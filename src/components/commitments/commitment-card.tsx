@@ -7,6 +7,8 @@ import { BorderBeam, NumberTicker } from '~/components/aceternity';
 import { Button } from '~/components/ui/button';
 import { abandonCommitment } from '~/lib/actions/commitments';
 import { computeStreak, type StampRow } from '~/lib/commitments';
+
+import { StampRail } from './stamp-rail';
 import { cn } from '~/lib/utils';
 import { LogStampForm } from './log-stamp-form';
 
@@ -116,10 +118,12 @@ export function CommitmentCard({
         )}
         {isComplete && (
           <p className="text-xs text-muted-foreground">
-            You hit your {goalDays}-day goal. The stamps live on your profile.
+            You hit your {goalDays}-day goal. Every stamp is below.
           </p>
         )}
       </div>
+
+      <StampRail stamps={stamps} goalDays={goalDays} />
     </div>
   );
 }

@@ -6,6 +6,7 @@ import {
   evaluateStreakBadges,
   inferProofType,
   isCommitmentComplete,
+  isSafeProofUrl,
   normalizeProofUrl,
   type StampRow,
 } from './commitments';
@@ -139,5 +140,37 @@ describe('commitments', () => {
       expect(evaluateStreakBadges(0)).toEqual([]);
       expect(evaluateStreakBadges(6)).toEqual([]);
     });
+  });
+});
+
+describe('isSafeProofUrl', () => {
+  it('accepts the http(s) URLs the form is meant to collect', () => {
+    expect(isSafeProofUrl('https://youtube.com/watch?v=abc')).toBe(true);
+    expect(isSafeProofUrl('http://example.com/photo.jpg')).toBe(true);
+    expect(isSafeProofUrl('  https://example.com  ')).toBe(true);
+  });
+
+  it('rejects script-bearing schemes, which normalizeProofUrl passes through', () => {
+    // normalizeProofUrl returns unmatched input verbatim ("treat as text note"),
+    // so these really can reach the database. Rendering one as an href would be
+    // stored XSS.
+    expect(isSafeProofUrl('javascript:alert(1)')).toBe(false);
+    expect(isSafeProofUrl('JavaScript:alert(1)')).toBe(false);
+    expect(isSafeProofUrl('data:text/html,<script>alert(1)</script>')).toBe(false);
+    expect(isSafeProofUrl('vbscript:msgbox(1)')).toBe(false);
+    expect(isSafeProofUrl('file:///etc/passwd')).toBe(false);
+  });
+
+  it('rejects whitespace and control-character smuggling', () => {
+    expect(isSafeProofUrl('java\nscript:alert(1)')).toBe(false);
+    expect(isSafeProofUrl('java\tscript:alert(1)')).toBe(false);
+    expect(isSafeProofUrl('https://exam ple.com')).toBe(false);
+  });
+
+  it('rejects plain text, which is what a non-URL proof note is', () => {
+    expect(isSafeProofUrl('did it at the gym')).toBe(false);
+    expect(isSafeProofUrl('')).toBe(false);
+    expect(isSafeProofUrl(null)).toBe(false);
+    expect(isSafeProofUrl(undefined)).toBe(false);
   });
 });

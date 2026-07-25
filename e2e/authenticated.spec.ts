@@ -172,6 +172,50 @@ test.describe('authenticated surfaces', () => {
     await expect(scoped, 'the deleted item should be gone').toHaveCount(0);
   });
 
+  test('a logged stamp shows its proof back, and never as a javascript: link', async ({
+    authedPage,
+  }) => {
+    // Stamp.proofUrl / proofType / note were written on every stamp and rendered
+    // nowhere, while the form asked outright for "Proof link" and the completion
+    // copy claimed "the stamps live on your profile". The feature whose premise
+    // is evidence collected it and never showed it back.
+    await authedPage.goto('/commitments');
+
+    // No `if (count())` guards here. They let the test skip its own subject and
+    // report green, which is how the earlier version "passed" while stamping
+    // nothing. Each step waits for the effect of the one before it — clicking a
+    // button is not the same as the server action completing.
+    // The creation form is collapsed behind a trigger, so the name field does not
+    // exist until it is opened.
+    const openCreate = authedPage.getByRole('button', { name: 'Start a commitment' });
+    if (await openCreate.count()) {
+      await openCreate.click();
+      const nameField = authedPage.getByPlaceholder('e.g. Guitar, Running, Spanish');
+      await expect(nameField).toBeVisible();
+      await nameField.fill('Piano');
+      await authedPage.getByRole('button', { name: 'Begin commitment' }).click();
+    }
+
+    // Wait for the commitment itself, not for a URL that never changes.
+    const openStampForm = authedPage.getByRole('button', { name: 'Stamp today' }).first();
+    await expect(openStampForm, 'a commitment should exist to stamp').toBeVisible();
+    await openStampForm.click();
+
+    const proof = authedPage.getByPlaceholder(/or any URL/);
+    await expect(proof).toBeVisible();
+    await proof.fill('https://youtube.com/watch?v=e2eproof');
+    await authedPage.getByRole('button', { name: 'Stamp today' }).last().click();
+
+    await expect(authedPage.getByText('The evidence').first()).toBeVisible();
+
+    // The proof is a real, opener-safe link — and nothing on the page is ever a
+    // javascript: href, because normalizeProofUrl stores non-URL input verbatim.
+    const proofLink = authedPage.locator('a[href*="e2eproof"]').first();
+    await expect(proofLink).toBeVisible();
+    await expect(proofLink).toHaveAttribute('rel', /noopener/);
+    await expect(authedPage.locator('a[href^="javascript:"]')).toHaveCount(0);
+  });
+
   test('trajectory renders all four life buckets', async ({ authedPage }) => {
     await authedPage.goto('/trajectory');
     for (const bucket of ['Health', 'Finance', 'Knowledge', 'Relationships']) {
