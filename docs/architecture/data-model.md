@@ -20,8 +20,8 @@ tables. See [`decisions.md`](decisions.md) A7.
 
 ### App profile (legacy PascalCase, preserved)
 
-`User` (app profile: username, bio, creed, onboardingData, completedQuests,
-earnedBadges), `Account`/`Session`/`VerificationToken` (legacy NextAuth-era,
+`User` (app profile: username, bio, creed, timezone, onboardingData,
+completedQuests, earnedBadges), `Account`/`Session`/`VerificationToken` (legacy NextAuth-era,
 untouched — better-auth no longer reads from them). The `User` table is
 app-owned and referenced by `Timeline`, `Like`, `Comment`, `Follow`,
 `Commitment`, `Stamp`, `Habit`, `HabitLog`, `JournalEntry`, `DailyCheckin`,
@@ -43,14 +43,21 @@ supports both list and Bingo presentations (`defaultView`).
 
 ### Commitments and stamps
 
-`Commitment` (hobbyName, goalDays, status, startDate, completedAt) and `Stamp`
-(commitmentId, dayDate, proofUrl, proofType, note). The unique index
+`Commitment` (hobbyName, goalDays, status, visibility, startDate, completedAt)
+and `Stamp` (commitmentId, dayDate, proofUrl, proofType, note). The unique index
 `Stamp_commitmentId_dayDate_key` on `(commitmentId, dayDate)` enforces one
 stamp per day per commitment — the core invariant. `proofType` is derived from
 `proofUrl` (`youtube` | `video` | `image` | `url` | `text`). Streak math is
 pure (`src/lib/commitments.ts`); streak badges (7/30/100/365-day) are merged
 into `User.earnedBadges` by the `logStamp` server action. See
 [`decisions.md`](decisions.md) A4 and A8.
+
+`visibility` defaults to `private` and gates display on the public profile.
+Before 2026-07-25 the column did not exist and every commitment was published
+with no opt-out.
+
+`Stamp.dayDate` is resolved in the user's timezone, so "one stamp per day" means
+the user's day. See [`knowledge/learnings.md`](../knowledge/learnings.md) L9.
 
 ### Daily ritual (from today-little-log merge)
 
@@ -65,12 +72,20 @@ for the merge rationale.
 ### Quests and retired arcs storage
 
 `UserQuest` (questId, type `rediscovery` | `static`, sourceHobby,
-sourceTimelineId, sourceBucketItemId, arcId, status). The unique index
-`UserQuest_userId_questId_active_key` on `(userId, questId, status)` prevents
-duplicate active quests. The `Arc` table and `UserQuest.arcId` remain in the
-schema only to preserve legacy data and prevent an accidental destructive
-migration. No active route or server action reads or writes them; side quests
-are the sole quest surface.
+sourceTimelineId, sourceBucketItemId, arcId, status, visibility). The unique
+index `UserQuest_userId_questId_active_key` on `(userId, questId, status)`
+prevents duplicate active quests.
+
+`visibility` defaults to `private` and gates display in "The evidence" on the
+public profile. Before 2026-07-25 the column did not exist and every completed
+quest was published with no opt-out.
+
+The `Arc` table and `UserQuest.arcId` remain in the schema, but nothing reads or
+writes them — all arcs runtime code was removed on 2026-07-25. They are retained
+to avoid a destructive migration against production, **not** to preserve data:
+nothing ever wrote `arcId`, so there are no legacy rows behind it. Dropping both
+is an open question in [`STATUS.md`](../../STATUS.md). Side quests are the sole
+quest surface.
 
 ### Trajectory (monthly life-review)
 

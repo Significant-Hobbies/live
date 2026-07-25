@@ -75,3 +75,81 @@ NextAuth era). better-auth reads only the `auth_*` tables; the PascalCase
 tables are app-owned and referenced by `Timeline`, `Commitment`, etc. Do not
 rename one set to match the other without a coordinated migration. See
 [`architecture/data-model.md`](../architecture/data-model.md).
+
+## L9 — `dayDate` is user-local; never resolve it with `toISOString()`
+
+Every `dayDate` column stores a **user-local** `YYYY-MM-DD` key. The obvious
+`new Date().toISOString().slice(0, 10)` silently makes it UTC, which on Workers
+is the server zone. In Asia/Dubai (UTC+4) that rolled the day at 04:00 local and
+kept the AM ritual prompt until 16:00 local, so journalling at 01:00 wrote to the
+previous day. The schema comments said "user-local" for months while no timezone
+code existed anywhere.
+
+Use `lib/day.ts` — `dayKeyIn(tz)`, `isMorningIn(tz)`, `shiftDayKey(key, n)` —
+and read the zone from `users.timezone` (reported by `<TimezoneSync>`).
+
+Two related traps, both real bugs that shipped:
+
+- `new Date(key + 'T00:00:00')` parses in the **server's** local zone, and
+  `.toISOString()` then serialises as UTC. Round-tripping a day key through that
+  pair can shift it by one in either direction. Do day arithmetic on the string
+  with `shiftDayKey`, which is pure.
+- Functions that decide "what day is it" internally cannot be corrected by their
+  callers. Pass `today` in as a parameter; `habit-utils` and
+  `behavioral-insights` both had to be refactored for this.
+
+## L10 — a config value that only renders a label is not a feature
+
+`habits.targetFrequency` accepted `daily | weekdays | 3x_week | 5x_week` and was
+used for exactly one thing: looking up a display string. Meanwhile
+`computeWeeklyProgress` hardcoded a target of 7 and `computeStreak` demanded
+strictly consecutive calendar days. So a `weekdays` habit's streak reset every
+Saturday and a `3x_week` habit sat at 3/7 (43%) while perfectly on target — the
+picker actively punished three of the four options it offered.
+
+The general shape: **an option the user can select must change behaviour, or it
+must not exist.** When auditing, grep every consumer of a config field. If they
+all resolve to copy, the feature is decoration.
+
+A corollary from the same pass: a streak is only meaningful in the unit its
+cadence is scored in. Day-consecutive streaks are wrong for quota habits, so
+`computeStreak` returns `{ count, unit }` and the UI renders `d` or `w`.
+
+## L11 — schema-only features read as shipped; check for a write path
+
+An audit of this repo found several surfaces that looked complete and were not:
+
+- `Arc` had a 294-line action module, a route, and a UI — and **nothing anywhere
+  inserted a row**. `/arcs` was permanently empty, and because the insights panel
+  read active quests *through* the arcs table, every completion and abandonment
+  rate it displayed was silently wrong.
+- Five badges were defined with no evaluator, so they were unwinnable.
+- `syncQuestProgress` and `closeEra` were fully implemented with **zero callers**.
+  Side-quest progress therefore lived only in `localStorage` and died with a
+  cache clear.
+- `Commitment` and `UserQuest` were rendered on the public profile with **no
+  visibility column at all**, so both were published with no way to opt out.
+
+Cheap checks that catch all of these: grep for an `insert` into every table;
+grep for callers of every exported action; and for anything on a public surface,
+confirm a visibility column exists rather than assuming the query filters.
+
+Fixing one of these has a trap worth knowing. `users.earnedBadges` is written by
+two independent systems (side-quest evaluation client-side, commitment streaks in
+`logStamp`). Wiring `syncQuestProgress` as written would have overwritten the
+column wholesale and erased every streak badge — it now merges, replacing only
+the ids in `SIDE_QUEST_BADGE_IDS`. **Before wiring an orphaned writer, check what
+else writes its target.**
+
+## L12 — `pnpm db:generate` is unsafe in this repo
+
+The `drizzle/meta` snapshot only knows migration `0000`. Everything since
+(better-auth, life bingo, trajectory, quests, habit columns, creed/onboarding)
+arrived via `db:push` or hand-written SQL that was never added to
+`_journal.json`. So `db:generate` diffs against an ancient baseline and emits
+`CREATE TABLE` for tables that already exist in production and `ADD COLUMN` for
+columns that already exist — output that fails on contact with the real database.
+
+Migrations here are hand-written (`0001_better_auth.sql`, `0002_life_bingo.sql`,
+`0003_visibility_and_timezone.sql`) and applied manually. Either rebaseline the
+snapshot against production or treat `db:generate` as unavailable.

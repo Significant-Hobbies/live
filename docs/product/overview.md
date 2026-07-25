@@ -66,8 +66,13 @@ The merge produced one coherent thesis:
   Structurally private: no visibility field, no public API, no sharing.
 - **Living (opt-in public):** hobbies, bucket lists, side quests, timelines,
   public profiles. Opt-in public per item.
-- **The journal is the bridge.** You write about practicing your hobby, and
-  that connects to your timeline and commitments.
+- **The journal is intended to be the bridge.** You write about practicing your
+  hobby, and that connects to your timeline and commitments. **This is an
+  intent, not a description of the code.** `journalEntries` has no foreign key
+  beyond `userId` — no hobby, no timeline, no commitment, no habit, no
+  trajectory bucket. Its only readers are `/daily`, `/dashboard`, and the
+  `/look-back` narrative. Building that link is the highest-leverage open item;
+  see [`STATUS.md`](../../STATUS.md) → Next steps.
 - **The mortality frame connects both.** A finite life is the reason daily
   practice and life aspirations both matter. The life grid (`src/lib/mortality.ts`)
   and the manifesto (`/manifesto`) make this concrete.
@@ -78,7 +83,11 @@ The merge produced one coherent thesis:
   days." Habits are simple check-ins.
 - No broad social network, paid coaching, marketplace, or creator monetization.
 - No large SEO expansion until the core hobby journey loop sharpens.
-- No coherent XP/badge progression system until follow-through value is proven.
+- No XP. There is no XP concept anywhere in the code and none is planned.
+- No badge progression beyond what an evaluator actually awards. Badges exist
+  for side-quest counts, category mastery, two specific quests, and commitment
+  streaks. Five badges with no evaluator were removed on 2026-07-25 rather than
+  left on the profile as an unwinnable promise.
 
 ## Discovery — the quiz is primary
 

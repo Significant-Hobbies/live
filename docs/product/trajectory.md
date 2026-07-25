@@ -5,9 +5,8 @@ description: A private monthly life-review across four buckets (Health, Finance,
 
 # Trajectory — monthly life-review against your own ideals
 
-> **Status:** proposed (2026-07-19). Not yet built. This doc is the design
-> artifact; schema and routes do not exist yet. See
-> [`STATUS.md`](../../STATUS.md) → Unresolved questions.
+> **Status:** built (2026-07-19). This doc is the design artifact; see
+> [Status](#status) at the bottom for what shipped and what did not.
 
 ## The thesis
 
@@ -165,11 +164,36 @@ None. Design is complete and ready for a build plan.
 
 ## Status
 
-Built 2026-07-19 (local dev). Design complete; all five open questions
-resolved. Build plan executed: schema in `src/db/schema.ts`, pure module
+Built 2026-07-19 (local dev). Schema in `src/db/schema.ts`, pure module
 `src/lib/trajectory.ts` (35 unit tests, coverage above thresholds), server
 actions `src/lib/actions/trajectory.ts`, `/trajectory` route + components,
 daily ritual month-end nudge, nav link, e2e spec. Not yet deployed —
 production deploy is operator-owned. See
-[`trajectory-build-plan.md`](trajectory-build-plan.md) for the full build
-plan and [`STATUS.md`](../../STATUS.md) → Unresolved questions.
+[`trajectory-build-plan.md`](trajectory-build-plan.md) for the full build plan.
+
+### Designed but deliberately not built
+
+Recorded here so the design above is not read as a description of the code:
+
+- **The ideal as a reference line on the chart.** The chart declines to draw it
+  (`src/components/trajectory/trajectory-chart.tsx`) — a free-form `idealText`
+  has no numeric value to plot against arbitrary user-named series.
+- **Cross-era charts with a "new goalpost set" annotation at the cliff.** Charts
+  are per-era and isolated (`extractChartSeries(entries, eraId)`). This is the
+  visual that would make goalpost drift literal, and it is the one piece of the
+  thesis still missing.
+- **Era count / completion rate as a cross-era headline.** No aggregate is
+  computed or shown.
+
+### Fixed after build
+
+- **Month-end nudge timing is still UTC.** `getActiveMonthEndNudge` compares
+  months via `new Date()`, so the nudge window opens on the server's month
+  boundary rather than the user's. Lower-impact than the day-boundary bug fixed
+  in `lib/day.ts`, but the same class.
+- Closing an era without authoring a replacement ideal is reachable as of
+  2026-07-25 (`CloseEraButton` → `closeEra`); before that the action existed
+  with no callers and the ideal-less bucket state could not be produced.
+- The monthly reflection form opened prefilled with the era's **oldest** entry
+  rather than the selected month's, so anyone with history overwrote their first
+  reflection. Fixed 2026-07-25.
