@@ -56,12 +56,18 @@ is the bridge between daily practice and life aspirations.
 
 ## Active work
 
-- **Schema changes pending application (operator-owned).**
-  `drizzle/0003_visibility_and_timezone.sql` adds `Commitment.visibility`,
-  `UserQuest.visibility`, and `User.timezone`. Hand-written to match this repo's
-  convention. Applied to local `dev.db` only; **not applied to production**. The
-  visibility defaults are what stop existing commitments and quests being
-  published without consent, so this needs to land before the next deploy.
+- **`0003` applied to production 2026-07-25.**
+  `drizzle/0003_visibility_and_timezone.sql` added `Commitment.visibility` and
+  `UserQuest.visibility` (both `TEXT NOT NULL DEFAULT 'private'`),
+  `User.timezone` (nullable `TEXT`), and the two supporting indexes. Applied
+  statement-by-statement via the Turso CLI against the `significanthobbies`
+  database and verified with `pragma_table_info` plus app-shaped queries. This
+  unblocks deploying `main`, which already reads all three columns.
+
+  Correction to the earlier framing: production held **0 commitments and 0
+  quests**, so no existing row was ever publicly exposed. The `'private'`
+  default protects future rows; it did not undo a live leak. 14 users, none with
+  a timezone yet — `TimezoneSync` populates that on next visit.
 - **`pnpm db:generate` is safe again (baselined 2026-07-25).** The snapshot used
   to record only migration 0000, so drizzle-kit emitted `CREATE TABLE` for tables
   that already existed in production. `drizzle/0001_baseline_current_schema.sql`
