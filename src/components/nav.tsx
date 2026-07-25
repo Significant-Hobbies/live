@@ -79,6 +79,11 @@ export async function Nav() {
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
+                    <Link href="/life-plan" prefetch={false}>
+                      Life Plan
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
                     <Link href="/bucket-list" prefetch={false}>
                       My Bucket Lists
                     </Link>
@@ -138,6 +143,11 @@ export async function Nav() {
                 <DropdownMenuItem asChild>
                   <Link href="/dashboard" prefetch={false}>
                     Dashboard
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/life-plan" prefetch={false}>
+                    Life Plan
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>

@@ -47,16 +47,41 @@ is the bridge between daily practice and life aspirations.
 
 ## Active work
 
-- **Schema changes pending application.**
+- **Schema changes pending application (operator-owned).**
   `drizzle/0003_visibility_and_timezone.sql` adds `Commitment.visibility`,
   `UserQuest.visibility`, and `User.timezone`. Hand-written to match this repo's
-  convention; **not applied to any database**. The visibility defaults are what
-  stop existing commitments and quests being published without consent, so this
-  needs to land before the next deploy.
-- **Do not run `pnpm db:generate`.** The `drizzle/meta` snapshot only knows
-  migration 0000, so it emits `CREATE TABLE` for tables that already exist in
-  production and `ADD COLUMN` for columns that already exist. Migrations here are
-  hand-written. Reconciling the snapshot is open work.
+  convention. Applied to local `dev.db` only; **not applied to production**. The
+  visibility defaults are what stop existing commitments and quests being
+  published without consent, so this needs to land before the next deploy.
+- **`pnpm db:generate` is guarded and will refuse to run.**
+  `scripts/db-generate-guard.mjs` explains why and exits non-zero, because the
+  `drizzle/meta` snapshot only records migration 0000 while `drizzle/` holds four
+  — so drizzle-kit emits `CREATE TABLE` for tables that already exist in
+  production. Migrations here are hand-written. `pnpm db:generate:unsafe` still
+  reaches the raw command if you have rebaselined the snapshot; retire the guard
+  when you do. See [`docs/knowledge/learnings.md`](docs/knowledge/learnings.md) L12.
+
+## Routes with no inbound UI links (deliberate, not forgotten)
+
+Checked 2026-07-25. Routes are preserved by default per the fleet standard; these
+are parked with a reason rather than deleted.
+
+| Route | Why it has no links |
+| --- | --- |
+| `/timelines/recent` | Duplicates `/explore` (both list `PUBLIC` timelines by recency). `/explore` is the designated community surface and is deliberately hidden pending the quiz-funnel readout, so linking either would undercut that experiment. Also absent from `sitemap.ts`. Revisit with the funnel decision. |
+| `/compare` | Static hobby-vs-hobby SEO page, no user data. It is in `sitemap.ts` and indexable, so crawlers are its intended audience; internal links are optional. |
+| `/explore` | Intentionally hidden — see [`docs/product/discovery-funnel.md`](docs/product/discovery-funnel.md). |
+| `/hobbies`, `/journeys` | Same as `/explore`. Reachable via deep links, SEO, and quiz cross-links. |
+
+`/life-plan` was in this category and is now linked from the account dropdown: it
+is not a `/dashboard` duplicate (archetype, life balance, and the only surface
+rendering bucket-item quest chains) and it is `noindex`, so surfacing it does not
+touch the discovery experiment.
+
+Still unlinked and worth a decision: **user profiles (`/u/[username]`) are absent
+from `sitemap.ts`**, so the entire user-generated layer gets no sitemap-driven
+distribution while 43 blog posts do. Adding them publishes more widely, so it is
+left as an explicit operator call rather than a cleanup edit.
 
 ## Blockers
 
@@ -79,14 +104,9 @@ is the bridge between daily practice and life aspirations.
    the single highest-leverage change available: it makes the thesis true and
    gives every other surface something to connect to. See
    [`docs/product/overview.md`](docs/product/overview.md).
-5. Fix reachability before building anything new. Logged-in nav offers only
-   `/dashboard`, `/commitments`, `/trajectory`; `/daily` is linked from the
-   footer alone, `/bucket-list` only from inside itself, and `/life-plan` and
-   `/timelines/recent` from nowhere at all. Several built features are
-   effectively unreachable.
-6. Tighten the first-time user journey to a meaningful public timeline.
-7. Wire habits ↔ commitments (optional explicit link, no auto-link by default).
-8. Decide whether the social layer earns investment. `follows` is a vanity
+5. Tighten the first-time user journey to a meaningful public timeline.
+6. Wire habits ↔ commitments (optional explicit link, no auto-link by default).
+7. Decide whether the social layer earns investment. `follows` is a vanity
    counter — no follower list, no feed, and no notification of any kind exists
    in the codebase, so a like, comment, or follow is silently discarded. Either
    ship notifications or stop presenting these as social features.
@@ -97,11 +117,13 @@ is the bridge between daily practice and life aspirations.
   the hidden surfaces need to be re-surfaced? (Blocked on PostHog readout.)
 - Should the content-flywheel canonical package document be populated before
   or after the branch merge? (Pending topic selection.)
-- Should the `Arc` table and `UserQuest.arcId` be dropped? All arcs runtime code
-  is gone. The columns were retained to avoid a destructive migration, and
-  `docs/architecture/data-model.md` describes them as preserving legacy data —
-  but nothing ever wrote `arcId`, so there is no legacy data to preserve. The
-  retention is defensible; the stated reason is not.
+- Should the `Arc` table and `UserQuest.arcId` be dropped? **Resolved 2026-07-25:
+  retained.** All arcs runtime code is gone; the columns stay to avoid a
+  destructive migration against production, which costs nothing at runtime. The
+  inaccurate justification has been corrected in
+  [`docs/architecture/data-model.md`](docs/architecture/data-model.md) — nothing
+  ever wrote `arcId`, so there is no legacy data behind it. Drop them only as part
+  of a deliberate schema tidy, never as a side effect of `db:generate`.
 - Should `dailyCheckins` be retired? `amCompleted`/`pmCompleted` nearly duplicate
   "the matching journal entry is non-empty", but not exactly: writing an AM entry
   in the evening leaves `amCompleted` false. Deriving would change what the AM/PM
