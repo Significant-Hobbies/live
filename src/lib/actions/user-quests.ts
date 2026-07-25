@@ -3,7 +3,7 @@
 import { and, eq } from 'drizzle-orm';
 import { revalidatePath } from 'next/cache';
 
-import { habits, userQuests, timelines } from '~/db/schema';
+import { habits, userQuests, timelines, users } from '~/db/schema';
 import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
 import type { TimelinePin } from '~/lib/types';
@@ -281,4 +281,39 @@ export async function getCompletedQuests(): Promise<UserQuestRow[]> {
 
 export async function getAbandonedQuests(): Promise<UserQuestRow[]> {
   return await getQuestsByStatus('abandoned');
+}
+
+// ─── Profile visibility ─────────────────────────────────────────────────────
+
+/**
+ * Opt a quest in or out of "The evidence" on the owner's public profile.
+ *
+ * Quests are private by default, so this is the only way one becomes visible
+ * to visitors.
+ */
+export async function setQuestVisibility(
+  questRowId: string,
+  isPublic: boolean
+): Promise<{ success: boolean; error?: string }> {
+  const session = await getServerAuthSession();
+  if (!session?.user?.id) return { success: false, error: 'Not authenticated' };
+
+  const owned = await db.query.userQuests.findFirst({
+    where: and(eq(userQuests.id, questRowId), eq(userQuests.userId, session.user.id)),
+    columns: { id: true },
+  });
+  if (!owned) return { success: false, error: 'Quest not found' };
+
+  await db
+    .update(userQuests)
+    .set({ visibility: isPublic ? 'public' : 'private' })
+    .where(eq(userQuests.id, questRowId));
+
+  const me = await db.query.users.findFirst({
+    where: eq(users.id, session.user.id),
+    columns: { username: true },
+  });
+  if (me?.username) revalidatePath(`/u/${me.username}`);
+
+  return { success: true };
 }

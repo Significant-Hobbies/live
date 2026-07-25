@@ -19,7 +19,12 @@ import {
 import { GradientMesh, SpotlightCard } from '~/components/aceternity';
 import { CircularProgress } from '~/components/dashboard/circular-progress';
 import { Button } from '~/components/ui/button';
-import { computeStreak, computeWeeklyProgress } from '~/lib/habit-utils';
+import {
+  computeStreak,
+  computeWeeklyProgress,
+  FREQUENCY_OPTIONS,
+  frequencyMeta,
+} from '~/lib/habit-utils';
 import { buildJournalDateWindow, hasJournalContent } from '~/lib/journal';
 import { BUCKET_LABELS, type TrajectoryBucket } from '~/lib/trajectory';
 import { cn } from '~/lib/utils';
@@ -89,20 +94,6 @@ interface Props {
   trajectoryNudge?: TrajectoryNudge;
   actions: Actions;
 }
-
-const FREQUENCY_LABELS: Record<string, string> = {
-  daily: 'Every day',
-  weekdays: 'Weekdays',
-  '3x_week': '3× / week',
-  '5x_week': '5× / week',
-};
-
-const FREQUENCY_OPTIONS = [
-  { value: 'daily', label: 'Every day' },
-  { value: 'weekdays', label: 'Weekdays' },
-  { value: '3x_week', label: '3× / week' },
-  { value: '5x_week', label: '5× / week' },
-];
 
 const EMOJI_CHOICES = ['📚', '🏃', '🧘', '✍️', '🎸', '🎨', '💪', '🧠', '🌅', '💧', '🥗', '😴'];
 
@@ -555,10 +546,15 @@ export function DailyRitual({
           <div className="space-y-2.5">
             {habits.map((habit) => {
               const done = isHabitDone(habit.id);
-              const streak = computeStreak(allHabitLogs, habit.id);
-              const weekly = computeWeeklyProgress(allHabitLogs, habit.id);
-              const freqLabel = FREQUENCY_LABELS[habit.targetFrequency] ?? 'Every day';
-              const weeklyPct = (weekly.completed / weekly.target) * 100;
+              const streak = computeStreak(allHabitLogs, habit.id, today, habit.targetFrequency);
+              const weekly = computeWeeklyProgress(
+                allHabitLogs,
+                habit.id,
+                today,
+                habit.targetFrequency
+              );
+              const freqLabel = frequencyMeta(habit.targetFrequency).label;
+              const weeklyPct = Math.min(100, (weekly.completed / weekly.target) * 100);
 
               return (
                 <SpotlightCard
@@ -617,9 +613,9 @@ export function DailyRitual({
                   <div className="hidden flex-col items-end gap-1.5 sm:flex">
                     <div
                       className="flex gap-1"
-                      aria-label={`${weekly.completed} of 7 days this week`}
+                      aria-label={`${weekly.completed} of ${weekly.target} this week`}
                     >
-                      {Array.from({ length: 7 }).map((_, i) => (
+                      {Array.from({ length: weekly.target }).map((_, i) => (
                         <div
                           key={i}
                           className={cn(
@@ -638,12 +634,18 @@ export function DailyRitual({
                     </div>
                   </div>
 
-                  {/* Streak counter */}
-                  {streak > 0 && (
-                    <div className="flex shrink-0 items-center gap-1 rounded-lg bg-primary/10 px-2 py-1">
+                  {/* Streak counter — days for scheduled habits, weeks for quota habits */}
+                  {streak.count > 0 && (
+                    <div
+                      className="flex shrink-0 items-center gap-1 rounded-lg bg-primary/10 px-2 py-1"
+                      aria-label={`${streak.count} ${streak.unit}${streak.count === 1 ? '' : 's'} in a row`}
+                    >
                       <Flame className="h-3.5 w-3.5 text-primary" />
                       <span className="font-serif text-sm font-semibold tabular-nums text-primary">
-                        {streak}
+                        {streak.count}
+                        <span className="ml-0.5 text-[10px] font-medium">
+                          {streak.unit === 'week' ? 'w' : 'd'}
+                        </span>
                       </span>
                     </div>
                   )}

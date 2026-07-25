@@ -5,6 +5,7 @@ import { redirect } from 'next/navigation';
 
 import { GradientMesh, GridBackground } from '~/components/aceternity';
 import { BehavioralInsights } from '~/components/dashboard/behavioral-insights';
+import { TimezoneSync } from '~/components/timezone-sync';
 import { EmptyStateCard } from '~/components/dashboard/empty-state-card';
 import { HabitsSection } from '~/components/dashboard/habits-section';
 import { JournalSection } from '~/components/dashboard/journal-section';
@@ -25,6 +26,7 @@ import {
 import { getMyCommitments } from '~/lib/actions/commitments';
 import { getAbandonedQuests, getActiveQuests, getCompletedQuests } from '~/lib/actions/user-quests';
 import { computeBehavioralInsights } from '~/lib/behavioral-insights';
+import { dayKeyIn, isMorningIn } from '~/lib/day';
 import { birthDateFromYear, buildLifeGrid, weekIndexForDay } from '~/lib/mortality';
 import { getTimelineUrl } from '~/lib/timeline-url';
 import type { Phase, TimelineVisibility } from '~/lib/types';
@@ -56,13 +58,18 @@ export default async function DashboardPage() {
   const session = await getServerAuthSession();
   if (!session?.user) redirect('/login');
 
-  const today = new Date().toISOString().slice(0, 10);
-  const isMorning = new Date().getHours() < 12;
+  // Resolve the user's zone first — every dayDate key below is user-local.
+  const me = await db.query.users.findFirst({
+    where: eq(users.id, session.user.id),
+    columns: { birthYear: true, creed: true, name: true, timezone: true },
+  });
+
+  const today = dayKeyIn(me?.timezone);
+  const isMorning = isMorningIn(me?.timezone);
 
   const [
     rawTimelines,
     myCommitments,
-    me,
     myHabits,
     myHabitLogs,
     allHabitLogs,
@@ -78,10 +85,6 @@ export default async function DashboardPage() {
       .where(eq(timelines.userId, session.user.id))
       .orderBy(desc(timelines.updatedAt)),
     getMyCommitments(),
-    db.query.users.findFirst({
-      where: eq(users.id, session.user.id),
-      columns: { birthYear: true, creed: true, name: true },
-    }),
     db
       .select()
       .from(habits)
@@ -194,10 +197,13 @@ export default async function DashboardPage() {
         label: p.label,
         hobbies: (p.hobbies ?? []).map((h) => ({ name: h.name })),
       })),
+    today,
   });
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-10 sm:py-14 space-y-16">
+      <TimezoneSync storedTimezone={me?.timezone ?? null} />
+
       {/* ════════════════════════════════════════════════════════════════════════
           1. LIFE GRID + TIMELINE (merged, top)
           The zoomed-out view: creed heading, life grid, then timelines below.

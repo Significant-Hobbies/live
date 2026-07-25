@@ -80,6 +80,9 @@ export const users = sqliteTable('User', {
   emailVerified: integer('emailVerified', { mode: 'timestamp' }),
   image: text('image'),
   username: text('username').unique(),
+  // IANA zone (e.g. "Asia/Dubai") reported by the browser, used to resolve the
+  // user-local dayDate keys and the AM/PM ritual split. Null = fall back to UTC.
+  timezone: text('timezone'),
   birthYear: integer('birthYear'),
   bio: text('bio'),
   website: text('website'),
@@ -298,6 +301,10 @@ export const commitments = sqliteTable(
     goalDays: integer('goalDays').notNull().default(30),
     // 'active' | 'completed' | 'abandoned'
     status: text('status').notNull().default('active'),
+    // 'private' | 'public' — gates display on the owner's public profile.
+    // Private by default: a commitment is a personal promise, and publishing one
+    // is a choice the user makes, not a side effect of making it.
+    visibility: text('visibility').notNull().default('private'),
     startDate: integer('startDate', { mode: 'timestamp' }).notNull(),
     completedAt: integer('completedAt', { mode: 'timestamp' }),
     createdAt: integer('createdAt', { mode: 'timestamp' }).notNull().default(sql`(unixepoch())`),
@@ -306,6 +313,7 @@ export const commitments = sqliteTable(
   (table) => [
     index('Commitment_userId_idx').on(table.userId),
     index('Commitment_status_idx').on(table.status),
+    index('Commitment_visibility_idx').on(table.visibility),
   ]
 );
 
@@ -478,12 +486,16 @@ export const userQuests = sqliteTable(
     emoji: text('emoji'),
     // 'active' | 'completed' | 'abandoned'
     status: text('status').notNull().default('active'),
+    // 'private' | 'public' — gates display in "The evidence" on the public
+    // profile. Private by default, same reasoning as Commitment.visibility.
+    visibility: text('visibility').notNull().default('private'),
     startedAt: integer('startedAt', { mode: 'timestamp' }).notNull().default(sql`(unixepoch())`),
     completedAt: integer('completedAt', { mode: 'timestamp' }),
     createdAt: integer('createdAt', { mode: 'timestamp' }).notNull().default(sql`(unixepoch())`),
   },
   (table) => [
     index('UserQuest_userId_status_idx').on(table.userId, table.status),
+    index('UserQuest_userId_visibility_idx').on(table.userId, table.visibility),
     uniqueIndex('UserQuest_userId_questId_active_key').on(
       table.userId,
       table.questId,

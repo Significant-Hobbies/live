@@ -5,6 +5,8 @@ import { revalidatePath } from 'next/cache';
 import { z } from 'zod';
 
 import { follows, users } from '~/db/schema';
+import { SIDE_QUEST_BADGE_IDS } from '~/lib/badges';
+import { isValidTimeZone } from '~/lib/day';
 import { parseStringArray } from '~/lib/utils';
 import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
@@ -134,6 +136,34 @@ export async function updateProfile(data: {
   revalidatePath('/settings');
 }
 
+// ─── Timezone ───────────────────────────────────────────────────────────────
+// Every `dayDate` key is user-local, so the server has to know the user's zone.
+// The browser reports it; this stores it. Silent no-op when unchanged, so the
+// client can call it on every mount without churning writes.
+
+export async function saveTimezone(timeZone: string): Promise<{ success: boolean }> {
+  const session = await getServerAuthSession();
+  if (!session?.user?.id) return { success: false };
+
+  const candidate = timeZone.trim();
+  if (!candidate || candidate.length > 64 || !isValidTimeZone(candidate)) {
+    return { success: false };
+  }
+
+  const current = await db.query.users.findFirst({
+    where: eq(users.id, session.user.id),
+    columns: { timezone: true },
+  });
+  if (current?.timezone === candidate) return { success: true };
+
+  await db.update(users).set({ timezone: candidate }).where(eq(users.id, session.user.id));
+
+  revalidatePath('/daily');
+  revalidatePath('/dashboard');
+
+  return { success: true };
+}
+
 // ─── Creed ──────────────────────────────────────────────────────────────────
 // The user's personal declaration — "I am someone who..."
 // This is the emotional anchor of the product. It sits at the top of the
@@ -198,22 +228,54 @@ export async function saveOnboardingAnswers(
 
 const QuestProgressArraySchema = z.array(z.string().max(100)).max(500);
 
-export async function syncQuestProgress(completedQuests: string[], earnedBadges: string[]) {
+/**
+ * Persists side-quest progress from the browser into the user's row.
+ *
+ * Side-quest state lives in localStorage (`sh-side-quests`) so the quest board
+ * works signed-out. This mirrors it to the database so clearing site data does
+ * not erase it and the badges can reach the public profile.
+ *
+ * `earnedBadges` is shared with commitment streak badges written by `logStamp`,
+ * so only the side-quest-derived ids are replaced here — everything else on the
+ * row is preserved. Returns instead of throwing: the client calls this on every
+ * change, including while signed out, where it must be a silent no-op.
+ */
+export async function syncQuestProgress(
+  completedQuests: string[],
+  earnedBadges: string[]
+): Promise<{ success: boolean }> {
   const session = await getServerAuthSession();
-  if (!session?.user?.id) throw new Error('Not authenticated');
+  if (!session?.user?.id) return { success: false };
 
   // Validate before persisting: a non-array payload here would corrupt the
   // JSON columns and break every later quest read for this user.
-  const quests = QuestProgressArraySchema.parse(completedQuests);
-  const badges = QuestProgressArraySchema.parse(earnedBadges);
+  const quests = QuestProgressArraySchema.safeParse(completedQuests);
+  const badges = QuestProgressArraySchema.safeParse(earnedBadges);
+  if (!quests.success || !badges.success) return { success: false };
+
+  const current = await db.query.users.findFirst({
+    where: eq(users.id, session.user.id),
+    columns: { earnedBadges: true },
+  });
+  const existing = parseStringArray(current?.earnedBadges);
+  const preserved = existing.filter((id) => !SIDE_QUEST_BADGE_IDS.includes(id));
+  const mergedBadges = Array.from(new Set([...preserved, ...badges.data]));
 
   await db
     .update(users)
     .set({
-      completedQuests: JSON.stringify(quests),
-      earnedBadges: JSON.stringify(badges),
+      completedQuests: JSON.stringify(quests.data),
+      earnedBadges: JSON.stringify(mergedBadges),
     })
     .where(eq(users.id, session.user.id));
+
+  const me = await db.query.users.findFirst({
+    where: eq(users.id, session.user.id),
+    columns: { username: true },
+  });
+  if (me?.username) revalidatePath(`/u/${me.username}`);
+
+  return { success: true };
 }
 
 export async function getQuestProgress(): Promise<{

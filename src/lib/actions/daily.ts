@@ -4,6 +4,7 @@ import { and, asc, eq, gte, lte } from 'drizzle-orm';
 import { revalidatePath } from 'next/cache';
 
 import { dailyCheckins, habitLogs, habits, journalEntries, users } from '~/db/schema';
+import { DEFAULT_FREQUENCY, isValidFrequency } from '~/lib/habit-utils';
 import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
 
@@ -31,9 +32,7 @@ export async function createHabit(
   const trimmed = name.trim();
   if (!trimmed) return null;
 
-  const freq = ['daily', 'weekdays', '3x_week', '5x_week'].includes(targetFrequency ?? '')
-    ? targetFrequency!
-    : 'daily';
+  const freq = isValidFrequency(targetFrequency) ? targetFrequency! : DEFAULT_FREQUENCY;
   const trimmedIcon = icon?.trim() || null;
 
   const [habit] = await db

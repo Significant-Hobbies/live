@@ -18,6 +18,7 @@ import {
 import type { TrajectoryEraWithEntries } from '~/lib/actions/trajectory';
 
 import { IdealEditor } from './ideal-editor';
+import { CloseEraButton } from './close-era-button';
 import { MonthEntryForm } from './month-entry-form';
 import { TrajectoryChart } from './trajectory-chart';
 
@@ -114,6 +115,7 @@ export function BucketSection({ bucket, eras }: Props) {
               <Pencil className="h-3.5 w-3.5" />
               <span className="sr-only sm:not-sr-only">Edit</span>
             </Button>
+            <CloseEraButton eraId={activeEra.id} label={label} />
           </div>
         )}
       </header>
