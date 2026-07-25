@@ -58,6 +58,22 @@ export interface LookBackData {
     startDate: Date;
     stamps: string[]; // dayDate strings
   }>;
+  /**
+   * What the user said during onboarding, if they answered.
+   *
+   * `saveOnboardingAnswers` has always stored this with a comment promising the
+   * look-back would "reference it later" — and nothing ever read it. The answers
+   * only earn their place here by being *contrasted* with what actually
+   * happened since, which is the one thing a retrospective can do that the
+   * onboarding form cannot.
+   */
+  onboarding?: {
+    droppedHobby?: string;
+    lastFinished?: 'recently' | 'months_ago' | 'cant_remember' | 'doesnt_matter';
+    nextYearFeeling?: 'excited' | 'neutral' | 'dread' | 'blank';
+  } | null;
+  /** When onboarding was completed — anchors "back then" against now. */
+  onboardingCompletedAt?: Date | null;
 }
 
 export interface NarrativeSection {
@@ -138,6 +154,8 @@ function generateOpening(data: LookBackData, name: string): NarrativeSection {
     }
   }
 
+  paragraphs.push(...onboardingContrast(data));
+
   return {
     id: 'opening',
     kind: 'opening',
@@ -145,6 +163,60 @@ function generateOpening(data: LookBackData, name: string): NarrativeSection {
     paragraphs,
     emoji: '✨',
   };
+}
+
+const FEELING_THEN: Record<string, string> = {
+  excited: 'you said the year ahead felt exciting',
+  neutral: 'you said the year ahead felt like nothing in particular',
+  dread: 'you said the year ahead felt like dread',
+  blank: 'you said the year ahead was a blank',
+};
+
+/**
+ * What the user said at the start, measured against what they have since done.
+ *
+ * Deliberately short and never scolding. If the dropped hobby has reappeared
+ * anywhere — a timeline phase, a quest, a habit, a commitment — that is the
+ * whole point of the product and gets said plainly. If it has not, the line
+ * stays an observation rather than a reproach: this is a retrospective, not a
+ * report card (see decisions.md A4).
+ */
+function onboardingContrast(data: LookBackData): string[] {
+  const answers = data.onboarding;
+  if (!answers) return [];
+
+  const out: string[] = [];
+  const dropped = answers.droppedHobby?.trim();
+
+  if (dropped) {
+    const needle = dropped.toLowerCase();
+    const mentions = (s: string | null | undefined) => !!s && s.toLowerCase().includes(needle);
+    const returned =
+      data.phases.some((p) => p.hobbies.some((h) => mentions(h.name))) ||
+      data.completedQuests.some((q) => mentions(q.title) || mentions(q.sourceHobby)) ||
+      data.activeQuests.some((q) => mentions(q.title) || mentions(q.sourceHobby)) ||
+      data.habits.some((h) => mentions(h.name)) ||
+      data.commitments.some((c) => mentions(c.hobbyName));
+
+    out.push(
+      returned
+        ? `When you started, the thing you said you'd dropped was ${dropped}. It is back in your life — it shows up in what you've been doing since. That is the entire point of this.`
+        : `When you started, the thing you said you'd dropped was ${dropped}. It has not come back yet. No verdict in that — but it is still sitting there, and one small step is enough to move it.`
+    );
+  }
+
+  const feeling = answers.nextYearFeeling ? FEELING_THEN[answers.nextYearFeeling] : undefined;
+  if (feeling) {
+    const sinceThen =
+      data.completedQuests.length + data.commitments.filter((c) => c.status === 'completed').length;
+    out.push(
+      sinceThen > 0
+        ? `Back then, ${feeling}. Since then you have finished ${sinceThen} thing${sinceThen === 1 ? '' : 's'} you chose on purpose.`
+        : `Back then, ${feeling}. Worth reading the rest of this with that in mind.`
+    );
+  }
+
+  return out;
 }
 
 // ─── Timeline story ─────────────────────────────────────────────────────────

@@ -54,7 +54,15 @@ export default async function LookBackPage() {
   ] = await Promise.all([
     db.query.users.findFirst({
       where: eq(users.id, session.user.id),
-      columns: { name: true, creed: true, birthYear: true, timezone: true },
+      columns: {
+        name: true,
+        creed: true,
+        birthYear: true,
+        timezone: true,
+        // Stored since onboarding shipped, read here for the first time.
+        onboardingData: true,
+        onboardingCompletedAt: true,
+      },
     }),
     db.select().from(timelines).where(eq(timelines.userId, session.user.id)),
     db
@@ -95,6 +103,14 @@ export default async function LookBackPage() {
     name: me?.name ?? session.user.name ?? null,
     creed: null, // Don't repeat the creed in the look-back — it's on the dashboard
     birthYear: me?.birthYear ?? null,
+    // Malformed JSON must not take the page down — parseJSONColumn logs and
+    // falls back, same as every other JSON column on this page.
+    onboarding: parseJSONColumn<LookBackData['onboarding']>(
+      me?.onboardingData,
+      null,
+      'look-back:onboardingData'
+    ),
+    onboardingCompletedAt: me?.onboardingCompletedAt ?? null,
     today: dayKeyIn(me?.timezone),
     phases: allPhases,
     pins: allPins,
