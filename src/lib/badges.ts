@@ -1,4 +1,7 @@
-type BadgeCategory = 'quest' | 'category' | 'hobby' | 'timeline' | 'secret';
+// Only categories with a real evaluator exist here. 'hobby' and 'timeline'
+// badges were defined but nothing ever awarded them, so they were unwinnable
+// decoration on the profile — removed rather than left as a promise.
+type BadgeCategory = 'quest' | 'category' | 'secret';
 
 export type Badge = {
   id: string;
@@ -102,40 +105,6 @@ export const BADGES: Badge[] = [
     hidden: false,
   },
 
-  // ── Hobby / Timeline ──────────────────────────────────────
-  {
-    id: 'rekindler',
-    name: 'Rekindler',
-    description: 'Add a hobby from an earlier life phase',
-    emoji: '\uD83D\uDD25',
-    category: 'hobby',
-    hidden: true,
-  },
-  {
-    id: 'storyteller',
-    name: 'Storyteller',
-    description: 'Have 5 or more life phases on your timeline',
-    emoji: '\uD83D\uDCD6',
-    category: 'timeline',
-    hidden: false,
-  },
-  {
-    id: 'polymath',
-    name: 'Polymath',
-    description: 'Have hobbies in 5 or more categories',
-    emoji: '\uD83E\uDDE0',
-    category: 'hobby',
-    hidden: false,
-  },
-  {
-    id: 'deep-diver',
-    name: 'Deep Diver',
-    description: 'Rate a hobby with intensity level 5',
-    emoji: '\uD83E\uDD3F',
-    category: 'hobby',
-    hidden: true,
-  },
-
   // ── Streak (commitments) ───────────────────────────────────────
   {
     id: 'showed-up',
@@ -187,14 +156,6 @@ export const BADGES: Badge[] = [
     category: 'secret',
     hidden: true,
   },
-  {
-    id: 'full-circle',
-    name: 'Full Circle',
-    description: 'Discover a quest, pin it, then add its related hobby to your timeline',
-    emoji: '\u2B55',
-    category: 'secret',
-    hidden: true,
-  },
 ];
 
 // ── Helpers ──────────────────────────────────────────────────
@@ -202,3 +163,27 @@ export const BADGES: Badge[] = [
 export function getBadgeById(id: string): Badge | undefined {
   return BADGES.find((b) => b.id === id);
 }
+
+/**
+ * Badges awarded by side-quest completion (`evaluateQuestBadges`).
+ *
+ * `users.earnedBadges` is shared with commitment streak badges, which are
+ * awarded server-side by `logStamp`. Syncing side-quest progress must replace
+ * only these ids and leave the rest alone, otherwise persisting quest progress
+ * silently erases every streak badge the user earned.
+ */
+export const SIDE_QUEST_BADGE_IDS: readonly string[] = [
+  'first-steps',
+  'curious-cat',
+  'adventurer',
+  'renaissance-soul',
+  'quest-master',
+  'sensor',
+  'maker',
+  'chefs-kiss',
+  'people-person',
+  'wanderer',
+  'zen-master',
+  'night-owl',
+  'unplugged',
+];

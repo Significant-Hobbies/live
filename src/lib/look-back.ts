@@ -13,6 +13,8 @@ export interface LookBackData {
   name: string | null;
   creed: string | null;
   birthYear: number | null;
+  /** Today as a user-local YYYY-MM-DD key — streaks are scored against it. */
+  today: string;
   phases: Phase[];
   pins: TimelinePin[];
   completedQuests: Array<{
@@ -36,6 +38,7 @@ export interface LookBackData {
     id: string;
     name: string;
     icon: string | null;
+    targetFrequency: string;
     createdAt: Date;
   }>;
   habitLogs: Array<{
@@ -310,31 +313,37 @@ function generateHabitStory(data: LookBackData, _name: string): NarrativeSection
     );
   }
 
-  // Best streak
-  let bestStreak = 0;
+  // Best current streak. Quota habits (3×/week) are scored in weeks rather than
+  // days, so rank on a common day scale but keep each habit's own unit in the copy.
+  const logsForStreak = data.habitLogs.map((l) => ({
+    habitId: l.habitId,
+    dayDate: l.dayDate,
+    completed: l.completed,
+  }));
+
+  let bestDays = 0;
+  let bestCount = 0;
+  let bestUnit: 'day' | 'week' = 'day';
   let bestHabit = '';
   for (const habit of data.habits) {
-    const streak = computeStreak(
-      data.habitLogs.map((l) => ({
-        habitId: l.habitId,
-        dayDate: l.dayDate,
-        completed: l.completed,
-      })),
-      habit.id
-    );
-    if (streak > bestStreak) {
-      bestStreak = streak;
+    const streak = computeStreak(logsForStreak, habit.id, data.today, habit.targetFrequency);
+    const asDays = streak.unit === 'week' ? streak.count * 7 : streak.count;
+    if (asDays > bestDays) {
+      bestDays = asDays;
+      bestCount = streak.count;
+      bestUnit = streak.unit;
       bestHabit = habit.name;
     }
   }
 
-  if (bestStreak >= 7) {
+  const streakNoun = `${bestUnit}${bestCount === 1 ? '' : 's'}`;
+  if (bestDays >= 7) {
     paragraphs.push(
-      `Your longest current streak is ${bestStreak} days on "${bestHabit}". That's not motivation — that's identity. You're someone who does this now.`
+      `Your longest current streak is ${bestCount} ${streakNoun} on "${bestHabit}". That's not motivation — that's identity. You're someone who does this now.`
     );
-  } else if (bestStreak >= 3) {
+  } else if (bestDays >= 3) {
     paragraphs.push(
-      `You're on a ${bestStreak}-day streak with "${bestHabit}". Keep going. The chain is forming.`
+      `You're on a ${bestCount}-${bestUnit} streak with "${bestHabit}". Keep going. The chain is forming.`
     );
   }
 

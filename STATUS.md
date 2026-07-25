@@ -36,16 +36,60 @@ is the bridge between daily practice and life aspirations.
   canonical package document is intentionally empty until topics are selected.
 - **Docs:** consolidated into a canonical `docs/` tree with Blume as the
   presentation layer.
-- **Product cleanup:** the unused arcs façade has been retired in favor of the
-  working side-quests surface. Legacy schema remains read-only for data safety.
-  Dashboard insights now use actual quest activity, compare-journeys exposes
-  only `PUBLIC` timelines, and trajectory month editing loads the selected
-  month's saved entry.
+- **Product cleanup (2026-07-25):** an audit found several surfaces that looked
+  like features but were not. Removed the arcs façade (table never written,
+  `/arcs` permanently empty, and it fed wrong numbers to the insights panel) and
+  five badges no evaluator could award. Fixed the day-boundary bug (`dayDate`
+  was resolved in UTC despite being documented user-local), made habit cadence
+  real, closed two privacy leaks, and wired two implemented-but-uncalled actions
+  (`syncQuestProgress`, `closeEra`). Detail in
+  [`docs/knowledge/learnings.md`](docs/knowledge/learnings.md).
 
 ## Active work
 
-- No active code change is blocked. Production deployment remains
-  operator-owned.
+- **Schema changes pending application (operator-owned).**
+  `drizzle/0003_visibility_and_timezone.sql` adds `Commitment.visibility`,
+  `UserQuest.visibility`, and `User.timezone`. Hand-written to match this repo's
+  convention. Applied to local `dev.db` only; **not applied to production**. The
+  visibility defaults are what stop existing commitments and quests being
+  published without consent, so this needs to land before the next deploy.
+- **`pnpm db:generate` is guarded and will refuse to run.**
+  `scripts/db-generate-guard.mjs` explains why and exits non-zero, because the
+  `drizzle/meta` snapshot only records migration 0000 while `drizzle/` holds four
+  — so drizzle-kit emits `CREATE TABLE` for tables that already exist in
+  production. Migrations here are hand-written. `pnpm db:generate:unsafe` still
+  reaches the raw command if you have rebaselined the snapshot; retire the guard
+  when you do. See [`docs/knowledge/learnings.md`](docs/knowledge/learnings.md) L12.
+
+## Routes with no inbound UI links (deliberate, not forgotten)
+
+Checked 2026-07-25. Routes are preserved by default per the fleet standard; these
+are parked with a reason rather than deleted.
+
+| Route | Why it has no links |
+| --- | --- |
+| `/timelines/recent` | Duplicates `/explore` (both list `PUBLIC` timelines by recency). `/explore` is the designated community surface and is deliberately hidden pending the quiz-funnel readout, so linking either would undercut that experiment. Also absent from `sitemap.ts`. Revisit with the funnel decision. |
+| `/compare` | Static hobby-vs-hobby SEO page, no user data. It is in `sitemap.ts` and indexable, so crawlers are its intended audience; internal links are optional. |
+| `/explore` | Intentionally hidden — see [`docs/product/discovery-funnel.md`](docs/product/discovery-funnel.md). |
+| `/hobbies`, `/journeys` | Same as `/explore`. Reachable via deep links, SEO, and quiz cross-links. |
+
+`/life-plan` was in this category and is now linked from the account dropdown: it
+is not a `/dashboard` duplicate (archetype, life balance, and the only surface
+rendering bucket-item quest chains) and it is `noindex`, so surfacing it does not
+touch the discovery experiment.
+
+**Resolved 2026-07-25:** user profiles are now in `sitemap.ts`. Only users with a
+username *and* at least one `PUBLIC` timeline are listed — an empty profile is a
+thin page, and `PRIVATE`/`UNLISTED` content is never advertised. `lastModified`
+tracks the newest public timeline update, the query is capped at 5000 rows, and it
+returns `[]` on failure so a database hiccup degrades the sitemap rather than
+500ing it and taking the static entries down with it.
+
+Private app routes stay out of the sitemap by design: `/daily`, `/dashboard`,
+`/trajectory`, `/commitments`, `/life-plan`, `/bucket-list`, and `/look-back` are
+all `noindex` and auth-gated, so listing them would point crawlers at a login
+redirect and contradict their own robots directive. `/search` is in the sitemap
+and is genuinely public — that one is consistent.
 
 ## Blockers
 
@@ -58,13 +102,22 @@ is the bridge between daily practice and life aspirations.
 
 ## Next steps
 
-1. Capture the 7-day PostHog quiz-funnel result, then freeze the winning
+1. Apply `drizzle/0003_visibility_and_timezone.sql` to dev and production.
+2. Capture the 7-day PostHog quiz-funnel result, then freeze the winning
    discovery path and pause feature development.
-2. Review and merge the content-flywheel branch after OpenSpec verification.
-3. Tighten the first-time user journey to a meaningful public timeline.
-4. Wire habits ↔ commitments (optional explicit link, no auto-link by default).
-5. Turn side quests / XP / badges into a coherent progression system only if
-   they improve hobby follow-through.
+3. Review and merge the content-flywheel branch after OpenSpec verification.
+4. **Make the journal an actual bridge.** `journalEntries` has no foreign key
+   beyond `userId`, so the product's headline claim is copy rather than code.
+   Adding an optional hobby/timeline/commitment reference to a journal entry is
+   the single highest-leverage change available: it makes the thesis true and
+   gives every other surface something to connect to. See
+   [`docs/product/overview.md`](docs/product/overview.md).
+5. Tighten the first-time user journey to a meaningful public timeline.
+6. Wire habits ↔ commitments (optional explicit link, no auto-link by default).
+7. Decide whether the social layer earns investment. `follows` is a vanity
+   counter — no follower list, no feed, and no notification of any kind exists
+   in the codebase, so a like, comment, or follow is silently discarded. Either
+   ship notifications or stop presenting these as social features.
 
 ## Unresolved questions
 
@@ -72,14 +125,22 @@ is the bridge between daily practice and life aspirations.
   the hidden surfaces need to be re-surfaced? (Blocked on PostHog readout.)
 - Should the content-flywheel canonical package document be populated before
   or after the branch merge? (Pending topic selection.)
-- **Trajectory feature** (built 2026-07-19): private monthly life-review
-  across Health/Finance/Knowledge/Relationships. Design in
-  [`docs/product/trajectory.md`](docs/product/trajectory.md), build plan in
-  [`docs/product/trajectory-build-plan.md`](docs/product/trajectory-build-plan.md).
-  Shipped to local dev: schema applied, `/trajectory` route + components,
-  daily ritual month-end nudge, nav link, unit tests (35 passing, coverage
-  above thresholds), e2e spec. Not yet deployed — production deploy is
-  operator-owned.
+- Should the `Arc` table and `UserQuest.arcId` be dropped? **Resolved 2026-07-25:
+  retained.** All arcs runtime code is gone; the columns stay to avoid a
+  destructive migration against production, which costs nothing at runtime. The
+  inaccurate justification has been corrected in
+  [`docs/architecture/data-model.md`](docs/architecture/data-model.md) — nothing
+  ever wrote `arcId`, so there is no legacy data behind it. Drop them only as part
+  of a deliberate schema tidy, never as a side effect of `db:generate`.
+- Should `dailyCheckins` be retired? `amCompleted`/`pmCompleted` nearly duplicate
+  "the matching journal entry is non-empty", but not exactly: writing an AM entry
+  in the evening leaves `amCompleted` false. Deriving would change what the AM/PM
+  rings mean, so this needs a product call rather than a refactor.
+
+Trajectory is built and documented in
+[`docs/product/trajectory.md`](docs/product/trajectory.md) (including the three
+pieces of its design that were deliberately not built). Not yet deployed —
+production deploy is operator-owned.
 
 ## Deploy fingerprint
 

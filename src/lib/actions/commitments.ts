@@ -5,6 +5,7 @@ import { revalidatePath } from 'next/cache';
 import { z } from 'zod';
 
 import { commitments, stamps, users } from '~/db/schema';
+import { dayKeyIn } from '~/lib/day';
 import {
   computeStreak,
   dayIndexFor,
@@ -17,13 +18,6 @@ import {
 import { parseStringArray } from '~/lib/utils';
 import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
-
-function todayStr(now: Date = new Date()): string {
-  const y = now.getFullYear();
-  const m = String(now.getMonth() + 1).padStart(2, '0');
-  const d = String(now.getDate()).padStart(2, '0');
-  return `${y}-${m}-${d}`;
-}
 
 const StartCommitmentSchema = z.object({
   hobbyName: z.string().min(1).max(80),
@@ -120,7 +114,14 @@ export async function logStamp(input: {
     return { success: false, error: 'This commitment is no longer active' };
   }
 
-  const dayDate = todayStr();
+  // Stamp against the user's own calendar day, not the server's. Reading the
+  // zone here rather than using `new Date()` locally keeps "one stamp per day"
+  // aligned with the day the user believes they are in.
+  const stamper = await db.query.users.findFirst({
+    where: eq(users.id, session.user.id),
+    columns: { timezone: true },
+  });
+  const dayDate = dayKeyIn(stamper?.timezone);
   const dayIndex = dayIndexFor(commitment.startDate, dayDate);
 
   // One stamp per day — enforced by unique index, but check first to give a
@@ -242,15 +243,21 @@ export async function getMyCommitments() {
 }
 
 /**
- * Fetch a profile owner's commitments + stamps for the public profile view.
- * Only active and completed commitments are shown; abandoned ones are hidden.
+ * Fetch a profile owner's commitments + stamps for the profile view.
+ *
+ * Abandoned commitments are always hidden. Beyond that, only commitments the
+ * user has explicitly marked public are returned — `includePrivate` is for the
+ * owner viewing their own profile, so they can see and toggle what visitors
+ * cannot. Never pass it for a visitor request.
  */
-export async function getPublicCommitmentsForUser(userId: string) {
+export async function getPublicCommitmentsForUser(userId: string, includePrivate = false) {
   const userCommitments = await db.query.commitments.findMany({
     where: and(eq(commitments.userId, userId)),
     orderBy: (c) => [desc(c.createdAt)],
   });
-  const visible = userCommitments.filter((c) => c.status !== 'abandoned');
+  const visible = userCommitments.filter(
+    (c) => c.status !== 'abandoned' && (includePrivate || c.visibility === 'public')
+  );
 
   const withStamps = await Promise.all(
     visible.map(async (c) => {
@@ -262,4 +269,40 @@ export async function getPublicCommitmentsForUser(userId: string) {
     })
   );
   return withStamps;
+}
+
+// ─── Profile visibility ─────────────────────────────────────────────────────
+
+/**
+ * Opt a commitment in or out of the owner's public profile.
+ *
+ * Commitments are private by default, so this is the only way one becomes
+ * visible to visitors.
+ */
+export async function setCommitmentVisibility(
+  commitmentId: string,
+  isPublic: boolean
+): Promise<{ success: boolean; error?: string }> {
+  const session = await getServerAuthSession();
+  if (!session?.user?.id) return { success: false, error: 'Not authenticated' };
+
+  const owned = await db.query.commitments.findFirst({
+    where: and(eq(commitments.id, commitmentId), eq(commitments.userId, session.user.id)),
+    columns: { id: true },
+  });
+  if (!owned) return { success: false, error: 'Commitment not found' };
+
+  await db
+    .update(commitments)
+    .set({ visibility: isPublic ? 'public' : 'private', updatedAt: new Date() })
+    .where(eq(commitments.id, commitmentId));
+
+  const me = await db.query.users.findFirst({
+    where: eq(users.id, session.user.id),
+    columns: { username: true },
+  });
+  if (me?.username) revalidatePath(`/u/${me.username}`);
+  revalidatePath('/commitments');
+
+  return { success: true };
 }

@@ -2,6 +2,7 @@ import { eq } from 'drizzle-orm';
 import { redirect } from 'next/navigation';
 
 import { DailyRitual } from '~/components/daily-ritual';
+import { TimezoneSync } from '~/components/timezone-sync';
 import { users } from '~/db/schema';
 import {
   createHabit,
@@ -16,6 +17,7 @@ import {
   saveJournalEntry,
   toggleHabitLog,
 } from '~/lib/actions/daily';
+import { dayKeyIn, isMorningIn } from '~/lib/day';
 import { buildJournalDateWindow } from '~/lib/journal';
 import { getActiveMonthEndNudge } from '~/lib/actions/trajectory';
 import { birthDateFromYear, buildLifeGrid } from '~/lib/mortality';
@@ -31,32 +33,27 @@ export default async function DailyPage() {
   const session = await getServerAuthSession();
   if (!session?.user) redirect('/login');
 
-  const today = new Date().toISOString().slice(0, 10);
-  const isMorning = new Date().getHours() < 12;
+  // The user's zone has to be resolved before "today" exists — every dayDate
+  // key below is user-local, so this one read cannot be parallelised with them.
+  const me = await db.query.users.findFirst({
+    where: eq(users.id, session.user.id),
+    columns: { birthYear: true, timezone: true },
+  });
+
+  const today = dayKeyIn(me?.timezone);
+  const isMorning = isMorningIn(me?.timezone);
   const journalDateWindow = buildJournalDateWindow(today);
 
-  const [
-    userHabits,
-    habitLogs,
-    allHabitLogs,
-    journalEntries,
-    checkin,
-    profile,
-    me,
-    trajectoryNudge,
-  ] = await Promise.all([
-    getHabits(),
-    getHabitLogsForDate(today),
-    getAllHabitLogs(),
-    getJournalEntriesForRange(journalDateWindow[0]!, today),
-    getDailyCheckin(today),
-    getUserProfile(),
-    db.query.users.findFirst({
-      where: eq(users.id, session.user.id),
-      columns: { birthYear: true },
-    }),
-    getActiveMonthEndNudge(),
-  ]);
+  const [userHabits, habitLogs, allHabitLogs, journalEntries, checkin, profile, trajectoryNudge] =
+    await Promise.all([
+      getHabits(),
+      getHabitLogsForDate(today),
+      getAllHabitLogs(),
+      getJournalEntriesForRange(journalDateWindow[0]!, today),
+      getDailyCheckin(today),
+      getUserProfile(),
+      getActiveMonthEndNudge(),
+    ]);
 
   const journalEntry = journalEntries.find((entry) => entry.dayDate === today) ?? null;
 
@@ -67,25 +64,28 @@ export default async function DailyPage() {
   const weeksRemaining = birth ? buildLifeGrid(birth, new Set()).weeksRemaining : null;
 
   return (
-    <DailyRitual
-      firstName={firstName}
-      today={today}
-      isMorning={isMorning}
-      weeksRemaining={weeksRemaining}
-      habits={userHabits}
-      habitLogs={habitLogs}
-      allHabitLogs={allHabitLogs}
-      journalEntry={journalEntry}
-      journalEntries={journalEntries}
-      checkin={checkin}
-      trajectoryNudge={trajectoryNudge}
-      actions={{
-        createHabit,
-        deleteHabit,
-        toggleHabitLog,
-        saveJournalEntry,
-        saveDailyCheckin,
-      }}
-    />
+    <>
+      <TimezoneSync storedTimezone={me?.timezone ?? null} />
+      <DailyRitual
+        firstName={firstName}
+        today={today}
+        isMorning={isMorning}
+        weeksRemaining={weeksRemaining}
+        habits={userHabits}
+        habitLogs={habitLogs}
+        allHabitLogs={allHabitLogs}
+        journalEntry={journalEntry}
+        journalEntries={journalEntries}
+        checkin={checkin}
+        trajectoryNudge={trajectoryNudge}
+        actions={{
+          createHabit,
+          deleteHabit,
+          toggleHabitLog,
+          saveJournalEntry,
+          saveDailyCheckin,
+        }}
+      />
+    </>
   );
 }

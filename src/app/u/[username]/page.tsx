@@ -12,7 +12,10 @@ import { LifeGrid } from '~/components/life-grid';
 import { SuggestionsPanel } from '~/components/suggestions-panel';
 import { Button } from '~/components/ui/button';
 import { bucketListItems, follows, timelines, userQuests, users } from '~/db/schema';
-import { getPublicCommitmentsForUser } from '~/lib/actions/commitments';
+import { ProfileShareButton } from '~/components/profile-share-button';
+import { ProfileVisibilityToggle } from '~/components/profile-visibility-toggle';
+import { getPublicCommitmentsForUser, setCommitmentVisibility } from '~/lib/actions/commitments';
+import { setQuestVisibility } from '~/lib/actions/user-quests';
 import type { StampRow } from '~/lib/commitments';
 import { BUCKET_ITEM_CATEGORIES } from '~/lib/famous-bucket-lists';
 import { getCategoryForHobby } from '~/lib/hobbies';
@@ -29,9 +32,25 @@ interface Props {
 
 export async function generateMetadata({ params }: Props) {
   const { username } = await params;
+  const title = `@${username} — SignificantHobbies`;
+  const description = `View @${username}'s hobby journey on SignificantHobbies — their timelines, hobby cloud, and badges.`;
+  // Without an explicit openGraph block the shared card falls back to the root
+  // layout's site-wide title and description, so every profile looked identical
+  // when pasted into a chat. The image still comes from opengraph-image.tsx.
   return {
-    title: `@${username} — SignificantHobbies`,
-    description: `View @${username}'s hobby journey on SignificantHobbies — their timelines, hobby cloud, and badges.`,
+    title,
+    description,
+    openGraph: {
+      type: 'profile' as const,
+      title,
+      description,
+      url: `/u/${username}`,
+    },
+    twitter: {
+      card: 'summary_large_image' as const,
+      title,
+      description,
+    },
   };
 }
 
@@ -108,7 +127,7 @@ export default async function ProfilePage({ params }: Props) {
     .orderBy(desc(bucketListItems.createdAt));
 
   // Commitments + stamps for the life grid and commitments section.
-  const profileCommitments = await getPublicCommitmentsForUser(user.id);
+  const profileCommitments = await getPublicCommitmentsForUser(user.id, isOwner);
   const birth = birthDateFromYear(user.birthYear);
   const stampedWeeks = new Set<number>();
   for (const c of profileCommitments) {
@@ -163,6 +182,9 @@ export default async function ProfilePage({ params }: Props) {
   // Completed quests — queried directly from the userQuests table so this works
   // for any public profile (the getCompletedQuests() action is auth-scoped to
   // the logged-in user only).
+  //
+  // Quests are private by default. Visitors see only what the owner opted in;
+  // the owner sees all of theirs so they can tell what is published and toggle it.
   const completedQuestRows = await db
     .select({
       id: userQuests.id,
@@ -171,9 +193,16 @@ export default async function ProfilePage({ params }: Props) {
       emoji: userQuests.emoji,
       description: userQuests.description,
       completedAt: userQuests.completedAt,
+      visibility: userQuests.visibility,
     })
     .from(userQuests)
-    .where(and(eq(userQuests.userId, user.id), eq(userQuests.status, 'completed')))
+    .where(
+      and(
+        eq(userQuests.userId, user.id),
+        eq(userQuests.status, 'completed'),
+        ...(isOwner ? [] : [eq(userQuests.visibility, 'public')])
+      )
+    )
     .orderBy(desc(userQuests.completedAt));
 
   // Years lived — evidence of time on earth.
@@ -294,6 +323,7 @@ export default async function ProfilePage({ params }: Props) {
                 </Button>
               </Link>
             )}
+            <ProfileShareButton username={username} displayName={displayName} />
           </div>
         </div>
       </div>
@@ -446,9 +476,18 @@ export default async function ProfilePage({ params }: Props) {
                       <h3 className="font-serif text-sm font-semibold text-foreground leading-snug">
                         {q.title}
                       </h3>
-                      <span className="mt-1.5 inline-flex items-center gap-1 rounded-full border border-[oklch(0.82_0.13_88/0.3)] bg-[oklch(0.82_0.13_88/0.08)] px-2 py-0.5 text-[10px] font-medium text-[oklch(0.82_0.13_88)]">
-                        Completed
-                      </span>
+                      <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
+                        <span className="inline-flex items-center gap-1 rounded-full border border-[oklch(0.82_0.13_88/0.3)] bg-[oklch(0.82_0.13_88/0.08)] px-2 py-0.5 text-[10px] font-medium text-[oklch(0.82_0.13_88)]">
+                          Completed
+                        </span>
+                        {isOwner && (
+                          <ProfileVisibilityToggle
+                            isPublic={q.visibility === 'public'}
+                            onChange={setQuestVisibility.bind(null, q.id)}
+                            label={q.title}
+                          />
+                        )}
+                      </div>
                     </div>
                   </div>
                 </SpotlightCard>
@@ -484,16 +523,24 @@ export default async function ProfilePage({ params }: Props) {
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
               {profileCommitments.slice(0, 4).map((c) => (
-                <CommitmentCard
-                  key={c.id}
-                  id={c.id}
-                  hobbyName={c.hobbyName}
-                  goalDays={c.goalDays}
-                  status={c.status}
-                  startDate={c.startDate}
-                  stamps={c.stamps as StampRow[]}
-                  canAbandon={false}
-                />
+                <div key={c.id} className="space-y-1.5">
+                  {isOwner && (
+                    <ProfileVisibilityToggle
+                      isPublic={c.visibility === 'public'}
+                      onChange={setCommitmentVisibility.bind(null, c.id)}
+                      label={`${c.hobbyName} commitment`}
+                    />
+                  )}
+                  <CommitmentCard
+                    id={c.id}
+                    hobbyName={c.hobbyName}
+                    goalDays={c.goalDays}
+                    status={c.status}
+                    startDate={c.startDate}
+                    stamps={c.stamps as StampRow[]}
+                    canAbandon={false}
+                  />
+                </div>
               ))}
             </div>
           </div>

@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 
+import { getQuestProgress, syncQuestProgress } from '~/lib/actions/user';
 import { SIDE_QUESTS } from '~/lib/side-quests';
 
 const STORAGE_KEY = 'sh-side-quests';
@@ -25,6 +26,18 @@ function readStorage(): QuestProgress {
 
 function writeStorage(progress: QuestProgress) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+}
+
+/**
+ * Mirror local progress to the database. No-ops when signed out.
+ *
+ * localStorage stays the source of truth for the signed-out board; this makes
+ * the signed-in copy durable so clearing site data does not wipe it.
+ */
+function persist(progress: QuestProgress) {
+  void syncQuestProgress(progress.completed, progress.earnedBadges).catch(() => {
+    // Offline or signed out — localStorage still holds the progress.
+  });
 }
 
 function evaluateQuestBadges(completedQuestIds: string[]): string[] {
@@ -68,8 +81,40 @@ export function useQuestProgress() {
   });
   const [newBadges, setNewBadges] = useState<string[]>([]);
 
+  // Hydrate from localStorage first (instant, works signed out), then reconcile
+  // with the server copy. Completions are unioned so a cleared cache recovers
+  // from the database and a signed-out session's progress is not lost on login.
   useEffect(() => {
-    setProgress(readStorage());
+    const local = readStorage();
+    setProgress(local);
+
+    let cancelled = false;
+    void getQuestProgress()
+      .then((remote) => {
+        if (cancelled) return;
+        const merged = Array.from(new Set([...local.completed, ...remote.completedQuests]));
+        if (
+          merged.length === local.completed.length &&
+          merged.length === remote.completedQuests.length
+        ) {
+          return;
+        }
+        const next: QuestProgress = {
+          completed: merged,
+          earnedBadges: evaluateQuestBadges(merged),
+          startedAt: local.startedAt || new Date().toISOString(),
+        };
+        writeStorage(next);
+        setProgress(next);
+        persist(next);
+      })
+      .catch(() => {
+        // Signed out or offline — local progress stands.
+      });
+
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   const completeQuest = useCallback((questId: string) => {
@@ -90,6 +135,7 @@ export function useQuestProgress() {
         startedAt: prev.startedAt || new Date().toISOString(),
       };
       writeStorage(next);
+      persist(next);
       return next;
     });
   }, []);
@@ -100,6 +146,7 @@ export function useQuestProgress() {
       const allEarned = evaluateQuestBadges(completed);
       const next: QuestProgress = { ...prev, completed, earnedBadges: allEarned };
       writeStorage(next);
+      persist(next);
       return next;
     });
   }, []);

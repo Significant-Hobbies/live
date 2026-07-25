@@ -1,3 +1,4 @@
+import { shiftDayKey } from '~/lib/day';
 import { getCategoryForHobby } from '~/lib/hobbies';
 
 // ─── Types ─────────────────────────────────────────────────────────────────
@@ -53,6 +54,8 @@ export type UserData = {
     label: string;
     hobbies: Array<{ name: string }>;
   }>;
+  /** Today as a user-local YYYY-MM-DD key — streaks are scored against it. */
+  today: string;
 };
 
 // ─── Helpers ───────────────────────────────────────────────────────────────
@@ -96,8 +99,18 @@ function topCategory(quests: Array<{ sourceHobby: string | null; type: string }>
   return best;
 }
 
-/** Compute the current habit streak + longest streak from habit logs. */
-function computeStreaks(logs: Array<{ dayDate: string; completed: boolean }>): {
+/**
+ * Compute the current habit streak + longest streak from habit logs.
+ *
+ * `today` is a user-local day key supplied by the caller. Day arithmetic goes
+ * through `shiftDayKey`, which is pure string/UTC math — the previous version
+ * parsed `"<key>T00:00:00"` in the *server's* local zone and then serialised
+ * back through `toISOString()`, so the day could shift by one either way.
+ */
+function computeStreaks(
+  logs: Array<{ dayDate: string; completed: boolean }>,
+  today: string
+): {
   current: number;
   longest: number;
 } {
@@ -107,16 +120,10 @@ function computeStreaks(logs: Array<{ dayDate: string; completed: boolean }>): {
 
   if (completedDays.length === 0) return { current: 0, longest: 0 };
 
-  const oneDay = (d: string): string => {
-    const dt = new Date(d + 'T00:00:00');
-    dt.setDate(dt.getDate() + 1);
-    return dt.toISOString().slice(0, 10);
-  };
-
   let longest = 1;
   let run = 1;
   for (let i = 1; i < completedDays.length; i++) {
-    if (oneDay(completedDays[i - 1]) === completedDays[i]) {
+    if (shiftDayKey(completedDays[i - 1]!, 1) === completedDays[i]) {
       run += 1;
       longest = Math.max(longest, run);
     } else {
@@ -125,15 +132,12 @@ function computeStreaks(logs: Array<{ dayDate: string; completed: boolean }>): {
   }
 
   // Current streak: walk back from today.
-  const today = new Date().toISOString().slice(0, 10);
   const set = new Set(completedDays);
   let current = 0;
   let cursor = today;
   while (set.has(cursor)) {
     current += 1;
-    const dt = new Date(cursor + 'T00:00:00');
-    dt.setDate(dt.getDate() - 1);
-    cursor = dt.toISOString().slice(0, 10);
+    cursor = shiftDayKey(cursor, -1);
   }
 
   return { current, longest };
@@ -229,8 +233,8 @@ function categorySpeedInsight(completed: UserData['completedQuests']): Behaviora
   };
 }
 
-function habitStreakInsight(logs: UserData['habitLogs']): BehavioralInsight | null {
-  const { current, longest } = computeStreaks(logs);
+function habitStreakInsight(logs: UserData['habitLogs'], today: string): BehavioralInsight | null {
+  const { current, longest } = computeStreaks(logs, today);
   if (current <= 0 && longest <= 0) return null;
   const headline =
     current > 0
@@ -381,7 +385,7 @@ export function computeBehavioralInsights(data: UserData): BehavioralInsight[] {
     nostalgicPhaseInsight(data.completedQuests),
     completionRateInsight(data),
     categorySpeedInsight(data.completedQuests),
-    habitStreakInsight(data.habitLogs),
+    habitStreakInsight(data.habitLogs, data.today),
     questHabitPracticeInsight(data),
     milestoneInsight(data.completedQuests),
     abandonedVsCompletedInsight(data),

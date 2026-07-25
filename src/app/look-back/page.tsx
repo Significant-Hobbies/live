@@ -22,6 +22,7 @@ import {
   userQuests,
   users,
 } from '~/db/schema';
+import { dayKeyIn } from '~/lib/day';
 import { generateLookBack, type LookBackData } from '~/lib/look-back';
 import { parseJSONColumn } from '~/lib/utils';
 import type { Phase, TimelinePin } from '~/lib/types';
@@ -52,7 +53,7 @@ export default async function LookBackPage() {
   ] = await Promise.all([
     db.query.users.findFirst({
       where: eq(users.id, session.user.id),
-      columns: { name: true, creed: true, birthYear: true },
+      columns: { name: true, creed: true, birthYear: true, timezone: true },
     }),
     db.select().from(timelines).where(eq(timelines.userId, session.user.id)),
     db
@@ -93,6 +94,7 @@ export default async function LookBackPage() {
     name: me?.name ?? session.user.name ?? null,
     creed: null, // Don't repeat the creed in the look-back — it's on the dashboard
     birthYear: me?.birthYear ?? null,
+    today: dayKeyIn(me?.timezone),
     phases: allPhases,
     pins: allPins,
     completedQuests: completedQuestRows.map((q) => ({
@@ -116,6 +118,7 @@ export default async function LookBackPage() {
       id: h.id,
       name: h.name,
       icon: h.icon,
+      targetFrequency: h.targetFrequency,
       createdAt: h.createdAt,
     })),
     habitLogs: allHabitLogs.map((l) => ({

@@ -92,9 +92,20 @@ function ExploreTimelineCard({ timeline }: { timeline: TimelineData & { likeCoun
     ).values()
   ).slice(0, 3);
 
+  const profileHref = timeline.user?.username ? `/u/${timeline.user.username}` : null;
+
   return (
-    <Link href={getTimelineUrl(timeline)} prefetch={false} className="block h-full">
-      <CardHoverEffect className="flex h-full flex-col p-5 transition-transform hover:-translate-y-0.5 hover:shadow-sm">
+    <div className="relative h-full">
+      {/* The card body links to the timeline via an overlay rather than wrapping
+          the whole card, so the @username inside can be its own link — nested
+          anchors are invalid HTML, which is why it used to be dead text. */}
+      <Link
+        href={getTimelineUrl(timeline)}
+        prefetch={false}
+        aria-label={timeline.title ?? 'Hobby Timeline'}
+        className="absolute inset-0 z-0 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/50"
+      />
+      <CardHoverEffect className="pointer-events-none flex h-full flex-col p-5 transition-transform hover:-translate-y-0.5 hover:shadow-sm">
         {/* Phase color strip */}
         {phases.length > 0 && (
           <div className="mb-4 flex h-1.5 w-full overflow-hidden rounded-full gap-px">
@@ -112,7 +123,18 @@ function ExploreTimelineCard({ timeline }: { timeline: TimelineData & { likeCoun
             <h3 className="font-semibold leading-tight text-foreground transition-colors group-hover:text-foreground">
               {timeline.title ?? 'Hobby Timeline'}
             </h3>
-            {username && <p className="mt-1 text-xs text-muted-foreground/60">@{username}</p>}
+            {username &&
+              (profileHref ? (
+                <Link
+                  href={profileHref}
+                  prefetch={false}
+                  className="pointer-events-auto relative z-10 mt-1 inline-block text-xs text-muted-foreground/60 underline decoration-transparent underline-offset-2 transition-colors hover:text-foreground hover:decoration-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/50"
+                >
+                  @{username}
+                </Link>
+              ) : (
+                <p className="mt-1 text-xs text-muted-foreground/60">@{username}</p>
+              ))}
           </div>
           <div className="shrink-0 rounded-lg border border-border bg-card/40 px-2 py-1 text-right">
             <div className="text-[10px] font-semibold text-muted-foreground/60">Span</div>
@@ -210,7 +232,7 @@ function ExploreTimelineCard({ timeline }: { timeline: TimelineData & { likeCoun
           </span>
         </div>
       </CardHoverEffect>
-    </Link>
+    </div>
   );
 }
 
