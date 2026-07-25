@@ -99,6 +99,38 @@ test.describe('authenticated surfaces', () => {
     await expect(authedPage.getByText(/1\/\d+ steps done/).first()).toBeVisible();
   });
 
+  test('the creed can be written, and reaches the surfaces that render it', async ({
+    authedPage,
+  }) => {
+    // `updateCreed` had zero callers, so users.creed was NULL for everyone and
+    // the dashboard heading, the public-profile quote and the look-back
+    // narrative all permanently took their fallback branch — for the field the
+    // code calls "the emotional anchor of the product".
+    //
+    // The value is unique per run on purpose. This suite shares dev.db with
+    // anything else driving localhost:3000, so a colliding writer shows up as an
+    // obvious diff rather than a silent pass.
+    const creed = `I am someone who finishes what they start. (${Date.now()})`;
+
+    await authedPage.goto('/settings');
+    const field = authedPage.getByLabel('Your creed');
+    await expect(field).toBeVisible();
+    await field.fill(creed);
+    await authedPage.getByRole('button', { name: 'Save changes' }).click();
+
+    // Wait for the form's own success signal before navigating. It redirects to
+    // the public profile once both actions resolve; navigating early cancels the
+    // in-flight server action and the write is silently lost.
+    await authedPage.waitForURL(/\/u\//);
+
+    // Persisted, not just echoed back by local state.
+    await authedPage.goto('/settings');
+    await expect(authedPage.getByLabel('Your creed')).toHaveValue(creed);
+
+    await authedPage.goto('/dashboard');
+    await expect(authedPage.getByText(creed).first()).toBeVisible();
+  });
+
   test('trajectory renders all four life buckets', async ({ authedPage }) => {
     await authedPage.goto('/trajectory');
     for (const bucket of ['Health', 'Finance', 'Knowledge', 'Relationships']) {

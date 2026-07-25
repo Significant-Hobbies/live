@@ -31,6 +31,7 @@ export default async function SettingsPage() {
       username: true,
       bio: true,
       website: true,
+      creed: true,
     },
   });
 
@@ -57,6 +58,7 @@ export default async function SettingsPage() {
           initialName={user.name ?? ''}
           initialBio={user.bio ?? ''}
           initialWebsite={user.website ?? ''}
+          initialCreed={user.creed ?? ''}
           username={user.username ?? ''}
         />
       </SpotlightCard>
