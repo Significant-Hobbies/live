@@ -39,16 +39,6 @@ export async function setUsername(username: string, birthYear?: number) {
   return user;
 }
 
-export async function getMyProfile() {
-  const session = await getServerAuthSession();
-  if (!session?.user?.id) return null;
-
-  return db.query.users.findFirst({
-    where: eq(users.id, session.user.id),
-    columns: { id: true, name: true, username: true, image: true },
-  });
-}
-
 export async function toggleFollow(
   targetUserId: string
 ): Promise<{ following: boolean; followerCount: number }> {

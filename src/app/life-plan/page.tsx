@@ -326,6 +326,7 @@ export default async function LifePlanPage() {
                   status={item.status}
                   visibility={item.visibility}
                   title={item.title}
+                  targetYear={item.targetYear}
                 />
               </div>
             ))}

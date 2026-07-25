@@ -197,6 +197,16 @@ export async function completeUserQuest(userQuestPkId: string): Promise<{
 
       pinAdded = true;
       revalidatePath(`/timeline/${quest.sourceTimelineId}`);
+      // Pins render on the public timeline too. `addPin` used to revalidate that
+      // path and has been deleted (quest completion is now the only writer, so
+      // pins are earned rather than hand-authored) — so this has to carry it.
+      if (timeline.slug) {
+        const owner = await db.query.users.findFirst({
+          where: eq(users.id, session.user.id),
+          columns: { username: true },
+        });
+        if (owner?.username) revalidatePath(`/u/${owner.username}/${timeline.slug}`);
+      }
     }
   }
 

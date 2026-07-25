@@ -12,7 +12,7 @@ import { test as base, type Page } from '@playwright/test';
  * logged-in surface was asserted only via its unauthenticated redirect.
  */
 
-export const TEST_USER = {
+const TEST_USER = {
   email: 'e2e-authenticated@significanthobbies.test',
   password: 'e2e-test-password-not-a-secret',
   name: 'E2E Tester',
@@ -20,7 +20,7 @@ export const TEST_USER = {
 } as const;
 
 /** True when the app is running with test auth enabled. */
-export async function testAuthAvailable(page: Page): Promise<boolean> {
+async function testAuthAvailable(page: Page): Promise<boolean> {
   const res = await page.request.post('/api/auth/sign-in/email', {
     data: { email: TEST_USER.email, password: 'deliberately-wrong' },
     failOnStatusCode: false,
@@ -33,7 +33,7 @@ export async function testAuthAvailable(page: Page): Promise<boolean> {
  * Ensures the test user exists, then signs in. Idempotent: sign-up is expected
  * to fail with "already exists" on every run after the first.
  */
-export async function signInTestUser(page: Page): Promise<void> {
+async function signInTestUser(page: Page): Promise<void> {
   await page.request.post('/api/auth/sign-up/email', {
     data: {
       email: TEST_USER.email,

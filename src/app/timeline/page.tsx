@@ -5,6 +5,7 @@ import { redirect } from 'next/navigation';
 
 import { CardHoverEffect, GridBackground, SpotlightCard } from '~/components/aceternity';
 import { TimelineCard } from '~/components/timeline-card';
+import { TimelineDeleteButton } from '~/components/timeline-delete-button';
 import { Button } from '~/components/ui/button';
 import { timelines } from '~/db/schema';
 import { loginPath } from '~/lib/auth-routing';
@@ -88,6 +89,7 @@ export default async function MyTimelinesPage() {
             {timelineList.map((timeline) => (
               <SpotlightCard key={timeline.id} className="shadow-soft">
                 <TimelineCard timeline={timeline} showVisibility={true} />
+                <TimelineDeleteButton timelineId={timeline.id} title={timeline.title} />
               </SpotlightCard>
             ))}
           </div>

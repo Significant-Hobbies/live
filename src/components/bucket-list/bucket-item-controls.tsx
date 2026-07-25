@@ -6,6 +6,7 @@ import { useState, useTransition } from 'react';
 
 import {
   removeBucketListItem,
+  updateBucketListItem,
   updateBucketListItemStatus,
   updateBucketListItemVisibility,
 } from '~/lib/actions/bucket-list';
@@ -18,6 +19,7 @@ interface Props {
   status: string;
   visibility: string;
   title: string;
+  targetYear: number | null;
 }
 
 const STATUS_LABEL: Record<ItemStatus, string> = {
@@ -43,10 +45,31 @@ const STATUSES: ItemStatus[] = ['planned', 'in_progress', 'done'];
  *   permanently empty for every user.
  * - Nothing could be deleted, so a mistaken "Add to my list" was permanent.
  */
-export function BucketItemControls({ id, status, visibility, title }: Props) {
+export function BucketItemControls({ id, status, visibility, title, targetYear }: Props) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const [confirmingDelete, setConfirmingDelete] = useState(false);
+  const [year, setYear] = useState(targetYear ? String(targetYear) : '');
+
+  /**
+   * `targetYear` is rendered on /life-plan ("by 2030") but was unreachable:
+   * `addBucketListItem` accepts it and `AddToMyListButton` never passes it, and
+   * `updateBucketListItem` — the only other writer — had no caller. So the
+   * display could never fire for anyone.
+   */
+  function commitYear() {
+    const trimmed = year.trim();
+    const parsed = trimmed === '' ? null : Number(trimmed);
+    if (parsed !== null && (!Number.isInteger(parsed) || parsed < 1900 || parsed > 2200)) {
+      setYear(targetYear ? String(targetYear) : '');
+      return;
+    }
+    if (parsed === targetYear) return;
+    startTransition(async () => {
+      await updateBucketListItem(id, { targetYear: parsed });
+      router.refresh();
+    });
+  }
 
   const isPublic = visibility === 'public';
   const current = (STATUSES as string[]).includes(status) ? (status as ItemStatus) : 'planned';
@@ -99,6 +122,28 @@ export function BucketItemControls({ id, status, visibility, title }: Props) {
           </button>
         ))}
       </div>
+
+      {/* Target year — a soft deadline, blank means "someday". */}
+      <label className="flex items-center gap-1.5 text-[11px] text-muted-foreground">
+        <span>by</span>
+        <input
+          type="text"
+          inputMode="numeric"
+          value={year}
+          onChange={(e) => setYear(e.target.value.replace(/[^0-9]/g, '').slice(0, 4))}
+          onBlur={commitYear}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              e.preventDefault();
+              commitYear();
+            }
+          }}
+          disabled={isPending}
+          placeholder="someday"
+          aria-label={`Target year for ${title}`}
+          className="w-16 rounded-md border border-transparent bg-transparent px-1 py-0.5 text-center tabular-nums text-foreground transition-colors placeholder:text-subtle hover:border-border focus:border-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/50 disabled:opacity-50"
+        />
+      </label>
 
       <span className="ml-auto flex items-center gap-2">
         {/* Visibility — the only way an item reaches the public profile. */}

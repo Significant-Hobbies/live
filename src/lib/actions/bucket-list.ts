@@ -290,15 +290,3 @@ export async function updateBucketListItemVisibility(
   await revalidateItemSurfaces(session.user.id);
   return { success: true };
 }
-
-export type BucketListItem = typeof bucketListItems.$inferSelect;
-
-export async function getUserBucketList(): Promise<BucketListItem[]> {
-  const session = await getServerAuthSession();
-  if (!session?.user?.id) return [];
-  return db
-    .select()
-    .from(bucketListItems)
-    .where(eq(bucketListItems.userId, session.user.id))
-    .orderBy(desc(bucketListItems.createdAt));
-}

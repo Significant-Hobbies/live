@@ -20,7 +20,7 @@ interface HabitLogLite {
  * - `quota`    — N completions per week, any days. Streaks count whole weeks,
  *                because "consecutive days" is meaningless for a 3x/week habit.
  */
-export type HabitCadence = 'daily' | 'weekdays' | 'quota';
+type HabitCadence = 'daily' | 'weekdays' | 'quota';
 
 export interface HabitFrequencyMeta {
   label: string;
@@ -29,7 +29,7 @@ export interface HabitFrequencyMeta {
   weeklyTarget: number;
 }
 
-export const HABIT_FREQUENCIES: Record<string, HabitFrequencyMeta> = {
+const HABIT_FREQUENCIES: Record<string, HabitFrequencyMeta> = {
   daily: { label: 'Every day', cadence: 'daily', weeklyTarget: 7 },
   weekdays: { label: 'Weekdays', cadence: 'weekdays', weeklyTarget: 5 },
   '3x_week': { label: '3× / week', cadence: 'quota', weeklyTarget: 3 },
@@ -52,7 +52,7 @@ export function isValidFrequency(value: string | null | undefined): boolean {
   return !!value && value in HABIT_FREQUENCIES;
 }
 
-export type StreakUnit = 'day' | 'week';
+type StreakUnit = 'day' | 'week';
 
 export interface HabitStreak {
   count: number;
