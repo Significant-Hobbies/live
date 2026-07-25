@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { redirect } from 'next/navigation';
 
 import { GridBackground, SpotlightCard } from '~/components/aceternity';
+import { BucketItemControls } from '~/components/bucket-list/bucket-item-controls';
 import { QuestChainCard } from '~/components/bucket-list/quest-chain-card';
 import { Whale } from '~/components/whale';
 import { bucketListItems, timelines } from '~/db/schema';
@@ -103,6 +104,10 @@ export default async function LifePlanPage() {
   const bucketDone = rawBucketItems.filter((i) => i.status === 'done');
   const bucketInProgress = rawBucketItems.filter((i) => i.status === 'in_progress');
   const bucketPlanned = rawBucketItems.filter((i) => i.status === 'planned');
+  // "Ahead of you" means everything not finished. Before status was reachable
+  // this could only ever be the planned set; now an in-progress item keeps its
+  // quest chain and its controls instead of vanishing into a bare list.
+  const bucketAhead = [...bucketInProgress, ...bucketPlanned];
 
   for (const item of rawBucketItems) {
     const cat = item.category ?? 'uncategorized';
@@ -274,7 +279,9 @@ export default async function LifePlanPage() {
             ) : (
               <p className="text-sm text-subtle">
                 Nothing in progress yet.{' '}
-                <Link href="/dashboard" className="text-foreground hover:underline">
+                {/* Was /dashboard, which does not render bucket items at all. The
+                    controls that move an item forward are further down this page. */}
+                <Link href="#ahead" className="text-foreground hover:underline">
                   Move something forward →
                 </Link>
               </p>
@@ -284,10 +291,12 @@ export default async function LifePlanPage() {
       </section>
 
       {/* ── Future (bucket list as quest chains) ────────────────── */}
-      {totalPlanned > 0 && (
+      {bucketAhead.length > 0 && (
         <section className="space-y-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-lg font-semibold text-foreground">Ahead of you</h2>
+            <h2 id="ahead" className="scroll-mt-20 text-lg font-semibold text-foreground">
+              Ahead of you
+            </h2>
             <Link
               href="/dashboard"
               className="text-sm text-primary hover:text-lumi-600 transition-colors"
@@ -299,7 +308,7 @@ export default async function LifePlanPage() {
             Each dream, broken into steps you can start today.
           </p>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {bucketPlanned.map((item) => (
+            {bucketAhead.map((item) => (
               <div key={item.id}>
                 <QuestChainCard
                   bucketItemId={item.id}
@@ -311,6 +320,12 @@ export default async function LifePlanPage() {
                     status: q.status,
                     title: q.title,
                   }))}
+                />
+                <BucketItemControls
+                  id={item.id}
+                  status={item.status}
+                  visibility={item.visibility}
+                  title={item.title}
                 />
               </div>
             ))}

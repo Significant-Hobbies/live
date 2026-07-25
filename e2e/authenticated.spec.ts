@@ -131,6 +131,47 @@ test.describe('authenticated surfaces', () => {
     await expect(authedPage.getByText(creed).first()).toBeVisible();
   });
 
+  test('a bucket item can be advanced, published, and deleted', async ({ authedPage }) => {
+    // All four item mutations existed with zero callers, so items were
+    // write-once: 'in_progress' was unreachable (leaving /life-plan's "In
+    // progress" panel permanently empty), nothing could be made public (leaving
+    // the profile's bucket-list block empty for every user), and nothing could
+    // be removed. They also revalidated only /dashboard, which does not render
+    // bucket items at all.
+    // A different source list from the quest-lifecycle test above. The suite runs
+    // fullyParallel against one dev.db, so two tests adding the same item title
+    // would each see the other's row and the delete assertion would never settle.
+    await authedPage.goto('/bucket-lists/richard-branson');
+    await authedPage.getByRole('button', { name: '+ Add to my list' }).first().click();
+    await expect(authedPage.getByText('Added to your bucket list').first()).toBeVisible();
+
+    await authedPage.goto('/life-plan');
+
+    // Scope every interaction to one item's own control group. The test user may
+    // already own other items, so unscoped `.first()` lookups would drift.
+    const controls = authedPage.getByRole('group', { name: /^Controls for / }).first();
+    await expect(controls, 'a bucket item should expose owner controls').toBeVisible();
+    const label = (await controls.getAttribute('aria-label')) as string;
+    const scoped = authedPage.getByRole('group', { name: label });
+
+    // Advance it — this status was previously unreachable. Re-resolve through the
+    // labelled locator after each router.refresh() so the handle stays attached.
+    await scoped.getByRole('button', { name: 'In progress' }).click();
+    await expect(scoped.getByRole('button', { name: 'In progress' })).toHaveAttribute(
+      'aria-pressed',
+      'true'
+    );
+
+    // Publish it — the only path to the public profile's bucket-list block.
+    await scoped.getByRole('button', { name: 'Private' }).click();
+    await expect(scoped.getByRole('button', { name: 'Public' })).toBeVisible();
+
+    // And remove it, behind a confirm step.
+    await scoped.getByRole('button', { name: /^Remove / }).click();
+    await scoped.getByRole('button', { name: 'Delete', exact: true }).click();
+    await expect(scoped, 'the deleted item should be gone').toHaveCount(0);
+  });
+
   test('trajectory renders all four life buckets', async ({ authedPage }) => {
     await authedPage.goto('/trajectory');
     for (const bucket of ['Health', 'Finance', 'Knowledge', 'Relationships']) {
