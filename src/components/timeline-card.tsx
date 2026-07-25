@@ -32,9 +32,7 @@ export function TimelineCard({ timeline, showVisibility = false, likeCount }: Pr
           <h3 className="font-medium text-foreground group-hover:text-growth transition-colors leading-tight">
             {timeline.title ?? 'Hobby Timeline'}
           </h3>
-          {showVisibility && (
-            <VisIcon className="h-3.5 w-3.5 text-muted-foreground/60 shrink-0 mt-0.5" />
-          )}
+          {showVisibility && <VisIcon className="h-3.5 w-3.5 text-subtle shrink-0 mt-0.5" />}
         </div>
 
         {/* Phase badges */}
@@ -49,10 +47,7 @@ export function TimelineCard({ timeline, showVisibility = false, likeCount }: Pr
             </Badge>
           ))}
           {phases.length > 4 && (
-            <Badge
-              variant="outline"
-              className="border-border text-xs text-muted-foreground/60 py-0"
-            >
+            <Badge variant="outline" className="border-border text-xs text-subtle py-0">
               +{phases.length - 4}
             </Badge>
           )}
@@ -60,7 +55,7 @@ export function TimelineCard({ timeline, showVisibility = false, likeCount }: Pr
 
         {/* Stats */}
         <div className="flex items-center justify-between">
-          <p className="text-xs text-muted-foreground/60">
+          <p className="text-xs text-subtle">
             {phases.length} phases · {totalHobbies} hobbies
           </p>
           {likeCount !== undefined && likeCount > 0 && (

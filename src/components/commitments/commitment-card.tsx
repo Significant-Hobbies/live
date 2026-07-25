@@ -85,7 +85,7 @@ export function CommitmentCard({
           <button
             onClick={handleAbandon}
             disabled={abandoning}
-            className="text-muted-foreground/40 hover:text-destructive transition-colors"
+            className="text-subtle hover:text-destructive transition-colors"
             title="Abandon commitment"
             aria-label="Abandon commitment"
           >
@@ -139,7 +139,7 @@ function Stat({
       <div className="text-base font-semibold tabular-nums text-foreground">
         {animate && isNumber ? <NumberTicker value={value} /> : value}
       </div>
-      <div className="text-[10px] text-muted-foreground/50">{label}</div>
+      <div className="text-[10px] text-subtle">{label}</div>
     </div>
   );
 }

@@ -44,9 +44,7 @@ export default async function SearchPage({ searchParams }: Props) {
           <div className="flex flex-col items-center justify-center rounded-2xl border border-border bg-card/40 py-20 text-center shadow-soft">
             <span className="mb-4 text-4xl">🔍</span>
             <p className="text-muted-foreground font-medium">Start typing to search</p>
-            <p className="mt-1 text-sm text-muted-foreground/60">
-              Search for timelines, usernames, or hobbies
-            </p>
+            <p className="mt-1 text-sm text-subtle">Search for timelines, usernames, or hobbies</p>
           </div>
         </FadeIn>
       </div>
@@ -166,11 +164,9 @@ export default async function SearchPage({ searchParams }: Props) {
                             <p className="font-medium text-foreground group-hover:text-foreground transition-colors">
                               {t.title ?? 'Hobby Timeline'}
                             </p>
-                            {username && (
-                              <p className="mt-0.5 text-xs text-muted-foreground/60">@{username}</p>
-                            )}
+                            {username && <p className="mt-0.5 text-xs text-subtle">@{username}</p>}
                           </div>
-                          <p className="shrink-0 pl-4 text-xs text-muted-foreground/60">
+                          <p className="shrink-0 pl-4 text-xs text-subtle">
                             {t.phases.length} phases &middot; {totalHobbies} hobbies
                           </p>
                         </div>
@@ -212,11 +208,9 @@ export default async function SearchPage({ searchParams }: Props) {
                           <p className="font-medium text-foreground group-hover:text-foreground transition-colors truncate">
                             {user.name ?? user.username}
                           </p>
-                          {user.username && (
-                            <p className="text-xs text-muted-foreground/60">@{user.username}</p>
-                          )}
+                          {user.username && <p className="text-xs text-subtle">@{user.username}</p>}
                         </div>
-                        <p className="shrink-0 text-xs text-muted-foreground/60">
+                        <p className="shrink-0 text-xs text-subtle">
                           {user._count.timelines} timeline{user._count.timelines !== 1 ? 's' : ''}
                         </p>
                       </div>
@@ -253,7 +247,7 @@ export default async function SearchPage({ searchParams }: Props) {
                   <span className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3.5 py-1.5 text-sm text-muted-foreground transition-colors hover:border-foreground/30 hover:text-foreground">
                     <span>{emoji}</span>
                     {hobby}
-                    <span className="text-muted-foreground/60 text-xs">{category}</span>
+                    <span className="text-subtle text-xs">{category}</span>
                   </span>
                 </Link>
               ))}

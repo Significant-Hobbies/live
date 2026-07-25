@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { redirect } from 'next/navigation';
 
 import { GradientMesh } from '~/components/aceternity/gradient-mesh';
@@ -26,16 +27,24 @@ export default async function TrajectoryPage() {
       <header className="relative overflow-hidden rounded-2xl border border-border/50 p-6 sm:p-8">
         <GradientMesh variant="gold" />
         <div className="relative">
-          <p className="text-xs font-medium text-muted-foreground/70">Monthly life-review</p>
+          <p className="text-xs font-medium text-subtle">Monthly life-review</p>
           <h1 className="mt-2 font-serif text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
             Trajectory
           </h1>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
-            Reflect on where you are against where you said you wanted to be. No score — the gap is
-            the whole point.
+            Direction, not destinations. Four areas of life, each with an ideal you wrote yourself,
+            revisited once a month. No score — the gap is the whole point. For the specific things
+            you want to have done, use your{' '}
+            <Link
+              href="/bucket-list"
+              className="text-foreground underline decoration-border underline-offset-4 transition-colors hover:decoration-primary"
+            >
+              bucket list
+            </Link>
+            .
           </p>
           {weeksRemaining !== null && (
-            <p className="mt-4 text-xs text-muted-foreground/70">
+            <p className="mt-4 text-xs text-subtle">
               <span className="font-serif font-medium tabular-nums text-foreground/90">
                 {weeksRemaining.toLocaleString()}
               </span>{' '}

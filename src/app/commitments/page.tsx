@@ -57,7 +57,8 @@ export default async function CommitmentsPage() {
         <div className="relative">
           <h1 className="text-2xl font-semibold text-foreground">Commitments</h1>
           <p className="text-sm text-muted-foreground max-w-lg">
-            Practice daily, log proof with stamps. Track your commitment journey.
+            Proof. A commitment is a promise you can show your work for — one stamp a day, each with
+            evidence attached. Habits are the quiet version of this with nothing to prove.
           </p>
         </div>
       </header>

@@ -257,7 +257,7 @@ export default async function FamousBucketListPage({ params }: Props) {
             <ul className="space-y-1">
               {list.sources.map((s, i) => (
                 <li key={i} className="text-xs text-muted-foreground flex items-start gap-2">
-                  <span className="text-muted-foreground/40 mt-0.5">·</span>
+                  <span className="text-subtle mt-0.5">·</span>
                   <a
                     href={s.url}
                     target="_blank"

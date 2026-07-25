@@ -76,3 +76,4 @@ docs-site/node_modules/
 # Local agent logs / scratch (never commit agent session artifacts)
 .agent-logs/
 *.agent.log
+.shots/

@@ -128,16 +128,16 @@ function ExploreTimelineCard({ timeline }: { timeline: TimelineData & { likeCoun
                 <Link
                   href={profileHref}
                   prefetch={false}
-                  className="pointer-events-auto relative z-10 mt-1 inline-block text-xs text-muted-foreground/60 underline decoration-transparent underline-offset-2 transition-colors hover:text-foreground hover:decoration-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/50"
+                  className="pointer-events-auto relative z-10 mt-1 inline-block text-xs text-subtle underline decoration-transparent underline-offset-2 transition-colors hover:text-foreground hover:decoration-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/50"
                 >
                   @{username}
                 </Link>
               ) : (
-                <p className="mt-1 text-xs text-muted-foreground/60">@{username}</p>
+                <p className="mt-1 text-xs text-subtle">@{username}</p>
               ))}
           </div>
           <div className="shrink-0 rounded-lg border border-border bg-card/40 px-2 py-1 text-right">
-            <div className="text-[10px] font-semibold text-muted-foreground/60">Span</div>
+            <div className="text-[10px] font-semibold text-subtle">Span</div>
             <div className="text-xs font-semibold text-foreground">{timelineSpan(phases)}</div>
           </div>
         </div>
@@ -196,7 +196,7 @@ function ExploreTimelineCard({ timeline }: { timeline: TimelineData & { likeCoun
               </div>
             ))}
             {phases.length > visiblePhases.length && (
-              <p className="pl-3 text-xs text-muted-foreground/60">
+              <p className="pl-3 text-xs text-subtle">
                 +{phases.length - visiblePhases.length} more phase
                 {phases.length - visiblePhases.length !== 1 ? 's' : ''}
               </p>
@@ -217,7 +217,7 @@ function ExploreTimelineCard({ timeline }: { timeline: TimelineData & { likeCoun
           </div>
         )}
 
-        <div className="mt-auto flex items-center justify-between gap-3 pt-5 text-xs text-muted-foreground/60">
+        <div className="mt-auto flex items-center justify-between gap-3 pt-5 text-xs text-subtle">
           <span className="inline-flex items-center gap-1">
             <CalendarDays className="h-3.5 w-3.5" />
             Updated{' '}
@@ -239,7 +239,7 @@ function ExploreTimelineCard({ timeline }: { timeline: TimelineData & { likeCoun
 function MiniStat({ icon, label, value }: { icon: ReactNode; label: string; value: string }) {
   return (
     <div className="rounded-lg border border-border bg-card/40 px-2 py-2">
-      <div className="flex items-center gap-1 text-muted-foreground/60">
+      <div className="flex items-center gap-1 text-subtle">
         {icon}
         <span>{label}</span>
       </div>
@@ -295,7 +295,7 @@ function ExploreFooter() {
       <div>
         <p className="text-sm font-semibold text-foreground">Community signal</p>
         <h2 className="mt-2 text-xl font-semibold">Explore grows with every public phase.</h2>
-        <p className="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground/40">
+        <p className="mt-2 max-w-2xl text-sm leading-6 text-subtle">
           Add a timeline with hobbies, dates, and phase labels so other people can discover patterns
           beyond a flat list of interests.
         </p>
@@ -380,12 +380,12 @@ export function ExploreClient({ timelines }: ExploreClientProps) {
         <div className="relative px-1 py-4 sm:px-3">
           {/* Search bar */}
           <div className="relative mb-4">
-            <Search className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground/60" />
+            <Search className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-subtle" />
             <Input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search timelines, hobbies, or people..."
-              className="h-11 border-border bg-card pl-10 placeholder:text-muted-foreground/60"
+              className="h-11 border-border bg-card pl-10 placeholder:text-subtle"
             />
           </div>
 
@@ -432,7 +432,7 @@ export function ExploreClient({ timelines }: ExploreClientProps) {
       {filtered.length === 0 ? (
         <div className="flex flex-col items-center justify-center rounded-2xl border border-border bg-card/40 px-6 py-20 text-center">
           <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-border bg-card">
-            <LayoutList className="h-5 w-5 text-muted-foreground/60" />
+            <LayoutList className="h-5 w-5 text-subtle" />
           </div>
           <p className="text-muted-foreground font-medium">
             {query
@@ -441,7 +441,7 @@ export function ExploreClient({ timelines }: ExploreClientProps) {
                 ? `No timelines in ${categoryFilter}`
                 : 'No public timelines yet'}
           </p>
-          <p className="mt-1 text-sm text-muted-foreground/60">
+          <p className="mt-1 text-sm text-subtle">
             {query
               ? 'Try a different search term'
               : categoryFilter
@@ -460,7 +460,7 @@ export function ExploreClient({ timelines }: ExploreClientProps) {
         </div>
       ) : (
         <>
-          <p className="mb-4 text-sm text-muted-foreground/60">
+          <p className="mb-4 text-sm text-subtle">
             {filtered.length} timeline{filtered.length !== 1 ? 's' : ''}
             {query && ` for "${query}"`}
             {categoryFilter && ` in ${categoryFilter}`}

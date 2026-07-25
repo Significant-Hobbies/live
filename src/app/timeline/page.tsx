@@ -66,7 +66,7 @@ export default async function MyTimelinesPage() {
         /* Empty state */
         <div className="flex flex-col items-center justify-center rounded-2xl border border-border bg-card/40 px-6 py-20 text-center shadow-soft">
           <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full border border-border bg-foreground/5">
-            <LayoutList className="h-6 w-6 text-muted-foreground/60" />
+            <LayoutList className="h-6 w-6 text-subtle" />
           </div>
           <h2 className="mb-2 text-lg font-semibold text-foreground">No timelines yet</h2>
           <p className="mb-7 max-w-xs text-sm text-muted-foreground">

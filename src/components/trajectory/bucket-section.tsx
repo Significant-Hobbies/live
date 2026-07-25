@@ -241,7 +241,7 @@ function EraList({
                 onClick={() => onToggleEra(era.id)}
                 className="flex w-full items-start gap-2 rounded-lg px-2 py-2 text-left text-sm text-foreground/85 hover:bg-background/50 transition-colors"
               >
-                <span className="mt-0.5 shrink-0 text-muted-foreground/70">
+                <span className="mt-0.5 shrink-0 text-subtle">
                   {isExpanded ? (
                     <ChevronDown className="h-3.5 w-3.5" />
                   ) : (
@@ -267,7 +267,7 @@ function ExpandedEraDetail({ era }: { era: TrajectoryEraWithEntries }) {
         {era.idealText}
       </p>
       {entriesDesc.length === 0 ? (
-        <p className="text-xs text-muted-foreground/70">No reflections recorded.</p>
+        <p className="text-xs text-subtle">No reflections recorded.</p>
       ) : (
         <ul className="space-y-2.5">
           {entriesDesc.map((entry) => (

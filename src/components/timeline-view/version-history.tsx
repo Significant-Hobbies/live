@@ -95,9 +95,7 @@ export function VersionHistory({ versions, currentPhases }: Props) {
             </div>
           )}
           {added.length === 0 && removed.length === 0 && (
-            <p className="text-sm text-muted-foreground/60">
-              No hobby changes between these versions.
-            </p>
+            <p className="text-sm text-subtle">No hobby changes between these versions.</p>
           )}
         </div>
       )}

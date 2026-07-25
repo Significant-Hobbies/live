@@ -213,7 +213,7 @@ export default async function HobbyDetailPage({ params }: Props) {
                     {r.description}
                   </p>
                 </div>
-                <span className="text-muted-foreground/40 group-hover:text-foreground transition-colors text-sm">
+                <span className="text-subtle group-hover:text-foreground transition-colors text-sm">
                   ↗
                 </span>
               </a>
@@ -271,7 +271,7 @@ export default async function HobbyDetailPage({ params }: Props) {
                         @{t.userUsername ?? t.userName}
                       </p>
                     )}
-                    <p className="text-xs text-muted-foreground/60 mt-1.5">
+                    <p className="text-xs text-subtle mt-1.5">
                       {phases.length} phases · {totalHobbies} hobbies
                     </p>
                   </div>
@@ -320,7 +320,7 @@ export default async function HobbyDetailPage({ params }: Props) {
       {crossCategoryHobbies.length > 0 && (
         <FadeIn delay={0.1}>
           <h2 className="mb-1 text-sm font-semibold text-muted-foreground">You might also like</h2>
-          <p className="mb-4 text-xs text-muted-foreground/60">
+          <p className="mb-4 text-xs text-subtle">
             Hobbies people pair with {hobbyName.toLowerCase()}, often from a completely different
             direction.
           </p>

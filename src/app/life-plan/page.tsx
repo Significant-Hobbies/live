@@ -240,7 +240,7 @@ export default async function LifePlanPage() {
                 ))}
               </div>
             ) : (
-              <p className="text-sm text-muted-foreground/60">
+              <p className="text-sm text-subtle">
                 No recent hobbies.{' '}
                 <Link href="/timeline/new" className="text-foreground hover:underline">
                   Start a timeline →
@@ -259,15 +259,13 @@ export default async function LifePlanPage() {
                     <span className="h-2 w-2 rounded-full bg-primary shrink-0" />
                     <span className="truncate">{item.title}</span>
                     {item.targetYear && (
-                      <span className="text-xs text-muted-foreground/60 shrink-0">
-                        by {item.targetYear}
-                      </span>
+                      <span className="text-xs text-subtle shrink-0">by {item.targetYear}</span>
                     )}
                   </li>
                 ))}
               </ul>
             ) : (
-              <p className="text-sm text-muted-foreground/60">
+              <p className="text-sm text-subtle">
                 Nothing in progress yet.{' '}
                 <Link href="/dashboard" className="text-foreground hover:underline">
                   Move something forward →
@@ -332,7 +330,7 @@ export default async function LifePlanPage() {
                   <SpotlightCard className="block rounded-xl border border-border bg-card p-4 shadow-soft transition-all">
                     <div className="flex items-center justify-between mb-2">
                       <span className="font-medium text-foreground">{tl.title}</span>
-                      <span className="text-xs text-muted-foreground/60">
+                      <span className="text-xs text-subtle">
                         {tl.phases.length} phase{tl.phases.length !== 1 ? 's' : ''}
                       </span>
                     </div>
@@ -349,7 +347,7 @@ export default async function LifePlanPage() {
                           </span>
                         ))}
                       {tl.phases.flatMap((p) => p.hobbies).length > 8 && (
-                        <span className="text-xs text-muted-foreground/60 self-center">
+                        <span className="text-xs text-subtle self-center">
                           +{tl.phases.flatMap((p) => p.hobbies).length - 8} more
                         </span>
                       )}
@@ -409,7 +407,7 @@ function StatCard({
     <SpotlightCard className="rounded-xl border border-border bg-card p-4 shadow-soft">
       <p className="text-xs text-muted-foreground font-medium">{label}</p>
       <p className={`text-2xl font-bold ${accent} mt-1`}>{value}</p>
-      <p className="text-xs text-muted-foreground/60 mt-0.5">{sub}</p>
+      <p className="text-xs text-subtle mt-0.5">{sub}</p>
     </SpotlightCard>
   );
 }

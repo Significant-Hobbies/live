@@ -389,7 +389,7 @@ export default function HobbiesForResumePage() {
           <div className="mt-4">
             <Link
               href="/find-your-hobby"
-              className="text-sm text-muted-foreground/60 hover:text-muted-foreground transition-colors"
+              className="text-sm text-subtle hover:text-muted-foreground transition-colors"
             >
               Or take the quiz to find a new hobby →
             </Link>

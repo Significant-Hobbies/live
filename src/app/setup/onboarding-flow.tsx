@@ -293,7 +293,7 @@ export function OnboardingFlow({ user }: { user: OnboardingUser }) {
                         isUsernameValid ? 'border-growth' : 'border-border'
                       }`}
                     >
-                      <span className="select-none pr-0.5 text-base font-medium text-muted-foreground/60">
+                      <span className="select-none pr-0.5 text-base font-medium text-subtle">
                         @
                       </span>
                       <input
@@ -303,7 +303,7 @@ export function OnboardingFlow({ user }: { user: OnboardingUser }) {
                         }
                         placeholder="yourname"
                         maxLength={30}
-                        className="flex-1 bg-transparent py-3 text-base text-foreground outline-none placeholder:text-muted-foreground/40"
+                        className="flex-1 bg-transparent py-3 text-base text-foreground outline-none placeholder:text-subtle"
                         autoFocus
                         autoComplete="off"
                         autoCapitalize="none"
@@ -323,7 +323,7 @@ export function OnboardingFlow({ user }: { user: OnboardingUser }) {
                       </p>
                     )}
                     {username.length === 0 && (
-                      <p className="mt-1.5 text-xs text-muted-foreground/60">
+                      <p className="mt-1.5 text-xs text-subtle">
                         Lowercase letters, numbers, and hyphens only
                       </p>
                     )}
@@ -331,16 +331,14 @@ export function OnboardingFlow({ user }: { user: OnboardingUser }) {
 
                   {/* Profile URL preview */}
                   <div className="mb-8 flex items-center gap-2 rounded-xl border border-border bg-muted px-3 py-2.5">
-                    <span className="truncate text-xs text-muted-foreground/60">
-                      significanthobbies.com/u/
-                    </span>
+                    <span className="truncate text-xs text-subtle">significanthobbies.com/u/</span>
                     <span
                       className={`flex-shrink-0 text-xs font-semibold transition-colors duration-200 ${
                         isUsernameValid
                           ? 'text-growth'
                           : username.length > 0
                             ? 'text-foreground'
-                            : 'text-muted-foreground/40'
+                            : 'text-subtle'
                       }`}
                     >
                       {username.length > 0 ? username : 'yourname'}
@@ -431,7 +429,7 @@ export function OnboardingFlow({ user }: { user: OnboardingUser }) {
 
                   {/* Age display + fun fact */}
                   <div className="mb-3 text-center">
-                    <p className="text-sm text-muted-foreground/60">
+                    <p className="text-sm text-subtle">
                       That makes you{' '}
                       <span className="font-semibold text-growth">
                         {currentYear - birthYear} years old
@@ -493,7 +491,7 @@ export function OnboardingFlow({ user }: { user: OnboardingUser }) {
                       onChange={(e) => setDroppedHobby(e.target.value.slice(0, 200))}
                       placeholder="Photography, guitar, running, drawing..."
                       maxLength={200}
-                      className="w-full rounded-xl border border-border bg-card px-4 py-3.5 text-base text-foreground outline-none transition-colors duration-200 placeholder:text-muted-foreground/40 focus:border-primary"
+                      className="w-full rounded-xl border border-border bg-card px-4 py-3.5 text-base text-foreground outline-none transition-colors duration-200 placeholder:text-subtle focus:border-primary"
                       autoFocus
                       autoComplete="off"
                       spellCheck={false}
@@ -729,7 +727,7 @@ export function OnboardingFlow({ user }: { user: OnboardingUser }) {
 
                       {/* Mini life-grid square lighting up */}
                       <div className="mt-6 flex items-center gap-2">
-                        <span className="text-xs text-muted-foreground/60">Today:</span>
+                        <span className="text-xs text-subtle">Today:</span>
                         <motion.div
                           initial={false}
                           animate={{

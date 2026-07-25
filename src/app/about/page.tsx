@@ -32,7 +32,7 @@ export default function AboutPage() {
       <FadeIn className="mb-8">
         <SpotlightCard className="shadow-soft" innerClassName="rounded-xl p-6 space-y-3">
           <h2 className="text-sm font-semibold text-muted-foreground">What you can do</h2>
-          <ul className="list-disc space-y-1 pl-5 marker:text-muted-foreground/60 text-sm leading-6">
+          <ul className="list-disc space-y-1 pl-5 marker:text-subtle text-sm leading-6">
             <li>
               Build a timeline of your hobby phases — childhood experiments through current
               obsessions.

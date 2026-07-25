@@ -82,7 +82,7 @@ export function CircularProgress({
       </div>
       <div className="text-center">
         <p className="text-xs font-medium text-foreground">{label}</p>
-        {sublabel && <p className="text-[10px] text-muted-foreground/60">{sublabel}</p>}
+        {sublabel && <p className="text-[10px] text-subtle">{sublabel}</p>}
       </div>
     </div>
   );

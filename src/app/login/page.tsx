@@ -55,7 +55,7 @@ export default async function LoginPage({
             </ul>
           </div>
 
-          <p className="mt-6 text-xs text-muted-foreground/60">
+          <p className="mt-6 text-xs text-subtle">
             Or{' '}
             <Link
               href={callbackUrl.startsWith('/bucket-list') ? '/bucket-list/new' : '/timeline/new'}

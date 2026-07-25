@@ -61,7 +61,7 @@ export function LifeGrid({ grid }: Props) {
       </div>
 
       {/* Editorial axis labels */}
-      <div className="mt-3 flex items-center justify-between text-[11px] text-muted-foreground/50">
+      <div className="mt-3 flex items-center justify-between text-[11px] text-subtle">
         <span className="font-mono">Age 0</span>
         <span className="font-mono tabular-nums">{currentYear} yrs stamped</span>
         <span className="font-mono">~{years} years</span>

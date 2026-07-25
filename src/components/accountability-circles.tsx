@@ -225,7 +225,7 @@ export function AccountabilityCircles({ completedQuestIds }: { completedQuestIds
                   <p className="mt-1 line-clamp-3 text-sm text-muted-foreground">
                     {quest.description}
                   </p>
-                  <div className="mt-3 flex items-center justify-between text-xs text-muted-foreground/60">
+                  <div className="mt-3 flex items-center justify-between text-xs text-subtle">
                     <span>{quest.timeEstimate}</span>
                     <span>{done ? 'Done' : 'Open'}</span>
                   </div>

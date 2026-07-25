@@ -138,7 +138,7 @@ export function QuestChainCard({
           </h3>
           <div className="flex items-center gap-2">
             <CategoryBadge category={category} />
-            <span className="text-xs text-muted-foreground/60">
+            <span className="text-xs text-subtle">
               {allDone
                 ? `${steps.length} steps complete`
                 : `${completedCount}/${steps.length} steps done`}
@@ -193,7 +193,7 @@ export function QuestChainCard({
                     <span className="text-xs font-bold">{step.stepNumber}</span>
                   </div>
                 ) : (
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full border border-border bg-muted/50 text-muted-foreground/50">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full border border-border bg-muted/50 text-subtle">
                     <Lock className="h-3.5 w-3.5" />
                   </div>
                 )}
@@ -225,7 +225,7 @@ export function QuestChainCard({
                           ? 'text-primary'
                           : isUnlocked
                             ? 'text-muted-foreground'
-                            : 'text-muted-foreground/40'
+                            : 'text-subtle'
                     }`}
                   >
                     {isCompleted

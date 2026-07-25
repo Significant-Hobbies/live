@@ -81,7 +81,7 @@ function SocialIcon({ level }: { level: HobbyDetail['socialLevel'] }) {
   const { Icon, label } = map[level];
   return (
     <span className="flex items-center gap-1.5 text-muted-foreground">
-      <Icon className="h-4 w-4 text-muted-foreground/60" />
+      <Icon className="h-4 w-4 text-subtle" />
       {label}
     </span>
   );
@@ -149,7 +149,7 @@ function HobbyCombobox({ label, value, onChange, exclude }: HobbyComboboxProps) 
 
   return (
     <div ref={containerRef} className="relative flex-1">
-      <p className="mb-1.5 text-sm font-semibold text-muted-foreground/60">{label}</p>
+      <p className="mb-1.5 text-sm font-semibold text-subtle">{label}</p>
 
       {value ? (
         <div className="flex items-center justify-between rounded-xl border border-foreground/30 bg-card px-4 py-3">
@@ -159,7 +159,7 @@ function HobbyCombobox({ label, value, onChange, exclude }: HobbyComboboxProps) 
           <button
             type="button"
             onClick={clear}
-            className="ml-2 text-muted-foreground/60 hover:text-muted-foreground transition-colors"
+            className="ml-2 text-subtle hover:text-muted-foreground transition-colors"
             aria-label="Clear selection"
           >
             <X className="h-4 w-4" />
@@ -168,7 +168,7 @@ function HobbyCombobox({ label, value, onChange, exclude }: HobbyComboboxProps) 
       ) : (
         <div>
           <div className="relative">
-            <Search className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground/60" />
+            <Search className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-subtle" />
             <Input
               value={query}
               onChange={(e) => {
@@ -177,14 +177,14 @@ function HobbyCombobox({ label, value, onChange, exclude }: HobbyComboboxProps) 
               }}
               onFocus={() => setOpen(true)}
               placeholder="Search a hobby…"
-              className="h-11 border-border bg-card pl-10 placeholder:text-muted-foreground/60"
+              className="h-11 border-border bg-card pl-10 placeholder:text-subtle"
             />
           </div>
 
           {open && (
             <div className="absolute z-20 mt-1 max-h-60 w-full overflow-y-auto rounded-xl border border-border bg-card shadow-lg">
               {options.length === 0 ? (
-                <p className="px-4 py-3 text-sm text-muted-foreground/60">No hobbies found</p>
+                <p className="px-4 py-3 text-sm text-subtle">No hobbies found</p>
               ) : (
                 options.map((hobby) => {
                   const cat = getCategoryForHobby(hobby);
@@ -221,7 +221,7 @@ function CompareRow({ label, left, right }: RowProps) {
   return (
     <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-3 border-b border-border py-4 last:border-0">
       <div className="flex justify-end">{left}</div>
-      <div className="w-28 text-center text-sm font-semibold text-muted-foreground/60">{label}</div>
+      <div className="w-28 text-center text-sm font-semibold text-subtle">{label}</div>
       <div className="flex justify-start">{right}</div>
     </div>
   );
@@ -245,15 +245,15 @@ function ComparisonCard({ a, b }: { a: HobbyDetail; b: HobbyDetail }) {
           <div className="p-5 text-right">
             <p className="text-2xl">{catA?.emoji}</p>
             <p className="mt-1 text-lg font-bold text-foreground">{a.name}</p>
-            <p className="text-xs text-muted-foreground/60">{catA?.name ?? 'Hobby'}</p>
+            <p className="text-xs text-subtle">{catA?.name ?? 'Hobby'}</p>
           </div>
           <div className="flex items-center justify-center px-4">
-            <span className="text-sm font-semibold text-muted-foreground/40">vs</span>
+            <span className="text-sm font-semibold text-subtle">vs</span>
           </div>
           <div className="p-5 text-left">
             <p className="text-2xl">{catB?.emoji}</p>
             <p className="mt-1 text-lg font-bold text-foreground">{b.name}</p>
-            <p className="text-xs text-muted-foreground/60">{catB?.name ?? 'Hobby'}</p>
+            <p className="text-xs text-subtle">{catB?.name ?? 'Hobby'}</p>
           </div>
         </div>
 
@@ -351,7 +351,7 @@ export function CompareClient() {
       {/* Selectors */}
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end">
         <HobbyCombobox label="Hobby A" value={hobbyA} onChange={setHobbyA} exclude={hobbyB} />
-        <div className="flex items-center justify-center pb-1 text-sm font-bold text-muted-foreground/40 sm:pb-3">
+        <div className="flex items-center justify-center pb-1 text-sm font-bold text-subtle sm:pb-3">
           VS
         </div>
         <HobbyCombobox label="Hobby B" value={hobbyB} onChange={setHobbyB} exclude={hobbyA} />
@@ -362,7 +362,7 @@ export function CompareClient() {
         <div className="mt-12 flex flex-col items-center justify-center rounded-2xl border border-dashed border-border bg-card/40 px-6 py-16 text-center">
           <p className="text-2xl">⚖️</p>
           <p className="mt-3 font-medium text-muted-foreground">Select two hobbies to compare</p>
-          <p className="mt-1 text-sm text-muted-foreground/60">
+          <p className="mt-1 text-sm text-subtle">
             Use the dropdowns above to pick Hobby A and Hobby B
           </p>
         </div>
@@ -385,7 +385,7 @@ export function CompareClient() {
       {/* Quick picks */}
       {!hobbyA && !hobbyB && (
         <div className="mt-10">
-          <p className="mb-3 text-sm font-semibold text-muted-foreground/60">Popular comparisons</p>
+          <p className="mb-3 text-sm font-semibold text-subtle">Popular comparisons</p>
           <div className="flex flex-wrap gap-2">
             {[
               ['Running', 'Cycling'],

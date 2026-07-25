@@ -119,7 +119,7 @@ export function HobbyRoadmapCard({ roadmap }: { roadmap: HobbyRoadmap }) {
                     <span className="text-[11px] font-semibold text-foreground">
                       {step.horizon}
                     </span>
-                    <span className="text-xs text-muted-foreground/60">Step {i + 1}</span>
+                    <span className="text-xs text-subtle">Step {i + 1}</span>
                   </div>
                   <p
                     className={`mt-1 text-sm font-semibold ${
@@ -146,7 +146,7 @@ export function HobbyRoadmapCard({ roadmap }: { roadmap: HobbyRoadmap }) {
           className="mt-1.5 w-full resize-none rounded-xl border border-border bg-card px-3 py-2 text-sm outline-none focus:border-foreground/30"
         />
         {hydrated && progress.updatedAt && (
-          <p className="mt-1 text-[11px] text-muted-foreground/60">
+          <p className="mt-1 text-[11px] text-subtle">
             Last updated {new Date(progress.updatedAt).toLocaleDateString()}
           </p>
         )}

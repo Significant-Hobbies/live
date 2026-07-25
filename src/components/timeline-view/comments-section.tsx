@@ -186,7 +186,7 @@ export function CommentsSectionWithOwn({
                   onClick={() => handleDelete(comment.id)}
                   disabled={deletingId === comment.id}
                   aria-label="Delete comment"
-                  className="shrink-0 self-start mt-0.5 rounded p-1 text-muted-foreground/40 transition-colors hover:bg-rose-50 hover:text-rose-500 disabled:opacity-40"
+                  className="shrink-0 self-start mt-0.5 rounded p-1 text-subtle transition-colors hover:bg-rose-50 hover:text-rose-500 disabled:opacity-40"
                 >
                   <Trash2 className="h-3.5 w-3.5" />
                 </button>

@@ -120,7 +120,7 @@ export default async function JourneyDetailPage({ params }: Props) {
         <FadeIn className="mb-8">
           <Link
             href="/journeys"
-            className="text-sm text-muted-foreground/60 transition-colors hover:text-muted-foreground"
+            className="text-sm text-subtle transition-colors hover:text-muted-foreground"
           >
             ← Famous Hobby Journeys
           </Link>
@@ -136,7 +136,7 @@ export default async function JourneyDetailPage({ params }: Props) {
                 <h1 className="text-3xl font-bold text-foreground">
                   {person.name}&apos;s Hobby Journey
                 </h1>
-                <p className="mt-1 text-muted-foreground/60 text-sm">{person.born}</p>
+                <p className="mt-1 text-subtle text-sm">{person.born}</p>
                 <span className="mt-3 inline-block rounded-full border border-foreground/20 bg-foreground/10 px-3 py-1 text-xs font-semibold text-foreground">
                   {person.knownFor}
                 </span>
@@ -147,7 +147,7 @@ export default async function JourneyDetailPage({ params }: Props) {
 
         {/* Phase timeline */}
         <FadeIn className="mb-10">
-          <h2 className="mb-5 text-sm font-semibold text-muted-foreground/60">Hobby Timeline</h2>
+          <h2 className="mb-5 text-sm font-semibold text-subtle">Hobby Timeline</h2>
           <StaggerContainer className="space-y-4">
             {person.phases.map((phase, idx) => {
               const colors = PHASE_COLORS[idx % PHASE_COLORS.length]!;
@@ -215,12 +215,10 @@ export default async function JourneyDetailPage({ params }: Props) {
                 &ldquo;{person.quote.text}&rdquo;
               </p>
               {person.quote.attribution && (
-                <footer className="mt-2 text-sm text-muted-foreground/60">
-                  — {person.quote.attribution}
-                </footer>
+                <footer className="mt-2 text-sm text-subtle">— {person.quote.attribution}</footer>
               )}
               {!person.quote.attribution && (
-                <footer className="mt-2 text-sm text-muted-foreground/60">— {person.name}</footer>
+                <footer className="mt-2 text-sm text-subtle">— {person.name}</footer>
               )}
             </blockquote>
           </FadeIn>
@@ -240,9 +238,7 @@ export default async function JourneyDetailPage({ params }: Props) {
                 >
                   <span className="text-2xl">{prevPerson.emoji}</span>
                   <div className="min-w-0 flex-1">
-                    <p className="text-[10px] font-semibold text-muted-foreground/60">
-                      ← Previous journey
-                    </p>
+                    <p className="text-[10px] font-semibold text-subtle">← Previous journey</p>
                     <p className="truncate text-sm font-semibold text-foreground group-hover:text-foreground">
                       {prevPerson.name}
                     </p>
@@ -258,9 +254,7 @@ export default async function JourneyDetailPage({ params }: Props) {
                 >
                   <span className="text-2xl">{nextPerson.emoji}</span>
                   <div className="min-w-0 flex-1">
-                    <p className="text-[10px] font-semibold text-muted-foreground/60">
-                      Next journey →
-                    </p>
+                    <p className="text-[10px] font-semibold text-subtle">Next journey →</p>
                     <p className="truncate text-sm font-semibold text-foreground group-hover:text-foreground">
                       {nextPerson.name}
                     </p>
@@ -289,7 +283,7 @@ export default async function JourneyDetailPage({ params }: Props) {
             <div className="mt-4">
               <Link
                 href="/journeys"
-                className="text-sm text-muted-foreground/60 transition-colors hover:text-muted-foreground"
+                className="text-sm text-subtle transition-colors hover:text-muted-foreground"
               >
                 ← See all famous journeys
               </Link>

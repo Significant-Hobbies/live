@@ -123,7 +123,7 @@ export function IdealEditor({ bucket, currentIdeal, hasActiveEra, onClose }: Pro
         rows={3}
         maxLength={500}
         autoFocus
-        className="resize-none border-border/60 bg-card/50 font-serif text-[15px] leading-relaxed placeholder:font-sans placeholder:text-sm placeholder:italic placeholder:text-muted-foreground/50"
+        className="resize-none border-border/60 bg-card/50 font-serif text-[15px] leading-relaxed placeholder:font-sans placeholder:text-sm placeholder:italic placeholder:text-subtle"
       />
       <p className="text-xs leading-relaxed text-muted-foreground">
         One to three sentences. This is your committed finish line — the gap between it and where

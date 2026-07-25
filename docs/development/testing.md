@@ -70,3 +70,38 @@ In `e2e/`. Run with `pnpm test:e2e` (assumes `pnpm dev` is running on :3000) or
   ≥5 sections, `id="lcp-shell"` in the overlaid HTML).
 - The edge cache layer in `worker.mjs` is tested via the production smoke
   workflow (`.github/workflows/smoke.yml`) every 6 hours.
+
+## Authenticated e2e (added 2026-07-25)
+
+Google OAuth is the only production sign-in path, and Playwright cannot complete
+an OAuth round-trip. For a long time that meant **zero authenticated coverage**:
+every logged-in surface was asserted only through its unauthenticated redirect,
+and the logged-in UI could not be reviewed at all.
+
+`src/lib/auth.ts` now enables better-auth's own email provider behind two
+independent gates — `NODE_ENV !== 'production'` **and** `ENABLE_TEST_AUTH === '1'`.
+Tests therefore sign in through the real session path; nothing fabricates a cookie
+and nothing reads `BETTER_AUTH_SECRET`.
+
+```bash
+pnpm dev:test-auth          # dev server with the gated provider on
+pnpm test:e2e               # e2e/authenticated.spec.ts skips if it is off
+```
+
+`e2e/fixtures/auth.ts` exposes an `authedPage` fixture that signs up (idempotent)
+then signs in. It skips the whole file when the endpoint returns 404, so a plain
+`pnpm dev` server does not produce a wall of failures.
+
+### Design review screenshots
+
+```bash
+pnpm dev:test-auth
+node scripts/shots.mjs .shots      # desktop + mobile, all logged-in surfaces
+```
+
+Shots are taken with reduced motion forced. `.scroll-reveal` uses
+`animation-timeline: view()`, whose progress stays at 0% — meaning `opacity: 0` —
+for anything that never enters the scrollport, so a full-page capture otherwise
+renders most of the page blank. The reduced-motion rules set `opacity: 1`, which
+is also the correct accessibility fallback. Pass `SHOTS_MOTION=allow` to capture
+with animation enabled.

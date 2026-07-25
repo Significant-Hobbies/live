@@ -372,7 +372,7 @@ export default function BucketListIdeasPage() {
                               prefetch={false}
                             >
                               <span>{p.name}</span>
-                              <span className="text-muted-foreground/60 text-xs">→</span>
+                              <span className="text-subtle text-xs">→</span>
                             </Link>
                           ))}
                         </div>

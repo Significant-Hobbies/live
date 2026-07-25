@@ -276,7 +276,7 @@ export default async function DashboardPage() {
                     <div key={timeline.id} className="relative">
                       <TimelineCard timeline={timeline} showVisibility />
                       <div className="mt-1.5 flex items-center gap-1.5 px-1">
-                        <Clock className="h-3 w-3 text-muted-foreground/50" />
+                        <Clock className="h-3 w-3 text-subtle" />
                         <span className={`text-xs ${staleness.colorClass}`}>{staleness.label}</span>
                         {staleness.isStale && (
                           <Link

@@ -106,7 +106,7 @@ export function ProfileForm({
         <p
           className={[
             'mt-1 text-right text-xs',
-            bioLength >= BIO_MAX ? 'text-destructive font-medium' : 'text-muted-foreground/60',
+            bioLength >= BIO_MAX ? 'text-destructive font-medium' : 'text-subtle',
           ].join(' ')}
         >
           {bioLength} / {BIO_MAX}
@@ -119,7 +119,7 @@ export function ProfileForm({
           Website
         </label>
         <div className="flex items-center rounded-lg border border-border bg-card/40 px-3.5 py-2 transition focus-within:border-foreground/30 focus-within:bg-card focus-within:ring-2 focus-within:ring-foreground/20">
-          <span className="mr-1 select-none text-sm text-muted-foreground/60">https://</span>
+          <span className="mr-1 select-none text-sm text-subtle">https://</span>
           <input
             id="website"
             type="text"
@@ -136,9 +136,7 @@ export function ProfileForm({
             className="flex-1 bg-transparent text-sm text-foreground placeholder-stone-400 outline-none"
           />
         </div>
-        <p className="mt-1 text-xs text-muted-foreground/60">
-          Include https:// — e.g. https://yoursite.com
-        </p>
+        <p className="mt-1 text-xs text-subtle">Include https:// — e.g. https://yoursite.com</p>
       </div>
 
       {/* Submit */}

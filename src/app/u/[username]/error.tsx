@@ -37,9 +37,7 @@ export default function ProfileError({
           Explore
         </Link>
       </div>
-      {error.digest ? (
-        <p className="mt-6 text-xs text-muted-foreground/60">Reference: {error.digest}</p>
-      ) : null}
+      {error.digest ? <p className="mt-6 text-xs text-subtle">Reference: {error.digest}</p> : null}
     </div>
   );
 }

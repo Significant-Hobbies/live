@@ -373,7 +373,7 @@ export default function HobbiesForAdultsPage() {
           <div className="mt-4">
             <Link
               href="/timeline/new"
-              className="text-sm text-muted-foreground/60 hover:text-muted-foreground transition-colors"
+              className="text-sm text-subtle hover:text-muted-foreground transition-colors"
             >
               Already have hobbies? Build your hobby timeline →
             </Link>

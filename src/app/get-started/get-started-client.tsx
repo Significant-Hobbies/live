@@ -120,7 +120,7 @@ export function GetStartedClient() {
           <SpotlightCard className="shadow-soft" innerClassName="p-6">
             {/* Input row */}
             <div className="flex items-center overflow-hidden rounded-xl border border-border bg-card/40 focus-within:border-foreground/30 focus-within:ring-2 focus-within:ring-foreground/20 transition-all">
-              <span className="select-none whitespace-nowrap px-4 py-4 text-base text-muted-foreground/60 font-medium">
+              <span className="select-none whitespace-nowrap px-4 py-4 text-base text-subtle font-medium">
                 significanthobbies.com/u/
               </span>
               <input
@@ -140,13 +140,11 @@ export function GetStartedClient() {
             {/* Status feedback */}
             <div className="mt-4 min-h-[4rem]">
               {state === 'idle' && (
-                <p className="text-sm text-muted-foreground/60">
-                  Start typing to check availability
-                </p>
+                <p className="text-sm text-subtle">Start typing to check availability</p>
               )}
 
               {state === 'checking' && (
-                <div className="flex items-center gap-2 text-sm text-muted-foreground/60">
+                <div className="flex items-center gap-2 text-sm text-subtle">
                   <svg className="h-4 w-4 animate-spin" fill="none" viewBox="0 0 24 24">
                     <circle
                       className="opacity-25"
@@ -251,7 +249,7 @@ export function GetStartedClient() {
 
         {/* Example profiles */}
         <div className="mt-6">
-          <p className="mb-3 text-sm font-semibold text-muted-foreground/60">Example profiles</p>
+          <p className="mb-3 text-sm font-semibold text-subtle">Example profiles</p>
           <div className="flex flex-col gap-2">
             {EXAMPLE_PROFILES.map(({ handle, display }) => (
               <Link
@@ -261,7 +259,7 @@ export function GetStartedClient() {
               >
                 <span className="font-mono text-foreground">/u/</span>
                 <span>{handle}</span>
-                <span className="ml-auto text-xs text-muted-foreground/60">{display}</span>
+                <span className="ml-auto text-xs text-subtle">{display}</span>
               </Link>
             ))}
           </div>
@@ -270,9 +268,7 @@ export function GetStartedClient() {
 
       {/* What you get */}
       <section className="mx-auto max-w-xl px-4 pb-12">
-        <p className="mb-4 text-sm font-semibold text-muted-foreground/60">
-          What you get with a profile
-        </p>
+        <p className="mb-4 text-sm font-semibold text-subtle">What you get with a profile</p>
         <StaggerContainer className="grid grid-cols-1 gap-3 sm:grid-cols-3">
           {BENEFITS.map(({ icon: Icon, title, desc }) => (
             <StaggerItem key={title}>
