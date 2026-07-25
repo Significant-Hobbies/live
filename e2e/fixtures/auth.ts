@@ -32,6 +32,13 @@ async function testAuthAvailable(page: Page): Promise<boolean> {
 /**
  * Ensures the test user exists, then signs in. Idempotent: sign-up is expected
  * to fail with "already exists" on every run after the first.
+ *
+ * Known flake: on a brand-new database the first call here can return 403 and
+ * succeed on Playwright's retry. Four hypotheses have already been tested and
+ * ruled out (cold compile, missing account, rate limiting, missing Origin) — see
+ * the table in docs/development/testing.md before trying a fifth. Plain curl gets
+ * 200 where Playwright's request context gets 403, so the next step is to capture
+ * the failing call's actual headers.
  */
 async function signInTestUser(page: Page): Promise<void> {
   await page.request.post('/api/auth/sign-up/email', {

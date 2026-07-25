@@ -108,7 +108,7 @@ believing it was their own.
 still gated: each carries its own route as `callbackUrl`, and every "continue as
 guest" destination is fetched to prove it renders without a session.
 
-### The e2e suite is not wired to CI
+### The e2e suite in CI
 
 `.github/workflows/ci.yml` now has an `e2e` job (added 2026-07-25) running the
 `desktop` and `landing` projects on every push and PR. Before that it ran only
@@ -140,6 +140,28 @@ caught correctly:
    ("Discover your hobby story") exists in **neither** `src/app/page.tsx` nor
    `landing-astro/`, so these specs are stale against both targets and need
    rewriting against whichever surface they mean to cover. Still open.
+
+### Known flake
+
+Against a **freshly created** `dev.db`, the first authenticated test
+(`/daily renders for a signed-in user`) fails with `Test sign-in failed (403)` and
+passes on Playwright's retry. It reproduces only on a brand-new database, never on
+a warm one, and CI absorbs it via `retries: 2`.
+
+Four hypotheses were tested and **ruled out**, recorded so the next attempt does
+not repeat them:
+
+| Hypothesis | How it was tested | Result |
+| --- | --- | --- |
+| Cold Next compile of `/daily` | Extra `goto` to warm the route before asserting | Still flaky |
+| The account does not exist yet | `curl` sign-up against a cold server, fresh DB | **200** — created fine |
+| better-auth rate limiting | Six rapid `curl` sign-ins | All **200** |
+| Missing request Origin in a new context | `page.goto('/login')` before the auth POSTs | **Made it worse** (2 failed, 12 skipped) |
+
+Still unexplained: `page.request.post` gets a 403 where plain `curl` gets a 200,
+on the first test only. The difference lives in the headers Playwright's request
+context sends, so the next step is to capture the failing call's actual
+request/response headers rather than reason about them.
 
 ### Design review screenshots
 
