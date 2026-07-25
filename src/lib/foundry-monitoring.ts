@@ -46,6 +46,7 @@ type ErrorBoundaryScope =
   | 'settings'
   | 'profile'
   | 'life-plan'
+  | 'sitemap'
   | 'unknown';
 
 /**

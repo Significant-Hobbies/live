@@ -78,10 +78,18 @@ is not a `/dashboard` duplicate (archetype, life balance, and the only surface
 rendering bucket-item quest chains) and it is `noindex`, so surfacing it does not
 touch the discovery experiment.
 
-Still unlinked and worth a decision: **user profiles (`/u/[username]`) are absent
-from `sitemap.ts`**, so the entire user-generated layer gets no sitemap-driven
-distribution while 43 blog posts do. Adding them publishes more widely, so it is
-left as an explicit operator call rather than a cleanup edit.
+**Resolved 2026-07-25:** user profiles are now in `sitemap.ts`. Only users with a
+username *and* at least one `PUBLIC` timeline are listed — an empty profile is a
+thin page, and `PRIVATE`/`UNLISTED` content is never advertised. `lastModified`
+tracks the newest public timeline update, the query is capped at 5000 rows, and it
+returns `[]` on failure so a database hiccup degrades the sitemap rather than
+500ing it and taking the static entries down with it.
+
+Private app routes stay out of the sitemap by design: `/daily`, `/dashboard`,
+`/trajectory`, `/commitments`, `/life-plan`, `/bucket-list`, and `/look-back` are
+all `noindex` and auth-gated, so listing them would point crawlers at a login
+redirect and contradict their own robots directive. `/search` is in the sitemap
+and is genuinely public — that one is consistent.
 
 ## Blockers
 

@@ -1,14 +1,62 @@
+import { and, eq, isNotNull, max, sql } from 'drizzle-orm';
 import type { MetadataRoute } from 'next';
 
+import { timelines, users } from '~/db/schema';
 import { editorialArticles } from '~/lib/editorial-content';
 import { FAMOUS_BUCKET_LISTS } from '~/lib/famous-bucket-lists';
 import { HOBBY_CATEGORIES } from '~/lib/hobbies';
+import { captureError } from '~/lib/foundry-monitoring';
+import { db } from '~/server/db';
 
 export const revalidate = 3600;
+
+/**
+ * Public profiles that have something to show.
+ *
+ * Only users with a username and at least one PUBLIC timeline are listed —
+ * an empty profile is a thin page, and PRIVATE/UNLISTED content must never be
+ * advertised to crawlers. `lastModified` is the newest public timeline update,
+ * so a profile's freshness tracks the work behind it.
+ *
+ * Returns [] on failure: a database hiccup should degrade the sitemap, never
+ * 500 it and lose the static entries with it.
+ */
+async function publicProfileEntries(baseUrl: string): Promise<MetadataRoute.Sitemap> {
+  try {
+    const rows = await db
+      .select({
+        username: users.username,
+        lastUpdated: max(timelines.updatedAt),
+      })
+      .from(users)
+      .innerJoin(timelines, eq(timelines.userId, users.id))
+      .where(and(isNotNull(users.username), eq(timelines.visibility, 'PUBLIC')))
+      .groupBy(users.username)
+      .orderBy(sql`max(${timelines.updatedAt}) desc`)
+      .limit(5000);
+
+    return rows.flatMap((row) =>
+      row.username
+        ? [
+            {
+              url: `${baseUrl}/u/${encodeURIComponent(row.username)}`,
+              lastModified: row.lastUpdated ? new Date(row.lastUpdated) : new Date(),
+              changeFrequency: 'weekly' as const,
+              priority: 0.6,
+            },
+          ]
+        : []
+    );
+  } catch (err) {
+    captureError(err, { scope: 'sitemap', source: 'public_profiles' });
+    return [];
+  }
+}
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://significanthobbies.com';
   const now = new Date();
+  const profilePages = await publicProfileEntries(baseUrl);
 
   const categoryPages = [
     'creative',
@@ -261,5 +309,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...bucketListPages,
     ...hobbyPages,
     ...blogPages,
+    ...profilePages,
   ];
 }
