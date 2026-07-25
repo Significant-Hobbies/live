@@ -40,9 +40,13 @@ export default async function LoginPage({
       <FadeIn className="relative w-full max-w-sm">
         <SpotlightCard className="shadow-soft" innerClassName="p-6">
           <div className="mb-8">
-            <h1 className="text-xl font-semibold text-foreground">
-              <TextGenerateEffect words="Sign in" />
-            </h1>
+            {/* `as="h1"` rather than an h1 wrapper — the effect rendered a div,
+                so wrapping it nested a div inside a heading. */}
+            <TextGenerateEffect
+              as="h1"
+              words="Sign in"
+              className="text-xl font-semibold text-foreground"
+            />
             <p className="mt-1.5 text-sm text-muted-foreground">
               Save your hobbies, bucket lists, and side quests. Pick up where you left off.
             </p>

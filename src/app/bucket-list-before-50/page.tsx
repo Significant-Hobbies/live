@@ -340,6 +340,7 @@ export default function BucketListBefore50Page() {
                   Guided by Whale · 50 goals worth your best years
                 </p>
                 <TextGenerateEffect
+                  as="h1"
                   words="50 Things to Do Before You Turn 50"
                   className="text-4xl sm:text-5xl font-bold leading-tight text-foreground text-balance"
                 />

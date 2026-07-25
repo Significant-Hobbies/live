@@ -239,6 +239,7 @@ export default function CheapHobbiesPage() {
             ← Hobby Directory
           </Link>
           <TextGenerateEffect
+            as="h1"
             words="25 Free & Cheap Hobbies That Are Actually Fun"
             className="mt-4 text-3xl font-bold text-foreground"
           />

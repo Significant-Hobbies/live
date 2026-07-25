@@ -293,6 +293,7 @@ export default function HobbiesForResumePage() {
             ← Hobby Directory
           </Link>
           <TextGenerateEffect
+            as="h1"
             words={`${total} Impressive Hobbies to Put on Your Resume`}
             className="mt-4 text-3xl font-bold text-foreground"
           />

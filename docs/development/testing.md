@@ -108,15 +108,31 @@ believing it was their own.
 still gated: each carries its own route as `callbackUrl`, and every "continue as
 guest" destination is fetched to prove it renders without a session.
 
-### Known dev-mode e2e failures
+### The e2e suite is not wired to CI
 
-Roughly a dozen specs fail against `pnpm dev` and are **not** regressions:
-`landing.spec.ts` and friends assert content from the Astro overlay, which only
-`pnpm build` produces — anon `GET /` is served by Astro in production
-([`decisions.md`](../architecture/decisions.md) A1), not by `next dev`. Separately,
-`daily.spec.ts` → "/manifesto has working CTAs" fails on a strict-mode violation
-(two links match "Find a hobby": the nav entry and the page CTA); it needs a
-scoped locator.
+`.github/workflows/ci.yml` runs `lint`, `typecheck` and `test:coverage` — **not
+Playwright**. Nothing has ever run these specs on a push, which is why several
+sat failing for a long time. Treat a green `pnpm test:e2e` as a local signal
+only, and read the specs before trusting them.
+
+Failures triaged 2026-07-25 fell into three genuinely different buckets, and the
+distinction matters — two of the three were real product bugs the specs had
+caught correctly:
+
+1. **Real bugs the specs were right about.** `/journeys` sat in the
+   middleware's `PROTECTED_PREFIXES`, so anonymous visitors and crawlers were
+   redirected to `/login`. Eleven SEO pages had no `<h1>`. Both fixed; both now
+   have regression tests in `seo.spec.ts`.
+2. **A bad locator.** `daily.spec.ts` → "/manifesto has working CTAs" hit a
+   strict-mode violation because two links match "Find a hobby" (the nav entry
+   and the page CTA). Fixed by scoping to `article`.
+3. **Genuinely environmental.** `landing.spec.ts` asserts hero copy on `/`.
+   Anon `GET /` is static Astro HTML in production
+   ([`decisions.md`](../architecture/decisions.md) A1), and `next dev` serves
+   the Next.js `/` route instead — which redirects. The asserted copy
+   ("Discover your hobby story") exists in **neither** `src/app/page.tsx` nor
+   `landing-astro/`, so these specs are stale against both targets and need
+   rewriting against whichever surface they mean to cover. Still open.
 
 ### Design review screenshots
 

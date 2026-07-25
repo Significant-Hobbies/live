@@ -1,6 +1,19 @@
 import { type NextRequest, NextResponse } from 'next/server';
 
-const PROTECTED_PREFIXES = ['/dashboard', '/profile', '/settings', '/setup', '/journeys'];
+/**
+ * Prefixes that require a session.
+ *
+ * Deliberately short. Two entries were removed 2026-07-25:
+ *
+ * - `/journeys` is public SEO content — a static catalog of famous people
+ *   (`FAMOUS_JOURNEYS`), no session, no DB, its own description meta, and
+ *   `generateStaticParams` on the detail route. Gating it bounced every
+ *   anonymous visitor and crawler to /login, contradicting
+ *   docs/product/discovery-funnel.md, which says these routes stay "reachable
+ *   via deep links, SEO pages" — and `/hobbies`, which is public, links to it.
+ * - `/profile` is not a route. Public profiles live at `/u/[username]`.
+ */
+const PROTECTED_PREFIXES = ['/dashboard', '/settings', '/setup'];
 
 function getSessionCookie(req: NextRequest) {
   return (

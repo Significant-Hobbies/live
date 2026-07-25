@@ -26,6 +26,7 @@ export default function JourneysPage() {
         <GridBackground variant="dots" size={22} />
         <FadeIn className="relative px-6 pt-14 pb-10 text-center sm:px-10">
           <TextGenerateEffect
+            as="h1"
             words="Famous Hobby Journeys"
             className="text-3xl font-bold text-foreground sm:text-4xl"
           />

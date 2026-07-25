@@ -172,6 +172,7 @@ export default function WhatAreSignificantHobbiesPage() {
           <div className="relative mx-auto max-w-3xl text-center">
             <FadeIn>
               <TextGenerateEffect
+                as="h1"
                 words="What Are Significant Hobbies?"
                 className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl"
               />

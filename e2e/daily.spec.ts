@@ -24,10 +24,20 @@ test.describe('Daily ritual & manifesto', () => {
 
   test('/manifesto has working CTAs', async ({ page }) => {
     await page.goto('/manifesto');
-    const hobbiesLink = page.getByRole('link', { name: 'Find a hobby' });
+    // Scoped to the article: the nav also carries a "Find a Hobby" link, and an
+    // unscoped accessible-name lookup matched both and failed strict mode.
+    const article = page.locator('article');
+
+    const hobbiesLink = article.getByRole('link', { name: 'Find a hobby' });
     await expect(hobbiesLink).toBeVisible();
-    const bucketListLink = page.getByRole('link', { name: 'Start a bucket list' });
+    // "Working" should mean it points somewhere, not merely that it renders.
+    // /hobbies is deliberately deep-link-only (see docs/product/discovery-funnel.md)
+    // — reachable from here, absent from nav and footer.
+    await expect(hobbiesLink).toHaveAttribute('href', '/hobbies');
+
+    const bucketListLink = article.getByRole('link', { name: 'Start a bucket list' });
     await expect(bucketListLink).toBeVisible();
+    await expect(bucketListLink).toHaveAttribute('href', '/bucket-lists');
   });
 
   test('nav includes Daily link', async ({ page }) => {

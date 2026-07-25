@@ -472,6 +472,7 @@ export default function TravelBucketListPage() {
                   Guided by Whale · {totalDestinations} destinations across 5 regions
                 </p>
                 <TextGenerateEffect
+                  as="h1"
                   words="The Ultimate Travel Bucket List (75 Destinations)"
                   className="text-4xl sm:text-5xl font-bold leading-tight text-foreground text-balance"
                 />

@@ -301,6 +301,7 @@ export default function HobbiesToTryPage() {
             ← Hobby Directory
           </Link>
           <TextGenerateEffect
+            as="h1"
             words="40 New Hobbies to Try in 2026"
             className="mt-4 text-3xl font-bold text-foreground"
           />

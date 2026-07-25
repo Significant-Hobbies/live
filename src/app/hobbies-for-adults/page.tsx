@@ -321,6 +321,7 @@ export default function HobbiesForAdultsPage() {
             ← Hobby Directory
           </Link>
           <TextGenerateEffect
+            as="h1"
             words="50 Best Hobbies for Adults — Find What Excites You"
             className="mt-4 text-3xl font-bold text-foreground"
           />

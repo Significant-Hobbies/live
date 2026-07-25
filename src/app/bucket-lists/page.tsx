@@ -64,6 +64,7 @@ export default function BucketListsPage() {
               <div className="space-y-5 text-center sm:text-left">
                 <p className="text-primary text-sm font-semibold">Guided by Whale</p>
                 <TextGenerateEffect
+                  as="h1"
                   words="Your bucket list is a love letter to your future self."
                   className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight text-foreground text-balance"
                 />
