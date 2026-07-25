@@ -8,6 +8,7 @@ import {
   SpotlightCard,
   TextGenerateEffect,
 } from '~/components/aceternity';
+import { guestRouteFor } from '~/lib/auth-routing';
 import { getServerAuthSession } from '~/server/auth';
 
 import { LoginForm } from './login-form';
@@ -28,6 +29,9 @@ export default async function LoginPage({
     requestedCallback?.startsWith('/') && !requestedCallback.startsWith('//')
       ? requestedCallback
       : '/dashboard';
+  // The guest link has to follow the same intent as the callback, or it strands
+  // people: arriving from /daily used to offer the timeline builder.
+  const guestRoute = guestRouteFor(callbackUrl);
 
   return (
     <div className="relative flex min-h-[80vh] items-center justify-center overflow-hidden px-4 py-12">
@@ -58,12 +62,12 @@ export default async function LoginPage({
           <p className="mt-6 text-xs text-subtle">
             Or{' '}
             <Link
-              href={callbackUrl.startsWith('/bucket-list') ? '/bucket-list/new' : '/timeline/new'}
+              href={guestRoute.href}
               className="text-foreground underline underline-offset-2 hover:opacity-70"
             >
               continue as guest
             </Link>{' '}
-            — build and export without an account
+            — {guestRoute.label}
           </p>
         </SpotlightCard>
       </FadeIn>

@@ -3,6 +3,7 @@ import { redirect } from 'next/navigation';
 
 import { GradientMesh } from '~/components/aceternity/gradient-mesh';
 import { TrajectoryPageClient } from '~/components/trajectory/trajectory-page-client';
+import { loginPath } from '~/lib/auth-routing';
 import { birthDateFromYear, buildLifeGrid } from '~/lib/mortality';
 import { getTrajectoryState, getUserBirthYear } from '~/lib/actions/trajectory';
 import { getServerAuthSession } from '~/server/auth';
@@ -14,7 +15,7 @@ export const metadata = {
 
 export default async function TrajectoryPage() {
   const session = await getServerAuthSession();
-  if (!session?.user) redirect('/login');
+  if (!session?.user) redirect(loginPath('/trajectory'));
 
   const [state, birthYear] = await Promise.all([getTrajectoryState(), getUserBirthYear()]);
 

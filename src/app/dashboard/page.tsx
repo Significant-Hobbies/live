@@ -23,6 +23,7 @@ import {
 } from '~/lib/actions/daily';
 import { getMyCommitments } from '~/lib/actions/commitments';
 import { getAbandonedQuests, getActiveQuests, getCompletedQuests } from '~/lib/actions/user-quests';
+import { loginPath } from '~/lib/auth-routing';
 import { computeBehavioralInsights } from '~/lib/behavioral-insights';
 import { dayKeyIn, isMorningIn } from '~/lib/day';
 import { birthDateFromYear, buildLifeGrid, weekIndexForDay } from '~/lib/mortality';
@@ -54,7 +55,7 @@ function getStalenessInfo(updatedAt: Date): {
 
 export default async function DashboardPage() {
   const session = await getServerAuthSession();
-  if (!session?.user) redirect('/login');
+  if (!session?.user) redirect(loginPath('/dashboard'));
 
   // Resolve the user's zone first — every dayDate key below is user-local.
   const me = await db.query.users.findFirst({

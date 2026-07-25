@@ -22,6 +22,7 @@ import {
   userQuests,
   users,
 } from '~/db/schema';
+import { loginPath } from '~/lib/auth-routing';
 import { dayKeyIn } from '~/lib/day';
 import { generateLookBack, type LookBackData } from '~/lib/look-back';
 import { parseJSONColumn } from '~/lib/utils';
@@ -38,7 +39,7 @@ export const dynamic = 'force-dynamic';
 
 export default async function LookBackPage() {
   const session = await getServerAuthSession();
-  if (!session?.user) redirect('/login');
+  if (!session?.user) redirect(loginPath('/look-back'));
 
   const [
     me,

@@ -5,6 +5,7 @@ import { GridBackground, SpotlightCard } from '~/components/aceternity';
 import { CommitmentCard } from '~/components/commitments/commitment-card';
 import { StartCommitmentForm } from '~/components/commitments/start-commitment-form';
 import { timelines, users } from '~/db/schema';
+import { loginPath } from '~/lib/auth-routing';
 import { birthDateFromYear, buildLifeGrid } from '~/lib/mortality';
 import type { Phase } from '~/lib/types';
 import { parseJSONColumn } from '~/lib/utils';
@@ -19,7 +20,7 @@ export const metadata = {
 
 export default async function CommitmentsPage() {
   const session = await getServerAuthSession();
-  if (!session?.user) redirect('/login');
+  if (!session?.user) redirect(loginPath('/commitments'));
 
   const [commitments, rawTimelines, me] = await Promise.all([
     getMyCommitments(),

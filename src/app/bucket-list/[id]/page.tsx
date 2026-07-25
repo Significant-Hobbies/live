@@ -3,6 +3,7 @@ import { and, eq } from 'drizzle-orm';
 import { notFound, redirect } from 'next/navigation';
 import { BucketListWorkspace } from '~/components/bucket-list/bucket-list-workspace';
 import { bucketLists } from '~/db/schema';
+import { loginPath } from '~/lib/auth-routing';
 import { draftFromStoredRecord, type BingoVisibility } from '~/lib/life-bingo';
 import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
@@ -17,9 +18,9 @@ export default async function BucketListDetailPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  const session = await getServerAuthSession();
-  if (!session?.user?.id) redirect('/login');
   const { id } = await params;
+  const session = await getServerAuthSession();
+  if (!session?.user?.id) redirect(loginPath(`/bucket-list/${id}`));
   const row = await db.query.bucketLists.findFirst({
     where: and(eq(bucketLists.id, id), eq(bucketLists.userId, session.user.id)),
   });

@@ -4,6 +4,7 @@ import { notFound, redirect } from 'next/navigation';
 import { SpotlightCard } from '~/components/aceternity';
 import { TimelineBuilder } from '~/components/timeline-builder/builder';
 import { timelines, users } from '~/db/schema';
+import { loginPath } from '~/lib/auth-routing';
 import type { Phase, TimelineData, TimelineVisibility } from '~/lib/types';
 import { parseJSONColumn } from '~/lib/utils';
 import { getServerAuthSession } from '~/server/auth';
@@ -19,7 +20,7 @@ export default async function EditTimelinePage({ params }: Props) {
   const { id } = await params;
   const session = await getServerAuthSession();
 
-  if (!session?.user?.id) redirect('/login');
+  if (!session?.user?.id) redirect(loginPath(`/timeline/${id}/edit`));
 
   const raw = await db.query.timelines.findFirst({
     where: eq(timelines.id, id),

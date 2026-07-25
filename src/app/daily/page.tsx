@@ -15,6 +15,7 @@ import {
   saveJournalEntry,
   toggleHabitLog,
 } from '~/lib/actions/daily';
+import { loginPath } from '~/lib/auth-routing';
 import { dayKeyIn, isMorningIn } from '~/lib/day';
 import { buildJournalDateWindow } from '~/lib/journal';
 import { getActiveMonthEndNudge } from '~/lib/actions/trajectory';
@@ -29,7 +30,7 @@ export const metadata = {
 
 export default async function DailyPage() {
   const session = await getServerAuthSession();
-  if (!session?.user) redirect('/login');
+  if (!session?.user) redirect(loginPath('/daily'));
 
   // The user's zone has to be resolved before "today" exists — every dayDate
   // key below is user-local, so this one read cannot be parallelised with them.

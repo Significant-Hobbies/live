@@ -7,6 +7,7 @@ import { QuestChainCard } from '~/components/bucket-list/quest-chain-card';
 import { Whale } from '~/components/whale';
 import { bucketListItems, timelines } from '~/db/schema';
 import { getActiveQuests } from '~/lib/actions/user-quests';
+import { loginPath } from '~/lib/auth-routing';
 import { BUCKET_ITEM_CATEGORIES, type BucketItemCategory } from '~/lib/famous-bucket-lists';
 import { computePersonality } from '~/lib/personality';
 import type { Phase, TimelineVisibility } from '~/lib/types';
@@ -58,7 +59,7 @@ const CATEGORY_COLORS: Record<
 
 export default async function LifePlanPage() {
   const session = await getServerAuthSession();
-  if (!session?.user) redirect('/login');
+  if (!session?.user) redirect(loginPath('/life-plan'));
 
   const [rawTimelines, rawBucketItems, activeQuests] = await Promise.all([
     db

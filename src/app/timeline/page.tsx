@@ -7,6 +7,7 @@ import { CardHoverEffect, GridBackground, SpotlightCard } from '~/components/ace
 import { TimelineCard } from '~/components/timeline-card';
 import { Button } from '~/components/ui/button';
 import { timelines } from '~/db/schema';
+import { loginPath } from '~/lib/auth-routing';
 import type { Phase, TimelineData, TimelineVisibility } from '~/lib/types';
 import { parseJSONColumn } from '~/lib/utils';
 import { getServerAuthSession } from '~/server/auth';
@@ -18,7 +19,7 @@ export default async function MyTimelinesPage() {
   const session = await getServerAuthSession();
 
   if (!session?.user?.id) {
-    redirect('/login');
+    redirect(loginPath('/timeline'));
   }
 
   const rawTimelines = await db
