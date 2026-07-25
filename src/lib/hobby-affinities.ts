@@ -7,7 +7,7 @@ export type HobbyAffinity = {
 
 // Cross-category affinities for popular hobbies.
 // Each entry lists 3 hobbies from DIFFERENT categories than the source, with a short reason.
-const HOBBY_AFFINITIES: Record<string, HobbyAffinity[]> = {
+export const HOBBY_AFFINITIES: Record<string, HobbyAffinity[]> = {
   // Creative
   Drawing: [
     {
@@ -53,10 +53,15 @@ const HOBBY_AFFINITIES: Record<string, HobbyAffinity[]> = {
       reason: 'Patience, precision, and beautiful outcomes from simple materials',
     },
   ],
+  // Previously Photography / Writing / Music production — all Creative, the same
+  // category as Filmmaking, so getRelatedHobbies dropped all three and this
+  // section rendered empty. Those three are apt, but they already appear in the
+  // page's "related hobbies in same category" block; this list exists to reach
+  // outside it.
   Filmmaking: [
-    { name: 'Photography', reason: 'Composition and light — video is just photos in motion' },
-    { name: 'Writing', reason: 'Screenwriting is storytelling with pictures' },
-    { name: 'Music production', reason: 'Score and sound design make or break a film' },
+    { name: 'Theater', reason: 'Blocking, rehearsal and directing actors is the same craft' },
+    { name: 'Electronics', reason: 'Lighting rigs and sound gear stop being someone else’s job' },
+    { name: 'Video games', reason: 'The best of them are studies in pacing and camera' },
   ],
   'Graphic design': [
     { name: 'Coding', reason: "Build the interfaces you've been designing" },
@@ -228,7 +233,9 @@ const HOBBY_AFFINITIES: Record<string, HobbyAffinity[]> = {
   History: [
     { name: 'Reading', reason: 'Primary sources beat every summary' },
     { name: 'Travel', reason: 'Standing in a place makes history stop being abstract' },
-    { name: 'Collecting', reason: 'Objects carry history in a way no text fully reproduces' },
+    // Was 'Collecting' — a category name, not a hobby, so getRelatedHobbies
+    // silently dropped it and History showed 2 related hobbies instead of 3.
+    { name: 'Coins', reason: 'Objects carry history in a way no text fully reproduces' },
   ],
   Astronomy: [
     { name: 'Stargazing', reason: 'The obvious pairing — the theory and the experience together' },
@@ -423,7 +430,8 @@ const HOBBY_AFFINITIES: Record<string, HobbyAffinity[]> = {
       name: 'Yoga',
       reason: 'Fine motor patience and a calm mind — both benefit from the same source',
     },
-    { name: 'Collecting', reason: 'Appreciation for precious materials crosses over naturally' },
+    // Was 'Collecting' (a category, not a hobby) — same silent drop as History.
+    { name: 'Watches', reason: 'Appreciation for precious materials crosses over naturally' },
   ],
   'Candle making': [
     {
@@ -483,6 +491,11 @@ const HOBBY_AFFINITIES: Record<string, HobbyAffinity[]> = {
   ],
 };
 
+/**
+ * Exported so the catalogue's integrity can be asserted directly. The lookup
+ * below drops unknown names *silently*, which is how two entries pointing at a
+ * category name instead of a hobby went unnoticed.
+ */
 export function getRelatedHobbies(hobbyName: string): HobbyAffinity[] {
   const sourceCategory = getCategoryForHobby(hobbyName);
   const affinities = HOBBY_AFFINITIES[hobbyName] ?? [];
