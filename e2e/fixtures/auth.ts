@@ -43,10 +43,27 @@ async function signInTestUser(page: Page): Promise<void> {
     failOnStatusCode: false,
   });
 
-  const res = await page.request.post('/api/auth/sign-in/email', {
+  // One retry, which helps but does NOT fully fix the known flake below.
+  //
+  // Against a freshly created database the suite's first test can fail with a 403
+  // from sign-in and then pass on Playwright's retry. Note the sign-up above
+  // deliberately ignores its result (it is expected to fail with "already exists"
+  // on every run after the first) — so if that sign-up is the request being
+  // rejected, retrying only the sign-in cannot help, because the account still
+  // does not exist. Retrying the pair is the next thing to try. Not yet
+  // diagnosed; see docs/development/testing.md.
+  let res = await page.request.post('/api/auth/sign-in/email', {
     data: { email: TEST_USER.email, password: TEST_USER.password },
     failOnStatusCode: false,
   });
+
+  if (!res.ok()) {
+    await page.waitForTimeout(750);
+    res = await page.request.post('/api/auth/sign-in/email', {
+      data: { email: TEST_USER.email, password: TEST_USER.password },
+      failOnStatusCode: false,
+    });
+  }
 
   if (!res.ok()) {
     throw new Error(

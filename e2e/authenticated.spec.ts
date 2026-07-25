@@ -32,6 +32,10 @@ test.describe('authenticated surfaces', () => {
 
   for (const route of LOGGED_IN_ROUTES) {
     test(`${route} renders for a signed-in user`, async ({ authedPage }) => {
+      // Warm the route first. Under `next dev` the first request to a route pays
+      // its compile, which made the suite's first authenticated hit flaky in CI.
+      // The assertion should measure the response, not the bundler.
+      await authedPage.goto(route).catch(() => undefined);
       const res = await authedPage.goto(route);
       expect(res?.status(), `${route} should not error`).toBeLessThan(400);
       // The redirect guard must not fire.
@@ -127,10 +131,15 @@ test.describe('authenticated surfaces', () => {
     await field.fill(creed);
     await authedPage.getByRole('button', { name: 'Save changes' }).click();
 
-    // Wait for the form's own success signal before navigating. It redirects to
-    // the public profile once both actions resolve; navigating early cancels the
-    // in-flight server action and the write is silently lost.
-    await authedPage.waitForURL(/\/u\//);
+    // Wait for the form's own success signal before navigating: navigating early
+    // cancels the in-flight server action and the write is silently lost.
+    //
+    // The toast, not the redirect. The form only pushes to /u/<username> when the
+    // user has a username, which a freshly seeded database's test user does not —
+    // so keying on the URL made this pass locally and hang in CI. setToast fires
+    // after both updateProfile and updateCreed resolve, which is exactly the
+    // condition being waited on.
+    await expect(authedPage.getByText('Profile updated!')).toBeVisible();
 
     // Persisted, not just echoed back by local state.
     await authedPage.goto('/settings');

@@ -110,10 +110,17 @@ guest" destination is fetched to prove it renders without a session.
 
 ### The e2e suite is not wired to CI
 
-`.github/workflows/ci.yml` runs `lint`, `typecheck` and `test:coverage` — **not
-Playwright**. Nothing has ever run these specs on a push, which is why several
-sat failing for a long time. Treat a green `pnpm test:e2e` as a local signal
-only, and read the specs before trusting them.
+`.github/workflows/ci.yml` now has an `e2e` job (added 2026-07-25) running the
+`desktop` and `landing` projects on every push and PR. Before that it ran only
+`lint`, `typecheck` and `test:coverage`, so **Playwright had never run in CI** —
+which is why several specs sat failing for a long time, two of them correctly
+(`/journeys` gated from crawlers, eleven SEO pages with no `<h1>`) plus a 500 on
+`/llms-full.txt`.
+
+The job uses a throwaway `file:./dev.db` with `db:push` + `db:seed`, and
+`ENABLE_TEST_AUTH=1` so the authenticated specs run rather than skip. No real
+credentials are involved. The device-matrix projects (`mobile`, `tablet`,
+`wide`) are left out: they re-run the same specs at other widths.
 
 Failures triaged 2026-07-25 fell into three genuinely different buckets, and the
 distinction matters — two of the three were real product bugs the specs had
