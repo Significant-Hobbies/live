@@ -12,6 +12,7 @@ import { LifeGrid } from '~/components/life-grid';
 import { SuggestionsPanel } from '~/components/suggestions-panel';
 import { Button } from '~/components/ui/button';
 import { bucketListItems, follows, timelines, userQuests, users } from '~/db/schema';
+import { ProfileShareButton } from '~/components/profile-share-button';
 import { ProfileVisibilityToggle } from '~/components/profile-visibility-toggle';
 import { getPublicCommitmentsForUser, setCommitmentVisibility } from '~/lib/actions/commitments';
 import { setQuestVisibility } from '~/lib/actions/user-quests';
@@ -31,9 +32,25 @@ interface Props {
 
 export async function generateMetadata({ params }: Props) {
   const { username } = await params;
+  const title = `@${username} — SignificantHobbies`;
+  const description = `View @${username}'s hobby journey on SignificantHobbies — their timelines, hobby cloud, and badges.`;
+  // Without an explicit openGraph block the shared card falls back to the root
+  // layout's site-wide title and description, so every profile looked identical
+  // when pasted into a chat. The image still comes from opengraph-image.tsx.
   return {
-    title: `@${username} — SignificantHobbies`,
-    description: `View @${username}'s hobby journey on SignificantHobbies — their timelines, hobby cloud, and badges.`,
+    title,
+    description,
+    openGraph: {
+      type: 'profile' as const,
+      title,
+      description,
+      url: `/u/${username}`,
+    },
+    twitter: {
+      card: 'summary_large_image' as const,
+      title,
+      description,
+    },
   };
 }
 
@@ -306,6 +323,7 @@ export default async function ProfilePage({ params }: Props) {
                 </Button>
               </Link>
             )}
+            <ProfileShareButton username={username} displayName={displayName} />
           </div>
         </div>
       </div>
