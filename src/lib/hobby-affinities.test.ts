@@ -38,17 +38,30 @@ describe('HOBBY_AFFINITIES integrity', () => {
     }
   });
 
+  it('shows every authored suggestion — nothing is silently dropped', () => {
+    // The strongest invariant in this file. The catalogue was written without the
+    // cross-category rule in mind, so 18 sources quietly lost an entry and
+    // Filmmaking lost all three (rendering an empty section). Every entry now
+    // survives the filter, and this fails the moment a new one does not.
+    const losing = Object.entries(HOBBY_AFFINITIES)
+      .map(([source, authored]) => ({
+        source,
+        authored: authored.length,
+        shown: getRelatedHobbies(source).length,
+      }))
+      .filter((r) => r.shown < r.authored);
+
+    expect(
+      losing,
+      `these sources lose suggestions: ${losing.map((r) => `${r.source} ${r.authored}→${r.shown}`).join(', ')}`
+    ).toEqual([]);
+  });
+
   it('recovers the two entries that pointed at a category instead of a hobby', () => {
-    // Both named 'Collecting'. Jewelry making now offers its intended three;
-    // History reaches two, because its third entry (Reading) is *also*
-    // Intellectual and the cross-category rule drops it by design — see the
-    // same-category test below, which is a separate and much larger issue.
-    expect(getRelatedHobbies('Jewelry making').map((h) => h.name)).toEqual([
-      'Drawing',
-      'Yoga',
-      'Watches',
-    ]);
-    expect(getRelatedHobbies('History').map((h) => h.name)).toEqual(['Travel', 'Coins']);
+    // Both named 'Collecting', which is a category and not a hobby.
+    expect(getRelatedHobbies('Jewelry making').map((h) => h.name)).toContain('Watches');
+    expect(getRelatedHobbies('History').map((h) => h.name)).toContain('Coins');
+    expect(getRelatedHobbies('History')).toHaveLength(3);
   });
 
   it('never leaves a hobby with no related hobbies at all', () => {

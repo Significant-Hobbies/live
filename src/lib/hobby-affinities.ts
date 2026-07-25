@@ -49,8 +49,8 @@ export const HOBBY_AFFINITIES: Record<string, HobbyAffinity[]> = {
     { name: 'Yoga', reason: 'Breath control and stillness matter as much as technique' },
     { name: 'Reading', reason: 'Calligraphy deepens appreciation for language itself' },
     {
-      name: 'Origami',
-      reason: 'Patience, precision, and beautiful outcomes from simple materials',
+      name: 'Language learning',
+      reason: 'Forming an unfamiliar script teaches the language from the hand inwards',
     },
   ],
   // Previously Photography / Writing / Music production — all Creative, the same
@@ -65,7 +65,10 @@ export const HOBBY_AFFINITIES: Record<string, HobbyAffinity[]> = {
   ],
   'Graphic design': [
     { name: 'Coding', reason: "Build the interfaces you've been designing" },
-    { name: 'Photography', reason: 'Original assets elevate every design project' },
+    {
+      name: 'Video games',
+      reason: 'Menus, HUDs and title screens are graphic design under real constraints',
+    },
     { name: 'Woodworking', reason: 'Physical making gives a new perspective on form and function' },
   ],
   'Music production': [
@@ -77,7 +80,7 @@ export const HOBBY_AFFINITIES: Record<string, HobbyAffinity[]> = {
     },
   ],
   Songwriting: [
-    { name: 'Writing', reason: 'Lyrics are compressed poetry — the craft transfers directly' },
+    { name: 'Guitar', reason: 'A song needs an instrument to argue with before the words settle' },
     { name: 'History', reason: 'Songs tell stories; knowing history gives you richer material' },
     {
       name: 'Yoga',
@@ -161,7 +164,7 @@ export const HOBBY_AFFINITIES: Record<string, HobbyAffinity[]> = {
   ],
   Climbing: [
     { name: 'Chess', reason: 'Route-reading is chess on a vertical plane — pure problem solving' },
-    { name: 'Yoga', reason: 'Flexibility and breath control directly improve sends' },
+    { name: 'Puzzles', reason: 'A route is a puzzle your whole body has to solve, holding on' },
     { name: 'Camping', reason: 'Crags are usually outside — overnight trips extend the adventure' },
   ],
   'Martial arts': [
@@ -173,7 +176,10 @@ export const HOBBY_AFFINITIES: Record<string, HobbyAffinity[]> = {
       name: 'History',
       reason: 'Most martial arts are inseparable from the culture that created them',
     },
-    { name: 'Yoga', reason: 'Flexibility and proprioception cross over directly' },
+    {
+      name: 'Chess',
+      reason: 'Openings, tempo, and knowing when to commit — the same game at speed',
+    },
   ],
   Dance: [
     { name: 'Singing', reason: 'Performance arts that both unlock from working the other' },
@@ -184,7 +190,10 @@ export const HOBBY_AFFINITIES: Record<string, HobbyAffinity[]> = {
     },
   ],
   Swimming: [
-    { name: 'Yoga', reason: 'Breathing technique from yoga translates directly into the water' },
+    {
+      name: 'Singing',
+      reason: 'Breath control is not a warm-up in either one. It is the discipline',
+    },
     {
       name: 'Cooking',
       reason: "Recovery nutrition becomes fascinating when you're training volume",
@@ -227,11 +236,17 @@ export const HOBBY_AFFINITIES: Record<string, HobbyAffinity[]> = {
   ],
   Philosophy: [
     { name: 'Writing', reason: 'Arguments only get better when you have to put them into prose' },
-    { name: 'Chess', reason: 'Both are games of consequence chains and first principles' },
+    {
+      name: 'Volunteering',
+      reason: 'Ethics stops being theoretical the first time you actually show up',
+    },
     { name: 'Debate club', reason: 'The fastest feedback loop for untested ideas' },
   ],
   History: [
-    { name: 'Reading', reason: 'Primary sources beat every summary' },
+    {
+      name: 'Calligraphy',
+      reason: 'The hand that wrote the primary sources — scripts shift by century',
+    },
     { name: 'Travel', reason: 'Standing in a place makes history stop being abstract' },
     // Was 'Collecting' — a category name, not a hobby, so getRelatedHobbies
     // silently dropped it and History showed 2 related hobbies instead of 3.
@@ -254,8 +269,8 @@ export const HOBBY_AFFINITIES: Record<string, HobbyAffinity[]> = {
     { name: 'Coding', reason: 'The gap between player and builder shrinks fast' },
     { name: 'Drawing', reason: 'Character and world art is where many game dev projects start' },
     {
-      name: 'Board games',
-      reason: 'Mechanics translate — many great video games started as tabletop designs',
+      name: 'Filmmaking',
+      reason: 'The good ones are studies in pacing, camera and withheld information',
     },
   ],
   'Board games': [
@@ -317,13 +332,16 @@ export const HOBBY_AFFINITIES: Record<string, HobbyAffinity[]> = {
     },
     { name: 'Astronomy', reason: 'Theory and observation reinforce each other' },
     {
-      name: 'Camping',
-      reason: 'Dark skies require leaving the city — overnight trips are the best plan',
+      name: 'Mathematics',
+      reason: 'Distances and orbits stop being trivia once you can do the arithmetic',
     },
   ],
   Foraging: [
     { name: 'Cooking', reason: 'What you find becomes dinner — the loop is deeply satisfying' },
-    { name: 'Gardening', reason: 'Learning wild plants builds a botanical eye that carries over' },
+    {
+      name: 'Fermentation',
+      reason: 'Wild yeast and wild plants are the same instinct, one jar apart',
+    },
     { name: 'Hiking', reason: 'Trails are where foragers spend most of their time' },
   ],
 
@@ -334,10 +352,7 @@ export const HOBBY_AFFINITIES: Record<string, HobbyAffinity[]> = {
       name: 'Hosting dinners',
       reason: 'Cooking needs an audience — hosting is where it comes alive',
     },
-    {
-      name: 'Wine tasting',
-      reason: 'Pairing food and wine is a craft that rewards the curious cook',
-    },
+    { name: 'Ceramics', reason: 'Making the bowl changes how you plate what goes in it' },
   ],
   Baking: [
     { name: 'Gardening', reason: 'Fresh herbs and fruits make baking seasons meaningful' },
@@ -353,7 +368,10 @@ export const HOBBY_AFFINITIES: Record<string, HobbyAffinity[]> = {
     },
   ],
   'Wine tasting': [
-    { name: 'Cooking', reason: 'Pairing food and wine is a craft that rewards both interests' },
+    {
+      name: 'Gardening',
+      reason: 'Soil and weather explain more about a bottle than the label does',
+    },
     { name: 'Travel', reason: 'Regions are the curriculum — every bottle is a reason to visit' },
     { name: 'History', reason: 'Wine is one of the oldest continuous threads in Western history' },
   ],
@@ -411,8 +429,8 @@ export const HOBBY_AFFINITIES: Record<string, HobbyAffinity[]> = {
   '3D printing': [
     { name: 'Coding', reason: 'Parametric design is programming for physical objects' },
     {
-      name: 'Electronics',
-      reason: 'Printed enclosures and mounts bring electronics projects together',
+      name: 'Tabletop RPGs',
+      reason: 'Print the miniatures you have been describing to everyone for months',
     },
     { name: 'Board games', reason: 'Custom tokens, minis, and inserts are a popular application' },
   ],
@@ -422,7 +440,7 @@ export const HOBBY_AFFINITIES: Record<string, HobbyAffinity[]> = {
       name: 'Music production',
       reason: 'Synth building and audio hardware are beloved intersections',
     },
-    { name: '3D printing', reason: 'Print the enclosures; build the circuits inside them' },
+    { name: 'Guitar', reason: 'Build the pedal, then find out what it actually does to your tone' },
   ],
   'Jewelry making': [
     { name: 'Drawing', reason: 'Sketching designs is the first step in every piece' },
@@ -455,12 +473,15 @@ export const HOBBY_AFFINITIES: Record<string, HobbyAffinity[]> = {
       reason: 'Book club adds accountability and new lenses to any reading habit',
     },
     {
-      name: 'Hosting dinners',
-      reason: 'Most book clubs work best when the food and company are good',
+      name: 'Poetry',
+      reason: 'Short enough that everyone has genuinely finished it before the meeting',
     },
   ],
   'Improv comedy': [
-    { name: 'Theater', reason: 'Improv is the engine that makes all performance better' },
+    {
+      name: 'Dance',
+      reason: 'Both are listening with your body and committing before you feel ready',
+    },
     {
       name: 'Singing',
       reason: 'Both demand presence, commitment, and not being afraid to look foolish',
@@ -474,8 +495,8 @@ export const HOBBY_AFFINITIES: Record<string, HobbyAffinity[]> = {
     { name: 'Singing', reason: 'Musical theater is the natural next level' },
     { name: 'Writing', reason: 'Understanding dramatic structure changes how you perform it' },
     {
-      name: 'Improv comedy',
-      reason: 'Improv builds the presence and listening that scripted work needs',
+      name: 'Sewing',
+      reason: 'Costume is half the character established before anyone speaks a line',
     },
   ],
   Travel: [
