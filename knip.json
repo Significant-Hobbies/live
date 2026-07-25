@@ -85,8 +85,6 @@
   ],
   "ignoreIssues": {
     "src/app/api/**/route.ts": ["exports", "types"],
-    "src/lib/actions/**": ["exports", "types"],
-    "lib/actions/**": ["exports", "types"],
     "**/schema.ts": ["exports", "types"],
     "**/db/schema*.ts": ["exports", "types"],
     "**/commands/**": ["exports", "types"],

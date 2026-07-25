@@ -4,6 +4,7 @@ import { and, count, eq } from 'drizzle-orm';
 import { revalidatePath } from 'next/cache';
 
 import { bucketListItems, habits, userQuests, timelines, users } from '~/db/schema';
+import { generateQuestChain } from '~/lib/quest-chains';
 import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
 import type { TimelinePin } from '~/lib/types';
@@ -207,7 +208,12 @@ export async function completeUserQuest(userQuestPkId: string): Promise<{
   let bucketItemCompleted = false;
   if (quest.sourceBucketItemId) {
     const [item] = await db
-      .select({ id: bucketListItems.id, status: bucketListItems.status })
+      .select({
+        id: bucketListItems.id,
+        status: bucketListItems.status,
+        title: bucketListItems.title,
+        category: bucketListItems.category,
+      })
       .from(bucketListItems)
       .where(
         and(
@@ -229,7 +235,29 @@ export async function completeUserQuest(userQuestPkId: string): Promise<{
           )
         );
 
-      if (remaining === 0) {
+      // "Nothing active" is NOT "chain finished" — it is also true after the
+      // very first step of a five-step chain, which would have marked a whole
+      // life goal done on one step. Compare completed steps against the chain
+      // this item actually generates; the generator is a pure function of
+      // (id, title, category), so the server can rebuild it exactly.
+      const [{ finished } = { finished: 0 }] = await db
+        .select({ finished: count() })
+        .from(userQuests)
+        .where(
+          and(
+            eq(userQuests.userId, session.user.id),
+            eq(userQuests.sourceBucketItemId, quest.sourceBucketItemId),
+            eq(userQuests.status, 'completed')
+          )
+        );
+
+      const chainLength = generateQuestChain({
+        bucketItemId: item.id,
+        title: item.title,
+        category: item.category,
+      }).length;
+
+      if (remaining === 0 && finished >= chainLength) {
         await db
           .update(bucketListItems)
           .set({ status: 'done', completedAt: new Date(), updatedAt: new Date() })

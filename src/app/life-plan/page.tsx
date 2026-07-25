@@ -6,7 +6,7 @@ import { GridBackground, SpotlightCard } from '~/components/aceternity';
 import { QuestChainCard } from '~/components/bucket-list/quest-chain-card';
 import { Whale } from '~/components/whale';
 import { bucketListItems, timelines } from '~/db/schema';
-import { getActiveQuests } from '~/lib/actions/user-quests';
+import { getActiveQuests, getCompletedQuests } from '~/lib/actions/user-quests';
 import { loginPath } from '~/lib/auth-routing';
 import { BUCKET_ITEM_CATEGORIES, type BucketItemCategory } from '~/lib/famous-bucket-lists';
 import { computePersonality } from '~/lib/personality';
@@ -61,7 +61,10 @@ export default async function LifePlanPage() {
   const session = await getServerAuthSession();
   if (!session?.user) redirect(loginPath('/life-plan'));
 
-  const [rawTimelines, rawBucketItems, activeQuests] = await Promise.all([
+  // Completed quests are fetched alongside active ones because QuestChainCard
+  // already handles `status === 'completed'` but was only ever given active
+  // rows — so a finished step silently reverted to looking un-started.
+  const [rawTimelines, rawBucketItems, activeQuests, completedQuests] = await Promise.all([
     db
       .select()
       .from(timelines)
@@ -73,7 +76,10 @@ export default async function LifePlanPage() {
       .where(eq(bucketListItems.userId, session.user.id))
       .orderBy(desc(bucketListItems.createdAt)),
     getActiveQuests(),
+    getCompletedQuests(),
   ]);
+
+  const chainQuests = [...activeQuests, ...completedQuests];
 
   // Parse all phases
   const allPhases: Phase[] = [];
@@ -299,7 +305,7 @@ export default async function LifePlanPage() {
                   bucketItemId={item.id}
                   title={item.title}
                   category={item.category}
-                  activeQuests={activeQuests.map((q) => ({
+                  activeQuests={chainQuests.map((q) => ({
                     id: q.id,
                     questId: q.questId,
                     status: q.status,

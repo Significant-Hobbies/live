@@ -65,6 +65,40 @@ test.describe('authenticated surfaces', () => {
     }
   });
 
+  test('a quest can be started AND finished, closing its bucket item', async ({ authedPage }) => {
+    // `completeUserQuest` and `abandonQuest` had zero callers app-wide, so the
+    // quest lifecycle was one-way: startable, never finishable. Nothing could
+    // reach 'completed', which is why the dashboard's completed section, the
+    // profile's "The evidence" and four behavioural insights were all
+    // permanently empty. This walks the whole loop through the UI.
+    await authedPage.goto('/bucket-lists/will-smith');
+
+    const addButton = authedPage.getByRole('button', { name: '+ Add to my list' }).first();
+    await expect(addButton).toBeVisible();
+    await addButton.click();
+    await expect(authedPage.getByText('Added to your bucket list').first()).toBeVisible();
+
+    await authedPage.goto('/life-plan');
+    const start = authedPage.getByRole('button', { name: /Start step 1/ }).first();
+    await expect(start, 'a planned bucket item should offer its first quest step').toBeVisible();
+    await start.click();
+
+    // Now in progress — and crucially, finishable.
+    const markDone = authedPage.getByRole('button', { name: 'Mark done' }).first();
+    await expect(markDone, 'an active step must be completable').toBeVisible();
+    await markDone.click();
+
+    // The step reports Done rather than staying "In progress" forever.
+    await expect(authedPage.getByText('Done', { exact: true }).first()).toBeVisible();
+
+    // And the bucket item must NOT be closed yet. My first version of the
+    // quest→bucket edge treated "no quests currently active" as "chain
+    // finished", so finishing step 1 of five marked a whole life goal done.
+    // The chain card stays on /life-plan (still a planned item) and reports
+    // partial progress.
+    await expect(authedPage.getByText(/1\/\d+ steps done/).first()).toBeVisible();
+  });
+
   test('trajectory renders all four life buckets', async ({ authedPage }) => {
     await authedPage.goto('/trajectory');
     for (const bucket of ['Health', 'Finance', 'Knowledge', 'Relationships']) {
