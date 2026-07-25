@@ -4,6 +4,7 @@ import { redirect } from 'next/navigation';
 
 import { GridBackground, SpotlightCard } from '~/components/aceternity';
 import { BucketItemControls } from '~/components/bucket-list/bucket-item-controls';
+import { BucketInsights } from '~/components/bucket-list/bucket-insights';
 import { QuestChainCard } from '~/components/bucket-list/quest-chain-card';
 import { Whale } from '~/components/whale';
 import { bucketListItems, timelines } from '~/db/schema';
@@ -189,6 +190,9 @@ export default async function LifePlanPage() {
           accent="text-muted-foreground"
         />
       </div>
+
+      {/* ── What the list says about you ────────────────────────── */}
+      <BucketInsights items={rawBucketItems} />
 
       {/* ── Life wheel ──────────────────────────────────────────── */}
       {totalBucket > 0 && (

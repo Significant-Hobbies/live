@@ -23,6 +23,13 @@ const LOGGED_IN_ROUTES = [
 ] as const;
 
 test.describe('authenticated surfaces', () => {
+  // Serial, not parallel. These tests mutate one shared dev.db as the same user —
+  // several add bucket items — so running them concurrently makes them read each
+  // other's rows: "Start step 1" could land on another test's item, and any
+  // count-based assertion drifts. Playwright defaults to fullyParallel, which is
+  // right for read-only specs and wrong for this one.
+  test.describe.configure({ mode: 'serial' });
+
   for (const route of LOGGED_IN_ROUTES) {
     test(`${route} renders for a signed-in user`, async ({ authedPage }) => {
       const res = await authedPage.goto(route);
@@ -73,7 +80,9 @@ test.describe('authenticated surfaces', () => {
     // permanently empty. This walks the whole loop through the UI.
     await authedPage.goto('/bucket-lists/will-smith');
 
-    const addButton = authedPage.getByRole('button', { name: '+ Add to my list' }).first();
+    const addButton = authedPage
+      .getByRole('button', { name: /^Add .+ to my bucket list$/ })
+      .first();
     await expect(addButton).toBeVisible();
     await addButton.click();
     await expect(authedPage.getByText('Added to your bucket list').first()).toBeVisible();
@@ -142,7 +151,10 @@ test.describe('authenticated surfaces', () => {
     // fullyParallel against one dev.db, so two tests adding the same item title
     // would each see the other's row and the delete assertion would never settle.
     await authedPage.goto('/bucket-lists/richard-branson');
-    await authedPage.getByRole('button', { name: '+ Add to my list' }).first().click();
+    await authedPage
+      .getByRole('button', { name: /^Add .+ to my bucket list$/ })
+      .first()
+      .click();
     await expect(authedPage.getByText('Added to your bucket list').first()).toBeVisible();
 
     await authedPage.goto('/life-plan');
@@ -214,6 +226,53 @@ test.describe('authenticated surfaces', () => {
     await expect(proofLink).toBeVisible();
     await expect(proofLink).toHaveAttribute('rel', /noopener/);
     await expect(authedPage.locator('a[href^="javascript:"]')).toHaveCount(0);
+  });
+
+  test('bucket-list insights render, and a suggestion can be added', async ({ authedPage }) => {
+    // src/lib/bucket-list-insights.ts is 368 lines with a full test suite and had
+    // zero importers — a finished feature with no door into it. All three
+    // generators return null/empty for an empty list, so seed one item first.
+    await authedPage.goto('/bucket-lists/barack-obama');
+    await authedPage
+      .getByRole('button', { name: /^Add .+ to my bucket list$/ })
+      .first()
+      .click();
+    await expect(authedPage.getByText('Added to your bucket list').first()).toBeVisible();
+
+    await authedPage.goto('/life-plan');
+    await expect(authedPage.getByRole('heading', { name: 'What your list says' })).toBeVisible();
+    await expect(authedPage.getByText(/bucket-list archetype/i)).toBeVisible();
+    await expect(authedPage.getByText('Closest famous list')).toBeVisible();
+    await expect(authedPage.getByText(/Chosen for the gaps/i)).toBeVisible();
+
+    // A suggestion is only worth showing if it can become a real item, which
+    // needed AddToMyListButton's provenance props to become optional.
+    //
+    // Asserted by the item appearing, not by the button's transient "Added"
+    // state: getBucketListSuggestions hashes the existing titles into its
+    // shuffle, so adding one re-rolls the panel and that row unmounts. The real
+    // confirmation is the item turning up under "Ahead of you" with its own
+    // controls.
+    // Identified by its own title rather than by a global count, so other items
+    // the user owns cannot make this pass or fail by accident.
+    const suggestionAdd = authedPage
+      .getByRole('button', { name: /^Add .+ to my bucket list$/ })
+      .first();
+    // The button is named after the item it adds, so its label yields the exact
+    // stored title — no scraping the row and stripping the emoji back out.
+    const label = (await suggestionAdd.getAttribute('aria-label')) as string;
+    const suggestionTitle = label.replace(/^Add /, '').replace(/ to my bucket list$/, '');
+    expect(suggestionTitle.length).toBeGreaterThan(3);
+
+    await suggestionAdd.click();
+
+    await expect(async () => {
+      await authedPage.goto('/life-plan');
+      await expect(
+        authedPage.getByRole('group', { name: `Controls for ${suggestionTitle}` }),
+        'the added suggestion should become a real bucket item'
+      ).toHaveCount(1);
+    }).toPass({ timeout: 10_000 });
   });
 
   test('trajectory renders all four life buckets', async ({ authedPage }) => {
