@@ -3,7 +3,7 @@
 import { and, asc, eq, gte, lte } from 'drizzle-orm';
 import { revalidatePath } from 'next/cache';
 
-import { dailyCheckins, habitLogs, habits, journalEntries, users } from '~/db/schema';
+import { habitLogs, habits, journalEntries, users } from '~/db/schema';
 import { DEFAULT_FREQUENCY, isValidFrequency } from '~/lib/habit-utils';
 import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
@@ -172,52 +172,6 @@ export async function saveJournalEntry(
       dayDate,
       amEntry,
       pmEntry,
-    });
-  }
-  revalidatePath('/daily');
-  revalidatePath('/dashboard');
-}
-
-// ── Daily check-in state ────────────────────────────────────────────────────
-
-export async function getDailyCheckin(dayDate: string) {
-  const session = await getServerAuthSession();
-  if (!session?.user) return null;
-
-  const rows = await db
-    .select()
-    .from(dailyCheckins)
-    .where(and(eq(dailyCheckins.userId, session.user.id), eq(dailyCheckins.dayDate, dayDate)))
-    .limit(1);
-
-  return rows[0] ?? null;
-}
-
-export async function saveDailyCheckin(
-  dayDate: string,
-  amCompleted: boolean,
-  pmCompleted: boolean
-) {
-  const session = await getServerAuthSession();
-  if (!session?.user) return;
-
-  const existing = await db
-    .select()
-    .from(dailyCheckins)
-    .where(and(eq(dailyCheckins.userId, session.user.id), eq(dailyCheckins.dayDate, dayDate)))
-    .limit(1);
-
-  if (existing.length > 0) {
-    await db
-      .update(dailyCheckins)
-      .set({ amCompleted, pmCompleted, updatedAt: new Date() })
-      .where(eq(dailyCheckins.id, existing[0].id));
-  } else {
-    await db.insert(dailyCheckins).values({
-      userId: session.user.id,
-      dayDate,
-      amCompleted,
-      pmCompleted,
     });
   }
   revalidatePath('/daily');

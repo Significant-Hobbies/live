@@ -52,12 +52,6 @@ interface JournalEntry {
   pmEntry: string | null;
 }
 
-interface Checkin {
-  id: string;
-  amCompleted: boolean;
-  pmCompleted: boolean;
-}
-
 interface Actions {
   createHabit: (
     name: string,
@@ -71,7 +65,6 @@ interface Actions {
     amEntry: string | null,
     pmEntry: string | null
   ) => Promise<void>;
-  saveDailyCheckin: (dayDate: string, amCompleted: boolean, pmCompleted: boolean) => Promise<void>;
 }
 
 interface TrajectoryNudge {
@@ -90,7 +83,6 @@ interface Props {
   allHabitLogs: HabitLog[];
   journalEntry: JournalEntry | null;
   journalEntries: JournalEntry[];
-  checkin: Checkin | null;
   trajectoryNudge?: TrajectoryNudge;
   actions: Actions;
 }
@@ -128,7 +120,6 @@ export function DailyRitual({
   allHabitLogs,
   journalEntry: initialJournal,
   journalEntries,
-  checkin: initialCheckin,
   trajectoryNudge,
   actions,
 }: Props) {
@@ -136,8 +127,6 @@ export function DailyRitual({
   const [logs, setLogs] = useState(initialLogs);
   const [amEntry, setAmEntry] = useState(initialJournal?.amEntry ?? '');
   const [pmEntry, setPmEntry] = useState(initialJournal?.pmEntry ?? '');
-  const [amCompleted, setAmCompleted] = useState(initialCheckin?.amCompleted ?? false);
-  const [pmCompleted, setPmCompleted] = useState(initialCheckin?.pmCompleted ?? false);
   const [newHabit, setNewHabit] = useState('');
   const [newHabitFreq, setNewHabitFreq] = useState('daily');
   const [newHabitIcon, setNewHabitIcon] = useState('');
@@ -201,13 +190,6 @@ export function DailyRitual({
     setSaved(false);
     try {
       await actions.saveJournalEntry(today, amEntry || null, pmEntry || null);
-      if (isMorning) {
-        setAmCompleted(true);
-        await actions.saveDailyCheckin(today, true, pmCompleted);
-      } else {
-        setPmCompleted(true);
-        await actions.saveDailyCheckin(today, amCompleted, true);
-      }
       setSaved(true);
       setTimeout(() => setSaved(false), 2000);
     } finally {
@@ -233,9 +215,13 @@ export function DailyRitual({
     if (nextDate) setSelectedDate(nextDate);
   }
 
-  // AM/PM completion for the rings
-  const amProgress = amCompleted ? 1 : 0;
-  const pmProgress = pmCompleted ? 1 : 0;
+  // AM/PM completion for the rings, derived from the writing itself rather than
+  // a separate DailyCheckin row. The old flag was set only when you pressed save
+  // during that half of the day, so writing a morning entry in the evening left
+  // the AM ring dark even though the entry existed. The ring now means exactly
+  // what it looks like it means: there is writing for this half of today.
+  const amProgress = amEntry.trim().length > 0 ? 1 : 0;
+  const pmProgress = pmEntry.trim().length > 0 ? 1 : 0;
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-10 sm:py-16 space-y-8">

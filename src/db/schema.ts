@@ -427,7 +427,20 @@ export const journalEntries = sqliteTable(
   ]
 );
 
-// Daily ritual check-in state — tracks whether AM/PM ritual was completed.
+// ─── DailyCheckin — RETIRED 2026-07-25, table kept for data safety ─────────
+//
+// Tracked whether the AM/PM ritual was "completed". Nothing reads or writes it
+// any more: the AM/PM rings on /daily now derive from whether the matching
+// journal entry has text, which is what they always appeared to mean.
+//
+// The flag was set only when you pressed save *during* that half of the day, so
+// writing a morning entry in the evening left the AM ring dark even though the
+// entry existed. On /dashboard the state was write-only — stored and never
+// rendered at all.
+//
+// The table stays defined so a generated migration can never drop it, matching
+// the decision made for `arcs`. Historical rows are harmless; nothing reads them.
+// Drop it only as part of a deliberate schema tidy.
 export const dailyCheckins = sqliteTable(
   'DailyCheckin',
   {
