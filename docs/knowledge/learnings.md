@@ -141,15 +141,39 @@ column wholesale and erased every streak badge — it now merges, replacing only
 the ids in `SIDE_QUEST_BADGE_IDS`. **Before wiring an orphaned writer, check what
 else writes its target.**
 
-## L12 — `pnpm db:generate` is unsafe in this repo
+## L12 — a stale migration snapshot generates confidently wrong SQL
 
-The `drizzle/meta` snapshot only knows migration `0000`. Everything since
-(better-auth, life bingo, trajectory, quests, habit columns, creed/onboarding)
-arrived via `db:push` or hand-written SQL that was never added to
-`_journal.json`. So `db:generate` diffs against an ancient baseline and emits
-`CREATE TABLE` for tables that already exist in production and `ADD COLUMN` for
-columns that already exist — output that fails on contact with the real database.
+**Fixed 2026-07-25 by baselining.** Kept because the failure mode is quiet and
+recurs in any project that mixes `db:push` with generated migrations.
 
-Migrations here are hand-written (`0001_better_auth.sql`, `0002_life_bingo.sql`,
-`0003_visibility_and_timezone.sql`) and applied manually. Either rebaseline the
-snapshot against production or treat `db:generate` as unavailable.
+The `drizzle/meta` snapshot only recorded migration `0000`, while the database had
+moved far past it: better-auth, life bingo, trajectory, quests, habit columns,
+creed/onboarding all arrived via `db:push` or hand-written SQL that was never added
+to `_journal.json`. `db:generate` therefore diffed against an ancient baseline and
+emitted `CREATE TABLE` for tables that already existed in production and
+`ADD COLUMN` for columns that already existed.
+
+The danger is not that it errors — it is that **the output looks like a normal
+migration**. It is well-formed SQL with plausible table names, and it only fails
+once it reaches a real database.
+
+The fix is a baseline: generate once against the current schema, confirm the diff
+is purely additive (**zero `DROP`s** — a `DROP` means the snapshot is *divergent*,
+not merely behind, and needs investigating instead), then empty the generated file
+and keep only its snapshot. `drizzle/0001_baseline_current_schema.sql` is that
+file, and `pnpm db:generate` now reports `No schema changes` against
+`src/db/schema.ts`.
+
+Two things worth carrying forward:
+
+- **Baseline against the schema file, not a guess.** `src/db/schema.ts` is the
+  source of truth. Before trusting the baseline, verify a real database matches it
+  — comparing `PRAGMA table_info` for every table against the columns declared in
+  the schema took one script and caught nothing, which is exactly the confirmation
+  you want before freezing a snapshot.
+- **A stale snapshot cannot see intentionally-retired tables.** `Arc` and
+  `DailyCheckin` have no runtime readers but are still declared precisely so a
+  generated migration never drops them. Deleting a table from the schema file is
+  how you accidentally write a destructive production migration.
+
+Layout and conventions: [`drizzle/README.md`](../../drizzle/README.md).

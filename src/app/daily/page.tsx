@@ -8,12 +8,10 @@ import {
   createHabit,
   deleteHabit,
   getAllHabitLogs,
-  getDailyCheckin,
   getHabits,
   getHabitLogsForDate,
   getJournalEntriesForRange,
   getUserProfile,
-  saveDailyCheckin,
   saveJournalEntry,
   toggleHabitLog,
 } from '~/lib/actions/daily';
@@ -44,13 +42,12 @@ export default async function DailyPage() {
   const isMorning = isMorningIn(me?.timezone);
   const journalDateWindow = buildJournalDateWindow(today);
 
-  const [userHabits, habitLogs, allHabitLogs, journalEntries, checkin, profile, trajectoryNudge] =
+  const [userHabits, habitLogs, allHabitLogs, journalEntries, profile, trajectoryNudge] =
     await Promise.all([
       getHabits(),
       getHabitLogsForDate(today),
       getAllHabitLogs(),
       getJournalEntriesForRange(journalDateWindow[0]!, today),
-      getDailyCheckin(today),
       getUserProfile(),
       getActiveMonthEndNudge(),
     ]);
@@ -76,14 +73,12 @@ export default async function DailyPage() {
         allHabitLogs={allHabitLogs}
         journalEntry={journalEntry}
         journalEntries={journalEntries}
-        checkin={checkin}
         trajectoryNudge={trajectoryNudge}
         actions={{
           createHabit,
           deleteHabit,
           toggleHabitLog,
           saveJournalEntry,
-          saveDailyCheckin,
         }}
       />
     </>

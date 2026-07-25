@@ -11,40 +11,24 @@ interface JournalEntry {
   pmEntry: string | null;
 }
 
-interface Checkin {
-  id: string;
-  amCompleted: boolean;
-  pmCompleted: boolean;
-}
-
 interface JournalActions {
   saveJournalEntry: (
     dayDate: string,
     amEntry: string | null,
     pmEntry: string | null
   ) => Promise<void>;
-  saveDailyCheckin: (dayDate: string, amCompleted: boolean, pmCompleted: boolean) => Promise<void>;
 }
 
 interface Props {
   today: string;
   isMorning: boolean;
   journalEntry: JournalEntry | null;
-  checkin: Checkin | null;
   actions: JournalActions;
 }
 
-export function JournalSection({
-  today,
-  isMorning,
-  journalEntry: initialJournal,
-  checkin: initialCheckin,
-  actions,
-}: Props) {
+export function JournalSection({ today, isMorning, journalEntry: initialJournal, actions }: Props) {
   const [amEntry, setAmEntry] = useState(initialJournal?.amEntry ?? '');
   const [pmEntry, setPmEntry] = useState(initialJournal?.pmEntry ?? '');
-  const [amCompleted, setAmCompleted] = useState(initialCheckin?.amCompleted ?? false);
-  const [pmCompleted, setPmCompleted] = useState(initialCheckin?.pmCompleted ?? false);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
 
@@ -58,13 +42,6 @@ export function JournalSection({
     setSaved(false);
     try {
       await actions.saveJournalEntry(today, amEntry || null, pmEntry || null);
-      if (isMorning) {
-        setAmCompleted(true);
-        await actions.saveDailyCheckin(today, true, pmCompleted);
-      } else {
-        setPmCompleted(true);
-        await actions.saveDailyCheckin(today, amCompleted, true);
-      }
       setSaved(true);
       setTimeout(() => setSaved(false), 2000);
     } finally {

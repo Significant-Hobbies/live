@@ -12,14 +12,12 @@ import { JournalSection } from '~/components/dashboard/journal-section';
 import { LifeGrid } from '~/components/life-grid';
 import { TimelineCard } from '~/components/timeline-card';
 import { Button } from '~/components/ui/button';
-import { dailyCheckins, habitLogs, habits, journalEntries, timelines, users } from '~/db/schema';
+import { habitLogs, habits, journalEntries, timelines, users } from '~/db/schema';
 import {
   createHabit,
   deleteHabit,
   getAllHabitLogs,
-  getDailyCheckin,
   getHabitLogsForDate,
-  saveDailyCheckin,
   saveJournalEntry,
   toggleHabitLog,
 } from '~/lib/actions/daily';
@@ -74,7 +72,6 @@ export default async function DashboardPage() {
     myHabitLogs,
     allHabitLogs,
     myJournal,
-    myCheckin,
     completedQuests,
     activeQuests,
     abandonedQuests,
@@ -100,18 +97,12 @@ export default async function DashboardPage() {
       .from(journalEntries)
       .where(and(eq(journalEntries.userId, session.user.id), eq(journalEntries.dayDate, today)))
       .limit(1),
-    db
-      .select()
-      .from(dailyCheckins)
-      .where(and(eq(dailyCheckins.userId, session.user.id), eq(dailyCheckins.dayDate, today)))
-      .limit(1),
     getCompletedQuests(),
     getActiveQuests(),
     getAbandonedQuests(),
   ]);
 
   const todayJournal = myJournal[0] ?? null;
-  const todayCheckin = myCheckin[0] ?? null;
 
   // Life grid — stamp weeks light up across the user's whole life.
   const birth = birthDateFromYear(me?.birthYear);
@@ -367,10 +358,8 @@ export default async function DashboardPage() {
         today={today}
         isMorning={isMorning}
         journalEntry={todayJournal}
-        checkin={todayCheckin}
         actions={{
           saveJournalEntry,
-          saveDailyCheckin,
         }}
       />
     </div>

@@ -53,13 +53,14 @@ is the bridge between daily practice and life aspirations.
   convention. Applied to local `dev.db` only; **not applied to production**. The
   visibility defaults are what stop existing commitments and quests being
   published without consent, so this needs to land before the next deploy.
-- **`pnpm db:generate` is guarded and will refuse to run.**
-  `scripts/db-generate-guard.mjs` explains why and exits non-zero, because the
-  `drizzle/meta` snapshot only records migration 0000 while `drizzle/` holds four
-  — so drizzle-kit emits `CREATE TABLE` for tables that already exist in
-  production. Migrations here are hand-written. `pnpm db:generate:unsafe` still
-  reaches the raw command if you have rebaselined the snapshot; retire the guard
-  when you do. See [`docs/knowledge/learnings.md`](docs/knowledge/learnings.md) L12.
+- **`pnpm db:generate` is safe again (baselined 2026-07-25).** The snapshot used
+  to record only migration 0000, so drizzle-kit emitted `CREATE TABLE` for tables
+  that already existed in production. `drizzle/0001_baseline_current_schema.sql`
+  is an intentionally empty baseline anchoring a snapshot of the current schema;
+  `db:generate` now reports `No schema changes` and produces correct incremental
+  diffs. The temporary guard script has been removed. Layout and conventions in
+  [`drizzle/README.md`](drizzle/README.md); the failure mode is recorded in
+  [`docs/knowledge/learnings.md`](docs/knowledge/learnings.md) L12.
 
 ## Routes with no inbound UI links (deliberate, not forgotten)
 

@@ -59,13 +59,27 @@ with no opt-out.
 `Stamp.dayDate` is resolved in the user's timezone, so "one stamp per day" means
 the user's day. See [`knowledge/learnings.md`](../knowledge/learnings.md) L9.
 
+### Retired tables (still declared, never read)
+
+`Arc`, `UserQuest.arcId`, and `DailyCheckin` have no runtime readers or writers.
+They remain in `src/db/schema.ts` so a generated migration can never drop them —
+deleting a table from the schema file is how you accidentally write a destructive
+production migration.
+
+`DailyCheckin` (userId, dayDate, amCompleted, pmCompleted) tracked whether the
+AM/PM ritual was "completed". The AM/PM rings on `/daily` now derive from whether
+the matching journal entry has text, which is what they always looked like they
+meant: the old flag was set only when you pressed save *during* that half of the
+day, so writing a morning entry in the evening left the AM ring dark even though
+the entry existed. On `/dashboard` the state was write-only — stored and never
+rendered. Retired 2026-07-25.
+
 ### Daily ritual (from today-little-log merge)
 
 `Habit` (name, status, targetFrequency, icon, sourceQuestId), `HabitLog`
 (habitId, dayDate, completed — unique on `(habitId, dayDate)`), `JournalEntry`
-(userId, dayDate, amEntry, pmEntry — unique on `(userId, dayDate)`),
-`DailyCheckin` (userId, dayDate, amCompleted, pmCompleted — unique on
-`(userId, dayDate)`). All private by default — no visibility fields. See
+(userId, dayDate, amEntry, pmEntry — unique on `(userId, dayDate)`).
+All private by default — no visibility fields. See
 [`knowledge/archive/merge-plan-tll.md`](../knowledge/archive/merge-plan-tll.md)
 for the merge rationale.
 
