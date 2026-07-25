@@ -154,3 +154,50 @@ commitments (which are about proof, not reflection).
 [`STATUS.md`](../../STATUS.md)) would allow a habit to *optionally* be linked
 to a commitment so checking the habit auto-stamps the commitment — but only if
 the user explicitly links them. Do not auto-link by default.
+
+## A9 — Auth saves work; it does not unlock it
+
+**Decision:** Anonymous visitors can use the product. Signing in exists to make
+work durable, not to grant access. Two consequences:
+
+1. **Every guard preserves the return path.** Route guards redirect to
+   `loginPath('/that-route')` (`src/lib/auth-routing.ts`), never a bare
+   `/login`. The "continue as guest" link derives its destination from the same
+   callback via `guestRouteFor`, and may only point at surfaces that render
+   without a session.
+2. **`/daily` and `/trajectory` render a signed-out preview** of one sample
+   month (`src/lib/preview-data.ts`) rather than redirecting.
+
+**Why:** Surfaces divide by *when* they deliver value, not by privacy. The
+single-session surfaces — the quiz, `/life-bingo`, `/side-quests`, the timeline
+builder, the calculators — already keep localStorage as the source of truth and
+mirror to the DB only once signed in. Their whole value lands in one visit.
+
+The longitudinal surfaces (`/daily`, `/trajectory`, `/look-back`,
+`/commitments`, `/dashboard`) are different: their value *is* accumulated
+history. Persisting those to localStorage would be a fragile imitation that
+silently loses months of private journal entries to a cache clear — worse than
+a sign-in wall, because the wall is at least honest about the trade. But
+redirecting also failed, because a visitor cannot judge a monthly review
+practice they have never seen. A read-only sample resolves both.
+
+**Constraints:**
+
+- The preview is **not** persistence. Habit ticks stay interactive because the
+  daily write actions return early without a session and a tick loses nothing.
+  Journal *writing* is suppressed, not merely discarded — inviting a stranger to
+  type a private entry that evaporates is the exact failure the preview exists
+  to avoid. `/trajectory` is fully read-only because its write actions *throw*
+  on a missing session rather than returning early.
+- `PreviewBanner` is not dismissible. It carries the whole ethical weight of
+  showing someone else's content on a page that otherwise looks like theirs.
+- Sample data is derived from the caller's `today` / `monthKey`, never
+  hardcoded, so it cannot drift into stale dates.
+- Sample data must not read as a growth dashboard. No trajectory bucket may
+  rise monotonically and the habit history must contain gaps, or the sample
+  contradicts A4 and the "no score — the gap is the whole point" copy directly
+  above it. Both are asserted in `src/lib/preview-data.test.ts`.
+- Both routes stay `noindex`. The preview is a conversion surface, not a
+  discovery surface; A3 still holds.
+- `/settings` and `/setup` stay gated with no preview — username, timezone and
+  profile visibility have no anonymous meaning.

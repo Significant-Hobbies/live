@@ -52,6 +52,19 @@ test.describe('authenticated surfaces', () => {
     await expect(authedPage.getByText('PM', { exact: true })).toBeVisible();
   });
 
+  test('the signed-out preview never leaks into a real session', async ({ authedPage }) => {
+    // /daily and /trajectory render sample content for anonymous visitors. If
+    // that branch ever fired for a signed-in user they would be looking at a
+    // stranger's month believing it was their own — the worst failure this
+    // feature can have, so it gets its own assertion on both surfaces.
+    for (const route of ['/daily', '/trajectory']) {
+      await authedPage.goto(route);
+      await expect(authedPage.getByLabel('Preview notice')).toHaveCount(0);
+      await expect(authedPage.getByText('Read 20 pages')).toHaveCount(0);
+      await expect(authedPage.getByText(/Twelve months of runway/)).toHaveCount(0);
+    }
+  });
+
   test('trajectory renders all four life buckets', async ({ authedPage }) => {
     await authedPage.goto('/trajectory');
     for (const bucket of ['Health', 'Finance', 'Knowledge', 'Relationships']) {

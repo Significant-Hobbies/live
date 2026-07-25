@@ -92,6 +92,32 @@ pnpm test:e2e               # e2e/authenticated.spec.ts skips if it is off
 then signs in. It skips the whole file when the endpoint returns 404, so a plain
 `pnpm dev` server does not produce a wall of failures.
 
+### Signed-out previews
+
+`e2e/preview.spec.ts` covers the `/daily` and `/trajectory` previews
+([`decisions.md`](../architecture/decisions.md) A9). It asserts absence as much as
+presence: no journal textarea, no Save button, no habit manager, no trajectory
+write affordance. Those are the assertions that keep the preview from quietly
+becoming a surface that discards real input.
+
+The matching guard lives in `e2e/authenticated.spec.ts` — the preview must never
+render for a signed-in user, who would otherwise be reading a stranger's month
+believing it was their own.
+
+`e2e/guest-access.spec.ts` covers the redirect contract for the surfaces that are
+still gated: each carries its own route as `callbackUrl`, and every "continue as
+guest" destination is fetched to prove it renders without a session.
+
+### Known dev-mode e2e failures
+
+Roughly a dozen specs fail against `pnpm dev` and are **not** regressions:
+`landing.spec.ts` and friends assert content from the Astro overlay, which only
+`pnpm build` produces — anon `GET /` is served by Astro in production
+([`decisions.md`](../architecture/decisions.md) A1), not by `next dev`. Separately,
+`daily.spec.ts` → "/manifesto has working CTAs" fails on a strict-mode violation
+(two links match "Find a hobby": the nav entry and the page CTA); it needs a
+scoped locator.
+
 ### Design review screenshots
 
 ```bash

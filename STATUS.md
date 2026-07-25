@@ -44,6 +44,15 @@ is the bridge between daily practice and life aspirations.
   real, closed two privacy leaks, and wired two implemented-but-uncalled actions
   (`syncQuestProgress`, `closeEra`). Detail in
   [`docs/knowledge/learnings.md`](docs/knowledge/learnings.md).
+- **Auth is optional again (2026-07-25).** All 12 route guards used a bare
+  `redirect('/login')`, so signing in from `/trajectory` landed on `/dashboard` —
+  the login page had accepted and validated `callbackUrl` all along and nothing
+  ever sent it. Guards now preserve the return path, and "continue as guest"
+  follows the same intent instead of a hardcoded `/timeline/new` (one of its old
+  targets, `/bucket-list/new`, itself required a session). `/daily` and
+  `/trajectory` now render a read-only signed-out preview of one sample month
+  rather than a wall. The longitudinal/single-session split and its constraints
+  are recorded as [`decisions.md`](docs/architecture/decisions.md) A9.
 
 ## Active work
 

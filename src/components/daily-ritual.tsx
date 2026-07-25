@@ -18,6 +18,7 @@ import {
 
 import { GradientMesh, SpotlightCard } from '~/components/aceternity';
 import { CircularProgress } from '~/components/dashboard/circular-progress';
+import { PreviewBanner } from '~/components/preview-banner';
 import { Button } from '~/components/ui/button';
 import {
   computeStreak,
@@ -85,6 +86,17 @@ interface Props {
   journalEntries: JournalEntry[];
   trajectoryNudge?: TrajectoryNudge;
   actions: Actions;
+  /**
+   * Signed-out preview of someone else's month.
+   *
+   * Habit ticks stay interactive — the daily write actions return early without
+   * a session, so a tick is a harmless in-session gesture. Journal *writing* is
+   * suppressed instead of merely unsaved: inviting a stranger to type a private
+   * entry that silently evaporates is exactly the failure this preview exists
+   * to avoid. Habit add/delete is hidden too, since router.refresh() would
+   * reset it to the sample set and read as a bug.
+   */
+  preview?: boolean;
 }
 
 const EMOJI_CHOICES = ['📚', '🏃', '🧘', '✍️', '🎸', '🎨', '💪', '🧠', '🌅', '💧', '🥗', '😴'];
@@ -122,6 +134,7 @@ export function DailyRitual({
   journalEntries,
   trajectoryNudge,
   actions,
+  preview = false,
 }: Props) {
   const [habits, setHabits] = useState(initialHabits);
   const [logs, setLogs] = useState(initialLogs);
@@ -225,6 +238,12 @@ export function DailyRitual({
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-10 sm:py-16 space-y-8">
+      {preview && (
+        <PreviewBanner route="/daily">
+          One stranger&apos;s week of the ritual — the AM and PM writing, the habit check-ins, the
+          date rail. Nothing here is yours and nothing is saved.
+        </PreviewBanner>
+      )}
       {/* ─── Ritual header — gradient mesh + editorial greeting ─── */}
       <section className="relative overflow-hidden rounded-2xl border border-border/50 p-6 sm:p-8">
         <GradientMesh variant={isMorning ? 'gold' : 'sage'} />
@@ -334,7 +353,7 @@ export function DailyRitual({
         </div>
 
         <div className="min-h-[280px] px-5 py-6 sm:px-7 sm:py-8">
-          {isTodaySelected ? (
+          {isTodaySelected && !preview ? (
             <div className="space-y-6">
               {!isMorning && amEntry.trim() && (
                 <div className="flex gap-3">
@@ -513,12 +532,14 @@ export function DailyRitual({
               The small repeated thing. Checked in, never scored.
             </p>
           </div>
-          <button
-            onClick={() => setShowHabitManager(!showHabitManager)}
-            className="text-xs text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/50 rounded px-1"
-          >
-            {showHabitManager ? 'Done' : 'Manage'}
-          </button>
+          {!preview && (
+            <button
+              onClick={() => setShowHabitManager(!showHabitManager)}
+              className="text-xs text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/50 rounded px-1"
+            >
+              {showHabitManager ? 'Done' : 'Manage'}
+            </button>
+          )}
         </div>
 
         {habits.length === 0 && !showHabitManager ? (

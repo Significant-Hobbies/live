@@ -25,6 +25,8 @@ import { TrajectoryChart } from './trajectory-chart';
 interface Props {
   bucket: TrajectoryBucket;
   eras: TrajectoryEraWithEntries[];
+  /** Suppress every editor and button. See TrajectoryPageClient. */
+  readOnly?: boolean;
 }
 
 const EMPTY_STATE_PROMPTS: Record<TrajectoryBucket, string> = {
@@ -43,7 +45,7 @@ const EMPTY_STATE_PROMPTS: Record<TrajectoryBucket, string> = {
  *      completed/abandoned as one-line summaries with equal visual weight
  *      (no red, no green — the design rejects gamification).
  */
-export function BucketSection({ bucket, eras }: Props) {
+export function BucketSection({ bucket, eras, readOnly = false }: Props) {
   const [editingIdeal, setEditingIdeal] = useState(false);
   const [showEntryForm, setShowEntryForm] = useState(false);
   const [expandedEraIds, setExpandedEraIds] = useState<Set<string>>(new Set());
@@ -84,17 +86,19 @@ export function BucketSection({ bucket, eras }: Props) {
           ) : (
             <p className="text-sm leading-relaxed text-muted-foreground">
               {EMPTY_STATE_PROMPTS[bucket]}{' '}
-              <button
-                type="button"
-                onClick={() => setEditingIdeal(true)}
-                className="text-foreground/90 underline decoration-primary/40 underline-offset-4 hover:decoration-primary transition-colors"
-              >
-                Set an ideal →
-              </button>
+              {!readOnly && (
+                <button
+                  type="button"
+                  onClick={() => setEditingIdeal(true)}
+                  className="text-foreground/90 underline decoration-primary/40 underline-offset-4 hover:decoration-primary transition-colors"
+                >
+                  Set an ideal →
+                </button>
+              )}
             </p>
           )}
         </div>
-        {activeEra && (
+        {activeEra && !readOnly && (
           <div className="flex shrink-0 items-center gap-1.5">
             <Button
               size="sm"
@@ -120,7 +124,7 @@ export function BucketSection({ bucket, eras }: Props) {
         )}
       </header>
 
-      {editingIdeal && (
+      {editingIdeal && !readOnly && (
         <div className="animate-fade-in-up mt-5">
           <IdealEditor
             bucket={bucket}
@@ -131,7 +135,7 @@ export function BucketSection({ bucket, eras }: Props) {
         </div>
       )}
 
-      {activeEra && showEntryForm && (
+      {activeEra && showEntryForm && !readOnly && (
         <div className="animate-fade-in-up mt-5">
           <MonthEntryForm
             eraId={activeEra.id}

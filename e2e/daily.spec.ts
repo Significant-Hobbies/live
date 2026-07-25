@@ -1,11 +1,13 @@
 import { expect, test } from '@playwright/test';
 
 test.describe('Daily ritual & manifesto', () => {
-  test('/daily redirects to login when not authenticated', async ({ page }) => {
-    await page.goto('/daily');
-    // Should redirect to /login since auth is required
-    await page.waitForURL(/\/login/);
-    expect(page.url()).toContain('/login');
+  test('/daily previews the ritual instead of walling it off', async ({ page }) => {
+    // This route used to redirect to /login. Auth here saves work rather than
+    // unlocking it, so a signed-out visitor now sees a sample month.
+    const res = await page.goto('/daily');
+    expect(res?.status()).toBeLessThan(400);
+    expect(page.url()).not.toContain('/login');
+    await expect(page.getByLabel('Preview notice')).toBeVisible();
   });
 
   test('/manifesto loads and shows the mortality frame', async ({ page }) => {

@@ -77,3 +77,9 @@ docs-site/node_modules/
 .agent-logs/
 *.agent.log
 .shots/
+
+# Playwright run artifacts. `test-results/.last-run.json` used to be tracked, so
+# every test run dirtied the tree and made `pnpm lint` (and therefore the
+# pre-push hook) fail on a formatting error in a generated file.
+test-results/
+playwright-report/

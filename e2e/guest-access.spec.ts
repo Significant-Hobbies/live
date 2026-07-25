@@ -9,10 +9,12 @@ import { expect, test } from '@playwright/test';
  *     renders without a session.
  */
 
+/**
+ * Still gated. /daily and /trajectory are deliberately absent: they render a
+ * signed-out preview instead (see daily.spec.ts / trajectory.spec.ts).
+ */
 const GUARDED_ROUTES = [
-  '/daily',
   '/dashboard',
-  '/trajectory',
   '/commitments',
   '/life-plan',
   '/look-back',
@@ -44,7 +46,7 @@ test.describe('the guest escape hatch', () => {
   test('guest link from a longitudinal surface leads somewhere that renders anonymously', async ({
     page,
   }) => {
-    await page.goto('/daily');
+    await page.goto('/look-back');
     await page.waitForURL(/\/login/);
 
     const guestLink = page.getByRole('link', { name: 'continue as guest' });
