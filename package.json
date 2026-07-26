@@ -10,7 +10,7 @@
     "validate:env:deploy": "node scripts/validate-env.mjs deploy",
     "start": "next start",
     "preview": "opennextjs-cloudflare preview",
-    "deploy": "pnpm validate:env:deploy && pnpm cf:build && wrangler deploy --minify",
+    "deploy": "pnpm validate:env:deploy && pnpm cf:build && wrangler deploy --minify --tag \"$(git rev-parse HEAD)\"",
     "lint": "biome check .",
     "typecheck": "tsc --noEmit",
     "format": "biome format --write .",
