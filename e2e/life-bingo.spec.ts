@@ -11,6 +11,12 @@ test.describe('Life Bingo and Bucket List', () => {
     await expect(page.getByRole('heading', { name: 'Make life less repetitive.' })).toBeVisible();
     await expect(page.getByRole('link', { name: /Make my Life Bingo/i })).toBeVisible();
     await expect(page.getByLabel(/My season of saying yes Bingo board/i)).toBeVisible();
+    await expect(page.locator('[data-site-nav]').getByRole('link', { name: 'Blog' })).toHaveCount(
+      0
+    );
+    await expect(
+      page.locator('[data-site-footer]').getByRole('link', { name: 'Blog' })
+    ).toBeVisible();
   });
 
   test('creates, edits, completes, and recovers a guest bucket list', async ({ page }) => {

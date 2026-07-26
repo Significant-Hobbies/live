@@ -14,10 +14,6 @@ const authSecret =
   process.env.BETTER_AUTH_SECRET?.trim() ||
   (canUseLocalAuthSecret ? 'significant-hobbies-local-development-secret-32-chars' : undefined);
 
-const baseURL = process.env.BETTER_AUTH_URL?.trim() || 'https://significanthobbies.com';
-const googleClientId = process.env.GOOGLE_CLIENT_ID?.trim();
-const googleClientSecret = process.env.GOOGLE_CLIENT_SECRET?.trim();
-
 /**
  * Email+password sign-in, enabled ONLY for local development and e2e tests.
  *
@@ -38,6 +34,12 @@ const googleClientSecret = process.env.GOOGLE_CLIENT_SECRET?.trim();
  */
 const testAuthEnabled =
   process.env.NODE_ENV !== 'production' && process.env.ENABLE_TEST_AUTH === '1';
+
+const baseURL =
+  process.env.BETTER_AUTH_URL?.trim() ||
+  (testAuthEnabled ? 'http://localhost:3000' : 'https://significanthobbies.com');
+const googleClientId = process.env.GOOGLE_CLIENT_ID?.trim();
+const googleClientSecret = process.env.GOOGLE_CLIENT_SECRET?.trim();
 
 export const auth = betterAuth({
   secret: authSecret,

@@ -12,6 +12,7 @@ import {
   Square,
   type LucideIcon,
 } from 'lucide-react';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { AnimatePresence, motion } from 'motion/react';
 import { useCallback, useRef, useState, useTransition } from 'react';
@@ -233,6 +234,13 @@ export function OnboardingFlow({ user }: { user: OnboardingUser }) {
   return (
     <div className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 py-12">
       {showMesh && <GradientMesh />}
+
+      <Link
+        href="/dashboard"
+        className="fixed left-4 top-4 z-50 flex min-h-11 items-center text-sm font-semibold tracking-tight text-foreground transition-opacity hover:opacity-75 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+      >
+        SignificantHobbies
+      </Link>
 
       {/* Ambient music toggle — top right corner */}
       <div className="fixed right-4 top-4 z-50">

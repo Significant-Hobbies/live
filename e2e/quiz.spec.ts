@@ -15,11 +15,13 @@ test.describe('Hobby Quiz', () => {
   test('completes the quiz and shows recommendations', async ({ page }) => {
     await page.goto('/find-your-hobby');
     await expect(page.locator('h1')).toContainText('Find Your Perfect Hobby');
+    await expect(page.locator('[data-site-footer]')).toHaveCount(0);
 
     // Selecting an option does not advance on its own (handleSelect only records
     // it; handleNext scores and moves on), so each question is a pick then a Next.
     const progress = page.getByText(/^Question \d+ of \d+$/);
     await expect(progress).toBeVisible();
+    await expect(progress).toHaveText('Question 1 of 9');
 
     for (let guard = 0; guard < 12; guard += 1) {
       if (!(await progress.isVisible().catch(() => false))) break;

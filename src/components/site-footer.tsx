@@ -3,7 +3,7 @@ import Link from 'next/link';
 /** Shared footer for all SignificantHobbies routes. */
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border px-4 py-10">
+    <footer data-site-footer className="border-t border-border px-4 py-10">
       <div className="mx-auto max-w-5xl">
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-5">
           {/* Brand + manifesto */}

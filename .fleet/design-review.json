@@ -1,0 +1,71 @@
+{
+  "$schema": "fleet.design-review.v1",
+  "version": 1,
+  "project": "significanthobbies",
+  "target": "Onboarding, shared navigation, Life Bingo, and hobby questionnaire consistency",
+  "mode": "preserve",
+  "register": "product",
+  "context": {
+    "product": "docs/product/overview.md",
+    "design": "src/app/globals.css"
+  },
+  "direction": {
+    "references": [],
+    "probes": [],
+    "selected": "existing-design",
+    "approval": "not-required",
+    "before": ".fleet/evidence/before-life-bingo-1440.png"
+  },
+  "evidence": {
+    "screenshots": [
+      {
+        "width": 390,
+        "path": ".fleet/evidence/after-life-bingo-390.png"
+      },
+      {
+        "width": 768,
+        "path": ".fleet/evidence/after-life-bingo-768.png"
+      },
+      {
+        "width": 1440,
+        "path": ".fleet/evidence/after-life-bingo-1440.png"
+      },
+      {
+        "width": 390,
+        "path": ".fleet/evidence/after-onboarding-390.png"
+      },
+      {
+        "width": 390,
+        "path": ".fleet/evidence/after-quiz-390.png"
+      },
+      {
+        "width": 1728,
+        "path": ".fleet/evidence/after-quiz-1440.png"
+      }
+    ],
+    "projectCheck": {
+      "command": "pnpm build; pnpm exec playwright test e2e/onboarding.spec.ts e2e/quiz.spec.ts e2e/life-bingo.spec.ts",
+      "status": "pass"
+    },
+    "critique": {
+      "score": 36,
+      "maximum": 40
+    },
+    "audit": {
+      "score": 18,
+      "maximum": 20
+    },
+    "unresolved": {
+      "p0": 0,
+      "p1": 0
+    },
+    "detector": {
+      "posture": "advisory",
+      "findings": []
+    }
+  },
+  "ownerFeedback": {
+    "decision": "delegated",
+    "note": "Owner delegated a bounded rough-edge cleanup while preserving the current design direction."
+  }
+}

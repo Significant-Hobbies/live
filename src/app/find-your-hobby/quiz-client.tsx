@@ -153,6 +153,106 @@ const QUESTIONS: QuizQuestion[] = [
       },
     ],
   },
+  {
+    question: 'What kind of progress would keep you coming back?',
+    options: [
+      {
+        icon: Palette,
+        label: 'Having something tangible I made',
+        categories: ['Creative', 'Making'],
+      },
+      {
+        icon: Activity,
+        label: 'Feeling stronger or more capable',
+        categories: ['Physical', 'Outdoor'],
+      },
+      {
+        icon: Lightbulb,
+        label: 'Understanding something at a deeper level',
+        categories: ['Intellectual', 'Gaming'],
+      },
+      {
+        icon: Coffee,
+        label: 'Building a collection with a point of view',
+        categories: ['Collecting'],
+      },
+    ],
+  },
+  {
+    question: 'Where would you most like this hobby to take you?',
+    options: [
+      {
+        icon: BookOpen,
+        label: 'A quiet corner I can make my own',
+        categories: ['Collecting', 'Intellectual'],
+      },
+      {
+        icon: Mountain,
+        label: 'Outside, away from the usual routine',
+        categories: ['Outdoor', 'Physical'],
+      },
+      {
+        icon: Hammer,
+        label: 'A workshop, studio, or maker space',
+        categories: ['Making', 'Creative'],
+      },
+      {
+        icon: Users,
+        label: 'A table, club, or room full of people',
+        categories: ['Social', 'Culinary', 'Music'],
+      },
+    ],
+  },
+  {
+    question: 'How do you enjoy learning something new?',
+    options: [
+      {
+        icon: BookOpen,
+        label: 'Following a self-guided rabbit hole',
+        categories: ['Intellectual', 'Collecting', 'Gaming'],
+      },
+      {
+        icon: HeartHandshake,
+        label: 'Learning alongside other people',
+        categories: ['Social', 'Music', 'Culinary'],
+      },
+      {
+        icon: Wrench,
+        label: 'Trying, adjusting, and using my hands',
+        categories: ['Making', 'Creative'],
+      },
+      {
+        icon: Dumbbell,
+        label: 'Repeating a practice until it clicks',
+        categories: ['Physical', 'Outdoor', 'Music'],
+      },
+    ],
+  },
+  {
+    question: 'Six months from now, what would feel most worthwhile?',
+    options: [
+      {
+        icon: Palette,
+        label: 'I have a body of work I am proud of',
+        categories: ['Creative', 'Making'],
+      },
+      {
+        icon: Zap,
+        label: 'I can do something my body could not do before',
+        categories: ['Physical', 'Outdoor'],
+      },
+      {
+        icon: Users,
+        label: 'I have people and a place I look forward to',
+        categories: ['Social', 'Culinary', 'Music'],
+      },
+      {
+        icon: Gamepad2,
+        label: 'I have mastered a system or built real knowledge',
+        categories: ['Intellectual', 'Gaming', 'Collecting'],
+      },
+    ],
+  },
 ];
 
 const ARCHETYPE_MAP: Record<Category, { title: string; emoji: string; description: string }> = {
@@ -266,7 +366,7 @@ function buildHobbyExperiments(hobbies: string[], topCats: Category[]): HobbyExp
 }
 
 export function HobbyQuiz() {
-  const [step, setStep] = useState(0); // 0-4 = questions, 5 = results
+  const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [scores, setScores] = useState<Record<string, number>>({});
@@ -289,8 +389,10 @@ export function HobbyQuiz() {
 
     const option = QUESTIONS[step]!.options[selectedOption]!;
     const newScores = { ...scores };
-    for (const cat of option.categories) {
-      newScores[cat] = (newScores[cat] ?? 0) + 1;
+    // The first category is the option's strongest signal; secondary matches
+    // still matter, but no longer count as equally decisive.
+    for (const [categoryIndex, cat] of option.categories.entries()) {
+      newScores[cat] = (newScores[cat] ?? 0) + (categoryIndex === 0 ? 2 : 1);
     }
 
     // Discovery funnel: quiz start on the first answer, complete on the last.
@@ -413,13 +515,14 @@ export function HobbyQuiz() {
 
   return (
     <FadeIn>
-      <div className="mx-auto max-w-2xl px-4 py-12">
+      <div className="mx-auto min-h-[calc(100svh-3.5rem)] max-w-2xl px-4 py-12">
         {/* Header */}
         {!isResults && (
           <div className="mb-10 text-center">
             <h1 className="text-3xl font-bold text-foreground">Find Your Perfect Hobby</h1>
             <p className="mt-3 text-muted-foreground">
-              A free quiz — answer 5 quick questions and get personalized hobby recommendations.
+              Nine focused questions, about three minutes, and a shortlist built around how you
+              actually like to spend your time.
             </p>
           </div>
         )}

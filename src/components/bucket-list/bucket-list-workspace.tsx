@@ -410,45 +410,41 @@ export function BucketListWorkspace({
   if (!hydrated) {
     return (
       <div className="flex min-h-[60vh] items-center justify-center">
-        <Loader2 className="h-6 w-6 animate-spin text-emerald-700" />
+        <Loader2 className="h-6 w-6 animate-spin text-primary" />
       </div>
     );
   }
 
   if (!draft) {
     return (
-      <div className="min-h-[calc(100vh-3.5rem)] bg-[#f7f1e7] px-4 py-10 sm:py-16">
+      <div className="min-h-[calc(100vh-3.5rem)] bg-background px-4 py-10 sm:py-16">
         <div className="mx-auto max-w-5xl">
           <Link
             href="/life-bingo"
-            className="mb-8 inline-flex items-center gap-1 text-xs font-semibold text-stone-500 hover:text-stone-900"
+            className="mb-8 inline-flex min-h-11 items-center gap-1 text-sm font-semibold text-muted-foreground hover:text-foreground"
           >
             <ChevronLeft className="h-3.5 w-3.5" /> About Life Bingo
           </Link>
           <div className="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:gap-16">
             <header className="lg:sticky lg:top-24 lg:self-start">
-              <p className="text-xs font-bold uppercase tracking-[0.28em] text-emerald-700">
-                Make your list
-              </p>
-              <h1 className="mt-3 max-w-xl font-serif text-5xl font-semibold leading-[0.93] tracking-[-0.04em] text-stone-900 sm:text-6xl">
+              <p className="text-sm font-semibold text-primary">Make your list.</p>
+              <h1 className="mt-3 max-w-xl font-serif text-5xl font-semibold leading-[0.96] tracking-[-0.035em] text-foreground sm:text-6xl">
                 What should this chapter feel like?
               </h1>
-              <p className="mt-5 max-w-md text-base leading-relaxed text-stone-600">
+              <p className="mt-5 max-w-md text-base leading-relaxed text-muted-foreground">
                 Choose a horizon and a few things you want more of. We’ll turn them into concrete
                 experiences, not vague goals.
               </p>
-              <div className="mt-8 hidden rotate-[-2deg] rounded-2xl border border-[#d8cbb5] bg-[#fffaf0] p-5 shadow-sm lg:block">
-                <p className="font-serif text-2xl text-stone-800">
-                  “A good list should make Tuesday feel full of possibility.”
-                </p>
-              </div>
+              <p className="mt-8 hidden max-w-sm border-t border-border pt-5 font-serif text-xl text-foreground lg:block">
+                “A good list should make Tuesday feel full of possibility.”
+              </p>
             </header>
 
-            <div className="space-y-9 rounded-[1.75rem] border border-[#ded3c1] bg-[#fffdf8] p-5 shadow-[0_24px_70px_rgba(72,58,38,0.1)] sm:p-8">
+            <div className="space-y-9 rounded-2xl border border-border bg-card p-5 sm:p-8">
               <fieldset>
-                <legend className="mb-4 text-sm font-bold text-stone-900">
-                  <span className="mr-2 font-serif text-xl text-emerald-700">01</span> How far are
-                  we looking?
+                <legend className="mb-4 text-sm font-bold text-foreground">
+                  <span className="mr-2 font-serif text-xl text-primary">01</span> How far are we
+                  looking?
                 </legend>
                 <div className="grid gap-2 sm:grid-cols-2">
                   {HORIZONS.map((item) => (
@@ -459,28 +455,28 @@ export function BucketListWorkspace({
                       className={cn(
                         'rounded-xl border p-4 text-left transition',
                         horizon === item.id
-                          ? 'border-emerald-700 bg-emerald-50 shadow-sm'
-                          : 'border-stone-200 bg-white hover:border-stone-300'
+                          ? 'border-primary bg-primary/10'
+                          : 'border-border bg-background hover:border-muted-foreground'
                       )}
                     >
                       <span className="flex items-center justify-between gap-2">
-                        <span className="font-semibold text-stone-900">{item.label}</span>
-                        <span className="text-[0.6rem] font-bold uppercase tracking-wider text-stone-400">
-                          {item.marker}
-                        </span>
+                        <span className="font-semibold text-foreground">{item.label}</span>
+                        <span className="text-xs font-medium text-subtle">{item.marker}</span>
                       </span>
-                      <span className="mt-1 block text-xs text-stone-500">{item.detail}</span>
+                      <span className="mt-1 block text-xs text-muted-foreground">
+                        {item.detail}
+                      </span>
                     </button>
                   ))}
                 </div>
               </fieldset>
 
               <fieldset>
-                <legend className="mb-1 text-sm font-bold text-stone-900">
-                  <span className="mr-2 font-serif text-xl text-emerald-700">02</span> What do you
-                  want more of?
+                <legend className="mb-1 text-sm font-bold text-foreground">
+                  <span className="mr-2 font-serif text-xl text-primary">02</span> What do you want
+                  more of?
                 </legend>
-                <p className="mb-4 text-xs text-stone-500">
+                <p className="mb-4 text-xs text-muted-foreground">
                   Choose up to three. Choosing another replaces your oldest choice.
                 </p>
                 <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
@@ -495,8 +491,8 @@ export function BucketListWorkspace({
                         className={cn(
                           'min-h-24 rounded-xl border p-3 text-left transition',
                           selected
-                            ? 'border-emerald-700 bg-[#e1eee5] text-emerald-950'
-                            : 'border-stone-200 bg-white text-stone-700 hover:border-stone-300'
+                            ? 'border-primary bg-primary/10 text-foreground'
+                            : 'border-border bg-background text-muted-foreground hover:border-muted-foreground hover:text-foreground'
                         )}
                       >
                         <span className="font-serif text-xl">{item.emoji}</span>
@@ -508,9 +504,9 @@ export function BucketListWorkspace({
               </fieldset>
 
               <fieldset>
-                <legend className="mb-4 text-sm font-bold text-stone-900">
-                  <span className="mr-2 font-serif text-xl text-emerald-700">03</span> How bold
-                  should it be?
+                <legend className="mb-4 text-sm font-bold text-foreground">
+                  <span className="mr-2 font-serif text-xl text-primary">03</span> How bold should
+                  it be?
                 </legend>
                 <div className="grid gap-2 sm:grid-cols-3">
                   {BOLDNESS.map((item) => (
@@ -521,14 +517,14 @@ export function BucketListWorkspace({
                       className={cn(
                         'rounded-xl border px-4 py-3 text-left transition',
                         boldness === item.id
-                          ? 'border-emerald-700 bg-emerald-50'
-                          : 'border-stone-200 bg-white hover:border-stone-300'
+                          ? 'border-primary bg-primary/10'
+                          : 'border-border bg-background hover:border-muted-foreground'
                       )}
                     >
-                      <span className="block text-sm font-semibold text-stone-900">
+                      <span className="block text-sm font-semibold text-foreground">
                         {item.label}
                       </span>
-                      <span className="mt-0.5 block text-[0.68rem] leading-snug text-stone-500">
+                      <span className="mt-0.5 block text-xs leading-snug text-muted-foreground">
                         {item.detail}
                       </span>
                     </button>
@@ -536,11 +532,7 @@ export function BucketListWorkspace({
                 </div>
               </fieldset>
 
-              <Button
-                onClick={generateBoard}
-                size="lg"
-                className="h-12 w-full rounded-xl bg-[#176b4a] text-white hover:bg-[#10583d]"
-              >
+              <Button onClick={generateBoard} size="lg" className="h-12 w-full rounded-xl">
                 <Sparkles className="h-4 w-4" /> Make my Life Bingo
               </Button>
             </div>
@@ -551,22 +543,20 @@ export function BucketListWorkspace({
   }
 
   return (
-    <div className="min-h-[calc(100vh-3.5rem)] bg-[#f7f1e7] pb-20">
-      <div className="border-b border-[#ded3c1] bg-[#fffdf8]/90 px-4 py-3 backdrop-blur-md">
+    <div className="min-h-[calc(100vh-3.5rem)] bg-background pb-20">
+      <div className="border-b border-border bg-card px-4 py-3">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-2">
             <Link
               href="/bucket-list"
-              className="rounded-lg p-2 text-stone-500 hover:bg-stone-100"
+              className="rounded-lg p-2 text-muted-foreground hover:bg-accent hover:text-foreground"
               aria-label="Back to bucket lists"
             >
               <ChevronLeft className="h-4 w-4" />
             </Link>
             <div>
-              <p className="text-[0.62rem] font-bold uppercase tracking-[0.2em] text-emerald-700">
-                Bucket List
-              </p>
-              <p className="max-w-[13rem] truncate text-sm font-semibold text-stone-900 sm:max-w-sm">
+              <p className="text-xs font-semibold text-primary">Bucket List</p>
+              <p className="max-w-[13rem] truncate text-sm font-semibold text-foreground sm:max-w-sm">
                 {draft.title}
               </p>
             </div>
@@ -574,7 +564,7 @@ export function BucketListWorkspace({
 
           <div className="flex flex-wrap items-center gap-2">
             <div
-              className="flex rounded-lg border border-stone-200 bg-white p-1"
+              className="flex rounded-lg border border-border bg-background p-1"
               aria-label="Choose bucket list view"
             >
               <button
@@ -583,8 +573,8 @@ export function BucketListWorkspace({
                 className={cn(
                   'flex min-h-11 items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-semibold sm:min-h-0',
                   activeView === 'LIST'
-                    ? 'bg-stone-900 text-white'
-                    : 'text-stone-500 hover:text-stone-900'
+                    ? 'bg-primary text-primary-foreground'
+                    : 'text-muted-foreground hover:text-foreground'
                 )}
               >
                 <List className="h-3.5 w-3.5" /> List
@@ -595,8 +585,8 @@ export function BucketListWorkspace({
                 className={cn(
                   'flex min-h-11 items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-semibold sm:min-h-0',
                   activeView === 'BINGO'
-                    ? 'bg-stone-900 text-white'
-                    : 'text-stone-500 hover:text-stone-900'
+                    ? 'bg-primary text-primary-foreground'
+                    : 'text-muted-foreground hover:text-foreground'
                 )}
               >
                 <Grid3X3 className="h-3.5 w-3.5" /> Bingo
@@ -607,7 +597,7 @@ export function BucketListWorkspace({
                 variant="outline"
                 size="sm"
                 onClick={exportBoard}
-                className="min-h-11 border-stone-300 bg-white sm:min-h-8"
+                className="min-h-11 sm:min-h-8"
               >
                 <Download className="h-3.5 w-3.5" /> Export
               </Button>
@@ -617,7 +607,7 @@ export function BucketListWorkspace({
                 size="sm"
                 onClick={saveToAccount}
                 disabled={isPending}
-                className="min-h-11 bg-[#176b4a] text-white hover:bg-[#10583d] sm:min-h-8"
+                className="min-h-11 sm:min-h-8"
               >
                 {isPending ? (
                   <Loader2 className="h-3.5 w-3.5 animate-spin" />
@@ -630,7 +620,7 @@ export function BucketListWorkspace({
               </Button>
             )}
             {listId && (
-              <span className="min-w-14 text-right text-[0.65rem] font-medium text-stone-400">
+              <span className="min-w-14 text-right text-xs font-medium text-subtle">
                 {saveState === 'saving' || isPending
                   ? 'Saving…'
                   : saveState === 'saved'
@@ -646,17 +636,17 @@ export function BucketListWorkspace({
         {activeView === 'LIST' && (
           <div className="mx-auto mb-6 grid max-w-3xl gap-3 sm:grid-cols-[1fr_auto] sm:items-center">
             <div>
-              <p className="text-xs font-semibold text-stone-500">
+              <p className="text-xs font-semibold text-muted-foreground">
                 {progress?.completed} of {progress?.total} lived
                 {progress && progress.lines.length > 0 && (
-                  <span className="ml-2 text-emerald-700">
+                  <span className="ml-2 text-growth">
                     · {progress.lines.length} Bingo {progress.lines.length === 1 ? 'line' : 'lines'}
                   </span>
                 )}
               </p>
-              <div className="mt-2 h-1.5 max-w-md overflow-hidden rounded-full bg-stone-200">
+              <div className="mt-2 h-1.5 max-w-md overflow-hidden rounded-full bg-muted">
                 <div
-                  className="h-full rounded-full bg-emerald-700 transition-all duration-500"
+                  className="h-full rounded-full bg-growth transition-all duration-500"
                   style={{ width: `${progress?.percentage ?? 0}%` }}
                 />
               </div>
@@ -668,7 +658,7 @@ export function BucketListWorkspace({
                 onKeyDown={(event) => event.key === 'Enter' && addItem()}
                 placeholder="Add something you want to do…"
                 aria-label="New bucket-list item"
-                className="h-11 w-full border-stone-300 bg-white sm:h-9 sm:w-64"
+                className="h-11 w-full sm:h-9 sm:w-64"
                 maxLength={180}
               />
               <Button
@@ -676,7 +666,7 @@ export function BucketListWorkspace({
                 size="sm"
                 onClick={() => addItem()}
                 disabled={!newItem.trim()}
-                className="min-h-11 border-stone-300 bg-white sm:min-h-8"
+                className="min-h-11 sm:min-h-8"
               >
                 <Plus className="h-3.5 w-3.5" /> Add
               </Button>
@@ -712,10 +702,10 @@ export function BucketListWorkspace({
         )}
 
         {listId && (
-          <section className="mx-auto mt-8 flex max-w-4xl flex-col gap-4 rounded-2xl border border-stone-200 bg-white/70 p-5 sm:flex-row sm:items-center sm:justify-between">
+          <section className="mx-auto mt-8 flex max-w-4xl flex-col gap-4 rounded-2xl border border-border bg-card p-5 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <p className="text-sm font-semibold text-stone-900">Share the Bingo version</p>
-              <p className="mt-0.5 text-xs text-stone-500">
+              <p className="text-sm font-semibold text-foreground">Share the Bingo version</p>
+              <p className="mt-0.5 text-xs text-muted-foreground">
                 Your reflections stay on the card only when you make the list shareable.
               </p>
             </div>
@@ -723,19 +713,14 @@ export function BucketListWorkspace({
               <select
                 value={visibility}
                 onChange={(event) => updateVisibility(event.target.value as BingoVisibility)}
-                className="h-9 rounded-md border border-stone-300 bg-white px-3 text-xs font-semibold text-stone-700"
+                className="h-9 rounded-md border border-border bg-background px-3 text-xs font-semibold text-foreground"
               >
                 <option value="PRIVATE">Private</option>
                 <option value="UNLISTED">Anyone with link</option>
                 <option value="PUBLIC">Public</option>
               </select>
               {slug && visibility !== 'PRIVATE' && (
-                <Button
-                  size="sm"
-                  variant="outline"
-                  onClick={copyShareLink}
-                  className="border-stone-300 bg-white"
-                >
+                <Button size="sm" variant="outline" onClick={copyShareLink}>
                   <Share2 className="h-3.5 w-3.5" /> Copy link
                 </Button>
               )}
@@ -743,7 +728,7 @@ export function BucketListWorkspace({
                 size="sm"
                 variant="ghost"
                 onClick={deleteList}
-                className="text-red-600 hover:bg-red-50 hover:text-red-700"
+                className="text-destructive hover:bg-destructive/10 hover:text-destructive"
               >
                 <Trash2 className="h-3.5 w-3.5" /> Delete
               </Button>
@@ -753,7 +738,7 @@ export function BucketListWorkspace({
       </main>
 
       <Dialog open={Boolean(editingItem)} onOpenChange={(open) => !open && setEditingId(null)}>
-        <DialogContent className="border-stone-200 bg-[#fffdf8] sm:max-w-md">
+        <DialogContent className="border-border bg-card sm:max-w-md">
           <DialogHeader>
             <DialogTitle className="font-serif text-2xl">Make this one yours</DialogTitle>
             <DialogDescription>
@@ -765,7 +750,7 @@ export function BucketListWorkspace({
               <div>
                 <label
                   htmlFor="bucket-item-text"
-                  className="mb-1.5 block text-xs font-semibold text-stone-600"
+                  className="mb-1.5 block text-xs font-semibold text-muted-foreground"
                 >
                   Experience
                 </label>
@@ -774,16 +759,16 @@ export function BucketListWorkspace({
                   value={editText}
                   onChange={(event) => setEditText(event.target.value)}
                   maxLength={180}
-                  className="min-h-24 border-stone-300 bg-white"
+                  className="min-h-24"
                 />
               </div>
               <div>
                 <label
                   htmlFor="bucket-item-note"
-                  className="mb-1.5 block text-xs font-semibold text-stone-600"
+                  className="mb-1.5 block text-xs font-semibold text-muted-foreground"
                 >
                   One line to remember it by{' '}
-                  <span className="font-normal text-stone-400">(optional)</span>
+                  <span className="font-normal text-subtle">(optional)</span>
                 </label>
                 <Textarea
                   id="bucket-item-note"
@@ -791,7 +776,7 @@ export function BucketListWorkspace({
                   onChange={(event) => setEditNote(event.target.value)}
                   maxLength={280}
                   placeholder="What happened? Who was there?"
-                  className="min-h-20 border-stone-300 bg-white"
+                  className="min-h-20"
                 />
               </div>
               <button
@@ -800,15 +785,15 @@ export function BucketListWorkspace({
                 className={cn(
                   'flex w-full items-center justify-between rounded-xl border px-4 py-3 text-left transition',
                   editingItem.completedAt
-                    ? 'border-emerald-300 bg-emerald-50'
-                    : 'border-stone-200 bg-white hover:border-emerald-300'
+                    ? 'border-growth bg-growth-soft'
+                    : 'border-border bg-background hover:border-growth'
                 )}
               >
                 <span>
-                  <span className="block text-sm font-semibold text-stone-900">
+                  <span className="block text-sm font-semibold text-foreground">
                     {editingItem.completedAt ? 'Completed' : 'Mark this lived'}
                   </span>
-                  <span className="block text-xs text-stone-500">
+                  <span className="block text-xs text-muted-foreground">
                     {editingItem.completedAt
                       ? new Date(editingItem.completedAt).toLocaleDateString()
                       : 'Give the square its ink stamp'}
@@ -817,9 +802,7 @@ export function BucketListWorkspace({
                 <span
                   className={cn(
                     'flex h-8 w-8 items-center justify-center rounded-full',
-                    editingItem.completedAt
-                      ? 'bg-emerald-700 text-white'
-                      : 'bg-stone-100 text-stone-400'
+                    editingItem.completedAt ? 'bg-growth text-background' : 'bg-muted text-subtle'
                   )}
                 >
                   <Check className="h-4 w-4" />
@@ -834,7 +817,7 @@ export function BucketListWorkspace({
                   variant="ghost"
                   size="sm"
                   onClick={() => replaceItem(editingItem)}
-                  className="text-stone-500"
+                  className="text-muted-foreground"
                 >
                   <RefreshCw className="h-3.5 w-3.5" /> Swap
                 </Button>
@@ -844,15 +827,13 @@ export function BucketListWorkspace({
                   variant="ghost"
                   size="sm"
                   onClick={() => removeItem(editingItem)}
-                  className="text-red-600 hover:bg-red-50"
+                  className="text-destructive hover:bg-destructive/10"
                 >
                   <Trash2 className="h-3.5 w-3.5" /> Remove
                 </Button>
               )}
             </div>
-            <Button onClick={saveItem} className="bg-[#176b4a] text-white hover:bg-[#10583d]">
-              Save changes
-            </Button>
+            <Button onClick={saveItem}>Save changes</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>

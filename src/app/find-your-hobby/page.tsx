@@ -6,12 +6,12 @@ import { JsonLd } from '~/components/json-ld';
 import { HobbyQuiz } from './quiz-client';
 
 export const metadata: Metadata = {
-  title: 'Find Your Next Hobby — Hobby Quiz | SignificantHobbies',
+  title: 'Find Your Next Hobby — Hobby Quiz',
   description:
-    'Take our free hobby quiz to discover your perfect hobby. Answer 5 quick questions and get personalized hobby recommendations based on your personality and interests.',
+    'Take our free hobby quiz to discover your perfect hobby. Answer nine focused questions and get personalized recommendations based on your interests and preferred way of spending time.',
   openGraph: {
     title: 'Find Your Next Hobby — Free Quiz',
-    description: 'Answer 5 questions. Get personalized hobby recommendations.',
+    description: 'Answer nine focused questions. Get personalized hobby recommendations.',
   },
 };
 

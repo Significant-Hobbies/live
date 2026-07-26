@@ -6,6 +6,7 @@ import { Fraunces, Geist } from 'next/font/google';
 import { Nav } from '~/components/nav';
 import { AnalyticsProvider } from '~/components/posthog-provider';
 import { Providers } from '~/components/providers';
+import { RouteChrome } from '~/components/route-chrome';
 import { SaaSMakerFeedback } from '~/components/saasmaker-feedback';
 import { SiteFooter } from '~/components/site-footer';
 import { VitalsReporter } from '~/components/VitalsReporter';
@@ -118,10 +119,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             >
               Skip to content
             </a>
-            <Nav />
-            <main id="main">{children}</main>
-            <SiteFooter />
-            <SaaSMakerFeedback />
+            <RouteChrome
+              navigation={<Nav />}
+              footer={<SiteFooter />}
+              feedback={<SaaSMakerFeedback />}
+            >
+              {children}
+            </RouteChrome>
             <VitalsReporter />
           </Providers>
         </AnalyticsProvider>

@@ -22,14 +22,13 @@ const NAV_LINKS = [
   { href: '/side-quests', label: 'Side Quests' },
   { href: '/daily', label: 'Daily' },
   { href: '/trajectory', label: 'Trajectory' },
-  { href: '/blog', label: 'Blog' },
 ];
 
 export async function Nav() {
   const session = await getServerAuthSession();
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-border bg-background">
+    <nav data-site-nav className="sticky top-0 z-50 border-b border-border bg-background">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4">
         <Link
           href="/"
