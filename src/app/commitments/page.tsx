@@ -5,6 +5,7 @@ import { GridBackground, SpotlightCard } from '~/components/aceternity';
 import { CommitmentCard } from '~/components/commitments/commitment-card';
 import { StartCommitmentForm } from '~/components/commitments/start-commitment-form';
 import { timelines, users } from '~/db/schema';
+import { loginPath } from '~/lib/auth-routing';
 import { birthDateFromYear, buildLifeGrid } from '~/lib/mortality';
 import type { Phase } from '~/lib/types';
 import { parseJSONColumn } from '~/lib/utils';
@@ -19,7 +20,7 @@ export const metadata = {
 
 export default async function CommitmentsPage() {
   const session = await getServerAuthSession();
-  if (!session?.user) redirect('/login');
+  if (!session?.user) redirect(loginPath('/commitments'));
 
   const [commitments, rawTimelines, me] = await Promise.all([
     getMyCommitments(),
@@ -57,7 +58,8 @@ export default async function CommitmentsPage() {
         <div className="relative">
           <h1 className="text-2xl font-semibold text-foreground">Commitments</h1>
           <p className="text-sm text-muted-foreground max-w-lg">
-            Practice daily, log proof with stamps. Track your commitment journey.
+            Proof. A commitment is a promise you can show your work for — one stamp a day, each with
+            evidence attached. Habits are the quiet version of this with nothing to prove.
           </p>
         </div>
       </header>

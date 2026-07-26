@@ -39,16 +39,6 @@ export async function setUsername(username: string, birthYear?: number) {
   return user;
 }
 
-export async function getMyProfile() {
-  const session = await getServerAuthSession();
-  if (!session?.user?.id) return null;
-
-  return db.query.users.findFirst({
-    where: eq(users.id, session.user.id),
-    columns: { id: true, name: true, username: true, image: true },
-  });
-}
-
 export async function toggleFollow(
   targetUserId: string
 ): Promise<{ following: boolean; followerCount: number }> {
@@ -188,6 +178,11 @@ export async function updateCreed(creed: string): Promise<{ success: boolean; er
     revalidatePath(`/u/${user.username}`);
   }
   revalidatePath('/dashboard');
+  // /settings renders the creed back into its textarea, so it belongs in this
+  // action's own revalidation set. Currently redundant in practice — the only
+  // caller runs `updateProfile` first, which already revalidates /settings —
+  // but this action should not depend on that to be correct on its own.
+  revalidatePath('/settings');
 
   return { success: true };
 }

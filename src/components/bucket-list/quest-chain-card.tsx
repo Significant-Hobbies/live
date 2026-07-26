@@ -1,6 +1,7 @@
 'use client';
 
 import { Check, Lock, Loader2, Play } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 import { useMemo, useState, useTransition } from 'react';
 
 import { BorderBeam, SpotlightCard } from '~/components/aceternity';
@@ -8,7 +9,7 @@ import { Badge } from '~/components/ui/badge';
 import { Button } from '~/components/ui/button';
 import { BUCKET_ITEM_CATEGORIES, type BucketItemCategory } from '~/lib/famous-bucket-lists';
 import { generateQuestChain, type QuestChainStep } from '~/lib/quest-chains';
-import { startQuest } from '~/lib/actions/user-quests';
+import { abandonQuest, completeUserQuest, startQuest } from '~/lib/actions/user-quests';
 
 interface QuestChainCardProps {
   bucketItemId: string;
@@ -101,6 +102,17 @@ export function QuestChainCard({
 
   const [startedQuestIds, setStartedQuestIds] = useState<Set<string>>(new Set());
   const [isPending, startTransition] = useTransition();
+  const router = useRouter();
+
+  /**
+   * The UserQuest row id for a step, needed to finish or drop it.
+   *
+   * `questId` identifies the step in the generated chain; the lifecycle actions
+   * take the row's primary key, so the two must not be confused.
+   */
+  function activeRowIdFor(questId: string): string | undefined {
+    return activeQuests.find((q) => q.questId === questId && q.status === 'active')?.id;
+  }
 
   const statuses = getStepStatuses(steps, activeQuests, startedQuestIds);
   const completedCount = statuses.filter((s) => s === 'completed').length;
@@ -122,6 +134,55 @@ export function QuestChainCard({
     });
   }
 
+  /**
+   * Finish the in-progress step.
+   *
+   * `completeUserQuest` had no caller anywhere in the app, so a quest could be
+   * started and never finished: the dashboard's completed/abandoned sections,
+   * the public profile's "The evidence", `/look-back`'s quest counts and four
+   * behavioural insights were all permanently empty, and the completion-rate
+   * insight reported 0% forever. It also owns the bucket-item edge — marking the
+   * item done once its last active quest is gone — which likewise never ran.
+   */
+  function handleCompleteStep(step: QuestChainStep) {
+    const rowId = activeRowIdFor(step.questId);
+    if (!rowId) return;
+    startTransition(async () => {
+      const res = await completeUserQuest(rowId);
+      if (!res.success) return;
+      // Drop the optimistic "started" marker before re-reading. It survives
+      // router.refresh() (the component is not remounted), and getStepStatuses
+      // treats a locally-started step as still active — so leaving it set pins
+      // the step at "In progress" for the rest of the session no matter what
+      // the server says.
+      clearOptimistic(step.questId);
+      // Server state changed (quest status, maybe a timeline pin and the bucket
+      // item itself), so re-read rather than guessing locally.
+      router.refresh();
+    });
+  }
+
+  /** Drop the in-progress step. `abandonQuest` was likewise uncalled. */
+  function handleAbandonStep(step: QuestChainStep) {
+    const rowId = activeRowIdFor(step.questId);
+    if (!rowId) return;
+    startTransition(async () => {
+      const res = await abandonQuest(rowId);
+      if (!res.success) return;
+      clearOptimistic(step.questId);
+      router.refresh();
+    });
+  }
+
+  function clearOptimistic(questId: string) {
+    setStartedQuestIds((prev) => {
+      if (!prev.has(questId)) return prev;
+      const next = new Set(prev);
+      next.delete(questId);
+      return next;
+    });
+  }
+
   return (
     <SpotlightCard
       className="relative overflow-hidden rounded-xl border border-border bg-card shadow-soft"
@@ -138,7 +199,7 @@ export function QuestChainCard({
           </h3>
           <div className="flex items-center gap-2">
             <CategoryBadge category={category} />
-            <span className="text-xs text-muted-foreground/60">
+            <span className="text-xs text-subtle">
               {allDone
                 ? `${steps.length} steps complete`
                 : `${completedCount}/${steps.length} steps done`}
@@ -193,7 +254,7 @@ export function QuestChainCard({
                     <span className="text-xs font-bold">{step.stepNumber}</span>
                   </div>
                 ) : (
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full border border-border bg-muted/50 text-muted-foreground/50">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full border border-border bg-muted/50 text-subtle">
                     <Lock className="h-3.5 w-3.5" />
                   </div>
                 )}
@@ -225,7 +286,7 @@ export function QuestChainCard({
                           ? 'text-primary'
                           : isUnlocked
                             ? 'text-muted-foreground'
-                            : 'text-muted-foreground/40'
+                            : 'text-subtle'
                     }`}
                   >
                     {isCompleted
@@ -236,6 +297,33 @@ export function QuestChainCard({
                           ? DIFFICULTY_LABEL[step.difficulty]
                           : 'Locked'}
                   </span>
+
+                  {/* Finish / drop — only on the step actually in progress. */}
+                  {isActive && activeRowIdFor(step.questId) && (
+                    <>
+                      <Button
+                        size="xs"
+                        onClick={() => handleCompleteStep(step)}
+                        disabled={isPending}
+                        className="bg-primary text-primary-foreground hover:opacity-90"
+                      >
+                        {isPending ? (
+                          <Loader2 className="h-3 w-3 animate-spin" />
+                        ) : (
+                          <Check className="h-3 w-3" />
+                        )}
+                        Mark done
+                      </Button>
+                      <button
+                        type="button"
+                        onClick={() => handleAbandonStep(step)}
+                        disabled={isPending}
+                        className="rounded px-1 text-[10px] font-medium uppercase tracking-wide text-subtle transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/50 disabled:opacity-50"
+                      >
+                        Drop
+                      </button>
+                    </>
+                  )}
 
                   {/* Start button — only on the first unlocked step */}
                   {isUnlocked && (

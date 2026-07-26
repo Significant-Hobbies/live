@@ -305,3 +305,55 @@ export function parseEntryNumbers(raw: string | null | undefined): TrajectoryNum
 export function serializeEntryNumbers(numbers: TrajectoryNumberInput[]): string {
   return JSON.stringify(numbers);
 }
+
+// ─── Chart axis scaling ─────────────────────────────────────────────────────
+
+export interface NiceAxis {
+  min: number;
+  max: number;
+  step: number;
+  ticks: number[];
+}
+
+/**
+ * Chooses round axis bounds and tick values covering [min, max].
+ *
+ * The chart previously interpolated ticks directly between the data min and max,
+ * which produced labels like 8 / 10.75 / 13.5 / 16.25 / 19 — technically correct
+ * and unreadable. This snaps the step to a 1 / 2 / 2.5 / 5 / 10 multiple of a
+ * power of ten and rounds the bounds outward, so the same data labels 8 / 11 / 14
+ * / 17 / 20 or similar.
+ *
+ * `targetTicks` is a hint, not a guarantee: rounding outward can add one.
+ */
+export function niceAxis(min: number, max: number, targetTicks = 4): NiceAxis {
+  if (!Number.isFinite(min) || !Number.isFinite(max)) {
+    return { min: 0, max: 1, step: 1, ticks: [0, 1] };
+  }
+  const safeTicks = Math.max(1, Math.floor(targetTicks));
+
+  // A flat series has no range to divide; give it symmetric breathing room.
+  if (min === max) {
+    const pad = min === 0 ? 1 : Math.abs(min) * 0.1;
+    min -= pad;
+    max += pad;
+  }
+
+  const rawStep = (max - min) / safeTicks;
+  const magnitude = 10 ** Math.floor(Math.log10(rawStep));
+  const normalized = rawStep / magnitude;
+  const niceNormalized =
+    normalized <= 1 ? 1 : normalized <= 2 ? 2 : normalized <= 2.5 ? 2.5 : normalized <= 5 ? 5 : 10;
+  const step = niceNormalized * magnitude;
+
+  const niceMin = Math.floor(min / step) * step;
+  const niceMax = Math.ceil(max / step) * step;
+
+  // Build by index rather than accumulating, so float drift cannot compound.
+  const count = Math.round((niceMax - niceMin) / step);
+  const decimals = Math.max(0, -Math.floor(Math.log10(step)));
+  const round = (v: number) => Number(v.toFixed(Math.min(10, decimals + 2)));
+  const ticks = Array.from({ length: count + 1 }, (_, i) => round(niceMin + i * step));
+
+  return { min: round(niceMin), max: round(niceMax), step: round(step), ticks };
+}

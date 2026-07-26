@@ -167,7 +167,7 @@ function QuestCard({
           >
             Completed
             <Check className="h-4 w-4 text-foreground" />
-            <span className="ml-1 text-xs text-muted-foreground/60">(undo)</span>
+            <span className="ml-1 text-xs text-subtle">(undo)</span>
           </button>
         ) : (
           <button
@@ -245,7 +245,7 @@ function ProgressBar({ completed, total }: { completed: number; total: number })
         <span className="font-medium text-foreground">
           {completed} / {total} completed
         </span>
-        <span className="text-muted-foreground/60">{pct}%</span>
+        <span className="text-subtle">{pct}%</span>
       </div>
       <div className="h-3 w-full overflow-hidden rounded-full bg-foreground/5">
         <div
@@ -576,7 +576,7 @@ function SideQuestsInner() {
                   <button
                     type="button"
                     onClick={dismissSavePrompt}
-                    className="ml-4 shrink-0 text-muted-foreground/60 hover:text-muted-foreground"
+                    className="ml-4 shrink-0 text-subtle hover:text-muted-foreground"
                     aria-label="Dismiss"
                   >
                     <X className="h-4 w-4" />
@@ -594,7 +594,7 @@ function SideQuestsInner() {
                     <div className="mb-4 flex items-center gap-2">
                       <span className="text-xl">{cat.emoji}</span>
                       <h3 className="text-lg font-bold text-foreground">{cat.label}</h3>
-                      <span className="text-sm text-muted-foreground/60">
+                      <span className="text-sm text-subtle">
                         {catCompleted}/{quests.length} completed
                       </span>
                     </div>
@@ -650,9 +650,7 @@ function SideQuestsInner() {
                                     <span className="text-lg">{quest.emoji}</span>
                                     <span
                                       className={`font-medium ${
-                                        done
-                                          ? 'text-muted-foreground/60 line-through'
-                                          : 'text-foreground'
+                                        done ? 'text-subtle line-through' : 'text-foreground'
                                       }`}
                                     >
                                       {quest.title}
@@ -669,7 +667,7 @@ function SideQuestsInner() {
                                     {quest.description}
                                   </p>
                                   <div className="flex flex-wrap items-center gap-2">
-                                    <span className="text-xs text-muted-foreground/60">
+                                    <span className="text-xs text-subtle">
                                       {quest.timeEstimate}
                                     </span>
                                     {quest.relatedHobbies.map((hobby) => (

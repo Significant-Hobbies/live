@@ -321,6 +321,7 @@ export default function HobbiesForAdultsPage() {
             ← Hobby Directory
           </Link>
           <TextGenerateEffect
+            as="h1"
             words="50 Best Hobbies for Adults — Find What Excites You"
             className="mt-4 text-3xl font-bold text-foreground"
           />
@@ -373,7 +374,7 @@ export default function HobbiesForAdultsPage() {
           <div className="mt-4">
             <Link
               href="/timeline/new"
-              className="text-sm text-muted-foreground/60 hover:text-muted-foreground transition-colors"
+              className="text-sm text-subtle hover:text-muted-foreground transition-colors"
             >
               Already have hobbies? Build your hobby timeline →
             </Link>

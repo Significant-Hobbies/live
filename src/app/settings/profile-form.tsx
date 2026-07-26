@@ -3,12 +3,13 @@
 import { useRouter } from 'next/navigation';
 import { useState, useTransition } from 'react';
 
-import { updateProfile } from '~/lib/actions/user';
+import { updateCreed, updateProfile } from '~/lib/actions/user';
 
 interface ProfileFormProps {
   initialName: string;
   initialBio: string;
   initialWebsite: string;
+  initialCreed: string;
   username: string;
 }
 
@@ -16,6 +17,7 @@ export function ProfileForm({
   initialName,
   initialBio,
   initialWebsite,
+  initialCreed,
   username,
 }: ProfileFormProps) {
   const router = useRouter();
@@ -24,11 +26,14 @@ export function ProfileForm({
   const [name, setName] = useState(initialName);
   const [bio, setBio] = useState(initialBio);
   const [website, setWebsite] = useState(initialWebsite);
+  const [creed, setCreed] = useState(initialCreed);
   const [error, setError] = useState<string | null>(null);
   const [toast, setToast] = useState(false);
 
   const bioLength = bio.length;
   const BIO_MAX = 160;
+  // Matches the server-side cap in updateCreed.
+  const CREED_MAX = 500;
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -47,6 +52,14 @@ export function ProfileForm({
           bio: bio.trim(),
           website: website.trim(),
         });
+        // Separate action rather than folding creed into updateProfile: it owns
+        // the 500-char cap and revalidates /dashboard, where the creed is the
+        // page heading. It had no caller at all before this, so `users.creed`
+        // was NULL for every user and both display surfaces always fell back.
+        if (creed.trim() !== initialCreed.trim()) {
+          const res = await updateCreed(creed);
+          if (!res.success) throw new Error(res.error ?? 'Could not save your creed');
+        }
         setToast(true);
         setTimeout(() => setToast(false), 3000);
         if (username) {
@@ -90,6 +103,34 @@ export function ProfileForm({
         />
       </div>
 
+      {/* Creed — rendered as a serif italic quote on the dashboard and profile,
+          so the input previews that voice rather than looking like a bio field. */}
+      <div>
+        <label htmlFor="creed" className="mb-1.5 block text-sm font-medium text-foreground">
+          Your creed
+        </label>
+        <p className="mb-2 text-xs leading-relaxed text-subtle">
+          One declaration, in your own words — &ldquo;I am someone who&hellip;&rdquo;. It becomes
+          the heading of your dashboard and the quote on your public profile.
+        </p>
+        <textarea
+          id="creed"
+          value={creed}
+          onChange={(e) => setCreed(e.target.value.slice(0, CREED_MAX))}
+          placeholder="I am someone who finishes what they start."
+          rows={2}
+          className="w-full resize-none rounded-lg border border-border bg-card/40 px-3.5 py-2 font-serif text-base italic leading-relaxed text-foreground placeholder-stone-400 outline-none transition focus:border-foreground/30 focus:bg-card focus:ring-2 focus:ring-foreground/20"
+        />
+        <p
+          className={[
+            'mt-1 text-right text-xs',
+            creed.length >= CREED_MAX ? 'text-destructive font-medium' : 'text-subtle',
+          ].join(' ')}
+        >
+          {creed.length} / {CREED_MAX}
+        </p>
+      </div>
+
       {/* Bio */}
       <div>
         <label htmlFor="bio" className="mb-1.5 block text-sm font-medium text-foreground">
@@ -106,7 +147,7 @@ export function ProfileForm({
         <p
           className={[
             'mt-1 text-right text-xs',
-            bioLength >= BIO_MAX ? 'text-destructive font-medium' : 'text-muted-foreground/60',
+            bioLength >= BIO_MAX ? 'text-destructive font-medium' : 'text-subtle',
           ].join(' ')}
         >
           {bioLength} / {BIO_MAX}
@@ -119,7 +160,7 @@ export function ProfileForm({
           Website
         </label>
         <div className="flex items-center rounded-lg border border-border bg-card/40 px-3.5 py-2 transition focus-within:border-foreground/30 focus-within:bg-card focus-within:ring-2 focus-within:ring-foreground/20">
-          <span className="mr-1 select-none text-sm text-muted-foreground/60">https://</span>
+          <span className="mr-1 select-none text-sm text-subtle">https://</span>
           <input
             id="website"
             type="text"
@@ -136,9 +177,7 @@ export function ProfileForm({
             className="flex-1 bg-transparent text-sm text-foreground placeholder-stone-400 outline-none"
           />
         </div>
-        <p className="mt-1 text-xs text-muted-foreground/60">
-          Include https:// — e.g. https://yoursite.com
-        </p>
+        <p className="mt-1 text-xs text-subtle">Include https:// — e.g. https://yoursite.com</p>
       </div>
 
       {/* Submit */}

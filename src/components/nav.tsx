@@ -40,7 +40,11 @@ export async function Nav() {
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden items-center gap-2 md:flex">
+        {/* lg, not md. The desktop nav needs ~734px of its own, so at exactly 768px
+            (Tailwind's md) it rendered and overflowed the viewport by 120px —
+            caught by the content-flywheel overflow check on /blog. Labels and
+            order are unchanged; only the switch point moves. */}
+        <div className="hidden items-center gap-2 lg:flex">
           <NavLinks links={NAV_LINKS} />
 
           {session?.user ? (
@@ -113,7 +117,7 @@ export async function Nav() {
         </div>
 
         {/* Mobile nav */}
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="flex items-center gap-2 lg:hidden">
           {session?.user && (
             <DropdownMenu>
               <DropdownMenuTrigger asChild>

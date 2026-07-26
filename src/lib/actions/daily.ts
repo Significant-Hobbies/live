@@ -112,19 +112,6 @@ export async function toggleHabitLog(habitId: string, dayDate: string, completed
 
 // ── Journal entries ─────────────────────────────────────────────────────────
 
-export async function getJournalEntry(dayDate: string) {
-  const session = await getServerAuthSession();
-  if (!session?.user) return null;
-
-  const rows = await db
-    .select()
-    .from(journalEntries)
-    .where(and(eq(journalEntries.userId, session.user.id), eq(journalEntries.dayDate, dayDate)))
-    .limit(1);
-
-  return rows[0] ?? null;
-}
-
 export async function getJournalEntriesForRange(startDate: string, endDate: string) {
   const session = await getServerAuthSession();
   if (!session?.user) return [];

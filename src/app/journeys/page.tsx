@@ -26,13 +26,14 @@ export default function JourneysPage() {
         <GridBackground variant="dots" size={22} />
         <FadeIn className="relative px-6 pt-14 pb-10 text-center sm:px-10">
           <TextGenerateEffect
+            as="h1"
             words="Famous Hobby Journeys"
             className="text-3xl font-bold text-foreground sm:text-4xl"
           />
           <p className="mt-3 text-muted-foreground">
             How the world&apos;s most interesting people spent their free time
           </p>
-          <p className="mt-3 text-sm text-muted-foreground/60">
+          <p className="mt-3 text-sm text-subtle">
             <span className="font-medium text-muted-foreground">{FAMOUS_JOURNEYS.length}</span>{' '}
             remarkable people
           </p>
@@ -63,7 +64,7 @@ export default function JourneysPage() {
                       <h2 className="font-bold text-foreground transition-colors group-hover:text-foreground leading-tight">
                         {person.name}
                       </h2>
-                      <p className="text-xs text-muted-foreground/60">{person.born}</p>
+                      <p className="text-xs text-subtle">{person.born}</p>
                     </div>
                   </div>
 
@@ -74,7 +75,7 @@ export default function JourneysPage() {
 
                   {/* Stats row */}
                   <div className="flex items-center justify-between border-t border-border pt-3">
-                    <span className="text-xs text-muted-foreground/60">
+                    <span className="text-xs text-subtle">
                       <span className="font-semibold text-muted-foreground">{totalHobbies}</span>{' '}
                       hobbies across{' '}
                       <span className="font-semibold text-muted-foreground">

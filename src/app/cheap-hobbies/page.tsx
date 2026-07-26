@@ -239,6 +239,7 @@ export default function CheapHobbiesPage() {
             ← Hobby Directory
           </Link>
           <TextGenerateEffect
+            as="h1"
             words="25 Free & Cheap Hobbies That Are Actually Fun"
             className="mt-4 text-3xl font-bold text-foreground"
           />
@@ -302,7 +303,7 @@ export default function CheapHobbiesPage() {
                       {hobby.cost}
                     </span>
                   </div>
-                  <p className="text-xs text-muted-foreground/60 mb-2 font-medium">{hobby.what}</p>
+                  <p className="text-xs text-subtle mb-2 font-medium">{hobby.what}</p>
                   <p className="text-sm text-muted-foreground leading-relaxed">{hobby.why}</p>
                 </SpotlightCard>
               </StaggerItem>
@@ -337,7 +338,7 @@ export default function CheapHobbiesPage() {
                       {hobby.cost}
                     </span>
                   </div>
-                  <p className="text-xs text-muted-foreground/60 mb-2 font-medium">{hobby.what}</p>
+                  <p className="text-xs text-subtle mb-2 font-medium">{hobby.what}</p>
                   <p className="text-sm text-muted-foreground leading-relaxed">{hobby.why}</p>
                 </SpotlightCard>
               </StaggerItem>

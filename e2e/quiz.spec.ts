@@ -1,35 +1,41 @@
 import { expect, test } from '@playwright/test';
 
+/**
+ * The quiz is the single primary discovery UX
+ * (docs/product/discovery-funnel.md), so this is the highest-value flow in the
+ * anonymous funnel and deserves a test that actually walks it.
+ *
+ * The previous version clicked `[class*='rounded-xl']` blindly inside
+ * `if (await x.isVisible())` guards, so every step could silently no-op, and it
+ * asserted on "Your Hobby Personality" / "recommended hobbies" — copy that does
+ * not exist. The real results heading is "Hobbies picked for you". It had been
+ * failing unnoticed because CI never ran Playwright.
+ */
 test.describe('Hobby Quiz', () => {
-  test('completes quiz flow and shows results', async ({ page }) => {
+  test('completes the quiz and shows recommendations', async ({ page }) => {
     await page.goto('/find-your-hobby');
-    await expect(page.locator('h1')).toContainText('Find Your Next Hobby');
+    await expect(page.locator('h1')).toContainText('Find Your Perfect Hobby');
 
-    // Answer all 5 questions
-    for (let i = 0; i < 5; i++) {
-      // Click the first option for each question
-      const options = page
-        .locator('button')
-        .filter({ hasText: /Make something|corner|long hike|Create something|High/ });
-      const firstOption = options.first();
-      if (await firstOption.isVisible()) {
-        await firstOption.click();
-      } else {
-        // Fallback: click any option button in the quiz area
-        const quizButtons = page.locator("[class*='rounded-xl']").filter({ hasText: /.+/ });
-        await quizButtons.first().click();
-      }
+    // Selecting an option does not advance on its own (handleSelect only records
+    // it; handleNext scores and moves on), so each question is a pick then a Next.
+    const progress = page.getByText(/^Question \d+ of \d+$/);
+    await expect(progress).toBeVisible();
 
-      // Click Next if visible
-      const nextButton = page.getByRole('button', { name: /Next|See Results/i });
-      if (await nextButton.isVisible()) {
-        await nextButton.click();
-      }
+    for (let guard = 0; guard < 12; guard += 1) {
+      if (!(await progress.isVisible().catch(() => false))) break;
+
+      // The option buttons are the ones inside the question card; the first is
+      // always a valid answer, and picking any option is enough to score.
+      const option = page.locator('button.rounded-xl').first();
+      await expect(option, 'each question must offer options').toBeVisible();
+      await option.click();
+
+      const next = page.getByRole('button', { name: /^(Next|See my results)/i }).first();
+      await expect(next, 'a scored answer must be advanceable').toBeEnabled();
+      await next.click();
     }
 
-    // Should show results
-    await expect(page.getByText(/recommended hobbies|Your Hobby Personality/i)).toBeVisible({
-      timeout: 5000,
-    });
+    // Results, asserted on copy the page actually renders.
+    await expect(page.getByRole('heading', { name: 'Hobbies picked for you' })).toBeVisible();
   });
 });

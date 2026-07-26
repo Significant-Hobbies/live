@@ -11,6 +11,7 @@ import {
   isTrajectoryBucket,
   monthEndNudgeTargetMonth,
   monthKeyFor,
+  niceAxis,
   parseEntryNumbers,
   previousMonthKey,
   serializeEntryNumbers,
@@ -443,5 +444,70 @@ describe('trajectory', () => {
         { label: 'another valid', value: 10 },
       ]);
     });
+  });
+});
+
+describe('niceAxis', () => {
+  it('replaces fractional interpolation with round ticks', () => {
+    // The real case from /trajectory: long-run km 8, 12, 16, 19.
+    // Raw interpolation gave 8 / 10.75 / 13.5 / 16.25 / 19.
+    const axis = niceAxis(8, 19, 4);
+    expect(axis.ticks.every((t) => Number.isInteger(t))).toBe(true);
+    expect(axis.min).toBeLessThanOrEqual(8);
+    expect(axis.max).toBeGreaterThanOrEqual(19);
+  });
+
+  it('always covers the data range', () => {
+    for (const [lo, hi] of [
+      [0, 1],
+      [3, 7],
+      [0.2, 0.9],
+      [-5, 5],
+      [100, 2500],
+      [1, 3],
+    ] as const) {
+      const axis = niceAxis(lo, hi, 4);
+      expect(axis.min).toBeLessThanOrEqual(lo);
+      expect(axis.max).toBeGreaterThanOrEqual(hi);
+      expect(axis.ticks[0]).toBe(axis.min);
+      expect(axis.ticks[axis.ticks.length - 1]).toBe(axis.max);
+    }
+  });
+
+  it('snaps the step to a 1/2/2.5/5/10 multiple of a power of ten', () => {
+    const mantissa = (v: number) => {
+      const m = v / 10 ** Math.floor(Math.log10(v));
+      return Number(m.toFixed(6));
+    };
+    for (const [lo, hi] of [
+      [0, 97],
+      [0, 4],
+      [12, 4800],
+      [0, 0.7],
+    ] as const) {
+      expect([1, 2, 2.5, 5, 10]).toContain(mantissa(niceAxis(lo, hi, 4).step));
+    }
+  });
+
+  it('gives a flat series breathing room instead of a zero range', () => {
+    const axis = niceAxis(12, 12, 4);
+    expect(axis.max).toBeGreaterThan(axis.min);
+    expect(axis.ticks.length).toBeGreaterThan(1);
+  });
+
+  it('handles a flat zero series', () => {
+    const axis = niceAxis(0, 0, 4);
+    expect(axis.max).toBeGreaterThan(axis.min);
+  });
+
+  it('does not emit floating point noise', () => {
+    for (const t of niceAxis(0, 0.3, 4).ticks) {
+      expect(String(t)).not.toMatch(/\d{6,}/);
+    }
+  });
+
+  it('survives non-finite input', () => {
+    expect(niceAxis(Number.NaN, 5).ticks.length).toBeGreaterThan(1);
+    expect(niceAxis(0, Number.POSITIVE_INFINITY).ticks.length).toBeGreaterThan(1);
   });
 });

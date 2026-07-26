@@ -58,13 +58,9 @@ export function JournalSection({ today, isMorning, journalEntry: initialJournal,
       <div className="flex items-baseline justify-between gap-3">
         <div>
           <h2 className="font-serif text-xl font-semibold text-foreground">Journal</h2>
-          <p className="mt-0.5 text-xs text-muted-foreground/70">
-            Proof for yourself, not anyone else
-          </p>
+          <p className="mt-0.5 text-xs text-subtle">Proof for yourself, not anyone else</p>
         </div>
-        <span className="text-xs text-muted-foreground/60">
-          {isMorning ? 'Morning' : 'Evening'}
-        </span>
+        <span className="text-xs text-subtle">{isMorning ? 'Morning' : 'Evening'}</span>
       </div>
 
       {/* Journal card with header + gradient focus border */}
@@ -78,15 +74,13 @@ export function JournalSection({ today, isMorning, journalEntry: initialJournal,
             )}
             <h3 className="font-serif text-sm font-medium text-foreground">{journalTitle}</h3>
           </div>
-          <span className="text-[10px] tabular-nums text-muted-foreground/50">
-            {charCount} chars
-          </span>
+          <span className="text-[10px] tabular-nums text-subtle">{charCount} chars</span>
         </div>
         <textarea
           value={isMorning ? amEntry : pmEntry}
           onChange={(e) => (isMorning ? setAmEntry(e.target.value) : setPmEntry(e.target.value))}
           placeholder={journalPlaceholder}
-          className="w-full min-h-[140px] resize-none bg-transparent px-5 py-4 text-base leading-relaxed text-foreground placeholder:text-muted-foreground/50 focus-visible:outline-none"
+          className="w-full min-h-[140px] resize-none bg-transparent px-5 py-4 text-base leading-relaxed text-foreground placeholder:text-subtle focus-visible:outline-none"
         />
       </div>
 
@@ -135,7 +129,7 @@ export function JournalSection({ today, isMorning, journalEntry: initialJournal,
         )}
 
         {!canSave && !saved && (
-          <span className="text-xs text-muted-foreground/60">
+          <span className="text-xs text-subtle">
             {isMorning
               ? 'What will you change today? One sentence is enough.'
               : 'What did you change today? One sentence is enough.'}

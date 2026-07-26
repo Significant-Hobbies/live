@@ -440,7 +440,7 @@ export function HobbyQuiz() {
         {!isResults && currentQuestion && (
           <div key={step} className="animate-in fade-in slide-in-from-right-4 duration-300">
             <SpotlightCard className="rounded-2xl shadow-soft" innerClassName="p-6">
-              <div className="mb-2 text-center text-sm text-muted-foreground/60">
+              <div className="mb-2 text-center text-sm text-subtle">
                 Question {step + 1} of {QUESTIONS.length}
               </div>
               <h2 className="mb-6 text-center text-xl font-semibold text-foreground">
@@ -484,7 +484,7 @@ export function HobbyQuiz() {
                   className={`rounded-lg px-8 py-3 text-sm font-semibold transition-all duration-150 ${
                     selectedOption !== null
                       ? 'bg-primary text-primary-foreground hover:opacity-90 shadow-sm hover:shadow-md'
-                      : 'cursor-not-allowed bg-foreground/5 text-muted-foreground/60'
+                      : 'cursor-not-allowed bg-foreground/5 text-subtle'
                   }`}
                 >
                   {step === QUESTIONS.length - 1 ? 'See my results →' : 'Next →'}
@@ -627,7 +627,7 @@ export function HobbyQuiz() {
               </button>
               <button
                 onClick={handleRestart}
-                className="text-sm text-muted-foreground/60 underline-offset-2 hover:text-muted-foreground hover:underline"
+                className="text-sm text-subtle underline-offset-2 hover:text-muted-foreground hover:underline"
               >
                 Retake quiz
               </button>

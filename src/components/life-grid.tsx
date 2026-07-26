@@ -1,14 +1,17 @@
-import { LIFE_EXPECTANCY_WEEKS, type LifeGrid as LifeGridData } from '~/lib/mortality';
+import type { LifeGrid as LifeGridData } from '~/lib/mortality';
 
 type Props = {
   grid: LifeGridData;
 };
 
 /**
- * Life in Weeks — the stamp frame. A 52×~77 grid where each cell is one
- * week of a ~4,000-week life. Stamped weeks (weeks with practice) glow in
- * gold — that's your mark on the canvas so far. The weeks ahead carry a
- * subtle gold tint: open space, not empty space.
+ * Life in Weeks — the stamp frame. 52 columns, one cell per week, running the
+ * length of this particular life: weeks lived plus the weeks conditional life
+ * expectancy still allows. Stamped weeks (weeks with practice) glow in gold —
+ * that's your mark on the canvas so far. The weeks ahead carry a subtle gold
+ * tint: open space, not empty space.
+ *
+ * The row count is therefore personal, not a fixed ~77.
  */
 export function LifeGrid({ grid }: Props) {
   const years = Math.ceil(grid.cells.length / 52);
@@ -33,16 +36,19 @@ export function LifeGrid({ grid }: Props) {
         style={{
           gridTemplateColumns: `repeat(52, minmax(0, 1fr))`,
         }}
-        aria-label={`Life grid: ${grid.weeksLived} of ${grid.totalWeeks} weeks stamped`}
+        aria-label={`Life grid: ${grid.weeksLived} weeks lived of about ${grid.totalWeeks}`}
       >
         {grid.cells.map((cell) => {
           // Past, unpracticed: muted charcoal
           // Past, practiced (stamped): gold
           // Future (remaining): slightly brighter with a faint gold tint
-          let bg = 'bg-foreground/8';
-          if (cell.lived) bg = 'bg-foreground/20';
-          if (cell.stamped) bg = 'bg-primary';
+          // Written as one branch rather than four reassignments: the previous
+          // form opened with a value nothing could ever read, and ended with a
+          // `!lived` line that silently overrode the stamped case.
+          let bg: string;
           if (!cell.lived) bg = 'bg-primary/12';
+          else if (cell.stamped) bg = 'bg-primary';
+          else bg = 'bg-foreground/20';
 
           return (
             <div
@@ -50,10 +56,10 @@ export function LifeGrid({ grid }: Props) {
               className={`aspect-square rounded-[1px] transition-colors ${bg}`}
               title={
                 cell.stamped
-                  ? `Week ${cell.weekIndex + 1} — stamped`
+                  ? `Week ${cell.weekIndex + 1} — you practised`
                   : cell.lived
-                    ? `Week ${cell.weekIndex + 1}`
-                    : `Week ${cell.weekIndex + 1} — to stamp`
+                    ? `Week ${cell.weekIndex + 1} — lived`
+                    : `Week ${cell.weekIndex + 1} — ahead of you`
               }
             />
           );
@@ -61,9 +67,9 @@ export function LifeGrid({ grid }: Props) {
       </div>
 
       {/* Editorial axis labels */}
-      <div className="mt-3 flex items-center justify-between text-[11px] text-muted-foreground/50">
+      <div className="mt-3 flex items-center justify-between text-[11px] text-subtle">
         <span className="font-mono">Age 0</span>
-        <span className="font-mono tabular-nums">{currentYear} yrs stamped</span>
+        <span className="font-mono tabular-nums">{currentYear} yrs lived</span>
         <span className="font-mono">~{years} years</span>
       </div>
     </div>

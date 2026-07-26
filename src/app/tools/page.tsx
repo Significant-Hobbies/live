@@ -138,7 +138,7 @@ export default function ToolsPage() {
           <FadeIn className="mt-12 text-center" delay={0.2}>
             <Link
               href="/"
-              className="text-sm text-muted-foreground/60 transition-colors hover:text-muted-foreground"
+              className="text-sm text-subtle transition-colors hover:text-muted-foreground"
             >
               ← Back to SignificantHobbies
             </Link>

@@ -42,6 +42,35 @@ export function normalizeProofUrl(input: string): string {
   return v; // treat as text note / non-url
 }
 
+/**
+ * Whether a stored proof value is safe to render as a link.
+ *
+ * `normalizeProofUrl` deliberately passes non-URL input straight through
+ * ("treat as text note"), so `proofUrl` can hold arbitrary text — including
+ * `javascript:` and `data:` URIs. That was inert while nothing rendered stamps,
+ * but any surface that turns the value into an `href` needs this guard, or a
+ * stored string becomes script execution. Anything failing this check should be
+ * shown as plain text instead.
+ */
+export function isSafeProofUrl(value: string | null | undefined): boolean {
+  if (!value) return false;
+  const v = value.trim();
+  // Reject whitespace and control characters before parsing. The URL parser
+  // strips tabs and newlines, so "java\nscript:alert(1)" would otherwise parse
+  // as the javascript: scheme. Checked by code point rather than a regex
+  // literal, so no control characters are embedded in this file.
+  for (const ch of v) {
+    const code = ch.codePointAt(0) ?? 0;
+    if (code <= 0x20 || code === 0x7f) return false;
+  }
+  try {
+    const parsed = new URL(v);
+    return parsed.protocol === 'http:' || parsed.protocol === 'https:';
+  } catch {
+    return false;
+  }
+}
+
 function todayStr(now: Date = new Date()): string {
   return toDayStr(now);
 }

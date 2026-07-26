@@ -3,10 +3,13 @@ import Link from 'next/link';
 import { redirect } from 'next/navigation';
 
 import { GridBackground, SpotlightCard } from '~/components/aceternity';
+import { BucketItemControls } from '~/components/bucket-list/bucket-item-controls';
+import { BucketInsights } from '~/components/bucket-list/bucket-insights';
 import { QuestChainCard } from '~/components/bucket-list/quest-chain-card';
 import { Whale } from '~/components/whale';
 import { bucketListItems, timelines } from '~/db/schema';
-import { getActiveQuests } from '~/lib/actions/user-quests';
+import { getActiveQuests, getCompletedQuests } from '~/lib/actions/user-quests';
+import { loginPath } from '~/lib/auth-routing';
 import { BUCKET_ITEM_CATEGORIES, type BucketItemCategory } from '~/lib/famous-bucket-lists';
 import { computePersonality } from '~/lib/personality';
 import type { Phase, TimelineVisibility } from '~/lib/types';
@@ -58,9 +61,12 @@ const CATEGORY_COLORS: Record<
 
 export default async function LifePlanPage() {
   const session = await getServerAuthSession();
-  if (!session?.user) redirect('/login');
+  if (!session?.user) redirect(loginPath('/life-plan'));
 
-  const [rawTimelines, rawBucketItems, activeQuests] = await Promise.all([
+  // Completed quests are fetched alongside active ones because QuestChainCard
+  // already handles `status === 'completed'` but was only ever given active
+  // rows — so a finished step silently reverted to looking un-started.
+  const [rawTimelines, rawBucketItems, activeQuests, completedQuests] = await Promise.all([
     db
       .select()
       .from(timelines)
@@ -72,7 +78,10 @@ export default async function LifePlanPage() {
       .where(eq(bucketListItems.userId, session.user.id))
       .orderBy(desc(bucketListItems.createdAt)),
     getActiveQuests(),
+    getCompletedQuests(),
   ]);
+
+  const chainQuests = [...activeQuests, ...completedQuests];
 
   // Parse all phases
   const allPhases: Phase[] = [];
@@ -96,6 +105,10 @@ export default async function LifePlanPage() {
   const bucketDone = rawBucketItems.filter((i) => i.status === 'done');
   const bucketInProgress = rawBucketItems.filter((i) => i.status === 'in_progress');
   const bucketPlanned = rawBucketItems.filter((i) => i.status === 'planned');
+  // "Ahead of you" means everything not finished. Before status was reachable
+  // this could only ever be the planned set; now an in-progress item keeps its
+  // quest chain and its controls instead of vanishing into a bare list.
+  const bucketAhead = [...bucketInProgress, ...bucketPlanned];
 
   for (const item of rawBucketItems) {
     const cat = item.category ?? 'uncategorized';
@@ -178,6 +191,9 @@ export default async function LifePlanPage() {
         />
       </div>
 
+      {/* ── What the list says about you ────────────────────────── */}
+      <BucketInsights items={rawBucketItems} />
+
       {/* ── Life wheel ──────────────────────────────────────────── */}
       {totalBucket > 0 && (
         <section>
@@ -240,7 +256,7 @@ export default async function LifePlanPage() {
                 ))}
               </div>
             ) : (
-              <p className="text-sm text-muted-foreground/60">
+              <p className="text-sm text-subtle">
                 No recent hobbies.{' '}
                 <Link href="/timeline/new" className="text-foreground hover:underline">
                   Start a timeline →
@@ -259,17 +275,17 @@ export default async function LifePlanPage() {
                     <span className="h-2 w-2 rounded-full bg-primary shrink-0" />
                     <span className="truncate">{item.title}</span>
                     {item.targetYear && (
-                      <span className="text-xs text-muted-foreground/60 shrink-0">
-                        by {item.targetYear}
-                      </span>
+                      <span className="text-xs text-subtle shrink-0">by {item.targetYear}</span>
                     )}
                   </li>
                 ))}
               </ul>
             ) : (
-              <p className="text-sm text-muted-foreground/60">
+              <p className="text-sm text-subtle">
                 Nothing in progress yet.{' '}
-                <Link href="/dashboard" className="text-foreground hover:underline">
+                {/* Was /dashboard, which does not render bucket items at all. The
+                    controls that move an item forward are further down this page. */}
+                <Link href="#ahead" className="text-foreground hover:underline">
                   Move something forward →
                 </Link>
               </p>
@@ -279,10 +295,12 @@ export default async function LifePlanPage() {
       </section>
 
       {/* ── Future (bucket list as quest chains) ────────────────── */}
-      {totalPlanned > 0 && (
+      {bucketAhead.length > 0 && (
         <section className="space-y-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-lg font-semibold text-foreground">Ahead of you</h2>
+            <h2 id="ahead" className="scroll-mt-20 text-lg font-semibold text-foreground">
+              Ahead of you
+            </h2>
             <Link
               href="/dashboard"
               className="text-sm text-primary hover:text-lumi-600 transition-colors"
@@ -294,18 +312,25 @@ export default async function LifePlanPage() {
             Each dream, broken into steps you can start today.
           </p>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {bucketPlanned.map((item) => (
+            {bucketAhead.map((item) => (
               <div key={item.id}>
                 <QuestChainCard
                   bucketItemId={item.id}
                   title={item.title}
                   category={item.category}
-                  activeQuests={activeQuests.map((q) => ({
+                  activeQuests={chainQuests.map((q) => ({
                     id: q.id,
                     questId: q.questId,
                     status: q.status,
                     title: q.title,
                   }))}
+                />
+                <BucketItemControls
+                  id={item.id}
+                  status={item.status}
+                  visibility={item.visibility}
+                  title={item.title}
+                  targetYear={item.targetYear}
                 />
               </div>
             ))}
@@ -332,7 +357,7 @@ export default async function LifePlanPage() {
                   <SpotlightCard className="block rounded-xl border border-border bg-card p-4 shadow-soft transition-all">
                     <div className="flex items-center justify-between mb-2">
                       <span className="font-medium text-foreground">{tl.title}</span>
-                      <span className="text-xs text-muted-foreground/60">
+                      <span className="text-xs text-subtle">
                         {tl.phases.length} phase{tl.phases.length !== 1 ? 's' : ''}
                       </span>
                     </div>
@@ -349,7 +374,7 @@ export default async function LifePlanPage() {
                           </span>
                         ))}
                       {tl.phases.flatMap((p) => p.hobbies).length > 8 && (
-                        <span className="text-xs text-muted-foreground/60 self-center">
+                        <span className="text-xs text-subtle self-center">
                           +{tl.phases.flatMap((p) => p.hobbies).length - 8} more
                         </span>
                       )}
@@ -409,7 +434,7 @@ function StatCard({
     <SpotlightCard className="rounded-xl border border-border bg-card p-4 shadow-soft">
       <p className="text-xs text-muted-foreground font-medium">{label}</p>
       <p className={`text-2xl font-bold ${accent} mt-1`}>{value}</p>
-      <p className="text-xs text-muted-foreground/60 mt-0.5">{sub}</p>
+      <p className="text-xs text-subtle mt-0.5">{sub}</p>
     </SpotlightCard>
   );
 }

@@ -160,6 +160,7 @@ export default function HobbiesForMentalHealthPage() {
             ← Hobby Directory
           </Link>
           <TextGenerateEffect
+            as="h1"
             words="15 Hobbies That Improve Mental Health — Science-Backed"
             className="mt-4 text-3xl font-bold text-foreground"
           />

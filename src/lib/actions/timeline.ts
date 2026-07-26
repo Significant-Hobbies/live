@@ -188,29 +188,6 @@ export async function deleteTimeline(id: string) {
   revalidatePath('/timeline');
 }
 
-export async function getLikeStatus(
-  timelineId: string
-): Promise<{ liked: boolean; count: number }> {
-  const session = await getServerAuthSession();
-
-  const [result] = await db
-    .select({ count: count() })
-    .from(likes)
-    .where(eq(likes.timelineId, timelineId));
-
-  const likeCount = result?.count ?? 0;
-
-  if (!session?.user?.id) {
-    return { liked: false, count: likeCount };
-  }
-
-  const existing = await db.query.likes.findFirst({
-    where: and(eq(likes.userId, session.user.id), eq(likes.timelineId, timelineId)),
-  });
-
-  return { liked: !!existing, count: likeCount };
-}
-
 export async function toggleLike(timelineId: string): Promise<{ liked: boolean; count: number }> {
   const session = await getServerAuthSession();
   if (!session?.user?.id) throw new Error('Not authenticated');
@@ -327,67 +304,5 @@ export async function deleteComment(commentId: string) {
     if (tlUser?.username) {
       revalidatePath(`/u/${tlUser.username}/${tl.slug}`);
     }
-  }
-}
-
-const PinSchema = z.object({
-  id: z.string(),
-  label: z.string().min(1).max(200),
-  emoji: z.string().max(10),
-  date: z.string().regex(/^\d{4}-\d{2}$/),
-  questId: z.string().optional(),
-  relatedHobby: z.string().max(100).optional(),
-});
-
-export async function addPin(timelineId: string, pin: TimelinePin) {
-  const session = await getServerAuthSession();
-  if (!session?.user?.id) throw new Error('Not authenticated');
-
-  const timeline = await db.query.timelines.findFirst({
-    where: eq(timelines.id, timelineId),
-  });
-  if (!timeline || timeline.userId !== session.user.id) throw new Error('Not found');
-
-  const parsed = PinSchema.parse(pin);
-  const parsedPins = parseJSONColumn<unknown>(timeline.pins, null, 'timeline-action:add-pin:pins');
-  const pins: TimelinePin[] = Array.isArray(parsedPins) ? (parsedPins as TimelinePin[]) : [];
-  pins.push(parsed as TimelinePin);
-
-  const [updated] = await db
-    .update(timelines)
-    .set({ pins: JSON.stringify(pins), updatedAt: new Date() })
-    .where(eq(timelines.id, timelineId))
-    .returning();
-  revalidatePath(`/timeline/${timelineId}`);
-  if (updated?.slug && session.user.username) {
-    revalidatePath(`/u/${session.user.username}/${updated.slug}`);
-  }
-}
-
-export async function removePin(timelineId: string, pinId: string) {
-  const session = await getServerAuthSession();
-  if (!session?.user?.id) throw new Error('Not authenticated');
-
-  const timeline = await db.query.timelines.findFirst({
-    where: eq(timelines.id, timelineId),
-  });
-  if (!timeline || timeline.userId !== session.user.id) throw new Error('Not found');
-
-  const parsedPins = parseJSONColumn<unknown>(
-    timeline.pins,
-    null,
-    'timeline-action:remove-pin:pins'
-  );
-  let pins: TimelinePin[] = Array.isArray(parsedPins) ? (parsedPins as TimelinePin[]) : [];
-  pins = pins.filter((p) => p.id !== pinId);
-
-  const [updatedTl] = await db
-    .update(timelines)
-    .set({ pins: JSON.stringify(pins), updatedAt: new Date() })
-    .where(eq(timelines.id, timelineId))
-    .returning();
-  revalidatePath(`/timeline/${timelineId}`);
-  if (updatedTl?.slug && session.user.username) {
-    revalidatePath(`/u/${session.user.username}/${updatedTl.slug}`);
   }
 }

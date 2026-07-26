@@ -22,6 +22,7 @@
     "test:watch": "vitest",
     "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio",
+    "dev:test-auth": "ENABLE_TEST_AUTH=1 next dev",
     "db:generate": "drizzle-kit generate",
     "db:seed": "tsx prisma/seed.ts",
     "test:e2e": "playwright test",

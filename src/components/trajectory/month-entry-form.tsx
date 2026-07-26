@@ -114,7 +114,7 @@ export function MonthEntryForm({ eraId, entries, onDone }: Props) {
         rows={5}
         maxLength={5000}
         autoFocus
-        className="resize-none border-border/60 bg-card/50 font-serif text-[15px] leading-relaxed placeholder:font-sans placeholder:text-sm placeholder:italic placeholder:text-muted-foreground/50"
+        className="resize-none border-border/60 bg-card/50 font-serif text-[15px] leading-relaxed placeholder:font-sans placeholder:text-sm placeholder:italic placeholder:text-subtle"
       />
 
       <div className="space-y-2.5">
@@ -132,7 +132,7 @@ export function MonthEntryForm({ eraId, entries, onDone }: Props) {
           </Button>
         </div>
         {numbers.length === 0 ? (
-          <p className="text-xs leading-relaxed text-muted-foreground/70">
+          <p className="text-xs leading-relaxed text-subtle">
             Add numeric inputs that map to your ideal — runway months, workouts per week, books
             read. The chart draws once you have 3 months of numbers.
           </p>

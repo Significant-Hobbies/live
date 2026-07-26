@@ -217,7 +217,7 @@ export default async function CategoryPage({ params }: Props) {
                           @{t.userUsername ?? t.userName}
                         </p>
                       )}
-                      <p className="text-xs text-muted-foreground/60 mt-1.5">
+                      <p className="text-xs text-subtle mt-1.5">
                         {phases.length} phases · {totalHobbies} hobbies
                       </p>
                     </CardHoverEffect>

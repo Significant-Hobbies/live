@@ -33,7 +33,25 @@ type NextYearFeeling = 'excited' | 'neutral' | 'dread' | 'blank';
 
 const TOTAL_STEPS = 7; // steps 0..6 (welcome is 0, done is 6)
 
+/**
+ * Matches MIN_BIRTH_YEAR in src/lib/life-in-weeks.ts. The floor was 1940,
+ * which quietly excluded anyone 86 or older from the product's central frame.
+ */
+const MIN_YEAR = 1900;
+
 // ─── Age fun facts ───────────────────────────────────────────────────────────
+/**
+ * Shown at the emotional peak of onboarding, under a 60px birth year.
+ *
+ * Every band points forward. The older two used to be the only ones written in
+ * the past tense — "Baby Boomer with stories to tell", directly after "Gen X —
+ * the cool ones" — which told a 62-year-old that the cohort one year younger
+ * were the interesting ones and they were an archive. On a product whose whole
+ * pitch is the life you still want to live, that was exactly backwards.
+ *
+ * The year easter eggs used to be five Millennial/Gen Z years and one 1969;
+ * the older end now gets the same treatment.
+ */
 function getAgeFact(birthYear: number): string {
   const age = new Date().getFullYear() - birthYear;
   if (birthYear === 1991) return 'Same year as the World Wide Web.';
@@ -42,12 +60,15 @@ function getAgeFact(birthYear: number): string {
   if (birthYear === 2000) return 'A true millennium kid.';
   if (birthYear === 1999) return 'Born at the turn of the millennium.';
   if (birthYear === 1989) return 'Same year as the fall of the Berlin Wall.';
+  if (birthYear === 1957) return 'Same year as Sputnik.';
+  if (birthYear === 1953) return 'The year Everest was first climbed.';
+  if (birthYear === 1945) return 'Born the year the war ended.';
   if (age <= 16) return 'Gen Alpha has arrived.';
   if (age <= 27) return 'Full-on Gen Z energy.';
   if (age <= 43) return 'Millennial, certified.';
   if (age <= 59) return 'Gen X — the cool ones.';
-  if (age <= 75) return 'Baby Boomer with stories to tell.';
-  return 'A lifetime of incredible hobbies.';
+  if (age <= 75) return 'Boomer — with more road ahead than the maths admits.';
+  return 'Past the average, which is the good news.';
 }
 
 // ─── Progress dots ────────────────────────────────────────────────────────────
@@ -194,7 +215,7 @@ export function OnboardingFlow({ user }: { user: OnboardingUser }) {
       const change = dir === 'minus' ? -1 : 1;
       holdTimerRef.current = setTimeout(() => {
         intervalRef.current = setInterval(() => {
-          setBirthYear((y) => Math.min(currentYear, Math.max(1940, y + change)));
+          setBirthYear((y) => Math.min(currentYear, Math.max(MIN_YEAR, y + change)));
         }, 80);
       }, 400);
     },
@@ -293,7 +314,7 @@ export function OnboardingFlow({ user }: { user: OnboardingUser }) {
                         isUsernameValid ? 'border-growth' : 'border-border'
                       }`}
                     >
-                      <span className="select-none pr-0.5 text-base font-medium text-muted-foreground/60">
+                      <span className="select-none pr-0.5 text-base font-medium text-subtle">
                         @
                       </span>
                       <input
@@ -303,7 +324,7 @@ export function OnboardingFlow({ user }: { user: OnboardingUser }) {
                         }
                         placeholder="yourname"
                         maxLength={30}
-                        className="flex-1 bg-transparent py-3 text-base text-foreground outline-none placeholder:text-muted-foreground/40"
+                        className="flex-1 bg-transparent py-3 text-base text-foreground outline-none placeholder:text-subtle"
                         autoFocus
                         autoComplete="off"
                         autoCapitalize="none"
@@ -323,7 +344,7 @@ export function OnboardingFlow({ user }: { user: OnboardingUser }) {
                       </p>
                     )}
                     {username.length === 0 && (
-                      <p className="mt-1.5 text-xs text-muted-foreground/60">
+                      <p className="mt-1.5 text-xs text-subtle">
                         Lowercase letters, numbers, and hyphens only
                       </p>
                     )}
@@ -331,16 +352,14 @@ export function OnboardingFlow({ user }: { user: OnboardingUser }) {
 
                   {/* Profile URL preview */}
                   <div className="mb-8 flex items-center gap-2 rounded-xl border border-border bg-muted px-3 py-2.5">
-                    <span className="truncate text-xs text-muted-foreground/60">
-                      significanthobbies.com/u/
-                    </span>
+                    <span className="truncate text-xs text-subtle">significanthobbies.com/u/</span>
                     <span
                       className={`flex-shrink-0 text-xs font-semibold transition-colors duration-200 ${
                         isUsernameValid
                           ? 'text-growth'
                           : username.length > 0
                             ? 'text-foreground'
-                            : 'text-muted-foreground/40'
+                            : 'text-subtle'
                       }`}
                     >
                       {username.length > 0 ? username : 'yourname'}
@@ -372,19 +391,46 @@ export function OnboardingFlow({ user }: { user: OnboardingUser }) {
                     </p>
                   </div>
 
-                  {/* Big year display */}
+                  {/* The year IS the input.
+                      It used to be a display <span> beside a number input that
+                      was pointer-events-none, tabIndex={-1} and aria-hidden —
+                      so the only way to set a birth year was the +/- steppers.
+                      That is 51 clicks from the 2001 default to 1950, and no
+                      path at all by keyboard or screen reader. Anyone who did
+                      not want to click fifty times hit "Skip for now", which
+                      silently empties the life grid, /trajectory and
+                      /commitments. */}
                   <div className="mb-2 text-center">
-                    <span className="text-5xl font-black tracking-tight text-growth sm:text-6xl">
-                      {birthYear}
-                    </span>
+                    <label htmlFor="birth-year" className="sr-only">
+                      Year you were born
+                    </label>
+                    <input
+                      id="birth-year"
+                      type="text"
+                      inputMode="numeric"
+                      autoComplete="bday-year"
+                      value={birthYear}
+                      onChange={(e) => {
+                        const val = Number.parseInt(e.target.value.trim(), 10);
+                        if (!Number.isNaN(val)) setBirthYear(val);
+                      }}
+                      onBlur={() => {
+                        // Clamp on blur, not on change: clamping mid-typing makes
+                        // "195" jump to the floor before the last digit lands.
+                        setBirthYear((y) => Math.min(currentYear, Math.max(MIN_YEAR, y)));
+                      }}
+                      className="w-[5ch] border-b-2 border-border bg-transparent text-center text-5xl font-black tracking-tight text-growth tabular-nums outline-none focus:border-growth sm:text-6xl"
+                    />
                   </div>
 
                   {/* Year stepper */}
                   <div className="mb-4 flex items-center justify-center gap-5">
                     {/* Minus */}
                     <button
+                      type="button"
+                      aria-label="One year earlier"
                       onClick={() => {
-                        setBirthYear((y) => Math.max(1940, y - 1));
+                        setBirthYear((y) => Math.max(MIN_YEAR, y - 1));
                       }}
                       onMouseDown={() => startHold('minus')}
                       onMouseUp={stopHold}
@@ -396,25 +442,10 @@ export function OnboardingFlow({ user }: { user: OnboardingUser }) {
                       −
                     </button>
 
-                    {/* Hidden number input for manual entry */}
-                    <input
-                      type="number"
-                      value={birthYear}
-                      onChange={(e) => {
-                        const val = parseInt(e.target.value, 10);
-                        if (!Number.isNaN(val) && val >= 1940 && val <= currentYear) {
-                          setBirthYear(val);
-                        }
-                      }}
-                      min={1940}
-                      max={currentYear}
-                      className="pointer-events-none absolute h-0 w-0 opacity-0"
-                      tabIndex={-1}
-                      aria-hidden="true"
-                    />
-
                     {/* Plus */}
                     <button
+                      type="button"
+                      aria-label="One year later"
                       onClick={() => {
                         setBirthYear((y) => Math.min(currentYear, y + 1));
                       }}
@@ -431,7 +462,7 @@ export function OnboardingFlow({ user }: { user: OnboardingUser }) {
 
                   {/* Age display + fun fact */}
                   <div className="mb-3 text-center">
-                    <p className="text-sm text-muted-foreground/60">
+                    <p className="text-sm text-subtle">
                       That makes you{' '}
                       <span className="font-semibold text-growth">
                         {currentYear - birthYear} years old
@@ -493,7 +524,7 @@ export function OnboardingFlow({ user }: { user: OnboardingUser }) {
                       onChange={(e) => setDroppedHobby(e.target.value.slice(0, 200))}
                       placeholder="Photography, guitar, running, drawing..."
                       maxLength={200}
-                      className="w-full rounded-xl border border-border bg-card px-4 py-3.5 text-base text-foreground outline-none transition-colors duration-200 placeholder:text-muted-foreground/40 focus:border-primary"
+                      className="w-full rounded-xl border border-border bg-card px-4 py-3.5 text-base text-foreground outline-none transition-colors duration-200 placeholder:text-subtle focus:border-primary"
                       autoFocus
                       autoComplete="off"
                       spellCheck={false}
@@ -729,7 +760,7 @@ export function OnboardingFlow({ user }: { user: OnboardingUser }) {
 
                       {/* Mini life-grid square lighting up */}
                       <div className="mt-6 flex items-center gap-2">
-                        <span className="text-xs text-muted-foreground/60">Today:</span>
+                        <span className="text-xs text-subtle">Today:</span>
                         <motion.div
                           initial={false}
                           animate={{

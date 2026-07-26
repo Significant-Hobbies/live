@@ -5,6 +5,7 @@ import { redirect } from 'next/navigation';
 
 import { SpotlightCard } from '~/components/aceternity';
 import { users } from '~/db/schema';
+import { loginPath } from '~/lib/auth-routing';
 import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
 
@@ -19,7 +20,7 @@ export default async function SettingsPage() {
   const session = await getServerAuthSession();
 
   if (!session?.user?.id) {
-    redirect('/login');
+    redirect(loginPath('/settings'));
   }
 
   const user = await db.query.users.findFirst({
@@ -30,10 +31,11 @@ export default async function SettingsPage() {
       username: true,
       bio: true,
       website: true,
+      creed: true,
     },
   });
 
-  if (!user) redirect('/login');
+  if (!user) redirect(loginPath('/settings'));
 
   return (
     <div className="mx-auto max-w-xl px-4 py-12">
@@ -56,6 +58,7 @@ export default async function SettingsPage() {
           initialName={user.name ?? ''}
           initialBio={user.bio ?? ''}
           initialWebsite={user.website ?? ''}
+          initialCreed={user.creed ?? ''}
           username={user.username ?? ''}
         />
       </SpotlightCard>

@@ -202,9 +202,7 @@ export function TimeCalculatorClient() {
                         />
                         {inp.label}
                         {sleepNote && (
-                          <span className="text-xs font-normal text-muted-foreground/60">
-                            {sleepNote}
-                          </span>
+                          <span className="text-xs font-normal text-subtle">{sleepNote}</span>
                         )}
                       </label>
                       <span className="shrink-0 min-w-[3.5rem] text-right text-sm font-bold text-foreground">
@@ -223,7 +221,7 @@ export function TimeCalculatorClient() {
                         accentColor: inp.color,
                       }}
                     />
-                    <div className="mt-1 flex justify-between text-xs text-muted-foreground/40">
+                    <div className="mt-1 flex justify-between text-xs text-subtle">
                       <span>{inp.min}h</span>
                       <span>{inp.max}h</span>
                     </div>
@@ -262,7 +260,7 @@ export function TimeCalculatorClient() {
                   per week available for hobbies
                 </p>
                 {freeTime > 0 && (
-                  <p className="mt-1 text-sm text-muted-foreground/60">
+                  <p className="mt-1 text-sm text-subtle">
                     That&apos;s {Math.round((freeTime / 7) * 10) / 10}h per day
                   </p>
                 )}
@@ -273,9 +271,7 @@ export function TimeCalculatorClient() {
           {/* Time bar */}
           {!overBudget && (
             <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-              <h3 className="mb-4 text-sm font-bold text-muted-foreground/60">
-                Where your 168 hours go
-              </h3>
+              <h3 className="mb-4 text-sm font-bold text-subtle">Where your 168 hours go</h3>
               <div className="flex h-8 w-full overflow-hidden rounded-full">
                 {barSegments.map((seg) => (
                   <div

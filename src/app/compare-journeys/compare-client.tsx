@@ -182,7 +182,7 @@ export function CompareJourneysClient({ userA, userB, paramA, paramB }: Props) {
       <div className="flex items-center justify-between flex-wrap gap-4">
         <h2 className="text-2xl font-bold text-foreground">
           <span className="text-foreground">@{userA?.username}</span>
-          <span className="mx-3 text-muted-foreground/60">vs</span>
+          <span className="mx-3 text-subtle">vs</span>
           <span className="text-foreground">@{userB?.username}</span>
         </h2>
         <Button
@@ -206,7 +206,7 @@ export function CompareJourneysClient({ userA, userB, paramA, paramB }: Props) {
                 Only @{userA?.username}
               </p>
               {onlyA.length === 0 ? (
-                <p className="text-center text-xs text-muted-foreground/60 py-4">None unique</p>
+                <p className="text-center text-xs text-subtle py-4">None unique</p>
               ) : (
                 <div className="flex flex-wrap gap-1.5 justify-center">
                   {onlyA.map((h) => (
@@ -232,9 +232,7 @@ export function CompareJourneysClient({ userA, userB, paramA, paramB }: Props) {
                 Shared ({shared.length})
               </p>
               {shared.length === 0 ? (
-                <p className="text-center text-xs text-muted-foreground/60 py-4">
-                  No shared hobbies yet
-                </p>
+                <p className="text-center text-xs text-subtle py-4">No shared hobbies yet</p>
               ) : (
                 <div className="flex flex-wrap gap-1.5 justify-center">
                   {shared.map((h) => (
@@ -257,7 +255,7 @@ export function CompareJourneysClient({ userA, userB, paramA, paramB }: Props) {
                 Only @{userB?.username}
               </p>
               {onlyB.length === 0 ? (
-                <p className="text-center text-xs text-muted-foreground/60 py-4">None unique</p>
+                <p className="text-center text-xs text-subtle py-4">None unique</p>
               ) : (
                 <div className="flex flex-wrap gap-1.5 justify-center">
                   {onlyB.map((h) => (
@@ -281,7 +279,7 @@ export function CompareJourneysClient({ userA, userB, paramA, paramB }: Props) {
           <div className="text-sm font-semibold text-foreground text-center">
             @{userA?.username}
           </div>
-          <div className="text-sm text-muted-foreground/60 text-center">Stat</div>
+          <div className="text-sm text-subtle text-center">Stat</div>
           <div className="text-sm font-semibold text-foreground text-center">
             @{userB?.username}
           </div>

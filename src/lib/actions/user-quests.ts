@@ -1,9 +1,10 @@
 'use server';
 
-import { and, eq } from 'drizzle-orm';
+import { and, count, eq } from 'drizzle-orm';
 import { revalidatePath } from 'next/cache';
 
-import { habits, userQuests, timelines, users } from '~/db/schema';
+import { bucketListItems, habits, userQuests, timelines, users } from '~/db/schema';
+import { generateQuestChain } from '~/lib/quest-chains';
 import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
 import type { TimelinePin } from '~/lib/types';
@@ -122,9 +123,13 @@ export async function startQuest(params: {
 // Marks the quest as completed AND auto-adds a pin to the source timeline.
 // This is the loop-closing moment: quest completion → timeline pin.
 
-export async function completeUserQuest(
-  userQuestPkId: string
-): Promise<{ success: boolean; error?: string; pinAdded?: boolean }> {
+export async function completeUserQuest(userQuestPkId: string): Promise<{
+  success: boolean;
+  error?: string;
+  pinAdded?: boolean;
+  /** True when this completion finished the last quest of a bucket item's chain. */
+  bucketItemCompleted?: boolean;
+}> {
   const session = await getServerAuthSession();
   if (!session?.user?.id) return { success: false, error: 'Not authenticated' };
 
@@ -192,6 +197,85 @@ export async function completeUserQuest(
 
       pinAdded = true;
       revalidatePath(`/timeline/${quest.sourceTimelineId}`);
+      // Pins render on the public timeline too. `addPin` used to revalidate that
+      // path and has been deleted (quest completion is now the only writer, so
+      // pins are earned rather than hand-authored) — so this has to carry it.
+      if (timeline.slug) {
+        const owner = await db.query.users.findFirst({
+          where: eq(users.id, session.user.id),
+          columns: { username: true },
+        });
+        if (owner?.username) revalidatePath(`/u/${owner.username}/${timeline.slug}`);
+      }
+    }
+  }
+
+  // Close the bucket-item loop. `sourceBucketItemId` was written when the quest
+  // chain was generated and then never read back, so you could finish every
+  // quest decomposed from "Learn to sail" and the bucket item stayed `planned` —
+  // the chain led nowhere. Marking the item done only once its last active quest
+  // is gone keeps the item honest for multi-quest chains.
+  let bucketItemCompleted = false;
+  if (quest.sourceBucketItemId) {
+    const [item] = await db
+      .select({
+        id: bucketListItems.id,
+        status: bucketListItems.status,
+        title: bucketListItems.title,
+        category: bucketListItems.category,
+      })
+      .from(bucketListItems)
+      .where(
+        and(
+          eq(bucketListItems.id, quest.sourceBucketItemId),
+          eq(bucketListItems.userId, session.user.id)
+        )
+      )
+      .limit(1);
+
+    if (item && item.status !== 'done') {
+      const [{ remaining } = { remaining: 0 }] = await db
+        .select({ remaining: count() })
+        .from(userQuests)
+        .where(
+          and(
+            eq(userQuests.userId, session.user.id),
+            eq(userQuests.sourceBucketItemId, quest.sourceBucketItemId),
+            eq(userQuests.status, 'active')
+          )
+        );
+
+      // "Nothing active" is NOT "chain finished" — it is also true after the
+      // very first step of a five-step chain, which would have marked a whole
+      // life goal done on one step. Compare completed steps against the chain
+      // this item actually generates; the generator is a pure function of
+      // (id, title, category), so the server can rebuild it exactly.
+      const [{ finished } = { finished: 0 }] = await db
+        .select({ finished: count() })
+        .from(userQuests)
+        .where(
+          and(
+            eq(userQuests.userId, session.user.id),
+            eq(userQuests.sourceBucketItemId, quest.sourceBucketItemId),
+            eq(userQuests.status, 'completed')
+          )
+        );
+
+      const chainLength = generateQuestChain({
+        bucketItemId: item.id,
+        title: item.title,
+        category: item.category,
+      }).length;
+
+      if (remaining === 0 && finished >= chainLength) {
+        await db
+          .update(bucketListItems)
+          .set({ status: 'done', completedAt: new Date(), updatedAt: new Date() })
+          .where(eq(bucketListItems.id, item.id));
+        bucketItemCompleted = true;
+        revalidatePath('/bucket-list');
+        revalidatePath('/life-plan');
+      }
     }
   }
 
@@ -199,7 +283,7 @@ export async function completeUserQuest(
   revalidatePath('/side-quests');
   revalidatePath('/timeline');
 
-  return { success: true, pinAdded };
+  return { success: true, pinAdded, bucketItemCompleted };
 }
 
 // ─── Abandon a quest ────────────────────────────────────────────────────────

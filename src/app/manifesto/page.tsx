@@ -97,13 +97,22 @@ export default function ManifestoPage() {
 
           <SpotlightCard className="shadow-soft" innerClassName="rounded-xl p-6">
             <p className="text-base text-muted-foreground leading-relaxed">
-              On your dashboard there&apos;s a grid of small squares — one per week of a human life.
-              The weeks you&apos;ve lived are darker. The weeks you&apos;ve stamped with practice
-              are darker still. The rest are ahead of you, for now.
+              A grid of small squares — one per week of a life. The weeks you&apos;ve already lived
+              recede into the background. The ones still ahead of you are lit. On your dashboard the
+              weeks you&apos;ve stamped with practice glow brightest of all.
             </p>
             <p className="mt-3 text-base text-muted-foreground leading-relaxed">
               We show it to you not to frighten you, but because the truth is useful. A finite life
               is the only kind worth planning.
+            </p>
+            <p className="mt-4 text-base leading-relaxed">
+              <Link
+                href="/life-in-weeks"
+                className="font-medium text-foreground underline underline-offset-4"
+              >
+                See your own grid
+              </Link>{' '}
+              <span className="text-muted-foreground">— it takes one number, and no account.</span>
             </p>
           </SpotlightCard>
 

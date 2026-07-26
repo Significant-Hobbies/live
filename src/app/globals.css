@@ -70,6 +70,14 @@
   /* Hero surface — deepest charcoal */
   --color-hero: oklch(0.11 0.005 285);
   --color-hero-surface: oklch(0.14 0.006 285);
+  /* Subtle — the accessible third text tier.
+     There used to be no token quieter than --muted-foreground, so 174 call
+     sites reached for opacity instead: text-muted-foreground/60 lands at
+     3.44:1 on --card and /40 at 2.20:1, both below the 4.5:1 body minimum.
+     This is solid rather than alpha-blended, measuring 5.18:1 on --background
+     and 4.87:1 on --card while staying clearly quieter than --muted-foreground
+     (7.4:1). Reach for this instead of fading muted text. */
+  --color-subtle: oklch(0.61 0.008 285);
 }
 
 /* ─── Editorial Dark palette ─────────────────────────────────────────────────

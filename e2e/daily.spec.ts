@@ -1,11 +1,13 @@
 import { expect, test } from '@playwright/test';
 
 test.describe('Daily ritual & manifesto', () => {
-  test('/daily redirects to login when not authenticated', async ({ page }) => {
-    await page.goto('/daily');
-    // Should redirect to /login since auth is required
-    await page.waitForURL(/\/login/);
-    expect(page.url()).toContain('/login');
+  test('/daily previews the ritual instead of walling it off', async ({ page }) => {
+    // This route used to redirect to /login. Auth here saves work rather than
+    // unlocking it, so a signed-out visitor now sees a sample month.
+    const res = await page.goto('/daily');
+    expect(res?.status()).toBeLessThan(400);
+    expect(page.url()).not.toContain('/login');
+    await expect(page.getByLabel('Preview notice')).toBeVisible();
   });
 
   test('/manifesto loads and shows the mortality frame', async ({ page }) => {
@@ -22,10 +24,20 @@ test.describe('Daily ritual & manifesto', () => {
 
   test('/manifesto has working CTAs', async ({ page }) => {
     await page.goto('/manifesto');
-    const hobbiesLink = page.getByRole('link', { name: 'Find a hobby' });
+    // Scoped to the article: the nav also carries a "Find a Hobby" link, and an
+    // unscoped accessible-name lookup matched both and failed strict mode.
+    const article = page.locator('article');
+
+    const hobbiesLink = article.getByRole('link', { name: 'Find a hobby' });
     await expect(hobbiesLink).toBeVisible();
-    const bucketListLink = page.getByRole('link', { name: 'Start a bucket list' });
+    // "Working" should mean it points somewhere, not merely that it renders.
+    // /hobbies is deliberately deep-link-only (see docs/product/discovery-funnel.md)
+    // — reachable from here, absent from nav and footer.
+    await expect(hobbiesLink).toHaveAttribute('href', '/hobbies');
+
+    const bucketListLink = article.getByRole('link', { name: 'Start a bucket list' });
     await expect(bucketListLink).toBeVisible();
+    await expect(bucketListLink).toHaveAttribute('href', '/bucket-lists');
   });
 
   test('nav includes Daily link', async ({ page }) => {

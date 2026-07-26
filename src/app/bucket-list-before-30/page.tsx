@@ -328,6 +328,7 @@ export default function BucketListBefore30Page() {
                   Guided by Whale · 50 experiences
                 </p>
                 <TextGenerateEffect
+                  as="h1"
                   words="50 Things to Do Before You Turn 30"
                   className="text-4xl sm:text-5xl font-bold leading-tight text-foreground text-balance"
                 />

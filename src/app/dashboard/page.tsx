@@ -23,6 +23,7 @@ import {
 } from '~/lib/actions/daily';
 import { getMyCommitments } from '~/lib/actions/commitments';
 import { getAbandonedQuests, getActiveQuests, getCompletedQuests } from '~/lib/actions/user-quests';
+import { loginPath } from '~/lib/auth-routing';
 import { computeBehavioralInsights } from '~/lib/behavioral-insights';
 import { dayKeyIn, isMorningIn } from '~/lib/day';
 import { birthDateFromYear, buildLifeGrid, weekIndexForDay } from '~/lib/mortality';
@@ -54,7 +55,7 @@ function getStalenessInfo(updatedAt: Date): {
 
 export default async function DashboardPage() {
   const session = await getServerAuthSession();
-  if (!session?.user) redirect('/login');
+  if (!session?.user) redirect(loginPath('/dashboard'));
 
   // Resolve the user's zone first — every dayDate key below is user-local.
   const me = await db.query.users.findFirst({
@@ -239,10 +240,13 @@ export default async function DashboardPage() {
 
           {/* Weeks stats */}
           {hasBirthYear && (
+            // "Stamped" means a week you logged practice in. These are weeks
+            // *lived*, which is a different and much larger number — the old
+            // copy credited a 71-year-old with 3,734 practice sessions.
             <p className="text-center text-sm text-muted-foreground">
-              {lifeGrid.weeksLived.toLocaleString()} weeks stamped ·{' '}
+              {lifeGrid.weeksLived.toLocaleString()} weeks lived ·{' '}
               <span className="text-primary">
-                {lifeGrid.weeksRemaining.toLocaleString()} to stamp
+                {lifeGrid.weeksRemaining.toLocaleString()} ahead of you
               </span>{' '}
               of ~{lifeGrid.totalWeeks.toLocaleString()}
             </p>
@@ -276,7 +280,7 @@ export default async function DashboardPage() {
                     <div key={timeline.id} className="relative">
                       <TimelineCard timeline={timeline} showVisibility />
                       <div className="mt-1.5 flex items-center gap-1.5 px-1">
-                        <Clock className="h-3 w-3 text-muted-foreground/50" />
+                        <Clock className="h-3 w-3 text-subtle" />
                         <span className={`text-xs ${staleness.colorClass}`}>{staleness.label}</span>
                         {staleness.isStale && (
                           <Link

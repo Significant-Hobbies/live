@@ -10,8 +10,9 @@ test.describe('Tools', () => {
   test('time calculator works', async ({ page }) => {
     await page.goto('/tools/time-calculator');
     await expect(page.locator('h1')).toContainText('Time Calculator');
-    // Should show default free time calculation
-    await expect(page.getByText(/hours/i)).toBeVisible();
+    // Should show default free time calculation. "hours" appears in the result,
+    // the inputs and the explanatory copy, so assert presence not uniqueness.
+    await expect(page.getByText(/hours/i).first()).toBeVisible();
   });
 
   test('compare page loads', async ({ page }) => {

@@ -4,7 +4,7 @@ import { and, desc, eq } from 'drizzle-orm';
 import { nanoid } from 'nanoid';
 import { revalidatePath } from 'next/cache';
 import { z } from 'zod';
-import { bucketListItems, bucketLists } from '~/db/schema';
+import { bucketListItems, bucketLists, users } from '~/db/schema';
 import { trackCoreAction } from '~/lib/analytics';
 import type { BingoVisibility, BucketListDraft } from '~/lib/life-bingo';
 import { getServerAuthSession } from '~/server/auth';
@@ -212,6 +212,23 @@ export async function addBucketListItem(data: {
   return { success: true, id: row?.id };
 }
 
+/**
+ * Revalidate every surface that actually renders bucket-list items.
+ *
+ * The item mutations each revalidated only `/dashboard`, which does not render
+ * bucket items at all — `/life-plan` and the public profile do. Another instance
+ * of code written against a page that never showed the data.
+ */
+async function revalidateItemSurfaces(userId: string): Promise<void> {
+  revalidatePath('/life-plan');
+  revalidatePath('/dashboard');
+  const me = await db.query.users.findFirst({
+    where: eq(users.id, userId),
+    columns: { username: true },
+  });
+  if (me?.username) revalidatePath(`/u/${me.username}`);
+}
+
 export async function updateBucketListItemStatus(
   id: string,
   status: 'planned' | 'in_progress' | 'done'
@@ -226,7 +243,7 @@ export async function updateBucketListItemStatus(
       updatedAt: new Date(),
     })
     .where(and(eq(bucketListItems.id, id), eq(bucketListItems.userId, session.user.id)));
-  revalidatePath('/dashboard');
+  await revalidateItemSurfaces(session.user.id);
   return { success: true };
 }
 
@@ -246,7 +263,7 @@ export async function updateBucketListItem(
     .update(bucketListItems)
     .set({ ...parsed, updatedAt: new Date() })
     .where(and(eq(bucketListItems.id, id), eq(bucketListItems.userId, session.user.id)));
-  revalidatePath('/dashboard');
+  await revalidateItemSurfaces(session.user.id);
   return { success: true };
 }
 
@@ -256,7 +273,7 @@ export async function removeBucketListItem(id: string): Promise<{ success: boole
   await db
     .delete(bucketListItems)
     .where(and(eq(bucketListItems.id, id), eq(bucketListItems.userId, session.user.id)));
-  revalidatePath('/dashboard');
+  await revalidateItemSurfaces(session.user.id);
   return { success: true };
 }
 
@@ -270,18 +287,6 @@ export async function updateBucketListItemVisibility(
     .update(bucketListItems)
     .set({ visibility, updatedAt: new Date() })
     .where(and(eq(bucketListItems.id, id), eq(bucketListItems.userId, session.user.id)));
-  revalidatePath('/dashboard');
+  await revalidateItemSurfaces(session.user.id);
   return { success: true };
-}
-
-export type BucketListItem = typeof bucketListItems.$inferSelect;
-
-export async function getUserBucketList(): Promise<BucketListItem[]> {
-  const session = await getServerAuthSession();
-  if (!session?.user?.id) return [];
-  return db
-    .select()
-    .from(bucketListItems)
-    .where(eq(bucketListItems.userId, session.user.id))
-    .orderBy(desc(bucketListItems.createdAt));
 }

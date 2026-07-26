@@ -106,13 +106,21 @@ export function HabitsSection({
   return (
     <div className="space-y-4">
       <div className="flex items-baseline justify-between gap-3">
-        <div className="flex items-baseline gap-3">
-          <h2 className="font-serif text-xl font-semibold text-foreground">Habits</h2>
-          {habitsTotal > 0 && (
-            <span className="text-sm text-muted-foreground">
-              {habitsDone} of {habitsTotal} done today
-            </span>
-          )}
+        <div>
+          {/* Matches the JournalSection header shape: title + one quiet line
+              naming what this surface is for. Habits are the behaviour tier —
+              distinguishing them from commitments, which want proof. */}
+          <div className="flex items-baseline gap-3">
+            <h2 className="font-serif text-xl font-semibold text-foreground">Habits</h2>
+            {habitsTotal > 0 && (
+              <span className="text-sm text-muted-foreground">
+                {habitsDone} of {habitsTotal} done today
+              </span>
+            )}
+          </div>
+          <p className="mt-0.5 text-xs text-subtle">
+            The small repeated thing. Checked in, never scored.
+          </p>
         </div>
         <button
           onClick={() => setShowHabitManager(!showHabitManager)}
@@ -201,9 +209,7 @@ export function HabitsSection({
                         </span>
                       )}
                     </div>
-                    <p className="text-[10px] uppercase tracking-wide text-muted-foreground/60">
-                      {freqLabel}
-                    </p>
+                    <p className="text-[10px] uppercase tracking-wide text-subtle">{freqLabel}</p>
                   </div>
                 </div>
 
@@ -252,7 +258,7 @@ export function HabitsSection({
                 {showHabitManager && (
                   <button
                     onClick={() => handleDeleteHabit(habit.id)}
-                    className="text-muted-foreground/40 hover:text-destructive transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-destructive/50 rounded"
+                    className="text-subtle hover:text-destructive transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-destructive/50 rounded"
                     aria-label={`Delete ${habit.name}`}
                   >
                     <Trash2 className="h-4 w-4" />

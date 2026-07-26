@@ -9,8 +9,13 @@ type Props = {
   title: string;
   description?: string;
   category?: BucketItemCategory;
-  sourceSlug: string;
-  sourceItemTitle: string;
+  /**
+   * Provenance, when the item came from a famous list — it drives the
+   * revalidation of that list's page. Optional because suggestions on
+   * /life-plan have no source page to revalidate.
+   */
+  sourceSlug?: string;
+  sourceItemTitle?: string;
 };
 
 export function AddToMyListButton({
@@ -45,6 +50,10 @@ export function AddToMyListButton({
     <button
       onClick={handleAdd}
       disabled={isPending}
+      /* Named by the item it adds. A famous list renders dozens of these and the
+         /life-plan suggestions render four, so a bare "+ Add to my list" left a
+         screen-reader user with a page of identically-named buttons. */
+      aria-label={`Add ${title} to my bucket list`}
       className="inline-flex items-center gap-1.5 rounded-full border border-lumi-200 bg-card px-3 py-1 text-xs font-medium text-lumi-600 hover:bg-primary/10 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
     >
       {isPending ? 'Adding…' : '+ Add to my list'}

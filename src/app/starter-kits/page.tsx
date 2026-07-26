@@ -110,24 +110,20 @@ export default function StarterKitsPage() {
                           </p>
                         </div>
                         <div className="rounded-lg border border-border bg-card/40 px-3 py-2 text-right">
-                          <p className="text-sm font-semibold text-muted-foreground/60">Budget</p>
+                          <p className="text-sm font-semibold text-subtle">Budget</p>
                           <p className="text-sm font-semibold text-foreground">{kit.budget}</p>
                         </div>
                       </div>
 
                       <dl className="grid gap-3 border-y border-border py-4 sm:grid-cols-2">
                         <div>
-                          <dt className="text-sm font-semibold text-muted-foreground/60">
-                            First win
-                          </dt>
+                          <dt className="text-sm font-semibold text-subtle">First win</dt>
                           <dd className="mt-1 text-sm font-medium text-foreground">
                             {kit.timeToFirstWin}
                           </dd>
                         </div>
                         <div>
-                          <dt className="text-sm font-semibold text-muted-foreground/60">
-                            Local sources
-                          </dt>
+                          <dt className="text-sm font-semibold text-subtle">Local sources</dt>
                           <dd className="mt-1 text-sm text-muted-foreground">
                             {kit.localSources.join(', ')}
                           </dd>
@@ -159,15 +155,11 @@ export default function StarterKitsPage() {
                       </div>
 
                       <div className="mt-4 rounded-lg border border-border bg-card/40 p-4">
-                        <p className="text-sm font-semibold text-muted-foreground/60">
-                          Keep going if
-                        </p>
+                        <p className="text-sm font-semibold text-subtle">Keep going if</p>
                         <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
                           {kit.successSignal}
                         </p>
-                        <p className="mt-3 text-sm font-semibold text-muted-foreground/60">
-                          Next upgrade
-                        </p>
+                        <p className="mt-3 text-sm font-semibold text-subtle">Next upgrade</p>
                         <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
                           {kit.upgradePath}
                         </p>

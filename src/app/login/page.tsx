@@ -8,6 +8,7 @@ import {
   SpotlightCard,
   TextGenerateEffect,
 } from '~/components/aceternity';
+import { guestRouteFor } from '~/lib/auth-routing';
 import { getServerAuthSession } from '~/server/auth';
 
 import { LoginForm } from './login-form';
@@ -28,6 +29,9 @@ export default async function LoginPage({
     requestedCallback?.startsWith('/') && !requestedCallback.startsWith('//')
       ? requestedCallback
       : '/dashboard';
+  // The guest link has to follow the same intent as the callback, or it strands
+  // people: arriving from /daily used to offer the timeline builder.
+  const guestRoute = guestRouteFor(callbackUrl);
 
   return (
     <div className="relative flex min-h-[80vh] items-center justify-center overflow-hidden px-4 py-12">
@@ -36,9 +40,13 @@ export default async function LoginPage({
       <FadeIn className="relative w-full max-w-sm">
         <SpotlightCard className="shadow-soft" innerClassName="p-6">
           <div className="mb-8">
-            <h1 className="text-xl font-semibold text-foreground">
-              <TextGenerateEffect words="Sign in" />
-            </h1>
+            {/* `as="h1"` rather than an h1 wrapper — the effect rendered a div,
+                so wrapping it nested a div inside a heading. */}
+            <TextGenerateEffect
+              as="h1"
+              words="Sign in"
+              className="text-xl font-semibold text-foreground"
+            />
             <p className="mt-1.5 text-sm text-muted-foreground">
               Save your hobbies, bucket lists, and side quests. Pick up where you left off.
             </p>
@@ -55,15 +63,15 @@ export default async function LoginPage({
             </ul>
           </div>
 
-          <p className="mt-6 text-xs text-muted-foreground/60">
+          <p className="mt-6 text-xs text-subtle">
             Or{' '}
             <Link
-              href={callbackUrl.startsWith('/bucket-list') ? '/bucket-list/new' : '/timeline/new'}
+              href={guestRoute.href}
               className="text-foreground underline underline-offset-2 hover:opacity-70"
             >
               continue as guest
             </Link>{' '}
-            — build and export without an account
+            — {guestRoute.label}
           </p>
         </SpotlightCard>
       </FadeIn>

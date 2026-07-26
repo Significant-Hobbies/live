@@ -18,6 +18,7 @@ import {
 
 import { GradientMesh, SpotlightCard } from '~/components/aceternity';
 import { CircularProgress } from '~/components/dashboard/circular-progress';
+import { PreviewBanner } from '~/components/preview-banner';
 import { Button } from '~/components/ui/button';
 import {
   computeStreak,
@@ -85,6 +86,17 @@ interface Props {
   journalEntries: JournalEntry[];
   trajectoryNudge?: TrajectoryNudge;
   actions: Actions;
+  /**
+   * Signed-out preview of someone else's month.
+   *
+   * Habit ticks stay interactive — the daily write actions return early without
+   * a session, so a tick is a harmless in-session gesture. Journal *writing* is
+   * suppressed instead of merely unsaved: inviting a stranger to type a private
+   * entry that silently evaporates is exactly the failure this preview exists
+   * to avoid. Habit add/delete is hidden too, since router.refresh() would
+   * reset it to the sample set and read as a bug.
+   */
+  preview?: boolean;
 }
 
 const EMOJI_CHOICES = ['📚', '🏃', '🧘', '✍️', '🎸', '🎨', '💪', '🧠', '🌅', '💧', '🥗', '😴'];
@@ -122,6 +134,7 @@ export function DailyRitual({
   journalEntries,
   trajectoryNudge,
   actions,
+  preview = false,
 }: Props) {
   const [habits, setHabits] = useState(initialHabits);
   const [logs, setLogs] = useState(initialLogs);
@@ -225,11 +238,17 @@ export function DailyRitual({
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-10 sm:py-16 space-y-8">
+      {preview && (
+        <PreviewBanner route="/daily">
+          One stranger&apos;s week of the ritual — the AM and PM writing, the habit check-ins, the
+          date rail. Nothing here is yours and nothing is saved.
+        </PreviewBanner>
+      )}
       {/* ─── Ritual header — gradient mesh + editorial greeting ─── */}
       <section className="relative overflow-hidden rounded-2xl border border-border/50 p-6 sm:p-8">
         <GradientMesh variant={isMorning ? 'gold' : 'sage'} />
         <div className="relative">
-          <div className="flex items-center gap-2 text-xs font-medium text-muted-foreground/60">
+          <div className="flex items-center gap-2 text-xs font-medium text-subtle">
             {isMorning ? (
               <Sunrise className="h-3.5 w-3.5 text-primary" />
             ) : (
@@ -318,7 +337,7 @@ export function DailyRitual({
       >
         <div className="flex items-start justify-between gap-4 border-b border-border/60 px-5 py-5 sm:px-7">
           <div>
-            <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground/55">
+            <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-subtle">
               Private journal
             </p>
             <h2
@@ -328,13 +347,13 @@ export function DailyRitual({
               {isTodaySelected ? 'Today' : formatJournalDate(selectedDate, false)}
             </h2>
           </div>
-          <p className="pt-1 text-right text-xs leading-relaxed text-muted-foreground/60">
+          <p className="pt-1 text-right text-xs leading-relaxed text-subtle">
             {isTodaySelected ? journalTitle : formatJournalDate(selectedDate)}
           </p>
         </div>
 
         <div className="min-h-[280px] px-5 py-6 sm:px-7 sm:py-8">
-          {isTodaySelected ? (
+          {isTodaySelected && !preview ? (
             <div className="space-y-6">
               {!isMorning && amEntry.trim() && (
                 <div className="flex gap-3">
@@ -342,7 +361,7 @@ export function DailyRitual({
                     <Sunrise className="h-3 w-3" />
                   </span>
                   <div>
-                    <p className="text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground/55">
+                    <p className="text-[10px] font-medium uppercase tracking-[0.14em] text-subtle">
                       This morning
                     </p>
                     <p className="mt-1.5 whitespace-pre-wrap text-sm leading-relaxed text-foreground/75">
@@ -371,7 +390,7 @@ export function DailyRitual({
                     isMorning ? setAmEntry(event.target.value) : setPmEntry(event.target.value)
                   }
                   placeholder={journalPlaceholder}
-                  className="mt-3 min-h-[150px] w-full resize-none border-0 bg-transparent p-0 text-base leading-7 text-foreground placeholder:text-muted-foreground/35 focus-visible:outline-none"
+                  className="mt-3 min-h-[150px] w-full resize-none border-0 bg-transparent p-0 text-base leading-7 text-foreground placeholder:text-subtle focus-visible:outline-none"
                 />
               </div>
 
@@ -386,9 +405,7 @@ export function DailyRitual({
                   </span>
                 )}
                 {!canSave && !saved && (
-                  <span className="text-xs text-muted-foreground/55">
-                    One honest sentence is enough.
-                  </span>
+                  <span className="text-xs text-subtle">One honest sentence is enough.</span>
                 )}
               </div>
             </div>
@@ -400,7 +417,7 @@ export function DailyRitual({
                     <Sunrise className="h-3 w-3" />
                   </span>
                   <div>
-                    <p className="text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground/55">
+                    <p className="text-[10px] font-medium uppercase tracking-[0.14em] text-subtle">
                       Morning focus
                     </p>
                     <p className="mt-1.5 whitespace-pre-wrap text-base leading-7 text-foreground/80">
@@ -415,7 +432,7 @@ export function DailyRitual({
                     <Sunset className="h-3 w-3" />
                   </span>
                   <div>
-                    <p className="text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground/55">
+                    <p className="text-[10px] font-medium uppercase tracking-[0.14em] text-subtle">
                       Evening reflection
                     </p>
                     <p className="mt-1.5 whitespace-pre-wrap text-base leading-7 text-foreground/80">
@@ -428,7 +445,7 @@ export function DailyRitual({
           ) : (
             <div className="flex min-h-[220px] flex-col items-center justify-center text-center">
               <p className="font-serif text-lg text-foreground/75">Nothing recorded here.</p>
-              <p className="mt-1.5 max-w-xs text-sm leading-relaxed text-muted-foreground/55">
+              <p className="mt-1.5 max-w-xs text-sm leading-relaxed text-subtle">
                 Some days stay unwritten. They still belong to you.
               </p>
             </div>
@@ -500,7 +517,7 @@ export function DailyRitual({
               );
             })}
           </div>
-          <p className="mt-2 text-center text-[10px] text-muted-foreground/40">
+          <p className="mt-2 text-center text-[10px] text-subtle">
             Solid marks hold writing. Quiet marks are simply days.
           </p>
         </div>
@@ -508,14 +525,21 @@ export function DailyRitual({
 
       {/* ─── Habits — SpotlightCards with streak + weekly progress ─── */}
       <div className="space-y-3">
-        <div className="flex items-center justify-between">
-          <h3 className="font-serif text-sm font-medium text-foreground">Habits</h3>
-          <button
-            onClick={() => setShowHabitManager(!showHabitManager)}
-            className="text-xs text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/50 rounded px-1"
-          >
-            {showHabitManager ? 'Done' : 'Manage'}
-          </button>
+        <div className="flex items-baseline justify-between gap-3">
+          <div>
+            <h3 className="font-serif text-sm font-medium text-foreground">Habits</h3>
+            <p className="mt-0.5 text-xs text-subtle">
+              The small repeated thing. Checked in, never scored.
+            </p>
+          </div>
+          {!preview && (
+            <button
+              onClick={() => setShowHabitManager(!showHabitManager)}
+              className="text-xs text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/50 rounded px-1"
+            >
+              {showHabitManager ? 'Done' : 'Manage'}
+            </button>
+          )}
         </div>
 
         {habits.length === 0 && !showHabitManager ? (
@@ -589,9 +613,7 @@ export function DailyRitual({
                           </span>
                         )}
                       </div>
-                      <p className="text-[10px] uppercase tracking-wide text-muted-foreground/60">
-                        {freqLabel}
-                      </p>
+                      <p className="text-[10px] uppercase tracking-wide text-subtle">{freqLabel}</p>
                     </div>
                   </div>
 
@@ -640,7 +662,7 @@ export function DailyRitual({
                   {showHabitManager && (
                     <button
                       onClick={() => handleDeleteHabit(habit.id)}
-                      className="text-muted-foreground/40 hover:text-destructive transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-destructive/50 rounded"
+                      className="text-subtle hover:text-destructive transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-destructive/50 rounded"
                       aria-label={`Delete ${habit.name}`}
                     >
                       <Trash2 className="h-4 w-4" />

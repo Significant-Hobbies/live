@@ -154,3 +154,93 @@ commitments (which are about proof, not reflection).
 [`STATUS.md`](../../STATUS.md)) would allow a habit to *optionally* be linked
 to a commitment so checking the habit auto-stamps the commitment — but only if
 the user explicitly links them. Do not auto-link by default.
+
+## A9 — Auth saves work; it does not unlock it
+
+**Decision:** Anonymous visitors can use the product. Signing in exists to make
+work durable, not to grant access. Two consequences:
+
+1. **Every guard preserves the return path.** Route guards redirect to
+   `loginPath('/that-route')` (`src/lib/auth-routing.ts`), never a bare
+   `/login`. The "continue as guest" link derives its destination from the same
+   callback via `guestRouteFor`, and may only point at surfaces that render
+   without a session.
+2. **`/daily` and `/trajectory` render a signed-out preview** of one sample
+   month (`src/lib/preview-data.ts`) rather than redirecting.
+
+**Why:** Surfaces divide by *when* they deliver value, not by privacy. The
+single-session surfaces — the quiz, `/life-bingo`, `/side-quests`, the timeline
+builder, the calculators — already keep localStorage as the source of truth and
+mirror to the DB only once signed in. Their whole value lands in one visit.
+
+The longitudinal surfaces (`/daily`, `/trajectory`, `/look-back`,
+`/commitments`, `/dashboard`) are different: their value *is* accumulated
+history. Persisting those to localStorage would be a fragile imitation that
+silently loses months of private journal entries to a cache clear — worse than
+a sign-in wall, because the wall is at least honest about the trade. But
+redirecting also failed, because a visitor cannot judge a monthly review
+practice they have never seen. A read-only sample resolves both.
+
+**Constraints:**
+
+- The preview is **not** persistence. Habit ticks stay interactive because the
+  daily write actions return early without a session and a tick loses nothing.
+  Journal *writing* is suppressed, not merely discarded — inviting a stranger to
+  type a private entry that evaporates is the exact failure the preview exists
+  to avoid. `/trajectory` is fully read-only because its write actions *throw*
+  on a missing session rather than returning early.
+- `PreviewBanner` is not dismissible. It carries the whole ethical weight of
+  showing someone else's content on a page that otherwise looks like theirs.
+- Sample data is derived from the caller's `today` / `monthKey`, never
+  hardcoded, so it cannot drift into stale dates.
+- Sample data must not read as a growth dashboard. No trajectory bucket may
+  rise monotonically and the habit history must contain gaps, or the sample
+  contradicts A4 and the "no score — the gap is the whole point" copy directly
+  above it. Both are asserted in `src/lib/preview-data.test.ts`.
+- Both routes stay `noindex`. The preview is a conversion surface, not a
+  discovery surface; A3 still holds.
+- `/settings` and `/setup` stay gated with no preview — username, timezone and
+  profile visibility have no anonymous meaning.
+
+## A10 — Remaining life expectancy is conditional, everywhere
+
+**Decision:** Every surface that shows weeks remaining derives them from
+`remainingYears()` in `src/lib/mortality.ts`, a published period-life-table
+curve. `buildLifeGrid` draws to `weeksLived + weeksRemaining`, so the grid's
+length is personal. `LIFE_EXPECTANCY_WEEKS` survives only as the fallback for a
+user who has not given a birth year.
+
+**Why:** Life expectancy at birth is not life expectancy at your age.
+Subtracting age from ~77 is the intuitive sum and it gets steadily more wrong
+the older the reader is — at 71 it predicts about 6 more years against a real
+figure near 14 — and past 77 it returns zero.
+
+This was shipped first on `/life-in-weeks` only, on the reasoning that the
+dashboard could carry the abstraction because its reader had already opted in.
+That was wrong, and the asymmetry was worse than either model on its own: a
+71-year-old met an honest number on the anonymous page, signed up on the
+strength of it, and was then told by `/dashboard` that they had 270 weeks left.
+Anyone past 77 got a fully dark grid and a literal zero — including on their
+public profile at `/u/[username]`. The signup was the punishment.
+
+The curve's two defining properties — monotonic decrease, never zero — are
+asserted across every age in both `mortality.test.ts` (via `buildLifeGrid`, for
+every birth year 1900-2025) and `life-in-weeks.test.ts` (via `remainingYears`,
+ages 0-120), with regressions pinning the 64- and 71-year-old cases.
+
+**Constraints:**
+
+- The colour encoding is inverted relative to a progress bar. Weeks already
+  spent recede (`bg-muted`, opaque); weeks remaining are lit in gold. The page
+  is arguing that the remainder is open space, and a grid that makes the past
+  the bright part argues the opposite.
+- The spent layer must stay opaque. A translucent class lets the lit layer
+  bleed through and the two states merge.
+- `/life-in-weeks` stores the birth year in `localStorage` only. Nothing is
+  sent to a server and no account is involved, which is what the page promises
+  in its own copy.
+- Weeks *lived* and weeks *stamped* are different numbers and must never share
+  a label. The dashboard read "3,734 weeks stamped" off `weeksLived`, crediting
+  a 71-year-old with 3,734 practice sessions they had not done.
+- The grid's row count is personal, so nothing may assume ~77 rows or a
+  4,000-cell array. `LifeGrid` derives its axis label from `cells.length`.

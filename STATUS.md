@@ -6,7 +6,7 @@
 > change. Do not let deploy-version snapshots accumulate here — put those in
 > the archive.
 
-Last updated: 2026-07-25
+Last updated: 2026-07-26
 
 ## Objective
 
@@ -27,6 +27,18 @@ is the bridge between daily practice and life aspirations.
   with a private, read-only 21-day date rail. The rail communicates only
   whether writing exists — no totals, streaks, scores, or entry-length
   comparisons. No schema change; production deployment remains operator-owned.
+- **Front door (2026-07-26):** `/life-in-weeks` is a new anonymous surface —
+  one birth year in, the whole life grid out, then a turn toward what the
+  remaining weeks are for. The mortality frame previously existed only behind
+  Google OAuth, so the most affecting thing the product does was unreachable
+  for a first-time visitor. It is now the hero CTA on the Astro landing and the
+  closing link on `/manifesto`.
+- **Mortality maths corrected everywhere (2026-07-26):** every surface now
+  derives weeks remaining from conditional life expectancy. The old fixed
+  4,000-week frame told a 71-year-old they had ~270 weeks left and anyone past
+  77 exactly zero, on `/dashboard`, `/daily`, `/trajectory`, `/look-back`,
+  `/commitments` and their public profile. See
+  [`docs/architecture/decisions.md`](docs/architecture/decisions.md) A10.
 - **Discovery:** the hobby quiz (`/find-your-hobby`) is the single primary
   discovery UX (2026-07-03). The other three surfaces (`/hobbies`, `/explore`,
   `/journeys`) are hidden from homepage/nav/footer; code intact, reachable
@@ -44,15 +56,30 @@ is the bridge between daily practice and life aspirations.
   real, closed two privacy leaks, and wired two implemented-but-uncalled actions
   (`syncQuestProgress`, `closeEra`). Detail in
   [`docs/knowledge/learnings.md`](docs/knowledge/learnings.md).
+- **Auth is optional again (2026-07-25).** All 12 route guards used a bare
+  `redirect('/login')`, so signing in from `/trajectory` landed on `/dashboard` —
+  the login page had accepted and validated `callbackUrl` all along and nothing
+  ever sent it. Guards now preserve the return path, and "continue as guest"
+  follows the same intent instead of a hardcoded `/timeline/new` (one of its old
+  targets, `/bucket-list/new`, itself required a session). `/daily` and
+  `/trajectory` now render a read-only signed-out preview of one sample month
+  rather than a wall. The longitudinal/single-session split and its constraints
+  are recorded as [`decisions.md`](docs/architecture/decisions.md) A9.
 
 ## Active work
 
-- **Schema changes pending application (operator-owned).**
-  `drizzle/0003_visibility_and_timezone.sql` adds `Commitment.visibility`,
-  `UserQuest.visibility`, and `User.timezone`. Hand-written to match this repo's
-  convention. Applied to local `dev.db` only; **not applied to production**. The
-  visibility defaults are what stop existing commitments and quests being
-  published without consent, so this needs to land before the next deploy.
+- **`0003` applied to production 2026-07-25.**
+  `drizzle/0003_visibility_and_timezone.sql` added `Commitment.visibility` and
+  `UserQuest.visibility` (both `TEXT NOT NULL DEFAULT 'private'`),
+  `User.timezone` (nullable `TEXT`), and the two supporting indexes. Applied
+  statement-by-statement via the Turso CLI against the `significanthobbies`
+  database and verified with `pragma_table_info` plus app-shaped queries. This
+  unblocks deploying `main`, which already reads all three columns.
+
+  Correction to the earlier framing: production held **0 commitments and 0
+  quests**, so no existing row was ever publicly exposed. The `'private'`
+  default protects future rows; it did not undo a live leak. 14 users, none with
+  a timezone yet — `TimezoneSync` populates that on next visit.
 - **`pnpm db:generate` is safe again (baselined 2026-07-25).** The snapshot used
   to record only migration 0000, so drizzle-kit emitted `CREATE TABLE` for tables
   that already existed in production. `drizzle/0001_baseline_current_schema.sql`

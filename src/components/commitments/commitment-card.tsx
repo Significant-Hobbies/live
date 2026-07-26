@@ -7,6 +7,8 @@ import { BorderBeam, NumberTicker } from '~/components/aceternity';
 import { Button } from '~/components/ui/button';
 import { abandonCommitment } from '~/lib/actions/commitments';
 import { computeStreak, type StampRow } from '~/lib/commitments';
+
+import { StampRail } from './stamp-rail';
 import { cn } from '~/lib/utils';
 import { LogStampForm } from './log-stamp-form';
 
@@ -54,7 +56,12 @@ export function CommitmentCard({
   }
 
   return (
+    // Labelled as a group so the card is addressable on its own — several can
+    // be on screen at once and every one of them has a "Stamp today" button.
+    // Matches the "Controls for <title>" convention on bucket-list items.
     <div
+      role="group"
+      aria-label={`${hobbyName} commitment`}
       className={cn(
         'relative overflow-hidden rounded-xl border p-4 shadow-soft',
         isComplete
@@ -85,7 +92,7 @@ export function CommitmentCard({
           <button
             onClick={handleAbandon}
             disabled={abandoning}
-            className="text-muted-foreground/40 hover:text-destructive transition-colors"
+            className="text-subtle hover:text-destructive transition-colors"
             title="Abandon commitment"
             aria-label="Abandon commitment"
           >
@@ -116,10 +123,12 @@ export function CommitmentCard({
         )}
         {isComplete && (
           <p className="text-xs text-muted-foreground">
-            You hit your {goalDays}-day goal. The stamps live on your profile.
+            You hit your {goalDays}-day goal. Every stamp is below.
           </p>
         )}
       </div>
+
+      <StampRail stamps={stamps} goalDays={goalDays} />
     </div>
   );
 }
@@ -139,7 +148,7 @@ function Stat({
       <div className="text-base font-semibold tabular-nums text-foreground">
         {animate && isNumber ? <NumberTicker value={value} /> : value}
       </div>
-      <div className="text-[10px] text-muted-foreground/50">{label}</div>
+      <div className="text-[10px] text-subtle">{label}</div>
     </div>
   );
 }

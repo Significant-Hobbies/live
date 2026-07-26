@@ -2,6 +2,8 @@
 
 import { useMemo } from 'react';
 
+import { niceAxis } from '~/lib/trajectory';
+
 interface ChartSeries {
   label: string;
   points: { monthKey: string; value: number }[];
@@ -34,15 +36,23 @@ const SERIES_COLORS = [
  */
 export function TrajectoryChart({ series }: Props) {
   const width = 640;
-  const height = 220;
-  const padding = { top: 16, right: 20, bottom: 36, left: 44 };
+  const height = 232;
+  // Bottom padding clears the x-axis month labels from the lowest y tick. Since
+  // niceAxis rounds the domain outward, that tick sits exactly on the axis floor
+  // and collided with the month label underneath it at the old 36.
+  const padding = { top: 16, right: 20, bottom: 48, left: 44 };
   const innerWidth = width - padding.left - padding.right;
   const innerHeight = height - padding.top - padding.bottom;
 
-  const { xLabels, xScale, yScale, yMin, yMax } = useMemo(() => {
+  const { xLabels, xScale, yScale, axis } = useMemo(() => {
     const allPoints = series.flatMap((s) => s.points);
     if (allPoints.length === 0) {
-      return { xLabels: [], xScale: (_: string) => 0, yScale: (_: number) => 0, yMin: 0, yMax: 1 };
+      return {
+        xLabels: [] as string[],
+        xScale: (_: string) => 0,
+        yScale: (_: number) => 0,
+        axis: niceAxis(0, 1, 4),
+      };
     }
     const labelSet = new Set<string>();
     for (const p of allPoints) labelSet.add(p.monthKey);
@@ -53,27 +63,23 @@ export function TrajectoryChart({ series }: Props) {
       return idx === -1 ? 0 : idx * xStep;
     };
     const values = allPoints.map((p) => p.value);
-    const yMin = Math.min(...values);
-    const yMax = Math.max(...values);
-    const yRange = yMax - yMin || 1;
-    const yPad = yRange * 0.12;
+    // Round bounds and ticks, so labels read 8 / 11 / 14 rather than
+    // 8 / 10.75 / 13.5. niceAxis also supplies the padding the old code faked
+    // with a 12% fudge, because it rounds outward past the data.
+    const axis = niceAxis(Math.min(...values), Math.max(...values), 4);
+    const ySpan = axis.max - axis.min || 1;
     const yScale = (v: number) => {
-      const t = (v - (yMin - yPad)) / (yRange + 2 * yPad);
+      const t = (v - axis.min) / ySpan;
       return innerHeight - t * innerHeight;
     };
-    return { xLabels, xScale, yScale, yMin, yMax };
+    return { xLabels, xScale, yScale, axis };
   }, [series, innerWidth, innerHeight]);
 
   if (series.length === 0 || xLabels.length === 0) {
     return null;
   }
 
-  // Y tick marks: 4 evenly spaced between yMin and yMax.
-  const yTicks = [0, 1, 2, 3, 4].map((i) => {
-    const t = i / 4;
-    const v = yMin + t * (yMax - yMin);
-    return { v, y: yScale(v) };
-  });
+  const yTicks = axis.ticks.map((v) => ({ v, y: yScale(v) }));
 
   return (
     <div className="w-full overflow-x-auto">

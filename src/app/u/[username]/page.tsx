@@ -267,7 +267,7 @@ export default async function ProfilePage({ params }: Props) {
             {isOwner && (
               <Link
                 href="/settings"
-                className="inline-flex items-center gap-1 text-xs text-muted-foreground/60 hover:text-foreground transition-colors"
+                className="inline-flex items-center gap-1 text-xs text-subtle hover:text-foreground transition-colors"
               >
                 <Pencil className="h-3 w-3" />
                 Edit
@@ -362,9 +362,7 @@ export default async function ProfilePage({ params }: Props) {
                 {yearsLived}
               </span>
             ) : (
-              <span className="font-serif text-3xl font-semibold text-muted-foreground/40">
-                &mdash;
-              </span>
+              <span className="font-serif text-3xl font-semibold text-subtle">&mdash;</span>
             )}
             <p className="mt-1 text-xs text-muted-foreground">
               {yearsLived === 1 ? 'year lived' : 'years lived'}
@@ -418,7 +416,7 @@ export default async function ProfilePage({ params }: Props) {
                             );
                           })}
                           {timelineHobbies.length > 6 && (
-                            <span className="inline-flex items-center rounded-full border border-border px-2.5 py-0.5 text-xs text-muted-foreground/60">
+                            <span className="inline-flex items-center rounded-full border border-border px-2.5 py-0.5 text-xs text-subtle">
                               +{timelineHobbies.length - 6}
                             </span>
                           )}
@@ -445,7 +443,7 @@ export default async function ProfilePage({ params }: Props) {
             <p className="font-serif text-lg text-muted-foreground">
               You haven&rsquo;t built a timeline yet.
             </p>
-            <p className="mt-2 text-sm text-muted-foreground/60">
+            <p className="mt-2 text-sm text-subtle">
               Map the hobbies that shaped each chapter of your life.
             </p>
             <Link href="/timeline/new">
@@ -578,7 +576,7 @@ export default async function ProfilePage({ params }: Props) {
           <div className="scroll-reveal scroll-reveal-d1">
             <BadgeCollection earnedBadgeIds={earnedBadgeIds} />
             {isOwner && earnedBadgeIds.length === 0 && (
-              <p className="mt-2 text-xs text-muted-foreground/60">
+              <p className="mt-2 text-xs text-subtle">
                 Complete{' '}
                 <a href="/side-quests" className="text-foreground hover:underline">
                   side quests
@@ -634,18 +632,16 @@ export default async function ProfilePage({ params }: Props) {
                     </span>
                     <span
                       className={`flex-1 text-sm ${
-                        isDone ? 'line-through text-muted-foreground/60' : 'text-foreground'
+                        isDone ? 'line-through text-subtle' : 'text-foreground'
                       }`}
                     >
                       {item.title}
                       {item.targetYear && (
-                        <span className="ml-2 text-xs text-muted-foreground/60">
-                          by {item.targetYear}
-                        </span>
+                        <span className="ml-2 text-xs text-subtle">by {item.targetYear}</span>
                       )}
                     </span>
                     {cat && (
-                      <span className="text-xs text-muted-foreground/60 shrink-0" title={cat.label}>
+                      <span className="text-xs text-subtle shrink-0" title={cat.label}>
                         {cat.emoji}
                       </span>
                     )}

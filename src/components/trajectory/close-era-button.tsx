@@ -84,7 +84,7 @@ export function CloseEraButton({ eraId, label }: CloseEraButtonProps) {
             setError(null);
           }}
           aria-label="Cancel closing this era"
-          className="text-muted-foreground/60 hover:text-foreground"
+          className="text-subtle hover:text-foreground"
         >
           <X className="h-3 w-3" />
         </Button>

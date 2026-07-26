@@ -172,6 +172,7 @@ export default function WhatAreSignificantHobbiesPage() {
           <div className="relative mx-auto max-w-3xl text-center">
             <FadeIn>
               <TextGenerateEffect
+                as="h1"
                 words="What Are Significant Hobbies?"
                 className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl"
               />
@@ -328,9 +329,7 @@ export default function WhatAreSignificantHobbiesPage() {
                 innerClassName="rounded-2xl"
               >
                 <div className="border-b border-border px-6 py-4">
-                  <p className="text-sm font-semibold text-muted-foreground/60">
-                    What you might discover
-                  </p>
+                  <p className="text-sm font-semibold text-subtle">What you might discover</p>
                 </div>
                 <div className="divide-y divide-stone-50">
                   {[
@@ -465,7 +464,7 @@ export default function WhatAreSignificantHobbiesPage() {
                             </span>
                           </div>
                           <p className="mb-1.5 text-sm text-muted-foreground">{description}</p>
-                          <p className="text-xs text-muted-foreground/60">{examples}</p>
+                          <p className="text-xs text-subtle">{examples}</p>
                         </div>
                       </SpotlightCard>
                     </Link>
