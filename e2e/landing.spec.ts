@@ -1,3 +1,4 @@
+import AxeBuilder from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
 
 /**
@@ -27,8 +28,18 @@ test.describe('Landing page (Astro overlay)', () => {
     // paints the same words before hydration.
     const h1 = page.locator('h1');
     await expect(h1).toHaveCount(1);
-    await expect(h1).toContainText('The hobbies that shaped you.');
-    await expect(h1).toContainText('The life you still want to live.');
+    await expect(h1).toContainText('What will you do');
+    await expect(h1).toContainText('with the time you have?');
+  });
+
+  test('uses the cinematic hero as a decorative, muted loop', async ({ page }) => {
+    const video = page.locator('video.cinematic-hero__video');
+    await expect(video).toHaveCount(1);
+    await expect(video).toHaveAttribute('poster', '/hero/hobby-horizon-poster.jpg');
+    await expect(video.locator('source')).toHaveAttribute('src', '/hero/hobby-horizon.mp4');
+    await expect(video).toHaveAttribute('autoplay', '');
+    await expect(video).toHaveAttribute('muted', '');
+    await expect(video).toHaveAttribute('playsinline', '');
   });
 
   test('states the no-signup promise, which the product actually honours', async ({ page }) => {
@@ -47,6 +58,7 @@ test.describe('Landing page (Astro overlay)', () => {
     expect(hrefs.length, 'the landing page should link somewhere').toBeGreaterThan(0);
     // Both destinations render for anonymous visitors; linking a guarded route
     // from the landing page would put a login wall in the primary funnel.
+    expect(hrefs).toContain('/life-in-weeks');
     expect(hrefs).toContain('/timeline/new');
     expect(hrefs).toContain('/bucket-lists');
   });
@@ -61,5 +73,10 @@ test.describe('Landing page (Astro overlay)', () => {
     if ((await robots.count()) > 0) {
       await expect(robots).not.toHaveAttribute('content', /noindex/);
     }
+  });
+
+  test('meets the automated accessibility baseline', async ({ page }) => {
+    const results = await new AxeBuilder({ page }).analyze();
+    expect(results.violations).toEqual([]);
   });
 });

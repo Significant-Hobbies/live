@@ -39,7 +39,7 @@ const shareButtons = ['Copy link', 'Export PNG', 'Publish'];
       </p>
     </div>
 
-    <div class="relative grid gap-8 md:grid-cols-3">
+    <ol class="relative grid gap-8 md:grid-cols-3">
       {
         steps.map((step, i) => (
           <li class="spotlight-card card-lift shadow-elevated list-none overflow-hidden rounded-2xl border border-border bg-background p-6">
@@ -118,7 +118,7 @@ const shareButtons = ['Copy link', 'Export PNG', 'Publish'];
           </li>
         ))
       }
-    </div>
+    </ol>
 
     <div class="mt-12 text-center">
       <a

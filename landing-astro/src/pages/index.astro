@@ -12,147 +12,65 @@ const TITLE = 'SignificantHobbies — Your Hobby Journey';
 const DESCRIPTION =
   'Map your hobby history across life phases. Discover what rekindled, what persisted, and what to explore next.';
 
-const heroPhases = [
-  {
-    label: 'Childhood',
-    color: 'oklch(0.72 0.13 150)',
-    bg: 'oklch(0.72 0.13 150 / 0.12)',
-    border: 'oklch(0.72 0.13 150 / 0.35)',
-    hobbies: ['Lego', 'Swimming', 'Chess', 'Drawing'],
-  },
-  {
-    label: 'Teen',
-    color: 'oklch(0.82 0.13 88)',
-    bg: 'oklch(0.82 0.13 88 / 0.12)',
-    border: 'oklch(0.82 0.13 88 / 0.35)',
-    hobbies: ['Guitar', 'Skate', 'Games'],
-  },
-  {
-    label: 'College',
-    color: 'oklch(0.78 0.10 200)',
-    bg: 'oklch(0.78 0.10 200 / 0.12)',
-    border: 'oklch(0.78 0.10 200 / 0.35)',
-    hobbies: ['Hiking', 'Photo', 'Coding'],
-  },
-  {
-    label: 'Now',
-    color: 'oklch(0.80 0.08 320)',
-    bg: 'oklch(0.80 0.08 320 / 0.12)',
-    border: 'oklch(0.80 0.08 320 / 0.35)',
-    hobbies: ['Running', 'Cooking', 'Pottery'],
-  },
-];
-
 ---
 
 <Layout title={TITLE} description={DESCRIPTION}>
-  <!-- ════════════════════════════════════════════════════════════════
-       HERO — full-bleed photo + gradient mesh + centered content
-       + browser-window product mockup + trust indicators
-       ════════════════════════════════════════════════════════════════ -->
-  <section class="relative flex min-h-svh flex-col items-center justify-center overflow-hidden bg-background">
-    <img
-      src="/hero/dawn-valley-1920.webp"
-      srcset="/hero/dawn-valley-640.webp 640w, /hero/dawn-valley-1280.webp 1280w, /hero/dawn-valley-1920.webp 1920w, /hero/dawn-valley-2560.webp 2560w"
-      sizes="100vw"
-      alt="Misty valley at dawn"
-      class="absolute inset-0 h-full w-full object-cover"
-      fetchpriority="high"
-    />
-    <!-- Darkening pass for legibility — top + bottom -->
-    <div
-      class="pointer-events-none absolute inset-0"
+  <main id="main">
+    <section class="cinematic-hero">
+    <video
+      class="cinematic-hero__video"
+      poster="/hero/hobby-horizon-poster.jpg"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
       aria-hidden="true"
-      style="background: linear-gradient(to top, oklch(0.15 0.005 285 / 0.92) 0%, oklch(0.15 0.005 285 / 0.55) 40%, oklch(0.15 0.005 285 / 0.35) 100%);"
-    />
-    <div class="relative z-10 mx-auto w-full max-w-5xl px-6 py-20 text-center lg:px-12 lg:py-24">
-      <h1
-        class="font-serif text-4xl font-medium tracking-tight text-foreground sm:text-5xl lg:text-6xl"
-        style="line-height: 1.12; text-wrap: balance;"
-      >
-        The hobbies that shaped you.<br />
-        <em>The life you still want to live.</em>
-      </h1>
+    >
+      <source src="/hero/hobby-horizon.mp4" type="video/mp4" />
+    </video>
+    <div class="cinematic-hero__scrim" aria-hidden="true"></div>
 
-      <p class="mx-auto mt-6 max-w-xl text-base text-muted-foreground sm:text-lg" style="line-height: 1.5;">
-        Start by seeing how many weeks you have already spent, and roughly how many
-        are still yours. Then decide what the rest are for.
+    <div class="cinematic-hero__inner">
+      <p class="cinematic-hero__wordmark">Significant Hobbies</p>
+      <div class="cinematic-hero__copy">
+        <h1>
+          <span>What will you do</span>
+          <span>with the time you have?</span>
+        </h1>
+        <p>
+          Start with your birth year. See the weeks behind you, the weeks still
+          yours, and make room for what matters.
+        </p>
+        <a class="cinematic-hero__cta" href="/life-in-weeks">
+          See my life in weeks
+          <span aria-hidden="true">→</span>
+        </a>
+        <p class="cinematic-hero__note">Takes 10 seconds. No sign-up required.</p>
+      </div>
+
+      <p class="cinematic-hero__prompt" aria-hidden="true">
+        The rest is still unwritten.
       </p>
-
-      <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
-        <a
-          href="/life-in-weeks"
-          class="rounded-full bg-primary px-7 py-3 text-sm font-semibold text-primary-foreground no-underline transition-opacity hover:opacity-90 focus-visible:ring-2 focus-visible:ring-foreground/50 focus-visible:outline-none"
-        >
-          See your life in weeks
-        </a>
-        <a
-          href="/timeline/new"
-          class="rounded-full border border-border bg-card/40 px-7 py-3 text-sm font-medium text-foreground no-underline backdrop-blur-sm transition-colors hover:border-muted-foreground focus-visible:ring-2 focus-visible:ring-foreground/50 focus-visible:outline-none"
-        >
-          Start your hobby map
-        </a>
-      </div>
-
-      <!-- ─── Product mockup: browser window + timeline UI ─── -->
-      <div class="relative mx-auto mt-14 max-w-4xl">
-        <div class="browser-mockup shadow-float relative z-10 text-left">
-          <!-- Browser chrome bar -->
-          <div class="browser-mockup-bar">
-            <span class="browser-dot" style="background: oklch(0.65 0.20 25);"></span>
-            <span class="browser-dot" style="background: oklch(0.82 0.13 88);"></span>
-            <span class="browser-dot" style="background: oklch(0.72 0.13 150);"></span>
-            <div class="ml-3 flex-1">
-              <div class="rounded-md bg-background/60 px-3 py-1 text-[11px] text-muted-foreground">
-                significanthobbies.com/timeline
-              </div>
-            </div>
-          </div>
-          <!-- Timeline content: 4 phase columns -->
-          <div class="grid grid-cols-2 gap-3 p-4 sm:grid-cols-4 sm:p-5">
-            {
-              heroPhases.map((phase) => (
-                <div class="rounded-xl border border-border bg-background/40 p-3">
-                  <div
-                    class="mb-2.5 flex items-center gap-1.5 rounded-md px-2 py-1"
-                    style={`background: ${phase.bg}`}
-                  >
-                    <div class="h-2 w-2 rounded-full" style={`background: ${phase.color}`} />
-                    <span class="text-[11px] font-semibold" style={`color: ${phase.color}`}>
-                      {phase.label}
-                    </span>
-                  </div>
-                  <div class="flex flex-col gap-1.5">
-                    {phase.hobbies.map((h) => (
-                      <span
-                        class="rounded-full border px-2 py-0.5 text-center text-[10px] font-medium"
-                        style={`background: ${phase.bg}; border-color: ${phase.border}; color: ${phase.color}`}
-                      >
-                        {h}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))
-            }
-          </div>
-        </div>
-      </div>
-
-      <p class="mt-10 text-sm text-muted-foreground">Free. No sign-up required to start.</p>
     </div>
-  </section>
+    </section>
 
-  <FeatureRow />
-  <BucketListPanel />
-  <HowItWorks />
-  <CommunitySamples />
-  <FaqSection />
-  <FinalCta />
+    <FeatureRow />
+    <BucketListPanel />
+    <HowItWorks />
+    <CommunitySamples />
+    <FaqSection />
+    <FinalCta />
+  </main>
   <FleetFooter />
 </Layout>
 
 <script>
+  const heroVideo = document.querySelector<HTMLVideoElement>('.cinematic-hero__video');
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    heroVideo?.pause();
+  }
+
   // Mouse-tracking for spotlight cards — sets --mouse-x/--mouse-y CSS vars
   document.querySelectorAll('.spotlight-card').forEach((card) => {
     card.addEventListener('mousemove', (e) => {
