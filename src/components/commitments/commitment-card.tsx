@@ -56,7 +56,12 @@ export function CommitmentCard({
   }
 
   return (
+    // Labelled as a group so the card is addressable on its own — several can
+    // be on screen at once and every one of them has a "Stamp today" button.
+    // Matches the "Controls for <title>" convention on bucket-list items.
     <div
+      role="group"
+      aria-label={`${hobbyName} commitment`}
       className={cn(
         'relative overflow-hidden rounded-xl border p-4 shadow-soft',
         isComplete

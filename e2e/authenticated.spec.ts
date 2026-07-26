@@ -128,7 +128,16 @@ test.describe('authenticated surfaces', () => {
     await authedPage.goto('/settings');
     const field = authedPage.getByLabel('Your creed');
     await expect(field).toBeVisible();
-    await field.fill(creed);
+
+    // Retry the fill until it sticks. The textarea is a controlled component,
+    // so a fill that lands before React hydrates updates the DOM but not the
+    // component state — hydration then reverts it, the form sees an unchanged
+    // creed, skips the write, and still reports success. Visible is not
+    // interactive, and this is the race that made the assertion below flap.
+    await expect(async () => {
+      await field.fill(creed);
+      await expect(field).toHaveValue(creed);
+    }).toPass({ timeout: 15_000 });
     await authedPage.getByRole('button', { name: 'Save changes' }).click();
 
     // Wait for the form's own success signal before navigating: navigating early
@@ -200,38 +209,47 @@ test.describe('authenticated surfaces', () => {
     // nowhere, while the form asked outright for "Proof link" and the completion
     // copy claimed "the stamps live on your profile". The feature whose premise
     // is evidence collected it and never showed it back.
+    // Unique per run, and deliberately so. dev.db persists between runs, and a
+    // commitment can only be stamped once a day — reusing a fixed hobby name
+    // meant the second run of any given day hit "You already have an active
+    // commitment for Piano", left the create form sitting on that error, and
+    // then had nothing new to stamp. A fresh commitment each run keeps the
+    // write path genuinely exercised instead of asserting over yesterday's row.
+    const stamp = Date.now();
+    const hobby = `Piano ${stamp}`;
+    const proofUrl = `https://youtube.com/watch?v=e2e${stamp}`;
+
     await authedPage.goto('/commitments');
 
-    // No `if (count())` guards here. They let the test skip its own subject and
-    // report green, which is how the earlier version "passed" while stamping
-    // nothing. Each step waits for the effect of the one before it — clicking a
-    // button is not the same as the server action completing.
-    // The creation form is collapsed behind a trigger, so the name field does not
-    // exist until it is opened.
-    const openCreate = authedPage.getByRole('button', { name: 'Start a commitment' });
-    if (await openCreate.count()) {
-      await openCreate.click();
-      const nameField = authedPage.getByPlaceholder('e.g. Guitar, Running, Spanish');
-      await expect(nameField).toBeVisible();
-      await nameField.fill('Piano');
-      await authedPage.getByRole('button', { name: 'Begin commitment' }).click();
-    }
+    // No `if (count())` guards around the subject. They let a test skip what it
+    // exists to check and still report green, which is how an earlier version
+    // "passed" while stamping nothing. Each step waits for the effect of the one
+    // before it — clicking a button is not the same as the action completing.
+    // The creation form is collapsed behind a trigger, so the name field does
+    // not exist until it is opened.
+    await authedPage.getByRole('button', { name: 'Start a commitment' }).click();
+    const nameField = authedPage.getByPlaceholder('e.g. Guitar, Running, Spanish');
+    await expect(nameField).toBeVisible();
+    await nameField.fill(hobby);
+    await authedPage.getByRole('button', { name: 'Begin commitment' }).click();
 
-    // Wait for the commitment itself, not for a URL that never changes.
-    const openStampForm = authedPage.getByRole('button', { name: 'Stamp today' }).first();
-    await expect(openStampForm, 'a commitment should exist to stamp').toBeVisible();
-    await openStampForm.click();
+    // Scope to this run's card: every active commitment renders its own
+    // "Stamp today" button, so an unscoped locator would race the others.
+    const card = authedPage.getByRole('group', { name: `${hobby} commitment` });
+    await expect(card, 'the new commitment should appear').toBeVisible();
 
-    const proof = authedPage.getByPlaceholder(/or any URL/);
+    await card.getByRole('button', { name: 'Stamp today' }).click();
+
+    const proof = card.getByPlaceholder(/or any URL/);
     await expect(proof).toBeVisible();
-    await proof.fill('https://youtube.com/watch?v=e2eproof');
-    await authedPage.getByRole('button', { name: 'Stamp today' }).last().click();
+    await proof.fill(proofUrl);
+    await card.getByRole('button', { name: 'Stamp today' }).last().click();
 
-    await expect(authedPage.getByText('The evidence').first()).toBeVisible();
+    await expect(card.getByText('The evidence')).toBeVisible();
 
     // The proof is a real, opener-safe link — and nothing on the page is ever a
     // javascript: href, because normalizeProofUrl stores non-URL input verbatim.
-    const proofLink = authedPage.locator('a[href*="e2eproof"]').first();
+    const proofLink = card.locator(`a[href="${proofUrl}"]`);
     await expect(proofLink).toBeVisible();
     await expect(proofLink).toHaveAttribute('rel', /noopener/);
     await expect(authedPage.locator('a[href^="javascript:"]')).toHaveCount(0);
@@ -241,15 +259,22 @@ test.describe('authenticated surfaces', () => {
     // src/lib/bucket-list-insights.ts is 368 lines with a full test suite and had
     // zero importers — a finished feature with no door into it. All three
     // generators return null/empty for an empty list, so seed one item first.
+    // Seeding, not the subject of this test. dev.db persists between runs, so
+    // the item may already be on the list and the famous-list page will then
+    // offer no add button at all — hence the count check. Skipping the seed is
+    // only safe because the precondition it exists to establish is asserted
+    // immediately below rather than assumed.
     await authedPage.goto('/bucket-lists/barack-obama');
-    await authedPage
-      .getByRole('button', { name: /^Add .+ to my bucket list$/ })
-      .first()
-      .click();
-    await expect(authedPage.getByText('Added to your bucket list').first()).toBeVisible();
+    const seed = authedPage.getByRole('button', { name: /^Add .+ to my bucket list$/ }).first();
+    if (await seed.count()) {
+      await seed.click();
+    }
 
     await authedPage.goto('/life-plan');
-    await expect(authedPage.getByRole('heading', { name: 'What your list says' })).toBeVisible();
+    await expect(
+      authedPage.getByRole('heading', { name: 'What your list says' }),
+      'insights only render for a non-empty list, so seeding must have left one'
+    ).toBeVisible();
     await expect(authedPage.getByText(/bucket-list archetype/i)).toBeVisible();
     await expect(authedPage.getByText('Closest famous list')).toBeVisible();
     await expect(authedPage.getByText(/Chosen for the gaps/i)).toBeVisible();
