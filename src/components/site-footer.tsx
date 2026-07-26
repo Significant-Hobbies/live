@@ -14,9 +14,16 @@ export function SiteFooter() {
               life is finite.
             </p>
             <Link
-              href="/manifesto"
+              href="/life-in-weeks"
               prefetch={false}
               className="mt-3 inline-block text-xs text-foreground underline underline-offset-2 hover:opacity-70"
+            >
+              See your life in weeks →
+            </Link>
+            <Link
+              href="/manifesto"
+              prefetch={false}
+              className="mt-2 inline-block text-xs text-muted-foreground underline underline-offset-2 hover:text-foreground"
             >
               Read the manifesto →
             </Link>
