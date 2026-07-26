@@ -163,6 +163,43 @@ on the first test only. The difference lives in the headers Playwright's request
 context sends, so the next step is to capture the failing call's actual
 request/response headers rather than reason about them.
 
+### Writing authenticated specs against a persistent `dev.db`
+
+`e2e/authenticated.spec.ts` is serial, so **one failure blocks every test after
+it**. For a long time the creed test failed and silently hid four more. If a run
+reports "N did not run", fix the first failure before reading anything else into
+the result.
+
+Two failure modes cost the most to diagnose, both worth recognising on sight:
+
+**Filling a controlled input before hydration.** `await expect(field).toBeVisible()`
+does not mean React has hydrated. A `fill()` that lands first updates the DOM but
+not component state; hydration then reverts it, the form compares the value
+against its unchanged initial prop, skips the write, and still shows a success
+toast. It presents as "the save silently did nothing" and it is timing-dependent,
+so it flaps rather than fails. Retry the fill until it sticks:
+
+```ts
+await expect(async () => {
+  await field.fill(value);
+  await expect(field).toHaveValue(value);
+}).toPass({ timeout: 15_000 });
+```
+
+**Reusing a fixed entity name.** `dev.db` survives between local runs. A spec
+that creates "Piano" every time hits `You already have an active commitment for
+Piano` on its second run of the day, leaves the create form on that error, and
+fails somewhere much later. Generate a unique name per run
+(`` `Piano ${Date.now()}` ``) and scope locators to that entity's own card —
+several cards render an identically-named "Stamp today" button, so an unscoped
+locator races them.
+
+Prefer unique-per-run data over `if (await x.count())` guards. A guard around a
+test's **subject** lets it skip what it exists to check and still report green,
+which is how an earlier version of the stamp test "passed" while stamping
+nothing. Guards are acceptable only around *setup*, and only when the
+precondition they establish is asserted immediately afterwards.
+
 ### Design review screenshots
 
 ```bash

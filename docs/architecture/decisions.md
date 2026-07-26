@@ -201,3 +201,40 @@ practice they have never seen. A read-only sample resolves both.
   discovery surface; A3 still holds.
 - `/settings` and `/setup` stay gated with no preview — username, timezone and
   profile visibility have no anonymous meaning.
+
+## A10 — Two mortality models, on purpose
+
+**Decision:** The dashboard grid keeps the fixed 4,000-week frame
+(`src/lib/mortality.ts`). The anonymous `/life-in-weeks` surface uses
+conditional remaining life expectancy instead (`src/lib/life-in-weeks.ts`) and
+draws its grid to `weeksLived + weeksRemaining`.
+
+**Why:** Life expectancy at birth is not life expectancy at your age.
+Subtracting age from ~77 is the intuitive sum and it gets steadily more wrong
+the older the reader is — at 64 it predicts about 13 more years against a real
+figure near 21. The dashboard can carry that abstraction because it is framing
+a philosophy for someone who already opted in. A cold, anonymous surface aimed
+at a first-time visitor cannot: it hands its oldest, most susceptible reader a
+number that is both false and bleak, and by construction the naive model
+eventually reaches zero.
+
+`remainingYears()` interpolates a published period-life-table curve. Its two
+defining properties — monotonic decrease, never zero — are asserted across
+every age 0-120 in `src/lib/life-in-weeks.test.ts`, alongside a regression
+pinning the 64-year-old case.
+
+**Constraints:**
+
+- The colour encoding is inverted relative to a progress bar. Weeks already
+  spent recede (`bg-muted`, opaque); weeks remaining are lit in gold. The page
+  is arguing that the remainder is open space, and a grid that makes the past
+  the bright part argues the opposite.
+- The spent layer must stay opaque. A translucent class lets the lit layer
+  bleed through and the two states merge.
+- `/life-in-weeks` stores the birth year in `localStorage` only. Nothing is
+  sent to a server and no account is involved, which is what the page promises
+  in its own copy.
+- **Known divergence:** `/commitments` renders "~N weeks of your remaining M"
+  from the 4,000-week model, so a signed-in user can see two different
+  remaining-weeks figures. Reconciling means changing `mortality.ts` and the
+  life grid everywhere it appears; not attempted here.

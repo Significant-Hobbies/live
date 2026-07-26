@@ -6,7 +6,7 @@
 > change. Do not let deploy-version snapshots accumulate here — put those in
 > the archive.
 
-Last updated: 2026-07-25
+Last updated: 2026-07-26
 
 ## Objective
 
@@ -27,6 +27,14 @@ is the bridge between daily practice and life aspirations.
   with a private, read-only 21-day date rail. The rail communicates only
   whether writing exists — no totals, streaks, scores, or entry-length
   comparisons. No schema change; production deployment remains operator-owned.
+- **Front door (2026-07-26):** `/life-in-weeks` is a new anonymous surface —
+  one birth year in, the whole life grid out, then a turn toward what the
+  remaining weeks are for. The mortality frame previously existed only behind
+  Google OAuth, so the most affecting thing the product does was unreachable
+  for a first-time visitor. It is now the hero CTA on the Astro landing and the
+  closing link on `/manifesto`. Uses conditional life expectancy rather than
+  the dashboard's fixed 4,000 weeks — see
+  [`docs/architecture/decisions.md`](docs/architecture/decisions.md) A10.
 - **Discovery:** the hobby quiz (`/find-your-hobby`) is the single primary
   discovery UX (2026-07-03). The other three surfaces (`/hobbies`, `/explore`,
   `/journeys`) are hidden from homepage/nav/footer; code intact, reachable
@@ -130,7 +138,13 @@ and is genuinely public — that one is consistent.
    [`docs/product/overview.md`](docs/product/overview.md).
 5. Tighten the first-time user journey to a meaningful public timeline.
 6. Wire habits ↔ commitments (optional explicit link, no auto-link by default).
-7. Decide whether the social layer earns investment. `follows` is a vanity
+7. **Reconcile the two mortality models.** `/commitments` shows "~N weeks of
+   your remaining M" from the fixed 4,000-week frame while `/life-in-weeks`
+   uses conditional life expectancy, so a signed-in user can meet two different
+   remaining-weeks figures. The conditional model is the correct one; adopting
+   it in `mortality.ts` changes the life grid on `/dashboard`, `/daily`,
+   `/trajectory`, `/look-back` and `/u/[username]`. See A10.
+8. Decide whether the social layer earns investment. `follows` is a vanity
    counter — no follower list, no feed, and no notification of any kind exists
    in the codebase, so a like, comment, or follow is silently discarded. Either
    ship notifications or stop presenting these as social features.
