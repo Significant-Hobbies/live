@@ -30,18 +30,31 @@ async function testAuthAvailable(page: Page): Promise<boolean> {
 }
 
 /**
- * Ensures the test user exists, then signs in. Idempotent: sign-up is expected
- * to fail with "already exists" on every run after the first.
+ * Ensures the test user exists and the context holds a session.
  *
- * Known flake: on a brand-new database the first call here can return 403 and
- * succeed on Playwright's retry. Four hypotheses have already been tested and
- * ruled out (cold compile, missing account, rate limiting, missing Origin) — see
- * the table in docs/development/testing.md before trying a fifth. Plain curl gets
- * 200 where Playwright's request context gets 403, so the next step is to capture
- * the failing call's actual headers.
+ * Sign-up is attempted first and is expected to fail with "already exists" on
+ * every run after the first.
+ *
+ * ## Why the sign-in is conditional
+ *
+ * A successful sign-up *already sets a session cookie*, and better-auth rejects
+ * `sign-in/email` with a 403 when the request context is already authenticated.
+ * Sign-up and sign-in share one cookie jar here, so unconditionally doing both
+ * meant:
+ *
+ * - **Fresh database** — sign-up succeeds and sets a session, the sign-in that
+ *   follows is refused 403, and the suite's first test fails.
+ * - **Warm database** — sign-up fails, no cookie is set, the sign-in succeeds.
+ *
+ * That is the whole of the long-standing "only flakes on a brand-new dev.db"
+ * behaviour, and it explains why plain `curl` never reproduced it (a fresh jar
+ * per invocation) and why retrying the sign-in never helped (the session cookie
+ * is still there on the retry). Verified directly: sign-up into an empty cookie
+ * jar returns 200 and writes `session_token`; reusing that jar, sign-in returns
+ * 403; discarding it, the same sign-in returns 200.
  */
 async function signInTestUser(page: Page): Promise<void> {
-  await page.request.post('/api/auth/sign-up/email', {
+  const signUp = await page.request.post('/api/auth/sign-up/email', {
     data: {
       email: TEST_USER.email,
       password: TEST_USER.password,
@@ -50,32 +63,20 @@ async function signInTestUser(page: Page): Promise<void> {
     failOnStatusCode: false,
   });
 
-  // One retry, which helps but does NOT fully fix the known flake below.
-  //
-  // Against a freshly created database the suite's first test can fail with a 403
-  // from sign-in and then pass on Playwright's retry. Note the sign-up above
-  // deliberately ignores its result (it is expected to fail with "already exists"
-  // on every run after the first) — so if that sign-up is the request being
-  // rejected, retrying only the sign-in cannot help, because the account still
-  // does not exist. Retrying the pair is the next thing to try. Not yet
-  // diagnosed; see docs/development/testing.md.
-  let res = await page.request.post('/api/auth/sign-in/email', {
+  // Sign-up succeeded, so this context is already authenticated. Signing in on
+  // top of that is exactly what produced the 403.
+  if (signUp.ok()) return;
+
+  const res = await page.request.post('/api/auth/sign-in/email', {
     data: { email: TEST_USER.email, password: TEST_USER.password },
     failOnStatusCode: false,
   });
 
   if (!res.ok()) {
-    await page.waitForTimeout(750);
-    res = await page.request.post('/api/auth/sign-in/email', {
-      data: { email: TEST_USER.email, password: TEST_USER.password },
-      failOnStatusCode: false,
-    });
-  }
-
-  if (!res.ok()) {
     throw new Error(
-      `Test sign-in failed (${res.status()}). Is the dev server running with ` +
-        `ENABLE_TEST_AUTH=1? Try: pnpm dev:test-auth`
+      `Test sign-in failed (${res.status()}) after sign-up returned ` +
+        `${signUp.status()}. Is the dev server running with ENABLE_TEST_AUTH=1? ` +
+        `Try: pnpm dev:test-auth`
     );
   }
 }

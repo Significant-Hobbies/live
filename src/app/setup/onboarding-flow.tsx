@@ -33,7 +33,25 @@ type NextYearFeeling = 'excited' | 'neutral' | 'dread' | 'blank';
 
 const TOTAL_STEPS = 7; // steps 0..6 (welcome is 0, done is 6)
 
+/**
+ * Matches MIN_BIRTH_YEAR in src/lib/life-in-weeks.ts. The floor was 1940,
+ * which quietly excluded anyone 86 or older from the product's central frame.
+ */
+const MIN_YEAR = 1900;
+
 // ─── Age fun facts ───────────────────────────────────────────────────────────
+/**
+ * Shown at the emotional peak of onboarding, under a 60px birth year.
+ *
+ * Every band points forward. The older two used to be the only ones written in
+ * the past tense — "Baby Boomer with stories to tell", directly after "Gen X —
+ * the cool ones" — which told a 62-year-old that the cohort one year younger
+ * were the interesting ones and they were an archive. On a product whose whole
+ * pitch is the life you still want to live, that was exactly backwards.
+ *
+ * The year easter eggs used to be five Millennial/Gen Z years and one 1969;
+ * the older end now gets the same treatment.
+ */
 function getAgeFact(birthYear: number): string {
   const age = new Date().getFullYear() - birthYear;
   if (birthYear === 1991) return 'Same year as the World Wide Web.';
@@ -42,12 +60,15 @@ function getAgeFact(birthYear: number): string {
   if (birthYear === 2000) return 'A true millennium kid.';
   if (birthYear === 1999) return 'Born at the turn of the millennium.';
   if (birthYear === 1989) return 'Same year as the fall of the Berlin Wall.';
+  if (birthYear === 1957) return 'Same year as Sputnik.';
+  if (birthYear === 1953) return 'The year Everest was first climbed.';
+  if (birthYear === 1945) return 'Born the year the war ended.';
   if (age <= 16) return 'Gen Alpha has arrived.';
   if (age <= 27) return 'Full-on Gen Z energy.';
   if (age <= 43) return 'Millennial, certified.';
   if (age <= 59) return 'Gen X — the cool ones.';
-  if (age <= 75) return 'Baby Boomer with stories to tell.';
-  return 'A lifetime of incredible hobbies.';
+  if (age <= 75) return 'Boomer — with more road ahead than the maths admits.';
+  return 'Past the average, which is the good news.';
 }
 
 // ─── Progress dots ────────────────────────────────────────────────────────────
@@ -194,7 +215,7 @@ export function OnboardingFlow({ user }: { user: OnboardingUser }) {
       const change = dir === 'minus' ? -1 : 1;
       holdTimerRef.current = setTimeout(() => {
         intervalRef.current = setInterval(() => {
-          setBirthYear((y) => Math.min(currentYear, Math.max(1940, y + change)));
+          setBirthYear((y) => Math.min(currentYear, Math.max(MIN_YEAR, y + change)));
         }, 80);
       }, 400);
     },
@@ -370,19 +391,46 @@ export function OnboardingFlow({ user }: { user: OnboardingUser }) {
                     </p>
                   </div>
 
-                  {/* Big year display */}
+                  {/* The year IS the input.
+                      It used to be a display <span> beside a number input that
+                      was pointer-events-none, tabIndex={-1} and aria-hidden —
+                      so the only way to set a birth year was the +/- steppers.
+                      That is 51 clicks from the 2001 default to 1950, and no
+                      path at all by keyboard or screen reader. Anyone who did
+                      not want to click fifty times hit "Skip for now", which
+                      silently empties the life grid, /trajectory and
+                      /commitments. */}
                   <div className="mb-2 text-center">
-                    <span className="text-5xl font-black tracking-tight text-growth sm:text-6xl">
-                      {birthYear}
-                    </span>
+                    <label htmlFor="birth-year" className="sr-only">
+                      Year you were born
+                    </label>
+                    <input
+                      id="birth-year"
+                      type="text"
+                      inputMode="numeric"
+                      autoComplete="bday-year"
+                      value={birthYear}
+                      onChange={(e) => {
+                        const val = Number.parseInt(e.target.value.trim(), 10);
+                        if (!Number.isNaN(val)) setBirthYear(val);
+                      }}
+                      onBlur={() => {
+                        // Clamp on blur, not on change: clamping mid-typing makes
+                        // "195" jump to the floor before the last digit lands.
+                        setBirthYear((y) => Math.min(currentYear, Math.max(MIN_YEAR, y)));
+                      }}
+                      className="w-[5ch] border-b-2 border-border bg-transparent text-center text-5xl font-black tracking-tight text-growth tabular-nums outline-none focus:border-growth sm:text-6xl"
+                    />
                   </div>
 
                   {/* Year stepper */}
                   <div className="mb-4 flex items-center justify-center gap-5">
                     {/* Minus */}
                     <button
+                      type="button"
+                      aria-label="One year earlier"
                       onClick={() => {
-                        setBirthYear((y) => Math.max(1940, y - 1));
+                        setBirthYear((y) => Math.max(MIN_YEAR, y - 1));
                       }}
                       onMouseDown={() => startHold('minus')}
                       onMouseUp={stopHold}
@@ -394,25 +442,10 @@ export function OnboardingFlow({ user }: { user: OnboardingUser }) {
                       −
                     </button>
 
-                    {/* Hidden number input for manual entry */}
-                    <input
-                      type="number"
-                      value={birthYear}
-                      onChange={(e) => {
-                        const val = parseInt(e.target.value, 10);
-                        if (!Number.isNaN(val) && val >= 1940 && val <= currentYear) {
-                          setBirthYear(val);
-                        }
-                      }}
-                      min={1940}
-                      max={currentYear}
-                      className="pointer-events-none absolute h-0 w-0 opacity-0"
-                      tabIndex={-1}
-                      aria-hidden="true"
-                    />
-
                     {/* Plus */}
                     <button
+                      type="button"
+                      aria-label="One year later"
                       onClick={() => {
                         setBirthYear((y) => Math.min(currentYear, y + 1));
                       }}

@@ -141,27 +141,43 @@ caught correctly:
    `landing-astro/`, so these specs are stale against both targets and need
    rewriting against whichever surface they mean to cover. Still open.
 
-### Known flake
+### The fresh-database 403 (resolved 2026-07-26)
 
-Against a **freshly created** `dev.db`, the first authenticated test
-(`/daily renders for a signed-in user`) fails with `Test sign-in failed (403)` and
-passes on Playwright's retry. It reproduces only on a brand-new database, never on
-a warm one, and CI absorbs it via `retries: 2`.
+For a long time the first authenticated test failed with
+`Test sign-in failed (403)` against a **freshly created** `dev.db` and passed on
+retry. Four hypotheses were tested and ruled out — cold Next compile, missing
+account, better-auth rate limiting, and a missing request `Origin`. None was the
+cause, and the `Origin` experiment made it measurably worse.
 
-Four hypotheses were tested and **ruled out**, recorded so the next attempt does
-not repeat them:
+**Actual cause:** a successful sign-up already sets a session cookie, and
+better-auth returns 403 from `sign-in/email` when the request context is
+already authenticated. The fixture ran sign-up and sign-in unconditionally
+through one shared cookie jar, so:
 
-| Hypothesis | How it was tested | Result |
-| --- | --- | --- |
-| Cold Next compile of `/daily` | Extra `goto` to warm the route before asserting | Still flaky |
-| The account does not exist yet | `curl` sign-up against a cold server, fresh DB | **200** — created fine |
-| better-auth rate limiting | Six rapid `curl` sign-ins | All **200** |
-| Missing request Origin in a new context | `page.goto('/login')` before the auth POSTs | **Made it worse** (2 failed, 12 skipped) |
+- **Fresh database** — sign-up succeeds, sets a session, the following sign-in
+  is refused 403, first test fails.
+- **Warm database** — sign-up fails ("already exists"), no cookie is set, the
+  sign-in succeeds.
 
-Still unexplained: `page.request.post` gets a 403 where plain `curl` gets a 200,
-on the first test only. The difference lives in the headers Playwright's request
-context sends, so the next step is to capture the failing call's actual
-request/response headers rather than reason about them.
+Which is why it only ever appeared on a new database. It also explains the two
+observations that made it look mysterious: plain `curl` never reproduced it
+because each invocation used a fresh cookie jar, and retrying the sign-in never
+helped because the session cookie was still present on the retry.
+
+Confirmed directly rather than inferred:
+
+```
+sign-up  (empty jar)      → 200, sets session_token
+sign-in  (reusing jar)    → 403
+sign-in  (no cookies)     → 200
+```
+
+`e2e/fixtures/auth.ts` now returns early when sign-up succeeds. Verified with
+18/18 passing against a brand-new seeded database at `--retries=0`.
+
+**Generalisable:** any auth endpoint may reject a credential exchange that a
+client already holds a session for. When a fixture chains create-then-login
+through one context, check whether the create step logged you in.
 
 ### Writing authenticated specs against a persistent `dev.db`
 

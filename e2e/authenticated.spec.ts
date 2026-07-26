@@ -129,15 +129,30 @@ test.describe('authenticated surfaces', () => {
     const field = authedPage.getByLabel('Your creed');
     await expect(field).toBeVisible();
 
-    // Retry the fill until it sticks. The textarea is a controlled component,
-    // so a fill that lands before React hydrates updates the DOM but not the
-    // component state — hydration then reverts it, the form sees an unchanged
-    // creed, skips the write, and still reports success. Visible is not
-    // interactive, and this is the race that made the assertion below flap.
-    await expect(async () => {
-      await field.fill(creed);
-      await expect(field).toHaveValue(creed);
-    }).toPass({ timeout: 15_000 });
+    // Wait for React to actually own the textarea before typing into it.
+    //
+    // It is a controlled component, so a fill that lands before hydration
+    // updates the DOM but never the component state; hydration then reverts it,
+    // the form compares the creed against an unchanged initial prop, skips the
+    // write, and still reports "Profile updated!". `toBeVisible()` only proves
+    // the server HTML arrived.
+    //
+    // Gated on React's own hydration marker rather than a timeout: React
+    // attaches `__reactFiber$…` / `__reactProps$…` keys to each host node as it
+    // hydrates. A retry-until-it-sticks loop worked locally but timed out in
+    // CI, where /settings cold-compiles under `next dev` with two workers and
+    // hydration lands far later than any budget worth hardcoding.
+    await authedPage.waitForFunction(
+      () => {
+        const el = document.getElementById('creed');
+        return !!el && Object.keys(el).some((k) => k.startsWith('__react'));
+      },
+      undefined,
+      { timeout: 60_000 }
+    );
+
+    await field.fill(creed);
+    await expect(field).toHaveValue(creed);
     await authedPage.getByRole('button', { name: 'Save changes' }).click();
 
     // Wait for the form's own success signal before navigating: navigating early
