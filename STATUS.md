@@ -32,8 +32,12 @@ is the bridge between daily practice and life aspirations.
   remaining weeks are for. The mortality frame previously existed only behind
   Google OAuth, so the most affecting thing the product does was unreachable
   for a first-time visitor. It is now the hero CTA on the Astro landing and the
-  closing link on `/manifesto`. Uses conditional life expectancy rather than
-  the dashboard's fixed 4,000 weeks — see
+  closing link on `/manifesto`.
+- **Mortality maths corrected everywhere (2026-07-26):** every surface now
+  derives weeks remaining from conditional life expectancy. The old fixed
+  4,000-week frame told a 71-year-old they had ~270 weeks left and anyone past
+  77 exactly zero, on `/dashboard`, `/daily`, `/trajectory`, `/look-back`,
+  `/commitments` and their public profile. See
   [`docs/architecture/decisions.md`](docs/architecture/decisions.md) A10.
 - **Discovery:** the hobby quiz (`/find-your-hobby`) is the single primary
   discovery UX (2026-07-03). The other three surfaces (`/hobbies`, `/explore`,
@@ -138,13 +142,7 @@ and is genuinely public — that one is consistent.
    [`docs/product/overview.md`](docs/product/overview.md).
 5. Tighten the first-time user journey to a meaningful public timeline.
 6. Wire habits ↔ commitments (optional explicit link, no auto-link by default).
-7. **Reconcile the two mortality models.** `/commitments` shows "~N weeks of
-   your remaining M" from the fixed 4,000-week frame while `/life-in-weeks`
-   uses conditional life expectancy, so a signed-in user can meet two different
-   remaining-weeks figures. The conditional model is the correct one; adopting
-   it in `mortality.ts` changes the life grid on `/dashboard`, `/daily`,
-   `/trajectory`, `/look-back` and `/u/[username]`. See A10.
-8. Decide whether the social layer earns investment. `follows` is a vanity
+7. Decide whether the social layer earns investment. `follows` is a vanity
    counter — no follower list, no feed, and no notification of any kind exists
    in the codebase, so a like, comment, or follow is silently discarded. Either
    ship notifications or stop presenting these as social features.

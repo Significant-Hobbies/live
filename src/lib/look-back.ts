@@ -149,7 +149,9 @@ function generateOpening(data: LookBackData, name: string): NarrativeSection {
       const grid = buildLifeGrid(birth, new Set());
       const years = Math.floor(grid.weeksLived / 52);
       paragraphs.push(
-        `You've been alive for about ${years} years. That's ${grid.weeksLived.toLocaleString()} weeks. Of those, ${grid.weeksRemaining.toLocaleString()} are ahead of you — squares on the grid that haven't been filled yet.`
+        // Not "of those": the remaining weeks are not a subset of the lived
+        // ones, and the sentence read as nonsense once both numbers were real.
+        `You've been alive for about ${years} years — ${grid.weeksLived.toLocaleString()} weeks. Roughly ${grid.weeksRemaining.toLocaleString()} more are ahead of you: squares on the grid that haven't been filled yet.`
       );
     }
   }

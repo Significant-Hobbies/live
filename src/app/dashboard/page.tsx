@@ -240,10 +240,13 @@ export default async function DashboardPage() {
 
           {/* Weeks stats */}
           {hasBirthYear && (
+            // "Stamped" means a week you logged practice in. These are weeks
+            // *lived*, which is a different and much larger number — the old
+            // copy credited a 71-year-old with 3,734 practice sessions.
             <p className="text-center text-sm text-muted-foreground">
-              {lifeGrid.weeksLived.toLocaleString()} weeks stamped ·{' '}
+              {lifeGrid.weeksLived.toLocaleString()} weeks lived ·{' '}
               <span className="text-primary">
-                {lifeGrid.weeksRemaining.toLocaleString()} to stamp
+                {lifeGrid.weeksRemaining.toLocaleString()} ahead of you
               </span>{' '}
               of ~{lifeGrid.totalWeeks.toLocaleString()}
             </p>

@@ -202,26 +202,31 @@ practice they have never seen. A read-only sample resolves both.
 - `/settings` and `/setup` stay gated with no preview — username, timezone and
   profile visibility have no anonymous meaning.
 
-## A10 — Two mortality models, on purpose
+## A10 — Remaining life expectancy is conditional, everywhere
 
-**Decision:** The dashboard grid keeps the fixed 4,000-week frame
-(`src/lib/mortality.ts`). The anonymous `/life-in-weeks` surface uses
-conditional remaining life expectancy instead (`src/lib/life-in-weeks.ts`) and
-draws its grid to `weeksLived + weeksRemaining`.
+**Decision:** Every surface that shows weeks remaining derives them from
+`remainingYears()` in `src/lib/mortality.ts`, a published period-life-table
+curve. `buildLifeGrid` draws to `weeksLived + weeksRemaining`, so the grid's
+length is personal. `LIFE_EXPECTANCY_WEEKS` survives only as the fallback for a
+user who has not given a birth year.
 
 **Why:** Life expectancy at birth is not life expectancy at your age.
 Subtracting age from ~77 is the intuitive sum and it gets steadily more wrong
-the older the reader is — at 64 it predicts about 13 more years against a real
-figure near 21. The dashboard can carry that abstraction because it is framing
-a philosophy for someone who already opted in. A cold, anonymous surface aimed
-at a first-time visitor cannot: it hands its oldest, most susceptible reader a
-number that is both false and bleak, and by construction the naive model
-eventually reaches zero.
+the older the reader is — at 71 it predicts about 6 more years against a real
+figure near 14 — and past 77 it returns zero.
 
-`remainingYears()` interpolates a published period-life-table curve. Its two
-defining properties — monotonic decrease, never zero — are asserted across
-every age 0-120 in `src/lib/life-in-weeks.test.ts`, alongside a regression
-pinning the 64-year-old case.
+This was shipped first on `/life-in-weeks` only, on the reasoning that the
+dashboard could carry the abstraction because its reader had already opted in.
+That was wrong, and the asymmetry was worse than either model on its own: a
+71-year-old met an honest number on the anonymous page, signed up on the
+strength of it, and was then told by `/dashboard` that they had 270 weeks left.
+Anyone past 77 got a fully dark grid and a literal zero — including on their
+public profile at `/u/[username]`. The signup was the punishment.
+
+The curve's two defining properties — monotonic decrease, never zero — are
+asserted across every age in both `mortality.test.ts` (via `buildLifeGrid`, for
+every birth year 1900-2025) and `life-in-weeks.test.ts` (via `remainingYears`,
+ages 0-120), with regressions pinning the 64- and 71-year-old cases.
 
 **Constraints:**
 
@@ -234,7 +239,8 @@ pinning the 64-year-old case.
 - `/life-in-weeks` stores the birth year in `localStorage` only. Nothing is
   sent to a server and no account is involved, which is what the page promises
   in its own copy.
-- **Known divergence:** `/commitments` renders "~N weeks of your remaining M"
-  from the 4,000-week model, so a signed-in user can see two different
-  remaining-weeks figures. Reconciling means changing `mortality.ts` and the
-  life grid everywhere it appears; not attempted here.
+- Weeks *lived* and weeks *stamped* are different numbers and must never share
+  a label. The dashboard read "3,734 weeks stamped" off `weeksLived`, crediting
+  a 71-year-old with 3,734 practice sessions they had not done.
+- The grid's row count is personal, so nothing may assume ~77 rows or a
+  4,000-cell array. `LifeGrid` derives its axis label from `cells.length`.

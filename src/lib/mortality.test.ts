@@ -69,10 +69,43 @@ describe('mortality', () => {
   });
 
   describe('buildLifeGrid', () => {
-    it('produces one cell per week up to LIFE_EXPECTANCY_WEEKS', () => {
+    it('produces one cell per week of the whole expected life', () => {
       const grid = buildLifeGrid(new Date(2026, 0, 1), new Set(), new Date(2026, 0, 15));
-      expect(grid.cells).toHaveLength(LIFE_EXPECTANCY_WEEKS);
-      expect(grid.totalWeeks).toBe(LIFE_EXPECTANCY_WEEKS);
+      expect(grid.cells).toHaveLength(grid.totalWeeks);
+      expect(grid.totalWeeks).toBe(grid.weeksLived + grid.weeksRemaining);
+    });
+
+    /**
+     * The regression that matters most on this module. The grid used to be a
+     * flat 4,000 cells with `weeksRemaining = max(0, 4000 - lived)`, so a
+     * 71-year-old was told they had ~270 weeks left and anyone past 77 got a
+     * fully dark grid and a literal zero — on /dashboard, /daily, /trajectory,
+     * /look-back, /commitments and their public profile.
+     */
+    it('never tells anyone they have zero weeks left, at any age', () => {
+      const now = new Date(2026, 6, 26);
+      for (let birthYear = 1900; birthYear <= 2025; birthYear += 1) {
+        const grid = buildLifeGrid(new Date(birthYear, 0, 1), new Set(), now);
+        expect(grid.weeksRemaining, `born ${birthYear}`).toBeGreaterThan(0);
+        expect(
+          grid.cells.some((c) => !c.lived),
+          `born ${birthYear}`
+        ).toBe(true);
+      }
+    });
+
+    it('gives an older user a longer grid, because expectancy is conditional', () => {
+      const now = new Date(2026, 6, 26);
+      const younger = buildLifeGrid(new Date(1996, 0, 1), new Set(), now); // 30
+      const older = buildLifeGrid(new Date(1936, 0, 1), new Set(), now); // 90
+      expect(older.totalWeeks).toBeGreaterThan(younger.totalWeeks);
+    });
+
+    it('gives a 71-year-old a believable remainder, not the naive ~270 weeks', () => {
+      const grid = buildLifeGrid(new Date(1955, 0, 1), new Set(), new Date(2026, 6, 26));
+      // ~14 years of conditional life expectancy at 71.
+      expect(grid.weeksRemaining).toBeGreaterThan(600);
+      expect(grid.weeksRemaining).toBeLessThan(850);
     });
 
     it('marks lived vs future weeks', () => {

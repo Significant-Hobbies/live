@@ -1,83 +1,26 @@
 /**
  * Felt units for the anonymous life-in-weeks surface.
  *
- * `mortality.ts` gives the dashboard's fixed 4,000-week grid. This module
- * answers a different question — what does the *remainder* feel like? "1,100
- * weeks" is an abstraction. "1,100 Saturdays" is a Tuesday-afternoon
- * realisation.
+ * `mortality.ts` owns the grid maths and the remaining-life-expectancy curve —
+ * including why that curve is conditional rather than "4,000 minus weeks
+ * lived". This module answers a different question: what does the remainder
+ * *feel* like? "1,100 weeks" is an abstraction. "1,100 Saturdays" is a
+ * Tuesday-afternoon realisation.
  *
- * ## Why this does not use LIFE_EXPECTANCY_WEEKS
- *
- * The 4,000-week figure is life expectancy *at birth*, and subtracting weeks
- * lived from it is a well-known way to be wrong about older people. Life
- * expectancy is conditional: reaching 65 means you have already survived every
- * risk that removed people before 65, so your expected remaining years are far
- * higher than "77 minus your age" implies. At 64 that naive model predicts ~13
- * more years; the actual figure is ~21.
- *
- * Getting that wrong is not a rounding error. It hands the oldest reader — the
- * one most likely to take it to heart — a number that is both false and bleak.
- * So this module interpolates a real remaining-life-expectancy curve instead,
- * and by construction it never returns zero.
+ * `remainingYears` is re-exported so callers of this module do not have to
+ * reach past it into `mortality.ts` for the number the units are built from.
  *
  * Everything here is pure and deterministic given `now`, so the numbers shown
  * to a real person are covered by tests.
  */
 
-import { weeksLived } from './mortality';
+import { remainingYears, weeksLived } from './mortality';
 
 const WEEKS_PER_YEAR = 52;
 /** Synodic month ≈ 29.53 days ≈ 4.219 weeks. */
 const WEEKS_PER_LUNATION = 29.53059 / 7;
 
-/**
- * Remaining life expectancy in years, by current age. Anchor points from
- * period life-table data (both sexes, high-income average), rounded — this is
- * a reflective tool, not an actuarial product.
- *
- * The curve's defining property: it decreases with age but never reaches zero,
- * because at every age the people still alive have a future.
- */
-const REMAINING_YEARS_BY_AGE: ReadonlyArray<readonly [age: number, years: number]> = [
-  [0, 77],
-  [10, 68],
-  [20, 58],
-  [30, 48],
-  [40, 39],
-  [50, 30],
-  [60, 22],
-  [65, 18],
-  [70, 14.5],
-  [75, 11.5],
-  [80, 8.5],
-  [85, 6],
-  [90, 4.2],
-  [95, 3],
-  [100, 2.2],
-];
-
-/** Floor for anyone past the end of the table. Never zero. */
-const MIN_REMAINING_YEARS = 2;
-
-/**
- * Linearly interpolated remaining life expectancy, in years, for a given age.
- * Exported for tests — the monotonicity and never-zero properties are the
- * whole point of this module.
- */
-export function remainingYears(age: number): number {
-  if (age <= 0) return REMAINING_YEARS_BY_AGE[0][1];
-
-  for (let i = 0; i < REMAINING_YEARS_BY_AGE.length - 1; i += 1) {
-    const [lowAge, lowYears] = REMAINING_YEARS_BY_AGE[i];
-    const [highAge, highYears] = REMAINING_YEARS_BY_AGE[i + 1];
-    if (age >= lowAge && age <= highAge) {
-      const t = (age - lowAge) / (highAge - lowAge);
-      return lowYears + t * (highYears - lowYears);
-    }
-  }
-
-  return MIN_REMAINING_YEARS;
-}
+export { remainingYears };
 
 export type FeltUnit = {
   id: 'saturdays' | 'summers' | 'fullMoons' | 'mornings';
