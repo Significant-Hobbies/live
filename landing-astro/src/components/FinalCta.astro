@@ -1,83 +1,34 @@
----
-// Final CTA — the quiet close. The whale drifts above the heading; one
-// sentence, two actions, nothing else.
----
+<section
+  class="relative flex min-h-[78svh] items-end overflow-hidden border-t border-border bg-background px-6 py-16 lg:px-12 lg:py-20"
+>
+  <img
+    src="/hero/hobby-horizon-poster.jpg"
+    alt=""
+    loading="lazy"
+    width="1280"
+    height="720"
+    class="absolute inset-0 h-full w-full object-cover"
+  />
+  <div
+    class="absolute inset-0"
+    style="background:
+      linear-gradient(to right, oklch(0.08 0.025 250 / 0.94) 0%, oklch(0.08 0.025 250 / 0.58) 60%, oklch(0.08 0.025 250 / 0.25) 100%),
+      linear-gradient(to top, oklch(0.08 0.025 250 / 0.84) 0%, transparent 65%);"
+  ></div>
 
-<section class="relative overflow-hidden bg-background px-6 py-28 text-center lg:px-12 lg:py-36">
-  <div class="relative mx-auto max-w-3xl">
-    <!-- Whale — small golden whale, tail lifted, drifting gently -->
-    <svg
-      width="88"
-      height="66"
-      viewBox="0 0 240 180"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      class="whale-drift mx-auto mb-8"
-      aria-hidden="true"
+  <div class="relative mx-auto w-full max-w-6xl">
+    <p class="mb-5 text-base font-medium text-primary">The rest is still unwritten.</p>
+    <h2
+      class="max-w-4xl font-serif text-5xl font-medium tracking-tight text-foreground sm:text-6xl lg:text-7xl"
+      style="line-height: 0.98;"
     >
-      <path
-        d="M 20 95 C 20 66, 52 50, 92 50 C 128 50, 154 62, 164 80 C 167 86, 168 92, 166 98 C 162 108, 150 115, 134 119 C 104 127, 60 123, 38 110 C 26 103, 20 99, 20 95 Z"
-        fill="#d4a843"
-      />
-      <path
-        d="M 156 92 C 163 88, 168 81, 170 73 C 172 60, 178 49, 188 42 C 191 40, 194 41, 194 44 C 192 53, 190 62, 191 69 C 198 64, 207 62, 216 63 C 219 63, 220 66, 218 69 C 209 74, 202 82, 197 92 C 193 101, 184 107, 173 106 C 165 105, 159 99, 156 92 Z"
-        fill="#d4a843"
-      />
-      <path
-        d="M 28 103 C 55 118, 100 122, 138 114 C 110 124, 62 122, 34 108 Z"
-        fill="#e8c770"
-        opacity="0.55"
-      />
-      <path
-        d="M 50 84 Q 55 80, 60 84"
-        stroke="#1a0a00"
-        stroke-width="3"
-        stroke-linecap="round"
-        fill="none"
-      />
-      <path
-        d="M 86 42 C 84 34, 86 26, 92 20 M 96 42 C 97 34, 102 28, 110 25"
-        stroke="#e8c770"
-        stroke-width="2.5"
-        stroke-linecap="round"
-        opacity="0.45"
-        fill="none"
-      />
-    </svg>
-
-    <h2 class="font-serif text-4xl font-medium tracking-tight text-foreground sm:text-5xl" style="line-height: 1.15;">
-      Your hobbies are your story.
+      The next chapter needs something worth remembering.
     </h2>
-    <p class="mx-auto mt-5 max-w-xl text-lg text-muted-foreground">
-      Map what shaped you. Discover what to try next. No sign-up required to start.
-    </p>
-
-    <div class="mt-9 flex flex-wrap justify-center gap-4">
-      <a
-        href="/timeline/new"
-        class="rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground no-underline transition-opacity hover:opacity-90 focus-visible:ring-2 focus-visible:ring-foreground/50 focus-visible:outline-none"
-      >
-        Start your hobby map →
-      </a>
-      <a
-        href="/find-your-hobby"
-        class="rounded-full border border-border px-8 py-3.5 text-sm font-semibold text-foreground no-underline transition-colors hover:border-muted-foreground focus-visible:ring-2 focus-visible:ring-foreground/50 focus-visible:outline-none"
-      >
-        Find your hobby →
-      </a>
-    </div>
+    <a
+      href="/timeline/new"
+      class="mt-9 inline-flex min-h-13 items-center gap-3 rounded-full bg-primary px-7 text-sm font-semibold text-primary-foreground no-underline transition-colors hover:bg-foreground focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-4 focus-visible:ring-offset-background focus-visible:outline-none"
+    >
+      Start your hobby map <span aria-hidden="true">→</span>
+    </a>
   </div>
 </section>
-
-<style>
-  @keyframes whaleDrift {
-    0%, 100% { transform: translateY(0) rotate(-1deg); }
-    50% { transform: translateY(-8px) rotate(1deg); }
-  }
-  .whale-drift {
-    animation: whaleDrift 8s ease-in-out infinite;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .whale-drift { animation: none; }
-  }
-</style>

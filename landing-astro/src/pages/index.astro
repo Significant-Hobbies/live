@@ -24,7 +24,9 @@ const DESCRIPTION =
       muted
       loop
       playsinline
-      preload="metadata"
+      preload="auto"
+      width="1280"
+      height="720"
       aria-hidden="true"
     >
       <source src="/hero/hobby-horizon.mp4" type="video/mp4" />
@@ -70,13 +72,4 @@ const DESCRIPTION =
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     heroVideo?.pause();
   }
-
-  // Mouse-tracking for spotlight cards — sets --mouse-x/--mouse-y CSS vars
-  document.querySelectorAll('.spotlight-card').forEach((card) => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
-      card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
-    });
-  });
 </script>

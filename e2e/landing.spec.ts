@@ -40,6 +40,15 @@ test.describe('Landing page (Astro overlay)', () => {
     await expect(video).toHaveAttribute('autoplay', '');
     await expect(video).toHaveAttribute('muted', '');
     await expect(video).toHaveAttribute('playsinline', '');
+    await expect(video).toHaveAttribute('preload', 'auto');
+    await expect(video).toHaveAttribute('width', '1280');
+    await expect(video).toHaveAttribute('height', '720');
+
+    const posterPreload = page.locator(
+      'link[rel="preload"][as="image"][href="/hero/hobby-horizon-poster.jpg"]'
+    );
+    await expect(posterPreload).toHaveAttribute('type', 'image/jpeg');
+    await expect(posterPreload).toHaveAttribute('fetchpriority', 'high');
   });
 
   test('states the no-signup promise, which the product actually honours', async ({ page }) => {
