@@ -243,7 +243,7 @@ export type Experience = {
 
 // ─── Milestones ──────────────────────────────────────────────────────────────
 
-export type MilestoneHorizon = 'before-30' | 'before-50';
+type MilestoneHorizon = 'before-30' | 'before-50';
 
 export type Milestone = {
   title: string;
@@ -1504,7 +1504,7 @@ function slugify(value: string): string {
  * before them, `/experiences/<slug>` would have been a heading and nothing
  * else, which is a thin page, and thin pages are a site-wide signal.
  */
-export const IDEA_DESCRIPTIONS: Record<string, string> = {
+const IDEA_DESCRIPTIONS: Record<string, string> = {
   'see-the-northern-lights-in-iceland-or-norway':
     'Aurora forecasts are a gamble. Clear skies, dark months, and most people waiting several cold nights for one good hour.',
   'walk-the-camino-de-santiago-800km-across-spain':

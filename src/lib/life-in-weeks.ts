@@ -22,7 +22,7 @@ const WEEKS_PER_LUNATION = 29.53059 / 7;
 
 export { remainingYears };
 
-export type FeltUnit = {
+type FeltUnit = {
   id: 'saturdays' | 'summers' | 'fullMoons' | 'mornings';
   count: number;
   label: string;

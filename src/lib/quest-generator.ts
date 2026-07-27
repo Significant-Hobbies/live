@@ -61,7 +61,7 @@ const DORMANT_TEMPLATES = [
 const REKINDLE_TEMPLATES = [
   {
     title: (hobby: string) => `Pick ${hobby.toLowerCase()} back up`,
-    desc: (hobby: string, phase: string) =>
+    desc: (hobby: string, _phase: string) =>
       `${hobby} keeps coming back — it's appeared across multiple phases of your life. That's not coincidence. Commit to it properly this week.`,
   },
   {

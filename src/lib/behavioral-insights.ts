@@ -146,7 +146,7 @@ function computeStreaks(
 function mostRecentLogDate(logs: Array<{ dayDate: string; completed: boolean }>): Date | null {
   if (logs.length === 0) return null;
   const sorted = [...logs].sort((a, b) => (a.dayDate < b.dayDate ? 1 : -1));
-  return new Date(sorted[0].dayDate + 'T00:00:00');
+  return new Date(`${sorted[0].dayDate}T00:00:00`);
 }
 
 function countThisMonth(logs: Array<{ dayDate: string; completed: boolean }>): number {
