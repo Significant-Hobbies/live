@@ -126,7 +126,22 @@ export function SiteFooter() {
               Sarthak
             </a>
           </span>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 sm:justify-end">
+            <Link href="/changelog" prefetch={false} className="hover:text-foreground">
+              Changelog
+            </Link>
+            <a
+              href="https://github.com/Significant-Hobbies/significanthobbies/issues"
+              className="hover:text-foreground"
+            >
+              Roadmap
+            </a>
+            <a
+              href="https://github.com/Significant-Hobbies/significanthobbies"
+              className="hover:text-foreground"
+            >
+              Source
+            </a>
             <Link href="/privacy" prefetch={false} className="hover:text-foreground">
               Privacy
             </Link>

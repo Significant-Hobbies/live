@@ -2,7 +2,7 @@
   "$schema": "fleet.design-review.v1",
   "version": 1,
   "project": "significanthobbies",
-  "target": "Onboarding, shared navigation, Life Bingo, and hobby questionnaire consistency",
+  "target": "Owned product changelog",
   "mode": "preserve",
   "register": "product",
   "context": {
@@ -14,37 +14,25 @@
     "probes": [],
     "selected": "existing-design",
     "approval": "not-required",
-    "before": ".fleet/evidence/before-life-bingo-1440.png"
+    "before": "artifacts/design/before.png"
   },
   "evidence": {
     "screenshots": [
       {
         "width": 390,
-        "path": ".fleet/evidence/after-life-bingo-390.png"
+        "path": "artifacts/design/after-390.png"
       },
       {
         "width": 768,
-        "path": ".fleet/evidence/after-life-bingo-768.png"
+        "path": "artifacts/design/after-768.png"
       },
       {
         "width": 1440,
-        "path": ".fleet/evidence/after-life-bingo-1440.png"
-      },
-      {
-        "width": 390,
-        "path": ".fleet/evidence/after-onboarding-390.png"
-      },
-      {
-        "width": 390,
-        "path": ".fleet/evidence/after-quiz-390.png"
-      },
-      {
-        "width": 1728,
-        "path": ".fleet/evidence/after-quiz-1440.png"
+        "path": "artifacts/design/after-1440.png"
       }
     ],
     "projectCheck": {
-      "command": "pnpm build; pnpm exec playwright test e2e/onboarding.spec.ts e2e/quiz.spec.ts e2e/life-bingo.spec.ts",
+      "command": "pnpm typecheck && pnpm build && pnpm docs:check && git diff --check",
       "status": "pass"
     },
     "critique": {
@@ -66,6 +54,6 @@
   },
   "ownerFeedback": {
     "decision": "delegated",
-    "note": "Owner delegated a bounded rough-edge cleanup while preserving the current design direction."
+    "note": "Owner explicitly delegated the owned changelog rollout on 2026-07-29."
   }
 }

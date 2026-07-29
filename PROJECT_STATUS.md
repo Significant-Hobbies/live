@@ -5,7 +5,7 @@
 > Update this file when durable current or shipped product truth changes. Do
 > not let deploy-version snapshots accumulate here — put those in the archive.
 
-Last updated: 2026-07-26
+Last updated: 2026-07-29
 
 ## Why / What
 
@@ -21,6 +21,9 @@ is the bridge between daily practice and life aspirations.
 
 ## Timeline
 
+- **2026-07-29:** Added an owned `/changelog` with verified shipped outcomes
+  and direct GitHub Roadmap and Source links.
+
 Historical milestones live in
 [`docs/knowledge/archive/project-status-2026-07-13.md`](docs/knowledge/archive/project-status-2026-07-13.md).
 
@@ -35,6 +38,7 @@ Historical milestones live in
 - **Runtime:** Cloudflare Worker `significanthobbies` (OpenNext) + Astro
   landing overlay for anon `GET /`. Turso (libSQL) + Drizzle ORM +
   better-auth Google OAuth. PostHog analytics.
+- **Owned product history:** public editorial changelog at `/changelog`.
 - **Two dimensions shipped:** Daily ritual (`/daily` — AM/PM prompts, habits,
   compulsory journal) and Living (timelines, bucket lists, side quests,
   public profiles, SEO blog, discovery quiz).
