@@ -24,9 +24,16 @@ export function SiteFooter() {
               See your life in weeks →
             </Link>
             <Link
-              href="/manifesto"
+              href="/life-in-weeks"
               prefetch={false}
               className="mt-2 block w-fit text-xs text-muted-foreground underline underline-offset-2 hover:text-foreground"
+            >
+              See your life in weeks →
+            </Link>
+            <Link
+              href="/manifesto"
+              prefetch={false}
+              className="mt-2 inline-block text-xs text-muted-foreground underline underline-offset-2 hover:text-foreground"
             >
               Read the manifesto →
             </Link>

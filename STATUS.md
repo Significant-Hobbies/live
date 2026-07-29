@@ -31,8 +31,7 @@ is the bridge between daily practice and life aspirations.
   one birth year in, the whole life grid out, then a turn toward what the
   remaining weeks are for. The mortality frame previously existed only behind
   Google OAuth, so the most affecting thing the product does was unreachable
-  for a first-time visitor. It is now the single hero CTA on a video-led Astro
-  landing and the closing link on `/manifesto`.
+  for a first-time visitor. It is now the single hero CTA on a video-led Astro  landing and the closing link on `/manifesto`.
 - **Mortality maths corrected everywhere (2026-07-26):** every surface now
   derives weeks remaining from conditional life expectancy. The old fixed
   4,000-week frame told a 71-year-old they had ~270 weeks left and anyone past
