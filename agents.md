@@ -1,7 +1,7 @@
 # AGENTS.md — significanthobbies
 
-> Concise agent bootloader. Depth lives in [`docs/`](docs/index.md). Live state
-> in [`STATUS.md`](STATUS.md). Full map at [`docs/index.md`](docs/index.md).
+> Concise agent bootloader. Depth lives in [`docs/`](docs/index.md).
+> Current/shipped product truth is in [`PROJECT_STATUS.md`](PROJECT_STATUS.md).
 
 ## Shared fleet standard
 
@@ -81,7 +81,8 @@ migrations or deploys.**
 
 | If you want to… | Read |
 | --- | --- |
-| Live status / blockers / next steps | [`STATUS.md`](STATUS.md) |
+| Current/shipped product truth | [`PROJECT_STATUS.md`](PROJECT_STATUS.md) |
+| Open work and blockers | GitHub Issues |
 | Product thesis, two dimensions, brand | [`docs/product/overview.md`](docs/product/overview.md) |
 | Discovery funnel (quiz-as-primary) | [`docs/product/discovery-funnel.md`](docs/product/discovery-funnel.md) |
 | Runtime shape (Worker, Astro overlay, storage) | [`docs/architecture/overview.md`](docs/architecture/overview.md) |
@@ -103,7 +104,7 @@ migrations or deploys.**
    fact has a canonical doc, edit that doc — do not add a second home.
 2. **Do not duplicate easily-discoverable facts** (route lists, script names,
    binding config, schema fields). Link to the code instead.
-3. **Do not invent information.** Mark unresolved questions in `STATUS.md`.
+3. **Do not invent information.** Track unresolved questions in GitHub Issues.
 4. **Preserve snapshots.** `docs/knowledge/archive/` files are snapshots — do
    not rewrite their bodies to "update" them. Update the current doc and let
    the archive stay a snapshot.
@@ -113,6 +114,6 @@ migrations or deploys.**
 
 ## Active context
 
-See [`STATUS.md`](STATUS.md) for the current objective, active work, blockers,
-and next steps. Do not start new discovery or progression features before the
-7-day quiz-funnel readout.
+See [`PROJECT_STATUS.md`](PROJECT_STATUS.md) for current/shipped product truth
+and GitHub Issues for open work. Do not start new discovery or progression
+features before the 7-day quiz-funnel readout.
