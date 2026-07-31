@@ -1,46 +1,46 @@
 {
   "$schema": "fleet.design-review.v1",
   "version": 1,
-  "project": "significanthobbies",
-  "target": "Daily habit commitment linking",
+  "project": "significanthobbies-retire-social",
+  "target": "Public profile and timeline social affordance retirement",
   "mode": "preserve",
   "register": "product",
   "context": {
     "product": "PRODUCT.md",
-    "design": "src/app/globals.css"
+    "design": "openspec/changes/retire-silent-social-affordances/design.md"
   },
   "direction": {
     "references": [],
     "probes": [],
     "selected": "existing-design",
     "approval": "not-required",
-    "before": "artifacts/design/journal-context-after-390.png"
+    "before": "artifacts/design/before.png"
   },
   "evidence": {
     "screenshots": [
       {
         "width": 390,
-        "path": "artifacts/design/habit-commitment-after-390.png"
+        "path": "artifacts/design/after-390.png"
       },
       {
         "width": 768,
-        "path": "artifacts/design/habit-commitment-after-768.png"
+        "path": "artifacts/design/after-768.png"
       },
       {
         "width": 1440,
-        "path": "artifacts/design/habit-commitment-after-1440.png"
+        "path": "artifacts/design/after-1440.png"
       }
     ],
     "projectCheck": {
-      "command": "pnpm test && pnpm typecheck && pnpm lint && pnpm docs:check && pnpm build && openspec validate --all --strict && git diff --check",
+      "command": "pnpm check && pnpm test && pnpm typecheck && pnpm build",
       "status": "pass"
     },
     "critique": {
-      "score": 36,
+      "score": 40,
       "maximum": 40
     },
     "audit": {
-      "score": 20,
+      "score": 17,
       "maximum": 20
     },
     "unresolved": {
@@ -49,16 +49,11 @@
     },
     "detector": {
       "posture": "advisory",
-      "findings": [
-        "The final mechanical detector returned no findings.",
-        "Independent critique found unsaved-journal navigation and undersized touch targets; separate-tab plan links, 44-pixel targets, row-specific feedback, and reordered guidance resolved them.",
-        "Independent audit found failed creation could discard a draft; creation now retains all fields and presents an actionable alert.",
-        "The pre-existing global header and Feedback widget still overlap full-page evidence at narrow widths, outside this focused change."
-      ]
+      "findings": []
     }
   },
   "ownerFeedback": {
     "decision": "delegated",
-    "note": "The owner explicitly approved all Fleet issue work and delegated final judgment on 2026-07-31."
+    "note": "Owner approved all task decisions; preserve-mode execution was delegated."
   }
 }

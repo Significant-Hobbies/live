@@ -19,7 +19,7 @@ export default function PrivacyPage() {
         <h1 className="mt-3 font-serif text-3xl font-semibold tracking-tight text-foreground">
           Privacy
         </h1>
-        <p className="mt-4 text-xs text-muted-foreground">Last updated: 2026-05-15.</p>
+        <p className="mt-4 text-xs text-muted-foreground">Last updated: 2026-07-31.</p>
       </FadeIn>
 
       <FadeIn className="relative mt-8" delay={0.05}>
@@ -28,7 +28,10 @@ export default function PrivacyPage() {
           <li>Your Google OAuth identity when you sign in.</li>
           <li>Timelines, phases, and any hobbies you enter.</li>
           <li>Quest progress and badge state.</li>
-          <li>Follow relationships if you follow other users.</li>
+          <li>
+            Historical follows, timeline likes, and comments created before those features were
+            retired.
+          </li>
         </ul>
       </FadeIn>
 
@@ -37,6 +40,7 @@ export default function PrivacyPage() {
         <ul className="mt-2 list-disc space-y-1 pl-5">
           <li>No third-party tracking pixels or marketing tags.</li>
           <li>No selling of timeline or hobby data.</li>
+          <li>No active follow, like, or comment features.</li>
         </ul>
       </FadeIn>
 

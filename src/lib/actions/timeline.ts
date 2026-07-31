@@ -1,14 +1,13 @@
 'use server';
 
-import { and, count, eq } from 'drizzle-orm';
+import { count, eq } from 'drizzle-orm';
 import { nanoid } from 'nanoid';
 import { revalidatePath } from 'next/cache';
 import { z } from 'zod';
 
-import { comments, likes, timelines, users } from '~/db/schema';
+import { timelines } from '~/db/schema';
 import { trackActivated, trackCoreAction } from '~/lib/analytics';
 import { firstTimelineDestination } from '~/lib/first-timeline';
-import { enforceRateLimit } from '~/lib/rate-limit';
 import type { Phase, TimelinePin, TimelineVisibility } from '~/lib/types';
 import { parseJSONColumn } from '~/lib/utils';
 import { getServerAuthSession } from '~/server/auth';
@@ -199,123 +198,4 @@ export async function deleteTimeline(id: string) {
 
   await db.delete(timelines).where(eq(timelines.id, id));
   revalidatePath('/timeline');
-}
-
-export async function toggleLike(timelineId: string): Promise<{ liked: boolean; count: number }> {
-  const session = await getServerAuthSession();
-  if (!session?.user?.id) throw new Error('Not authenticated');
-  await enforceRateLimit('like', session.user.id);
-
-  // Authorization: only the owner, or viewers of a PUBLIC/UNLISTED timeline,
-  // may like it. PRIVATE timelines cannot be liked by non-owners.
-  const tl = await db.query.timelines.findFirst({
-    where: eq(timelines.id, timelineId),
-    columns: { userId: true, visibility: true, slug: true },
-  });
-  if (!tl) throw new Error('Not found');
-  const isOwner = tl.userId === session.user.id;
-  if (!isOwner && tl.visibility === 'PRIVATE') throw new Error('Not found');
-
-  const existing = await db.query.likes.findFirst({
-    where: and(eq(likes.userId, session.user.id), eq(likes.timelineId, timelineId)),
-  });
-
-  if (existing) {
-    await db.delete(likes).where(eq(likes.id, existing.id));
-  } else {
-    await db.insert(likes).values({
-      userId: session.user.id,
-      timelineId,
-    });
-  }
-
-  // Recount likes (reflects the toggle above) and reload the timeline owner for
-  // revalidation — independent reads, so run them concurrently.
-  const [[result], tlOwner] = await Promise.all([
-    db.select({ count: count() }).from(likes).where(eq(likes.timelineId, timelineId)),
-    tl.userId
-      ? db.query.users.findFirst({
-          where: eq(users.id, tl.userId),
-          columns: { username: true },
-        })
-      : Promise.resolve(null),
-  ]);
-
-  const likeCount = result?.count ?? 0;
-  revalidatePath(`/timeline/${timelineId}`);
-  if (tl.slug && tlOwner?.username) {
-    revalidatePath(`/u/${tlOwner.username}/${tl.slug}`);
-  }
-  return { liked: !existing, count: likeCount };
-}
-
-export async function addComment(timelineId: string, body: string) {
-  const session = await getServerAuthSession();
-  if (!session?.user?.id) throw new Error('Not authenticated');
-  await enforceRateLimit('comment', session.user.id);
-
-  // Authorization: only the owner, or viewers of a PUBLIC/UNLISTED timeline,
-  // may comment. PRIVATE timelines cannot be commented on by non-owners.
-  const tl = await db.query.timelines.findFirst({
-    where: eq(timelines.id, timelineId),
-    columns: { userId: true, visibility: true, slug: true },
-  });
-  if (!tl) throw new Error('Not found');
-  const isOwner = tl.userId === session.user.id;
-  if (!isOwner && tl.visibility === 'PRIVATE') throw new Error('Not found');
-
-  const trimmed = body.trim().slice(0, 280);
-  if (!trimmed) throw new Error('Comment body is required');
-
-  const [comment] = await db
-    .insert(comments)
-    .values({ userId: session.user.id, timelineId, body: trimmed })
-    .returning();
-
-  // Fetch the comment author info to return, and the timeline owner info for
-  // revalidation — independent reads, so run them concurrently.
-  const [commentUser, tlOwner] = await Promise.all([
-    db.query.users.findFirst({
-      where: eq(users.id, session.user.id),
-      columns: { name: true, username: true, image: true },
-    }),
-    tl.userId
-      ? db.query.users.findFirst({
-          where: eq(users.id, tl.userId),
-          columns: { username: true },
-        })
-      : Promise.resolve(null),
-  ]);
-
-  revalidatePath(`/timeline/${timelineId}`);
-  if (tl.slug && tlOwner?.username) {
-    revalidatePath(`/u/${tlOwner.username}/${tl.slug}`);
-  }
-  return { ...comment, user: commentUser };
-}
-
-export async function deleteComment(commentId: string) {
-  const session = await getServerAuthSession();
-  if (!session?.user?.id) throw new Error('Not authenticated');
-
-  const comment = await db.query.comments.findFirst({
-    where: eq(comments.id, commentId),
-  });
-  if (!comment || comment.userId !== session.user.id) throw new Error('Not found');
-
-  await db.delete(comments).where(eq(comments.id, commentId));
-  revalidatePath(`/timeline/${comment.timelineId}`);
-  const tl = await db.query.timelines.findFirst({
-    where: eq(timelines.id, comment.timelineId),
-    columns: { slug: true, userId: true },
-  });
-  if (tl?.slug && tl.userId) {
-    const tlUser = await db.query.users.findFirst({
-      where: eq(users.id, tl.userId),
-      columns: { username: true },
-    });
-    if (tlUser?.username) {
-      revalidatePath(`/u/${tlUser.username}/${tl.slug}`);
-    }
-  }
 }

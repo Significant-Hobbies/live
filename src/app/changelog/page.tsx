@@ -5,6 +5,14 @@ const repository = 'https://github.com/Significant-Hobbies/significanthobbies';
 
 const releases = [
   {
+    date: '2026-07-31',
+    title: 'Public journeys became more honest',
+    outcomes: [
+      'Profiles and timelines now focus on the journey itself instead of follows, likes, and comments that had no notification or return loop.',
+      'Explore now ranks public timelines by their own phases, hobbies, and recency rather than engagement counts.',
+    ],
+  },
+  {
     date: '2026-07-26',
     title: 'Your life in weeks became a public starting point',
     outcomes: [

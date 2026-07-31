@@ -365,3 +365,30 @@ proof standard of commitments.
 - Deleting a commitment clears the nullable reference with
   `ON DELETE SET NULL`; the habit and its check-in history survive.
 - The signed-out daily preview exposes no relationship controls.
+
+## A15 — Public hobby artifacts are shareable, not a social network
+
+**Decision:** Public profiles and timelines no longer expose follows, likes, or
+comments. Explore ranks and summarizes public timelines from their phases,
+hobbies, spans, and update time rather than engagement data. The three legacy
+social tables remain declared but have no runtime readers or writers.
+
+**Why:** The controls persisted interaction data but the product had no
+notification inbox, follower discovery, activity feed, or return loop. They
+therefore promised a broad social experience the product explicitly does not
+intend to build and distracted from the complete outcome: publishing and
+sharing a meaningful hobby journey.
+
+Adding notifications was rejected. It would expand a small truthfulness fix
+into a new social system whose value has not been established.
+
+**Constraints:**
+
+- Existing profile sharing and timeline share, compare, export, visibility, and
+  owner-edit actions remain available.
+- No active route or server action reads or writes `Like`, `Comment`, or
+  `Follow`.
+- The tables, indexes, relationships, and historical rows remain intact. This
+  decision authorizes no destructive migration or data deletion.
+- Any future export, reuse, or removal of historical social data requires a
+  separate explicit decision.

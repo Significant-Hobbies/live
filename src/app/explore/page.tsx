@@ -1,11 +1,11 @@
 export const revalidate = 300;
 
-import { count, desc, eq, inArray } from 'drizzle-orm';
+import { desc, eq } from 'drizzle-orm';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import { FadeIn, GridBackground } from '~/components/aceternity';
-import { likes, timelines, users } from '~/db/schema';
+import { timelines, users } from '~/db/schema';
 import { getCategoryForHobby } from '~/lib/hobbies';
 import { DEFAULT_SOCIAL_IMAGE, SITE_URL } from '~/lib/site-metadata';
 import type { Phase, TimelineData, TimelineVisibility } from '~/lib/types';
@@ -57,21 +57,7 @@ export default async function ExplorePage() {
     .orderBy(desc(timelines.updatedAt))
     .limit(100);
 
-  // Get like counts for these timelines — single GROUP BY query instead of
-  // one COUNT(*) per timeline (N+1 → 1).
-  const timelineIds = rawTimelines.map((t) => t.id);
-  const likeCounts: Record<string, number> = {};
-  if (timelineIds.length > 0) {
-    const likeCountRows = await db
-      .select({ timelineId: likes.timelineId, count: count() })
-      .from(likes)
-      .where(inArray(likes.timelineId, timelineIds))
-      .groupBy(likes.timelineId);
-    for (const lc of likeCountRows) likeCounts[lc.timelineId] = lc.count;
-    // timelines with no likes default to 0
-  }
-
-  const timelineList: (TimelineData & { likeCount: number })[] = rawTimelines.map((raw) => {
+  const timelineList: TimelineData[] = rawTimelines.map((raw) => {
     const phases = parseJSONColumn<Phase[]>(raw.phases, [], 'explore:phases');
     return {
       id: raw.id,
@@ -81,7 +67,6 @@ export default async function ExplorePage() {
       phases,
       createdAt: raw.createdAt,
       updatedAt: raw.updatedAt,
-      likeCount: likeCounts[raw.id] ?? 0,
       user: raw.userIdRef
         ? {
             id: raw.userIdRef,
@@ -108,7 +93,6 @@ export default async function ExplorePage() {
     .map(([name, count]) => ({ name, count, emoji: getCategoryForHobby(name)?.emoji ?? '✨' }));
   const totalPhases = timelineList.reduce((sum, timeline) => sum + timeline.phases.length, 0);
   const totalUniqueHobbies = Object.keys(hobbyCount).length;
-  const totalLikes = timelineList.reduce((sum, timeline) => sum + timeline.likeCount, 0);
 
   return (
     <div className="relative mx-auto min-h-screen max-w-5xl px-4 py-12 pb-16">
@@ -124,7 +108,7 @@ export default async function ExplorePage() {
         <div className="grid grid-cols-3 gap-2">
           <ExploreStat label="Public" value={String(timelineList.length)} />
           <ExploreStat label="Phases" value={String(totalPhases)} />
-          <ExploreStat label="Signals" value={String(totalUniqueHobbies + totalLikes)} />
+          <ExploreStat label="Hobbies" value={String(totalUniqueHobbies)} />
         </div>
       </FadeIn>
 
