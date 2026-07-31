@@ -180,7 +180,7 @@ export default async function TimelineBySlugPage({ params, searchParams }: Props
                     <Button
                       variant="outline"
                       size="sm"
-                      className="border-border text-muted-foreground hover:text-foreground"
+                      className="min-h-11 border-border text-muted-foreground hover:text-foreground"
                     >
                       Compare with mine
                     </Button>
@@ -191,7 +191,7 @@ export default async function TimelineBySlugPage({ params, searchParams }: Props
                     <Button
                       variant="outline"
                       size="sm"
-                      className="border-border text-muted-foreground hover:text-foreground"
+                      className="min-h-11 border-border text-muted-foreground hover:text-foreground"
                     >
                       <Pencil className="mr-1.5 h-3.5 w-3.5" />
                       Edit

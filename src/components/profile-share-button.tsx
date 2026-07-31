@@ -51,7 +51,7 @@ export function ProfileShareButton({ username, displayName }: ProfileShareButton
       size="sm"
       variant="outline"
       onClick={handleShare}
-      className="gap-1.5"
+      className="min-h-11 gap-1.5"
       aria-label={`Share @${username}'s profile`}
     >
       <Share2 className="h-3.5 w-3.5" />

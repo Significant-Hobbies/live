@@ -22,6 +22,16 @@ const PHASE_COLORS = [
   { border: 'oklch(0.65 0.18 15)', bg: 'oklch(0.65 0.18 15 / 0.06)' }, // rose
 ];
 
+function uniqueHobbies(hobbies: Phase['hobbies']) {
+  const seen = new Set<string>();
+  return hobbies.filter((hobby) => {
+    const key = hobby.name.trim().toLocaleLowerCase();
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
 export function PhaseSwimlane({ phases, pins = [] }: Props) {
   if (!phases.length) return null;
 
@@ -31,6 +41,7 @@ export function PhaseSwimlane({ phases, pins = [] }: Props) {
       <div className="space-y-3 md:hidden">
         {phases.map((phase, index) => {
           const color = PHASE_COLORS[index % PHASE_COLORS.length]!;
+          const hobbies = uniqueHobbies(phase.hobbies);
           return (
             <div
               key={phase.id}
@@ -44,7 +55,7 @@ export function PhaseSwimlane({ phases, pins = [] }: Props) {
                 <div className="flex items-center justify-between">
                   <h3 className="font-semibold text-foreground text-sm">{phase.label}</h3>
                   <Badge variant="outline" className="border-border text-xs text-muted-foreground">
-                    {phase.hobbies.length} hobbies
+                    {hobbies.length} hobbies
                   </Badge>
                 </div>
                 {(phase.ageStart ?? phase.yearStart) && (
@@ -57,10 +68,10 @@ export function PhaseSwimlane({ phases, pins = [] }: Props) {
               </div>
 
               <div className="px-4 py-3 flex flex-wrap gap-1.5">
-                {phase.hobbies.length === 0 && (
+                {hobbies.length === 0 && (
                   <p className="text-xs text-muted-foreground italic">No hobbies added</p>
                 )}
-                {phase.hobbies.map((hobby) => {
+                {hobbies.map((hobby) => {
                   const category = getCategoryForHobby(hobby.name);
                   return (
                     <span
@@ -86,6 +97,7 @@ export function PhaseSwimlane({ phases, pins = [] }: Props) {
         >
           {phases.map((phase, index) => {
             const color = PHASE_COLORS[index % PHASE_COLORS.length]!;
+            const hobbies = uniqueHobbies(phase.hobbies);
 
             return (
               <div key={phase.id} className="bg-card flex flex-col">
@@ -106,12 +118,12 @@ export function PhaseSwimlane({ phases, pins = [] }: Props) {
 
                 {/* Hobbies */}
                 <div className="px-3 py-3 flex-1 space-y-1.5">
-                  {phase.hobbies.length === 0 && (
+                  {hobbies.length === 0 && (
                     <div className="rounded-md border border-dashed border-border px-3 py-4 text-center">
                       <p className="text-xs text-muted-foreground italic">No hobbies added</p>
                     </div>
                   )}
-                  {phase.hobbies.map((hobby) => {
+                  {hobbies.map((hobby) => {
                     const category = getCategoryForHobby(hobby.name);
                     return (
                       <div

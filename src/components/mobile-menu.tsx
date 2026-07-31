@@ -19,7 +19,7 @@ export function MobileMenu({ links, isLoggedIn }: MobileMenuProps) {
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="flex h-9 w-9 items-center justify-center rounded-md text-muted-foreground hover:bg-foreground/5 transition-colors"
+        className="flex h-11 w-11 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-foreground/5"
         aria-label={open ? 'Close menu' : 'Open menu'}
       >
         {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}

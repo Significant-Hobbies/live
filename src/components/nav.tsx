@@ -33,7 +33,7 @@ export async function Nav() {
         <Link
           href="/"
           prefetch={false}
-          className="text-base font-semibold tracking-tight text-foreground hover:opacity-80 transition-opacity"
+          className="inline-flex min-h-11 items-center text-base font-semibold tracking-tight text-foreground transition-opacity hover:opacity-80"
         >
           SignificantHobbies
         </Link>

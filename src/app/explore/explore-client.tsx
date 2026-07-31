@@ -279,11 +279,11 @@ function ExploreBackfill({ hasResults }: { hasResults: boolean }) {
 
 function ExploreFooter() {
   return (
-    <section className="mt-10 rounded-xl border border-border bg-foreground/90 px-5 py-6 text-foreground md:flex md:items-center md:justify-between md:gap-6">
+    <section className="mt-10 rounded-xl border border-foreground/20 bg-foreground px-5 py-6 text-background md:flex md:items-center md:justify-between md:gap-6">
       <div>
-        <p className="text-sm font-semibold text-foreground">Community signal</p>
+        <p className="text-sm font-semibold text-background">Community signal</p>
         <h2 className="mt-2 text-xl font-semibold">Explore grows with every public phase.</h2>
-        <p className="mt-2 max-w-2xl text-sm leading-6 text-subtle">
+        <p className="mt-2 max-w-2xl text-sm leading-6 text-background/75">
           Add a timeline with hobbies, dates, and phase labels so other people can discover patterns
           beyond a flat list of interests.
         </p>
@@ -291,7 +291,7 @@ function ExploreFooter() {
       <Link
         href="/timeline/new"
         prefetch={false}
-        className="mt-5 inline-flex items-center justify-center gap-2 rounded-lg bg-foreground px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:opacity-90 md:mt-0"
+        className="mt-5 inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-background px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-background/90 md:mt-0"
       >
         Build your timeline
         <ArrowRight className="h-4 w-4" />
@@ -389,9 +389,9 @@ export function ExploreClient({ timelines }: ExploreClientProps) {
         <button
           type="button"
           onClick={() => setCategoryFilter(null)}
-          className={`rounded-full px-3.5 py-1.5 text-sm font-medium transition-colors ${
+          className={`min-h-11 rounded-full px-3.5 py-1.5 text-sm font-medium transition-colors ${
             categoryFilter === null
-              ? 'bg-foreground/80 text-foreground'
+              ? 'bg-foreground text-background'
               : 'border border-border bg-card text-muted-foreground hover:border-border hover:text-foreground'
           }`}
         >
@@ -402,9 +402,9 @@ export function ExploreClient({ timelines }: ExploreClientProps) {
             key={cat.name}
             type="button"
             onClick={() => setCategoryFilter(categoryFilter === cat.name ? null : cat.name)}
-            className={`rounded-full px-3.5 py-1.5 text-sm font-medium transition-colors ${
+            className={`min-h-11 rounded-full px-3.5 py-1.5 text-sm font-medium transition-colors ${
               categoryFilter === cat.name
-                ? 'bg-foreground/80 text-foreground'
+                ? 'bg-foreground text-background'
                 : 'border border-border bg-card text-muted-foreground hover:border-border hover:text-foreground'
             }`}
           >
