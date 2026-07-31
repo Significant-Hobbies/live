@@ -21,6 +21,11 @@ is the bridge between daily practice and life aspirations.
 
 ## Timeline
 
+- **2026-07-31:** Retired silent follows, timeline likes, and comments from the
+  runtime because they had no notifications, discovery, or return loop and
+  contradicted the product's no-broad-social-network boundary. Public profiles
+  and timelines remain shareable artifacts; historical social rows and schema
+  declarations remain intact. Production deployment remains manual.
 - **2026-07-31:** Connected Daily habits to Living commitments with one
   optional, owner-verified planning link. The relationship is explicit and
   editable; habit check-ins still create no proof or commitment progress. The
@@ -64,6 +69,11 @@ Historical milestones live in
 - **Two dimensions shipped:** Daily ritual (`/daily` — AM/PM prompts, habits,
   compulsory journal) and Living (timelines, bucket lists, side quests,
   public profiles, SEO blog, discovery quiz).
+- **Public artifacts, not a social network:** profiles and timelines retain
+  sharing, compare, export, visibility, and owner-edit actions without follows,
+  likes, comments, engagement ranking, or engagement counts. Retired social
+  tables remain declared and their historical rows are preserved; no migration
+  or deployment was run.
 - **Habit and commitment bridge built locally:** an authenticated owner can
   optionally link a habit to one owned, non-abandoned commitment while creating
   or managing it. Daily cards show the private planning context, while

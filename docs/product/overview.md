@@ -90,6 +90,9 @@ The merge produced one coherent thesis:
 - No scoring, no streaks on daily practice. "We don't shame you for missed
   days." Habits are simple check-ins.
 - No broad social network, paid coaching, marketplace, or creator monetization.
+- Public profiles and timelines are shareable artifacts, not social feeds.
+  Follow, like, and comment controls were retired on 2026-07-31 because they
+  had no notification, discovery, or return loop.
 - No large SEO expansion until the core hobby journey loop sharpens.
 - No XP. There is no XP concept anywhere in the code and none is planned.
 - No badge progression beyond what an evaluator actually awards. Badges exist

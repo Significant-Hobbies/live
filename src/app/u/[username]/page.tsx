@@ -1,4 +1,4 @@
-import { and, count, desc, eq } from 'drizzle-orm';
+import { and, desc, eq } from 'drizzle-orm';
 import { ArrowRight, ExternalLink, Pencil, Plus, Trophy } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -7,11 +7,10 @@ import { notFound } from 'next/navigation';
 import { GradientMesh, GridBackground, SpotlightCard } from '~/components/aceternity';
 import { BadgeCollection } from '~/components/badge-collection';
 import { CommitmentCard } from '~/components/commitments/commitment-card';
-import { FollowButton } from '~/components/follow-button';
 import { LifeGrid } from '~/components/life-grid';
 import { SuggestionsPanel } from '~/components/suggestions-panel';
 import { Button } from '~/components/ui/button';
-import { bucketListItems, follows, timelines, userQuests, users } from '~/db/schema';
+import { bucketListItems, timelines, userQuests, users } from '~/db/schema';
 import { ProfileShareButton } from '~/components/profile-share-button';
 import { ProfileVisibilityToggle } from '~/components/profile-visibility-toggle';
 import { getPublicCommitmentsForUser, setCommitmentVisibility } from '~/lib/actions/commitments';
@@ -91,13 +90,6 @@ export default async function ProfilePage({ params }: Props) {
 
   const isOwner = session?.user?.id === user.id;
 
-  const [followerResult] = await db
-    .select({ count: count() })
-    .from(follows)
-    .where(eq(follows.followingId, user.id));
-
-  const followerCount = followerResult?.count ?? 0;
-
   // Get timelines - public for visitors, all for owner. UNLISTED means
   // "anyone with the link" — it must never be listed on the public profile.
   const ownTimelines = isOwner
@@ -137,15 +129,6 @@ export default async function ProfilePage({ params }: Props) {
     }
   }
   const lifeGrid = buildLifeGrid(birth, stampedWeeks);
-
-  // Check if the current user is following this profile
-  let isFollowing = false;
-  if (session?.user?.id && !isOwner) {
-    const followRecord = await db.query.follows.findFirst({
-      where: and(eq(follows.followerId, session.user.id), eq(follows.followingId, user.id)),
-    });
-    isFollowing = !!followRecord;
-  }
 
   const timelineList = ownTimelines.map((t) => {
     const phases = parseJSONColumn<Phase[]>(t.phases, [], `profile:timeline:${t.id}`);
@@ -288,30 +271,8 @@ export default async function ProfilePage({ params }: Props) {
             </a>
           )}
 
-          {/* Follow / owner actions — kept functional, styled quiet */}
+          {/* Profile actions */}
           <div className="mt-5 flex items-center gap-3">
-            {!isOwner && session?.user && (
-              <FollowButton
-                targetUserId={user.id}
-                initialFollowing={isFollowing}
-                initialCount={followerCount}
-                isOwnProfile={false}
-              />
-            )}
-            {!isOwner && !session?.user && (
-              <>
-                <Link
-                  href="/login"
-                  className="inline-flex items-center gap-1.5 rounded-full border border-[oklch(0.82_0.13_88/0.4)] px-4 py-1.5 text-sm font-medium text-foreground hover:bg-[oklch(0.82_0.13_88/0.08)] transition-colors"
-                >
-                  Follow
-                </Link>
-                <span className="text-sm text-muted-foreground">
-                  <span className="font-semibold text-foreground">{followerCount}</span>{' '}
-                  {followerCount === 1 ? 'follower' : 'followers'}
-                </span>
-              </>
-            )}
             {isOwner && (
               <Link href="/timeline/new">
                 <Button

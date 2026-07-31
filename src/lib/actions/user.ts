@@ -1,10 +1,10 @@
 'use server';
 
-import { and, count, eq } from 'drizzle-orm';
+import { eq } from 'drizzle-orm';
 import { revalidatePath } from 'next/cache';
 import { z } from 'zod';
 
-import { follows, users } from '~/db/schema';
+import { users } from '~/db/schema';
 import { SIDE_QUEST_BADGE_IDS } from '~/lib/badges';
 import { isValidTimeZone } from '~/lib/day';
 import { parseStringArray } from '~/lib/utils';
@@ -37,50 +37,6 @@ export async function setUsername(username: string, birthYear?: number) {
     .returning();
   revalidatePath(`/u/${parsed}`);
   return user;
-}
-
-export async function toggleFollow(
-  targetUserId: string
-): Promise<{ following: boolean; followerCount: number }> {
-  const session = await getServerAuthSession();
-  if (!session?.user?.id) throw new Error('Not authenticated');
-
-  const currentUserId = session.user.id;
-
-  if (currentUserId === targetUserId) {
-    throw new Error('Cannot follow yourself');
-  }
-
-  const existing = await db.query.follows.findFirst({
-    where: and(eq(follows.followerId, currentUserId), eq(follows.followingId, targetUserId)),
-  });
-
-  if (existing) {
-    await db.delete(follows).where(eq(follows.id, existing.id));
-  } else {
-    await db.insert(follows).values({
-      followerId: currentUserId,
-      followingId: targetUserId,
-    });
-  }
-
-  const [result] = await db
-    .select({ count: count() })
-    .from(follows)
-    .where(eq(follows.followingId, targetUserId));
-
-  const followerCount = result?.count ?? 0;
-
-  // Revalidate the target user's profile page
-  const targetUser = await db.query.users.findFirst({
-    where: eq(users.id, targetUserId),
-    columns: { username: true },
-  });
-  if (targetUser?.username) {
-    revalidatePath(`/u/${targetUser.username}`);
-  }
-
-  return { following: !existing, followerCount };
 }
 
 const UpdateProfileSchema = z.object({

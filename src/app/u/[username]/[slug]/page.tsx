@@ -1,14 +1,12 @@
-import { asc, eq, inArray } from 'drizzle-orm';
+import { eq } from 'drizzle-orm';
 import { ArrowLeft, Pencil, User } from 'lucide-react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import { GradientMesh, SpotlightCard } from '~/components/aceternity';
-import { CommentsSectionWithOwn } from '~/components/timeline-view/comments-section';
 import { ExportButton } from '~/components/timeline-view/export-button';
 import { FirstTimelinePublishPrompt } from '~/components/timeline-view/first-timeline-publish-prompt';
 import { InsightsPanel } from '~/components/timeline-view/insights-panel';
-import { LikeButton } from '~/components/timeline-view/like-button';
 import { PersonalityCard } from '~/components/timeline-view/personality-card';
 import { PhaseSwimlane } from '~/components/timeline-view/phase-swimlane';
 import { RecommendationsPanel } from '~/components/timeline-view/recommendations-panel';
@@ -17,7 +15,7 @@ import { VersionHistory } from '~/components/timeline-view/version-history';
 import { VisibilityToggle } from '~/components/timeline-view/visibility-toggle';
 import { Badge } from '~/components/ui/badge';
 import { Button } from '~/components/ui/button';
-import { comments as commentsTable, likes as likesTable, timelines, users } from '~/db/schema';
+import { timelines, users } from '~/db/schema';
 import {
   shouldShowFirstTimelinePrompt,
   shouldShowFirstTimelinePublishedConfirmation,
@@ -129,53 +127,7 @@ export default async function TimelineBySlugPage({ params, searchParams }: Props
     user: timelineUser,
   };
 
-  // Get likes
-  const likeRows = await db
-    .select({ userId: likesTable.userId })
-    .from(likesTable)
-    .where(eq(likesTable.timelineId, raw.id));
-
   const currentUserId = session?.user?.id ?? null;
-  const isLiked = likeRows.some((l) => l.userId === currentUserId);
-  const likeCount = likeRows.length;
-
-  // Get comments
-  const commentRows = await db
-    .select({
-      id: commentsTable.id,
-      userId: commentsTable.userId,
-      body: commentsTable.body,
-      createdAt: commentsTable.createdAt,
-    })
-    .from(commentsTable)
-    .where(eq(commentsTable.timelineId, raw.id))
-    .orderBy(asc(commentsTable.createdAt));
-
-  // Fetch comment users — single inArray query instead of one findFirst per
-  // user (N+1 → 1).
-  const commentUserIds = [...new Set(commentRows.map((c) => c.userId))];
-  const commentUsersMap: Record<
-    string,
-    { id: string; name: string | null; username: string | null; image: string | null }
-  > = {};
-  if (commentUserIds.length > 0) {
-    const commentUsers = await db.query.users.findMany({
-      where: inArray(users.id, commentUserIds),
-      columns: { id: true, name: true, username: true, image: true },
-    });
-    for (const u of commentUsers) commentUsersMap[u.id] = u;
-  }
-
-  const ownCommentIds = new Set(
-    currentUserId ? commentRows.filter((c) => c.userId === currentUserId).map((c) => c.id) : []
-  );
-
-  const commentList = commentRows.map((c) => ({
-    id: c.id,
-    body: c.body,
-    createdAt: c.createdAt,
-    user: commentUsersMap[c.userId] ?? { name: null, username: null, image: null },
-  }));
 
   return (
     <div className="relative mx-auto max-w-6xl px-4 py-10">
@@ -217,12 +169,6 @@ export default async function TimelineBySlugPage({ params, searchParams }: Props
                 </div>
               </div>
               <div className="flex items-center gap-2 flex-wrap">
-                <LikeButton
-                  timelineId={timeline.id}
-                  initialLiked={isLiked}
-                  initialCount={likeCount}
-                  isAuthenticated={!!currentUserId}
-                />
                 {isOwner && (
                   <VisibilityToggle timelineId={timeline.id} current={timeline.visibility} />
                 )}
@@ -301,14 +247,6 @@ export default async function TimelineBySlugPage({ params, searchParams }: Props
               <RecommendationsPanel phases={phases} />
             </div>
           )}
-          <div>
-            <CommentsSectionWithOwn
-              timelineId={timeline.id}
-              initialComments={commentList}
-              currentUserId={currentUserId}
-              ownCommentIds={ownCommentIds}
-            />
-          </div>
           {isOwner && versions.length > 0 && (
             <div>
               <VersionHistory versions={versions} currentPhases={phases} />

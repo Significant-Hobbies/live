@@ -27,12 +27,15 @@ app-owned and referenced by `Timeline`, `Like`, `Comment`, `Follow`,
 `Commitment`, `Stamp`, `Habit`, `HabitLog`, `JournalEntry`, `DailyCheckin`,
 `UserQuest`, `Arc`, `BucketList`, `BucketListItem`.
 
-### Timelines and social
+### Timelines and retired social storage
 
 `Timeline` (phases/pins/versions as JSON text), `Like`, `Comment`, `Follow`.
 Indexes on `userId`, `slug`, `visibility`. `Like` has a unique index on
 `(userId, timelineId)` — one like per user per timeline. `Follow` has a unique
-index on `(followerId, followingId)`.
+index on `(followerId, followingId)`. `Like`, `Comment`, and `Follow` were
+retired from runtime use on 2026-07-31: no active route or action reads or
+writes them. Their declarations and historical rows remain so schema generation
+cannot accidentally propose a destructive production migration.
 
 ### Bucket lists
 
@@ -61,10 +64,10 @@ the user's day. See [`knowledge/learnings.md`](../knowledge/learnings.md) L9.
 
 ### Retired tables (still declared, never read)
 
-`Arc`, `UserQuest.arcId`, and `DailyCheckin` have no runtime readers or writers.
-They remain in `src/db/schema.ts` so a generated migration can never drop them —
-deleting a table from the schema file is how you accidentally write a destructive
-production migration.
+`Arc`, `UserQuest.arcId`, `DailyCheckin`, `Like`, `Comment`, and `Follow` have no
+runtime readers or writers. They remain in `src/db/schema.ts` so a generated
+migration can never drop them — deleting a table from the schema file is how
+you accidentally write a destructive production migration.
 
 `DailyCheckin` (userId, dayDate, amCompleted, pmCompleted) tracked whether the
 AM/PM ritual was "completed". The AM/PM rings on `/daily` now derive from whether
