@@ -1,6 +1,6 @@
 'use client';
 
-import { Link2, Share2 } from 'lucide-react';
+import { Share2 } from 'lucide-react';
 import { toast } from 'sonner';
 
 import { Button } from '~/components/ui/button';
@@ -19,8 +19,6 @@ interface ProfileShareButtonProps {
  * the link.
  */
 export function ProfileShareButton({ username, displayName }: ProfileShareButtonProps) {
-  const canNativeShare = typeof navigator !== 'undefined' && typeof navigator.share === 'function';
-
   async function copyLink() {
     try {
       await navigator.clipboard.writeText(window.location.href);
@@ -31,7 +29,7 @@ export function ProfileShareButton({ username, displayName }: ProfileShareButton
   }
 
   async function handleShare() {
-    if (!canNativeShare) {
+    if (typeof navigator.share !== 'function') {
       await copyLink();
       return;
     }
@@ -56,7 +54,7 @@ export function ProfileShareButton({ username, displayName }: ProfileShareButton
       className="gap-1.5"
       aria-label={`Share @${username}'s profile`}
     >
-      {canNativeShare ? <Share2 className="h-3.5 w-3.5" /> : <Link2 className="h-3.5 w-3.5" />}
+      <Share2 className="h-3.5 w-3.5" />
       Share
     </Button>
   );
