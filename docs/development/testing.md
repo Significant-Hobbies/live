@@ -117,7 +117,7 @@ which is why several specs sat failing for a long time, two of them correctly
 (`/journeys` gated from crawlers, eleven SEO pages with no `<h1>`) plus a 500 on
 `/llms-full.txt`.
 
-The job uses a throwaway `file:./dev.db` with `db:push` + `db:seed`, and
+The job uses a throwaway local D1 database with `db:migrate:local` + `db:seed`, and
 `ENABLE_TEST_AUTH=1` so the authenticated specs run rather than skip. No real
 credentials are involved. The device-matrix projects (`mobile`, `tablet`,
 `wide`) are left out: they re-run the same specs at other widths.
@@ -144,7 +144,7 @@ caught correctly:
 ### The fresh-database 403 (resolved 2026-07-26)
 
 For a long time the first authenticated test failed with
-`Test sign-in failed (403)` against a **freshly created** `dev.db` and passed on
+`Test sign-in failed (403)` against a **freshly created** local database and passed on
 retry. Four hypotheses were tested and ruled out — cold Next compile, missing
 account, better-auth rate limiting, and a missing request `Origin`. None was the
 cause, and the `Origin` experiment made it measurably worse.
@@ -179,7 +179,7 @@ sign-in  (no cookies)     → 200
 client already holds a session for. When a fixture chains create-then-login
 through one context, check whether the create step logged you in.
 
-### Writing authenticated specs against a persistent `dev.db`
+### Writing authenticated specs against persistent local D1
 
 `e2e/authenticated.spec.ts` is serial, so **one failure blocks every test after
 it**. For a long time the creed test failed and silently hid four more. If a run
@@ -213,7 +213,7 @@ A retry-until-it-sticks loop was tried first and timed out in CI. For a toggle
 button, retrying is actively wrong — the second click closes what the first
 opened.
 
-**Reusing a fixed entity name.** `dev.db` survives between local runs. A spec
+**Reusing a fixed entity name.** Local D1 state survives between local runs. A spec
 that creates "Piano" every time hits `You already have an active commitment for
 Piano` on its second run of the day, leaves the create form on that error, and
 fails somewhere much later. Generate a unique name per run

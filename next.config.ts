@@ -1,4 +1,7 @@
+import { initOpenNextCloudflareForDev } from '@opennextjs/cloudflare';
 import type { NextConfig } from 'next';
+
+initOpenNextCloudflareForDev({ configPath: './wrangler.local.toml' });
 
 const nextConfig: NextConfig = {
   output: 'standalone',
@@ -6,15 +9,7 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react'],
   },
-  // Keep libsql stack external so workerd-compatible exports resolve at runtime via wrangler
-  serverExternalPackages: [
-    '@libsql/client',
-    '@libsql/hrana-client',
-    '@libsql/isomorphic-ws',
-    '@libsql/isomorphic-fetch',
-    'libsql',
-    'drizzle-orm',
-  ],
+  serverExternalPackages: ['drizzle-orm'],
   images: {
     unoptimized: true, // Required for Cloudflare Pages edge runtime
     remotePatterns: [

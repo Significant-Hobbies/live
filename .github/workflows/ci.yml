@@ -75,18 +75,15 @@ jobs:
         run: pnpm exec playwright install --with-deps chromium
 
       - name: Prepare a local database
-        # A throwaway SQLite file, never a real Turso URL — no secrets in CI.
+        # A throwaway local D1 database — no remote database or secrets in CI.
         # ENABLE_TEST_AUTH lets the authenticated specs sign in through
         # better-auth's own email provider instead of skipping (src/lib/auth.ts).
-        env:
-          DATABASE_URL: file:./dev.db
         run: |
-          pnpm db:push --force
+          pnpm db:migrate:local
           pnpm db:seed
 
       - name: Run e2e
         env:
-          DATABASE_URL: file:./dev.db
           ENABLE_TEST_AUTH: '1'
           BETTER_AUTH_SECRET: ci-not-a-real-secret-e2e-only
           BETTER_AUTH_URL: http://localhost:3000

@@ -12,8 +12,8 @@ description: Local setup, common commands, schema changes, branching, pre-push h
 
 ```bash
 pnpm install
-cp .env.example .env          # fill in DATABASE_URL, BETTER_AUTH_SECRET, GOOGLE_CLIENT_*
-pnpm db:push                  # apply Drizzle schema to local SQLite (dev.db)
+cp .env.example .env          # fill in BETTER_AUTH_SECRET and GOOGLE_CLIENT_*
+pnpm db:migrate:local         # apply tracked migrations to local D1
 pnpm db:seed                  # seed hobby catalog (tsx prisma/seed.ts — legacy dir name)
 pnpm dev                      # next dev on localhost:3000
 ```
@@ -25,11 +25,10 @@ Do not add Prisma schema files there. See
 ## Schema changes
 
 1. Edit `src/db/schema.ts` (the source of truth).
-2. `pnpm db:push` to apply to local `dev.db` (fast iteration).
-3. `pnpm db:generate` to generate a migration file in `drizzle/` (for
-   production). Commit the generated migration.
-4. Production applies migrations via Turso — ask the operator before running
-   against prod. Agents must not run prod migrations (see `AGENTS.md`).
+2. `pnpm db:generate` to generate a migration file in `migrations/d1/`.
+3. `pnpm db:migrate:local` to apply it to the local D1 database.
+4. Commit the generated migration. Run `pnpm db:migrate:remote` only after an
+   operator explicitly approves the production migration.
 
 ## Branching
 

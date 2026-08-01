@@ -17,9 +17,6 @@ importers:
       '@dnd-kit/utilities':
         specifier: 3.2.2
         version: 3.2.2(react@19.2.8)
-      '@libsql/client':
-        specifier: 0.17.4
-        version: 0.17.4
       '@radix-ui/react-avatar':
         specifier: 1.2.6
         version: 1.2.6(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
@@ -11295,10 +11292,12 @@ snapshots:
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
+    optional: true
 
   '@libsql/core@0.17.4':
     dependencies:
       js-base64: 3.9.1
+    optional: true
 
   '@libsql/darwin-arm64@0.5.29':
     optional: true
@@ -11313,6 +11312,7 @@ snapshots:
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
+    optional: true
 
   '@libsql/isomorphic-ws@0.1.5':
     dependencies:
@@ -11321,6 +11321,7 @@ snapshots:
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
+    optional: true
 
   '@libsql/linux-arm-gnueabihf@0.5.29':
     optional: true
@@ -11443,7 +11444,8 @@ snapshots:
       '@tybys/wasm-util': 0.10.3
     optional: true
 
-  '@neon-rs/load@0.0.4': {}
+  '@neon-rs/load@0.0.4':
+    optional: true
 
   '@next/env@16.2.12': {}
 
@@ -13139,6 +13141,7 @@ snapshots:
   '@types/ws@8.18.1':
     dependencies:
       '@types/node': 25.6.0
+    optional: true
 
   '@typescript/vfs@1.6.4(typescript@6.0.3)':
     dependencies:
@@ -14517,7 +14520,8 @@ snapshots:
 
   destr@2.0.5: {}
 
-  detect-libc@2.0.2: {}
+  detect-libc@2.0.2:
+    optional: true
 
   detect-libc@2.1.2: {}
 
@@ -15639,7 +15643,8 @@ snapshots:
 
   jose@6.2.4: {}
 
-  js-base64@3.9.1: {}
+  js-base64@3.9.1:
+    optional: true
 
   js-tokens@10.0.0: {}
 
@@ -15774,6 +15779,7 @@ snapshots:
       '@libsql/linux-x64-gnu': 0.5.29
       '@libsql/linux-x64-musl': 0.5.29
       '@libsql/win32-x64-msvc': 0.5.29
+    optional: true
 
   lie@3.3.0:
     dependencies:
@@ -17034,7 +17040,8 @@ snapshots:
 
   process-nextick-args@2.0.1: {}
 
-  promise-limit@2.7.0: {}
+  promise-limit@2.7.0:
+    optional: true
 
   prompts@2.4.2:
     dependencies:
@@ -18408,7 +18415,8 @@ snapshots:
 
   ws@8.21.0: {}
 
-  ws@8.21.1: {}
+  ws@8.21.1:
+    optional: true
 
   wsl-utils@0.3.1:
     dependencies:

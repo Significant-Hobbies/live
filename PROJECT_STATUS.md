@@ -16,11 +16,16 @@ is the bridge between daily practice and life aspirations.
 
 ## Dependencies
 
-- Cloudflare Workers/OpenNext, Turso/libSQL, Drizzle, better-auth Google OAuth,
-  and PostHog.
+- Cloudflare Workers/OpenNext, Cloudflare D1, Drizzle, better-auth Google OAuth,
+  and PostHog. Turso remains temporarily preserved as the rollback source for
+  the D1 cutover observation window.
 
 ## Timeline
 
+- **2026-08-01:** Migrated production persistence from Turso/libSQL to a
+  project-owned Cloudflare D1 database after schema, row-count, aggregate,
+  relationship, auth, and write-path parity checks. The Turso source remains
+  preserved for the bounded rollback observation window.
 - **2026-08-01:** Reframed Trajectory locally as one private living decision
   contract: constraints, intent, decision policy, and feedback loop. Reviews can
   continue, adjust, complete, or release the direction; adjustments retain
@@ -69,7 +74,7 @@ Historical milestones live in
 ## Features (shipped)
 
 - **Runtime:** Cloudflare Worker `significanthobbies` (OpenNext) + Astro
-  landing overlay for anon `GET /`. Turso (libSQL) + Drizzle ORM +
+  landing overlay for anon `GET /`. Cloudflare D1 + Drizzle ORM +
   better-auth Google OAuth. PostHog analytics.
 - **Owned product history:** public editorial changelog at `/changelog`.
 - **Two dimensions shipped:** Daily ritual (`/daily` — AM/PM prompts, habits,
@@ -184,7 +189,7 @@ and is genuinely public — that one is consistent.
 - **Worker:** `significanthobbies` (prod) / `significanthobbies-preview` (PR)
 - **Routes:** `significanthobbies.com/*`, `www.significanthobbies.com/*`
 - **Deploy trigger:** manual `workflow_dispatch` on `.github/workflows/deploy.yml`
-- **DB:** Turso `significanthobbies` (libSQL)
+- **DB:** Cloudflare D1 `significanthobbies`; Turso retained temporarily for rollback
 
 ## Work queue
 

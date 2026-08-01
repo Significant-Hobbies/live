@@ -108,48 +108,60 @@ export async function reviewTrajectoryContract(
     return { success: false, error: 'An adjustment needs a revised contract.' };
   }
 
-  return db.transaction(async (tx) => {
-    const active = await tx.query.trajectoryContracts.findFirst({
-      where: and(
-        eq(trajectoryContracts.id, parsed.data.contractId),
-        eq(trajectoryContracts.userId, session.user.id),
-        eq(trajectoryContracts.status, 'active')
-      ),
-    });
-    if (!active) return { success: false, error: 'Active trajectory not found.' };
+  const active = await db.query.trajectoryContracts.findFirst({
+    where: and(
+      eq(trajectoryContracts.id, parsed.data.contractId),
+      eq(trajectoryContracts.userId, session.user.id),
+      eq(trajectoryContracts.status, 'active')
+    ),
+  });
+  if (!active) return { success: false, error: 'Active trajectory not found.' };
 
-    await tx.insert(trajectoryReviews).values({
-      contractId: active.id,
-      userId: session.user.id,
-      signalText: parsed.data.signalText,
-      decision: parsed.data.decision,
-    });
+  const reviewInsert = db.insert(trajectoryReviews).values({
+    contractId: active.id,
+    userId: session.user.id,
+    signalText: parsed.data.signalText,
+    decision: parsed.data.decision,
+  });
 
-    if (parsed.data.decision !== 'continue') {
-      const status: ContractStatus =
-        parsed.data.decision === 'adjust'
-          ? 'adjusted'
-          : parsed.data.decision === 'complete'
-            ? 'completed'
-            : 'released';
-      const now = new Date();
-      await tx
-        .update(trajectoryContracts)
-        .set({ status, closedAt: now, updatedAt: now })
-        .where(eq(trajectoryContracts.id, active.id));
+  if (parsed.data.decision === 'continue') {
+    await db.batch([reviewInsert]);
+  } else {
+    const status: ContractStatus =
+      parsed.data.decision === 'adjust'
+        ? 'adjusted'
+        : parsed.data.decision === 'complete'
+          ? 'completed'
+          : 'released';
+    const now = new Date();
+    const closeActive = db
+      .update(trajectoryContracts)
+      .set({ status, closedAt: now, updatedAt: now })
+      .where(
+        and(
+          eq(trajectoryContracts.id, active.id),
+          eq(trajectoryContracts.userId, session.user.id),
+          eq(trajectoryContracts.status, 'active')
+        )
+      );
 
-      if (parsed.data.decision === 'adjust' && parsed.data.revision) {
-        await tx.insert(trajectoryContracts).values({
+    if (parsed.data.decision === 'adjust' && parsed.data.revision) {
+      await db.batch([
+        reviewInsert,
+        closeActive,
+        db.insert(trajectoryContracts).values({
           userId: session.user.id,
           previousContractId: active.id,
           ...parsed.data.revision,
-        });
-      }
+        }),
+      ]);
+    } else {
+      await db.batch([reviewInsert, closeActive]);
     }
+  }
 
-    revalidatePath('/trajectory');
-    return { success: true };
-  });
+  revalidatePath('/trajectory');
+  return { success: true };
 }
 
 function toContractRecord(row: typeof trajectoryContracts.$inferSelect): TrajectoryContractRecord {

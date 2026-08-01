@@ -331,4 +331,32 @@ test.describe('authenticated surfaces', () => {
     await expect(authedPage.getByRole('combobox', { name: /Review rhythm/ })).toBeVisible();
     await expect(authedPage.getByRole('button', { name: 'Set this trajectory' })).toBeVisible();
   });
+
+  test('trajectory adjusts a contract atomically on D1', async ({ authedPage }) => {
+    await authedPage.goto('/trajectory');
+    const initialIntent = `Publish one useful artifact each week ${Date.now()}`;
+    const create = authedPage.getByRole('button', { name: 'Set this trajectory' });
+    if (await create.count()) {
+      await authedPage.getByLabel(/^Constraints/).fill('Limited weekday energy');
+      await authedPage.getByLabel(/^Intent/).fill(initialIntent);
+      await authedPage.getByLabel(/^Decision policy/).fill('Prefer small finished work');
+      await authedPage.getByLabel(/^Feedback loop/).fill('Review friction every Sunday');
+      await create.click();
+      await expect(authedPage.getByText(initialIntent)).toBeVisible();
+    }
+
+    await authedPage.getByRole('button', { name: 'Review this trajectory' }).click();
+    const review = authedPage
+      .getByRole('heading', { name: 'What did reality tell you?' })
+      .locator('xpath=ancestor::section');
+    await review.getByLabel('Observed signal').fill('The weekly scope was still too large.');
+    await review.getByRole('button', { name: 'Adjust' }).click();
+
+    const revisedIntent = `Publish one useful artifact every two weeks ${Date.now()}`;
+    await review.getByLabel(/^Intent/).fill(revisedIntent);
+    await review.getByRole('button', { name: 'Save and adjust' }).click();
+
+    await expect(authedPage.getByText(revisedIntent)).toBeVisible();
+    await expect(authedPage.getByRole('heading', { name: 'What changed' })).toBeVisible();
+  });
 });

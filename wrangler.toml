@@ -29,6 +29,13 @@ NODE_ENV = "production"
 [ai]
 binding = "AI"
 
+[[d1_databases]]
+binding = "DB"
+database_name = "significanthobbies"
+database_id = "da450bef-a88d-4bc6-8013-35e3d96f70bd"
+preview_database_id = "bbbdc0a6-a4ad-4881-8c71-cfc3f2a3b234"
+migrations_dir = "migrations/d1"
+
 # ─── Preview environment ───────────────────────────────────────────────
 # Used by the PR deploy job: `wrangler deploy --env preview`. Deploys to
 # significanthobbies-preview.<account>.workers.dev (no production routes).
@@ -42,6 +49,12 @@ name = "significanthobbies-preview"
 # already owns them.
 workers_dev = true
 routes = []
+
+[[env.preview.d1_databases]]
+binding = "DB"
+database_name = "significanthobbies-preview"
+database_id = "bbbdc0a6-a4ad-4881-8c71-cfc3f2a3b234"
+migrations_dir = "migrations/d1"
 
 [env.preview.observability]
 enabled = true

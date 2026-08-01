@@ -155,8 +155,9 @@ indexed queries on nested fields.
 
 ## Migrations
 
-Drizzle migrations live in `drizzle/`. Apply with `pnpm db:push` (dev) or
-`pnpm db:generate` (migration files). The local dev DB is `file:./dev.db`
-(gitignored). Production is Turso `significanthobbies`. See
+Current D1 migrations live in `migrations/d1/`. Apply locally with
+`pnpm db:migrate:local`. Production migration is a separate, explicitly remote
+operator step. Historical Turso-era migrations remain in `drizzle/` for audit.
+Use `pnpm db:generate` to generate migration files from the current schema. See
 [`development/workflows.md`](../development/workflows.md) for the schema-change
 workflow.
