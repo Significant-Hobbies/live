@@ -1,6 +1,6 @@
 ---
 title: Architecture overview
-description: Runtime shape — Cloudflare Worker (OpenNext) + Astro landing overlay + Turso/Drizzle + better-auth. Request flow, build pipeline, and the edge cache layer.
+description: Runtime shape — Cloudflare Worker (OpenNext) + Astro landing overlay + D1/Drizzle + better-auth. Request flow, build pipeline, and the edge cache layer.
 ---
 
 # Architecture overview
@@ -16,7 +16,7 @@ Browser → Cloudflare Worker `significanthobbies` (OpenNext, worker.mjs)
   ├── GET / (anon) → ASSETS binding → overlaid Astro static hero (no Worker invocation)
   ├── GET / (authed) → Astro HTML inline location.replace('/dashboard')
   └── all other routes → OpenNext Next.js 16 App Router handlers
-        ├── Turso (libSQL) via Drizzle ORM
+        ├── Cloudflare D1 via Drizzle ORM
         ├── better-auth Google OAuth sessions
         └── PostHog analytics via posthog-js wrapper
 ```
@@ -75,9 +75,9 @@ to avoid conflicts with the prod worker that owns `significanthobbies.com/*`.
 
 ## Storage
 
-- **Turso (libSQL)** — production DB `significanthobbies`. Local dev uses
-  `file:./dev.db`. Drizzle ORM is the only access layer; `src/db/schema.ts` is
-  the source of truth.
+- **Cloudflare D1** — exposed to the Worker through the `DB` binding. Local dev
+  uses the isolated binding in `wrangler.local.toml`. Drizzle ORM is the only
+  access layer; `src/db/schema.ts` is the source of truth.
 - **Durable Objects** — re-exported from `worker.mjs` (`DOQueueHandler`,
   `DOShardedTagCache`, `BucketCachePurge`) so wrangler can resolve bindings at
   deploy time. These come from OpenNext; do not redefine them.

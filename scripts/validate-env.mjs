@@ -1,11 +1,6 @@
 import { spawnSync } from 'node:child_process';
 
-const REQUIRED_WORKER_SECRETS = [
-  'BETTER_AUTH_SECRET',
-  'DATABASE_URL',
-  'GOOGLE_CLIENT_ID',
-  'GOOGLE_CLIENT_SECRET',
-];
+const REQUIRED_WORKER_SECRETS = ['BETTER_AUTH_SECRET', 'GOOGLE_CLIENT_ID', 'GOOGLE_CLIENT_SECRET'];
 
 function parseSecretNames(stdout) {
   try {

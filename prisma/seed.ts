@@ -1,16 +1,19 @@
 import 'dotenv/config';
 
-import { createClient } from '@libsql/client';
 import { eq } from 'drizzle-orm';
-import { drizzle } from 'drizzle-orm/libsql';
+import { drizzle } from 'drizzle-orm/d1';
+import { getPlatformProxy } from 'wrangler';
 
 import * as schema from '../src/db/schema';
 
-function createDb() {
-  const url = process.env.DATABASE_URL ?? 'file:./dev.db';
-  const authToken = process.env.TURSO_AUTH_TOKEN || undefined;
-  const client = createClient({ url, authToken });
-  return drizzle(client, { schema });
+async function createDb() {
+  const platform = await getPlatformProxy<CloudflareEnv>({
+    configPath: './wrangler.local.toml',
+  });
+  return {
+    db: drizzle(platform.env.DB, { schema }),
+    dispose: platform.dispose,
+  };
 }
 
 const famousTimelines = [
@@ -453,75 +456,79 @@ const famousTimelines = [
 ];
 
 async function main() {
-  const db = createDb();
-  console.log('Seeding database with famous hobby journeys...');
+  const { db, dispose } = await createDb();
+  try {
+    console.log('Seeding local D1 with famous hobby journeys...');
 
-  // Remove old demo timelines
-  for (const slug of ['demo-alex', 'demo-sam', 'demo-jordan']) {
-    const existing = await db.query.timelines.findFirst({
-      where: eq(schema.timelines.slug, slug),
-    });
-    if (existing) {
-      await db.delete(schema.timelines).where(eq(schema.timelines.slug, slug));
-      console.log(`  Removed old demo: ${slug}`);
-    }
-  }
-
-  // Seed famous timelines
-  for (const demo of famousTimelines) {
-    // Upsert user
-    let user = await db.query.users.findFirst({
-      where: eq(schema.users.email, demo.email),
-    });
-
-    if (user) {
-      await db
-        .update(schema.users)
-        .set({ username: demo.username, name: demo.name })
-        .where(eq(schema.users.id, user.id));
-    } else {
-      const [newUser] = await db
-        .insert(schema.users)
-        .values({
-          email: demo.email,
-          name: demo.name,
-          username: demo.username,
-          image: `https://api.dicebear.com/7.x/initials/svg?seed=${demo.name}`,
-        })
-        .returning();
-      user = newUser!;
-    }
-
-    // Upsert timeline
-    const existingTimeline = await db.query.timelines.findFirst({
-      where: eq(schema.timelines.slug, demo.timeline.slug),
-    });
-
-    const now = new Date();
-    if (existingTimeline) {
-      await db
-        .update(schema.timelines)
-        .set({
-          phases: JSON.stringify(demo.timeline.phases),
-          title: demo.timeline.title,
-          updatedAt: now,
-        })
-        .where(eq(schema.timelines.id, existingTimeline.id));
-    } else {
-      await db.insert(schema.timelines).values({
-        userId: user.id,
-        title: demo.timeline.title,
-        visibility: 'PUBLIC',
-        slug: demo.timeline.slug,
-        phases: JSON.stringify(demo.timeline.phases),
-        createdAt: now,
-        updatedAt: now,
+    // Remove old demo timelines
+    for (const slug of ['demo-alex', 'demo-sam', 'demo-jordan']) {
+      const existing = await db.query.timelines.findFirst({
+        where: eq(schema.timelines.slug, slug),
       });
+      if (existing) {
+        await db.delete(schema.timelines).where(eq(schema.timelines.slug, slug));
+        console.log(`  Removed old demo: ${slug}`);
+      }
     }
 
-    console.log(`  Done: ${demo.name} (@${demo.username})`);
+    // Seed famous timelines
+    for (const demo of famousTimelines) {
+      // Upsert user
+      let user = await db.query.users.findFirst({
+        where: eq(schema.users.email, demo.email),
+      });
+
+      if (user) {
+        await db
+          .update(schema.users)
+          .set({ username: demo.username, name: demo.name })
+          .where(eq(schema.users.id, user.id));
+      } else {
+        const [newUser] = await db
+          .insert(schema.users)
+          .values({
+            email: demo.email,
+            name: demo.name,
+            username: demo.username,
+            image: `https://api.dicebear.com/7.x/initials/svg?seed=${demo.name}`,
+          })
+          .returning();
+        user = newUser!;
+      }
+
+      // Upsert timeline
+      const existingTimeline = await db.query.timelines.findFirst({
+        where: eq(schema.timelines.slug, demo.timeline.slug),
+      });
+
+      const now = new Date();
+      if (existingTimeline) {
+        await db
+          .update(schema.timelines)
+          .set({
+            phases: JSON.stringify(demo.timeline.phases),
+            title: demo.timeline.title,
+            updatedAt: now,
+          })
+          .where(eq(schema.timelines.id, existingTimeline.id));
+      } else {
+        await db.insert(schema.timelines).values({
+          userId: user.id,
+          title: demo.timeline.title,
+          visibility: 'PUBLIC',
+          slug: demo.timeline.slug,
+          phases: JSON.stringify(demo.timeline.phases),
+          createdAt: now,
+          updatedAt: now,
+        });
+      }
+
+      console.log(`  Done: ${demo.name} (@${demo.username})`);
+    }
+    console.log('Seeding complete!');
+  } finally {
+    await dispose();
   }
-  console.log('Seeding complete!');
 }
 
 main().catch((e) => {

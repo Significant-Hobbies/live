@@ -128,24 +128,21 @@ export async function setIdeal(input: {
   const now = new Date();
   const outcome: EraStatus = input.previousOutcome === 'completed' ? 'completed' : 'abandoned';
 
-  return db.transaction(async (tx) => {
-    // Close the current active era for this bucket, if one exists.
-    const active = await tx.query.trajectoryEras.findFirst({
-      where: and(
-        eq(trajectoryEras.userId, session.user.id),
-        eq(trajectoryEras.bucket, parsed.data.bucket),
-        eq(trajectoryEras.status, 'active')
+  // D1 executes a batch transactionally. Close any active era and create the
+  // replacement in one database round trip; if either statement fails, D1
+  // rolls the whole batch back.
+  const [, createdRows] = await db.batch([
+    db
+      .update(trajectoryEras)
+      .set({ status: outcome, closedAt: now, updatedAt: now })
+      .where(
+        and(
+          eq(trajectoryEras.userId, session.user.id),
+          eq(trajectoryEras.bucket, parsed.data.bucket),
+          eq(trajectoryEras.status, 'active')
+        )
       ),
-      columns: { id: true },
-    });
-    if (active) {
-      await tx
-        .update(trajectoryEras)
-        .set({ status: outcome, closedAt: now, updatedAt: now })
-        .where(eq(trajectoryEras.id, active.id));
-    }
-
-    const [created] = await tx
+    db
       .insert(trajectoryEras)
       .values({
         userId: session.user.id,
@@ -154,12 +151,12 @@ export async function setIdeal(input: {
         status: 'active',
         openedAt: now,
       })
-      .returning({ id: trajectoryEras.id });
+      .returning({ id: trajectoryEras.id }),
+  ]);
 
-    revalidatePath('/trajectory');
-    revalidatePath('/daily');
-    return { success: true, eraId: created?.id };
-  });
+  revalidatePath('/trajectory');
+  revalidatePath('/daily');
+  return { success: true, eraId: createdRows[0]?.id };
 }
 
 /**

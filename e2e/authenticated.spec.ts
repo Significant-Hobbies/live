@@ -328,4 +328,31 @@ test.describe('authenticated surfaces', () => {
       await expect(authedPage.getByRole('heading', { name: bucket })).toBeVisible();
     }
   });
+
+  test('trajectory replaces an ideal atomically on D1', async ({ authedPage }) => {
+    await authedPage.goto('/trajectory');
+    const health = authedPage
+      .getByRole('heading', { name: 'Health' })
+      .locator('xpath=ancestor::section');
+
+    const edit = health.getByRole('button', { name: 'Edit Health ideal' });
+    if (await edit.count()) {
+      await edit.click();
+    } else {
+      await health.getByRole('button', { name: 'Set an ideal →' }).click();
+    }
+
+    const ideal = `Move every day and sleep consistently ${Date.now()}`;
+    await health.getByLabel('Your ideal for health').fill(ideal);
+
+    const replace = health.getByRole('button', { name: 'Set new ideal' });
+    if (await replace.count()) {
+      await replace.click();
+      await health.getByRole('button', { name: 'No — moved on' }).click();
+    } else {
+      await health.getByRole('button', { name: 'Set ideal' }).click();
+    }
+
+    await expect(health.getByText(ideal)).toBeVisible();
+  });
 });

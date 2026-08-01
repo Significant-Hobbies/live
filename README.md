@@ -10,7 +10,7 @@ Map your hobby history across life phases. Visualize insights. Share your journe
 | Concern | Service |
 |---------|---------|
 | Hosting | Cloudflare Workers (`significanthobbies`) via `@opennextjs/cloudflare`; routes `significanthobbies.com` + `www.significanthobbies.com`. PRs deploy a `significanthobbies-preview` env on `*.workers.dev`. |
-| Database | Turso (libSQL); Drizzle ORM |
+| Database | Cloudflare D1; Drizzle ORM |
 | Auth | better-auth + Google OAuth |
 | Analytics | PostHog via an isomorphic wrapper (`src/lib/analytics.ts`) — `posthog-js` in the browser, direct capture-API `fetch` in server actions |
 | CI/CD | GitHub Actions (`.github/workflows/deploy.yml`) — manual production deploy from `main` |
@@ -20,8 +20,8 @@ Map your hobby history across life phases. Visualize insights. Share your journe
 ```bash
 pnpm install
 cp .env.example .env          # fill in your values
-pnpm db:push                  # apply Drizzle schema to local SQLite (dev.db)
-pnpm db:seed
+pnpm db:migrate:local         # apply tracked migrations to local D1
+pnpm db:seed                  # seed local D1 demo data
 pnpm dev
 ```
 
@@ -29,10 +29,12 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Environment Variables
 
+The application database is provided through the Cloudflare `DB` binding. Local
+development uses the local-only binding in `wrangler.local.toml`; it does not
+need a database URL or token.
+
 | Variable | Required | Description |
 |----------|----------|-------------|
-| `DATABASE_URL` | Yes | `file:./dev.db` for local, `libsql://...` for Turso |
-| `TURSO_AUTH_TOKEN` | Turso only | Token from `turso db tokens create <db>` |
 | `BETTER_AUTH_SECRET` | Yes | `openssl rand -base64 32` |
 | `BETTER_AUTH_URL` | Yes | `http://localhost:3000` in dev |
 | `GOOGLE_CLIENT_ID` | Yes | From Google Cloud Console |
@@ -45,24 +47,16 @@ Open [http://localhost:3000](http://localhost:3000).
 3. Add Authorized redirect URI: `http://localhost:3000/api/auth/callback/google`
 4. Copy Client ID + Secret into `.env`
 
-## Turso (Production Database)
+## Cloudflare D1
 
 ```bash
-# Install CLI
-brew install tursodatabase/tap/turso
-turso auth login
-
-# Create database
-turso db create significanthobbies
-
-# Get URL and token
-turso db show significanthobbies --url
-turso db tokens create significanthobbies
-
-# Update .env
-DATABASE_URL="libsql://significanthobbies-<org>.turso.io"
-TURSO_AUTH_TOKEN="<token>"
+# Local database only; does not contact the production database
+pnpm db:migrate:local
+pnpm db:seed
 ```
+
+Production migrations use `pnpm db:migrate:remote` only after an operator has
+reviewed the migration receipt and explicitly approved the remote step.
 
 ## Running Tests
 
@@ -101,7 +95,7 @@ landing pages, etc.).
 ## Stack
 
 - **Framework**: Next.js 16 App Router + TypeScript
-- **Database**: Drizzle + Turso (libSQL / SQLite)
+- **Database**: Drizzle + Cloudflare D1
 - **Auth**: better-auth (Google OAuth)
 - **UI**: Tailwind CSS v4 + shadcn/ui + @dnd-kit for drag/drop
 - **Export**: html-to-image (client-side PNG)

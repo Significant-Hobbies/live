@@ -95,20 +95,13 @@ deploy. Confirm with the cache-busted URL before concluding anything.
 `pnpm build` is green on your machine. `wrangler` never runs, so production is
 untouched — check the step list before assuming a partial deploy.
 
-**Cause:** the deploy job sets no `DATABASE_URL`. Anything that only executes
-when a database query *fails* is therefore unreachable locally and reached on
-every deploy. This bit once already: `sitemap.ts` called `captureError` from
-`~/lib/foundry-monitoring` inside the catch around its public-profiles query.
-That module is `'use client'`, so the build died with "Attempted to call
-captureError() from the server" — but only where the DB was unreachable.
+**Cause:** the deployed Worker has no `DB` binding, or its D1 schema migration
+has not been applied. Local development uses `wrangler.local.toml`, while a
+remote deploy uses the explicitly configured binding in `wrangler.toml`; a
+green local build does not prove that remote operator step happened.
 
-**Reproduce locally** — point the URL at a host that does not resolve, which
-makes every query throw the way it does in CI:
-
-```bash
-rm -rf .next
-DATABASE_URL="libsql://nonexistent-host-xyz.turso.io" pnpm build
-```
+Check the deployment's bindings and D1 migration list before retrying. Do not
+apply a remote migration just to diagnose a build failure.
 
 **Rule:** server routes must not import from `'use client'` modules. An unused
 import is silently fine, which is what makes this class of bug survive review —

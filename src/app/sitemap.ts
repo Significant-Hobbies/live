@@ -9,7 +9,9 @@ import { PAGED_EXPERIENCES } from '~/lib/experiences';
 import { HOBBY_CATEGORIES } from '~/lib/hobbies';
 import { db } from '~/server/db';
 
-export const revalidate = 3600;
+// D1 is request-scoped under OpenNext. Generating this route at build time has
+// no Worker context and would silently omit public profiles.
+export const dynamic = 'force-dynamic';
 
 /**
  * Public profiles that have something to show.

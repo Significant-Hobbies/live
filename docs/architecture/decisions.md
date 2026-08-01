@@ -112,9 +112,9 @@ default.
 **Constraint:** A few routes opt into runtime behaviour and are the exception,
 not the rule: `src/app/hobbies/[hobby]/page.tsx` and `src/app/explore/page.tsx`
 use `export const revalidate` (ISR — 3600s and 300s respectively),
-`src/app/sitemap.ts` uses `revalidate = 3600`, and `src/app/look-back/page.tsx`
-and `src/app/timelines/recent/page.tsx` use `export const dynamic =
-'force-dynamic'`. With the static-assets incremental cache, ISR routes are
+`src/app/sitemap.ts`, `src/app/look-back/page.tsx`, and
+`src/app/timelines/recent/page.tsx` use `export const dynamic =
+'force-dynamic'`; the sitemap needs a request-scoped D1 binding. With the static-assets incremental cache, ISR routes are
 served from the last build output rather than revalidating on the OpenNext
 runtime — verify a new `revalidate` route actually updates before relying on
 it, and grep `src/app` for `revalidate`/`dynamic` for the current set. See
@@ -127,8 +127,8 @@ procedure.
 current codebase uses Drizzle ORM + better-auth. `src/db/schema.ts` is the
 source of truth; `prisma/seed.ts` is legacy naming only (it uses Drizzle now).
 
-**Why:** Drizzle is lighter on Cloudflare Workers and has first-class Turso/
-libSQL support. better-auth has a cleaner Drizzle adapter and simpler Google
+**Why:** Drizzle is lighter on Cloudflare Workers and has a first-class D1
+adapter. better-auth has a cleaner Drizzle adapter and simpler Google
 OAuth than NextAuth v5 at the time of migration. The legacy PascalCase tables
 (`User`, `Account`, `Session`, `VerificationToken`) are preserved because app
 code references them; better-auth uses `auth_`-prefixed tables to avoid
