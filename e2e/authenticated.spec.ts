@@ -322,10 +322,13 @@ test.describe('authenticated surfaces', () => {
     }).toPass({ timeout: 10_000 });
   });
 
-  test('trajectory renders all four life buckets', async ({ authedPage }) => {
+  test('trajectory offers one focused contract to a new user', async ({ authedPage }) => {
     await authedPage.goto('/trajectory');
-    for (const bucket of ['Health', 'Finance', 'Knowledge', 'Relationships']) {
-      await expect(authedPage.getByRole('heading', { name: bucket })).toBeVisible();
-    }
+    await expect(
+      authedPage.getByRole('heading', { name: 'One direction. Four useful answers.' })
+    ).toBeVisible();
+    await expect(authedPage.locator('textarea')).toHaveCount(4);
+    await expect(authedPage.getByRole('combobox', { name: /Review rhythm/ })).toBeVisible();
+    await expect(authedPage.getByRole('button', { name: 'Set this trajectory' })).toBeVisible();
   });
 });
