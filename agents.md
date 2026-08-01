@@ -23,7 +23,7 @@ Workers via OpenNext.
 
 - **Framework:** Next.js 16 (App Router, React 19) + TypeScript (strict)
 - **Styling:** Tailwind CSS v4 + shadcn/ui
-- **DB:** Turso (libSQL) via Drizzle ORM. Local dev: `file:./dev.db`
+- **DB:** Cloudflare D1 via Drizzle ORM
 - **Auth:** better-auth (Google OAuth)
 - **Testing:** Vitest (unit, co-located in `src/lib/*.test.ts`), Playwright (e2e in `e2e/`)
 - **Deploy:** Cloudflare Workers (`significanthobbies`) via `@opennextjs/cloudflare`
@@ -33,8 +33,8 @@ Workers via OpenNext.
 
 ```bash
 pnpm install
-cp .env.example .env          # fill in DATABASE_URL, BETTER_AUTH_SECRET, GOOGLE_CLIENT_*
-pnpm db:push                  # apply Drizzle schema to local SQLite (dev.db)
+cp .env.example .env          # fill in BETTER_AUTH_SECRET and GOOGLE_CLIENT_*
+pnpm db:migrate:local         # apply tracked migrations to isolated local D1
 pnpm db:seed                  # seed hobby catalog (tsx prisma/seed.ts — legacy dir name)
 pnpm dev                      # next dev on localhost:3000
 
