@@ -11,11 +11,13 @@ describe('trajectory contract actions', () => {
   });
 
   it('records every review before applying its decision', () => {
-    const reviewInsert = source.indexOf('tx.insert(trajectoryReviews)');
+    const reviewInsert = source.indexOf('db.insert(trajectoryReviews)');
     const statusUpdate = source.indexOf('.update(trajectoryContracts)');
     expect(reviewInsert).toBeGreaterThan(-1);
     expect(statusUpdate).toBeGreaterThan(reviewInsert);
-    expect(source).toContain("parsed.data.decision !== 'continue'");
+    expect(source).toContain('await db.batch([');
+    expect(source).not.toContain('db.transaction(');
+    expect(source).toContain("parsed.data.decision === 'continue'");
     expect(source).toContain("parsed.data.decision === 'adjust'");
     expect(source).toContain("parsed.data.decision === 'complete'");
     expect(source).toContain(": 'released'");
