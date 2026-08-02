@@ -5,7 +5,7 @@
 > Update this file when durable current or shipped product truth changes. Do
 > not let deploy-version snapshots accumulate here — put those in the archive.
 
-Last updated: 2026-08-01
+Last updated: 2026-08-02
 
 ## Why / What
 
@@ -21,6 +21,14 @@ is the bridge between daily practice and life aspirations.
   2026-08-02.
 
 ## Timeline
+
+- **2026-08-02:** Built the simplified four-surface private product locally:
+  authenticated `/` is Today, `/live-more` owns aspirations and substantial
+  corpus-backed discovery, `/daily` owns journal and habits, and `/history`
+  joins timeline, mortality, and Trajectory. Setup is now a resumable seven-step
+  journey that creates a private past, bucket-list future, annual focus, daily
+  habit, and initial Trajectory. Legacy overview routes redirect; production
+  migration and deployment remain manual.
 
 - **2026-08-02:** Deleted the retired `significanthobbies` Turso database after
   D1 cutover acceptance and verified the public Worker remained healthy.
@@ -132,6 +140,12 @@ Historical milestones live in
   52-item pool. 122 hobbies gained twelve cross-cutting facets, so "gentle,
   cheap, screen-free" is two clicks rather than unanswerable. See
   [`docs/architecture/decisions.md`](docs/architecture/decisions.md) A11.
+- **Four-surface private product built locally:** Today (`/`) keeps the current
+  day useful; Live More (`/live-more`) centres the bucket list, annual focus,
+  and full-corpus discovery; Daily (`/daily`) owns journal and habits; History
+  (`/history`) owns timeline, Life in Weeks, reflection, and Trajectory.
+  `/dashboard`, `/life-plan`, and `/look-back` remain compatibility redirects.
+  The supporting exact-DOB migration and deployment remain operator-owned.
 - **Discovery:** the hobby quiz (`/find-your-hobby`) is the single primary
   discovery UX (2026-07-03). The other three surfaces (`/hobbies`, `/explore`,
   `/journeys`) are hidden from homepage/nav/footer; code intact, reachable
@@ -172,10 +186,9 @@ are parked with a reason rather than deleted.
 | `/explore` | Intentionally hidden — see [`docs/product/discovery-funnel.md`](docs/product/discovery-funnel.md). |
 | `/hobbies`, `/journeys` | Same as `/explore`. Reachable via deep links, SEO, and quiz cross-links. |
 
-`/life-plan` was in this category and is now linked from the account dropdown: it
-is not a `/dashboard` duplicate (archetype, life balance, and the only surface
-rendering bucket-item quest chains) and it is `noindex`, so surfacing it does not
-touch the discovery experiment.
+The former `/life-plan` overview is now a compatibility redirect to
+`/live-more`; bucket-item quest chains live in the detailed `/bucket-list`
+workspace.
 
 **Resolved 2026-07-25:** user profiles are now in `sitemap.ts`. Only users with a
 username *and* at least one `PUBLIC` timeline are listed — an empty profile is a
@@ -184,10 +197,10 @@ tracks the newest public timeline update, the query is capped at 5000 rows, and 
 returns `[]` on failure so a database hiccup degrades the sitemap rather than
 500ing it and taking the static entries down with it.
 
-Private app routes stay out of the sitemap by design: `/daily`, `/dashboard`,
-`/trajectory`, `/commitments`, `/life-plan`, `/bucket-list`, and `/look-back` are
-all `noindex` and auth-gated, so listing them would point crawlers at a login
-redirect and contradict their own robots directive. `/search` is in the sitemap
+Private app routes stay out of the sitemap by design: `/`, `/daily`,
+`/trajectory`, `/commitments`, `/live-more`, `/bucket-list`, and `/history` are
+`noindex` application surfaces. Several support signed-out local work, but that
+does not make private records public or indexable. `/search` is in the sitemap
 and is genuinely public — that one is consistent.
 
 ### Deploy fingerprint
