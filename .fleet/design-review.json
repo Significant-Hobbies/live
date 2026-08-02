@@ -2,8 +2,8 @@
   "$schema": "fleet.design-review.v1",
   "version": 1,
   "project": "significanthobbies",
-  "target": "Global shell and core product routes",
-  "mode": "overhaul",
+  "target": "Simplified four-surface product, onboarding, and responsive Live More discovery",
+  "mode": "preserve",
   "register": "product",
   "context": {
     "product": "PRODUCT.md",
@@ -24,39 +24,43 @@
     "screenshots": [
       {
         "width": 390,
-        "path": ".fleet/design-evidence/life-atlas-v3/live-more-390.png"
+        "path": ".fleet/design-evidence/simplified-four-surfaces/live-more-390-final.png"
       },
       {
         "width": 768,
-        "path": ".fleet/design-evidence/life-atlas-v3/live-more-768.png"
+        "path": ".fleet/design-evidence/simplified-four-surfaces/live-more-768-final.png"
       },
       {
         "width": 1440,
-        "path": ".fleet/design-evidence/life-atlas-v3/live-more-1440.png"
+        "path": ".fleet/design-evidence/simplified-four-surfaces/live-more-1440-final.png"
+      },
+      {
+        "width": 390,
+        "path": ".fleet/design-evidence/simplified-four-surfaces/onboarding-390-final.png"
+      },
+      {
+        "width": 768,
+        "path": ".fleet/design-evidence/simplified-four-surfaces/onboarding-768-final.png"
       },
       {
         "width": 1440,
-        "path": ".fleet/design-evidence/system-sweep-v1/dashboard-1440.png"
+        "path": ".fleet/design-evidence/simplified-four-surfaces/onboarding-1440-final.png"
       },
       {
-        "width": 1440,
-        "path": ".fleet/design-evidence/system-sweep-v1/settings-1440.png"
-      },
-      {
-        "width": 1440,
-        "path": ".fleet/design-evidence/system-sweep-v1/login-1440.png"
+        "width": 390,
+        "path": ".fleet/design-evidence/simplified-four-surfaces/history-390-final.png"
       }
     ],
     "projectCheck": {
-      "command": "pnpm typecheck && pnpm lint && pnpm test && pnpm docs:check && pnpm exec openspec validate --all --strict && pnpm exec playwright test --project=desktop && pnpm build",
-      "status": "passed"
+      "command": "pnpm lint; pnpm typecheck; pnpm test; pnpm docs:check; openspec validate make-daily-the-operational-home --strict; focused Playwright desktop and mobile; pnpm build",
+      "status": "pass"
     },
     "critique": {
-      "score": 0,
+      "score": 33,
       "maximum": 40
     },
     "audit": {
-      "score": 0,
+      "score": 18,
       "maximum": 20
     },
     "unresolved": {
@@ -70,6 +74,6 @@
   },
   "ownerFeedback": {
     "decision": "delegated",
-    "note": "Owner asked to proceed with end-to-end testing and release if the agent is happy with the UI. The final visual pass includes the expanded core-route system and the redesigned Side Quests activity stage."
+    "note": "Owner explicitly delegated the simplification and mobile quality judgment with 'go for it'. The preserve-mode pass extends the approved Life Atlas system across onboarding and the four canonical private surfaces."
   }
 }
