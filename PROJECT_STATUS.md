@@ -17,10 +17,13 @@ is the bridge between daily practice and life aspirations.
 ## Dependencies
 
 - Cloudflare Workers/OpenNext, Cloudflare D1, Drizzle, better-auth Google OAuth,
-  and PostHog. Turso remains temporarily preserved as the rollback source for
-  the D1 cutover observation window.
+  and PostHog. D1 is authoritative; the retired Turso database was deleted on
+  2026-08-02.
 
 ## Timeline
+
+- **2026-08-02:** Deleted the retired `significanthobbies` Turso database after
+  D1 cutover acceptance and verified the public Worker remained healthy.
 
 - **2026-08-01:** Unified the local product shell around three direct destinations: Live More, Daily, and See History. Live More now gathers hobbies, bucket lists, Life Bingo, and side quests in a bright action-led home; See History pairs the mortality grid with Trajectory and reflection. Focused routes remain intact, account and local data keep their existing authorities, and production deployment remains manual.
 
@@ -28,8 +31,7 @@ is the bridge between daily practice and life aspirations.
 
 - **2026-08-01:** Migrated production persistence from Turso/libSQL to a
   project-owned Cloudflare D1 database after schema, row-count, aggregate,
-  relationship, auth, and write-path parity checks. The Turso source remains
-  preserved for the bounded rollback observation window.
+  relationship, auth, and write-path parity checks.
 - **2026-08-01:** Reframed Trajectory locally as one private living decision
   contract: constraints, intent, decision policy, and feedback loop. Reviews can
   continue, adjust, complete, or release the direction; adjustments retain
@@ -193,7 +195,7 @@ and is genuinely public — that one is consistent.
 - **Worker:** `significanthobbies` (prod) / `significanthobbies-preview` (PR)
 - **Routes:** `significanthobbies.com/*`, `www.significanthobbies.com/*`
 - **Deploy trigger:** manual `workflow_dispatch` on `.github/workflows/deploy.yml`
-- **DB:** Cloudflare D1 `significanthobbies`; Turso retained temporarily for rollback
+- **DB:** Cloudflare D1 `significanthobbies` (authoritative)
 
 ## Work queue
 
