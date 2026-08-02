@@ -10,16 +10,16 @@ description: Durable architectural decisions for significanthobbies and the why 
 > and [`knowledge/archive/side-quests-design-2026-03-06.md`](../knowledge/archive/side-quests-design-2026-03-06.md).
 > This page keeps the choices that still constrain the current codebase.
 
-## A1 — Astro owns `GET /`, Next.js handles everything else
+## A1 — Astro owns anonymous `GET /`; Next.js owns authenticated `GET /`
 
-**Decision:** The anon landing page is a static Astro site (`landing-astro/`)
-overlaid into `.open-next/assets/`. `wrangler.toml` uses
-`run_worker_first = ["/*", "!/"]` so the Worker is skipped entirely for anon
-`GET /`. Next.js `page.tsx` is an auth-only fallback; authed visitors get an
-inline `location.replace('/dashboard')` in the Astro HTML.
+**Decision:** The anonymous landing page is a static Astro site (`landing-astro/`)
+overlaid into `.open-next/assets/`. The Worker runs first for `/`: anonymous
+requests are served directly from the ASSETS binding while auth-bearing requests
+reach the private Next.js root. This lets both audiences use the canonical URL
+without a dead dashboard route or a client-side redirect flash.
 
-**Why:** The homepage is the LCP path and the highest-traffic page. Serving it
-from the ASSETS binding eliminates Worker cold-start TTFB entirely. Astro is
+**Why:** The homepage is the LCP path and the highest-traffic page. Serving the
+anonymous response from the ASSETS binding avoids starting OpenNext. Astro is
 also a better fit for static marketing content than Next.js App Router. The
 fleet perf push (2026-06-20) required sub-second TTFB on `/`.
 
