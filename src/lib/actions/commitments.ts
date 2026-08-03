@@ -70,7 +70,7 @@ export async function startCommitment(input: {
   });
   if (user?.username) revalidatePath(`/u/${user.username}`);
   revalidatePath('/commitments');
-  revalidatePath('/dashboard');
+  revalidatePath('/');
 
   return { success: true, commitmentId: created?.id };
 }
@@ -192,7 +192,7 @@ export async function logStamp(input: {
 
   if (user?.username) revalidatePath(`/u/${user.username}`);
   revalidatePath('/commitments');
-  revalidatePath('/dashboard');
+  revalidatePath('/');
 
   return { success: true, newBadges };
 }
@@ -212,7 +212,7 @@ export async function abandonCommitment(commitmentId: string): Promise<{ success
   });
   if (user?.username) revalidatePath(`/u/${user.username}`);
   revalidatePath('/commitments');
-  revalidatePath('/dashboard');
+  revalidatePath('/');
 
   return { success: true };
 }

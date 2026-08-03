@@ -7,10 +7,12 @@ export function LiveMoreAtlas({
   name,
   currentHobbies = [],
   nextThings = [],
+  compact = false,
 }: {
   name?: string | null;
   currentHobbies?: string[];
   nextThings?: string[];
+  compact?: boolean;
 }) {
   return (
     <section className="overflow-hidden rounded-[1.75rem] bg-white text-[#201f18] shadow-[0_18px_50px_rgba(66,55,22,0.10)]">
@@ -45,56 +47,58 @@ export function LiveMoreAtlas({
         </div>
       </div>
 
-      <div className="bg-[#fffdf3] px-6 py-12 sm:px-10 lg:px-14 lg:py-16">
-        <div className="mb-9 flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
-          <h2 className="max-w-lg font-serif text-4xl font-medium tracking-[-0.025em] sm:text-5xl">
-            Four ways back into your life
-          </h2>
-          <p className="max-w-sm text-base leading-relaxed text-[#4b493d]">
-            Browse less. Choose one door and make a small move through it.
-          </p>
+      {!compact && (
+        <div className="bg-[#fffdf3] px-6 py-12 sm:px-10 lg:px-14 lg:py-16">
+          <div className="mb-9 flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
+            <h2 className="max-w-lg font-serif text-4xl font-medium tracking-[-0.025em] sm:text-5xl">
+              Four ways back into your life
+            </h2>
+            <p className="max-w-sm text-base leading-relaxed text-[#4b493d]">
+              Browse less. Choose one door and make a small move through it.
+            </p>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-12">
+            <PhotoPath
+              href="/find-your-hobby"
+              title="Find a hobby"
+              note="Follow a curiosity until it becomes part of your week."
+              action="Find your thing"
+              image="/images/live-more/pottery-v1.webp"
+              alt="Hands shaping a clay bowl at a sunlit community pottery table"
+              className="lg:col-span-7"
+            />
+
+            <ColorPath
+              href="/bucket-list"
+              title="Want something bigger"
+              note="Name the experiences you would regret leaving unlived."
+              action="Add a possibility"
+              className="bg-[#ff9d7d] lg:col-span-5"
+              icon={<ListChecks className="size-7" strokeWidth={1.8} aria-hidden="true" />}
+            />
+
+            <ColorPath
+              href="/life-bingo"
+              title="Make life playful"
+              note="Turn this season into a board of small, surprising wins."
+              action="Play Life Bingo"
+              className="bg-[#c5abfa] lg:col-span-5"
+              icon={<Dice5 className="size-7" strokeWidth={1.8} aria-hidden="true" />}
+            />
+
+            <PhotoPath
+              href="/side-quests"
+              title="Do something this week"
+              note="Take a detour. Try the slightly odd thing. Collect a story."
+              action="Pick a side quest"
+              image="/images/live-more/bike-ride-v1.webp"
+              alt="Two friends riding bicycles through a colorful neighborhood at golden hour"
+              className="lg:col-span-7"
+            />
+          </div>
         </div>
-
-        <div className="grid gap-6 lg:grid-cols-12">
-          <PhotoPath
-            href="/find-your-hobby"
-            title="Find a hobby"
-            note="Follow a curiosity until it becomes part of your week."
-            action="Find your thing"
-            image="/images/live-more/pottery-v1.webp"
-            alt="Hands shaping a clay bowl at a sunlit community pottery table"
-            className="lg:col-span-7"
-          />
-
-          <ColorPath
-            href="/bucket-list/new"
-            title="Want something bigger"
-            note="Name the experiences you would regret leaving unlived."
-            action="Add a possibility"
-            className="bg-[#ff9d7d] lg:col-span-5"
-            icon={<ListChecks className="size-7" strokeWidth={1.8} aria-hidden="true" />}
-          />
-
-          <ColorPath
-            href="/life-bingo"
-            title="Make life playful"
-            note="Turn this season into a board of small, surprising wins."
-            action="Play Life Bingo"
-            className="bg-[#c5abfa] lg:col-span-5"
-            icon={<Dice5 className="size-7" strokeWidth={1.8} aria-hidden="true" />}
-          />
-
-          <PhotoPath
-            href="/side-quests"
-            title="Do something this week"
-            note="Take a detour. Try the slightly odd thing. Collect a story."
-            action="Pick a side quest"
-            image="/images/live-more/bike-ride-v1.webp"
-            alt="Two friends riding bicycles through a colorful neighborhood at golden hour"
-            className="lg:col-span-7"
-          />
-        </div>
-      </div>
+      )}
 
       {(currentHobbies.length > 0 || nextThings.length > 0) && (
         <div className="grid gap-8 border-t border-[#e7dfbd] bg-white px-6 py-9 sm:px-10 lg:px-14 md:grid-cols-2">
@@ -202,8 +206,11 @@ function LifeList({ title, items, empty }: { title: string; items: string[]; emp
       <p className="text-sm font-bold text-[#514d3b]">{title}</p>
       {items.length ? (
         <ul className="mt-3 flex flex-wrap gap-2">
-          {items.slice(0, 6).map((item) => (
-            <li key={item} className="rounded-full bg-[#f7e957] px-3 py-1.5 text-base font-medium">
+          {items.slice(0, 6).map((item, index) => (
+            <li
+              key={`${item}-${index}`}
+              className="rounded-full bg-[#f7e957] px-3 py-1.5 text-base font-medium"
+            >
               {item}
             </li>
           ))}

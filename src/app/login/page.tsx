@@ -22,7 +22,7 @@ export default async function LoginPage({
   const callbackUrl =
     requestedCallback?.startsWith('/') && !requestedCallback.startsWith('//')
       ? requestedCallback
-      : '/dashboard';
+      : '/';
   // The guest link has to follow the same intent as the callback, or it strands
   // people: arriving from /daily used to offer the timeline builder.
   const guestRoute = guestRouteFor(callbackUrl);

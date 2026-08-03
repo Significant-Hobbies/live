@@ -14,7 +14,7 @@ description: Runtime shape — Cloudflare Worker (OpenNext) + Astro landing over
 ```
 Browser → Cloudflare Worker `significanthobbies` (OpenNext, worker.mjs)
   ├── GET / (anon) → ASSETS binding → overlaid Astro static hero (no Worker invocation)
-  ├── GET / (authed) → Astro HTML inline location.replace('/dashboard')
+  ├── GET / (authed) → OpenNext → private Today home
   └── all other routes → OpenNext Next.js 16 App Router handlers
         ├── Cloudflare D1 via Drizzle ORM
         ├── better-auth Google OAuth sessions
@@ -39,9 +39,8 @@ builds the static hero + below-fold sections for `GET /`. The build pipeline
 overlays its output into `.open-next/assets/` so the Worker's `ASSETS` binding
 serves it directly. `wrangler.toml` uses `run_worker_first = ["/*", "!/"]` so
 the Worker is skipped entirely for anon `GET /` — no cold-start TTFB on the
-LCP path. Auth redirect is inline in `landing-astro/src/layouts/Layout.astro`
-(`location.replace('/dashboard')`). Next.js `page.tsx` is an auth-only
-fallback.
+LCP path. The custom Worker detects better-auth session cookies and sends those
+requests through OpenNext; `src/app/page.tsx` owns the authenticated Today home.
 
 See [`decisions.md`](decisions.md) A1 for why this split exists.
 

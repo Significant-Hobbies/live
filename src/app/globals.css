@@ -152,6 +152,12 @@
   }
 }
 
+@layer components {
+  .field-input {
+    @apply mt-2 min-h-12 w-full rounded-xl border-2 border-[#d9cfbd] bg-white px-4 text-base text-[#211e18] placeholder:text-[#8c8273] focus-visible:border-[#176b4a] focus-visible:outline-none;
+  }
+}
+
 /* ─── Professional depth utilities ────────────────────────────────────────── */
 @layer utilities {
   /* Subtle elevation — Stripe-like card shadow */
@@ -272,6 +278,11 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  [data-animated-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
   .life-bingo-stamp { animation: none; }
 }
 
@@ -541,4 +552,166 @@
   .animate-bucket-item-in,
   .animate-bucket-check-pop,
   .animate-bucket-sparkle { animation: none; }
+}
+
+/* ─── Public cinematic landing ─────────────────────────────────────────── */
+
+.landing-cinematic-hero {
+  position: relative;
+  min-height: calc(100svh - 4.5rem);
+  overflow: hidden;
+  isolation: isolate;
+  background: #0b1320 url('/hero/hobby-horizon-poster.jpg') center / cover no-repeat;
+}
+
+.landing-cinematic-hero__video,
+.landing-cinematic-hero__scrim {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.landing-cinematic-hero__video {
+  object-fit: cover;
+  object-position: 54% center;
+  opacity: 0;
+  transition: opacity 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.landing-cinematic-hero__video.is-ready {
+  opacity: 1;
+}
+
+.landing-cinematic-hero__scrim {
+  background:
+    linear-gradient(90deg, oklch(0.08 0.025 250 / 0.92) 0%, oklch(0.08 0.025 250 / 0.7) 38%, oklch(0.08 0.025 250 / 0.18) 72%),
+    linear-gradient(180deg, oklch(0.08 0.025 250 / 0.48) 0%, transparent 35%, oklch(0.08 0.025 250 / 0.72) 100%);
+}
+
+.landing-cinematic-hero__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: calc(100svh - 4.5rem);
+  width: min(100%, 96rem);
+  margin-inline: auto;
+  padding: clamp(1.5rem, 3vw, 3rem);
+  flex-direction: column;
+}
+
+.landing-cinematic-hero__copy {
+  width: min(100%, 56rem);
+  margin-block: auto;
+  padding-block: clamp(4rem, 10vh, 8rem);
+}
+
+.public-landing h1,
+.public-landing h2,
+.public-landing h3 {
+  font-family: inherit;
+}
+
+.landing-cinematic-hero h1 {
+  margin: 0;
+  max-width: 14ch;
+  color: oklch(0.99 0.004 90);
+  font-size: clamp(3rem, 6.8vw, 6rem);
+  font-weight: 720;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+.landing-cinematic-hero h1 span {
+  display: block;
+}
+
+.landing-cinematic-hero__copy > p {
+  max-width: 47ch;
+  margin: clamp(1.5rem, 3vw, 2rem) 0 0;
+  color: oklch(0.92 0.018 88);
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+
+.landing-cinematic-hero__cta {
+  display: inline-flex;
+  min-height: 3.25rem;
+  margin-top: clamp(1.75rem, 3vw, 2.5rem);
+  padding-inline: 1.35rem;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 0.75rem;
+  background: oklch(0.84 0.14 85);
+  color: oklch(0.16 0.025 250);
+  font-size: 0.98rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 180ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.landing-cinematic-hero__cta:hover {
+  background: oklch(0.91 0.12 85);
+}
+
+.landing-cinematic-hero__cta:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 4px;
+}
+
+.landing-cinematic-hero__copy > .landing-cinematic-hero__note {
+  margin-top: 0.85rem;
+  color: oklch(0.81 0.018 88);
+  font-size: 0.875rem;
+}
+
+.landing-cinematic-hero__prompt {
+  align-self: flex-end;
+  margin: 0;
+  color: oklch(0.92 0.018 88);
+  font-size: 0.875rem;
+}
+
+.landing-final-cta {
+  position: relative;
+  display: flex;
+  min-height: 78svh;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 4rem 1.5rem;
+}
+
+@media (min-width: 64rem) {
+  .landing-final-cta {
+    padding: 5rem 3rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .landing-cinematic-hero__video {
+    object-position: 61% center;
+  }
+
+  .landing-cinematic-hero__scrim {
+    background:
+      linear-gradient(90deg, oklch(0.08 0.025 250 / 0.84) 0%, oklch(0.08 0.025 250 / 0.46) 100%),
+      linear-gradient(180deg, oklch(0.08 0.025 250 / 0.56) 0%, transparent 30%, oklch(0.08 0.025 250 / 0.86) 100%);
+  }
+
+  .landing-cinematic-hero h1 {
+    font-size: clamp(3rem, 14vw, 4.5rem);
+  }
+
+  .landing-cinematic-hero__prompt {
+    align-self: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing-cinematic-hero__video {
+    display: none;
+    transition: none;
+  }
 }

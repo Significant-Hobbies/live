@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { waitForHydrated } from './fixtures/hydration';
 
 test.describe('Explore page', () => {
   test('loads and shows timelines', async ({ page }) => {
@@ -9,6 +10,7 @@ test.describe('Explore page', () => {
   test('search filters timelines', async ({ page }) => {
     await page.goto('/explore');
     const searchInput = page.getByPlaceholder('Search');
+    await waitForHydrated(searchInput);
     await searchInput.fill('nonexistent-hobby-xyz');
     await expect(page.getByText('No timelines match')).toBeVisible();
   });

@@ -79,32 +79,35 @@ export function HobbyRoadmapCard({ roadmap }: { roadmap: HobbyRoadmap }) {
   const allDone = doneCount === total;
 
   return (
-    <div className="rounded-2xl border border-foreground/20 bg-foreground/10 p-5">
-      <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
+    <section className="overflow-hidden rounded-3xl bg-[#b9dcf5] p-6 text-[#211e18] sm:p-8">
+      <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
         <div>
-          <h2 className="text-base font-semibold text-foreground">
+          <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em]">
+            From curious to doing
+          </p>
+          <h2 className="font-serif text-4xl font-medium leading-none sm:text-5xl">
             Your {roadmap.hobby.toLowerCase()} roadmap
           </h2>
-          <p className="text-xs text-muted-foreground">
+          <p className="mt-3 max-w-2xl text-sm text-[#454a4c] sm:text-base">
             A concrete path from today to three months in. Check off as you go — progress saves on
             this device.
           </p>
         </div>
-        <span className="text-xs font-medium text-foreground">
+        <span className="rounded-full bg-white/65 px-4 py-2 text-sm font-bold">
           {hydrated ? `${doneCount}/${total} done` : `${total} steps`}
         </span>
       </div>
 
-      <ol className="space-y-3">
+      <ol className="grid gap-3 md:grid-cols-2">
         {roadmap.steps.map((step, i) => {
           const isDone = progress.completed[step.id];
           return (
             <li key={step.id}>
               <label
-                className={`flex cursor-pointer items-start gap-3 rounded-xl border bg-card p-4 transition-colors ${
+                className={`flex min-h-40 cursor-pointer items-start gap-3 rounded-2xl border p-5 transition-all ${
                   isDone
-                    ? 'border-foreground/30 bg-foreground/10'
-                    : 'border-border hover:border-foreground/30'
+                    ? 'border-[#4e7654] bg-[#b5d98f]'
+                    : 'border-white/80 bg-white/80 hover:-translate-y-0.5 hover:bg-white'
                 }`}
               >
                 <input
@@ -136,14 +139,14 @@ export function HobbyRoadmapCard({ roadmap }: { roadmap: HobbyRoadmap }) {
         })}
       </ol>
 
-      <div className="mt-4">
-        <label className="text-sm font-semibold text-muted-foreground">Progress notes</label>
+      <div className="mt-6 rounded-2xl bg-white/65 p-5">
+        <label className="text-sm font-bold">What are you noticing?</label>
         <textarea
           value={progress.notes}
           onChange={(e) => updateNotes(e.target.value)}
           rows={3}
           placeholder="What worked, what didn't, what to try next…"
-          className="mt-1.5 w-full resize-none rounded-xl border border-border bg-card px-3 py-2 text-sm outline-none focus:border-foreground/30"
+          className="mt-2 w-full resize-none rounded-xl border border-[#a4b9c8] bg-white px-4 py-3 text-sm outline-none focus:border-[#211e18]"
         />
         {hydrated && progress.updatedAt && (
           <p className="mt-1 text-[11px] text-subtle">
@@ -152,10 +155,10 @@ export function HobbyRoadmapCard({ roadmap }: { roadmap: HobbyRoadmap }) {
         )}
       </div>
 
-      <div className="mt-4 flex flex-wrap items-center gap-3">
+      <div className="mt-5 flex flex-wrap items-center gap-3">
         <Link
           href="/timeline/new"
-          className="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:opacity-90"
+          className="rounded-xl bg-[#211e18] px-5 py-3 text-sm font-bold text-white transition-transform hover:-translate-y-0.5"
         >
           {allDone ? 'Log it in a timeline →' : 'Track this in a timeline →'}
         </Link>
@@ -165,6 +168,6 @@ export function HobbyRoadmapCard({ roadmap }: { roadmap: HobbyRoadmap }) {
             : 'Notes and check-offs stay on this device until you save a timeline.'}
         </p>
       </div>
-    </div>
+    </section>
   );
 }

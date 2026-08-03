@@ -1,6 +1,9 @@
 import { expect, test } from '@playwright/test';
 
+import { completeLocalOnboarding } from './fixtures/local-onboarding';
+
 test('anonymous private work imports into a newly signed-in account', async ({ page }) => {
+  await completeLocalOnboarding(page);
   await page.goto('/daily');
   await page.getByRole('button', { name: 'Manage' }).click();
   await page.getByPlaceholder('Habit name (e.g. Read 20 pages)').fill('Imported local walk');
@@ -25,6 +28,15 @@ test('anonymous private work imports into a newly signed-in account', async ({ p
   });
   if (signUp.status() === 404) test.skip(true, 'Test auth disabled');
   expect(signUp.ok(), `sign-up failed (${signUp.status()}): ${await signUp.text()}`).toBe(true);
+
+  const complete = await page.request.post('/api/test/complete-onboarding', {
+    headers: { Origin: 'http://localhost:3000' },
+    failOnStatusCode: false,
+  });
+  expect(
+    complete.ok(),
+    `onboarding completion failed (${complete.status()}): ${await complete.text()}`
+  ).toBe(true);
 
   await page.goto('/daily');
   await expect(page.getByRole('button', { name: 'Import private data' })).toBeVisible();

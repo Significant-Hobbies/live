@@ -76,11 +76,10 @@ landing pages, etc.).
 
 | Route | Description |
 |-------|-------------|
-| `/` | Landing page (static Astro overlay for anon `GET /`) |
+| `/` | Public landing for guests; post-onboarding dashboard when signed in |
 | `/login` | Google sign in |
-| `/setup` | Set your username (first login) |
-| `/dashboard` | Signed-in home (anon `/` redirects here when authed) |
-| `/daily` | Daily ritual — AM/PM prompts, habit check-ins, journal (private) |
+| `/onboarding` | First-use journey for identity, life history, intentions, and habits |
+| `/daily` | Daily ritual — journal, habit check-ins, and one small new thing (private) |
 | `/timeline/new` | Build a new timeline |
 | `/timeline/[id]` | View/own your timeline with insights |
 | `/timeline/[id]/edit` | Edit your timeline |

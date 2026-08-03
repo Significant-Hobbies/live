@@ -37,7 +37,7 @@ const STATUSES: ItemStatus[] = ['planned', 'in_progress', 'done'];
  * write-once: they could be added and then never advanced, published, or
  * removed. Consequences that this closes:
  *
- * - `/life-plan`'s "In progress" panel could never populate, because
+ * - `/live-more`'s "In progress" panel could never populate, because
  *   `'in_progress'` was unreachable — `'done'` was only ever set by finishing a
  *   whole quest chain.
  * - The bucket-list block on `/u/[username]` filters `visibility = 'public'`,
@@ -52,7 +52,7 @@ export function BucketItemControls({ id, status, visibility, title, targetYear }
   const [year, setYear] = useState(targetYear ? String(targetYear) : '');
 
   /**
-   * `targetYear` is rendered on /life-plan ("by 2030") but was unreachable:
+   * `targetYear` is rendered on /live-more ("by 2030") but was unreachable:
    * `addBucketListItem` accepts it and `AddToMyListButton` never passes it, and
    * `updateBucketListItem` — the only other writer — had no caller. So the
    * display could never fire for anyone.

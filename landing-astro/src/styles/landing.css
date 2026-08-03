@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Editorial Dark palette — mirrors src/app/globals.css */
+  /* Warm Life Atlas palette — mirrors the light product surfaces. */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -27,33 +27,31 @@
 }
 
 :root {
-  /* Neutral charcoal body — near-zero chroma, slight warmth */
-  --background: oklch(0.15 0.005 285);
-  --foreground: oklch(0.97 0.003 285);
-  /* card — lifted one step from body, same neutral hue */
-  --card: oklch(0.19 0.006 285);
-  --card-foreground: oklch(0.97 0.003 285);
+  --background: oklch(0.975 0.018 88);
+  --foreground: oklch(0.22 0.025 65);
+  --card: oklch(0.93 0.07 24);
+  --card-foreground: oklch(0.22 0.025 65);
   /* popover */
-  --popover: oklch(0.19 0.006 285);
-  --popover-foreground: oklch(0.97 0.003 285);
-  /* gold primary — the single warm accent. Dark text on gold for contrast */
-  --primary: oklch(0.82 0.13 88);
-  --primary-foreground: oklch(0.15 0.005 285);
+  --popover: oklch(0.99 0.01 88);
+  --popover-foreground: oklch(0.22 0.025 65);
+  /* Deep amber reads clearly across the light, colorful chapter surfaces. */
+  --primary: oklch(0.39 0.1 72);
+  --primary-foreground: oklch(0.99 0.01 88);
   /* secondary — muted neutral surface */
-  --secondary: oklch(0.23 0.006 285);
-  --secondary-foreground: oklch(0.97 0.003 285);
-  /* muted — surface for panels; foreground tuned for ≥4.5:1 on charcoal */
-  --muted: oklch(0.23 0.006 285);
-  --muted-foreground: oklch(0.72 0.008 285);
+  --secondary: oklch(0.86 0.09 305);
+  --secondary-foreground: oklch(0.22 0.025 65);
+  /* Muted copy remains accessible on cream, coral, lilac, sky, and green. */
+  --muted: oklch(0.92 0.035 88);
+  --muted-foreground: oklch(0.34 0.025 65);
   /* accent — slightly lifted neutral for hover states */
-  --accent: oklch(0.26 0.008 285);
-  --accent-foreground: oklch(0.97 0.003 285);
+  --accent: oklch(0.86 0.07 225);
+  --accent-foreground: oklch(0.22 0.025 65);
   /* destructive — warm red, tuned for dark bg */
   --destructive: oklch(0.65 0.20 25);
   /* border — subtle neutral hairline */
-  --border: oklch(0.27 0.006 285);
-  --input: oklch(0.27 0.006 285);
-  --ring: oklch(0.82 0.13 88);
+  --border: oklch(0.79 0.035 75);
+  --input: oklch(0.79 0.035 75);
+  --ring: oklch(0.39 0.1 72);
   /* growth — sage green (practice / stamps / progress) */
   --growth: oklch(0.72 0.13 150);
   /* One committed family: cinematic display weights, legible text weights. */
@@ -63,8 +61,8 @@
 body {
   margin: 0;
   font-family: var(--font-archivo);
-  background: oklch(0.15 0.005 285);
-  color: oklch(0.97 0.003 285);
+  background: var(--background);
+  color: var(--foreground);
 }
 
 /* Display headings share the landing's single-family typographic system. */

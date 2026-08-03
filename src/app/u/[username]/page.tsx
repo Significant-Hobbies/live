@@ -555,7 +555,7 @@ export default async function ProfilePage({ params }: Props) {
               <h2 className="text-sm font-medium text-foreground">Bucket list</h2>
               {isOwner && (
                 <a
-                  href="/dashboard"
+                  href="/"
                   className="text-xs text-foreground hover:text-foreground transition-colors"
                 >
                   Manage →

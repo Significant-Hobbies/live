@@ -1,24 +1,51 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-import { lifeInWeeks, MIN_BIRTH_YEAR, parseBirthYear, type LifeInWeeks } from '~/lib/life-in-weeks';
+import { lifeInWeeksFromDate, parseBirthDate, type LifeInWeeks } from '~/lib/life-in-weeks';
+import { browserRecordAdapter, readLocalRecord, writeLocalRecord } from '~/lib/local-record-store';
+import { saveBirthDate } from '~/lib/actions/user';
 import { WeeksGrid } from './weeks-grid';
 
-const STORAGE_KEY = 'sh:birth-year';
+const STORAGE_KEY = 'profile:birth-date';
+const LEGACY_STORAGE_KEY = 'sh:birth-year';
+const isBirthDateRecord = (value: unknown): value is { birthDate: string } =>
+  Boolean(
+    value &&
+      typeof value === 'object' &&
+      typeof (value as { birthDate?: unknown }).birthDate === 'string'
+  );
+const isOnboardingProfile = (value: unknown): value is { birthDate?: string } =>
+  Boolean(value && typeof value === 'object');
 
 /** Groups the digits so 1,847 reads at a glance. */
 const fmt = new Intl.NumberFormat('en-US');
 
-export function LifeInWeeksClient() {
-  const [raw, setRaw] = useState('');
-  const [result, setResult] = useState<LifeInWeeks | null>(null);
+export function LifeInWeeksClient({
+  initialBirthDate = null,
+  initialOnboardingComplete = false,
+  storageMode = 'local',
+}: {
+  initialBirthDate?: string | null;
+  initialOnboardingComplete?: boolean;
+  storageMode?: 'local' | 'account';
+}) {
+  const validInitialBirthDate = initialBirthDate ? parseBirthDate(initialBirthDate) : null;
+  const [raw, setRaw] = useState(validInitialBirthDate ?? '');
+  const [result, setResult] = useState<LifeInWeeks | null>(() =>
+    validInitialBirthDate ? lifeInWeeksFromDate(validInitialBirthDate) : null
+  );
+  const [profileResolved, setProfileResolved] = useState(
+    Boolean(validInitialBirthDate) || storageMode === 'account'
+  );
+  const [editingBirthDate, setEditingBirthDate] = useState(
+    !validInitialBirthDate && storageMode === 'account'
+  );
+  const [onboardingComplete, setOnboardingComplete] = useState(initialOnboardingComplete);
   const [invalid, setInvalid] = useState(false);
   const [animate, setAnimate] = useState(true);
   const resultRef = useRef<HTMLDivElement>(null);
-
-  const thisYear = useMemo(() => new Date().getFullYear(), []);
 
   // A returning visitor should not have to answer the same question twice. This
   // is the whole persistence story for the page — no account, no network.
@@ -28,25 +55,51 @@ export function LifeInWeeksClient() {
       window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     setAnimate(!reduced);
 
-    const saved = window.localStorage.getItem(STORAGE_KEY);
-    if (!saved) return;
-    const year = parseBirthYear(saved);
-    if (year === null) return;
-    setRaw(String(year));
-    setResult(lifeInWeeks(year));
-  }, []);
+    if (initialBirthDate && parseBirthDate(initialBirthDate)) {
+      setProfileResolved(true);
+      return;
+    }
+    if (storageMode === 'account') {
+      setEditingBirthDate(true);
+      setProfileResolved(true);
+      return;
+    }
+    void (async () => {
+      const adapter = browserRecordAdapter();
+      const [saved, onboarding] = await Promise.all([
+        readLocalRecord(adapter, STORAGE_KEY, 'profile', isBirthDateRecord),
+        readLocalRecord(adapter, 'onboarding:profile', 'onboarding', isOnboardingProfile),
+      ]);
+      setOnboardingComplete(Boolean(onboarding));
+      let birthDate = saved?.birthDate ?? onboarding?.birthDate ?? null;
+      if (!birthDate) {
+        const legacyYear = window.localStorage.getItem(LEGACY_STORAGE_KEY);
+        if (legacyYear && /^\d{4}$/.test(legacyYear)) birthDate = `${legacyYear}-01-01`;
+      }
+      if (birthDate && parseBirthDate(birthDate)) {
+        setRaw(birthDate);
+        setResult(lifeInWeeksFromDate(birthDate));
+        setEditingBirthDate(false);
+      } else {
+        setEditingBirthDate(true);
+      }
+      setProfileResolved(true);
+    })();
+  }, [initialBirthDate, storageMode]);
 
   function onSubmit(event: React.FormEvent) {
     event.preventDefault();
-    const year = parseBirthYear(raw);
-    if (year === null) {
+    const birthDate = parseBirthDate(raw);
+    if (birthDate === null) {
       setInvalid(true);
       setResult(null);
       return;
     }
     setInvalid(false);
-    setResult(lifeInWeeks(year));
-    window.localStorage.setItem(STORAGE_KEY, String(year));
+    setResult(lifeInWeeksFromDate(birthDate));
+    setEditingBirthDate(false);
+    if (storageMode === 'account') void saveBirthDate(birthDate);
+    else void writeLocalRecord(browserRecordAdapter(), STORAGE_KEY, 'profile', { birthDate });
     // Reveal happens below the fold on a phone; take the reader there.
     window.requestAnimationFrame(() => {
       resultRef.current?.scrollIntoView({
@@ -70,49 +123,74 @@ export function LifeInWeeksClient() {
       </h1>
       <p className="mt-5 max-w-[62ch] text-lg text-foreground/80" style={{ lineHeight: 1.6 }}>
         One square for every week you have lived, and every week people your age tend to have left.
-        It takes one number to draw, it costs nothing, and it never leaves your phone.
+        Your exact date makes the lived weeks precise. The estimate ahead is population context, not
+        a prediction.
       </p>
 
-      <form onSubmit={onSubmit} className="mt-10">
-        <label
-          htmlFor="birth-year"
-          className="block font-serif text-2xl text-foreground sm:text-3xl"
-        >
-          What year were you born?
-        </label>
-
-        <div className="mt-5 flex flex-wrap items-center gap-3">
-          <input
-            id="birth-year"
-            name="birthYear"
-            type="text"
-            inputMode="numeric"
-            autoComplete="bday-year"
-            placeholder="1962"
-            value={raw}
-            onChange={(e) => {
-              setRaw(e.target.value);
-              setInvalid(false);
-            }}
-            aria-invalid={invalid}
-            aria-describedby={invalid ? 'birth-year-error' : undefined}
-            className="w-40 rounded-xl border-2 border-border bg-card px-4 py-3 font-mono text-3xl tabular-nums text-foreground placeholder:text-muted-foreground/50 focus-visible:border-primary focus-visible:outline-none"
-          />
-          <button
-            type="submit"
-            className="rounded-xl bg-primary px-6 py-3.5 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90 focus-visible:ring-2 focus-visible:ring-foreground/50 focus-visible:outline-none"
+      {!profileResolved ? (
+        <p className="mt-10 text-sm text-muted-foreground">Opening your saved life map…</p>
+      ) : editingBirthDate ? (
+        <form onSubmit={onSubmit} className="mt-10">
+          <label
+            htmlFor="birth-date"
+            className="block font-serif text-2xl text-foreground sm:text-3xl"
           >
-            Show me
+            {result ? 'Change your birth date' : 'What date were you born?'}
+          </label>
+
+          <div className="mt-5 flex flex-wrap items-center gap-3">
+            <input
+              id="birth-date"
+              name="birthDate"
+              type="date"
+              autoComplete="bday"
+              value={raw}
+              onChange={(event) => {
+                setRaw(event.target.value);
+                setInvalid(false);
+              }}
+              aria-invalid={invalid}
+              aria-describedby={invalid ? 'birth-date-error' : undefined}
+              className="min-w-64 rounded-xl border-2 border-border bg-card px-4 py-3 font-mono text-xl tabular-nums text-foreground focus-visible:border-primary focus-visible:outline-none"
+            />
+            <button
+              type="submit"
+              className="min-h-12 rounded-xl bg-primary px-6 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90 focus-visible:ring-2 focus-visible:ring-foreground/50 focus-visible:outline-none"
+            >
+              {result ? 'Update' : 'Show me'}
+            </button>
+            {result ? (
+              <button
+                type="button"
+                onClick={() => {
+                  setEditingBirthDate(false);
+                  setInvalid(false);
+                }}
+                className="min-h-12 px-3 text-sm font-semibold text-muted-foreground underline underline-offset-4"
+              >
+                Cancel
+              </button>
+            ) : null}
+          </div>
+
+          {invalid ? (
+            <p id="birth-date-error" role="alert" className="mt-3 text-base text-destructive">
+              Choose a real date in the past.
+            </p>
+          ) : null}
+        </form>
+      ) : result ? (
+        <div className="mt-9 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted-foreground">
+          <span>Using your saved birth date.</span>
+          <button
+            type="button"
+            onClick={() => setEditingBirthDate(true)}
+            className="min-h-11 font-semibold text-foreground underline underline-offset-4"
+          >
+            Change
           </button>
         </div>
-
-        {invalid ? (
-          <p id="birth-year-error" role="alert" className="mt-3 text-base text-destructive">
-            That does not look like a birth year. Try a four-digit year between {MIN_BIRTH_YEAR} and{' '}
-            {thisYear - 1}.
-          </p>
-        ) : null}
-      </form>
+      ) : null}
 
       {/* scroll-mt-24 clears the sticky header. At the previous 8 (32px) the
           nav sat over the top of the Saturdays line — the one sentence the
@@ -140,7 +218,7 @@ export function LifeInWeeksClient() {
             />
           </div>
 
-          <Turn />
+          <Turn onboardingComplete={onboardingComplete} />
         </div>
       ) : null}
     </div>
@@ -192,7 +270,7 @@ function Result({ result }: { result: LifeInWeeks }) {
  * The pivot from awareness to agency. The page would be a bleak curiosity
  * without it — the point is not the number, it is what the number is for.
  */
-function Turn() {
+function Turn({ onboardingComplete }: { onboardingComplete: boolean }) {
   return (
     <div className="mt-14 border-t border-border pt-10">
       <h2
@@ -202,22 +280,23 @@ function Turn() {
         The squares behind you are spent. The rest are still a choice.
       </h2>
       <p className="mt-5 max-w-[62ch] text-lg text-muted-foreground" style={{ lineHeight: 1.6 }}>
-        You do not need an account, and nothing here is scored or ranked. Pick whichever of these
-        sounds less like homework.
+        {onboardingComplete
+          ? 'Your plans already have a home. Use the number as context, then return to the part of your life you want to move.'
+          : 'You do not need an account, and nothing here is scored or ranked. Pick whichever of these sounds less like homework.'}
       </p>
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
         <Link
-          href="/find-your-hobby"
+          href={onboardingComplete ? '/live-more' : '/find-your-hobby'}
           className="rounded-xl bg-primary px-6 py-3.5 text-center text-base font-semibold text-primary-foreground no-underline transition-opacity hover:opacity-90"
         >
-          Find something to do — 2 minutes
+          {onboardingComplete ? 'Return to Live More' : 'Find something to do — 2 minutes'}
         </Link>
         <Link
-          href="/life-bingo"
+          href={onboardingComplete ? '/history' : '/life-bingo'}
           className="rounded-xl border border-border bg-card px-6 py-3.5 text-center text-base font-medium text-foreground no-underline transition-colors hover:border-foreground/30"
         >
-          List what you still want to do
+          {onboardingComplete ? 'Return to History' : 'List what you still want to do'}
         </Link>
       </div>
 

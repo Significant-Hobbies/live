@@ -197,17 +197,13 @@ export default async function JourneyDetailPage({ params }: Props) {
         <FadeIn className="mb-10">
           <h2 className="mb-4 text-lg font-bold text-foreground">Surprising hobbies</h2>
           <SpotlightCard className="shadow-soft" innerClassName="rounded-xl p-5">
-            <StaggerContainer>
-              <ul className="space-y-3">
-                {person.surprisingHobbies.map((item) => (
-                  <StaggerItem key={item}>
-                    <li className="flex items-start gap-3">
-                      <span className="mt-0.5 flex-shrink-0 text-foreground">✦</span>
-                      <span className="text-sm text-muted-foreground">{item}</span>
-                    </li>
-                  </StaggerItem>
-                ))}
-              </ul>
+            <StaggerContainer as="ul" className="space-y-3">
+              {person.surprisingHobbies.map((item) => (
+                <StaggerItem as="li" key={item} className="flex items-start gap-3">
+                  <span className="mt-0.5 flex-shrink-0 text-foreground">✦</span>
+                  <span className="text-sm text-muted-foreground">{item}</span>
+                </StaggerItem>
+              ))}
             </StaggerContainer>
           </SpotlightCard>
         </FadeIn>

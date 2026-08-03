@@ -31,7 +31,7 @@ export default function TimelineViewError({
           Try again
         </button>
         <Link
-          href="/dashboard"
+          href="/"
           className="px-4 py-2 rounded border border-border text-foreground hover:bg-card/40"
         >
           Dashboard

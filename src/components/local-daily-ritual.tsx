@@ -4,6 +4,11 @@ import { useEffect, useMemo, useState } from 'react';
 
 import { DailyRitual } from '~/components/daily-ritual';
 import { StorageModeProvider, StorageModeStatus } from '~/components/storage-mode-provider';
+import {
+  areDailyIntentionsValid,
+  dailyNoveltyById,
+  normalizeDailyIntentions,
+} from '~/lib/daily-novelty';
 import { browserRecordAdapter, readLocalRecord, writeLocalRecord } from '~/lib/local-record-store';
 
 interface LocalHabit {
@@ -28,6 +33,9 @@ interface LocalJournal {
   pmEntry: string | null;
   timelineId: null;
   commitmentId: null;
+  noveltyId?: string | null;
+  noveltyText?: string | null;
+  noveltyCompleted?: boolean;
 }
 interface LocalDailyState {
   habits: LocalHabit[];
@@ -122,6 +130,9 @@ export function LocalDailyRitual({ today, isMorning }: { today: string; isMornin
             pmEntry,
             timelineId: null,
             commitmentId: null,
+            noveltyId: existing?.noveltyId ?? null,
+            noveltyText: existing?.noveltyText ?? null,
+            noveltyCompleted: existing?.noveltyCompleted ?? false,
           };
           return {
             ...current,
@@ -130,6 +141,41 @@ export function LocalDailyRitual({ today, isMorning }: { today: string; isMornin
               : [...current.journals, entry],
           };
         });
+      },
+      async setDailyNovelty(
+        dayDate: string,
+        noveltyId: string | null,
+        noveltyText: string | null,
+        completed: boolean
+      ) {
+        const customText = normalizeDailyIntentions(noveltyText);
+        const validNoveltyId = noveltyId ? dailyNoveltyById(noveltyId)?.id : null;
+        if (
+          Boolean(validNoveltyId) === Boolean(customText) ||
+          (Boolean(customText) && !areDailyIntentionsValid(customText))
+        )
+          return false;
+        await commit((current) => {
+          const existing = current.journals.find((entry) => entry.dayDate === dayDate);
+          const entry: LocalJournal = {
+            id: existing?.id ?? `local-journal-${crypto.randomUUID()}`,
+            dayDate,
+            amEntry: existing?.amEntry ?? null,
+            pmEntry: existing?.pmEntry ?? null,
+            timelineId: null,
+            commitmentId: null,
+            noveltyId: validNoveltyId,
+            noveltyText: customText || null,
+            noveltyCompleted: completed,
+          };
+          return {
+            ...current,
+            journals: existing
+              ? current.journals.map((item) => (item.id === existing.id ? entry : item))
+              : [...current.journals, entry],
+          };
+        });
+        return true;
       },
       // commit deliberately follows the latest state through the component remount revision.
       // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -156,10 +202,10 @@ export function LocalDailyRitual({ today, isMorning }: { today: string; isMornin
         weeksRemaining={null}
         habits={state.habits}
         habitLogs={state.logs.filter((log) => log.dayDate === today)}
-        allHabitLogs={state.logs}
         journalEntry={todayJournal}
         journalEntries={state.journals}
         actions={actions}
+        noveltySeed="this-device"
         localMode
       />
     </StorageModeProvider>

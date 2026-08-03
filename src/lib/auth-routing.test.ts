@@ -35,9 +35,9 @@ describe('guestRouteFor', () => {
   });
 
   it('sends the longitudinal surfaces to the quiz, which has no account requirement', () => {
-    // /daily, /trajectory and /look-back have no guest twin: their value is
+    // /daily, /trajectory and /history have no guest twin: their value is
     // accumulated history, so there is nothing honest to offer in one session.
-    for (const route of ['/daily', '/trajectory', '/look-back', '/commitments', '/dashboard']) {
+    for (const route of ['/daily', '/trajectory', '/history', '/commitments', '/']) {
       expect(guestRouteFor(route).href).toBe('/find-your-hobby');
     }
   });

@@ -29,6 +29,7 @@ type FeltUnit = {
 };
 
 export type LifeInWeeks = {
+  birthDate: string;
   birthYear: number;
   age: number;
   weeksLived: number;
@@ -40,6 +41,25 @@ export type LifeInWeeks = {
 
 /** Lowest birth year the input accepts. */
 export const MIN_BIRTH_YEAR = 1900;
+
+export function parseBirthDate(raw: string, now: Date = new Date()): string | null {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(raw.trim());
+  if (!match) return null;
+  const year = Number(match[1]);
+  const month = Number(match[2]);
+  const day = Number(match[3]);
+  const value = new Date(year, month - 1, day, 12);
+  if (
+    year < MIN_BIRTH_YEAR ||
+    value.getFullYear() !== year ||
+    value.getMonth() !== month - 1 ||
+    value.getDate() !== day
+  )
+    return null;
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12);
+  if (value >= today) return null;
+  return `${String(year).padStart(4, '0')}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+}
 
 /**
  * Validates a raw birth-year input. Returns null when it is not a usable year,
@@ -69,12 +89,21 @@ function feltUnits(weeksRemaining: number): FeltUnit[] {
 
 /** The whole derivation for one birth year. */
 export function lifeInWeeks(birthYear: number, now: Date = new Date()): LifeInWeeks {
-  const birth = new Date(birthYear, 0, 1);
+  return lifeInWeeksFromDate(`${birthYear}-01-01`, now);
+}
+
+export function lifeInWeeksFromDate(rawBirthDate: string, now: Date = new Date()): LifeInWeeks {
+  const birthDate = parseBirthDate(rawBirthDate, now);
+  if (!birthDate) throw new Error('Invalid birth date');
+  const [birthYear, month, day] = birthDate.split('-').map(Number) as [number, number, number];
+  const birth = new Date(birthYear, month - 1, day, 12);
   const lived = weeksLived(birth, now);
-  const age = now.getFullYear() - birthYear;
+  let age = now.getFullYear() - birthYear;
+  if (now.getMonth() < month - 1 || (now.getMonth() === month - 1 && now.getDate() < day)) age -= 1;
   const remaining = Math.round(remainingYears(age) * WEEKS_PER_YEAR);
 
   return {
+    birthDate,
     birthYear,
     age,
     weeksLived: lived,

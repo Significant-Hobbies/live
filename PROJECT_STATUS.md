@@ -22,12 +22,24 @@ is the bridge between daily practice and life aspirations.
 
 ## Timeline
 
-- **2026-08-02:** Built the simplified four-surface private product locally:
-  authenticated `/` is Today, `/live-more` owns aspirations and substantial
+- **2026-08-03:** Corrected onboarding's planning assumptions locally. Future
+  possibilities now search 5,202 distinct experience and hobby paths, accept a
+  pasted numbered bucket list, and keep every selected or freely entered answer
+  visible. People define several independent goals for the year, optionally
+  borrow from their bucket list, and those goals collectively become Trajectory
+  intent. A daily habit is optional. The soundtrack now uses a visible YouTube
+  player with three upbeat choices, remembered selection, autoplay attempts,
+  and an honest one-tap fallback when the browser blocks sound. The first
+  possibility shelf is a balanced 18-item editorial selection rather than the
+  travel-heavy start of the raw catalog. Production deployment remains manual.
+
+- **2026-08-02:** Built the simplified post-onboarding private product locally:
+  onboarded account or local `/` is the dashboard, signed-in incomplete accounts
+  continue at `/onboarding`, `/live-more` owns aspirations and substantial
   corpus-backed discovery, `/daily` owns journal and habits, and `/history`
-  joins timeline, mortality, and Trajectory. Setup is now a resumable seven-step
-  journey that creates a private past, bucket-list future, annual focus, daily
-  habit, and initial Trajectory. Legacy overview routes redirect; production
+  joins timeline, mortality, and Trajectory. Onboarding is now a resumable seven-step
+  journey that creates a private past, bucket-list future, yearly goals, an
+  optional daily habit, and initial Trajectory. Legacy overview routes are removed; production
   migration and deployment remain manual.
 
 - **2026-08-02:** Deleted the retired `significanthobbies` Turso database after
@@ -56,7 +68,7 @@ is the bridge between daily practice and life aspirations.
   editable; habit check-ins still create no proof or commitment progress. The
   generated additive migration is validated locally but remains unapplied in
   production, and deployment remains manual.
-- **2026-07-31:** Tightened the first-use Living loop: completed setup now
+- **2026-07-31:** Tightened the first-use Living loop: completed onboarding now
   leads to an editable timeline prefilled from the user's saved hobby answer,
   and the first private save presents a separate, explicit opt-in to add that
   timeline to the public profile. No content is automatically published;
@@ -111,7 +123,7 @@ Historical milestones live in
   check-ins remain separate from stamps, proof, progress, visibility, and public
   activity. Deleting the commitment clears only the link; production
   migration/deployment remains operator-owned.
-- **First Living handoff built locally:** setup completion carries the user's
+- **First Living handoff built locally:** onboarding completion carries the user's
   persisted hobby answer into one editable `Now` phase. The first timeline save
   stays private, then offers an owner-only choice to publish it on the profile
   or keep it private. Direct and signed-out timeline creation retain the
@@ -140,11 +152,17 @@ Historical milestones live in
   52-item pool. 122 hobbies gained twelve cross-cutting facets, so "gentle,
   cheap, screen-free" is two clicks rather than unanswerable. See
   [`docs/architecture/decisions.md`](docs/architecture/decisions.md) A11.
-- **Four-surface private product built locally:** Today (`/`) keeps the current
-  day useful; Live More (`/live-more`) centres the bucket list, annual focus,
+- **Post-onboarding private product built locally:** the dashboard (`/`) keeps the current
+  day useful; Live More (`/live-more`) centres the bucket list, yearly goals,
   and full-corpus discovery; Daily (`/daily`) owns journal and habits; History
   (`/history`) owns timeline, Life in Weeks, reflection, and Trajectory.
-  `/dashboard`, `/life-plan`, and `/look-back` remain compatibility redirects.
+  The unused `/dashboard`, `/life-plan`, and `/look-back` compatibility routes
+  are removed; the dashboard and three sections are the whole private product.
+  Daily now pairs the journal with one stable, optional small new thing. People
+  can ask for another, write their own, mark it done, or reopen it. Habits are a
+  simple checklist without streaks, bars, scores, or competitive decoration.
+  Until onboarding is complete, Live More, Daily, and History stay gated while
+  the landing/dashboard at `/` and public editorial and possibility pages remain available.
   The supporting exact-DOB migration and deployment remain operator-owned.
 - **Discovery:** the hobby quiz (`/find-your-hobby`) is the single primary
   discovery UX (2026-07-03). The other three surfaces (`/hobbies`, `/explore`,
@@ -186,9 +204,8 @@ are parked with a reason rather than deleted.
 | `/explore` | Intentionally hidden — see [`docs/product/discovery-funnel.md`](docs/product/discovery-funnel.md). |
 | `/hobbies`, `/journeys` | Same as `/explore`. Reachable via deep links, SEO, and quiz cross-links. |
 
-The former `/life-plan` overview is now a compatibility redirect to
-`/live-more`; bucket-item quest chains live in the detailed `/bucket-list`
-workspace.
+The former `/life-plan` overview has been removed; bucket-item quest chains live
+in the detailed `/bucket-list` workspace and Live More is the canonical home.
 
 **Resolved 2026-07-25:** user profiles are now in `sitemap.ts`. Only users with a
 username *and* at least one `PUBLIC` timeline are listed — an empty profile is a

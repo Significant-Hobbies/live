@@ -84,7 +84,7 @@ export default function BucketListsPage() {
                 </p>
                 <div className="flex flex-wrap gap-4 justify-center sm:justify-start">
                   <Link
-                    href="/dashboard"
+                    href="/"
                     className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3.5 text-sm font-bold text-foreground hover:bg-lumi-600 active:scale-95 transition-all duration-150 shadow-md"
                   >
                     Start my list
@@ -257,7 +257,7 @@ export default function BucketListsPage() {
       </section>
 
       {/* ── Bottom CTA ───────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-primary">
+      <section className="relative overflow-hidden bg-[#f7e957]">
         <div className="relative mx-auto max-w-3xl px-4 py-20 text-center space-y-6">
           <div className="flex justify-center">
             <Whale size={80} glow float onDark />
@@ -266,20 +266,20 @@ export default function BucketListsPage() {
             Your turn. What do you want to do
             <br className="hidden sm:block" /> before you die?
           </h2>
-          <p className="text-foreground/80 text-base max-w-sm mx-auto">
+          <p className="mx-auto max-w-sm text-base text-[#3f3a20]">
             Whale will help you discover what belongs on your list — based on who you are, not who
             everyone else expects you to be.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link
-              href="/dashboard"
+              href="/"
               className="inline-flex items-center gap-2 rounded-full bg-card px-7 py-3.5 text-sm font-bold text-primary hover:bg-foreground/5 active:scale-95 transition-all duration-150 shadow-lg"
             >
               Start my bucket list
             </Link>
             <Link
               href="/find-your-hobby"
-              className="inline-flex items-center gap-2 rounded-full border-2 border-white/40 bg-card/10 px-7 py-3.5 text-sm font-semibold text-foreground hover:bg-card/20 transition-colors duration-150"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-[#211e18] bg-white px-7 py-3.5 text-sm font-semibold text-[#211e18] transition-colors duration-150 hover:bg-[#fff8d6]"
             >
               Take the hobby quiz →
             </Link>

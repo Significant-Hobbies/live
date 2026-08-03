@@ -77,6 +77,18 @@ describe('catalog coverage for older visitors', () => {
     const all = HOBBY_CATEGORIES.flatMap((c) => c.hobbies).map((h) => h.toLowerCase());
     expect(new Set(all).size).toBe(all.length);
   });
+
+  it('gives every canonical hobby one unique detail-page slug', () => {
+    const slugs = ALL_HOBBIES.map((hobby) => hobby.toLowerCase().replace(/\s+/g, '-'));
+    expect(slugs).toHaveLength(ALL_HOBBIES.length);
+    expect(new Set(slugs).size).toBe(ALL_HOBBIES.length);
+    for (const hobby of ALL_HOBBIES) {
+      expect(
+        getCategoryForHobby(hobby),
+        `/hobbies/${hobby.toLowerCase().replace(/\s+/g, '-')}`
+      ).toBeDefined();
+    }
+  });
 });
 
 describe('hobby facets', () => {

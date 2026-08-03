@@ -8,7 +8,7 @@ import { Whale } from '~/components/whale';
 const DISMISS_KEY = 'whale-floating-dismissed';
 
 const SHORTCUTS = [
-  { label: 'My bucket list', href: '/dashboard' },
+  { label: 'My bucket list', href: '/bucket-list' },
   { label: 'Browse famous lists', href: '/bucket-lists' },
   { label: '150+ ideas', href: '/bucket-list-ideas' },
 ];

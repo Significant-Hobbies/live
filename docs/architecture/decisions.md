@@ -112,7 +112,7 @@ default.
 **Constraint:** A few routes opt into runtime behaviour and are the exception,
 not the rule: `src/app/hobbies/[hobby]/page.tsx` and `src/app/explore/page.tsx`
 use `export const revalidate` (ISR — 3600s and 300s respectively),
-`src/app/sitemap.ts`, `src/app/look-back/page.tsx`, and
+`src/app/sitemap.ts`, `src/app/history/page.tsx`, and
 `src/app/timelines/recent/page.tsx` use `export const dynamic =
 'force-dynamic'`; the sitemap needs a request-scoped D1 binding. With the static-assets incremental cache, ISR routes are
 served from the last build output rather than revalidating on the OpenNext
@@ -165,42 +165,31 @@ work durable, not to grant access. Two consequences:
    `/login`. The "continue as guest" link derives its destination from the same
    callback via `guestRouteFor`, and may only point at surfaces that render
    without a session.
-2. **`/daily` and `/trajectory` render a signed-out preview** of one sample
-   month (`src/lib/preview-data.ts`) rather than redirecting.
+2. **Private work uses one explicit storage authority.** Signed-out work is
+   stored locally; signed-in work is owner-scoped in D1. Routes consume that
+   authority rather than each inventing a guest mode.
 
 **Why:** Surfaces divide by *when* they deliver value, not by privacy. The
 single-session surfaces — the quiz, `/life-bingo`, `/side-quests`, the timeline
 builder, the calculators — already keep localStorage as the source of truth and
 mirror to the DB only once signed in. Their whole value lands in one visit.
 
-The longitudinal surfaces (`/daily`, `/trajectory`, `/look-back`,
-`/commitments`, `/dashboard`) are different: their value *is* accumulated
-history. Persisting those to localStorage would be a fragile imitation that
-silently loses months of private journal entries to a cache clear — worse than
-a sign-in wall, because the wall is at least honest about the trade. But
-redirecting also failed, because a visitor cannot judge a monthly review
-practice they have never seen. A read-only sample resolves both.
+Longitudinal surfaces (`/daily`, `/trajectory`, `/history`, `/commitments`, and
+Today) keep accumulated history locally when signed out. The UI states that the
+work lives on this device; signing in changes the authority to D1 and enables
+cross-device durability. Local data may be explicitly imported, but is never
+silently treated as account data.
 
 **Constraints:**
 
-- The preview is **not** persistence. Habit ticks stay interactive because the
-  daily write actions return early without a session and a tick loses nothing.
-  Journal *writing* is suppressed, not merely discarded — inviting a stranger to
-  type a private entry that evaporates is the exact failure the preview exists
-  to avoid. `/trajectory` is fully read-only because its write actions *throw*
-  on a missing session rather than returning early.
-- `PreviewBanner` is not dismissible. It carries the whole ethical weight of
-  showing someone else's content on a page that otherwise looks like theirs.
-- Sample data is derived from the caller's `today` / `monthKey`, never
-  hardcoded, so it cannot drift into stale dates.
-- Sample data must not read as a growth dashboard. No trajectory bucket may
-  rise monotonically and the habit history must contain gaps, or the sample
-  contradicts A4 and the "no score — the gap is the whole point" copy directly
-  above it. Both are asserted in `src/lib/preview-data.test.ts`.
-- Both routes stay `noindex`. The preview is a conversion surface, not a
-  discovery surface; A3 still holds.
-- `/settings` and `/setup` stay gated with no preview — username, timezone and
-  profile visibility have no anonymous meaning.
+- Local records are versioned and scoped by feature; the application-wide
+  authority decides whether local or D1 is canonical.
+- Account writes still require server-side ownership checks. Client state is
+  never evidence of ownership.
+- Importing local work into an account is deliberate, idempotent, and
+  dismissible. It must not overwrite newer account data silently.
+- Private app routes stay `noindex`; local availability does not make them
+  public discovery surfaces, so A3 still holds.
 
 ## A10 — Remaining life expectancy is conditional, everywhere
 
@@ -313,12 +302,12 @@ into a second commitments system or a public content surface.
 
 ## A13 — The first public timeline is a separate consent step
 
-**Decision:** Completed setup leads to the new-timeline builder, which may reuse
+**Decision:** Completed onboarding leads to the new-timeline builder, which may reuse
 the authenticated user's persisted dropped-hobby answer as one editable `Now`
 phase. The first save remains `PRIVATE`; only a subsequent owner action can add
 it to the public profile.
 
-**Why:** Setup previously ended after one habit and sent the user to a dashboard
+**Why:** Onboarding previously ended after one habit and sent the user to a dashboard
 whose highest-value empty state was another link. Even after finding the
 builder, the user repeated context they had already provided, saved into a
 private owner view, and had to infer that a small visibility menu was the path
@@ -326,14 +315,14 @@ to the public profile. The core creation-and-sharing loop existed, but the
 handoffs made it feel like several unrelated products.
 
 Folding publication into Save was rejected. A timeline can contain a personal
-history, and “finish setup” is not consent to make that history discoverable.
+history, and “finish onboarding” is not consent to make that history discoverable.
 The product should make the public path obvious without making it automatic.
 
 **Constraints:**
 
-- Setup-specific prefill reads existing authenticated `onboardingData`; it does
+- Onboarding-specific prefill reads existing authenticated `onboardingData`; it does
   not put the hobby answer in the URL or create a second onboarding store.
-- Setup waits for the existing answer save before offering the timeline
+- Onboarding waits for the existing answer save before offering the timeline
   handoff, so fast navigation cannot lose the starter hobby.
 - Direct and signed-out `/timeline/new` visits keep the template-first builder.
 - The first-save query marker is presentation state only. The prompt also
@@ -392,3 +381,40 @@ into a new social system whose value has not been established.
   decision authorizes no destructive migration or data deletion.
 - Any future export, reuse, or removal of historical social data requires a
   separate explicit decision.
+
+## A16 — Four private surfaces own the product loop
+
+**Decision:** The post-onboarding private application has a dashboard at `/`
+plus three canonical sections: Live More (`/live-more`), Daily (`/daily`), and
+History (`/history`). The former `/dashboard`, `/life-plan`, and
+`/look-back` routes are removed rather than maintained as parallel products.
+
+**Why:** Separate dashboard, planning, bucket-list, mortality, timeline, and
+trajectory homes made the product feel like a collection of features. The four
+destinations follow the person's actual loop: act today, imagine more, keep a
+daily record, and understand the life accumulating behind them.
+
+**Constraints:**
+
+- Astro continues to own production anonymous `GET /`. In the application,
+  signed-out visitors without a completed local profile see the public landing,
+  signed-out people with one see the local dashboard, signed-in people with
+  completed onboarding see the account dashboard, and signed-in incomplete
+  accounts continue at `/onboarding`. The SH wordmark is the dashboard's home
+  control, so “Today” is not a separate navigation section.
+- Live More may link to focused tools, but its owned list, yearly goals, and
+  corpus-backed discovery are the orchestration layer.
+- “Discover new things” uses the full experience corpus and supports refresh,
+  dismiss, direct save, and a small-step route. It is an internal inspiration
+  engine, not a fifth global destination or a replacement for A3's public quiz.
+- Daily remains non-scoring. Its journal may pair with one optional, reversible
+  small new thing for the day without turning it into a streak or score.
+  History groups timeline, mortality, reflection, and Trajectory without
+  presenting a lifespan estimate as a prediction.
+- Before onboarding, the signed-out shell exposes public inspiration rather
+  than empty private sections. Signed-in incomplete accounts continue at
+  `/onboarding`; Live More, Daily, History, and the dashboard use
+  `onboardingCompletedAt` in account mode and the versioned onboarding profile
+  in local mode.
+- Navigation names only Live More, Daily, and History. With no external legacy users,
+  obsolete compatibility routes are removed instead of preserved indefinitely.

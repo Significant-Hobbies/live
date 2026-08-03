@@ -1,6 +1,12 @@
 import { expect, test } from '@playwright/test';
 
+import { completeLocalOnboarding } from './fixtures/local-onboarding';
+
 test.describe('signed-out private surfaces are local-first', () => {
+  test.beforeEach(async ({ page }) => {
+    await completeLocalOnboarding(page);
+  });
+
   test('/daily exposes editable local habits and journal', async ({ page }) => {
     await page.goto('/daily');
     await expect(page.getByLabel('Preview notice')).toHaveCount(0);

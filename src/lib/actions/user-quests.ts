@@ -111,10 +111,10 @@ export async function startQuest(params: {
     // Habit creation is best-effort; the quest should still start.
   }
 
-  revalidatePath('/dashboard');
+  revalidatePath('/');
   revalidatePath('/side-quests');
   revalidatePath('/timeline');
-  revalidatePath('/life-plan');
+  revalidatePath('/live-more');
 
   return { success: true };
 }
@@ -274,12 +274,12 @@ export async function completeUserQuest(userQuestPkId: string): Promise<{
           .where(eq(bucketListItems.id, item.id));
         bucketItemCompleted = true;
         revalidatePath('/bucket-list');
-        revalidatePath('/life-plan');
+        revalidatePath('/live-more');
       }
     }
   }
 
-  revalidatePath('/dashboard');
+  revalidatePath('/');
   revalidatePath('/side-quests');
   revalidatePath('/timeline');
 
@@ -309,7 +309,7 @@ export async function abandonQuest(
     // Best-effort; quest abandonment should still succeed.
   }
 
-  revalidatePath('/dashboard');
+  revalidatePath('/');
   revalidatePath('/side-quests');
 
   return { success: true };

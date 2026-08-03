@@ -1,11 +1,15 @@
 import type { Metadata } from 'next';
 
 import { LifeInWeeksClient } from './life-in-weeks-client';
+import { eq } from 'drizzle-orm';
+import { users } from '~/db/schema';
+import { getServerAuthSession } from '~/server/auth';
+import { db } from '~/server/db';
 
 export const metadata: Metadata = {
   title: 'Your Life in Weeks — SignificantHobbies',
   description:
-    'See your whole life as one grid of weeks, from a single number. No account, nothing saved to a server. Then decide what the remaining ones are for.',
+    'See your whole life as one grid of weeks, using your exact birth date when available. Then decide what the remaining ones are for.',
   alternates: { canonical: '/life-in-weeks' },
   openGraph: {
     title: 'Your Life in Weeks',
@@ -16,6 +20,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function LifeInWeeksPage() {
-  return <LifeInWeeksClient />;
+export default async function LifeInWeeksPage() {
+  const session = await getServerAuthSession();
+  const profile = session?.user?.id
+    ? await db.query.users.findFirst({
+        where: eq(users.id, session.user.id),
+        columns: { birthDate: true, onboardingCompletedAt: true },
+      })
+    : null;
+  return (
+    <LifeInWeeksClient
+      storageMode={session?.user ? 'account' : 'local'}
+      initialBirthDate={profile?.birthDate ?? null}
+      initialOnboardingComplete={Boolean(profile?.onboardingCompletedAt)}
+    />
+  );
 }

@@ -6,7 +6,8 @@ description: SignificantHobbies — a life planner with two dimensions (Daily + 
 # Product overview
 
 > A life planner with two dimensions. **Daily** (private): one ritual page with
-> AM/PM prompts, habit check-ins, and a compulsory journal entry. **Living**
+> AM/PM prompts, habit check-ins, a journal entry, and one optional small new
+> thing to try. **Living**
 > (opt-in public): hobby discovery, timeline builder, bucket lists, side
 > quests, SEO blog, and public user profiles. The mortality frame (life grid,
 > manifesto) connects both dimensions.
@@ -21,7 +22,7 @@ People in their 20s–40s who feel the pull of unlived experiences — curious a
 
 ## Product Purpose
 
-A companion for living intentionally — helping people discover their hobbies, build their bucket list, and track a life worth remembering. The core loop: discover (quiz, famous journeys, famous bucket lists) → capture (timelines, bucket list items) → reflect (dashboard insights, personality archetype, celebrity match). The bucket list is the newest and highest-leverage surface: it answers "what do I want to do with my life?" rather than just "what are my hobbies?"
+A companion for living intentionally — helping people discover their hobbies, build their bucket list, and track a life worth remembering. The core loop is: discover what is possible → save what feels alive → take one small step → reflect on what changed. The bucket list is the durable centre of the Living dimension: it answers “what do I want to do with my life?” rather than just “what are my hobbies?”
 
 Lumi is the mascot: an amber/gold guiding light. Warm, aspirational, never preachy. "Your guiding light toward a life worth remembering."
 
@@ -62,16 +63,19 @@ The product merged with `today-little-log` on 2026-07-02 (see
 The merge produced one coherent thesis:
 
 - **Daily (private):** one `/daily` ritual page — AM/PM prompts, habit
-  check-ins (simple, no scoring), compulsory journal entry at the bottom.
+  check-ins (simple, no scoring), journal, and one approachable new thing that
+  can be swapped, completed, or left open without becoming another obligation.
   Structurally private: no visibility field, no public API, no sharing.
-- **Living (opt-in public):** hobbies, bucket lists, side quests, timelines,
-  public profiles. Opt-in public per item. `/life-plan` is the action-led Live
-  More home for hobbies, bucket lists, Life Bingo, and side quests; the focused
-  tools remain separate routes.
-- **First-use Living loop:** completed setup leads into an editable first
-  timeline seeded from the hobby the user already named. Saving remains private
-  by default; a separate owner-only choice is required before the timeline
-  appears on the public profile. See
+- **Living (private by default, selectively public):** hobbies, bucket lists,
+  side quests, timelines, and public profiles. `/live-more` is the orchestration
+  home: the owned list and yearly goals come first, then corpus-backed discovery,
+  Life Bingo, and Side Quests. Focused tools remain separate routes.
+- **First-use Living loop:** onboarding turns remembered hobbies into a private
+  timeline and searches 5,000+ structured paths while accepting a pasted personal
+  bucket list. Yearly goals are captured independently, may optionally borrow
+  from the bucket list, and collectively become Trajectory direction. A daily habit is optional,
+  because episodic goals do not need artificial repetition. A separate owner-only choice is still required
+  before a timeline appears on the public profile. See
   [`decisions.md`](../architecture/decisions.md) A13.
 - **The journal is the bridge.** A private daily entry can optionally relate to
   one of its owner's timelines or non-abandoned commitments. The relationship
@@ -85,8 +89,27 @@ The merge produced one coherent thesis:
   [`decisions.md`](../architecture/decisions.md) A14.
 - **The mortality frame connects both.** A finite life is the reason daily
   practice and life aspirations both matter. The life grid (`src/lib/mortality.ts`)
-  and the manifesto (`/manifesto`) make this concrete. `/look-back` is the See
-  History home, pairing the life grid with Trajectory and lived reflection.
+  and the manifesto (`/manifesto`) make this concrete. `/history` pairs the life
+  grid with an image-capable timeline, Trajectory, and lived reflection.
+
+### Post-onboarding workspace
+
+- **Dashboard (`/` after onboarding):** remaining-time context, one strong quote,
+  today's journal, habit check-ins, and one next bucket-list action.
+- **Live More (`/live-more`):** bucket list and yearly goals, followed by a
+  substantial “discover new things” engine and small-step paths into Bingo and
+  Side Quests.
+- **Daily (`/daily`):** journal writing and history, one suggested or
+  person-authored new thing, and a calm habit checklist without scores.
+- **History (`/history`):** the personal timeline, Life in Weeks, life-so-far
+  reflection, and Trajectory.
+
+Before onboarding, signed-out visitors retain `/` and public navigation:
+editorial stories, the primary hobby quiz, experience possibilities, the
+manifesto, and explicitly public profiles. Signed-in incomplete accounts and
+private-section attempts continue at `/onboarding`. Once onboarding is complete,
+`/` is the local or account dashboard. The SH wordmark returns a person to that
+dashboard; there is no separate “Today” navigation item.
 
 ### What we deliberately do not do
 
@@ -103,7 +126,7 @@ The merge produced one coherent thesis:
   streaks. Five badges with no evaluator were removed on 2026-07-25 rather than
   left on the profile as an unwinnable promise.
 
-## Discovery — the quiz is primary
+## Discovery — public acquisition and private inspiration
 
 The hobby quiz at `/find-your-hobby` is the single primary discovery UX
 (chosen 2026-07-03). The other three discovery surfaces — taxonomy directory
@@ -111,6 +134,13 @@ The hobby quiz at `/find-your-hobby` is the single primary discovery UX
 are hidden from the homepage/nav/footer but their code and routes are intact;
 they remain reachable via deep links, SEO pages, and cross-links from the quiz
 result. Re-surface only if the 7-day PostHog funnel underperforms.
+
+That public acquisition constraint does not make the signed-in product passive.
+Inside `/live-more`, “discover new things” does heavy lifting across the full
+experience corpus: it should show breadth, explain why an idea might fit, let a
+person dismiss or refresh it, save it directly to the bucket list, or turn it
+into a small Side Quest. It complements the quiz instead of becoming another
+public top-level discovery destination.
 
 See [`discovery-funnel.md`](discovery-funnel.md) for the funnel measurement
 plan.

@@ -139,7 +139,7 @@ export function QuestChainCard({
    *
    * `completeUserQuest` had no caller anywhere in the app, so a quest could be
    * started and never finished: the dashboard's completed/abandoned sections,
-   * the public profile's "The evidence", `/look-back`'s quest counts and four
+   * the public profile's "The evidence", `/history`'s quest counts and four
    * behavioural insights were all permanently empty, and the completion-rate
    * insight reported 0% forever. It also owns the bucket-item edge — marking the
    * item done once its last active quest is gone — which likewise never ran.

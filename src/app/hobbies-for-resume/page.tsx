@@ -320,8 +320,8 @@ export default function HobbiesForResumePage() {
           className="border-primary/30 bg-primary/10 shadow-soft"
           innerClassName="rounded-xl p-5"
         >
-          <h2 className="text-sm font-bold text-lumi-300 mb-1">How to choose what to include</h2>
-          <ul className="space-y-1.5 text-sm text-lumi-300">
+          <h2 className="mb-1 text-sm font-bold text-[#684e00]">How to choose what to include</h2>
+          <ul className="space-y-1.5 text-sm text-[#514630]">
             <li>
               Include hobbies where you&apos;ve reached a notable level — a rank, a project, a
               milestone

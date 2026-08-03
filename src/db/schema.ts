@@ -85,6 +85,9 @@ export const users = sqliteTable('User', {
   // user-local dayDate keys and the AM/PM ritual split. Null = fall back to UTC.
   timezone: text('timezone'),
   birthYear: integer('birthYear'),
+  // Exact private date for Life in Weeks. Kept alongside birthYear while
+  // older mortality/profile surfaces migrate from the legacy approximation.
+  birthDate: text('birthDate'),
   bio: text('bio'),
   website: text('website'),
   // The user's personal creed — their declaration of what they're about.
@@ -430,6 +433,10 @@ export const journalEntries = sqliteTable(
     commitmentId: text('commitmentId').references(() => commitments.id, {
       onDelete: 'set null',
     }),
+    // One optional, non-scoring invitation to make this day contain something new.
+    noveltyId: text('noveltyId'),
+    noveltyText: text('noveltyText'),
+    noveltyCompleted: integer('noveltyCompleted', { mode: 'boolean' }).notNull().default(false),
     createdAt: integer('createdAt', { mode: 'timestamp' }).notNull().default(sql`(unixepoch())`),
     updatedAt: integer('updatedAt', { mode: 'timestamp' }).notNull().default(sql`(unixepoch())`),
   },

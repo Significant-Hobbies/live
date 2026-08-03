@@ -69,37 +69,38 @@ function templateToPhases(template: TimelineTemplate): Phase[] {
 
 function TemplatePicker({ onPick }: { onPick: (template: TimelineTemplate) => void }) {
   return (
-    <div className="mx-auto max-w-2xl">
-      <div className="mb-6 text-center">
-        <h2 className="text-xl font-bold text-foreground">Choose a starting point</h2>
-        <p className="mt-1 text-sm text-muted-foreground">
-          Pick a template to pre-fill phases, or start blank and build your own.
+    <div className="mx-auto max-w-4xl rounded-[2rem] border border-[#d9cfbd] bg-[#fffdf8] p-5 shadow-[0_22px_60px_rgba(72,58,38,0.08)] sm:p-9">
+      <div className="mb-8 max-w-2xl">
+        <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#176b4a]">
+          Personal timeline
+        </p>
+        <h2 className="mt-2 font-serif text-4xl font-medium tracking-[-0.03em] text-[#211e18]">
+          Where does your story begin?
+        </h2>
+        <p className="mt-3 text-base leading-relaxed text-[#625b50]">
+          Start empty or borrow a shape. Every phase stays editable.
         </p>
       </div>
-      <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
+      <div className="divide-y divide-[#e8dfd1] border-y border-[#e8dfd1]">
         {TIMELINE_TEMPLATES.map((template) => (
           <button
             key={template.id}
             type="button"
             onClick={() => onPick(template)}
-            className="group rounded-xl border border-border bg-card p-5 text-left transition-all hover:border-foreground/30 hover:bg-foreground/10 hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-foreground focus:ring-offset-2"
+            className="group grid w-full grid-cols-[2.5rem_1fr_auto] items-center gap-4 px-2 py-5 text-left transition-colors hover:bg-[#f7f1e7] focus-visible:bg-[#f7e957] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#211e18]"
           >
-            <div className="mb-3 text-3xl">{template.emoji}</div>
-            <h3 className="mb-1 text-sm font-semibold text-foreground group-hover:text-growth transition-colors leading-tight">
-              {template.name}
-            </h3>
-            <p className="mb-3 text-xs text-muted-foreground leading-snug">
-              {template.description}
-            </p>
-            {template.phases.length > 0 ? (
-              <span className="inline-flex items-center rounded-full bg-foreground/5 px-2 py-0.5 text-xs text-muted-foreground group-hover:bg-foreground/10 group-hover:text-growth transition-colors">
-                {template.phases.length} phases
+            <span className="flex size-10 items-center justify-center rounded-full bg-[#b9dcf5] font-serif text-lg font-bold text-[#192a36]">
+              {template.name.charAt(0)}
+            </span>
+            <span>
+              <span className="block font-serif text-2xl font-medium text-[#211e18]">
+                {template.name}
               </span>
-            ) : (
-              <span className="inline-flex items-center rounded-full bg-foreground/5 px-2 py-0.5 text-xs text-muted-foreground group-hover:bg-foreground/10 group-hover:text-growth transition-colors">
-                empty
-              </span>
-            )}
+              <span className="mt-1 block text-sm text-[#625b50]">{template.description}</span>
+            </span>
+            <span className="rounded-full border border-[#d9cfbd] bg-white px-3 py-1.5 text-xs font-bold text-[#625b50]">
+              {template.phases.length ? `${template.phases.length} phases` : 'Empty'}
+            </span>
           </button>
         ))}
       </div>

@@ -176,16 +176,6 @@ const OG_IMAGE = `${SITE_URL}/opengraph-image`;
       <p class="lcp-prompt">The rest is still unwritten.</p>
     </div>
     <script is:inline>
-      // Signed-in users skip the static landing — matches src/middleware.ts redirect.
-      (function () {
-        var c = document.cookie;
-        if (
-          c.indexOf('better-auth.session_token') !== -1 ||
-          c.indexOf('__Secure-better-auth.session_token') !== -1
-        ) {
-          location.replace('/dashboard');
-        }
-      })();
       // Hand off to the fully styled static hero on the next paint. Waiting
       // for idle kept the duplicate shell visible for several seconds on
       // throttled devices and turned that intentional delay into the LCP.

@@ -154,12 +154,14 @@ export default function CostCalculatorClient() {
               className="grid grid-cols-12 gap-2 rounded-lg border border-border bg-card/40/40 p-3"
             >
               <input
+                aria-label={`Cost label for ${it.label}`}
                 value={it.label}
                 onChange={(e) => updateItem(it.id, { label: e.target.value })}
                 className="col-span-12 rounded-md border border-border bg-card px-2 py-1.5 text-sm focus-visible:ring-2 focus-visible:ring-foreground/50 focus-visible:outline-none sm:col-span-5"
                 placeholder="What is it?"
               />
               <input
+                aria-label={`Amount for ${it.label}`}
                 type="number"
                 inputMode="decimal"
                 value={Number.isFinite(it.amount) ? it.amount : 0}
@@ -169,6 +171,7 @@ export default function CostCalculatorClient() {
                 step={5}
               />
               <select
+                aria-label={`Cadence for ${it.label}`}
                 value={it.cadence}
                 onChange={(e) =>
                   updateItem(it.id, { cadence: e.target.value as LineItem['cadence'] })

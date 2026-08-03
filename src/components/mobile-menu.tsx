@@ -1,18 +1,23 @@
 'use client';
 
-import { Menu, Search, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
+import { useLocalOnboardingComplete } from './local-onboarding-gate';
+
 interface MobileMenuProps {
   links: { href: string; label: string }[];
+  localLinks?: { href: string; label: string }[];
   isLoggedIn: boolean;
 }
 
-export function MobileMenu({ links, isLoggedIn }: MobileMenuProps) {
+export function MobileMenu({ links, localLinks, isLoggedIn }: MobileMenuProps) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const localComplete = useLocalOnboardingComplete();
+  const visibleLinks = localLinks && localComplete ? localLinks : links;
 
   return (
     <>
@@ -28,14 +33,16 @@ export function MobileMenu({ links, isLoggedIn }: MobileMenuProps) {
       {open && (
         <div className="absolute left-0 top-[4.5rem] z-50 w-full border-b border-[#ddd4b7] bg-[#fffdf3] shadow-[0_16px_32px_rgba(66,55,22,0.14)]">
           <div className="flex flex-col gap-2 px-4 py-4">
-            {links.map((link) => {
+            {visibleLinks.map((link) => {
               const isActive = pathname === link.href;
               const colorClass =
-                link.href === '/life-plan'
-                  ? 'bg-[#f7e957] text-[#201f18]'
-                  : link.href === '/daily'
-                    ? 'bg-[#c5abfa] text-[#241a31]'
-                    : 'bg-[#b9dcf5] text-[#192a36]';
+                link.href === '/'
+                  ? 'bg-[#fffdf8] text-[#201f18] border border-[#ddd4b7]'
+                  : link.href === '/live-more'
+                    ? 'bg-[#f7e957] text-[#201f18]'
+                    : link.href === '/daily'
+                      ? 'bg-[#c5abfa] text-[#241a31]'
+                      : 'bg-[#b9dcf5] text-[#192a36]';
               return (
                 <Link
                   key={link.href}
@@ -49,28 +56,15 @@ export function MobileMenu({ links, isLoggedIn }: MobileMenuProps) {
                 </Link>
               );
             })}
-            <Link
-              href="/search"
-              prefetch={false}
-              onClick={() => setOpen(false)}
-              className={`flex min-h-12 items-center gap-2 rounded-xl px-4 text-base font-medium transition-colors ${
-                pathname === '/search'
-                  ? 'bg-foreground/10 text-foreground'
-                  : 'text-muted-foreground hover:bg-card/40 hover:text-foreground'
-              }`}
-            >
-              <Search className="h-4 w-4" />
-              Search
-            </Link>
             <div className="my-1 border-t border-border" />
             {isLoggedIn ? (
               <Link
-                href="/timeline/new"
+                href="/settings"
                 prefetch={false}
                 onClick={() => setOpen(false)}
-                className="flex min-h-12 items-center justify-center rounded-xl bg-[#ff9d7d] px-4 text-center text-base font-bold text-[#261e18] transition-colors hover:bg-[#f58c69]"
+                className="flex min-h-12 items-center justify-center rounded-xl bg-[#201f18] px-4 text-center text-base font-bold text-white transition-colors hover:bg-[#36342a]"
               >
-                New Timeline
+                Account settings
               </Link>
             ) : (
               <Link

@@ -21,7 +21,7 @@ interface Props {
  * zero importers and was unreachable from every entrypoint. A finished feature
  * with no door into it.
  *
- * `/life-plan` already reads a *timeline* archetype from what someone has done.
+ * `/live-more` already reads a *timeline* archetype from what someone has done.
  * This is the counterpart: what they say they want. Presenting the pair is the
  * reason this page exists — past, present, and future in one view.
  *

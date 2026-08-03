@@ -195,7 +195,10 @@ export function TimeCalculatorClient() {
                 return (
                   <div key={inp.id}>
                     <div className="mb-2 flex items-center justify-between gap-2">
-                      <label className="flex flex-wrap items-center gap-2 text-sm font-medium text-foreground">
+                      <label
+                        htmlFor={`time-${inp.id}`}
+                        className="flex flex-wrap items-center gap-2 text-sm font-medium text-foreground"
+                      >
                         <inp.icon
                           className="h-4 w-4 shrink-0 text-muted-foreground"
                           aria-hidden="true"
@@ -210,6 +213,7 @@ export function TimeCalculatorClient() {
                       </span>
                     </div>
                     <input
+                      id={`time-${inp.id}`}
                       type="range"
                       min={inp.min}
                       max={inp.max}
@@ -331,9 +335,9 @@ export function TimeCalculatorClient() {
                     <h3 className="font-bold text-foreground">Screen time swap</h3>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Cut your screen time in half and you&apos;d gain{' '}
-                    <span className="font-bold text-foreground">{screenSaving} more hours</span> per
-                    week — that&apos;s{' '}
+                    <span>Cut your screen time in half and you&apos;d gain </span>
+                    <span className="font-bold text-foreground">{screenSaving} more hours</span>
+                    <span> per week — that&apos;s </span>
                     <span className="font-semibold">{freeTime + screenSaving}h total</span> for
                     hobbies.
                   </p>

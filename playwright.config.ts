@@ -10,9 +10,9 @@ const APP_URL = 'http://localhost:3000';
 const LANDING_URL = 'http://localhost:4321';
 
 /**
- * `landing.spec.ts` only makes sense against the Astro preview — `src/app/page.tsx`
- * always redirects, so there is no landing page on the Next server. Every
- * app-targeted project skips it, and the `landing` project runs nothing else.
+ * `landing.spec.ts` validates the production anonymous Astro overlay. The Next
+ * server also owns a public fallback for local development, but the landing
+ * project's contract remains the built Astro artifact served in production.
  */
 const LANDING_SPEC = /landing\.spec\.ts/;
 

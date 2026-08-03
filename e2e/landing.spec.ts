@@ -4,9 +4,9 @@ import { expect, test } from '@playwright/test';
 /**
  * The anonymous landing page, which is **Astro**, not Next.js
  * (decisions.md A1 — `run_worker_first` excludes `/`, so the Worker never sees
- * an anonymous `GET /`). `src/app/page.tsx` unconditionally redirects:
- * `/dashboard` when signed in, `/timeline/new` otherwise. So there is no landing
- * page on the Next dev server at all.
+ * an anonymous `GET /`). Signed-in requests bypass the static asset in the
+ * Worker and reach the private Next.js home. So the production landing itself
+ * is exercised through the dedicated Astro project.
  *
  * This spec therefore runs only under the `landing` Playwright project, which
  * points at a built Astro preview. Every other project ignores it.

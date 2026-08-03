@@ -1,19 +1,16 @@
 import { and, desc, eq } from 'drizzle-orm';
 import { BookOpen } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 
-import {
-  GradientMesh,
-  GridBackground,
-  SpotlightCard,
-  StaggerContainer,
-  StaggerItem,
-} from '~/components/aceternity';
+import { GradientMesh, GridBackground, SpotlightCard } from '~/components/aceternity';
 import { AmbientMusic } from '~/components/ambient-music';
 import { Whale } from '~/components/whale';
 import { LocalLookBack } from '~/components/local-look-back';
+import { LocalOnboardingGate } from '~/components/local-onboarding-gate';
 import { HistoryAtlas } from '~/components/life-atlas/history-atlas';
+import { PhaseSwimlane } from '~/components/timeline-view/phase-swimlane';
 import {
   bucketListItems,
   commitments,
@@ -34,7 +31,7 @@ import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
 
 export const metadata = {
-  title: 'Your look-back — SignificantHobbies',
+  title: 'History — Significant Hobbies',
   robots: { index: false, follow: false },
 };
 
@@ -42,7 +39,12 @@ export const dynamic = 'force-dynamic';
 
 export default async function LookBackPage() {
   const session = await getServerAuthSession();
-  if (!session?.user) return <LocalLookBack today={dayKeyIn(null)} />;
+  if (!session?.user)
+    return (
+      <LocalOnboardingGate>
+        <LocalLookBack today={dayKeyIn(null)} />
+      </LocalOnboardingGate>
+    );
 
   const [
     me,
@@ -62,6 +64,7 @@ export default async function LookBackPage() {
         name: true,
         creed: true,
         birthYear: true,
+        birthDate: true,
         timezone: true,
         // Stored since onboarding shipped, read here for the first time.
         onboardingData: true,
@@ -90,6 +93,7 @@ export default async function LookBackPage() {
     db.select().from(commitments).where(eq(commitments.userId, session.user.id)),
     getTrajectoryContractState(),
   ]);
+  if (!me?.onboardingCompletedAt) redirect('/onboarding');
 
   // Flatten all phases across timelines
   const allPhases: Phase[] = [];
@@ -175,13 +179,57 @@ export default async function LookBackPage() {
       </div>
 
       <div className="relative mx-auto max-w-6xl px-4 py-10 sm:py-14">
-        <HistoryAtlas birthYear={me?.birthYear ?? null} trajectory={trajectoryState.active} />
+        <HistoryAtlas
+          birthYear={me?.birthYear ?? null}
+          birthDate={me?.birthDate ?? null}
+          trajectory={trajectoryState.active}
+        />
+
+        <section
+          id="personal-timeline"
+          className="mt-8 scroll-mt-24 overflow-hidden rounded-[1.75rem] border border-[#d9cfbd] bg-white"
+        >
+          <div className="grid lg:grid-cols-[0.72fr_1.28fr]">
+            <div className="relative min-h-72 overflow-hidden bg-[#211e18]">
+              <Image
+                src="/categories/creative-1200.webp"
+                alt="Hands making something as part of a lived hobby chapter"
+                fill
+                sizes="(min-width: 1024px) 34vw, 100vw"
+                className="object-cover opacity-75"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#211e18] via-transparent to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-6 text-white sm:p-8">
+                <p className="text-sm font-bold text-[#f7e957]">Your personal timeline</p>
+                <h2 className="mt-2 font-serif text-4xl">The chapters that made you.</h2>
+              </div>
+            </div>
+            <div className="p-5 sm:p-8">
+              {allPhases.length ? (
+                <PhaseSwimlane phases={allPhases} pins={allPins} />
+              ) : (
+                <div className="flex min-h-64 flex-col justify-center">
+                  <h2 className="font-serif text-3xl">Start with what you used to love.</h2>
+                  <p className="mt-3 max-w-lg leading-relaxed text-muted-foreground">
+                    Childhood obsessions, abandoned experiments, and quiet returns all belong here.
+                  </p>
+                </div>
+              )}
+              <Link
+                href={rawTimelines[0] ? `/timeline/${rawTimelines[0].id}/edit` : '/timeline/new'}
+                className="mt-6 inline-flex min-h-11 items-center border-b-2 border-current font-bold"
+              >
+                {allPhases.length ? 'Edit my timeline' : 'Build my timeline'} →
+              </Link>
+            </div>
+          </div>
+        </section>
 
         {/* Whale + back link */}
         <div className="mb-8 mt-14 flex items-center gap-3">
           <Whale size={40} float glow />
           <Link
-            href="/dashboard"
+            href="/"
             className="inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
             ← Dashboard
@@ -189,9 +237,9 @@ export default async function LookBackPage() {
         </div>
 
         {hasContent ? (
-          <StaggerContainer className="mx-auto max-w-4xl space-y-5">
+          <div className="mx-auto max-w-4xl space-y-5">
             {sections.map((section, index) => (
-              <StaggerItem key={section.id}>
+              <div key={section.id}>
                 <SpotlightCard
                   className={`relative overflow-hidden rounded-2xl border-0 p-8 sm:p-10 ${
                     index % 3 === 0
@@ -224,9 +272,9 @@ export default async function LookBackPage() {
                     </div>
                   </div>
                 </SpotlightCard>
-              </StaggerItem>
+              </div>
             ))}
-          </StaggerContainer>
+          </div>
         ) : (
           <SpotlightCard className="relative overflow-hidden rounded-2xl border border-border/50 bg-card p-12 text-center shadow-soft">
             <GradientMesh variant="gold" />
@@ -240,10 +288,10 @@ export default async function LookBackPage() {
                 do, the more your look-back has to say.
               </p>
               <Link
-                href="/dashboard"
+                href="/"
                 className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
               >
-                Start on your dashboard →
+                Start with today →
               </Link>
             </div>
           </SpotlightCard>

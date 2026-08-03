@@ -108,7 +108,7 @@ export async function createBucketList(input: BucketListDraft) {
     .returning();
 
   revalidatePath('/bucket-list');
-  revalidatePath('/dashboard');
+  revalidatePath('/');
   trackCoreAction('bucket_list_saved', session.user.id);
   return created;
 }
@@ -127,7 +127,7 @@ export async function updateBucketList(listId: string, input: BucketListDraft) {
 
   revalidatePath(`/bucket-list/${listId}`);
   revalidatePath('/bucket-list');
-  revalidatePath('/dashboard');
+  revalidatePath('/');
   if (existing.slug) revalidatePath(`/b/${existing.slug}`);
   return updated;
 }
@@ -162,7 +162,7 @@ export async function deleteBucketList(listId: string) {
     .delete(bucketLists)
     .where(and(eq(bucketLists.id, listId), eq(bucketLists.userId, session.user.id)));
   revalidatePath('/bucket-list');
-  revalidatePath('/dashboard');
+  revalidatePath('/');
 }
 
 const CATEGORIES = [
@@ -207,7 +207,7 @@ export async function addBucketListItem(data: {
       targetYear: parsed.targetYear ?? null,
     })
     .returning({ id: bucketListItems.id });
-  revalidatePath('/dashboard');
+  await revalidateItemSurfaces(session.user.id);
   if (parsed.sourceSlug) revalidatePath(`/bucket-lists/${parsed.sourceSlug}`);
   return { success: true, id: row?.id };
 }
@@ -216,12 +216,13 @@ export async function addBucketListItem(data: {
  * Revalidate every surface that actually renders bucket-list items.
  *
  * The item mutations each revalidated only `/dashboard`, which does not render
- * bucket items at all — `/life-plan` and the public profile do. Another instance
+ * bucket items at all — `/live-more` and the public profile do. Another instance
  * of code written against a page that never showed the data.
  */
 async function revalidateItemSurfaces(userId: string): Promise<void> {
-  revalidatePath('/life-plan');
-  revalidatePath('/dashboard');
+  revalidatePath('/bucket-list');
+  revalidatePath('/live-more');
+  revalidatePath('/');
   const me = await db.query.users.findFirst({
     where: eq(users.id, userId),
     columns: { username: true },

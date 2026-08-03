@@ -6,6 +6,11 @@ import { revalidatePath } from 'next/cache';
 import { commitments, habitLogs, habits, journalEntries, timelines, users } from '~/db/schema';
 import { DEFAULT_FREQUENCY, isValidFrequency } from '~/lib/habit-utils';
 import {
+  areDailyIntentionsValid,
+  dailyNoveltyById,
+  normalizeDailyIntentions,
+} from '~/lib/daily-novelty';
+import {
   columnsForVerifiedJournalContext,
   journalContextFromColumns,
   type JournalContextChoice,
@@ -101,7 +106,7 @@ export async function createHabit(
     })
     .returning({ id: habits.id, name: habits.name });
   revalidatePath('/daily');
-  revalidatePath('/dashboard');
+  revalidatePath('/');
   return habit ?? null;
 }
 
@@ -138,7 +143,7 @@ export async function deleteHabit(id: string) {
     .set({ status: 'archived' })
     .where(and(eq(habits.id, id), eq(habits.userId, session.user.id)));
   revalidatePath('/daily');
-  revalidatePath('/dashboard');
+  revalidatePath('/');
 }
 
 // ── Habit logs (check-ins) ──────────────────────────────────────────────────
@@ -187,7 +192,7 @@ export async function toggleHabitLog(habitId: string, dayDate: string, completed
     });
   }
   revalidatePath('/daily');
-  revalidatePath('/dashboard');
+  revalidatePath('/');
 }
 
 // ── Journal entries ─────────────────────────────────────────────────────────
@@ -204,6 +209,9 @@ export async function getJournalEntriesForRange(startDate: string, endDate: stri
       pmEntry: journalEntries.pmEntry,
       timelineId: journalEntries.timelineId,
       commitmentId: journalEntries.commitmentId,
+      noveltyId: journalEntries.noveltyId,
+      noveltyText: journalEntries.noveltyText,
+      noveltyCompleted: journalEntries.noveltyCompleted,
     })
     .from(journalEntries)
     .where(
@@ -214,6 +222,74 @@ export async function getJournalEntriesForRange(startDate: string, endDate: stri
       )
     )
     .orderBy(asc(journalEntries.dayDate));
+}
+
+export async function getAllJournalEntries() {
+  const session = await getServerAuthSession();
+  if (!session?.user) return [];
+
+  return db
+    .select({
+      id: journalEntries.id,
+      dayDate: journalEntries.dayDate,
+      amEntry: journalEntries.amEntry,
+      pmEntry: journalEntries.pmEntry,
+      timelineId: journalEntries.timelineId,
+      commitmentId: journalEntries.commitmentId,
+      noveltyId: journalEntries.noveltyId,
+      noveltyText: journalEntries.noveltyText,
+      noveltyCompleted: journalEntries.noveltyCompleted,
+    })
+    .from(journalEntries)
+    .where(eq(journalEntries.userId, session.user.id))
+    .orderBy(asc(journalEntries.dayDate));
+}
+
+export async function setDailyNovelty(
+  dayDate: string,
+  noveltyId: string | null,
+  noveltyText: string | null,
+  completed: boolean
+): Promise<boolean> {
+  const session = await getServerAuthSession();
+  const customText = normalizeDailyIntentions(noveltyText);
+  const validCatalogId = noveltyId ? dailyNoveltyById(noveltyId)?.id : null;
+  const validChoice = Boolean(validCatalogId) !== Boolean(customText);
+  if (
+    !session?.user ||
+    !/^\d{4}-\d{2}-\d{2}$/.test(dayDate) ||
+    !validChoice ||
+    (Boolean(customText) && !areDailyIntentionsValid(customText))
+  ) {
+    return false;
+  }
+
+  const choice = {
+    noveltyId: validCatalogId,
+    noveltyText: customText || null,
+    noveltyCompleted: completed,
+    updatedAt: new Date(),
+  };
+
+  const existing = await db
+    .select({ id: journalEntries.id })
+    .from(journalEntries)
+    .where(and(eq(journalEntries.userId, session.user.id), eq(journalEntries.dayDate, dayDate)))
+    .limit(1);
+
+  if (existing[0]) {
+    await db.update(journalEntries).set(choice).where(eq(journalEntries.id, existing[0].id));
+  } else {
+    await db.insert(journalEntries).values({
+      userId: session.user.id,
+      dayDate,
+      ...choice,
+    });
+  }
+
+  revalidatePath('/daily');
+  revalidatePath('/');
+  return true;
 }
 
 export async function getJournalContextChoices(): Promise<JournalContextChoice[]> {
@@ -332,7 +408,7 @@ export async function saveJournalEntry(
     });
   }
   revalidatePath('/daily');
-  revalidatePath('/dashboard');
+  revalidatePath('/');
 }
 
 // ── Profile ─────────────────────────────────────────────────────────────────

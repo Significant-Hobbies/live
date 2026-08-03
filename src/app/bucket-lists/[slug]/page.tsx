@@ -179,84 +179,82 @@ export default async function FamousBucketListPage({ params }: Props) {
 
         <SpotlightCard className="shadow-soft" innerClassName="p-0">
           <div className="relative overflow-hidden rounded-xl">
-            <StaggerContainer className="p-1.5">
-              <ul className="space-y-3">
-                {list.items.map((item, i) => {
-                  const cat = item.category ? BUCKET_ITEM_CATEGORIES[item.category] : null;
-                  const isDone = item.status === 'done';
+            <StaggerContainer as="ul" className="space-y-3 p-1.5">
+              {list.items.map((item, i) => {
+                const cat = item.category ? BUCKET_ITEM_CATEGORIES[item.category] : null;
+                const isDone = item.status === 'done';
 
-                  return (
-                    <StaggerItem key={i}>
-                      <li
-                        className={`group rounded-2xl border p-5 transition-all duration-200 ${
+                return (
+                  <StaggerItem
+                    as="li"
+                    key={i}
+                    className={`group rounded-2xl border p-5 transition-all duration-200 ${
+                      isDone
+                        ? 'border-lumi-200 bg-primary/10'
+                        : 'border-border bg-card hover:border-border hover:shadow-sm'
+                    }`}
+                  >
+                    <div className="flex items-start gap-4">
+                      {/* Status indicator — coral for done */}
+                      <div
+                        className={`mt-0.5 h-6 w-6 shrink-0 rounded-full border-2 flex items-center justify-center text-xs font-bold ${
                           isDone
-                            ? 'border-lumi-200 bg-primary/10'
-                            : 'border-border bg-card hover:border-border hover:shadow-sm'
+                            ? 'border-primary bg-primary text-foreground'
+                            : 'border-border text-transparent'
                         }`}
                       >
-                        <div className="flex items-start gap-4">
-                          {/* Status indicator — coral for done */}
-                          <div
-                            className={`mt-0.5 h-6 w-6 shrink-0 rounded-full border-2 flex items-center justify-center text-xs font-bold ${
-                              isDone
-                                ? 'border-primary bg-primary text-foreground'
-                                : 'border-border text-transparent'
-                            }`}
+                        ✓
+                      </div>
+
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-start justify-between gap-3 flex-wrap">
+                          <h3
+                            className={`font-semibold text-foreground ${isDone ? 'line-through text-muted-foreground' : ''}`}
                           >
-                            ✓
-                          </div>
-
-                          <div className="flex-1 min-w-0">
-                            <div className="flex items-start justify-between gap-3 flex-wrap">
-                              <h3
-                                className={`font-semibold text-foreground ${isDone ? 'line-through text-muted-foreground' : ''}`}
-                              >
-                                {item.title}
-                              </h3>
-                              {cat && (
-                                <span
-                                  className={`shrink-0 text-xs rounded-full px-2.5 py-1 font-medium border ${
-                                    isDone
-                                      ? 'border-lumi-200 text-primary bg-primary/10'
-                                      : 'border-border text-muted-foreground bg-card/40'
-                                  }`}
-                                >
-                                  {cat.label}
-                                </span>
-                              )}
-                            </div>
-
-                            <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed">
-                              {item.description}
-                            </p>
-
-                            {item.completedNote && (
-                              <div className="mt-2.5 flex items-start gap-2 rounded-lg bg-primary/10 border border-lumi-200 px-3 py-2">
-                                <span className="text-primary text-sm shrink-0">✓</span>
-                                <p className="text-xs text-lumi-600 leading-relaxed">
-                                  {item.completedNote}
-                                </p>
-                              </div>
-                            )}
-
-                            {isLoggedIn && (
-                              <div className="mt-3">
-                                <AddToMyListButton
-                                  title={item.title}
-                                  description={item.description}
-                                  category={item.category}
-                                  sourceSlug={list.slug}
-                                  sourceItemTitle={item.title}
-                                />
-                              </div>
-                            )}
-                          </div>
+                            {item.title}
+                          </h3>
+                          {cat && (
+                            <span
+                              className={`shrink-0 text-xs rounded-full px-2.5 py-1 font-medium border ${
+                                isDone
+                                  ? 'border-lumi-200 text-primary bg-primary/10'
+                                  : 'border-border text-muted-foreground bg-card/40'
+                              }`}
+                            >
+                              {cat.label}
+                            </span>
+                          )}
                         </div>
-                      </li>
-                    </StaggerItem>
-                  );
-                })}
-              </ul>
+
+                        <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed">
+                          {item.description}
+                        </p>
+
+                        {item.completedNote && (
+                          <div className="mt-2.5 flex items-start gap-2 rounded-lg bg-primary/10 border border-lumi-200 px-3 py-2">
+                            <span className="text-primary text-sm shrink-0">✓</span>
+                            <p className="text-xs leading-relaxed text-[#684e00]">
+                              {item.completedNote}
+                            </p>
+                          </div>
+                        )}
+
+                        {isLoggedIn && (
+                          <div className="mt-3">
+                            <AddToMyListButton
+                              title={item.title}
+                              description={item.description}
+                              category={item.category}
+                              sourceSlug={list.slug}
+                              sourceItemTitle={item.title}
+                            />
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </StaggerItem>
+                );
+              })}
             </StaggerContainer>
           </div>
         </SpotlightCard>
@@ -296,7 +294,7 @@ export default async function FamousBucketListPage({ params }: Props) {
           </Link>
           {isLoggedIn && (
             <Link
-              href="/dashboard"
+              href="/"
               className="text-sm font-medium text-primary hover:text-lumi-600 transition-colors"
             >
               View my bucket list →

@@ -7,6 +7,7 @@ import { z } from 'zod';
 import { commitments, habitLogs, habits, journalEntries, stamps, users } from '~/db/schema';
 import { dayIndexFor, inferProofType } from '~/lib/commitments';
 import { isValidFrequency } from '~/lib/habit-utils';
+import { dailyNoveltyById } from '~/lib/daily-novelty';
 import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
 
@@ -45,6 +46,9 @@ const JournalSchema = z.object({
   dayDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
   amEntry: z.string().max(10000).nullable(),
   pmEntry: z.string().max(10000).nullable(),
+  noveltyId: z.string().nullable().optional(),
+  noveltyText: z.string().trim().max(160).nullable().optional(),
+  noveltyCompleted: z.boolean().optional(),
 });
 const StampSchema = z.object({
   id: z.string().startsWith('local-stamp-'),
@@ -207,8 +211,11 @@ export async function importLocalAccountData(
   for (const journal of daily?.journals ?? []) {
     const existingDay = await db.query.journalEntries.findFirst({
       where: and(eq(journalEntries.userId, userId), eq(journalEntries.dayDate, journal.dayDate)),
-      columns: { id: true },
+      columns: { id: true, noveltyId: true, noveltyText: true },
     });
+    const validNoveltyId = dailyNoveltyById(journal.noveltyId)?.id ?? null;
+    const validNoveltyText = validNoveltyId ? null : journal.noveltyText?.trim() || null;
+    const hasNovelty = Boolean(validNoveltyId || validNoveltyText);
     if (!existingDay)
       await db.insert(journalEntries).values({
         id: journal.id,
@@ -216,9 +223,21 @@ export async function importLocalAccountData(
         dayDate: journal.dayDate,
         amEntry: journal.amEntry,
         pmEntry: journal.pmEntry,
+        noveltyId: validNoveltyId,
+        noveltyText: validNoveltyText,
+        noveltyCompleted: hasNovelty ? (journal.noveltyCompleted ?? false) : false,
       });
+    else if (!existingDay.noveltyId && !existingDay.noveltyText && hasNovelty)
+      await db
+        .update(journalEntries)
+        .set({
+          noveltyId: validNoveltyId,
+          noveltyText: validNoveltyText,
+          noveltyCompleted: journal.noveltyCompleted ?? false,
+          updatedAt: new Date(),
+        })
+        .where(eq(journalEntries.id, existingDay.id));
   }
-  for (const path of ['/dashboard', '/daily', '/commitments', '/look-back', '/settings'])
-    revalidatePath(path);
+  for (const path of ['/', '/daily', '/commitments', '/history', '/settings']) revalidatePath(path);
   return { success: true };
 }

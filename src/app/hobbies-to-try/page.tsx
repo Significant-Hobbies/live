@@ -274,7 +274,7 @@ const SECTIONS: Section[] = [
     label: 'This Year',
     subtitle: '10 deep-dive hobbies for people ready to commit',
     hobbies: THIS_YEAR,
-    badgeColor: 'bg-primary/15 text-lumi-300 border-primary/30',
+    badgeColor: 'bg-[#fff4c2] text-[#684e00] border-[#c6a935]',
   },
 ];
 

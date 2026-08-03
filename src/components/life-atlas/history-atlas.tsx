@@ -3,15 +3,20 @@ import Link from 'next/link';
 import { TrajectoryMap } from '~/components/trajectory/trajectory-map';
 import type { TrajectoryContractRecord } from '~/lib/trajectory-contract';
 import { birthDateFromYear, buildLifeGrid } from '~/lib/mortality';
+import { parseBirthDate } from '~/lib/life-in-weeks';
 
 export function HistoryAtlas({
   birthYear,
+  birthDate,
   trajectory,
 }: {
   birthYear: number | null;
+  birthDate?: string | null;
   trajectory: TrajectoryContractRecord | null;
 }) {
-  const life = buildLifeGrid(birthDateFromYear(birthYear), new Set());
+  const exactBirthDate =
+    birthDate && parseBirthDate(birthDate) ? new Date(`${birthDate}T12:00:00`) : null;
+  const life = buildLifeGrid(exactBirthDate ?? birthDateFromYear(birthYear), new Set());
   const trajectoryValue = trajectory ?? {
     constraintsText: '',
     intentText: '',
@@ -23,7 +28,7 @@ export function HistoryAtlas({
     <section className="overflow-hidden rounded-[1.75rem] bg-white shadow-[0_18px_50px_rgba(66,55,22,0.10)]">
       <div className="grid lg:grid-cols-[23rem_1fr]">
         <div className="border-b border-[#cdbd36] bg-[#f7e957] p-7 text-[#201f18] sm:p-10 lg:border-b-0 lg:border-r">
-          <p className="text-base font-bold">See History</p>
+          <p className="text-base font-bold">History</p>
           <h1 className="mt-5 font-serif text-5xl font-medium leading-[1.02] tracking-[-0.03em]">
             Your life so far
           </h1>
@@ -35,7 +40,7 @@ export function HistoryAtlas({
               {life.weeksRemaining.toLocaleString()}
             </span>
             <span className="text-base text-[#4b493d]">
-              {birthYear ? 'weeks remain' : 'weeks, roughly'}
+              {birthDate || birthYear ? 'weeks remain, roughly' : 'weeks, roughly'}
             </span>
           </div>
           <LifeWeekField cells={life.cells} />
@@ -72,6 +77,28 @@ export function HistoryAtlas({
           </div>
         </div>
       </div>
+      <div className="grid border-t border-[#e4dccb] bg-[#fffdf8] sm:grid-cols-2">
+        <Link
+          href="/history#personal-timeline"
+          className="p-6 transition-colors hover:bg-[#ffd0bd] sm:p-8"
+        >
+          <p className="text-sm font-bold">Personal timeline</p>
+          <h3 className="mt-2 font-serif text-3xl">The chapters you have lived</h3>
+          <span className="mt-4 inline-flex border-b-2 border-current font-bold">
+            Open timeline →
+          </span>
+        </Link>
+        <Link
+          href="/daily#journal-history"
+          className="border-t border-[#e4dccb] p-6 transition-colors hover:bg-[#dceabf] sm:border-l sm:border-t-0 sm:p-8"
+        >
+          <p className="text-sm font-bold">Journal history</p>
+          <h3 className="mt-2 font-serif text-3xl">The days in your own words</h3>
+          <span className="mt-4 inline-flex border-b-2 border-current font-bold">
+            Read the record →
+          </span>
+        </Link>
+      </div>
     </section>
   );
 }
@@ -79,7 +106,7 @@ export function HistoryAtlas({
 function LifeWeekField({ cells }: { cells: Array<{ weekIndex: number; lived: boolean }> }) {
   return (
     <div
-      className="mt-6 grid grid-cols-[repeat(52,minmax(0,1fr))] gap-px"
+      className="mt-6 grid grid-cols-[repeat(80,minmax(0,1fr))] gap-px sm:grid-cols-[repeat(64,minmax(0,1fr))] lg:grid-cols-[repeat(52,minmax(0,1fr))]"
       role="img"
       aria-label="Life in weeks overview"
     >

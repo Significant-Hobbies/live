@@ -12,7 +12,7 @@ type Props = {
   /**
    * Provenance, when the item came from a famous list — it drives the
    * revalidation of that list's page. Optional because suggestions on
-   * /life-plan have no source page to revalidate.
+   * /live-more have no source page to revalidate.
    */
   sourceSlug?: string;
   sourceItemTitle?: string;
@@ -37,7 +37,7 @@ export function AddToMyListButton({
 
   if (added) {
     return (
-      <span className="inline-flex items-center gap-1.5 text-xs font-medium text-lumi-600">
+      <span className="inline-flex items-center gap-1.5 text-xs font-medium text-[#684e00]">
         <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-primary text-primary-foreground text-[9px] font-bold">
           ✓
         </span>
@@ -51,10 +51,10 @@ export function AddToMyListButton({
       onClick={handleAdd}
       disabled={isPending}
       /* Named by the item it adds. A famous list renders dozens of these and the
-         /life-plan suggestions render four, so a bare "+ Add to my list" left a
+         /live-more suggestions render four, so a bare "+ Add to my list" left a
          screen-reader user with a page of identically-named buttons. */
       aria-label={`Add ${title} to my bucket list`}
-      className="inline-flex items-center gap-1.5 rounded-full border border-lumi-200 bg-card px-3 py-1 text-xs font-medium text-lumi-600 hover:bg-primary/10 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+      className="inline-flex items-center gap-1.5 rounded-full border border-lumi-200 bg-card px-3 py-1 text-xs font-medium text-[#684e00] transition-colors hover:bg-primary/10 disabled:cursor-not-allowed disabled:opacity-50"
     >
       {isPending ? 'Adding…' : '+ Add to my list'}
     </button>

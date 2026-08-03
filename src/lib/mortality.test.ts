@@ -80,7 +80,7 @@ describe('mortality', () => {
      * flat 4,000 cells with `weeksRemaining = max(0, 4000 - lived)`, so a
      * 71-year-old was told they had ~270 weeks left and anyone past 77 got a
      * fully dark grid and a literal zero — on /dashboard, /daily, /trajectory,
-     * /look-back, /commitments and their public profile.
+     * /history, /commitments and their public profile.
      */
     it('never tells anyone they have zero weeks left, at any age', () => {
       const now = new Date(2026, 6, 26);

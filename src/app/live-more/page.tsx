@@ -1,229 +1,135 @@
-import { desc, eq } from 'drizzle-orm';
+import { eq } from 'drizzle-orm';
+import { ArrowRight, Dice5, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 
-import { SpotlightCard } from '~/components/aceternity';
-import { BucketItemControls } from '~/components/bucket-list/bucket-item-controls';
 import { BucketInsights } from '~/components/bucket-list/bucket-insights';
-import { QuestChainCard } from '~/components/bucket-list/quest-chain-card';
-import { LiveMoreAtlas } from '~/components/life-atlas/live-more-atlas';
-import { bucketListItems, timelines } from '~/db/schema';
-import { getActiveQuests, getCompletedQuests } from '~/lib/actions/user-quests';
-import { loginPath } from '~/lib/auth-routing';
-import { computePersonality } from '~/lib/personality';
-import type { Phase, TimelineVisibility } from '~/lib/types';
-import { parseJSONColumn } from '~/lib/utils';
+import { LiveMoreBucketFocus } from '~/components/live-more-bucket-focus';
+import { LiveMoreDiscovery } from '~/components/live-more-discovery';
+import { LocalLiveMore } from '~/components/local-live-more';
+import { LocalOnboardingGate } from '~/components/local-onboarding-gate';
+import { bucketListItems, users } from '~/db/schema';
+import { getBucketListSuggestions } from '~/lib/bucket-list-insights';
 import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
 
 export const metadata = {
-  title: 'Life Plan — SignificantHobbies',
+  title: 'Live More — Significant Hobbies',
   robots: { index: false, follow: false },
 };
 
-export default async function LifePlanPage() {
+const fitReasons: Record<string, string> = {
+  travel: 'A change of place may be the contrast your current list is missing.',
+  adventure: 'This adds courage, novelty, and a story worth remembering.',
+  creative: 'Your hands and attention get to make something real.',
+  achievement: 'A meaningful stretch can become part of this year’s chapter.',
+  social: 'This is really an excuse to make a memory with other people.',
+  humanitarian: 'A possibility that leaves something useful behind.',
+};
+
+export default async function LiveMorePage() {
   const session = await getServerAuthSession();
-  if (!session?.user)
-    return (
-      <main className="mx-auto max-w-6xl px-4 py-8 sm:py-12">
-        <LiveMoreAtlas />
-      </main>
+  if (!session?.user) {
+    const localSuggestions = getBucketListSuggestions([], 24, new Date().getFullYear()).map(
+      (suggestion) => ({
+        ...suggestion,
+        reason: fitReasons[suggestion.category] ?? 'A different kind of life experience.',
+      })
     );
+    return (
+      <LocalOnboardingGate>
+        <LocalLiveMore suggestions={localSuggestions} />
+      </LocalOnboardingGate>
+    );
+  }
 
-  // Completed quests are fetched alongside active ones because QuestChainCard
-  // already handles `status === 'completed'` but was only ever given active
-  // rows — so a finished step silently reverted to looking un-started.
-  const [rawTimelines, rawBucketItems, activeQuests, completedQuests] = await Promise.all([
-    db
-      .select()
-      .from(timelines)
-      .where(eq(timelines.userId, session.user.id))
-      .orderBy(desc(timelines.updatedAt)),
-    db
-      .select()
-      .from(bucketListItems)
-      .where(eq(bucketListItems.userId, session.user.id))
-      .orderBy(desc(bucketListItems.createdAt)),
-    getActiveQuests(),
-    getCompletedQuests(),
-  ]);
-
-  const chainQuests = [...activeQuests, ...completedQuests];
-
-  // Parse all phases
-  const allPhases: Phase[] = [];
-  const timelineList = rawTimelines.map((raw) => {
-    const phases = parseJSONColumn<Phase[]>(raw.phases, [], `life-plan:timeline:${raw.id}`);
-    allPhases.push(...phases);
-    return {
-      id: raw.id,
-      title: raw.title,
-      visibility: raw.visibility as TimelineVisibility,
-      slug: raw.slug,
-      phases,
-      updatedAt: raw.updatedAt,
-    };
+  const account = await db.query.users.findFirst({
+    where: eq(users.id, session.user.id),
+    columns: { onboardingCompletedAt: true },
   });
+  if (!account?.onboardingCompletedAt) redirect('/onboarding');
 
-  const personality = allPhases.length > 0 ? computePersonality(allPhases) : null;
-
-  const bucketDone = rawBucketItems.filter((i) => i.status === 'done');
-  const bucketInProgress = rawBucketItems.filter((i) => i.status === 'in_progress');
-  const bucketPlanned = rawBucketItems.filter((i) => i.status === 'planned');
-  // "Ahead of you" means everything not finished. Before status was reachable
-  // this could only ever be the planned set; now an in-progress item keeps its
-  // quest chain and its controls instead of vanishing into a bare list.
-  const bucketAhead = [...bucketInProgress, ...bucketPlanned];
-
-  // Recent hobbies (present focus)
-  const recentHobbies = [
-    ...new Set(allPhases.slice(-3).flatMap((p) => p.hobbies.map((h) => h.name))),
-  ].slice(0, 6);
-
-  const totalDone = bucketDone.length;
+  const items = await db.query.bucketListItems.findMany({
+    where: eq(bucketListItems.userId, session.user.id),
+    orderBy: (item, { desc }) => [desc(item.updatedAt)],
+  });
+  const active = items.filter((item) => item.status !== 'done');
+  const year = new Date().getFullYear();
+  const yearFocus = active.filter(
+    (item) => item.targetYear === year || item.status === 'in_progress'
+  );
+  const suggestions = getBucketListSuggestions(items, 24, year).map((suggestion) => ({
+    ...suggestion,
+    reason:
+      fitReasons[suggestion.category] ??
+      'This introduces a different kind of experience to your current list.',
+  }));
 
   return (
-    <div className="mx-auto max-w-6xl space-y-14 px-4 py-8 sm:py-12">
-      <LiveMoreAtlas
-        name={session.user.name?.split(' ')[0]}
-        currentHobbies={recentHobbies}
-        nextThings={bucketAhead.map((item) => item.title)}
-      />
+    <div className="bg-[#fbf8ef] px-4 py-8 text-[#211e18] sm:py-12">
+      <div className="mx-auto max-w-6xl space-y-10 sm:space-y-14">
+        <LiveMoreBucketFocus
+          name={session.user.name?.split(' ')[0]}
+          mode="account"
+          initialItems={active.map((item) => ({ id: item.id, title: item.title }))}
+          goals={yearFocus.map((item) => item.title)}
+        />
 
-      {personality && (
-        <p className="text-sm text-muted-foreground">
-          Your living pattern currently resembles{' '}
-          <strong className="font-medium text-foreground">
-            {personality.archetype.emoji} {personality.archetype.name}
-          </strong>
-          .
-        </p>
-      )}
+        <LiveMoreDiscovery suggestions={suggestions} />
 
-      {/* ── What the list says about you ────────────────────────── */}
-      <BucketInsights items={rawBucketItems} />
-
-      {/* ── Future (bucket list as quest chains) ────────────────── */}
-      {bucketAhead.length > 0 && (
-        <section className="space-y-4">
-          <div className="flex items-center justify-between">
-            <h2 id="ahead" className="scroll-mt-20 text-lg font-semibold text-foreground">
-              Ahead of you
-            </h2>
-            <Link
-              href="/dashboard"
-              className="text-sm text-primary hover:text-lumi-600 transition-colors"
-            >
-              Manage bucket list →
-            </Link>
-          </div>
-          <p className="text-sm text-muted-foreground">
-            Each dream, broken into steps you can start today.
-          </p>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {bucketAhead.map((item) => (
-              <div key={item.id}>
-                <QuestChainCard
-                  bucketItemId={item.id}
-                  title={item.title}
-                  category={item.category}
-                  activeQuests={chainQuests.map((q) => ({
-                    id: q.id,
-                    questId: q.questId,
-                    status: q.status,
-                    title: q.title,
-                  }))}
-                />
-                <BucketItemControls
-                  id={item.id}
-                  status={item.status}
-                  visibility={item.visibility}
-                  title={item.title}
-                  targetYear={item.targetYear}
-                />
-              </div>
-            ))}
-          </div>
+        <section className="grid gap-4 sm:grid-cols-2">
+          <ActionPath
+            href="/life-bingo"
+            color="bg-[#f7e957]"
+            icon={<Dice5 className="size-6" />}
+            title="Make the year playful"
+            copy="Turn possibility into a Bingo board of small, surprising wins."
+            action="Play Life Bingo"
+          />
+          <ActionPath
+            href="/find-your-hobby"
+            color="bg-[#b9dcf5]"
+            icon={<Sparkles className="size-6" />}
+            title="Find another interest"
+            copy="Use the focused hobby quiz when you want a new recurring practice."
+            action="Find my hobby"
+          />
         </section>
-      )}
 
-      {/* ── Past (timeline arc) ─────────────────────────────────── */}
-      <section className="space-y-4">
-        <div className="flex items-center justify-between">
-          <h2 className="text-lg font-semibold text-foreground">Where you&apos;ve been</h2>
-          <Link
-            href="/timeline/new"
-            className="text-sm text-foreground hover:opacity-80 transition-opacity"
-          >
-            Add a phase →
-          </Link>
-        </div>
-        {timelineList.length > 0 ? (
-          <div className="space-y-3">
-            {timelineList.map((tl) => (
-              <div key={tl.id}>
-                <Link href={`/timeline/${tl.id}`} prefetch={false}>
-                  <SpotlightCard className="block rounded-xl border border-border bg-card p-4 shadow-soft transition-all">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="font-medium text-foreground">{tl.title}</span>
-                      <span className="text-xs text-subtle">
-                        {tl.phases.length} phase{tl.phases.length !== 1 ? 's' : ''}
-                      </span>
-                    </div>
-                    <div className="flex flex-wrap gap-1.5">
-                      {tl.phases
-                        .flatMap((p) => p.hobbies.map((h) => h.name))
-                        .slice(0, 8)
-                        .map((hobby, i) => (
-                          <span
-                            key={`${hobby}-${i}`}
-                            className="inline-flex items-center rounded-full bg-foreground/5 px-2.5 py-0.5 text-xs text-muted-foreground"
-                          >
-                            {hobby}
-                          </span>
-                        ))}
-                      {tl.phases.flatMap((p) => p.hobbies).length > 8 && (
-                        <span className="text-xs text-subtle self-center">
-                          +{tl.phases.flatMap((p) => p.hobbies).length - 8} more
-                        </span>
-                      )}
-                    </div>
-                  </SpotlightCard>
-                </Link>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <SpotlightCard className="rounded-xl border border-dashed border-border bg-card/40 p-8 text-center shadow-soft">
-            <p className="text-muted-foreground mb-3">No timelines yet.</p>
-            <Link
-              href="/timeline/new"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
-            >
-              Build your first timeline →
-            </Link>
-          </SpotlightCard>
-        )}
-      </section>
-
-      {/* ── Completed (the archive) ─────────────────────────────── */}
-      {totalDone > 0 && (
-        <section className="space-y-4">
-          <h2 className="text-lg font-semibold text-foreground">Done &amp; dusted</h2>
-          <div className="rounded-xl border border-lumi-200 bg-primary/10 p-5">
-            <ul className="grid gap-2 sm:grid-cols-2">
-              {bucketDone.map((item) => (
-                <li key={item.id} className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <span className="inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-primary text-foreground text-[9px] font-bold">
-                    ✓
-                  </span>
-                  <span className="truncate">{item.title}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      )}
+        {items.length > 0 ? <BucketInsights items={items} /> : null}
+      </div>
     </div>
+  );
+}
+
+function ActionPath({
+  href,
+  color,
+  icon,
+  title,
+  copy,
+  action,
+}: {
+  href: string;
+  color: string;
+  icon: React.ReactNode;
+  title: string;
+  copy: string;
+  action: string;
+}) {
+  return (
+    <Link
+      href={href}
+      className={`group flex min-h-72 flex-col justify-between rounded-[1.5rem] p-6 ${color}`}
+    >
+      {icon}
+      <div>
+        <h2 className="font-serif text-3xl leading-tight">{title}</h2>
+        <p className="mt-3 text-sm leading-relaxed opacity-70">{copy}</p>
+        <span className="mt-6 inline-flex min-h-11 items-center gap-2 border-b-2 border-current font-bold">
+          {action} <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+        </span>
+      </div>
+    </Link>
   );
 }

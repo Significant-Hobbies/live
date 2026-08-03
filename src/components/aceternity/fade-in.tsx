@@ -29,6 +29,7 @@ export function FadeIn({
       viewport={{ once, margin: '0px 0px -50px 0px' }}
       transition={{ duration: 0.4, delay, ease: [0.22, 1, 0.36, 1] }}
       className={cn(className)}
+      data-animated-reveal
     >
       {children}
     </motion.div>
@@ -43,14 +44,18 @@ export function StaggerContainer({
   className,
   delay = 0,
   staggerDelay = 0.06,
+  as = 'div',
 }: {
   children: ReactNode;
   className?: string;
   delay?: number;
   staggerDelay?: number;
+  as?: 'div' | 'ul';
 }) {
+  const Component = as === 'ul' ? motion.ul : motion.div;
+
   return (
-    <motion.div
+    <Component
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: '0px 0px -50px 0px' }}
@@ -66,7 +71,7 @@ export function StaggerContainer({
       className={cn(className)}
     >
       {children}
-    </motion.div>
+    </Component>
   );
 }
 
@@ -77,13 +82,17 @@ export function StaggerItem({
   children,
   className,
   y = 12,
+  as = 'div',
 }: {
   children: ReactNode;
   className?: string;
   y?: number;
+  as?: 'div' | 'li';
 }) {
+  const Component = as === 'li' ? motion.li : motion.div;
+
   return (
-    <motion.div
+    <Component
       variants={{
         hidden: { opacity: 0, y },
         visible: {
@@ -93,8 +102,9 @@ export function StaggerItem({
         },
       }}
       className={cn(className)}
+      data-animated-reveal
     >
       {children}
-    </motion.div>
+    </Component>
   );
 }

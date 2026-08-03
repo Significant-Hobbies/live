@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 
 import { captureError } from '~/lib/foundry-monitoring';
 
-export default function LifePlanError({
+export default function LiveMoreError({
   error,
   reset,
 }: {
@@ -14,14 +14,14 @@ export default function LifePlanError({
 }) {
   useEffect(() => {
     console.error(error);
-    captureError(error, { scope: 'life-plan', digest: error.digest });
+    captureError(error, { scope: 'live-more', digest: error.digest });
   }, [error]);
 
   return (
     <div className="mx-auto max-w-md px-4 py-24 text-center">
-      <h2 className="text-xl font-bold mb-3 text-foreground">Couldn&apos;t load your life plan</h2>
+      <h2 className="text-xl font-bold mb-3 text-foreground">Couldn&apos;t load Live More</h2>
       <p className="text-sm text-muted-foreground mb-6">
-        Something went wrong while loading your life plan. Your data is safe — try again.
+        Something went wrong while loading your possibilities. Your data is safe — try again.
       </p>
       <div className="flex gap-3 justify-center">
         <button
@@ -31,10 +31,10 @@ export default function LifePlanError({
           Try again
         </button>
         <Link
-          href="/dashboard"
+          href="/"
           className="px-4 py-2 rounded border border-border text-foreground hover:bg-card/40"
         >
-          Dashboard
+          Back to dashboard
         </Link>
       </div>
       {error.digest ? <p className="mt-6 text-xs text-subtle">Reference: {error.digest}</p> : null}

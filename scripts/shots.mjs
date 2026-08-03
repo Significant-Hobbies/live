@@ -18,18 +18,19 @@ const EMAIL = 'e2e-authenticated@significanthobbies.test';
 const PASSWORD = 'e2e-test-password-not-a-secret';
 
 const ROUTES = [
+  ['today', '/'],
   ['daily', '/daily'],
-  ['dashboard', '/dashboard'],
   ['trajectory', '/trajectory'],
   ['commitments', '/commitments'],
   ['bucket-list', '/bucket-list'],
-  ['life-plan', '/life-plan'],
+  ['live-more', '/live-more'],
   ['profile', '/u/e2etester'],
-  ['look-back', '/look-back'],
+  ['history', '/history'],
 ];
 
 const VIEWPORTS = [
   ['desktop', { width: 1440, height: 900 }],
+  ['tablet', { width: 768, height: 1024 }],
   ['mobile', devices['Pixel 7'].viewport],
 ];
 

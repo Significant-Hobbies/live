@@ -94,6 +94,14 @@ export const test = base.extend<{ authedPage: Page }>({
       base.skip(true, 'Test auth disabled — run the dev server with ENABLE_TEST_AUTH=1');
     }
     await signInTestUser(page);
+    const onboarding = await page.request.post('/api/test/complete-onboarding', {
+      failOnStatusCode: false,
+    });
+    if (!onboarding.ok()) {
+      throw new Error(
+        `Could not prepare the test user's onboarding state (${onboarding.status()})`
+      );
+    }
     await use(page);
   },
 });

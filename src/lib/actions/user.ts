@@ -8,6 +8,7 @@ import { users } from '~/db/schema';
 import { SIDE_QUEST_BADGE_IDS } from '~/lib/badges';
 import { isValidTimeZone } from '~/lib/day';
 import { parseStringArray } from '~/lib/utils';
+import { parseBirthDate } from '~/lib/life-in-weeks';
 import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
 
@@ -37,6 +38,20 @@ export async function setUsername(username: string, birthYear?: number) {
     .returning();
   revalidatePath(`/u/${parsed}`);
   return user;
+}
+
+export async function saveBirthDate(raw: string): Promise<{ success: boolean }> {
+  const session = await getServerAuthSession();
+  if (!session?.user?.id) return { success: false };
+  const birthDate = parseBirthDate(raw);
+  if (!birthDate) return { success: false };
+  await db
+    .update(users)
+    .set({ birthDate, birthYear: Number(birthDate.slice(0, 4)) })
+    .where(eq(users.id, session.user.id));
+  revalidatePath('/life-in-weeks');
+  revalidatePath('/');
+  return { success: true };
 }
 
 const UpdateProfileSchema = z.object({
@@ -105,7 +120,7 @@ export async function saveTimezone(timeZone: string): Promise<{ success: boolean
   await db.update(users).set({ timezone: candidate }).where(eq(users.id, session.user.id));
 
   revalidatePath('/daily');
-  revalidatePath('/dashboard');
+  revalidatePath('/');
 
   return { success: true };
 }
@@ -133,7 +148,7 @@ export async function updateCreed(creed: string): Promise<{ success: boolean; er
   if (user?.username) {
     revalidatePath(`/u/${user.username}`);
   }
-  revalidatePath('/dashboard');
+  revalidatePath('/');
   // /settings renders the creed back into its textarea, so it belongs in this
   // action's own revalidation set. Currently redundant in practice — the only
   // caller runs `updateProfile` first, which already revalidates /settings —
@@ -172,7 +187,7 @@ export async function saveOnboardingAnswers(
     })
     .where(eq(users.id, session.user.id));
 
-  revalidatePath('/dashboard');
+  revalidatePath('/');
 
   return { success: true };
 }

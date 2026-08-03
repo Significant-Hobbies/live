@@ -3,7 +3,7 @@ import AxeBuilder from '@axe-core/playwright';
 
 test.describe('Life Bingo and Bucket List', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/life-bingo');
+    await page.goto('/life-bingo', { waitUntil: 'domcontentloaded' });
     await page.evaluate(() => window.localStorage.clear());
   });
 

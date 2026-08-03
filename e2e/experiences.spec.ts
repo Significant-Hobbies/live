@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { waitForHydrated } from './fixtures/hydration';
 
 /**
  * The browsable corpus. Everything here must work without a session — this is
@@ -25,7 +26,9 @@ test.describe('Experiences', () => {
     const counter = page.getByText(/^\d+ of \d+$/);
     const before = Number((await counter.textContent())?.match(/^(\d+)/)?.[1]);
 
-    await page.getByLabel('Search everything').fill('marathon');
+    const search = page.getByLabel('Search everything');
+    await waitForHydrated(search);
+    await search.fill('marathon');
     await expect(counter).not.toHaveText(`${before} of ${before}`);
     const after = Number((await counter.textContent())?.match(/^(\d+)/)?.[1]);
     expect(after).toBeGreaterThan(0);
@@ -36,7 +39,9 @@ test.describe('Experiences', () => {
     page,
   }) => {
     await page.goto('/experiences');
-    await page.getByLabel('Search everything').fill('zzzzqqqq');
+    const search = page.getByLabel('Search everything');
+    await waitForHydrated(search);
+    await search.fill('zzzzqqqq');
     await expect(page.getByText(/Nothing matches that/)).toBeVisible();
   });
 

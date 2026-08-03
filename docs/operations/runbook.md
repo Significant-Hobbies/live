@@ -22,7 +22,6 @@ The workflow:
    `continue-on-error: true` — a missing `cache_purge` permission (401) must
    not fail a good deploy.
 4. Smoke check: fetches the homepage and verifies:
-   - `location.replace('/dashboard')` is present (auth redirect in Astro HTML)
    - ≥5 `<section>` elements (full Astro landing, not a stale/partial overlay)
    - `id="lcp-shell"` is present (LCP shell in overlaid index.html)
 
@@ -119,8 +118,8 @@ dashboard rate-limit, not a deploy problem.
 
 ### Stale Astro overlay
 
-**Symptom:** Deploy smoke check fails — missing `location.replace('/dashboard')`,
-<5 sections, or missing `id="lcp-shell"`.
+**Symptom:** Deploy smoke check fails — fewer than five sections or a missing
+`id="lcp-shell"`.
 **Cause:** `scripts/cf-build.mjs` did not overlay the Astro build into
 `.open-next/assets/`, or the cache was not purged after a successful overlay.
 **Fix:** Re-run the deploy workflow. If it persists, verify

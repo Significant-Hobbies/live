@@ -1,9 +1,15 @@
 import { expect, test } from '@playwright/test';
 
+import { completeLocalOnboarding } from './fixtures/local-onboarding';
+
 // E2E for the local-first Trajectory feature plus nav visibility. Authenticated
 // database behavior is also covered by e2e/authenticated.spec.ts.
 
 test.describe('Trajectory', () => {
+  test.beforeEach(async ({ page }) => {
+    await completeLocalOnboarding(page);
+  });
+
   test('/trajectory saves anonymous work on this device across reloads', async ({ page }) => {
     const res = await page.goto('/trajectory');
     expect(res?.status()).toBeLessThan(400);
@@ -38,10 +44,11 @@ test.describe('Trajectory', () => {
 
   test('nav leads to the combined history surface', async ({ page }) => {
     await page.goto('/hobbies');
-    await expect(page.getByRole('link', { name: 'See History' })).toHaveAttribute(
-      'href',
-      '/look-back'
-    );
+    const historyLink = page.locator('nav a[href="/history"]');
+    if ((page.viewportSize()?.width ?? 0) < 1024) {
+      await page.getByRole('button', { name: 'Open menu' }).click();
+    }
+    await expect(historyLink.filter({ visible: true }).first()).toHaveAttribute('href', '/history');
   });
 
   test('/trajectory is not indexable by search engines', async ({ page }) => {

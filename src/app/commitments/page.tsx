@@ -5,6 +5,7 @@ import { SpotlightCard } from '~/components/aceternity';
 import { CommitmentCard } from '~/components/commitments/commitment-card';
 import { StartCommitmentForm } from '~/components/commitments/start-commitment-form';
 import { LocalCommitments } from '~/components/commitments/local-commitments';
+import { LocalOnboardingGate } from '~/components/local-onboarding-gate';
 import { timelines, users } from '~/db/schema';
 import { loginPath } from '~/lib/auth-routing';
 import { birthDateFromYear, buildLifeGrid } from '~/lib/mortality';
@@ -23,9 +24,11 @@ export default async function CommitmentsPage() {
   const session = await getServerAuthSession();
   if (!session?.user) {
     return (
-      <div className="mx-auto max-w-3xl px-4 py-10 sm:py-14">
-        <LocalCommitments />
-      </div>
+      <LocalOnboardingGate>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:py-14">
+          <LocalCommitments />
+        </div>
+      </LocalOnboardingGate>
     );
   }
 
@@ -38,9 +41,10 @@ export default async function CommitmentsPage() {
       .orderBy(desc(timelines.updatedAt)),
     db.query.users.findFirst({
       where: eq(users.id, session.user.id),
-      columns: { birthYear: true },
+      columns: { birthYear: true, onboardingCompletedAt: true },
     }),
   ]);
+  if (!me?.onboardingCompletedAt) redirect('/onboarding');
 
   // Hobby suggestions from the user's timelines.
   const hobbySet = new Set<string>();

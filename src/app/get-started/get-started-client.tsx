@@ -180,7 +180,7 @@ export function GetStartedClient() {
                   </div>
                   <div className="relative mt-3 inline-flex overflow-hidden rounded-xl">
                     <Link
-                      href={`/login?callbackUrl=/setup&username=${encodeURIComponent(input)}`}
+                      href={`/login?callbackUrl=/onboarding&username=${encodeURIComponent(input)}`}
                       className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm hover:opacity-90 transition-colors"
                     >
                       Sign up with Google
@@ -259,7 +259,9 @@ export function GetStartedClient() {
               >
                 <span className="font-mono text-foreground">/u/</span>
                 <span>{handle}</span>
-                <span className="ml-auto text-xs text-subtle">{display}</span>
+                <span className="min-w-0 truncate text-right text-xs text-subtle sm:ml-auto">
+                  {display}
+                </span>
               </Link>
             ))}
           </div>

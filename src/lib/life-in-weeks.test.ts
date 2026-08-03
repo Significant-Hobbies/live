@@ -1,9 +1,31 @@
 import { describe, expect, it } from 'vitest';
 
-import { lifeInWeeks, MIN_BIRTH_YEAR, parseBirthYear, remainingYears } from './life-in-weeks';
+import {
+  lifeInWeeks,
+  lifeInWeeksFromDate,
+  MIN_BIRTH_YEAR,
+  parseBirthDate,
+  parseBirthYear,
+  remainingYears,
+} from './life-in-weeks';
 
 // Fixed "now" so every assertion below is a real number, not a moving target.
 const NOW = new Date(2026, 6, 26); // 2026-07-26
+
+describe('parseBirthDate', () => {
+  it('accepts real past dates and rejects impossible or future dates', () => {
+    expect(parseBirthDate('2000-02-29', NOW)).toBe('2000-02-29');
+    expect(parseBirthDate('2001-02-29', NOW)).toBeNull();
+    expect(parseBirthDate('2027-01-01', NOW)).toBeNull();
+  });
+
+  it('uses the exact birthday for age and lived weeks', () => {
+    const exact = lifeInWeeksFromDate('2000-07-27', NOW);
+    const approximate = lifeInWeeks(2000, NOW);
+    expect(exact.age).toBe(25);
+    expect(exact.weeksLived).toBeLessThan(approximate.weeksLived);
+  });
+});
 
 describe('parseBirthYear', () => {
   it('accepts a plain year', () => {

@@ -1,11 +1,16 @@
+import { eq } from 'drizzle-orm';
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
 
+import { LocalOnboardingGate } from '~/components/local-onboarding-gate';
 import { TrajectoryPageClient } from '~/components/trajectory/trajectory-page-client';
+import { users } from '~/db/schema';
 import { birthDateFromYear, buildLifeGrid } from '~/lib/mortality';
 import { getTrajectoryContractState } from '~/lib/actions/trajectory-contract';
 import { getUserBirthYear } from '~/lib/actions/trajectory';
 import type { TrajectoryContractState } from '~/lib/actions/trajectory-contract';
 import { getServerAuthSession } from '~/server/auth';
+import { db } from '~/server/db';
 
 export const metadata = {
   title: 'Trajectory — SignificantHobbies',
@@ -14,12 +19,37 @@ export const metadata = {
 
 export default async function TrajectoryPage() {
   const session = await getServerAuthSession();
-  const isPreview = !session?.user;
+  if (!session?.user) {
+    return (
+      <LocalOnboardingGate>
+        <TrajectorySurface
+          state={{ active: null, contracts: [], reviews: [] }}
+          birthYear={null}
+          storageMode="local"
+        />
+      </LocalOnboardingGate>
+    );
+  }
 
-  const [state, birthYear]: [TrajectoryContractState, number | null] = isPreview
-    ? [{ active: null, contracts: [], reviews: [] }, null]
-    : await Promise.all([getTrajectoryContractState(), getUserBirthYear()]);
+  const account = await db.query.users.findFirst({
+    where: eq(users.id, session.user.id),
+    columns: { onboardingCompletedAt: true },
+  });
+  if (!account?.onboardingCompletedAt) redirect('/onboarding');
 
+  const [state, birthYear] = await Promise.all([getTrajectoryContractState(), getUserBirthYear()]);
+  return <TrajectorySurface state={state} birthYear={birthYear} storageMode="account" />;
+}
+
+function TrajectorySurface({
+  state,
+  birthYear,
+  storageMode,
+}: {
+  state: TrajectoryContractState;
+  birthYear: number | null;
+  storageMode: 'local' | 'account';
+}) {
   // Mortality frame — same zoom-out grounding as /daily and /commitments.
   const birth = birthDateFromYear(birthYear);
   const weeksRemaining = birth ? buildLifeGrid(birth, new Set()).weeksRemaining : null;
@@ -58,7 +88,7 @@ export default async function TrajectoryPage() {
       <TrajectoryPageClient
         key={state.active?.id ?? 'no-active-contract'}
         state={state}
-        storageMode={isPreview ? 'local' : 'account'}
+        storageMode={storageMode}
       />
     </div>
   );

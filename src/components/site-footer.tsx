@@ -1,146 +1,103 @@
 import Link from 'next/link';
 
-/** Shared footer for all SignificantHobbies routes. */
+const groups = [
+  {
+    title: 'Start here',
+    links: [
+      ['Find your hobby', '/find-your-hobby'],
+      ['Onboarding', '/onboarding'],
+      ['Why this exists', '/manifesto'],
+    ],
+  },
+  {
+    title: 'Possibilities',
+    links: [
+      ['Things to try', '/experiences'],
+      ['Bucket list ideas', '/bucket-list-ideas'],
+      ['Life Bingo', '/life-bingo'],
+      ['Side quests', '/side-quests'],
+    ],
+  },
+  {
+    title: 'Explore',
+    links: [
+      ['Life in weeks', '/life-in-weeks'],
+      ['Hobbies for adults', '/hobbies-for-adults'],
+      ['Cheap hobbies', '/cheap-hobbies'],
+      ['Travel bucket list', '/travel-bucket-list'],
+    ],
+  },
+  {
+    title: 'About',
+    links: [
+      ['Blog', '/blog'],
+      ['Manifesto', '/manifesto'],
+      ['Changelog', '/changelog'],
+      ['Privacy', '/privacy'],
+      ['Terms', '/terms'],
+    ],
+  },
+] as const;
+
 export function SiteFooter() {
   return (
-    <footer data-site-footer className="border-t border-border bg-[#fff4c7] px-4 py-12">
-      <div className="mx-auto max-w-5xl">
-        <div className="grid grid-cols-2 gap-8 rounded-3xl bg-white/65 p-6 shadow-[0_12px_32px_rgba(58,45,20,0.06)] sm:grid-cols-5 sm:p-8">
-          {/* Brand + manifesto */}
-          <div className="col-span-2 sm:col-span-1">
-            <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#ffeb3b] font-serif text-lg font-bold text-foreground">
+    <footer data-site-footer className="bg-[#f7e957] px-4 py-10 text-[#211e18]">
+      <div className="mx-auto max-w-6xl overflow-hidden rounded-[2rem] border border-[#d4c74c] bg-[#fffdf8] shadow-[0_18px_45px_rgba(80,67,23,0.10)]">
+        <div className="grid gap-9 p-7 sm:p-10 lg:grid-cols-[1.25fr_3fr]">
+          <div>
+            <div className="flex size-11 items-center justify-center rounded-full bg-[#f7e957] font-serif text-xl font-bold">
               SH
             </div>
-            <p className="font-serif text-lg font-semibold text-foreground">Significant Hobbies</p>
-            <p className="mt-2 text-xs text-muted-foreground leading-relaxed max-w-[200px]">
-              A companion for living intentionally. Hobbies, bucket lists, and side quests — because
-              life is finite.
+            <p className="mt-4 font-serif text-2xl font-semibold">Significant Hobbies</p>
+            <p className="mt-3 max-w-xs text-sm leading-relaxed text-[#625b50]">
+              A companion for living intentionally—because life is finite and the rest is still
+              unwritten.
             </p>
-            <Link
-              href="/life-in-weeks"
-              prefetch={false}
-              className="mt-3 block w-fit text-xs text-muted-foreground underline underline-offset-2 hover:text-foreground"
-            >
-              See your life in weeks →
-            </Link>
-            <Link
-              href="/manifesto"
-              prefetch={false}
-              className="mt-2 inline-block text-xs text-muted-foreground underline underline-offset-2 hover:text-foreground"
-            >
-              Read the manifesto →
-            </Link>
           </div>
-
-          {/* Three pillars */}
-          <div>
-            <p className="text-xs font-medium text-foreground">Hobbies</p>
-            <ul className="mt-3 space-y-2 text-xs text-muted-foreground">
-              <li>
-                <Link href="/find-your-hobby" prefetch={false} className="hover:text-foreground">
-                  Find your hobby
-                </Link>
-              </li>
-              <li>
-                <Link href="/timeline/new" prefetch={false} className="hover:text-foreground">
-                  Build a timeline
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <p className="text-xs font-medium text-foreground">Bucket Lists</p>
-            <ul className="mt-3 space-y-2 text-xs text-muted-foreground">
-              <li>
-                <Link href="/bucket-lists" prefetch={false} className="hover:text-foreground">
-                  Your lists
-                </Link>
-              </li>
-              <li>
-                <Link href="/bucket-list-ideas" prefetch={false} className="hover:text-foreground">
-                  Ideas
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/how-to-make-a-bucket-list"
-                  prefetch={false}
-                  className="hover:text-foreground"
-                >
-                  How to make one
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <p className="text-xs font-medium text-foreground">Side Quests</p>
-            <ul className="mt-3 space-y-2 text-xs text-muted-foreground">
-              <li>
-                <Link href="/side-quests" prefetch={false} className="hover:text-foreground">
-                  Quest board
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" prefetch={false} className="hover:text-foreground">
-                  Blog
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <p className="text-xs font-medium text-foreground">Daily</p>
-            <ul className="mt-3 space-y-2 text-xs text-muted-foreground">
-              <li>
-                <Link href="/daily" prefetch={false} className="hover:text-foreground">
-                  Today&apos;s ritual
-                </Link>
-              </li>
-              <li>
-                <Link href="/dashboard" prefetch={false} className="hover:text-foreground">
-                  Dashboard
-                </Link>
-              </li>
-              <li>
-                <Link href="/commitments" prefetch={false} className="hover:text-foreground">
-                  Commitments
-                </Link>
-              </li>
-            </ul>
+          <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-4">
+            {groups.map((group) => (
+              <div key={group.title}>
+                <p className="text-sm font-bold">{group.title}</p>
+                <ul className="mt-4 space-y-3 text-sm text-[#625b50]">
+                  {group.links.map(([label, href]) => (
+                    <li key={href}>
+                      <Link
+                        href={href}
+                        prefetch={false}
+                        className="inline-flex min-h-11 items-center hover:text-[#211e18] hover:underline hover:underline-offset-4 sm:min-h-0"
+                      >
+                        {label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
-
-        <div className="mt-8 flex flex-col items-center justify-between gap-2 border-t border-foreground/10 pt-6 text-xs text-muted-foreground sm:flex-row">
+        <div className="flex flex-col gap-4 border-t border-[#e4dccb] bg-[#f7f1e7] px-7 py-5 text-xs text-[#625b50] sm:flex-row sm:items-center sm:justify-between sm:px-10">
           <span>
             Made by{' '}
-            <a href="https://sarthakagrawal.dev" className="hover:text-foreground">
+            <a
+              href="https://sarthakagrawal.dev"
+              className="font-semibold text-[#211e18] hover:underline"
+            >
               Sarthak
             </a>
           </span>
-          <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 sm:justify-end">
-            <Link href="/changelog" prefetch={false} className="hover:text-foreground">
-              Changelog
-            </Link>
+          <div className="flex flex-wrap gap-x-5 gap-y-2">
             <a
               href="https://github.com/Significant-Hobbies/significanthobbies/issues"
-              className="hover:text-foreground"
+              className="inline-flex min-h-11 items-center hover:text-[#211e18] sm:min-h-0"
             >
               Roadmap
             </a>
             <a
               href="https://github.com/Significant-Hobbies/significanthobbies"
-              className="hover:text-foreground"
+              className="inline-flex min-h-11 items-center hover:text-[#211e18] sm:min-h-0"
             >
               Source
             </a>
-            <Link href="/privacy" prefetch={false} className="hover:text-foreground">
-              Privacy
-            </Link>
-            <Link href="/terms" prefetch={false} className="hover:text-foreground">
-              Terms
-            </Link>
           </div>
         </div>
       </div>

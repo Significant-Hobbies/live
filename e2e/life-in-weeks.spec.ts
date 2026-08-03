@@ -1,4 +1,13 @@
 import { expect, test } from '@playwright/test';
+import { waitForHydrated } from './fixtures/hydration';
+import { completeLocalOnboarding } from './fixtures/local-onboarding';
+
+async function enterBirthDate(page: import('@playwright/test').Page, value: string) {
+  const field = page.getByLabel('What date were you born?');
+  await waitForHydrated(field);
+  await field.fill(value);
+  await expect(field).toHaveValue(value);
+}
 
 /**
  * `/life-in-weeks` is the anonymous front door: the mortality frame used to be
@@ -24,7 +33,7 @@ test.describe('Life in weeks', () => {
     await expect(page).toHaveURL(/\/life-in-weeks$/);
     await expect(page.getByRole('heading', { name: 'Your life, in weeks.' })).toBeVisible();
 
-    await page.getByLabel('What year were you born?').fill('1990');
+    await enterBirthDate(page, '1990-06-15');
     await page.getByRole('button', { name: 'Show me' }).click();
 
     await expect(page.getByText(/That leaves roughly/)).toBeVisible();
@@ -39,7 +48,7 @@ test.describe('Life in weeks', () => {
    */
   test('gives an older visitor a truthful number of summers', async ({ page }) => {
     await page.goto('/life-in-weeks');
-    await page.getByLabel('What year were you born?').fill('1962');
+    await enterBirthDate(page, '1962-06-15');
     await page.getByRole('button', { name: 'Show me' }).click();
 
     const summers = page.getByText(/\d+ summers/);
@@ -53,7 +62,7 @@ test.describe('Life in weeks', () => {
 
   test('never shows a zero, however old the visitor', async ({ page }) => {
     await page.goto('/life-in-weeks');
-    await page.getByLabel('What year were you born?').fill('1930');
+    await enterBirthDate(page, '1930-06-15');
     await page.getByRole('button', { name: 'Show me' }).click();
 
     await expect(page.getByText(/That leaves roughly/)).toBeVisible();
@@ -61,30 +70,43 @@ test.describe('Life in weeks', () => {
     await expect(page.getByText(/\b0 summers/)).toHaveCount(0);
   });
 
-  test('rejects a non-year instead of drawing a bogus grid', async ({ page }) => {
+  test('rejects a future date instead of drawing a bogus grid', async ({ page }) => {
     await page.goto('/life-in-weeks');
-    await page.getByLabel('What year were you born?').fill('banana');
+    await enterBirthDate(page, '2099-01-01');
     await page.getByRole('button', { name: 'Show me' }).click();
 
     // Scoped by id: Next's own route announcer is also role="alert".
-    await expect(page.locator('#birth-year-error')).toBeVisible();
+    await expect(page.locator('#birth-date-error')).toBeVisible();
     await expect(page.getByText(/That leaves roughly/)).toHaveCount(0);
   });
 
-  test('remembers the year on a return visit, with no account', async ({ page }) => {
+  test('remembers the exact date on a return visit, with no account', async ({ page }) => {
     await page.goto('/life-in-weeks');
-    await page.getByLabel('What year were you born?').fill('1975');
+    await enterBirthDate(page, '1975-03-09');
     await page.getByRole('button', { name: 'Show me' }).click();
     await expect(page.getByText(/That leaves roughly/)).toBeVisible();
 
     await page.reload();
-    await expect(page.getByLabel('What year were you born?')).toHaveValue('1975');
     await expect(page.getByText(/That leaves roughly/)).toBeVisible();
+    await expect(page.getByLabel('What date were you born?')).toHaveCount(0);
+    await page.getByRole('button', { name: 'Change' }).click();
+    await expect(page.getByLabel('Change your birth date')).toHaveValue('1975-03-09');
+  });
+
+  test('uses onboarding DOB without asking again or repeating setup CTAs', async ({ page }) => {
+    await completeLocalOnboarding(page);
+    await page.goto('/life-in-weeks');
+
+    await expect(page.getByText(/That leaves roughly/)).toBeVisible();
+    await expect(page.getByLabel('What date were you born?')).toHaveCount(0);
+    await expect(page.getByRole('link', { name: 'Return to Live More' })).toBeVisible();
+    await expect(page.getByRole('link', { name: 'Return to History' })).toBeVisible();
+    await expect(page.getByRole('link', { name: /Find something to do/ })).toHaveCount(0);
   });
 
   test('offers only routes that work without signing in', async ({ page }) => {
     await page.goto('/life-in-weeks');
-    await page.getByLabel('What year were you born?').fill('1990');
+    await enterBirthDate(page, '1990-06-15');
     await page.getByRole('button', { name: 'Show me' }).click();
 
     for (const name of [/Find something to do/, /List what you still want to do/]) {

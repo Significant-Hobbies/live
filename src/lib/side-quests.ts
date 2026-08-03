@@ -603,6 +603,59 @@ export function getQuestById(id: string): SideQuest | undefined {
   return SIDE_QUESTS.find((q) => q.id === id);
 }
 
+const POSSIBILITY_SIGNALS: { pattern: RegExp; questIds: string[] }[] = [
+  {
+    pattern: /meditat|retreat|mindful|silence|attention|yoga/i,
+    questIds: ['sq-05', 'sq-45', 'sq-49'],
+  },
+  {
+    pattern: /travel|trip|country|city|place|granada|alhambra/i,
+    questIds: ['sq-18', 'sq-39', 'sq-34'],
+  },
+  {
+    pattern: /perform|audience|stage|music|song|instrument/i,
+    questIds: ['sq-27', 'sq-16', 'sq-08'],
+  },
+  {
+    pattern: /volunteer|community|humanitarian|help|beach|river/i,
+    questIds: ['sq-28', 'sq-07', 'sq-26'],
+  },
+  {
+    pattern: /draw|paint|write|make|creative|art/i,
+    questIds: ['sq-17', 'sq-09', 'sq-10'],
+  },
+  {
+    pattern: /people|friends|gather|dinner|social/i,
+    questIds: ['sq-30', 'sq-26', 'sq-33'],
+  },
+];
+
+/** Rank small quests by how closely they continue a larger possibility. */
+export function rankQuestsForPossibility(quests: SideQuest[], possibility: string): SideQuest[] {
+  const normalized = possibility.toLowerCase();
+  const words = new Set(
+    normalized
+      .replace(/[^a-z0-9 ]/g, ' ')
+      .split(/\s+/)
+      .filter((word) => word.length > 3)
+  );
+  const preferredIds = POSSIBILITY_SIGNALS.filter(({ pattern }) =>
+    pattern.test(possibility)
+  ).flatMap(({ questIds }) => questIds);
+
+  return quests
+    .map((quest, index) => {
+      const searchable =
+        `${quest.title} ${quest.description} ${quest.relatedHobbies.join(' ')}`.toLowerCase();
+      const overlap = [...words].filter((word) => searchable.includes(word)).length;
+      const preferredIndex = preferredIds.indexOf(quest.id);
+      const signalScore = preferredIndex === -1 ? 0 : 20 - preferredIndex * 3;
+      return { quest, index, score: signalScore + overlap * 2 };
+    })
+    .sort((a, b) => b.score - a.score || a.index - b.index)
+    .map(({ quest }) => quest);
+}
+
 export type QuestFilters = {
   vibe?: 'solo' | 'social' | 'either';
   energy?: 'chill' | 'active' | 'creative';

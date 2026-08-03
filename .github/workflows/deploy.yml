@@ -72,10 +72,6 @@ jobs:
             exit 1
           fi
           sections=$(printf '%s' "$html" | grep -o '<section' | wc -l | tr -d ' ')
-          if ! printf '%s' "$html" | grep -q 'location.replace('\''/dashboard'\'')'; then
-            echo "ERROR: stale overlay — expected /dashboard auth redirect in Astro HTML"
-            exit 1
-          fi
           if [ "$sections" -lt 5 ]; then
             echo "ERROR: stale overlay — expected full Astro landing (>=5 sections), got ${sections}"
             exit 1

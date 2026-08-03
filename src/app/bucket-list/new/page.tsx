@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { BucketListWorkspace } from '~/components/bucket-list/bucket-list-workspace';
-import { getServerAuthSession } from '~/server/auth';
 import { getQuestById } from '~/lib/side-quests';
+import { getServerAuthSession } from '~/server/auth';
 
 export const metadata: Metadata = {
   title: 'Make Your Bucket List',

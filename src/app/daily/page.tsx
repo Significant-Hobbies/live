@@ -1,25 +1,26 @@
 import { eq } from 'drizzle-orm';
+import { redirect } from 'next/navigation';
 
 import { DailyRitual } from '~/components/daily-ritual';
 import { LocalDailyRitual } from '~/components/local-daily-ritual';
+import { LocalOnboardingGate } from '~/components/local-onboarding-gate';
 import { TimezoneSync } from '~/components/timezone-sync';
 import { users } from '~/db/schema';
 import {
   createHabit,
   deleteHabit,
-  getAllHabitLogs,
+  getAllJournalEntries,
   getHabitCommitmentChoices,
   getHabits,
   getHabitLogsForDate,
   getJournalContextChoices,
-  getJournalEntriesForRange,
   getUserProfile,
   saveJournalEntry,
+  setDailyNovelty,
   setHabitCommitment,
   toggleHabitLog,
 } from '~/lib/actions/daily';
 import { dayKeyIn, isMorningIn } from '~/lib/day';
-import { buildJournalDateWindow } from '~/lib/journal';
 import {
   PREVIEW_FIRST_NAME,
   previewHabitLogs,
@@ -29,6 +30,7 @@ import {
   previewJournalEntryForToday,
 } from '~/lib/preview-data';
 import { birthDateFromYear, buildLifeGrid } from '~/lib/mortality';
+import { parseBirthDate } from '~/lib/life-in-weeks';
 import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
 
@@ -42,24 +44,26 @@ export default async function DailyPage() {
 
   if (!session?.user) {
     const today = dayKeyIn(null);
-    return <LocalDailyRitual today={today} isMorning={isMorningIn(null)} />;
+    return (
+      <LocalOnboardingGate>
+        <LocalDailyRitual today={today} isMorning={isMorningIn(null)} />
+      </LocalOnboardingGate>
+    );
   }
 
   // The user's zone has to be resolved before "today" exists — every dayDate
   // key below is user-local, so this one read cannot be parallelised with them.
   const me = await db.query.users.findFirst({
     where: eq(users.id, session.user.id),
-    columns: { birthYear: true, timezone: true },
+    columns: { birthYear: true, birthDate: true, timezone: true, onboardingCompletedAt: true },
   });
+  if (!me?.onboardingCompletedAt) redirect('/onboarding');
 
   const today = dayKeyIn(me?.timezone);
   const isMorning = isMorningIn(me?.timezone);
-  const journalDateWindow = buildJournalDateWindow(today);
-
   const [
     userHabits,
     habitLogs,
-    allHabitLogs,
     journalEntries,
     journalContextChoices,
     habitCommitmentChoices,
@@ -67,8 +71,7 @@ export default async function DailyPage() {
   ] = await Promise.all([
     getHabits(),
     getHabitLogsForDate(today),
-    getAllHabitLogs(),
-    getJournalEntriesForRange(journalDateWindow[0]!, today),
+    getAllJournalEntries(),
     getJournalContextChoices(),
     getHabitCommitmentChoices(),
     getUserProfile(),
@@ -79,7 +82,10 @@ export default async function DailyPage() {
   const firstName = profile?.name?.split(' ')[0] ?? session.user.name?.split(' ')[0] ?? 'there';
 
   // Mortality frame — weeks remaining grounds the ritual in the finite life.
-  const birth = birthDateFromYear(me?.birthYear);
+  const birth =
+    me?.birthDate && parseBirthDate(me.birthDate)
+      ? new Date(`${me.birthDate}T12:00:00`)
+      : birthDateFromYear(me?.birthYear);
   const weeksRemaining = birth ? buildLifeGrid(birth, new Set()).weeksRemaining : null;
 
   return (
@@ -92,7 +98,6 @@ export default async function DailyPage() {
         weeksRemaining={weeksRemaining}
         habits={userHabits}
         habitLogs={habitLogs}
-        allHabitLogs={allHabitLogs}
         journalEntry={journalEntry}
         journalEntries={journalEntries}
         journalContextChoices={journalContextChoices}
@@ -103,7 +108,9 @@ export default async function DailyPage() {
           setHabitCommitment,
           toggleHabitLog,
           saveJournalEntry,
+          setDailyNovelty,
         }}
+        noveltySeed={session.user.id}
       />
     </>
   );

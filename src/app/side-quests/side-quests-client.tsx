@@ -14,6 +14,7 @@ import {
   filterQuests,
   getQuestById,
   QUEST_CATEGORIES,
+  rankQuestsForPossibility,
   type QuestCategory,
   type QuestFilters,
   SIDE_QUESTS,
@@ -335,7 +336,12 @@ function SideQuestsInner() {
     completed,
   } = useQuestProgress();
 
-  const [activeTab, setActiveTab] = useState<Tab>('random');
+  const [activeTab, setActiveTab] = useState<Tab>(() => {
+    const requested = searchParams.get('tab');
+    return requested === 'pick' || requested === 'board' || requested === 'circles'
+      ? requested
+      : 'random';
+  });
   const [currentQuest, setCurrentQuest] = useState<SideQuest | null>(() => SIDE_QUESTS[0] ?? null);
   const [isShuffling, setIsShuffling] = useState(false);
 
@@ -344,6 +350,7 @@ function SideQuestsInner() {
   const [energy, setEnergy] = useState<QuestFilters['energy']>(undefined);
   const [time, setTime] = useState<QuestFilters['time']>(undefined);
   const [pickedQuest, setPickedQuest] = useState<SideQuest | null>(null);
+  const sourcePossibility = searchParams.get('possibility')?.slice(0, 160) ?? '';
 
   // Quest Board expanded cards
   const [expandedCards, setExpandedCards] = useState<Set<string>>(new Set());
@@ -354,8 +361,8 @@ function SideQuestsInner() {
   // Initialize
   useEffect(() => {
     const tabParam = searchParams.get('tab');
-    if (tabParam === 'circles') {
-      setActiveTab('circles');
+    if (tabParam === 'pick' || tabParam === 'board' || tabParam === 'circles') {
+      setActiveTab(tabParam);
     }
 
     const qParam = searchParams.get('q');
@@ -394,20 +401,32 @@ function SideQuestsInner() {
   const filteredQuests = useMemo(() => {
     return filterQuests({ vibe, energy, time });
   }, [vibe, energy, time]);
+  const rankedQuests = useMemo(
+    () =>
+      sourcePossibility
+        ? rankQuestsForPossibility(filteredQuests, sourcePossibility)
+        : filteredQuests,
+    [filteredQuests, sourcePossibility]
+  );
 
   const pickFromFiltered = useCallback(() => {
-    if (filteredQuests.length === 0) return;
-    setPickedQuest(filteredQuests[Math.floor(Math.random() * filteredQuests.length)]);
-  }, [filteredQuests]);
+    if (rankedQuests.length === 0) return;
+    const poolSize = sourcePossibility ? Math.min(rankedQuests.length, 3) : rankedQuests.length;
+    setPickedQuest(rankedQuests[Math.floor(Math.random() * poolSize)]);
+  }, [rankedQuests, sourcePossibility]);
 
   // Auto-pick when filters change
   useEffect(() => {
-    if (filteredQuests.length > 0) {
-      setPickedQuest(filteredQuests[Math.floor(Math.random() * filteredQuests.length)]);
+    if (rankedQuests.length > 0) {
+      setPickedQuest(
+        sourcePossibility
+          ? rankedQuests[0]
+          : rankedQuests[Math.floor(Math.random() * rankedQuests.length)]
+      );
     } else {
       setPickedQuest(null);
     }
-  }, [filteredQuests]);
+  }, [rankedQuests, sourcePossibility]);
 
   const toggleExpanded = useCallback((id: string) => {
     setExpandedCards((prev) => {
@@ -512,6 +531,16 @@ function SideQuestsInner() {
           {/* Mode B: Help Me Pick */}
           {activeTab === 'pick' && (
             <div>
+              {sourcePossibility ? (
+                <div className="mx-auto mb-5 max-w-lg rounded-2xl bg-[#f7e957] p-5 text-[#211e18]">
+                  <p className="text-sm font-bold">Make this possibility smaller</p>
+                  <p className="mt-1 font-serif text-2xl leading-tight">{sourcePossibility}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-[#575344]">
+                    Pick the time and energy you actually have. We will suggest one nearby move, not
+                    ask you to finish the whole dream today.
+                  </p>
+                </div>
+              ) : null}
               <div className="mx-auto mb-8 max-w-lg space-y-4 rounded-2xl border border-border bg-card p-6 shadow-sm">
                 <FilterPills
                   label="Vibe"

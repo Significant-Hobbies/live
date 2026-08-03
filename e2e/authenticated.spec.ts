@@ -13,13 +13,13 @@ import { waitForHydrated } from './fixtures/hydration';
  */
 
 const LOGGED_IN_ROUTES = [
+  '/',
   '/daily',
-  '/dashboard',
   '/trajectory',
   '/commitments',
   '/bucket-list',
-  '/life-plan',
-  '/look-back',
+  '/live-more',
+  '/history',
   '/settings',
 ] as const;
 
@@ -50,18 +50,48 @@ test.describe('authenticated surfaces', () => {
     await expect(authedPage.getByRole('heading', { name: 'Habits' })).toBeVisible();
   });
 
+  test('/daily persists the chosen new thing without losing journal writing', async ({
+    authedPage,
+  }) => {
+    await authedPage.goto('/daily');
+    const card = authedPage.locator('aside').filter({ hasText: 'Make today different' });
+    await expect(card).toBeVisible();
+
+    const reopen = card.getByRole('button', { name: 'Mark this open again' });
+    if (await reopen.isVisible()) await reopen.click();
+
+    const chooseOwn = card.getByRole('button', { name: /^(Choose my own|Edit my list)$/ });
+    await waitForHydrated(chooseOwn);
+    await chooseOwn.click();
+    const chosenIdea = 'Walk a street I have never taken';
+    await authedPage.getByLabel('What do you want to try today?').fill(chosenIdea);
+    await card.getByRole('button', { name: 'Keep my list' }).click();
+
+    const journal = 'I noticed something new today.';
+    await authedPage.locator('#daily-journal-entry').fill(journal);
+    await authedPage.getByRole('button', { name: /Save (morning|evening)/ }).click();
+    await card.getByRole('button', { name: 'I did this' }).click();
+    await expect(card.getByRole('button', { name: 'Mark this open again' })).toBeVisible();
+
+    await authedPage.reload();
+    const restored = authedPage.locator('aside').filter({ hasText: 'Make today different' });
+    await expect(restored.getByRole('heading', { level: 2 })).toContainText(chosenIdea);
+    await expect(authedPage.locator('#daily-journal-entry')).toHaveValue(journal);
+    await expect(restored.getByRole('button', { name: 'Mark this open again' })).toBeVisible();
+  });
+
   test('the account menu exposes the surfaces it claims to', async ({ authedPage }) => {
-    await authedPage.goto('/dashboard');
+    await authedPage.goto('/');
     // Nav renders the signed-in dropdown rather than a Sign in button.
     await expect(authedPage.getByRole('link', { name: 'Sign in' })).toHaveCount(0);
   });
 
-  test('AM/PM rings derive from journal text, not a separate flag', async ({ authedPage }) => {
+  test('compact AM/PM context derives from journal text', async ({ authedPage }) => {
     await authedPage.goto('/daily');
     // Both ring labels are always present; the assertion is that the page renders
     // them from journal state without a DailyCheckin row existing.
-    await expect(authedPage.getByText('AM', { exact: true })).toBeVisible();
-    await expect(authedPage.getByText('PM', { exact: true })).toBeVisible();
+    await expect(authedPage.getByText(/^AM (written|open)$/)).toBeVisible();
+    await expect(authedPage.getByText(/^PM (written|open)$/)).toBeVisible();
   });
 
   test('the signed-out preview never leaks into a real session', async ({ authedPage }) => {
@@ -92,7 +122,7 @@ test.describe('authenticated surfaces', () => {
     await addButton.click();
     await expect(authedPage.getByText('Added to your bucket list').first()).toBeVisible();
 
-    await authedPage.goto('/life-plan');
+    await authedPage.goto('/bucket-list');
     const start = authedPage.getByRole('button', { name: /Start step 1/ }).first();
     await expect(start, 'a planned bucket item should offer its first quest step').toBeVisible();
     await start.click();
@@ -108,7 +138,7 @@ test.describe('authenticated surfaces', () => {
     // And the bucket item must NOT be closed yet. My first version of the
     // quest→bucket edge treated "no quests currently active" as "chain
     // finished", so finishing step 1 of five marked a whole life goal done.
-    // The chain card stays on /life-plan (still a planned item) and reports
+    // The chain card stays in the detailed bucket-list workspace and reports
     // partial progress.
     await expect(authedPage.getByText(/1\/\d+ steps done/).first()).toBeVisible();
   });
@@ -160,13 +190,13 @@ test.describe('authenticated surfaces', () => {
     await authedPage.goto('/settings');
     await expect(authedPage.getByLabel('Your creed')).toHaveValue(creed);
 
-    await authedPage.goto('/dashboard');
-    await expect(authedPage.getByText(creed).first()).toBeVisible();
+    await authedPage.goto('/');
+    await expect(authedPage.getByRole('heading', { name: /Live it,/ })).toBeVisible();
   });
 
   test('a bucket item can be advanced, published, and deleted', async ({ authedPage }) => {
     // All four item mutations existed with zero callers, so items were
-    // write-once: 'in_progress' was unreachable (leaving /life-plan's "In
+    // write-once: 'in_progress' was unreachable (leaving /live-more's "In
     // progress" panel permanently empty), nothing could be made public (leaving
     // the profile's bucket-list block empty for every user), and nothing could
     // be removed. They also revalidated only /dashboard, which does not render
@@ -182,14 +212,19 @@ test.describe('authenticated surfaces', () => {
     await add.click();
     await expect(authedPage.getByText('Added to your bucket list').first()).toBeVisible();
 
-    await authedPage.goto('/life-plan');
+    await authedPage.goto('/bucket-list');
 
     // Scope every interaction to one item's own control group. The test user may
     // already own other items, so unscoped `.first()` lookups would drift.
     const controls = authedPage.getByRole('group', { name: /^Controls for / }).first();
     await expect(controls, 'a bucket item should expose owner controls').toBeVisible();
     const label = (await controls.getAttribute('aria-label')) as string;
-    const scoped = authedPage.getByRole('group', { name: label });
+    // Local dev data survives between runs, so the same public-list item can
+    // already exist more than once. Keep this test scoped to one concrete row
+    // and prove deletion by the count changing instead of assuming a clean DB.
+    const matchingRows = authedPage.getByRole('group', { name: label });
+    const matchingCount = await matchingRows.count();
+    const scoped = matchingRows.first();
 
     // Advance it — this status was previously unreachable. Re-resolve through the
     // labelled locator after each router.refresh() so the handle stays attached.
@@ -206,7 +241,7 @@ test.describe('authenticated surfaces', () => {
     // And remove it, behind a confirm step.
     await scoped.getByRole('button', { name: /^Remove / }).click();
     await scoped.getByRole('button', { name: 'Delete', exact: true }).click();
-    await expect(scoped, 'the deleted item should be gone').toHaveCount(0);
+    await expect(matchingRows, 'one matching item should be gone').toHaveCount(matchingCount - 1);
   });
 
   test('a logged stamp shows its proof back, and never as a javascript: link', async ({
@@ -283,7 +318,7 @@ test.describe('authenticated surfaces', () => {
       await seed.click();
     }
 
-    await authedPage.goto('/life-plan');
+    await authedPage.goto('/live-more');
     await expect(
       authedPage.getByRole('heading', { name: 'What your list says' }),
       'insights only render for a non-empty list, so seeding must have left one'
@@ -311,10 +346,17 @@ test.describe('authenticated surfaces', () => {
     const suggestionTitle = label.replace(/^Add /, '').replace(/ to my bucket list$/, '');
     expect(suggestionTitle.length).toBeGreaterThan(3);
 
-    await suggestionAdd.click();
+    const addedSuggestionButton = authedPage.getByRole('button', {
+      name: `Add ${suggestionTitle} to my bucket list`,
+    });
+    await addedSuggestionButton.click();
+    await expect(
+      addedSuggestionButton,
+      'the refreshed suggestion set confirms that the server action finished'
+    ).toHaveCount(0);
 
     await expect(async () => {
-      await authedPage.goto('/life-plan');
+      await authedPage.goto('/bucket-list');
       await expect(
         authedPage.getByRole('group', { name: `Controls for ${suggestionTitle}` }),
         'the added suggestion should become a real bucket item'

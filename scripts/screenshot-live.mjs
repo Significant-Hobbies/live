@@ -7,7 +7,7 @@ const SHOTS = [
   { name: 'landing-full', url: 'https://significanthobbies.com/', fullPage: true },
   { name: 'hobbies', url: 'https://significanthobbies.com/hobbies', fullPage: false },
   { name: 'explore', url: 'https://significanthobbies.com/explore', fullPage: false },
-  { name: 'dashboard', url: 'https://significanthobbies.com/dashboard', fullPage: false },
+  { name: 'today', url: 'https://significanthobbies.com/', fullPage: false },
   { name: 'daily', url: 'https://significanthobbies.com/daily', fullPage: false },
   { name: 'commitments', url: 'https://significanthobbies.com/commitments', fullPage: false },
   { name: 'manifesto', url: 'https://significanthobbies.com/manifesto', fullPage: false },

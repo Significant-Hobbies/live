@@ -1,30 +1,30 @@
 # first-public-timeline Specification
 
 ## Purpose
-Define the privacy-preserving first-use journey from completed setup to one
+Define the privacy-preserving first-use journey from completed onboarding to one
 meaningful timeline and an explicit public-profile opt-in.
 ## Requirements
-### Requirement: Completed setup leads to first timeline creation
-The system SHALL make first timeline creation the primary next step after setup
+### Requirement: Completed onboarding leads to first timeline creation
+The system SHALL make first timeline creation the primary next step after onboarding
 while retaining a secondary path to the dashboard. The timeline entry path
 SHALL reuse a bounded hobby answer already persisted for the authenticated user
 and SHALL NOT expose that answer in the URL.
 
-#### Scenario: Setup hobby is available
-- **WHEN** a user completes setup after naming a hobby
+#### Scenario: Onboarding hobby is available
+- **WHEN** a user completes onboarding after naming a hobby
 - **THEN** the primary continuation opens a new timeline with that hobby in one editable present-day phase
 
 #### Scenario: Hobby was skipped
-- **WHEN** a user completes setup without naming a hobby
+- **WHEN** a user completes onboarding without naming a hobby
 - **THEN** the ordinary timeline template chooser remains available
 
 ### Requirement: Ordinary timeline creation remains unchanged
-The system SHALL apply setup-specific prefill only to the explicit setup entry
+The system SHALL apply onboarding-specific prefill only to the explicit onboarding entry
 path. Direct and signed-out visits to the new-timeline route SHALL retain the
 existing template-first experience.
 
 #### Scenario: Direct builder visit
-- **WHEN** a visitor opens the new-timeline route without setup context
+- **WHEN** a visitor opens the new-timeline route without onboarding context
 - **THEN** the existing template chooser is shown and no personal starter hobby is loaded
 
 #### Scenario: First creation is interrupted
@@ -34,7 +34,7 @@ existing template-first experience.
 ### Requirement: First timeline remains private until explicit consent
 The first saved timeline SHALL use the existing private default. On its
 canonical owner route, the system SHALL explain that state and offer separate
-publish and keep-private actions. It MUST NOT publish because setup completed,
+publish and keep-private actions. It MUST NOT publish because onboarding completed,
 because the timeline was saved, or because a completion marker is present.
 Before publication, the system SHALL disclose that a public timeline may also
 appear in public discovery and search.

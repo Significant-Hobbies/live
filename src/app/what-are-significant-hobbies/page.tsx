@@ -600,20 +600,16 @@ export default function WhatAreSignificantHobbiesPage() {
                     <Link href={href} className="group block" prefetch={false}>
                       <SpotlightCard
                         className={`shadow-soft transition-transform duration-200 group-hover:-translate-y-0.5 ${
-                          accent ? 'border-foreground/20 bg-primary' : ''
+                          accent ? 'border-[#c6a935] bg-[#f7e957]' : ''
                         }`}
                         innerClassName="flex h-full items-start gap-4 rounded-2xl p-6"
                       >
                         <span className="text-2xl">{emoji}</span>
                         <div>
-                          <p
-                            className={`mb-1 font-bold ${accent ? 'text-foreground' : 'text-foreground'}`}
-                          >
-                            {label}
-                          </p>
+                          <p className="mb-1 font-bold text-foreground">{label}</p>
                           <p
                             className={`text-sm leading-relaxed ${
-                              accent ? 'text-primary-foreground/80' : 'text-muted-foreground'
+                              accent ? 'text-[#3f3a20]' : 'text-muted-foreground'
                             }`}
                           >
                             {description}
