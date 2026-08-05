@@ -21,8 +21,8 @@ const fraunces = Fraunces({
 
 export const metadata: Metadata = {
   title: {
-    default: 'SignificantHobbies — Your Hobby Journey',
-    template: '%s | SignificantHobbies',
+    default: 'Significant Hobbies — Your Hobby Journey',
+    template: '%s | Significant Hobbies',
   },
   description:
     'Map your hobby history across life phases. Discover what rekindled, what persisted, and what to explore next.',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     'habit tracking',
     'life planner',
   ],
-  authors: [{ name: 'SignificantHobbies' }],
+  authors: [{ name: 'Significant Hobbies' }],
   robots: {
     index: true,
     follow: true,
@@ -60,14 +60,14 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'SignificantHobbies',
+    title: 'Significant Hobbies',
   },
   formatDetection: { telephone: false },
   openGraph: {
     type: 'website',
-    siteName: 'SignificantHobbies',
+    siteName: 'Significant Hobbies',
     url: 'https://significanthobbies.com',
-    title: 'SignificantHobbies — Your Hobby Journey',
+    title: 'Significant Hobbies — Your Hobby Journey',
     description:
       'Map your hobby history across life phases. Discover what rekindled, what persisted, and what to explore next.',
     images: [
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
         url: 'https://significanthobbies.com/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'SignificantHobbies — Your Hobby Journey',
+        alt: 'Significant Hobbies — Your Hobby Journey',
       },
     ],
   },
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://significanthobbies.com'),
   twitter: {
     card: 'summary_large_image',
-    title: 'SignificantHobbies — Your Hobby Journey',
+    title: 'Significant Hobbies — Your Hobby Journey',
     description: 'Map your hobby history across life phases.',
     images: ['https://significanthobbies.com/opengraph-image'],
   },
@@ -103,7 +103,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: `{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://sarthakagrawal.dev/#person","name":"Sarthak Agrawal","url":"https://sarthakagrawal.dev","sameAs":["https://sarthakagrawal.dev","https://github.com/sarthakagrawal927"]},{"@type":"SoftwareApplication","@id":"https://significanthobbies.com/#app","name":"Significant Hobbies","url":"https://significanthobbies.com","description":"Life planner for private daily rituals and public living — hobbies, bucket lists, and side quests over time.","publisher":{"@id":"https://sarthakagrawal.dev/#person"},"sameAs":["https://github.com/Significant-Hobbies/significanthobbies"]}]}`,
+            __html: `{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://sarthakagrawal.dev/#person","name":"Sarthak Agrawal","jobTitle":"AI Infrastructure & Product Engineer","url":"https://sarthakagrawal.dev","image":"https://avatars.githubusercontent.com/u/43884471?v=4","sameAs":["https://sarthakagrawal.dev","https://www.linkedin.com/in/sarthakagrawal927","https://github.com/sarthakagrawal927","https://x.com/sarthakcodes","https://huggingface.co/sarthakagrawal927"]},{"@type":"SoftwareApplication","@id":"https://significanthobbies.com/#app","name":"Significant Hobbies","alternateName":["SignificantHobbies","significanthobbies.com"],"url":"https://significanthobbies.com","description":"Life planner for private daily rituals and public living — hobbies, bucket lists, and side quests over time.","publisher":{"@id":"https://sarthakagrawal.dev/#person"},"sameAs":["https://github.com/Significant-Hobbies/significanthobbies"]}]}`,
           }}
         />
         {/* fleet-jsonld:end */}
