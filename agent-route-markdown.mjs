@@ -95,6 +95,55 @@ export async function handlePublicRouteMarkdown(request, loadMarkdown) {
   });
 }
 
+/**
+ * Cache explicit public `.md` alternates without sharing a cache key with
+ * Accept-negotiated Markdown on the canonical HTML URL.
+ *
+ * @param {Request} request
+ * @param {(sourcePath: string, request: Request) => Promise<string | null>} loadMarkdown
+ * @param {{ cache?: Cache, cacheEnabled?: boolean, waitUntil?: (promise: Promise<unknown>) => void }} options
+ * @returns {Promise<Response | null>}
+ */
+export async function handleCachedPublicRouteMarkdown(request, loadMarkdown, options = {}) {
+  const requestedUrl = new URL(request.url);
+  const cacheEnabled =
+    options.cacheEnabled !== false &&
+    request.method === 'GET' &&
+    requestedUrl.search === '' &&
+    isMarkdownAlternatePath(requestedUrl.pathname) &&
+    options.cache;
+
+  if (!cacheEnabled) {
+    return handlePublicRouteMarkdown(request, loadMarkdown);
+  }
+
+  const cacheKey = new Request(requestedUrl.toString(), { method: 'GET' });
+  const cached = await options.cache.match(cacheKey);
+  if (cached) {
+    const hit = new Response(cached.body, cached);
+    hit.headers.set('x-edge-cache', 'AGENT-HIT');
+    return hit;
+  }
+
+  const response = await handlePublicRouteMarkdown(request, loadMarkdown);
+  if (
+    !response ||
+    response.status !== 200 ||
+    response.headers.has('set-cookie') ||
+    !response.headers.get('content-type')?.includes('text/markdown')
+  ) {
+    return response;
+  }
+
+  const cacheable = new Response(response.body, response);
+  const write = options.cache.put(cacheKey, cacheable.clone());
+  if (options.waitUntil) options.waitUntil(write);
+  else await write;
+
+  cacheable.headers.set('x-edge-cache', 'AGENT-MISS');
+  return cacheable;
+}
+
 export function isPublicAgentDocumentPath(pathname) {
   const path = normalizePath(pathname);
   if (PUBLIC_EXACT_PATHS.has(path)) return true;

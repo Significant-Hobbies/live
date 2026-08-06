@@ -14,7 +14,7 @@
 import openNext from './.open-next/worker.js';
 import { withTiming } from './timing.mjs';
 import { handleAgentEdge } from './agent-edge.mjs';
-import { handlePublicRouteMarkdown } from './agent-route-markdown.mjs';
+import { handleCachedPublicRouteMarkdown } from './agent-route-markdown.mjs';
 
 // Durable Objects must be re-exported from the entry that wrangler.toml
 // points at, otherwise the bindings can't resolve them at deploy time.
@@ -25,6 +25,10 @@ export {
 } from './.open-next/worker.js';
 
 const CACHE_CONTROL = 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800';
+const DATA_CACHE_CONTROL = new Map([
+  ['/sitemap.xml', 'public, max-age=300, s-maxage=3600'],
+  ['/video-sitemap.xml', 'public, max-age=300, s-maxage=3600'],
+]);
 // Public marketing + free-tool surfaces (anon HTML only).
 const CACHEABLE_EXACT = new Set([
   '/',
@@ -56,8 +60,18 @@ const CACHEABLE_EXACT = new Set([
   '/hobbies/random',
   '/privacy',
   '/terms',
+  '/sitemap.xml',
+  '/video-sitemap.xml',
 ]);
-const CACHEABLE_PREFIXES = ['/tools', '/blog', '/hobbies', '/bucket-lists', '/hobbies/category'];
+const CACHEABLE_PREFIXES = [
+  '/tools',
+  '/blog',
+  '/hobbies',
+  '/bucket-lists',
+  '/hobbies/category',
+  '/experiences',
+  '/journeys',
+];
 function isCacheableDocumentPath(pathname) {
   if (!pathname) return false;
   if (CACHEABLE_EXACT.has(pathname)) return true;
@@ -65,6 +79,15 @@ function isCacheableDocumentPath(pathname) {
     if (pathname === prefix || pathname.startsWith(`${prefix}/`)) return true;
   }
   return false;
+}
+
+function cacheControlForPath(pathname) {
+  return DATA_CACHE_CONTROL.get(pathname) ?? CACHE_CONTROL;
+}
+
+function isCacheableContentType(pathname, contentType) {
+  if (DATA_CACHE_CONTROL.has(pathname)) return contentType.includes('xml');
+  return contentType.includes('text/html');
 }
 
 // Skip cache when ANY of these cookies are present — covers the better-auth
@@ -95,24 +118,32 @@ export default {
       if (agent) return agent;
     }
     try {
-      const markdown = await handlePublicRouteMarkdown(request, async (sourcePath) => {
-        const sourceUrl = new URL('/api/ai/markdown', request.url);
-        sourceUrl.searchParams.set('path', sourcePath);
-        const sourceResponse = await openNext.fetch(
-          new Request(sourceUrl, {
-            headers: {
-              Accept: 'text/markdown',
-              'x-fleet-markdown-source': '1',
-            },
-          }),
-          env,
-          ctx
-        );
-        if (!sourceResponse.ok) return null;
-        const contentType = sourceResponse.headers.get('content-type') || '';
-        if (!contentType.toLowerCase().includes('text/markdown')) return null;
-        return sourceResponse.text();
-      });
+      const markdown = await handleCachedPublicRouteMarkdown(
+        request,
+        async (sourcePath) => {
+          const sourceUrl = new URL('/api/ai/markdown', request.url);
+          sourceUrl.searchParams.set('path', sourcePath);
+          const sourceResponse = await openNext.fetch(
+            new Request(sourceUrl, {
+              headers: {
+                Accept: 'text/markdown',
+                'x-fleet-markdown-source': '1',
+              },
+            }),
+            env,
+            ctx
+          );
+          if (!sourceResponse.ok) return null;
+          const contentType = sourceResponse.headers.get('content-type') || '';
+          if (!contentType.toLowerCase().includes('text/markdown')) return null;
+          return sourceResponse.text();
+        },
+        {
+          cache: caches.default,
+          cacheEnabled: !hasAuthCookie(request),
+          waitUntil: (promise) => ctx.waitUntil(promise),
+        }
+      );
       if (markdown) return markdown;
 
       if (request.method !== 'GET') {
@@ -183,7 +214,11 @@ export default {
 
       // Only cache 2xx HTML responses — never error pages or redirects.
       const contentType = response.headers.get('content-type') ?? '';
-      if (response.status !== 200 || !contentType.includes('text/html')) {
+      if (
+        response.status !== 200 ||
+        response.headers.has('set-cookie') ||
+        !isCacheableContentType(url.pathname, contentType)
+      ) {
         return response;
       }
 
@@ -195,7 +230,7 @@ export default {
       // the same Uint8Array sidesteps the streaming edge case entirely.
       const body = await response.arrayBuffer();
       const headers = new Headers(response.headers);
-      headers.set('Cache-Control', CACHE_CONTROL);
+      headers.set('Cache-Control', cacheControlForPath(url.pathname));
 
       const cacheable = new Response(body, {
         status: response.status,

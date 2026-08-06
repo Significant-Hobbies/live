@@ -22,6 +22,11 @@ is the bridge between daily practice and life aspirations.
 
 ## Timeline
 
+- **2026-08-06:** Reduced crawler-driven Worker CPU by edge-caching explicit
+  public Markdown alternates, static experience and journey pages, and the two
+  sitemap XML routes. Authenticated, personalized, query-bearing Markdown,
+  error, redirect, API, and private-route responses retain their uncached
+  behavior.
 - **2026-08-05:** Restored the full 42-article `/llms-full.txt` agent index by
   keeping the portable Worker fallback from masking the application-owned
   editorial route. The hobby quiz and Life in Weeks now publish self-canonical

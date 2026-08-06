@@ -6,6 +6,7 @@ import { PAGED_EXPERIENCES } from '~/lib/experiences';
 import { FAMOUS_JOURNEYS } from '~/lib/famous-journeys';
 import apiCatalog from '../../public/api-ai.json';
 import {
+  handleCachedPublicRouteMarkdown,
   handlePublicRouteMarkdown,
   htmlPathFromMarkdown,
   isAgentReadableSitemapPath,
@@ -46,6 +47,52 @@ describe('public route Markdown boundary', () => {
     expect(response?.headers.get('content-location')).toBe('/hobbies/painting.md');
     expect(await response?.text()).toContain('# Painting');
     expect(load).toHaveBeenCalledWith('/hobbies/painting', expect.any(Request));
+  });
+
+  it('edge-caches explicit Markdown without caching negotiated HTML URLs', async () => {
+    const entries = new Map<string, Response>();
+    const writes: Promise<unknown>[] = [];
+    const cache = {
+      async match(request: Request) {
+        return entries.get(request.url)?.clone();
+      },
+      async put(request: Request, response: Response) {
+        entries.set(request.url, response.clone());
+      },
+    } as Cache;
+    const load = vi.fn(async () => '# Painting\n');
+    const options = {
+      cache,
+      waitUntil(promise: Promise<unknown>) {
+        writes.push(promise);
+      },
+    };
+
+    const miss = await handleCachedPublicRouteMarkdown(
+      new Request('https://significanthobbies.com/hobbies/painting.md'),
+      load,
+      options
+    );
+    expect(miss?.headers.get('x-edge-cache')).toBe('AGENT-MISS');
+    await Promise.all(writes);
+
+    const hit = await handleCachedPublicRouteMarkdown(
+      new Request('https://significanthobbies.com/hobbies/painting.md'),
+      load,
+      options
+    );
+    expect(hit?.headers.get('x-edge-cache')).toBe('AGENT-HIT');
+    expect(await hit?.text()).toBe('# Painting\n');
+    expect(load).toHaveBeenCalledTimes(1);
+
+    await handleCachedPublicRouteMarkdown(
+      new Request('https://significanthobbies.com/hobbies/painting', {
+        headers: { Accept: 'text/markdown' },
+      }),
+      load,
+      options
+    );
+    expect(load).toHaveBeenCalledTimes(2);
   });
 
   it('returns explicit Markdown failures instead of exposing private or empty shells', async () => {
