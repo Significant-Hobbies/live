@@ -18,13 +18,11 @@ describe('onboarding possibility catalog', () => {
   });
 
   it('opens with a balanced popular shelf instead of the first catalog category', () => {
-    const popular = getOnboardingPossibilities().slice(0, 18);
+    const popular = getOnboardingPossibilities().slice(0, 22);
     const categories = new Set(popular.map((possibility) => possibility.category));
 
-    expect(popular).toHaveLength(18);
-    expect(categories).toEqual(
-      new Set(['travel', 'adventure', 'creative', 'achievement', 'social', 'humanitarian'])
-    );
+    expect(popular).toHaveLength(22);
+    expect(categories.size).toBeGreaterThanOrEqual(8);
     expect(popular.filter((possibility) => possibility.category === 'travel').length).toBeLessThan(
       5
     );

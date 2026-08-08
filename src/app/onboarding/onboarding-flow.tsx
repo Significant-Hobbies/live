@@ -28,7 +28,17 @@ import type { StorageMode } from '~/lib/storage-mode';
 
 type Possibility = {
   title: string;
-  category: 'travel' | 'adventure' | 'creative' | 'achievement' | 'social' | 'humanitarian';
+  category:
+    | 'travel'
+    | 'adventure'
+    | 'creative'
+    | 'achievement'
+    | 'relationships'
+    | 'contribution'
+    | 'food'
+    | 'health'
+    | 'mindfulness'
+    | 'reflection';
   emoji: string;
 };
 
@@ -289,6 +299,22 @@ export function OnboardingFlow({
           status: 'active',
           targetFrequency: 'daily',
           icon: null,
+          sourceQuestId: null,
+          commitmentId: null,
+        });
+      }
+      // Default relationship habit — see onboarding.ts for research rationale.
+      if (
+        !daily.habits.some(
+          (habit) => String(habit.name).toLowerCase() === 'connect with someone today'
+        )
+      ) {
+        daily.habits.push({
+          id: `local-habit-${crypto.randomUUID()}`,
+          name: 'Connect with someone today',
+          status: 'active',
+          targetFrequency: 'daily',
+          icon: '💬',
           sourceQuestId: null,
           commitmentId: null,
         });

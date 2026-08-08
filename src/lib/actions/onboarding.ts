@@ -15,8 +15,12 @@ const categories = [
   'adventure',
   'creative',
   'achievement',
-  'social',
-  'humanitarian',
+  'relationships',
+  'contribution',
+  'food',
+  'health',
+  'mindfulness',
+  'reflection',
 ] as const;
 
 const ActivationSchema = z.object({
@@ -122,14 +126,33 @@ export async function completeOnboarding(
     existingTitles.add(key);
   }
 
+  const allHabits = await db
+    .select({ name: habits.name })
+    .from(habits)
+    .where(eq(habits.userId, userId));
+
   if (data.habit) {
-    const allHabits = await db
-      .select({ name: habits.name })
-      .from(habits)
-      .where(eq(habits.userId, userId));
     if (!allHabits.some((habit) => habit.name.trim().toLowerCase() === data.habit.toLowerCase())) {
       await db.insert(habits).values({ userId, name: data.habit, status: 'active' });
     }
+  }
+
+  // Default relationship habit — the single most evidence-backed default.
+  // Harvard 85-year study, Blue Zones, World Happiness Report: relationships
+  // are the #1 predictor of happiness, health, and longevity. See
+  // docs/knowledge/learnings.md for the research synthesis.
+  const DEFAULT_RELATIONSHIP_HABIT = 'Connect with someone today';
+  if (
+    !allHabits.some(
+      (habit) => habit.name.trim().toLowerCase() === DEFAULT_RELATIONSHIP_HABIT.toLowerCase()
+    )
+  ) {
+    await db.insert(habits).values({
+      userId,
+      name: DEFAULT_RELATIONSHIP_HABIT,
+      status: 'active',
+      icon: '💬',
+    });
   }
 
   const activeTrajectory = await db.query.trajectoryContracts.findFirst({

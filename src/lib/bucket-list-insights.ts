@@ -58,7 +58,7 @@ const ARCHETYPES: Record<BucketItemCategory, BucketListArchetype> = {
     color: 'bg-amber-500',
     textColor: 'text-amber-600',
   },
-  social: {
+  relationships: {
     id: 'connector',
     name: 'The Deep Connector',
     emoji: '❤️',
@@ -68,7 +68,7 @@ const ARCHETYPES: Record<BucketItemCategory, BucketListArchetype> = {
     color: 'bg-rose-500',
     textColor: 'text-rose-600',
   },
-  humanitarian: {
+  contribution: {
     id: 'changemaker',
     name: 'The World Changer',
     emoji: '🌍',
@@ -77,6 +77,46 @@ const ARCHETYPES: Record<BucketItemCategory, BucketListArchetype> = {
       "You don't want to just witness history — you want to shape it. Your ambitions scale with the problems you see.",
     color: 'bg-emerald-500',
     textColor: 'text-emerald-600',
+  },
+  food: {
+    id: 'epicurean',
+    name: 'The Epicurean',
+    emoji: '🍽️',
+    tagline: 'Life is tasted, not counted',
+    description:
+      'You measure your days in flavours, textures, and the meals you shared. Cooking, foraging, tasting — food is your way of being present.',
+    color: 'bg-amber-600',
+    textColor: 'text-amber-700',
+  },
+  health: {
+    id: 'vitalist',
+    name: 'The Vitalist',
+    emoji: '💪',
+    tagline: 'Your body is the project',
+    description:
+      "You treat your body as the one asset you can't replace. Movement, sleep, strength — vitality is the foundation everything else stands on.",
+    color: 'bg-lime-600',
+    textColor: 'text-lime-700',
+  },
+  mindfulness: {
+    id: 'presence-seeker',
+    name: 'The Presence Seeker',
+    emoji: '🧘',
+    tagline: 'Here is the only place',
+    description:
+      'You are drawn to stillness, ritual, and the present moment. Meditation, nature, silence — your bucket list is a practice of attention.',
+    color: 'bg-teal-600',
+    textColor: 'text-teal-700',
+  },
+  reflection: {
+    id: 'wise-elder',
+    name: 'The Wise Elder',
+    emoji: '📖',
+    tagline: 'A life worth reviewing',
+    description:
+      'You are drawn to meaning-making — journaling, memoir, forgiveness, life review. Your bucket list is a conversation with your own story.',
+    color: 'bg-indigo-500',
+    textColor: 'text-indigo-600',
   },
 };
 

@@ -8,7 +8,17 @@ import { browserRecordAdapter, readLocalRecord, writeLocalRecord } from '~/lib/l
 
 type Suggestion = {
   title: string;
-  category: 'travel' | 'adventure' | 'creative' | 'achievement' | 'social' | 'humanitarian';
+  category:
+    | 'travel'
+    | 'adventure'
+    | 'creative'
+    | 'achievement'
+    | 'relationships'
+    | 'contribution'
+    | 'food'
+    | 'health'
+    | 'mindfulness'
+    | 'reflection';
   emoji: string;
   reason: string;
 };
@@ -18,8 +28,12 @@ const categoryCopy: Record<Suggestion['category'], string> = {
   adventure: 'This adds a little courage and a story you can keep.',
   creative: 'Making something gives your attention somewhere real to go.',
   achievement: 'A meaningful stretch can become a chapter, not just a task.',
-  social: 'Some of the best possibilities are really reasons to gather.',
-  humanitarian: 'This leaves more behind than a checked box.',
+  relationships: 'Some of the best possibilities are really reasons to gather.',
+  contribution: 'This leaves more behind than a checked box.',
+  food: 'Food is one of the most direct ways to be present in a place and a culture.',
+  health: 'Your body is the one asset everything else depends on.',
+  mindfulness: 'Attention is the rarest thing you have. This practices it.',
+  reflection: 'A life unexamined is hard to feel complete about.',
 };
 
 export function LiveMoreDiscovery({

@@ -170,8 +170,12 @@ const CATEGORIES = [
   'adventure',
   'creative',
   'achievement',
-  'social',
-  'humanitarian',
+  'relationships',
+  'contribution',
+  'food',
+  'health',
+  'mindfulness',
+  'reflection',
 ] as const;
 
 const AddItemSchema = z.object({

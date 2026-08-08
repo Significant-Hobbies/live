@@ -157,10 +157,10 @@ const ACHIEVEMENT_TEMPLATE: ChainTemplate = (itemTitle) => [
   },
 ];
 
-// ─── Social ─────────────────────────────────────────────────────────────────
+// ─── Relationships ──────────────────────────────────────────────────────────
 // Reach out → Small gathering → Bigger event
 
-const SOCIAL_TEMPLATE: ChainTemplate = (itemTitle) => [
+const RELATIONSHIPS_TEMPLATE: ChainTemplate = (itemTitle) => [
   {
     title: `Reach out about ${itemTitle}`,
     description: `Send a message to one person who'd be part of ${itemTitle}. A friend, a group, a community. Just start the conversation.`,
@@ -181,10 +181,10 @@ const SOCIAL_TEMPLATE: ChainTemplate = (itemTitle) => [
   },
 ];
 
-// ─── Humanitarian ───────────────────────────────────────────────────────────
+// ─── Contribution ───────────────────────────────────────────────────────────
 // Research causes → Volunteer locally → Commit to a project
 
-const HUMANITARIAN_TEMPLATE: ChainTemplate = (itemTitle) => [
+const CONTRIBUTION_TEMPLATE: ChainTemplate = (itemTitle) => [
   {
     title: `Research causes behind ${itemTitle}`,
     description: `Spend an hour learning which organizations and causes align with ${itemTitle}. Find 3 you respect and note how they help.`,
@@ -201,6 +201,102 @@ const HUMANITARIAN_TEMPLATE: ChainTemplate = (itemTitle) => [
     title: `Commit to ${itemTitle}`,
     description: `Pick one organization or project and make a real commitment — a recurring donation, a regular volunteer slot, or a personal project. Sustained help beats one-off help.`,
     emoji: '🌍',
+    difficulty: 'hard',
+  },
+];
+
+// ─── Food ───────────────────────────────────────────────────────────────────
+// Try it locally → Cook it yourself → Go to the source
+
+const FOOD_TEMPLATE: ChainTemplate = (itemTitle) => [
+  {
+    title: `Try a version of ${itemTitle} locally`,
+    description: `Find the closest approximation of ${itemTitle} near you — a restaurant, a market, a shop. Taste it. See if it pulls you in.`,
+    emoji: '🍽️',
+    difficulty: 'easy',
+  },
+  {
+    title: `Make it yourself`,
+    description: `Find a recipe or technique behind ${itemTitle} and attempt it at home. It won't be perfect. The point is to understand the food from the inside.`,
+    emoji: '👨‍🍳',
+    difficulty: 'medium',
+  },
+  {
+    title: `Go deeper with ${itemTitle}`,
+    description: `Take it to the source — travel for it, take a class, or master the technique. Turn curiosity into a real relationship with the food.`,
+    emoji: '🌍',
+    difficulty: 'hard',
+  },
+];
+
+// ─── Health ─────────────────────────────────────────────────────────────────
+// Start small → Build consistency → Hit the goal
+
+const HEALTH_TEMPLATE: ChainTemplate = (itemTitle) => [
+  {
+    title: `Start a small version of ${itemTitle}`,
+    description: `Find the easiest entry point to ${itemTitle} — a 10-minute walk, a beginner routine, one good night's sleep. Just start this week.`,
+    emoji: '🚶',
+    difficulty: 'easy',
+  },
+  {
+    title: `Build a weekly rhythm`,
+    description: `Turn ${itemTitle} into a habit. Commit to 3 sessions a week for a month. Track it. The goal is consistency, not intensity.`,
+    emoji: '📅',
+    difficulty: 'medium',
+  },
+  {
+    title: `Achieve ${itemTitle}`,
+    description: `Go for the real milestone — the target weight, the distance, the certification. You've built the base; now push to the goal.`,
+    emoji: '💪',
+    difficulty: 'hard',
+  },
+];
+
+// ─── Mindfulness ────────────────────────────────────────────────────────────
+// Try it once → Build a practice → Go deep
+
+const MINDFULNESS_TEMPLATE: ChainTemplate = (itemTitle) => [
+  {
+    title: `Try ${itemTitle} for 10 minutes`,
+    description: `Find the simplest way to experience ${itemTitle} — a short meditation, a walk in nature, a moment of silence. Just 10 minutes. See what shifts.`,
+    emoji: '🌿',
+    difficulty: 'easy',
+  },
+  {
+    title: `Practice ${itemTitle} for a week`,
+    description: `Commit to ${itemTitle} daily for 7 days. Keep it small — 10-15 minutes. The point is to feel what consistency reveals that one session doesn't.`,
+    emoji: '🧘',
+    difficulty: 'medium',
+  },
+  {
+    title: `Go deep with ${itemTitle}`,
+    description: `Take ${itemTitle} to its real form — a retreat, a silent week, a daily practice you commit to for a season. Let it change how you pay attention.`,
+    emoji: '🕯️',
+    difficulty: 'hard',
+  },
+];
+
+// ─── Reflection ──────────────────────────────────────────────────────────────
+// Start writing → Review patterns → Share or complete
+
+const REFLECTION_TEMPLATE: ChainTemplate = (itemTitle) => [
+  {
+    title: `Start ${itemTitle} privately`,
+    description: `Begin ${itemTitle} in whatever form feels natural — a journal entry, a letter you don't send, a voice memo. No audience. Just begin.`,
+    emoji: '✍️',
+    difficulty: 'easy',
+  },
+  {
+    title: `Go back and look for patterns`,
+    description: `After a few weeks of ${itemTitle}, re-read what you've written. What repeats? What surprises you? The insight is in the pattern, not the individual entry.`,
+    emoji: '🔍',
+    difficulty: 'medium',
+  },
+  {
+    title: `Complete ${itemTitle}`,
+    description: `Bring ${itemTitle} to a close — send the letter, finish the memoir, have the conversation, share the story. The reflection becomes real when it reaches someone.`,
+    emoji: '📖',
     difficulty: 'hard',
   },
 ];
@@ -236,8 +332,12 @@ const TEMPLATES: Record<string, ChainTemplate> = {
   adventure: ADVENTURE_TEMPLATE,
   creative: CREATIVE_TEMPLATE,
   achievement: ACHIEVEMENT_TEMPLATE,
-  social: SOCIAL_TEMPLATE,
-  humanitarian: HUMANITARIAN_TEMPLATE,
+  relationships: RELATIONSHIPS_TEMPLATE,
+  contribution: CONTRIBUTION_TEMPLATE,
+  food: FOOD_TEMPLATE,
+  health: HEALTH_TEMPLATE,
+  mindfulness: MINDFULNESS_TEMPLATE,
+  reflection: REFLECTION_TEMPLATE,
 };
 
 // ─── Main export ────────────────────────────────────────────────────────────

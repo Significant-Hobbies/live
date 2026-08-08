@@ -5,8 +5,12 @@ export type BucketItemCategory =
   | 'adventure'
   | 'creative'
   | 'achievement'
-  | 'social'
-  | 'humanitarian';
+  | 'relationships'
+  | 'contribution'
+  | 'food'
+  | 'health'
+  | 'mindfulness'
+  | 'reflection';
 
 type FamousBucketItem = {
   title: string;
@@ -212,7 +216,7 @@ export const FAMOUS_BUCKET_LISTS: FamousBucketList[] = [
       {
         title: 'Only eat meat from animals you personally raised or hunted',
         description: 'Develop a direct, honest relationship with the food you consume.',
-        category: 'social',
+        category: 'relationships',
         status: 'done',
         completedNote:
           'His 2011 challenge. Started with a lobster, then worked up to a goat and a pig — learned to stun, slaughter, and butcher them himself.',
@@ -229,7 +233,7 @@ export const FAMOUS_BUCKET_LISTS: FamousBucketList[] = [
       {
         title: 'Have meaningful conversations in all 50 U.S. states',
         description: 'Travel every state and connect with people outside your usual circles.',
-        category: 'social',
+        category: 'relationships',
         status: 'done',
         completedNote:
           'His 2017 challenge. Visited factories, churches, farms, and community centers across all 50 states.',
@@ -279,7 +283,7 @@ export const FAMOUS_BUCKET_LISTS: FamousBucketList[] = [
       {
         title: 'Support a generation of African girls through education',
         description: 'Build and sustain a school that gives girls a path out of poverty.',
-        category: 'humanitarian',
+        category: 'contribution',
         status: 'done',
         completedNote:
           'The Oprah Winfrey Leadership Academy for Girls in South Africa has graduated thousands of young women since 2007.',
@@ -328,7 +332,7 @@ export const FAMOUS_BUCKET_LISTS: FamousBucketList[] = [
       {
         title: 'Live to see your grandchildren grow up',
         description: 'Be present for the life milestones of the next generation you helped create.',
-        category: 'social',
+        category: 'relationships',
         status: 'done',
         completedNote:
           "Clinton called this the top item on his 'A list' — the most meaningful goal, not the most dramatic.",
@@ -378,13 +382,13 @@ export const FAMOUS_BUCKET_LISTS: FamousBucketList[] = [
       {
         title: "Be volunteer of the year at your daughter's school",
         description: 'Show up not as a celebrity, but as a present and involved parent.',
-        category: 'social',
+        category: 'relationships',
         status: 'planned',
       },
       {
         title: 'Have a second child',
         description: 'Grow your family and give your child a sibling.',
-        category: 'social',
+        category: 'relationships',
         status: 'done',
         completedNote: 'Her daughter Adira River Ohanian was born in 2023.',
       },
@@ -416,14 +420,14 @@ export const FAMOUS_BUCKET_LISTS: FamousBucketList[] = [
         title: 'Establish a self-sustaining city on Mars with over 1 million people',
         description:
           'Build the first off-world city that can survive and grow without resupply from Earth.',
-        category: 'humanitarian',
+        category: 'contribution',
         status: 'planned',
       },
       {
         title: 'Make humanity a multi-planetary species before extinction risks close the window',
         description:
           'Ensure there is always a backup of human civilization somewhere other than Earth.',
-        category: 'humanitarian',
+        category: 'contribution',
         status: 'planned',
       },
     ],
@@ -448,7 +452,7 @@ export const FAMOUS_BUCKET_LISTS: FamousBucketList[] = [
         title: 'Eradicate polio from the planet',
         description:
           'Finish what vaccines started and make polio the second human disease ever fully eliminated.',
-        category: 'humanitarian',
+        category: 'contribution',
         status: 'planned',
       },
       {
@@ -470,7 +474,7 @@ export const FAMOUS_BUCKET_LISTS: FamousBucketList[] = [
         title: 'Ensure every child on Earth can access life-saving vaccines',
         description:
           'Eliminate the geography-of-birth lottery that determines whether a child survives their first years.',
-        category: 'humanitarian',
+        category: 'contribution',
         status: 'planned',
       },
     ],
@@ -589,6 +593,10 @@ export const BUCKET_ITEM_CATEGORIES: Record<BucketItemCategory, { label: string;
     adventure: { label: 'Adventure', emoji: '⛰️' },
     creative: { label: 'Creative', emoji: '🎨' },
     achievement: { label: 'Achievement', emoji: '🏆' },
-    social: { label: 'Social', emoji: '❤️' },
-    humanitarian: { label: 'Humanitarian', emoji: '🌍' },
+    relationships: { label: 'Relationships', emoji: '❤️' },
+    contribution: { label: 'Contribution', emoji: '🌍' },
+    food: { label: 'Food & Culinary', emoji: '🍽️' },
+    health: { label: 'Health & Vitality', emoji: '💪' },
+    mindfulness: { label: 'Mindfulness', emoji: '🧘' },
+    reflection: { label: 'Reflection', emoji: '📖' },
   };

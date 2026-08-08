@@ -3,21 +3,31 @@ import { HOBBY_CATEGORIES } from '~/lib/hobbies';
 
 export type OnboardingPossibility = {
   title: string;
-  category: 'travel' | 'adventure' | 'creative' | 'achievement' | 'social' | 'humanitarian';
+  category:
+    | 'travel'
+    | 'adventure'
+    | 'creative'
+    | 'achievement'
+    | 'relationships'
+    | 'contribution'
+    | 'food'
+    | 'health'
+    | 'mindfulness'
+    | 'reflection';
   emoji: string;
 };
 
 const HOBBY_CATEGORY_TO_BUCKET: Record<string, OnboardingPossibility['category']> = {
   Creative: 'creative',
   Music: 'creative',
-  Physical: 'adventure',
+  Physical: 'health',
   Intellectual: 'achievement',
   Gaming: 'achievement',
   Outdoor: 'adventure',
-  Culinary: 'creative',
+  Culinary: 'food',
   Collecting: 'achievement',
   Making: 'creative',
-  Social: 'social',
+  Social: 'relationships',
 };
 
 const HOBBY_PATHS: Array<(hobby: string) => string> = [
@@ -80,11 +90,15 @@ const POPULAR_STARTING_TITLES = [
   'Learn to fly a plane',
   'Clean up a beach or river in your community',
   'See the Great Barrier Reef',
-  'Learn to cook 10 world cuisines from scratch',
+  'Eat street food in Bangkok',
   'Climb a mountain over 4,000 metres',
   "Reconnect with someone you've lost touch with",
   'Learn to code and ship an app',
   'Record a song and release it',
+  'Do a 10-day silent meditation retreat',
+  'Write your memoir',
+  'Walk 10,000 steps a day for a month',
+  'Bake sourdough weekly for a year',
 ] as const;
 
 export function getOnboardingPossibilities(): OnboardingPossibility[] {

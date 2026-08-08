@@ -11,7 +11,17 @@ import { browserRecordAdapter, readLocalRecord } from '~/lib/local-record-store'
 
 type Suggestion = {
   title: string;
-  category: 'travel' | 'adventure' | 'creative' | 'achievement' | 'social' | 'humanitarian';
+  category:
+    | 'travel'
+    | 'adventure'
+    | 'creative'
+    | 'achievement'
+    | 'relationships'
+    | 'contribution'
+    | 'food'
+    | 'health'
+    | 'mindfulness'
+    | 'reflection';
   emoji: string;
   reason: string;
 };

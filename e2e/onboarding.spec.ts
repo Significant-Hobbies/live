@@ -145,7 +145,15 @@ test.describe('Onboarding', () => {
       ...new Set(elements.map((element) => element.getAttribute('data-possibility-category'))),
     ]);
     expect(categories.sort()).toEqual(
-      ['achievement', 'adventure', 'creative', 'humanitarian', 'social', 'travel'].sort()
+      [
+        'achievement',
+        'adventure',
+        'contribution',
+        'creative',
+        'food',
+        'relationships',
+        'travel',
+      ].sort()
     );
 
     for (const option of await options.all()) await option.click();

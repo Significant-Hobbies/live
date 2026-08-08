@@ -90,17 +90,17 @@ export const EXPERIENCES_BY_CATEGORY: Record<ExperienceCategory, ExperienceGroup
       'Cage dive with great white sharks',
       'Climb El Capitan in Yosemite',
       'Ride a motorcycle across a country',
-      'Complete an Ironman triathlon',
       'Hike the Pacific Crest Trail',
       'Go on a polar expedition',
       'Zipline through a rainforest canopy',
       'Learn to free solo climb',
-      'Do a polar bear plunge',
       'Drive a racecar at full speed',
       'Go canyoneering',
       'Trek across Iceland',
       'Kayak the Grand Canyon',
       'Dog sled in Alaska',
+      'Free dive to 20 metres',
+      'Summit a volcano',
     ],
   },
   creative: {
@@ -111,7 +111,6 @@ export const EXPERIENCES_BY_CATEGORY: Record<ExperienceCategory, ExperienceGroup
       'Write and finish a novel',
       'Learn to play a musical instrument',
       "Paint something you're proud to hang on a wall",
-      'Learn to cook 10 world cuisines from scratch',
       'Record a song and release it',
       'Perform on a stage in front of a crowd',
       'Learn a new language to conversational fluency',
@@ -140,36 +139,36 @@ export const EXPERIENCES_BY_CATEGORY: Record<ExperienceCategory, ExperienceGroup
     label: 'Achievement',
     color: 'coral',
     ideas: [
-      'Run a marathon',
       'Learn to fly a plane',
       'Start and grow a business',
       'Earn a black belt in a martial art',
       'Become fluent in a second language',
-      'Complete a triathlon',
       'Read 52 books in a year',
       'Become completely debt-free',
-      'Meditate every day for 365 days',
       'Learn to code and ship an app',
       'Climb the corporate ladder to a role you dreamed of',
       'Compete in a national championship',
       'Earn a postgraduate degree',
-      'Break a personal athletic record',
       'Master a complex card trick',
       'Memorise a long poem or speech',
       'Build an investment portfolio',
       'Complete a Tough Mudder',
-      'Do 100 push-ups in a row',
       'Become a certified scuba diver',
       "Get a pilot's licence",
       'Compete in an obstacle course race',
       "Solve a Rubik's cube in under a minute",
-      'Complete a 100-mile ultramarathon',
-      'Qualify for the Boston Marathon',
+      'Give a TED talk',
+      'Build something that reaches a million people',
+      'Become a recognised expert in your field',
+      'Learn a second discipline deeply',
+      'Patent an invention',
+      'Win a competition you genuinely trained for',
+      'Get featured in a major publication',
     ],
   },
-  social: {
+  relationships: {
     emoji: '❤️',
-    label: 'Social',
+    label: 'Relationships',
     color: 'rose',
     ideas: [
       'Volunteer abroad for at least a month',
@@ -188,7 +187,6 @@ export const EXPERIENCES_BY_CATEGORY: Record<ExperienceCategory, ExperienceGroup
       "Learn someone's language to have a conversation with them",
       'Attend a multi-day music festival',
       'Do a group charity challenge with friends',
-      'Create a family cookbook with old recipes',
       'Organise a neighbourhood event',
       'Get married or celebrate a long-term partnership',
       'Spend a month living with a foreign family',
@@ -197,11 +195,17 @@ export const EXPERIENCES_BY_CATEGORY: Record<ExperienceCategory, ExperienceGroup
       'Co-write something with a friend',
       'Show up for someone in a crisis without being asked',
       "Celebrate someone else's milestone as if it were your own",
+      'Ask forgiveness from someone you hurt',
+      'Forgive someone who hurt you',
+      'Have one real conversation with a grandparent before it is too late',
+      'Repair a relationship you damaged',
+      'Write a letter to someone who changed your life and send it',
+      'Spend a week with each of your parents while they are well enough to travel',
     ],
   },
-  humanitarian: {
+  contribution: {
     emoji: '🌍',
-    label: 'Humanitarian',
+    label: 'Contribution',
     color: 'emerald',
     ideas: [
       'Plant 1,000 trees',
@@ -231,14 +235,144 @@ export const EXPERIENCES_BY_CATEGORY: Record<ExperienceCategory, ExperienceGroup
       'Leave a place cleaner and more hopeful than you found it',
     ],
   },
+  food: {
+    emoji: '🍽️',
+    label: 'Food & Culinary',
+    color: 'amber',
+    ideas: [
+      'Eat street food in Bangkok',
+      'Bake sourdough weekly for a year',
+      'Forage for wild mushrooms',
+      'Make cheese from scratch',
+      'Eat at a 3-star Michelin restaurant',
+      'Brew your own beer or wine',
+      'Grow something you can eat from seed to plate',
+      'Create a family cookbook with old recipes',
+      'Eat a meal cooked by a grandmother in her home',
+      'Master one dish so well you could teach it',
+      'Roast your own coffee beans',
+      'Preserve a season: jam, pickle, ferment',
+      'Eat at the source: coffee in Ethiopia, tea in Japan, chocolate in Ecuador',
+      'Cook a whole animal from nose to tail',
+      'Make pasta from scratch',
+      'Eat something you foraged or caught yourself',
+      'Take a cooking class in the country the cuisine is from',
+      'Bake a wedding cake for someone you love',
+      'Learn to butcher a whole fish',
+      'Ferment something for the first time',
+      'Eat a 12-course tasting menu',
+      'Make your own condiments from scratch',
+      'Cook a meal over an open fire',
+      'Eat your way through a country one market at a time',
+    ],
+  },
+  health: {
+    emoji: '💪',
+    label: 'Health & Vitality',
+    color: 'lime',
+    ideas: [
+      'Run a marathon',
+      'Complete a triathlon',
+      'Complete a 100-mile ultramarathon',
+      'Qualify for the Boston Marathon',
+      'Complete an Ironman triathlon',
+      'Break a personal athletic record',
+      'Do 100 push-ups in a row',
+      'Do a polar bear plunge',
+      'Walk 10,000 steps a day for a month',
+      'Hike weekly for a year',
+      'Sleep 8 hours a night for 30 days',
+      'Cycle coast to coast',
+      'Take a cold plunge every morning for a month',
+      'Get a full health checkup including bloodwork',
+      'Do a 30-day yoga challenge',
+      'Learn to cook 10 healthy meals from scratch',
+      'Swim a mile without stopping',
+      'Walk a long-distance trail over 100km',
+      'Do your first pull-up',
+      'Run your first 5K',
+      'Climb your first mountain',
+      'Spend a year strength training',
+      'Learn to meditate for 20 minutes straight',
+      'Fast for 24 hours at least once',
+      'Get your hearing and vision checked',
+    ],
+  },
+  mindfulness: {
+    emoji: '🧘',
+    label: 'Mindfulness',
+    color: 'teal',
+    ideas: [
+      'Do a 10-day silent meditation retreat',
+      'Spend a week fully off-grid',
+      'Watch a sunrise and a sunset in the same day',
+      'Meditate every day for 365 days',
+      'Do a solo camping trip with no phone',
+      'Take a tea ceremony class',
+      'Spend a day in complete silence',
+      'Watch a meteor shower from a dark sky location',
+      'Sit with a dying person and just be present',
+      'Do a digital detox for a full week',
+      'Practice ichigo ichie: treat one ordinary day as unrepeatable',
+      'Walk a labyrinth or pilgrimage slowly',
+      'Spend a night alone in the wilderness',
+      'Learn to identify 10 bird species by song',
+      'Spend an hour watching a single tree',
+      'Take a slow travel trip: one town, one week, no plan',
+      'Spend a week in a monastery or retreat centre',
+      'Learn to sit with discomfort without reaching for your phone',
+      'Watch a storm roll in from start to finish',
+      'Spend a full day with no screens',
+      'Take a forest bathing walk',
+      'Create a morning ritual you keep for a year',
+      'Spend a night stargazing with no agenda',
+      'Do a walking meditation every morning for a month',
+      'Spend an afternoon doing one thing at a time',
+    ],
+  },
+  reflection: {
+    emoji: '📖',
+    label: 'Reflection',
+    color: 'indigo',
+    ideas: [
+      'Record your parents life stories',
+      'Write your ethical will: values, lessons, what you want passed down',
+      'Keep a journal for a full year',
+      'Keep a journal for a decade',
+      'Write a letter to your younger self',
+      'Write a letter to your future self and read it in 10 years',
+      'Change your mind publicly on something important',
+      'Do a structured life review: decade by decade',
+      'Create a photo book of one year of your life',
+      'Write the story of how you became who you are',
+      'Record a conversation with an elder and preserve it',
+      'Write down everything you know about your family history',
+      'Spend a day reviewing every job, relationship, and home you have had',
+      'Write your obituary the way you would want it read',
+      'Make a list of 100 things you are grateful for',
+      'Re-read a book that changed your life and see what you notice now',
+      'Write a letter to someone you have not forgiven and then decide whether to send it',
+      'Write a manifesto for how you want to live',
+      'Spend a birthday alone reflecting on the past year',
+      'Write down your core values and check them against how you actually spend your time',
+      'Create a personal annual report',
+      'Write a forgiveness letter to yourself',
+      'Spend a day visiting places that shaped you',
+      'Write the speech you would give at your own retirement',
+      'Make a timeline of the five most important moments of your life',
+    ],
+  },
 };
 
 export const EXPERIENCE_CATEGORIES = Object.keys(EXPERIENCES_BY_CATEGORY) as ExperienceCategory[];
+
+export type ExperienceLocation = 'anywhere' | 'specific-place';
 
 export type Experience = {
   title: string;
   category: ExperienceCategory;
   emoji: string;
+  location: ExperienceLocation;
 };
 
 // ─── Milestones ──────────────────────────────────────────────────────────────
@@ -380,14 +514,14 @@ export const MILESTONES: Milestone[] = [
     description:
       'Actually — not performatively. The uncomfortable, inconvenient, transforming kind.',
     emoji: '❤️',
-    category: 'social',
+    category: 'relationships',
     horizon: 'before-30',
   },
   {
     title: 'Make a best friend in a foreign country',
     description: 'A real one who you still text five years later.',
     emoji: '🤝',
-    category: 'social',
+    category: 'relationships',
     horizon: 'before-30',
   },
   {
@@ -395,28 +529,28 @@ export const MILESTONES: Milestone[] = [
     description:
       "About their life, their mistakes, what they'd do differently. Before it's too late.",
     emoji: '👴',
-    category: 'social',
+    category: 'relationships',
     horizon: 'before-30',
   },
   {
     title: 'Throw a party worth remembering',
     description: 'Plan it properly. Invite the right mix of people. Make it legendary.',
     emoji: '🎉',
-    category: 'social',
+    category: 'relationships',
     horizon: 'before-30',
   },
   {
     title: 'Write a letter to someone who changed your life',
     description: "Send it. Don't wait for a funeral to say it.",
     emoji: '💌',
-    category: 'social',
+    category: 'relationships',
     horizon: 'before-30',
   },
   {
     title: 'Live with friends, not just roommates',
     description: "People you'd choose to live with, not just tolerate. It only happens once.",
     emoji: '👯',
-    category: 'social',
+    category: 'relationships',
     horizon: 'before-30',
   },
   {
@@ -511,7 +645,7 @@ export const MILESTONES: Milestone[] = [
     title: 'Do a silent meditation retreat',
     description: 'Even a weekend. No talking, no phone. The silence teaches you something.',
     emoji: '🧘',
-    category: 'achievement',
+    category: 'mindfulness',
     horizon: 'before-30',
   },
   {
@@ -525,14 +659,14 @@ export const MILESTONES: Milestone[] = [
     title: 'Get into the best shape of your life',
     description: 'Not a 30-day challenge — a sustained year of treating your body as an asset.',
     emoji: '💪',
-    category: 'achievement',
+    category: 'health',
     horizon: 'before-30',
   },
   {
     title: "Give up something that's running your life",
     description: 'Alcohol, sugar, social media, a toxic relationship. For at least 90 days.',
     emoji: '🚫',
-    category: 'achievement',
+    category: 'health',
     horizon: 'before-30',
   },
   {
@@ -546,42 +680,42 @@ export const MILESTONES: Milestone[] = [
     title: 'Volunteer for something you believe in',
     description: 'Not one afternoon — a sustained commitment where your absence would be noticed.',
     emoji: '🙌',
-    category: 'humanitarian',
+    category: 'contribution',
     horizon: 'before-30',
   },
   {
     title: 'Grow something you can eat',
     description: 'A balcony herb, a vegetable patch, a proper kitchen garden. From seed to plate.',
     emoji: '🌱',
-    category: 'humanitarian',
+    category: 'contribution',
     horizon: 'before-30',
   },
   {
     title: 'Run a race you had to train for',
     description: 'Half marathon minimum. Something that required more than casual fitness.',
     emoji: '🏃',
-    category: 'humanitarian',
+    category: 'contribution',
     horizon: 'before-30',
   },
   {
     title: 'Learn something completely outside your field',
     description: "A programming language if you're in arts; ceramics if you're in tech.",
     emoji: '🎓',
-    category: 'humanitarian',
+    category: 'contribution',
     horizon: 'before-30',
   },
   {
     title: 'Stay up all night to watch a sunrise',
     description: 'On purpose, somewhere beautiful. Tiredness and wonder is a strange combination.',
     emoji: '🌙',
-    category: 'humanitarian',
+    category: 'contribution',
     horizon: 'before-30',
   },
   {
     title: 'Attend a festival that changes your taste',
     description: 'Music, film, food, ideas — something that expands your reference points.',
     emoji: '🎪',
-    category: 'humanitarian',
+    category: 'contribution',
     horizon: 'before-30',
   },
   {
@@ -589,7 +723,7 @@ export const MILESTONES: Milestone[] = [
     description:
       'Rent a flat, go to the supermarket, have a local coffee shop. Actually live there.',
     emoji: '🏠',
-    category: 'humanitarian',
+    category: 'contribution',
     horizon: 'before-30',
   },
   {
@@ -597,21 +731,21 @@ export const MILESTONES: Milestone[] = [
     description:
       "Daily, honest, unedited. Read it back twelve months later. You won't recognise yourself.",
     emoji: '📖',
-    category: 'humanitarian',
+    category: 'reflection',
     horizon: 'before-30',
   },
   {
     title: 'Give something away that costs you something',
     description: 'Not spare change — something that actually hurts to let go of.',
     emoji: '🤲',
-    category: 'humanitarian',
+    category: 'contribution',
     horizon: 'before-30',
   },
   {
     title: 'Finish what you started',
     description: 'The book, the project, the course. One thing, all the way through. It compounds.',
     emoji: '🎯',
-    category: 'humanitarian',
+    category: 'contribution',
     horizon: 'before-30',
   },
   {
@@ -619,7 +753,7 @@ export const MILESTONES: Milestone[] = [
     description:
       'A scholarship, a community project, a trust. Something that keeps working after you stop.',
     emoji: '🏛️',
-    category: 'humanitarian',
+    category: 'contribution',
     horizon: 'before-50',
   },
   {
@@ -627,7 +761,7 @@ export const MILESTONES: Milestone[] = [
     description:
       "Not advice over coffee — sustained, intentional mentorship that changes someone's trajectory.",
     emoji: '👩‍🏫',
-    category: 'humanitarian',
+    category: 'contribution',
     horizon: 'before-50',
   },
   {
@@ -635,7 +769,7 @@ export const MILESTONES: Milestone[] = [
     description:
       'Memoir, business, fiction. The discipline of writing a book is unlike anything else. The finished object is proof of self.',
     emoji: '📖',
-    category: 'humanitarian',
+    category: 'contribution',
     horizon: 'before-50',
   },
   {
@@ -643,21 +777,21 @@ export const MILESTONES: Milestone[] = [
     description:
       "Trees, a garden, an orchard. Something that will still be growing when you're gone.",
     emoji: '🌱',
-    category: 'humanitarian',
+    category: 'contribution',
     horizon: 'before-50',
   },
   {
     title: "Fund a child's education from start to finish",
     description: 'Sponsor a student all the way through school or university. Watch them graduate.',
     emoji: '🎓',
-    category: 'humanitarian',
+    category: 'contribution',
     horizon: 'before-50',
   },
   {
     title: 'Build or restore a home',
     description: 'Design it yourself, or gut-renovate an old one. Live in something you shaped.',
     emoji: '🏡',
-    category: 'humanitarian',
+    category: 'contribution',
     horizon: 'before-50',
   },
   {
@@ -665,7 +799,7 @@ export const MILESTONES: Milestone[] = [
     description:
       'Not your financial will — your values, lessons, and what you want passed down. The thing that matters.',
     emoji: '📜',
-    category: 'humanitarian',
+    category: 'contribution',
     horizon: 'before-50',
   },
   {
@@ -673,7 +807,7 @@ export const MILESTONES: Milestone[] = [
     description:
       'Not a one-off day — a sustained year where your absence would genuinely set things back.',
     emoji: '🙏',
-    category: 'humanitarian',
+    category: 'contribution',
     horizon: 'before-50',
   },
   {
@@ -713,7 +847,7 @@ export const MILESTONES: Milestone[] = [
     description:
       'Divemaster, black belt, mountaineering cert. Something that took years and a real grading process.',
     emoji: '🤿',
-    category: 'achievement',
+    category: 'health',
     horizon: 'before-50',
   },
   {
@@ -728,7 +862,7 @@ export const MILESTONES: Milestone[] = [
     title: 'Run a marathon',
     description: 'The full 26.2. After mile 20, everyone discovers something about themselves.',
     emoji: '🏃',
-    category: 'achievement',
+    category: 'health',
     horizon: 'before-50',
   },
   {
@@ -736,14 +870,14 @@ export const MILESTONES: Milestone[] = [
     description:
       'Sprint or Olympic distance at minimum. The swim, the bike, the run — each one humbling for a different reason.',
     emoji: '🏊',
-    category: 'achievement',
+    category: 'health',
     horizon: 'before-50',
   },
   {
     title: 'Reach peak physical fitness for your age',
     description: 'Not for vanity — the kind of fitness that makes everything else in life easier.',
     emoji: '⛰️',
-    category: 'achievement',
+    category: 'health',
     horizon: 'before-50',
   },
   {
@@ -765,7 +899,7 @@ export const MILESTONES: Milestone[] = [
     title: 'Complete a major cycling challenge',
     description: 'The Tour de France route, a coast-to-coast, a serious multi-day mountain route.',
     emoji: '🚴',
-    category: 'achievement',
+    category: 'health',
     horizon: 'before-50',
   },
   {
@@ -773,7 +907,7 @@ export const MILESTONES: Milestone[] = [
     description:
       "Your child's, a sibling's, a close friend's. The arrival of life changes the scale of things.",
     emoji: '👶',
-    category: 'social',
+    category: 'relationships',
     horizon: 'before-50',
   },
   {
@@ -781,21 +915,21 @@ export const MILESTONES: Milestone[] = [
     description:
       "Deliberately, with intention. Not because it's expected — because you mean it more now.",
     emoji: '💍',
-    category: 'social',
+    category: 'relationships',
     horizon: 'before-50',
   },
   {
     title: "Repair a relationship you've damaged",
     description: "The call you've been putting off. Make it.",
     emoji: '🤗',
-    category: 'social',
+    category: 'relationships',
     horizon: 'before-50',
   },
   {
     title: "Take a trip with your parents before it's too late",
     description: "While they're well enough to travel. Go somewhere they've always wanted to go.",
     emoji: '🌅',
-    category: 'social',
+    category: 'relationships',
     horizon: 'before-50',
   },
   {
@@ -803,7 +937,7 @@ export const MILESTONES: Milestone[] = [
     description:
       'Designed, considered, full of things that mean something. A place that tells your story.',
     emoji: '🏠',
-    category: 'social',
+    category: 'relationships',
     horizon: 'before-50',
   },
   {
@@ -811,7 +945,7 @@ export const MILESTONES: Milestone[] = [
     description:
       'Vipassana or equivalent. Ten days of silence resets how you relate to your own mind.',
     emoji: '🧘',
-    category: 'creative',
+    category: 'mindfulness',
     horizon: 'before-50',
   },
   {
@@ -835,7 +969,7 @@ export const MILESTONES: Milestone[] = [
     description:
       'Daily or weekly, consistently. Read it back at the end. The person who started it will be a stranger.',
     emoji: '✍️',
-    category: 'creative',
+    category: 'reflection',
     horizon: 'before-50',
   },
   {
@@ -843,7 +977,7 @@ export const MILESTONES: Milestone[] = [
     description:
       "Find a belief you've held for years and genuinely re-examine it. Change it if the evidence warrants. Say so.",
     emoji: '🌓',
-    category: 'creative',
+    category: 'reflection',
     horizon: 'before-50',
   },
   {
@@ -937,7 +1071,7 @@ export const MILESTONES: Milestone[] = [
     description:
       'For your sake, not theirs. Carrying a grievance through your 40s is a tax you can stop paying.',
     emoji: '🤝',
-    category: 'adventure',
+    category: 'relationships',
     horizon: 'before-50',
   },
   {
@@ -974,7 +1108,7 @@ export const MILESTONES: Milestone[] = [
     description:
       'Pacific, Atlantic, Indian, Arctic, Southern. A slow, deliberate life goal that forces extraordinary travel.',
     emoji: '🌊',
-    category: 'adventure',
+    category: 'health',
     horizon: 'before-50',
   },
   {
@@ -997,7 +1131,7 @@ export const MILESTONES: Milestone[] = [
     description:
       'Full bloodwork, genetics, a proper physical baseline. Know your body before it tells you something is wrong.',
     emoji: '🧬',
-    category: 'adventure',
+    category: 'health',
     horizon: 'before-50',
   },
   {
@@ -1429,6 +1563,38 @@ export const DESTINATIONS: Destination[] = [
 ];
 
 /**
+ * Ideas that are tied to a specific place, not doable anywhere.
+ *
+ * Travel ideas are almost all place-specific by default, so the whole
+ * category is marked `specific-place` without listing each one. This set
+ * covers the non-travel ideas that still require being somewhere specific.
+ */
+const SPECIFIC_PLACE_SLUGS: ReadonlySet<string> = new Set([
+  // Food
+  'eat-street-food-in-bangkok',
+  'eat-at-the-source-coffee-in-ethiopia-tea-in-japan-chocolate-in-ecuador',
+  'eat-your-way-through-a-country-one-market-at-a-time',
+  'take-a-cooking-class-in-the-country-the-cuisine-is-from',
+  // Adventure
+  'run-with-the-bulls-in-pamplona',
+  'dive-the-blue-hole-in-belize',
+  'sleep-under-the-stars-in-the-sahara',
+  'paraglide-over-the-swiss-alps',
+  'climb-el-capitan-in-yosemite',
+  'hike-the-appalachian-trail-end-to-end',
+  'hike-the-pacific-crest-trail',
+  'trek-across-iceland',
+  'kayak-the-grand-canyon',
+  'dog-sled-in-alaska',
+]);
+
+function locationForIdea(category: ExperienceCategory, slug: string): ExperienceLocation {
+  if (category === 'travel') return 'specific-place';
+  if (SPECIFIC_PLACE_SLUGS.has(slug)) return 'specific-place';
+  return 'anywhere';
+}
+
+/**
  * Every experience the product knows about, as one flat list.
  *
  * Three corpora feed it — the category ideas, the two life-stage milestone
@@ -1440,19 +1606,26 @@ export const DESTINATIONS: Destination[] = [
 export const ALL_EXPERIENCES: Experience[] = (() => {
   const seen = new Set<string>();
   const out: Experience[] = [];
-  const push = (title: string, category: ExperienceCategory, emoji: string) => {
+  const push = (
+    title: string,
+    category: ExperienceCategory,
+    emoji: string,
+    location: ExperienceLocation = 'anywhere'
+  ) => {
     const key = title.toLowerCase().trim();
     if (seen.has(key)) return;
     seen.add(key);
-    out.push({ title, category, emoji });
+    out.push({ title, category, emoji, location });
   };
 
   for (const category of EXPERIENCE_CATEGORIES) {
     const group = EXPERIENCES_BY_CATEGORY[category];
-    for (const title of group.ideas) push(title, category, group.emoji);
+    for (const title of group.ideas) {
+      push(title, category, group.emoji, locationForIdea(category, slugify(title)));
+    }
   }
   for (const m of MILESTONES) push(m.title, m.category, m.emoji);
-  for (const d of DESTINATIONS) push(d.name, 'travel', '✈️');
+  for (const d of DESTINATIONS) push(d.name, 'travel', '✈️', 'specific-place');
 
   return out;
 })();
@@ -1474,6 +1647,7 @@ export type ExperienceEntry = {
   emoji: string;
   category: ExperienceCategory;
   kind: ExperienceKind;
+  location: ExperienceLocation;
   region?: DestinationRegion;
   horizon?: MilestoneHorizon;
   famous?: { name: string; slug: string; note: string };
@@ -1799,6 +1973,223 @@ const IDEA_DESCRIPTIONS: Record<string, string> = {
     'No trade skills required on site. Framing, painting, and the family who will live there working the same shift.',
   'leave-a-place-cleaner-and-more-hopeful-than-you-found-it':
     'The measure is what is still standing a year after you left, and whether anyone there mentions your name.',
+  // ─── Relationships ──────────────────────────────────────────────────────
+  'ask-forgiveness-from-someone-you-hurt':
+    'The conversation is shorter than the dread. Most people are more ready to forgive than you expect.',
+  'forgive-someone-who-hurt-you':
+    'Forgiveness is for you, not them. Carrying a grievance costs energy you could spend elsewhere.',
+  'have-one-real-conversation-with-a-grandparent-before-it-is-too-late':
+    'Ask about their life, their mistakes, what they would do differently. The window closes without warning.',
+  'repair-a-relationship-you-damaged':
+    'The call you have been putting off. Make it. Most repairs are easier than the silence that precedes them.',
+  'write-a-letter-to-someone-who-changed-your-life-and-send-it':
+    'Do not wait for a funeral to say it. A handwritten letter carries weight no email can match.',
+  'spend-a-week-with-each-of-your-parents-while-they-are-well-enough-to-travel':
+    'Go somewhere they have always wanted. The trip matters less than the time, which you cannot get back.',
+  // ─── Food & Culinary ─────────────────────────────────────────────────────
+  'eat-street-food-in-bangkok':
+    'Yaowarat Road after dark. Follow the longest queue that is not a tour group and order what they are having.',
+  'bake-sourdough-weekly-for-a-year':
+    'A living starter, weekly feedings, and a year of learning that bread is mostly patience and timing.',
+  'forage-for-wild-mushrooms':
+    'Go with someone who knows. One wrong species in the basket is a hospital trip, so never guess.',
+  'make-cheese-from-scratch':
+    'Milk, rennet, salt, and patience. Ricotta takes an afternoon; aged cheeses take months and a cave.',
+  'eat-at-a-3-star-michelin-restaurant':
+    'A meal engineered to the last gram. Book months ahead, accept the tasting menu, and do not photograph every plate.',
+  'brew-your-own-beer-or-wine':
+    'A basic extract kit takes one afternoon and two weeks of waiting. The first bottle is never the best one.',
+  'grow-something-you-can-eat-from-seed-to-plate':
+    'A balcony herb, a tomato plant, a full vegetable patch. The taste gap between garden and supermarket is startling.',
+  'eat-a-meal-cooked-by-a-grandmother-in-her-home':
+    'Eat With Locals or a slow-food network connects you. The recipes are unwriteable, and the welcome is the point.',
+  'master-one-dish-so-well-you-could-teach-it':
+    'Pick one thing. Make it twenty times. By the tenth you stop reading the recipe; by the twentieth you are adjusting it.',
+  'roast-your-own-coffee-beans':
+    'A popcorn popper and green beans from a single estate. First crack, second crack, and a week to rest before brewing.',
+  'preserve-a-season-jam-pickle-ferment':
+    'Strawberries in June become January jam. Pickling, fermenting, and preserving turn a glut into a pantry.',
+  'eat-at-the-source-coffee-in-ethiopia-tea-in-japan-chocolate-in-ecuador':
+    'Drink coffee in a Yirgacheffe ceremony, tea in a Uji teahouse, chocolate from a Montañita cacao farm. Three trips, one thesis.',
+  'cook-a-whole-animal-from-nose-to-tail':
+    'A pig, a lamb, or a goat. Nothing wasted, every cut used. It changes how you think about meat and the animal it came from.',
+  'make-pasta-from-scratch':
+    'Flour, eggs, a board, and a rolling pin. Fresh tagliatelle takes an hour and ruins dried pasta for you permanently.',
+  'eat-something-you-foraged-or-caught-yourself':
+    'A fish you caught, mushrooms you picked, greens you gathered. The shortest food chain you will ever eat from.',
+  'take-a-cooking-class-in-the-country-the-cuisine-is-from':
+    'A morning market tour, an afternoon at the stove, and eating what you made. Thailand, Italy, Japan, Vietnam all do this well.',
+  'bake-a-wedding-cake-for-someone-you-love':
+    'Three tiers, two days of work, and a level of stress that only love justifies. It will not be perfect and that is fine.',
+  'learn-to-butcher-a-whole-fish':
+    'A whole fish, a sharp knife, and a YouTube tutorial. Filleting, skinning, and using the bones for stock.',
+  'ferment-something-for-the-first-time':
+    'Sauerkraut, kimchi, or kefir. Salt, time, and trusting bacteria you cannot see. The smell is the sign it is working.',
+  'eat-a-12-course-tasting-menu':
+    'Three hours, twelve small plates, and a pacing that turns a meal into a journey. Let the sommelier pair each course.',
+  'make-your-own-condiments-from-scratch':
+    'Ketchup, mayonnaise, mustard, hot sauce. Each one takes an hour and makes the supermarket version taste like plastic.',
+  'cook-a-meal-over-an-open-fire':
+    'Cast iron, hardwood coals, and no thermostat. The smoke flavours everything and the timing is entirely by feel.',
+  'eat-your-way-through-a-country-one-market-at-a-time':
+    'Skip the restaurants for a week. Eat only from markets, street stalls, and bakeries. The country tastes different this way.',
+  // ─── Health & Vitality ───────────────────────────────────────────────────
+  'walk-10-000-steps-a-day-for-a-month':
+    'Roughly seven kilometres, or ninety minutes. The first week feels excessive; by the fourth it is just how you move.',
+  'hike-weekly-for-a-year':
+    'Fifty-two weekends, fifty-two trails. By spring you know your boots; by autumn you are choosing harder routes.',
+  'sleep-8-hours-a-night-for-30-days':
+    'No alarm, no phone in the bedroom, and a consistent bedtime. The first week is hard; the last week is revelatory.',
+  'cycle-coast-to-coast':
+    'Four to six weeks, a loaded bike, and whatever weather the continent throws at you. Train for hills before you leave.',
+  'take-a-cold-plunge-every-morning-for-a-month':
+    'Two to three minutes in water under 15 degrees. The shock never stops being shocking, but your recovery gets faster.',
+  'get-a-full-health-checkup-including-bloodwork':
+    'Cholesterol, vitamin D, inflammatory markers, hormone panel. Know your baseline before something goes wrong.',
+  'do-a-30-day-yoga-challenge':
+    'Twenty minutes a day, every day, for a month. By day ten you stop fighting the poses; by day thirty you are different.',
+  'learn-to-cook-10-healthy-meals-from-scratch':
+    'Ten meals you can make without a recipe, each one nutritious. This is the single highest-impact health skill.',
+  'swim-a-mile-without-stopping':
+    'Roughly 64 lengths of a 25-metre pool. Takes six to twelve weeks of consistent training from a casual swimming base.',
+  'walk-a-long-distance-trail-over-100km':
+    'Four to seven days, a loaded pack, and weather you cannot control. The trail teaches you what your body can actually do.',
+  'do-your-first-pull-up':
+    'Most adults cannot do one. Negatives, hangs, and assisted bands for two to three months will get you there.',
+  'run-your-first-5k':
+    'Nine weeks with a couch-to-5K plan. The first session is ninety seconds of running. The last is thirty minutes straight.',
+  'climb-your-first-mountain':
+    'Pick a walk-up, not a technical climb. Six hours up, two down, and a view that photographs cannot carry.',
+  'spend-a-year-strength-training':
+    'Three sessions a week, progressive overload, and patience. The changes are invisible for six weeks and obvious by twelve.',
+  'learn-to-meditate-for-20-minutes-straight':
+    'Start with five. Add a minute every few sessions. Twenty minutes is where the mind genuinely starts to settle.',
+  'fast-for-24-hours-at-least-once':
+    'Water only, dinner to dinner. The hunger peaks at lunch and fades by afternoon. Break it gently, not with a feast.',
+  'get-your-hearing-and-vision-checked':
+    'Two appointments that most people postpone for a decade. Both decline slowly enough that you do not notice until it matters.',
+  'spend-120-minutes-in-nature-every-week-for-a-year':
+    'The research threshold for measurable wellbeing benefits. A park counts. A forest is better. A window does not.',
+  'take-up-a-sport-you-have-never-tried':
+    'Pick one you have no natural advantage in. Being bad at something new is the point, and the fastest way to learn humility.',
+  'walk-every-street-in-your-neighbourhood':
+    'Print a map, highlight as you go. Most people know three routes and miss the other two hundred.',
+  'do-a-7-day-fitness-retreat':
+    'Structured training, controlled meals, and no decisions for a week. Expensive, but it breaks patterns that months of willpower cannot.',
+  'track-your-sleep-for-a-month-and-fix-what-you-find':
+    'A watch, a notebook, and honest mornings. The data reveals patterns that willpower alone cannot fix.',
+  'learn-to-swim-properly-as-an-adult':
+    'Adult swim lessons exist at most pools. Six weeks of feeling awkward, then a skill that lasts the rest of your life.',
+  'do-a-digital-sunset-no-screens-after-8pm-for-a-month':
+    'The hardest hour is the first one. By week two you read, talk, or sleep earlier without thinking about it.',
+  'hire-a-personal-trainer-for-3-months':
+    'Three months of form correction and progressive programming. The investment is in technique you keep for decades.',
+  // ─── Mindfulness ─────────────────────────────────────────────────────────
+  'do-a-10-day-silent-meditation-retreat':
+    'Vipassana or equivalent. Ten days, no talking, no phone, no reading. The silence is harder than the sitting.',
+  'watch-a-sunrise-and-a-sunset-in-the-same-day':
+    'Requires planning, not luck. Pick a day with a clear forecast, wake early, and find a west-facing spot for evening.',
+  'do-a-solo-camping-trip-with-no-phone':
+    'One night, a tent, and whatever sounds the forest makes after dark. The first night is restless; the second is different.',
+  'take-a-tea-ceremony-class':
+    'A Japanese chakai or a Chinese gongfu session. The ritual is the opposite of efficiency, which is the entire point.',
+  'spend-a-day-in-complete-silence':
+    'No talking, no music, no podcasts. Tell the people you live with first. The internal noise is louder than you expect.',
+  'watch-a-meteor-shower-from-a-dark-sky-location':
+    'Check the calendar for Perseids or Geminids. Drive an hour from city lights, bring a blanket, and stay until 2am.',
+  'sit-with-a-dying-person-and-just-be-present':
+    'No agenda, no fixing, no stories. Just sit. It is the hardest simple thing you will ever do.',
+  'do-a-digital-detox-for-a-full-week':
+    'Seven days, no screens. The withdrawal is real for the first two days. By day five, time moves at a different speed.',
+  'practice-ichigo-ichie-treat-one-ordinary-day-as-unrepeatable':
+    'A Japanese concept: one time, one meeting. Spend a day treating every interaction as if it will never happen again.',
+  'walk-a-labyrinth-or-pilgrimage-slowly':
+    'Not a maze but a single winding path to the centre. Walk it slowly. The pace is the practice, not the destination.',
+  'spend-a-night-alone-in-the-wilderness':
+    'A bivvy bag, a sleeping bag, and a clear forecast. No tent, no fire, just the sky and whatever sounds come with it.',
+  'learn-to-identify-10-bird-species-by-song':
+    'Start with five common ones. Learn the song before the name. By the tenth, a walk sounds completely different.',
+  'spend-an-hour-watching-a-single-tree':
+    'Pick one tree. Sit with it for an hour. Notice the light, the wind, the insects, the way it moves. Time slows down.',
+  'take-a-slow-travel-trip-one-town-one-week-no-plan':
+    'One small town, seven days, no itinerary. You learn what a place is when you stop trying to see all of it.',
+  'spend-a-week-in-a-monastery-or-retreat-centre':
+    'Buddhist, Christian, or secular. A week of structured silence, simple meals, and a rhythm that strips away the noise.',
+  'learn-to-sit-with-discomfort-without-reaching-for-your-phone':
+    'The gap between feeling uncomfortable and reaching for distraction is where attention lives. Widen it, one minute at a time.',
+  'watch-a-storm-roll-in-from-start-to-finish':
+    'Find a safe vantage point. Watch the clouds build, the wind shift, the rain arrive. Twenty minutes of weather as theatre.',
+  'spend-a-full-day-with-no-screens':
+    'One day, no phone, no laptop, no TV. The withdrawal passes by noon. The afternoon is unexpectedly long.',
+  'take-a-forest-bathing-walk':
+    'Shinrin-yoku: a slow, sensory walk through a forest. No destination, no pace, no goal except being there.',
+  'create-a-morning-ritual-you-keep-for-a-year':
+    'Not a routine but a ritual: something with meaning, not just efficiency. Keep it for 365 days and it becomes part of you.',
+  'spend-a-night-stargazing-with-no-agenda':
+    'A blanket, a dark sky, and no app telling you what to look at. Just look up. The longer you look, the more you see.',
+  'do-a-walking-meditation-every-morning-for-a-month':
+    'Twenty minutes, slow pace, attention on the feet. Different from sitting meditation and, for many people, easier to sustain.',
+  'spend-an-afternoon-doing-one-thing-at-a-time':
+    'No multitasking, no background audio, no tab-switching. One activity, fully attended. Harder than it sounds.',
+  // ─── Reflection ──────────────────────────────────────────────────────────
+  'record-your-parents-life-stories':
+    'Audio or video, not just notes. Ask the questions you have never asked. Do it now, not when you wish you had.',
+  'write-your-ethical-will-values-lessons-what-you-want-passed-down':
+    'Not your financial will but your values. What you learned, what you got wrong, what you hope for the people who come after.',
+  'write-a-letter-to-your-younger-self':
+    'What would you tell the person you were ten, twenty, thirty years ago? Write it honestly. The exercise is for you, not them.',
+  'write-a-letter-to-your-future-self-and-read-it-in-10-years':
+    'Seal it, date it, and put it somewhere you will find it. The person who opens it will be a stranger you once knew.',
+  'do-a-structured-life-review-decade-by-decade':
+    'One afternoon, a notebook, and each decade of your life. What happened, what you learned, what you would do differently.',
+  'create-a-photo-book-of-one-year-of-your-life':
+    'One photo a week, fifty-two weeks. Not the highlights but the ordinary days. The book becomes a year you can hold.',
+  'write-the-story-of-how-you-became-who-you-are':
+    'Not a memoir for publication. The narrative of your own becoming, written for yourself. The act of writing changes the story.',
+  'record-a-conversation-with-an-elder-and-preserve-it':
+    'Audio or video. Ask about their childhood, their work, their regrets. The recording outlives the person. Do not wait.',
+  'write-down-everything-you-know-about-your-family-history':
+    'Names, dates, places, stories. Start with your parents, then grandparents. The information dies with the people who hold it.',
+  'spend-a-day-reviewing-every-job-relationship-and-home-you-have-had':
+    'One day, a notebook, and an honest accounting. What each one taught you, what you regret, and what you would repeat.',
+  'write-your-obituary-the-way-you-would-want-it-read':
+    'Not morbid but clarifying. What do you want to be remembered for? The gap between the obituary and your life is your to-do list.',
+  'make-a-list-of-100-things-you-are-grateful-for':
+    'Not a gratitude journal but a single exhaustive list. The first twenty are easy. The last twenty are where the practice works.',
+  're-read-a-book-that-changed-your-life-and-see-what-you-notice-now':
+    'You are different now. The book has not changed, but what you notice in it will reveal how you have.',
+  'write-a-letter-to-someone-you-have-not-forgiven-and-then-decide-whether-to-send-':
+    'Write it first, decide later. The writing does the work whether or not the letter ever leaves your hands.',
+  'write-a-manifesto-for-how-you-want-to-live':
+    'Not resolutions but principles. One page, written in your own voice, that you can re-read when you forget who you decided to be.',
+  'spend-a-birthday-alone-reflecting-on-the-past-year':
+    'No dinner, no party, no plans. A notebook, a walk, and an honest accounting of the year you just lived.',
+  'write-down-your-core-values-and-check-them-against-how-you-actually-spend-your-t':
+    'List your values on one side. List your calendar and bank statements on the other. The gap is where the work is.',
+  'create-a-personal-annual-report':
+    'Borrow the corporate ritual for yourself. What went well, what failed, what you learned, and what next year is for.',
+  'write-a-forgiveness-letter-to-yourself':
+    'You are the person you have been hardest on. Write the letter you would write to a friend who made your mistakes.',
+  'spend-a-day-visiting-places-that-shaped-you':
+    'The school, the first flat, the hospital, the park. Walk them slowly. The geography of a life is worth revisiting.',
+  'write-the-speech-you-would-give-at-your-own-retirement':
+    'What would you say about the working years? Write it now, while you can still change what it would say.',
+  'make-a-timeline-of-the-five-most-important-moments-of-your-life':
+    'Five moments, five lines each. The exercise is not in choosing them but in writing why they mattered.',
+  'free-dive-to-20-metres':
+    'A single breath, no tank, and twenty metres down. Takes six to twelve weeks of training and a competent buddy.',
+  'summit-a-volcano':
+    'Pick an active or dormant one. The crater at dawn, the sulfur, the scale — nothing else on earth feels quite like it.',
+  'give-a-ted-talk':
+    'A fifteen-minute idea worth spreading, delivered to a real audience. Apply through TEDx events to start.',
+  'become-a-recognised-expert-in-your-field':
+    'Not a job title but a reputation. Years of work, published thinking, and being the person others call first.',
+  'patent-an-invention':
+    'A novel, useful, non-obvious idea, filed and granted. Expensive and slow, but it is the legal record of making something new.',
+  'win-a-competition-you-genuinely-trained-for':
+    'Not a participation trophy. Something you trained for, lost at, and came back to win. The losing is what makes it count.',
+  'get-featured-in-a-major-publication':
+    "The New York Times, Wired, Nature, or your field's equivalent. Pitch the story, not yourself — editors want a narrative, not a CV.",
 };
 
 /**
@@ -1833,6 +2224,7 @@ export const EXPERIENCE_ENTRIES: ExperienceEntry[] = (() => {
         emoji: group.emoji,
         category,
         kind: 'idea',
+        location: locationForIdea(category, slug),
       });
     }
   }
@@ -1844,6 +2236,7 @@ export const EXPERIENCE_ENTRIES: ExperienceEntry[] = (() => {
       emoji: m.emoji,
       category: m.category,
       kind: 'milestone',
+      location: 'anywhere',
       horizon: m.horizon,
     });
   }
@@ -1855,6 +2248,7 @@ export const EXPERIENCE_ENTRIES: ExperienceEntry[] = (() => {
       emoji: '✈️',
       category: 'travel',
       kind: 'destination',
+      location: 'specific-place',
       region: d.region,
       famous: d.famous,
     });

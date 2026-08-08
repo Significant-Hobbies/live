@@ -39,7 +39,7 @@ describe('getBucketListArchetype', () => {
 
   it('returns the Renaissance Soul when 3+ categories tie for the top', () => {
     const result = getBucketListArchetype(
-      itemsWith(['travel', 'adventure', 'creative', 'social', 'humanitarian'])
+      itemsWith(['travel', 'adventure', 'creative', 'relationships', 'contribution'])
     );
     expect(result?.id).toBe('renaissance');
     expect(result?.name).toBe('The Renaissance Soul');
@@ -81,7 +81,7 @@ describe('getCelebrityMatch', () => {
   it('returns a strong match for a single-category user when the overlap is real', () => {
     // A humanitarian-only user legitimately matches Oprah (humanitarian-heavy,
     // small list → high cosine score). This must NOT be filtered out.
-    const result = getCelebrityMatch(itemsWith(['humanitarian']));
+    const result = getCelebrityMatch(itemsWith(['contribution']));
     expect(result).not.toBeNull();
     expect(result!.score).toBeGreaterThanOrEqual(15);
   });
@@ -90,7 +90,7 @@ describe('getCelebrityMatch', () => {
     // The guard's contract: a returned match always has either a real score
     // (≥15) or at least two shared categories. A diluted user (many items,
     // thin overlap) should not produce a broken "1% match".
-    const diluted = itemsWith(['travel', 'adventure', 'creative', 'achievement', 'social']);
+    const diluted = itemsWith(['travel', 'adventure', 'creative', 'achievement', 'relationships']);
     const result = getCelebrityMatch(diluted);
     if (result) {
       const ok = result.score >= 15 || result.sharedCategories.length >= 2;

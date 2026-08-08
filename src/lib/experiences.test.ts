@@ -17,8 +17,8 @@ import { getBucketListSuggestions } from './bucket-list-insights';
 import { getOnboardingPossibilities } from './onboarding-possibilities';
 
 describe('experiences corpus', () => {
-  it('covers all six categories with real content in each', () => {
-    expect(EXPERIENCE_CATEGORIES).toHaveLength(6);
+  it('covers all ten categories with real content in each', () => {
+    expect(EXPERIENCE_CATEGORIES).toHaveLength(10);
     for (const category of EXPERIENCE_CATEGORIES) {
       const group = EXPERIENCES_BY_CATEGORY[category];
       expect(group.ideas.length, `${category} should not be empty`).toBeGreaterThan(15);
@@ -32,12 +32,12 @@ describe('experiences corpus', () => {
       (n, c) => n + EXPERIENCES_BY_CATEGORY[c].ideas.length,
       0
     );
-    expect(ideas).toBe(150);
+    expect(ideas).toBe(253);
     expect(MILESTONES).toHaveLength(100);
     expect(DESTINATIONS).toHaveLength(75);
 
     // The union minus the handful of genuine overlaps between the lists.
-    expect(ALL_EXPERIENCES.length).toBeGreaterThan(300);
+    expect(ALL_EXPERIENCES.length).toBeGreaterThan(400);
     expect(ALL_EXPERIENCES.length).toBeLessThanOrEqual(ideas + 100 + 75);
 
     for (const e of ALL_EXPERIENCES) {
@@ -126,7 +126,7 @@ describe('the suggestion engine reads the shared corpus', () => {
 
 describe('browsable entries', () => {
   it('indexes the whole corpus with unique, non-empty slugs', () => {
-    expect(EXPERIENCE_ENTRIES.length).toBe(322);
+    expect(EXPERIENCE_ENTRIES.length).toBe(419);
     const slugs = EXPERIENCE_ENTRIES.map((e) => e.slug);
     expect(slugs.filter((s) => !s)).toHaveLength(0);
     expect(new Set(slugs).size).toBe(slugs.length);
