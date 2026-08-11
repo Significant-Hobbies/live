@@ -64,7 +64,7 @@ The app works in local mode. Daily writing intentionally has no sharing control.
 
 ## Screenshots and release
 
-- iPhone 6.9-inch portrait: `artifacts/app-store/iphone-6.9/live-more.jpg`,
+- iPhone 6.9-inch portrait: `ios/artifacts/app-store/iphone-6.9/live-more.jpg`,
   `daily.jpg`, and `history.jpg`
 - Each store image is `1320 × 2868`, has no alpha channel, and is an accepted
   6.9-inch screenshot size
