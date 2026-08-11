@@ -46,7 +46,7 @@ hobbies,life planner,journal,reflection,bucket list,habits,commitments,goals,pri
 - Daily reflections and journal: always private and never publication-eligible
 - Living items: private by default; item-level opt-in only
 - Account mode: name, email address, user ID, and private user content are linked to the user and used only for app functionality
-- Device-only mode: content remains on the iPhone unless the user explicitly exports it
+- Device-only mode: content remains on this device unless the user explicitly exports it
 - IDFA: not used
 
 ## Age rating draft
