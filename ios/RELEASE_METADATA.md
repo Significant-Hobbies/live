@@ -52,9 +52,13 @@ hobbies,life planner,journal,reflection,bucket list,habits,commitments,goals,pri
 ## Age rating draft
 
 - Made for Kids: No
-- Violence, sexual content, profanity, drugs, alcohol, gambling, horror: None
-- Medical or treatment claims: None
-- User-generated content, messaging, unrestricted web access: None in this native build
+- In-app parental controls or age assurance: None
+- Unrestricted web access, broadly distributed user-generated content, social
+  media, messaging/chat, and advertising: No in this native build
+- Health or Wellness Topics: Yes — private reflection and humane habit planning
+- Medical or Treatment Information: None
+- Violence, sexuality or nudity, profanity, horror, drugs, alcohol, gambling,
+  contests, and loot boxes: None
 
 Confirm the rating produced by App Store Connect's current questionnaire.
 
