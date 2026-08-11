@@ -19,12 +19,19 @@ is the bridge between daily practice and life aspirations.
 - Ultracite 7.10.2 supplies exact development-only shared Biome presets;
   Significant Hobbies keeps explicit local compatibility exceptions and does
   not ship Ultracite at runtime.
-- Cloudflare Workers/OpenNext, Cloudflare D1, Drizzle, better-auth Google OAuth,
-  and PostHog. D1 is authoritative; the retired Turso database was deleted on
-  2026-08-02.
+- Cloudflare Workers/OpenNext, Cloudflare D1, Drizzle, better-auth with Google
+  OAuth and native Sign in with Apple, and PostHog. Native account linking is
+  explicit and never inferred from matching email addresses. D1 is
+  authoritative; the retired Turso database was deleted on 2026-08-02.
 
 ## Timeline
 
+- **2026-08-12:** Shipped native Sign in with Apple on the personal Apple and
+  Cloudflare accounts, with bundle-audience validation, nonce protection,
+  Keychain-backed sessions, provider visibility, and an explicit flow for
+  linking an existing Google account. The personal-team archive is ready;
+  App Store Connect record creation and TestFlight upload remain external
+  release gates.
 - **2026-08-11:** Prepared the isolated native account and private Life Atlas
   sync contract: exact browser callback, one-use handoff, Keychain bearer
   session, revisioned whole-atlas backup, explicit conflict choices, sign out,
