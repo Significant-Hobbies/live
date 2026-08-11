@@ -27,7 +27,7 @@ struct SettingsView: View {
                                 .background(model.account == nil ? AtlasPalette.sky : AtlasPalette.sage)
                                 .clipShape(RoundedRectangle(cornerRadius: 12))
                             VStack(alignment: .leading, spacing: 3) {
-                                Text(model.account?.name ?? "Private on this iPhone").font(.headline)
+                                Text(model.account?.name ?? "Private on this device").font(.headline)
                                 Text(model.account?.email ?? "Every Life Atlas tool works offline.")
                                     .font(.subheadline).foregroundStyle(AtlasPalette.quietInk)
                             }
@@ -157,7 +157,7 @@ struct SettingsView: View {
             Button("Delete account", role: .destructive) { Task { await model.deleteAccount() } }
             Button("Cancel", role: .cancel) {}
         } message: {
-            Text("Export your Life Atlas first if you want a recovery copy. The copy already on this iPhone remains local, but account deletion cannot be undone.")
+            Text("Export your Life Atlas first if you want a recovery copy. The copy already on this device remains local, but account deletion cannot be undone.")
         }
         .sheet(item: $model.cloudConflict) { conflict in
             NavigationStack {
@@ -171,11 +171,11 @@ struct SettingsView: View {
                     .frame(width: 68, height: 68)
                     Text("Choose the Life Atlas to keep")
                         .font(.system(.title2, design: .serif, weight: .semibold))
-                    Text("This iPhone and your private account changed separately. Nothing is replaced or published until you decide.")
+                    Text("This device and your private account changed separately. Nothing is replaced or published until you decide.")
                         .foregroundStyle(AtlasPalette.quietInk)
-                    atlasSummary("This iPhone", document: model.document)
+                    atlasSummary("This device", document: model.document)
                     atlasSummary("Account copy", document: conflict.document.localDocument())
-                    Button("Keep this iPhone’s copy") { Task { await model.keepDeviceCopy() } }
+                    Button("Keep this device’s copy") { Task { await model.keepDeviceCopy() } }
                         .buttonStyle(AtlasPrimaryButtonStyle())
                     Button("Use the account copy") { Task { await model.useAccountCopy() } }
                         .buttonStyle(.bordered)

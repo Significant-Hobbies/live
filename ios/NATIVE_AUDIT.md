@@ -10,7 +10,7 @@ Audit target: iPhone simulator build of the native SwiftUI application.
 | Performance | 4/4 | Local-first document, bounded timelines, native scrolling, and no blocking network dependency. |
 | Appearance | 3/4 | Distinctive Life Atlas paper/ink/gold/sage language with strong typographic landmarks. The deliberate light editorial presentation does not yet expose a dark palette. |
 | Platform conventions | 4/4 | SwiftUI tabs, navigation, sheets, confirmations, menus, native text styles, and system-safe privacy prompts. |
-| Adaptivity | 3/4 | Compact iPhone and accessibility text sizes remain scrollable without horizontal clipping. Dedicated iPad composition is outside this submission scope. |
+| Adaptivity | 3/4 | Compact iPhone and accessibility text sizes remain scrollable without horizontal clipping, and the universal 13-inch iPad Release routes are store-ready. Physical iPad window resizing and keyboard behavior remain device checks. |
 
 **Total: 17/20 — Good**
 

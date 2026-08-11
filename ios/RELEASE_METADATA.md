@@ -66,9 +66,11 @@ The app works in local mode. Daily writing intentionally has no sharing control.
 
 - iPhone 6.9-inch portrait: `ios/artifacts/app-store/iphone-6.9/live-more.jpg`,
   `daily.jpg`, and `history.jpg`
-- Each store image is `1320 × 2868`, has no alpha channel, and is an accepted
-  6.9-inch screenshot size
+- iPad 13-inch portrait: `ios/artifacts/app-store/ipad-13/live-more.jpg`,
+  `daily.jpg`, and `history.jpg`
+- Each iPhone image is `1320 × 2868`; each iPad image is `2064 × 2752`.
+  Every store image has no alpha channel and uses an accepted screenshot size.
 - Accessibility evidence is retained separately and is not part of the default store sequence
-- iPad screenshots: not required; the target is iPhone only
+- The target is universal, so both the iPhone and iPad sequences are required
 - App previews: omit for version 1.0
 - Release: manual

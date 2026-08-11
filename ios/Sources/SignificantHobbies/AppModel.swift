@@ -79,7 +79,7 @@ final class AppModel {
 
     func saveDaily(_ entry: DailyEntry) async {
         await mutate { $0.saveDaily(entry) }
-        message = "Private Daily entry saved on this iPhone."
+        message = "Private Daily entry saved on this device."
     }
 
     func toggleHabit(_ habit: Habit) async {
@@ -229,7 +229,7 @@ final class AppModel {
             remoteRevision = conflict.revision
             cloudConflict = nil
             deferredConflict = nil
-            accountMessage = "Your private account copy is now on this iPhone."
+            accountMessage = "Your private account copy is now on this device."
         } catch {
             accountMessage = friendlyMessage(for: error)
         }
@@ -250,7 +250,7 @@ final class AppModel {
         deferredConflict = nil
         document.syncState = .localOnly
         try? await store.save(document)
-        accountMessage = "Signed out. Your Life Atlas remains on this iPhone."
+        accountMessage = "Signed out. Your Life Atlas remains on this device."
     }
 
     func deleteAccount() async {

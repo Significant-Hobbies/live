@@ -1,4 +1,4 @@
-# Significant Hobbies for iPhone
+# Significant Hobbies for iPhone and iPad
 
 A native SwiftUI Life Atlas for iOS 17 and later. Live More, Daily, and See History remain the product's three destinations. Daily writing is private by domain design; eligible Living items require an explicit publication choice.
 
@@ -20,7 +20,7 @@ The script is locked to personal team `8F7LXHTJZR`, verifies the local signature
 
 ## Device-only checks before submission
 
-- Complete morning/evening Daily, hobby, commitment, bucket-list, quest, trajectory, and public-item flows on a physical iPhone.
+- Complete morning/evening Daily, hobby, commitment, bucket-list, quest, trajectory, and public-item flows on physical iPhone and iPad hardware.
 - Verify the largest Dynamic Type sizes, VoiceOver chronology, Reduce Motion, and writing keyboard behavior on hardware.
 - Verify account callback, Keychain persistence, offline reconciliation, and public-profile propagation after native account sync is enabled.
 - Confirm screenshots, support/privacy URLs, age rating, App Privacy answers, and the final public-sharing review notes in App Store Connect before upload.

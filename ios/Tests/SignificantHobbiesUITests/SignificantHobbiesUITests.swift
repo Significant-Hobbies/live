@@ -29,7 +29,7 @@ final class SignificantHobbiesUITests: XCTestCase {
         app.buttons["Save private Daily entry"].tap()
 
         XCTAssertTrue(app.alerts["Significant Hobbies"].waitForExistence(timeout: 3))
-        XCTAssertTrue(app.alerts["Significant Hobbies"].staticTexts["Private Daily entry saved on this iPhone."].exists)
+        XCTAssertTrue(app.alerts["Significant Hobbies"].staticTexts["Private Daily entry saved on this device."].exists)
     }
 
     func testAccountScreenExplainsPrivateSyncAndExportRecovery() {

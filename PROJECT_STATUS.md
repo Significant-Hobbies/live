@@ -5,7 +5,7 @@
 > Update this file when durable current or shipped product truth changes. Do
 > not let deploy-version snapshots accumulate here — put those in the archive.
 
-Last updated: 2026-08-11
+Last updated: 2026-08-12
 
 ## Why / What
 
@@ -42,8 +42,8 @@ is the bridge between daily practice and life aspirations.
   experiences, and public timelines. Legacy D1 timestamp representations are
   normalized at the projection boundary, and production list/detail probes
   now return successfully without exposing private or unlisted records.
-- **2026-08-11:** Prepared the first native SwiftUI iPhone beta with local-first
-  Daily, Living, History, profile, privacy, data transfer, accessibility,
+- **2026-08-11:** Prepared the first universal native SwiftUI iPhone and iPad
+  beta with local-first Daily, Living, History, profile, privacy, data transfer, accessibility,
   simulator coverage, App Store metadata, and a personal-team signed archive
   path; native account synchronization remains tracked separately.
 - **2026-08-09:** Restored the onboarding promise that a daily practice is
@@ -147,7 +147,7 @@ Historical milestones live in
 
 ## Products
 
-- Native SwiftUI iPhone beta under `ios/`; App Store Connect/TestFlight
+- Universal native SwiftUI iPhone and iPad beta under `ios/`; App Store Connect/TestFlight
   transport remains manual.
 - Public product at `https://significanthobbies.com`.
 - Daily practice, Living planning, discovery, public profiles, and content
@@ -155,7 +155,7 @@ Historical milestones live in
 
 ## Features (shipped)
 
-- **Native iPhone experience:** local-first Daily ritual, Living plans,
+- **Native iPhone and iPad experience:** local-first Daily ritual, Living plans,
   history, profile/privacy controls, explicit publication eligibility,
   versioned data transfer, accessibility, simulator tests, personal-team
   archiving, and a locally prepared private account-sync adapter whose
