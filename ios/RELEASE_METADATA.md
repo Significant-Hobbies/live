@@ -62,10 +62,17 @@ Confirm the rating produced by App Store Connect's current questionnaire.
 
 The app works in local mode. Daily writing intentionally has no sharing control. To inspect the opt-in boundary, open a hobby and choose its Private status; the confirmation explains that only the selected eligible item changes. Account sync uses Google sign-in and stores a private revisioned Life Atlas; a conflict always requires an explicit copy choice.
 
+Do not submit this build for App Review until Sign in with Apple is implemented
+and configured as an equivalent login option, or the Google login is removed;
+neither exception in App Review Guideline 4.8 applies to this primary account
+flow. Internal TestFlight testing may proceed while this is completed.
+
 ## Screenshots and release
 
-- iPhone 6.9-inch portrait: `live-more.png`, `daily.png`, and `history.png`
-- Each store image is `1206 × 2622`, an accepted 6.9-inch screenshot size
+- iPhone 6.9-inch portrait: `artifacts/app-store/iphone-6.9/live-more.jpg`,
+  `daily.jpg`, and `history.jpg`
+- Each store image is `1320 × 2868`, has no alpha channel, and is an accepted
+  6.9-inch screenshot size
 - Accessibility evidence is retained separately and is not part of the default store sequence
 - iPad screenshots: not required; the target is iPhone only
 - App previews: omit for version 1.0
