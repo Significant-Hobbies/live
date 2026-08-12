@@ -13,6 +13,41 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
+        with:
+          fetch-depth: 2
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Prepare pnpm
+        run: |
+          corepack enable
+          if node -e "const pm=require('./package.json').packageManager||''; process.exit(pm.startsWith('pnpm@')?0:1)"; then
+            corepack install
+          else
+            corepack prepare pnpm@10.33.2 --activate
+          fi
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --ignore-scripts
+
+      - name: Install complexity analyzer
+        run: python -m pip install lizard==1.23.0
+
+      - name: Run quality checks
+        run: pnpm quality
+
+  native-quality:
+    runs-on: macos-15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
 
       - uses: actions/setup-node@v6
         with:
@@ -27,14 +62,11 @@ jobs:
             corepack prepare pnpm@10.33.2 --activate
           fi
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile --ignore-scripts
+      - name: Install XcodeGen
+        run: command -v xcodegen >/dev/null || brew install xcodegen
 
-      - name: Run quality checks
-        run: |
-          pnpm --if-present run lint
-          pnpm --if-present run typecheck
-          pnpm --if-present run test:coverage
+      - name: Run native quality checks
+        run: pnpm quality:native
 
   # Playwright has never run in CI. That is why several specs sat failing for a
   # long time unnoticed — including two real bugs (/journeys gated from crawlers,
