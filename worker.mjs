@@ -174,7 +174,7 @@ export default {
       // rendered as text after the cached variants crossed.
       if (env.ASSETS && url.pathname === '/') {
         const assetRequest = isLiveLanding
-          ? new Request(new URL('/live.html', request.url), request)
+          ? new Request(new URL('/live.html', request.url), { headers: request.headers })
           : request;
         const assetResp = await env.ASSETS.fetch(assetRequest);
         // The assets binding answers If-None-Match revalidations with 304.
