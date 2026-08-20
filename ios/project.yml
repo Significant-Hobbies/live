@@ -13,7 +13,7 @@ settings:
     DEVELOPMENT_TEAM: 8F7LXHTJZR
     CODE_SIGN_STYLE: Automatic
     TARGETED_DEVICE_FAMILY: "1"
-    CURRENT_PROJECT_VERSION: 1
+    CURRENT_PROJECT_VERSION: 2
     MARKETING_VERSION: 1.0.0
     ENABLE_USER_SCRIPT_SANDBOXING: YES
 targets:
@@ -39,7 +39,7 @@ targets:
     info:
       path: Sources/SignificantHobbies/Info.plist
       properties:
-        CFBundleDisplayName: Journal
+        CFBundleDisplayName: Journal by Significant Hobbies
         CFBundleShortVersionString: "$(MARKETING_VERSION)"
         CFBundleVersion: "$(CURRENT_PROJECT_VERSION)"
         CFBundleURLTypes:
@@ -59,7 +59,7 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.significanthobbies.app
-        PRODUCT_NAME: Significant Hobbies
+        PRODUCT_NAME: Journal by Significant Hobbies
         CODE_SIGN_ENTITLEMENTS: Sources/SignificantHobbies/SignificantHobbies.entitlements
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         SUPPORTS_MACCATALYST: NO
