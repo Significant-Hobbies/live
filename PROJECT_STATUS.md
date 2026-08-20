@@ -29,6 +29,12 @@ Habits are focused products built from the existing private practice data.
 
 ## Timeline
 
+- **2026-08-21:** Created the personal-team App Store Connect record as
+  `Journal by Significant Hobbies` while preserving the installed `Journal`
+  name and bundle ID `com.significanthobbies.app`. Journal 1.0.0 (1) passed
+  native tests, UI tests, a stable Xcode 26.6 archive, and distribution-package
+  inspection before its internal-only TestFlight upload was accepted on team
+  `8F7LXHTJZR`; Apple processing remains the final availability gate.
 - **2026-08-21:** Reduced the existing native target to Journal only. The app
   retains `com.significanthobbies.app` and the versioned atlas document so
   existing writing survives, while Live, History, habit check-ins, profile
@@ -167,8 +173,9 @@ Historical milestones live in
 
 ## Products
 
-- Journal native SwiftUI iPhone beta under `ios/`; App Store Connect/TestFlight
-  transport remains manual and the existing bundle identity is preserved.
+- Journal native SwiftUI iPhone beta under `ios/`; build 1.0.0 (1) has been
+  accepted for internal-only TestFlight processing and the existing bundle
+  identity is preserved.
 - Personal-app Hub at `https://significanthobbies.com`.
 - Live landing at `https://live.significanthobbies.com`; application routes,
   discovery, public profiles, and content remain on the same Cloudflare Worker.
