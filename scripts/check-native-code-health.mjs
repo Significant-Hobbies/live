@@ -66,7 +66,7 @@ function productionCoverage(resultBundle) {
     capture('xcrun', ['xccov', 'view', '--report', '--json', resultBundle])
   );
   const productionTargets = report.targets.filter((target) =>
-    ['Significant Hobbies.app', 'SignificantHobbiesCore.framework'].includes(target.name)
+    ['Journal by Significant Hobbies.app', 'SignificantHobbiesCore.framework'].includes(target.name)
   );
   if (productionTargets.length !== 2) {
     throw new Error('The native coverage report did not contain both production targets.');
