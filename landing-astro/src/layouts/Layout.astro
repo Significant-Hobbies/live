@@ -7,7 +7,7 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
-const SITE_URL = 'https://significanthobbies.com';
+const SITE_URL = 'https://live.significanthobbies.com';
 const OG_IMAGE = `${SITE_URL}/opengraph-image`;
 ---
 
@@ -16,6 +16,7 @@ const OG_IMAGE = `${SITE_URL}/opengraph-image`;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <base href="https://significanthobbies.com/" />
     {/* Tiny critical CSS first — paints #lcp-shell before the full Tailwind block below. */}
     <style is:inline>
       #lcp-shell {
@@ -107,7 +108,7 @@ const OG_IMAGE = `${SITE_URL}/opengraph-image`;
     <meta name="description" content={description} />
     <meta
       name="keywords"
-      content="hobby discovery, hobby journal, life phases hobbies, hobby timeline, bucket list, find your hobby, hobby quiz, daily rituals, habit tracking, life planner"
+      content="hobby discovery, life phases hobbies, hobby timeline, bucket list, find your hobby, hobby quiz, life planner"
     />
     <meta name="author" content="Significant Hobbies" />
     <meta
@@ -117,7 +118,7 @@ const OG_IMAGE = `${SITE_URL}/opengraph-image`;
     <link rel="canonical" href={SITE_URL} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={SITE_URL} />
-    <meta property="og:site_name" content="Significant Hobbies" />
+    <meta property="og:site_name" content="Live by Significant Hobbies" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={OG_IMAGE} />
@@ -138,11 +139,11 @@ const OG_IMAGE = `${SITE_URL}/opengraph-image`;
     <script is:inline type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      "name": "Significant Hobbies",
-      "alternateName": ["SignificantHobbies", "significanthobbies.com"],
+      "name": "Live",
+      "alternateName": ["Live by Significant Hobbies", "live.significanthobbies.com"],
       "applicationCategory": "LifestyleApplication",
       "operatingSystem": "Web Browser",
-      "url": "https://significanthobbies.com",
+      "url": SITE_URL,
       "description": "Map your hobby history across life phases. Visualize insights, share your journey, and discover what to explore next. Timeline builder with drag-and-drop phases and auto-save for guests.",
       "offers": {
         "@type": "Offer",

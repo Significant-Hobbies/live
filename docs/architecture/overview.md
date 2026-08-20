@@ -13,8 +13,10 @@ description: Runtime shape — Cloudflare Worker (OpenNext) + Astro landing over
 
 ```
 Browser → Cloudflare Worker `significanthobbies` (OpenNext, worker.mjs)
-  ├── GET / (anon) → ASSETS binding → overlaid Astro static hero (no Worker invocation)
-  ├── GET / (authed) → OpenNext → private Today home
+  ├── significanthobbies.com/ (anon) → ASSETS binding → static product Hub
+  ├── significanthobbies.com/ (authed) → OpenNext → equivalent product Hub
+  ├── live.significanthobbies.com/ → ASSETS binding → cinematic Live landing
+  ├── live.significanthobbies.com/<path> → 308 → significanthobbies.com/<path>
   └── all other routes → OpenNext Next.js 16 App Router handlers
         ├── Cloudflare D1 via Drizzle ORM
         ├── better-auth Google OAuth sessions
@@ -32,15 +34,16 @@ The cacheable path list lives in `worker.mjs` (`CACHEABLE_EXACT`,
 `CACHEABLE_PREFIXES`). Add new public marketing/tool routes there when they
 should be edge-cached.
 
-## Astro landing overlay
+## Astro Hub and Live overlay
 
 `landing-astro/` is a separate Astro package (pnpm workspace member) that
-builds the static hero + below-fold sections for `GET /`. The build pipeline
+builds the static seven-product Hub and preserved cinematic Live landing. The build pipeline
 overlays its output into `.open-next/assets/` so the Worker's `ASSETS` binding
-serves it directly. `wrangler.toml` uses `run_worker_first = ["/*", "!/"]` so
-the Worker is skipped entirely for anon `GET /` — no cold-start TTFB on the
-LCP path. The custom Worker detects better-auth session cookies and sends those
-requests through OpenNext; `src/app/page.tsx` owns the authenticated Today home.
+serves both roots directly. The custom Worker detects better-auth session
+cookies on the apex and sends those requests through OpenNext;
+`src/app/page.tsx` renders the same Hub. The Live landing uses the apex as its
+base URL, keeping all application, authentication, and local data on the
+existing origin. No client-side data fetch or combined product state exists yet.
 
 See [`decisions.md`](decisions.md) A1 for why this split exists.
 
