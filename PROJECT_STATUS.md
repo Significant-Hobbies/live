@@ -5,7 +5,7 @@
 > Update this file when durable current or shipped product truth changes. Do
 > not let deploy-version snapshots accumulate here — put those in the archive.
 
-Last updated: 2026-08-20
+Last updated: 2026-08-21
 
 ## Why / What
 
@@ -32,10 +32,12 @@ Habits are focused products built from the existing private practice data.
 
 ## Timeline
 
-- **2026-08-21:** Prepared Journal 1.0.0 (3) to publish each signed-in writing
+- **2026-08-21:** Journal 1.0.0 (3) completed internal-only TestFlight
+  processing on personal team `8F7LXHTJZR`. It publishes each signed-in writing
   version into Personal Platform while retaining the existing local document,
   account, and whole-atlas reconciliation. Pace-created entries pull into the
-  daily Journal model; focused contract tests and a generic Release build pass.
+  daily Journal model; focused contract tests, the full native CI gate, and a
+  stable Xcode 26.6 archive passed.
 
 - **2026-08-21:** Created the personal-team App Store Connect record as
   `Journal by Significant Hobbies` with bundle ID `com.significanthobbies.app`.
@@ -181,7 +183,7 @@ Historical milestones live in
 
 ## Products
 
-- Journal native SwiftUI iPhone beta under `ios/`; build 1.0.0 (2) completed
+- Journal native SwiftUI iPhone beta under `ios/`; build 1.0.0 (3) completed
   internal-only TestFlight processing and the existing bundle identity is
   preserved.
 - Personal-app Hub at `https://significanthobbies.com`.
