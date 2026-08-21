@@ -247,6 +247,39 @@ describe("Personal Platform Worker", () => {
     expect(JSON.stringify(body)).toContain('\"personName\":\"Rahul\"');
   });
 
+  it("preserves Journal source identity and structured writing", async () => {
+    const response = await api("/v1/sync/push", {
+      method: "POST",
+      body: JSON.stringify({
+        domain: "journal",
+        deviceId: "iphone",
+        mutations: [{
+          id: "entry-1-version-1",
+          idempotencyKey: "journal-entry-1-version-1",
+          operation: "upsert",
+          baseVersion: 0,
+          occurredAt: "2026-08-21T06:00:00.000Z",
+          record: {
+            sourceId: "entry-1",
+            body: "A clear day.",
+            occurredOn: "2026-08-21T06:00:00.000Z",
+            morningReflection: "Begin quietly.",
+            eveningReflection: "The walk helped.",
+            newThing: "Tried a new route.",
+          },
+        }],
+      }),
+    });
+    expect(response.status).toBe(200);
+
+    const pull = await api("/v1/sync/pull?domain=journal&cursor=0");
+    const body = await pull.json<{ changes: Array<{ record: Record<string, unknown> }> }>();
+    expect(body.changes.some((change) => change.record.sourceId === "entry-1")).toBe(true);
+    expect(body.changes.some(
+      (change) => change.record.morningReflection === "Begin quietly.",
+    )).toBe(true);
+  });
+
   it("does not fall back to Personal Platform D1 for Calorie", async () => {
     const response = await api("/v1/domains/calorie/summary");
     expect(response.status).toBe(503);
