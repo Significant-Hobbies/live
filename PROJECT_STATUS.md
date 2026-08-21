@@ -1,6 +1,6 @@
 # personal-platform — PROJECT STATUS
 
-Last updated: 2026-08-21
+Last updated: 2026-08-22
 
 ## Why / What
 
@@ -34,6 +34,10 @@ legacy-data import, and immediate CloudKit retirement.
 
 ## Timeline
 
+- **2026-08-22:** Verified the exact SHA-tagged production Worker is healthy
+  and its remote D1 schema is current but contains no owner or domain records.
+  The deployed integration is therefore awaiting its first real native sign-in
+  and owner-scoped synchronization; no production test data was inserted.
 - **2026-08-22:** Deployed the seven-domain read contracts, Live and Calorie
   connectors, privacy projections, and read-only MCP implementation from exact
   SHA `7b950a0d193af9d4b967a81c3bfedc0af36548ee` at 100% traffic. Production D1

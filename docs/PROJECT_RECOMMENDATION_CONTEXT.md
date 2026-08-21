@@ -27,6 +27,9 @@ tests, and a deployment dry run. Use `swift test` for the native package.
 
 ## Current release guidance
 
-The implementation is local and intentionally undeployed. Production auth,
-service bindings, D1 creation/migration, and per-app activation require
-separate operator-approved release work.
+The Worker, D1 schema, Significant Hobbies and Calorie service bindings, seven
+read contracts, and read-only MCP implementation are deployed from an exact
+SHA-tagged release. Production D1 is currently empty: no owner has completed a
+real native sign-in and synchronization yet. The remaining release proof is one
+owner-scoped record per domain, a Hub read showing all seven sources, and MCP
+OAuth activation after its issuer, audience, and owner mapping are configured.
