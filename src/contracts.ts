@@ -150,9 +150,21 @@ export function validateDomainRecord(
       });
     case "journal":
       return compact({
+        sourceId: optionalString(input.sourceId, "record.sourceId", 128),
         body: requireString(input.body, "record.body", 100_000),
         occurredOn: requireIsoDate(input.occurredOn, "record.occurredOn"),
         mood: optionalString(input.mood, "record.mood", 80),
+        morningReflection: optionalString(
+          input.morningReflection,
+          "record.morningReflection",
+          20_000,
+        ),
+        eveningReflection: optionalString(
+          input.eveningReflection,
+          "record.eveningReflection",
+          20_000,
+        ),
+        newThing: optionalString(input.newThing, "record.newThing", 20_000),
       });
     case "habits":
       return compact({
