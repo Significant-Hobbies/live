@@ -34,10 +34,10 @@ legacy-data import, and immediate CloudKit retirement.
 
 ## Timeline
 
-- **2026-08-21:** Deployed the production Worker and D1 migration at exact main
-  SHA `5363bbf7725c93dc3a9909f66d3e1365edb7a7af`. The `significanthobbies` and
-  `calorie` service bindings are live, the health probe passes, and remote D1
-  reports no pending migrations.
+- **2026-08-21:** Deployed the production Worker and D1 migration from a green,
+  exact-SHA-tagged main revision. The `significanthobbies` and `calorie`
+  service bindings are live, the health probe passes, and remote D1 reports no
+  pending migrations.
 - **2026-08-21:** Rolled PersonalSyncKit into Journal, Kith, Habits, Setline,
   and Anchor while preserving each local store and temporary CloudKit rollback.
   Journal 3, Kith 2, Habits 5, and Setline 2 completed internal TestFlight
