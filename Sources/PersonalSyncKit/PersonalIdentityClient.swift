@@ -167,6 +167,20 @@ public actor PersonalIdentityClient {
         try await tokenStore.load()
     }
 
+    /// Adopts the one-use native browser handoff returned by the existing
+    /// Better Auth service. This is the shared sign-in path for bundle IDs that
+    /// are not the Journal app's native Apple client.
+    public func adoptBearerToken(_ token: String) async throws -> PersonalIdentitySession {
+        guard !token.isEmpty else { throw PersonalIdentityError.missingSession }
+        try await tokenStore.save(token)
+        do {
+            return try await identitySession(bearerToken: token)
+        } catch {
+            try? await tokenStore.delete()
+            throw error
+        }
+    }
+
     public func signOut() async {
         if let token = try? await tokenStore.load() {
             var request = URLRequest(url: endpoint("api/auth/sign-out"))
