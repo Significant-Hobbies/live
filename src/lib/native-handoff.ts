@@ -4,10 +4,19 @@ import { nativeAuthHandoffs } from '~/db/schema';
 import { db } from '~/server/db';
 
 export const NATIVE_AUTH_CALLBACK = 'significanthobbies://auth';
+const PERSONAL_APP_AUTH_CALLBACKS = [
+  NATIVE_AUTH_CALLBACK,
+  'kith://auth',
+  'setline://auth',
+  'habits://auth',
+  'anchor://auth',
+] as const;
 const NATIVE_HANDOFF_TTL_MS = 5 * 60 * 1000;
 
 export function isAllowedNativeCallback(value: string): boolean {
-  return value === NATIVE_AUTH_CALLBACK;
+  return PERSONAL_APP_AUTH_CALLBACKS.includes(
+    value as (typeof PERSONAL_APP_AUTH_CALLBACKS)[number]
+  );
 }
 
 export function createNativeHandoffCode(): string {

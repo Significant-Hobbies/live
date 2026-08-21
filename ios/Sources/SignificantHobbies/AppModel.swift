@@ -1,6 +1,8 @@
 import AuthenticationServices
+import CryptoKit
 import Foundation
 import Observation
+import PersonalSyncKit
 import SignificantHobbiesCore
 
 @MainActor
@@ -22,6 +24,7 @@ final class AppModel {
     private let store: AtlasStore
     private let accountClient: SignificantHobbiesNativeAccountClient
     private let webAuthenticator: SignificantHobbiesWebAuthenticator
+    private let platform: PersonalPlatformConnection?
     private var remoteRevision: Int?
     private var syncRequested = false
     private var isSyncing = false
@@ -30,11 +33,13 @@ final class AppModel {
     init(
         store: AtlasStore = AtlasStore(),
         accountClient: SignificantHobbiesNativeAccountClient = SignificantHobbiesNativeAccountClient(),
-        webAuthenticator: SignificantHobbiesWebAuthenticator = SignificantHobbiesWebAuthenticator()
+        webAuthenticator: SignificantHobbiesWebAuthenticator = SignificantHobbiesWebAuthenticator(),
+        platform: PersonalPlatformConnection? = AppModel.makePlatformConnection()
     ) {
         self.store = store
         self.accountClient = accountClient
         self.webAuthenticator = webAuthenticator
+        self.platform = Self.isAutomatedLaunch ? nil : platform
     }
 
     func load() async {
@@ -79,6 +84,7 @@ final class AppModel {
     @discardableResult
     func saveDaily(_ entry: DailyEntry, announceSuccess: Bool = true) async -> Bool {
         guard await mutate({ $0.saveDaily(entry) }) else { return false }
+        enqueueJournal(entry)
         if announceSuccess {
             message = "Private Journal entry saved on this device."
         }
@@ -127,6 +133,7 @@ final class AppModel {
             let code = try await webAuthenticator.authenticate(at: url)
             account = try await accountClient.exchangeHandoff(code)
             try await reconcileAccountCopy()
+            await syncWithPlatform()
         } catch let error as NSError
             where error.domain == ASWebAuthenticationSessionErrorDomain && error.code == 1 {
             accountMessage = nil
@@ -147,6 +154,7 @@ final class AppModel {
                 account = try await accountClient.signInWithApple(payload)
             }
             try await reconcileAccountCopy()
+            await syncWithPlatform()
         } catch {
             accountMessage = friendlyMessage(for: error)
         }
@@ -160,6 +168,7 @@ final class AppModel {
             return
         }
         await queueSync()
+        await syncWithPlatform(announcing: true)
     }
 
     func keepDeviceCopy() async {
@@ -223,7 +232,10 @@ final class AppModel {
     private func restoreAccount() async {
         do {
             account = try await accountClient.restoreAccount()
-            if account != nil { try await reconcileAccountCopy() }
+            if account != nil {
+                try await reconcileAccountCopy()
+                await syncWithPlatform()
+            }
         } catch {
             account = nil
             document.syncState = .localOnly
@@ -298,11 +310,72 @@ final class AppModel {
         }
     }
 
+    private func enqueueJournal(_ entry: DailyEntry) {
+        guard account != nil, let platform else { return }
+        let payload = JournalPlatformRecord.encode(entry)
+        let recordId = JournalPlatformRecord.versionedRecordId(entry)
+        Task {
+            do {
+                try await platform.sync.enqueue(
+                    recordId: recordId,
+                    occurredAt: JournalPlatformRecord.iso(entry.date),
+                    record: payload
+                )
+                _ = try? await platform.sync.synchronize()
+            } catch {}
+        }
+    }
+
+    private func syncWithPlatform(announcing: Bool = false) async {
+        guard account != nil, let platform else { return }
+        do {
+            let changes = try await platform.sync.synchronize()
+            var next = document
+            for change in changes {
+                if change.operation == .delete {
+                    guard let sourceId = JournalPlatformRecord.sourceId(change) else { continue }
+                    next.dailyEntries.removeAll { $0.id == sourceId }
+                } else if let entry = JournalPlatformRecord.decode(change) {
+                    next.saveDaily(entry)
+                }
+            }
+            if next != document {
+                try await store.save(next)
+                document = next
+            }
+            if announcing { accountMessage = "Journal and Personal Platform are up to date." }
+        } catch {
+            if announcing { accountMessage = "Journal sync will retry when you are online." }
+        }
+    }
+
     private func friendlyMessage(for error: Error) -> String {
         if let native = error as? NativeAccountError {
             return native.errorDescription ?? "Journal account service is unavailable."
         }
         return "Journal could not complete that account action. Try again."
+    }
+
+    private static var isAutomatedLaunch: Bool {
+        ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil
+            || ProcessInfo.processInfo.arguments.contains("--fresh-demo")
+    }
+
+    private static func makePlatformConnection() -> PersonalPlatformConnection? {
+        let defaults = UserDefaults.standard
+        let key = "personal-platform-device-id"
+        let deviceId = defaults.string(forKey: key) ?? UUID().uuidString.lowercased()
+        defaults.set(deviceId, forKey: key)
+        let supportDirectory = FileManager.default.urls(
+            for: .applicationSupportDirectory,
+            in: .userDomainMask
+        )[0].appending(path: "SignificantHobbies", directoryHint: .isDirectory)
+        return try? PersonalPlatformConnection(
+            domain: .journal,
+            keychainService: "com.significanthobbies.app.session",
+            supportDirectory: supportDirectory,
+            deviceId: deviceId
+        )
     }
 
     @discardableResult

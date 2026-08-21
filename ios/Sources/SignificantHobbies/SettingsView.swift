@@ -103,7 +103,7 @@ struct SettingsView: View {
                             .font(.subheadline).foregroundStyle(AtlasPalette.quietInk)
                     }
                     settingsSection("About") {
-                        LabeledContent("Version", value: "1.0.0 (1)")
+                        LabeledContent("Version", value: "1.0.0 (3)")
                         Link("Privacy", destination: URL(string: "https://journal.significanthobbies.com/privacy/")!).frame(minHeight: 44)
                         Link("Support", destination: URL(string: "https://journal.significanthobbies.com/support/")!).frame(minHeight: 44)
                     }

@@ -13,9 +13,13 @@ settings:
     DEVELOPMENT_TEAM: 8F7LXHTJZR
     CODE_SIGN_STYLE: Automatic
     TARGETED_DEVICE_FAMILY: "1"
-    CURRENT_PROJECT_VERSION: 2
+    CURRENT_PROJECT_VERSION: 3
     MARKETING_VERSION: 1.0.0
     ENABLE_USER_SCRIPT_SANDBOXING: YES
+packages:
+  PersonalSyncKit:
+    url: https://github.com/Significant-Hobbies/personal-platform.git
+    branch: main
 targets:
   SignificantHobbiesCore:
     type: framework
@@ -36,6 +40,7 @@ targets:
         buildPhase: resources
     dependencies:
       - target: SignificantHobbiesCore
+      - package: PersonalSyncKit
     info:
       path: Sources/SignificantHobbies/Info.plist
       properties:
@@ -73,6 +78,19 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.significanthobbies.app.core-tests
         GENERATE_INFOPLIST_FILE: YES
+  SignificantHobbiesTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: Tests/SignificantHobbiesTests
+    dependencies:
+      - target: SignificantHobbies
+      - package: PersonalSyncKit
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.significanthobbies.app.tests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/Journal by Significant Hobbies.app/Journal by Significant Hobbies"
+        BUNDLE_LOADER: "$(TEST_HOST)"
   SignificantHobbiesUITests:
     type: bundle.ui-testing
     platform: iOS
@@ -89,10 +107,12 @@ schemes:
       targets:
         SignificantHobbies: all
         SignificantHobbiesCoreTests: [test]
+        SignificantHobbiesTests: [test]
         SignificantHobbiesUITests: [test]
     test:
       targets:
         - SignificantHobbiesCoreTests
+        - SignificantHobbiesTests
         - SignificantHobbiesUITests
       gatherCoverageData: true
     run:

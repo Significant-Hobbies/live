@@ -12,14 +12,18 @@
 		232BE0083A654EDA0678E35F /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D1654F75D6BD52DEA4738 /* RootView.swift */; };
 		2744CFC51415CDCE0A39B0BC /* SignificantHobbiesCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8016DC426444E2D76EF32BB4 /* SignificantHobbiesCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4ED00C45ADB96002493EF597 /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7B72C12049FE81DEEE108E /* Domain.swift */; };
+		69B25EAE82A093562DF00E01 /* PersonalSyncKit in Frameworks */ = {isa = PBXBuildFile; productRef = D6234645F92BDC746B6319AB /* PersonalSyncKit */; };
 		713D9934D1E2EF54F4778EF9 /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D99A5939D824B344E6704A9 /* Design.swift */; };
 		73997EF2CCBE316A8A4AB154 /* SignificantHobbiesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CADA0312E38B323127C310 /* SignificantHobbiesApp.swift */; };
 		8718C60F2A3C7A593418343B /* CloudSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70587D4024EBCBD4A2335D71 /* CloudSync.swift */; };
 		942A77EEE223A4E0945EC4BE /* SignificantHobbiesCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8016DC426444E2D76EF32BB4 /* SignificantHobbiesCore.framework */; };
 		9CB054BDE18BF67E2F120AD6 /* SignificantHobbiesCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AFFF3B28DF309BB620A727 /* SignificantHobbiesCoreTests.swift */; };
 		AD89875F157AA02A1D13EBBF /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EA8F0EE78476D9881C7347 /* AppModel.swift */; };
+		C2FD601717B6E3743C988122 /* PersonalSyncKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9A34C6845C1CC7A25E8C327F /* PersonalSyncKit */; };
 		C499F299941E14A486903109 /* SignificantHobbiesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5197DAFED5BEB3D8E1FF6B /* SignificantHobbiesUITests.swift */; };
+		C7F9594990F4F3C0BB4EB769 /* JournalPlatformRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8E53174F333BE6F42CD41 /* JournalPlatformRecord.swift */; };
 		D145E61360B9F2043C4B98F7 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 62223B76D2F335D38753F13F /* PrivacyInfo.xcprivacy */; };
+		DFB69840DDC0716771EA0E9C /* JournalPlatformRecordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BB86859D853186F562517 /* JournalPlatformRecordTests.swift */; };
 		E2940F7FB5B87D63D182CB5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9C9ECF6FD75300C43AE4574 /* Assets.xcassets */; };
 		E3CAE2317CCCC6B79A306D9B /* SignificantHobbiesCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8016DC426444E2D76EF32BB4 /* SignificantHobbiesCore.framework */; };
 		E8D072E503C4BFBE7C6D668C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C7DF31D7BBD34A504FB0B5 /* Persistence.swift */; };
@@ -41,6 +45,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2AE7ACA17160B21AD09AC9A4;
 			remoteInfo = SignificantHobbiesCore;
+		};
+		A70D3A5166A872387A48A3DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 243196152188445AFC62BD80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6300EF748A62C09CEC28DB0C;
+			remoteInfo = SignificantHobbies;
 		};
 		F0DE799ACACC72B5E92CB51F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -84,13 +95,16 @@
 		45756EFDB3A45F83CBF63F78 /* SignificantHobbies.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SignificantHobbies.entitlements; sourceTree = "<group>"; };
 		48EFA0E8BD9B98537969A433 /* SignificantHobbies.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = SignificantHobbies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B5197DAFED5BEB3D8E1FF6B /* SignificantHobbiesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignificantHobbiesUITests.swift; sourceTree = "<group>"; };
+		552A1E923415BCECAB7858BB /* SignificantHobbiesTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = SignificantHobbiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55CADA0312E38B323127C310 /* SignificantHobbiesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignificantHobbiesApp.swift; sourceTree = "<group>"; };
 		62223B76D2F335D38753F13F /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		70587D4024EBCBD4A2335D71 /* CloudSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudSync.swift; sourceTree = "<group>"; };
 		7AA77312B5602FD12AB082F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8016DC426444E2D76EF32BB4 /* SignificantHobbiesCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SignificantHobbiesCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FA8E53174F333BE6F42CD41 /* JournalPlatformRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalPlatformRecord.swift; sourceTree = "<group>"; };
 		AD5D1654F75D6BD52DEA4738 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		AE73F47A9024224B92970695 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		CE1BB86859D853186F562517 /* JournalPlatformRecordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalPlatformRecordTests.swift; sourceTree = "<group>"; };
 		D0188FEAC7CFA0623B6FF0EA /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
 		D18715A25D2EC787F766FD6C /* SignificantHobbiesUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = SignificantHobbiesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7B72C12049FE81DEEE108E /* Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
@@ -108,11 +122,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BAC23B5565ADA006C29A7125 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69B25EAE82A093562DF00E01 /* PersonalSyncKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E2BAEAC9ED343066308A2830 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E3CAE2317CCCC6B79A306D9B /* SignificantHobbiesCore.framework in Frameworks */,
+				C2FD601717B6E3743C988122 /* PersonalSyncKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +148,7 @@
 				48EFA0E8BD9B98537969A433 /* SignificantHobbies.app */,
 				8016DC426444E2D76EF32BB4 /* SignificantHobbiesCore.framework */,
 				FCECA2C6051C17B3374B3FE8 /* SignificantHobbiesCoreTests.xctest */,
+				552A1E923415BCECAB7858BB /* SignificantHobbiesTests.xctest */,
 				D18715A25D2EC787F766FD6C /* SignificantHobbiesUITests.xctest */,
 			);
 			name = Products;
@@ -141,12 +165,22 @@
 			path = Sources/SignificantHobbiesCore;
 			sourceTree = "<group>";
 		};
+		5A5F9D8D04952A401B506D51 /* SignificantHobbiesTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE1BB86859D853186F562517 /* JournalPlatformRecordTests.swift */,
+			);
+			name = SignificantHobbiesTests;
+			path = Tests/SignificantHobbiesTests;
+			sourceTree = "<group>";
+		};
 		6F5982B9066C4FA230E6A8EF /* SignificantHobbies */ = {
 			isa = PBXGroup;
 			children = (
 				05EA8F0EE78476D9881C7347 /* AppModel.swift */,
 				3D99A5939D824B344E6704A9 /* Design.swift */,
 				7AA77312B5602FD12AB082F1 /* Info.plist */,
+				8FA8E53174F333BE6F42CD41 /* JournalPlatformRecord.swift */,
 				D0188FEAC7CFA0623B6FF0EA /* JournalView.swift */,
 				0C2B9B72A49B3D8612FD520D /* NativeAccountClient.swift */,
 				AD5D1654F75D6BD52DEA4738 /* RootView.swift */,
@@ -165,6 +199,7 @@
 				6F5982B9066C4FA230E6A8EF /* SignificantHobbies */,
 				16066171C19086EC8DBBC7C0 /* SignificantHobbiesCore */,
 				AC133343578A80E025294E9C /* SignificantHobbiesCoreTests */,
+				5A5F9D8D04952A401B506D51 /* SignificantHobbiesTests */,
 				EFFC64DD865C5063391C5354 /* SignificantHobbiesUITests */,
 				1259EA1335448FFBE0C8D6DD /* Products */,
 			);
@@ -271,10 +306,31 @@
 			);
 			name = SignificantHobbies;
 			packageProductDependencies = (
+				9A34C6845C1CC7A25E8C327F /* PersonalSyncKit */,
 			);
 			productName = SignificantHobbies;
 			productReference = 48EFA0E8BD9B98537969A433 /* SignificantHobbies.app */;
 			productType = "com.apple.product-type.application";
+		};
+		7124EDFE4D0D6AF71FC70B88 /* SignificantHobbiesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B30DE5B04FFF7AC4F0D5C5EB /* Build configuration list for PBXNativeTarget "SignificantHobbiesTests" */;
+			buildPhases = (
+				81ACA028E13B93BFB37BC932 /* Sources */,
+				BAC23B5565ADA006C29A7125 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3ACFC1C996E2517663D56905 /* PBXTargetDependency */,
+			);
+			name = SignificantHobbiesTests;
+			packageProductDependencies = (
+				D6234645F92BDC746B6319AB /* PersonalSyncKit */,
+			);
+			productName = SignificantHobbiesTests;
+			productReference = 552A1E923415BCECAB7858BB /* SignificantHobbiesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -302,6 +358,10 @@
 						DevelopmentTeam = 8F7LXHTJZR;
 						ProvisioningStyle = Automatic;
 					};
+					7124EDFE4D0D6AF71FC70B88 = {
+						DevelopmentTeam = 8F7LXHTJZR;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 47CB4E5FABA5092131474791 /* Build configuration list for PBXProject "SignificantHobbies" */;
@@ -313,6 +373,9 @@
 			);
 			mainGroup = 7E59BCEAD1DD090070550D90;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				0AEE6D6566507156943208A4 /* XCRemoteSwiftPackageReference "personal-platform" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1259EA1335448FFBE0C8D6DD /* Products */;
 			projectDirPath = "";
@@ -321,6 +384,7 @@
 				2AE7ACA17160B21AD09AC9A4 /* SignificantHobbiesCore */,
 				6300EF748A62C09CEC28DB0C /* SignificantHobbies */,
 				11CBCB61DBF7B0ED161A34EC /* SignificantHobbiesCoreTests */,
+				7124EDFE4D0D6AF71FC70B88 /* SignificantHobbiesTests */,
 				5056B0BE156DCB7089BA20E0 /* SignificantHobbiesUITests */,
 			);
 		};
@@ -344,6 +408,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C499F299941E14A486903109 /* SignificantHobbiesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81ACA028E13B93BFB37BC932 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFB69840DDC0716771EA0E9C /* JournalPlatformRecordTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +443,7 @@
 			files = (
 				AD89875F157AA02A1D13EBBF /* AppModel.swift in Sources */,
 				713D9934D1E2EF54F4778EF9 /* Design.swift in Sources */,
+				C7F9594990F4F3C0BB4EB769 /* JournalPlatformRecord.swift in Sources */,
 				E99B4FB1629093EA9C77A575 /* JournalView.swift in Sources */,
 				FCE1765D393AE0E6495557B5 /* NativeAccountClient.swift in Sources */,
 				232BE0083A654EDA0678E35F /* RootView.swift in Sources */,
@@ -382,6 +455,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3ACFC1C996E2517663D56905 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6300EF748A62C09CEC28DB0C /* SignificantHobbies */;
+			targetProxy = A70D3A5166A872387A48A3DE /* PBXContainerItemProxy */;
+		};
 		3B78242B35AF05D61B9E8747 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2AE7ACA17160B21AD09AC9A4 /* SignificantHobbiesCore */;
@@ -435,7 +513,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 8F7LXHTJZR;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -497,7 +575,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 8F7LXHTJZR;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -562,6 +640,23 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = SignificantHobbies;
+			};
+			name = Debug;
+		};
+		83ECBC2A4C9303BCFB9BDD33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.significanthobbies.app.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Journal by Significant Hobbies.app/Journal by Significant Hobbies";
 			};
 			name = Debug;
 		};
@@ -639,6 +734,23 @@
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D78552D1FECA131F5813755D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.significanthobbies.app.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Journal by Significant Hobbies.app/Journal by Significant Hobbies";
 			};
 			name = Release;
 		};
@@ -720,6 +832,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
+		B30DE5B04FFF7AC4F0D5C5EB /* Build configuration list for PBXNativeTarget "SignificantHobbiesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83ECBC2A4C9303BCFB9BDD33 /* Debug */,
+				D78552D1FECA131F5813755D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		F36D0CF206566B5BC94EDD22 /* Build configuration list for PBXNativeTarget "SignificantHobbiesCore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -730,6 +851,30 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0AEE6D6566507156943208A4 /* XCRemoteSwiftPackageReference "personal-platform" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Significant-Hobbies/personal-platform.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9A34C6845C1CC7A25E8C327F /* PersonalSyncKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0AEE6D6566507156943208A4 /* XCRemoteSwiftPackageReference "personal-platform" */;
+			productName = PersonalSyncKit;
+		};
+		D6234645F92BDC746B6319AB /* PersonalSyncKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0AEE6D6566507156943208A4 /* XCRemoteSwiftPackageReference "personal-platform" */;
+			productName = PersonalSyncKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 243196152188445AFC62BD80 /* Project object */;
 }
