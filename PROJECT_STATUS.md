@@ -35,7 +35,8 @@ legacy-data import, and immediate CloudKit retirement.
 ## Timeline
 
 - **2026-08-22:** Verified the exact SHA-tagged production Worker is healthy
-  and its remote D1 schema is current but contains no owner or domain records.
+  and its remote D1 schema is current but contains no owner or Platform-owned
+  native-domain records. Live and Calorie remain external service-bound reads.
   The deployed integration is therefore awaiting its first real native sign-in
   and owner-scoped synchronization; no production test data was inserted.
 - **2026-08-22:** Deployed the seven-domain read contracts, Live and Calorie
