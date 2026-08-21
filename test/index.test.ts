@@ -280,6 +280,52 @@ describe("Personal Platform Worker", () => {
     )).toBe(true);
   });
 
+  it("converges a Setline session from an iPhone mutation into a second client", async () => {
+    const sessionId = crypto.randomUUID();
+    const push = await api("/v1/sync/push", {
+      method: "POST",
+      body: JSON.stringify({
+        domain: "setline",
+        deviceId: "setline-iphone",
+        mutations: [{
+          id: sessionId,
+          idempotencyKey: `setline-${sessionId}-v1`,
+          operation: "upsert",
+          baseVersion: 0,
+          occurredAt: "2026-08-21T06:30:00.000Z",
+          record: {
+            title: "Lower strength",
+            occurredOn: "2026-08-21T06:30:00.000Z",
+            minutes: 31,
+            notes: "12 steps completed",
+          },
+        }],
+      }),
+    });
+    expect(push.status).toBe(200);
+    expect(await push.json()).toMatchObject({
+      results: [{ id: sessionId, status: "accepted", version: 1 }],
+    });
+
+    const pull = await api("/v1/sync/pull?domain=setline&cursor=0", {
+      headers: { "X-Personal-Device-ID": "setline-second-client" },
+    });
+    expect(pull.status).toBe(200);
+    const body = await pull.json<{
+      changes: Array<{ id: string; originDeviceId: string; record: Record<string, unknown> }>;
+    }>();
+    expect(body.changes).toContainEqual(expect.objectContaining({
+      id: sessionId,
+      originDeviceId: "setline-iphone",
+      record: {
+        title: "Lower strength",
+        occurredOn: "2026-08-21T06:30:00.000Z",
+        minutes: 31,
+        notes: "12 steps completed",
+      },
+    }));
+  });
+
   it("does not fall back to Personal Platform D1 for Calorie", async () => {
     const response = await api("/v1/domains/calorie/summary");
     expect(response.status).toBe(503);

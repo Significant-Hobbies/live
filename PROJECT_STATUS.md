@@ -34,6 +34,10 @@ legacy-data import, and immediate CloudKit retirement.
 
 ## Timeline
 
+- **2026-08-21:** Added an explicit two-client Setline convergence check: a
+  completed session pushed from an iPhone-origin device is accepted once,
+  versioned, and pulled intact by a second client. All Worker integration tests
+  and the native Setline record adapter pass without using CloudKit.
 - **2026-08-21:** Deployed exact SHA
   `9e38ac985f2bbd505d929b00f4524813f39821cd` at 100% traffic after scoping
   Vitest discovery to the platform's three test files. The live health endpoint
