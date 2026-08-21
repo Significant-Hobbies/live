@@ -15,16 +15,16 @@ Live, Journal, Habits, Setline, Kith, and Anchor, Hub summaries/actions, action
 audit, life events, and a Calorie service connector.
 
 **Out of scope:** a universal personal schema, direct access to Calorie's D1,
-production deployment, remote migrations, legacy-data import, and immediate
-CloudKit retirement.
+legacy-data import, and immediate CloudKit retirement.
 
 ## Dependencies
 
 ### External
 
 - Cloudflare Workers and D1.
-- A production auth verifier to map Apple/Better Auth sessions to one internal
-  user ID before deployment.
+- Significant Hobbies' authenticated session verifier, reached through a
+  Cloudflare service binding, maps native Better Auth sessions to one internal
+  user ID.
 
 ### Internal
 
@@ -34,17 +34,25 @@ CloudKit retirement.
 
 ## Timeline
 
+- **2026-08-21:** Deployed the production Worker and D1 migration from a green,
+  exact-SHA-tagged main revision. The `significanthobbies` and `calorie`
+  service bindings are live, the health probe passes, and remote D1 reports no
+  pending migrations.
+- **2026-08-21:** Rolled PersonalSyncKit into Journal, Kith, Habits, Setline,
+  and Anchor while preserving each local store and temporary CloudKit rollback.
+  Journal 3, Kith 2, Habits 5, and Setline 2 completed internal TestFlight
+  processing; Anchor's package is ready but its App Store Connect record is not.
 - **2026-08-21:** Built the local shared sync foundation: a typed Worker/D1
   API for six fresh domains, idempotent outbox push and cursor pull, semantic
   Hub actions with audit/undo, a fail-closed Calorie connector, and the
-  multi-platform `PersonalSyncKit` package. Production resources remain
-  intentionally uncreated and undeployed.
+  multi-platform `PersonalSyncKit` package.
 - **2026-08-21:** Created the repository and specified the shared Cloudflare
   sync foundation in GitHub issue #1.
 
 ## Products
 
-- Cloudflare Worker source and local D1 migration (not deployed).
+- Live Cloudflare Worker `personal-platform` and D1 database
+  `personal-platform`.
 - `PersonalSyncKit` Swift package for iOS, iPadOS, macOS, and watchOS clients.
 
 ## Features (shipped)
@@ -61,8 +69,8 @@ CloudKit retirement.
 - **Native package:** Foundation-only Swift transport, typed JSON adapters,
   durable mutation outbox, per-domain cursor persistence, and a sync
   coordinator for iOS/iPadOS, macOS, and watchOS.
-- **Safety:** authenticated routes fail closed until the production verifier is
-  bound; local tests provide the only test-token mode.
+- **Safety:** authenticated routes fail closed through the production verifier;
+  local tests provide the only test-token mode.
 
 ## Work queue
 
