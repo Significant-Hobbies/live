@@ -32,6 +32,12 @@ Habits are focused products built from the existing private practice data.
 
 ## Timeline
 
+- **2026-08-22:** Released the Significant Hobbies directory, authenticated
+  read-only Hub, and Live to Cloudflare from exact green commit
+  `67ad6bfe5ca62f51c6ebe3e38aa5d1567510efab`. Apple completed processing
+  Journal 1.0.0 (4); the build still needs internal tester assignment before it
+  appears in TestFlight.
+
 - **2026-08-21:** Added a private proof surface to the authenticated Hub. It
   reads the existing Personal Platform summary contract with the current
   Better Auth session and shows per-product record counts, freshness,
