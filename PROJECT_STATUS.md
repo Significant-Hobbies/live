@@ -26,8 +26,16 @@ Habits are focused products built from the existing private practice data.
   OAuth and native Sign in with Apple, and PostHog. Native account linking is
   explicit and never inferred from matching email addresses. D1 is
   authoritative; the retired Turso database was deleted on 2026-08-02.
+- `PersonalSyncKit` adds a durable semantic Journal outbox and cursor on top of
+  the same Better Auth bearer session. The versioned local atlas remains the
+  immediate store and existing whole-atlas sync stays available during rollout.
 
 ## Timeline
+
+- **2026-08-21:** Prepared Journal 1.0.0 (3) to publish each signed-in writing
+  version into Personal Platform while retaining the existing local document,
+  account, and whole-atlas reconciliation. Pace-created entries pull into the
+  daily Journal model; focused contract tests and a generic Release build pass.
 
 - **2026-08-21:** Created the personal-team App Store Connect record as
   `Journal by Significant Hobbies` with bundle ID `com.significanthobbies.app`.
@@ -186,7 +194,8 @@ Historical milestones live in
 
 - **Journal for iPhone:** one local-first morning/evening writing surface,
   date navigation, prior-entry context, private account sync, compatible
-  export/import, accessibility, simulator tests, and preserved pre-split data.
+  export/import, accessibility, simulator tests, preserved pre-split data, and
+  signed-in semantic Personal Platform synchronization.
   Live and Habits have no UI or write actions in this target.
 - **Runtime:** Cloudflare Worker `significanthobbies` (OpenNext) + Astro Hub
   and Live overlays. Cloudflare D1 + Drizzle ORM +

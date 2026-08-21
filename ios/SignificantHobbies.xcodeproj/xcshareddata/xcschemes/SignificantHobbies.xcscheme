@@ -43,6 +43,20 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7124EDFE4D0D6AF71FC70B88"
+               BuildableName = "SignificantHobbiesTests.xctest"
+               BlueprintName = "SignificantHobbiesTests"
+               ReferencedContainer = "container:SignificantHobbies.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "5056B0BE156DCB7089BA20E0"
                BuildableName = "SignificantHobbiesUITests.xctest"
                BlueprintName = "SignificantHobbiesUITests"
@@ -76,6 +90,17 @@
                BlueprintIdentifier = "11CBCB61DBF7B0ED161A34EC"
                BuildableName = "SignificantHobbiesCoreTests.xctest"
                BlueprintName = "SignificantHobbiesCoreTests"
+               ReferencedContainer = "container:SignificantHobbies.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7124EDFE4D0D6AF71FC70B88"
+               BuildableName = "SignificantHobbiesTests.xctest"
+               BlueprintName = "SignificantHobbiesTests"
                ReferencedContainer = "container:SignificantHobbies.xcodeproj">
             </BuildableReference>
          </TestableReference>

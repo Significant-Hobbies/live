@@ -2,7 +2,7 @@
 
 A private native SwiftUI journal for iOS 17 and later. The app is focused on morning and evening reflection, free writing, dates, and finding earlier entries.
 
-The existing `com.significanthobbies.app` identity and local document remain unchanged so current entries survive the split. Live and Habits records stay preserved in the compatible archive but are no longer exposed or edited by the Journal interface. Account sync remains revisioned and optional; the app is fully useful offline.
+The existing `com.significanthobbies.app` identity and local document remain unchanged so current entries survive the split. Live and Habits records stay preserved in the compatible archive but are no longer exposed or edited by the Journal interface. Account sync remains revisioned and optional; the app is fully useful offline. When signed in, saved writing also enters the shared Cloudflare Personal Platform through `PersonalSyncKit` without replacing the compatible local atlas document.
 
 ## Local checks
 
@@ -22,5 +22,6 @@ The script is locked to personal team `8F7LXHTJZR`, verifies the local signature
 
 - Complete morning/evening reflection, writing, date navigation, and archive flows on physical iPhone hardware.
 - Verify the largest Dynamic Type sizes, VoiceOver chronology, Reduce Motion, and writing keyboard behavior on hardware.
-- Verify account callback, Keychain persistence, and offline reconciliation after native account sync is enabled.
+- Verify account callback, Keychain persistence, whole-atlas reconciliation,
+  and Personal Platform push/pull on physical devices.
 - Confirm screenshots, support/privacy URLs, age rating, and App Privacy answers in App Store Connect before upload.

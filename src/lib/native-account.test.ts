@@ -10,9 +10,14 @@ import {
 import { parseNativeStateEnvelope } from './native-state';
 
 describe('native account boundary', () => {
-  it('accepts only the exact Significant Hobbies callback', () => {
+  it('accepts only exact callbacks owned by the personal app family', () => {
     expect(isAllowedNativeCallback('significanthobbies://auth')).toBe(true);
+    expect(isAllowedNativeCallback('kith://auth')).toBe(true);
+    expect(isAllowedNativeCallback('setline://auth')).toBe(true);
+    expect(isAllowedNativeCallback('habits://auth')).toBe(true);
+    expect(isAllowedNativeCallback('anchor://auth')).toBe(true);
     expect(isAllowedNativeCallback('significanthobbies://auth.evil.example')).toBe(false);
+    expect(isAllowedNativeCallback('anchor://auth.evil.example')).toBe(false);
     expect(isAllowedNativeCallback('https://significanthobbies.com/auth')).toBe(false);
   });
 

@@ -1,13 +1,13 @@
 # Journal iOS release draft
 
-Preparation only. No App Store Connect record has been created.
+Internal TestFlight record exists on Sarthak's personal Apple team.
 
 ## Identity
 
 - Name: Journal
 - Bundle ID: `com.significanthobbies.app`
 - Version: `1.0.0`
-- Build: `1`
+- Build: `3`
 - SKU: `significant-hobbies-ios-1`
 - Primary language: English (U.S.)
 - Category: Lifestyle
@@ -29,7 +29,7 @@ Journal gives each day one private page. Start with a short morning reflection, 
 
 Writing is always private. There is no public profile, social feed, publishing control, XP, or shame loop.
 
-Journal remains useful without an account. If account sync is enabled, it keeps a private cross-device archive with explicit conflict choices. The preserved bundle and document identities keep entries created before the product split readable.
+Journal remains useful without an account. If account sync is enabled, it keeps a private cross-device archive with explicit conflict choices and publishes structured writing to the owner's Cloudflare Personal Platform. The preserved bundle and document identities keep entries created before the product split readable.
 
 **Keywords**
 journal,reflection,private diary,morning pages,daily notes,writing,evening review
