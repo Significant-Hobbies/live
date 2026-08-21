@@ -85,6 +85,29 @@ struct PersonalIdentityClientTests {
         }
         #expect(await store.load() == nil)
     }
+
+    @Test
+    func nativeBrowserHandoffIsValidatedAndPersisted() async throws {
+        IdentityURLProtocol.handler = { request in
+            #expect(request.url?.path == "/api/personal-platform/session")
+            #expect(request.value(forHTTPHeaderField: "Authorization") == "Bearer handoff-token")
+            return (
+                try response(request, status: 200),
+                Data(#"{"userId":"shared-user","email":"owner@example.com","appleSubject":null}"#.utf8)
+            )
+        }
+        let store = MemoryBearerStore()
+        let client = PersonalIdentityClient(
+            baseURL: try #require(URL(string: "https://identity.test")),
+            session: testSession(),
+            tokenStore: store
+        )
+
+        let identity = try await client.adoptBearerToken("handoff-token")
+
+        #expect(identity.userId == "shared-user")
+        #expect(await store.load() == "handoff-token")
+    }
 }
 
 private func testSession() -> URLSession {
