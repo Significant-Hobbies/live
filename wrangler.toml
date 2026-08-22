@@ -38,6 +38,10 @@ database_id = "da450bef-a88d-4bc6-8013-35e3d96f70bd"
 preview_database_id = "bbbdc0a6-a4ad-4881-8c71-cfc3f2a3b234"
 migrations_dir = "migrations/d1"
 
+[[services]]
+binding = "HUB_SERVICE"
+service = "personal-platform"
+
 # ─── Preview environment ───────────────────────────────────────────────
 # Used by the PR deploy job: `wrangler deploy --env preview`. Deploys to
 # significanthobbies-preview.<account>.workers.dev (no production routes).

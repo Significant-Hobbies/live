@@ -95,6 +95,7 @@ function isCacheableContentType(pathname, contentType) {
 // always see live SSR (e.g. redirect to /library).
 const AUTH_COOKIE_FRAGMENTS = ['session_token', 'session-token'];
 const LIVE_HOST = 'live.significanthobbies.com';
+const HUB_HOSTS = new Set(['significanthobbies.com', 'www.significanthobbies.com']);
 
 function hasAuthCookie(request) {
   const cookie = request.headers.get('cookie');
@@ -142,6 +143,13 @@ async function fetchOpenNext(request, env, ctx) {
 export default {
   fetch: withTiming(async function fetch(request, env, ctx) {
     const requestUrl = new URL(request.url);
+    if (
+      HUB_HOSTS.has(requestUrl.hostname) &&
+      (requestUrl.pathname === '/' || requestUrl.pathname === '/hub') &&
+      env.HUB_SERVICE
+    ) {
+      return env.HUB_SERVICE.fetch(request);
+    }
     if (requestUrl.hostname === LIVE_HOST && requestUrl.pathname !== '/') {
       requestUrl.hostname = 'significanthobbies.com';
       return Response.redirect(requestUrl, 308);

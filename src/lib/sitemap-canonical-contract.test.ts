@@ -30,11 +30,7 @@ describe('sitemap canonical contract', () => {
     }
   });
 
-  it('covers the root and dynamic sitemap route families', () => {
-    const homeSource = readSource('src/app/page.tsx');
-    expect(homeSource).toContain("canonical: 'https://significanthobbies.com'");
-    expect(homeSource).not.toMatch(/robots\s*:\s*\{\s*index:\s*false/);
-
+  it('covers the dynamic sitemap route families', () => {
     for (const routeSource of [
       'src/app/hobbies/category/[category]/page.tsx',
       'src/app/u/[username]/page.tsx',

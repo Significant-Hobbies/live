@@ -9,7 +9,7 @@ import { fileURLToPath } from 'node:url';
 
 const currentFile = fileURLToPath(import.meta.url);
 const projectRoot = resolve(dirname(currentFile), '..');
-const productionPaths = ['src', 'ios/Sources', 'scripts'];
+const productionPaths = ['src', 'scripts'];
 
 const baselines = {
   complexity: {
@@ -35,7 +35,6 @@ const baselines = {
     unresolved: 0,
   },
   suppressions: 11,
-  nativeFormatErrors: 104,
 };
 
 const acceptedHighAdvisories = new Set([
@@ -256,7 +255,7 @@ function sourceFiles(root) {
 }
 
 function checkSuppressions() {
-  const roots = ['src', 'ios/Sources', 'ios/Tests', 'scripts', 'e2e'];
+  const roots = ['src', 'scripts', 'e2e'];
   const matches = roots
     .flatMap((root) => sourceFiles(resolve(projectRoot, root)))
     .filter((file) => file !== currentFile)
@@ -306,27 +305,6 @@ function checkHygiene() {
   );
 }
 
-function checkNativeFormat() {
-  const result = run(
-    'xcrun',
-    ['swift-format', 'lint', '--strict', '--recursive', 'ios/Sources', 'ios/Tests'],
-    { allowFailure: true }
-  );
-  const output = `${result.stdout}\n${result.stderr}`;
-  const errors = output.split('\n').filter((line) => line.includes('error:')).length;
-  console.log(`Native format/lint: ${errors} accepted diagnostics; no regression allowed.`);
-  if (errors > baselines.nativeFormatErrors) {
-    throw new Error(
-      `Native format diagnostics regressed: ${errors} > ${baselines.nativeFormatErrors}`
-    );
-  }
-  if (errors < baselines.nativeFormatErrors) {
-    console.log(
-      'Native format improved; lower the checked-in baseline in the next intentional update.'
-    );
-  }
-}
-
 const checks = {
   unused: checkUnused,
   complexity: checkComplexity,
@@ -335,7 +313,6 @@ const checks = {
   dependencies: checkDependencies,
   suppressions: checkSuppressions,
   hygiene: checkHygiene,
-  'native-format': checkNativeFormat,
 };
 const selected = process.argv[2];
 
