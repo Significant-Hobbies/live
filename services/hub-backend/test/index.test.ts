@@ -75,6 +75,13 @@ describe("Hub Backend Worker", () => {
     expect(unauthorized.status).toBe(401);
   });
 
+  it("serves the public Hub without authentication", async () => {
+    const response = await exports.default.fetch("https://significanthobbies.com/");
+    expect(response.status).toBe(200);
+    expect(response.headers.get("content-type")).toContain("text/html");
+    expect(await response.text()).toContain("Your personal apps");
+  });
+
   it("pushes once, returns the same cursor on retry, and pulls by cursor", async () => {
     const body = mutationBody();
     const first = await api("/v1/sync/push", { method: "POST", body: JSON.stringify(body) });

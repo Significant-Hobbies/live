@@ -43,6 +43,21 @@ export async function authenticate(request: Request, env: Env): Promise<Authenti
   return { id: body.userId };
 }
 
+export async function authenticateSession(
+  request: Request,
+  env: Env,
+): Promise<AuthenticatedUser | null> {
+  const authService = optionalFetcher(env, "AUTH_SERVICE");
+  if (!authService) return null;
+  const response = await authService.fetch(AUTH_SERVICE_URL, { headers: request.headers });
+  if (response.status === 401) return null;
+  if (!response.ok) {
+    throw new HttpError(502, "auth_service_unavailable", "auth service could not verify the session");
+  }
+  const body = (await response.json()) as Record<string, unknown>;
+  return typeof body.userId === "string" && body.userId.length > 0 ? { id: body.userId } : null;
+}
+
 export async function ensureUser(env: Env, user: AuthenticatedUser): Promise<void> {
   const now = new Date().toISOString();
   await env.DB.prepare(

@@ -14,6 +14,7 @@ import { authenticateMcp } from "./mcp-auth";
 import { handleMcp } from "./mcp";
 import { getDomainRecords, getLifeEvents, parseReadQuery } from "./reads";
 import { errorResponse, json, preflight, readJson, withCors } from "./http";
+import { handleHub } from "./hub";
 import { pullChanges, pushMutations } from "./sync";
 
 export default {
@@ -30,6 +31,9 @@ export default {
 
 async function route(request: Request, env: Env): Promise<Response> {
   const url = new URL(request.url);
+  if (request.method === "GET" && (url.pathname === "/" || url.pathname === "/hub")) {
+    return handleHub(request, env);
+  }
   if (request.method === "GET" && url.pathname === "/health") {
     return json({ status: "ok", service: "personal-platform" });
   }
