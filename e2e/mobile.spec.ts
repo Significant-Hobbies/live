@@ -9,8 +9,8 @@ import { expect, test } from '@playwright/test';
  */
 
 test.describe('SignificantHobbies mobile', () => {
-  test('landing page has no horizontal scroll', async ({ page }) => {
-    await page.goto('/');
+  test('life-in-weeks page has no horizontal scroll', async ({ page }) => {
+    await page.goto('/life-in-weeks');
     const overflow = await page.evaluate(
       () => document.documentElement.scrollWidth - document.documentElement.clientWidth
     );

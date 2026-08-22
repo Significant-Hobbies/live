@@ -23,7 +23,7 @@ const baselines = {
     duplicatedLines: 763,
     // Removing the obsolete native account client reduced duplicate lines but
     // also reduced total production LOC, so the percentage denominator moved.
-    percentage: 1.3134338635268195,
+    percentage: 1.3265035767906033,
   },
   unused: {
     files: 0,

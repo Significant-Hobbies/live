@@ -72,14 +72,16 @@ export default defineConfig({
       // ENABLE_TEST_AUTH gates better-auth's email provider behind NODE_ENV too
       // (src/lib/auth.ts), so the authenticated specs run instead of skipping.
       command: 'pnpm dev:test-auth',
-      url: APP_URL,
+      // Live no longer owns the apex `/` page after the Hub extraction, so a
+      // root readiness probe would wait forever on Next's intentional 404.
+      url: `${APP_URL}/life-in-weeks`,
       reuseExistingServer: !ci,
       timeout: 60_000,
     },
     {
       // `astro preview` serves dist/, so it has to be built first.
       command: `pnpm --filter significanthobbies-landing-astro build && pnpm --filter significanthobbies-landing-astro preview --port ${LANDING_PORT}`,
-      url: LANDING_URL,
+      url: `${LANDING_URL}/live`,
       reuseExistingServer: !ci,
       timeout: 120_000,
     },

@@ -1,8 +1,8 @@
 import { expect, test } from '@playwright/test';
 
 test.describe('SEO', () => {
-  test('homepage has correct meta tags', async ({ page }) => {
-    await page.goto('/');
+  test('Live has correct meta tags', async ({ page }) => {
+    await page.goto('/life-in-weeks');
     const title = await page.title();
     expect(title).toContain('Significant Hobbies');
   });

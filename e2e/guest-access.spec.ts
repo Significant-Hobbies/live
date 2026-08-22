@@ -11,23 +11,6 @@ const LOCAL_ROUTES = [
 ] as const;
 
 test.describe('private work is locally available without an account', () => {
-  test('root is the public product Hub before local onboarding', async ({ page }) => {
-    await page.goto('/');
-    await expect(page).toHaveURL(/\/$/);
-    await expect(
-      page.getByRole('heading', { name: 'Your personal apps, in one place.' })
-    ).toBeVisible();
-  });
-
-  test('the Hub remains the front door after local onboarding', async ({ page }) => {
-    await completeLocalOnboarding(page);
-    await page.goto('/');
-    await expect(page).toHaveURL(/\/$/);
-    await expect(page.getByRole('link', { name: /Live/ }).first()).toBeVisible();
-    await expect(page.getByRole('heading', { name: 'Journal', exact: true })).toBeVisible();
-    await expect(page.getByRole('heading', { name: 'Habits', exact: true })).toBeVisible();
-  });
-
   test('public navigation does not expose the private workspace before onboarding', async ({
     page,
   }) => {

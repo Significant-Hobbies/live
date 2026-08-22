@@ -13,8 +13,6 @@ import { waitForHydrated } from './fixtures/hydration';
  */
 
 const LOGGED_IN_ROUTES = [
-  '/',
-  '/hub',
   '/daily',
   '/journal',
   '/habits',
@@ -46,32 +44,6 @@ test.describe('authenticated surfaces', () => {
       expect(authedPage.url()).not.toContain('/login');
     });
   }
-
-  test('/hub requires sign-in and preserves its destination', async ({ page }) => {
-    await page.goto('/hub');
-    await expect(page).toHaveURL(/\/login\?callbackUrl=%2Fhub$/);
-  });
-
-  test('/hub renders the read-only inventory for a signed-in user', async ({ authedPage }) => {
-    await authedPage.goto('/hub');
-    const inventory = authedPage.locator('section[aria-labelledby="data-inventory-heading"]');
-    await expect(
-      inventory.getByRole('heading', { name: 'What Cloudflare has for you.' })
-    ).toBeVisible();
-    await expect(inventory.getByText('Platform read confirmed')).toBeVisible();
-    await expect(inventory.locator('ul > li')).toHaveCount(7);
-    await expect(inventory.getByText('See the northern lights')).toBeVisible();
-    await expect(inventory.getByText('Significant Hobbies D1 connector')).toBeVisible();
-    await expect(inventory.getByText('Entry from 2026-08-21')).toBeVisible();
-    await expect(inventory.getByText('640 kcal · 42 g protein')).toBeVisible();
-    await expect(inventory.getByText('Calorie D1 connector')).toBeVisible();
-    await expect(inventory.getByText('Anchor record updated')).toBeVisible();
-  });
-
-  test('an already-signed-in login request returns to /hub', async ({ authedPage }) => {
-    await authedPage.goto('/login?callbackUrl=%2Fhub');
-    await expect(authedPage).toHaveURL(/\/hub$/);
-  });
 
   test('/daily points to Journal and Habits instead of mixing them', async ({ authedPage }) => {
     await authedPage.goto('/daily');
@@ -113,7 +85,7 @@ test.describe('authenticated surfaces', () => {
   });
 
   test('the account menu exposes the surfaces it claims to', async ({ authedPage }) => {
-    await authedPage.goto('/');
+    await authedPage.goto('/journal');
     // Nav renders the signed-in dropdown rather than a Sign in button.
     await expect(authedPage.getByRole('link', { name: 'Sign in' })).toHaveCount(0);
   });
@@ -175,7 +147,7 @@ test.describe('authenticated surfaces', () => {
     await expect(authedPage.getByText(/1\/\d+ steps done/).first()).toBeVisible();
   });
 
-  test('the creed can be written and remains durable from the Hub', async ({ authedPage }) => {
+  test('the creed can be written and remains durable', async ({ authedPage }) => {
     // `updateCreed` had zero callers, so users.creed was NULL for everyone and
     // the dashboard heading, the public-profile quote and the look-back
     // narrative all permanently took their fallback branch — for the field the
@@ -219,12 +191,6 @@ test.describe('authenticated surfaces', () => {
     // Persisted, not just echoed back by local state.
     await authedPage.goto('/settings');
     await expect(authedPage.getByLabel('Your creed')).toHaveValue(creed);
-
-    await authedPage.goto('/');
-    await expect(authedPage).toHaveURL(/\/$/);
-    await expect(
-      authedPage.getByRole('heading', { name: 'Your personal apps, in one place.' })
-    ).toBeVisible();
   });
 
   test('a bucket item can be advanced, published, and deleted', async ({ authedPage }) => {

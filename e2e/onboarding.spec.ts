@@ -1,28 +1,6 @@
 import { expect, test } from '@playwright/test';
 
 test.describe('Onboarding', () => {
-  test('signed-in people can open the Hub before onboarding', async ({ page }, testInfo) => {
-    const email = `e2e-onboarding-gate-${testInfo.project.name}-${Date.now()}-${crypto.randomUUID()}@significanthobbies.test`;
-    const signUp = await page.request.post('/api/auth/sign-up/email', {
-      data: {
-        email,
-        password: 'e2e-test-password-not-a-secret',
-        name: 'New Person',
-      },
-      failOnStatusCode: false,
-    });
-    if (signUp.status() === 404) {
-      test.skip(true, 'Test auth disabled — run the dev server with ENABLE_TEST_AUTH=1');
-    }
-    expect(signUp.ok()).toBe(true);
-
-    await page.goto('/');
-    await expect(page).toHaveURL(/\/$/);
-    await expect(
-      page.getByRole('heading', { name: 'Your personal apps, in one place.' })
-    ).toBeVisible();
-  });
-
   test('anonymous onboarding restores its local draft after reload', async ({ page }) => {
     await page.goto('/onboarding');
     const dismissImport = page.getByRole('button', { name: 'Not now' });
