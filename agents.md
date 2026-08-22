@@ -12,11 +12,13 @@ and record durable follow-up in this repository's GitHub Issues.
 
 ## What this is
 
-The Significant Hobbies personal-app family. The apex is a read-only directory;
-**Live** is the web application for hobbies, bucket lists, timelines, and
-lifelong tracking; **Journal** is the native private writing app under `ios/`;
-and **Habits** is maintained in its own native repository. The web runtime is
-deployed at `significanthobbies.com` on Cloudflare Workers via OpenNext.
+The Significant Hobbies Hub and its shared backend. The Hub at
+`significanthobbies.com` joins seven independently owned personal apps through
+privacy-safe summaries and typed semantic actions. The backend Worker lives in
+`services/hub-backend`, while the reusable native client is the root
+`PersonalSyncKit` Swift package. Live and Journal have independent repositories;
+their historical source may remain visible in earlier commits but is not
+canonical here after the reconciliation cutover.
 
 ## Stack
 
@@ -49,6 +51,9 @@ pnpm quality:all              # web and native gates together
 
 pnpm docs:check               # markdown link + frontmatter validation (no deps)
 pnpm docs:build               # blume build (presentation layer only) → docs-site/dist/
+npm --prefix services/hub-backend ci
+pnpm hub-backend:check         # Worker types, tests, and dry-run bundle
+pnpm sync-kit:test             # shared native sync client
 ```
 
 Full command list in `package.json`. Schema changes: edit `src/db/schema.ts`,
