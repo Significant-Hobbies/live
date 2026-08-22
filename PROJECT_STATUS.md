@@ -44,9 +44,9 @@ Habits are focused products built from the existing private practice data.
   but the production Astro overlay masked that route. A dedicated `/hub` route,
   preserved sign-in return path, current native-app labels, and seven-domain
   browser coverage are implemented and verified; production release remains
-  operator-owned. Apple
-  completed processing Journal 1.0.0 (4); the build still needs internal tester
-  assignment before it appears in TestFlight.
+  operator-owned. Apple completed processing Journal 1.0.0 (4), and the valid
+  build is assigned to the owner in the internal `Personal Testing` group with
+  automatic distribution.
 
 - **2026-08-21:** Added a private proof surface to the authenticated Hub. It
   reads the existing Personal Platform summary contract with the current
