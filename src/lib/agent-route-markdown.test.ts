@@ -111,6 +111,24 @@ describe('public route Markdown boundary', () => {
     expect(await emptyResponse?.text()).not.toContain('<html>');
   });
 
+  it('returns a Markdown 404 for Accept-negotiated unknown HTML paths', async () => {
+    const response = await handlePublicRouteMarkdown(
+      new Request('https://significanthobbies.com/this-route-does-not-exist', {
+        headers: { Accept: 'text/markdown, text/html;q=0.1' },
+      }),
+      vi.fn()
+    );
+    expect(response?.status).toBe(404);
+    expect(response?.headers.get('content-type')).toContain('text/markdown');
+    expect(await response?.text()).toContain('Not found');
+    // Non-markdown requests for the same unknown path still fall through.
+    const passthrough = await handlePublicRouteMarkdown(
+      new Request('https://significanthobbies.com/this-route-does-not-exist'),
+      vi.fn()
+    );
+    expect(passthrough).toBeNull();
+  });
+
   it('renders every generated public corpus route from canonical source data', async () => {
     const entries = await sitemap();
     const paths = entries.map((entry) => new URL(entry.url).pathname);

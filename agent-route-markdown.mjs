@@ -72,8 +72,15 @@ export async function handlePublicRouteMarkdown(request, loadMarkdown) {
   if (explicitMarkdown && !isPublicAgentDocumentPath(sourcePath)) {
     return markdownError(404, 'Not found', requestedUrl.pathname, request.method);
   }
-  if (!explicitMarkdown && (!wantsMarkdown(request) || !isPublicAgentDocumentPath(sourcePath))) {
+  // Non-.md requests: only negotiate markdown for known public documents.
+  if (!explicitMarkdown && !wantsMarkdown(request)) {
     return null;
+  }
+  // A markdown request (via Accept negotiation) for a path that has no
+  // public document surface: return a real 404 with a markdown body so
+  // agents don't receive the 200 HTML app shell for unknown routes.
+  if (!explicitMarkdown && !isPublicAgentDocumentPath(sourcePath)) {
+    return markdownError(404, 'Not found', requestedUrl.pathname, request.method);
   }
 
   const markdown = await loadMarkdown(sourcePath, request);

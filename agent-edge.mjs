@@ -73,6 +73,7 @@ export function handleAgentEdge(request) {
     // Re-bind origin so preview/custom domains stay correct
     const catalog = {
       ...AGENT_SURFACE.catalog,
+      openapi: `${url.origin}/openapi.json`,
       url: url.origin,
       llms: `${url.origin}/llms.txt`,
       llmsFull: `${url.origin}/llms-full.txt`,
@@ -86,6 +87,10 @@ export function handleAgentEdge(request) {
       })),
     };
     return json(catalog);
+  }
+
+  if (path === '/openapi.json') {
+    return json(openApiSpec(url.origin));
   }
 
   // Homepage markdown negotiation
@@ -125,4 +130,152 @@ function json(data) {
       'Cache-Control': 'public, max-age=300',
     },
   });
+}
+
+/**
+ * OpenAPI 3.1 description of the public, read-only agent surfaces.
+ * Origin is rebound so preview/custom domains stay correct.
+ *
+ * @param {string} origin
+ * @returns {object}
+ */
+function openApiSpec(origin) {
+  return {
+    openapi: '3.1.0',
+    info: {
+      title: 'Significant Hobbies — Agent API',
+      version: '1',
+      summary:
+        'Read-only public agent surfaces for Significant Hobbies: hobby discovery, bucket lists, experiences, and side quests over time.',
+      description:
+        'All endpoints are unauthenticated and read-only. Authenticated daily practice and private user data are not agent-indexed. Public HTML routes support `Accept: text/markdown` content negotiation and a `.md` alternate.',
+    },
+    servers: [{ url: origin }],
+    tags: [{ name: 'agent', description: 'Machine-readable agent surfaces' }],
+    paths: {
+      '/api/ai': {
+        get: {
+          tags: ['agent'],
+          summary: 'Agent catalog',
+          description:
+            'JSON inventory of bounded public surfaces, the markdown negotiation contract, and the list of agent-readable routes. The canonical entry point for crawlers and agents.',
+          operationId: 'getAgentCatalog',
+          responses: {
+            200: {
+              description: 'Agent catalog',
+              content: {
+                'application/json': {
+                  schema: { $ref: '#/components/schemas/Catalog' },
+                },
+              },
+            },
+          },
+        },
+      },
+      '/llms.txt': {
+        get: {
+          tags: ['agent'],
+          summary: 'llms.txt index',
+          description:
+            'Concise, human-and-agent-readable index of the site and its machine surfaces, following the llms.txt convention.',
+          operationId: 'getLlmsTxt',
+          responses: {
+            200: {
+              description: 'llms.txt index',
+              content: { 'text/plain': { schema: { type: 'string' } } },
+            },
+          },
+        },
+      },
+      '/llms-full.txt': {
+        get: {
+          tags: ['agent'],
+          summary: 'Full agent brief',
+          description:
+            'Canonical editorial corpus concatenated into a single agent-readable document.',
+          operationId: 'getLlmsFullTxt',
+          responses: {
+            200: {
+              description: 'Full agent brief',
+              content: { 'text/plain': { schema: { type: 'string' } } },
+            },
+          },
+        },
+      },
+      '/sitemap.xml': {
+        get: {
+          tags: ['agent'],
+          summary: 'Sitemap',
+          description: 'XML sitemap of public, agent-readable routes.',
+          operationId: 'getSitemap',
+          responses: {
+            200: {
+              description: 'Sitemap XML',
+              content: { 'application/xml': { schema: { type: 'string' } } },
+            },
+          },
+        },
+      },
+      '/openapi.json': {
+        get: {
+          tags: ['agent'],
+          summary: 'OpenAPI description',
+          description: 'This document: a machine-readable description of the public agent API.',
+          operationId: 'getOpenApi',
+          responses: {
+            200: {
+              description: 'OpenAPI 3.1 document',
+              content: { 'application/json': { schema: { type: 'object' } } },
+            },
+          },
+        },
+      },
+    },
+    components: {
+      schemas: {
+        Catalog: {
+          type: 'object',
+          description: 'Bounded inventory of public agent surfaces.',
+          properties: {
+            name: { type: 'string' },
+            version: { type: 'string' },
+            url: { type: 'string', format: 'uri' },
+            llms: { type: 'string', format: 'uri' },
+            llmsFull: { type: 'string', format: 'uri' },
+            sitemap: { type: 'string', format: 'uri' },
+            robots: { type: 'string', format: 'uri' },
+            openapi: { type: 'string', format: 'uri' },
+            markdown: {
+              type: 'object',
+              properties: {
+                suffix: { type: 'string', example: '.md' },
+                negotiation: { type: 'boolean', example: true },
+              },
+            },
+            surfaces: {
+              type: 'array',
+              items: { $ref: '#/components/schemas/Surface' },
+            },
+            auth: {
+              type: 'object',
+              properties: {
+                public: { type: 'boolean' },
+                notes: { type: 'string' },
+              },
+            },
+          },
+        },
+        Surface: {
+          type: 'object',
+          properties: {
+            id: { type: 'string' },
+            url: { type: 'string', format: 'uri' },
+            md: { type: 'string', format: 'uri' },
+            kind: { type: 'string', example: 'static' },
+            description: { type: 'string' },
+          },
+        },
+      },
+    },
+  };
 }

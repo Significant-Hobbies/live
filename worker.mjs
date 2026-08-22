@@ -102,6 +102,43 @@ function hasAuthCookie(request) {
   return AUTH_COOKIE_FRAGMENTS.some((c) => cookie.includes(c));
 }
 
+function isApiPath(pathname) {
+  return pathname === '/api' || pathname.startsWith('/api/');
+}
+
+/**
+ * JSON error body for unknown API routes, per the agent-friendly error
+ * contract: `{"error":{"code","message","path"}}`.
+ */
+function jsonApiError(status, code, message, path) {
+  return new Response(`${JSON.stringify({ error: { code, message, path } }, null, 2)}\n`, {
+    status,
+    headers: {
+      'Content-Type': 'application/json; charset=utf-8',
+      'Cache-Control': 'no-store',
+      'X-Content-Type-Options': 'nosniff',
+    },
+  });
+}
+
+/**
+ * Wrap openNext.fetch so unknown `/api/*` routes return a JSON error
+ * instead of an HTML app shell or opaque 404.
+ */
+async function fetchOpenNext(request, env, ctx) {
+  const response = await openNext.fetch(request, env, ctx);
+  const pathname = new URL(request.url).pathname;
+  if (isApiPath(pathname) && response.status === 404) {
+    return jsonApiError(
+      404,
+      'not_found',
+      `No API route exists at ${pathname}. See /api/ai for the public agent catalog.`,
+      pathname
+    );
+  }
+  return response;
+}
+
 export default {
   fetch: withTiming(async function fetch(request, env, ctx) {
     const requestUrl = new URL(request.url);
@@ -148,17 +185,17 @@ export default {
       if (markdown) return markdown;
 
       if (request.method !== 'GET') {
-        return openNext.fetch(request, env, ctx);
+        return fetchOpenNext(request, env, ctx);
       }
       const url = requestUrl;
       if (!isCacheableDocumentPath(url.pathname)) {
-        return openNext.fetch(request, env, ctx);
+        return fetchOpenNext(request, env, ctx);
       }
       // Auth-bearing requests pass straight through; the user is likely
       // going to be redirected by middleware to /library or /dashboard.
       const isLiveLanding = url.hostname === LIVE_HOST && url.pathname === '/';
       if (hasAuthCookie(request) && !isLiveLanding) {
-        return openNext.fetch(request, env, ctx);
+        return fetchOpenNext(request, env, ctx);
       }
 
       // Short-circuit: the Astro landing is overlaid into
