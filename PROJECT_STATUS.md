@@ -5,7 +5,7 @@
 > Update this file when durable current or shipped product truth changes. Do
 > not let deploy-version snapshots accumulate here — put those in the archive.
 
-Last updated: 2026-08-21
+Last updated: 2026-08-22
 
 ## Why / What
 
@@ -32,11 +32,21 @@ Habits are focused products built from the existing private practice data.
 
 ## Timeline
 
-- **2026-08-22:** Released the Significant Hobbies directory, authenticated
-  read-only Hub, and Live to Cloudflare from exact green commit
-  `67ad6bfe5ca62f51c6ebe3e38aa5d1567510efab`. Apple completed processing
-  Journal 1.0.0 (4); the build still needs internal tester assignment before it
-  appears in TestFlight.
+- **2026-08-22:** Added Journal's private first-entry onboarding. New owners
+  choose a prompt or blank page, keep drafts across relaunches, and complete
+  onboarding only after the existing local store accepts a real entry. Existing
+  writing bypasses the flow; optional account sync is explained after local
+  value. iPhone/iPad evidence, focused accessibility and reduced-motion UI
+  coverage, the full native check, and the design review gate pass.
+
+- **2026-08-22:** Released the Significant Hobbies directory and Live to
+  Cloudflare. The authenticated inventory had been implemented in the Next root,
+  but the production Astro overlay masked that route. A dedicated `/hub` route,
+  preserved sign-in return path, current native-app labels, and seven-domain
+  browser coverage are implemented and verified; production release remains
+  operator-owned. Apple completed processing Journal 1.0.0 (4), and the valid
+  build is assigned to the owner in the internal `Personal Testing` group with
+  automatic distribution.
 
 - **2026-08-21:** Added a private proof surface to the authenticated Hub. It
   reads the existing Personal Platform summary contract with the current
@@ -214,9 +224,10 @@ Historical milestones live in
 - **Runtime:** Cloudflare Worker `significanthobbies` (OpenNext) + Astro Hub
   and Live overlays. Cloudflare D1 + Drizzle ORM +
   better-auth Google OAuth. PostHog analytics.
-- **Personal-app Hub:** seven honest linked cards plus an authenticated,
-  read-only Personal Platform inventory. The Hub owns no combined database,
-  assistant, or write actions.
+- **Personal-app Hub:** seven linked cards are shipped at the apex. An
+  authenticated, read-only Personal Platform inventory is implemented at
+  `/hub`; it owns no combined database, assistant, or write actions. Production
+  release remains operator-owned.
 - **Focused web products:** Live at `/live-more`, Journal at `/journal`, Habits
   at `/habits`, and `/daily` as the compatibility doorway.
 - **Owned product history:** public editorial changelog at `/changelog`.
