@@ -264,6 +264,10 @@ export default {
       const body = await response.arrayBuffer();
       const headers = new Headers(response.headers);
       headers.set('Cache-Control', cacheControlForPath(url.pathname));
+      // HTML pages with markdown alternates must Vary on Accept so caches
+      // don't serve the wrong representation to markdown clients.
+      const existingVary = headers.get('Vary');
+      headers.set('Vary', existingVary ? `${existingVary}, Accept` : 'Accept, Accept-Encoding');
 
       const cacheable = new Response(body, {
         status: response.status,

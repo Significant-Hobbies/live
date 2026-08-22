@@ -54,6 +54,27 @@ Do NOT use this for:
 - Every public sitemap route supports `Accept: text/markdown` and a `.md` alternate.
 - Authenticated daily practice and private user data are not agent-indexed.
 
+## Developer docs
+
+- [OpenAPI specification](https://significanthobbies.com/openapi.json): Full API surface description (OpenAPI 3.1)
+- [Agent catalog](https://significanthobbies.com/api/ai): JSON inventory of public agent surfaces
+
+## CLI
+
+```bash
+# Fetch the agent catalog
+curl -s https://significanthobbies.com/api/ai | jq .
+
+# Get the OpenAPI spec
+curl -s https://significanthobbies.com/openapi.json | jq .
+
+# Fetch the homepage as markdown
+curl -s -H 'Accept: text/markdown' https://significanthobbies.com/
+
+# Fetch the full agent brief
+curl -s https://significanthobbies.com/llms-full.txt
+```
+
 ## Source
 
 - [GitHub](https://github.com/Significant-Hobbies/significanthobbies)

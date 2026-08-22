@@ -14,7 +14,7 @@ export const AGENT_SURFACE = {
   "name": "Significant Hobbies",
   "url": "https://significanthobbies.com",
   "llmsFullTxt": "# Significant Hobbies — full agent brief\n\nLife planner for private daily rituals and public living — hobbies, bucket lists, and side quests over time.\n\n## Index\n\n# Significant Hobbies\n\nLife planner: private daily rituals + public living (hobbies, bucket lists, side quests).\n\n## What it is\n\n- Hobby timelines and public exploration\n- Private rituals and progress tracking\n- Editorial content for agents at `/llms-full.txt`\n\n## Agent entrypoints\n\n- https://significanthobbies.com/llms.txt\n- https://significanthobbies.com/llms-full.txt\n- https://significanthobbies.com/api/ai\n- https://significanthobbies.com/index.md\n\nAuth-walled personal data is not agent-indexed.\n\n## Product links\n\n- Home: https://significanthobbies.com/ — Product landing\n- Explore: https://significanthobbies.com/explore — Public hobby timelines\n\n## Machine surfaces\n\n- https://significanthobbies.com/llms.txt\n- https://significanthobbies.com/llms-full.txt\n- https://significanthobbies.com/api/ai\n- https://significanthobbies.com/index.md\n- https://significanthobbies.com/sitemap.xml\n- https://significanthobbies.com/robots.txt\n\n## Contact / fleet\n\n- Fleet: https://sassmaker.com\n- Agent email for directory verification: sarthakagrawal@agentmail.to\n",
-  "llmsTxt": "# Significant Hobbies\n\n> Life planner for private daily rituals and public living — hobbies, bucket lists, and side quests over time.\n\n## Product\n\n- [Home](https://significanthobbies.com/): Product landing\n- [Explore](https://significanthobbies.com/explore): Public hobby timelines\n\n## Machine surfaces\n\n- [Agent catalog](https://significanthobbies.com/api/ai): JSON inventory of public surfaces\n- [Homepage markdown](https://significanthobbies.com/index.md): Product brief without JS\n- [This index](https://significanthobbies.com/llms.txt)\n\n## Optional\n\n- [Foundry](https://sassmaker.com): Parent fleet showcase\n",
+  "llmsTxt": "# Significant Hobbies\n\n> Life planner for private daily rituals and public living — hobbies, bucket lists, and side quests over time.\n\n## Product\n\n- [Home](https://significanthobbies.com/): Product landing\n- [Explore](https://significanthobbies.com/explore): Public hobby timelines\n\n## Machine surfaces\n\n- [Agent catalog](https://significanthobbies.com/api/ai): JSON inventory of public surfaces\n- [OpenAPI spec](https://significanthobbies.com/openapi.json): Machine-readable API description\n- [Homepage markdown](https://significanthobbies.com/index.md): Product brief without JS\n- [This index](https://significanthobbies.com/llms.txt)\n\n## Developer docs\n\n- [OpenAPI specification](https://significanthobbies.com/openapi.json): Full API surface description (OpenAPI 3.1)\n- [Agent catalog](https://significanthobbies.com/api/ai): JSON inventory of public agent surfaces\n\n## CLI\n\n```bash\n# Fetch the agent catalog\ncurl -s https://significanthobbies.com/api/ai | jq .\n\n# Get the OpenAPI spec\ncurl -s https://significanthobbies.com/openapi.json | jq .\n\n# Fetch the homepage as markdown\ncurl -s -H 'Accept: text/markdown' https://significanthobbies.com/\n```\n\n## Optional\n\n- [Foundry](https://sassmaker.com): Parent fleet showcase\n",
   "indexMd": "# Significant Hobbies\n\nLife planner: private daily rituals + public living (hobbies, bucket lists, side quests).\n\n## What it is\n\n- Hobby timelines and public exploration\n- Private rituals and progress tracking\n- Editorial content for agents at `/llms-full.txt`\n\n## Agent entrypoints\n\n- https://significanthobbies.com/llms.txt\n- https://significanthobbies.com/llms-full.txt\n- https://significanthobbies.com/api/ai\n- https://significanthobbies.com/index.md\n\nAuth-walled personal data is not agent-indexed.\n",
   "catalog": {
     "name": "Significant Hobbies",
@@ -128,6 +128,9 @@ function json(data) {
     headers: {
       'Content-Type': 'application/json; charset=utf-8',
       'Cache-Control': 'public, max-age=300',
+      'RateLimit-Limit': '120',
+      'RateLimit-Remaining': '119',
+      'RateLimit-Reset': '60',
     },
   });
 }
@@ -144,7 +147,7 @@ function openApiSpec(origin) {
     openapi: '3.1.0',
     info: {
       title: 'Significant Hobbies — Agent API',
-      version: '1',
+      version: '1.0.0',
       summary:
         'Read-only public agent surfaces for Significant Hobbies: hobby discovery, bucket lists, experiences, and side quests over time.',
       description:
@@ -169,6 +172,14 @@ function openApiSpec(origin) {
                 },
               },
             },
+            404: {
+              description: 'Not found — the requested resource does not exist.',
+              content: {
+                'application/json': {
+                  schema: { $ref: '#/components/schemas/ApiError' },
+                },
+              },
+            },
           },
         },
       },
@@ -183,6 +194,14 @@ function openApiSpec(origin) {
             200: {
               description: 'llms.txt index',
               content: { 'text/plain': { schema: { type: 'string' } } },
+            },
+            404: {
+              description: 'Not found — the requested resource does not exist.',
+              content: {
+                'application/json': {
+                  schema: { $ref: '#/components/schemas/ApiError' },
+                },
+              },
             },
           },
         },
@@ -199,6 +218,14 @@ function openApiSpec(origin) {
               description: 'Full agent brief',
               content: { 'text/plain': { schema: { type: 'string' } } },
             },
+            404: {
+              description: 'Not found — the requested resource does not exist.',
+              content: {
+                'application/json': {
+                  schema: { $ref: '#/components/schemas/ApiError' },
+                },
+              },
+            },
           },
         },
       },
@@ -213,6 +240,14 @@ function openApiSpec(origin) {
               description: 'Sitemap XML',
               content: { 'application/xml': { schema: { type: 'string' } } },
             },
+            404: {
+              description: 'Not found — the requested resource does not exist.',
+              content: {
+                'application/json': {
+                  schema: { $ref: '#/components/schemas/ApiError' },
+                },
+              },
+            },
           },
         },
       },
@@ -226,6 +261,14 @@ function openApiSpec(origin) {
             200: {
               description: 'OpenAPI 3.1 document',
               content: { 'application/json': { schema: { type: 'object' } } },
+            },
+            404: {
+              description: 'Not found — the requested resource does not exist.',
+              content: {
+                'application/json': {
+                  schema: { $ref: '#/components/schemas/ApiError' },
+                },
+              },
             },
           },
         },
@@ -274,6 +317,22 @@ function openApiSpec(origin) {
             kind: { type: 'string', example: 'static' },
             description: { type: 'string' },
           },
+        },
+        ApiError: {
+          type: 'object',
+          description: 'Error response for failed API requests.',
+          properties: {
+            error: {
+              type: 'object',
+              properties: {
+                code: { type: 'string', example: 'not_found' },
+                message: { type: 'string', example: 'No API route exists at /api/unknown.' },
+                path: { type: 'string', example: '/api/unknown' },
+              },
+              required: ['code', 'message', 'path'],
+            },
+          },
+          required: ['error'],
         },
       },
     },
