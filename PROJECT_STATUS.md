@@ -1,10 +1,10 @@
-# personal-platform — PROJECT STATUS
+# Hub Backend — PROJECT STATUS
 
 Last updated: 2026-08-22
 
 ## Why / What
 
-Provide one small signed-in Cloudflare synchronization and semantic API layer
+Hub Backend provides one small signed-in Cloudflare synchronization and semantic API layer
 for the Significant Hobbies personal app family while keeping every source app
 standalone and local-first.
 
@@ -72,7 +72,7 @@ legacy-data import, and immediate CloudKit retirement.
 
 ## Products
 
-- Live Cloudflare Worker `personal-platform` and D1 database
+- Live Hub Backend Worker `personal-platform` and D1 database
   `personal-platform`.
 - `PersonalSyncKit` Swift package for iOS, iPadOS, macOS, and watchOS clients.
 
@@ -95,4 +95,4 @@ legacy-data import, and immediate CloudKit retirement.
 
 ## Work queue
 
-- [GitHub Issues](https://github.com/Significant-Hobbies/personal-platform/issues)
+- [GitHub Issues](https://github.com/Significant-Hobbies/hub-backend/issues)

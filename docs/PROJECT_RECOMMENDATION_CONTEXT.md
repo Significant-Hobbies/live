@@ -1,4 +1,4 @@
-# Personal Platform recommendation context
+# Hub Backend recommendation context
 
 ## Product boundary
 

@@ -63,7 +63,7 @@ function connectedApi(path: string, init: RequestInit = {}): Promise<Response> {
   );
 }
 
-describe("Personal Platform Worker", () => {
+describe("Hub Backend Worker", () => {
   it("serves health without authentication and fails closed elsewhere", async () => {
     const health = await exports.default.fetch("https://personal-platform.test/health");
     expect(health.status).toBe(200);
@@ -479,7 +479,7 @@ describe("Personal Platform Worker", () => {
     }));
   });
 
-  it("does not fall back to Personal Platform D1 for Calorie", async () => {
+  it("does not fall back to Hub Backend D1 for Calorie", async () => {
     const response = await api("/v1/domains/calorie/summary");
     expect(response.status).toBe(503);
     expect(await response.json()).toMatchObject({

@@ -1,6 +1,6 @@
 # Application integration
 
-Personal Platform is the signed-in synchronization and semantic API layer. It
+Hub Backend is the signed-in synchronization and semantic API layer. It
 does not replace any app's local store or domain service.
 
 ## Ownership map
@@ -9,11 +9,11 @@ does not replace any app's local store or domain service.
 | --- | --- | --- | --- |
 | Hub | Read cache only | None | Reads summaries and recent activity |
 | Live | Existing browser/native store | Significant Hobbies D1 | Typed Significant Hobbies service connector |
-| Journal | Existing browser/native store | Personal Platform D1 | `journal` adapter |
-| Habits | SwiftData | Personal Platform D1 | `habits` adapter |
-| Setline | Local JSON | Personal Platform D1 | `setline` adapter |
-| Kith | Local JSON | Personal Platform D1 | `kith` adapter |
-| Anchor | SwiftData | Personal Platform D1 | `anchor` adapter |
+| Journal | Existing browser/native store | Hub Backend D1 | `journal` adapter |
+| Habits | SwiftData | Hub Backend D1 | `habits` adapter |
+| Setline | Local JSON | Hub Backend D1 | `setline` adapter |
+| Kith | Local JSON | Hub Backend D1 | `kith` adapter |
+| Anchor | SwiftData | Hub Backend D1 | `anchor` adapter |
 | Calorie | IndexedDB/native local store | Existing Calorie D1 | Calorie service binding only |
 
 Existing non-Calorie records do not require migration. The first signed-in
@@ -61,7 +61,7 @@ surfaces.
 
 ## Calorie
 
-Personal Platform expects a Cloudflare service binding named
+Hub Backend expects a Cloudflare service binding named
 `CALORIE_SERVICE`. It forwards the verified internal user ID to:
 
 - `GET /v1/personal/summary`
@@ -82,7 +82,7 @@ Before production activation:
 
 1. Bind the existing identity service as `AUTH_SERVICE`.
 2. Bind the existing Calorie Worker as `CALORIE_SERVICE`.
-3. Replace the placeholder D1 ID with a newly created Personal Platform D1.
+3. Replace the placeholder D1 ID with a newly created Hub Backend D1.
 4. Apply `migrations/0001_initial.sql` remotely only after explicit approval.
 5. Integrate and verify one app adapter at a time before disabling its CloudKit
    transport.

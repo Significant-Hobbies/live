@@ -1,4 +1,4 @@
-# Personal Platform agent instructions
+# Hub Backend agent instructions
 
 Also follow the Fleet standard in `../AGENTS.md`.
 
@@ -23,4 +23,3 @@ npm run check
 Never deploy, create or migrate a remote D1 database, activate production
 authentication, or retire CloudKit without explicit operator approval. Local D1
 migrations and tests are safe.
-

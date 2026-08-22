@@ -1,4 +1,4 @@
-# Personal Platform
+# Hub Backend
 
 Cloudflare synchronization and semantic APIs for Journal, Habits, Setline,
 Kith, and Anchor. Hub consumes these APIs read-only and owns no domain data.
