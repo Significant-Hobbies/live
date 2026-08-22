@@ -1,6 +1,6 @@
 # Hub Backend agent instructions
 
-Also follow the Fleet standard in `../AGENTS.md`.
+Also follow the repository standard in `../../AGENTS.md`.
 
 ## Product boundary
 
@@ -16,7 +16,7 @@ npm ci
 npm run types
 npm run typecheck
 npm test
-swift test
+swift test --package-path ../..
 npm run check
 ```
 

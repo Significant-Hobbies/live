@@ -12,7 +12,7 @@ typed service connectors.
 npm ci
 npm run types
 npm test
-swift test
+swift test --package-path ../..
 npm run check
 ```
 
@@ -32,3 +32,5 @@ these commands.
 - `POST /v1/actions/:actionId/undo`
 
 See [`docs/integration.md`](docs/integration.md) for the app-by-app boundary.
+The Worker is owned by this directory; the `PersonalSyncKit` package is owned
+at the repository root so native consumers can resolve it with SwiftPM.

@@ -1,6 +1,6 @@
 # Hub Backend — PROJECT STATUS
 
-Last updated: 2026-08-22
+Last updated: 2026-08-23
 
 ## Why / What
 
@@ -33,6 +33,11 @@ legacy-data import, and immediate CloudKit retirement.
 - Hub as a read/action client with no canonical domain storage.
 
 ## Timeline
+
+- **2026-08-23:** Consolidated Hub Backend into the canonical Significant
+  Hobbies repository without changing the deployed `personal-platform`
+  Worker, D1, bindings, routes, or authentication boundary. `PersonalSyncKit`
+  is now published from the repository root so every native app has one source.
 
 - **2026-08-22:** Verified the exact SHA-tagged production Worker is healthy
   and its remote D1 schema is current but contains no owner or Platform-owned
@@ -95,4 +100,4 @@ legacy-data import, and immediate CloudKit retirement.
 
 ## Work queue
 
-- [GitHub Issues](https://github.com/Significant-Hobbies/hub-backend/issues)
+- [GitHub Issues](https://github.com/Significant-Hobbies/significanthobbies/issues)
