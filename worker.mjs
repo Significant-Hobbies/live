@@ -15,6 +15,11 @@ import openNext from './.open-next/worker.js';
 import { withTiming } from './timing.mjs';
 import { handleAgentEdge } from './agent-edge.mjs';
 import { handleCachedPublicRouteMarkdown } from './agent-route-markdown.mjs';
+import {
+  HUB_HOSTS,
+  isHubServicePath,
+  markPersonalPlatformInternalRequest,
+} from './hub-routing.mjs';
 
 // Durable Objects must be re-exported from the entry that wrangler.toml
 // points at, otherwise the bindings can't resolve them at deploy time.
@@ -95,7 +100,6 @@ function isCacheableContentType(pathname, contentType) {
 // always see live SSR (e.g. redirect to /library).
 const AUTH_COOKIE_FRAGMENTS = ['session_token', 'session-token'];
 const LIVE_HOST = 'live.significanthobbies.com';
-const HUB_HOSTS = new Set(['significanthobbies.com', 'www.significanthobbies.com']);
 
 function hasAuthCookie(request) {
   const cookie = request.headers.get('cookie');
@@ -142,10 +146,11 @@ async function fetchOpenNext(request, env, ctx) {
 
 export default {
   fetch: withTiming(async function fetch(request, env, ctx) {
+    request = markPersonalPlatformInternalRequest(request);
     const requestUrl = new URL(request.url);
     if (
       HUB_HOSTS.has(requestUrl.hostname) &&
-      (requestUrl.pathname === '/' || requestUrl.pathname === '/hub') &&
+      isHubServicePath(requestUrl.pathname) &&
       env.HUB_SERVICE
     ) {
       return env.HUB_SERVICE.fetch(request);
