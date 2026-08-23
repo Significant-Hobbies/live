@@ -3,7 +3,10 @@ import { LiveReadError } from '@/server/personal-platform-live';
 
 export async function personalPlatformUser(request: Request): Promise<string | Response> {
   const forwardedUserId = request.headers.get('X-Personal-User-Id');
-  if (new URL(request.url).hostname === 'personal-auth.internal' && forwardedUserId) {
+  // worker.mjs adds this marker only after validating the private service-binding hostname
+  // and strips a caller-supplied marker from public traffic.
+  const isTrustedInternalRequest = request.headers.get('X-Personal-Platform-Internal') === '1';
+  if (isTrustedInternalRequest && forwardedUserId) {
     return forwardedUserId;
   }
   const session = await auth.api.getSession({ headers: request.headers });

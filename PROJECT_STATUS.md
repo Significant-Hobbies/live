@@ -17,9 +17,10 @@ side quests.
 - Authenticated records remain in the existing Significant Hobbies D1;
   signed-out private records remain in IndexedDB on the compatible apex origin.
 - The Live landing remains `https://live.significanthobbies.com`.
-- Apex `/` and `/hub` delegate to the separately owned Hub through the
-  `personal-platform` service binding. Existing deeper apex routes remain
-  compatibility surfaces for Live, avoiding a data or auth migration.
+- Apex `/`, `/hub`, `/health`, `/mcp`, and `/v1/*` delegate to the separately
+  owned Hub through the `personal-platform` service binding. Existing deeper
+  apex product routes remain compatibility surfaces for Live, avoiding a data
+  or auth migration.
 
 ## Status and next
 
