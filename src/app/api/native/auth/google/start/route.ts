@@ -14,16 +14,19 @@ export async function GET(request: Request): Promise<Response> {
 
   const completeURL = new URL('/api/native/auth/google/complete', requestURL);
   completeURL.searchParams.set('callback', callback);
-  const result = await auth.api.signInSocial({
+  const { response: result, headers } = await auth.api.signInSocial({
     body: {
       provider: 'google',
       callbackURL: completeURL.toString(),
       errorCallbackURL: completeURL.toString(),
     },
     headers: request.headers,
+    returnHeaders: true,
   });
   if (!result.url) {
     return json({ code: 'OAUTH_START_FAILED', message: 'Google sign-in could not start.' }, 502);
   }
-  return Response.redirect(result.url);
+  headers.set('Location', result.url);
+  headers.set('Cache-Control', 'no-store');
+  return new Response(null, { status: 302, headers });
 }
