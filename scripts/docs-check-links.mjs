@@ -31,8 +31,7 @@ function walk(dir, out = []) {
     const p = join(dir, entry);
     const st = statSync(p);
     if (st.isDirectory()) {
-      if (entry === 'node_modules' || entry === 'dist' || entry === '.git')
-        continue;
+      if (entry === 'node_modules' || entry === 'dist' || entry === '.git') continue;
       walk(p, out);
     } else if (/\.(md|mdx)$/.test(p)) {
       out.push(p);
