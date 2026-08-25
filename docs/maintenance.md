@@ -1,11 +1,11 @@
 ---
 title: Maintaining this docs system
-description: How to edit the significanthobbies docs tree, validate links, and build with Blume. Markdown is the source of truth; Blume is only the presentation layer.
+description: How to edit the significanthobbies docs tree and validate links. Markdown is the source of truth.
 ---
 
 # Maintaining this docs system
 
-> Rules: Markdown in `docs/` is the source of truth. Blume only renders it.
+> Rules: Markdown in `docs/` is the source of truth.
 > Code and executable config (`wrangler.toml`, `package.json`,
 > `src/db/schema.ts`) remain authoritative for implementation details and
 > schedules.
@@ -20,7 +20,7 @@ See [`index.md`](index.md) for the full map. Canonical homes:
 - **Operations + runbooks + jobs + security audit** → `docs/operations/`
 - **Durable learnings + failed approaches + study queue** → `docs/knowledge/`
 - **Durable research data** → `docs/knowledge/research/`
-- **Snapshots (TLL merge, old status, old designs)** → `docs/knowledge/archive/`
+- **Snapshots (old status and designs)** → `docs/knowledge/archive/`
 - **Live status** → `STATUS.md` (repo root, short)
 - **Agent bootloader** → `AGENTS.md` (repo root, concise)
 - **Public README** → `README.md` (repo root)
@@ -63,35 +63,14 @@ node scripts/docs-check-links.mjs
 # or
 pnpm docs:check
 
-# Build the docs site with Blume (presentation layer only).
-# No docs-site lockfile is committed yet, so use a plain install (the CI
-# workflow does the same). Switch to --frozen-lockfile once one is committed.
-pnpm install --filter significanthobbies-docs...
-pnpm docs:build     # → docs-site/dist/
-pnpm docs:preview
 ```
 
-CI (`.github/workflows/docs.yml`) runs the link check then the Blume build on
-pushes to `main` and PRs touching `docs/`, `STATUS.md`, `AGENTS.md`,
-`README.md`, `docs-site/`, `scripts/docs-check-links.mjs`, or the workflow
-itself.
+CI (`.github/workflows/docs.yml`) runs the link checker on pushes to `main` and
+PRs touching `docs/`, `STATUS.md`, `AGENTS.md`, `README.md`,
+`scripts/docs-check-links.mjs`, or the workflow itself.
 
-## Blume
-
-`docs-site/blume.config.ts` points Blume at `../docs` as the content root.
-Blume generates a static site into `docs-site/dist/` (gitignored). The
-committed Markdown is the source of truth; Blume is only the presentation and
-search layer. Do not add Blume-specific frontmatter that the source-of-truth
-docs depend on to make sense — plain Markdown must read correctly on its own.
-
-`docs/knowledge/archive/` is included in the Blume build so historical
-snapshots are reachable, but each archive page carries a banner that points to
-its current successor.
-
-The Blume package is isolated in `docs-site/` (a pnpm workspace member) so its
-Astro deps do not pollute the Next.js app's `node_modules`. The root
-`package.json` exposes `docs:check`, `docs:build`, and `docs:preview` scripts
-that delegate to the `docs-site` workspace.
+`docs/knowledge/archive/` preserves historical snapshots. Keep archive bodies
+stable and update the current document that supersedes them.
 
 ## When the live status changes
 

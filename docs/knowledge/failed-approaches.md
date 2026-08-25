@@ -75,12 +75,12 @@ description: Resolved traps and approaches that did not work — preserved so th
 
 ## F6 — Scoring daily practice turned reflection into performance
 
-- **What:** `today-little-log` had a scoreboard, min/ideal/max habit values,
-  monthly calendar locks, streak counts, and a life score. Users experienced
-  this as surveillance and shame, not encouragement.
-- **How it surfaced:** product stance crystallized during the TLL merge —
-  "we don't shame you for missed days."
-- **Fix:** the merge dropped all scoring. Habits are simple boolean
+- **What:** An earlier daily-practice design used a scoreboard, min/ideal/max
+  habit values, monthly calendar locks, streak counts, and a life score. Users
+  experienced this as surveillance and shame, not encouragement.
+- **How it surfaced:** Product review established the stance that "we don't
+  shame you for missed days."
+- **Fix:** Daily-practice scoring was dropped. Habits are simple boolean
   check-ins. The journal is compulsory but not scored. Commitments keep
   streaks (they are about proof, not daily rhythm).
 - **Durable constraint:** do not add scoring, streaks, or XP to the daily

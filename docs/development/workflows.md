@@ -64,8 +64,7 @@ a Mac for the complete local gate.
 `.github/workflows/weekly.yml` runs Mondays 09:00 UTC: lint, typecheck, test,
 build. A broader sanity check than CI.
 
-`.github/workflows/docs.yml` (added in this consolidation) runs the markdown
-link checker and Blume build on docs/ changes. See
+`.github/workflows/docs.yml` runs the Markdown link checker on docs/ changes. See
 [`maintenance.md`](../maintenance.md).
 
 ## Build for Cloudflare

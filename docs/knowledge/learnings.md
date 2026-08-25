@@ -52,13 +52,11 @@ functional (SEO + deep links + cross-links from the quiz result) — only the
 main entry points were removed. Do not add a fifth discovery surface. See
 [`product/discovery-funnel.md`](../product/discovery-funnel.md).
 
-## L6 — The daily ritual merge dropped scoring deliberately
+## L6 — Daily practice deliberately excludes scoring
 
-The `today-little-log` merge brought habits, journal, and check-ins but
-deliberately dropped TLL's scoreboard, focus timer, tasks, and scoring. The
-product stance is "we don't shame you for missed days." Commitments have
-streaks; daily habits do not. See [`architecture/decisions.md`](../architecture/decisions.md)
-A4 and [`archive/merge-plan-tll.md`](archive/merge-plan-tll.md).
+The product stance is "we don't shame you for missed days." Commitments have
+streaks; daily habits do not. See
+[`architecture/decisions.md`](../architecture/decisions.md) A4.
 
 ## L7 — `prisma/` is a legacy directory name; Drizzle is the ORM
 

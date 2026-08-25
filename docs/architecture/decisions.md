@@ -72,9 +72,7 @@ journal entry is compulsory for the PM ritual but not scored.
 
 **Why:** "We don't rank you against other people. Your weeks are your own. We
 don't shame you for missed days." Scoring daily practice turns reflection into
-performance, which is the opposite of the product's emotional goal. This stance
-came over explicitly from the `today-little-log` merge — see
-[`knowledge/archive/merge-plan-tll.md`](../knowledge/archive/merge-plan-tll.md).
+performance, which is the opposite of the product's emotional goal.
 
 **Constraint:** Commitments (`/commitments`) do have streak math and streak
 badges (7/30/100/365-day) — but commitments are hobby-specific multi-day goals

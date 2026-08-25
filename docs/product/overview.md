@@ -56,10 +56,8 @@ Emotional goal: users should feel seen, inspired, and gently nudged — not trac
 
 ## Product family
 
-The product merged with `today-little-log` on 2026-07-02 (see
-[`knowledge/archive/merge-plan-tll.md`](../knowledge/archive/merge-plan-tll.md)).
-The merge produced the original Daily and Living thesis. The 2026-08 split
-preserves its data while giving each recurring job a clearer home:
+The 2026-08 split preserves existing data while giving each recurring job a
+clearer home:
 
 - **Journal (private):** `/journal` owns AM/PM prompts and journal history.
   Structurally private: no visibility field, public API, or sharing.

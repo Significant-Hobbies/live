@@ -77,7 +77,7 @@ day, so writing a morning entry in the evening left the AM ring dark even though
 the entry existed. On `/dashboard` the state was write-only — stored and never
 rendered. Retired 2026-07-25.
 
-### Journal and Habits (from today-little-log merge)
+### Journal and Habits
 
 `Habit` (name, status, targetFrequency, icon, sourceQuestId, and one optional
 owned non-abandoned commitment reference), `HabitLog`
@@ -90,10 +90,9 @@ Journal and Habits are separate product surfaces but intentionally retain these
 tables and identifiers; the split requires no database migration. Signed-out
 work similarly keeps one origin-scoped `daily:state` IndexedDB envelope while
 the `/journal` and `/habits` adapters read and update only their respective
-fields. All journal data remains private by structure — no visibility fields. See
-[`knowledge/archive/merge-plan-tll.md`](../knowledge/archive/merge-plan-tll.md)
-for the merge rationale, [`decisions.md`](decisions.md) A12 for the bridge
-boundary, and A17 for the product split.
+fields. All journal data remains private by structure — no visibility fields.
+See [`decisions.md`](decisions.md) A12 for the bridge boundary and A17 for the
+product split.
 
 The habit commitment foreign key uses `ON DELETE SET NULL`, so removing a
 commitment preserves the habit and all `HabitLog` rows. The reference is

@@ -5,8 +5,7 @@ description: A life planner with two dimensions (Daily + Living). Product, archi
 
 # significanthobbies docs
 
-> Source of truth is the Markdown in this `docs/` tree (plus the code). Blume
-> renders it; it does not own it. See
+> Source of truth is the Markdown in this `docs/` tree (plus the code). See
 > [`maintenance.md`](maintenance.md) for how to edit this knowledge system.
 
 **significanthobbies** is a life planner with two dimensions. **Daily**
@@ -93,14 +92,13 @@ Deployed at `significanthobbies.com` on Cloudflare Workers via OpenNext.
 - [`knowledge/research/`](knowledge/research/) — durable research data:
   famous hobby journeys (v1 + v2), blog keyword research, seasonal content,
   and the separate [`Indulge iOS product reference`](knowledge/research/indulge-ios-prd.md)
-- [`knowledge/archive/`](knowledge/archive/) — preserved snapshots (TLL merge
-  plan, project recommendation context, project status 2026-07-13, v1 design,
-  side-quests design)
+- [`knowledge/archive/`](knowledge/archive/) — preserved snapshots (project
+  recommendation context, project status 2026-07-13, v1 design, side-quests
+  design)
 
 ### Meta
 
-- [`maintenance.md`](maintenance.md) — how to edit this docs system, validation,
-  and Blume build
+- [`maintenance.md`](maintenance.md) — how to edit this docs system and validate it
 
 ## Conventions
 

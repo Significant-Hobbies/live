@@ -64,7 +64,6 @@ Build pipeline (`scripts/cf-build.mjs`): Next build → patch sparse pnpm store 
 - **2026-07-13** — Implemented the Significant Hobbies half of the content flywheel on `feature/significant-content-flywheel`: versioned JSON packages and receipts, deterministic CLI, legacy/package blog adapter, canonical article enrichment, hobby/LLM discovery, video sitemap, and permanent retired-video redirects. Pending review/merge and the separate Reel Pipeline/OpenClaw work; no content, upload, deploy, post, or schedule was created.
 - **2026-07-12** — Completed the explicitly approved Life Bingo exception: private and shareable bucket lists with list and Bingo presentations.
 - **2026-07-03** — Chose the hobby quiz (`/find-your-hobby`) as the single primary discovery UX. Hid the other three discovery surfaces (taxonomy `/hobbies`, community `/explore`, famous journeys `/journeys`) from the homepage, nav, and footer (code retained, just unreachable from the main entry point). Instrumented the quiz with a canonical 3-step PostHog funnel: `discovery_started` → `discovery_engaged` → `hobby_committed` (7-day conversion window).
-- **2026-07-02** — Merged today-little-log into significanthobbies. Added daily ritual (`/daily`), 4 new DB tables (habits, habit_logs, journal_entries, daily_checkins), dashboard integration (habits + journal summary), nav/footer/manifesto updated to reflect two dimensions (Daily + Living).
 - **2026-07-02** — Added global try/catch error handler to OpenNext worker (`worker.mjs`).
 - **2026-06-20 — Hybrid Astro `/`:** Full static landing in `landing-astro/` (hero + below-fold sections); overlaid into `.open-next/assets`; Worker skips invocation on `GET /`; Next `page.tsx` is auth-only fallback; demo timelines moved to `GET /api/demo-timelines`.
 - **Platform hardening:** Custom `cf-build.mjs` fixes OpenNext + pnpm monorepo sparse-store resolution; PR preview environment without prod route conflicts; dependency hygiene (removed unused `lighthouse` devDependency).
@@ -118,7 +117,7 @@ Build pipeline (`scripts/cf-build.mjs`): Next build → patch sparse pnpm store 
 ### Features shipped
 
 - Life Bingo list creation, completion tracking, Bingo presentation, visibility controls, and public sharing.
-- **Daily ritual** (`/daily`): AM/PM prompts, habit check-ins (simple, no scoring), compulsory journal entry, inline habit management. Merged from today-little-log.
+- **Daily ritual** (`/daily`): AM/PM prompts, habit check-ins (simple, no scoring), compulsory journal entry, inline habit management.
 - **Dashboard integration**: today's habits summary + journal prompt alongside commitments and life grid.
 - **Manifesto** (`/manifesto`): mortality frame as mission, two dimensions (Daily + Living), journal as bridge.
 - Timeline builder with drag/drop phases and hobbies.
@@ -152,14 +151,13 @@ All events carry `project_id: "significanthobbies"`. Implementation: `trackDisco
 
 ### Planned
 
-1. ~~**Decommission today-little-log**~~ — TLL repo marked archived/merged (2026-07-02). Domain redirect from `today-little-log.pages.dev` to `significanthobbies.com` still pending operator action when ready. No data migration needed.
-2. Tighten timeline creation and sharing loop so a first-time user can produce a meaningful public journey quickly.
-3. ~~**Decide which discovery path is primary**~~ — Chosen 2026-07-03: the hobby quiz (`/find-your-hobby`). The other three surfaces (taxonomy `/hobbies`, community `/explore`, famous journeys `/journeys`) are hidden from the homepage/nav/footer. Measure the quiz funnel for 7 days in PostHog before re-evaluating.
-4. Turn side quests, XP, and badges into a coherent progression system only if they improve hobby follow-through.
-5. Review raw HTML rendering paths before making them user-sourced.
-6. Wire habits and commitments — allow a habit to be linked to a commitment (e.g. "practice guitar" habit auto-stamps the commitment).
-7. **Closure gate:** capture the 7-day quiz funnel result in PostHog, then freeze the winning discovery path and pause feature development.
-8. Review and merge the Significant Hobbies content-flywheel branch after the shared cross-repository OpenSpec verification is complete; the canonical package document intentionally remains empty until topics are selected.
+1. Tighten timeline creation and sharing loop so a first-time user can produce a meaningful public journey quickly.
+2. ~~**Decide which discovery path is primary**~~ — Chosen 2026-07-03: the hobby quiz (`/find-your-hobby`). The other three surfaces (taxonomy `/hobbies`, community `/explore`, famous journeys `/journeys`) are hidden from the homepage/nav/footer. Measure the quiz funnel for 7 days in PostHog before re-evaluating.
+3. Turn side quests, XP, and badges into a coherent progression system only if they improve hobby follow-through.
+4. Review raw HTML rendering paths before making them user-sourced.
+5. Wire habits and commitments — allow a habit to be linked to a commitment (e.g. "practice guitar" habit auto-stamps the commitment).
+6. **Closure gate:** capture the 7-day quiz funnel result in PostHog, then freeze the winning discovery path and pause feature development.
+7. Review and merge the Significant Hobbies content-flywheel branch after the shared cross-repository OpenSpec verification is complete; the canonical package document intentionally remains empty until topics are selected.
 
 ### Deferred
 
