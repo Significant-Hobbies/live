@@ -292,65 +292,25 @@ test.describe('authenticated surfaces', () => {
     await expect(authedPage.locator('a[href^="javascript:"]')).toHaveCount(0);
   });
 
-  test('bucket-list insights render, and a suggestion can be added', async ({ authedPage }) => {
-    // src/lib/bucket-list-insights.ts is 368 lines with a full test suite and had
-    // zero importers — a finished feature with no door into it. All three
-    // generators return null/empty for an empty list, so seed one item first.
-    // Seeding, not the subject of this test. dev.db persists between runs, so
-    // the item may already be on the list and the famous-list page will then
-    // offer no add button at all — hence the count check. Skipping the seed is
-    // only safe because the precondition it exists to establish is asserted
-    // immediately below rather than assumed.
-    await authedPage.goto('/bucket-lists/barack-obama');
-    const seed = authedPage.getByRole('button', { name: /^Add .+ to my bucket list$/ }).first();
-    if (await seed.count()) {
-      await seed.click();
-    }
+  test('a dream saved in Live becomes a real bucket item with a calling path', async ({
+    authedPage,
+  }) => {
+    const dream = `Virelune Quivanta journey ${crypto.randomUUID().slice(0, 8)}`;
+    await authedPage.goto('/live-more');
+    await authedPage.getByLabel('What do you still want to live?').fill(dream);
+    await authedPage.getByRole('button', { name: 'Keep this exact dream' }).click();
+    await expect(authedPage.getByText('1 dream is now in your atlas.')).toBeVisible();
+
+    await authedPage.goto('/bucket-list');
+    await expect(authedPage.getByRole('group', { name: `Controls for ${dream}` })).toHaveCount(1);
 
     await authedPage.goto('/live-more');
-    await expect(
-      authedPage.getByRole('heading', { name: 'What your list says' }),
-      'insights only render for a non-empty list, so seeding must have left one'
-    ).toBeVisible();
-    await expect(authedPage.getByText(/bucket-list archetype/i)).toBeVisible();
-    await expect(authedPage.getByText('Closest famous list')).toBeVisible();
-    await expect(authedPage.getByText(/Chosen for the gaps/i)).toBeVisible();
-
-    // A suggestion is only worth showing if it can become a real item, which
-    // needed AddToMyListButton's provenance props to become optional.
-    //
-    // Asserted by the item appearing, not by the button's transient "Added"
-    // state: getBucketListSuggestions hashes the existing titles into its
-    // shuffle, so adding one re-rolls the panel and that row unmounts. The real
-    // confirmation is the item turning up under "Ahead of you" with its own
-    // controls.
-    // Identified by its own title rather than by a global count, so other items
-    // the user owns cannot make this pass or fail by accident.
-    const suggestionAdd = authedPage
-      .getByRole('button', { name: /^Add .+ to my bucket list$/ })
-      .first();
-    // The button is named after the item it adds, so its label yields the exact
-    // stored title — no scraping the row and stripping the emoji back out.
-    const label = (await suggestionAdd.getAttribute('aria-label')) as string;
-    const suggestionTitle = label.replace(/^Add /, '').replace(/ to my bucket list$/, '');
-    expect(suggestionTitle.length).toBeGreaterThan(3);
-
-    const addedSuggestionButton = authedPage.getByRole('button', {
-      name: `Add ${suggestionTitle} to my bucket list`,
-    });
-    await addedSuggestionButton.click();
-    await expect(
-      addedSuggestionButton,
-      'the refreshed suggestion set confirms that the server action finished'
-    ).toHaveCount(0);
-
-    await expect(async () => {
-      await authedPage.goto('/bucket-list');
-      await expect(
-        authedPage.getByRole('group', { name: `Controls for ${suggestionTitle}` }),
-        'the added suggestion should become a real bucket item'
-      ).toHaveCount(1);
-    }).toPass({ timeout: 10_000 });
+    await authedPage.getByLabel('What do you still want to live?').fill(dream);
+    const callForward = authedPage.getByRole('button', { name: 'Call this forward' });
+    if (await callForward.isVisible()) await callForward.click();
+    await expect(authedPage.getByRole('button', { name: 'Calling now' })).toBeVisible();
+    await authedPage.getByRole('button', { name: 'Clear dream search' }).click();
+    await expect(authedPage.getByRole('heading', { name: dream, level: 1 })).toBeVisible();
   });
 
   test('trajectory offers one focused contract or the existing active one', async ({
