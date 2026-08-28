@@ -8,13 +8,14 @@ import { Check, ClipboardList, Dices, Target, Users, X } from 'lucide-react';
 
 import { FadeIn, SpotlightCard } from '~/components/aceternity';
 import { AccountabilityCircles } from '~/components/accountability-circles';
+import { WiderWorldLinks } from '~/components/wider-world-links';
 import { useQuestProgress } from '~/hooks/use-quest-progress';
 import { getBadgeById } from '~/lib/badges';
 import {
   filterQuests,
   getQuestById,
   QUEST_CATEGORIES,
-  rankQuestsForPossibility,
+  relevantQuestsForPossibility,
   type QuestCategory,
   type QuestFilters,
   SIDE_QUESTS,
@@ -404,7 +405,7 @@ function SideQuestsInner() {
   const rankedQuests = useMemo(
     () =>
       sourcePossibility
-        ? rankQuestsForPossibility(filteredQuests, sourcePossibility)
+        ? relevantQuestsForPossibility(filteredQuests, sourcePossibility)
         : filteredQuests,
     [filteredQuests, sourcePossibility]
   );
@@ -586,10 +587,27 @@ function SideQuestsInner() {
                     rollLabel="Try Another"
                   />
                 ) : (
-                  <div className="rounded-2xl border border-border bg-card/40 px-8 py-16 text-center">
-                    <p className="text-lg text-muted-foreground">
-                      No quests match those filters — try loosening up!
-                    </p>
+                  <div className="w-full max-w-2xl rounded-2xl bg-[#b9dcf5] p-6 text-[#211e18] sm:p-8">
+                    {sourcePossibility ? (
+                      <>
+                        <p className="text-sm font-bold text-[#175475]">No honest shortcut yet</p>
+                        <h2 className="mt-2 font-serif text-3xl leading-tight">
+                          We will not hand you an unrelated task.
+                        </h2>
+                        <p className="mt-3 max-w-xl text-sm leading-relaxed text-[#415968]">
+                          Live does not have a small quest that genuinely continues “
+                          {sourcePossibility}” yet. Keep the dream intact and research a real first
+                          doorway instead.
+                        </p>
+                        <div className="mt-5">
+                          <WiderWorldLinks query={sourcePossibility} compact />
+                        </div>
+                      </>
+                    ) : (
+                      <p className="text-lg text-muted-foreground">
+                        No quests match those filters — try loosening up!
+                      </p>
+                    )}
                   </div>
                 )}
               </div>

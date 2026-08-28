@@ -1,6 +1,6 @@
 # Live — PROJECT STATUS
 
-Last updated: 2026-08-23
+Last updated: 2026-08-28
 
 ## Why / What
 
@@ -27,5 +27,18 @@ side quests.
 Live is actively usable but remains an ongoing product. Continue from observed
 usage, improve discovery and long-lived planning, and gradually move public
 links to the Live domain while preserving existing local browser data.
+
+## Features (shipped)
+
+- The open-world Dream Atlas preserves exact personal dreams, imports existing
+  lists, shows confidence-only native coverage, and opens honest wider-world
+  research when Live's own catalogue ends.
+- Returning users meet one calling dream and one evidence-labelled first door
+  before broader discovery, with local and account storage using the existing
+  bucket-item status model.
+
+## Timeline
+
+- 2026-08-28 — Shipped the open-world Dream Atlas and calling-dream loop.
 
 Product work belongs in this repository's GitHub Issues.

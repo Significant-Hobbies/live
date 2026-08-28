@@ -1,8 +1,9 @@
 {
   "$schema": "fleet.design-review.v1",
   "version": 1,
-  "project": "journal-onboarding-128",
-  "target": "Journal first-entry onboarding",
+  "project": "live",
+  "target": "Live calling dream loop",
+  "surfaceMode": "operate",
   "mode": "preserve",
   "register": "product",
   "context": {
@@ -13,34 +14,47 @@
     "references": [],
     "probes": [],
     "selected": "existing-design",
-    "approval": "not-required",
-    "before": "ios/artifacts/design/journal/journal-home-final.png"
+    "approval": "delegated",
+    "before": ".fleet/design-evidence/open-world-life-atlas/after-1440.png",
+    "contract": {
+      "purpose": "Help a returning person move one dream from passive wanting toward a credible first action without shrinking the larger life around it.",
+      "purposeSource": "../site-health/apps/backend/config/projects.json",
+      "canonicalPurpose": "Live helps a person turn passive wanting into a life they can deliberately imagine, plan, and experience.",
+      "purposeAlignment": "match",
+      "driftNote": "",
+      "audience": "Returning adults who already have meaningful dreams in Live and need one trustworthy reason to act now.",
+      "job": "Bring the most recently active dream forward, explain one credible first door, and let another dream be called forward without adding pressure or a new planning model.",
+      "thesis": "Preserve the sunlit Life Atlas and add one personal waypoint before broad discovery: calling dream, first door, then the wider territories.",
+      "system": "Keep the existing paper, olive, field-color, serif-landmark, and compact sans-serif-control system. Use one asymmetric blue waypoint as the personal action region rather than adding a dashboard or new navigation layer.",
+      "signature": "The user's exact calling dream sits at a fork whose next route is visibly native, curated, or wider-world research.",
+      "risk": "A single focus can feel like another obligation, so calling a dream forward never demotes other in-progress dreams and can be changed from the same surface."
+    }
   },
   "evidence": {
     "screenshots": [
       {
         "width": 390,
-        "path": "ios/artifacts/design/journal/onboarding/after-390.png"
+        "path": ".fleet/design-evidence/calling-dream-loop/after-390.png"
       },
       {
         "width": 768,
-        "path": "ios/artifacts/design/journal/onboarding/after-768.png"
+        "path": ".fleet/design-evidence/calling-dream-loop/after-768.png"
       },
       {
         "width": 1440,
-        "path": "ios/artifacts/design/journal/onboarding/after-1440.png"
+        "path": ".fleet/design-evidence/calling-dream-loop/after-1440.png"
       }
     ],
     "projectCheck": {
-      "command": "ios/scripts/check.sh",
+      "command": "pnpm typecheck && pnpm lint && pnpm test && pnpm build",
       "status": "pass"
     },
     "critique": {
-      "score": 35,
+      "score": 38,
       "maximum": 40
     },
     "audit": {
-      "score": 18,
+      "score": 17,
       "maximum": 20
     },
     "unresolved": {
@@ -50,10 +64,32 @@
     "detector": {
       "posture": "advisory",
       "findings": []
+    },
+    "comprehension": {
+      "status": "not-applicable",
+      "reviewer": "",
+      "answers": {
+        "product": "",
+        "audience": "",
+        "value": "",
+        "mechanism": "",
+        "proof": "",
+        "nextAction": ""
+      },
+      "purposeScore": {
+        "product": 0,
+        "audience": 0,
+        "value": 0,
+        "mechanism": 0,
+        "proof": 0,
+        "nextAction": 0,
+        "total": 0
+      },
+      "mismatches": []
     }
   },
   "ownerFeedback": {
     "decision": "delegated",
-    "note": "Owner asked Codex to resolve the application tickets end to end and continue without per-app pauses."
+    "note": "The owner asked to raise the product to at least 9 without super-drastic changes and delegated the focused coherence pass."
   }
 }

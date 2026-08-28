@@ -32,7 +32,7 @@ interface LocalJournal {
   noveltyText?: string | null;
   noveltyCompleted?: boolean;
 }
-export interface LocalDailyState {
+interface LocalDailyState {
   habits: LocalHabit[];
   logs: LocalHabitLog[];
   journals: LocalJournal[];

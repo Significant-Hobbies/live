@@ -331,7 +331,7 @@ export const SIDE_QUESTS: SideQuest[] = [
     id: 'sq-27',
     title: 'Attend an Open Mic',
     description:
-      'Go to an open mic night — poetry, comedy, music. Extra credit if you sign up yourself.',
+      'Go to a music open mic. Stay for three performers, then ask one person where local musicians find collaborators. Sign up only if you want to.',
     category: 'social',
     difficulty: 'medium',
     timeEstimate: '1 hour',
@@ -613,7 +613,7 @@ const POSSIBILITY_SIGNALS: { pattern: RegExp; questIds: string[] }[] = [
     questIds: ['sq-18', 'sq-39', 'sq-34'],
   },
   {
-    pattern: /perform|audience|stage|music|song|instrument/i,
+    pattern: /band|perform|audience|stage|music|song|instrument/i,
     questIds: ['sq-27', 'sq-16', 'sq-08'],
   },
   {
@@ -632,6 +632,20 @@ const POSSIBILITY_SIGNALS: { pattern: RegExp; questIds: string[] }[] = [
 
 /** Rank small quests by how closely they continue a larger possibility. */
 export function rankQuestsForPossibility(quests: SideQuest[], possibility: string): SideQuest[] {
+  return scoreQuestsForPossibility(quests, possibility).map(({ quest }) => quest);
+}
+
+/** Return only quests with a concrete lexical or curated connection to the possibility. */
+export function relevantQuestsForPossibility(
+  quests: SideQuest[],
+  possibility: string
+): SideQuest[] {
+  return scoreQuestsForPossibility(quests, possibility)
+    .filter(({ score }) => score > 0)
+    .map(({ quest }) => quest);
+}
+
+function scoreQuestsForPossibility(quests: SideQuest[], possibility: string) {
   const normalized = possibility.toLowerCase();
   const words = new Set(
     normalized
@@ -645,15 +659,17 @@ export function rankQuestsForPossibility(quests: SideQuest[], possibility: strin
 
   return quests
     .map((quest, index) => {
-      const searchable =
-        `${quest.title} ${quest.description} ${quest.relatedHobbies.join(' ')}`.toLowerCase();
+      // Descriptions contain broad words such as "space" and "place" that can
+      // create absurd matches. Titles, hobbies, and curated signals are the
+      // honest evidence that a small quest actually continues the dream.
+      const searchable = `${quest.title} ${quest.relatedHobbies.join(' ')}`.toLowerCase();
       const overlap = [...words].filter((word) => searchable.includes(word)).length;
       const preferredIndex = preferredIds.indexOf(quest.id);
       const signalScore = preferredIndex === -1 ? 0 : 20 - preferredIndex * 3;
       return { quest, index, score: signalScore + overlap * 2 };
     })
     .sort((a, b) => b.score - a.score || a.index - b.index)
-    .map(({ quest }) => quest);
+    .map(({ quest, score }) => ({ quest, score }));
 }
 
 export type QuestFilters = {

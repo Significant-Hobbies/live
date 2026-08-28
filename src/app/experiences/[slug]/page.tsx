@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
+import { AddToMyListButton } from '~/components/add-to-my-list-button';
 import { JsonLd } from '~/components/json-ld';
 import {
   type ExperienceEntry,
@@ -165,13 +166,16 @@ export default async function ExperiencePage({ params }: { params: Promise<{ slu
       ) : null}
 
       <div className="mt-14 border-border border-t pt-10">
-        <Link
-          href="/life-bingo"
-          className="inline-block rounded-xl bg-primary px-6 py-3.5 text-base font-semibold text-primary-foreground no-underline transition-opacity hover:opacity-90"
-        >
-          Put this on a list
-        </Link>
-        <p className="mt-4 text-base text-muted-foreground">No account needed.</p>
+        <AddToMyListButton
+          title={entry.title}
+          description={entry.description}
+          category={entry.category}
+          sourceSlug={entry.slug}
+          variant="primary"
+        />
+        <p className="mt-4 text-base text-muted-foreground">
+          Saved privately here. No account needed.
+        </p>
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import { trackCoreAction } from '~/lib/analytics';
 import type { BingoVisibility, BucketListDraft } from '~/lib/life-bingo';
 import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
+import { normalizeDreamTitle } from '~/lib/dream-atlas';
 
 const IntentionSchema = z.enum([
   'adventure',
@@ -194,10 +195,18 @@ export async function addBucketListItem(data: {
   sourceSlug?: string;
   sourceItemTitle?: string;
   targetYear?: number;
-}): Promise<{ success: boolean; id?: string }> {
+}): Promise<{ success: boolean; id?: string; added?: boolean }> {
   const session = await getServerAuthSession();
   if (!session?.user?.id) throw new Error('Not authenticated');
   const parsed = AddItemSchema.parse(data);
+  const existing = await db
+    .select({ id: bucketListItems.id, title: bucketListItems.title })
+    .from(bucketListItems)
+    .where(eq(bucketListItems.userId, session.user.id));
+  const duplicate = existing.find(
+    (item) => normalizeDreamTitle(item.title) === normalizeDreamTitle(parsed.title)
+  );
+  if (duplicate) return { success: true, id: duplicate.id, added: false };
   const [row] = await db
     .insert(bucketListItems)
     .values({
@@ -213,7 +222,64 @@ export async function addBucketListItem(data: {
     .returning({ id: bucketListItems.id });
   await revalidateItemSurfaces(session.user.id);
   if (parsed.sourceSlug) revalidatePath(`/bucket-lists/${parsed.sourceSlug}`);
-  return { success: true, id: row?.id };
+  return { success: true, id: row?.id, added: true };
+}
+
+const AddItemsSchema = z.array(AddItemSchema).min(1).max(100);
+
+export async function addBucketListItems(
+  data: Array<{
+    title: string;
+    description?: string;
+    category?: string;
+    sourceSlug?: string;
+    sourceItemTitle?: string;
+    targetYear?: number;
+  }>
+): Promise<{ success: boolean; added: string[]; duplicates: string[] }> {
+  const session = await getServerAuthSession();
+  if (!session?.user?.id) throw new Error('Not authenticated');
+  const parsed = AddItemsSchema.parse(data);
+  const existing = await db
+    .select({ title: bucketListItems.title })
+    .from(bucketListItems)
+    .where(eq(bucketListItems.userId, session.user.id));
+  const seen = new Set(existing.map((item) => normalizeDreamTitle(item.title)));
+  const rows: Array<typeof bucketListItems.$inferInsert> = [];
+  const added: string[] = [];
+  const duplicates: string[] = [];
+
+  for (const item of parsed) {
+    const key = normalizeDreamTitle(item.title);
+    if (seen.has(key)) {
+      duplicates.push(item.title);
+      continue;
+    }
+    seen.add(key);
+    added.push(item.title);
+    rows.push({
+      userId: session.user.id,
+      title: item.title,
+      description: item.description ?? null,
+      category: item.category ?? null,
+      status: 'planned',
+      sourceSlug: item.sourceSlug ?? null,
+      sourceItemTitle: item.sourceItemTitle ?? null,
+      targetYear: item.targetYear ?? null,
+    });
+  }
+
+  if (rows.length > 0) {
+    await db.insert(bucketListItems).values(rows);
+    await revalidateItemSurfaces(session.user.id);
+    for (const sourceSlug of new Set(
+      rows.flatMap((row) => (row.sourceSlug ? [row.sourceSlug] : []))
+    )) {
+      revalidatePath(`/bucket-lists/${sourceSlug}`);
+    }
+  }
+
+  return { success: true, added, duplicates };
 }
 
 /**
@@ -248,6 +314,27 @@ export async function updateBucketListItemStatus(
       updatedAt: new Date(),
     })
     .where(and(eq(bucketListItems.id, id), eq(bucketListItems.userId, session.user.id)));
+  await revalidateItemSurfaces(session.user.id);
+  return { success: true };
+}
+
+export async function setCallingBucketListDream(title: string): Promise<{ success: boolean }> {
+  const session = await getServerAuthSession();
+  if (!session?.user?.id) throw new Error('Not authenticated');
+  const requestedTitle = normalizeDreamTitle(z.string().trim().min(1).max(200).parse(title));
+  const candidates = await db
+    .select({ id: bucketListItems.id, title: bucketListItems.title })
+    .from(bucketListItems)
+    .where(eq(bucketListItems.userId, session.user.id));
+  const selected = candidates.find(
+    (candidate) => normalizeDreamTitle(candidate.title) === requestedTitle
+  );
+  if (!selected) return { success: false };
+
+  await db
+    .update(bucketListItems)
+    .set({ status: 'in_progress', completedAt: null, updatedAt: new Date() })
+    .where(and(eq(bucketListItems.id, selected.id), eq(bucketListItems.userId, session.user.id)));
   await revalidateItemSurfaces(session.user.id);
   return { success: true };
 }

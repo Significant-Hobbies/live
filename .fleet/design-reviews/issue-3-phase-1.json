@@ -1,0 +1,95 @@
+{
+  "$schema": "fleet.design-review.v1",
+  "version": 1,
+  "project": "live",
+  "target": "Live open-world Dream Atlas",
+  "surfaceMode": "operate",
+  "mode": "overhaul",
+  "register": "product",
+  "context": {
+    "product": "PRODUCT.md",
+    "design": "DESIGN.md"
+  },
+  "direction": {
+    "references": [],
+    "probes": [],
+    "selected": "agent-selected",
+    "approval": "delegated",
+    "before": ".fleet/design-evidence/open-world-life-atlas/before-1440.png",
+    "contract": {
+      "purpose": "Help a person discover more ways a life can be lived and turn the possibilities that call to them into honest, personal journeys.",
+      "purposeSource": "../site-health/apps/backend/config/projects.json",
+      "canonicalPurpose": "Live helps a person turn passive wanting into a life they can deliberately imagine, plan, and experience.",
+      "purposeAlignment": "match",
+      "driftNote": "",
+      "audience": "Adults who want meaningful goals, possibilities, and experiences to look forward to, including dreams the native catalogue has never seen.",
+      "job": "Enlarge the user's sense of what is possible, preserve any exact dream, and offer one coherent next move without pretending Live covers the whole world.",
+      "thesis": "An open world with a curated spine: one sunlit Life Atlas where native possibilities, uniquely personal dreams, and sourced outward research form one continuous journey.",
+      "system": "Warm paper and olive ink hold the private atlas; large yellow, sky, coral, sage, and lilac fields distinguish discovery states. Serif landmarks lead through open paths and contour lines while compact sans-serif controls preserve clarity and accessibility.",
+      "signature": "A future-life trail that visibly branches from an exact dream into confidence-only native matches and honest wider-world doors.",
+      "risk": "An infinite atlas can become overwhelming or feel like a search-results page, so each surface leads with one dominant possibility and progressively reveals breadth, provenance, and action."
+    }
+  },
+  "evidence": {
+    "screenshots": [
+      {
+        "width": 390,
+        "path": ".fleet/design-evidence/open-world-life-atlas/after-390.png"
+      },
+      {
+        "width": 768,
+        "path": ".fleet/design-evidence/open-world-life-atlas/after-768.png"
+      },
+      {
+        "width": 1440,
+        "path": ".fleet/design-evidence/open-world-life-atlas/after-1440.png"
+      }
+    ],
+    "projectCheck": {
+      "command": "pnpm test && pnpm typecheck && pnpm lint",
+      "status": "pass"
+    },
+    "critique": {
+      "score": 35,
+      "maximum": 40
+    },
+    "audit": {
+      "score": 18,
+      "maximum": 20
+    },
+    "unresolved": {
+      "p0": 0,
+      "p1": 0
+    },
+    "detector": {
+      "posture": "advisory",
+      "findings": []
+    },
+    "comprehension": {
+      "status": "not-applicable",
+      "reviewer": "",
+      "answers": {
+        "product": "",
+        "audience": "",
+        "value": "",
+        "mechanism": "",
+        "proof": "",
+        "nextAction": ""
+      },
+      "purposeScore": {
+        "product": 0,
+        "audience": 0,
+        "value": 0,
+        "mechanism": 0,
+        "proof": 0,
+        "nextAction": 0,
+        "total": 0
+      },
+      "mismatches": []
+    }
+  },
+  "ownerFeedback": {
+    "decision": "delegated",
+    "note": "The owner approved the open-world Life Atlas direction and delegated implementation with 'go for it'."
+  }
+}

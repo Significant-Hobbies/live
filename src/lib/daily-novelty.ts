@@ -9,8 +9,8 @@ export type DailyNovelty = {
   timeEstimate: string;
 };
 
-export const MAX_DAILY_INTENTIONS = 20;
-export const MAX_DAILY_INTENTION_LENGTH = 160;
+const MAX_DAILY_INTENTIONS = 20;
+const MAX_DAILY_INTENTION_LENGTH = 160;
 
 export function parseDailyIntentions(value: string | null | undefined): string[] {
   if (!value?.trim()) return [];
