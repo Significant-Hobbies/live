@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-const repository = 'https://github.com/Significant-Hobbies/significanthobbies';
+const repository = 'https://github.com/Significant-Hobbies/live';
 
 const releases = [
   {

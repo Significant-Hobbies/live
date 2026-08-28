@@ -14,10 +14,9 @@ description: GitHub Actions cron schedules for significanthobbies — production
 
 - **Workflow:** `.github/workflows/smoke.yml`
 - **Schedule:** `0 */6 * * *` (every 6 hours) + `workflow_dispatch`
-- **What:** Probes `https://significanthobbies.com/` with a 20s timeout.
-  200 = OK. 429/1015 = Cloudflare zone-level rate-limit active (dashboard fix,
-  not a code fix — see [`runbook.md`](runbook.md)). Anything else = unexpected
-  failure.
+- **What:** Probes the Hub apex, canonical Live `/live-more`, and the legacy
+  apex-to-Live redirect with a 20s timeout. 429/1015 means a Cloudflare
+  zone-level rate limit is active; see [`runbook.md`](runbook.md).
 - **User-Agent:** `smoke-probe/1.0`
 
 ## Weekly quality check — Mondays 09:00 UTC

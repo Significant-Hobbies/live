@@ -5,7 +5,7 @@ export function buildLlmArticleIndex(articles: EditorialArticle[]): string {
   const entries = articles
     .map(
       (article) =>
-        `- [${article.title}](https://significanthobbies.com/blog/${article.slug}): ${article.excerpt}`
+        `- [${article.title}](https://live.significanthobbies.com/blog/${article.slug}): ${article.excerpt}`
     )
     .join('\n');
   return `# ${BRAND_NAME} article index\n\nCanonical articles for agents and language models. Package-backed articles use the same URLs as human-facing blog pages.\n\n${entries}\n`;

@@ -2,7 +2,7 @@ import AxeBuilder from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
 
 const ARTICLE_PATH = '/blog/side-quests';
-const ARTICLE_URL = `https://significanthobbies.com${ARTICLE_PATH}`;
+const ARTICLE_URL = `https://live.significanthobbies.com${ARTICLE_PATH}`;
 
 test.describe('Significant content discovery routes', () => {
   test('publishes canonical SEO and source-aligned Article structured data', async ({ page }) => {
@@ -34,7 +34,9 @@ test.describe('Significant content discovery routes', () => {
     expect(markdown.ok()).toBe(true);
     expect(markdown.headers()['content-type']).toContain('text/markdown');
     expect(markdown.headers().vary).toContain('Accept');
-    expect(await markdown.text()).toContain('](https://significanthobbies.com/blog/side-quests):');
+    expect(await markdown.text()).toContain(
+      '](https://live.significanthobbies.com/blog/side-quests):'
+    );
 
     const videoSitemap = await request.get('/video-sitemap.xml');
     expect(videoSitemap.ok()).toBe(true);

@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Probe homepage
+      - name: Probe Hub homepage
         run: |
           status=$(curl -o /dev/null -s -w "%{http_code}" \
             -A "smoke-probe/1.0" \
@@ -30,3 +30,22 @@ jobs:
               exit 1
               ;;
           esac
+      - name: Probe canonical Live host
+        run: |
+          status=$(curl -o /dev/null -s -w "%{http_code}" \
+            -A "smoke-probe/1.0" \
+            --max-time 20 \
+            https://live.significanthobbies.com/live-more)
+          if [ "$status" != "200" ]; then
+            echo "ERROR: canonical Live route returned HTTP $status"
+            exit 1
+          fi
+
+          location=$(curl -s -o /dev/null -w "%{redirect_url}" \
+            -A "smoke-probe/1.0" \
+            --max-time 20 \
+            https://significanthobbies.com/live-more)
+          if [ "$location" != "https://live.significanthobbies.com/live-more" ]; then
+            echo "ERROR: legacy apex route did not move to the canonical Live host"
+            exit 1
+          fi

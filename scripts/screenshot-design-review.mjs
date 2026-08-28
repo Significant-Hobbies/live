@@ -1,7 +1,7 @@
 import { chromium } from '@playwright/test';
 import { mkdirSync } from 'node:fs';
 
-const BASE = 'https://significanthobbies.com';
+const BASE = 'https://live.significanthobbies.com';
 const SHOTS = [
   { name: 'prod-landing', url: `${BASE}/`, fullPage: true },
   { name: 'prod-hobbies', url: `${BASE}/hobbies`, fullPage: false },

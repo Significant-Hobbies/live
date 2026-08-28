@@ -46,7 +46,7 @@ function timeline(id: number) {
 
 async function page(offset: number) {
   const response = await GET(
-    new Request(`https://significanthobbies.com/api/mcp/timelines?limit=2&offset=${offset}`)
+    new Request(`https://live.significanthobbies.com/api/mcp/timelines?limit=2&offset=${offset}`)
   );
   return response.json() as Promise<{
     items: Array<{ id: string }>;

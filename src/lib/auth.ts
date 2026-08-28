@@ -40,7 +40,7 @@ const testAuthEnabled =
 
 const baseURL =
   process.env.BETTER_AUTH_URL?.trim() ||
-  (testAuthEnabled ? 'http://localhost:3000' : 'https://significanthobbies.com');
+  (testAuthEnabled ? 'http://localhost:3000' : 'https://live.significanthobbies.com');
 const googleClientId = process.env.GOOGLE_CLIENT_ID?.trim();
 const googleClientSecret = process.env.GOOGLE_CLIENT_SECRET?.trim();
 const appleBundleIdentifier = process.env.APPLE_APP_BUNDLE_IDENTIFIER?.trim();

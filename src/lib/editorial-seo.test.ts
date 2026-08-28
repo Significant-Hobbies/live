@@ -60,7 +60,7 @@ describe('editorial discovery and structured data', () => {
     const jsonLd = buildArticleJsonLd(article);
 
     expect(articleCanonicalUrl(article)).toBe(
-      'https://significanthobbies.com/blog/start-watercolor'
+      'https://live.significanthobbies.com/blog/start-watercolor'
     );
     expect(metadata.alternates?.canonical).toBe(articleCanonicalUrl(article));
     expect(metadata.openGraph).toMatchObject({
@@ -71,7 +71,7 @@ describe('editorial discovery and structured data', () => {
     });
     expect(metadata.twitter).toMatchObject({
       card: 'summary_large_image',
-      images: ['https://significanthobbies.com/opengraph-image'],
+      images: ['https://live.significanthobbies.com/opengraph-image'],
     });
     expect(jsonLd).toMatchObject({
       '@type': 'Article',
@@ -124,7 +124,7 @@ describe('editorial discovery and structured data', () => {
     ]);
 
     expect(xml).toContain('xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"');
-    expect(xml).toContain('<loc>https://significanthobbies.com/blog/start-watercolor</loc>');
+    expect(xml).toContain('<loc>https://live.significanthobbies.com/blog/start-watercolor</loc>');
     expect(xml).toContain('<video:title>Start Watercolor &amp; Keep Going</video:title>');
     expect(xml).not.toContain('/blog/no-video');
 
@@ -136,19 +136,19 @@ describe('editorial discovery and structured data', () => {
   it('negotiates the LLM index as Markdown while preserving the plain-text fallback', async () => {
     const body = buildLlmArticleIndex([article]);
     expect(body).toContain(
-      '- [Start Watercolor & Keep Going](https://significanthobbies.com/blog/start-watercolor)'
+      '- [Start Watercolor & Keep Going](https://live.significanthobbies.com/blog/start-watercolor)'
     );
 
     const markdown = getLlmIndex(
-      new Request('https://significanthobbies.com/llms-full.txt', {
+      new Request('https://live.significanthobbies.com/llms-full.txt', {
         headers: { Accept: 'text/markdown' },
       })
     );
     expect(markdown.headers.get('content-type')).toBe('text/markdown; charset=utf-8');
     expect(markdown.headers.get('vary')).toBe('Accept');
-    expect(await markdown.text()).toContain('# Significant Hobbies article index');
+    expect(await markdown.text()).toContain('# Live article index');
 
-    const plain = getLlmIndex(new Request('https://significanthobbies.com/llms-full.txt'));
+    const plain = getLlmIndex(new Request('https://live.significanthobbies.com/llms-full.txt'));
     expect(plain.headers.get('content-type')).toBe('text/plain; charset=utf-8');
   });
 

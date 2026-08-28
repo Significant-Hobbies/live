@@ -130,13 +130,13 @@ export default async function HobbyDetailPage({ params }: Props) {
               '@type': 'ListItem',
               position: 1,
               name: 'Hobbies',
-              item: 'https://significanthobbies.com/hobbies',
+              item: 'https://live.significanthobbies.com/hobbies',
             },
             {
               '@type': 'ListItem',
               position: 2,
               name: hobbyName,
-              item: `https://significanthobbies.com/hobbies/${hobbySlug}`,
+              item: `https://live.significanthobbies.com/hobbies/${hobbySlug}`,
             },
           ],
         }}

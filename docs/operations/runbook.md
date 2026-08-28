@@ -17,12 +17,12 @@ The workflow:
    Does **not** run `populateCache` (that needs Cloudflare creds).
 2. `wrangler deploy --minify` via `cloudflare/wrangler-action@v3` with
    `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` secrets.
-3. Best-effort edge cache purge for `https://significanthobbies.com/` and
-   `https://www.significanthobbies.com/` via the Cloudflare API. Uses
+3. Best-effort whole-zone edge cache purge via the Cloudflare API. Uses
    `continue-on-error: true` — a missing `cache_purge` permission (401) must
    not fail a good deploy.
-4. Smoke check: verifies the Hub heading and exactly seven product cards, then
-   verifies the cinematic Live landing at `live.significanthobbies.com`.
+4. Smoke check: verifies the Hub heading on the apex, the cinematic Live
+   landing, a Worker-rendered page on the Live host, and the legacy apex
+   redirect to that Live page.
 
 If the smoke check fails, the deploy is considered stale — the Astro overlay
 did not rebuild or the cache was not purged. Re-run the workflow; if it
@@ -43,11 +43,11 @@ zone_id=$(curl -fsS -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
   "https://api.cloudflare.com/client/v4/zones?name=significanthobbies.com" \
   | node -e "let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{const j=JSON.parse(d);process.stdout.write(j.result?.[0]?.id||'')})")
 
-# Purge / (and www)
+# Purge the Live landing only
 curl -fsS -X POST "https://api.cloudflare.com/client/v4/zones/$zone_id/purge_cache" \
   -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
   -H "Content-Type: application/json" \
-  --data '{"files":["https://significanthobbies.com/","https://www.significanthobbies.com/"]}'
+  --data '{"files":["https://live.significanthobbies.com/"]}'
 ```
 
 The deploy workflow purges the **whole zone** (`purge_everything`), not just
@@ -71,10 +71,10 @@ full request URL, so a query string is a guaranteed miss:
 
 ```bash
 # Fresh render — proves what the deployed code produces
-curl -s "https://significanthobbies.com/hobbies?cb=$RANDOM" | grep -c 'Browse by what suits you'
+curl -s "https://live.significanthobbies.com/hobbies?cb=$RANDOM" | grep -c 'Browse by what suits you'
 
 # What a real visitor gets, plus whether it came from cache
-curl -sI https://significanthobbies.com/hobbies | grep -i x-edge-cache
+curl -sI https://live.significanthobbies.com/hobbies | grep -i x-edge-cache
 ```
 
 A `Cache-Control: no-cache` **request header does not bypass the Worker cache** —
@@ -146,10 +146,9 @@ applies. See [`architecture/overview.md`](../architecture/overview.md).
 
 ## Production smoke probe
 
-`.github/workflows/smoke.yml` runs every 6 hours (`0 */6 * * *`) and probes
-`https://significanthobbies.com/` with a 20s timeout. 200 = OK; 429/1015 =
-rate-limit (see above); anything else = unexpected failure. The probe uses
-`User-Agent: smoke-probe/1.0`.
+`.github/workflows/smoke.yml` runs every 6 hours (`0 */6 * * *`) and probes the
+Hub apex, the canonical Live `/live-more` route, and the legacy apex redirect.
+The probe uses `User-Agent: smoke-probe/1.0`.
 
 ## Observability
 

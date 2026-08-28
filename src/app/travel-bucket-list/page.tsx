@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description:
       'From Stonehenge (Obama) to the Serengeti (Oprah) to Namibia (Clinton) — 75 destinations worth crossing the world for.',
   },
-  alternates: { canonical: 'https://significanthobbies.com/travel-bucket-list' },
+  alternates: { canonical: 'https://live.significanthobbies.com/travel-bucket-list' },
 };
 
 // Sourced from ~/lib/experiences. These 75 destinations were unreachable by

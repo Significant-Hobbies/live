@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       images: [DEFAULT_SOCIAL_IMAGE],
     },
-    alternates: { canonical: `https://significanthobbies.com/bucket-lists/${slug}` },
+    alternates: { canonical: `https://live.significanthobbies.com/bucket-lists/${slug}` },
   };
 }
 

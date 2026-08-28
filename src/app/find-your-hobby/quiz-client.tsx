@@ -417,7 +417,7 @@ export function HobbyQuiz() {
   function handleShare() {
     const topCats = getTopCategories(scores);
     const archetype = ARCHETYPE_MAP[topCats[0]!];
-    const text = `I took the Hobby Finder Quiz and I'm ${archetype?.title ?? 'a hobby explorer'}! Find your perfect hobby at significanthobbies.com/find-your-hobby`;
+    const text = `I took the Hobby Finder Quiz and I'm ${archetype?.title ?? 'a hobby explorer'}! Find your perfect hobby at live.significanthobbies.com/find-your-hobby`;
     trackDiscovery('shared', {
       surface: 'quiz_result',
       method: typeof navigator.share === 'function' ? 'web_share' : 'clipboard',
@@ -428,7 +428,7 @@ export function HobbyQuiz() {
         .share({
           title: 'My Hobby Archetype',
           text,
-          url: 'https://significanthobbies.com/find-your-hobby',
+          url: 'https://live.significanthobbies.com/find-your-hobby',
         })
         .catch(() => {});
     } else {

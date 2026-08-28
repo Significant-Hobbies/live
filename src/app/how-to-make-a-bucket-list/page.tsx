@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description:
       'Most bucket lists die in a drawer. These six steps keep yours alive — from choosing the right goals to reviewing them quarterly with Whale.',
   },
-  alternates: { canonical: 'https://significanthobbies.com/how-to-make-a-bucket-list' },
+  alternates: { canonical: 'https://live.significanthobbies.com/how-to-make-a-bucket-list' },
 };
 
 const STEPS = [

@@ -1,4 +1,5 @@
 export const HUB_HOSTS = new Set(['significanthobbies.com', 'www.significanthobbies.com']);
+export const LIVE_HOST = 'live.significanthobbies.com';
 
 const HUB_SERVICE_EXACT_PATHS = new Set(['/', '/hub', '/health', '/mcp']);
 const PERSONAL_PLATFORM_INTERNAL_HOST = 'personal-auth.internal';
@@ -6,6 +7,22 @@ export const PERSONAL_PLATFORM_INTERNAL_HEADER = 'X-Personal-Platform-Internal';
 
 export function isHubServicePath(pathname) {
   return HUB_SERVICE_EXACT_PATHS.has(pathname) || pathname.startsWith('/v1/');
+}
+
+/**
+ * Legacy apex Live links move permanently to the canonical Live host while
+ * actual Hub routes remain on the apex service binding.
+ *
+ * @param {URL} url
+ * @returns {URL | null}
+ */
+export function legacyLiveRedirect(url) {
+  if (!HUB_HOSTS.has(url.hostname) || isHubServicePath(url.pathname)) return null;
+
+  const target = new URL(url);
+  target.hostname = LIVE_HOST;
+  target.port = '';
+  return target;
 }
 
 export function markPersonalPlatformInternalRequest(request) {

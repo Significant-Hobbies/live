@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://significanthobbies.com/schemas/reel-variant/v1",
+  "$id": "https://live.significanthobbies.com/schemas/reel-variant/v1",
   "title": "Significant Hobbies canonical reel variant v1",
   "type": "object",
   "required": [

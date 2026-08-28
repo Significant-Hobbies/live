@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description:
       'The 40s are peak ambition. Here are 50 bucket list goals that reflect depth, legacy, and a life fully inhabited.',
   },
-  alternates: { canonical: 'https://significanthobbies.com/bucket-list-before-50' },
+  alternates: { canonical: 'https://live.significanthobbies.com/bucket-list-before-50' },
 };
 
 // Sourced from ~/lib/experiences so the suggestion engine can see these

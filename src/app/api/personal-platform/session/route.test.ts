@@ -30,7 +30,7 @@ describe('Personal Platform identity session', () => {
 
   it('fails closed without a Better Auth bearer session', async () => {
     const response = await GET(
-      new Request('https://significanthobbies.com/api/personal-platform/session')
+      new Request('https://live.significanthobbies.com/api/personal-platform/session')
     );
     expect(response.status).toBe(401);
     expect(response.headers.get('Cache-Control')).toBe('no-store');
@@ -41,7 +41,7 @@ describe('Personal Platform identity session', () => {
     state.appleSubject = 'apple-subject';
 
     const response = await GET(
-      new Request('https://significanthobbies.com/api/personal-platform/session', {
+      new Request('https://live.significanthobbies.com/api/personal-platform/session', {
         headers: { Authorization: 'Bearer signed-session' },
       })
     );

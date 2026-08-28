@@ -20,7 +20,7 @@ describe('native account boundary', () => {
     expect(isAllowedNativeCallback('anchor://auth')).toBe(true);
     expect(isAllowedNativeCallback('significanthobbies://auth.evil.example')).toBe(false);
     expect(isAllowedNativeCallback('anchor://auth.evil.example')).toBe(false);
-    expect(isAllowedNativeCallback('https://significanthobbies.com/auth')).toBe(false);
+    expect(isAllowedNativeCallback('https://live.significanthobbies.com/auth')).toBe(false);
   });
 
   it('creates opaque, one-way handoff material', async () => {

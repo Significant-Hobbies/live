@@ -1,4 +1,4 @@
-# Significant Hobbies
+# Live by Significant Hobbies
 
 > A life planner for private daily rituals and public living: hobbies, bucket
 > lists, experiences, and side quests over time.
@@ -31,50 +31,50 @@ Do NOT use this for:
 
 ## Discover
 
-- [Home](https://significanthobbies.com/): Product landing and life-planning frame
-- [Explore](https://significanthobbies.com/explore): Public hobby timelines
-- [Hobbies](https://significanthobbies.com/hobbies): Hobby taxonomy and category browse
-- [Experiences](https://significanthobbies.com/experiences): Things you could do and how to begin
-- [Famous journeys](https://significanthobbies.com/journeys): How hobbies changed across notable lives
-- [Bucket lists](https://significanthobbies.com/bucket-lists): Public lists and practical starting points
-- [Blog](https://significanthobbies.com/blog): Long-form articles about hobbies and living deliberately
+- [Home](https://live.significanthobbies.com/): Product landing and life-planning frame
+- [Explore](https://live.significanthobbies.com/explore): Public hobby timelines
+- [Hobbies](https://live.significanthobbies.com/hobbies): Hobby taxonomy and category browse
+- [Experiences](https://live.significanthobbies.com/experiences): Things you could do and how to begin
+- [Famous journeys](https://live.significanthobbies.com/journeys): How hobbies changed across notable lives
+- [Bucket lists](https://live.significanthobbies.com/bucket-lists): Public lists and practical starting points
+- [Blog](https://live.significanthobbies.com/blog): Long-form articles about hobbies and living deliberately
 
 ## Start
 
-- [Find your hobby](https://significanthobbies.com/find-your-hobby): Guided hobby discovery
-- [Life in weeks](https://significanthobbies.com/life-in-weeks): Anonymous mortality and time-planning tool
-- [Life bingo](https://significanthobbies.com/life-bingo): Build a life list without an account
+- [Find your hobby](https://live.significanthobbies.com/find-your-hobby): Guided hobby discovery
+- [Life in weeks](https://live.significanthobbies.com/life-in-weeks): Anonymous mortality and time-planning tool
+- [Life bingo](https://live.significanthobbies.com/life-bingo): Build a life list without an account
 
 ## Agent access
 
-- [Agent catalog](https://significanthobbies.com/api/ai): JSON inventory of bounded public surfaces
-- [OpenAPI spec](https://significanthobbies.com/openapi.json): Machine-readable API description
-- [Homepage Markdown](https://significanthobbies.com/index.md): Product brief without JavaScript
-- [Full article index](https://significanthobbies.com/llms-full.txt): Canonical editorial corpus
+- [Agent catalog](https://live.significanthobbies.com/api/ai): JSON inventory of bounded public surfaces
+- [OpenAPI spec](https://live.significanthobbies.com/openapi.json): Machine-readable API description
+- [Homepage Markdown](https://live.significanthobbies.com/index.md): Product brief without JavaScript
+- [Full article index](https://live.significanthobbies.com/llms-full.txt): Canonical editorial corpus
 - Every public sitemap route supports `Accept: text/markdown` and a `.md` alternate.
 - Authenticated daily practice and private user data are not agent-indexed.
 
 ## Developer docs
 
-- [OpenAPI specification](https://significanthobbies.com/openapi.json): Full API surface description (OpenAPI 3.1)
-- [Agent catalog](https://significanthobbies.com/api/ai): JSON inventory of public agent surfaces
+- [OpenAPI specification](https://live.significanthobbies.com/openapi.json): Full API surface description (OpenAPI 3.1)
+- [Agent catalog](https://live.significanthobbies.com/api/ai): JSON inventory of public agent surfaces
 
 ## CLI
 
 ```bash
 # Fetch the agent catalog
-curl -s https://significanthobbies.com/api/ai | jq .
+curl -s https://live.significanthobbies.com/api/ai | jq .
 
 # Get the OpenAPI spec
-curl -s https://significanthobbies.com/openapi.json | jq .
+curl -s https://live.significanthobbies.com/openapi.json | jq .
 
 # Fetch the homepage as markdown
-curl -s -H 'Accept: text/markdown' https://significanthobbies.com/
+curl -s -H 'Accept: text/markdown' https://live.significanthobbies.com/
 
 # Fetch the full agent brief
-curl -s https://significanthobbies.com/llms-full.txt
+curl -s https://live.significanthobbies.com/llms-full.txt
 ```
 
 ## Source
 
-- [GitHub](https://github.com/Significant-Hobbies/significanthobbies)
+- [GitHub](https://github.com/Significant-Hobbies/live)

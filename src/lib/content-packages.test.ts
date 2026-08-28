@@ -39,11 +39,11 @@ function variant(id: string, format: string, hypothesis: string, hook: string) {
     visualDirection: 'High-contrast practical demonstration',
     caption: `${hook} ${payoff}`,
     cta: 'Read the guide',
-    destinationUrl: 'https://significanthobbies.com/blog/start-watercolor',
+    destinationUrl: 'https://live.significanthobbies.com/blog/start-watercolor',
     tags: ['watercolor', 'hobbies'],
     provenance: {
       sourceIds: ['section:start-small'],
-      sourceUrls: ['https://significanthobbies.com/blog/start-watercolor'],
+      sourceUrls: ['https://live.significanthobbies.com/blog/start-watercolor'],
       generatedAt: '2026-07-13T08:00:00.000Z',
       approvedAt: '2026-07-13T09:00:00.000Z',
       approvedBy: 'fixture-owner',

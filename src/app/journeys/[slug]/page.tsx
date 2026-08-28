@@ -109,7 +109,7 @@ export default async function JourneyDetailPage({ params }: Props) {
     '@type': 'Article',
     headline: `${person.name}'s Hobby Journey`,
     description: `Explore ${person.name}'s hobby journey — from ${firstPhaseLabel} to ${lastPhaseLabel}. See how their hobbies shaped who they became.`,
-    url: `https://significanthobbies.com/journeys/${person.slug}`,
+    url: `https://live.significanthobbies.com/journeys/${person.slug}`,
     author: {
       '@type': 'Organization',
       name: 'SignificantHobbies',
@@ -117,7 +117,7 @@ export default async function JourneyDetailPage({ params }: Props) {
     publisher: {
       '@type': 'Organization',
       name: 'SignificantHobbies',
-      url: 'https://significanthobbies.com',
+      url: 'https://live.significanthobbies.com',
     },
     about: {
       '@type': 'Person',

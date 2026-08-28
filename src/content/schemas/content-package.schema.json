@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://significanthobbies.com/schemas/content-package/v1",
+  "$id": "https://live.significanthobbies.com/schemas/content-package/v1",
   "title": "Significant Hobbies content package document v1",
   "type": "object",
   "required": ["schemaVersion", "packages"],

@@ -1,12 +1,12 @@
 {
-  "name": "Significant Hobbies",
+  "name": "Live",
   "version": "1",
-  "url": "https://significanthobbies.com",
-  "llms": "https://significanthobbies.com/llms.txt",
-  "llmsFull": "https://significanthobbies.com/llms-full.txt",
-  "sitemap": "https://significanthobbies.com/sitemap.xml",
-  "robots": "https://significanthobbies.com/robots.txt",
-  "openapi": "https://significanthobbies.com/openapi.json",
+  "url": "https://live.significanthobbies.com",
+  "llms": "https://live.significanthobbies.com/llms.txt",
+  "llmsFull": "https://live.significanthobbies.com/llms-full.txt",
+  "sitemap": "https://live.significanthobbies.com/sitemap.xml",
+  "robots": "https://live.significanthobbies.com/robots.txt",
+  "openapi": "https://live.significanthobbies.com/openapi.json",
   "markdown": {
     "suffix": ".md",
     "negotiation": true
@@ -14,15 +14,15 @@
   "surfaces": [
     {
       "id": "home",
-      "url": "https://significanthobbies.com/",
-      "md": "https://significanthobbies.com/index.md",
+      "url": "https://live.significanthobbies.com/",
+      "md": "https://live.significanthobbies.com/index.md",
       "kind": "static",
       "description": "Product home"
     },
     {
       "id": "explore",
-      "url": "https://significanthobbies.com/explore",
-      "md": "https://significanthobbies.com/explore.md",
+      "url": "https://live.significanthobbies.com/explore",
+      "md": "https://live.significanthobbies.com/explore.md",
       "kind": "static",
       "description": "Public hobby timelines"
     }

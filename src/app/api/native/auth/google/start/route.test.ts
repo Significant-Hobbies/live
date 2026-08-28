@@ -21,7 +21,7 @@ describe('native Google auth start', () => {
 
     const response = await GET(
       new Request(
-        'https://significanthobbies.com/api/native/auth/google/start?callback=calorie%3A%2F%2Fauth'
+        'https://live.significanthobbies.com/api/native/auth/google/start?callback=calorie%3A%2F%2Fauth'
       )
     );
 

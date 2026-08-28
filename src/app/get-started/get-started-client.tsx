@@ -16,16 +16,16 @@ import {
 type CheckState = 'idle' | 'checking' | 'available' | 'taken' | 'invalid';
 
 const EXAMPLE_PROFILES = [
-  { handle: 'stevejobs', display: 'significanthobbies.com/u/stevejobs' },
-  { handle: 'alberteinstein', display: 'significanthobbies.com/u/alberteinstein' },
-  { handle: 'richardfeynman', display: 'significanthobbies.com/u/richardfeynman' },
+  { handle: 'stevejobs', display: 'live.significanthobbies.com/u/stevejobs' },
+  { handle: 'alberteinstein', display: 'live.significanthobbies.com/u/alberteinstein' },
+  { handle: 'richardfeynman', display: 'live.significanthobbies.com/u/richardfeynman' },
 ];
 
 const BENEFITS = [
   {
     icon: Link2,
     title: 'Shareable URL',
-    desc: 'Your own significanthobbies.com/u/yourname',
+    desc: 'Your own live.significanthobbies.com/u/yourname',
   },
   {
     icon: Compass,
@@ -121,7 +121,7 @@ export function GetStartedClient() {
             {/* Input row */}
             <div className="flex items-center overflow-hidden rounded-xl border border-border bg-card/40 focus-within:border-foreground/30 focus-within:ring-2 focus-within:ring-foreground/20 transition-all">
               <span className="select-none whitespace-nowrap px-4 py-4 text-base text-subtle font-medium">
-                significanthobbies.com/u/
+                live.significanthobbies.com/u/
               </span>
               <input
                 type="text"

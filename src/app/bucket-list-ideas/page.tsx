@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description:
       'Find your next life goal. Browse bucket list ideas by category, inspired by Obama, Serena Williams, Richard Branson, and more.',
   },
-  alternates: { canonical: 'https://significanthobbies.com/bucket-list-ideas' },
+  alternates: { canonical: 'https://live.significanthobbies.com/bucket-list-ideas' },
 };
 
 // The corpus moved to ~/lib/experiences so the suggestion engine and any

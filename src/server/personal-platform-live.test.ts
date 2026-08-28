@@ -6,7 +6,7 @@ describe('Personal Platform Live reads', () => {
   it('bounds pagination and keeps sensitive fields opt-in', () => {
     const query = parseLiveReadQuery(
       new URL(
-        'https://significanthobbies.com/api/personal-platform/live/records?start=2026-01-01&end=2028-12-31&q=Kyoto&limit=10&includeSensitive=true'
+        'https://live.significanthobbies.com/api/personal-platform/live/records?start=2026-01-01&end=2028-12-31&q=Kyoto&limit=10&includeSensitive=true'
       )
     );
     expect(query).toEqual({
@@ -23,13 +23,13 @@ describe('Personal Platform Live reads', () => {
     expect(() =>
       parseLiveReadQuery(
         new URL(
-          'https://significanthobbies.com/api/personal-platform/live/records?start=2028&end=2026'
+          'https://live.significanthobbies.com/api/personal-platform/live/records?start=2028&end=2026'
         )
       )
     ).toThrow(LiveReadError);
     expect(() =>
       parseLiveReadQuery(
-        new URL('https://significanthobbies.com/api/personal-platform/live/records?limit=500')
+        new URL('https://live.significanthobbies.com/api/personal-platform/live/records?limit=500')
       )
     ).toThrow(LiveReadError);
   });

@@ -87,13 +87,13 @@ export function SiteFooter() {
           </span>
           <div className="flex flex-wrap gap-x-5 gap-y-2">
             <a
-              href="https://github.com/Significant-Hobbies/significanthobbies/issues"
+              href="https://github.com/Significant-Hobbies/live/issues"
               className="inline-flex min-h-11 items-center hover:text-[#211e18] sm:min-h-0"
             >
               Roadmap
             </a>
             <a
-              href="https://github.com/Significant-Hobbies/significanthobbies"
+              href="https://github.com/Significant-Hobbies/live"
               className="inline-flex min-h-11 items-center hover:text-[#211e18] sm:min-h-0"
             >
               Source

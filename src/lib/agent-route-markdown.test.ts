@@ -36,7 +36,7 @@ describe('public route Markdown boundary', () => {
   it('negotiates Markdown from the canonical route source', async () => {
     const load = vi.fn(async (path: string) => renderPublicRouteMarkdown(path));
     const response = await handlePublicRouteMarkdown(
-      new Request('https://significanthobbies.com/hobbies/painting', {
+      new Request('https://live.significanthobbies.com/hobbies/painting', {
         headers: { Accept: 'text/markdown, text/html;q=0.1' },
       }),
       load
@@ -69,7 +69,7 @@ describe('public route Markdown boundary', () => {
     };
 
     const miss = await handleCachedPublicRouteMarkdown(
-      new Request('https://significanthobbies.com/hobbies/painting.md'),
+      new Request('https://live.significanthobbies.com/hobbies/painting.md'),
       load,
       options
     );
@@ -77,7 +77,7 @@ describe('public route Markdown boundary', () => {
     await Promise.all(writes);
 
     const hit = await handleCachedPublicRouteMarkdown(
-      new Request('https://significanthobbies.com/hobbies/painting.md'),
+      new Request('https://live.significanthobbies.com/hobbies/painting.md'),
       load,
       options
     );
@@ -86,7 +86,7 @@ describe('public route Markdown boundary', () => {
     expect(load).toHaveBeenCalledTimes(1);
 
     await handleCachedPublicRouteMarkdown(
-      new Request('https://significanthobbies.com/hobbies/painting', {
+      new Request('https://live.significanthobbies.com/hobbies/painting', {
         headers: { Accept: 'text/markdown' },
       }),
       load,
@@ -97,14 +97,14 @@ describe('public route Markdown boundary', () => {
 
   it('returns explicit Markdown failures instead of exposing private or empty shells', async () => {
     const privateResponse = await handlePublicRouteMarkdown(
-      new Request('https://significanthobbies.com/daily.md'),
+      new Request('https://live.significanthobbies.com/daily.md'),
       vi.fn()
     );
     expect(privateResponse?.status).toBe(404);
     expect(privateResponse?.headers.get('content-type')).toContain('text/markdown');
 
     const emptyResponse = await handlePublicRouteMarkdown(
-      new Request('https://significanthobbies.com/explore.md'),
+      new Request('https://live.significanthobbies.com/explore.md'),
       async () => null
     );
     expect(emptyResponse?.status).toBe(404);
@@ -113,7 +113,7 @@ describe('public route Markdown boundary', () => {
 
   it('returns a Markdown 404 for Accept-negotiated unknown HTML paths', async () => {
     const response = await handlePublicRouteMarkdown(
-      new Request('https://significanthobbies.com/this-route-does-not-exist', {
+      new Request('https://live.significanthobbies.com/this-route-does-not-exist', {
         headers: { Accept: 'text/markdown, text/html;q=0.1' },
       }),
       vi.fn()
@@ -123,7 +123,7 @@ describe('public route Markdown boundary', () => {
     expect(await response?.text()).toContain('Not found');
     // Non-markdown requests for the same unknown path still fall through.
     const passthrough = await handlePublicRouteMarkdown(
-      new Request('https://significanthobbies.com/this-route-does-not-exist'),
+      new Request('https://live.significanthobbies.com/this-route-does-not-exist'),
       vi.fn()
     );
     expect(passthrough).toBeNull();
@@ -158,7 +158,7 @@ describe('public route Markdown boundary', () => {
     expect(hobby).toContain('## Resources');
     expect(experience).toContain('## How to start');
     expect(journey).toContain(FAMOUS_JOURNEYS[0]!.name);
-    expect(blog).toContain('> Source: https://significanthobbies.com/blog/');
+    expect(blog).toContain('> Source: https://live.significanthobbies.com/blog/');
     expect(await renderPublicRouteMarkdown('/daily')).toBeNull();
   });
 

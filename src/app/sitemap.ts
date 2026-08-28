@@ -66,7 +66,7 @@ async function publicProfileEntries(
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://significanthobbies.com';
+  const baseUrl = 'https://live.significanthobbies.com';
   const now = new Date();
   const profilePages = await publicProfileEntries(baseUrl, now);
 

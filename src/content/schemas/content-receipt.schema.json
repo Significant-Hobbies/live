@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://significanthobbies.com/schemas/content-receipt/v1",
+  "$id": "https://live.significanthobbies.com/schemas/content-receipt/v1",
   "title": "Significant content receipt v1",
   "type": "object",
   "required": [

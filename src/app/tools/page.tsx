@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: 'Hobby Tools — SignificantHobbies',
   description:
     'Free tools to help you discover, plan, and commit to hobbies. Hobby quiz, time calculator, hobby comparison, and more.',
-  alternates: { canonical: 'https://significanthobbies.com/tools' },
+  alternates: { canonical: 'https://live.significanthobbies.com/tools' },
 };
 
 interface Tool {

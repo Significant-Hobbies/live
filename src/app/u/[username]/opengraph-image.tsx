@@ -106,7 +106,7 @@ export default async function OgImage({ params }: { params: Promise<{ username: 
           marginBottom: 24,
         }}
       >
-        significanthobbies.com
+        live.significanthobbies.com
       </div>
 
       {/* Avatar circle */}

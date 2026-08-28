@@ -16,7 +16,7 @@ test.describe('Live landing (Astro overlay)', () => {
       await page
         .getByRole('link', { name: /See my life in weeks/ })
         .evaluate((link) => (link as HTMLAnchorElement).href)
-    ).toBe('https://significanthobbies.com/life-in-weeks');
+    ).toBe('https://live.significanthobbies.com/life-in-weeks');
   });
 
   test('meets the automated accessibility baseline', async ({ page }) => {

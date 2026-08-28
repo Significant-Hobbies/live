@@ -3,18 +3,18 @@ import { chromium } from '@playwright/test';
 import { mkdirSync } from 'node:fs';
 
 const SHOTS = [
-  { name: 'landing', url: 'https://significanthobbies.com/', fullPage: false },
-  { name: 'landing-full', url: 'https://significanthobbies.com/', fullPage: true },
-  { name: 'hobbies', url: 'https://significanthobbies.com/hobbies', fullPage: false },
-  { name: 'explore', url: 'https://significanthobbies.com/explore', fullPage: false },
-  { name: 'today', url: 'https://significanthobbies.com/', fullPage: false },
-  { name: 'daily', url: 'https://significanthobbies.com/daily', fullPage: false },
-  { name: 'commitments', url: 'https://significanthobbies.com/commitments', fullPage: false },
-  { name: 'manifesto', url: 'https://significanthobbies.com/manifesto', fullPage: false },
-  { name: 'tools', url: 'https://significanthobbies.com/tools', fullPage: false },
-  { name: 'blog', url: 'https://significanthobbies.com/blog', fullPage: false },
-  { name: 'side-quests', url: 'https://significanthobbies.com/side-quests', fullPage: false },
-  { name: 'login', url: 'https://significanthobbies.com/login', fullPage: false },
+  { name: 'landing', url: 'https://live.significanthobbies.com/', fullPage: false },
+  { name: 'landing-full', url: 'https://live.significanthobbies.com/', fullPage: true },
+  { name: 'hobbies', url: 'https://live.significanthobbies.com/hobbies', fullPage: false },
+  { name: 'explore', url: 'https://live.significanthobbies.com/explore', fullPage: false },
+  { name: 'today', url: 'https://live.significanthobbies.com/', fullPage: false },
+  { name: 'daily', url: 'https://live.significanthobbies.com/daily', fullPage: false },
+  { name: 'commitments', url: 'https://live.significanthobbies.com/commitments', fullPage: false },
+  { name: 'manifesto', url: 'https://live.significanthobbies.com/manifesto', fullPage: false },
+  { name: 'tools', url: 'https://live.significanthobbies.com/tools', fullPage: false },
+  { name: 'blog', url: 'https://live.significanthobbies.com/blog', fullPage: false },
+  { name: 'side-quests', url: 'https://live.significanthobbies.com/side-quests', fullPage: false },
+  { name: 'login', url: 'https://live.significanthobbies.com/login', fullPage: false },
 ];
 
 const browser = await chromium.launch();

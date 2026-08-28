@@ -2,7 +2,7 @@ import { z } from 'zod';
 
 import contentDocumentJson from '~/content/content-packages.json';
 
-const SITE_URL = 'https://significanthobbies.com';
+const SITE_URL = 'https://live.significanthobbies.com';
 export const RECEIPT_VERSION = 'significant-content-receipt/v1' as const;
 export const EXPORT_VERSION = 'significant-content-reels/v1' as const;
 

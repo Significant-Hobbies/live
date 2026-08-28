@@ -18,6 +18,8 @@ import { handleCachedPublicRouteMarkdown } from './agent-route-markdown.mjs';
 import {
   HUB_HOSTS,
   isHubServicePath,
+  legacyLiveRedirect,
+  LIVE_HOST,
   markPersonalPlatformInternalRequest,
 } from './hub-routing.mjs';
 
@@ -99,8 +101,6 @@ function isCacheableContentType(pathname, contentType) {
 // session in both prod (__Secure-) and dev variants so signed-in users
 // always see live SSR (e.g. redirect to /library).
 const AUTH_COOKIE_FRAGMENTS = ['session_token', 'session-token'];
-const LIVE_HOST = 'live.significanthobbies.com';
-
 function hasAuthCookie(request) {
   const cookie = request.headers.get('cookie');
   if (!cookie) return false;
@@ -155,10 +155,8 @@ export default {
     ) {
       return env.HUB_SERVICE.fetch(request);
     }
-    if (requestUrl.hostname === LIVE_HOST && requestUrl.pathname !== '/') {
-      requestUrl.hostname = 'significanthobbies.com';
-      return Response.redirect(requestUrl, 308);
-    }
+    const legacyRedirect = legacyLiveRedirect(requestUrl);
+    if (legacyRedirect) return Response.redirect(legacyRedirect, 308);
 
     // Agent / LLM indexing surfaces (fleet GEO standard)
     // `/llms-full.txt` is owned by the application because it is generated

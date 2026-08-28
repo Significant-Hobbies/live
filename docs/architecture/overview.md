@@ -13,10 +13,10 @@ description: Runtime shape — Cloudflare Worker (OpenNext) + Astro landing over
 
 ```
 Browser → Cloudflare Worker `significanthobbies` (OpenNext, worker.mjs)
-  ├── significanthobbies.com/ and /hub → HUB_SERVICE → canonical Hub
+  ├── significanthobbies.com Hub routes → HUB_SERVICE → canonical Hub
+  ├── significanthobbies.com legacy Live path → 308 → live.significanthobbies.com/<path>
   ├── live.significanthobbies.com/ → ASSETS binding → cinematic Live landing
-  ├── live.significanthobbies.com/<path> → 308 → significanthobbies.com/<path>
-  └── all other routes → OpenNext Next.js 16 App Router handlers
+  └── live.significanthobbies.com/<path> → OpenNext Next.js 16 App Router handlers
         ├── Cloudflare D1 via Drizzle ORM
         ├── better-auth Google OAuth sessions
         └── PostHog analytics via posthog-js wrapper
@@ -39,8 +39,8 @@ should be edge-cached.
 builds the cinematic Live landing. The build pipeline overlays it into
 `.open-next/assets/`, and `worker.mjs` serves `/live.html` at the Live custom
 domain root. Apex `/` and `/hub` requests are delegated to the canonical Hub
-through the `HUB_SERVICE` binding. Other apex paths stay on this Worker so
-existing auth cookies, IndexedDB records, and bookmarks remain compatible.
+through the `HUB_SERVICE` binding. Other legacy apex Live paths permanently
+redirect to the same path on the canonical Live host.
 
 See [`decisions.md`](decisions.md) A1 for why this split exists.
 
@@ -70,7 +70,7 @@ cache.
 that deploys to `*.workers.dev` with no production routes. PR deploys use
 `wrangler deploy --env preview` so they never touch the prod domain. The
 preview env inherits observability and limits but explicitly empties `routes`
-to avoid conflicts with the prod worker that owns `significanthobbies.com/*`.
+to avoid conflicts with the prod worker's production routes and custom domain.
 
 ## Storage
 

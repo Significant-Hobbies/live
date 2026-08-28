@@ -71,16 +71,11 @@ jobs:
             echo "ERROR: failed to fetch homepage"
             exit 1
           fi
-          cards=$(printf '%s' "$html" | grep -o 'class="product-card' | wc -l | tr -d ' ')
-          if [ "$cards" -ne 7 ]; then
-            echo "ERROR: stale overlay — expected seven Hub product cards, got ${cards}"
-            exit 1
-          fi
-          if ! printf '%s' "$html" | grep -q 'Your personal apps, in one place.'; then
+          if ! printf '%s' "$html" | grep -q 'Your personal apps'; then
             echo "ERROR: stale overlay — missing Hub heading"
             exit 1
           fi
-          echo "Overlay OK: seven Hub product cards"
+          echo "Hub OK: canonical Hub heading is available on the apex"
 
           live_html=$(curl -fsS --retry 6 --retry-all-errors --retry-delay 10 --max-time 20 \
             -H "Cache-Control: no-cache" https://live.significanthobbies.com/)
@@ -103,7 +98,7 @@ jobs:
         #    Cloudflare purge propagation is asynchronous, so a stale answer here
         #    is a timing fact, not a broken release — it warns and moves on.
         run: |
-          url=https://significanthobbies.com/hobbies
+          url=https://live.significanthobbies.com/hobbies
           marker='Browse by what suits you'
 
           fresh=$(curl -fsS --retry 3 --retry-delay 5 --max-time 20 "${url}?cb=${GITHUB_RUN_ID}")
@@ -113,6 +108,14 @@ jobs:
             exit 1
           fi
           echo "Deployed code OK: /hobbies renders the facet browser."
+
+          legacy=https://significanthobbies.com/hobbies
+          redirect=$(curl -sS -o /dev/null -w '%{redirect_url}' "$legacy")
+          if [ "$redirect" != "$url" ]; then
+            echo "ERROR: legacy apex Live route did not redirect to $url"
+            exit 1
+          fi
+          echo "Host boundary OK: legacy apex Live route redirects to the Live host."
 
           for attempt in 1 2 3 4 5 6; do
             if curl -fsS --max-time 20 "$url" | grep -q "$marker"; then

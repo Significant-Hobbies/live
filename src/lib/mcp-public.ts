@@ -43,7 +43,7 @@ export function searchPublicHobbies(searchParams: URLSearchParams) {
       category: group.name,
       emoji: group.emoji,
       facets: HOBBY_FACETS[name] ?? [],
-      canonicalUrl: `https://significanthobbies.com/hobbies/${encodeURIComponent(name.toLocaleLowerCase().replaceAll(' ', '-'))}`,
+      canonicalUrl: `https://live.significanthobbies.com/hobbies/${encodeURIComponent(name.toLocaleLowerCase().replaceAll(' ', '-'))}`,
     }))
   ).filter(
     (item) =>
@@ -65,7 +65,7 @@ export function searchPublicExperiences(searchParams: URLSearchParams) {
       (!category || item.category.toLocaleLowerCase() === category)
   ).map((item) => ({
     ...item,
-    canonicalUrl: `https://significanthobbies.com/experiences/${item.slug}`,
+    canonicalUrl: `https://live.significanthobbies.com/experiences/${item.slug}`,
   }));
   return page(experiences, limit, offset);
 }
@@ -80,9 +80,9 @@ export function getPublicExperience(slug: string) {
       slug: item.slug,
       title: item.title,
       category: item.category,
-      canonicalUrl: `https://significanthobbies.com/experiences/${item.slug}`,
+      canonicalUrl: `https://live.significanthobbies.com/experiences/${item.slug}`,
     })),
-    canonicalUrl: `https://significanthobbies.com/experiences/${experience.slug}`,
+    canonicalUrl: `https://live.significanthobbies.com/experiences/${experience.slug}`,
   };
 }
 
@@ -115,8 +115,8 @@ export function publicTimelineRecord(row: {
     user: row.userName ? { name: row.userName, username: row.userUsername } : null,
     canonicalUrl:
       row.userUsername && row.slug
-        ? `https://significanthobbies.com/u/${encodeURIComponent(row.userUsername)}/${encodeURIComponent(row.slug)}`
-        : `https://significanthobbies.com/timeline/${encodeURIComponent(row.id)}`,
+        ? `https://live.significanthobbies.com/u/${encodeURIComponent(row.userUsername)}/${encodeURIComponent(row.slug)}`
+        : `https://live.significanthobbies.com/timeline/${encodeURIComponent(row.id)}`,
   };
 }
 

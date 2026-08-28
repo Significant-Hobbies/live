@@ -18,7 +18,7 @@ import { parseJSONColumn } from '~/lib/utils';
 import { db } from '~/server/db';
 import type { Phase } from '~/lib/types';
 
-const SITE_URL = 'https://significanthobbies.com';
+const SITE_URL = 'https://live.significanthobbies.com';
 
 const STATIC_PAGES: Record<string, { title: string; summary: string }> = {
   '/about': {

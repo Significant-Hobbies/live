@@ -5,19 +5,19 @@ import { guestRouteFor, loginPath, safeCallbackUrl } from './auth-routing';
 describe('loginPath', () => {
   it('round-trips through the callbackUrl param the login page reads', () => {
     expect(loginPath('/journal')).toBe('/login?callbackUrl=%2Fjournal');
-    const parsed = new URL(loginPath('/trajectory'), 'https://significanthobbies.com');
+    const parsed = new URL(loginPath('/trajectory'), 'https://live.significanthobbies.com');
     expect(parsed.searchParams.get('callbackUrl')).toBe('/trajectory');
   });
 
   it('encodes dynamic segments so ids survive the round trip', () => {
-    const url = new URL(loginPath('/bucket-list/abc 123'), 'https://significanthobbies.com');
+    const url = new URL(loginPath('/bucket-list/abc 123'), 'https://live.significanthobbies.com');
     expect(url.searchParams.get('callbackUrl')).toBe('/bucket-list/abc 123');
   });
 
   it('encodes a nested query so it cannot inject a second param', () => {
     // A callback carrying its own "&" must not become a sibling param the login
     // page would read as something else.
-    const url = new URL(loginPath('/journal?tab=pm&x=1'), 'https://significanthobbies.com');
+    const url = new URL(loginPath('/journal?tab=pm&x=1'), 'https://live.significanthobbies.com');
     expect(url.searchParams.get('callbackUrl')).toBe('/journal?tab=pm&x=1');
     expect(url.searchParams.get('x')).toBeNull();
   });

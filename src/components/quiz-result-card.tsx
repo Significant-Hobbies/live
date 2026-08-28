@@ -157,7 +157,7 @@ export function QuizResultCard({
         }}
       >
         <p style={{ fontSize: '11px', color: '#475569', margin: 0 }}>
-          significanthobbies.com/find-your-hobby
+          live.significanthobbies.com/find-your-hobby
         </p>
         <p style={{ fontSize: '11px', fontWeight: 600, color: '#10b981', margin: 0 }}>
           Take the quiz →

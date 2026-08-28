@@ -45,7 +45,7 @@ export default async function NewTimelinePage({ searchParams }: Props) {
           name: 'SignificantHobbies Timeline Builder',
           description:
             'Build a visual timeline of your hobbies across life phases. Discover your hobby personality and share your journey.',
-          url: 'https://significanthobbies.com/timeline/new',
+          url: 'https://live.significanthobbies.com/timeline/new',
           applicationCategory: 'LifestyleApplication',
           offers: { '@type': 'Offer', price: '0' },
         }}

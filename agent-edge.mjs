@@ -11,19 +11,19 @@
 /** @type {{ name: string, url: string, llmsTxt: string, llmsFullTxt?: string, indexMd: string, catalog: object }} */
 // biome-ignore format: generated payload from apply-agent-surfaces (JSON keys/quotes)
 export const AGENT_SURFACE = {
-  "name": "Significant Hobbies",
-  "url": "https://significanthobbies.com",
-  "llmsFullTxt": "# Significant Hobbies — full agent brief\n\nLife planner for private daily rituals and public living — hobbies, bucket lists, and side quests over time.\n\n## Index\n\n# Significant Hobbies\n\nLife planner: private daily rituals + public living (hobbies, bucket lists, side quests).\n\n## What it is\n\n- Hobby timelines and public exploration\n- Private rituals and progress tracking\n- Editorial content for agents at `/llms-full.txt`\n\n## Agent entrypoints\n\n- https://significanthobbies.com/llms.txt\n- https://significanthobbies.com/llms-full.txt\n- https://significanthobbies.com/api/ai\n- https://significanthobbies.com/index.md\n\nAuth-walled personal data is not agent-indexed.\n\n## Product links\n\n- Home: https://significanthobbies.com/ — Product landing\n- Explore: https://significanthobbies.com/explore — Public hobby timelines\n\n## Machine surfaces\n\n- https://significanthobbies.com/llms.txt\n- https://significanthobbies.com/llms-full.txt\n- https://significanthobbies.com/api/ai\n- https://significanthobbies.com/index.md\n- https://significanthobbies.com/sitemap.xml\n- https://significanthobbies.com/robots.txt\n\n## Contact / fleet\n\n- Fleet: https://sassmaker.com\n- Agent email for directory verification: sarthakagrawal@agentmail.to\n",
-  "llmsTxt": "# Significant Hobbies\n\n> Life planner for private daily rituals and public living — hobbies, bucket lists, and side quests over time.\n\n## Product\n\n- [Home](https://significanthobbies.com/): Product landing\n- [Explore](https://significanthobbies.com/explore): Public hobby timelines\n\n## Machine surfaces\n\n- [Agent catalog](https://significanthobbies.com/api/ai): JSON inventory of public surfaces\n- [OpenAPI spec](https://significanthobbies.com/openapi.json): Machine-readable API description\n- [Homepage markdown](https://significanthobbies.com/index.md): Product brief without JS\n- [This index](https://significanthobbies.com/llms.txt)\n\n## Developer docs\n\n- [OpenAPI specification](https://significanthobbies.com/openapi.json): Full API surface description (OpenAPI 3.1)\n- [Agent catalog](https://significanthobbies.com/api/ai): JSON inventory of public agent surfaces\n\n## CLI\n\n```bash\n# Fetch the agent catalog\ncurl -s https://significanthobbies.com/api/ai | jq .\n\n# Get the OpenAPI spec\ncurl -s https://significanthobbies.com/openapi.json | jq .\n\n# Fetch the homepage as markdown\ncurl -s -H 'Accept: text/markdown' https://significanthobbies.com/\n```\n\n## Optional\n\n- [Foundry](https://sassmaker.com): Parent fleet showcase\n",
-  "indexMd": "# Significant Hobbies\n\nLife planner: private daily rituals + public living (hobbies, bucket lists, side quests).\n\n## What it is\n\n- Hobby timelines and public exploration\n- Private rituals and progress tracking\n- Editorial content for agents at `/llms-full.txt`\n\n## Agent entrypoints\n\n- https://significanthobbies.com/llms.txt\n- https://significanthobbies.com/llms-full.txt\n- https://significanthobbies.com/api/ai\n- https://significanthobbies.com/index.md\n\nAuth-walled personal data is not agent-indexed.\n",
+  "name": "Live",
+  "url": "https://live.significanthobbies.com",
+  "llmsFullTxt": "# Live — full agent brief\n\nLife planner for private daily rituals and public living — hobbies, bucket lists, and side quests over time.\n\n## Index\n\n# Live by Significant Hobbies\n\nLife planner: private daily rituals + public living (hobbies, bucket lists, side quests).\n\n## What it is\n\n- Hobby timelines and public exploration\n- Private rituals and progress tracking\n- Editorial content for agents at `/llms-full.txt`\n\n## Agent entrypoints\n\n- https://live.significanthobbies.com/llms.txt\n- https://live.significanthobbies.com/llms-full.txt\n- https://live.significanthobbies.com/api/ai\n- https://live.significanthobbies.com/index.md\n\nAuth-walled personal data is not agent-indexed.\n\n## Product links\n\n- Home: https://live.significanthobbies.com/ — Product landing\n- Explore: https://live.significanthobbies.com/explore — Public hobby timelines\n\n## Machine surfaces\n\n- https://live.significanthobbies.com/llms.txt\n- https://live.significanthobbies.com/llms-full.txt\n- https://live.significanthobbies.com/api/ai\n- https://live.significanthobbies.com/index.md\n- https://live.significanthobbies.com/sitemap.xml\n- https://live.significanthobbies.com/robots.txt\n\n## Contact / fleet\n\n- Fleet: https://sassmaker.com\n- Agent email for directory verification: sarthakagrawal@agentmail.to\n",
+  "llmsTxt": "# Live by Significant Hobbies\n\n> Life planner for private daily rituals and public living — hobbies, bucket lists, and side quests over time.\n\n## Product\n\n- [Home](https://live.significanthobbies.com/): Product landing\n- [Explore](https://live.significanthobbies.com/explore): Public hobby timelines\n\n## Machine surfaces\n\n- [Agent catalog](https://live.significanthobbies.com/api/ai): JSON inventory of public surfaces\n- [OpenAPI spec](https://live.significanthobbies.com/openapi.json): Machine-readable API description\n- [Homepage markdown](https://live.significanthobbies.com/index.md): Product brief without JS\n- [This index](https://live.significanthobbies.com/llms.txt)\n\n## Developer docs\n\n- [OpenAPI specification](https://live.significanthobbies.com/openapi.json): Full API surface description (OpenAPI 3.1)\n- [Agent catalog](https://live.significanthobbies.com/api/ai): JSON inventory of public agent surfaces\n\n## CLI\n\n```bash\n# Fetch the agent catalog\ncurl -s https://live.significanthobbies.com/api/ai | jq .\n\n# Get the OpenAPI spec\ncurl -s https://live.significanthobbies.com/openapi.json | jq .\n\n# Fetch the homepage as markdown\ncurl -s -H 'Accept: text/markdown' https://live.significanthobbies.com/\n```\n\n## Optional\n\n- [Foundry](https://sassmaker.com): Parent fleet showcase\n",
+  "indexMd": "# Live by Significant Hobbies\n\nLife planner: private daily rituals + public living (hobbies, bucket lists, side quests).\n\n## What it is\n\n- Hobby timelines and public exploration\n- Private rituals and progress tracking\n- Editorial content for agents at `/llms-full.txt`\n\n## Agent entrypoints\n\n- https://live.significanthobbies.com/llms.txt\n- https://live.significanthobbies.com/llms-full.txt\n- https://live.significanthobbies.com/api/ai\n- https://live.significanthobbies.com/index.md\n\nAuth-walled personal data is not agent-indexed.\n",
   "catalog": {
-    "name": "Significant Hobbies",
+    "name": "Live",
     "version": "1",
-    "url": "https://significanthobbies.com",
-    "llms": "https://significanthobbies.com/llms.txt",
-    "llmsFull": "https://significanthobbies.com/llms-full.txt",
-    "sitemap": "https://significanthobbies.com/sitemap.xml",
-    "robots": "https://significanthobbies.com/robots.txt",
+    "url": "https://live.significanthobbies.com",
+    "llms": "https://live.significanthobbies.com/llms.txt",
+    "llmsFull": "https://live.significanthobbies.com/llms-full.txt",
+    "sitemap": "https://live.significanthobbies.com/sitemap.xml",
+    "robots": "https://live.significanthobbies.com/robots.txt",
     "markdown": {
       "suffix": ".md",
       "negotiation": true
@@ -31,15 +31,15 @@ export const AGENT_SURFACE = {
     "surfaces": [
       {
         "id": "home",
-        "url": "https://significanthobbies.com/",
-        "md": "https://significanthobbies.com/index.md",
+        "url": "https://live.significanthobbies.com/",
+        "md": "https://live.significanthobbies.com/index.md",
         "kind": "static",
         "description": "Product home"
       },
       {
         "id": "explore",
-        "url": "https://significanthobbies.com/explore",
-        "md": "https://significanthobbies.com/explore.md",
+        "url": "https://live.significanthobbies.com/explore",
+        "md": "https://live.significanthobbies.com/explore.md",
         "kind": "static",
         "description": "Public hobby timelines"
       }
@@ -146,7 +146,7 @@ function openApiSpec(origin) {
   return {
     openapi: '3.1.0',
     info: {
-      title: 'Significant Hobbies — Agent API',
+      title: 'Live by Significant Hobbies — Agent API',
       version: '1.0.0',
       summary:
         'Read-only public agent surfaces for Significant Hobbies: hobby discovery, bucket lists, experiences, and side quests over time.',

@@ -1,6 +1,6 @@
-# Significant Hobbies
+# Live by Significant Hobbies
 
-Life planner: private daily rituals + public living (hobbies, bucket lists, side quests).
+Turn hobbies, experiences, bucket lists, and side quests into a life worth anticipating.
 
 ## What it is
 
@@ -10,9 +10,9 @@ Life planner: private daily rituals + public living (hobbies, bucket lists, side
 
 ## Agent entrypoints
 
-- https://significanthobbies.com/llms.txt
-- https://significanthobbies.com/llms-full.txt
-- https://significanthobbies.com/api/ai
-- https://significanthobbies.com/index.md
+- https://live.significanthobbies.com/llms.txt
+- https://live.significanthobbies.com/llms-full.txt
+- https://live.significanthobbies.com/api/ai
+- https://live.significanthobbies.com/index.md
 
 Auth-walled personal data is not agent-indexed.

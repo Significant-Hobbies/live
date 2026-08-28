@@ -15,18 +15,18 @@ side quests.
 - Extracted with full Significant Hobbies history on 2026-08-23.
 - Runtime remains the existing `significanthobbies` Cloudflare Worker.
 - Authenticated records remain in the existing Significant Hobbies D1;
-  signed-out private records remain in IndexedDB on the compatible apex origin.
-- The Live landing remains `https://live.significanthobbies.com`.
+  signed-out private records remain in IndexedDB on the canonical Live origin.
+- Every Live page, API, discovery document, and generated URL is canonical at
+  `https://live.significanthobbies.com`.
 - Apex `/`, `/hub`, `/health`, `/mcp`, and `/v1/*` delegate to the separately
-  owned Hub through the `personal-platform` service binding. Existing deeper
-  apex product routes remain compatibility surfaces for Live, avoiding a data
-  or auth migration.
+  owned Hub through the `personal-platform` service binding. Legacy apex Live
+  paths permanently redirect to the same path on the Live host.
 
 ## Status and next
 
 Live is actively usable but remains an ongoing product. Continue from observed
-usage, improve discovery and long-lived planning, and gradually move public
-links to the Live domain while preserving existing local browser data.
+usage and improve discovery and long-lived planning on the independent Live
+origin.
 
 ## Features (shipped)
 
@@ -40,5 +40,7 @@ links to the Live domain while preserving existing local browser data.
 ## Timeline
 
 - 2026-08-28 — Shipped the open-world Dream Atlas and calling-dream loop.
+- 2026-08-28 — Made `live.significanthobbies.com` canonical for every Live
+  surface while preserving the Hub at the apex and the existing data authority.
 
 Product work belongs in this repository's GitHub Issues.
