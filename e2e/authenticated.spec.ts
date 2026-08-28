@@ -53,35 +53,25 @@ test.describe('authenticated surfaces', () => {
 
   test('Live and Journal persist independently after the split', async ({ authedPage }) => {
     await authedPage.goto('/live-more');
-    const card = authedPage.locator('aside').filter({ hasText: 'Make today different' });
-    await expect(card).toBeVisible();
-
-    const reopen = card.getByRole('button', { name: 'Mark this open again' });
-    if (await reopen.isVisible()) await reopen.click();
-
-    const chooseOwn = card.getByRole('button', { name: /^(Choose my own|Edit my list)$/ });
-    await waitForHydrated(chooseOwn);
-    await chooseOwn.click();
-    const chosenIdea = 'Walk a street I have never taken';
-    await authedPage.getByLabel('What do you want to try today?').fill(chosenIdea);
-    await card.getByRole('button', { name: 'Keep my list' }).click();
+    const chosenIdea = `Zorblax Quivanta walk ${crypto.randomUUID().slice(0, 8)}`;
+    await authedPage.getByLabel('What do you still want to live?').fill(chosenIdea);
+    const keepDream = authedPage.getByRole('button', { name: 'Keep this exact dream' });
+    await waitForHydrated(keepDream);
+    await keepDream.click();
+    await expect(authedPage.getByText('1 dream is now in your atlas.')).toBeVisible();
 
     const journal = 'I noticed something new today.';
     await authedPage.goto('/journal');
     await authedPage.locator('#journal-entry').fill(journal);
     await authedPage.getByRole('button', { name: /Save (morning|evening)/ }).click();
     await authedPage.goto('/live-more');
-    const restoredCard = authedPage.locator('aside').filter({ hasText: 'Make today different' });
-    await expect(restoredCard.getByRole('heading', { level: 2 })).toContainText(chosenIdea);
-    await restoredCard.getByRole('button', { name: 'I did this' }).click();
-    await expect(restoredCard.getByRole('button', { name: 'Mark this open again' })).toBeVisible();
+    await authedPage.getByLabel('What do you still want to live?').fill(chosenIdea);
+    await expect(authedPage.getByRole('button', { name: 'Calling now' })).toBeVisible();
 
     await authedPage.goto('/journal');
     await expect(authedPage.locator('#journal-entry')).toHaveValue(journal);
     await authedPage.goto('/live-more');
-    const restored = authedPage.locator('aside').filter({ hasText: 'Make today different' });
-    await expect(restored.getByRole('heading', { level: 2 })).toContainText(chosenIdea);
-    await expect(restored.getByRole('button', { name: 'Mark this open again' })).toBeVisible();
+    await expect(authedPage.getByRole('heading', { name: chosenIdea, level: 1 })).toBeVisible();
   });
 
   test('the account menu exposes the surfaces it claims to', async ({ authedPage }) => {

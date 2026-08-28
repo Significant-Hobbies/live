@@ -151,6 +151,8 @@ export function DreamAtlasExplorer({
   const exactOwnedDream = items.find(
     (item) => normalizeDreamTitle(item.title) === normalizeDreamTitle(exactQuery)
   );
+  const exactOwnedCalling =
+    exactOwnedDream !== undefined && exactOwnedDream.id === callingDream?.id;
 
   return (
     <div className="flex flex-col gap-8">
@@ -486,7 +488,7 @@ export function DreamAtlasExplorer({
                     disabled={
                       pendingTitles.has(normalizeDreamTitle(exactQuery)) ||
                       callingPendingId !== null ||
-                      exactOwnedDream?.id === callingDream?.id
+                      exactOwnedCalling
                     }
                     onClick={() =>
                       exactOwnedDream
@@ -497,14 +499,14 @@ export function DreamAtlasExplorer({
                   >
                     {pendingTitles.has(normalizeDreamTitle(exactQuery)) ? (
                       <Loader2 className="size-4 animate-spin" />
-                    ) : exactOwnedDream?.id === callingDream?.id ? (
+                    ) : exactOwnedCalling ? (
                       <Check className="size-4" />
                     ) : exactOwnedDream ? (
                       <Footprints className="size-4" />
                     ) : (
                       <Sparkles className="size-4" />
                     )}
-                    {exactOwnedDream?.id === callingDream?.id
+                    {exactOwnedCalling
                       ? 'Calling now'
                       : exactOwnedDream
                         ? 'Call this forward'
@@ -528,7 +530,7 @@ export function DreamAtlasExplorer({
                   const ownedDream = items.find((item) => normalizeDreamTitle(item.title) === key);
                   const owned = !!ownedDream;
                   const pending = pendingTitles.has(key);
-                  const calling = ownedDream?.id === callingDream?.id;
+                  const calling = ownedDream !== undefined && ownedDream.id === callingDream?.id;
                   return (
                     <article
                       key={entry.slug}

@@ -86,9 +86,9 @@ test.describe('Onboarding', () => {
     expect(saved.daily?.habits).toEqual([]);
 
     await page.goto('/live-more');
-    const yearlyGoals = page.getByRole('complementary').filter({ hasText: 'Goals for this year' });
-    await expect(yearlyGoals).toContainText('Build a calmer work week');
-    await expect(yearlyGoals).toContainText('Solo trip for one week');
+    await page.getByLabel('What do you still want to live?').fill('Solo trip for one week');
+    await expect(page.getByText('Solo trip for one week', { exact: true })).toBeVisible();
+    await expect(page.getByRole('button', { name: /Calling now|Call this forward/ })).toBeVisible();
   });
 
   test('starts with varied popular possibilities and offers real YouTube songs', async ({
@@ -213,7 +213,7 @@ test.describe('Onboarding', () => {
     await page.getByRole('link', { name: /^Live/ }).first().click();
     await expect(page).toHaveURL(/\/live-more$/);
     await expect(
-      page.getByRole('heading', { name: /What do you still want to live, Complete/i })
+      page.getByRole('heading', { name: /There are more ways to live, Complete/i })
     ).toBeVisible();
     await page.goto('/habits');
     await expect(page.getByText('Connect with someone today', { exact: true })).toHaveCount(0);

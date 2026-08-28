@@ -35,44 +35,29 @@ test.describe('Life Atlas shell', () => {
 
   test('Live More makes discovery and the action paths coherent', async ({ page }) => {
     await page.goto('/live-more');
-    await expect(
-      page.getByRole('heading', { name: /What do you still want to live/ })
-    ).toBeVisible();
-    await expect(page.getByText('More than 5,000 possibilities')).toBeVisible();
-    for (const name of [
-      'Discover a life you have not thought of yet.',
-      'Life Bingo',
-      'Give “someday” a first step.',
-    ]) {
-      await expect(page.getByRole('heading', { name })).toBeVisible();
-    }
+    await expect(page.getByRole('heading', { name: /There are more ways to live/ })).toBeVisible();
+    await expect(page.getByRole('heading', { name: /Wander beyond the categories/ })).toBeVisible();
 
-    await page.getByLabel('I want to…').fill('Learn to sail');
-    await page.getByRole('button', { name: 'Add to my list' }).click();
-    await expect(page.getByText('Learn to sail', { exact: true })).toBeVisible();
-    await expect(
-      page
-        .getByRole('link', { name: /Make a Side Quest/ })
-        .filter({ hasText: 'Make a Side Quest' })
-        .first()
-    ).toBeVisible();
-
-    const firstPossibility = page.locator('#discover article').first();
-    const title = await firstPossibility.getByRole('heading', { level: 3 }).innerText();
-    await firstPossibility.getByRole('link', { name: 'Small first step' }).click();
-    await expect(page).toHaveURL(/\/side-quests\?tab=pick&possibility=/);
-    await expect(page.getByText('Make this possibility smaller')).toBeVisible();
-    await expect(page.getByText(title, { exact: true })).toBeVisible();
+    await page.getByLabel('What do you still want to live?').fill('Learn to sail');
+    const result = page.getByRole('region', { name: 'Dream search results' });
+    await expect(result.getByText('Developed in Live')).toBeVisible();
+    await expect(result.getByRole('heading', { name: /Learn to sail/i }).first()).toBeVisible();
+    await expect(result.getByRole('link', { name: 'See the path' }).first()).toBeVisible();
+    await result.getByRole('button', { name: 'Keep this possibility' }).first().click();
+    await expect(page.getByText('1 dream is now in your atlas.')).toBeVisible();
   });
 
-  test('a dismissed possibility can be recovered', async ({ page }) => {
+  test('an external possibility becomes a durable calling dream', async ({ page }) => {
     await page.goto('/live-more');
-    const firstPossibility = page.locator('#discover article').first();
-    const title = await firstPossibility.getByRole('heading', { level: 3 }).innerText();
-    await firstPossibility.getByRole('button', { name: `Dismiss ${title}` }).click();
-    await expect(page.getByText(`${title} dismissed. You can undo this.`)).toBeVisible();
-    await page.getByRole('button', { name: 'Undo' }).click();
-    await expect(page.getByRole('heading', { name: title })).toBeVisible();
+    const dream = `Aurevian Zorblax Quivanta ${crypto.randomUUID().slice(0, 8)}`;
+    await page.getByLabel('What do you still want to live?').fill(dream);
+    await expect(page.getByText('The native atlas ends here')).toBeVisible();
+    await page.getByRole('button', { name: 'Keep this exact dream' }).click();
+    await expect(page.getByRole('button', { name: 'Calling now' })).toBeVisible();
+    await page.getByRole('button', { name: 'Clear dream search' }).click();
+    await expect(page.getByRole('heading', { name: dream, level: 1 })).toBeVisible();
+    await page.reload();
+    await expect(page.getByRole('heading', { name: dream, level: 1 })).toBeVisible();
   });
 
   test('a large possibility becomes a related small quest', async ({ page }) => {

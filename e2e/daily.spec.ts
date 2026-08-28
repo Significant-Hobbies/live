@@ -59,59 +59,43 @@ test.describe('Journal, Habits & manifesto', () => {
     await expect(page.getByText(/\d+ of \d+ complete today/)).toHaveCount(0);
   });
 
-  test('/live-more owns and restores the small new thing', async ({ page }) => {
+  test('/live-more keeps and restores an exact dream', async ({ page }) => {
     await completeLocalOnboarding(page);
     await page.goto('/live-more');
-
-    const newThing = page.locator('aside').filter({ hasText: 'Make today different' });
-    await expect(newThing).toBeVisible();
-    const firstIdea = await newThing.getByRole('heading', { level: 2 }).textContent();
-
-    await newThing.getByRole('button', { name: 'Suggest another' }).click();
-    await expect(newThing.getByRole('heading', { level: 2 })).not.toHaveText(firstIdea ?? '');
-    const chosenIdea = await newThing.getByRole('heading', { level: 2 }).textContent();
-
-    await newThing.getByRole('button', { name: 'I did this' }).click();
-    await expect(newThing.getByRole('button', { name: 'Mark this open again' })).toBeVisible();
-
+    const chosenIdea = `Moonlit Zorblax Quivanta ${crypto.randomUUID().slice(0, 8)}`;
+    await page.getByLabel('What do you still want to live?').fill(chosenIdea);
+    await page.getByRole('button', { name: 'Keep this exact dream' }).click();
+    await expect(page.getByText('1 dream is now in your atlas.')).toBeVisible();
     await page.reload();
-    await expect(
-      page.locator('aside').filter({ hasText: 'Make today different' }).getByRole('heading', {
-        level: 2,
-      })
-    ).toHaveText(chosenIdea ?? '');
-    await expect(page.getByRole('button', { name: 'Mark this open again' })).toBeVisible();
+    await page.getByLabel('What do you still want to live?').fill(chosenIdea);
+    await expect(page.getByRole('button', { name: 'Calling now' })).toBeVisible();
+    await page.getByRole('button', { name: 'Clear dream search' }).click();
+    await expect(page.getByRole('heading', { name: chosenIdea, level: 1 })).toBeVisible();
   });
 
-  test('/live-more lets a person keep their own list for today', async ({ page }) => {
+  test('/live-more lets a person import a whole dream list', async ({ page }) => {
     await completeLocalOnboarding(page);
     await page.goto('/live-more');
-    const card = page.locator('aside').filter({ hasText: 'Make today different' });
-
-    await card.getByRole('button', { name: 'Choose my own' }).click();
+    const suffix = crypto.randomUUID().slice(0, 8);
+    const dreams = [
+      `Call an old friend ${suffix}`,
+      `Cook one new dish ${suffix}`,
+      `Walk somewhere unfamiliar ${suffix}`,
+    ];
+    await page.getByRole('button', { name: 'Paste a whole list' }).click();
     await page
-      .getByLabel('What do you want to try today?')
-      .fill('1. Call an old friend\n2. Cook one new dish\n3. Walk somewhere unfamiliar');
-    await card.getByRole('button', { name: 'Keep my list' }).click();
-    await expect(card.getByRole('heading', { level: 2 })).toContainText('Your list for today');
-    await expect(card.getByRole('listitem')).toHaveCount(3);
-    await expect(card.getByRole('button', { name: 'I did these' })).toBeVisible();
-    await card.getByRole('button', { name: 'I did these' }).click();
-
-    const livedCollection = page.getByRole('region', { name: "Things I've done" });
-    await expect(livedCollection.getByText('Call an old friend', { exact: true })).toBeVisible();
-    await expect(livedCollection.getByText('Cook one new dish', { exact: true })).toBeVisible();
-    await expect(
-      livedCollection.getByText('Walk somewhere unfamiliar', { exact: true })
-    ).toBeVisible();
-
+      .getByLabel('Bucket list to import')
+      .fill(dreams.map((dream, index) => `${index + 1}. ${dream}`).join('\n'));
+    await expect(page.getByText('Dreams Live will keep').locator('../..')).toContainText('3');
+    await page.getByRole('button', { name: 'Keep these dreams' }).click();
+    await expect(page.getByText('3 dreams are now in your atlas.')).toBeVisible();
     await page.reload();
-    const restored = page.locator('aside').filter({ hasText: 'Make today different' });
-    await expect(restored.getByRole('heading', { name: /Your list for today/ })).toBeVisible();
-    await expect(restored.getByRole('listitem')).toHaveCount(3);
-    await expect(
-      page.getByRole('region', { name: "Things I've done" }).getByRole('listitem')
-    ).toHaveCount(3);
+    for (const dream of dreams) {
+      await page.getByLabel('What do you still want to live?').fill(dream);
+      await expect(
+        page.getByRole('button', { name: /Calling now|Call this forward/ })
+      ).toBeVisible();
+    }
   });
 
   test('/manifesto loads and shows the mortality frame', async ({ page }) => {
