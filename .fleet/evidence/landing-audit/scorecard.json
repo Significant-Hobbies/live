@@ -1,0 +1,99 @@
+{
+  "$schema": "fleet.landing-audit.scorecard.v1",
+  "project": "live",
+  "priority": "P2",
+  "candidate": "http://127.0.0.1:4176/live.html",
+  "productionChanged": false,
+  "checkedAt": "2026-08-28",
+  "purpose": {
+    "score": 94,
+    "minimum": 85,
+    "p0": 0,
+    "p1": 0,
+    "note": "The hero explains discovery, choosing, bucket lists, commitments, side quests, and retained personal history. The quiz is one clear next action and matches the owner's current discovery-dogfooding priority."
+  },
+  "design": {
+    "score": 94,
+    "minimum": 88,
+    "p0": 0,
+    "p1": 0,
+    "note": "The Life Atlas direction is emotionally specific, visually polished, responsive, and consistent with the product's warm editorial system rather than a generic SaaS component grid."
+  },
+  "seo": {
+    "score": 99,
+    "pages": 1,
+    "passed": 14,
+    "failed": 0,
+    "warnings": 1,
+    "warning": "Valid SoftwareApplication markup has no genuine review or aggregateRating evidence, so it is not eligible for Google's app rich result. No rating was invented.",
+    "productionGraph": {
+      "sitemapPages": 684,
+      "crawledPages": 684,
+      "discoveredTargets": 780,
+      "errors": 0,
+      "redirects": 0,
+      "orphanCandidates": 96
+    },
+    "candidateBoundary": "The candidate reduces the Live hostname sitemap to the product landing and keeps deeper compatibility application routes on the apex origin."
+  },
+  "geo": {
+    "score": 100,
+    "candidateTier": "S",
+    "productionTier": "A",
+    "productionScore": 90,
+    "note": "The candidate has a host-specific Live catalog, Markdown home, llms files, robots, one-page sitemap, OpenAPI, AI catalog, pricing truth, and agent skill. Seven routing contract tests pass. Current production has one stale catalog-integrity mismatch and remains unchanged."
+  },
+  "performance": {
+    "score": 98,
+    "runs": 8,
+    "successfulRuns": 8,
+    "weightedLcpMs": 685,
+    "weightedCls": 0,
+    "weightedTbtMs": 0,
+    "cwvLcpP75Ms": 939,
+    "profiles": {
+      "mobileSlowScore": 95,
+      "mobileSlowLcpP75Ms": 1863,
+      "mobileMidScore": 100,
+      "mobileMidLcpP75Ms": 939,
+      "mobileFastScore": 100,
+      "mobileFastLcpP75Ms": 469,
+      "desktopScore": 100,
+      "desktopLcpP75Ms": 249
+    },
+    "report": "/Users/sarthak/.psi-swarm/reports/psi-swarm-127.0.0.1_4176_live.html-2026-08-28T15-34-27.html",
+    "note": "All eight audits passed and PSI Swarm found no actionable Lighthouse opportunity."
+  },
+  "verification": {
+    "astroCheck": "pass",
+    "astroBuild": "pass",
+    "biome": "436 files clean",
+    "typecheck": "pass",
+    "vitest": "530/530",
+    "liveHostRouting": "7/7",
+    "responsiveBrowser": "pass",
+    "axeWcagAAndAA": {
+      "mobileViolations": 0,
+      "desktopViolations": 0
+    },
+    "horizontalOverflow": {
+      "mobile": false,
+      "desktop": false
+    },
+    "footer": {
+      "askAi": "pass",
+      "projectStrip": "pass"
+    },
+    "runtimeErrors": 0,
+    "responsiveScreenshots": [
+      "../../../artifacts/design/landing-audit/final-p2-390.png",
+      "../../../artifacts/design/landing-audit/final-p2-768.png",
+      "../../../artifacts/design/landing-audit/final-p2-1440.png"
+    ]
+  },
+  "limitations": [
+    "The static local landing intentionally resolves application assets and deeper calls to action through the established Significant Hobbies compatibility origin.",
+    "Current production still exposes the older mixed-host sitemap and A-tier agent catalog; the cleaner candidate host boundary is source- and test-verified but not deployed.",
+    "Production crawlers should be revisited once after an authorized release, not during every local design iteration."
+  ]
+}
