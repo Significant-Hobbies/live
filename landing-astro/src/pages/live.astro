@@ -1,6 +1,5 @@
 ---
 import BucketListPanel from '@/components/BucketListPanel.astro';
-import CommunitySamples from '@/components/CommunitySamples.astro';
 import FaqSection from '@/components/FaqSection.astro';
 import FeatureRow from '@/components/FeatureRow.astro';
 import FinalCta from '@/components/FinalCta.astro';
@@ -8,9 +7,9 @@ import FleetFooter from '@/components/FleetFooter.astro';
 import HowItWorks from '@/components/HowItWorks.astro';
 import Layout from '@/layouts/Layout.astro';
 
-const TITLE = 'Live — Map your hobby journey across life';
+const TITLE = 'Live — Discover what deserves your time';
 const DESCRIPTION =
-  'Map hobbies across life phases: what rekindled, what persisted, and what to try next. A lifelong catalog for curious adults.';
+  'Discover hobbies worth trying, turn the right ones into bucket lists and commitments, and keep a truthful record of the life you are building.';
 ---
 
 <Layout title={TITLE} description={DESCRIPTION}>
@@ -36,18 +35,22 @@ const DESCRIPTION =
         <p class="cinematic-hero__wordmark">Live by Significant Hobbies</p>
         <div class="cinematic-hero__copy">
           <h1>
-            <span>What will you do</span>
-            <span>with the time you have?</span>
+            <span>Find what deserves</span>
+            <span>your time.</span>
           </h1>
           <p>
-            Start with your birth date. See the weeks behind you, the weeks still
-            yours, and make room for what matters.
+            Live helps you discover hobbies and experiences, choose what matters,
+            and turn intention into bucket lists, commitments, side quests, and a
+            personal history you can keep.
           </p>
-          <a class="cinematic-hero__cta" href="/life-in-weeks">
-            See my life in weeks
+          <a class="cinematic-hero__cta" href="/find-your-hobby">
+            Find my next hobby
             <span aria-hidden="true">→</span>
           </a>
-          <p class="cinematic-hero__note">Takes 10 seconds. No sign-up required.</p>
+          <p class="cinematic-hero__note">
+            Free to use. No account required to begin.
+            <a class="cinematic-hero__secondary" href="/life-in-weeks">See your life in weeks</a>.
+          </p>
         </div>
 
         <p class="cinematic-hero__prompt" aria-hidden="true">
@@ -59,7 +62,6 @@ const DESCRIPTION =
     <FeatureRow />
     <BucketListPanel />
     <HowItWorks />
-    <CommunitySamples />
     <FaqSection />
     <FinalCta />
   </main>

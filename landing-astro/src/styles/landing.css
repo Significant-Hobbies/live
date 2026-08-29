@@ -209,6 +209,22 @@ h1, h2, h3 {
   font-size: 0.875rem;
 }
 
+.cinematic-hero__secondary {
+  color: inherit;
+  font-weight: 650;
+  text-decoration-color: oklch(0.81 0.018 88 / 0.55);
+  text-underline-offset: 0.2em;
+}
+
+.cinematic-hero__secondary:hover {
+  color: oklch(0.98 0.005 90);
+}
+
+.cinematic-hero__secondary:focus-visible {
+  outline: 2px solid oklch(0.99 0.004 90);
+  outline-offset: 3px;
+}
+
 .cinematic-hero__prompt {
   align-self: flex-end;
   margin: 0;
