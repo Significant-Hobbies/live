@@ -40,19 +40,23 @@ where proof is the explicit job.
 
 ## Operating Context
 
-- The public product runs at `significanthobbies.com`.
-- `live.significanthobbies.com` serves the preserved Live landing; its calls to
-  action return to the existing same-origin application routes.
-- `/` is the same seven-product directory for signed-out and signed-in visitors.
-- `/live-more`, `/journal`, and `/habits` are the current same-origin product
-  routes; `/daily` is a compatibility doorway to Journal and Habits.
+- Live is canonical at `live.significanthobbies.com`. Every Live page, API,
+  discovery document, and generated URL belongs to that host.
+- The apex `significanthobbies.com` is the separately owned Significant Hobbies
+  Hub, and legacy apex Live paths permanently redirect to the same path on the
+  Live host. The host split is specified in
+  [`docs/architecture/overview.md`](docs/architecture/overview.md).
+- `live.significanthobbies.com/` serves the preserved Live landing, and its
+  calls to action lead into Live application routes on that same host.
+- `/live-more`, `/journal`, and `/habits` are the current Live product routes;
+  `/daily` is a compatibility doorway to Journal and Habits.
 - The hobby quiz is the single primary discovery path while its funnel is being
   evaluated.
 - Authenticated users manage timelines, commitments, habits, journal entries,
   bucket lists, quests, trajectory, and profile settings.
 - Cloudflare Workers/OpenNext serves the application; Cloudflare D1 stores
   authenticated application data through Drizzle. Signed-out private work
-  remains in IndexedDB on the current origin.
+  remains in IndexedDB on the canonical Live origin.
 - Production database migrations and deployments are manual and
   operator-owned.
 

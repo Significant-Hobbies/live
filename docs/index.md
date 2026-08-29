@@ -1,19 +1,20 @@
 ---
-title: significanthobbies docs
-description: A life planner with two dimensions (Daily + Living). Product, architecture, development, operations, and durable learnings for the significanthobbies Cloudflare Workers app.
+title: Live docs
+description: Product, architecture, development, operations, and durable learnings for Live, the Cloudflare Workers app at live.significanthobbies.com.
 ---
 
-# significanthobbies docs
+# Live docs
 
 > Source of truth is the Markdown in this `docs/` tree (plus the code). See
 > [`maintenance.md`](maintenance.md) for how to edit this knowledge system.
 
-**significanthobbies** is a life planner with two dimensions. **Daily**
-(private): one ritual page with AM/PM prompts, habit check-ins, and a
-compulsory journal entry. **Living** (opt-in public): hobby discovery,
-timeline builder, bucket lists, side quests, SEO blog, and public user
-profiles. The mortality frame (life grid, manifesto) connects both dimensions.
-Deployed at `significanthobbies.com` on Cloudflare Workers via OpenNext.
+**Live** owns hobby discovery, bucket lists, timelines, commitments, side
+quests, private writing and practice check-ins, and the history that
+accumulates behind them. The mortality frame (life grid, manifesto) connects
+them. Deployed at `live.significanthobbies.com` on Cloudflare Workers via
+OpenNext; the apex `significanthobbies.com` belongs to the separately owned
+Hub — see [`architecture/overview.md`](architecture/overview.md) for the host
+split.
 
 - **Live status:** [`STATUS.md`](https://github.com/Significant-Hobbies/significanthobbies/blob/main/STATUS.md)
 - **Agent bootloader:** [`agents.md`](https://github.com/Significant-Hobbies/significanthobbies/blob/main/agents.md)
