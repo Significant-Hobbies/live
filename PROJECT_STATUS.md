@@ -39,6 +39,11 @@ origin.
 
 ## Timeline
 
+- **2026-09-01 — Dedicated Clarity project wired locally:** Replaced the
+  borrowed Significant Hobbies analytics project with Live's own project and
+  product tag. PostHog remains unchanged. TypeScript and the Fleet-wide Clarity
+  source audit pass; production deployment is pending the normal release gate.
+
 - 2026-08-28 — Shipped the open-world Dream Atlas and calling-dream loop.
 - 2026-08-28 — Made `live.significanthobbies.com` canonical for every Live
   surface while preserving the Hub at the apex and the existing data authority.
