@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { GitHubIcon } from '@/components/github-icon';
 
 const repository = 'https://github.com/Significant-Hobbies/live';
 
@@ -74,9 +75,13 @@ export default function ChangelogPage() {
           </a>
           <a
             href={repository}
-            className="font-medium text-primary underline underline-offset-4 hover:text-primary/80"
+            aria-label="GitHub repository"
+            title="GitHub repository"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-primary hover:text-primary/80"
           >
-            Source
+            <GitHubIcon />
           </a>
         </nav>
       </header>
