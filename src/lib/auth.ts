@@ -7,6 +7,7 @@ import { account, session, user, users, verification } from '~/db/schema';
 import { db } from '~/server/db';
 
 import { nativeAppleAudiences } from './native-apple';
+import { ping } from '~/lib/ping';
 
 const canUseLocalAuthSecret =
   process.env.NODE_ENV !== 'production' ||
@@ -105,6 +106,10 @@ export const auth = betterAuth({
               image: authUser.image ?? null,
             });
           }
+          await ping('signup', {
+            title: authUser.email,
+            props: { id: authUser.id, name: authUser.name },
+          });
         },
       },
       delete: {
