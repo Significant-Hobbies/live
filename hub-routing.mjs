@@ -2,11 +2,12 @@ export const HUB_HOSTS = new Set(['significanthobbies.com', 'www.significanthobb
 export const LIVE_HOST = 'live.significanthobbies.com';
 
 const HUB_SERVICE_EXACT_PATHS = new Set(['/', '/hub', '/health', '/mcp']);
+const HUB_SERVICE_PREFIX_PATHS = ['/.well-known/agent-skills/'];
 const PERSONAL_PLATFORM_INTERNAL_HOST = 'personal-auth.internal';
 export const PERSONAL_PLATFORM_INTERNAL_HEADER = 'X-Personal-Platform-Internal';
 
 export function isHubServicePath(pathname) {
-  return HUB_SERVICE_EXACT_PATHS.has(pathname) || pathname.startsWith('/v1/');
+  return HUB_SERVICE_EXACT_PATHS.has(pathname) || pathname.startsWith('/v1/') || HUB_SERVICE_PREFIX_PATHS.some(prefix => pathname.startsWith(prefix));
 }
 
 /**
