@@ -49,3 +49,43 @@ jobs:
             echo "ERROR: legacy apex route did not move to the canonical Live host"
             exit 1
           fi
+      - name: Probe apex crawler and agent contract
+        run: |
+          # The apex must answer these itself. Redirecting them to live.
+          # hands a crawler the wrong entity and leaves the hub with no
+          # sitemap on its own host (live#7, significanthobbies#148).
+          fail=0
+          for path in /robots.txt /sitemap.xml /llms.txt /llms-full.txt \
+                      /index.md /api/ai /api-ai.json /.well-known/security.txt; do
+            status=$(curl -o /dev/null -s -w "%{http_code}" \
+              -A "smoke-probe/1.0" --max-time 20 \
+              "https://significanthobbies.com${path}")
+            if [ "$status" != "200" ]; then
+              echo "ERROR: apex ${path} returned HTTP $status (expected 200, on-host)"
+              fail=1
+            fi
+          done
+
+          name=$(curl -s -A "smoke-probe/1.0" --max-time 20 \
+            https://significanthobbies.com/api/ai \
+            | tr -d ' \n' | sed -n 's/.*"name":"\([^"]*\)".*/\1/p')
+          if [ "$name" != "Significant Hobbies" ]; then
+            echo "ERROR: apex /api/ai declares name '$name', expected 'Significant Hobbies'"
+            fail=1
+          fi
+
+          if curl -s -A "smoke-probe/1.0" --max-time 20 \
+              https://significanthobbies.com/robots.txt \
+              | grep -q '^Sitemap: https://live\.'; then
+            echo "ERROR: apex robots.txt advertises a sitemap on a foreign host"
+            fail=1
+          fi
+
+          if curl -s -A "smoke-probe/1.0" --max-time 20 \
+              https://significanthobbies.com/sitemap.xml \
+              | grep -q '<loc>https://live\.'; then
+            echo "ERROR: apex sitemap lists URLs on a foreign host"
+            fail=1
+          fi
+
+          exit $fail

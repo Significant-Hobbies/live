@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
 import {
+  HUB_AGENT_CONTRACT_PATHS,
   isHubServicePath,
   legacyLiveRedirect,
   markPersonalPlatformInternalRequest,
@@ -36,6 +37,47 @@ describe('Hub edge routing', () => {
       expect(legacyLiveRedirect(new URL(`https://significanthobbies.com${pathname}`))).toBeNull();
     }
   );
+
+  it.each(HUB_AGENT_CONTRACT_PATHS)(
+    'keeps the apex agent contract file %s on the apex',
+    (pathname) => {
+      expect(isHubServicePath(pathname)).toBe(true);
+      expect(legacyLiveRedirect(new URL(`https://significanthobbies.com${pathname}`))).toBeNull();
+      expect(
+        legacyLiveRedirect(new URL(`https://www.significanthobbies.com${pathname}`))
+      ).toBeNull();
+    }
+  );
+
+  it('covers the whole crawler and agent contract', () => {
+    expect(new Set(HUB_AGENT_CONTRACT_PATHS)).toEqual(
+      new Set([
+        '/robots.txt',
+        '/sitemap.xml',
+        '/llms.txt',
+        '/llms-full.txt',
+        '/index.md',
+        '/api/ai',
+        '/api-ai.json',
+        '/.well-known/security.txt',
+      ])
+    );
+  });
+
+  it.each(['/blog/side-quests', '/compare', '/about', '/side-quests'])(
+    'still moves the Live-owned content path %s to the Live host',
+    (pathname) => {
+      expect(legacyLiveRedirect(new URL(`https://significanthobbies.com${pathname}`))?.href).toBe(
+        `https://live.significanthobbies.com${pathname}`
+      );
+    }
+  );
+
+  it.each(HUB_AGENT_CONTRACT_PATHS)('leaves the Live host to serve its own %s', (pathname) => {
+    expect(
+      legacyLiveRedirect(new URL(`https://live.significanthobbies.com${pathname}`))
+    ).toBeNull();
+  });
 
   it('marks only the private service-binding request as trusted', () => {
     const request = markPersonalPlatformInternalRequest(
