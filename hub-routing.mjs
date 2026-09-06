@@ -46,6 +46,18 @@ export function isHubServicePath(pathname) {
 }
 
 /**
+ * Legacy apex paths whose name changes, not just its host, when it moves to
+ * Live. `/hub-opengraph-image` is the social-preview image the apex's own
+ * OG tags reference (rendered by the Hub Backend's HTML) — it was never a
+ * route under that name on Live, only Next's App Router convention path
+ * `/opengraph-image` generates the image. The identity redirect every other
+ * apex path gets therefore sent crawlers to a same-named path that 404s
+ * (Significant-Hobbies/live#10). Map the alias to its real target instead of
+ * teaching Live to answer a name nothing else calls it by.
+ */
+const LEGACY_LIVE_PATH_ALIASES = new Map([['/hub-opengraph-image', '/opengraph-image']]);
+
+/**
  * Legacy apex Live links move permanently to the canonical Live host while
  * actual Hub routes remain on the apex service binding.
  *
@@ -58,7 +70,24 @@ export function legacyLiveRedirect(url) {
   const target = new URL(url);
   target.hostname = LIVE_HOST;
   target.port = '';
+  target.pathname = LEGACY_LIVE_PATH_ALIASES.get(url.pathname) ?? url.pathname;
   return target;
+}
+
+/**
+ * The Hub Backend's router only registers GET handlers for hub-service
+ * paths (`/`, `/health`, the agent-contract files, ...); anything else falls
+ * through to its authenticated `/v1/*` routes and answers a HEAD probe with
+ * 401 instead of the 200 a GET receives (Significant-Hobbies/live#10). HEAD
+ * must be observably identical to GET minus the body, so run it as GET
+ * against the backend and let the caller drop the body afterward instead of
+ * teaching that router about HEAD.
+ *
+ * @param {Request} request
+ * @returns {Request}
+ */
+export function hubServiceRequest(request) {
+  return request.method === 'HEAD' ? new Request(request, { method: 'GET' }) : request;
 }
 
 export function markPersonalPlatformInternalRequest(request) {

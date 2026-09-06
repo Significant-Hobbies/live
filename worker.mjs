@@ -17,6 +17,7 @@ import { handleAgentEdge } from './agent-edge.mjs';
 import { handleCachedPublicRouteMarkdown } from './agent-route-markdown.mjs';
 import {
   HUB_HOSTS,
+  hubServiceRequest,
   isHubServicePath,
   legacyLiveRedirect,
   LIVE_HOST,
@@ -153,7 +154,8 @@ export default {
       isHubServicePath(requestUrl.pathname) &&
       env.HUB_SERVICE
     ) {
-      return env.HUB_SERVICE.fetch(request);
+      const hubResponse = await env.HUB_SERVICE.fetch(hubServiceRequest(request));
+      return request.method === 'HEAD' ? new Response(null, hubResponse) : hubResponse;
     }
     const legacyRedirect = legacyLiveRedirect(requestUrl);
     if (legacyRedirect) return Response.redirect(legacyRedirect, 308);
@@ -195,7 +197,15 @@ export default {
       );
       if (markdown) return markdown;
 
-      if (request.method !== 'GET') {
+      // HEAD must get the same routing decision as GET — the branches below
+      // (the Astro asset overlay especially) are what actually answers "/"
+      // at all; OpenNext has no route registered for it, so a HEAD that
+      // fell straight through to fetchOpenNext 404'd instead of getting the
+      // 200 a browser's GET sees (Significant-Hobbies/live#10). Every fetch
+      // below runs as GET and the body is dropped from the final response
+      // when the original request was HEAD.
+      const isHead = request.method === 'HEAD';
+      if (request.method !== 'GET' && !isHead) {
         return fetchOpenNext(request, env, ctx);
       }
       const url = requestUrl;
@@ -208,6 +218,7 @@ export default {
       if (hasAuthCookie(request) && !isLiveLanding) {
         return fetchOpenNext(request, env, ctx);
       }
+      const getRequest = isHead ? new Request(request, { method: 'GET' }) : request;
 
       // Short-circuit: the Astro landing is overlaid into
       // `.open-next/assets/index.html` by `scripts/overlay-astro-landing.mjs`.
@@ -223,7 +234,7 @@ export default {
       if (env.ASSETS && url.pathname === '/') {
         const assetRequest = isLiveLanding
           ? new Request(new URL('/live.html', request.url), { headers: request.headers })
-          : request;
+          : getRequest;
         const assetResp = await env.ASSETS.fetch(assetRequest);
         // The assets binding answers If-None-Match revalidations with 304.
         // Pass those through — falling through would serve the wrong page.
@@ -238,7 +249,7 @@ export default {
           headers.set('Cache-Control', CACHE_CONTROL);
           headers.set('x-edge-cache', 'ASSET');
 
-          return new Response(assetResp.body, {
+          return new Response(isHead ? null : assetResp.body, {
             status: assetResp.status,
             statusText: assetResp.statusText,
             headers,
@@ -247,14 +258,14 @@ export default {
       }
 
       const cache = caches.default;
-      const cached = await cache.match(request);
+      const cached = await cache.match(getRequest);
       if (cached) {
-        const hit = new Response(cached.body, cached);
+        const hit = new Response(isHead ? null : cached.body, cached);
         hit.headers.set('x-edge-cache', 'HIT');
         return hit;
       }
 
-      const response = await openNext.fetch(request, env, ctx);
+      const response = await openNext.fetch(getRequest, env, ctx);
 
       // Only cache 2xx HTML responses — never error pages or redirects.
       const contentType = response.headers.get('content-type') ?? '';
@@ -263,7 +274,7 @@ export default {
         response.headers.has('set-cookie') ||
         !isCacheableContentType(url.pathname, contentType)
       ) {
-        return response;
+        return isHead ? new Response(null, response) : response;
       }
 
       // Read the body into memory once so we can hand the same bytes to
@@ -285,9 +296,12 @@ export default {
         statusText: response.statusText,
         headers,
       });
-      ctx.waitUntil(cache.put(request, cacheable.clone()));
+      // The Cache API only accepts GET-keyed requests — key on getRequest so
+      // a HEAD probe still populates (and later hits) the same cache entry
+      // a GET to the same URL uses.
+      ctx.waitUntil(cache.put(getRequest, cacheable.clone()));
 
-      const clientResponse = new Response(body, {
+      const clientResponse = new Response(isHead ? null : body, {
         status: response.status,
         statusText: response.statusText,
         headers,
