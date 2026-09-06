@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 
 import {
   HUB_AGENT_CONTRACT_PATHS,
+  hubServiceRequest,
   isHubServicePath,
   legacyLiveRedirect,
   markPersonalPlatformInternalRequest,
@@ -93,5 +94,51 @@ describe('Hub edge routing', () => {
       })
     );
     expect(request.headers.has(PERSONAL_PLATFORM_INTERNAL_HEADER)).toBe(false);
+  });
+
+  // Significant-Hobbies/live#10: the Hub Backend's router only registers GET
+  // handlers for `/`, so a HEAD probe fell through to its authenticated
+  // routes and got a 401 instead of the 200 a GET receives. Run HEAD as GET
+  // against the service binding and let the caller drop the body.
+  describe('HEAD parity for the Hub service binding', () => {
+    it.each(['/', '/hub', '/health', ...HUB_AGENT_CONTRACT_PATHS])(
+      'rewrites a HEAD request for %s to GET',
+      (pathname) => {
+        const request = hubServiceRequest(
+          new Request(`https://significanthobbies.com${pathname}`, { method: 'HEAD' })
+        );
+        expect(request.method).toBe('GET');
+        expect(request.url).toBe(`https://significanthobbies.com${pathname}`);
+      }
+    );
+
+    it.each(['GET', 'POST', 'OPTIONS'])('leaves a %s request untouched', (method) => {
+      const original = new Request('https://significanthobbies.com/v1/sync/push', { method });
+      expect(hubServiceRequest(original)).toBe(original);
+    });
+  });
+
+  // Significant-Hobbies/live#10: the apex's own OG tags reference
+  // `/hub-opengraph-image`, but nothing was ever registered under that name
+  // on Live — only Next's `/opengraph-image` App Router route generates the
+  // image — so the identity redirect sent crawlers to a 404.
+  describe('the apex OG image alias', () => {
+    it('redirects /hub-opengraph-image to the real Live route name', () => {
+      expect(
+        legacyLiveRedirect(new URL('https://significanthobbies.com/hub-opengraph-image'))?.href
+      ).toBe('https://live.significanthobbies.com/opengraph-image');
+    });
+
+    it('redirects the www apex host the same way', () => {
+      expect(
+        legacyLiveRedirect(new URL('https://www.significanthobbies.com/hub-opengraph-image'))?.href
+      ).toBe('https://live.significanthobbies.com/opengraph-image');
+    });
+
+    it('leaves the real Live route name alone on the Live host', () => {
+      expect(
+        legacyLiveRedirect(new URL('https://live.significanthobbies.com/opengraph-image'))
+      ).toBeNull();
+    });
   });
 });

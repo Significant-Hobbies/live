@@ -89,3 +89,42 @@ jobs:
           fi
 
           exit $fail
+      - name: Probe HEAD parity on both hosts
+        run: |
+          # HEAD must return the same status as GET for the same URL — a
+          # divergence is exactly what uptime monitors and link-checkers use
+          # HEAD to detect (Significant-Hobbies/live#10).
+          fail=0
+          for url in https://live.significanthobbies.com/ https://significanthobbies.com/; do
+            head_status=$(curl -o /dev/null -s -I -w "%{http_code}" \
+              -A "smoke-probe/1.0" --max-time 20 "$url")
+            get_status=$(curl -o /dev/null -s -w "%{http_code}" \
+              -A "smoke-probe/1.0" --max-time 20 "$url")
+            if [ "$head_status" != "$get_status" ]; then
+              echo "ERROR: ${url} HEAD returned $head_status but GET returned $get_status"
+              fail=1
+            fi
+          done
+          exit $fail
+      - name: Probe the apex OG image
+        run: |
+          # The apex's own OG tags reference /hub-opengraph-image; it must
+          # resolve to a real image, not dangle on a 404 (live#10).
+          status=$(curl -o /dev/null -s -L -w "%{http_code}" \
+            -A "smoke-probe/1.0" --max-time 20 \
+            https://significanthobbies.com/hub-opengraph-image)
+          if [ "$status" != "200" ]; then
+            echo "ERROR: apex OG image resolved to HTTP $status"
+            exit 1
+          fi
+
+          content_type=$(curl -o /dev/null -s -L -w "%{content_type}" \
+            -A "smoke-probe/1.0" --max-time 20 \
+            https://significanthobbies.com/hub-opengraph-image)
+          case "$content_type" in
+            image/*) echo "OK: $content_type" ;;
+            *)
+              echo "ERROR: apex OG image content-type is '$content_type', expected image/*"
+              exit 1
+              ;;
+          esac
