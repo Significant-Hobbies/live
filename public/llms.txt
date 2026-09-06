@@ -1,4 +1,4 @@
-# Live by Significant Hobbies
+# Live
 
 > A life planner for private daily rituals and public living: hobbies, bucket
 > lists, experiences, and side quests over time.

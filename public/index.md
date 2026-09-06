@@ -1,4 +1,4 @@
-# Live by Significant Hobbies
+# Live
 
 Turn hobbies, experiences, bucket lists, and side quests into a life worth anticipating.
 
