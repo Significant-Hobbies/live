@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   formatDetection: { telephone: false },
   openGraph: {
     type: 'website',
-    siteName: 'Live by Significant Hobbies',
+    siteName: 'Live',
     url: 'https://live.significanthobbies.com',
     title: 'Live — Hobbies, Life Lists & Personal History',
     description:
