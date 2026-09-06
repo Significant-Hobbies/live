@@ -100,27 +100,40 @@ jobs:
             --data '{"purge_everything":true}'
           echo "Purged the whole zone for significanthobbies.com"
       - name: Smoke check production
+        # These two checks answer one question: is each host serving its own
+        # page, rather than the other host's?
+        #
+        # They used to assert on headline copy ("Your personal apps", "Live —
+        # Map your hobby journey across life"). Both strings have since been
+        # rewritten on the pages themselves, so the assertions would now fail
+        # a perfectly good deploy — a marketing copy edit should never be able
+        # to break the deploy pipeline. Assert on structural markers instead:
+        # the apex's apps-section id and each host's self-canonical link. Those
+        # change only when the page's identity changes, which is exactly the
+        # regression worth failing on.
         run: |
-          html=$(curl -fsS --retry 3 --retry-delay 5 --max-time 20 \
-            -H "Cache-Control: no-cache" https://significanthobbies.com/)
-          status=$?
-          if [ "$status" -ne 0 ]; then
+          if ! html=$(curl -fsS --retry 3 --retry-delay 5 --max-time 20 \
+            -H "Cache-Control: no-cache" https://significanthobbies.com/); then
             echo "ERROR: failed to fetch homepage"
             exit 1
           fi
-          if ! printf '%s' "$html" | grep -q 'Your personal apps'; then
-            echo "ERROR: stale overlay — missing Hub heading"
+          if ! printf '%s' "$html" | grep -q 'rel="canonical" href="https://significanthobbies.com/"'; then
+            echo "ERROR: the apex is not serving a self-canonical page — it is redirecting or serving another host's HTML"
             exit 1
           fi
-          echo "Hub OK: canonical Hub heading is available on the apex"
+          if ! printf '%s' "$html" | grep -q 'id="apps-title"'; then
+            echo "ERROR: stale overlay — the apex is missing the Hub apps section"
+            exit 1
+          fi
+          echo "Hub OK: the apex serves its own self-canonical Hub page"
 
           live_html=$(curl -fsS --retry 6 --retry-all-errors --retry-delay 10 --max-time 20 \
             -H "Cache-Control: no-cache" https://live.significanthobbies.com/)
-          if ! printf '%s' "$live_html" | grep -q 'Live — Map your hobby journey across life'; then
-            echo "ERROR: Live custom domain is missing the cinematic landing"
+          if ! printf '%s' "$live_html" | grep -q 'rel="canonical" href="https://live.significanthobbies.com'; then
+            echo "ERROR: the Live custom domain is not serving the Live landing"
             exit 1
           fi
-          echo "Live OK: cinematic landing is available on its custom domain"
+          echo "Live OK: the cinematic landing is available on its custom domain"
       - name: Smoke check a Worker-rendered page
         # Two different questions, and only the first should fail a deploy.
         #
