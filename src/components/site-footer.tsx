@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { GitHubIcon } from '@/components/github-icon';
 
 const groups = [
   {
@@ -94,9 +95,13 @@ export function SiteFooter() {
             </a>
             <a
               href="https://github.com/Significant-Hobbies/live"
+              aria-label="GitHub repository"
+              title="GitHub repository"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex min-h-11 items-center hover:text-[#211e18] sm:min-h-0"
             >
-              Source
+              <GitHubIcon />
             </a>
           </div>
         </div>
