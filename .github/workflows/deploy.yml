@@ -11,6 +11,37 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
+      # Fail fast, and name what is missing.
+      #
+      # Every run of this workflow so far has died the same way: ~2.5 minutes
+      # of install + Next build, and then Wrangler hands off to
+      # `opennextjs-cloudflare deploy`, whose nested remote-proxy session dies
+      # with an opaque "Failed to start the remote proxy session" stack trace.
+      # The real cause is simply that the two secrets below are not set on this
+      # repository, so every `${{ secrets.* }}` reference resolves to an empty
+      # string. Checking them up front turns a slow, misleading failure into an
+      # instant, actionable one.
+      #
+      # Set them under Settings -> Secrets and variables -> Actions ->
+      # Repository secrets:
+      #   CLOUDFLARE_API_TOKEN  - Workers Scripts:Edit plus the resources bound
+      #                           in wrangler.toml (D1, Workers AI), and
+      #                           optionally Zone:Cache Purge for the purge step.
+      #   CLOUDFLARE_ACCOUNT_ID - the account that owns the `significanthobbies`
+      #                           Worker.
+      - name: Require Cloudflare credentials
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          missing=""
+          [ -n "$CLOUDFLARE_API_TOKEN" ] || missing="$missing CLOUDFLARE_API_TOKEN"
+          [ -n "$CLOUDFLARE_ACCOUNT_ID" ] || missing="$missing CLOUDFLARE_ACCOUNT_ID"
+          if [ -n "$missing" ]; then
+            echo "::error::Missing repository secret(s):$missing. Add them under Settings -> Secrets and variables -> Actions -> Repository secrets, then re-run this workflow."
+            exit 1
+          fi
+          echo "Cloudflare credentials are present."
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
         with:
