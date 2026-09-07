@@ -66,9 +66,9 @@ jobs:
             fi
           done
 
-          name=$(curl -s -A "smoke-probe/1.0" --max-time 20 \
+          name=$(curl -fsS -A "smoke-probe/1.0" --max-time 20 \
             https://significanthobbies.com/api/ai \
-            | tr -d ' \n' | sed -n 's/.*"name":"\([^"]*\)".*/\1/p')
+            | jq -er '.name | select(type == "string")')
           if [ "$name" != "Significant Hobbies" ]; then
             echo "ERROR: apex /api/ai declares name '$name', expected 'Significant Hobbies'"
             fail=1
