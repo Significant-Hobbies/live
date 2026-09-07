@@ -8,8 +8,8 @@
  * place, which is the opposite of the intent.
  *
  * These helpers are pure so the redirect contract is unit-testable; the
- * open-redirect validation itself stays in src/app/login/page.tsx, which is the
- * boundary that receives untrusted input.
+ * login page validates untrusted input with the helper below before passing
+ * the destination to the authentication provider.
  */
 
 /** Sign-in URL that returns the visitor to `callbackUrl` once authenticated. */
@@ -18,8 +18,25 @@ export function loginPath(callbackUrl: string): string {
 }
 
 /** Keep sign-in redirects on this origin and fall back to the public directory. */
-export function safeCallbackUrl(value: string | undefined): string {
-  return value?.startsWith('/') && !value.startsWith('//') ? value : '/';
+export function safeCallbackUrl(value: string | undefined, returnTo?: string): string {
+  // Compatibility for the old Hub link is limited to its one destination.
+  value ??= returnTo === '/hub' ? '/hub' : undefined;
+  if (!value?.startsWith('/')) return '/';
+  try {
+    const decoded = decodeURIComponent(value);
+    if (
+      decoded.startsWith('//') ||
+      Array.from(decoded).some((char) => char === '\\' || char.charCodeAt(0) <= 32)
+    )
+      return '/';
+    const target = new URL(value, 'https://live.significanthobbies.com');
+    if (target.origin !== 'https://live.significanthobbies.com' || target.pathname === '/login') {
+      return '/';
+    }
+    return value;
+  } catch {
+    return '/';
+  }
 }
 
 export type GuestRoute = {
@@ -40,6 +57,9 @@ export type GuestRoute = {
  * someone not ready to commit an account.
  */
 export function guestRouteFor(callbackUrl: string): GuestRoute {
+  if (callbackUrl === '/hub') {
+    return { href: 'https://significanthobbies.com/', label: 'return to the public app directory' };
+  }
   if (callbackUrl.startsWith('/bucket-list') || callbackUrl.startsWith('/life-bingo')) {
     return { href: '/life-bingo', label: 'build a board without an account' };
   }

@@ -68,3 +68,23 @@ describe('guestRouteFor', () => {
     }
   });
 });
+
+describe('Hub login continuity', () => {
+  it('accepts only the exact legacy Hub intent and gives callbackUrl precedence', () => {
+    expect(safeCallbackUrl(undefined, '/hub')).toBe('/hub');
+    expect(safeCallbackUrl(undefined, 'https://evil.example')).toBe('/');
+    expect(safeCallbackUrl('/journal', '/hub')).toBe('/journal');
+    expect(guestRouteFor('/hub').href).toBe('https://significanthobbies.com/');
+  });
+  it.each([
+    '/\\evil.example',
+    '/%5cevil.example',
+    '/%2fevil.example',
+    '/%0a/evil.example',
+    '/login',
+    '/login?callbackUrl=/hub',
+    '/%',
+  ])('rejects normalization or loop hazards: %s', (value) => {
+    expect(safeCallbackUrl(value)).toBe('/');
+  });
+});

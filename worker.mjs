@@ -16,9 +16,7 @@ import { withTiming } from './timing.mjs';
 import { handleAgentEdge } from './agent-edge.mjs';
 import { handleCachedPublicRouteMarkdown } from './agent-route-markdown.mjs';
 import {
-  HUB_HOSTS,
-  hubServiceRequest,
-  isHubServicePath,
+  fetchHubRoute,
   legacyLiveRedirect,
   LIVE_HOST,
   markPersonalPlatformInternalRequest,
@@ -149,14 +147,8 @@ export default {
   fetch: withTiming(async function fetch(request, env, ctx) {
     request = markPersonalPlatformInternalRequest(request);
     const requestUrl = new URL(request.url);
-    if (
-      HUB_HOSTS.has(requestUrl.hostname) &&
-      isHubServicePath(requestUrl.pathname) &&
-      env.HUB_SERVICE
-    ) {
-      const hubResponse = await env.HUB_SERVICE.fetch(hubServiceRequest(request));
-      return request.method === 'HEAD' ? new Response(null, hubResponse) : hubResponse;
-    }
+    const hubResponse = await fetchHubRoute(request, env);
+    if (hubResponse) return hubResponse;
     const legacyRedirect = legacyLiveRedirect(requestUrl);
     if (legacyRedirect) return Response.redirect(legacyRedirect, 308);
 

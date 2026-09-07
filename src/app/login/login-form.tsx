@@ -3,16 +3,29 @@
 import { useState } from 'react';
 
 import { Button } from '~/components/ui/button';
+import { loginPath } from '~/lib/auth-routing';
 import { authClient } from '~/lib/auth-client';
 import { captureAuthFailure } from '~/lib/foundry-monitoring';
 
-export function LoginForm({ callbackURL = '/' }: { callbackURL?: string }) {
+export function LoginForm({
+  callbackURL = '/',
+  initialError = false,
+}: {
+  callbackURL?: string;
+  initialError?: boolean;
+}) {
   const [loading, setLoading] = useState(false);
+  const [failed, setFailed] = useState(initialError);
 
   async function handleGoogle() {
     setLoading(true);
+    setFailed(false);
     try {
-      const result = await authClient.signIn.social({ provider: 'google', callbackURL });
+      const result = await authClient.signIn.social({
+        provider: 'google',
+        callbackURL,
+        errorCallbackURL: `${loginPath(callbackURL)}&error=signin_failed`,
+      });
       if (result?.error) {
         captureAuthFailure({
           provider: 'google',
@@ -20,6 +33,7 @@ export function LoginForm({ callbackURL = '/' }: { callbackURL?: string }) {
           reason: result.error.message ?? 'Google sign-in failed',
           source: 'login-form',
         });
+        setFailed(true);
         setLoading(false);
       }
     } catch (error) {
@@ -29,12 +43,18 @@ export function LoginForm({ callbackURL = '/' }: { callbackURL?: string }) {
         reason: error instanceof Error ? error.message : 'Google sign-in failed',
         source: 'login-form',
       });
+      setFailed(true);
       setLoading(false);
     }
   }
 
   return (
     <div className="relative overflow-hidden rounded-lg">
+      {failed && (
+        <p role="alert" className="mb-3 text-sm text-destructive">
+          Sign-in did not finish. Try again, or use the guest link below to leave sign-in.
+        </p>
+      )}
       <Button
         onClick={handleGoogle}
         disabled={loading}

@@ -21,9 +21,10 @@ pnpm build
 ```
 
 The existing `significanthobbies` Worker and D1 remain Live's runtime and data
-authority. The apex `/` and `/hub` requests are delegated to the Hub through a
-Cloudflare service binding; other legacy apex application paths remain
-compatible so no browser data or account migration is required.
+authority. Apex Hub paths remain delegated through the existing service binding.
+The private `/hub` page also delegates on the Live host so sign-in and Hub rendering
+use the existing host-only Live session. Hub rendering and data remain Hub-owned;
+other legacy apex application paths remain compatible.
 
 ## Verification and retained work
 
@@ -38,3 +39,12 @@ The repaired check reads the top-level JSON name and rejects missing/null values
 All five existing read-only smoke steps passed locally against the live hosts,
 including crawler routes, redirects, HEAD parity and the social image. This
 repair does not deploy application changes or qualify authenticated journeys.
+
+The [Hub login repair](https://github.com/Significant-Hobbies/significanthobbies/issues/154)
+keeps private Hub intent through sign-in, cancellation, expiry and unavailable
+services without changing authentication identities or cookie domains. Local
+browser proof used actual Live-issued synthetic sessions and two-account summary
+isolation; [receipts](https://github.com/Significant-Hobbies/significanthobbies/blob/main/docs/hub-login-qualification-2026-09-07.md)
+remain separate from hosted Google sign-in qualification. The intended private
+entry is `https://live.significanthobbies.com/hub`, while the public directory
+stays on the apex. No application deployment was performed for this repair.

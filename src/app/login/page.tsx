@@ -14,10 +14,10 @@ export const metadata = {
 export default async function LoginPage({
   searchParams,
 }: {
-  searchParams: Promise<{ callbackUrl?: string }>;
+  searchParams: Promise<{ callbackUrl?: string; returnTo?: string; error?: string }>;
 }) {
-  const { callbackUrl: requestedCallback } = await searchParams;
-  const callbackUrl = safeCallbackUrl(requestedCallback);
+  const { callbackUrl: requestedCallback, returnTo, error } = await searchParams;
+  const callbackUrl = safeCallbackUrl(requestedCallback, returnTo);
   const session = await getServerAuthSession();
   if (session?.user) redirect(callbackUrl);
   // The guest link has to follow the same intent as the callback, or it strands
@@ -44,7 +44,12 @@ export default async function LoginPage({
             </p>
           </div>
 
-          <LoginForm callbackURL={callbackUrl} />
+          {callbackUrl === '/hub' && (
+            <p className="mb-4 text-sm text-muted-foreground">
+              Sign in to open your private read-only Hub. You will return there after signing in.
+            </p>
+          )}
+          <LoginForm callbackURL={callbackUrl} initialError={Boolean(error)} />
 
           <div className="mt-6 space-y-2.5">
             <p className="text-base font-bold text-foreground">What you get</p>

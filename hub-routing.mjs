@@ -1,4 +1,4 @@
-export const HUB_HOSTS = new Set(['significanthobbies.com', 'www.significanthobbies.com']);
+const HUB_HOSTS = new Set(['significanthobbies.com', 'www.significanthobbies.com']);
 export const LIVE_HOST = 'live.significanthobbies.com';
 
 /**
@@ -107,4 +107,39 @@ export function markPersonalPlatformInternalRequest(request) {
     headers.delete(PERSONAL_PLATFORM_INTERNAL_HEADER);
   }
   return new Request(request, { headers });
+}
+
+/** Only the private Hub page also runs on Live's authenticated origin. */
+export function shouldDelegateHub(url) {
+  return (
+    (HUB_HOSTS.has(url.hostname) && isHubServicePath(url.pathname)) ||
+    (url.hostname === LIVE_HOST && url.pathname === '/hub')
+  );
+}
+
+/** Preserve host-only cookies and keep private successes, redirects and errors uncached. */
+export async function fetchHubRoute(request, env) {
+  const url = new URL(request.url);
+  if (!shouldDelegateHub(url)) return null;
+  let response;
+  try {
+    response = env.HUB_SERVICE
+      ? await env.HUB_SERVICE.fetch(hubServiceRequest(request))
+      : new Response('The Hub is temporarily unavailable. Please try again.', { status: 503 });
+  } catch {
+    response = new Response('The Hub is temporarily unavailable. Please try again.', {
+      status: 502,
+    });
+  }
+  const headers = new Headers(response.headers);
+  if (url.pathname === '/hub') {
+    headers.set('Cache-Control', 'private, no-store');
+    headers.set('CDN-Cache-Control', 'no-store');
+    headers.set('X-Robots-Tag', 'noindex, nofollow');
+  }
+  return new Response(request.method === 'HEAD' ? null : response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  });
 }

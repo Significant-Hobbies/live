@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
 
 import {
+  fetchHubRoute,
+  shouldDelegateHub,
   HUB_AGENT_CONTRACT_PATHS,
   hubServiceRequest,
   isHubServicePath,
@@ -140,5 +142,61 @@ describe('Hub edge routing', () => {
         legacyLiveRedirect(new URL('https://live.significanthobbies.com/opengraph-image'))
       ).toBeNull();
     });
+  });
+});
+
+describe('private Hub on the authenticated Live origin', () => {
+  it.each([
+    'https://live.significanthobbies.com/hub',
+    'https://significanthobbies.com/hub',
+    'https://www.significanthobbies.com/hub',
+  ])('delegates the allowed entry %s', (url) => expect(shouldDelegateHub(new URL(url))).toBe(true));
+  it.each([
+    'https://live.significanthobbies.com/',
+    'https://live.significanthobbies.com/hub/extra',
+    'https://live.significanthobbies.com/v1/sync/push',
+    'https://evil.example/hub',
+    'https://live.significanthobbies.com.evil.example/hub',
+  ])('does not expand delegation to %s', (url) =>
+    expect(shouldDelegateHub(new URL(url))).toBe(false)
+  );
+  it('forwards the original authenticated request and prevents shared caching', async () => {
+    const request = new Request('https://live.significanthobbies.com/hub', {
+      headers: { Cookie: 'synthetic=session' },
+    });
+    const response = await fetchHubRoute(request, {
+      HUB_SERVICE: {
+        fetch: async (forwarded: Request) => {
+          expect(forwarded.url).toBe(request.url);
+          expect(forwarded.headers.get('cookie')).toBe('synthetic=session');
+          return new Response('private record', {
+            headers: { 'Cache-Control': 'public, max-age=3600' },
+          });
+        },
+      },
+    });
+    expect(await response?.text()).toBe('private record');
+    expect(response?.headers.get('cache-control')).toBe('private, no-store');
+    expect(response?.headers.get('cdn-cache-control')).toBe('no-store');
+  });
+  it('fails closed without the binding or when it throws', async () => {
+    for (const env of [
+      {},
+      {
+        HUB_SERVICE: {
+          fetch: async () => {
+            throw new Error('unavailable');
+          },
+        },
+      },
+    ]) {
+      const response = await fetchHubRoute(
+        new Request('https://live.significanthobbies.com/hub'),
+        env
+      );
+      expect([502, 503]).toContain(response?.status);
+      expect(response?.headers.has('location')).toBe(false);
+      expect(response?.headers.get('cache-control')).toBe('private, no-store');
+    }
   });
 });
