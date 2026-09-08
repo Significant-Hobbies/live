@@ -1,6 +1,6 @@
 # Live — PROJECT STATUS
 
-Last updated: 2026-08-28
+Last updated: 2026-09-08
 
 ## Why / What
 
@@ -38,6 +38,14 @@ origin.
   bucket-item status model.
 
 ## Timeline
+
+- **2026-09-08 — Local bucket-list save recovery prepared:** Browser storage
+  now acknowledges transaction completion, rejects aborted writes, and closes
+  its connection after failures. Bucket-list edits retain input and existing
+  items on failure, prevent overlapping writes, and offer a visible retry.
+  Focused transaction regressions, all 588 unit tests and three mobile browser
+  checks pass, including actual IndexedDB abort, retry and reload. Production
+  deployment and authenticated personal use remain separate gates.
 
 - **2026-09-01 — Dedicated Clarity project wired locally:** Replaced the
   borrowed Significant Hobbies analytics project with Live's own project and

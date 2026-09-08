@@ -2,7 +2,7 @@
 
 import { Check, Plus, Trash2 } from 'lucide-react';
 import Link from 'next/link';
-import { type FormEvent, useEffect, useState } from 'react';
+import { type FormEvent, useEffect, useRef, useState } from 'react';
 
 import { StorageModeProvider, StorageModeStatus } from '~/components/storage-mode-provider';
 import { browserRecordAdapter, readLocalRecord, writeLocalRecord } from '~/lib/local-record-store';
@@ -22,6 +22,9 @@ export function LocalBucketList() {
   const [record, setRecord] = useState<LocalBucketRecord>({ items: [] });
   const [title, setTitle] = useState('');
   const [loaded, setLoaded] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState('');
+  const writing = useRef(false);
 
   useEffect(() => {
     readLocalRecord(
@@ -29,28 +32,53 @@ export function LocalBucketList() {
       'onboarding:bucket-items',
       'bucket-list',
       isBucketRecord
-    ).then((next) => {
-      setRecord(next ?? { items: [] });
-      setLoaded(true);
-    });
+    )
+      .then((next) => {
+        setRecord(next ?? { items: [] });
+        setLoaded(true);
+      })
+      .catch(() => {
+        setError(
+          'Your list could not be opened. Reload to try again; existing items have not been changed.'
+        );
+      });
   }, []);
 
   const items = normalizeItems(record.items);
 
   async function persist(nextItems: LocalBucketItem[]) {
+    if (!loaded || writing.current) return false;
+    writing.current = true;
+    setSaving(true);
+    setError('');
     const next = { ...record, items: nextItems };
-    await writeLocalRecord(browserRecordAdapter(), 'onboarding:bucket-items', 'bucket-list', next);
-    setRecord(next);
+    try {
+      await writeLocalRecord(
+        browserRecordAdapter(),
+        'onboarding:bucket-items',
+        'bucket-list',
+        next
+      );
+      setRecord(next);
+      return true;
+    } catch {
+      setError(
+        'Changes could not be saved on this device. Your list and input are unchanged. Try again.'
+      );
+      return false;
+    } finally {
+      writing.current = false;
+      setSaving(false);
+    }
   }
 
-  function addItem(event: FormEvent<HTMLFormElement>) {
+  async function addItem(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const nextTitle = title.trim();
     if (!nextTitle || items.some((item) => item.title.toLowerCase() === nextTitle.toLowerCase())) {
       return;
     }
-    setTitle('');
-    void persist([...items, { title: nextTitle, status: 'planned' }]);
+    if (await persist([...items, { title: nextTitle, status: 'planned' }])) setTitle('');
   }
 
   return (
@@ -80,6 +108,7 @@ export function LocalBucketList() {
             </label>
             <input
               id="local-bucket-title"
+              disabled={!loaded || saving}
               value={title}
               onChange={(event) => setTitle(event.target.value)}
               placeholder="Something I want to do…"
@@ -87,11 +116,18 @@ export function LocalBucketList() {
             />
             <button
               type="submit"
+              disabled={!loaded || saving}
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#176b4a] px-5 font-bold text-white hover:bg-[#10583d]"
             >
               <Plus className="size-4" /> Add to my list
             </button>
           </form>
+
+          {error && (
+            <p role="alert" className="mt-4 text-sm text-red-800">
+              {error}
+            </p>
+          )}
 
           <section className="mt-7 rounded-[2rem] border border-[#d9cfbd] bg-[#fffdf8] p-5 sm:p-8">
             <div className="flex flex-col items-start justify-between gap-8 sm:flex-row sm:items-end sm:gap-5">
@@ -124,6 +160,7 @@ export function LocalBucketList() {
                     <li key={`${item.title}-${index}`} className="flex items-center gap-3 py-4">
                       <button
                         type="button"
+                        disabled={saving}
                         aria-label={`${done ? 'Reopen' : 'Complete'} ${item.title}`}
                         onClick={() =>
                           void persist(
@@ -145,6 +182,7 @@ export function LocalBucketList() {
                       </p>
                       <button
                         type="button"
+                        disabled={saving}
                         aria-label={`Remove ${item.title}`}
                         onClick={() =>
                           void persist(items.filter((_, itemIndex) => itemIndex !== index))

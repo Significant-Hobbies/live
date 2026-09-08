@@ -126,12 +126,23 @@ async function runRequest<T>(
     throw new LocalRecordError('Browser storage is unavailable.');
   const database = await openDatabase();
   return new Promise<T>((resolve, reject) => {
-    const transaction = database.transaction(STORE_NAME, mode);
-    const request = operation(transaction.objectStore(STORE_NAME));
-    request.onsuccess = () => resolve(request.result);
-    request.onerror = () => reject(request.error ?? new Error('Browser storage request failed.'));
-    transaction.oncomplete = () => database.close();
-    transaction.onerror = () => database.close();
+    try {
+      const transaction = database.transaction(STORE_NAME, mode);
+      const request = operation(transaction.objectStore(STORE_NAME));
+      transaction.oncomplete = () => {
+        database.close();
+        resolve(request.result);
+      };
+      transaction.onabort = () => {
+        database.close();
+        reject(transaction.error ?? new LocalRecordError('Browser storage save was aborted.'));
+      };
+      request.onerror = () =>
+        reject(request.error ?? new LocalRecordError('Browser storage request failed.'));
+    } catch (error) {
+      database.close();
+      reject(error);
+    }
   });
 }
 

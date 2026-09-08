@@ -58,3 +58,45 @@ test.describe('private work is locally available without an account', () => {
     await expect(page.getByRole('button', { name: 'Reopen Sleep under the stars' })).toBeVisible();
   });
 });
+
+test('bucket draft survives a transaction abort and retries without losing saved items', async ({
+  page,
+}) => {
+  await completeLocalOnboarding(page);
+  await page.goto('/bucket-list');
+  const input = page.getByLabel('Something you want to do');
+  await input.fill('Watch a sunrise');
+  await page.getByRole('button', { name: 'Add to my list' }).click();
+  await expect(page.getByRole('button', { name: 'Complete Watch a sunrise' })).toBeVisible();
+
+  await page.evaluate(() => {
+    const original = IDBObjectStore.prototype.put;
+    IDBObjectStore.prototype.put = function (...args) {
+      const request = original.apply(this, args);
+      request.addEventListener('success', () => this.transaction.abort(), { once: true });
+      IDBObjectStore.prototype.put = original;
+      return request;
+    };
+  });
+  await input.fill('Sleep under the stars');
+  await page.getByRole('button', { name: 'Add to my list' }).click();
+  await expect(
+    page.getByRole('alert').filter({ hasText: 'Changes could not be saved' })
+  ).toBeVisible();
+  await expect(input).toHaveValue('Sleep under the stars');
+  await expect(page.getByRole('button', { name: 'Complete Sleep under the stars' })).toHaveCount(0);
+  await page.getByRole('button', { name: 'Add to my list' }).click();
+  await expect(input).toHaveValue('');
+  await page.reload();
+  await expect(page.getByRole('button', { name: 'Complete Sleep under the stars' })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Complete Watch a sunrise' })).toBeVisible();
+  await page.getByRole('button', { name: 'Complete Sleep under the stars' }).click();
+  await expect(page.getByRole('button', { name: 'Reopen Sleep under the stars' })).toBeVisible();
+  await page.reload();
+  await expect(page.getByRole('button', { name: 'Reopen Sleep under the stars' })).toBeVisible();
+  await page.getByRole('button', { name: 'Remove Sleep under the stars' }).click();
+  await expect(page.getByRole('button', { name: 'Reopen Sleep under the stars' })).toHaveCount(0);
+  await page.reload();
+  await expect(page.getByRole('button', { name: 'Reopen Sleep under the stars' })).toHaveCount(0);
+  await expect(page.getByRole('button', { name: 'Complete Watch a sunrise' })).toBeVisible();
+});
