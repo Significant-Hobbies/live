@@ -8,6 +8,7 @@ import { db } from '~/server/db';
 
 import { nativeAppleAudiences } from './native-apple';
 import { ping } from '~/lib/ping';
+import { authBaseUrl } from './auth-routing';
 
 const canUseLocalAuthSecret =
   process.env.NODE_ENV !== 'production' ||
@@ -39,9 +40,11 @@ const authSecret =
 const testAuthEnabled =
   process.env.NODE_ENV !== 'production' && process.env.ENABLE_TEST_AUTH === '1';
 
-const baseURL =
-  process.env.BETTER_AUTH_URL?.trim() ||
-  (testAuthEnabled ? 'http://localhost:3000' : 'https://live.significanthobbies.com');
+const baseURL = authBaseUrl({
+  production: process.env.NODE_ENV === 'production',
+  configuredUrl: process.env.BETTER_AUTH_URL,
+  testAuthEnabled,
+});
 const googleClientId = process.env.GOOGLE_CLIENT_ID?.trim();
 const googleClientSecret = process.env.GOOGLE_CLIENT_SECRET?.trim();
 const appleBundleIdentifier = process.env.APPLE_APP_BUNDLE_IDENTIFIER?.trim();

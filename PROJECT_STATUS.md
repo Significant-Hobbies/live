@@ -39,6 +39,13 @@ origin.
 
 ## Timeline
 
+- **2026-09-08 — Canonical sign-in repair prepared:** The actual Live login
+  button returned 403 `INVALID_ORIGIN` before Google. Production auth now
+  pins its base and callback origin to Live instead of inheriting a legacy
+  host setting. Real Better Auth handler regression accepts Live and rejects
+  an unrelated browser origin with CSRF/origin checks enabled. Hosted OAuth
+  and account persistence remain unqualified in issue #14.
+
 - **2026-09-08 — Local bucket-list save recovery prepared:** Browser storage
   now acknowledges transaction completion, rejects aborted writes, and closes
   its connection after failures. Bucket-list edits retain input and existing

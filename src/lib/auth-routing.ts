@@ -68,3 +68,16 @@ export function guestRouteFor(callbackUrl: string): GuestRoute {
   }
   return { href: '/find-your-hobby', label: 'take the 2-minute quiz instead' };
 }
+
+/** Production auth stays on Live even when inherited settings name the former apex. */
+export function authBaseUrl(options: {
+  production: boolean;
+  configuredUrl?: string;
+  testAuthEnabled: boolean;
+}): string {
+  if (options.production) return 'https://live.significanthobbies.com';
+  return (
+    options.configuredUrl?.trim() ||
+    (options.testAuthEnabled ? 'http://localhost:3000' : 'https://live.significanthobbies.com')
+  );
+}
