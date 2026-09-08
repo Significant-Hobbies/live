@@ -255,6 +255,8 @@ export default {
       const cached = await cache.match(getRequest);
       if (cached) {
         const hit = new Response(isHead ? null : cached.body, cached);
+        // Cache storage can rewrite browser max-age; restore the route policy.
+        hit.headers.set('Cache-Control', cacheControlForPath(url.pathname));
         hit.headers.set('x-edge-cache', 'HIT');
         return hit;
       }

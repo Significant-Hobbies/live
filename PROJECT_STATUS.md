@@ -43,8 +43,10 @@ origin.
   referenced six missing scripts after a successful deployment. The HTML cache
   now isolates builds by Next build ID, shares GET/HEAD keys, preserves query
   variants and requires browser revalidation. Build metadata is generated with
-  the asset bundle; no provider bindings or credentials change. Hosted recovery
-  verification is still required before claiming this defect resolved.
+  the asset bundle; no provider bindings or credentials change. Source 640c7e9 was deployed at 100% traffic; actual `/hobbies` MISS and HIT
+  both resolve all 20 scripts. Hosted checking also found Cache API hits rewrite
+  browser max-age to four hours; restoring the route policy on hits is prepared
+  and requires release verification.
 
 - **2026-09-08 — Canonical sign-in repair prepared:** The actual Live login
   button returned 403 `INVALID_ORIGIN` before Google. Production auth now
