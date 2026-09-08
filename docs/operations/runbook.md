@@ -24,9 +24,15 @@ The workflow:
    landing, a Worker-rendered page on the Live host, and the legacy apex
    redirect to that Live page.
 
-If the smoke check fails, the deploy is considered stale — the Astro overlay
-did not rebuild or the cache was not purged. Re-run the workflow; if it
-persists, manually purge the cache (see below).
+HTML cache entries are namespaced by `.next/BUILD_ID`, emitted into the
+bundle by `scripts/cf-build.mjs`. A new build cannot reuse HTML that references
+removed JavaScript assets. Browsers revalidate HTML; the edge retains its daily
+TTL. Cache match and put use the same build key for GET and HEAD. This follows
+[Cloudflare Cache API request-key semantics](https://developers.cloudflare.com/workers/runtime-apis/cache/).
+
+If smoke fails, inspect the active revision, cache status and referenced asset
+responses before retrying a deployment. A purge is no longer required to keep
+HTML aligned with each release's assets.
 
 ## Deploy (preview / PR)
 

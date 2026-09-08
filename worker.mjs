@@ -12,6 +12,8 @@
 // All non-GET, non-`/` requests pass straight through to OpenNext.
 
 import openNext from './.open-next/worker.js';
+import { buildId } from './.open-next/cache-release.mjs';
+import { createReleaseCache } from './release-cache.mjs';
 import { withTiming } from './timing.mjs';
 import { handleAgentEdge } from './agent-edge.mjs';
 import { handleCachedPublicRouteMarkdown } from './agent-route-markdown.mjs';
@@ -30,7 +32,7 @@ export {
   BucketCachePurge,
 } from './.open-next/worker.js';
 
-const CACHE_CONTROL = 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800';
+const CACHE_CONTROL = 'public, max-age=0, s-maxage=86400, must-revalidate';
 const DATA_CACHE_CONTROL = new Map([
   ['/sitemap.xml', 'public, max-age=300, s-maxage=3600'],
   ['/video-sitemap.xml', 'public, max-age=300, s-maxage=3600'],
@@ -249,7 +251,7 @@ export default {
         }
       }
 
-      const cache = caches.default;
+      const cache = createReleaseCache(caches.default, buildId);
       const cached = await cache.match(getRequest);
       if (cached) {
         const hit = new Response(isHead ? null : cached.body, cached);

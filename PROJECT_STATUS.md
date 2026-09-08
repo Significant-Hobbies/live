@@ -39,6 +39,13 @@ origin.
 
 ## Timeline
 
+- **2026-09-08 — Release cache repair prepared:** Actual `/hobbies` cache hits
+  referenced six missing scripts after a successful deployment. The HTML cache
+  now isolates builds by Next build ID, shares GET/HEAD keys, preserves query
+  variants and requires browser revalidation. Build metadata is generated with
+  the asset bundle; no provider bindings or credentials change. Hosted recovery
+  verification is still required before claiming this defect resolved.
+
 - **2026-09-08 — Canonical sign-in repair prepared:** The actual Live login
   button returned 403 `INVALID_ORIGIN` before Google. Production auth now
   pins its base and callback origin to Live instead of inheriting a legacy

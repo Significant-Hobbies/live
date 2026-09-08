@@ -214,4 +214,12 @@ execSync('node scripts/run-overlay-astro-landing.mjs --strict', {
   stdio: 'inherit',
 });
 
+// Couple HTML cache entries to the asset bundle, without changing Worker bindings.
+const buildId = readFileSync(join(projectDir, '.next/BUILD_ID'), 'utf8').trim();
+if (!buildId)
+  throw new Error('Next build identity is missing; refusing an unversioned HTML cache.');
+writeFileSync(
+  join(projectDir, '.open-next/cache-release.mjs'),
+  `export const buildId = ${JSON.stringify(buildId)};\n`
+);
 console.log('[cf-build] Build complete!');
