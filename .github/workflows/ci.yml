@@ -98,8 +98,8 @@ jobs:
         # keep CI quick — they re-run the same specs at other widths.
         run: pnpm exec playwright test --project=desktop --project=landing
 
-      - name: Upload report on failure
-        if: failure()
+      # Retain successful qualification evidence as well as failure reports.
+      - name: Upload browser report
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report
