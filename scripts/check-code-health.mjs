@@ -38,15 +38,9 @@ const baselines = {
 };
 
 const acceptedHighAdvisories = new Set([
-  'GHSA-2p49-hgcm-8545',
-  'GHSA-2pvr-wf23-7pc7',
   'GHSA-4cwx-7wf7-3272',
-  'GHSA-52cp-r559-cp3m',
-  'GHSA-5p4m-2wfm-xmqj',
   'GHSA-6g55-p6wh-862q',
   'GHSA-88fw-hqm2-52qc',
-  'GHSA-8hv8-536x-4wqp',
-  'GHSA-f88m-g3jw-g9cj',
   'GHSA-mh99-v99m-4gvg',
   'GHSA-mwp4-54f8-5fhr',
   'GHSA-r28c-9q8g-f849',

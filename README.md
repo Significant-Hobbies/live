@@ -62,3 +62,10 @@ receipt; no credentials or provider configuration were accessed or changed.
 for that configuration, real-account saving/reload/isolation, authenticated
 Hub continuity, and GitHub deployment credentials. Guest qualification does
 not establish signed-in readiness.
+
+The [9 September security migration receipt](docs/qualification/2026-09-09/security-upgrade.json)
+records patched Next/Astro/Sharp dependencies, a preserved landing whitespace
+contract, 593 unit tests, full deployment-bundle compilation and 20 local
+guest/landing browser checks. [Mobile landing evidence](docs/qualification/2026-09-09/astro7-landing-first-screen.png)
+is from the local build. These source changes have not been deployed and do
+not resolve Google's registration requirement or qualify a real account.

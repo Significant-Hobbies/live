@@ -1,0 +1,53 @@
+{
+  "validatedAt": "2026-09-09",
+  "scope": "Local source/build/browser validation; not deployed",
+  "versions": {
+    "next": "16.3.3",
+    "astro": "7.2.8",
+    "vite": "8.2.2",
+    "sharp": "0.35.4",
+    "opennextCloudflare": "1.20.2"
+  },
+  "addedOverrides": {
+    "miniflare>sharp": "0.35.4",
+    "cosmiconfig>js-yaml": "4.3.2"
+  },
+  "checks": {
+    "unitTestsPassed": 593,
+    "fullQuality": "passed",
+    "nextOpenNextAstroBuild": "passed",
+    "localGuestAndLandingBrowserTestsPassed": 20,
+    "astroDiagnostics": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "landingAccessibility": "passed",
+    "phoneWidth": 390,
+    "phoneHorizontalOverflow": false
+  },
+  "compatibilityRepair": "Astro 7 defaults to JSX whitespace; existing heading regression observed deservesyour. Documented compressHTML:true restores prior HTML-aware word boundaries.",
+  "localTestBoundary": "Production-mode Next server with a synthetic local auth secret; guest/onboarding/quiz/IndexedDB retry/save/reload and static landing. Two account-creation tests require the isolated hosted email-provider fixture and were outside this local guest selection. No test definitions weakened.",
+  "audit": {
+    "critical": 0,
+    "unexpectedHigh": 0,
+    "acceptedLegacyHigh": 7,
+    "resolvedExceptionIds": [
+      "GHSA-2p49-hgcm-8545",
+      "GHSA-2pvr-wf23-7pc7",
+      "GHSA-52cp-r559-cp3m",
+      "GHSA-5p4m-2wfm-xmqj",
+      "GHSA-8hv8-536x-4wqp",
+      "GHSA-f88m-g3jw-g9cj"
+    ]
+  },
+  "limitations": [
+    "Google redirect registration remains blocked in issue 14",
+    "Real-account persistence/isolation/Hub continuity unqualified",
+    "Runtime deployment and hosted release acceptance not performed"
+  ],
+  "references": [
+    "https://docs.astro.build/en/guides/upgrade-to/v6/",
+    "https://docs.astro.build/en/guides/upgrade-to/v7/",
+    "https://github.com/advisories/GHSA-rgj7-g3m4-5g8c"
+  ]
+}
