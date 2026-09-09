@@ -67,5 +67,15 @@ The [9 September security migration receipt](docs/qualification/2026-09-09/secur
 records patched Next/Astro/Sharp dependencies, a preserved landing whitespace
 contract, 593 unit tests, full deployment-bundle compilation and 20 local
 guest/landing browser checks. [Mobile landing evidence](docs/qualification/2026-09-09/astro7-landing-first-screen.png)
-is from the local build. These source changes have not been deployed and do
-not resolve Google's registration requirement or qualify a real account.
+is from the local build. The operator's 9 September release receipt records
+source `207f11bff5e03207bbe0ffaf79fa446b4629ef72` deployed as Worker
+`ecd54c8c-8df1-4c60-8f52-0942b3b89ced`, deployment
+`a10dc6ea-1707-4f3e-9021-4eb98cab8aa9`, with its full source tag at 100% traffic.
+All six deployment gates and exact-source
+[Quality](https://github.com/Significant-Hobbies/live/actions/runs/34320369661),
+[Browser CI](https://github.com/Significant-Hobbies/live/actions/runs/34320369767)
+and [Docs](https://github.com/Significant-Hobbies/live/actions/runs/34320369821)
+passed. The actual 390px production landing returned 200 with readable heading
+spacing and no overflow. This is the dated release observation, not a fresh
+provider check; it does not resolve Google's registration requirement or qualify
+a real account.
