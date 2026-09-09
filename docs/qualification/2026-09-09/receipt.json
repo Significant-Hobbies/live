@@ -1,0 +1,23 @@
+{
+  "observedAt": "2026-09-09T06:27:20.009Z",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "browser": "isolated headless Chromium",
+  "credentialsEntered": false,
+  "productionConfigurationChanged": false,
+  "sourceRevision": "9a4c9d1b55c1f75e79c55513a856d56958b1e7c7",
+  "entry": "https://live.significanthobbies.com/login?callbackUrl=%2Fhub",
+  "handoff": {
+    "host": "accounts.google.com",
+    "callback": "https://live.significanthobbies.com/api/auth/callback/google",
+    "clientId": "207924374505-t0nqhf0ei3ref87aeaigvvb5dafdicvd.apps.googleusercontent.com"
+  },
+  "observedProviderError": "400 redirect_uri_mismatch",
+  "accountJourneyQualified": false,
+  "focusedTests": {
+    "files": 2,
+    "passed": 19
+  }
+}
