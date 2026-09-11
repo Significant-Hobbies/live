@@ -32,6 +32,43 @@ test.describe('authenticated surfaces', () => {
   // right for read-only specs and wrong for this one.
   test.describe.configure({ mode: 'serial' });
 
+  test('a new owner can create and reload a bucket list without onboarding DOB', async ({
+    page,
+    request,
+  }) => {
+    const password = 'e2e-test-password-not-a-secret';
+    const email = `e2e-bucket-owner-${crypto.randomUUID()}@significanthobbies.test`;
+    const signUp = await request.post('/api/auth/sign-up/email', {
+      data: { email, password, name: 'Bucket Owner' },
+      failOnStatusCode: false,
+    });
+    if (signUp.status() === 404) {
+      test.skip(true, 'Test auth disabled — run the dev server with ENABLE_TEST_AUTH=1');
+    }
+    expect(signUp.ok(), `fresh test owner sign-up failed (${signUp.status()})`).toBeTruthy();
+
+    const signIn = await page.request.post('/api/auth/sign-in/email', {
+      data: { email, password },
+      failOnStatusCode: false,
+    });
+    expect(signIn.ok(), `fresh test owner sign-in failed (${signIn.status()})`).toBeTruthy();
+
+    await page.goto('/bucket-list');
+    await expect(page).toHaveURL(/\/bucket-list$/);
+    await expect(page.getByRole('heading', { name: 'Your Bucket List' })).toBeVisible();
+
+    await page.goto('/bucket-list/new');
+    await page.getByRole('button', { name: /This month/i }).click();
+    await page.getByRole('button', { name: /Keep it cozy/i }).click();
+    await page.getByRole('button', { name: 'Make my Life Bingo' }).click();
+    await page.getByRole('button', { name: 'Save list' }).click();
+
+    await expect(page).toHaveURL(/\/bucket-list\/[^/]+$/);
+    await page.reload();
+    await expect(page.getByRole('button', { name: 'Export' })).toBeVisible();
+    await expect(page.getByText('Bucket List', { exact: true }).first()).toBeVisible();
+  });
+
   for (const route of LOGGED_IN_ROUTES) {
     test(`${route} renders for a signed-in user`, async ({ authedPage }) => {
       // Warm the route first. Under `next dev` the first request to a route pays

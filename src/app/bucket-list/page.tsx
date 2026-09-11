@@ -2,9 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { desc, eq } from 'drizzle-orm';
 import { ArrowRight, Check, Grid3X3, Plus } from 'lucide-react';
-import { redirect } from 'next/navigation';
 import { Button } from '~/components/ui/button';
-import { bucketListItems, bucketLists, users } from '~/db/schema';
+import { bucketListItems, bucketLists } from '~/db/schema';
 import { BucketItemControls } from '~/components/bucket-list/bucket-item-controls';
 import { QuickAddBucketItem } from '~/components/bucket-list/quick-add-item';
 import { LocalBucketList } from '~/components/bucket-list/local-bucket-list';
@@ -28,12 +27,6 @@ export default async function BucketListPage() {
         <LocalBucketList />
       </LocalOnboardingGate>
     );
-
-  const account = await db.query.users.findFirst({
-    where: eq(users.id, session.user.id),
-    columns: { onboardingCompletedAt: true },
-  });
-  if (!account?.onboardingCompletedAt) redirect('/onboarding');
 
   const [rows, items, activeQuests, completedQuests] = await Promise.all([
     db

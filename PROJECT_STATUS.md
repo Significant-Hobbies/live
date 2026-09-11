@@ -49,6 +49,12 @@ origin.
   preserving existing routes, domains, schedules, and dashboard variables;
   ordinary code releases no longer require zone route permissions.
 
+- **2026-09-11 — Owner bucket-list entry gate narrowed:** An authenticated
+  owner can open and create a bucket list before completing the broader
+  onboarding flow. Bucket-list reads and writes already use the authenticated
+  session's owner ID; date of birth remains required only for the separate
+  Life in Weeks and profile activation data.
+
 - **2026-09-08 — Release cache repair prepared:** Actual `/hobbies` cache hits
   referenced six missing scripts after a successful deployment. The HTML cache
   now isolates builds by Next build ID, shares GET/HEAD keys, preserves query
