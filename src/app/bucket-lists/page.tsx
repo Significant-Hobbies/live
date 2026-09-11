@@ -84,7 +84,7 @@ export default function BucketListsPage() {
                 </p>
                 <div className="flex flex-wrap gap-4 justify-center sm:justify-start">
                   <Link
-                    href="/"
+                    href="/bucket-list"
                     className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3.5 text-sm font-bold text-foreground hover:bg-lumi-600 active:scale-95 transition-all duration-150 shadow-md"
                   >
                     Start my list
@@ -272,7 +272,7 @@ export default function BucketListsPage() {
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link
-              href="/"
+              href="/bucket-list"
               className="inline-flex items-center gap-2 rounded-full bg-card px-7 py-3.5 text-sm font-bold text-primary hover:bg-foreground/5 active:scale-95 transition-all duration-150 shadow-lg"
             >
               Start my bucket list

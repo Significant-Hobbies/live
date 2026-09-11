@@ -1,6 +1,6 @@
 # Live — PROJECT STATUS
 
-Last updated: 2026-09-08
+Last updated: 2026-09-11
 
 ## Why / What
 
@@ -38,6 +38,11 @@ origin.
   bucket-item status model.
 
 ## Timeline
+
+- **2026-09-11 — Bucket-list entry links repaired:** The start/build controls
+  on the idea guide and famous-list pages now open `/bucket-list`, including
+  the guest local workspace, instead of returning to the marketing homepage.
+  The signed-in "View my bucket list" link uses the same destination.
 
 - **2026-09-08 — Release cache repair prepared:** Actual `/hobbies` cache hits
   referenced six missing scripts after a successful deployment. The HTML cache

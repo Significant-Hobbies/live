@@ -294,7 +294,7 @@ export default async function FamousBucketListPage({ params }: Props) {
           </Link>
           {isLoggedIn && (
             <Link
-              href="/"
+              href="/bucket-list"
               className="text-sm font-medium text-primary hover:text-lumi-600 transition-colors"
             >
               View my bucket list →

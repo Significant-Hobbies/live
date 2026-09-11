@@ -67,7 +67,7 @@ export default function BucketListIdeasPage() {
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
-                href="/"
+                href="/bucket-list"
                 className="inline-flex items-center gap-2 rounded-full bg-[#211e18] px-6 py-3 text-sm font-semibold text-white shadow-md transition-colors hover:bg-[#39352d]"
               >
                 Build my bucket list
@@ -181,7 +181,7 @@ export default function BucketListIdeasPage() {
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link
-              href="/"
+              href="/bucket-list"
               className="inline-flex items-center gap-2 rounded-full bg-[#211e18] px-6 py-3 text-sm font-semibold text-white shadow-md transition-colors hover:bg-[#39352d]"
             >
               Start my bucket list
