@@ -1,6 +1,6 @@
 # Live — PROJECT STATUS
 
-Last updated: 2026-09-11
+Last updated: 2026-09-12
 
 ## Why / What
 
@@ -38,6 +38,10 @@ origin.
   bucket-item status model.
 
 ## Timeline
+
+- **2026-09-12 — Marketing source link:** The Astro marketing footer now uses
+  an accessible repository icon with a 44px target, matching the app footer's
+  icon-only source link. No application, account or storage behavior changes.
 
 - **2026-09-11 — Bucket-list entry links repaired:** The start/build controls
   on the idea guide and famous-list pages now open `/bucket-list`, including
