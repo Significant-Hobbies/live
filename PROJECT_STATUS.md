@@ -42,7 +42,12 @@ origin.
 - **2026-09-11 — Bucket-list entry links repaired:** The start/build controls
   on the idea guide and famous-list pages now open `/bucket-list`, including
   the guest local workspace, instead of returning to the marketing homepage.
-  The signed-in "View my bucket list" link uses the same destination.
+  The signed-in "View my bucket list" link uses the same destination. Completing
+  onboarding now enters `/live-more` directly, where the saved possibilities
+  appear, instead of sending the user back to the marketing page.
+  The release workflow uploads and promotes the exact Git revision while
+  preserving existing routes, domains, schedules, and dashboard variables;
+  ordinary code releases no longer require zone route permissions.
 
 - **2026-09-08 — Release cache repair prepared:** Actual `/hobbies` cache hits
   referenced six missing scripts after a successful deployment. The HTML cache

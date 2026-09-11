@@ -69,7 +69,11 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: deploy --minify --tag ${{ github.sha }}
+          # Code releases preserve the existing routes, domains and schedules.
+          # A full deploy also reconciles routes and requires zone-wide access.
+          command: |
+            versions upload --minify --tag ${{ github.sha }} --keep-vars
+            versions deploy --version-tag ${{ github.sha }}@100 --yes
       - name: Purge edge cache
         # Purges the whole zone, not just `/`.
         #

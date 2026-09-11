@@ -60,7 +60,8 @@ test.describe('Onboarding', () => {
       .getByLabel('What is true about my life right now')
       .fill('Travel needs advance planning, while writing fits into quiet weekends.');
     await page.getByRole('button', { name: /Enter my life/i }).click();
-    await expect(page).toHaveURL(/\/$/);
+    await expect(page).toHaveURL(/\/live-more$/);
+    await expect(page.getByLabel('What do you still want to live?')).toBeVisible();
 
     const saved = await page.evaluate(async () => {
       const database = await new Promise<IDBDatabase>((resolve, reject) => {
@@ -209,8 +210,6 @@ test.describe('Onboarding', () => {
       .getByLabel('What is true about my life right now')
       .fill('Weekdays are busy, but Sunday mornings are open.');
     await page.getByRole('button', { name: /Enter my life/i }).click();
-    await expect(page).toHaveURL(/\/$/);
-    await page.getByRole('link', { name: /^Live/ }).first().click();
     await expect(page).toHaveURL(/\/live-more$/);
     await expect(
       page.getByRole('heading', { name: /There are more ways to live, Complete/i })

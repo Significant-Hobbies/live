@@ -307,7 +307,7 @@ export function OnboardingFlow({
       await createLocalTrajectory(trajectory, adapter).catch(() => undefined);
       syncLocalWorkspaceCookie(true);
     }
-    router.push('/');
+    router.push('/live-more');
     router.refresh();
   }
 
