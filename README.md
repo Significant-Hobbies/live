@@ -51,17 +51,17 @@ stays on the apex. No application deployment was performed for this repair.
 
 ## Current signed-in acceptance gate
 
-The [9 September real-browser receipt](docs/qualification/2026-09-09/receipt.json)
-and [provider screenshot](docs/qualification/2026-09-09/live-google-phone.png)
-confirm that Google still rejects the canonical callback with
-`400 redirect_uri_mismatch`. The owning Google OAuth client must authorize
-`https://live.significanthobbies.com/api/auth/callback/google` while retaining
-its existing redirect entries. The public client identifier is recorded in the
-receipt; no credentials or provider configuration were accessed or changed.
+The 9 September provider failure is superseded by the 11 September owner
+verification: the existing Google OAuth client now authorizes the canonical
+callback while retaining its existing redirect entries. Native Chrome reached
+the authenticated Live Hub, and a synthetic bucket-list item was created,
+completed, reopened and persisted across reloads before being deleted; no
+pre-existing records changed. Source `dc0ad9b5` is deployed at 100% traffic
+through deployment run `34599212391`.
 [Issue 14](https://github.com/Significant-Hobbies/live/issues/14) remains open
-for that configuration, real-account saving/reload/isolation, authenticated
-Hub continuity, and GitHub deployment credentials. Guest qualification does
-not establish signed-in readiness.
+for two-account isolation and physical iPhone installation/launch plus
+cross-device use. The former GitHub Actions credential blocker is stale after
+the current successful deployment.
 
 The [9 September security migration receipt](docs/qualification/2026-09-09/security-upgrade.json)
 records patched Next/Astro/Sharp dependencies, a preserved landing whitespace
