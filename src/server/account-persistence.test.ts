@@ -1,3 +1,5 @@
+// @vitest-environment node
+
 /**
  * Account and persistence qualification on real storage (P06 / live#14).
  *
