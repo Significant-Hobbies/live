@@ -12,7 +12,7 @@ import { waitForHydrated } from './fixtures/hydration';
  *    test-only endpoint, not a forged cookie) produces exactly one sign-in
  *    prompt that retains the private destination and returns to it.
  *
- * Skips automatically when the server runs without ENABLE_TEST_AUTH=1.
+ * Requires the configured local test-auth server; missing fixtures fail visibly.
  */
 
 const PASSWORD = 'e2e-test-password-not-a-secret';
@@ -24,9 +24,7 @@ async function signUp(page: Page, email: string, name: string): Promise<string> 
     data: { email, password: PASSWORD, name },
     failOnStatusCode: false,
   });
-  if (res.status() === 404) {
-    test.skip(true, 'Test auth disabled — run the dev server with ENABLE_TEST_AUTH=1');
-  }
+  expect(res.status(), 'Run the local test server with ENABLE_TEST_AUTH=1').not.toBe(404);
   expect(res.ok(), `sign-up for ${email} failed (${res.status()})`).toBeTruthy();
   const body = (await res.json()) as { user: { id: string } };
   return body.user.id;
@@ -136,9 +134,7 @@ test('an expired session gets one sign-in prompt that retains and returns to the
     headers: { Origin: ORIGIN },
     failOnStatusCode: false,
   });
-  if (expired.status() === 404) {
-    test.skip(true, 'Test auth disabled — run the dev server with ENABLE_TEST_AUTH=1');
-  }
+  expect(expired.status(), 'Run the local test server with ENABLE_TEST_AUTH=1').not.toBe(404);
   expect(expired.ok()).toBeTruthy();
 
   // One prompt, destination retained — not a loop, not a silent homepage send.
