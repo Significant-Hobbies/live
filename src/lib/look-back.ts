@@ -51,6 +51,11 @@ export interface LookBackData {
     amEntry: string | null;
     pmEntry: string | null;
   }>;
+  /** Weekly log entries — the journal's successor. Optional for callers without them. */
+  weeklyEntries?: Array<{
+    weekOf: string;
+    text: string;
+  }>;
   commitments: Array<{
     hobbyName: string;
     goalDays: number;
@@ -92,7 +97,7 @@ export function generateLookBack(data: LookBackData): NarrativeSection[] {
   const hasPhases = data.phases.length > 0;
   const hasQuests = data.completedQuests.length > 0 || data.activeQuests.length > 0;
   const hasHabits = data.habits.length > 0;
-  const hasJournal = data.journalEntries.length > 0;
+  const hasJournal = data.journalEntries.length > 0 || (data.weeklyEntries?.length ?? 0) > 0;
 
   // ─── Opening ──────────────────────────────────────────────────────────────
   sections.push(generateOpening(data, name));
@@ -446,18 +451,21 @@ function generateHabitStory(data: LookBackData, _name: string): NarrativeSection
 function generateJournalStory(data: LookBackData, _name: string): NarrativeSection {
   const paragraphs: string[] = [];
   const entries = data.journalEntries;
+  const weekly = data.weeklyEntries ?? [];
   const totalEntries = entries.length;
   const entriesWithContent = entries.filter((e) => e.amEntry || e.pmEntry);
 
-  if (totalEntries === 0) {
+  if (totalEntries === 0 && weekly.length === 0) {
     return { id: 'journal', kind: 'journal', title: '', paragraphs: [], emoji: '📝' };
   }
 
-  paragraphs.push(
-    `You've written ${totalEntries} journal ${totalEntries === 1 ? 'entry' : 'entries'}. That's ${totalEntries} ${totalEntries === 1 ? 'day' : 'days'} you stopped to think about what you're doing.`
-  );
+  if (totalEntries > 0) {
+    paragraphs.push(
+      `You've written ${totalEntries} journal ${totalEntries === 1 ? 'entry' : 'entries'}. That's ${totalEntries} ${totalEntries === 1 ? 'day' : 'days'} you stopped to think about what you're doing.`
+    );
+  }
 
-  // Find a meaningful entry to quote
+  // Find a meaningful daily entry to quote
   const meaningfulEntries = entriesWithContent
     .filter((e) => {
       const text = (e.pmEntry ?? e.amEntry ?? '').trim();
@@ -474,6 +482,25 @@ function generateJournalStory(data: LookBackData, _name: string): NarrativeSecti
       year: 'numeric',
     });
     paragraphs.push(`On ${date}, you wrote: "${text}"`);
+  }
+
+  if (weekly.length > 0) {
+    paragraphs.push(
+      `And ${weekly.length} ${weekly.length === 1 ? 'week' : 'weeks'} recorded in your weekly log — ${weekly.length === 1 ? 'one week' : `${weekly.length} weeks`} of your life, in your own words.`
+    );
+    const quotable = [...weekly]
+      .filter((e) => e.text.trim().length > 20)
+      .sort((a, b) => b.weekOf.localeCompare(a.weekOf))[0];
+    if (quotable) {
+      const date = new Date(`${quotable.weekOf}T12:00:00`).toLocaleDateString('en-US', {
+        month: 'long',
+        day: 'numeric',
+        year: 'numeric',
+      });
+      const excerpt =
+        quotable.text.length > 200 ? `${quotable.text.slice(0, 197).trimEnd()}…` : quotable.text;
+      paragraphs.push(`The week of ${date}, you wrote: "${excerpt}"`);
+    }
   }
 
   // Consistency

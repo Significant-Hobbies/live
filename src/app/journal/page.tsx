@@ -1,26 +1,34 @@
 import { eq } from 'drizzle-orm';
 import { redirect } from 'next/navigation';
 
-import { LocalJournalExperience } from '~/components/local-personal-practice-surfaces';
+import { JournalArchive } from '~/components/journal-archive';
 import { LocalOnboardingGate } from '~/components/local-onboarding-gate';
-import { JournalExperience } from '~/components/personal-practice-surfaces';
+import { LocalWeeklyLog } from '~/components/weekly-log/local-weekly-log';
+import { WeeklyLogSurface } from '~/components/weekly-log/weekly-log-surface';
 import { TimezoneSync } from '~/components/timezone-sync';
 import { users } from '~/db/schema';
+import { getAllJournalEntries } from '~/lib/actions/daily';
+import { setCallingBucketListDream } from '~/lib/actions/bucket-list';
 import {
-  getAllJournalEntries,
-  getJournalContextChoices,
-  getUserProfile,
-  saveJournalEntry,
-} from '~/lib/actions/daily';
-import { dayKeyIn, isMorningIn } from '~/lib/day';
+  getNudgeSignals,
+  getRecentPromptIds,
+  getStaleDreams,
+  getWeekStartsOn,
+  getWeeklyLogEntries,
+  saveWeeklyLogEntry,
+  setWeekStartsOn,
+} from '~/lib/actions/weekly-log';
+import { dayKeyIn } from '~/lib/day';
 import { parseBirthDate } from '~/lib/life-in-weeks';
 import { birthDateFromYear, buildLifeGrid } from '~/lib/mortality';
+import { resolveWeeklyNudge } from '~/lib/weekly-nudge';
+import { weekStartFor, type WeekStartsOn } from '~/lib/weekly-log';
 import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
 
 export const metadata = {
-  title: 'Journal — Significant Hobbies',
-  description: 'A private place to notice what changed and remember what mattered.',
+  title: 'Weekly log — Significant Hobbies',
+  description: 'A private weekly record of what you actually lived.',
   robots: { index: false, follow: false },
 };
 
@@ -31,7 +39,7 @@ export default async function JournalPage() {
     const today = dayKeyIn(null);
     return (
       <LocalOnboardingGate>
-        <LocalJournalExperience today={today} isMorning={isMorningIn(null)} />
+        <LocalWeeklyLog today={today} />
       </LocalOnboardingGate>
     );
   }
@@ -47,13 +55,23 @@ export default async function JournalPage() {
   });
   if (!me?.onboardingCompletedAt) redirect('/onboarding');
 
+  const [entries, staleDreams, weekStartsOn, signals, excludeIds, journalHistory, profile] =
+    await Promise.all([
+      getWeeklyLogEntries(),
+      getStaleDreams(3),
+      getWeekStartsOn(),
+      getNudgeSignals(me.timezone),
+      getRecentPromptIds(),
+      getAllJournalEntries(),
+      db.query.users.findFirst({
+        where: eq(users.id, session.user.id),
+        columns: { name: true },
+      }),
+    ]);
+
   const today = dayKeyIn(me.timezone);
-  const [journalEntries, journalContextChoices, profile] = await Promise.all([
-    getAllJournalEntries(),
-    getJournalContextChoices(),
-    getUserProfile(),
-  ]);
-  const journalEntry = journalEntries.find((entry) => entry.dayDate === today) ?? null;
+  const weekOf = weekStartFor(today, weekStartsOn);
+  const question = await resolveWeeklyNudge(signals, weekOf, excludeIds);
   const birth =
     me.birthDate && parseBirthDate(me.birthDate)
       ? new Date(`${me.birthDate}T12:00:00`)
@@ -63,15 +81,36 @@ export default async function JournalPage() {
   return (
     <>
       <TimezoneSync storedTimezone={me.timezone} />
-      <JournalExperience
-        firstName={profile?.name?.split(' ')[0] ?? session.user.name?.split(' ')[0] ?? 'there'}
-        today={today}
-        isMorning={isMorningIn(me.timezone)}
-        weeksRemaining={weeksRemaining}
-        journalEntry={journalEntry}
-        journalEntries={journalEntries}
-        journalContextChoices={journalContextChoices}
-        saveJournalEntry={saveJournalEntry}
+      <WeeklyLogSurface
+        data={{
+          firstName: profile?.name?.split(' ')[0] ?? session.user.name?.split(' ')[0] ?? 'there',
+          today,
+          weekStartsOn,
+          entries,
+          staleDreams: staleDreams.map((dream) => ({
+            title: dream.title,
+            category: dream.category,
+            daysSinceMovement: dream.daysSinceMovement,
+          })),
+          weeksRemaining,
+          initialQuestion: question,
+          archiveSlot: <JournalArchive records={journalHistory} />,
+        }}
+        actions={{
+          onSave: async (entryWeekOf, text, promptText) => {
+            'use server';
+            const result = await saveWeeklyLogEntry(entryWeekOf, text, promptText);
+            return result.saved;
+          },
+          onWeekStartsOnChange: async (value: WeekStartsOn) => {
+            'use server';
+            await setWeekStartsOn(value);
+          },
+          onCallDreamForward: async (title: string) => {
+            'use server';
+            await setCallingBucketListDream(title);
+          },
+        }}
       />
     </>
   );

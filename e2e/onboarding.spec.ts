@@ -8,12 +8,14 @@ test.describe('Onboarding', () => {
     await page.getByLabel('What should we call you?').fill('Local Person');
     await page.getByLabel('When were you born?').fill('1994-04-12');
     await page.getByRole('button', { name: /Begin my story/i }).click();
-    await page.getByRole('button', { name: /Skip this moment/i }).click();
+    // The weeks reveal is step 2: their own number, not a generic quote.
+    await expect(page.getByText(/weeks in\. About [\d,]+ to go\./)).toBeVisible();
+    await page.getByRole('button', { name: /This is why the list matters/i }).click();
     await page.getByRole('button', { name: 'Drawing' }).click();
     await page.waitForTimeout(300);
     await page.reload();
     await expect(page.getByRole('button', { name: 'Drawing' })).toBeVisible();
-    await expect(page.getByText('3 of 7')).toBeVisible();
+    await expect(page.getByText('3 of 5')).toBeVisible();
     await expect(page.locator('body')).toContainText('this device');
   });
 
@@ -26,7 +28,7 @@ test.describe('Onboarding', () => {
     await page.getByLabel('What should we call you?').fill('Local Explorer');
     await page.getByLabel('When were you born?').fill('1994-04-12');
     await page.getByRole('button', { name: /Begin my story/i }).click();
-    await page.getByRole('button', { name: /Skip this moment/i }).click();
+    await page.getByRole('button', { name: /This is why the list matters/i }).click();
     await page.getByRole('button', { name: 'Drawing' }).click();
     await page.getByRole('button', { name: /Build this chapter/i }).click();
 
@@ -54,8 +56,6 @@ test.describe('Onboarding', () => {
     await page.getByLabel('Add a goal for this year').fill('Build a calmer work week');
     await page.getByRole('button', { name: 'Add yearly goal' }).click();
     await page.locator('[data-focus-option]').nth(0).click();
-    await page.getByRole('button', { name: /Keep these goals/i }).click();
-    await page.getByRole('button', { name: /Continue without a daily practice/i }).click();
     await page
       .getByLabel('What is true about my life right now')
       .fill('Travel needs advance planning, while writing fits into quiet weekends.');
@@ -111,7 +111,7 @@ test.describe('Onboarding', () => {
     await expect(page.locator('iframe[title="Lights by Ikson"]')).toBeVisible();
     await page.getByRole('button', { name: 'Choose music' }).click();
 
-    await page.getByRole('button', { name: /Skip this moment/i }).click();
+    await page.getByRole('button', { name: 'Continue', exact: true }).click();
     await page.getByRole('button', { name: 'Drawing' }).click();
     await page.getByRole('button', { name: /Build this chapter/i }).click();
 
@@ -196,7 +196,7 @@ test.describe('Onboarding', () => {
     if (await dismissImport.isVisible()) await dismissImport.click();
     await page.getByLabel('When were you born?').fill('1992-08-15');
     await page.getByRole('button', { name: /Begin my story/i }).click();
-    await page.getByRole('button', { name: /Skip this moment/i }).click();
+    await page.getByRole('button', { name: /This is why the list matters/i }).click();
     await page.getByRole('button', { name: 'Drawing' }).click();
     await page.getByRole('button', { name: /Build this chapter/i }).click();
     await page.locator('[data-possibility-option]').nth(0).click();
@@ -204,8 +204,6 @@ test.describe('Onboarding', () => {
     await page.getByRole('button', { name: /Keep these possibilities/i }).click();
     await page.locator('[data-focus-option]').nth(0).click();
     await page.locator('[data-focus-option]').nth(1).click();
-    await page.getByRole('button', { name: /Keep these goals/i }).click();
-    await page.getByRole('button', { name: /Continue without a daily practice/i }).click();
     await page
       .getByLabel('What is true about my life right now')
       .fill('Weekdays are busy, but Sunday mornings are open.');

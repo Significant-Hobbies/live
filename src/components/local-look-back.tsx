@@ -7,6 +7,7 @@ import { HistoryAtlas } from '~/components/life-atlas/history-atlas';
 import { PhaseSwimlane } from '~/components/timeline-view/phase-swimlane';
 import { browserRecordAdapter, readLocalRecord } from '~/lib/local-record-store';
 import { readLocalTrajectory } from '~/lib/local-trajectory';
+import { readLocalWeeklyLog } from '~/lib/local-weekly-log';
 import { generateLookBack, type LookBackData, type NarrativeSection } from '~/lib/look-back';
 import type { TrajectoryContractRecord } from '~/lib/trajectory-contract';
 import type { Phase } from '~/lib/types';
@@ -21,15 +22,23 @@ export function LocalLookBack({ today }: { today: string }) {
   useEffect(() => {
     async function load() {
       const adapter = browserRecordAdapter();
-      const [commitments, timeline, onboarding, profile, birthDateRecord, trajectoryState] =
-        await Promise.all([
-          readLocalRecord(adapter, 'commitments:state', 'commitments', Array.isArray),
-          readLocalRecord(adapter, 'timeline-draft-new', 'timelines', isObject),
-          readLocalRecord(adapter, 'onboarding:draft', 'onboarding', isObject),
-          readLocalRecord(adapter, 'profile:draft', 'profile', isObject),
-          readLocalRecord(adapter, 'profile:birth-date', 'profile', isObject),
-          readLocalTrajectory(),
-        ]);
+      const [
+        commitments,
+        timeline,
+        onboarding,
+        profile,
+        birthDateRecord,
+        trajectoryState,
+        weeklyLog,
+      ] = await Promise.all([
+        readLocalRecord(adapter, 'commitments:state', 'commitments', Array.isArray),
+        readLocalRecord(adapter, 'timeline-draft-new', 'timelines', isObject),
+        readLocalRecord(adapter, 'onboarding:draft', 'onboarding', isObject),
+        readLocalRecord(adapter, 'profile:draft', 'profile', isObject),
+        readLocalRecord(adapter, 'profile:birth-date', 'profile', isObject),
+        readLocalTrajectory(),
+        readLocalWeeklyLog(adapter),
+      ]);
       const data: LookBackData = {
         name: typeof profile?.name === 'string' ? profile.name : null,
         creed: null,
@@ -48,6 +57,10 @@ export function LocalLookBack({ today }: { today: string }) {
         habits: [],
         habitLogs: [],
         journalEntries: [],
+        weeklyEntries: weeklyLog.entries.map((entry) => ({
+          weekOf: entry.weekOf,
+          text: entry.text,
+        })),
         commitments: Array.isArray(commitments)
           ? commitments.map((item: Record<string, unknown>) => ({
               hobbyName: String(item.hobbyName),

@@ -16,6 +16,7 @@ import { loginPath } from '~/lib/auth-routing';
 import { dayKeyIn } from '~/lib/day';
 import { generateLookBack, type LookBackData } from '~/lib/look-back';
 import { getTrajectoryContractState } from '~/lib/actions/trajectory-contract';
+import { getWeeklyLogEntries } from '~/lib/actions/weekly-log';
 import { parseJSONColumn } from '~/lib/utils';
 import type { Phase, TimelinePin } from '~/lib/types';
 import { getServerAuthSession } from '~/server/auth';
@@ -45,6 +46,7 @@ export default async function LookBackPage() {
     abandonedQuestRows,
     rawCommitments,
     trajectoryState,
+    weeklyRows,
   ] = await Promise.all([
     db.query.users.findFirst({
       where: eq(users.id, session.user.id),
@@ -74,6 +76,7 @@ export default async function LookBackPage() {
       .where(and(eq(userQuests.userId, session.user.id), eq(userQuests.status, 'abandoned'))),
     db.select().from(commitments).where(eq(commitments.userId, session.user.id)),
     getTrajectoryContractState(),
+    getWeeklyLogEntries(),
   ]);
   if (!me?.onboardingCompletedAt) redirect('/onboarding');
 
@@ -125,6 +128,10 @@ export default async function LookBackPage() {
     habits: [],
     habitLogs: [],
     journalEntries: [],
+    weeklyEntries: weeklyRows.map((entry) => ({
+      weekOf: entry.weekOf,
+      text: entry.text,
+    })),
     commitments: rawCommitments.map((c) => ({
       hobbyName: c.hobbyName,
       goalDays: c.goalDays,

@@ -33,6 +33,10 @@ export function JournalArchive({ records }: { records: JournalRecord[] }) {
     [entries]
   );
 
+  // The archive only earns space when it has something to show — the weekly
+  // log above is the living surface now.
+  if (!writtenEntries.length) return null;
+
   return (
     <section
       id="journal-history"
@@ -41,10 +45,10 @@ export function JournalArchive({ records }: { records: JournalRecord[] }) {
     >
       <div className="border-b border-[#e8dfd1] bg-[#ffd0bd] p-5 sm:p-7">
         <BookOpen className="size-6" />
-        <p className="mt-5 text-sm font-bold text-[#713f2d]">In your own words</p>
+        <p className="mt-5 text-sm font-bold text-[#713f2d]">Before the weekly log</p>
         <div className="mt-1 flex items-end justify-between gap-4">
           <h2 id="journal-history-title" className="font-serif text-3xl sm:text-4xl">
-            Journal history
+            Earlier daily entries
           </h2>
           <span className="font-serif text-2xl tabular-nums">
             {writtenEntries.length} {writtenEntries.length === 1 ? 'entry' : 'entries'}
@@ -81,14 +85,7 @@ export function JournalArchive({ records }: { records: JournalRecord[] }) {
             </details>
           ))}
         </div>
-      ) : (
-        <div className="p-6 sm:p-8">
-          <p className="font-serif text-2xl">Your first saved reflection will live here.</p>
-          <p className="mt-2 text-sm leading-relaxed text-[#625b50]">
-            This is a private archive, not a publishing feed.
-          </p>
-        </div>
-      )}
+      ) : null}
     </section>
   );
 }

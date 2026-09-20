@@ -2,8 +2,8 @@
   "$schema": "fleet.design-review.v1",
   "version": 1,
   "project": "live",
-  "target": "Live calling dream loop",
-  "surfaceMode": "operate",
+  "target": "Live onboarding weeks-reveal and weekly log",
+  "surfaceMode": "experience",
   "mode": "preserve",
   "register": "product",
   "context": {
@@ -14,47 +14,70 @@
     "references": [],
     "probes": [],
     "selected": "existing-design",
-    "approval": "delegated",
-    "before": ".fleet/design-evidence/open-world-life-atlas/after-1440.png",
+    "approval": "not-required",
+    "before": ".fleet/design-evidence/weekly-log/before/README.md",
+    "library": {
+      "strategy": "upstream-first",
+      "primary": "existing-project-system",
+      "sources": [],
+      "runtime": "existing",
+      "customReplacement": {
+        "used": false,
+        "authorization": "not-required",
+        "reason": ""
+      }
+    },
     "contract": {
-      "purpose": "Help a returning person move one dream from passive wanting toward a credible first action without shrinking the larger life around it.",
-      "purposeSource": "../site-health/apps/backend/config/projects.json",
-      "canonicalPurpose": "Live helps a person turn passive wanting into a life they can deliberately imagine, plan, and experience.",
+      "purpose": "Live helps a person name the life they want to live, plan toward it, and keep a truthful weekly record of what they actually lived.",
+      "purposeSource": "Owner direction on 20 September 2026 and PRODUCT.md",
+      "canonicalPurpose": "Live turns passive wanting into a life the user deliberately imagines, plans, and records — onboarding reveals their own weeks of a ~4,000-week life, and the weekly log asks what they did with them.",
       "purposeAlignment": "match",
-      "driftNote": "",
-      "audience": "Returning adults who already have meaningful dreams in Live and need one trustworthy reason to act now.",
-      "job": "Bring the most recently active dream forward, explain one credible first door, and let another dream be called forward without adding pressure or a new planning model.",
-      "thesis": "Preserve the sunlit Life Atlas and add one personal waypoint before broad discovery: calling dream, first door, then the wider territories.",
-      "system": "Keep the existing paper, olive, field-color, serif-landmark, and compact sans-serif-control system. Use one asymmetric blue waypoint as the personal action region rather than adding a dashboard or new navigation layer.",
-      "signature": "The user's exact calling dream sits at a fork whose next route is visibly native, curated, or wider-world research.",
-      "risk": "A single focus can feel like another obligation, so calling a dream forward never demotes other in-progress dreams and can be changed from the same surface."
+      "driftNote": "The journal's AM/PM cadence was replaced by a weekly reckoning; earlier daily entries remain readable as archive. Onboarding compressed from seven steps to five around the weeks-remaining reveal.",
+      "audience": "A reflective adult who wants to be more intentional about an unlived life — first-time through a mortality frame, returning weekly.",
+      "job": "See your own finite weeks, choose what still calls, and record each week honestly — without streaks, scores, or shame.",
+      "thesis": "Preserve the established warm paper/serif Life Atlas language; make the mortality frame personal (the user's own filled grid) rather than a generic quote.",
+      "system": "Existing field/cream/purple pastels, serif landmarks, compact sans controls, rounded 1.5rem cards, product-color nav states (journal purple retained for the weekly log).",
+      "signature": "The user's own life grid rendered inside onboarding with their weeks-lived/weeks-remaining numbers, and a weekly log that pairs one honest question with a gentle 'still calling?' check on quiet dreams.",
+      "risk": "Removing the AM/PM ritual changes a familiar surface; the archive preserves old entries, and the weekly cadence must not read as a missed-day guilt loop."
     }
   },
   "evidence": {
     "screenshots": [
       {
         "width": 390,
-        "path": ".fleet/design-evidence/calling-dream-loop/after-390.png"
+        "path": ".fleet/design-evidence/weekly-log/after/journal-390.png"
       },
       {
         "width": 768,
-        "path": ".fleet/design-evidence/calling-dream-loop/after-768.png"
+        "path": ".fleet/design-evidence/weekly-log/after/journal-768.png"
       },
       {
         "width": 1440,
-        "path": ".fleet/design-evidence/calling-dream-loop/after-1440.png"
+        "path": ".fleet/design-evidence/weekly-log/after/journal-1440.png"
+      },
+      {
+        "width": 390,
+        "path": ".fleet/design-evidence/weekly-log/after/onboarding-reveal-390.png"
+      },
+      {
+        "width": 768,
+        "path": ".fleet/design-evidence/weekly-log/after/onboarding-reveal-768.png"
+      },
+      {
+        "width": 1440,
+        "path": ".fleet/design-evidence/weekly-log/after/onboarding-reveal-1440.png"
       }
     ],
     "projectCheck": {
-      "command": "pnpm typecheck && pnpm lint && pnpm test && pnpm build",
+      "command": "pnpm lint; pnpm typecheck; pnpm test; pnpm build; axe at 390, 768, and 1440 via e2e/daily.spec.ts a11y sweep",
       "status": "pass"
     },
     "critique": {
-      "score": 38,
+      "score": 36,
       "maximum": 40
     },
     "audit": {
-      "score": 17,
+      "score": 18,
       "maximum": 20
     },
     "unresolved": {
@@ -63,7 +86,13 @@
     },
     "detector": {
       "posture": "advisory",
-      "findings": []
+      "findings": [
+        "Axe reported zero serious violations across /daily, /journal, and /habits after muted helper text moved from #8a8175 to #625b50 (3.83:1 -> >4.5:1).",
+        "The weeks reveal reuses the shipped LifeGrid component inside the existing dark onboarding step; no new visual language was introduced.",
+        "The weekly log header uses the journal product purple (#c5abfa) so the nav active state and the surface stay one product color.",
+        "Stale-dream copy was kept to 'still calling?' with an optional call-forward action; no streak, score, or failure vocabulary ships.",
+        "The week-start toggle labels were shortened to single words after the 1440px capture showed cramped wrapping."
+      ]
     },
     "comprehension": {
       "status": "not-applicable",
@@ -89,7 +118,7 @@
     }
   },
   "ownerFeedback": {
-    "decision": "delegated",
-    "note": "The owner asked to raise the product to at least 9 without super-drastic changes and delegated the focused coherence pass."
+    "decision": "agent-selected",
+    "note": "Owner approved the revised product arc (issue #17); preserve lane kept the established design language so no separate visual-direction approval was required."
   }
 }

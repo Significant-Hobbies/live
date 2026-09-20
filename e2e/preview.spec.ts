@@ -10,7 +10,7 @@ test.describe('signed-out private surfaces are local-first', () => {
   test('/journal exposes editable local writing', async ({ page }) => {
     await page.goto('/journal');
     await expect(page.getByLabel('Preview notice')).toHaveCount(0);
-    await expect(page.locator('#journal-entry')).toBeVisible();
+    await expect(page.locator('#weekly-entry')).toBeVisible();
     await expect(page.locator('body')).toContainText('this device');
   });
 
@@ -18,7 +18,7 @@ test.describe('signed-out private surfaces are local-first', () => {
     await page.goto('/habits');
     await expect(page.getByLabel('Preview notice')).toHaveCount(0);
     await expect(page.getByRole('button', { name: 'Manage' })).toBeVisible();
-    await expect(page.locator('#journal-entry')).toHaveCount(0);
+    await expect(page.locator('#weekly-entry')).toHaveCount(0);
   });
 
   test('/trajectory exposes an editable local contract', async ({ page }) => {

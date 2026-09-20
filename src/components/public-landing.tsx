@@ -53,15 +53,15 @@ const onboardingSteps = [
 const questions = [
   [
     'Can I begin without an account?',
-    'Yes. Your onboarding, journal, habits, bucket-list choices, and trajectory can stay on this device. Sign in only when you want cross-device access.',
+    'Yes. Your onboarding, weekly log, habits, bucket-list choices, and trajectory can stay on this device. Sign in only when you want cross-device access.',
   ],
   [
     'What happens after onboarding?',
-    'Your home becomes a personal dashboard: time in weeks, today’s journal, simple habit check-ins, and the next thing you want to live.',
+    'Your home becomes a personal dashboard: time in weeks, a weekly log of what you actually lived, simple habit check-ins, and the next thing you want to live.',
   ],
   [
-    'Is my journal public?',
-    'No. Daily writing is private. Living surfaces such as timelines and profiles are shared only when you explicitly choose to publish them.',
+    'Is my weekly log public?',
+    'No. What you write each week is private. Living surfaces such as timelines and profiles are shared only when you explicitly choose to publish them.',
   ],
   [
     'Is this another productivity score?',

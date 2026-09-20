@@ -1,14 +1,16 @@
 # Live by Significant Hobbies
 
-Live helps people map hobbies and experiences across a lifetime: what they want
-to try, what persisted, and what is worth doing next. It includes discovery,
-bucket lists, commitments, timelines, side quests, and personal history.
+Live helps a person name the life they want to live and walk toward it: what
+they still want to try, what persisted, what is worth doing next, and — each
+week — what they actually lived. It includes discovery, bucket lists,
+commitments, timelines, side quests, the weekly log, and personal history.
 
 This is Live's canonical repository and issue tracker. Its Git history was
 preserved when it was extracted from
 [`Significant-Hobbies/significanthobbies`](https://github.com/Significant-Hobbies/significanthobbies).
-The Hub and `PersonalSyncKit` remain there. Journal's independent source history
-is retained, but Journal has been removed from the Fleet product lineup.
+The Hub and `PersonalSyncKit` remain there. The former Journal product now lives
+inside Live as the weekly log at `/journal`; earlier AM/PM entries remain
+readable as archive.
 
 ## Local development
 

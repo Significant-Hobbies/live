@@ -6,12 +6,6 @@ import { revalidatePath } from 'next/cache';
 import { commitments, habitLogs, habits, journalEntries, timelines, users } from '~/db/schema';
 import { DEFAULT_FREQUENCY, isValidFrequency } from '~/lib/habit-utils';
 import {
-  columnsForVerifiedJournalContext,
-  journalContextFromColumns,
-  type JournalContextChoice,
-  type JournalContextRef,
-} from '~/lib/journal-context';
-import {
   habitCommitmentIdForVerifiedTarget,
   habitCommitmentLabel,
   type HabitCommitmentChoice,
@@ -198,124 +192,6 @@ export async function getAllJournalEntries() {
     .from(journalEntries)
     .where(eq(journalEntries.userId, session.user.id))
     .orderBy(asc(journalEntries.dayDate));
-}
-
-export async function getJournalContextChoices(): Promise<JournalContextChoice[]> {
-  const session = await getServerAuthSession();
-  if (!session?.user) return [];
-
-  const [ownedTimelines, ownedCommitments] = await Promise.all([
-    db
-      .select({
-        id: timelines.id,
-        title: timelines.title,
-      })
-      .from(timelines)
-      .where(eq(timelines.userId, session.user.id))
-      .orderBy(desc(timelines.updatedAt)),
-    db
-      .select({
-        id: commitments.id,
-        hobbyName: commitments.hobbyName,
-        goalDays: commitments.goalDays,
-      })
-      .from(commitments)
-      .where(and(eq(commitments.userId, session.user.id), ne(commitments.status, 'abandoned')))
-      .orderBy(desc(commitments.updatedAt)),
-  ]);
-
-  return [
-    ...ownedTimelines.map((timeline) => ({
-      kind: 'timeline' as const,
-      id: timeline.id,
-      label: timeline.title?.trim() || 'Untitled timeline',
-      href: `/timeline/${timeline.id}`,
-    })),
-    ...ownedCommitments.map((commitment) => ({
-      kind: 'commitment' as const,
-      id: commitment.id,
-      label: `${commitment.hobbyName} · ${commitment.goalDays}-day commitment`,
-      href: '/commitments',
-    })),
-  ];
-}
-
-async function verifyOwnedJournalContext(
-  userId: string,
-  context: JournalContextRef
-): Promise<JournalContextRef | null> {
-  if (context.kind === 'timeline') {
-    const [owned] = await db
-      .select({ id: timelines.id })
-      .from(timelines)
-      .where(and(eq(timelines.id, context.id), eq(timelines.userId, userId)))
-      .limit(1);
-    return owned ? { kind: 'timeline', id: owned.id } : null;
-  }
-
-  const [owned] = await db
-    .select({ id: commitments.id })
-    .from(commitments)
-    .where(
-      and(
-        eq(commitments.id, context.id),
-        eq(commitments.userId, userId),
-        ne(commitments.status, 'abandoned')
-      )
-    )
-    .limit(1);
-  return owned ? { kind: 'commitment', id: owned.id } : null;
-}
-
-export async function saveJournalEntry(
-  dayDate: string,
-  amEntry: string | null,
-  pmEntry: string | null,
-  context?: JournalContextRef | null
-) {
-  const session = await getServerAuthSession();
-  if (!session?.user) return;
-
-  const existing = await db
-    .select()
-    .from(journalEntries)
-    .where(and(eq(journalEntries.userId, session.user.id), eq(journalEntries.dayDate, dayDate)))
-    .limit(1);
-
-  const existingContext = journalContextFromColumns(
-    existing[0]?.timelineId,
-    existing[0]?.commitmentId
-  );
-  const contextIsUnchanged =
-    context !== undefined &&
-    context?.kind === existingContext?.kind &&
-    context?.id === existingContext?.id;
-  const contextColumns =
-    context === undefined || contextIsUnchanged
-      ? {
-          timelineId: existing[0]?.timelineId ?? null,
-          commitmentId: existing[0]?.commitmentId ?? null,
-        }
-      : columnsForVerifiedJournalContext(
-          context,
-          context ? await verifyOwnedJournalContext(session.user.id, context) : null
-        );
-
-  if (existing.length > 0) {
-    await db
-      .update(journalEntries)
-      .set({ amEntry, pmEntry, ...contextColumns, updatedAt: new Date() })
-      .where(eq(journalEntries.id, existing[0].id));
-  } else {
-    await db.insert(journalEntries).values({
-      userId: session.user.id,
-      dayDate,
-      amEntry,
-      pmEntry,
-      ...contextColumns,
-    });
-  }
-  revalidatePath('/journal');
 }
 
 // ── Profile ─────────────────────────────────────────────────────────────────

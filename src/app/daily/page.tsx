@@ -26,9 +26,9 @@ export default function DailyTransitionPage() {
             href="/journal"
             color="bg-[#c5abfa] text-[#241a31]"
             icon={<BookOpen className="size-7" />}
-            title="Journal"
-            copy="Write this morning or evening, then return to the words you left behind."
-            action="Open Journal"
+            title="Weekly log"
+            copy="Once a week, write what you actually lived — Sunday is the natural moment, any day counts."
+            action="Open the weekly log"
           />
           <Destination
             href="/habits"
