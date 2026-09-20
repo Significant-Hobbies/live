@@ -128,6 +128,7 @@ export function LocalWeeklyLog({ today }: { today: string }) {
           weekOf: entry.weekOf,
           text: entry.text,
           promptText: entry.promptText,
+          turns: entry.turns,
         }))
         .sort((a, b) => b.weekOf.localeCompare(a.weekOf)),
     [state.entries]
@@ -152,6 +153,12 @@ export function LocalWeeklyLog({ today }: { today: string }) {
           today,
           weekStartsOn: state.weekStartsOn,
           entries,
+          activeDreams: dreams
+            .filter((dream) => dream.title && dream.status !== 'done')
+            .map((dream) => ({
+              title: dream.title ?? '',
+              category: typeof dream.category === 'string' ? dream.category : null,
+            })),
           staleDreams,
           weeksRemaining: null,
           initialQuestion: null,
@@ -159,8 +166,8 @@ export function LocalWeeklyLog({ today }: { today: string }) {
           archiveSlot: <JournalArchive records={legacyEntries} />,
         }}
         actions={{
-          onSave: async (weekOf, text, promptText) => {
-            const next = await saveLocalWeeklyEntry(weekOf, text, promptText);
+          onSave: async (weekOf, text, promptText, turns) => {
+            const next = await saveLocalWeeklyEntry(weekOf, text, promptText, undefined, turns);
             setState(next);
             return true;
           },

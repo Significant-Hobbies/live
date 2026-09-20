@@ -112,6 +112,9 @@ export const users = sqliteTable('User', {
   // 'monday' | 'sunday' — which day starts this owner's week in the weekly
   // log. Null = Monday, the product default.
   weekStartsOn: text('weekStartsOn'),
+  // Opt-in only: send a gentle Sunday nudge email to this owner's account
+  // address. Default off — the log never reaches into an inbox uninvited.
+  weeklyEmailOptIn: integer('weeklyEmailOptIn', { mode: 'boolean' }).notNull().default(false),
   bio: text('bio'),
   website: text('website'),
   // The user's personal creed — their declaration of what they're about.
@@ -497,6 +500,9 @@ export const weeklyLogEntries = sqliteTable(
     weekOf: text('weekOf').notNull(),
     text: text('text').notNull(),
     promptText: text('promptText'),
+    // JSON array of { questionText, answer } when the entry was written as a
+    // guided interview — keeps the prompts that produced each paragraph.
+    turnsJson: text('turnsJson'),
     createdAt: integer('createdAt', { mode: 'timestamp' }).notNull().default(sql`(unixepoch())`),
     updatedAt: integer('updatedAt', { mode: 'timestamp' }).notNull().default(sql`(unixepoch())`),
   },

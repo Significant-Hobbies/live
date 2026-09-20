@@ -43,6 +43,13 @@
       "when": 1789913353669,
       "tag": "0005_fancy_wild_child",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1789919719966,
+      "tag": "0006_black_proemial_gods",
+      "breakpoints": true
     }
   ]
 }

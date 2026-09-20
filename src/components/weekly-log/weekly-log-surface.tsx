@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useEffect, useMemo, useRef, useState, useTransition } from 'react';
 
 import {
+  detectDreamTouches,
   formatWeekOf,
   formatWeekSpan,
   isSuggestedLogDay,
@@ -23,6 +24,7 @@ export type WeeklyLogEntryView = {
   weekOf: string;
   text: string;
   promptText: string | null;
+  turns?: Array<{ questionText: string; answer: string }>;
 };
 
 export type StaleDreamView = {
@@ -38,6 +40,8 @@ export type WeeklyLogData = {
   weekStartsOn: WeekStartsOn;
   entries: WeeklyLogEntryView[];
   staleDreams: StaleDreamView[];
+  /** Active dreams for touched-matching — title + category only. */
+  activeDreams?: Array<{ title: string; category: string | null }>;
   weeksRemaining: number | null;
   /**
    * The resolved question for this week. When null (local mode before the
@@ -49,13 +53,21 @@ export type WeeklyLogData = {
   nudgeRequest?: { signals: NudgeSignals; excludeIds: string[] } | null;
   /** Old AM/PM archive rendered below the weekly history. */
   archiveSlot?: React.ReactNode;
+  /** Signed-in only: whether the Sunday nudge email is on. */
+  emailOptIn?: boolean;
 };
 
 export type WeeklyLogActions = {
-  onSave: (weekOf: string, text: string, promptText: string | null) => Promise<boolean>;
+  onSave: (
+    weekOf: string,
+    text: string,
+    promptText: string | null,
+    turns?: Array<{ questionText: string; answer: string }>
+  ) => Promise<boolean>;
   onWeekStartsOnChange: (value: WeekStartsOn) => Promise<void>;
   onCallDreamForward?: (title: string) => Promise<void>;
   onQuestionServed?: (questionId: string) => void;
+  onEmailOptInChange?: (optIn: boolean) => Promise<void>;
 };
 
 export function WeeklyLogSurface({
@@ -97,6 +109,14 @@ export function WeeklyLogSurface({
   const weekOf = useMemo(() => weekStartFor(data.today, weekStartsOn), [data.today, weekStartsOn]);
   const currentEntry = entries.find((entry) => entry.weekOf === weekOf) ?? null;
   const textareaValue = editedWeek === weekOf ? text : (currentEntry?.text ?? '');
+
+  // Reconciliation: which held dreams this week's writing actually touched.
+  // Plain keyword matching — reads only, never writes dream state.
+  const touchedTitles = useMemo(
+    () => detectDreamTouches(currentEntry?.text ?? '', data.activeDreams ?? []),
+    [currentEntry?.text, data.activeDreams]
+  );
+  const untouchedStale = staleDreams.filter((dream) => !touchedTitles.includes(dream.title));
 
   // Resolve a question client-side when the server didn't (local mode).
   const servedRef = useRef(actions.onQuestionServed);
@@ -204,7 +224,7 @@ export function WeeklyLogSurface({
     setSaved(false);
     setSaveError(null);
     try {
-      const ok = await actions.onSave(weekOf, composed, promptText);
+      const ok = await actions.onSave(weekOf, composed, promptText, turns);
       if (!ok) throw new Error('not saved');
       setEntries((current) => {
         const next = {
@@ -212,6 +232,7 @@ export function WeeklyLogSurface({
           weekOf,
           text: composed,
           promptText,
+          turns: turns.length ? turns : undefined,
         };
         return current.some((entry) => entry.weekOf === weekOf)
           ? current.map((entry) => (entry.weekOf === weekOf ? next : entry))
@@ -285,8 +306,12 @@ export function WeeklyLogSurface({
           hasEntry: !!currentEntry,
         }}
       />
+      {data.emailOptIn !== undefined && actions.onEmailOptInChange ? (
+        <EmailNudgeCard optIn={data.emailOptIn} onChange={actions.onEmailOptInChange} />
+      ) : null}
       <StaleDreamsCard
-        dreams={staleDreams}
+        dreams={untouchedStale}
+        touchedTitles={touchedTitles}
         callingTitle={callingTitle}
         pending={isPending}
         onCallForward={actions.onCallDreamForward ? callForward : null}
@@ -496,16 +521,18 @@ function WriteCard({ card }: { card: WriteCardModel }) {
 
 function StaleDreamsCard({
   dreams,
+  touchedTitles,
   callingTitle,
   pending,
   onCallForward,
 }: {
   dreams: StaleDreamView[];
+  touchedTitles: string[];
   callingTitle: string | null;
   pending: boolean;
   onCallForward: ((title: string) => void) | null;
 }) {
-  if (!dreams.length) return null;
+  if (!dreams.length && !touchedTitles.length) return null;
   return (
     <section
       aria-labelledby="still-calling-title"
@@ -520,9 +547,26 @@ function StaleDreamsCard({
           id="still-calling-title"
           className="mt-1 font-serif text-2xl font-medium tracking-tight text-foreground"
         >
-          Dreams that have been quiet a while.
+          Your week and your wants, side by side.
         </h2>
       </div>
+      {touchedTitles.length ? (
+        <div className="border-b border-[#e8dfd1] bg-[#eef5e4] px-5 py-4 sm:px-7">
+          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#405032]">
+            This week touched
+          </p>
+          <div className="mt-2 flex flex-wrap gap-2">
+            {touchedTitles.map((title) => (
+              <span
+                key={title}
+                className="inline-flex items-center gap-1.5 rounded-full bg-[#dceabf] px-3 py-1.5 text-sm font-bold text-[#2f4226]"
+              >
+                <Check className="size-3.5" aria-hidden="true" /> {title}
+              </span>
+            ))}
+          </div>
+        </div>
+      ) : null}
       <ul className="divide-y divide-[#e8dfd1] px-5 sm:px-7">
         {dreams.map((dream) => (
           <li key={dream.title} className="flex items-center justify-between gap-4 py-4">
@@ -590,18 +634,83 @@ function WeekHistoryCard({ entries }: { entries: WeeklyLogEntryView[] }) {
               </span>
             </summary>
             <div className="pb-5">
-              {entry.promptText ? (
-                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#625b50]">
-                  {entry.promptText}
-                </p>
-              ) : null}
-              <p className="mt-2 whitespace-pre-wrap text-sm leading-relaxed text-foreground/80">
-                {entry.text}
-              </p>
+              {entry.turns?.length ? (
+                <ol className="space-y-4">
+                  {entry.turns.map((turn, index) => (
+                    <li
+                      key={`${turn.questionText}-${index}`}
+                      className="border-l-2 border-[#c5abfa] pl-4"
+                    >
+                      <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#625b50]">
+                        {turn.questionText}
+                      </p>
+                      <p className="mt-1 whitespace-pre-wrap text-sm leading-relaxed text-foreground/80">
+                        {turn.answer}
+                      </p>
+                    </li>
+                  ))}
+                </ol>
+              ) : (
+                <>
+                  {entry.promptText ? (
+                    <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#625b50]">
+                      {entry.promptText}
+                    </p>
+                  ) : null}
+                  <p className="mt-2 whitespace-pre-wrap text-sm leading-relaxed text-foreground/80">
+                    {entry.text}
+                  </p>
+                </>
+              )}
             </div>
           </details>
         ))}
       </div>
+    </section>
+  );
+}
+
+function EmailNudgeCard({
+  optIn,
+  onChange,
+}: {
+  optIn: boolean;
+  onChange: (optIn: boolean) => Promise<void>;
+}) {
+  const [on, setOn] = useState(optIn);
+  const [pending, setPending] = useState(false);
+  return (
+    <section className="flex items-center justify-between gap-4 rounded-[1.5rem] border border-[#d9cfbd] bg-[#fffdf8] px-5 py-4 shadow-[0_12px_36px_rgba(66,55,22,0.06)] sm:px-7">
+      <div>
+        <p className="font-serif text-lg">A Sunday nudge, if you want one.</p>
+        <p className="mt-0.5 text-sm text-[#625b50]">
+          One quiet email when the week turns — nothing counted, nothing scored.
+        </p>
+      </div>
+      <button
+        type="button"
+        role="switch"
+        aria-checked={on}
+        disabled={pending}
+        onClick={async () => {
+          const next = !on;
+          setOn(next);
+          setPending(true);
+          try {
+            await onChange(next);
+          } catch {
+            setOn(!next);
+          } finally {
+            setPending(false);
+          }
+        }}
+        className={`relative h-7 w-12 shrink-0 rounded-full transition-colors disabled:opacity-50 ${on ? 'bg-[#176b4a]' : 'bg-[#cfc3b0]'}`}
+        aria-label="Email me a Sunday nudge"
+      >
+        <span
+          className={`absolute top-0.5 size-6 rounded-full bg-white shadow transition-transform ${on ? 'translate-x-5' : 'translate-x-0.5'}`}
+        />
+      </button>
     </section>
   );
 }

@@ -27,6 +27,7 @@ export async function getWeeklyLogEntries() {
       weekOf: weeklyLogEntries.weekOf,
       text: weeklyLogEntries.text,
       promptText: weeklyLogEntries.promptText,
+      turnsJson: weeklyLogEntries.turnsJson,
       updatedAt: weeklyLogEntries.updatedAt,
     })
     .from(weeklyLogEntries)
@@ -36,11 +37,27 @@ export async function getWeeklyLogEntries() {
 
 const WEEK_OF_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
 const MAX_ENTRY_LENGTH = 8000;
+const MAX_TURNS = 12;
+
+type WeeklyTurn = { questionText: string; answer: string };
+
+function cleanTurns(turns: WeeklyTurn[] | undefined): string | null {
+  if (!Array.isArray(turns) || !turns.length) return null;
+  const clean = turns
+    .slice(0, MAX_TURNS)
+    .map((turn) => ({
+      questionText: String(turn.questionText ?? '').slice(0, 500),
+      answer: String(turn.answer ?? '').slice(0, MAX_ENTRY_LENGTH),
+    }))
+    .filter((turn) => turn.questionText && turn.answer);
+  return clean.length ? JSON.stringify(clean) : null;
+}
 
 export async function saveWeeklyLogEntry(
   weekOf: string,
   text: string,
-  promptText?: string | null
+  promptText?: string | null,
+  turns?: WeeklyTurn[]
 ): Promise<{ saved: boolean }> {
   const session = await getServerAuthSession();
   if (!session?.user) return { saved: false };
@@ -48,6 +65,7 @@ export async function saveWeeklyLogEntry(
   const trimmed = text.trim().slice(0, MAX_ENTRY_LENGTH);
   if (!WEEK_OF_PATTERN.test(weekOf) || !trimmed) return { saved: false };
   const cleanPrompt = promptText?.trim().slice(0, 500) || null;
+  const cleanTurnsJson = cleanTurns(turns);
 
   const [existing] = await db
     .select({ id: weeklyLogEntries.id })
@@ -58,7 +76,12 @@ export async function saveWeeklyLogEntry(
   if (existing) {
     await db
       .update(weeklyLogEntries)
-      .set({ text: trimmed, promptText: cleanPrompt, updatedAt: new Date() })
+      .set({
+        text: trimmed,
+        promptText: cleanPrompt,
+        turnsJson: cleanTurnsJson,
+        updatedAt: new Date(),
+      })
       .where(eq(weeklyLogEntries.id, existing.id));
   } else {
     await db.insert(weeklyLogEntries).values({
@@ -66,6 +89,7 @@ export async function saveWeeklyLogEntry(
       weekOf,
       text: trimmed,
       promptText: cleanPrompt,
+      turnsJson: cleanTurnsJson,
     });
   }
   revalidatePath('/journal');
@@ -198,4 +222,28 @@ export async function getRecentPromptIds(): Promise<string[]> {
 
   const served = new Set(rows.map((r) => r.promptText).filter(Boolean));
   return WEEKLY_QUESTIONS.filter((q) => served.has(q.text)).map((q) => q.id);
+}
+
+// ── Sunday email nudge ──────────────────────────────────────────────────────
+
+export async function getWeeklyEmailOptIn(): Promise<boolean> {
+  const session = await getServerAuthSession();
+  if (!session?.user) return false;
+  const [row] = await db
+    .select({ weeklyEmailOptIn: users.weeklyEmailOptIn })
+    .from(users)
+    .where(eq(users.id, session.user.id))
+    .limit(1);
+  return row?.weeklyEmailOptIn === true;
+}
+
+export async function setWeeklyEmailOptIn(optIn: boolean): Promise<{ saved: boolean }> {
+  const session = await getServerAuthSession();
+  if (!session?.user) return { saved: false };
+  await db
+    .update(users)
+    .set({ weeklyEmailOptIn: optIn === true })
+    .where(eq(users.id, session.user.id));
+  revalidatePath('/journal');
+  return { saved: true };
 }

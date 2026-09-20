@@ -25,6 +25,19 @@ cpu_ms = 30000
 NODE_ENV = "production"
 APPLE_APP_BUNDLE_IDENTIFIER = "com.significanthobbies.app"
 
+# ─── Email Sending binding (weekly-log Sunday nudge) ───────────────────────
+# Domain onboarded via `wrangler email sending enable significanthobbies.com`.
+# Used by the cron handler in worker.mjs (weekly-nudge-email.mjs).
+[[send_email]]
+name = "EMAIL"
+
+# ─── Cron: the Sunday pull ──────────────────────────────────────────────────
+# Two fires cover the globe: 22:00 UTC Saturday reaches UTC+12..+14 Sunday
+# morning; 14:00 UTC daily reaches everyone else. The handler itself filters
+# to owners whose local day is actually Sunday and whose week is unwritten.
+[triggers]
+crons = ["0 22 * * 6", "0 14 * * *"]
+
 # ─── Workers AI binding (Lumi coach) ─────────────────────────────────────
 # Free tier, no API key needed. Used by the AI-powered weekly review.
 # Accessed in-app via getCloudflareContext().env.AI.

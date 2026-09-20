@@ -13,6 +13,8 @@ type LocalWeeklyEntry = {
   weekOf: string;
   text: string;
   promptText: string | null;
+  /** Interview Q&A turns that produced the entry, when it was written that way. */
+  turns?: Array<{ questionText: string; answer: string }>;
   updatedAt: string;
 };
 
@@ -69,7 +71,8 @@ export async function saveLocalWeeklyEntry(
   weekOf: string,
   text: string,
   promptText: string | null,
-  adapter: LocalRecordAdapter = browserRecordAdapter()
+  adapter: LocalRecordAdapter = browserRecordAdapter(),
+  turns?: Array<{ questionText: string; answer: string }>
 ): Promise<LocalWeeklyLogState> {
   const current = await readLocalWeeklyLog(adapter);
   const trimmed = text.trim().slice(0, 8000);
@@ -79,6 +82,7 @@ export async function saveLocalWeeklyEntry(
     weekOf,
     text: trimmed,
     promptText,
+    turns: turns?.length ? turns.slice(0, 12) : undefined,
     updatedAt: new Date().toISOString(),
   };
   const next: LocalWeeklyLogState = {

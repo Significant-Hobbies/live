@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
 import {
+  detectDreamTouches,
   formatWeekOf,
   formatWeekSpan,
   isSuggestedLogDay,
@@ -73,5 +74,34 @@ describe('normalizeWeekStartsOn', () => {
     expect(normalizeWeekStartsOn(null)).toBe('monday');
     expect(normalizeWeekStartsOn('friday')).toBe('monday');
     expect(normalizeWeekStartsOn(undefined)).toBe('monday');
+  });
+});
+
+describe('detectDreamTouches', () => {
+  const dreams = [
+    { title: 'Hike the Annapurna circuit', category: 'travel' },
+    { title: 'Learn to play piano', category: 'creative' },
+    { title: 'Run a marathon', category: 'fitness' },
+  ];
+
+  it('marks a dream touched when the entry shares its meaningful word', () => {
+    expect(detectDreamTouches('Finally booked the Annapurna flights.', dreams)).toEqual([
+      'Hike the Annapurna circuit',
+    ]);
+  });
+
+  it('marks a dream touched when the entry names its category', () => {
+    expect(detectDreamTouches('Did some travel planning this week.', dreams)).toContain(
+      'Hike the Annapurna circuit'
+    );
+  });
+
+  it('ignores stopword-only overlaps', () => {
+    expect(detectDreamTouches('I want to learn new things this week.', dreams)).toEqual([]);
+  });
+
+  it('returns nothing for an empty entry', () => {
+    expect(detectDreamTouches('', dreams)).toEqual([]);
+    expect(detectDreamTouches('   ', dreams)).toEqual([]);
   });
 });

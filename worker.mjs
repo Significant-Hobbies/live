@@ -17,6 +17,7 @@ import { createReleaseCache } from './release-cache.mjs';
 import { withTiming } from './timing.mjs';
 import { handleAgentEdge } from './agent-edge.mjs';
 import { handleCachedPublicRouteMarkdown } from './agent-route-markdown.mjs';
+import { sendWeeklyNudges } from './weekly-nudge-email.mjs';
 import {
   fetchHubRoute,
   legacyLiveRedirect,
@@ -146,6 +147,11 @@ async function fetchOpenNext(request, env, ctx) {
 }
 
 export default {
+  // Weekly-log Sunday nudge: each run emails opted-in owners whose
+  // *local* day is Sunday and whose current week has no entry yet.
+  async scheduled(_event, env, ctx) {
+    ctx.waitUntil(sendWeeklyNudges(env));
+  },
   fetch: withTiming(async function fetch(request, env, ctx) {
     request = markPersonalPlatformInternalRequest(request);
     const requestUrl = new URL(request.url);

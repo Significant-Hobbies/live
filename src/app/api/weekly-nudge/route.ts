@@ -1,3 +1,4 @@
+import { getCloudflareContext } from '@opennextjs/cloudflare';
 import { NextResponse } from 'next/server';
 
 import { resolveWeeklyNudge } from '~/lib/weekly-nudge';
@@ -59,6 +60,7 @@ export async function POST(request: Request) {
     ? raw.excludeIds.filter((id): id is string => typeof id === 'string').slice(0, 40)
     : [];
 
-  const question = await resolveWeeklyNudge(signals, weekOf, excludeIds);
+  const { env } = getCloudflareContext();
+  const question = await resolveWeeklyNudge(signals, weekOf, excludeIds, env.AI);
   return NextResponse.json({ question });
 }
