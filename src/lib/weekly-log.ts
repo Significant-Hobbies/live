@@ -74,3 +74,57 @@ export function formatWeekSpan(weekOf: string): string {
  * Deliberately generous — this is a reconsideration prompt, not a deadline.
  */
 export const STALE_DREAM_DAYS = 21;
+
+/**
+ * Which dreams an entry touched — the honest reconciliation between what
+ * someone wants and what they actually lived. Matching is deliberately
+ * plain: a dream counts as touched when its title shares a meaningful
+ * word with the entry, or when the entry names its category. No fake
+ * state is written; this only reads.
+ */
+export function detectDreamTouches(
+  entryText: string,
+  dreams: Array<{ title: string; category?: string | null }>
+): string[] {
+  const text = entryText.toLowerCase();
+  if (!text.trim()) return [];
+  const words = new Set(text.match(/[a-z]{3,}/g) ?? []);
+  return dreams
+    .filter((dream) => {
+      const titleWords = (dream.title.toLowerCase().match(/[a-z]{4,}/g) ?? []).filter(
+        (word) => !DREAM_TITLE_STOPWORDS.has(word)
+      );
+      const titleHit = titleWords.some((word) => words.has(word) || text.includes(word));
+      const categoryHit =
+        !!dream.category &&
+        dream.category.length > 3 &&
+        text.includes(dream.category.toLowerCase());
+      return titleHit || categoryHit;
+    })
+    .map((dream) => dream.title);
+}
+
+// Words so common in dream titles they would match anything.
+const DREAM_TITLE_STOPWORDS = new Set([
+  'learn',
+  'make',
+  'take',
+  'have',
+  'with',
+  'from',
+  'this',
+  'that',
+  'more',
+  'some',
+  'your',
+  'life',
+  'want',
+  'something',
+  'things',
+  'start',
+  'every',
+  'first',
+  'year',
+  'week',
+  'trip',
+]);

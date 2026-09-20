@@ -50,6 +50,16 @@ export const WEEKLY_QUESTIONS: WeeklyQuestion[] = [
     family: 'momentum',
     text: 'Where did you surprise yourself with follow-through?',
   },
+  {
+    id: 'momentum-4',
+    family: 'momentum',
+    text: 'What got easier this week than it used to be?',
+  },
+  {
+    id: 'momentum-5',
+    family: 'momentum',
+    text: 'What small win deserves a sentence in your history?',
+  },
   // stuck — something did not move
   {
     id: 'stuck-1',
@@ -62,10 +72,30 @@ export const WEEKLY_QUESTIONS: WeeklyQuestion[] = [
     text: 'Which dream sat untouched this week — and is that okay?',
   },
   { id: 'stuck-3', family: 'stuck', text: 'What would have made this week easier on you?' },
+  {
+    id: 'stuck-4',
+    family: 'stuck',
+    text: 'What are you carrying that was never yours to carry?',
+  },
+  {
+    id: 'stuck-5',
+    family: 'stuck',
+    text: 'If the same thing stalls again next week, what would that tell you?',
+  },
   // lived — the plain record
   { id: 'lived-1', family: 'lived', text: 'What did you actually do with your time this week?' },
   { id: 'lived-2', family: 'lived', text: 'If this week were a photo album, what would be in it?' },
   { id: 'lived-3', family: 'lived', text: 'What did an ordinary day this week look like?' },
+  {
+    id: 'lived-4',
+    family: 'lived',
+    text: 'Which hour of this week would you relive exactly as it was?',
+  },
+  {
+    id: 'lived-5',
+    family: 'lived',
+    text: 'What filled the days that nobody will ever ask about?',
+  },
   // new — novelty
   { id: 'new-1', family: 'new', text: 'What did you do for the first time, or after a long time?' },
   { id: 'new-2', family: 'new', text: 'What was new this week — even something small?' },
@@ -73,6 +103,16 @@ export const WEEKLY_QUESTIONS: WeeklyQuestion[] = [
     id: 'new-3',
     family: 'new',
     text: 'Where did this week take you that you hadn\u2019t planned?',
+  },
+  {
+    id: 'new-4',
+    family: 'new',
+    text: 'What did you taste, hear, or see for the first time this week?',
+  },
+  {
+    id: 'new-5',
+    family: 'new',
+    text: 'Who or what did you meet this week that you didn\u2019t know last week?',
   },
   // people — who was in it
   { id: 'people-1', family: 'people', text: 'Who did this week include?' },
@@ -82,6 +122,16 @@ export const WEEKLY_QUESTIONS: WeeklyQuestion[] = [
     text: 'Whose company made this week better — or who did you miss?',
   },
   { id: 'people-3', family: 'people', text: 'What did you do with or for someone else this week?' },
+  {
+    id: 'people-4',
+    family: 'people',
+    text: 'Which conversation this week is still echoing?',
+  },
+  {
+    id: 'people-5',
+    family: 'people',
+    text: 'Who got the best of your attention this week — and did they deserve it?',
+  },
   // want — dreams touched
   {
     id: 'want-1',
@@ -98,22 +148,72 @@ export const WEEKLY_QUESTIONS: WeeklyQuestion[] = [
     family: 'want',
     text: 'What did you do this week that future-you will be glad about?',
   },
+  {
+    id: 'want-4',
+    family: 'want',
+    text: 'Which dream came closer without you noticing at the time?',
+  },
+  {
+    id: 'want-5',
+    family: 'want',
+    text: 'If next week could only move one dream, which should it be?',
+  },
   // honest — the harder look
   { id: 'honest-1', family: 'honest', text: 'What would you rather not repeat next week?' },
   { id: 'honest-2', family: 'honest', text: 'Where did your time go that you didn\u2019t choose?' },
   { id: 'honest-3', family: 'honest', text: 'What are you pretending is fine this week?' },
+  {
+    id: 'honest-4',
+    family: 'honest',
+    text: 'What did you call rest that was really avoidance?',
+  },
+  {
+    id: 'honest-5',
+    family: 'honest',
+    text: 'What would this week look like written by someone who watched you?',
+  },
   // rest — restoration
   { id: 'rest-1', family: 'rest', text: 'What restored you this week?' },
   { id: 'rest-2', family: 'rest', text: 'When did you feel most like yourself this week?' },
   { id: 'rest-3', family: 'rest', text: 'What did this week give you back?' },
+  {
+    id: 'rest-4',
+    family: 'rest',
+    text: 'When did your shoulders actually drop this week?',
+  },
+  {
+    id: 'rest-5',
+    family: 'rest',
+    text: 'What did you do slowly on purpose this week?',
+  },
   // surprise — the unexpected
   { id: 'surprise-1', family: 'surprise', text: 'What surprised you this week?' },
   { id: 'surprise-2', family: 'surprise', text: 'What happened that you didn\u2019t see coming?' },
   { id: 'surprise-3', family: 'surprise', text: 'What turned out differently than you expected?' },
+  {
+    id: 'surprise-4',
+    family: 'surprise',
+    text: 'What went wrong this week in a way you\u2019re oddly grateful for?',
+  },
+  {
+    id: 'surprise-5',
+    family: 'surprise',
+    text: 'Which plan bent this week, and was the bend better?',
+  },
   // next — looking one week ahead
   { id: 'next-1', family: 'next', text: 'What\u2019s the one thing next week should contain?' },
   { id: 'next-2', family: 'next', text: 'What would make next week count, in one line?' },
   { id: 'next-3', family: 'next', text: 'What are you carrying into next week on purpose?' },
+  {
+    id: 'next-4',
+    family: 'next',
+    text: 'What are you deliberately leaving out of next week?',
+  },
+  {
+    id: 'next-5',
+    family: 'next',
+    text: 'If next week had a title, what would you want it to be?',
+  },
 ];
 
 export type NudgeSignals = {
