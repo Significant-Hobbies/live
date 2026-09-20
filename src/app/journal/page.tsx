@@ -94,6 +94,7 @@ export default async function JournalPage() {
           })),
           weeksRemaining,
           initialQuestion: question,
+          nudgeRequest: { signals, excludeIds },
           archiveSlot: <JournalArchive records={journalHistory} />,
         }}
         actions={{

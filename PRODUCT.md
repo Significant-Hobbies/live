@@ -23,8 +23,9 @@ toward it — a family of focused personal products:
 - **Live** owns bucket lists, hobbies, commitments, timelines, side quests,
   discovery, and the optional small new thing for today.
 - **Weekly log** owns the private weekly record of what the user actually
-  lived — the journal's successor — and keeps earlier AM/PM entries readable
-  as archive.
+  lived — the journal's successor — as a short guided interview: an
+  opening question, then the next best question each turn until the user
+  says they're done. Earlier AM/PM entries remain readable as archive.
 - **Habits** owns simple, non-scoring practice check-ins.
 - **History** remains part of Live and helps the user understand the life
   accumulating behind their plans.

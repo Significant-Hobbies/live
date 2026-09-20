@@ -43,7 +43,7 @@ test.describe('Journal, Habits & manifesto', () => {
 
     await page.goto('/journal');
     await page.locator('#weekly-entry').fill('I made room for a slower afternoon.');
-    await page.getByRole('button', { name: /Save this week|Update this week/ }).click();
+    await page.getByRole('button', { name: /done — keep this week|Update this week/ }).click();
     await page.reload();
     await expect(page.locator('#weekly-entry')).toHaveValue('I made room for a slower afternoon.');
 
@@ -52,6 +52,27 @@ test.describe('Journal, Habits & manifesto', () => {
     await expect(page.locator('#weekly-entry')).toHaveCount(0);
     await expect(page.getByText('Ready when you are')).toBeVisible();
     await expect(page.getByText(/\d+ of \d+ complete today/)).toHaveCount(0);
+  });
+
+  test('the weekly log asks follow-up questions until the week is done', async ({ page }) => {
+    await completeLocalOnboarding(page);
+    await page.goto('/journal');
+
+    await page.locator('#weekly-entry').fill('Dinner with my mom, then a long slow walk.');
+    await page.getByRole('button', { name: 'Next question' }).click();
+
+    // The kept answer stays on the page while a fresh question takes over.
+    await expect(page.getByText('Dinner with my mom, then a long slow walk.')).toBeVisible();
+    await expect(page.locator('#weekly-entry')).toHaveValue('');
+
+    await page.locator('#weekly-entry').fill('A quiet Sunday with coffee and a book.');
+    await page.getByRole('button', { name: /done — keep this week/ }).click();
+    await expect(page.getByText('Kept. This week is on record.')).toBeVisible();
+
+    await page.reload();
+    const saved = await page.locator('#weekly-entry').inputValue();
+    expect(saved).toContain('Dinner with my mom, then a long slow walk.');
+    expect(saved).toContain('A quiet Sunday with coffee and a book.');
   });
 
   test('/live-more keeps and restores an exact dream', async ({ page }) => {

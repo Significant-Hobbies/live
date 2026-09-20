@@ -127,6 +127,12 @@ export type NudgeSignals = {
   activeDreams: number;
   /** Whether today is the suggested Sunday writing moment. */
   isSuggestedDay: boolean;
+  /** Theme families detected locally from earlier answers this session. */
+  detectedThemes?: string[];
+  /** Question families already asked this session — excluded from the next pick. */
+  askedFamilies?: string[];
+  /** Which turn of the weekly interview this is (0 = opener). */
+  turn?: number;
 };
 
 /**
@@ -141,7 +147,80 @@ export function buildNudgeContext(signals: NudgeSignals): string {
     `active dreams: ${signals.activeDreams}`,
     `suggested day: ${signals.isSuggestedDay ? 'yes' : 'no'}`,
   ];
+  if (signals.detectedThemes?.length) {
+    parts.push(`themes in earlier answers: ${signals.detectedThemes.join(', ')}`);
+  }
+  if (signals.askedFamilies?.length) {
+    parts.push(`families already asked: ${signals.askedFamilies.join(', ')}`);
+  }
+  if (typeof signals.turn === 'number' && signals.turn > 0) {
+    parts.push(`interview turn: ${signals.turn}`);
+  }
   return parts.join('; ');
+}
+
+// Theme detection runs locally — the answer itself never leaves the device.
+// Only the matched family names become classifier signals.
+const THEME_KEYWORDS: Array<{ family: QuestionFamily; pattern: RegExp }> = [
+  {
+    family: 'people',
+    pattern:
+      /\b(friends?|wife|husband|partner|mom|mother|dad|father|family|kids?|son|daughter|colleague|coworker|team|dinner with|met up|called|visited|date|birthday|parents?)\b/i,
+  },
+  {
+    family: 'rest',
+    pattern:
+      /\b(slept?|sleep|nap|rested?|relax\w*|walks?|read|reading|movie|film|show|watched|slow|quiet|coffee|recover\w*|weekend|garden|bath|massage)\b/i,
+  },
+  {
+    family: 'stuck',
+    pattern:
+      /\b(didn.?t get|didn.?t|postponed|put off|procrastinat\w*|missed|skipped|couldn.?t|failed|behind|too busy|forgot)\b/i,
+  },
+  {
+    family: 'new',
+    pattern:
+      /\b(first time|tried|trying|never before|signed up|lessons?|classes?|began|started learning|new (job|hobby|place|restaurant|trail))\b/i,
+  },
+  {
+    family: 'want',
+    pattern:
+      /\b(dream|goal|bucket list|always wanted|someday|plan to|booked|reservation|applied)\b/i,
+  },
+  {
+    family: 'honest',
+    pattern:
+      /\b(wasted|mindless|scroll\w*|stressed|anxious|overwhelm\w*|exhausted|regret|shouldn.?t have|hated|doom)\b/i,
+  },
+  {
+    family: 'surprise',
+    pattern:
+      /\b(surpris\w*|unexpected|suddenly|randomly|turned out|out of nowhere|didn.?t expect|ran into)\b/i,
+  },
+  {
+    family: 'momentum',
+    pattern:
+      /\b(finished|completed|started|launched|shipped|progress|finally|got done|submitted|workout|ran|practiced|built|wrote|cooked|painted|recorded)\b/i,
+  },
+  {
+    family: 'next',
+    pattern: /\b(next week|plan\w*|tomorrow|upcoming|looking forward|will be)\b/i,
+  },
+];
+
+/**
+ * Detect which question families an answer touched — locally, so the
+ * prose never leaves the device. 'lived' is the opener family and is
+ * never detected: it is the default, not a theme.
+ */
+export function detectThemes(text: string): QuestionFamily[] {
+  if (!text.trim()) return [];
+  return THEME_KEYWORDS.filter(({ pattern }) => pattern.test(text)).map(({ family }) => family);
+}
+
+/** Families still available to ask — everything not already asked this session. */
+export function remainingFamilies(askedFamilies: string[] = []): QuestionFamily[] {
+  return QUESTION_FAMILIES.filter((family) => !askedFamilies.includes(family));
 }
 
 /** True when the context carries no meaningful signal — go straight to fallback. */
@@ -150,7 +229,8 @@ export function isContextEmpty(signals: NudgeSignals): boolean {
     signals.staleDreamCategories.length === 0 &&
     signals.entriesLastMonth === 0 &&
     signals.activeCommitments === 0 &&
-    signals.activeDreams === 0
+    signals.activeDreams === 0 &&
+    (signals.detectedThemes?.length ?? 0) === 0
   );
 }
 
