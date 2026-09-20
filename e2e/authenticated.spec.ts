@@ -102,7 +102,9 @@ test.describe('authenticated surfaces', () => {
     const journal = 'I noticed something new today.';
     await authedPage.goto('/journal');
     await authedPage.locator('#weekly-entry').fill(journal);
-    await authedPage.getByRole('button', { name: /Save this week|Update this week/ }).click();
+    await authedPage
+      .getByRole('button', { name: /done — keep this week|Update this week/ })
+      .click();
     await authedPage.goto('/live-more');
     await authedPage.getByLabel('What do you still want to live?').fill(chosenIdea);
     await expect(authedPage.getByRole('button', { name: 'Calling now' })).toBeVisible();
@@ -124,7 +126,7 @@ test.describe('authenticated surfaces', () => {
     await expect(authedPage.locator('#weekly-entry')).toBeVisible();
     await expect(authedPage.getByText(/Week of /)).toBeVisible();
     await expect(
-      authedPage.getByRole('button', { name: /Save this week|Update this week/ })
+      authedPage.getByRole('button', { name: /done — keep this week|Update this week/ })
     ).toBeVisible();
   });
 

@@ -27,7 +27,15 @@ export async function resolveWeeklyNudge(
   weekOf: string,
   excludeIds: string[] = []
 ): Promise<WeeklyQuestion> {
-  if (isContextEmpty(signals)) return fallbackQuestion(weekOf, excludeIds);
+  // Each turn gets its own seed so consecutive questions in one session
+  // don't collapse onto the same deterministic pick.
+  const seed = `${weekOf}#${signals.turn ?? 0}`;
+  const fallback = () => fallbackQuestion(seed, excludeIds);
+  if (isContextEmpty(signals)) return fallback();
+
+  const asked = new Set(signals.askedFamilies ?? []);
+  const labels = QUESTION_FAMILIES.filter((family) => !asked.has(family));
+  if (!labels.length) return fallback();
 
   try {
     const response = await fetch(CLASSIFIER_ENDPOINT, {
@@ -35,20 +43,20 @@ export async function resolveWeeklyNudge(
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({
         inputs: [buildNudgeContext(signals)],
-        labels: QUESTION_FAMILIES,
+        labels,
       }),
       signal: AbortSignal.timeout(CLASSIFIER_TIMEOUT_MS),
       cache: 'no-store',
     });
-    if (!response.ok) return fallbackQuestion(weekOf, excludeIds);
+    if (!response.ok) return fallback();
 
     const body = (await response.json()) as { results?: ClassifierResult[] };
     const label = body.results?.[0]?.label;
     if (typeof label !== 'string' || !isQuestionFamily(label)) {
-      return fallbackQuestion(weekOf, excludeIds);
+      return fallback();
     }
-    return questionForFamily(label, weekOf, excludeIds);
+    return questionForFamily(label, seed, excludeIds);
   } catch {
-    return fallbackQuestion(weekOf, excludeIds);
+    return fallback();
   }
 }

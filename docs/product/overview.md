@@ -60,11 +60,16 @@ Emotional goal: users should feel seen, inspired, and gently nudged — not trac
 The 2026-08 split preserves existing data while giving each recurring job a
 clearer home:
 
-- **Weekly log (private):** `/journal` hosts the weekly log — one honest
-  entry a week answering "what did you live this week?", keyed to user-local
-  weeks (Monday start by default, adjustable). Earlier AM/PM journal entries
-  remain readable as archive. Structurally private: no visibility field,
-  public API, or sharing.
+- **Weekly log (private):** `/journal` hosts the weekly log — a short
+  guided interview per week. It opens with one question ("what did you
+  live this week?"), then asks the next most relevant question from a
+  ~30-question bank until the person says they're done; the answers
+  compose into the week's entry. Question selection uses classifier.dev
+  over categorical signals only — answer themes are detected on-device
+  and user prose never leaves the app. Entries are keyed to user-local
+  weeks (Monday start by default, adjustable). Earlier AM/PM journal
+  entries remain readable as archive. Structurally private: no
+  visibility field, public API, or sharing.
 - **Habits (private):** `/habits` owns simple check-ins and lightweight
   management without scoring.
 - **Live (private by default, selectively public):** hobbies, bucket lists,

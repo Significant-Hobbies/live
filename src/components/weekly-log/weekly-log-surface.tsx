@@ -12,8 +12,8 @@ import {
   type WeekStartsOn,
 } from '~/lib/weekly-log';
 import {
+  detectThemes,
   fallbackQuestion,
-  WEEKLY_QUESTIONS,
   type NudgeSignals,
   type WeeklyQuestion,
 } from '~/lib/weekly-questions';
@@ -86,6 +86,14 @@ export function WeeklyLogSurface({
   const [callingTitle, setCallingTitle] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
 
+  // Interview turns: answers kept so far this week, plus the running
+  // classifier signals that pick the next question.
+  const [turns, setTurns] = useState<Array<{ questionText: string; answer: string }>>([]);
+  const [askedFamilies, setAskedFamilies] = useState<string[]>([]);
+  const [askedIds, setAskedIds] = useState<string[]>([]);
+  const [themes, setThemes] = useState<string[]>([]);
+  const [fetchingNext, setFetchingNext] = useState(false);
+
   const weekOf = useMemo(() => weekStartFor(data.today, weekStartsOn), [data.today, weekStartsOn]);
   const currentEntry = entries.find((entry) => entry.weekOf === weekOf) ?? null;
   const textareaValue = editedWeek === weekOf ? text : (currentEntry?.text ?? '');
@@ -132,34 +140,86 @@ export function WeeklyLogSurface({
     };
   }, [question, nudgeRequest, weekStartsOn, weekOf]);
 
+  const allExcludeIds = [...(data.nudgeRequest?.excludeIds ?? []), ...askedIds];
+
+  async function resolveNextQuestion(turn: number, signalPatch: Partial<NudgeSignals>) {
+    setFetchingNext(true);
+    try {
+      const response = await fetch('/api/weekly-nudge', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          signals: { ...data.nudgeRequest?.signals, ...signalPatch, turn },
+          weekStartsOn,
+          weekOf,
+          excludeIds: allExcludeIds,
+        }),
+      });
+      if (response.ok) {
+        const body = (await response.json()) as { question?: WeeklyQuestion };
+        if (body.question?.text) {
+          setQuestion(body.question);
+          servedRef.current?.(body.question.id);
+          return;
+        }
+      }
+    } catch {
+      // fall through to rotation
+    } finally {
+      setFetchingNext(false);
+    }
+    setQuestion(fallbackQuestion(`${weekOf}#${turn}`, allExcludeIds));
+  }
+
   function cycleQuestion() {
-    const exclude = [question?.id ?? '', ...(data.nudgeRequest?.excludeIds ?? [])];
-    const pool = WEEKLY_QUESTIONS.filter((q) => !exclude.includes(q.id));
-    const candidates = pool.length ? pool : WEEKLY_QUESTIONS.filter((q) => q.id !== question?.id);
-    setQuestion(candidates[0] ?? question);
-    if (candidates[0]) actions.onQuestionServed?.(candidates[0].id);
+    const skipped = question ? [question.family] : [];
+    const nextAsked = [...new Set([...askedFamilies, ...skipped])];
+    setAskedFamilies(nextAsked);
+    if (question) setAskedIds((ids) => [...ids, question.id]);
+    void resolveNextQuestion(turns.length, { askedFamilies: nextAsked });
+  }
+
+  async function nextQuestion() {
+    const answer = textareaValue.trim();
+    if (!answer || !question) return;
+    const newThemes = [...new Set([...themes, ...detectThemes(answer)])];
+    const nextAsked = [...new Set([...askedFamilies, question.family])];
+    setTurns((current) => [...current, { questionText: question.text, answer }]);
+    setThemes(newThemes);
+    setAskedFamilies(nextAsked);
+    setAskedIds((ids) => [...ids, question.id]);
+    setText('');
+    await resolveNextQuestion(turns.length + 1, {
+      detectedThemes: newThemes,
+      askedFamilies: nextAsked,
+    });
   }
 
   async function handleSave() {
-    const trimmed = textareaValue.trim();
-    if (!trimmed) return;
+    const answers = [...turns.map((turn) => turn.answer), textareaValue.trim()].filter(Boolean);
+    const composed = answers.join('\n\n');
+    if (!composed) return;
+    const promptText = turns[0]?.questionText ?? question?.text ?? null;
     setSaving(true);
     setSaved(false);
     setSaveError(null);
     try {
-      const ok = await actions.onSave(weekOf, trimmed, question?.text ?? null);
+      const ok = await actions.onSave(weekOf, composed, promptText);
       if (!ok) throw new Error('not saved');
       setEntries((current) => {
         const next = {
           id: currentEntry?.id ?? `week-${weekOf}`,
           weekOf,
-          text: trimmed,
-          promptText: question?.text ?? null,
+          text: composed,
+          promptText,
         };
         return current.some((entry) => entry.weekOf === weekOf)
           ? current.map((entry) => (entry.weekOf === weekOf ? next : entry))
           : [next, ...current];
       });
+      setTurns([]);
+      setText('');
+      setEditedWeek(null);
       setSaved(true);
       window.setTimeout(() => setSaved(false), 2500);
     } catch {
@@ -216,6 +276,9 @@ export function WeeklyLogSurface({
           },
           onSave: handleSave,
           onCycle: cycleQuestion,
+          onNext: nextQuestion,
+          turns,
+          fetchingNext,
           saving,
           saved,
           saveError,
@@ -302,6 +365,9 @@ type WriteCardModel = {
   onText: (value: string) => void;
   onSave: () => void;
   onCycle: () => void;
+  onNext: () => void;
+  turns: Array<{ questionText: string; answer: string }>;
+  fetchingNext: boolean;
   saving: boolean;
   saved: boolean;
   saveError: string | null;
@@ -309,9 +375,25 @@ type WriteCardModel = {
 };
 
 function WriteCard({ card }: { card: WriteCardModel }) {
-  const { weekOf, question, text, onText, onSave, onCycle, saving, saved, saveError, hasEntry } =
-    card;
+  const {
+    weekOf,
+    question,
+    text,
+    onText,
+    onSave,
+    onCycle,
+    onNext,
+    turns,
+    fetchingNext,
+    saving,
+    saved,
+    saveError,
+    hasEntry,
+  } = card;
   const label = question ? question.text : 'What did you live this week?';
+  const interview = !hasEntry || turns.length > 0;
+  const canAdvance = !!text.trim() && !fetchingNext && !saving;
+  const canFinish = canAdvance || turns.length > 0;
   return (
     <section
       aria-labelledby="weekly-entry-title"
@@ -323,10 +405,27 @@ function WriteCard({ card }: { card: WriteCardModel }) {
           id="weekly-entry-title"
           className="mt-1 font-serif text-3xl font-medium tracking-tight text-foreground"
         >
-          {label}
+          {fetchingNext ? 'One more…' : label}
         </h2>
       </div>
       <div className="px-5 py-6 sm:px-7 sm:py-8">
+        {turns.length ? (
+          <ol className="mb-5 space-y-4">
+            {turns.map((turn, index) => (
+              <li
+                key={`${turn.questionText}-${index}`}
+                className="border-l-2 border-[#c5abfa] pl-4"
+              >
+                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#625b50]">
+                  {turn.questionText}
+                </p>
+                <p className="mt-1 whitespace-pre-wrap text-sm leading-relaxed text-foreground/80">
+                  {turn.answer}
+                </p>
+              </li>
+            ))}
+          </ol>
+        ) : null}
         <label htmlFor="weekly-entry" className="sr-only">
           {label}
         </label>
@@ -334,24 +433,46 @@ function WriteCard({ card }: { card: WriteCardModel }) {
           id="weekly-entry"
           value={text}
           onChange={(event) => onText(event.target.value)}
-          placeholder="One honest paragraph is enough. What did you actually do with your week?"
-          rows={7}
+          placeholder={
+            turns.length
+              ? 'Answer this one too — or finish whenever the week feels written.'
+              : 'One honest paragraph is enough. What did you actually do with your week?'
+          }
+          rows={turns.length ? 4 : 7}
           className="w-full resize-y rounded-xl border border-[#cfc3b0] bg-[#fffdf8] px-4 py-3 text-base leading-relaxed outline-none focus:border-[#176b4a] focus:ring-2 focus:ring-[#176b4a]/20"
         />
         <div className="mt-4 flex flex-wrap items-center gap-3">
+          {interview ? (
+            <button
+              type="button"
+              onClick={onNext}
+              disabled={!canAdvance}
+              className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#176b4a] px-5 font-bold text-white disabled:opacity-45"
+            >
+              {fetchingNext ? (
+                <Loader2 className="size-4 animate-spin" />
+              ) : (
+                <ArrowRight className="size-4" />
+              )}
+              Next question
+            </button>
+          ) : null}
           <button
             type="button"
             onClick={onSave}
-            disabled={saving || !text.trim()}
-            className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#176b4a] px-5 font-bold text-white disabled:opacity-45"
+            disabled={saving || (interview ? !canFinish : !text.trim())}
+            className={`inline-flex min-h-12 items-center gap-2 rounded-xl px-5 font-bold disabled:opacity-45 ${
+              interview ? 'border border-[#176b4a] text-[#176b4a]' : 'bg-[#176b4a] text-white'
+            }`}
           >
             {saving ? <Loader2 className="size-4 animate-spin" /> : <Check className="size-4" />}
-            {hasEntry ? 'Update this week' : 'Save this week'}
+            {hasEntry ? 'Update this week' : "I'm done — keep this week"}
           </button>
           <button
             type="button"
             onClick={onCycle}
-            className="inline-flex min-h-11 items-center gap-2 rounded-xl border border-[#cfc3b0] px-4 text-sm font-bold text-[#625b50]"
+            disabled={fetchingNext}
+            className="inline-flex min-h-11 items-center gap-2 rounded-xl border border-[#cfc3b0] px-4 text-sm font-bold text-[#625b50] disabled:opacity-45"
           >
             <RefreshCw className="size-3.5" /> A different question
           </button>

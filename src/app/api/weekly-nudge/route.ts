@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 import { resolveWeeklyNudge } from '~/lib/weekly-nudge';
 import { weekStartFor, normalizeWeekStartsOn } from '~/lib/weekly-log';
 import { dayKeyIn } from '~/lib/day';
-import type { NudgeSignals } from '~/lib/weekly-questions';
+import { isQuestionFamily, type NudgeSignals } from '~/lib/weekly-questions';
 
 export const dynamic = 'force-dynamic';
 
@@ -19,12 +19,17 @@ function cleanSignals(value: unknown): NudgeSignals | null {
     : [];
   const count = (v: unknown, max: number) =>
     typeof v === 'number' && Number.isInteger(v) && v >= 0 ? Math.min(v, max) : 0;
+  const families = (v: unknown, max: number) =>
+    Array.isArray(v) ? v.filter((f): f is string => isQuestionFamily(f)).slice(0, max) : [];
   return {
     staleDreamCategories: categories,
     entriesLastMonth: count(raw.entriesLastMonth, 52),
     activeCommitments: count(raw.activeCommitments, 100),
     activeDreams: count(raw.activeDreams, 1000),
     isSuggestedDay: raw.isSuggestedDay === true,
+    detectedThemes: families(raw.detectedThemes, 10),
+    askedFamilies: families(raw.askedFamilies, 10),
+    turn: count(raw.turn, 20),
   };
 }
 
