@@ -1,14 +1,15 @@
 ---
 title: Product overview
-description: SignificantHobbies — a family of focused Live, Journal, and Habits products. Product thesis, users, brand, design principles, and the mortality frame.
+description: SignificantHobbies — a family of focused Live, Weekly log, and Habits products. Product thesis, users, brand, design principles, and the mortality frame.
 ---
 
 # Product overview
 
 > A family of focused personal products. **Live** owns hobby discovery, bucket
 > lists, timelines, commitments, side quests, and one optional small new thing.
-> **Journal** owns private AM/PM writing. **Habits** owns non-scoring practice
-> check-ins. The mortality frame (life grid, manifesto) connects the family.
+> **Weekly log** owns the private weekly record of what the user lived — the
+> journal's successor. **Habits** owns non-scoring practice check-ins. The
+> mortality frame (life grid, manifesto) connects the family.
 
 ## Register
 
@@ -20,7 +21,7 @@ People in their 20s–40s who feel the pull of unlived experiences — curious a
 
 ## Product Purpose
 
-A companion for living intentionally — helping people discover their hobbies, build their bucket list, and track a life worth remembering. The core loop is: discover what is possible → save what feels alive → take one small step → reflect on what changed. The bucket list is the durable centre of the Living dimension: it answers “what do I want to do with my life?” rather than just “what are my hobbies?”
+A companion for living the life you actually want — helping people name what they still want to live, plan toward it, and keep a truthful weekly record of what they did. The core loop is: discover what is possible → save what feels alive → take one small step → record the week → reconcile against the wants. The bucket list is the durable centre of the Living dimension: it answers “what do I want to do with my life?” rather than just “what are my hobbies?”
 
 Lumi is the mascot: an amber/gold guiding light. Warm, aspirational, never preachy. "Your guiding light toward a life worth remembering."
 
@@ -59,8 +60,11 @@ Emotional goal: users should feel seen, inspired, and gently nudged — not trac
 The 2026-08 split preserves existing data while giving each recurring job a
 clearer home:
 
-- **Journal (private):** `/journal` owns AM/PM prompts and journal history.
-  Structurally private: no visibility field, public API, or sharing.
+- **Weekly log (private):** `/journal` hosts the weekly log — one honest
+  entry a week answering "what did you live this week?", keyed to user-local
+  weeks (Monday start by default, adjustable). Earlier AM/PM journal entries
+  remain readable as archive. Structurally private: no visibility field,
+  public API, or sharing.
 - **Habits (private):** `/habits` owns simple check-ins and lightweight
   management without scoring.
 - **Live (private by default, selectively public):** hobbies, bucket lists,
@@ -68,18 +72,19 @@ clearer home:
   home: the owned list and yearly goals come first, then corpus-backed discovery,
   the optional small new thing, Life Bingo, and Side Quests. Focused tools remain
   separate routes.
-- **First-use Living loop:** onboarding turns remembered hobbies into a private
-  timeline and searches 5,000+ structured paths while accepting a pasted personal
-  bucket list. Yearly goals are captured independently, may optionally borrow
-  from the bucket list, and collectively become Trajectory direction. A daily habit is optional,
-  because episodic goals do not need artificial repetition. A separate owner-only choice is still required
-  before a timeline appears on the public profile. See
-  [`decisions.md`](../architecture/decisions.md) A13.
-- **The journal is the bridge.** A private daily entry can optionally relate to
-  one of its owner's timelines or non-abandoned commitments. The relationship
-  creates a navigable thread back to the Living plan; it does not create proof,
-  progress, scoring, or public activity. See
-  [`decisions.md`](../architecture/decisions.md) A12.
+- **First-use Living loop:** onboarding opens with the honest math — the
+  user's own weeks lived and roughly remaining of a ~4,000-week life — then
+  turns remembered hobbies into a private timeline and searches 5,000+
+  structured paths while accepting a pasted personal bucket list. Yearly goals
+  are captured independently, may optionally borrow from the bucket list, and
+  collectively become Trajectory direction. A daily habit is optional, because
+  episodic goals do not need artificial repetition. A separate owner-only
+  choice is still required before a timeline appears on the public profile.
+  See [`decisions.md`](../architecture/decisions.md) A13.
+- **The weekly log is the bridge.** Each week's entry sits alongside a
+  gentle "still calling?" check for dreams that have been quiet — a
+  reconsideration prompt, never a failure state. Missed weeks stay missed;
+  there are no streaks, scores, or make-up pressure.
 - **Habits can point to a commitment.** An owner may explicitly relate one
   private habit to one owned, non-abandoned commitment and change or clear that
   link later. The check-in remains lightweight context: only a deliberate proof
@@ -97,17 +102,18 @@ clearer home:
 - **Live (`/live-more`):** bucket list and yearly
   goals, the optional small new thing, a substantial discovery engine, and
   small-step paths into Bingo and Side Quests.
-- **Journal (`/journal`):** private writing and journal history.
+- **Weekly log (`/journal`):** private weekly writing, week history, and
+  the archived AM/PM entries that preceded it.
 - **Habits (`/habits`):** a calm practice checklist and management surface
   without scores.
 - **History (`/history`):** the personal timeline, Life in Weeks, life-so-far
-  reflection, and Trajectory. It no longer retrieves Journal or Habits records.
+  reflection, and Trajectory. Weekly-log entries join the narrative.
 - **Daily (`/daily`):** a compatibility doorway that explains the split and
-  routes existing bookmarks to Journal or Habits.
+  routes existing bookmarks to the weekly log or Habits.
 
 All visitors see the product Hub at `/`. Public editorial, discovery, and
 explicitly public profiles remain reachable. Private-section attempts continue
-at `/onboarding` until onboarding is complete. Navigation names Live, Journal,
+at `/onboarding` until onboarding is complete. Navigation names Live, Weekly log,
 Habits, and History directly inside the existing same-origin application.
 
 ### What we deliberately do not do

@@ -46,9 +46,10 @@ export default function ManifestoPage() {
           </p>
 
           <p className="text-base text-muted-foreground leading-relaxed">
-            <span className="text-foreground font-medium">Daily.</span> One ritual, twice a day.
-            Morning prompts, habit check-ins, and a journal entry. The quiet capture of how
-            you&apos;re spending your days. Private by default — no one sees this but you.
+            <span className="text-foreground font-medium">Daily.</span> Small practices checked in,
+            never scored. And once a week — usually a Sunday — one honest question: what did you
+            actually do with your life this week? The quiet capture of how you&apos;re spending your
+            days. Private by default — no one sees this but you.
           </p>
 
           <p className="text-base text-muted-foreground leading-relaxed">
@@ -75,8 +76,8 @@ export default function ManifestoPage() {
           </ul>
 
           <p className="text-base text-muted-foreground leading-relaxed">
-            The journal is the bridge. You write about practicing your hobby, and that entry
-            connects your daily practice to your life aspirations. The days become weeks. The weeks
+            The weekly log is the bridge. You write what you actually lived, and that record
+            connects your weeks to the life you said you wanted. The days become weeks. The weeks
             become a life.
           </p>
 

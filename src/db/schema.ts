@@ -109,6 +109,9 @@ export const users = sqliteTable('User', {
   // Exact private date for Life in Weeks. Kept alongside birthYear while
   // older mortality/profile surfaces migrate from the legacy approximation.
   birthDate: text('birthDate'),
+  // 'monday' | 'sunday' — which day starts this owner's week in the weekly
+  // log. Null = Monday, the product default.
+  weekStartsOn: text('weekStartsOn'),
   bio: text('bio'),
   website: text('website'),
   // The user's personal creed — their declaration of what they're about.
@@ -470,6 +473,36 @@ export const journalEntries = sqliteTable(
       'JournalEntry_single_context_check',
       sql`${table.timelineId} IS NULL OR ${table.commitmentId} IS NULL`
     ),
+  ]
+);
+
+// ─── WeeklyLogEntry — the weekly reckoning ────────────────────────────────
+//
+// The journal's AM/PM cadence was replaced by one weekly question: "what did
+// you live this week?" One row per owner per week. `weekOf` is the user-local
+// YYYY-MM-DD of the week's starting day — Monday by default, Sunday when the
+// owner's `users.weekStartsOn` preference says so — so changing the preference
+// never rewrites history. `promptText` keeps the nudge question that was
+// showing when the entry was written, so the archive stays truthful about
+// what was being answered.
+export const weeklyLogEntries = sqliteTable(
+  'WeeklyLogEntry',
+  {
+    id: text('id')
+      .primaryKey()
+      .$defaultFn(() => createId()),
+    userId: text('userId')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    weekOf: text('weekOf').notNull(),
+    text: text('text').notNull(),
+    promptText: text('promptText'),
+    createdAt: integer('createdAt', { mode: 'timestamp' }).notNull().default(sql`(unixepoch())`),
+    updatedAt: integer('updatedAt', { mode: 'timestamp' }).notNull().default(sql`(unixepoch())`),
+  },
+  (table) => [
+    uniqueIndex('WeeklyLogEntry_userId_weekOf_key').on(table.userId, table.weekOf),
+    index('WeeklyLogEntry_userId_idx').on(table.userId),
   ]
 );
 

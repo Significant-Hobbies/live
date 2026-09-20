@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 
-import { HabitsExperience, JournalExperience } from '~/components/personal-practice-surfaces';
+import { HabitsExperience } from '~/components/personal-practice-surfaces';
 import { StorageModeProvider, StorageModeStatus } from '~/components/storage-mode-provider';
 import { browserRecordAdapter, readLocalRecord, writeLocalRecord } from '~/lib/local-record-store';
 
@@ -21,7 +21,7 @@ interface LocalHabitLog {
   dayDate: string;
   completed: boolean;
 }
-interface LocalJournal {
+export interface LocalJournal {
   id: string;
   dayDate: string;
   amEntry: string | null;
@@ -32,7 +32,7 @@ interface LocalJournal {
   noveltyText?: string | null;
   noveltyCompleted?: boolean;
 }
-interface LocalDailyState {
+export interface LocalDailyState {
   habits: LocalHabit[];
   logs: LocalHabitLog[];
   journals: LocalJournal[];
@@ -41,45 +41,21 @@ interface LocalProfile {
   name?: string;
 }
 
-const EMPTY: LocalDailyState = { habits: [], logs: [], journals: [] };
+const EMPTY_LOCAL_DAILY: LocalDailyState = { habits: [], logs: [], journals: [] };
 
-export function LocalJournalExperience({
-  today,
-  isMorning,
-}: {
-  today: string;
-  isMorning: boolean;
-}) {
-  return <LocalPersonalPracticeSurface today={today} isMorning={isMorning} surface="journal" />;
+export function isLocalDailyState(value: unknown): value is LocalDailyState {
+  return !!value && typeof value === 'object' && 'habits' in value;
 }
 
 export function LocalHabitsExperience({ today }: { today: string }) {
-  return <LocalPersonalPracticeSurface today={today} isMorning={true} surface="habits" />;
-}
-
-function LocalPersonalPracticeSurface({
-  today,
-  isMorning,
-  surface,
-}: {
-  today: string;
-  isMorning: boolean;
-  surface: 'journal' | 'habits';
-}) {
-  const [state, setState] = useState<LocalDailyState>(EMPTY);
+  const [state, setState] = useState<LocalDailyState>(EMPTY_LOCAL_DAILY);
   const [profile, setProfile] = useState<LocalProfile>({});
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     const adapter = browserRecordAdapter();
     Promise.all([
-      readLocalRecord(
-        adapter,
-        'daily:state',
-        'daily',
-        (value): value is LocalDailyState =>
-          !!value && typeof value === 'object' && 'habits' in value
-      ),
+      readLocalRecord(adapter, 'daily:state', 'daily', isLocalDailyState),
       readLocalRecord(
         adapter,
         'onboarding:profile',
@@ -87,7 +63,7 @@ function LocalPersonalPracticeSurface({
         (value): value is LocalProfile => !!value && typeof value === 'object'
       ),
     ]).then(([stored, storedProfile]) => {
-      setState(stored ?? EMPTY);
+      setState(stored ?? EMPTY_LOCAL_DAILY);
       setProfile(storedProfile ?? {});
       setLoaded(true);
     });
@@ -152,28 +128,6 @@ function LocalPersonalPracticeSurface({
           };
         });
       },
-      async saveJournalEntry(dayDate: string, amEntry: string | null, pmEntry: string | null) {
-        await commit((current) => {
-          const existing = current.journals.find((entry) => entry.dayDate === dayDate);
-          const entry: LocalJournal = {
-            id: existing?.id ?? `local-journal-${crypto.randomUUID()}`,
-            dayDate,
-            amEntry,
-            pmEntry,
-            timelineId: null,
-            commitmentId: null,
-            noveltyId: existing?.noveltyId ?? null,
-            noveltyText: existing?.noveltyText ?? null,
-            noveltyCompleted: existing?.noveltyCompleted ?? false,
-          };
-          return {
-            ...current,
-            journals: existing
-              ? current.journals.map((item) => (item.id === existing.id ? entry : item))
-              : [...current.journals, entry],
-          };
-        });
-      },
       // commit deliberately follows the latest state through the component remount revision.
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }),
@@ -183,39 +137,25 @@ function LocalPersonalPracticeSurface({
   if (!loaded)
     return (
       <p className="p-8 text-center text-sm text-muted-foreground">
-        Loading {surface === 'journal' ? 'Journal' : 'Habits'} from this device…
+        Loading Habits from this device…
       </p>
     );
-  const todayJournal = state.journals.find((entry) => entry.dayDate === today) ?? null;
   return (
     <StorageModeProvider mode="local">
       <div className="mx-auto max-w-3xl px-4 pt-6">
         <StorageModeStatus />
       </div>
-      {surface === 'journal' ? (
-        <JournalExperience
-          firstName={profile.name?.trim().split(/\s+/)[0] || 'there'}
-          today={today}
-          isMorning={isMorning}
-          weeksRemaining={null}
-          journalEntry={todayJournal}
-          journalEntries={state.journals}
-          saveJournalEntry={actions.saveJournalEntry}
-          localMode
-        />
-      ) : (
-        <HabitsExperience
-          firstName={profile.name?.trim().split(/\s+/)[0] || 'there'}
-          today={today}
-          habits={state.habits}
-          habitLogs={state.logs.filter((log) => log.dayDate === today)}
-          createHabit={actions.createHabit}
-          deleteHabit={actions.deleteHabit}
-          setHabitCommitment={actions.setHabitCommitment}
-          toggleHabitLog={actions.toggleHabitLog}
-          localMode
-        />
-      )}
+      <HabitsExperience
+        firstName={profile.name?.trim().split(/\s+/)[0] || 'there'}
+        today={today}
+        habits={state.habits}
+        habitLogs={state.logs.filter((log) => log.dayDate === today)}
+        createHabit={actions.createHabit}
+        deleteHabit={actions.deleteHabit}
+        setHabitCommitment={actions.setHabitCommitment}
+        toggleHabitLog={actions.toggleHabitLog}
+        localMode
+      />
     </StorageModeProvider>
   );
 }

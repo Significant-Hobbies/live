@@ -20,7 +20,7 @@ import { NavSignOut } from './nav-sign-out';
 
 const NAV_LINKS = [
   { href: '/live-more', label: 'Live' },
-  { href: '/journal', label: 'Journal' },
+  { href: '/journal', label: 'Weekly log' },
   { href: '/habits', label: 'Habits' },
   { href: '/history', label: 'History' },
 ];

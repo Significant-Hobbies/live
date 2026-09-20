@@ -15,7 +15,7 @@ test.describe('private work is locally available without an account', () => {
     page,
   }) => {
     await page.goto('/hobbies');
-    await expect(page.getByRole('link', { name: 'Journal', exact: true })).toHaveCount(0);
+    await expect(page.getByRole('link', { name: 'Weekly log', exact: true })).toHaveCount(0);
     await expect(page.getByRole('link', { name: 'Habits', exact: true })).toHaveCount(0);
     if (!(await page.getByRole('link', { name: 'Possibilities' }).isVisible())) {
       await page.getByRole('button', { name: 'Open menu' }).click();

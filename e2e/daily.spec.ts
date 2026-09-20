@@ -9,7 +9,7 @@ test.describe('Journal, Habits & manifesto', () => {
     const res = await page.goto('/daily');
     expect(res?.status()).toBeLessThan(400);
     expect(page.url()).not.toContain('/login');
-    await expect(page.getByRole('link', { name: /Open Journal/ })).toHaveAttribute(
+    await expect(page.getByRole('link', { name: /Open the weekly log/ })).toHaveAttribute(
       'href',
       '/journal'
     );
@@ -42,19 +42,14 @@ test.describe('Journal, Habits & manifesto', () => {
     await expect(page.getByText('Walk after lunch')).toBeVisible();
 
     await page.goto('/journal');
-    await page.locator('#journal-entry').fill('I made room for a slower afternoon.');
-    await page.getByRole('button', { name: /Save (morning|evening)/ }).click();
+    await page.locator('#weekly-entry').fill('I made room for a slower afternoon.');
+    await page.getByRole('button', { name: /Save this week|Update this week/ }).click();
     await page.reload();
-    await expect(page.locator('#journal-entry')).toHaveValue('I made room for a slower afternoon.');
-    await expect(
-      page
-        .getByRole('region', { name: 'Journal history' })
-        .getByText('I made room for a slower afternoon.', { exact: true })
-    ).toBeVisible();
+    await expect(page.locator('#weekly-entry')).toHaveValue('I made room for a slower afternoon.');
 
     await page.goto('/habits');
     await expect(page.getByText('Walk after lunch')).toBeVisible();
-    await expect(page.locator('#journal-entry')).toHaveCount(0);
+    await expect(page.locator('#weekly-entry')).toHaveCount(0);
     await expect(page.getByText('Ready when you are')).toBeVisible();
     await expect(page.getByText(/\d+ of \d+ complete today/)).toHaveCount(0);
   });
@@ -106,8 +101,8 @@ test.describe('Journal, Habits & manifesto', () => {
     // Two dimensions — match the bold labels in the manifesto body
     await expect(page.locator('article').getByText('Daily.')).toBeVisible();
     await expect(page.locator('article').getByText('Living.')).toBeVisible();
-    // The journal as bridge
-    await expect(page.getByText(/journal is the bridge/i)).toBeVisible();
+    // The weekly log as bridge
+    await expect(page.getByText(/weekly log is the bridge/i)).toBeVisible();
   });
 
   test('/manifesto has working CTAs', async ({ page }) => {
@@ -128,21 +123,21 @@ test.describe('Journal, Habits & manifesto', () => {
     await expect(bucketListLink).toHaveAttribute('href', '/bucket-lists');
   });
 
-  test('nav exposes Live, Journal, and Habits as distinct products', async ({ page }) => {
+  test('nav exposes Live, Weekly log, and Habits as distinct products', async ({ page }) => {
     await completeLocalOnboarding(page);
     await page.goto('/hobbies');
     if ((page.viewportSize()?.width ?? 0) < 1024) {
       await page.getByRole('button', { name: 'Open menu' }).click();
     }
     await expect(page.getByRole('link', { name: 'Live', exact: true }).first()).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Journal', exact: true }).first()).toBeVisible();
+    await expect(page.getByRole('link', { name: 'Weekly log', exact: true }).first()).toBeVisible();
     await expect(page.getByRole('link', { name: 'Habits', exact: true }).first()).toBeVisible();
   });
 
   test('public footer keeps private workspace links out', async ({ page }) => {
     await page.goto('/hobbies');
     const footer = page.locator('[data-site-footer]');
-    await expect(footer.getByRole('link', { name: 'Journal', exact: true })).toHaveCount(0);
+    await expect(footer.getByRole('link', { name: 'Weekly log', exact: true })).toHaveCount(0);
     await expect(footer.getByRole('link', { name: 'Habits', exact: true })).toHaveCount(0);
     await expect(footer.getByRole('link', { name: 'Find your hobby' })).toBeVisible();
     await expect(footer.getByRole('link', { name: 'Things to try' })).toBeVisible();

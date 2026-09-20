@@ -82,13 +82,15 @@ test.describe('authenticated surfaces', () => {
     });
   }
 
-  test('/daily points to Journal and Habits instead of mixing them', async ({ authedPage }) => {
+  test('/daily points to the weekly log and Habits instead of mixing them', async ({
+    authedPage,
+  }) => {
     await authedPage.goto('/daily');
-    await expect(authedPage.getByRole('link', { name: /Open Journal/ })).toBeVisible();
+    await expect(authedPage.getByRole('link', { name: /Open the weekly log/ })).toBeVisible();
     await expect(authedPage.getByRole('link', { name: /Open Habits/ })).toBeVisible();
   });
 
-  test('Live and Journal persist independently after the split', async ({ authedPage }) => {
+  test('Live and the weekly log persist independently after the split', async ({ authedPage }) => {
     await authedPage.goto('/live-more');
     const chosenIdea = `Zorblax Quivanta walk ${crypto.randomUUID().slice(0, 8)}`;
     await authedPage.getByLabel('What do you still want to live?').fill(chosenIdea);
@@ -99,14 +101,14 @@ test.describe('authenticated surfaces', () => {
 
     const journal = 'I noticed something new today.';
     await authedPage.goto('/journal');
-    await authedPage.locator('#journal-entry').fill(journal);
-    await authedPage.getByRole('button', { name: /Save (morning|evening)/ }).click();
+    await authedPage.locator('#weekly-entry').fill(journal);
+    await authedPage.getByRole('button', { name: /Save this week|Update this week/ }).click();
     await authedPage.goto('/live-more');
     await authedPage.getByLabel('What do you still want to live?').fill(chosenIdea);
     await expect(authedPage.getByRole('button', { name: 'Calling now' })).toBeVisible();
 
     await authedPage.goto('/journal');
-    await expect(authedPage.locator('#journal-entry')).toHaveValue(journal);
+    await expect(authedPage.locator('#weekly-entry')).toHaveValue(journal);
     await authedPage.goto('/live-more');
     await expect(authedPage.getByRole('heading', { name: chosenIdea, level: 1 })).toBeVisible();
   });
@@ -117,12 +119,13 @@ test.describe('authenticated surfaces', () => {
     await expect(authedPage.getByRole('link', { name: 'Sign in' })).toHaveCount(0);
   });
 
-  test('compact AM/PM context derives from journal text', async ({ authedPage }) => {
+  test('the weekly log renders the current week and a nudge question', async ({ authedPage }) => {
     await authedPage.goto('/journal');
-    // Both ring labels are always present; the assertion is that the page renders
-    // them from journal state without a DailyCheckin row existing.
-    await expect(authedPage.getByText(/^AM (written|open)$/)).toBeVisible();
-    await expect(authedPage.getByText(/^PM (written|open)$/)).toBeVisible();
+    await expect(authedPage.locator('#weekly-entry')).toBeVisible();
+    await expect(authedPage.getByText(/Week of /)).toBeVisible();
+    await expect(
+      authedPage.getByRole('button', { name: /Save this week|Update this week/ })
+    ).toBeVisible();
   });
 
   test('the signed-out preview never leaks into a real session', async ({ authedPage }) => {

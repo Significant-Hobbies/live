@@ -8,7 +8,7 @@ test.describe('Life Atlas shell', () => {
     await completeLocalOnboarding(page);
   });
 
-  test('uses distinct Live, Journal, Habits, and History destinations', async ({ page }) => {
+  test('uses distinct Live, Weekly log, Habits, and History destinations', async ({ page }) => {
     await page.goto('/live-more');
     const nav = page.getByRole('navigation').first();
     if ((page.viewportSize()?.width ?? 0) < 1024) {
@@ -18,10 +18,9 @@ test.describe('Life Atlas shell', () => {
       'href',
       '/live-more'
     );
-    await expect(nav.getByRole('link', { name: 'Journal', exact: true }).first()).toHaveAttribute(
-      'href',
-      '/journal'
-    );
+    await expect(
+      nav.getByRole('link', { name: 'Weekly log', exact: true }).first()
+    ).toHaveAttribute('href', '/journal');
     await expect(nav.getByRole('link', { name: 'Habits', exact: true }).first()).toHaveAttribute(
       'href',
       '/habits'
