@@ -80,6 +80,12 @@ const CACHEABLE_PREFIXES = [
   '/hobbies/category',
   '/experiences',
   '/journeys',
+  // Public detail pages — the high-cardinality surfaces crawlers land on.
+  // Anonymous requests get the public render; owners and signed-in users
+  // carry a session cookie and bypass the shared cache entirely.
+  '/u',
+  '/b',
+  '/timeline',
 ];
 function isCacheableDocumentPath(pathname) {
   if (!pathname) return false;
