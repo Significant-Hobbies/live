@@ -12,9 +12,9 @@ import {
 import { JsonLd } from '~/components/json-ld';
 
 export const metadata: Metadata = {
-  title: '50 Best Hobbies for Adults — Find What Excites You | SignificantHobbies',
+  title: 'List of 50 Best Hobbies for Adults — Find What Excites You | SignificantHobbies',
   description:
-    'Discover 50 hobbies perfect for adults. From creative pursuits to physical adventures, find your next passion with our curated guide.',
+    'A list of 50 hobbies perfect for adults. From creative pursuits to physical adventures, find your next passion with our curated guide.',
   alternates: { canonical: 'https://live.significanthobbies.com/hobbies-for-adults' },
 };
 
@@ -323,7 +323,7 @@ export default function HobbiesForAdultsPage() {
           </Link>
           <TextGenerateEffect
             as="h1"
-            words="50 Best Hobbies for Adults — Find What Excites You"
+            words="List of 50 Best Hobbies for Adults — Find What Excites You"
             className="mt-4 text-3xl font-bold text-foreground"
           />
         </FadeIn>

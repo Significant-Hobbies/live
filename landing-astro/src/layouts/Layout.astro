@@ -146,16 +146,35 @@ const OG_IMAGE = `${SITE_URL}/opengraph-image`;
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <script is:inline type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Live",
-      "alternateName": ["Live by Significant Hobbies", "live.significanthobbies.com"],
-      "url": SITE_URL,
-      "description": "Discover hobbies and experiences worth trying, turn them into bucket lists and commitments, and keep a private-by-default record through timelines, side quests, and personal history.",
-      "creator": {
-        "@type": "Person",
-        "name": "Sarthak Agrawal",
-        "url": "https://sarthakagrawal.dev"
-      }
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "name": "Live",
+          "alternateName": ["Live by Significant Hobbies", "live.significanthobbies.com"],
+          "url": SITE_URL,
+          "description": "Discover hobbies and experiences worth trying, turn them into bucket lists and commitments, and keep a private-by-default record through timelines, side quests, and personal history.",
+          "creator": {
+            "@type": "Person",
+            "name": "Sarthak Agrawal",
+            "url": "https://sarthakagrawal.dev"
+          }
+        },
+        {
+          "@type": "WebApplication",
+          "@id": `${SITE_URL}/#app`,
+          "name": "Live",
+          "alternateName": ["Live by Significant Hobbies", "live.significanthobbies.com"],
+          "url": SITE_URL,
+          "applicationCategory": "LifestyleApplication",
+          "isAccessibleForFree": true,
+          "description": "Discover hobbies and experiences worth trying, turn them into bucket lists and commitments, and keep a private-by-default record through timelines, side quests, and personal history.",
+          "publisher": {
+            "@type": "Person",
+            "name": "Sarthak Agrawal",
+            "url": "https://sarthakagrawal.dev"
+          }
+        }
+      ]
     })} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
