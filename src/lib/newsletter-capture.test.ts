@@ -7,8 +7,15 @@ const footer = await readProjectFile('landing-astro/src/components/FleetFooter.a
 const layout = await readProjectFile('landing-astro/src/layouts/Layout.astro');
 const privacy = await readProjectFile('src/app/privacy/page.tsx');
 const foundry = JSON.parse(await readProjectFile('foundry.json')) as { projectKey?: string };
+const livePage = await readProjectFile('landing-astro/src/pages/live.astro');
+const appHealthLogger = await readProjectFile('landing-astro/public/app-health-log.js');
 
 describe('Live newsletter capture', () => {
+  it('tracks the primary hobby finder CTA in App Health', () => {
+    expect(livePage.match(/data-log="hobby_finder_opened"/gu)).toHaveLength(1);
+    expect(appHealthLogger).toContain('window.appHealth.track(name)');
+  });
+
   it('uses the product-scoped key in the shared consented footer form', () => {
     expect(foundry.projectKey).toMatch(/^pk_[A-Za-z0-9]+$/u);
     expect(footer).toContain('project-key={newsletterProjectKey}');
