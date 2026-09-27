@@ -1,5 +1,6 @@
 ---
 import '@/styles/landing.css';
+import foundry from '../../../foundry.json';
 
 interface Props {
   title: string;
@@ -7,6 +8,7 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+const newsletterProjectKey = foundry.projectKey?.trim();
 const SITE_URL = 'https://live.significanthobbies.com';
 const OG_IMAGE = `${SITE_URL}/opengraph-image`;
 ---
@@ -201,6 +203,13 @@ const OG_IMAGE = `${SITE_URL}/opengraph-image`;
       })();
     </script>
     <slot />
+    {newsletterProjectKey && (
+      <script
+        is:inline
+        type="module"
+        src="https://sassmaker.com/newsletter-capture.js"
+      ></script>
+    )}
     <script
       is:inline
       src="https://sassmaker.com/project-strip.js"

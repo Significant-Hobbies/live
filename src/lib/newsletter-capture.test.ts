@@ -1,0 +1,26 @@
+import { readFile } from 'node:fs/promises';
+import { resolve } from 'node:path';
+import { describe, expect, it } from 'vitest';
+
+const readProjectFile = (path: string) => readFile(resolve(process.cwd(), path), 'utf8');
+const footer = await readProjectFile('landing-astro/src/components/FleetFooter.astro');
+const layout = await readProjectFile('landing-astro/src/layouts/Layout.astro');
+const privacy = await readProjectFile('src/app/privacy/page.tsx');
+const foundry = JSON.parse(await readProjectFile('foundry.json')) as { projectKey?: string };
+
+describe('Live newsletter capture', () => {
+  it('uses the product-scoped key in the shared consented footer form', () => {
+    expect(foundry.projectKey).toMatch(/^pk_[A-Za-z0-9]+$/u);
+    expect(footer).toContain('project-key={newsletterProjectKey}');
+    expect(footer).toContain('kind="newsletter"');
+    expect(footer).toContain('source="live-footer"');
+    expect(footer).toContain('theme="light"');
+    expect(layout).toContain('https://sassmaker.com/newsletter-capture.js');
+  });
+
+  it('discloses email and consent storage outside Live account data', () => {
+    expect(privacy).toContain('email address and consent');
+    expect(privacy).toContain('stored by SaaS Maker');
+    expect(privacy).toMatch(/not stored in\s+Live's/u);
+  });
+});

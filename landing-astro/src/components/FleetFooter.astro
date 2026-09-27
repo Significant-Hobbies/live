@@ -1,3 +1,9 @@
+---
+import foundry from '../../../foundry.json';
+
+const newsletterProjectKey = foundry.projectKey?.trim();
+---
+
 <footer class="border-t border-[#d4c74c] bg-[#f7e957] px-6 py-8 lg:px-12">
   <div class="mx-auto max-w-5xl">
     <nav
@@ -29,4 +35,16 @@
       </a>
     </nav>
   </div>
+  {newsletterProjectKey && (
+    <div class="mx-auto mt-8 max-w-5xl">
+      <saas-maker-newsletter-capture
+        product-name="Live"
+        project-key={newsletterProjectKey}
+        source="live-footer"
+        kind="newsletter"
+        privacy-url="https://live.significanthobbies.com/privacy"
+        theme="light"
+      ></saas-maker-newsletter-capture>
+    </div>
+  )}
 </footer>

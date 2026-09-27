@@ -20,7 +20,7 @@ export default function PrivacyPage() {
         <h1 className="mt-3 font-serif text-3xl font-semibold tracking-tight text-foreground">
           Privacy
         </h1>
-        <p className="mt-4 text-xs text-muted-foreground">Last updated: 2026-07-31.</p>
+        <p className="mt-4 text-xs text-muted-foreground">Last updated: 2026-09-28.</p>
       </FadeIn>
 
       <FadeIn className="relative mt-8" delay={0.05}>
@@ -29,6 +29,11 @@ export default function PrivacyPage() {
           <li>Your Google OAuth identity when you sign in.</li>
           <li>Timelines, phases, and any hobbies you enter.</li>
           <li>Quest progress and badge state.</li>
+          <li>
+            If you opt in through the public product-updates form, your email address and consent
+            record are stored by SaaS Maker to manage that subscription. They are not stored in
+            Live's account database or linked to your Live activity.
+          </li>
           <li>
             Historical follows, timeline likes, and comments created before those features were
             retired.
