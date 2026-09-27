@@ -15,6 +15,7 @@ describe('Live newsletter capture', () => {
     expect(footer).toContain('kind="newsletter"');
     expect(footer).toContain('source="live-footer"');
     expect(footer).toContain('theme="light"');
+    expect(footer).toContain('style="--newsletter-capture-muted: #62625a"');
     expect(layout).toContain('https://sassmaker.com/newsletter-capture.js');
   });
 
