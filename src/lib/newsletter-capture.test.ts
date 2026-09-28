@@ -14,12 +14,15 @@ const appHealthLogger = await readProjectFile('landing-astro/public/app-health-l
 describe('Live newsletter capture', () => {
   it('tracks the primary hobby finder CTA in App Health', () => {
     expect(livePage.match(/data-log="hobby_finder_opened"/gu)).toHaveLength(1);
-    expect(appHealthLogger).toContain('window.appHealth.track(name)');
+    expect(appHealthLogger).toContain('tracker.track(name)');
   });
 
   it('tracks the primary timeline builder CTA click in App Health', () => {
     expect(featureRow).toContain('data-log="hobby_timeline_builder_opened"');
     expect(featureRow).toContain('href="/timeline/new"');
+    expect(appHealthLogger).toContain('tracker.flush()');
+    expect(appHealthLogger).toContain('setTimeout(navigate, 1200)');
+    expect(appHealthLogger).toContain('!e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey');
   });
 
   it('uses the product-scoped key in the shared consented footer form', () => {
