@@ -3,13 +3,31 @@
 import '@saas-maker/feedback/dist/index.css';
 
 import { FeedbackWidget, type FeedbackSubmission } from '@saas-maker/feedback';
-import foundry from '../../foundry.json';
 
-const FEEDBACK_PROJECT_KEY = foundry.projectKey.trim();
 const FEEDBACK_API_URL = 'https://api.sassmaker.com/v1/feedback';
+const FEEDBACK_CONFIG_URL = 'https://api.sassmaker.com/v1/capture-config/live';
+
+async function getFeedbackProjectKey(): Promise<string> {
+  const response = await fetch(FEEDBACK_CONFIG_URL, { credentials: 'omit' });
+  if (!response.ok) throw new Error(`Feedback configuration returned HTTP ${response.status}.`);
+  const config: unknown = await response.json();
+  if (
+    !config ||
+    typeof config !== 'object' ||
+    !('api_key' in config) ||
+    typeof config.api_key !== 'string' ||
+    !config.api_key.startsWith('pk_') ||
+    !('name' in config) ||
+    config.name !== 'Live'
+  ) {
+    throw new Error('Feedback configuration is invalid.');
+  }
+  return config.api_key;
+}
 
 async function submitFeedback(submission: FeedbackSubmission): Promise<void> {
   const { screenshot, ...feedback } = submission;
+  const projectKey = await getFeedbackProjectKey();
   const body = new FormData();
   body.append(
     'feedback',
@@ -31,7 +49,7 @@ async function submitFeedback(submission: FeedbackSubmission): Promise<void> {
   try {
     response = await fetch(FEEDBACK_API_URL, {
       method: 'POST',
-      headers: { 'X-Project-Key': FEEDBACK_PROJECT_KEY },
+      headers: { 'X-Project-Key': projectKey },
       credentials: 'omit',
       body,
     });
