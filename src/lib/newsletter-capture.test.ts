@@ -21,7 +21,7 @@ describe('Live newsletter capture', () => {
     expect(featureRow).toContain('data-log="hobby_timeline_builder_opened"');
     expect(featureRow).toContain('href="/timeline/new"');
     expect(appHealthLogger).toContain('tracker.flush()');
-    expect(appHealthLogger).toContain('setTimeout(navigate, 1200)');
+    expect(appHealthLogger).toContain('setTimeout(navigate, 4000)');
     expect(appHealthLogger).toContain('!e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey');
   });
 

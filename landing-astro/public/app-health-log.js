@@ -31,7 +31,7 @@
           if (isPlainSameTabLink(e, t) && typeof tracker.flush === "function") {
             e.preventDefault();
             var navigated = false;
-            var timer = setTimeout(navigate, 1200);
+            var timer = setTimeout(navigate, 4000);
             function navigate() {
               if (navigated) return;
               navigated = true;
