@@ -32,7 +32,7 @@ export function observeRequest(request, response, durationMs, env, ctx) {
     events: [
       {
         event_id: crypto.randomUUID(),
-        timestamp: new Date().toISOString(),
+        timestamp: Date.now(),
         method: request.method,
         route,
         status_code: response.status,
