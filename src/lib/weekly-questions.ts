@@ -236,7 +236,7 @@ export type NudgeSignals = {
 };
 
 /**
- * The categorical context string sent to classifier.dev.
+ * The categorical context string sent to the managed family classifier.
  * Only Live taxonomy values and counts — never user-typed text.
  */
 export function buildNudgeContext(signals: NudgeSignals): string {
