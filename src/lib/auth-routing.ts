@@ -17,25 +17,25 @@ export function loginPath(callbackUrl: string): string {
   return `/login?callbackUrl=${encodeURIComponent(callbackUrl)}`;
 }
 
-/** Keep sign-in redirects on this origin and fall back to the public directory. */
+/** Keep sign-in redirects on this origin and fall back to the personal list. */
 export function safeCallbackUrl(value: string | undefined, returnTo?: string): string {
   // Compatibility for the old Hub link is limited to its one destination.
   value ??= returnTo === '/hub' ? '/hub' : undefined;
-  if (!value?.startsWith('/')) return '/';
+  if (!value?.startsWith('/')) return '/bucket-list';
   try {
     const decoded = decodeURIComponent(value);
     if (
       decoded.startsWith('//') ||
       Array.from(decoded).some((char) => char === '\\' || char.charCodeAt(0) <= 32)
     )
-      return '/';
+      return '/bucket-list';
     const target = new URL(value, 'https://live.significanthobbies.com');
     if (target.origin !== 'https://live.significanthobbies.com' || target.pathname === '/login') {
-      return '/';
+      return '/bucket-list';
     }
     return value;
   } catch {
-    return '/';
+    return '/bucket-list';
   }
 }
 
@@ -46,27 +46,24 @@ export type GuestRoute = {
   label: string;
 };
 
-/**
- * The anonymous equivalent of a guarded surface, if one exists.
- *
- * Only the single-session surfaces have real guest equivalents: /life-bingo
- * builds a board, /timeline/new builds a timeline, the quiz returns a result —
- * each delivers its whole value before you ever sign in. The longitudinal
- * surfaces (/journal, /habits, /trajectory, /history) have no guest twin, because their
- * value *is* accumulated history; the quiz is the honest destination for
- * someone not ready to commit an account.
- */
+/** Continue the same task using local storage, without setup or sign-in. */
 export function guestRouteFor(callbackUrl: string): GuestRoute {
   if (callbackUrl === '/hub') {
     return { href: 'https://significanthobbies.com/', label: 'return to the public app directory' };
   }
-  if (callbackUrl.startsWith('/bucket-list') || callbackUrl.startsWith('/life-bingo')) {
-    return { href: '/life-bingo', label: 'build a board without an account' };
+  if (callbackUrl.startsWith('/bucket-list')) {
+    return { href: '/bucket-list', label: 'keep your list on this device' };
   }
   if (callbackUrl.startsWith('/timeline')) {
     return { href: '/timeline/new', label: 'build and export without an account' };
   }
-  return { href: '/find-your-hobby', label: 'take the 2-minute quiz instead' };
+  if (callbackUrl.startsWith('/life-bingo'))
+    return { href: '/life-bingo', label: 'build a board without an account' };
+  if (callbackUrl === '/journal')
+    return { href: '/journal', label: 'write privately on this device' };
+  if (callbackUrl === '/habits')
+    return { href: '/habits', label: 'keep your check-ins on this device' };
+  return { href: '/experiences', label: 'browse the catalog without an account' };
 }
 
 /** Production auth stays on Live even when inherited settings name the former apex. */

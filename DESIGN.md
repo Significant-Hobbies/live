@@ -58,7 +58,7 @@ Primary pages use one dominant spatial field followed by quieter supporting pass
 
 Live leads with a verb and an immediate invitation. It must make the user want to choose an activity, not admire a planning system. Mortality belongs in History and acts as context, never as the dominant emotional register of the action surface.
 
-The global shell exposes four direct destinations: Live, Journal, Habits, and History. Their shared visual language communicates family membership without merging their jobs.
+The global shell exposes Catalog, My list, Weekly journal, Habits, and Life in weeks. These reuse the incumbent shell and workspaces. The bucket-list cleanup removes competing steps and navigation without replacing typography, colors, imagery, or layout.
 
 ## Elevation & Depth
 
@@ -72,7 +72,7 @@ Controls use 12px corners and major bounded surfaces use 16px corners. Paths, co
 
 ### Navigation
 
-The wordmark is `SH` with an accessible full name. Live, Journal, Habits, and History are direct links in that order on desktop and mobile. Yellow, lavender, sage, and blue active states keep the destinations distinct without creating four unrelated brands.
+The wordmark is `SH` with an accessible full name. Catalog, My list, Weekly journal, Habits, and Life in weeks are direct links in that order on desktop and mobile. Preserve the established destination colors and responsive menu.
 
 ### Cards / Containers
 

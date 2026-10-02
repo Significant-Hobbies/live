@@ -24,21 +24,26 @@ describe('loginPath', () => {
 });
 
 describe('safeCallbackUrl', () => {
+  it('preserves an explicit workspace destination', () => {
+    expect(safeCallbackUrl('/journal')).toBe('/journal');
+    expect(safeCallbackUrl('/bucket-list')).toBe('/bucket-list');
+  });
+
   it('preserves an internal Hub destination', () => {
     expect(safeCallbackUrl('/hub')).toBe('/hub');
   });
 
   it('rejects external and protocol-relative redirects', () => {
-    expect(safeCallbackUrl('https://example.com')).toBe('/');
-    expect(safeCallbackUrl('//example.com')).toBe('/');
-    expect(safeCallbackUrl(undefined)).toBe('/');
+    expect(safeCallbackUrl('https://example.com')).toBe('/bucket-list');
+    expect(safeCallbackUrl('//example.com')).toBe('/bucket-list');
+    expect(safeCallbackUrl(undefined)).toBe('/bucket-list');
   });
 });
 
 describe('guestRouteFor', () => {
-  it('sends bucket-list intent to the anonymous board, not the guarded /bucket-list/new', () => {
-    expect(guestRouteFor('/bucket-list').href).toBe('/life-bingo');
-    expect(guestRouteFor('/bucket-list/xyz').href).toBe('/life-bingo');
+  it('keeps bucket-list intent in the local list', () => {
+    expect(guestRouteFor('/bucket-list').href).toBe('/bucket-list');
+    expect(guestRouteFor('/bucket-list/xyz').href).toBe('/bucket-list');
   });
 
   it('sends timeline intent to the anonymous builder', () => {
@@ -46,16 +51,23 @@ describe('guestRouteFor', () => {
     expect(guestRouteFor('/timeline/xyz/edit').href).toBe('/timeline/new');
   });
 
-  it('sends the longitudinal surfaces to the quiz, which has no account requirement', () => {
-    // /journal, /habits, /trajectory and /history have no guest twin: their value is
-    // accumulated history, so there is nothing honest to offer in one session.
-    for (const route of ['/journal', '/habits', '/trajectory', '/history', '/commitments', '/']) {
-      expect(guestRouteFor(route).href).toBe('/find-your-hobby');
+  it('keeps journal and habit intent on the same local surface', () => {
+    expect(guestRouteFor('/journal').href).toBe('/journal');
+    expect(guestRouteFor('/habits').href).toBe('/habits');
+    for (const route of ['/trajectory', '/history', '/commitments', '/']) {
+      expect(guestRouteFor(route).href).toBe('/experiences');
     }
   });
 
   it('always returns a route that is reachable without a session', () => {
-    const anonymous = new Set(['/life-bingo', '/timeline/new', '/find-your-hobby']);
+    const anonymous = new Set([
+      '/life-bingo',
+      '/bucket-list',
+      '/timeline/new',
+      '/experiences',
+      '/journal',
+      '/habits',
+    ]);
     for (const route of [
       '/journal',
       '/habits',
@@ -72,7 +84,7 @@ describe('guestRouteFor', () => {
 describe('Hub login continuity', () => {
   it('accepts only the exact legacy Hub intent and gives callbackUrl precedence', () => {
     expect(safeCallbackUrl(undefined, '/hub')).toBe('/hub');
-    expect(safeCallbackUrl(undefined, 'https://evil.example')).toBe('/');
+    expect(safeCallbackUrl(undefined, 'https://evil.example')).toBe('/bucket-list');
     expect(safeCallbackUrl('/journal', '/hub')).toBe('/journal');
     expect(guestRouteFor('/hub').href).toBe('https://significanthobbies.com/');
   });
@@ -85,6 +97,6 @@ describe('Hub login continuity', () => {
     '/login?callbackUrl=/hub',
     '/%',
   ])('rejects normalization or loop hazards: %s', (value) => {
-    expect(safeCallbackUrl(value)).toBe('/');
+    expect(safeCallbackUrl(value)).toBe('/bucket-list');
   });
 });

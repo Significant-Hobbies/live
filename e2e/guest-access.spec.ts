@@ -11,29 +11,23 @@ const LOCAL_ROUTES = [
 ] as const;
 
 test.describe('private work is locally available without an account', () => {
-  test('public navigation does not expose the private workspace before onboarding', async ({
-    page,
-  }) => {
-    await page.goto('/hobbies');
-    await expect(page.getByRole('link', { name: 'Weekly log', exact: true })).toHaveCount(0);
-    await expect(page.getByRole('link', { name: 'Habits', exact: true })).toHaveCount(0);
-    if (!(await page.getByRole('link', { name: 'Possibilities' }).isVisible())) {
+  test('core navigation is available without onboarding', async ({ page }) => {
+    await page.goto('/experiences');
+    const nav = page.locator('[data-site-nav]');
+    if (!(await nav.getByRole('link', { name: 'Catalog', exact: true }).isVisible())) {
       await page.getByRole('button', { name: 'Open menu' }).click();
     }
-    await expect(page.getByRole('link', { name: 'Possibilities' })).toBeVisible();
+    for (const name of ['Catalog', 'My list', 'Weekly journal', 'Habits', 'Life in weeks']) {
+      await expect(nav.getByRole('link', { name, exact: true })).toBeVisible();
+    }
+    await expect(page.getByRole('link', { name: 'Possibilities', exact: true })).toHaveCount(0);
   });
 
-  for (const route of [
-    '/live-more',
-    '/journal',
-    '/habits',
-    '/history',
-    '/trajectory',
-    '/bucket-list',
-  ] as const) {
-    test(`${route} starts with onboarding`, async ({ page }) => {
-      await page.goto(route);
-      await page.waitForURL(/\/onboarding$/);
+  for (const route of ['/live-more', '/journal', '/habits', '/bucket-list', '/settings'] as const) {
+    test(`${route} opens directly without onboarding`, async ({ page }) => {
+      const response = await page.goto(route);
+      expect(response?.status()).toBeLessThan(400);
+      await expect(page).toHaveURL(new RegExp(`${route}$`));
     });
   }
 
@@ -45,8 +39,7 @@ test.describe('private work is locally available without an account', () => {
     });
   }
 
-  test('bucket list is a complete local workspace after onboarding', async ({ page }) => {
-    await completeLocalOnboarding(page);
+  test('bucket list is a complete local workspace without onboarding', async ({ page }) => {
     await page.goto('/bucket-list');
     await expect(page).toHaveURL(/\/bucket-list$/);
     await page.getByLabel('Something you want to do').fill('Sleep under the stars');

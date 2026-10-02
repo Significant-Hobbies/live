@@ -1,15 +1,14 @@
 ---
 import BucketListPanel from '@/components/BucketListPanel.astro';
 import FaqSection from '@/components/FaqSection.astro';
-import FeatureRow from '@/components/FeatureRow.astro';
 import FinalCta from '@/components/FinalCta.astro';
 import FleetFooter from '@/components/FleetFooter.astro';
 import HowItWorks from '@/components/HowItWorks.astro';
 import Layout from '@/layouts/Layout.astro';
 
-const TITLE = 'Live — Discover what deserves your time';
+const TITLE = 'Live — Make your bucket list happen';
 const DESCRIPTION =
-  'Discover hobbies worth trying, turn the right ones into bucket lists and commitments, and keep a truthful record of the life you are building.';
+  'Find bucket-list ideas and side quests, keep your own list, log what you do, and write one private entry each week.';
 ---
 
 <Layout title={TITLE} description={DESCRIPTION}>
@@ -35,16 +34,15 @@ const DESCRIPTION =
         <p class="cinematic-hero__wordmark">Live by Significant Hobbies</p>
         <div class="cinematic-hero__copy">
           <h1>
-            <span>Find what deserves</span>
-            <span>your time.</span>
+            <span>Make your bucket list</span>
+            <span>happen.</span>
           </h1>
           <p>
-            Live helps you discover hobbies and experiences, choose what matters,
-            and turn intention into bucket lists, commitments, side quests, and a
-            personal history you can keep.
+            Find things you want to do, from big bucket-list experiences to small
+            side quests. Keep your own list, mark things done, and remember your week.
           </p>
-          <a class="cinematic-hero__cta" href="/find-your-hobby" data-log="hobby_finder_opened">
-            Find my next hobby
+          <a class="cinematic-hero__cta" href="/experiences" data-log="catalog_opened">
+            Explore the catalog
             <span aria-hidden="true">→</span>
           </a>
           <p class="cinematic-hero__note">
@@ -59,7 +57,6 @@ const DESCRIPTION =
       </div>
     </section>
 
-    <FeatureRow />
     <BucketListPanel />
     <HowItWorks />
     <FaqSection />

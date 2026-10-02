@@ -57,6 +57,37 @@ test.describe('authenticated surfaces', () => {
     await expect(page).toHaveURL(/\/bucket-list$/);
     await expect(page.getByRole('heading', { name: 'Your Bucket List' })).toBeVisible();
 
+    await page.goto('/experiences');
+    await page.getByLabel('Search everything').fill('Make pasta from scratch');
+    const add = page.getByRole('button', {
+      name: 'Add Make pasta from scratch to my bucket list',
+      exact: true,
+    });
+    await waitForHydrated(add);
+    await add.click();
+    await expect(page.getByText('Added to your bucket list')).toBeVisible();
+    await page.goto('/bucket-list');
+    const item = page.getByRole('group', { name: 'Controls for Make pasta from scratch' });
+    await item.getByRole('button', { name: 'Done', exact: true }).click();
+    await expect(item.getByRole('button', { name: 'Done', exact: true })).toHaveAttribute(
+      'aria-pressed',
+      'true'
+    );
+    await page.reload();
+    await expect(item.getByRole('button', { name: 'Done', exact: true })).toHaveAttribute(
+      'aria-pressed',
+      'true'
+    );
+
+    await page.goto('/journal');
+    await page.locator('#weekly-entry').fill('Made pasta and took a long walk last week.');
+    await page.getByRole('button', { name: 'Keep this week', exact: true }).click();
+    await expect(page.getByText('Kept. This week is on record.')).toBeVisible();
+    await page.reload();
+    await expect(page.locator('#weekly-entry')).toHaveValue(
+      'Made pasta and took a long walk last week.'
+    );
+
     await page.goto('/bucket-list/new');
     await page.getByRole('button', { name: /This month/i }).click();
     await page.getByRole('button', { name: /Keep it cozy/i }).click();
@@ -102,9 +133,7 @@ test.describe('authenticated surfaces', () => {
     const journal = 'I noticed something new today.';
     await authedPage.goto('/journal');
     await authedPage.locator('#weekly-entry').fill(journal);
-    await authedPage
-      .getByRole('button', { name: /done — keep this week|Update this week/ })
-      .click();
+    await authedPage.getByRole('button', { name: /Keep this week|Update this week/ }).click();
     await authedPage.goto('/live-more');
     await authedPage.getByLabel('What do you still want to live?').fill(chosenIdea);
     await expect(authedPage.getByRole('button', { name: 'Calling now' })).toBeVisible();
@@ -121,12 +150,16 @@ test.describe('authenticated surfaces', () => {
     await expect(authedPage.getByRole('link', { name: 'Sign in' })).toHaveCount(0);
   });
 
-  test('the weekly log renders the current week and a nudge question', async ({ authedPage }) => {
+  test('the weekly journal offers one entry about last week', async ({ authedPage }) => {
     await authedPage.goto('/journal');
     await expect(authedPage.locator('#weekly-entry')).toBeVisible();
-    await expect(authedPage.getByText(/Week of /)).toBeVisible();
+    await expect(authedPage.getByText(/Week of /).first()).toBeVisible();
     await expect(
-      authedPage.getByRole('button', { name: /done — keep this week|Update this week/ })
+      authedPage.getByRole('heading', { name: 'What did you do last week?' })
+    ).toBeVisible();
+    await expect(authedPage.getByRole('button', { name: 'Next question' })).toHaveCount(0);
+    await expect(
+      authedPage.getByRole('button', { name: /Keep this week|Update this week/ })
     ).toBeVisible();
   });
 

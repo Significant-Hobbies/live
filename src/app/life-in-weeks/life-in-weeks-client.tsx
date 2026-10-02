@@ -287,16 +287,16 @@ function Turn({ onboardingComplete }: { onboardingComplete: boolean }) {
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
         <Link
-          href={onboardingComplete ? '/live-more' : '/find-your-hobby'}
+          href={'/experiences'}
           className="rounded-xl bg-primary px-6 py-3.5 text-center text-base font-semibold text-primary-foreground no-underline transition-opacity hover:opacity-90"
         >
-          {onboardingComplete ? 'Return to Live More' : 'Find something to do — 2 minutes'}
+          {'Explore the catalog'}
         </Link>
         <Link
-          href={onboardingComplete ? '/history' : '/life-bingo'}
+          href={'/bucket-list'}
           className="rounded-xl border border-border bg-card px-6 py-3.5 text-center text-base font-medium text-foreground no-underline transition-colors hover:border-foreground/30"
         >
-          {onboardingComplete ? 'Return to History' : 'List what you still want to do'}
+          {'Open my list'}
         </Link>
       </div>
 

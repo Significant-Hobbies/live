@@ -8,26 +8,31 @@ test.describe('Life Atlas shell', () => {
     await completeLocalOnboarding(page);
   });
 
-  test('uses distinct Live, Weekly log, Habits, and History destinations', async ({ page }) => {
+  test('uses the core catalog, list, journal, habits, and time destinations', async ({ page }) => {
     await page.goto('/live-more');
     const nav = page.getByRole('navigation').first();
     if ((page.viewportSize()?.width ?? 0) < 1024) {
       await page.getByRole('button', { name: 'Open menu' }).click();
     }
-    await expect(nav.getByRole('link', { name: 'Live', exact: true })).toHaveAttribute(
+    await expect(nav.getByRole('link', { name: 'Catalog', exact: true })).toHaveAttribute(
       'href',
-      '/live-more'
+      '/experiences'
     );
-    await expect(
-      nav.getByRole('link', { name: 'Weekly log', exact: true }).first()
-    ).toHaveAttribute('href', '/journal');
+    await expect(nav.getByRole('link', { name: 'My list', exact: true })).toHaveAttribute(
+      'href',
+      '/bucket-list'
+    );
+    await expect(nav.getByRole('link', { name: 'Weekly journal', exact: true })).toHaveAttribute(
+      'href',
+      '/journal'
+    );
     await expect(nav.getByRole('link', { name: 'Habits', exact: true }).first()).toHaveAttribute(
       'href',
       '/habits'
     );
-    await expect(nav.getByRole('link', { name: 'History', exact: true }).first()).toHaveAttribute(
+    await expect(nav.getByRole('link', { name: 'Life in weeks', exact: true })).toHaveAttribute(
       'href',
-      '/history'
+      '/life-in-weeks'
     );
     await expect(page.getByRole('button', { name: /Live More|History/ })).toHaveCount(0);
   });

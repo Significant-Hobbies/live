@@ -1,10 +1,8 @@
 import { eq } from 'drizzle-orm';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
-import { redirect } from 'next/navigation';
 
 import { SpotlightCard } from '~/components/aceternity';
-import { LocalOnboardingGate } from '~/components/local-onboarding-gate';
 import { users } from '~/db/schema';
 import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
@@ -29,12 +27,9 @@ export default async function SettingsPage() {
           bio: true,
           website: true,
           creed: true,
-          onboardingCompletedAt: true,
         },
       })
     : null;
-
-  if (session?.user && !user?.onboardingCompletedAt) redirect('/onboarding');
 
   const content = (
     <div className="mx-auto max-w-3xl px-4 py-10 sm:py-14">
@@ -70,5 +65,5 @@ export default async function SettingsPage() {
     </div>
   );
 
-  return session?.user ? content : <LocalOnboardingGate>{content}</LocalOnboardingGate>;
+  return content;
 }

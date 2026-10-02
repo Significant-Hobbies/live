@@ -40,7 +40,8 @@ export default async function LoginPage({
               className="font-serif text-5xl font-medium tracking-[-0.03em] text-foreground"
             />
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              Save your hobbies, bucket lists, and side quests. Pick up where you left off.
+              Save your bucket list, side quests, habits, and weekly journal. Pick up where you left
+              off.
             </p>
           </div>
 
@@ -54,9 +55,9 @@ export default async function LoginPage({
           <div className="mt-6 space-y-2.5">
             <p className="text-base font-bold text-foreground">What you get</p>
             <ul className="space-y-2 text-sm leading-relaxed text-muted-foreground">
-              <li>· Track hobbies across every phase of your life</li>
-              <li>· Build bucket lists you&apos;ll actually complete</li>
-              <li>· Accept side quests — micro-adventures for the weekend</li>
+              <li>· Keep your list across devices</li>
+              <li>· Mark bucket-list items and side quests done</li>
+              <li>· Keep your habit check-ins and weekly journal private</li>
             </ul>
           </div>
 

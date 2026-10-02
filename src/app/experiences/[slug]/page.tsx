@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { getServerAuthSession } from '~/server/auth';
 import { notFound } from 'next/navigation';
 
 import { AddToMyListButton } from '~/components/add-to-my-list-button';
@@ -63,6 +64,7 @@ export async function generateMetadata({
 }
 
 export default async function ExperiencePage({ params }: { params: Promise<{ slug: string }> }) {
+  const session = await getServerAuthSession();
   const entry = resolve((await params).slug);
   if (!entry) notFound();
 
@@ -172,9 +174,12 @@ export default async function ExperiencePage({ params }: { params: Promise<{ slu
           category={entry.category}
           sourceSlug={entry.slug}
           variant="primary"
+          mode={session?.user ? 'account' : 'local'}
         />
         <p className="mt-4 text-base text-muted-foreground">
-          Saved privately here. No account needed.
+          {session?.user
+            ? 'Saved privately to your account.'
+            : 'Saved privately on this device. No account needed.'}
         </p>
       </div>
     </div>

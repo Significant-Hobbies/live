@@ -1,8 +1,28 @@
 import { resolve } from 'node:path';
 import { defineConfig } from 'vitest/config';
 
+const generatedWorkerModules = new Set([
+  resolve(__dirname, '.open-next/worker.js'),
+  resolve(__dirname, '.open-next/cache-release.mjs'),
+]);
+
 // Plain Vitest config (formerly @saas-maker/test-config/vitest factory).
 export default defineConfig({
+  plugins: [
+    {
+      // Edge tests supply vi.mock factories for generated bindings. Resolve
+      // them without requiring a Cloudflare build in a fresh checkout.
+      name: 'mock-generated-worker-modules',
+      resolveId(id, importer) {
+        if (!importer || !id.startsWith('.')) return;
+        const target = resolve(importer, '..', id);
+        if (generatedWorkerModules.has(target)) return target;
+      },
+      load(id) {
+        if (generatedWorkerModules.has(id)) return 'export {};';
+      },
+    },
+  ],
   test: {
     globals: true,
     environment: 'jsdom',

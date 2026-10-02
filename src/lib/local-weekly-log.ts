@@ -82,7 +82,7 @@ export async function saveLocalWeeklyEntry(
     weekOf,
     text: trimmed,
     promptText,
-    turns: turns?.length ? turns.slice(0, 12) : undefined,
+    turns: turns === undefined ? existing?.turns : turns.slice(0, 12),
     updatedAt: new Date().toISOString(),
   };
   const next: LocalWeeklyLogState = {
@@ -103,19 +103,4 @@ export async function setLocalWeekStartsOn(
   const next = { ...current, weekStartsOn };
   await writeLocalRecord(adapter, LOCAL_WEEKLY_LOG_KEY, 'weekly-log', next);
   return next;
-}
-
-export async function markQuestionServed(
-  questionId: string,
-  adapter: LocalRecordAdapter = browserRecordAdapter()
-): Promise<void> {
-  const current = await readLocalWeeklyLog(adapter);
-  const served = [questionId, ...current.servedQuestionIds.filter((id) => id !== questionId)].slice(
-    0,
-    24
-  );
-  await writeLocalRecord(adapter, LOCAL_WEEKLY_LOG_KEY, 'weekly-log', {
-    ...current,
-    servedQuestionIds: served,
-  });
 }

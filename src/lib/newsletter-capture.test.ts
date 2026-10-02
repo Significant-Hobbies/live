@@ -12,8 +12,8 @@ const featureRow = await readProjectFile('landing-astro/src/components/FeatureRo
 const appHealthLogger = await readProjectFile('landing-astro/public/app-health-log.js');
 
 describe('Live newsletter capture', () => {
-  it('tracks the primary hobby finder CTA in App Health', () => {
-    expect(livePage.match(/data-log="hobby_finder_opened"/gu)).toHaveLength(1);
+  it('tracks the primary catalog CTA in App Health', () => {
+    expect(livePage.match(/data-log="catalog_opened"/gu)).toHaveLength(1);
     expect(appHealthLogger).toContain('tracker.track(name)');
   });
 
