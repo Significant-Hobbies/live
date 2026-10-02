@@ -62,7 +62,7 @@ export function AddToMyListButton({
           type="button"
           onClick={handleAdd}
           disabled={isPending || added}
-          aria-label={`${added ? 'Saved' : 'Save'} ${title} to my private atlas`}
+          aria-label={`${added ? 'Saved' : 'Save'} ${title} to my list`}
           className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#211e18] px-5 text-sm font-bold text-white transition-colors hover:bg-[#363128] disabled:cursor-default disabled:opacity-70"
         >
           {isPending ? (
@@ -72,7 +72,7 @@ export function AddToMyListButton({
           ) : (
             <Sparkles className="size-4" />
           )}
-          {isPending ? 'Saving privately…' : added ? 'In your atlas' : 'Keep this possibility'}
+          {isPending ? 'Saving privately…' : added ? 'In my list' : 'Add to my list'}
         </button>
         {failed ? (
           <p className="mt-2 text-xs font-medium text-[#8b3329]" role="status">

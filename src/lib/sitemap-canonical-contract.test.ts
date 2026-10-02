@@ -26,7 +26,12 @@ describe('sitemap canonical contract', () => {
         .join('\n');
 
       expect(metadataSources, `${route} must resolve to an App Router page`).not.toBe('');
-      expect(metadataSources, `${route} must declare its own canonical`).toMatch(/canonical\s*:/);
+      const inlineCanonical = /canonical\s*:/.test(metadataSources);
+      const sharedCanonical =
+        metadataSources.includes('experienceMetadata(') && metadataSources.includes(`'${route}'`);
+      expect(inlineCanonical || sharedCanonical, `${route} must declare its own canonical`).toBe(
+        true
+      );
     }
   });
 

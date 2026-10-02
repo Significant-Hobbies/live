@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getServerAuthSession } from '~/server/auth';
+import { ExperienceCollectionLinks } from '~/components/experience-collection-links';
+import { JsonLd } from '~/components/json-ld';
+import { EXPERIENCE_COLLECTIONS } from '~/lib/experience-collections';
+import { EXPERIENCE_CONTENT_UPDATED } from '~/lib/experience-guides';
 
 import { EXPERIENCE_CATEGORIES, EXPERIENCE_ENTRIES } from '~/lib/experiences';
 import { DEFAULT_SOCIAL_IMAGE, SITE_URL } from '~/lib/site-metadata';
@@ -31,6 +35,16 @@ export default async function ExperiencesPage() {
   const session = await getServerAuthSession();
   return (
     <div className="mx-auto w-full max-w-3xl px-5 py-16 sm:px-8 sm:py-24">
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: 'Bucket list experience catalog',
+          description,
+          url: `${SITE_URL}/experiences`,
+          dateModified: EXPERIENCE_CONTENT_UPDATED,
+        }}
+      />
       <h1
         className="font-serif text-4xl font-medium tracking-tight text-foreground sm:text-5xl"
         style={{ textWrap: 'balance', lineHeight: 1.12 }}
@@ -43,11 +57,30 @@ export default async function ExperiencesPage() {
         week.
       </p>
 
+      <p className="mt-4 text-base text-muted-foreground">
+        Want a shorter starting list?{' '}
+        <Link
+          href="/experiences/collections"
+          className="text-foreground underline underline-offset-4"
+        >
+          Browse collections for weekends, solo time and more
+        </Link>
+        .
+      </p>
+
       <ExperiencesClient
         entries={EXPERIENCE_ENTRIES}
         categories={EXPERIENCE_CATEGORIES}
         mode={session?.user ? 'account' : 'local'}
       />
+
+      <section className="mt-14">
+        <h2 className="font-serif text-2xl text-foreground">Choose from a collection</h2>
+        <p className="mt-3 text-base text-muted-foreground">
+          Ideas grouped by the time, budget and company you have.
+        </p>
+        <ExperienceCollectionLinks collections={EXPERIENCE_COLLECTIONS} />
+      </section>
 
       <p className="mt-12 text-base text-muted-foreground">
         Not sure where to start?{' '}

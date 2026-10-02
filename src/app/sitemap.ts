@@ -6,6 +6,8 @@ import { editorialArticles } from '~/lib/editorial-content';
 import { FAMOUS_BUCKET_LISTS } from '~/lib/famous-bucket-lists';
 import { FAMOUS_JOURNEYS } from '~/lib/famous-journeys';
 import { PAGED_EXPERIENCES } from '~/lib/experiences';
+import { EXPERIENCE_COLLECTIONS } from '~/lib/experience-collections';
+import { EXPERIENCE_CONTENT_UPDATED } from '~/lib/experience-guides';
 import { HOBBY_CATEGORIES } from '~/lib/hobbies';
 import { sitemapLastModified } from '~/lib/sitemap-last-modified';
 import { db } from '~/server/db';
@@ -144,19 +146,28 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${baseUrl}/experiences`,
-      lastModified: now,
+      lastModified: EXPERIENCE_CONTENT_UPDATED,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
-    // Only the entries with written prose. The bare ideas are browsable on the
-    // index but have no page, so listing them here would point crawlers at
-    // 404s — and thin pages are a site-wide signal worth protecting the 122
-    // hobby pages from.
+    // Catalog pages use an editorial revision date, not request-time freshness.
     ...PAGED_EXPERIENCES.map((e) => ({
       url: `${baseUrl}/experiences/${e.slug}`,
-      lastModified: now,
+      lastModified: EXPERIENCE_CONTENT_UPDATED,
       changeFrequency: 'monthly' as const,
       priority: 0.6,
+    })),
+    {
+      url: `${baseUrl}/experiences/collections`,
+      lastModified: EXPERIENCE_CONTENT_UPDATED,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    ...EXPERIENCE_COLLECTIONS.map((collection) => ({
+      url: `${baseUrl}/experiences/collections/${collection.slug}`,
+      lastModified: EXPERIENCE_CONTENT_UPDATED,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
     })),
     // /journeys and its 36 detail pages were absent entirely — the largest
     // content file in the repo (famous-journeys.ts: 36 lives, 127 phases) was
@@ -309,7 +320,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${baseUrl}/bucket-list-ideas`,
-      lastModified: now,
+      lastModified: EXPERIENCE_CONTENT_UPDATED,
       changeFrequency: 'monthly',
       priority: 0.9,
     },

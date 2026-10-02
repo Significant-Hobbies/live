@@ -2,8 +2,8 @@
   "$schema": "fleet.design-review.v1",
   "version": 1,
   "project": "live",
-  "target": "Remove Habits page and navigation; preserve catalog, list, weekly journal, and time perspective",
-  "surfaceMode": "operate",
+  "target": "Practical activity guides and curated bucket-list collections in the existing reading template",
+  "surfaceMode": "read",
   "mode": "preserve",
   "register": "product",
   "context": {
@@ -15,7 +15,7 @@
     "probes": [],
     "selected": "existing-design",
     "approval": "not-required",
-    "before": ".fleet/design-evidence/remove-habits/before-1440.jpg",
+    "before": ".fleet/design-evidence/activity-seo/before-1440.jpg",
     "library": {
       "strategy": "upstream-first",
       "primary": "existing-project-system",
@@ -29,35 +29,35 @@
     },
     "contract": {
       "purpose": "Discover bucket-list ideas and side quests, keep a personal list, record completion, write one entry about last week, and keep time in perspective.",
-      "purposeSource": "Owner correction on 2026-10-02 and PRODUCT.md",
-      "canonicalPurpose": "Live is a catalog and personal bucket list with completion logging, a weekly journal, and Life in weeks.",
+      "purposeSource": "PRODUCT.md; owner SEO approval; Site Health publicDirectory.projects.live.purposeContract",
+      "canonicalPurpose": "Live helps a person turn passive wanting into a life they can deliberately imagine, plan, and experience.",
       "purposeAlignment": "match",
-      "driftNote": "Owner explicitly rejected a redesign and requested subtraction. Legacy planning records remain secondary.",
+      "driftNote": "The existing canonical purpose covers discovery and a private catalogue. Repository product truth makes completion and weekly writing explicit; no landing redesign.",
       "audience": "Adults collecting things they want to do and remembering what they did.",
-      "job": "Choose an idea, save it, complete it, and remember last week.",
-      "thesis": "Remove the separate habit tracker while preserving the existing visual system.",
-      "system": "Existing warm paper, serif headings, yellow navigation, lavender journal and established list workspace.",
-      "signature": "The recognizable cinematic landing, personal bucket list, and Life in weeks remain.",
-      "risk": "Retired URLs must lead to a useful destination without deleting historical records."
+      "job": "Choose an experience, understand how to start, save it privately and know when it is fulfilled.",
+      "thesis": "Extend the incumbent reading template with useful activity-specific text and curated links.",
+      "system": "Existing warm paper, serif headings, semantic ink, open sections and divided text lists.",
+      "signature": "Practical possibilities connected to My list and the weekly journal.",
+      "risk": "Avoid template-generated filler, invented prices and misleading completion promises."
     }
   },
   "evidence": {
     "screenshots": [
       {
         "width": 390,
-        "path": ".fleet/design-evidence/remove-habits/after-390.jpg"
+        "path": ".fleet/design-evidence/activity-seo/guide-390.jpg"
       },
       {
         "width": 768,
-        "path": ".fleet/design-evidence/remove-habits/after-768.jpg"
+        "path": ".fleet/design-evidence/activity-seo/guide-768.jpg"
       },
       {
         "width": 1440,
-        "path": ".fleet/design-evidence/remove-habits/after-1440.jpg"
+        "path": ".fleet/design-evidence/activity-seo/guide-1440.jpg"
       }
     ],
     "projectCheck": {
-      "command": "pnpm quality; 105 Playwright checks across mobile, tablet and desktop",
+      "command": "pnpm quality; 48 Playwright checks across mobile, tablet and desktop",
       "status": "pass"
     },
     "critique": {
@@ -65,7 +65,7 @@
       "maximum": 40
     },
     "audit": {
-      "score": 17,
+      "score": 18,
       "maximum": 20
     },
     "unresolved": {
@@ -78,11 +78,11 @@
     },
     "comprehension": {
       "status": "not-applicable",
-      "reviewer": "Operate surface; independent A and B preservation review"
+      "reviewer": "Read surface; isolated Assessment A and B, with no P0/P1 findings."
     }
   },
   "ownerFeedback": {
     "decision": "keep",
-    "note": "Owner explicitly requested removing the Habits page, keeping the project simple, preserving the design, and completing/deploying the correction quickly."
+    "note": "Owner approved practical SEO content and explicitly requested preserving the design and keeping the product simple."
   }
 }

@@ -5,6 +5,10 @@ import { notFound } from 'next/navigation';
 
 import { AddToMyListButton } from '~/components/add-to-my-list-button';
 import { JsonLd } from '~/components/json-ld';
+import { ExperienceCollectionLinks } from '~/components/experience-collection-links';
+import { collectionsForExperience } from '~/lib/experience-collections';
+import { EXPERIENCE_GUIDES, EXPERIENCE_CONTENT_UPDATED } from '~/lib/experience-guides';
+import { experienceBreadcrumbs, experienceMetadata } from '~/lib/experience-seo';
 import {
   type ExperienceEntry,
   findExperience,
@@ -13,17 +17,9 @@ import {
   relatedExperiences,
 } from '~/lib/experiences';
 import { safeDecodeURIComponent } from '~/lib/slug';
-import { DEFAULT_SOCIAL_IMAGE } from '~/lib/site-metadata';
+import { SITE_URL } from '~/lib/site-metadata';
 
-/**
- * A page per experience — but only for the ones carrying written prose.
- *
- * `PAGED_EXPERIENCES` deliberately excludes the 150 bare ideas. A page whose
- * only unique content is its own heading is a thin page, thin pages are a
- * site-wide ranking signal, and there are already 122 hobby pages that work.
- * The bare ideas stay browsable on /experiences and earn a URL when someone
- * writes them a sentence.
- */
+/** Preserve catalog URLs; detailed editorial plans can be added independently. */
 export async function generateStaticParams() {
   return PAGED_EXPERIENCES.map((e) => ({ slug: e.slug }));
 }
@@ -43,24 +39,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const entry = resolve((await params).slug);
   if (!entry) return { title: 'Not found — SignificantHobbies' };
-  return {
-    title: { absolute: entry.title },
-    description: entry.description,
-    alternates: { canonical: `/experiences/${entry.slug}` },
-    openGraph: {
-      title: entry.title,
-      description: entry.description,
-      url: `/experiences/${entry.slug}`,
-      type: 'article',
-      images: [{ url: DEFAULT_SOCIAL_IMAGE }],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: entry.title,
-      description: entry.description,
-      images: [DEFAULT_SOCIAL_IMAGE],
-    },
-  };
+  const guide = EXPERIENCE_GUIDES[entry.slug];
+  return experienceMetadata(
+    guide?.title ?? `${entry.title} | Bucket list idea`,
+    guide?.summary ?? entry.description ?? '',
+    `/experiences/${entry.slug}`
+  );
 }
 
 export default async function ExperiencePage({ params }: { params: Promise<{ slug: string }> }) {
@@ -68,28 +52,33 @@ export default async function ExperiencePage({ params }: { params: Promise<{ slu
   const entry = resolve((await params).slug);
   if (!entry) notFound();
 
-  // Not generateQuestChain: that is templated on category alone, so all 75
-  // travel items rendered the same four paragraphs with a noun swapped — most
-  // of the body, identical across the set. These weave in the entry's own
-  // description, region or horizon, and cross-reference.
-  const chain = firstSteps(entry);
-  const related = relatedExperiences(entry, 6);
+  const guide = EXPERIENCE_GUIDES[entry.slug];
+  const chain = guide?.steps ?? firstSteps(entry);
+  const related = relatedExperiences(entry, 12)
+    .sort(
+      (a, b) =>
+        Number(Boolean(EXPERIENCE_GUIDES[b.slug])) - Number(Boolean(EXPERIENCE_GUIDES[a.slug]))
+    )
+    .slice(0, 6);
+  const collections = collectionsForExperience(entry.slug);
 
   return (
     <div className="mx-auto w-full max-w-3xl px-5 py-16 sm:px-8 sm:py-24">
       <JsonLd
         data={{
           '@context': 'https://schema.org',
-          '@type': 'HowTo',
+          '@type': 'WebPage',
+          url: `${SITE_URL}/experiences/${entry.slug}`,
           name: entry.title,
-          description: entry.description,
-          step: chain.map((s, i) => ({
-            '@type': 'HowToStep',
-            position: i + 1,
-            name: s.title,
-            text: s.body,
-          })),
+          description: guide?.summary ?? entry.description,
+          ...(guide ? { dateModified: EXPERIENCE_CONTENT_UPDATED } : {}),
         }}
+      />
+      <JsonLd
+        data={experienceBreadcrumbs([
+          { name: 'Catalog', path: '/experiences' },
+          { name: entry.title, path: `/experiences/${entry.slug}` },
+        ])}
       />
 
       <nav className="text-sm text-muted-foreground">
@@ -106,7 +95,7 @@ export default async function ExperiencePage({ params }: { params: Promise<{ slu
       </h1>
 
       <p className="mt-5 max-w-[62ch] text-lg text-foreground/80" style={{ lineHeight: 1.6 }}>
-        {entry.description}
+        {guide?.summary ?? entry.description}
       </p>
 
       <p className="mt-4 flex flex-wrap gap-2 text-xs text-muted-foreground">
@@ -114,6 +103,53 @@ export default async function ExperiencePage({ params }: { params: Promise<{ slu
         {entry.region ? <Tag>{entry.region.replace(/-/g, ' ')}</Tag> : null}
         {entry.horizon ? <Tag>{entry.horizon.replace('-', ' ')}</Tag> : null}
       </p>
+
+      <div className="mt-8">
+        <AddToMyListButton
+          title={entry.title}
+          description={guide?.summary ?? entry.description}
+          category={entry.category}
+          sourceSlug={entry.slug}
+          variant="primary"
+          mode={session?.user ? 'account' : 'local'}
+        />
+        <p className="mt-2 text-sm text-muted-foreground">
+          {session?.user
+            ? 'Saves privately to your account.'
+            : 'Saves privately on this device. No account needed.'}
+        </p>
+      </div>
+
+      {guide ? (
+        <>
+          <section className="mt-14" aria-labelledby="planning-heading">
+            <h2 id="planning-heading" className="font-serif text-2xl text-foreground">
+              Plan the experience
+            </h2>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Planning estimates, not a price quote or a deadline. Your version may vary.
+            </p>
+            <dl className="mt-5 space-y-4 text-base">
+              {[
+                ['Time', guide.time],
+                ['Cost', guide.cost],
+                ['Where', guide.place],
+              ].map(([label, text]) => (
+                <div key={label}>
+                  <dt className="font-medium text-foreground">{label}</dt>
+                  <dd className="mt-1 max-w-[62ch] text-muted-foreground">{text}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+          <section className="mt-14">
+            <h2 className="font-serif text-2xl text-foreground">Before you start</h2>
+            <p className="mt-4 max-w-[62ch] text-base leading-relaxed text-muted-foreground">
+              {guide.preparation}
+            </p>
+          </section>
+        </>
+      ) : null}
 
       {entry.famous ? (
         <p className="mt-6 max-w-[62ch] text-base text-muted-foreground">
@@ -133,14 +169,42 @@ export default async function ExperiencePage({ params }: { params: Promise<{ slu
         <ol className="mt-5 space-y-4">
           {chain.map((step) => (
             <li key={step.title} className="border-border border-l-2 pl-4">
-              <p className="font-medium text-foreground">
-                {step.emoji} {step.title}
-              </p>
+              <p className="font-medium text-foreground">{step.title}</p>
               <p className="mt-1 max-w-[62ch] text-base text-muted-foreground">{step.body}</p>
             </li>
           ))}
         </ol>
       </section>
+
+      {guide ? (
+        <section className="mt-14">
+          <h2 className="font-serif text-2xl text-foreground">What counts as done</h2>
+          <p className="mt-4 max-w-[62ch] text-base leading-relaxed text-muted-foreground">
+            {guide.completion}
+          </p>
+          <p className="mt-4 max-w-[62ch] text-base leading-relaxed text-muted-foreground">
+            {guide.tip}
+          </p>
+          <p className="mt-4 text-sm text-muted-foreground">
+            When you finish, mark it fulfilled in{' '}
+            <Link href="/bucket-list" className="text-foreground underline underline-offset-4">
+              My list
+            </Link>
+            . You can remember it in your{' '}
+            <Link href="/journal" className="text-foreground underline underline-offset-4">
+              weekly journal
+            </Link>
+            .
+          </p>
+        </section>
+      ) : null}
+
+      {collections.length > 0 ? (
+        <section className="mt-14">
+          <h2 className="font-serif text-2xl text-foreground">Explore a collection</h2>
+          <ExperienceCollectionLinks collections={collections} />
+        </section>
+      ) : null}
 
       {related.length > 0 ? (
         <section className="mt-14">
@@ -166,22 +230,6 @@ export default async function ExperiencePage({ params }: { params: Promise<{ slu
           </ul>
         </section>
       ) : null}
-
-      <div className="mt-14 border-border border-t pt-10">
-        <AddToMyListButton
-          title={entry.title}
-          description={entry.description}
-          category={entry.category}
-          sourceSlug={entry.slug}
-          variant="primary"
-          mode={session?.user ? 'account' : 'local'}
-        />
-        <p className="mt-4 text-base text-muted-foreground">
-          {session?.user
-            ? 'Saved privately to your account.'
-            : 'Saved privately on this device. No account needed.'}
-        </p>
-      </div>
     </div>
   );
 }
