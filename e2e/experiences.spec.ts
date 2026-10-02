@@ -47,7 +47,7 @@ test.describe('Experiences', () => {
 
   test('category and kind filters compose', async ({ page }) => {
     await page.goto('/experiences');
-    await page.getByRole('button', { name: 'Places' }).click();
+    await page.getByRole('button', { name: 'Places', exact: true }).click();
     await page.getByRole('button', { name: 'Travel', exact: true }).click();
     const counter = page.getByText(/^\d+ of \d+$/);
     const shown = Number((await counter.textContent())?.match(/^(\d+)/)?.[1]);
