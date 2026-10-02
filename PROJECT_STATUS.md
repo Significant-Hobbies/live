@@ -5,7 +5,7 @@ Last updated: 2026-10-02
 ## Why / What
 
 Live is a simple catalog of bucket-list ideas and side quests, with personal
-lists, optional Life Bingo, habit check-ins, one journal entry about last week,
+lists, optional Life Bingo, completion logging, one journal entry about last week,
 and Life in weeks for time perspective. Existing planning and history records
 remain available on secondary routes.
 
@@ -36,6 +36,11 @@ generation use the same managed binding; neither request includes journal text.
 
 ## Features (shipped)
 
+- Core navigation is Catalog, My list, Weekly journal and Life in weeks.
+  Signed-in root requests enter My list. `/habits` redirects to My list and
+  `/daily` redirects to the weekly journal; historical records remain stored.
+- The catalog has 419 activity URLs, with 24 practical guides and six curated
+  collections. Discovery stays public; saving works locally or in an account.
 - The open-world Dream Atlas preserves exact personal dreams, imports existing
   lists, shows confidence-only native coverage, and opens honest wider-world
   research when Live's own catalogue ends.
@@ -45,14 +50,23 @@ generation use the same managed binding; neither request includes journal text.
 
 ## Timeline
 
-- **2026-10-02 — Bucket-list simplification prepared locally:** The existing
+- **2026-10-02 — Practical activity discovery (#32):** 24 existing
+  activity URLs now have individually written planning estimates, preparation,
+  first steps and completion criteria. Six curated collections connect useful
+  activities by budget, time, location and company. The reading template and
+  site design are preserved. Activity and collection metadata, breadcrumbs and
+  sitemap dates describe the actual content. The category roundup reports its
+  real 253 ideas and links to their activity pages. Tracking: GitHub issue #32.
+
+- **2026-10-02 — Bucket-list simplification deployed:** The existing
   landing imagery, typography, colors, and workspace layouts are retained.
-  Primary navigation leads to Catalog, My list, Weekly journal, Habits, and
+  Primary navigation leads to Catalog, My list, Weekly journal, and
   Life in weeks. The hobby-history marketing section, required biography
   onboarding, and journal interview controls are removed. Catalog rows save
   directly to the existing local or account list. Session-bearing root requests
-  and default sign-in callbacks enter My list. No deployment or data migration
-  has been performed for this change.
+  and default sign-in callbacks enter My list. The separate Habits page is
+  removed. PR #31 deployed at `fc5204f`, with full Quality and Browser CI green;
+  production retired-route redirects were verified. No data migration.
 
 - **2026-09-12 — Marketing source link:** The Astro marketing footer now uses
   an accessible repository icon with a 44px target, matching the app footer's

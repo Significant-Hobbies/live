@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import {
@@ -11,31 +10,22 @@ import {
 } from '~/components/aceternity';
 import { Whale } from '~/components/whale';
 import { getBucketListCategoryStyle } from '~/lib/bucket-list-category-styles';
-import { EXPERIENCES_BY_CATEGORY } from '~/lib/experiences';
+import { EXPERIENCE_ENTRIES, EXPERIENCES_BY_CATEGORY } from '~/lib/experiences';
+import { experienceMetadata } from '~/lib/experience-seo';
 import { FAMOUS_BUCKET_LISTS } from '~/lib/famous-bucket-lists';
-
-export const metadata: Metadata = {
-  title: '1000+ Bucket List Ideas for 2025 — SignificantHobbies',
-  description:
-    'The ultimate bucket list ideas guide: travel, adventure, creative, achievement, social, and humanitarian goals. Curated from real bucket lists of famous people. Free to build yours.',
-  openGraph: {
-    title: "1000+ Bucket List Ideas — Curated from Famous People's Real Lists",
-    description:
-      'Find your next life goal. Browse bucket list ideas by category, inspired by Obama, Serena Williams, Richard Branson, and more.',
-  },
-  alternates: { canonical: 'https://live.significanthobbies.com/bucket-list-ideas' },
-};
 
 // The corpus moved to ~/lib/experiences so the suggestion engine and any
 // future surface can read it. This page renders it; it no longer owns it.
 const IDEAS_BY_CATEGORY = EXPERIENCES_BY_CATEGORY;
+const totalIdeas = Object.values(IDEAS_BY_CATEGORY).reduce((sum, cat) => sum + cat.ideas.length, 0);
+const experienceByTitle = new Map(EXPERIENCE_ENTRIES.map((entry) => [entry.title, entry]));
+export const metadata = experienceMetadata(
+  `${totalIdeas} Bucket List Ideas by Category | Live`,
+  `Explore ${totalIdeas} bucket list ideas across travel, creativity, relationships and more. Read practical guides and save ideas privately to your own list.`,
+  '/bucket-list-ideas'
+);
 
 export default function BucketListIdeasPage() {
-  const totalIdeas = Object.values(IDEAS_BY_CATEGORY).reduce(
-    (sum, cat) => sum + cat.ideas.length,
-    0
-  );
-
   return (
     <div className="bg-card">
       {/* ── Hero ─────────────────────────────────────────────────── */}
@@ -48,10 +38,10 @@ export default function BucketListIdeasPage() {
               <Whale size={80} glow float />
               <div>
                 <p className="text-primary text-sm font-semibold mb-1">
-                  Guided by Whale · {totalIdeas}+ ideas
+                  {totalIdeas} ideas · One personal list
                 </p>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Curated from real bucket lists of presidents, athletes, and icons.
+                  Places to go, things to make, and experiences to share.
                 </p>
               </div>
             </div>
@@ -62,8 +52,8 @@ export default function BucketListIdeasPage() {
               Bucket list ideas <span className="text-primary">worth doing before you die</span>
             </h1>
             <p className="mt-4 text-muted-foreground text-lg max-w-xl">
-              Curated from the verified bucket lists of presidents, athletes, billionaires, and
-              icons — then expanded to cover every kind of life well-lived.
+              Browse ideas by category, open one for a closer look, and keep the ones you want to
+              do. Start with something small or make room for a longer ambition.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
@@ -117,19 +107,29 @@ export default function BucketListIdeasPage() {
               </FadeIn>
 
               <StaggerContainer className="grid gap-2 sm:grid-cols-2">
-                {cat.ideas.map((idea, i) => (
-                  <StaggerItem key={i}>
-                    <SpotlightCard
-                      className={`border ${style.border} ${style.bg} shadow-soft`}
-                      innerClassName="px-4 py-3"
-                    >
-                      <div className="flex items-start gap-3 group">
-                        <span className={`mt-1.5 h-2 w-2 shrink-0 rounded-full ${style.dot}`} />
-                        <span className="text-sm text-foreground leading-relaxed">{idea}</span>
-                      </div>
-                    </SpotlightCard>
-                  </StaggerItem>
-                ))}
+                {cat.ideas.map((idea, i) => {
+                  const entry = experienceByTitle.get(idea);
+                  if (!entry) throw new Error(`Idea missing from the activity catalog: ${idea}`);
+                  return (
+                    <StaggerItem key={i}>
+                      <SpotlightCard
+                        className={`border ${style.border} ${style.bg} shadow-soft`}
+                        innerClassName="px-4 py-3"
+                      >
+                        <div className="flex items-start gap-3 group">
+                          <span className={`mt-1.5 h-2 w-2 shrink-0 rounded-full ${style.dot}`} />
+                          <Link
+                            href={`/experiences/${entry.slug}`}
+                            prefetch={false}
+                            className="text-sm text-foreground leading-relaxed underline-offset-4 hover:underline"
+                          >
+                            {idea}
+                          </Link>
+                        </div>
+                      </SpotlightCard>
+                    </StaggerItem>
+                  );
+                })}
               </StaggerContainer>
 
               {/* Famous person who did something in this category */}
@@ -176,8 +176,8 @@ export default function BucketListIdeasPage() {
             Found something that speaks to you?
           </h2>
           <p className="text-muted-foreground max-w-md mx-auto">
-            Whale tracks your bucket list, shows your personality archetype, and matches you to the
-            famous person whose ambitions look most like yours.
+            Save the ideas you want to do, mark them fulfilled when you finish, and remember what
+            happened in your weekly journal.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link

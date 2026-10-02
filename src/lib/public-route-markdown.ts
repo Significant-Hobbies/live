@@ -2,6 +2,8 @@ import { and, desc, eq } from 'drizzle-orm';
 
 import { timelines, users } from '~/db/schema';
 import { getEditorialArticle, editorialArticles } from '~/lib/editorial-content';
+import { EXPERIENCE_COLLECTIONS, findExperienceCollection } from '~/lib/experience-collections';
+import { EXPERIENCE_GUIDES } from '~/lib/experience-guides';
 import {
   EXPERIENCE_ENTRIES,
   findExperience,
@@ -24,7 +26,7 @@ const STATIC_PAGES: Record<string, { title: string; summary: string }> = {
   '/about': {
     title: 'About Significant Hobbies',
     summary:
-      'A life planner for private daily rituals and public living: hobbies, bucket lists, experiences, side quests, and opt-in profiles.',
+      'A searchable bucket-list catalog and personal list, with completion logging, a weekly journal and Life in weeks.',
   },
   '/bucket-list-before-30': {
     title: 'Bucket list ideas before 30',
@@ -154,17 +156,18 @@ export async function renderPublicRouteMarkdown(pathname: string): Promise<strin
     return page(
       'Significant Hobbies',
       source,
-      'A life planner for private daily rituals and public living.',
+      'A searchable catalog of bucket-list ideas and side quests, with a personal list and weekly journal.',
       [
-        'Explore hobbies, experiences, bucket lists, and famous hobby journeys.',
+        'Explore the public activity catalog, practical guides and curated collections.',
         'Use the anonymous life-in-weeks and life-bingo tools without creating an account.',
-        'Private daily practice and saved timelines require an account and are not agent-indexed.',
+        'Keep a private list on this device or in an account, log completed items and write about last week. Private records are not agent-indexed.',
       ]
     );
   }
   if (path === '/explore') return renderExplore(source);
   if (path === '/hobbies') return renderHobbyIndex(source);
   if (path === '/experiences') return renderExperienceIndex(source);
+  if (path === '/experiences/collections') return renderExperienceCollectionIndex(source);
   if (path === '/journeys') return renderJourneyIndex(source);
   if (path === '/bucket-lists') return renderBucketListIndex(source);
   if (path === '/blog') return renderBlogIndex(source);
@@ -177,6 +180,9 @@ export async function renderPublicRouteMarkdown(pathname: string): Promise<strin
 
   const hobbyMatch = path.match(/^\/hobbies\/([^/]+)$/);
   if (hobbyMatch) return renderHobby(hobbyMatch[1]!, source);
+
+  const collectionMatch = path.match(/^\/experiences\/collections\/([^/]+)$/);
+  if (collectionMatch) return renderExperienceCollection(collectionMatch[1]!, source);
 
   const experienceMatch = path.match(/^\/experiences\/([^/]+)$/);
   if (experienceMatch) return renderExperience(experienceMatch[1]!, source);
@@ -308,23 +314,61 @@ function renderExperienceIndex(source: string) {
     'Experiences worth making room for',
     source,
     `${EXPERIENCE_ENTRIES.length} places, milestones, and ideas worth considering.`,
-    sections
+    [`[Browse curated collections](${SITE_URL}/experiences/collections)`, ...sections]
+  );
+}
+
+function renderExperienceCollectionIndex(source: string) {
+  return page(
+    'Bucket list collections',
+    source,
+    'Choose by time, budget, location and company.',
+    EXPERIENCE_COLLECTIONS.map(
+      (collection) =>
+        `[${collection.title}](${SITE_URL}/experiences/collections/${collection.slug}) — ${collection.description}`
+    )
+  );
+}
+
+function renderExperienceCollection(slug: string, source: string) {
+  const collection = findExperienceCollection(slug);
+  if (!collection) return null;
+  return page(
+    collection.title,
+    source,
+    collection.introduction,
+    [
+      `## How to choose\n\n${collection.choosing}`,
+      `## Ideas to explore\n\n${collection.items
+        .map((item) => {
+          const entry = findExperience(item.slug);
+          return `- [${entry?.title ?? item.slug}](${SITE_URL}/experiences/${item.slug}) — ${item.why}`;
+        })
+        .join('\n')}`,
+    ],
+    false
   );
 }
 
 function renderExperience(slug: string, source: string) {
   const entry = findExperience(slug);
   if (!entry?.description) return null;
-  const steps = firstSteps(entry);
+  const guide = EXPERIENCE_GUIDES[slug];
+  const steps = guide?.steps ?? firstSteps(entry);
   const related = relatedExperiences(entry);
   return page(
     `${entry.emoji} ${entry.title}`,
     source,
-    entry.description,
+    guide?.summary ?? entry.description,
     [
-      `## How to start\n\n${steps
-        .map((step) => `### ${step.emoji} ${step.title}\n\n${step.body}`)
-        .join('\n\n')}`,
+      ...(guide
+        ? [
+            `## Plan the experience\n\nPlanning estimates, not a price quote or a deadline. Your version may vary.\n\nTime: ${guide.time}\n\nCost: ${guide.cost}\n\nWhere: ${guide.place}`,
+            `## Before you start\n\n${guide.preparation}`,
+          ]
+        : []),
+      `## How to start\n\n${steps.map((step) => `### ${step.title}\n\n${step.body}`).join('\n\n')}`,
+      ...(guide ? [`## What counts as done\n\n${guide.completion}\n\n${guide.tip}`] : []),
       `## Related experiences\n\n${related
         .map((item) =>
           item.description

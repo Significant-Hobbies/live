@@ -2262,15 +2262,7 @@ export const EXPERIENCE_ENTRIES: ExperienceEntry[] = (() => {
   return [...all.filter((e) => e.description), ...all.filter((e) => !e.description)];
 })();
 
-/**
- * The entries that get their own page.
- *
- * Only those carrying written prose. The 150 bare ideas are titles and nothing
- * else — 150 pages whose only unique content is a heading would be thin, and
- * thin pages are a site-wide signal that would drag down the 122 hobby pages
- * that currently work. They stay browsable on the index; they earn a URL when
- * someone writes them a sentence.
- */
+/** Entries with prose have stable detail URLs; currently the whole catalog. */
 export const PAGED_EXPERIENCES: ExperienceEntry[] = EXPERIENCE_ENTRIES.filter(
   (e) => typeof e.description === 'string' && e.description.length > 0
 );

@@ -1,0 +1,88 @@
+{
+  "$schema": "fleet.design-review.v1",
+  "version": 1,
+  "project": "live",
+  "target": "Remove Habits page and navigation; preserve catalog, list, weekly journal, and time perspective",
+  "surfaceMode": "operate",
+  "mode": "preserve",
+  "register": "product",
+  "context": {
+    "product": "PRODUCT.md",
+    "design": "DESIGN.md"
+  },
+  "direction": {
+    "references": [],
+    "probes": [],
+    "selected": "existing-design",
+    "approval": "not-required",
+    "before": ".fleet/design-evidence/remove-habits/before-1440.jpg",
+    "library": {
+      "strategy": "upstream-first",
+      "primary": "existing-project-system",
+      "sources": [],
+      "runtime": "existing",
+      "customReplacement": {
+        "used": false,
+        "authorization": "not-required",
+        "reason": ""
+      }
+    },
+    "contract": {
+      "purpose": "Discover bucket-list ideas and side quests, keep a personal list, record completion, write one entry about last week, and keep time in perspective.",
+      "purposeSource": "Owner correction on 2026-10-02 and PRODUCT.md",
+      "canonicalPurpose": "Live is a catalog and personal bucket list with completion logging, a weekly journal, and Life in weeks.",
+      "purposeAlignment": "match",
+      "driftNote": "Owner explicitly rejected a redesign and requested subtraction. Legacy planning records remain secondary.",
+      "audience": "Adults collecting things they want to do and remembering what they did.",
+      "job": "Choose an idea, save it, complete it, and remember last week.",
+      "thesis": "Remove the separate habit tracker while preserving the existing visual system.",
+      "system": "Existing warm paper, serif headings, yellow navigation, lavender journal and established list workspace.",
+      "signature": "The recognizable cinematic landing, personal bucket list, and Life in weeks remain.",
+      "risk": "Retired URLs must lead to a useful destination without deleting historical records."
+    }
+  },
+  "evidence": {
+    "screenshots": [
+      {
+        "width": 390,
+        "path": ".fleet/design-evidence/remove-habits/after-390.jpg"
+      },
+      {
+        "width": 768,
+        "path": ".fleet/design-evidence/remove-habits/after-768.jpg"
+      },
+      {
+        "width": 1440,
+        "path": ".fleet/design-evidence/remove-habits/after-1440.jpg"
+      }
+    ],
+    "projectCheck": {
+      "command": "pnpm quality; 105 Playwright checks across mobile, tablet and desktop",
+      "status": "pass"
+    },
+    "critique": {
+      "score": 32,
+      "maximum": 40
+    },
+    "audit": {
+      "score": 17,
+      "maximum": 20
+    },
+    "unresolved": {
+      "p0": 0,
+      "p1": 0
+    },
+    "detector": {
+      "posture": "advisory",
+      "findings": []
+    },
+    "comprehension": {
+      "status": "not-applicable",
+      "reviewer": "Operate surface; independent A and B preservation review"
+    }
+  },
+  "ownerFeedback": {
+    "decision": "keep",
+    "note": "Owner explicitly requested removing the Habits page, keeping the project simple, preserving the design, and completing/deploying the correction quickly."
+  }
+}
