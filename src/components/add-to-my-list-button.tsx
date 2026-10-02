@@ -105,9 +105,9 @@ export function AddToMyListButton({
       aria-describedby={
         failed ? `add-${title.replace(/\W+/g, '-').toLowerCase()}-error` : undefined
       }
-      className="inline-flex items-center gap-1.5 rounded-full border border-lumi-200 bg-card px-3 py-1 text-xs font-medium text-[#684e00] transition-colors hover:bg-primary/10 disabled:cursor-not-allowed disabled:opacity-50"
+      className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-lumi-200 bg-card px-3 py-1 text-xs font-medium text-[#684e00] transition-colors hover:bg-primary/10 disabled:cursor-not-allowed disabled:opacity-50"
     >
-      {isPending ? 'Adding…' : '+ Add to my list'}
+      {isPending ? 'Adding…' : failed ? 'Could not save — retry' : '+ Add to my list'}
       {failed ? (
         <span id={`add-${title.replace(/\W+/g, '-').toLowerCase()}-error`} className="sr-only">
           Live could not save this yet. Please try again.

@@ -1,17 +1,10 @@
 'use server';
 
-import { and, asc, desc, eq, gt, lt, ne } from 'drizzle-orm';
+import { and, desc, eq } from 'drizzle-orm';
 import { revalidatePath } from 'next/cache';
 
-import { bucketListItems, commitments, users, weeklyLogEntries } from '~/db/schema';
-import { dayKeyIn, isValidTimeZone } from '~/lib/day';
-import {
-  normalizeWeekStartsOn,
-  STALE_DREAM_DAYS,
-  weekStartFor,
-  type WeekStartsOn,
-} from '~/lib/weekly-log';
-import { WEEKLY_QUESTIONS, type NudgeSignals } from '~/lib/weekly-questions';
+import { users, weeklyLogEntries } from '~/db/schema';
+import { normalizeWeekStartsOn, type WeekStartsOn } from '~/lib/weekly-log';
 import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
 
@@ -79,7 +72,7 @@ export async function saveWeeklyLogEntry(
       .set({
         text: trimmed,
         promptText: cleanPrompt,
-        turnsJson: cleanTurnsJson,
+        ...(turns === undefined ? {} : { turnsJson: cleanTurnsJson }),
         updatedAt: new Date(),
       })
       .where(eq(weeklyLogEntries.id, existing.id));
@@ -118,110 +111,6 @@ export async function setWeekStartsOn(value: string): Promise<{ saved: boolean }
   await db.update(users).set({ weekStartsOn: normalized }).where(eq(users.id, session.user.id));
   revalidatePath('/journal');
   return { saved: true };
-}
-
-// ── Stale dreams & nudge signals ───────────────────────────────────────────
-
-export type StaleDream = {
-  id: string;
-  title: string;
-  category: string | null;
-  daysSinceMovement: number;
-};
-
-export async function getStaleDreams(limit = 3): Promise<StaleDream[]> {
-  const session = await getServerAuthSession();
-  if (!session?.user) return [];
-
-  const cutoff = new Date(Date.now() - STALE_DREAM_DAYS * 24 * 60 * 60 * 1000);
-  const rows = await db
-    .select({
-      id: bucketListItems.id,
-      title: bucketListItems.title,
-      category: bucketListItems.category,
-      updatedAt: bucketListItems.updatedAt,
-    })
-    .from(bucketListItems)
-    .where(
-      and(
-        eq(bucketListItems.userId, session.user.id),
-        ne(bucketListItems.status, 'done'),
-        lt(bucketListItems.updatedAt, cutoff)
-      )
-    )
-    .orderBy(asc(bucketListItems.updatedAt))
-    .limit(limit);
-
-  const dayMs = 24 * 60 * 60 * 1000;
-  return rows.map((row) => ({
-    id: row.id,
-    title: row.title,
-    category: row.category,
-    daysSinceMovement: Math.max(0, Math.floor((Date.now() - row.updatedAt.getTime()) / dayMs)),
-  }));
-}
-
-/**
- * Categorical signals for the nudge classifier — taxonomy values and counts
- * only, never titles or entry text.
- */
-export async function getNudgeSignals(timezone: string | null): Promise<NudgeSignals> {
-  const session = await getServerAuthSession();
-  const tz = isValidTimeZone(timezone ?? '') ? timezone : null;
-  const empty: NudgeSignals = {
-    staleDreamCategories: [],
-    entriesLastMonth: 0,
-    activeCommitments: 0,
-    activeDreams: 0,
-    isSuggestedDay: true,
-  };
-  if (!session?.user) return empty;
-
-  const stale = await getStaleDreams(5);
-  const monthAgo = new Date(Date.now() - 28 * 24 * 60 * 60 * 1000);
-  const [recentEntries, activeCommitmentRows, activeDreamRows] = await Promise.all([
-    db
-      .select({ id: weeklyLogEntries.id })
-      .from(weeklyLogEntries)
-      .where(
-        and(eq(weeklyLogEntries.userId, session.user.id), gt(weeklyLogEntries.updatedAt, monthAgo))
-      ),
-    db
-      .select({ id: commitments.id })
-      .from(commitments)
-      .where(and(eq(commitments.userId, session.user.id), ne(commitments.status, 'abandoned'))),
-    db
-      .select({ id: bucketListItems.id })
-      .from(bucketListItems)
-      .where(and(eq(bucketListItems.userId, session.user.id), ne(bucketListItems.status, 'done'))),
-  ]);
-
-  const today = dayKeyIn(tz);
-  return {
-    staleDreamCategories: [
-      ...new Set(stale.map((dream) => dream.category).filter((c): c is string => !!c)),
-    ],
-    entriesLastMonth: recentEntries.length,
-    activeCommitments: activeCommitmentRows.length,
-    activeDreams: activeDreamRows.length,
-    isSuggestedDay: new Date(`${today}T00:00:00Z`).getUTCDay() === 0,
-  };
-}
-
-/** Question ids to exclude — derived from the prompts already served. */
-export async function getRecentPromptIds(): Promise<string[]> {
-  const session = await getServerAuthSession();
-  if (!session?.user) return [];
-
-  const rows = await db
-    .select({ promptText: weeklyLogEntries.promptText })
-    .from(weeklyLogEntries)
-    .where(eq(weeklyLogEntries.userId, session.user.id))
-    .orderBy(desc(weeklyLogEntries.weekOf))
-    .limit(8);
-
-  const served = new Set(rows.map((r) => r.promptText).filter(Boolean));
-  return WEEKLY_QUESTIONS.filter((q) => served.has(q.text)).map((q) => q.id);
 }
 
 // ── Sunday email nudge ──────────────────────────────────────────────────────

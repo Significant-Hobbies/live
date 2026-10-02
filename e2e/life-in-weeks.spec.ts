@@ -99,8 +99,8 @@ test.describe('Life in weeks', () => {
 
     await expect(page.getByText(/That leaves roughly/)).toBeVisible();
     await expect(page.getByLabel('What date were you born?')).toHaveCount(0);
-    await expect(page.getByRole('link', { name: 'Return to Live More' })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Return to History' })).toBeVisible();
+    await expect(page.getByRole('link', { name: 'Explore the catalog' })).toBeVisible();
+    await expect(page.getByRole('link', { name: 'Open my list' })).toBeVisible();
     await expect(page.getByRole('link', { name: /Find something to do/ })).toHaveCount(0);
   });
 
@@ -109,7 +109,7 @@ test.describe('Life in weeks', () => {
     await enterBirthDate(page, '1990-06-15');
     await page.getByRole('button', { name: 'Show me' }).click();
 
-    for (const name of [/Find something to do/, /List what you still want to do/]) {
+    for (const name of [/Explore the catalog/, /Open my list/]) {
       const href = await page.getByRole('link', { name }).getAttribute('href');
       expect(href).toBeTruthy();
       const res = await page.request.get(href as string);

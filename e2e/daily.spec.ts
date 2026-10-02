@@ -43,7 +43,7 @@ test.describe('Journal, Habits & manifesto', () => {
 
     await page.goto('/journal');
     await page.locator('#weekly-entry').fill('I made room for a slower afternoon.');
-    await page.getByRole('button', { name: /done — keep this week|Update this week/ }).click();
+    await page.getByRole('button', { name: /Keep this week|Update this week/ }).click();
     await page.reload();
     await expect(page.locator('#weekly-entry')).toHaveValue('I made room for a slower afternoon.');
 
@@ -54,25 +54,44 @@ test.describe('Journal, Habits & manifesto', () => {
     await expect(page.getByText(/\d+ of \d+ complete today/)).toHaveCount(0);
   });
 
-  test('the weekly log asks follow-up questions until the week is done', async ({ page }) => {
-    await completeLocalOnboarding(page);
+  test('the weekly journal keeps one entry without an interview', async ({ page }) => {
     await page.goto('/journal');
-
-    await page.locator('#weekly-entry').fill('Dinner with my mom, then a long slow walk.');
-    await page.getByRole('button', { name: 'Next question' }).click();
-
-    // The kept answer stays on the page while a fresh question takes over.
-    await expect(page.getByText('Dinner with my mom, then a long slow walk.')).toBeVisible();
-    await expect(page.locator('#weekly-entry')).toHaveValue('');
-
-    await page.locator('#weekly-entry').fill('A quiet Sunday with coffee and a book.');
-    await page.getByRole('button', { name: /done — keep this week/ }).click();
+    await expect(page.getByRole('button', { name: 'Next question' })).toHaveCount(0);
+    await expect(page.getByRole('button', { name: 'A different question' })).toHaveCount(0);
+    await expect(page.getByRole('heading', { name: 'What did you do last week?' })).toBeVisible();
+    const entry = 'Dinner with my mom, then a long slow walk.';
+    await page.locator('#weekly-entry').fill(entry);
+    await expect(page.getByRole('button', { name: 'Weeks start sunday' })).toBeDisabled();
+    await page.getByRole('button', { name: 'Keep this week', exact: true }).click();
     await expect(page.getByText('Kept. This week is on record.')).toBeVisible();
-
+    await expect(page.getByRole('button', { name: 'Weeks start sunday' })).toBeEnabled();
     await page.reload();
-    const saved = await page.locator('#weekly-entry').inputValue();
-    expect(saved).toContain('Dinner with my mom, then a long slow walk.');
-    expect(saved).toContain('A quiet Sunday with coffee and a book.');
+    await expect(page.locator('#weekly-entry')).toHaveValue(entry);
+    await page.locator('#weekly-entry').fill(`${entry} A quiet Sunday with coffee.`);
+    await page.getByRole('button', { name: 'Update this week' }).click();
+    await expect(page.getByText('Kept. This week is on record.')).toBeVisible();
+    await page.reload();
+    await expect(page.locator('#weekly-entry')).toHaveValue(`${entry} A quiet Sunday with coffee.`);
+  });
+
+  test('a catalog idea can be saved and completed with no setup', async ({ page }) => {
+    await page.goto('/experiences');
+    await page.getByLabel('Search everything').fill('Make pasta from scratch');
+    await page
+      .getByRole('button', { name: 'Add Make pasta from scratch to my bucket list', exact: true })
+      .click();
+    await expect(page.getByText('Added to your bucket list')).toBeVisible();
+    await page.goto('/bucket-list');
+    await page
+      .getByRole('button', { name: 'Complete Make pasta from scratch', exact: true })
+      .click();
+    await expect(
+      page.getByRole('button', { name: 'Reopen Make pasta from scratch', exact: true })
+    ).toBeVisible();
+    await page.reload();
+    await expect(
+      page.getByRole('button', { name: 'Reopen Make pasta from scratch', exact: true })
+    ).toBeVisible();
   });
 
   test('/live-more keeps and restores an exact dream', async ({ page }) => {
@@ -144,23 +163,23 @@ test.describe('Journal, Habits & manifesto', () => {
     await expect(bucketListLink).toHaveAttribute('href', '/bucket-lists');
   });
 
-  test('nav exposes Live, Weekly log, and Habits as distinct products', async ({ page }) => {
-    await completeLocalOnboarding(page);
+  test('nav exposes the core list, journal, and habits', async ({ page }) => {
     await page.goto('/hobbies');
     if ((page.viewportSize()?.width ?? 0) < 1024) {
       await page.getByRole('button', { name: 'Open menu' }).click();
     }
-    await expect(page.getByRole('link', { name: 'Live', exact: true }).first()).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Weekly log', exact: true }).first()).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Habits', exact: true }).first()).toBeVisible();
+    const nav = page.locator('[data-site-nav]');
+    for (const name of ['Catalog', 'My list', 'Weekly journal', 'Habits', 'Life in weeks']) {
+      await expect(nav.getByRole('link', { name, exact: true })).toBeVisible();
+    }
   });
 
-  test('public footer keeps private workspace links out', async ({ page }) => {
+  test('public footer leads to catalog and local workspaces', async ({ page }) => {
     await page.goto('/hobbies');
     const footer = page.locator('[data-site-footer]');
-    await expect(footer.getByRole('link', { name: 'Weekly log', exact: true })).toHaveCount(0);
-    await expect(footer.getByRole('link', { name: 'Habits', exact: true })).toHaveCount(0);
-    await expect(footer.getByRole('link', { name: 'Find your hobby' })).toBeVisible();
-    await expect(footer.getByRole('link', { name: 'Things to try' })).toBeVisible();
+    await expect(footer.getByRole('link', { name: 'Catalog', exact: true })).toBeVisible();
+    await expect(footer.getByRole('link', { name: 'My list', exact: true })).toBeVisible();
+    await expect(footer.getByRole('link', { name: 'Weekly journal', exact: true })).toBeVisible();
+    await expect(footer.getByRole('link', { name: 'Habits', exact: true })).toBeVisible();
   });
 });

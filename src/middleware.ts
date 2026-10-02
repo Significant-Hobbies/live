@@ -2,7 +2,7 @@ import { type NextRequest, NextResponse } from 'next/server';
 
 export function middleware(req: NextRequest) {
   // Root ownership is resolved in worker.mjs: anonymous requests receive the
-  // Astro asset while authenticated requests reach the private Next root.
+  // Astro asset while session-bearing requests redirect to /bucket-list.
   void req;
 
   // Private top-level workspaces choose local or account storage themselves.

@@ -8,7 +8,7 @@ import { authClient } from '~/lib/auth-client';
 import { captureAuthFailure } from '~/lib/foundry-monitoring';
 
 export function LoginForm({
-  callbackURL = '/',
+  callbackURL = '/bucket-list',
   initialError = false,
 }: {
   callbackURL?: string;

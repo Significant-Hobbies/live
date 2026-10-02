@@ -5,9 +5,9 @@ const groups = [
   {
     title: 'Start here',
     links: [
-      ['Find your hobby', '/find-your-hobby'],
-      ['Onboarding', '/onboarding'],
-      ['Why this exists', '/manifesto'],
+      ['Catalog', '/experiences'],
+      ['My list', '/bucket-list'],
+      ['Weekly journal', '/journal'],
     ],
   },
   {
@@ -23,8 +23,7 @@ const groups = [
     title: 'Explore',
     links: [
       ['Life in weeks', '/life-in-weeks'],
-      ['Hobbies for adults', '/hobbies-for-adults'],
-      ['Cheap hobbies', '/cheap-hobbies'],
+      ['Habits', '/habits'],
       ['Travel bucket list', '/travel-bucket-list'],
     ],
   },

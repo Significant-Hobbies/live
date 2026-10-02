@@ -20,15 +20,14 @@ Significant Hobbies helps a person name the life they want to live and walk
 toward it — a family of focused personal products:
 
 - **Significant Hobbies** is the read-only directory and future dashboard.
-- **Live** owns bucket lists, hobbies, commitments, timelines, side quests,
-  discovery, and the optional small new thing for today.
+- **Live** leads with a searchable catalog of bucket-list ideas and side quests,
+  a personal list, and optional Life Bingo boards.
 - **Weekly log** owns the private weekly record of what the user actually
-  lived — the journal's successor — as a short guided interview: an
-  opening question, then the next best question each turn until the user
-  says they're done. Earlier AM/PM entries remain readable as archive.
+  lived: one editable entry about the previous week. Earlier weekly and AM/PM
+  entries remain readable as archive.
 - **Habits** owns simple, non-scoring practice check-ins.
-- **History** remains part of Live and helps the user understand the life
-  accumulating behind their plans.
+- **Life in weeks** keeps time in perspective with weeks lived and estimated
+  weeks remaining. Existing History and planning records remain available.
 
 The mortality frame connects the family by making finite time concrete — the
 roughly 4,000 weeks an average life holds. Success means helping a person
@@ -50,15 +49,15 @@ progress systems are limited to surfaces where proof is the explicit job.
   Hub, and legacy apex Live paths permanently redirect to the same path on the
   Live host. The host split is specified in
   [`docs/architecture/overview.md`](docs/architecture/overview.md).
-- `live.significanthobbies.com/` serves the preserved Live landing, and its
-  calls to action lead into Live application routes on that same host.
-- `/live-more`, `/journal`, and `/habits` are the current Live product routes;
-  `/journal` hosts the weekly log, and `/daily` is a compatibility doorway
-  to the weekly log and Habits.
-- The hobby quiz is the single primary discovery path while its funnel is being
-  evaluated.
-- Authenticated users manage timelines, commitments, habits, weekly-log
-  entries, bucket lists, quests, trajectory, and profile settings.
+- Signed-out `/` serves the preserved Live landing with a catalog call to
+  action. A session-bearing request enters `/bucket-list`; the application
+  still validates the session before choosing account or local storage.
+- Primary navigation is Catalog (`/experiences`), My list (`/bucket-list`),
+  Weekly journal (`/journal`), Habits (`/habits`), and Life in weeks
+  (`/life-in-weeks`). Core work does not require biography onboarding.
+- `/onboarding` redirects to My list. `/daily`, the hobby quiz, Dream Atlas,
+  timelines, commitments, trajectory, and History remain compatibility or
+  secondary routes; they are not the primary journey.
 - Cloudflare Workers/OpenNext serves the application; Cloudflare D1 stores
   authenticated application data through Drizzle. Signed-out private work
   remains in IndexedDB on the canonical Live origin.
@@ -71,8 +70,8 @@ progress systems are limited to surfaces where proof is the explicit job.
 - Habits are boolean check-ins with no score, streak, XP, or shame loop.
 - Commitments are separate hobby-specific goals with optional public
   visibility, proof stamps, and commitment-only streak badges.
-- Hidden discovery routes remain functional but must not be re-surfaced before
-  the quiz-funnel decision.
+- Reuse the existing visual design. Simplification removes steps and competing
+  features instead of introducing a new shell, theme, or dashboard.
 - Anonymous marketing and tool HTML follows the existing Astro/Worker cache
   boundary.
 - The Hub has no shared database, summaries, assistant, or write actions in V1.

@@ -1,10 +1,8 @@
 import { eq } from 'drizzle-orm';
-import { redirect } from 'next/navigation';
 
 import { DreamAtlasExplorer } from '~/components/dream-atlas-explorer';
 import { LocalLiveMore } from '~/components/local-live-more';
-import { LocalOnboardingGate } from '~/components/local-onboarding-gate';
-import { bucketListItems, users } from '~/db/schema';
+import { bucketListItems } from '~/db/schema';
 import { EXPERIENCE_ENTRIES, firstSteps } from '~/lib/experiences';
 import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
@@ -28,18 +26,8 @@ const atlasEntries = EXPERIENCE_ENTRIES.map((entry) => ({
 export default async function LiveMorePage() {
   const session = await getServerAuthSession();
   if (!session?.user) {
-    return (
-      <LocalOnboardingGate>
-        <LocalLiveMore entries={atlasEntries} />
-      </LocalOnboardingGate>
-    );
+    return <LocalLiveMore entries={atlasEntries} />;
   }
-
-  const account = await db.query.users.findFirst({
-    where: eq(users.id, session.user.id),
-    columns: { onboardingCompletedAt: true },
-  });
-  if (!account?.onboardingCompletedAt) redirect('/onboarding');
 
   const items = await db.query.bucketListItems.findMany({
     where: eq(bucketListItems.userId, session.user.id),

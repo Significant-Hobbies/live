@@ -7,7 +7,6 @@ import { bucketListItems, bucketLists } from '~/db/schema';
 import { BucketItemControls } from '~/components/bucket-list/bucket-item-controls';
 import { QuickAddBucketItem } from '~/components/bucket-list/quick-add-item';
 import { LocalBucketList } from '~/components/bucket-list/local-bucket-list';
-import { LocalOnboardingGate } from '~/components/local-onboarding-gate';
 import { QuestChainCard } from '~/components/bucket-list/quest-chain-card';
 import { getActiveQuests, getCompletedQuests } from '~/lib/actions/user-quests';
 import { draftFromStoredRecord, getBingoProgress } from '~/lib/life-bingo';
@@ -21,12 +20,7 @@ export const metadata: Metadata = {
 
 export default async function BucketListPage() {
   const session = await getServerAuthSession();
-  if (!session?.user?.id)
-    return (
-      <LocalOnboardingGate>
-        <LocalBucketList />
-      </LocalOnboardingGate>
-    );
+  if (!session?.user?.id) return <LocalBucketList />;
 
   const [rows, items, activeQuests, completedQuests] = await Promise.all([
     db

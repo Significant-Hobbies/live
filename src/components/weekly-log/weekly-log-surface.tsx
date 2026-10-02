@@ -1,23 +1,11 @@
 'use client';
 
-import { ArrowRight, CalendarDays, Check, Compass, Loader2, RefreshCw } from 'lucide-react';
+import { CalendarDays, Check, Loader2 } from 'lucide-react';
 import Link from 'next/link';
-import { useEffect, useMemo, useRef, useState, useTransition } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
-import {
-  detectDreamTouches,
-  formatWeekOf,
-  formatWeekSpan,
-  isSuggestedLogDay,
-  weekStartFor,
-  type WeekStartsOn,
-} from '~/lib/weekly-log';
-import {
-  detectThemes,
-  fallbackQuestion,
-  type NudgeSignals,
-  type WeeklyQuestion,
-} from '~/lib/weekly-questions';
+import { shiftDayKey } from '~/lib/day';
+import { formatWeekOf, formatWeekSpan, weekStartFor, type WeekStartsOn } from '~/lib/weekly-log';
 
 export type WeeklyLogEntryView = {
   id: string;
@@ -27,46 +15,19 @@ export type WeeklyLogEntryView = {
   turns?: Array<{ questionText: string; answer: string }>;
 };
 
-export type StaleDreamView = {
-  title: string;
-  category: string | null;
-  daysSinceMovement: number | null;
-};
-
 export type WeeklyLogData = {
   firstName: string;
-  /** User-local YYYY-MM-DD. */
   today: string;
   weekStartsOn: WeekStartsOn;
   entries: WeeklyLogEntryView[];
-  staleDreams: StaleDreamView[];
-  /** Active dreams for touched-matching — title + category only. */
-  activeDreams?: Array<{ title: string; category: string | null }>;
   weeksRemaining: number | null;
-  /**
-   * The resolved question for this week. When null (local mode before the
-   * request lands), the surface resolves one itself — via `nudgeRequest`
-   * when provided, else the deterministic rotation.
-   */
-  initialQuestion: WeeklyQuestion | null;
-  /** Local-mode nudge request posted to /api/weekly-nudge. */
-  nudgeRequest?: { signals: NudgeSignals; excludeIds: string[] } | null;
-  /** Old AM/PM archive rendered below the weekly history. */
   archiveSlot?: React.ReactNode;
-  /** Signed-in only: whether the Sunday nudge email is on. */
   emailOptIn?: boolean;
 };
 
 export type WeeklyLogActions = {
-  onSave: (
-    weekOf: string,
-    text: string,
-    promptText: string | null,
-    turns?: Array<{ questionText: string; answer: string }>
-  ) => Promise<boolean>;
+  onSave: (weekOf: string, text: string, promptText: string | null) => Promise<boolean>;
   onWeekStartsOnChange: (value: WeekStartsOn) => Promise<void>;
-  onCallDreamForward?: (title: string) => Promise<void>;
-  onQuestionServed?: (questionId: string) => void;
   onEmailOptInChange?: (optIn: boolean) => Promise<void>;
 };
 
@@ -79,152 +40,31 @@ export function WeeklyLogSurface({
 }) {
   const [weekStartsOn, setWeekStartsOn] = useState(data.weekStartsOn);
   const [entries, setEntries] = useState(data.entries);
-  const [staleDreams, setStaleDreams] = useState(data.staleDreams);
-
-  // Local mode resolves its records asynchronously after mount — late-arriving
-  // props must replace the empty snapshot, not sit behind it.
   useEffect(() => setEntries(data.entries), [data.entries]);
   useEffect(() => setWeekStartsOn(data.weekStartsOn), [data.weekStartsOn]);
-  useEffect(() => setStaleDreams(data.staleDreams), [data.staleDreams]);
 
-  const [question, setQuestion] = useState<WeeklyQuestion | null>(data.initialQuestion);
   const [text, setText] = useState('');
-  // The week the visible textarea text belongs to — lets async local entries
-  // fill the box without ever overwriting in-progress typing on a week switch.
   const [editedWeek, setEditedWeek] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
-  const [callingTitle, setCallingTitle] = useState<string | null>(null);
-  const [isPending, startTransition] = useTransition();
-
-  // Interview turns: answers kept so far this week, plus the running
-  // classifier signals that pick the next question.
-  const [turns, setTurns] = useState<Array<{ questionText: string; answer: string }>>([]);
-  const [askedFamilies, setAskedFamilies] = useState<string[]>([]);
-  const [askedIds, setAskedIds] = useState<string[]>([]);
-  const [themes, setThemes] = useState<string[]>([]);
-  const [fetchingNext, setFetchingNext] = useState(false);
-
-  const weekOf = useMemo(() => weekStartFor(data.today, weekStartsOn), [data.today, weekStartsOn]);
+  const weekOf = useMemo(
+    () => weekStartFor(shiftDayKey(data.today, -7), weekStartsOn),
+    [data.today, weekStartsOn]
+  );
   const currentEntry = entries.find((entry) => entry.weekOf === weekOf) ?? null;
   const textareaValue = editedWeek === weekOf ? text : (currentEntry?.text ?? '');
-
-  // Reconciliation: which held dreams this week's writing actually touched.
-  // Plain keyword matching — reads only, never writes dream state.
-  const touchedTitles = useMemo(
-    () => detectDreamTouches(currentEntry?.text ?? '', data.activeDreams ?? []),
-    [currentEntry?.text, data.activeDreams]
-  );
-  const untouchedStale = staleDreams.filter((dream) => !touchedTitles.includes(dream.title));
-
-  // Resolve a question client-side when the server didn't (local mode).
-  const servedRef = useRef(actions.onQuestionServed);
-  servedRef.current = actions.onQuestionServed;
-  const nudgeRequest = data.nudgeRequest;
-  useEffect(() => {
-    if (question) return;
-    let cancelled = false;
-    async function resolve() {
-      if (nudgeRequest) {
-        try {
-          const response = await fetch('/api/weekly-nudge', {
-            method: 'POST',
-            headers: { 'content-type': 'application/json' },
-            body: JSON.stringify({
-              signals: nudgeRequest.signals,
-              weekStartsOn,
-              weekOf,
-              excludeIds: nudgeRequest.excludeIds,
-            }),
-          });
-          if (response.ok) {
-            const body = (await response.json()) as { question?: WeeklyQuestion };
-            if (body.question?.text && !cancelled) {
-              setQuestion(body.question);
-              servedRef.current?.(body.question.id);
-              return;
-            }
-          }
-        } catch {
-          // fall through to rotation
-        }
-      }
-      if (!cancelled) {
-        setQuestion(fallbackQuestion(weekOf, nudgeRequest?.excludeIds ?? []));
-      }
-    }
-    void resolve();
-    return () => {
-      cancelled = true;
-    };
-  }, [question, nudgeRequest, weekStartsOn, weekOf]);
-
-  const allExcludeIds = [...(data.nudgeRequest?.excludeIds ?? []), ...askedIds];
-
-  async function resolveNextQuestion(turn: number, signalPatch: Partial<NudgeSignals>) {
-    setFetchingNext(true);
-    try {
-      const response = await fetch('/api/weekly-nudge', {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({
-          signals: { ...data.nudgeRequest?.signals, ...signalPatch, turn },
-          weekStartsOn,
-          weekOf,
-          excludeIds: allExcludeIds,
-        }),
-      });
-      if (response.ok) {
-        const body = (await response.json()) as { question?: WeeklyQuestion };
-        if (body.question?.text) {
-          setQuestion(body.question);
-          servedRef.current?.(body.question.id);
-          return;
-        }
-      }
-    } catch {
-      // fall through to rotation
-    } finally {
-      setFetchingNext(false);
-    }
-    setQuestion(fallbackQuestion(`${weekOf}#${turn}`, allExcludeIds));
-  }
-
-  function cycleQuestion() {
-    const skipped = question ? [question.family] : [];
-    const nextAsked = [...new Set([...askedFamilies, ...skipped])];
-    setAskedFamilies(nextAsked);
-    if (question) setAskedIds((ids) => [...ids, question.id]);
-    void resolveNextQuestion(turns.length, { askedFamilies: nextAsked });
-  }
-
-  async function nextQuestion() {
-    const answer = textareaValue.trim();
-    if (!answer || !question) return;
-    const newThemes = [...new Set([...themes, ...detectThemes(answer)])];
-    const nextAsked = [...new Set([...askedFamilies, question.family])];
-    setTurns((current) => [...current, { questionText: question.text, answer }]);
-    setThemes(newThemes);
-    setAskedFamilies(nextAsked);
-    setAskedIds((ids) => [...ids, question.id]);
-    setText('');
-    await resolveNextQuestion(turns.length + 1, {
-      detectedThemes: newThemes,
-      askedFamilies: nextAsked,
-    });
-  }
+  const hasUnsavedChanges = editedWeek === weekOf && text !== (currentEntry?.text ?? '');
 
   async function handleSave() {
-    const answers = [...turns.map((turn) => turn.answer), textareaValue.trim()].filter(Boolean);
-    const composed = answers.join('\n\n');
-    if (!composed) return;
-    const promptText = turns[0]?.questionText ?? question?.text ?? null;
+    const composed = textareaValue.trim();
+    if (!composed || saving) return;
     setSaving(true);
     setSaved(false);
     setSaveError(null);
     try {
-      const ok = await actions.onSave(weekOf, composed, promptText, turns);
+      const promptText = currentEntry?.promptText ?? 'What did you do last week?';
+      const ok = await actions.onSave(weekOf, composed, promptText);
       if (!ok) throw new Error('not saved');
       setEntries((current) => {
         const next = {
@@ -232,17 +72,14 @@ export function WeeklyLogSurface({
           weekOf,
           text: composed,
           promptText,
-          turns: turns.length ? turns : undefined,
         };
         return current.some((entry) => entry.weekOf === weekOf)
           ? current.map((entry) => (entry.weekOf === weekOf ? next : entry))
           : [next, ...current];
       });
-      setTurns([]);
       setText('');
       setEditedWeek(null);
       setSaved(true);
-      window.setTimeout(() => setSaved(false), 2500);
     } catch {
       setSaveError('Your words are still here — Live could not save yet. Try again.');
     } finally {
@@ -251,7 +88,7 @@ export function WeeklyLogSurface({
   }
 
   async function changeWeekStart(value: WeekStartsOn) {
-    if (value === weekStartsOn) return;
+    if (value === weekStartsOn || saving || hasUnsavedChanges) return;
     const previous = weekStartsOn;
     setWeekStartsOn(value);
     try {
@@ -261,62 +98,75 @@ export function WeeklyLogSurface({
     }
   }
 
-  function callForward(title: string) {
-    if (!actions.onCallDreamForward) return;
-    setCallingTitle(title);
-    startTransition(async () => {
-      try {
-        await actions.onCallDreamForward?.(title);
-        setStaleDreams((current) => current.filter((dream) => dream.title !== title));
-      } finally {
-        setCallingTitle(null);
-      }
-    });
-  }
-
-  const pastEntries = entries.filter((entry) => entry.weekOf !== weekOf);
-
   return (
     <div className="mx-auto max-w-4xl space-y-6 px-4 py-6 sm:py-8">
       <HeaderCard
         firstName={data.firstName}
         weekOf={weekOf}
-        today={data.today}
         weekStartsOn={weekStartsOn}
         weeksRemaining={data.weeksRemaining}
+        weekStartDisabled={saving || hasUnsavedChanges}
         onWeekStart={changeWeekStart}
       />
-      <WriteCard
-        card={{
-          weekOf,
-          question,
-          text: textareaValue,
-          onText: (value) => {
-            setText(value);
-            setEditedWeek(weekOf);
-          },
-          onSave: handleSave,
-          onCycle: cycleQuestion,
-          onNext: nextQuestion,
-          turns,
-          fetchingNext,
-          saving,
-          saved,
-          saveError,
-          hasEntry: !!currentEntry,
-        }}
-      />
+      <section
+        aria-labelledby="weekly-entry-title"
+        className="overflow-hidden rounded-[1.5rem] bg-white shadow-[0_12px_36px_rgba(66,55,22,0.10)]"
+      >
+        <div className="border-b border-[#e8dfd1] px-5 py-5 sm:px-7">
+          <p className="text-sm font-semibold text-subtle">{formatWeekOf(weekOf)}</p>
+          <h2
+            id="weekly-entry-title"
+            className="mt-1 font-serif text-3xl font-medium tracking-tight text-foreground"
+          >
+            What did you do last week?
+          </h2>
+        </div>
+        <div className="px-5 py-6 sm:px-7 sm:py-8">
+          <label htmlFor="weekly-entry" className="sr-only">
+            What did you do last week?
+          </label>
+          <textarea
+            id="weekly-entry"
+            value={textareaValue}
+            onChange={(event) => {
+              setText(event.target.value);
+              setEditedWeek(weekOf);
+              setSaved(false);
+            }}
+            placeholder="One honest paragraph is enough. What did you try, finish, or enjoy?"
+            rows={7}
+            disabled={saving}
+            maxLength={8000}
+            className="w-full resize-y rounded-xl border border-[#cfc3b0] bg-[#fffdf8] px-4 py-3 text-base leading-relaxed outline-none focus:border-[#176b4a] focus:ring-2 focus:ring-[#176b4a]/20"
+          />
+          <div className="mt-4 flex flex-wrap items-center gap-3">
+            <button
+              type="button"
+              onClick={handleSave}
+              disabled={saving || !textareaValue.trim()}
+              className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#176b4a] px-5 font-bold text-white disabled:opacity-45"
+            >
+              {saving ? <Loader2 className="size-4 animate-spin" /> : <Check className="size-4" />}
+              {currentEntry ? 'Update this week' : 'Keep this week'}
+            </button>
+            <p aria-live="polite" className="text-sm font-semibold text-[#176b4a]">
+              {saved ? 'Kept. This week is on record.' : ''}
+            </p>
+          </div>
+          {saveError ? (
+            <p role="alert" className="mt-3 text-sm font-bold text-red-700">
+              {saveError}
+            </p>
+          ) : null}
+          <p className="mt-4 text-sm leading-relaxed text-[#625b50]">
+            Your entry stays private. No daily writing requirement, streaks, or scores.
+          </p>
+        </div>
+      </section>
       {data.emailOptIn !== undefined && actions.onEmailOptInChange ? (
         <EmailNudgeCard optIn={data.emailOptIn} onChange={actions.onEmailOptInChange} />
       ) : null}
-      <StaleDreamsCard
-        dreams={untouchedStale}
-        touchedTitles={touchedTitles}
-        callingTitle={callingTitle}
-        pending={isPending}
-        onCallForward={actions.onCallDreamForward ? callForward : null}
-      />
-      <WeekHistoryCard entries={pastEntries} />
+      <WeekHistoryCard entries={entries.filter((entry) => entry.weekOf !== weekOf)} />
       {data.archiveSlot}
     </div>
   );
@@ -325,19 +175,18 @@ export function WeeklyLogSurface({
 function HeaderCard({
   firstName,
   weekOf,
-  today,
   weekStartsOn,
   weeksRemaining,
+  weekStartDisabled,
   onWeekStart,
 }: {
   firstName: string;
   weekOf: string;
-  today: string;
   weekStartsOn: WeekStartsOn;
   weeksRemaining: number | null;
+  weekStartDisabled: boolean;
   onWeekStart: (value: WeekStartsOn) => void;
 }) {
-  const suggested = isSuggestedLogDay(today);
   return (
     <section className="relative overflow-hidden rounded-[1.5rem] bg-[#c5abfa] px-5 py-5 text-[#241a31] shadow-[0_10px_30px_rgba(66,55,22,0.08)] sm:px-7 sm:py-6">
       <div className="relative flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
@@ -350,9 +199,7 @@ function HeaderCard({
             The week in your own words{firstName !== 'there' ? `, ${firstName}` : ''}.
           </h1>
           <p className="mt-2 text-sm opacity-75">
-            {suggested
-              ? 'Sunday is the natural moment — but any day counts.'
-              : 'One honest entry a week. Any day counts.'}
+            One entry about the previous week. Write whenever you like.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-2 text-xs font-semibold">
@@ -369,7 +216,8 @@ function HeaderCard({
                 aria-pressed={weekStartsOn === value}
                 aria-label={`Weeks start ${value}`}
                 onClick={() => onWeekStart(value)}
-                className={`min-h-8 rounded-full px-3 capitalize transition-colors ${
+                disabled={weekStartDisabled}
+                className={`min-h-11 rounded-full px-3 capitalize transition-colors ${
                   weekStartsOn === value ? 'bg-[#241a31] text-white' : 'text-[#241a31]/70'
                 }`}
               >
@@ -378,231 +226,6 @@ function HeaderCard({
             ))}
           </span>
         </div>
-      </div>
-    </section>
-  );
-}
-
-type WriteCardModel = {
-  weekOf: string;
-  question: WeeklyQuestion | null;
-  text: string;
-  onText: (value: string) => void;
-  onSave: () => void;
-  onCycle: () => void;
-  onNext: () => void;
-  turns: Array<{ questionText: string; answer: string }>;
-  fetchingNext: boolean;
-  saving: boolean;
-  saved: boolean;
-  saveError: string | null;
-  hasEntry: boolean;
-};
-
-function WriteCard({ card }: { card: WriteCardModel }) {
-  const {
-    weekOf,
-    question,
-    text,
-    onText,
-    onSave,
-    onCycle,
-    onNext,
-    turns,
-    fetchingNext,
-    saving,
-    saved,
-    saveError,
-    hasEntry,
-  } = card;
-  const label = question ? question.text : 'What did you live this week?';
-  const interview = !hasEntry || turns.length > 0;
-  const canAdvance = !!text.trim() && !fetchingNext && !saving;
-  const canFinish = canAdvance || turns.length > 0;
-  return (
-    <section
-      aria-labelledby="weekly-entry-title"
-      className="overflow-hidden rounded-[1.5rem] bg-white shadow-[0_12px_36px_rgba(66,55,22,0.10)]"
-    >
-      <div className="border-b border-[#e8dfd1] px-5 py-5 sm:px-7">
-        <p className="text-sm font-semibold text-subtle">{formatWeekOf(weekOf)}</p>
-        <h2
-          id="weekly-entry-title"
-          className="mt-1 font-serif text-3xl font-medium tracking-tight text-foreground"
-        >
-          {fetchingNext ? 'One more…' : label}
-        </h2>
-      </div>
-      <div className="px-5 py-6 sm:px-7 sm:py-8">
-        {turns.length ? (
-          <ol className="mb-5 space-y-4">
-            {turns.map((turn, index) => (
-              <li
-                key={`${turn.questionText}-${index}`}
-                className="border-l-2 border-[#c5abfa] pl-4"
-              >
-                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#625b50]">
-                  {turn.questionText}
-                </p>
-                <p className="mt-1 whitespace-pre-wrap text-sm leading-relaxed text-foreground/80">
-                  {turn.answer}
-                </p>
-              </li>
-            ))}
-          </ol>
-        ) : null}
-        <label htmlFor="weekly-entry" className="sr-only">
-          {label}
-        </label>
-        <textarea
-          id="weekly-entry"
-          value={text}
-          onChange={(event) => onText(event.target.value)}
-          placeholder={
-            turns.length
-              ? 'Answer this one too — or finish whenever the week feels written.'
-              : 'One honest paragraph is enough. What did you actually do with your week?'
-          }
-          rows={turns.length ? 4 : 7}
-          className="w-full resize-y rounded-xl border border-[#cfc3b0] bg-[#fffdf8] px-4 py-3 text-base leading-relaxed outline-none focus:border-[#176b4a] focus:ring-2 focus:ring-[#176b4a]/20"
-        />
-        <div className="mt-4 flex flex-wrap items-center gap-3">
-          {interview ? (
-            <button
-              type="button"
-              onClick={onNext}
-              disabled={!canAdvance}
-              className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#176b4a] px-5 font-bold text-white disabled:opacity-45"
-            >
-              {fetchingNext ? (
-                <Loader2 className="size-4 animate-spin" />
-              ) : (
-                <ArrowRight className="size-4" />
-              )}
-              Next question
-            </button>
-          ) : null}
-          <button
-            type="button"
-            onClick={onSave}
-            disabled={saving || (interview ? !canFinish : !text.trim())}
-            className={`inline-flex min-h-12 items-center gap-2 rounded-xl px-5 font-bold disabled:opacity-45 ${
-              interview ? 'border border-[#176b4a] text-[#176b4a]' : 'bg-[#176b4a] text-white'
-            }`}
-          >
-            {saving ? <Loader2 className="size-4 animate-spin" /> : <Check className="size-4" />}
-            {hasEntry ? 'Update this week' : "I'm done — keep this week"}
-          </button>
-          <button
-            type="button"
-            onClick={onCycle}
-            disabled={fetchingNext}
-            className="inline-flex min-h-11 items-center gap-2 rounded-xl border border-[#cfc3b0] px-4 text-sm font-bold text-[#625b50] disabled:opacity-45"
-          >
-            <RefreshCw className="size-3.5" /> A different question
-          </button>
-          <p aria-live="polite" className="text-sm font-semibold text-[#176b4a]">
-            {saved ? 'Kept. This week is on record.' : ''}
-          </p>
-        </div>
-        {saveError ? (
-          <p role="alert" className="mt-3 text-sm font-bold text-red-700">
-            {saveError}
-          </p>
-        ) : null}
-        <p className="mt-4 text-sm leading-relaxed text-[#625b50]">
-          Missed weeks stay missed — no streaks, no make-up pressure. Write when the week is worth
-          writing down.
-        </p>
-      </div>
-    </section>
-  );
-}
-
-function StaleDreamsCard({
-  dreams,
-  touchedTitles,
-  callingTitle,
-  pending,
-  onCallForward,
-}: {
-  dreams: StaleDreamView[];
-  touchedTitles: string[];
-  callingTitle: string | null;
-  pending: boolean;
-  onCallForward: ((title: string) => void) | null;
-}) {
-  if (!dreams.length && !touchedTitles.length) return null;
-  return (
-    <section
-      aria-labelledby="still-calling-title"
-      className="overflow-hidden rounded-[1.5rem] border border-[#d9cfbd] bg-[#fffdf8] shadow-[0_12px_36px_rgba(66,55,22,0.08)]"
-    >
-      <div className="border-b border-[#e8dfd1] px-5 py-5 sm:px-7">
-        <div className="flex items-center gap-2 text-sm font-bold text-[#6c3d2b]">
-          <Compass className="size-4" aria-hidden="true" />
-          Still calling?
-        </div>
-        <h2
-          id="still-calling-title"
-          className="mt-1 font-serif text-2xl font-medium tracking-tight text-foreground"
-        >
-          Your week and your wants, side by side.
-        </h2>
-      </div>
-      {touchedTitles.length ? (
-        <div className="border-b border-[#e8dfd1] bg-[#eef5e4] px-5 py-4 sm:px-7">
-          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#405032]">
-            This week touched
-          </p>
-          <div className="mt-2 flex flex-wrap gap-2">
-            {touchedTitles.map((title) => (
-              <span
-                key={title}
-                className="inline-flex items-center gap-1.5 rounded-full bg-[#dceabf] px-3 py-1.5 text-sm font-bold text-[#2f4226]"
-              >
-                <Check className="size-3.5" aria-hidden="true" /> {title}
-              </span>
-            ))}
-          </div>
-        </div>
-      ) : null}
-      <ul className="divide-y divide-[#e8dfd1] px-5 sm:px-7">
-        {dreams.map((dream) => (
-          <li key={dream.title} className="flex items-center justify-between gap-4 py-4">
-            <div>
-              <p className="font-serif text-lg leading-snug">{dream.title}</p>
-              <p className="mt-0.5 text-xs text-[#625b50]">
-                {dream.daysSinceMovement !== null
-                  ? `Untouched for about ${Math.round(dream.daysSinceMovement / 7)} ${
-                      Math.round(dream.daysSinceMovement / 7) === 1 ? 'week' : 'weeks'
-                    }`
-                  : 'In your atlas, waiting'}
-              </p>
-            </div>
-            {onCallForward ? (
-              <button
-                type="button"
-                disabled={pending && callingTitle === dream.title}
-                onClick={() => onCallForward(dream.title)}
-                className="inline-flex min-h-11 shrink-0 items-center gap-1.5 text-sm font-bold text-[#6c3d2b] underline decoration-[#d79b7f] underline-offset-4 disabled:opacity-50"
-              >
-                {pending && callingTitle === dream.title ? (
-                  <Loader2 className="size-3.5 animate-spin" />
-                ) : null}
-                Call it forward
-              </button>
-            ) : null}
-          </li>
-        ))}
-      </ul>
-      <div className="border-t border-[#e8dfd1] px-5 py-4 sm:px-7">
-        <Link
-          href="/live-more"
-          className="inline-flex min-h-11 items-center gap-2 text-sm font-bold text-[#176b4a] underline underline-offset-4"
-        >
-          Revisit your atlas <ArrowRight className="size-3.5" />
-        </Link>
       </div>
     </section>
   );
@@ -634,34 +257,9 @@ function WeekHistoryCard({ entries }: { entries: WeeklyLogEntryView[] }) {
               </span>
             </summary>
             <div className="pb-5">
-              {entry.turns?.length ? (
-                <ol className="space-y-4">
-                  {entry.turns.map((turn, index) => (
-                    <li
-                      key={`${turn.questionText}-${index}`}
-                      className="border-l-2 border-[#c5abfa] pl-4"
-                    >
-                      <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#625b50]">
-                        {turn.questionText}
-                      </p>
-                      <p className="mt-1 whitespace-pre-wrap text-sm leading-relaxed text-foreground/80">
-                        {turn.answer}
-                      </p>
-                    </li>
-                  ))}
-                </ol>
-              ) : (
-                <>
-                  {entry.promptText ? (
-                    <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#625b50]">
-                      {entry.promptText}
-                    </p>
-                  ) : null}
-                  <p className="mt-2 whitespace-pre-wrap text-sm leading-relaxed text-foreground/80">
-                    {entry.text}
-                  </p>
-                </>
-              )}
+              <p className="mt-2 whitespace-pre-wrap text-sm leading-relaxed text-foreground/80">
+                {entry.text}
+              </p>
             </div>
           </details>
         ))}

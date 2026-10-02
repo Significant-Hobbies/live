@@ -1,8 +1,6 @@
 import { eq } from 'drizzle-orm';
-import { redirect } from 'next/navigation';
 
 import { LocalHabitsExperience } from '~/components/local-personal-practice-surfaces';
-import { LocalOnboardingGate } from '~/components/local-onboarding-gate';
 import { HabitsExperience } from '~/components/personal-practice-surfaces';
 import { TimezoneSync } from '~/components/timezone-sync';
 import { users } from '~/db/schema';
@@ -30,20 +28,15 @@ export default async function HabitsPage() {
   const session = await getServerAuthSession();
 
   if (!session?.user) {
-    return (
-      <LocalOnboardingGate>
-        <LocalHabitsExperience today={dayKeyIn(null)} />
-      </LocalOnboardingGate>
-    );
+    return <LocalHabitsExperience today={dayKeyIn(null)} />;
   }
 
   const me = await db.query.users.findFirst({
     where: eq(users.id, session.user.id),
-    columns: { timezone: true, onboardingCompletedAt: true },
+    columns: { timezone: true },
   });
-  if (!me?.onboardingCompletedAt) redirect('/onboarding');
 
-  const today = dayKeyIn(me.timezone);
+  const today = dayKeyIn(me?.timezone ?? null);
   const [habits, habitLogs, habitCommitmentChoices, profile] = await Promise.all([
     getHabits(),
     getHabitLogsForDate(today),
@@ -53,7 +46,7 @@ export default async function HabitsPage() {
 
   return (
     <>
-      <TimezoneSync storedTimezone={me.timezone} />
+      <TimezoneSync storedTimezone={me?.timezone ?? null} />
       <HabitsExperience
         firstName={profile?.name?.split(' ')[0] ?? session.user.name?.split(' ')[0] ?? 'there'}
         today={today}

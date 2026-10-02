@@ -7,7 +7,14 @@ test.describe('Live landing (Astro overlay)', () => {
   });
 
   test('preserves the cinematic landing on the Live domain contract', async ({ page }) => {
-    await expect(page.locator('h1')).toContainText('Find what deserves your time');
+    await expect(page.locator('h1')).toContainText('Make your bucket list happen');
+    await expect(page.getByRole('link', { name: 'Explore the catalog' }).first()).toHaveAttribute(
+      'href',
+      '/experiences'
+    );
+    await expect(
+      page.getByRole('heading', { name: 'Your interests already tell a story.' })
+    ).toHaveCount(0);
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
       'href',
       'https://live.significanthobbies.com'
