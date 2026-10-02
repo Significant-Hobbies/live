@@ -10,12 +10,75 @@ import {
   type WeeklyQuestion,
 } from '~/lib/weekly-questions';
 
-const CLASSIFIER_ENDPOINT = 'https://classifier.dev/v1/classify';
 const CLASSIFIER_TIMEOUT_MS = 3000;
-const AI_MODEL = '@cf/meta/llama-3.1-8b-instruct-fp8-fast';
 
-type ClassifierResult = { label?: unknown; confidence?: unknown };
-type AiBinding = { run: (model: string, input: unknown) => Promise<unknown> };
+type AiGatewayBinding = { fetch: (request: Request) => Promise<Response> };
+
+async function gatewayCompletion(
+  gateway: AiGatewayBinding,
+  messages: Array<{ role: 'system' | 'user'; content: string }>,
+  maxTokens: number,
+  json = false,
+  sampling?: { temperature: number; seed: number }
+): Promise<string> {
+  const response = await gateway.fetch(
+    new Request('https://fleet-gateway.internal/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        authorization: 'Bearer gateway-managed',
+        'x-gateway-project-id': 'live',
+      },
+      body: JSON.stringify({
+        model: 'auto',
+        messages,
+        max_tokens: maxTokens,
+        ...(json ? { response_format: { type: 'json_object' } } : {}),
+        ...sampling,
+      }),
+      signal: AbortSignal.timeout(CLASSIFIER_TIMEOUT_MS),
+    })
+  );
+  if (!response.ok) throw new Error(`Managed AI gateway returned ${response.status}`);
+  const result = (await response.json()) as {
+    choices?: Array<{ message?: { content?: unknown } }>;
+  };
+  const content = result.choices?.[0]?.message?.content;
+  return typeof content === 'string' ? content.trim() : '';
+}
+
+async function classifyQuestionFamily(
+  gateway: AiGatewayBinding,
+  context: string,
+  labels: string[]
+): Promise<string | null> {
+  try {
+    const content = await gatewayCompletion(
+      gateway,
+      [
+        {
+          role: 'system',
+          content:
+            'Classify a weekly reflection into one allowed family. Return JSON only: {"family":"..."}.',
+        },
+        {
+          role: 'user',
+          content: `Choose the best family from [${labels.join(', ')}] for these categorical signals: ${context}.`,
+        },
+      ],
+      24,
+      true
+    );
+    const result = JSON.parse(content) as { family?: unknown };
+    return typeof result.family === 'string' &&
+      labels.includes(result.family) &&
+      isQuestionFamily(result.family)
+      ? result.family
+      : null;
+  } catch {
+    return null;
+  }
+}
 
 /**
  * Generate one question for a family the bank has exhausted. Runs on
@@ -23,15 +86,16 @@ type AiBinding = { run: (model: string, input: unknown) => Promise<unknown> };
  * Returns null on any failure; callers fall back to the rotation.
  */
 async function generateQuestion(
-  ai: AiBinding,
+  gateway: AiGatewayBinding,
   family: string,
   context: string,
   seed: string
 ): Promise<WeeklyQuestion | null> {
   const bank = WEEKLY_QUESTIONS.filter((q) => q.family === family).map((q) => q.text);
   try {
-    const result = (await ai.run(AI_MODEL, {
-      messages: [
+    const text = await gatewayCompletion(
+      gateway,
+      [
         {
           role: 'system',
           content:
@@ -46,11 +110,10 @@ async function generateQuestion(
             `It must not repeat these existing questions: ${bank.join(' | ')}`,
         },
       ],
-      max_tokens: 48,
-      temperature: 0.7,
-      seed: hashSeedForAi(seed),
-    })) as { response?: unknown };
-    const text = typeof result.response === 'string' ? result.response.trim() : '';
+      48,
+      false,
+      { temperature: 0.7, seed: hashSeedForAi(seed) }
+    );
     if (text.length < 12 || text.length > 160 || !text.endsWith('?') || text.includes('\n')) {
       return null;
     }
@@ -80,16 +143,15 @@ function familyExhausted(family: string, excludeIds: string[]): boolean {
 /**
  * Resolve the week's nudge question.
  *
- * classifier.dev picks the question *family* from a categorical context
- * string built server-side — user-typed text (dream titles, entries) is
- * never sent. Any failure, empty context, or malformed response falls back
- * to the deterministic rotation: the ritual never depends on the service.
+ * The managed gateway picks the question family from categorical context
+ * built server-side — user-typed text (dream titles, entries) is never sent.
+ * Any failure, empty context, or malformed response falls back to the bank.
  */
 export async function resolveWeeklyNudge(
   signals: NudgeSignals,
   weekOf: string,
   excludeIds: string[] = [],
-  ai?: AiBinding | null
+  gateway?: AiGatewayBinding | null
 ): Promise<WeeklyQuestion> {
   // Each turn gets its own seed so consecutive questions in one session
   // don't collapse onto the same deterministic pick.
@@ -101,33 +163,13 @@ export async function resolveWeeklyNudge(
   const labels = QUESTION_FAMILIES.filter((family) => !asked.has(family));
   if (!labels.length) return fallback();
 
-  try {
-    const response = await fetch(CLASSIFIER_ENDPOINT, {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({
-        inputs: [buildNudgeContext(signals)],
-        labels,
-      }),
-      signal: AbortSignal.timeout(CLASSIFIER_TIMEOUT_MS),
-      cache: 'no-store',
-    });
-    if (!response.ok) return fallback();
-
-    const body = (await response.json()) as { results?: ClassifierResult[] };
-    const label = body.results?.[0]?.label;
-    if (typeof label !== 'string' || !isQuestionFamily(label)) {
-      return fallback();
-    }
-    // The bank is the backbone; Workers AI extends it when a family has
-    // nothing left to serve. Generation still sees only the context
-    // string — never user prose.
-    if (ai && familyExhausted(label, excludeIds)) {
-      const generated = await generateQuestion(ai, label, buildNudgeContext(signals), seed);
-      if (generated) return generated;
-    }
-    return questionForFamily(label, seed, excludeIds);
-  } catch {
-    return fallback();
-  }
+  if (!gateway) return fallback();
+  const context = buildNudgeContext(signals);
+  const label = await classifyQuestionFamily(gateway, context, labels);
+  if (!label) return fallback();
+  // The bank is the backbone; managed AI extends it only after exhaustion.
+  const generated = familyExhausted(label, excludeIds)
+    ? await generateQuestion(gateway, label, context, seed)
+    : null;
+  return generated ?? questionForFamily(label, seed, excludeIds);
 }
