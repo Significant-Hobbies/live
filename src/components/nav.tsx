@@ -19,7 +19,6 @@ const NAV_LINKS = [
   { href: '/experiences', label: 'Catalog' },
   { href: '/bucket-list', label: 'My list' },
   { href: '/journal', label: 'Weekly journal' },
-  { href: '/habits', label: 'Habits' },
   { href: '/life-in-weeks', label: 'Life in weeks' },
 ];
 

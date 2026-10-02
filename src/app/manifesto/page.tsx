@@ -85,8 +85,8 @@ export default function ManifestoPage() {
 
           <ul className="space-y-2 text-base text-muted-foreground leading-relaxed">
             <li>
-              We don&apos;t score your days. Check off your habits, write your entry. No numbers, no
-              streaks, no dashboards about your dashboards.
+              We don&apos;t score your days. Complete your list items, write your weekly entry. No
+              numbers, no streaks, no dashboards about your dashboards.
             </li>
             <li>We don&apos;t rank you against other people. Your weeks are your own.</li>
             <li>

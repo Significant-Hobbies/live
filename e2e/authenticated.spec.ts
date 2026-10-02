@@ -113,12 +113,12 @@ test.describe('authenticated surfaces', () => {
     });
   }
 
-  test('/daily points to the weekly log and Habits instead of mixing them', async ({
-    authedPage,
-  }) => {
+  test('retired routes redirect for a signed-in user', async ({ authedPage }) => {
     await authedPage.goto('/daily');
-    await expect(authedPage.getByRole('link', { name: /Open the weekly log/ })).toBeVisible();
-    await expect(authedPage.getByRole('link', { name: /Open Habits/ })).toBeVisible();
+    await expect(authedPage).toHaveURL(/\/journal$/);
+    await authedPage.goto('/habits');
+    await expect(authedPage).toHaveURL(/\/bucket-list$/);
+    await expect(authedPage.getByRole('link', { name: 'Habits', exact: true })).toHaveCount(0);
   });
 
   test('Live and the weekly log persist independently after the split', async ({ authedPage }) => {

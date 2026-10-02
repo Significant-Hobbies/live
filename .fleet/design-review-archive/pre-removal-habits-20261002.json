@@ -2,7 +2,7 @@
   "$schema": "fleet.design-review.v1",
   "version": 1,
   "project": "live",
-  "target": "Remove Habits page and navigation; preserve catalog, list, weekly journal, and time perspective",
+  "target": "Habits page: cut greeting and promotional empty state; retain check-in list",
   "surfaceMode": "operate",
   "mode": "preserve",
   "register": "product",
@@ -15,7 +15,7 @@
     "probes": [],
     "selected": "existing-design",
     "approval": "not-required",
-    "before": ".fleet/design-evidence/remove-habits/before-1440.jpg",
+    "before": ".fleet/design-evidence/cut-only-habits/before-1440.jpg",
     "library": {
       "strategy": "upstream-first",
       "primary": "existing-project-system",
@@ -28,36 +28,36 @@
       }
     },
     "contract": {
-      "purpose": "Discover bucket-list ideas and side quests, keep a personal list, record completion, write one entry about last week, and keep time in perspective.",
-      "purposeSource": "Owner correction on 2026-10-02 and PRODUCT.md",
-      "canonicalPurpose": "Live is a catalog and personal bucket list with completion logging, a weekly journal, and Life in weeks.",
+      "purpose": "Find bucket-list ideas and side quests, keep a list, check in on habits, and write one entry about last week.",
+      "purposeSource": "Owner instruction on 2026-10-02 and PRODUCT.md",
+      "canonicalPurpose": "Live is a simple catalog, personal list, habit log, weekly journal, and Life in weeks for time perspective.",
       "purposeAlignment": "match",
       "driftNote": "Owner explicitly rejected a redesign and requested subtraction. Legacy planning records remain secondary.",
       "audience": "Adults collecting things they want to do and remembering what they did.",
-      "job": "Choose an idea, save it, complete it, and remember last week.",
-      "thesis": "Remove the separate habit tracker while preserving the existing visual system.",
-      "system": "Existing warm paper, serif headings, yellow navigation, lavender journal and established list workspace.",
+      "job": "Log a habit for today or manage the existing list.",
+      "thesis": "Start with the check-in list and remove the duplicate introduction.",
+      "system": "Existing warm paper, serif heading, yellow navigation and white check-in rows.",
       "signature": "The recognizable cinematic landing, personal bucket list, and Life in weeks remain.",
-      "risk": "Retired URLs must lead to a useful destination without deleting historical records."
+      "risk": "Check-ins and saved habit and journal records must remain intact."
     }
   },
   "evidence": {
     "screenshots": [
       {
         "width": 390,
-        "path": ".fleet/design-evidence/remove-habits/after-390.jpg"
+        "path": ".fleet/design-evidence/cut-only-habits/after-390.jpg"
       },
       {
         "width": 768,
-        "path": ".fleet/design-evidence/remove-habits/after-768.jpg"
+        "path": ".fleet/design-evidence/cut-only-habits/after-768.jpg"
       },
       {
         "width": 1440,
-        "path": ".fleet/design-evidence/remove-habits/after-1440.jpg"
+        "path": ".fleet/design-evidence/cut-only-habits/after-1440.jpg"
       }
     ],
     "projectCheck": {
-      "command": "pnpm quality; 105 Playwright checks across mobile, tablet and desktop",
+      "command": "pnpm quality; focused Playwright persistence and accessibility checks on desktop, mobile and tablet",
       "status": "pass"
     },
     "critique": {
@@ -65,7 +65,7 @@
       "maximum": 40
     },
     "audit": {
-      "score": 17,
+      "score": 18,
       "maximum": 20
     },
     "unresolved": {
@@ -78,11 +78,11 @@
     },
     "comprehension": {
       "status": "not-applicable",
-      "reviewer": "Operate surface; independent A and B preservation review"
+      "reviewer": "Operate surface; scoped preservation review in cut-only-habits/review.md"
     }
   },
   "ownerFeedback": {
     "decision": "keep",
-    "note": "Owner explicitly requested removing the Habits page, keeping the project simple, preserving the design, and completing/deploying the correction quickly."
+    "note": "Owner explicitly directed preserving the incumbent design and cutting excess features on 2026-10-02. No redesign approved."
   }
 }
