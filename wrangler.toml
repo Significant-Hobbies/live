@@ -44,6 +44,12 @@ crons = ["0 22 * * 6", "0 14 * * *"]
 [ai]
 binding = "AI"
 
+# Share Fleet's global UTC-day Workers AI Neuron budget.
+[[durable_objects.bindings]]
+name = "NEURON_BUDGET"
+class_name = "NeuronBudgetDO"
+script_name = "free-ai-gateway"
+
 [[d1_databases]]
 binding = "DB"
 database_name = "significanthobbies"
@@ -85,3 +91,8 @@ cpu_ms = 30000
 [env.preview.vars]
 NODE_ENV = "production"
 APPLE_APP_BUNDLE_IDENTIFIER = "com.significanthobbies.app"
+
+[[env.preview.durable_objects.bindings]]
+name = "NEURON_BUDGET"
+class_name = "NeuronBudgetDO"
+script_name = "free-ai-gateway"

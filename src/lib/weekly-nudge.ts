@@ -12,7 +12,7 @@ import {
 
 const CLASSIFIER_ENDPOINT = 'https://classifier.dev/v1/classify';
 const CLASSIFIER_TIMEOUT_MS = 3000;
-const AI_MODEL = '@cf/meta/llama-3.1-8b-instruct-fast';
+const AI_MODEL = '@cf/meta/llama-3.1-8b-instruct-fp8-fast';
 
 type ClassifierResult = { label?: unknown; confidence?: unknown };
 type AiBinding = { run: (model: string, input: unknown) => Promise<unknown> };

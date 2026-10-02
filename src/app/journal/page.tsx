@@ -26,6 +26,7 @@ import { birthDateFromYear, buildLifeGrid } from '~/lib/mortality';
 import { getCloudflareContext } from '@opennextjs/cloudflare';
 
 import { resolveWeeklyNudge } from '~/lib/weekly-nudge';
+import { withWorkersAiBudget } from '~/lib/workers-ai-budget';
 import { weekStartFor, type WeekStartsOn } from '~/lib/weekly-log';
 import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
@@ -74,12 +75,9 @@ export default async function JournalPage() {
 
   const today = dayKeyIn(me.timezone);
   const weekOf = weekStartFor(today, weekStartsOn);
-  const question = await resolveWeeklyNudge(
-    signals,
-    weekOf,
-    excludeIds,
-    getCloudflareContext().env.AI
-  );
+  const env = getCloudflareContext().env;
+  const ai = withWorkersAiBudget(env.AI, env.NEURON_BUDGET);
+  const question = await resolveWeeklyNudge(signals, weekOf, excludeIds, ai);
   const birth =
     me.birthDate && parseBirthDate(me.birthDate)
       ? new Date(`${me.birthDate}T12:00:00`)
