@@ -40,6 +40,10 @@ test.describe('Journal, Habits & manifesto', () => {
     await page.getByPlaceholder('Habit name (e.g. Read 20 pages)').fill('Walk after lunch');
     await page.getByRole('button', { name: 'Add habit' }).click();
     await expect(page.getByText('Walk after lunch')).toBeVisible();
+    await page.getByRole('button', { name: 'Mark Walk after lunch as done', exact: true }).click();
+    await expect(
+      page.getByRole('button', { name: 'Mark Walk after lunch as not done', exact: true })
+    ).toHaveAttribute('aria-pressed', 'true');
 
     await page.goto('/journal');
     await page.locator('#weekly-entry').fill('I made room for a slower afternoon.');
@@ -49,8 +53,15 @@ test.describe('Journal, Habits & manifesto', () => {
 
     await page.goto('/habits');
     await expect(page.getByText('Walk after lunch')).toBeVisible();
+    await expect(
+      page.getByRole('button', { name: 'Mark Walk after lunch as not done', exact: true })
+    ).toHaveAttribute('aria-pressed', 'true');
     await expect(page.locator('#weekly-entry')).toHaveCount(0);
-    await expect(page.getByText('Ready when you are')).toBeVisible();
+    await expect(
+      page.getByRole('heading', { level: 1, name: 'Habits', exact: true })
+    ).toBeVisible();
+    await expect(page.getByText('Ready when you are')).toHaveCount(0);
+    await expect(page.getByText(/Keep it small,/)).toHaveCount(0);
     await expect(page.getByText(/\d+ of \d+ complete today/)).toHaveCount(0);
   });
 

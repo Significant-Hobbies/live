@@ -60,6 +60,8 @@ Live leads with a verb and an immediate invitation. It must make the user want t
 
 The global shell exposes Catalog, My list, Weekly journal, Habits, and Life in weeks. These reuse the incumbent shell and workspaces. The bucket-list cleanup removes competing steps and navigation without replacing typography, colors, imagery, or layout.
 
+Habits starts with one heading and today's date, followed directly by the existing check-in list. It has no separate greeting banner, repeated introduction, or progress badge.
+
 ## Elevation & Depth
 
 Depth comes primarily from tonal layers and spatial overlap. Shadows are reserved for selected or floating controls and must have visible offset and soft blur. Wide surfaces do not combine a border with a generic ambient shadow.
