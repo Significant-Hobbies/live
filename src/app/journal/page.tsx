@@ -75,13 +75,9 @@ export default async function JournalPage() {
 
   const today = dayKeyIn(me.timezone);
   const weekOf = weekStartFor(today, weekStartsOn);
-  const { env } = getCloudflareContext();
-  const question = await resolveWeeklyNudge(
-    signals,
-    weekOf,
-    excludeIds,
-    withWorkersAiBudget(env.AI, env.NEURON_BUDGET)
-  );
+  const env = getCloudflareContext().env;
+  const ai = withWorkersAiBudget(env.AI, env.NEURON_BUDGET);
+  const question = await resolveWeeklyNudge(signals, weekOf, excludeIds, ai);
   const birth =
     me.birthDate && parseBirthDate(me.birthDate)
       ? new Date(`${me.birthDate}T12:00:00`)
