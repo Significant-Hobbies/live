@@ -2,7 +2,6 @@ import { getCloudflareContext } from '@opennextjs/cloudflare';
 import { NextResponse } from 'next/server';
 
 import { resolveWeeklyNudge } from '~/lib/weekly-nudge';
-import { withWorkersAiBudget } from '~/lib/workers-ai-budget';
 import { weekStartFor, normalizeWeekStartsOn } from '~/lib/weekly-log';
 import { dayKeyIn } from '~/lib/day';
 import { isQuestionFamily, type NudgeSignals } from '~/lib/weekly-questions';
@@ -62,11 +61,6 @@ export async function POST(request: Request) {
     : [];
 
   const { env } = getCloudflareContext();
-  const question = await resolveWeeklyNudge(
-    signals,
-    weekOf,
-    excludeIds,
-    withWorkersAiBudget(env.AI, env.NEURON_BUDGET)
-  );
+  const question = await resolveWeeklyNudge(signals, weekOf, excludeIds, env.FREE_AI);
   return NextResponse.json({ question });
 }
