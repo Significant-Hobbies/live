@@ -1,6 +1,5 @@
 interface CloudflareEnv {
   DB: D1Database;
-  AI: Ai;
-  NEURON_BUDGET: DurableObjectNamespace;
+  FREE_AI: Fetcher;
   EMAIL: SendEmail;
 }

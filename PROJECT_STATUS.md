@@ -28,6 +28,12 @@ Live is actively usable but remains an ongoing product. Continue from observed
 usage and improve discovery and long-lived planning on the independent Live
 origin.
 
+The retained weekly-nudge API's question generation uses the private
+`FREE_AI` service binding to Fleet's managed gateway. It sends only categorical
+context, caps output at 48 tokens, and retains deterministic questions when the
+gateway is absent or fails. Both family classification and exhausted-family
+generation use the same managed binding; neither request includes journal text.
+
 ## Features (shipped)
 
 - The open-world Dream Atlas preserves exact personal dreams, imports existing
