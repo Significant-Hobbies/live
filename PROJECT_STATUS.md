@@ -4,10 +4,10 @@ Last updated: 2026-10-02
 
 ## Why / What
 
-Live is the web product for building a life around hobbies, experiences, plans,
-and the history that accumulates behind them. It combines discovery with a
-local-first and signed-in record of bucket lists, commitments, timelines, and
-side quests.
+Live is a simple catalog of bucket-list ideas and side quests, with personal
+lists, optional Life Bingo, habit check-ins, one journal entry about last week,
+and Life in weeks for time perspective. Existing planning and history records
+remain available on secondary routes.
 
 ## Current status
 
@@ -28,7 +28,7 @@ Live is actively usable but remains an ongoing product. Continue from observed
 usage and improve discovery and long-lived planning on the independent Live
 origin.
 
-The weekly log's exhausted-family question generation uses the private
+The retained weekly-nudge API's question generation uses the private
 `FREE_AI` service binding to Fleet's managed gateway. It sends only categorical
 context, caps output at 48 tokens, and retains deterministic questions when the
 gateway is absent or fails. Both family classification and exhausted-family
@@ -44,6 +44,15 @@ generation use the same managed binding; neither request includes journal text.
   bucket-item status model.
 
 ## Timeline
+
+- **2026-10-02 — Bucket-list simplification prepared locally:** The existing
+  landing imagery, typography, colors, and workspace layouts are retained.
+  Primary navigation leads to Catalog, My list, Weekly journal, Habits, and
+  Life in weeks. The hobby-history marketing section, required biography
+  onboarding, and journal interview controls are removed. Catalog rows save
+  directly to the existing local or account list. Session-bearing root requests
+  and default sign-in callbacks enter My list. No deployment or data migration
+  has been performed for this change.
 
 - **2026-09-12 — Marketing source link:** The Astro marketing footer now uses
   an accessible repository icon with a 44px target, matching the app footer's

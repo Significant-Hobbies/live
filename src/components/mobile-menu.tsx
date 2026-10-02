@@ -5,19 +5,14 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-import { useLocalOnboardingComplete } from './local-onboarding-gate';
-
 interface MobileMenuProps {
   links: { href: string; label: string }[];
-  localLinks?: { href: string; label: string }[];
   isLoggedIn: boolean;
 }
 
-export function MobileMenu({ links, localLinks, isLoggedIn }: MobileMenuProps) {
+export function MobileMenu({ links, isLoggedIn }: MobileMenuProps) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const localComplete = useLocalOnboardingComplete();
-  const visibleLinks = localLinks && localComplete ? localLinks : links;
 
   useEffect(() => {
     if (!open) return;
@@ -47,12 +42,12 @@ export function MobileMenu({ links, localLinks, isLoggedIn }: MobileMenuProps) {
           className="absolute left-0 top-[4.5rem] z-50 w-full border-b border-[#ddd4b7] bg-[#fffdf3] shadow-[0_16px_32px_rgba(66,55,22,0.14)]"
         >
           <div className="flex flex-col gap-2 px-4 py-4">
-            {visibleLinks.map((link) => {
+            {links.map((link) => {
               const isActive = pathname === link.href;
               const colorClass =
                 link.href === '/'
                   ? 'bg-[#fffdf8] text-[#201f18] border border-[#ddd4b7]'
-                  : link.href === '/live-more'
+                  : link.href === '/experiences' || link.href === '/bucket-list'
                     ? 'bg-[#f7e957] text-[#201f18]'
                     : link.href === '/journal'
                       ? 'bg-[#c5abfa] text-[#241a31]'

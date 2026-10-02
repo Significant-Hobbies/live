@@ -136,7 +136,7 @@ export function LocalBucketList() {
                 <h2 className="mt-1 font-serif text-4xl leading-[1.05]">What comes next</h2>
               </div>
               <Link
-                href="/live-more#discover"
+                href="/experiences"
                 className="inline-flex min-h-10 items-center text-sm font-bold underline underline-offset-4"
               >
                 Discover more possibilities

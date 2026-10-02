@@ -42,13 +42,17 @@ test.describe('Trajectory', () => {
     await expect(page.getByText('Short edits were easy to return to.')).toBeVisible();
   });
 
-  test('nav leads to the combined history surface', async ({ page }) => {
+  test('primary nav leads to the list and keeps history secondary', async ({ page }) => {
     await page.goto('/hobbies');
-    const historyLink = page.locator('nav a[href="/history"]');
+    const listLink = page.locator('nav a[href="/bucket-list"]');
     if ((page.viewportSize()?.width ?? 0) < 1024) {
       await page.getByRole('button', { name: 'Open menu' }).click();
     }
-    await expect(historyLink.filter({ visible: true }).first()).toHaveAttribute('href', '/history');
+    await expect(listLink.filter({ visible: true }).first()).toHaveAttribute(
+      'href',
+      '/bucket-list'
+    );
+    await expect(page.locator('nav a[href="/history"]')).toHaveCount(0);
   });
 
   test('/trajectory is not indexable by search engines', async ({ page }) => {

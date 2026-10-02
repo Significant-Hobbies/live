@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { AddToMyListButton } from '~/components/add-to-my-list-button';
 import { useMemo, useState } from 'react';
 
 import type { ExperienceCategory, ExperienceEntry, ExperienceKind } from '~/lib/experiences';
@@ -8,6 +9,7 @@ import type { ExperienceCategory, ExperienceEntry, ExperienceKind } from '~/lib/
 type Props = {
   entries: ExperienceEntry[];
   categories: ExperienceCategory[];
+  mode: 'account' | 'local';
 };
 
 const KINDS: { id: ExperienceKind | 'all'; label: string }[] = [
@@ -28,7 +30,7 @@ const KINDS: { id: ExperienceKind | 'all'; label: string }[] = [
  * Filtering is client-side over a few hundred rows, which is far cheaper than a
  * round trip and keeps the whole thing usable with the keyboard.
  */
-export function ExperiencesClient({ entries, categories }: Props) {
+export function ExperiencesClient({ entries, categories, mode }: Props) {
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState<ExperienceCategory | 'all'>('all');
   const [kind, setKind] = useState<ExperienceKind | 'all'>('all');
@@ -115,6 +117,14 @@ export function ExperiencesClient({ entries, categories }: Props) {
                       {e.description}
                     </p>
                   ) : null}
+                </div>
+                <div className="ml-auto shrink-0">
+                  <AddToMyListButton
+                    title={e.title}
+                    description={e.description}
+                    category={e.category}
+                    mode={mode}
+                  />
                 </div>
               </div>
             </li>

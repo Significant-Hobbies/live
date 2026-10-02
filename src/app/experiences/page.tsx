@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { getServerAuthSession } from '~/server/auth';
 
 import { EXPERIENCE_CATEGORIES, EXPERIENCE_ENTRIES } from '~/lib/experiences';
 import { DEFAULT_SOCIAL_IMAGE, SITE_URL } from '~/lib/site-metadata';
@@ -26,7 +27,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ExperiencesPage() {
+export default async function ExperiencesPage() {
+  const session = await getServerAuthSession();
   return (
     <div className="mx-auto w-full max-w-3xl px-5 py-16 sm:px-8 sm:py-24">
       <h1
@@ -41,7 +43,11 @@ export default function ExperiencesPage() {
         week.
       </p>
 
-      <ExperiencesClient entries={EXPERIENCE_ENTRIES} categories={EXPERIENCE_CATEGORIES} />
+      <ExperiencesClient
+        entries={EXPERIENCE_ENTRIES}
+        categories={EXPERIENCE_CATEGORIES}
+        mode={session?.user ? 'account' : 'local'}
+      />
 
       <p className="mt-12 text-base text-muted-foreground">
         Not sure where to start?{' '}

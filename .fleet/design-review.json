@@ -2,8 +2,8 @@
   "$schema": "fleet.design-review.v1",
   "version": 1,
   "project": "live",
-  "target": "Live onboarding weeks-reveal and weekly log",
-  "surfaceMode": "experience",
+  "target": "Cut-only Live simplification: retain incumbent landing and core workspaces",
+  "surfaceMode": "operate",
   "mode": "preserve",
   "register": "product",
   "context": {
@@ -15,7 +15,7 @@
     "probes": [],
     "selected": "existing-design",
     "approval": "not-required",
-    "before": ".fleet/design-evidence/weekly-log/before/README.md",
+    "before": ".fleet/design-evidence/weekly-log/after/journal-1440.png",
     "library": {
       "strategy": "upstream-first",
       "primary": "existing-project-system",
@@ -28,56 +28,44 @@
       }
     },
     "contract": {
-      "purpose": "Live helps a person name the life they want to live, plan toward it, and keep a truthful weekly record of what they actually lived.",
-      "purposeSource": "Owner direction on 20 September 2026 and PRODUCT.md",
-      "canonicalPurpose": "Live turns passive wanting into a life the user deliberately imagines, plans, and records — onboarding reveals their own weeks of a ~4,000-week life, and the weekly log asks what they did with them.",
+      "purpose": "Find bucket-list ideas and side quests, keep a list, check in on habits, and write one entry about last week.",
+      "purposeSource": "Owner instruction on 2026-10-02 and PRODUCT.md",
+      "canonicalPurpose": "Live is a simple catalog, personal list, habit log, weekly journal, and Life in weeks for time perspective.",
       "purposeAlignment": "match",
-      "driftNote": "The journal's AM/PM cadence was replaced by a weekly reckoning; earlier daily entries remain readable as archive. Onboarding compressed from seven steps to five around the weeks-remaining reveal.",
-      "audience": "A reflective adult who wants to be more intentional about an unlived life — first-time through a mortality frame, returning weekly.",
-      "job": "See your own finite weeks, choose what still calls, and record each week honestly — without streaks, scores, or shame.",
-      "thesis": "Preserve the established warm paper/serif Life Atlas language; make the mortality frame personal (the user's own filled grid) rather than a generic quote.",
-      "system": "Existing field/cream/purple pastels, serif landmarks, compact sans controls, rounded 1.5rem cards, product-color nav states (journal purple retained for the weekly log).",
-      "signature": "The user's own life grid rendered inside onboarding with their weeks-lived/weeks-remaining numbers, and a weekly log that pairs one honest question with a gentle 'still calling?' check on quiet dreams.",
-      "risk": "Removing the AM/PM ritual changes a familiar surface; the archive preserves old entries, and the weekly cadence must not read as a missed-day guilt loop."
+      "driftNote": "Owner explicitly rejected a redesign and requested subtraction. Legacy planning records remain secondary.",
+      "audience": "Adults collecting things they want to do and remembering what they did.",
+      "job": "Search, save an idea, fulfill it, and record last week without setup.",
+      "thesis": "Keep the incumbent visual design and remove competing steps and features.",
+      "system": "Existing warm paper, serif display type, yellow navigation, lavender journal header, and white writing surface.",
+      "signature": "The recognizable cinematic landing, personal bucket list, and Life in weeks remain.",
+      "risk": "Removing interview and biography setup must preserve existing records and safe saving."
     }
   },
   "evidence": {
     "screenshots": [
       {
         "width": 390,
-        "path": ".fleet/design-evidence/weekly-log/after/journal-390.png"
+        "path": ".fleet/design-evidence/cut-only-live/journal-390.jpg"
       },
       {
         "width": 768,
-        "path": ".fleet/design-evidence/weekly-log/after/journal-768.png"
+        "path": ".fleet/design-evidence/cut-only-live/journal-768.jpg"
       },
       {
         "width": 1440,
-        "path": ".fleet/design-evidence/weekly-log/after/journal-1440.png"
-      },
-      {
-        "width": 390,
-        "path": ".fleet/design-evidence/weekly-log/after/onboarding-reveal-390.png"
-      },
-      {
-        "width": 768,
-        "path": ".fleet/design-evidence/weekly-log/after/onboarding-reveal-768.png"
-      },
-      {
-        "width": 1440,
-        "path": ".fleet/design-evidence/weekly-log/after/onboarding-reveal-1440.png"
+        "path": ".fleet/design-evidence/cut-only-live/journal-1440.jpg"
       }
     ],
     "projectCheck": {
-      "command": "pnpm lint; pnpm typecheck; pnpm test; pnpm build; axe at 390, 768, and 1440 via e2e/daily.spec.ts a11y sweep",
+      "command": "pnpm lint; pnpm typecheck; pnpm test; pnpm build; pnpm quality:astro; pnpm quality:unused; focused desktop, mobile and tablet Playwright flows",
       "status": "pass"
     },
     "critique": {
-      "score": 36,
+      "score": 32,
       "maximum": 40
     },
     "audit": {
-      "score": 18,
+      "score": 16,
       "maximum": 20
     },
     "unresolved": {
@@ -86,39 +74,33 @@
     },
     "detector": {
       "posture": "advisory",
-      "findings": [
-        "Axe reported zero serious violations across /daily, /journal, and /habits after muted helper text moved from #8a8175 to #625b50 (3.83:1 -> >4.5:1).",
-        "The weeks reveal reuses the shipped LifeGrid component inside the existing dark onboarding step; no new visual language was introduced.",
-        "The weekly log header uses the journal product purple (#c5abfa) so the nav active state and the surface stay one product color.",
-        "Stale-dream copy was kept to 'still calling?' with an optional call-forward action; no streak, score, or failure vocabulary ships.",
-        "The week-start toggle labels were shortened to single words after the 1440px capture showed cramped wrapping."
-      ]
+      "findings": []
     },
     "comprehension": {
-      "status": "not-applicable",
-      "reviewer": "",
+      "status": "pass",
+      "reviewer": "Independent preservation_review Assessment A",
       "answers": {
-        "product": "",
-        "audience": "",
-        "value": "",
-        "mechanism": "",
-        "proof": "",
-        "nextAction": ""
+        "product": "A catalog and personal bucket list with habits and weekly writing.",
+        "audience": "Adults who want to choose and do things worth remembering.",
+        "value": "Turn ideas into lived experiences while keeping finite time in perspective.",
+        "mechanism": "Search the catalog, save an item, complete it, and record last week.",
+        "proof": "Real catalog entries, existing list and Bingo workflows; no invented testimonials.",
+        "nextAction": "Explore the catalog; signed-in root enters My list."
       },
       "purposeScore": {
-        "product": 0,
-        "audience": 0,
-        "value": 0,
-        "mechanism": 0,
-        "proof": 0,
-        "nextAction": 0,
-        "total": 0
+        "product": 25,
+        "audience": 12,
+        "value": 15,
+        "mechanism": 14,
+        "proof": 10,
+        "nextAction": 15,
+        "total": 91
       },
       "mismatches": []
     }
   },
   "ownerFeedback": {
-    "decision": "agent-selected",
-    "note": "Owner approved the revised product arc (issue #17); preserve lane kept the established design language so no separate visual-direction approval was required."
+    "decision": "keep",
+    "note": "Owner explicitly directed preserving the incumbent design and cutting excess features on 2026-10-02. No redesign approved."
   }
 }

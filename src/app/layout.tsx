@@ -21,12 +21,12 @@ const fraunces = Fraunces({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Live — Hobbies, Life Lists & Personal History',
+    default: 'Live — Bucket Lists, Side Quests & Weekly Journal',
     template: '%s | Live by Significant Hobbies',
   },
   description:
-    'Discover hobbies and experiences worth trying, turn the right ones into plans, and keep a private-by-default personal history.',
-  keywords: ['hobby discovery', 'bucket list', 'experiences', 'side quests', 'personal history'],
+    'Find bucket-list ideas and side quests, keep your own list, log what you do, and write one private entry each week.',
+  keywords: ['bucket list', 'experiences', 'side quests', 'habits', 'weekly journal'],
   authors: [{ name: 'Live by Significant Hobbies' }],
   robots: {
     index: true,
@@ -56,9 +56,9 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Live',
     url: 'https://live.significanthobbies.com',
-    title: 'Live — Hobbies, Life Lists & Personal History',
+    title: 'Live — Bucket Lists, Side Quests & Weekly Journal',
     description:
-      'Discover hobbies and experiences worth trying, turn the right ones into plans, and keep a private-by-default personal history.',
+      'Find bucket-list ideas and side quests, keep your own list, log what you do, and write one private entry each week.',
     images: [
       {
         url: 'https://live.significanthobbies.com/opengraph-image',
@@ -71,9 +71,9 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://live.significanthobbies.com'),
   twitter: {
     card: 'summary_large_image',
-    title: 'Live — Hobbies, Life Lists & Personal History',
+    title: 'Live — Bucket Lists, Side Quests & Weekly Journal',
     description:
-      'Discover hobbies and experiences worth trying, turn the right ones into plans, and keep a private-by-default personal history.',
+      'Find bucket-list ideas and side quests, keep your own list, log what you do, and write one private entry each week.',
     images: ['https://live.significanthobbies.com/opengraph-image'],
   },
 };
@@ -90,7 +90,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: `{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://sarthakagrawal.dev/#person","name":"Sarthak Agrawal","jobTitle":"AI Infrastructure & Product Engineer","url":"https://sarthakagrawal.dev","image":"https://avatars.githubusercontent.com/u/43884471?v=4","sameAs":["https://sarthakagrawal.dev","https://www.linkedin.com/in/sarthakagrawal927","https://github.com/sarthakagrawal927","https://x.com/sarthakcodes","https://huggingface.co/sarthakagrawal927"],"knowsAbout":["AI infrastructure","Local-first software","Post-training language models","AI code review","Cloudflare Workers","TypeScript","Rust"],"affiliation":{"@type":"Organization","@id":"https://sassmaker.com/#app","name":"SaaS Maker","url":"https://sassmaker.com"}},{"@type":"Organization","@id":"https://significanthobbies.com/#org","name":"Significant Hobbies","url":"https://significanthobbies.com","contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"sarthakagrawal@agentmail.to","url":"https://significanthobbies.com"},"address":{"@type":"PostalAddress","addressCountry":"US"}},{"@type":"WebApplication","@id":"https://live.significanthobbies.com/#app","name":"Live","alternateName":["Live by Significant Hobbies","live.significanthobbies.com"],"url":"https://live.significanthobbies.com","applicationCategory":"LifestyleApplication","description":"Discover hobbies and experiences worth trying, turn the right ones into plans, and keep a private-by-default personal history.","publisher":{"@id":"https://sarthakagrawal.dev/#person"},"isPartOf":{"@id":"https://significanthobbies.com/#org"},"sameAs":["https://github.com/Significant-Hobbies/live"]}]}`,
+            __html: `{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://sarthakagrawal.dev/#person","name":"Sarthak Agrawal","jobTitle":"AI Infrastructure & Product Engineer","url":"https://sarthakagrawal.dev","image":"https://avatars.githubusercontent.com/u/43884471?v=4","sameAs":["https://sarthakagrawal.dev","https://www.linkedin.com/in/sarthakagrawal927","https://github.com/sarthakagrawal927","https://x.com/sarthakcodes","https://huggingface.co/sarthakagrawal927"],"knowsAbout":["AI infrastructure","Local-first software","Post-training language models","AI code review","Cloudflare Workers","TypeScript","Rust"],"affiliation":{"@type":"Organization","@id":"https://sassmaker.com/#app","name":"SaaS Maker","url":"https://sassmaker.com"}},{"@type":"Organization","@id":"https://significanthobbies.com/#org","name":"Significant Hobbies","url":"https://significanthobbies.com","contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"sarthakagrawal@agentmail.to","url":"https://significanthobbies.com"},"address":{"@type":"PostalAddress","addressCountry":"US"}},{"@type":"WebApplication","@id":"https://live.significanthobbies.com/#app","name":"Live","alternateName":["Live by Significant Hobbies","live.significanthobbies.com"],"url":"https://live.significanthobbies.com","applicationCategory":"LifestyleApplication","description":"Find bucket-list ideas and side quests, keep your own list, log what you do, and write one private entry each week.","publisher":{"@id":"https://sarthakagrawal.dev/#person"},"isPartOf":{"@id":"https://significanthobbies.com/#org"},"sameAs":["https://github.com/Significant-Hobbies/live"]}]}`,
           }}
         />
         {/* fleet-jsonld:end */}

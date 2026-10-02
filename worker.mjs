@@ -218,10 +218,22 @@ export default {
       if (!isCacheableDocumentPath(url.pathname)) {
         return fetchOpenNext(request, env, ctx);
       }
-      // Auth-bearing requests pass straight through; the user is likely
-      // going to be redirected by middleware to /library or /dashboard.
+      // Session-bearing requests enter the list at the root and bypass shared
+      // HTML caching elsewhere. Workspaces still validate the real session.
       const isLiveLanding = url.hostname === LIVE_HOST && url.pathname === '/';
-      if (hasAuthCookie(request) && !isLiveLanding) {
+      if (hasAuthCookie(request) && isLiveLanding) {
+        // Enter the list directly. The workspace validates the real session;
+        // cookie presence only selects routing and never grants data access.
+        return new Response(null, {
+          status: 307,
+          headers: {
+            Location: new URL('/bucket-list', request.url).href,
+            'Cache-Control': 'private, no-store',
+            Vary: 'Cookie',
+          },
+        });
+      }
+      if (hasAuthCookie(request)) {
         return fetchOpenNext(request, env, ctx);
       }
       const getRequest = isHead ? new Request(request, { method: 'GET' }) : request;
