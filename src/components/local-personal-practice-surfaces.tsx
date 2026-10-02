@@ -37,10 +37,6 @@ export interface LocalDailyState {
   logs: LocalHabitLog[];
   journals: LocalJournal[];
 }
-interface LocalProfile {
-  name?: string;
-}
-
 const EMPTY_LOCAL_DAILY: LocalDailyState = { habits: [], logs: [], journals: [] };
 
 export function isLocalDailyState(value: unknown): value is LocalDailyState {
@@ -49,22 +45,12 @@ export function isLocalDailyState(value: unknown): value is LocalDailyState {
 
 export function LocalHabitsExperience({ today }: { today: string }) {
   const [state, setState] = useState<LocalDailyState>(EMPTY_LOCAL_DAILY);
-  const [profile, setProfile] = useState<LocalProfile>({});
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     const adapter = browserRecordAdapter();
-    Promise.all([
-      readLocalRecord(adapter, 'daily:state', 'daily', isLocalDailyState),
-      readLocalRecord(
-        adapter,
-        'onboarding:profile',
-        'onboarding',
-        (value): value is LocalProfile => !!value && typeof value === 'object'
-      ),
-    ]).then(([stored, storedProfile]) => {
+    readLocalRecord(adapter, 'daily:state', 'daily', isLocalDailyState).then((stored) => {
       setState(stored ?? EMPTY_LOCAL_DAILY);
-      setProfile(storedProfile ?? {});
       setLoaded(true);
     });
   }, []);
@@ -146,7 +132,6 @@ export function LocalHabitsExperience({ today }: { today: string }) {
         <StorageModeStatus />
       </div>
       <HabitsExperience
-        firstName={profile.name?.trim().split(/\s+/)[0] || 'there'}
         today={today}
         habits={state.habits}
         habitLogs={state.logs.filter((log) => log.dayDate === today)}

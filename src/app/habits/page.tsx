@@ -10,7 +10,6 @@ import {
   getHabitCommitmentChoices,
   getHabitLogsForDate,
   getHabits,
-  getUserProfile,
   setHabitCommitment,
   toggleHabitLog,
 } from '~/lib/actions/daily';
@@ -37,18 +36,16 @@ export default async function HabitsPage() {
   });
 
   const today = dayKeyIn(me?.timezone ?? null);
-  const [habits, habitLogs, habitCommitmentChoices, profile] = await Promise.all([
+  const [habits, habitLogs, habitCommitmentChoices] = await Promise.all([
     getHabits(),
     getHabitLogsForDate(today),
     getHabitCommitmentChoices(),
-    getUserProfile(),
   ]);
 
   return (
     <>
       <TimezoneSync storedTimezone={me?.timezone ?? null} />
       <HabitsExperience
-        firstName={profile?.name?.split(' ')[0] ?? session.user.name?.split(' ')[0] ?? 'there'}
         today={today}
         habits={habits}
         habitLogs={habitLogs}

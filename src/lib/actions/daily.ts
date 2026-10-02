@@ -3,7 +3,7 @@
 import { and, asc, desc, eq, ne } from 'drizzle-orm';
 import { revalidatePath } from 'next/cache';
 
-import { commitments, habitLogs, habits, journalEntries, timelines, users } from '~/db/schema';
+import { commitments, habitLogs, habits, journalEntries, timelines } from '~/db/schema';
 import { DEFAULT_FREQUENCY, isValidFrequency } from '~/lib/habit-utils';
 import {
   habitCommitmentIdForVerifiedTarget,
@@ -192,15 +192,4 @@ export async function getAllJournalEntries() {
     .from(journalEntries)
     .where(eq(journalEntries.userId, session.user.id))
     .orderBy(asc(journalEntries.dayDate));
-}
-
-// ── Profile ─────────────────────────────────────────────────────────────────
-
-export async function getUserProfile() {
-  const session = await getServerAuthSession();
-  if (!session?.user) return null;
-
-  const rows = await db.select().from(users).where(eq(users.id, session.user.id)).limit(1);
-
-  return rows[0] ?? null;
 }

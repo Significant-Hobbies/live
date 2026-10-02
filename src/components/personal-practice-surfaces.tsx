@@ -3,7 +3,7 @@
 import { useState, useTransition } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { Check, Link2, Plus, Sparkles, Trash2 } from 'lucide-react';
+import { Check, Link2, Plus, Trash2 } from 'lucide-react';
 
 import { PreviewBanner } from '~/components/preview-banner';
 import { Button } from '~/components/ui/button';
@@ -29,7 +29,6 @@ interface HabitLog {
 }
 
 export type HabitsExperienceProps = {
-  firstName: string;
   today: string;
   habits: Habit[];
   habitLogs: HabitLog[];
@@ -63,7 +62,6 @@ function calendarDate(dayDate: string): Date {
 }
 
 export function HabitsExperience({
-  firstName,
   today,
   habits: initialHabits,
   habitLogs: initialLogs,
@@ -219,34 +217,12 @@ export function HabitsExperience({
           saved.
         </PreviewBanner>
       )}
-      <section className="relative overflow-hidden rounded-[1.5rem] bg-[#dceabf] px-5 py-5 text-[#24351f] shadow-[0_10px_30px_rgba(66,55,22,0.08)] sm:px-7 sm:py-6">
-        <div className="relative flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <div className="flex items-center gap-2 text-sm font-semibold">
-              <Sparkles className="h-5 w-5" />
-              {dateString}
-            </div>
-            <h1 className="mt-2 font-serif text-3xl font-medium leading-tight tracking-[-0.02em] sm:text-4xl">
-              Keep it small, {firstName}.
-            </h1>
-            <p className="mt-2 text-sm opacity-75">
-              The small repeated thing. Checked in, never scored.
-            </p>
-          </div>
-          <p className="rounded-full bg-white/65 px-3 py-2 text-xs font-semibold">
-            {logs.some((log) => log.completed)
-              ? `${logs.filter((log) => log.completed).length} checked in today`
-              : 'Ready when you are'}
-          </p>
-        </div>
-      </section>
-
       <div id="habits" className="scroll-mt-24 space-y-3">
         <div className="flex items-baseline justify-between gap-3">
           <div>
-            <h3 className="font-serif text-3xl font-medium text-foreground">Habits</h3>
-            <p className="mt-2 text-base text-muted-foreground">
-              The small repeated thing. Checked in, never scored.
+            <h1 className="font-serif text-3xl font-medium text-foreground">Habits</h1>
+            <p className="mt-2 text-sm text-muted-foreground">
+              <time dateTime={today}>{dateString}</time>
             </p>
           </div>
           {!preview && (
@@ -275,18 +251,8 @@ export function HabitsExperience({
         )}
 
         {habits.length === 0 && !showHabitManager ? (
-          <div className="flex flex-col gap-5 rounded-2xl bg-[#dceabf] p-5 text-[#24351f] sm:flex-row sm:items-center sm:justify-between sm:p-6">
-            <div className="flex items-start gap-4">
-              <div className="flex size-11 shrink-0 items-center justify-center rounded-full bg-white/65">
-                <Sparkles className="size-5" />
-              </div>
-              <div>
-                <p className="font-serif text-2xl font-medium">Begin with one repeatable thing.</p>
-                <p className="mt-1 text-sm leading-relaxed text-[#4f6542]">
-                  Small enough to do on an ordinary day.
-                </p>
-              </div>
-            </div>
+          <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-sm text-muted-foreground">No habits yet.</p>
             {!preview && (
               <Button
                 type="button"
@@ -320,8 +286,9 @@ export function HabitsExperience({
                       'flex size-11 shrink-0 items-center justify-center rounded-full border-2 transition-[background-color,border-color,transform] hover:scale-105 focus-visible:ring-2 focus-visible:ring-foreground/50 focus-visible:outline-none',
                       done
                         ? 'border-[#176b4a] bg-[#176b4a] text-white'
-                        : 'border-[#cfc5b3] bg-[#fffdf8] hover:border-[#8a7c64]'
+                        : 'border-[#8a7c64] bg-[#fffdf8] hover:border-[#24351f]'
                     )}
+                    aria-pressed={done}
                     aria-label={
                       done ? `Mark ${habit.name} as not done` : `Mark ${habit.name} as done`
                     }
@@ -446,7 +413,7 @@ export function HabitsExperience({
                 onChange={(e) => setNewHabit(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && handleAddHabit()}
                 placeholder="Habit name (e.g. Read 20 pages)"
-                className="flex-1 rounded-lg border border-border bg-background px-3 py-1.5 text-sm text-foreground focus:border-foreground/40 focus-visible:ring-2 focus-visible:ring-foreground/50 focus-visible:outline-none"
+                className="min-h-11 flex-1 rounded-lg border border-border bg-background px-3 py-1.5 text-sm text-foreground focus:border-foreground/40 focus-visible:ring-2 focus-visible:ring-foreground/50 focus-visible:outline-none"
               />
             </div>
 
@@ -531,7 +498,7 @@ export function HabitsExperience({
               size="sm"
               onClick={handleAddHabit}
               disabled={!newHabit.trim() || habitCreating}
-              className="w-full"
+              className="min-h-11 w-full"
             >
               <Plus className="h-3.5 w-3.5" />
               {habitCreating ? 'Adding habit…' : 'Add habit'}

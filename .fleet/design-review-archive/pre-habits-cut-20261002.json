@@ -2,7 +2,7 @@
   "$schema": "fleet.design-review.v1",
   "version": 1,
   "project": "live",
-  "target": "Habits page: cut greeting and promotional empty state; retain check-in list",
+  "target": "Cut-only Live simplification: retain incumbent landing and core workspaces",
   "surfaceMode": "operate",
   "mode": "preserve",
   "register": "product",
@@ -15,7 +15,7 @@
     "probes": [],
     "selected": "existing-design",
     "approval": "not-required",
-    "before": ".fleet/design-evidence/cut-only-habits/before-1440.jpg",
+    "before": ".fleet/design-evidence/weekly-log/after/journal-1440.png",
     "library": {
       "strategy": "upstream-first",
       "primary": "existing-project-system",
@@ -34,30 +34,30 @@
       "purposeAlignment": "match",
       "driftNote": "Owner explicitly rejected a redesign and requested subtraction. Legacy planning records remain secondary.",
       "audience": "Adults collecting things they want to do and remembering what they did.",
-      "job": "Log a habit for today or manage the existing list.",
-      "thesis": "Start with the check-in list and remove the duplicate introduction.",
-      "system": "Existing warm paper, serif heading, yellow navigation and white check-in rows.",
+      "job": "Search, save an idea, fulfill it, and record last week without setup.",
+      "thesis": "Keep the incumbent visual design and remove competing steps and features.",
+      "system": "Existing warm paper, serif display type, yellow navigation, lavender journal header, and white writing surface.",
       "signature": "The recognizable cinematic landing, personal bucket list, and Life in weeks remain.",
-      "risk": "Check-ins and saved habit and journal records must remain intact."
+      "risk": "Removing interview and biography setup must preserve existing records and safe saving."
     }
   },
   "evidence": {
     "screenshots": [
       {
         "width": 390,
-        "path": ".fleet/design-evidence/cut-only-habits/after-390.jpg"
+        "path": ".fleet/design-evidence/cut-only-live/journal-390.jpg"
       },
       {
         "width": 768,
-        "path": ".fleet/design-evidence/cut-only-habits/after-768.jpg"
+        "path": ".fleet/design-evidence/cut-only-live/journal-768.jpg"
       },
       {
         "width": 1440,
-        "path": ".fleet/design-evidence/cut-only-habits/after-1440.jpg"
+        "path": ".fleet/design-evidence/cut-only-live/journal-1440.jpg"
       }
     ],
     "projectCheck": {
-      "command": "pnpm quality; focused Playwright persistence and accessibility checks on desktop, mobile and tablet",
+      "command": "pnpm lint; pnpm typecheck; pnpm test; pnpm build; pnpm quality:astro; pnpm quality:unused; focused desktop, mobile and tablet Playwright flows",
       "status": "pass"
     },
     "critique": {
@@ -65,7 +65,7 @@
       "maximum": 40
     },
     "audit": {
-      "score": 18,
+      "score": 16,
       "maximum": 20
     },
     "unresolved": {
@@ -77,8 +77,26 @@
       "findings": []
     },
     "comprehension": {
-      "status": "not-applicable",
-      "reviewer": "Operate surface; scoped preservation review in cut-only-habits/review.md"
+      "status": "pass",
+      "reviewer": "Independent preservation_review Assessment A",
+      "answers": {
+        "product": "A catalog and personal bucket list with habits and weekly writing.",
+        "audience": "Adults who want to choose and do things worth remembering.",
+        "value": "Turn ideas into lived experiences while keeping finite time in perspective.",
+        "mechanism": "Search the catalog, save an item, complete it, and record last week.",
+        "proof": "Real catalog entries, existing list and Bingo workflows; no invented testimonials.",
+        "nextAction": "Explore the catalog; signed-in root enters My list."
+      },
+      "purposeScore": {
+        "product": 25,
+        "audience": 12,
+        "value": 15,
+        "mechanism": 14,
+        "proof": 10,
+        "nextAction": 15,
+        "total": 91
+      },
+      "mismatches": []
     }
   },
   "ownerFeedback": {
