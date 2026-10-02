@@ -48,7 +48,10 @@ test.describe('Trajectory', () => {
     if ((page.viewportSize()?.width ?? 0) < 1024) {
       await page.getByRole('button', { name: 'Open menu' }).click();
     }
-    await expect(listLink.filter({ visible: true }).first()).toHaveAttribute('href', '/bucket-list');
+    await expect(listLink.filter({ visible: true }).first()).toHaveAttribute(
+      'href',
+      '/bucket-list'
+    );
     await expect(page.locator('nav a[href="/history"]')).toHaveCount(0);
   });
 
