@@ -53,11 +53,11 @@ const onboardingSteps = [
 const questions = [
   [
     'Can I begin without an account?',
-    'Yes. Your onboarding, weekly log, habits, bucket-list choices, and trajectory can stay on this device. Sign in only when you want cross-device access.',
+    'Yes. Your bucket list and weekly journal can stay on this device. Sign in only when you want cross-device access.',
   ],
   [
-    'What happens after onboarding?',
-    'Your home becomes a personal dashboard: time in weeks, a weekly log of what you actually lived, simple habit check-ins, and the next thing you want to live.',
+    'What happens when I sign in?',
+    'Your home opens to your bucket list. Mark items done, write about the previous week, and use Life in weeks to keep time in perspective.',
   ],
   [
     'Is my weekly log public?',
@@ -65,7 +65,7 @@ const questions = [
   ],
   [
     'Is this another productivity score?',
-    'No. Habits are simple check-ins and reflection is never scored. The product is here to help you notice, choose, and remember—not grade your life.',
+    'No. Record completed bucket-list items and write a weekly journal entry without scores or streaks. The product is here to help you notice, choose, and remember—not grade your life.',
   ],
 ] as const;
 

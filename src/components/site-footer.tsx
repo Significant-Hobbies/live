@@ -23,7 +23,6 @@ const groups = [
     title: 'Explore',
     links: [
       ['Life in weeks', '/life-in-weeks'],
-      ['Habits', '/habits'],
       ['Travel bucket list', '/travel-bucket-list'],
     ],
   },

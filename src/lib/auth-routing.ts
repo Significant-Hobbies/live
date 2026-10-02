@@ -62,7 +62,7 @@ export function guestRouteFor(callbackUrl: string): GuestRoute {
   if (callbackUrl === '/journal')
     return { href: '/journal', label: 'write privately on this device' };
   if (callbackUrl === '/habits')
-    return { href: '/habits', label: 'keep your check-ins on this device' };
+    return { href: '/bucket-list', label: 'keep your list on this device' };
   return { href: '/experiences', label: 'browse the catalog without an account' };
 }
 

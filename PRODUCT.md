@@ -9,8 +9,8 @@ web and iOS
 ## Users
 
 Adults who want to live more intentionally use the Significant Hobbies family
-to discover interests, write privately, build repeatable practices, and shape
-longer-lived plans.
+to discover bucket-list ideas and side quests, keep a personal list, record
+completed items, and write about the previous week.
 Signed-out visitors can explore the mortality frame, discovery content, and
 explicitly public Living surfaces before choosing whether to create an account.
 
@@ -25,7 +25,6 @@ toward it — a family of focused personal products:
 - **Weekly log** owns the private weekly record of what the user actually
   lived: one editable entry about the previous week. Earlier weekly and AM/PM
   entries remain readable as archive.
-- **Habits** owns simple, non-scoring practice check-ins.
 - **Life in weeks** keeps time in perspective with weeks lived and estimated
   weeks remaining. Existing History and planning records remain available.
 
@@ -53,9 +52,10 @@ progress systems are limited to surfaces where proof is the explicit job.
   action. A session-bearing request enters `/bucket-list`; the application
   still validates the session before choosing account or local storage.
 - Primary navigation is Catalog (`/experiences`), My list (`/bucket-list`),
-  Weekly journal (`/journal`), Habits (`/habits`), and Life in weeks
+  Weekly journal (`/journal`), and Life in weeks
   (`/life-in-weeks`). Core work does not require biography onboarding.
-- `/onboarding` redirects to My list. `/daily`, the hobby quiz, Dream Atlas,
+- `/onboarding` and `/habits` redirect to My list. `/daily` redirects to the
+  weekly journal. The hobby quiz, Dream Atlas,
   timelines, commitments, trajectory, and History remain compatibility or
   secondary routes; they are not the primary journey.
 - Cloudflare Workers/OpenNext serves the application; Cloudflare D1 stores
@@ -67,7 +67,8 @@ progress systems are limited to surfaces where proof is the explicit job.
 ## Capabilities and Constraints
 
 - Weekly-log writing has no public visibility field or sharing API.
-- Habits are boolean check-ins with no score, streak, XP, or shame loop.
+- Completion logging belongs to My list. There is no separate habit tracker;
+  historical habit records remain stored for compatibility.
 - Commitments are separate hobby-specific goals with optional public
   visibility, proof stamps, and commitment-only streak badges.
 - Reuse the existing visual design. Simplification removes steps and competing
@@ -94,8 +95,8 @@ and none should be invented.
 
 ## Product Principles
 
-1. Let Live, the weekly log, and Habits own distinct jobs while preserving
-   explicit links between related records.
+1. Keep discovery, personal list completion, weekly writing, and time
+   perspective focused, without a separate habit-tracking surface.
 2. Keep private work private and publication explicitly opt-in.
 3. Let the mortality frame create urgency without scoring or shame.
 4. Prefer one focused discovery path over multiplying surfaces.

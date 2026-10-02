@@ -72,7 +72,7 @@ export default async function CommitmentsPage() {
           </h1>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-[#344b31]">
             Proof. A commitment is a promise you can show your work for — one stamp a day, each with
-            evidence attached. Habits are the quiet version of this with nothing to prove.
+            evidence attached.
           </p>
         </div>
       </header>

@@ -17,13 +17,14 @@ test.describe('private work is locally available without an account', () => {
     if (!(await nav.getByRole('link', { name: 'Catalog', exact: true }).isVisible())) {
       await page.getByRole('button', { name: 'Open menu' }).click();
     }
-    for (const name of ['Catalog', 'My list', 'Weekly journal', 'Habits', 'Life in weeks']) {
+    for (const name of ['Catalog', 'My list', 'Weekly journal', 'Life in weeks']) {
       await expect(nav.getByRole('link', { name, exact: true })).toBeVisible();
     }
+    await expect(nav.getByRole('link', { name: 'Habits', exact: true })).toHaveCount(0);
     await expect(page.getByRole('link', { name: 'Possibilities', exact: true })).toHaveCount(0);
   });
 
-  for (const route of ['/live-more', '/journal', '/habits', '/bucket-list', '/settings'] as const) {
+  for (const route of ['/live-more', '/journal', '/bucket-list', '/settings'] as const) {
     test(`${route} opens directly without onboarding`, async ({ page }) => {
       const response = await page.goto(route);
       expect(response?.status()).toBeLessThan(400);

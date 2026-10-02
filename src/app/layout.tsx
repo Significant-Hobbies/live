@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   description:
     'Find bucket-list ideas and side quests, keep your own list, log what you do, and write one private entry each week.',
-  keywords: ['bucket list', 'experiences', 'side quests', 'habits', 'weekly journal'],
+  keywords: ['bucket list', 'experiences', 'side quests', 'weekly journal'],
   authors: [{ name: 'Live by Significant Hobbies' }],
   robots: {
     index: true,

@@ -4,12 +4,6 @@ import { completeLocalOnboarding } from './fixtures/local-onboarding';
 
 test('anonymous private work imports into a newly signed-in account', async ({ page }) => {
   await completeLocalOnboarding(page);
-  await page.goto('/habits');
-  await page.getByRole('button', { name: 'Manage' }).click();
-  await page.getByPlaceholder('Habit name (e.g. Read 20 pages)').fill('Imported local walk');
-  await page.getByRole('button', { name: 'Add habit' }).click();
-  await expect(page.getByText('Imported local walk')).toBeVisible();
-
   await page.goto('/commitments');
   await page.getByRole('button', { name: 'Start a commitment' }).click();
   await page.getByPlaceholder('e.g. Guitar, Running, Spanish').fill('Imported local guitar');
@@ -38,13 +32,12 @@ test('anonymous private work imports into a newly signed-in account', async ({ p
     `onboarding completion failed (${complete.status()}): ${await complete.text()}`
   ).toBe(true);
 
-  await page.goto('/habits');
+  await page.goto('/bucket-list');
   await expect(page.getByRole('button', { name: 'Import private data' })).toBeVisible();
   await page.getByRole('button', { name: 'Import private data' }).click();
   await expect(page.getByRole('button', { name: 'Import private data' })).toHaveCount(0);
 
   await page.reload();
-  await expect(page.getByText('Imported local walk')).toBeVisible();
   await page.goto('/commitments');
   await expect(page.getByText('Imported local guitar')).toBeVisible();
   await page.goto('/settings');

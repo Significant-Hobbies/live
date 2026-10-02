@@ -1,9 +1,3 @@
-export type HabitCommitmentChoice = {
-  id: string;
-  label: string;
-  href: string;
-};
-
 const MAX_COMMITMENT_ID_LENGTH = 128;
 
 export function parseHabitCommitmentValue(value: string): string | null {

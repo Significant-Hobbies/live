@@ -36,13 +36,7 @@ const HABIT_FREQUENCIES: Record<string, HabitFrequencyMeta> = {
   '5x_week': { label: '5× / week', cadence: 'quota', weeklyTarget: 5 },
 };
 
-export const DEFAULT_FREQUENCY = 'daily';
-
-/** Options for the habit-create form, in display order. */
-export const FREQUENCY_OPTIONS = Object.entries(HABIT_FREQUENCIES).map(([value, meta]) => ({
-  value,
-  label: meta.label,
-}));
+const DEFAULT_FREQUENCY = 'daily';
 
 export function frequencyMeta(targetFrequency: string | null | undefined): HabitFrequencyMeta {
   return HABIT_FREQUENCIES[targetFrequency ?? ''] ?? HABIT_FREQUENCIES[DEFAULT_FREQUENCY]!;

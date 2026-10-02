@@ -51,9 +51,7 @@ export function MobileMenu({ links, isLoggedIn }: MobileMenuProps) {
                     ? 'bg-[#f7e957] text-[#201f18]'
                     : link.href === '/journal'
                       ? 'bg-[#c5abfa] text-[#241a31]'
-                      : link.href === '/habits'
-                        ? 'bg-[#dceabf] text-[#24351f]'
-                        : 'bg-[#b9dcf5] text-[#192a36]';
+                      : 'bg-[#b9dcf5] text-[#192a36]';
               return (
                 <Link
                   key={link.href}

@@ -38,9 +38,9 @@ components:
 
 **Creative North Star: “The Life Atlas”**
 
-The interface is a map of a finite, inhabited life. Live uses paths, horizons, clusters, and wayfinding to turn possibility into a next move. History uses the same atlas language as chronology: week fields, dated markers, bends in direction, and remembered evidence. Journal and Habits are focused close-up scales of the same world.
+The interface is a map of a finite, inhabited life. Live uses paths, horizons, clusters, and wayfinding to turn possibility into a next move. History uses the same atlas language as chronology: week fields, dated markers, bends in direction, and remembered evidence. The weekly journal is a focused close-up scale of the same world.
 
-The system is warm light mode by default: sunlit, colorful, energetic, and action-led. Live should make leaving the screen feel tempting. Journal is a calm ritual expressed through morning yellow or evening lavender and a substantial white writing surface. Habits uses lived sage and deliberately spare check-in rows. History is a personal almanac: yellow mortality, blue direction, and coral, lavender, or paper story passages. Gold indicates chosen direction; sage indicates lived evidence and learning. Content should feel placed in a landscape, not packed into a grid of interchangeable cards.
+The system is warm light mode by default: sunlit, colorful, energetic, and action-led. Live should make leaving the screen feel tempting. Journal is a calm ritual expressed through morning yellow or evening lavender and a substantial white writing surface. History is a personal almanac: yellow mortality, blue direction, and coral, lavender, or paper story passages. Gold indicates chosen direction; sage indicates lived evidence and learning. Content should feel placed in a landscape, not packed into a grid of interchangeable cards.
 
 ## Colors
 
@@ -58,9 +58,9 @@ Primary pages use one dominant spatial field followed by quieter supporting pass
 
 Live leads with a verb and an immediate invitation. It must make the user want to choose an activity, not admire a planning system. Mortality belongs in History and acts as context, never as the dominant emotional register of the action surface.
 
-The global shell exposes Catalog, My list, Weekly journal, Habits, and Life in weeks. These reuse the incumbent shell and workspaces. The bucket-list cleanup removes competing steps and navigation without replacing typography, colors, imagery, or layout.
+The global shell exposes Catalog, My list, Weekly journal, and Life in weeks. These reuse the incumbent shell and workspaces. The bucket-list cleanup removes competing steps and navigation without replacing typography, colors, imagery, or layout.
 
-Habits starts with one heading and today's date, followed directly by the existing check-in list. It has no separate greeting banner, repeated introduction, or progress badge.
+Completion logging stays in My list. There is no Habits page or navigation link; its old URL redirects to My list. The old Daily URL redirects to the weekly journal.
 
 ## Elevation & Depth
 
@@ -74,7 +74,7 @@ Controls use 12px corners and major bounded surfaces use 16px corners. Paths, co
 
 ### Navigation
 
-The wordmark is `SH` with an accessible full name. Catalog, My list, Weekly journal, Habits, and Life in weeks are direct links in that order on desktop and mobile. Preserve the established destination colors and responsive menu.
+The wordmark is `SH` with an accessible full name. Catalog, My list, Weekly journal, and Life in weeks are direct links in that order on desktop and mobile. Preserve the established destination colors and responsive menu.
 
 ### Cards / Containers
 
@@ -92,7 +92,7 @@ Primary actions use atlas gold on night. Secondary actions use quiet tonal surfa
 - **Do** connect possibilities, present action, and remembered evidence spatially.
 - **Do** use real personal content as the visual material of private surfaces.
 - **Do** make Live feel sunny, playful, physical, and in motion.
-- **Do** keep Journal reflective and Habits immediate instead of rebuilding a combined Daily dashboard.
+- **Do** keep one weekly journal entry and completion logging in My list.
 
 ### Don't:
 

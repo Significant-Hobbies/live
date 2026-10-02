@@ -19,9 +19,7 @@ export function NavLinks({ links }: NavLinksProps) {
             ? 'bg-[#f7e957] text-[#201f18] shadow-[0_2px_0_#c8b92e]'
             : link.href === '/journal'
               ? 'bg-[#c5abfa] text-[#241a31] shadow-[0_2px_0_#9d82d5]'
-              : link.href === '/habits'
-                ? 'bg-[#dceabf] text-[#24351f] shadow-[0_2px_0_#adc28c]'
-                : 'bg-[#b9dcf5] text-[#192a36] shadow-[0_2px_0_#8db9d7]';
+              : 'bg-[#b9dcf5] text-[#192a36] shadow-[0_2px_0_#8db9d7]';
         return (
           <Link
             key={link.href}

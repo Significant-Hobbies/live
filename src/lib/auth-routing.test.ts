@@ -51,9 +51,9 @@ describe('guestRouteFor', () => {
     expect(guestRouteFor('/timeline/xyz/edit').href).toBe('/timeline/new');
   });
 
-  it('keeps journal and habit intent on the same local surface', () => {
+  it('keeps journal intent and sends retired habits to the list', () => {
     expect(guestRouteFor('/journal').href).toBe('/journal');
-    expect(guestRouteFor('/habits').href).toBe('/habits');
+    expect(guestRouteFor('/habits').href).toBe('/bucket-list');
     for (const route of ['/trajectory', '/history', '/commitments', '/']) {
       expect(guestRouteFor(route).href).toBe('/experiences');
     }

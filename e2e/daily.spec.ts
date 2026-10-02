@@ -3,20 +3,14 @@ import { expect, test } from '@playwright/test';
 
 import { completeLocalOnboarding } from './fixtures/local-onboarding';
 
-test.describe('Journal, Habits & manifesto', () => {
-  test('/daily sends the old ritual to its two new homes', async ({ page }) => {
-    await completeLocalOnboarding(page);
-    const res = await page.goto('/daily');
-    expect(res?.status()).toBeLessThan(400);
-    expect(page.url()).not.toContain('/login');
-    await expect(page.getByRole('link', { name: /Open the weekly log/ })).toHaveAttribute(
-      'href',
-      '/journal'
-    );
-    await expect(page.getByRole('link', { name: /Open Habits/ })).toHaveAttribute(
-      'href',
-      '/habits'
-    );
+test.describe('Journal, list & manifesto', () => {
+  test('retired routes lead to the list and weekly journal', async ({ page }) => {
+    await page.goto('/habits');
+    await expect(page).toHaveURL(/\/bucket-list$/);
+    await expect(page.getByRole('button', { name: 'Manage', exact: true })).toHaveCount(0);
+    await page.goto('/daily');
+    await expect(page).toHaveURL(/\/journal$/);
+    await expect(page.locator('#weekly-entry')).toBeVisible();
   });
 
   test('the split surfaces have no serious accessibility violations', async ({ page }) => {
@@ -31,19 +25,12 @@ test.describe('Journal, Habits & manifesto', () => {
     }
   });
 
-  test('Habits and Journal preserve the existing anonymous records independently', async ({
-    page,
-  }) => {
+  test('list completion and weekly writing persist independently', async ({ page }) => {
     await completeLocalOnboarding(page);
-    await page.goto('/habits');
-    await page.getByRole('button', { name: 'Manage' }).click();
-    await page.getByPlaceholder('Habit name (e.g. Read 20 pages)').fill('Walk after lunch');
-    await page.getByRole('button', { name: 'Add habit' }).click();
-    await expect(page.getByText('Walk after lunch')).toBeVisible();
-    await page.getByRole('button', { name: 'Mark Walk after lunch as done', exact: true }).click();
-    await expect(
-      page.getByRole('button', { name: 'Mark Walk after lunch as not done', exact: true })
-    ).toHaveAttribute('aria-pressed', 'true');
+    await page.goto('/bucket-list');
+    await page.getByLabel('Something you want to do').fill('Walk after lunch');
+    await page.getByRole('button', { name: 'Add to my list' }).click();
+    await page.getByRole('button', { name: 'Complete Walk after lunch', exact: true }).click();
 
     await page.goto('/journal');
     await page.locator('#weekly-entry').fill('I made room for a slower afternoon.');
@@ -52,17 +39,11 @@ test.describe('Journal, Habits & manifesto', () => {
     await expect(page.locator('#weekly-entry')).toHaveValue('I made room for a slower afternoon.');
 
     await page.goto('/habits');
-    await expect(page.getByText('Walk after lunch')).toBeVisible();
+    await expect(page).toHaveURL(/\/bucket-list$/);
     await expect(
-      page.getByRole('button', { name: 'Mark Walk after lunch as not done', exact: true })
-    ).toHaveAttribute('aria-pressed', 'true');
-    await expect(page.locator('#weekly-entry')).toHaveCount(0);
-    await expect(
-      page.getByRole('heading', { level: 1, name: 'Habits', exact: true })
+      page.getByRole('button', { name: 'Reopen Walk after lunch', exact: true })
     ).toBeVisible();
-    await expect(page.getByText('Ready when you are')).toHaveCount(0);
-    await expect(page.getByText(/Keep it small,/)).toHaveCount(0);
-    await expect(page.getByText(/\d+ of \d+ complete today/)).toHaveCount(0);
+    await expect(page.locator('#weekly-entry')).toHaveCount(0);
   });
 
   test('the weekly journal keeps one entry without an interview', async ({ page }) => {
@@ -174,13 +155,15 @@ test.describe('Journal, Habits & manifesto', () => {
     await expect(bucketListLink).toHaveAttribute('href', '/bucket-lists');
   });
 
-  test('nav exposes the core list, journal, and habits', async ({ page }) => {
+  test('nav exposes only the core list, journal, catalog, and time perspective', async ({
+    page,
+  }) => {
     await page.goto('/hobbies');
     if ((page.viewportSize()?.width ?? 0) < 1024) {
       await page.getByRole('button', { name: 'Open menu' }).click();
     }
     const nav = page.locator('[data-site-nav]');
-    for (const name of ['Catalog', 'My list', 'Weekly journal', 'Habits', 'Life in weeks']) {
+    for (const name of ['Catalog', 'My list', 'Weekly journal', 'Life in weeks']) {
       await expect(nav.getByRole('link', { name, exact: true })).toBeVisible();
     }
   });
@@ -191,6 +174,6 @@ test.describe('Journal, Habits & manifesto', () => {
     await expect(footer.getByRole('link', { name: 'Catalog', exact: true })).toBeVisible();
     await expect(footer.getByRole('link', { name: 'My list', exact: true })).toBeVisible();
     await expect(footer.getByRole('link', { name: 'Weekly journal', exact: true })).toBeVisible();
-    await expect(footer.getByRole('link', { name: 'Habits', exact: true })).toBeVisible();
+    await expect(footer.getByRole('link', { name: 'Habits', exact: true })).toHaveCount(0);
   });
 });

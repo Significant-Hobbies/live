@@ -40,8 +40,7 @@ export default async function LoginPage({
               className="font-serif text-5xl font-medium tracking-[-0.03em] text-foreground"
             />
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              Save your bucket list, side quests, habits, and weekly journal. Pick up where you left
-              off.
+              Save your bucket list, side quests, and weekly journal. Pick up where you left off.
             </p>
           </div>
 
