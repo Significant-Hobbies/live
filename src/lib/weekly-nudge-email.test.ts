@@ -1,10 +1,11 @@
-import { describe, expect, it, vi } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 
 // The cron sender is a self-contained .mjs (Wrangler bundles it directly).
 // These tests drive it with a mocked env — D1 rows and a captured EMAIL
 // binding — so the Sunday filter, skip-written rule, and send shape are
 // verified without a real database or mailbox.
 import { sendWeeklyNudges } from '../../weekly-nudge-email.mjs';
+import { fallbackQuestion, QUESTION_FAMILIES, questionForFamily } from './weekly-questions';
 
 type Row = Record<string, unknown>;
 
@@ -12,6 +13,7 @@ function makeEnv(opts: {
   users: Row[];
   writtenWeeks?: string[];
   counts?: { entries: number; commitments: number; dreams: number };
+  gateway?: { fetch: (request: Request) => Promise<Response> };
 }) {
   const sent: Array<{ to: string; subject: string; text: string; html: string }> = [];
   const writtenWeeks = new Set(opts.writtenWeeks ?? []);
@@ -53,9 +55,15 @@ function makeEnv(opts: {
         },
       },
       EMAIL: { send: async (msg: (typeof sent)[number]) => sent.push(msg) },
+      FREE_AI: opts.gateway,
     },
   };
 }
+
+afterEach(() => {
+  vi.useRealTimers();
+  vi.restoreAllMocks();
+});
 
 function utcDayOfWeek(): number {
   const dayKey = new Intl.DateTimeFormat('en-CA', { timeZone: 'UTC' }).format(new Date());
@@ -72,6 +80,78 @@ const utcUser = {
 };
 
 describe('sendWeeklyNudges', () => {
+  it('classifies the cron email through the private managed gateway with bounded output', async () => {
+    vi.useFakeTimers({ now: new Date('2026-10-04T12:00:00.000Z') });
+    const family = QUESTION_FAMILIES[0]!;
+    const gatewayFetch = vi.fn(async (request: Request) => {
+      expect(new URL(request.url).pathname).toBe('/v1/chat/completions');
+      expect(request.method).toBe('POST');
+      expect(request.headers.get('x-gateway-project-id')).toBe('live');
+      expect(request.headers.get('authorization')).toBe('Bearer gateway-managed');
+      expect(request.signal.aborted).toBe(false);
+      const body = (await request.json()) as {
+        model: string;
+        project_id: string;
+        max_tokens: number;
+        response_format: { type: string };
+        messages: Array<{ content: string }>;
+      };
+      expect(body.model).toBe('auto');
+      expect(body.project_id).toBe('live');
+      expect(body.max_tokens).toBe(24);
+      expect(body.response_format).toEqual({ type: 'json_object' });
+      expect(body.messages[1]?.content).toContain('categorical signals');
+      expect(body.messages[1]?.content).not.toContain('Sarthak Tester');
+      return Response.json({ choices: [{ message: { content: JSON.stringify({ family }) } }] });
+    });
+    const externalFetch = vi.spyOn(globalThis, 'fetch');
+    const { env, sent } = makeEnv({
+      users: [utcUser],
+      counts: { entries: 1, commitments: 0, dreams: 0 },
+      gateway: { fetch: gatewayFetch },
+    });
+
+    await sendWeeklyNudges(env as never);
+
+    expect(gatewayFetch).toHaveBeenCalledTimes(1);
+    expect(externalFetch).not.toHaveBeenCalled();
+    expect(sent).toHaveLength(1);
+    expect(sent[0]?.text).toContain(questionForFamily(family, '2026-09-28').text);
+  });
+
+  it('keeps the deterministic email question when the managed gateway is absent', async () => {
+    vi.useFakeTimers({ now: new Date('2026-10-04T12:00:00.000Z') });
+    const externalFetch = vi.spyOn(globalThis, 'fetch');
+    const { env, sent } = makeEnv({
+      users: [utcUser],
+      counts: { entries: 1, commitments: 0, dreams: 0 },
+    });
+
+    await sendWeeklyNudges(env as never);
+
+    expect(externalFetch).not.toHaveBeenCalled();
+    expect(sent).toHaveLength(1);
+    expect(sent[0]?.text).toContain(fallbackQuestion('2026-09-28').text);
+  });
+
+  it('rejects an unknown managed family and uses the deterministic question bank', async () => {
+    vi.useFakeTimers({ now: new Date('2026-10-04T12:00:00.000Z') });
+    const gatewayFetch = vi.fn(async () =>
+      Response.json({ choices: [{ message: { content: '{"family":"outside"}' } }] })
+    );
+    const { env, sent } = makeEnv({
+      users: [utcUser],
+      counts: { entries: 1, commitments: 0, dreams: 0 },
+      gateway: { fetch: gatewayFetch },
+    });
+
+    await sendWeeklyNudges(env as never);
+
+    expect(gatewayFetch).toHaveBeenCalledTimes(1);
+    expect(sent).toHaveLength(1);
+    expect(sent[0]?.text).toContain(fallbackQuestion('2026-09-28').text);
+  });
+
   it('emails an opted-in user whose local day is Sunday and week is unwritten', async () => {
     const { env, sent } = makeEnv({ users: [utcUser] });
     await sendWeeklyNudges(env as never);

@@ -19,8 +19,9 @@ import {
   questionForFamily,
 } from './src/lib/weekly-questions.ts';
 
-const CLASSIFIER_ENDPOINT = 'https://classifier.dev/v1/classify';
 const CLASSIFIER_TIMEOUT_MS = 3000;
+const GATEWAY_COMPLETIONS_URL = 'https://fleet-gateway.internal/v1/chat/completions';
+const GATEWAY_PROJECT_ID = 'live';
 const JOURNAL_URL = 'https://live.significanthobbies.com/journal';
 const FROM = { email: 'weekly@significanthobbies.com', name: 'Live — weekly log' };
 
@@ -84,20 +85,47 @@ async function loadSignals(db, userId, isSunday) {
   };
 }
 
-/** classifier.dev pick with the deterministic rotation as the fallback. */
-async function resolveQuestion(signals, weekOf) {
+/** Managed gateway family pick with the deterministic rotation as fallback. */
+async function resolveQuestion(gateway, signals, weekOf) {
   if (isContextEmpty(signals)) return fallbackQuestion(weekOf);
+  if (!gateway) return fallbackQuestion(weekOf);
   try {
-    const response = await fetch(CLASSIFIER_ENDPOINT, {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ inputs: [buildNudgeContext(signals)], labels: QUESTION_FAMILIES }),
-      signal: AbortSignal.timeout(CLASSIFIER_TIMEOUT_MS),
-    });
+    const response = await gateway.fetch(
+      new Request(GATEWAY_COMPLETIONS_URL, {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+          authorization: 'Bearer gateway-managed',
+          'x-gateway-project-id': GATEWAY_PROJECT_ID,
+        },
+        body: JSON.stringify({
+          model: 'auto',
+          project_id: GATEWAY_PROJECT_ID,
+          messages: [
+            {
+              role: 'system',
+              content:
+                'Choose one allowed weekly reflection family. Return JSON only: {"family":"..."}.',
+            },
+            {
+              role: 'user',
+              content: `Choose the best family from [${QUESTION_FAMILIES.join(', ')}] for these categorical signals: ${buildNudgeContext(signals)}.`,
+            },
+          ],
+          max_tokens: 24,
+          response_format: { type: 'json_object' },
+        }),
+        signal: AbortSignal.timeout(CLASSIFIER_TIMEOUT_MS),
+      })
+    );
     if (!response.ok) return fallbackQuestion(weekOf);
     const body = await response.json();
-    const label = body.results?.[0]?.label;
-    if (typeof label !== 'string' || !isQuestionFamily(label)) return fallbackQuestion(weekOf);
+    const content = body.choices?.[0]?.message?.content;
+    if (typeof content !== 'string') return fallbackQuestion(weekOf);
+    const parsed = JSON.parse(content);
+    const label = parsed.family;
+    if (typeof label !== 'string' || !QUESTION_FAMILIES.includes(label) || !isQuestionFamily(label))
+      return fallbackQuestion(weekOf);
     return questionForFamily(label, weekOf);
   } catch {
     return fallbackQuestion(weekOf);
@@ -174,7 +202,7 @@ export async function sendWeeklyNudges(env) {
       if (written) continue; // never nudge a week already on record
 
       const signals = await loadSignals(env.DB, user.id, true);
-      const question = await resolveQuestion(signals, weekOf);
+      const question = await resolveQuestion(env.FREE_AI, signals, weekOf);
       const name = (user.name || 'there').split(' ')[0];
       await env.EMAIL.send({
         to: user.email,
