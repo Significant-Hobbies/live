@@ -255,7 +255,6 @@ try {
         );
         const unexpectedResponses = failedResponses.filter(
           ({ status: responseStatus, url }) =>
-            !url.startsWith('https://vitals.fleet.workers.dev/') &&
             (url !== finalUrl || responseStatus !== expectedStatus)
         );
         const unexpectedFooter =
