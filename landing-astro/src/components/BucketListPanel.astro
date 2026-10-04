@@ -1,4 +1,7 @@
 ---
+import { EXPERIENCE_ENTRIES } from '../../../src/lib/experiences';
+
+const ideaCount = EXPERIENCE_ENTRIES.length;
 const famous = [
   {
     name: 'Will Smith',
@@ -83,7 +86,7 @@ const famous = [
         href="/bucket-list-ideas"
         class="ml-1 font-semibold text-foreground underline decoration-border underline-offset-4 transition-colors hover:text-primary focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
       >
-        Explore 150+ ideas.
+        Explore {ideaCount} ideas.
       </a>
     </p>
   </div>
