@@ -255,7 +255,7 @@ try {
         );
         const unexpectedResponses = failedResponses.filter(
           ({ status: responseStatus, url }) =>
-            (url !== finalUrl || responseStatus !== expectedStatus)
+            url !== finalUrl || responseStatus !== expectedStatus
         );
         const unexpectedFooter =
           (state === 'local' || state === 'account') &&
