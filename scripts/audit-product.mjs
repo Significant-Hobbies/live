@@ -254,8 +254,7 @@ try {
           ({ impact }) => impact === 'serious' || impact === 'critical'
         );
         const unexpectedResponses = failedResponses.filter(
-          ({ status: responseStatus, url }) =>
-            url !== finalUrl || responseStatus !== expectedStatus
+          ({ status: responseStatus, url }) => url !== finalUrl || responseStatus !== expectedStatus
         );
         const unexpectedFooter =
           (state === 'local' || state === 'account') &&
