@@ -19,8 +19,8 @@
       ],
       "asset": "geist.woff2",
       "license": "geist-OFL.txt",
-      "licenseSha256": "1781d2806a07d91c4edf4740b88449fab7d0eadad53f7c351b94cd4d4eb8c00f",
-      "licenseBytes": 4387
+      "licenseSha256": "fb64c1011862d97fe49c633ad9180ffd80a61aab6ff220a2935704e8a0c3a7c4",
+      "licenseBytes": 4386
     },
     {
       "family": "Geist Mono",
@@ -34,8 +34,8 @@
       ],
       "asset": "geistmono.woff2",
       "license": "geistmono-OFL.txt",
-      "licenseSha256": "1781d2806a07d91c4edf4740b88449fab7d0eadad53f7c351b94cd4d4eb8c00f",
-      "licenseBytes": 4387
+      "licenseSha256": "fb64c1011862d97fe49c633ad9180ffd80a61aab6ff220a2935704e8a0c3a7c4",
+      "licenseBytes": 4386
     },
     {
       "family": "Newsreader",
@@ -58,8 +58,8 @@
       ],
       "asset": "newsreader.woff2",
       "license": "newsreader-OFL.txt",
-      "licenseSha256": "fdfad38143ec470553cae82a1e45320bdd1b9ec70415d37bd0171051d8a4ded8",
-      "licenseBytes": 4394
+      "licenseSha256": "afdae9053282ba66bbacbc4cb20ad20b12ef46379ac587fd464fe3ff8ce1cd4a",
+      "licenseBytes": 4393
     }
   ],
   "treatment": "Exact local OFL WOFF2 bytes, unmodified. Loaded face acceptance requires browser evidence; no external Google request at runtime."
