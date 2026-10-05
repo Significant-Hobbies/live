@@ -67,6 +67,10 @@ body {
   font-synthesis: none;
 }
 
+fleet-footer-extension > portfolio-project-strip {
+  --portfolio-strip-muted: #625c56;
+}
+
 /* Display headings carry the reflective Life Atlas voice used in the app. */
 h1, h2, h3 {
   font-family: var(--font-fraunces);
