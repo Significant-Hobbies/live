@@ -1,6 +1,6 @@
 import type { ExperienceCategory, ExperienceEntry, ExperienceKind } from './experiences';
 
-export type CatalogIdea = Pick<
+type CatalogIdea = Pick<
   ExperienceEntry,
   'slug' | 'title' | 'description' | 'emoji' | 'category' | 'kind'
 >;
