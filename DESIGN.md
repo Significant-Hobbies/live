@@ -58,7 +58,7 @@ Primary pages use one dominant spatial field followed by quieter supporting pass
 
 Live leads with a verb and an immediate invitation. It must make the user want to choose an activity, not admire a planning system. Mortality belongs in History and acts as context, never as the dominant emotional register of the action surface.
 
-The global shell exposes Catalog, My list, Weekly journal, and Life in weeks. These reuse the incumbent shell and workspaces. The bucket-list cleanup removes competing steps and navigation without replacing typography, colors, imagery, or layout.
+The global shell exposes Explore, My list, Weekly journal, and Life in weeks. These reuse the incumbent shell and workspaces. The bucket-list cleanup removes competing steps and navigation without replacing typography, colors, imagery, or layout.
 
 Completion logging stays in My list. There is no Habits page or navigation link; its old URL redirects to My list. The old Daily URL redirects to the weekly journal.
 
@@ -74,7 +74,7 @@ Controls use 12px corners and major bounded surfaces use 16px corners. Paths, co
 
 ### Navigation
 
-The wordmark is `SH` with an accessible full name. Catalog, My list, Weekly journal, and Life in weeks are direct links in that order on desktop and mobile. Preserve the established destination colors and responsive menu.
+The wordmark is `SH` with an accessible full name. Explore, My list, Weekly journal, and Life in weeks are direct links in that order on desktop and mobile. Preserve the established destination colors and responsive menu.
 
 ### Cards / Containers
 

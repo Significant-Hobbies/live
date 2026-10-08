@@ -4,7 +4,22 @@ import foundry from '../../../foundry.json';
 const newsletterProjectKey = foundry.projectKey?.trim();
 ---
 
-<footer class="border-t border-[#d4c74c] bg-[#f7e957] px-6 py-8 lg:px-12">
+<fleet-footer-extension product-name="Live" art-src="https://sassmaker.com/footer-art/live.webp">
+  <slot name="cta" />
+  {newsletterProjectKey && (
+    <div slot="capture" class="mx-auto mt-8 max-w-5xl">
+      <saas-maker-newsletter-capture
+        product-name="Live"
+        project-key={newsletterProjectKey}
+        source="live-footer"
+        kind="newsletter"
+        privacy-url="https://live.significanthobbies.com/privacy"
+        theme="light"
+        style="--newsletter-capture-muted: #62625a"
+      ></saas-maker-newsletter-capture>
+    </div>
+  )}
+<footer slot="navigation" data-fleet-footer-navigation class="border-t border-[#d4c74c] bg-[#f7e957] px-6 py-8 lg:px-12">
   <div class="mx-auto max-w-5xl">
     <nav
       class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs"
@@ -35,17 +50,6 @@ const newsletterProjectKey = foundry.projectKey?.trim();
       </a>
     </nav>
   </div>
-  {newsletterProjectKey && (
-    <div class="mx-auto mt-8 max-w-5xl">
-      <saas-maker-newsletter-capture
-        product-name="Live"
-        project-key={newsletterProjectKey}
-        source="live-footer"
-        kind="newsletter"
-        privacy-url="https://live.significanthobbies.com/privacy"
-        theme="light"
-        style="--newsletter-capture-muted: #62625a"
-      ></saas-maker-newsletter-capture>
-    </div>
-  )}
+  
 </footer>
+</fleet-footer-extension>

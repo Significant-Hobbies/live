@@ -3,6 +3,8 @@ import '@/styles/landing.css';
 import foundry from '../../../foundry.json';
 
 interface Props {
+  /** This route renders its own declarative product footer. */
+  hasProductFooter?: boolean;
   title: string;
   description: string;
 }
@@ -11,6 +13,7 @@ const { title, description } = Astro.props;
 const newsletterProjectKey = foundry.projectKey?.trim();
 const SITE_URL = 'https://live.significanthobbies.com';
 const OG_IMAGE = `${SITE_URL}/opengraph-image`;
+const hasProductFooter = Astro.props.hasProductFooter === true;
 ---
 
 <!doctype html>
@@ -203,6 +206,7 @@ const OG_IMAGE = `${SITE_URL}/opengraph-image`;
       })();
     </script>
     <slot />
+    {!hasProductFooter && <fleet-footer-extension product-name="Live" art-src="https://sassmaker.com/footer-art/live.webp" surface="app"></fleet-footer-extension>}
     {newsletterProjectKey && (
       <script
         is:inline

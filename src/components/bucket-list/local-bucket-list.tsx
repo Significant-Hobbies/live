@@ -1,15 +1,17 @@
 'use client';
 
-import { Check, Plus, Trash2 } from 'lucide-react';
+import { Check, Trash2 } from 'lucide-react';
 import Link from 'next/link';
-import { type FormEvent, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { ManualItemInput } from './manual-item-input';
 
 import { StorageModeProvider, StorageModeStatus } from '~/components/storage-mode-provider';
 import { browserRecordAdapter, readLocalRecord, writeLocalRecord } from '~/lib/local-record-store';
 
 type LocalBucketItem = {
   title: string;
-  status?: 'planned' | 'done';
+  status?: 'planned' | 'in_progress' | 'done';
+  [key: string]: unknown;
 };
 
 type LocalBucketRecord = {
@@ -20,7 +22,6 @@ type LocalBucketRecord = {
 
 export function LocalBucketList() {
   const [record, setRecord] = useState<LocalBucketRecord>({ items: [] });
-  const [title, setTitle] = useState('');
   const [loaded, setLoaded] = useState(false);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
@@ -72,15 +73,6 @@ export function LocalBucketList() {
     }
   }
 
-  async function addItem(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const nextTitle = title.trim();
-    if (!nextTitle || items.some((item) => item.title.toLowerCase() === nextTitle.toLowerCase())) {
-      return;
-    }
-    if (await persist([...items, { title: nextTitle, status: 'planned' }])) setTitle('');
-  }
-
   return (
     <StorageModeProvider mode="local">
       <div className="min-h-[calc(100vh-4rem)] bg-[#f7f1e7] px-4 py-10 text-[#211e18] sm:py-14">
@@ -99,29 +91,22 @@ export function LocalBucketList() {
             </p>
           </header>
 
-          <form
-            onSubmit={addItem}
-            className="mt-7 flex flex-col gap-3 rounded-[1.5rem] border border-[#d9cfbd] bg-[#fffdf8] p-4 shadow-[0_10px_35px_rgba(72,58,38,0.07)] sm:flex-row"
-          >
-            <label className="sr-only" htmlFor="local-bucket-title">
-              Something you want to do
-            </label>
-            <input
-              id="local-bucket-title"
+          <div className="mt-7">
+            <ManualItemInput
               disabled={!loaded || saving}
-              value={title}
-              onChange={(event) => setTitle(event.target.value)}
-              placeholder="Something I want to do…"
-              className="min-h-12 min-w-0 flex-1 rounded-xl border border-[#d9cfbd] bg-white px-4 text-base outline-none focus:border-[#176b4a] focus:ring-2 focus:ring-[#176b4a]/20"
+              onAdd={async (item) => {
+                if (
+                  items.some(
+                    (candidate) => candidate.title.toLowerCase() === item.title.toLowerCase()
+                  )
+                ) {
+                  setError('This item is already in your list.');
+                  return false;
+                }
+                return persist([...items, { ...item, status: 'planned' }]);
+              }}
             />
-            <button
-              type="submit"
-              disabled={!loaded || saving}
-              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#176b4a] px-5 font-bold text-white hover:bg-[#10583d]"
-            >
-              <Plus className="size-4" /> Add to my list
-            </button>
-          </form>
+          </div>
 
           {error && (
             <p role="alert" className="mt-4 text-sm text-red-800">
@@ -139,7 +124,7 @@ export function LocalBucketList() {
                 href="/experiences"
                 className="inline-flex min-h-10 items-center text-sm font-bold underline underline-offset-4"
               >
-                Discover more possibilities
+                Explore ideas
               </Link>
             </div>
 
@@ -208,7 +193,7 @@ function normalizeItems(items: LocalBucketRecord['items']): LocalBucketItem[] {
   return items.flatMap((item) => {
     if (typeof item === 'string') return [{ title: item, status: 'planned' as const }];
     return typeof item?.title === 'string'
-      ? [{ title: item.title, status: item.status === 'done' ? 'done' : 'planned' }]
+      ? [{ ...item, title: item.title, status: item.status ?? 'planned' }]
       : [];
   });
 }

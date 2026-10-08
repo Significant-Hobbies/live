@@ -17,6 +17,7 @@
     "format:check": "biome format .",
     "check": "biome check .",
     "content": "tsx scripts/content-cli.ts",
+    "catalog": "tsx scripts/catalog-cli.ts",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest",

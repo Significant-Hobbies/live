@@ -11,7 +11,7 @@ const DESCRIPTION =
   'Find bucket-list ideas and side quests, keep your own list, log what you do, and write one private entry each week.';
 ---
 
-<Layout title={TITLE} description={DESCRIPTION}>
+<Layout hasProductFooter title={TITLE} description={DESCRIPTION}>
   <main id="main">
     <section class="cinematic-hero">
       <video
@@ -60,9 +60,8 @@ const DESCRIPTION =
     <BucketListPanel />
     <HowItWorks />
     <FaqSection />
-    <FinalCta />
   </main>
-  <FleetFooter />
+  <FleetFooter><FinalCta slot="cta" /></FleetFooter>
 </Layout>
 
 <script>

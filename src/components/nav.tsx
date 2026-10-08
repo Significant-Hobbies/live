@@ -16,7 +16,7 @@ import { NavLinks } from './nav-links';
 import { NavSignOut } from './nav-sign-out';
 
 const NAV_LINKS = [
-  { href: '/experiences', label: 'Catalog' },
+  { href: '/experiences', label: 'Explore' },
   { href: '/bucket-list', label: 'My list' },
   { href: '/journal', label: 'Weekly journal' },
   { href: '/life-in-weeks', label: 'Life in weeks' },
