@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { waitForHydrated } from './fixtures/hydration';
 
 import { completeLocalOnboarding } from './fixtures/local-onboarding';
 
@@ -14,10 +15,10 @@ test.describe('private work is locally available without an account', () => {
   test('core navigation is available without onboarding', async ({ page }) => {
     await page.goto('/experiences');
     const nav = page.locator('[data-site-nav]');
-    if (!(await nav.getByRole('link', { name: 'Catalog', exact: true }).isVisible())) {
+    if (!(await nav.getByRole('link', { name: 'Explore', exact: true }).isVisible())) {
       await page.getByRole('button', { name: 'Open menu' }).click();
     }
-    for (const name of ['Catalog', 'My list', 'Weekly journal', 'Life in weeks']) {
+    for (const name of ['Explore', 'My list', 'Weekly journal', 'Life in weeks']) {
       await expect(nav.getByRole('link', { name, exact: true })).toBeVisible();
     }
     await expect(nav.getByRole('link', { name: 'Habits', exact: true })).toHaveCount(0);
@@ -43,8 +44,9 @@ test.describe('private work is locally available without an account', () => {
   test('bucket list is a complete local workspace without onboarding', async ({ page }) => {
     await page.goto('/bucket-list');
     await expect(page).toHaveURL(/\/bucket-list$/);
-    await page.getByLabel('Something you want to do').fill('Sleep under the stars');
-    await page.getByRole('button', { name: 'Add to my list' }).click();
+    await waitForHydrated(page.getByLabel('I want to…'));
+    await page.getByLabel('I want to…').fill('Sleep under the stars');
+    await page.getByRole('button', { name: 'Add my wording', exact: true }).click();
     await expect(page.getByText('Sleep under the stars')).toBeVisible();
     await page.reload();
     await expect(page.getByText('Sleep under the stars')).toBeVisible();
@@ -58,9 +60,10 @@ test('bucket draft survives a transaction abort and retries without losing saved
 }) => {
   await completeLocalOnboarding(page);
   await page.goto('/bucket-list');
-  const input = page.getByLabel('Something you want to do');
+  const input = page.getByLabel('I want to…');
+  await waitForHydrated(input);
   await input.fill('Watch a sunrise');
-  await page.getByRole('button', { name: 'Add to my list' }).click();
+  await page.getByRole('button', { name: 'Add my wording', exact: true }).click();
   await expect(page.getByRole('button', { name: 'Complete Watch a sunrise' })).toBeVisible();
 
   await page.evaluate(() => {
@@ -73,13 +76,13 @@ test('bucket draft survives a transaction abort and retries without losing saved
     };
   });
   await input.fill('Sleep under the stars');
-  await page.getByRole('button', { name: 'Add to my list' }).click();
+  await page.getByRole('button', { name: 'Add my wording', exact: true }).click();
   await expect(
     page.getByRole('alert').filter({ hasText: 'Changes could not be saved' })
   ).toBeVisible();
   await expect(input).toHaveValue('Sleep under the stars');
   await expect(page.getByRole('button', { name: 'Complete Sleep under the stars' })).toHaveCount(0);
-  await page.getByRole('button', { name: 'Add to my list' }).click();
+  await page.getByRole('button', { name: 'Add my wording', exact: true }).click();
   await expect(input).toHaveValue('');
   await page.reload();
   await expect(page.getByRole('button', { name: 'Complete Sleep under the stars' })).toBeVisible();

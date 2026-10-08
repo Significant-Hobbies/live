@@ -14,7 +14,7 @@ test.describe('Life Atlas shell', () => {
     if ((page.viewportSize()?.width ?? 0) < 1024) {
       await page.getByRole('button', { name: 'Open menu' }).click();
     }
-    await expect(nav.getByRole('link', { name: 'Catalog', exact: true })).toHaveAttribute(
+    await expect(nav.getByRole('link', { name: 'Explore', exact: true })).toHaveAttribute(
       'href',
       '/experiences'
     );
