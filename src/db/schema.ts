@@ -311,6 +311,51 @@ export const bucketListItems = sqliteTable(
   (table) => [index('BucketListItem_userId_idx').on(table.userId)]
 );
 
+// Shared approved ideas and an entirely separate private review queue.
+export const experienceCatalog = sqliteTable(
+  'ExperienceCatalog',
+  {
+    slug: text('slug').primaryKey(),
+    title: text('title').notNull(),
+    normalizedTitle: text('normalizedTitle').notNull().unique(),
+    description: text('description'),
+    searchText: text('searchText').notNull(),
+    emoji: text('emoji').notNull(),
+    category: text('category').notNull(),
+    kind: text('kind').notNull(),
+    source: text('source').notNull(),
+    sortOrder: integer('sortOrder').notNull().default(2147483647),
+    createdAt: integer('createdAt').notNull().default(sql`(unixepoch())`),
+  },
+  (table) => [index('ExperienceCatalog_category_kind_idx').on(table.category, table.kind)]
+);
+
+export const catalogSubmissions = sqliteTable(
+  'CatalogSubmission',
+  {
+    id: text('id').primaryKey(),
+    userId: text('userId')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    title: text('title').notNull(),
+    normalizedTitle: text('normalizedTitle').notNull(),
+    category: text('category').notNull(),
+    status: text('status').notNull().default('pending'),
+    createdAt: integer('createdAt').notNull().default(sql`(unixepoch())`),
+    reviewedBy: text('reviewedBy'),
+    reviewedAt: integer('reviewedAt'),
+  },
+  (table) => [
+    uniqueIndex('CatalogSubmission_user_title_idx').on(table.userId, table.normalizedTitle),
+    index('CatalogSubmission_status_created_idx').on(table.status, table.createdAt),
+    index('CatalogSubmission_user_created_idx').on(table.userId, table.createdAt),
+    check(
+      'CatalogSubmission_status_check',
+      sql`${table.status} IN ('pending','approved','rejected')`
+    ),
+  ]
+);
+
 // ─── Commitments & Stamps ─────────────────────────────────────────────────
 // A "commitment" is a multi-day goal to show up daily for a hobby
 // (e.g. "30 days of guitar"). Each calendar day the user logs a "stamp" —
