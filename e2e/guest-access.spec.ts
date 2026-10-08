@@ -47,9 +47,9 @@ test.describe('private work is locally available without an account', () => {
     await waitForHydrated(page.getByLabel('I want to…'));
     await page.getByLabel('I want to…').fill('Sleep under the stars');
     await page.getByRole('button', { name: 'Add my wording', exact: true }).click();
-    await expect(page.getByText('Sleep under the stars')).toBeVisible();
+    await expect(page.getByText('Sleep under the stars', { exact: true })).toBeVisible();
     await page.reload();
-    await expect(page.getByText('Sleep under the stars')).toBeVisible();
+    await expect(page.getByText('Sleep under the stars', { exact: true })).toBeVisible();
     await page.getByRole('button', { name: 'Complete Sleep under the stars' }).click();
     await expect(page.getByRole('button', { name: 'Reopen Sleep under the stars' })).toBeVisible();
   });
