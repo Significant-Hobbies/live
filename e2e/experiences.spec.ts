@@ -7,18 +7,76 @@ import { waitForHydrated } from './fixtures/hydration';
  * mistake the mortality frame had (decisions.md A9).
  */
 test.describe('Experiences', () => {
-  test('lists the whole corpus for a signed-out visitor', async ({ page }) => {
+  test('makes the whole corpus available in bounded pages for a signed-out visitor', async ({
+    page,
+  }) => {
     await page.goto('/experiences');
     await expect(page).toHaveURL(/\/experiences$/);
     await expect(page.getByRole('heading', { name: 'Things you could do.' })).toBeVisible();
     await expect(page.getByText(/^\d+ of \d+$/)).toBeVisible();
     await expect(page.locator('main li').first()).toBeVisible();
+    await expect(page.locator('main ul').first().locator(':scope > li')).toHaveCount(20);
+    await expect(page.getByRole('button', { name: 'Previous', exact: true })).toBeDisabled();
+    const firstTitle = await page.locator('main ul').first().locator('li').first().textContent();
+    await waitForHydrated(page.getByRole('button', { name: 'Next', exact: true }));
+    await page.getByRole('button', { name: 'Next', exact: true }).click();
+    await expect(page.getByText(/^Page 2 of/)).toBeVisible();
+    await expect(page.getByText(/^\d+ of \d+$/)).toBeFocused();
+    expect(await page.locator('main ul').first().locator('li').first().textContent()).not.toBe(
+      firstTitle
+    );
+    await expect(page.locator('main ul').first().locator(':scope > li')).toHaveCount(20);
+    await page.getByRole('button', { name: 'Travel', exact: true }).click();
+    await expect(page.getByText(/^Page 1 of/)).toBeVisible();
   });
 
   test('exposes exactly one main landmark and one h1', async ({ page }) => {
     await page.goto('/experiences');
     await expect(page.locator('main')).toHaveCount(1);
     await expect(page.locator('main#main h1')).toHaveCount(1);
+  });
+
+  test('last page has no extra rows and cannot advance further', async ({ page }) => {
+    await page.goto('/experiences');
+    const next = page.getByRole('button', { name: 'Next', exact: true });
+    await waitForHydrated(next);
+    const total = Number(
+      (await page.getByText(/^\d+ of \d+$/).textContent())?.match(/^(\d+)/)?.[1]
+    );
+    const pages = Math.ceil(total / 20);
+    for (let pageNumber = 1; pageNumber < pages; pageNumber++) await next.click();
+    await expect(next).toBeDisabled();
+    await expect(page.getByText(`Page ${pages} of ${pages}`, { exact: true })).toBeVisible();
+    await expect(page.locator('main ul').first().locator(':scope > li')).toHaveCount(
+      total % 20 || 20
+    );
+  });
+
+  test('preserves filtered pagination across reload and browser back', async ({ page }) => {
+    await page.goto('/experiences?category=travel&kind=destination&page=2');
+    await expect(page.getByText('Page 2 of 4', { exact: true })).toBeVisible();
+    await page.reload();
+    await expect(page.getByText('Page 2 of 4', { exact: true })).toBeVisible();
+    const next = page.getByRole('button', { name: 'Next', exact: true });
+    await waitForHydrated(next);
+    await next.click();
+    await expect(page).toHaveURL(/page=3/);
+    await expect(page.getByText('Page 3 of 4', { exact: true })).toBeVisible();
+    await page.goBack();
+    await expect(page.getByText('Page 2 of 4', { exact: true })).toBeVisible();
+  });
+
+  test('API returns bounded shared suggestions and rejects oversized pages', async ({
+    request,
+  }) => {
+    const response = await request.get('/api/experience-catalog?q=pot&pageSize=5');
+    expect(response.status()).toBe(200);
+    const data = await response.json();
+    expect(data.items.length).toBeGreaterThan(0);
+    expect(data.items.length).toBeLessThanOrEqual(5);
+    expect(['seed', 'database']).toContain(data.source);
+    expect(JSON.stringify(data)).not.toMatch(/userId|reviewedBy|pending/);
+    expect((await request.get('/api/experience-catalog?pageSize=100')).status()).toBe(400);
   });
 
   test('search narrows the list and reports the count', async ({ page }) => {
@@ -91,5 +149,55 @@ test.describe('Experiences', () => {
     await expect(related.first()).toBeVisible();
     const href = await related.first().getAttribute('href');
     expect(href).toMatch(/^\/experiences\//);
+  });
+});
+
+test.describe('Manual bucket-list entry', () => {
+  test('searches, saves locally, then accepts personal wording', async ({ page }) => {
+    await page.goto('/bucket-list');
+    await expect(page.getByLabel('I want to…')).toBeEnabled();
+    await waitForHydrated(page.getByLabel('I want to…'));
+    await page.getByLabel('I want to…').fill('learn');
+    await expect(page.getByText(/matching ideas/)).toBeVisible();
+    await expect(page.locator('form + div ul > li')).toHaveCount(5);
+    await page.getByRole('button', { name: 'Next', exact: true }).click();
+    await expect(page.getByText(/^Page 2 of/)).toBeVisible();
+    await page.getByLabel('I want to…').fill('pottery');
+    await page
+      .getByRole('button', {
+        name: 'Add Take a pottery class and make a finished piece to my list',
+        exact: true,
+      })
+      .click();
+    await expect(
+      page.getByText('Take a pottery class and make a finished piece', { exact: true })
+    ).toBeVisible();
+    await page.getByLabel('I want to…').fill('Teach my niece to make a bowl');
+    await page.getByRole('button', { name: 'Add my wording', exact: true }).click();
+    await expect(page.getByText('Teach my niece to make a bowl', { exact: true })).toBeVisible();
+    await page.reload();
+    await expect(page.getByText('Teach my niece to make a bowl', { exact: true })).toBeVisible();
+    await expect(
+      page.getByText('Take a pottery class and make a finished piece', { exact: true })
+    ).toBeVisible();
+  });
+
+  test('offers live matches while typing and accepts unmatched personal wording', async ({
+    page,
+  }) => {
+    await page.goto('/bucket-list');
+    await waitForHydrated(page.getByLabel('I want to…'));
+    await page.getByLabel('I want to…').pressSequentially('pot');
+    await expect(
+      page.getByRole('button', {
+        name: 'Add Take a pottery class and make a finished piece to my list',
+        exact: true,
+      })
+    ).toBeVisible();
+    await page.getByLabel('I want to…').fill('My very personal zzzzqqqq idea');
+    await expect(page.getByText(/No matching ideas/)).toBeVisible();
+    await expect(page.getByLabel('I want to…')).toHaveValue('My very personal zzzzqqqq idea');
+    await page.getByRole('button', { name: 'Add my wording', exact: true }).click();
+    await expect(page.getByText('My very personal zzzzqqqq idea', { exact: true })).toBeVisible();
   });
 });

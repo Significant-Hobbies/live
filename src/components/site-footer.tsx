@@ -5,7 +5,7 @@ const groups = [
   {
     title: 'Start here',
     links: [
-      ['Catalog', '/experiences'],
+      ['Explore', '/experiences'],
       ['My list', '/bucket-list'],
       ['Weekly journal', '/journal'],
     ],

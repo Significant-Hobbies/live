@@ -51,7 +51,7 @@ progress systems are limited to surfaces where proof is the explicit job.
 - Signed-out `/` serves the preserved Live landing with a catalog call to
   action. A session-bearing request enters `/bucket-list`; the application
   still validates the session before choosing account or local storage.
-- Primary navigation is Catalog (`/experiences`), My list (`/bucket-list`),
+- Primary navigation is Explore (`/experiences`), My list (`/bucket-list`),
   Weekly journal (`/journal`), and Life in weeks
   (`/life-in-weeks`). Core work does not require biography onboarding.
 - `/onboarding` and `/habits` redirect to My list. `/daily` redirects to the
@@ -75,6 +75,13 @@ progress systems are limited to surfaces where proof is the explicit job.
   features instead of introducing a new shell, theme, or dashboard.
 - Anonymous marketing and tool HTML follows the existing Astro/Worker cache
   boundary.
+- My list searches the shared seeded experience catalog as the person types.
+  Suggestions use the same catalog across users; personal wording and saved
+  list status remain separate from catalog data.
+- Shared contributions require explicit authenticated submission and operator
+  review. Pending and rejected titles are not public suggestions. The shared
+  catalog's additive migration and seed import must be applied before enabling
+  database-backed contributions; existing seed discovery remains available.
 - The Hub has no shared database, summaries, assistant, or write actions in V1.
 - Existing private data must survive target deletion and reversible product
   changes.

@@ -6,7 +6,8 @@ import { JsonLd } from '~/components/json-ld';
 import { EXPERIENCE_COLLECTIONS } from '~/lib/experience-collections';
 import { EXPERIENCE_CONTENT_UPDATED } from '~/lib/experience-guides';
 
-import { EXPERIENCE_CATEGORIES, EXPERIENCE_ENTRIES } from '~/lib/experiences';
+import { parseCatalogQuery } from '~/lib/catalog-seed';
+import { searchExperienceCatalog } from '~/server/experience-catalog';
 import { DEFAULT_SOCIAL_IMAGE, SITE_URL } from '~/lib/site-metadata';
 import { ExperiencesClient } from './experiences-client';
 
@@ -31,8 +32,26 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function ExperiencesPage() {
-  const session = await getServerAuthSession();
+export default async function ExperiencesPage({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  const params = new URLSearchParams();
+  for (const [key, value] of Object.entries(await searchParams))
+    if (typeof value === 'string') params.set(key, value);
+  // Ignore malformed entry URLs without rendering an error page.
+  let query: ReturnType<typeof parseCatalogQuery>;
+  try {
+    query = parseCatalogQuery(params);
+  } catch {
+    query = parseCatalogQuery(new URLSearchParams());
+  }
+  query.pageSize = 20;
+  const [session, catalog] = await Promise.all([
+    getServerAuthSession(),
+    searchExperienceCatalog(query),
+  ]);
   return (
     <div className="mx-auto w-full max-w-3xl px-5 py-16 sm:px-8 sm:py-24">
       <JsonLd
@@ -52,9 +71,8 @@ export default async function ExperiencesPage() {
         Things you could do.
       </h1>
       <p className="mt-5 max-w-[62ch] text-lg text-foreground/80" style={{ lineHeight: 1.6 }}>
-        {EXPERIENCE_ENTRIES.length} of them, in one place — places to go, milestones worth reaching,
-        and ideas worth stealing. Each has a page of its own with a first step you could take this
-        week.
+        {catalog.total} ideas in one shared catalog — places to go, milestones worth reaching, and
+        things worth trying. Explore by category, and keep the ones that matter in your own list.
       </p>
 
       <p className="mt-4 text-base text-muted-foreground">
@@ -69,8 +87,8 @@ export default async function ExperiencesPage() {
       </p>
 
       <ExperiencesClient
-        entries={EXPERIENCE_ENTRIES}
-        categories={EXPERIENCE_CATEGORIES}
+        initialPage={catalog}
+        initialQuery={query}
         mode={session?.user ? 'account' : 'local'}
       />
 
