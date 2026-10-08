@@ -1,0 +1,268 @@
+{
+  "$schema": "fleet.design-review.v2",
+  "version": 2,
+  "project": "live",
+  "target": "Manual add with search or custom input and separate categorized Explore",
+  "surfaceMode": "operate",
+  "mode": "overhaul",
+  "register": "product",
+  "context": {
+    "product": "PRODUCT.md",
+    "design": "DESIGN.md"
+  },
+  "direction": {
+    "productSurfaces": {
+      "scope": "paired",
+      "landing": "landing-astro/src/pages/live.astro — https://live.significanthobbies.com/",
+      "app": "src/app/bucket-list/page.tsx and src/app/experiences — https://live.significanthobbies.com/bucket-list",
+      "reason": ""
+    },
+    "pairedPreview": {
+      "landing": "",
+      "app": ""
+    },
+    "source": "comparison",
+    "references": [],
+    "probes": [
+      {
+        "id": "direct",
+        "path": ".fleet-local/manual-explore/direct.png",
+        "thesis": "Explicit search/custom modes and category-first discovery",
+        "layout": "Inline input and category tiles",
+        "typography": "Existing serif landmarks with sans-serif controls",
+        "surfaces": {
+          "app": ".fleet-local/manual-explore/direct.png",
+          "landing": ""
+        }
+      },
+      {
+        "id": "notebook",
+        "path": ".fleet-local/manual-explore/notebook.png",
+        "thesis": "Personal wording alongside catalog matches; chaptered discovery",
+        "layout": "Notebook rows and category rail",
+        "typography": "Existing serif landmarks with sans-serif controls",
+        "surfaces": {
+          "app": ".fleet-local/manual-explore/notebook.png",
+          "landing": ""
+        }
+      },
+      {
+        "id": "chapters",
+        "path": ".fleet-local/manual-explore/chapters.png",
+        "thesis": "Focused add sheet and expanding categories",
+        "layout": "Quiet list and broad category bands",
+        "typography": "Existing serif landmarks with sans-serif controls",
+        "surfaces": {
+          "app": ".fleet-local/manual-explore/chapters.png",
+          "landing": ""
+        }
+      }
+    ],
+    "selected": "",
+    "approval": "pending",
+    "ownerEvidence": {
+      "path": "",
+      "quote": ""
+    },
+    "supplied": "",
+    "before": "",
+    "library": {
+      "strategy": "upstream-first",
+      "primary": "",
+      "sources": [],
+      "runtime": "none",
+      "customReplacement": {
+        "used": false,
+        "authorization": "not-required",
+        "reason": ""
+      }
+    },
+    "contract": {
+      "purpose": "",
+      "purposeSource": "",
+      "canonicalPurpose": "",
+      "purposeAlignment": "match",
+      "driftNote": "",
+      "audience": "",
+      "job": "",
+      "thesis": "",
+      "system": "",
+      "signature": "",
+      "risk": "",
+      "qualityBar": ""
+    }
+  },
+  "evidence": {
+    "platform": "web",
+    "productContinuity": {
+      "status": "pending",
+      "reason": "",
+      "reviewer": "",
+      "report": "artifacts/design/product-continuity.md",
+      "surfaces": {
+        "landing": "artifacts/design/landing.png",
+        "app": "artifacts/design/app.png"
+      },
+      "checks": {
+        "designSystem": {
+          "status": "pending",
+          "observation": ""
+        },
+        "identity": {
+          "status": "pending",
+          "observation": ""
+        },
+        "vocabulary": {
+          "status": "pending",
+          "observation": ""
+        },
+        "productTruth": {
+          "status": "pending",
+          "observation": ""
+        },
+        "handoff": {
+          "status": "pending",
+          "observation": ""
+        }
+      }
+    },
+    "slopScale": {
+      "platform": "web",
+      "posture": "advisory",
+      "reason": "",
+      "checkpoints": [
+        {
+          "stage": "directions",
+          "direction": "direct",
+          "status": "blocked",
+          "report": ".fleet-local/manual-explore/brief.md",
+          "reason": "Static SVG/PNG concept boards have no DOM or computed styles for the pinned web scanner",
+          "findingsReview": "See static preview review in brief.md; no score claimed"
+        },
+        {
+          "stage": "directions",
+          "direction": "notebook",
+          "status": "blocked",
+          "report": ".fleet-local/manual-explore/brief.md",
+          "reason": "Static SVG/PNG concept boards have no DOM or computed styles for the pinned web scanner",
+          "findingsReview": "See static preview review in brief.md; no score claimed"
+        },
+        {
+          "stage": "directions",
+          "direction": "chapters",
+          "status": "blocked",
+          "report": ".fleet-local/manual-explore/brief.md",
+          "reason": "Static SVG/PNG concept boards have no DOM or computed styles for the pinned web scanner",
+          "findingsReview": "See static preview review in brief.md; no score claimed"
+        }
+      ]
+    },
+    "visualReview": {
+      "status": "pending",
+      "reviewer": "",
+      "direction": "",
+      "report": "artifacts/design/review.md",
+      "checks": {
+        "hierarchy": {
+          "status": "pending",
+          "observation": ""
+        },
+        "typography": {
+          "status": "pending",
+          "observation": ""
+        },
+        "composition": {
+          "status": "pending",
+          "observation": ""
+        },
+        "identity": {
+          "status": "pending",
+          "observation": ""
+        },
+        "interaction": {
+          "status": "pending",
+          "observation": ""
+        },
+        "responsive": {
+          "status": "pending",
+          "observation": ""
+        }
+      }
+    },
+    "screenshots": [
+      {
+        "width": 390,
+        "path": "artifacts/design/after-390.png"
+      },
+      {
+        "width": 768,
+        "path": "artifacts/design/after-768.png"
+      },
+      {
+        "width": 1440,
+        "path": "artifacts/design/after-1440.png"
+      }
+    ],
+    "projectCheck": {
+      "command": "replace-with-project-check",
+      "status": "pending"
+    },
+    "critique": {
+      "score": 0,
+      "maximum": 40,
+      "dimensions": {
+        "hierarchy": 0,
+        "typography": 0,
+        "composition": 0,
+        "identity": 0,
+        "interaction": 0,
+        "responsive": 0
+      }
+    },
+    "audit": {
+      "score": 0,
+      "maximum": 20,
+      "dimensions": {
+        "purpose": 0,
+        "accessibility": 0,
+        "behavior": 0,
+        "responsive": 0,
+        "performance": 0
+      }
+    },
+    "unresolved": {
+      "p0": 0,
+      "p1": 0
+    },
+    "detector": {
+      "posture": "advisory",
+      "findings": []
+    },
+    "comprehension": {
+      "status": "not-applicable",
+      "reviewer": "",
+      "answers": {
+        "product": "",
+        "audience": "",
+        "value": "",
+        "mechanism": "",
+        "proof": "",
+        "nextAction": ""
+      },
+      "purposeScore": {
+        "product": 0,
+        "audience": 0,
+        "value": 0,
+        "mechanism": 0,
+        "proof": 0,
+        "nextAction": 0,
+        "total": 0
+      },
+      "mismatches": []
+    }
+  },
+  "ownerFeedback": {
+    "decision": "pending",
+    "note": "Superseded: owner clarified no major redesign. Scoped implementation uses .fleet/design-review-manual-explore-preserve.json; original concepts are historical, not approved."
+  }
+}

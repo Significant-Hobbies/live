@@ -1,0 +1,227 @@
+{
+  "$schema": "fleet.design-review.v2",
+  "version": 2,
+  "project": "live",
+  "target": "Preserve existing UI: manual search/custom entry and paginated categorized Explore",
+  "surfaceMode": "operate",
+  "mode": "preserve",
+  "register": "product",
+  "context": {
+    "product": "PRODUCT.md",
+    "design": "DESIGN.md"
+  },
+  "direction": {
+    "productSurfaces": {
+      "scope": "paired",
+      "landing": "https://live.significanthobbies.com/ \u2014 landing-astro/src/pages/live.astro",
+      "app": "http://localhost:3097/bucket-list and /experiences",
+      "reason": ""
+    },
+    "pairedPreview": {
+      "landing": "",
+      "app": ""
+    },
+    "source": "existing",
+    "references": [],
+    "probes": [],
+    "selected": "existing-design",
+    "approval": "not-required",
+    "ownerEvidence": {
+      "path": "",
+      "quote": ""
+    },
+    "supplied": "",
+    "before": ".fleet-local/manual-explore/before/list.png",
+    "library": {
+      "strategy": "upstream-first",
+      "primary": "Healthy project-native input, buttons and filter rows",
+      "sources": [
+        "https://github.com/Significant-Hobbies/live/blob/main/src/components/bucket-list/quick-add-item.tsx",
+        "https://github.com/Significant-Hobbies/live/blob/main/src/app/experiences/experiences-client.tsx"
+      ],
+      "runtime": "none",
+      "customReplacement": {
+        "used": false,
+        "authorization": "not-required",
+        "reason": "Preserve existing project controls"
+      }
+    },
+    "contract": {
+      "purpose": "Live helps adults live more intentionally by discovering experiences, keeping a personal list and recording completed items.",
+      "purposeSource": "PRODUCT.md and PROJECT_STATUS.md",
+      "canonicalPurpose": "Live leads with a searchable catalog of bucket-list ideas and side quests, a personal list, and optional Life Bingo boards.",
+      "purposeAlignment": "match",
+      "driftNote": "",
+      "audience": "Adults maintaining personal bucket lists",
+      "job": "Add an idea already in mind or separately explore categorized possibilities",
+      "thesis": "Preserve incumbent UI; single input searches as you type and saves exact personal wording; separate categorized Explore.",
+      "system": "Existing warm paper, dark ink, green/yellow actions; incumbent serif headings, sans-serif forms, spacing and rounded controls",
+      "signature": "Personal someday list and meaningful experience categories",
+      "risk": "Shared contribution activation requires the prepared additive migration and seed import, neither applied. Authenticated UI actions tested with mocks; SQL lifecycle tested in memory.",
+      "qualityBar": "Existing shell; live suggestions; private exact wording; explicit submission then review; bounded server pagination and URL navigation; keyboard use and no phone overflow"
+    }
+  },
+  "evidence": {
+    "platform": "web",
+    "productContinuity": {
+      "status": "pass",
+      "reason": "Scoped preserved-design continuity; revised behavior is local only. Production release handoff remains unverified.",
+      "reviewer": "Codex direct rendered review",
+      "report": ".fleet-local/manual-explore/review.md",
+      "surfaces": {
+        "landing": ".fleet-local/manual-explore/after/landing.png",
+        "app": ".fleet-local/manual-explore/after/shared-typeahead-1440.png"
+      },
+      "checks": {
+        "designSystem": {
+          "status": "pass",
+          "observation": "Rendered landing and local app retain existing serif landmarks, gold actions and product vocabulary; cinematic marketing and warm paper workspace reflect their existing jobs."
+        },
+        "identity": {
+          "status": "pass",
+          "observation": "Existing Significant Hobbies name, bucket-list subject matter and incumbent imagery/colors retained."
+        },
+        "vocabulary": {
+          "status": "pass",
+          "observation": "Explore labels discovery; landing catalog describes the same experience collection; My list remains personal storage."
+        },
+        "productTruth": {
+          "status": "pass",
+          "observation": "Existing promises of ideas, lists and completion match local behavior; no new landing claims; proposed changes not presented as deployed."
+        },
+        "handoff": {
+          "status": "pass",
+          "observation": "Rendered landing CTA was observed opening canonical public /experiences with catalog visible. Proposed manual and pagination paths tested separately locally; no combined revised production save-path claim."
+        }
+      }
+    },
+    "slopScale": {
+      "platform": "web",
+      "posture": "advisory",
+      "reason": "",
+      "checkpoints": [
+        {
+          "stage": "iteration",
+          "status": "scanned",
+          "report": ".fleet-local/manual-explore/shared-iteration.json",
+          "command": "node /Users/sarthak/Desktop/fleet/saas-maker/tooling/scripts/slop-score.mjs http://localhost:3097/bucket-list http://localhost:3097/experiences --json",
+          "findingsReview": "Incumbent sans-serif and warm-paper heuristics retained; Explore letter-avatar pattern belongs to shell. No new theme change warranted."
+        },
+        {
+          "stage": "final",
+          "status": "scanned",
+          "report": ".fleet-local/manual-explore/shared-final.json",
+          "command": "node /Users/sarthak/Desktop/fleet/saas-maker/tooling/scripts/slop-score.mjs http://localhost:3097/bucket-list http://localhost:3097/experiences --json",
+          "findingsReview": "Incumbent font, cream and avatar heuristics retained; no redesign warranted. Shared typeahead and Explore rendered separately at three widths. Landing evidence and failed local scanner history retained."
+        }
+      ]
+    },
+    "visualReview": {
+      "status": "pass",
+      "reviewer": "Codex direct rendered review",
+      "direction": "existing-design",
+      "report": ".fleet-local/manual-explore/review.md",
+      "checks": {
+        "hierarchy": {
+          "status": "pass",
+          "observation": "Existing list header and shell retained; one input presents exact-wording save and five live suggestions; Explore stays separate."
+        },
+        "typography": {
+          "status": "pass",
+          "observation": "Existing serif landmarks and sans-serif controls; titles wrap at 390px with separate add targets."
+        },
+        "composition": {
+          "status": "pass",
+          "observation": "Existing shell, list sections and catalog filter rows retained; result mounts bounded to 20 and manual matches to 5."
+        },
+        "identity": {
+          "status": "pass",
+          "observation": "Preserved personal bucket-list vocabulary, warm paper, green/yellow actions and landing imagery."
+        },
+        "interaction": {
+          "status": "pass",
+          "observation": "14 browser tests pass; six mocked-account tests cover save, explicit submission, errors and stale search races. SQL tests prove pending ideas stay private until approval. Initial hydration loading flash fixed."
+        },
+        "responsive": {
+          "status": "pass",
+          "observation": "Both local app surfaces captured and overflow-checked at 390, 768 and 1440 pixels; controls reflow with no horizontal overflow."
+        }
+      }
+    },
+    "screenshots": [
+      {
+        "width": 390,
+        "path": ".fleet-local/manual-explore/after/shared-typeahead-390.png"
+      },
+      {
+        "width": 768,
+        "path": ".fleet-local/manual-explore/after/shared-typeahead-768.png"
+      },
+      {
+        "width": 1440,
+        "path": ".fleet-local/manual-explore/after/shared-typeahead-1440.png"
+      }
+    ],
+    "projectCheck": {
+      "status": "pass",
+      "command": "pnpm typecheck; pnpm exec biome check <changed TS files>; pnpm exec vitest run src/components/bucket-list/quick-add-item.test.tsx; pnpm exec playwright test --config .fleet-local/manual-explore/playwright.config.mjs"
+    },
+    "critique": {
+      "score": 36,
+      "maximum": 40,
+      "dimensions": {
+        "hierarchy": 7,
+        "typography": 7,
+        "composition": 7,
+        "identity": 7,
+        "interaction": 4,
+        "responsive": 4
+      }
+    },
+    "audit": {
+      "score": 17,
+      "maximum": 20,
+      "dimensions": {
+        "purpose": 4,
+        "accessibility": 5,
+        "behavior": 3,
+        "responsive": 3,
+        "performance": 2
+      }
+    },
+    "unresolved": {
+      "p0": 0,
+      "p1": 0
+    },
+    "detector": {
+      "posture": "advisory",
+      "findings": []
+    },
+    "comprehension": {
+      "status": "not-applicable",
+      "reviewer": "",
+      "answers": {
+        "product": "",
+        "audience": "",
+        "value": "",
+        "mechanism": "",
+        "proof": "",
+        "nextAction": ""
+      },
+      "purposeScore": {
+        "product": 0,
+        "audience": 0,
+        "value": 0,
+        "mechanism": 0,
+        "proof": 0,
+        "nextAction": 0,
+        "total": 0
+      },
+      "mismatches": []
+    }
+  },
+  "ownerFeedback": {
+    "decision": "keep",
+    "note": "Owner explicitly narrowed scope: bro there is no major redesign is needed. Preserve established direction; owner acceptance of finished change not inferred."
+  }
+}
