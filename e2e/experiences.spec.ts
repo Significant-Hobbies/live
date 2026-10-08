@@ -187,7 +187,9 @@ test.describe('Manual bucket-list entry', () => {
   }) => {
     await page.goto('/bucket-list');
     await waitForHydrated(page.getByLabel('I want to…'));
-    await page.getByLabel('I want to…').pressSequentially('pot');
+    await expect(page.getByLabel('I want to…')).toBeEnabled();
+    await page.getByLabel('I want to…').pressSequentially('pot', { delay: 50 });
+    await expect(page.getByLabel('I want to…')).toHaveValue('pot');
     await expect(
       page.getByRole('button', {
         name: 'Add Take a pottery class and make a finished piece to my list',

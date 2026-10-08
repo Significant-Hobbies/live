@@ -1,5 +1,6 @@
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
+import { waitForHydrated } from './fixtures/hydration';
 
 import { completeLocalOnboarding } from './fixtures/local-onboarding';
 
@@ -28,8 +29,9 @@ test.describe('Journal, list & manifesto', () => {
   test('list completion and weekly writing persist independently', async ({ page }) => {
     await completeLocalOnboarding(page);
     await page.goto('/bucket-list');
-    await page.getByLabel('Something you want to do').fill('Walk after lunch');
-    await page.getByRole('button', { name: 'Add to my list' }).click();
+    await waitForHydrated(page.getByLabel('I want to…'));
+    await page.getByLabel('I want to…').fill('Walk after lunch');
+    await page.getByRole('button', { name: 'Add my wording', exact: true }).click();
     await page.getByRole('button', { name: 'Complete Walk after lunch', exact: true }).click();
 
     await page.goto('/journal');
@@ -68,6 +70,7 @@ test.describe('Journal, list & manifesto', () => {
 
   test('a catalog idea can be saved and completed with no setup', async ({ page }) => {
     await page.goto('/experiences');
+    await waitForHydrated(page.getByLabel('Search everything'));
     await page.getByLabel('Search everything').fill('Make pasta from scratch');
     await page
       .getByRole('button', { name: 'Add Make pasta from scratch to my bucket list', exact: true })
@@ -163,7 +166,7 @@ test.describe('Journal, list & manifesto', () => {
       await page.getByRole('button', { name: 'Open menu' }).click();
     }
     const nav = page.locator('[data-site-nav]');
-    for (const name of ['Catalog', 'My list', 'Weekly journal', 'Life in weeks']) {
+    for (const name of ['Explore', 'My list', 'Weekly journal', 'Life in weeks']) {
       await expect(nav.getByRole('link', { name, exact: true })).toBeVisible();
     }
   });
@@ -171,7 +174,7 @@ test.describe('Journal, list & manifesto', () => {
   test('public footer leads to catalog and local workspaces', async ({ page }) => {
     await page.goto('/hobbies');
     const footer = page.locator('[data-site-footer]');
-    await expect(footer.getByRole('link', { name: 'Catalog', exact: true })).toBeVisible();
+    await expect(footer.getByRole('link', { name: 'Explore', exact: true })).toBeVisible();
     await expect(footer.getByRole('link', { name: 'My list', exact: true })).toBeVisible();
     await expect(footer.getByRole('link', { name: 'Weekly journal', exact: true })).toBeVisible();
     await expect(footer.getByRole('link', { name: 'Habits', exact: true })).toHaveCount(0);

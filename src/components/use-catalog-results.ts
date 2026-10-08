@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import type { CatalogPage, CatalogQuery } from '~/lib/catalog-types';
 
-export function catalogSearchParams(query: CatalogQuery) {
+function catalogSearchParams(query: CatalogQuery) {
   return new URLSearchParams({
     q: query.query.trim(),
     category: query.category,
