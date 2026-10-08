@@ -17,7 +17,7 @@ Hub — see [`architecture/overview.md`](architecture/overview.md) for the host
 split.
 
 - **Live status:** [`STATUS.md`](https://github.com/Significant-Hobbies/significanthobbies/blob/main/STATUS.md)
-- **Agent bootloader:** [`agents.md`](https://github.com/Significant-Hobbies/significanthobbies/blob/main/agents.md)
+- **Agent bootloader:** [`AGENTS.md`](https://github.com/Significant-Hobbies/significanthobbies/blob/main/AGENTS.md)
 - **Public README:** [`README.md`](https://github.com/Significant-Hobbies/significanthobbies/blob/main/README.md)
 
 ## Start here
