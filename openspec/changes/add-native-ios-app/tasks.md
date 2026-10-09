@@ -23,7 +23,7 @@
 - [x] 4.2 Complete Dynamic Type, VoiceOver, Reduce Motion, contrast, empty/error/loading states, and native polish review
 - [x] 4.3 Add release metadata, privacy/support copy, simulator screenshots, and documented device-only checks
 - [x] 4.4 Run strict OpenSpec validation, tests, Release simulator build, personal-team archive, and signature verification without upload
-- [ ] 4.5 Apply the reviewed additive D1 migration and deploy the exact native callback/API contract before live account testing
+- [x] 4.5 Apply the reviewed additive D1 migration and deploy the exact native callback/API contract before live account testing
 
 ## 5. Equivalent Native Account Access
 
