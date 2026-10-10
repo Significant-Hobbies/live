@@ -33,7 +33,7 @@ const HUB_SERVICE_EXACT_PATHS = new Set([
   '/mcp',
   ...HUB_AGENT_CONTRACT_PATHS,
 ]);
-const HUB_SERVICE_PREFIX_PATHS = ['/.well-known/agent-skills/'];
+const HUB_SERVICE_PREFIX_PATHS = ['/.well-known/agent-skills/', '/landing/'];
 const PERSONAL_PLATFORM_INTERNAL_HOST = 'personal-auth.internal';
 export const PERSONAL_PLATFORM_INTERNAL_HEADER = 'X-Personal-Platform-Internal';
 

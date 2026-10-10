@@ -23,6 +23,61 @@ describe('Hub edge routing', () => {
     expect(isHubServicePath(pathname)).toBe(false);
   });
 
+  describe('Hub landing assets', () => {
+    it.each([
+      '/landing/',
+      '/landing/x',
+      '/landing/fonts/home.woff2',
+      '/landing/home.css',
+      '/landing/images/home.webp',
+    ])('delegates the precise prefix %s only on apex hosts', (pathname) => {
+      expect(isHubServicePath(pathname)).toBe(true);
+      for (const hostname of ['significanthobbies.com', 'www.significanthobbies.com']) {
+        const url = new URL(`https://${hostname}${pathname}`);
+        expect(shouldDelegateHub(url)).toBe(true);
+        expect(legacyLiveRedirect(url)).toBeNull();
+      }
+      expect(shouldDelegateHub(new URL(`https://live.significanthobbies.com${pathname}`))).toBe(
+        false
+      );
+      expect(shouldDelegateHub(new URL(`https://other.example${pathname}`))).toBe(false);
+    });
+
+    it.each(['/landing', '/landing-extra/home.css', '/landings/home.css'])(
+      'redirects the non-prefix path %s to Live',
+      (pathname) => {
+        expect(isHubServicePath(pathname)).toBe(false);
+        for (const hostname of ['significanthobbies.com', 'www.significanthobbies.com']) {
+          const url = new URL(`https://${hostname}${pathname}`);
+          expect(shouldDelegateHub(url)).toBe(false);
+          expect(legacyLiveRedirect(url)?.href).toBe(
+            `https://live.significanthobbies.com${pathname}`
+          );
+        }
+      }
+    );
+
+    it('forwards apex assets and preserves their Hub cache headers', async () => {
+      const request = new Request('https://significanthobbies.com/landing/home.css');
+      const response = await fetchHubRoute(request, {
+        HUB_SERVICE: {
+          fetch: async (forwarded: Request) => {
+            expect(forwarded).toBe(request);
+            return new Response('body {}', {
+              headers: { 'Cache-Control': 'public, max-age=3600' },
+            });
+          },
+        },
+      });
+      expect(await response?.text()).toBe('body {}');
+      expect(response?.headers.get('cache-control')).toBe('public, max-age=3600');
+      expect(response?.headers.has('cdn-cache-control')).toBe(false);
+      expect(
+        await fetchHubRoute(new Request('https://live.significanthobbies.com/landing/home.css'), {})
+      ).toBeNull();
+    });
+  });
+
   it('keeps every Live path on the Live host', () => {
     expect(legacyLiveRedirect(new URL('https://live.significanthobbies.com/live-more'))).toBeNull();
   });
