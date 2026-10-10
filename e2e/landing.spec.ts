@@ -21,9 +21,10 @@ test.describe('Live landing (Astro overlay)', () => {
     );
     expect(
       await page
-        .getByRole('link', { name: /See your life in weeks/ })
-        .evaluate((link) => (link as HTMLAnchorElement).href)
-    ).toBe('https://live.significanthobbies.com/life-in-weeks');
+        .getByRole('link', { name: 'Life in weeks' })
+        .first()
+        .evaluate((link) => link.getAttribute('href'))
+    ).toBe('/life-in-weeks');
   });
 
   test('meets the automated accessibility baseline', async ({ page }) => {
