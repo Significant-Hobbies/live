@@ -12,6 +12,8 @@ export default defineConfig({
   trailingSlash: 'never',
   build: {
     format: 'file',
+    // Keep the initial layout styled before the first paint, including on slow mobile connections.
+    inlineStylesheets: 'always',
   },
   vite: {
     plugins: [tailwindcss()],

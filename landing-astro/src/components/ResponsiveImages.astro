@@ -1,0 +1,25 @@
+---
+// Add delivery attributes to the shared template's static markup without changing its layout.
+let html = await Astro.slots.render('default');
+const cardSizes = '(min-width: 1200px) 347px, (min-width: 1024px) calc((92vw - 48px) / 3), (min-width: 640px) calc((92vw - 24px) / 2), calc((100vw - 56px) / 2)';
+html = html.replace(/<img\b[^>]*src="\/categories\/([a-z]+)-800\.webp"[^>]*>/g, (tag, name) =>
+  tag.replace(/\/?\s*>$/, ` width="800" height="600" srcset="/categories/${name}-400.webp 400w, /categories/${name}-800.webp 800w" sizes="${cardSizes}">`)
+);
+html = html.replace(/<img\b[^>]*src="\/footer-art\/live-1600\.webp"[^>]*>/g, (tag) =>
+  tag.replace(/\/?\s*>$/, ' width="1600" height="535" srcset="/footer-art/live-800.webp 800w, /footer-art/live-1200.webp 1200w, /footer-art/live-1600.webp 1600w" sizes="(max-width: 640px) 800px, 100vw">')
+);
+// Preserve the parallax element, its crop and its full-size containing box.
+html = html.replace(/<div class="motion-parallax size-full bg-cover bg-\[40%_center\]" style="background-image:url\(([^)]+)\)"><\/div>/g, (tag, src) => {
+  const hero = src === '/hero/hobby-horizon-poster.webp';
+  if (!hero && src !== '/footer-art/live-1600.webp') return tag;
+  const sources = hero
+    ? '/hero/hobby-horizon-poster-640.webp 640w, /hero/hobby-horizon-poster-960.webp 960w, /hero/hobby-horizon-poster.webp 1280w'
+    : '/footer-art/live-800.webp 800w, /footer-art/live-1200.webp 1200w, /footer-art/live-1600.webp 1600w';
+  return `<img class="motion-parallax size-full" style="object-fit:cover;object-position:40% center" src="${src}" srcset="${sources}" sizes="${hero ? '(max-width: 767px) 1100px, 100vw' : '(max-width: 767px) 1600px, 100vw'}" width="${hero ? 1280 : 1600}" height="${hero ? 720 : 535}" alt="" loading="${hero ? 'eager' : 'lazy'}" ${hero ? 'fetchpriority="high"' : ''} decoding="async">`;
+});
+html = html.replace(/<div aria-hidden="true" class="motion-drift absolute inset-0 -z-10 bg-cover bg-\[12%_60%\] md:bg-\[center_60%\]" style="background-image:url\(\/hero\/dawn-valley-1920.webp\)"><\/div>/g,
+  '<img aria-hidden="true" class="motion-drift absolute inset-0 -z-10 size-full object-cover object-[12%_60%] md:object-[center_60%]" src="/hero/dawn-valley-1920.webp" srcset="/hero/dawn-valley-640.webp 640w, /hero/dawn-valley-1280.webp 1280w, /hero/dawn-valley-1920.webp 1920w" sizes="(max-width: 767px) 1000px, 100vw" width="1920" height="1280" alt="" loading="lazy" decoding="async">'
+);
+---
+
+<Fragment set:html={html} />

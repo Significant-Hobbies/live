@@ -4,6 +4,7 @@ import { galleryContent } from '@saas-maker/templates/schema';
 import { EXPERIENCE_ENTRIES } from '../../../src/lib/experiences';
 import json from '../content/live.json';
 import Layout from '../layouts/Layout.astro';
+import ResponsiveImages from '../components/ResponsiveImages.astro';
 
 const content = galleryContent.parse({
   ...json,
@@ -14,5 +15,7 @@ const content = galleryContent.parse({
 ---
 
 <Layout content={content}>
-  <GalleryPage content={content} />
+  <ResponsiveImages>
+    <GalleryPage content={content} />
+  </ResponsiveImages>
 </Layout>
