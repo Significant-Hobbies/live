@@ -11,6 +11,7 @@ const nextConfig: NextConfig = {
   // `.next/standalone/.next/` and cannot find pages-manifest.json.
   outputFileTracingRoot: process.cwd(),
   reactCompiler: true,
+  transpilePackages: ['@saas-maker/ui'],
   experimental: {
     optimizePackageImports: ['lucide-react'],
   },
