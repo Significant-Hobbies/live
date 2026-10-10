@@ -8,7 +8,8 @@ side quests, discovery, and personal history. It owns the existing
 `significanthobbies` Cloudflare Worker and D1 data authority.
 
 The Worker retains apex compatibility routes for the existing web application.
-The Hub path allowlist is delegated through `HUB_SERVICE` on apex hosts.
+The Hub path allowlist, including the `/landing/` asset prefix (not exact
+`/landing`), is delegated through `HUB_SERVICE` on apex hosts.
 Exactly `/hub` also delegates on the Live host to preserve its host-only session.
 The canonical Significant Hobbies Hub retains rendering and data ownership. Journal and Hub Backend source belong in
 their independent repositories and must not be reintroduced here.
