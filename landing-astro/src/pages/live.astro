@@ -1,73 +1,18 @@
 ---
-import BucketListPanel from '@/components/BucketListPanel.astro';
-import FaqSection from '@/components/FaqSection.astro';
-import FinalCta from '@/components/FinalCta.astro';
-import FleetFooter from '@/components/FleetFooter.astro';
-import HowItWorks from '@/components/HowItWorks.astro';
-import Layout from '@/layouts/Layout.astro';
+import { GalleryPage } from '@saas-maker/templates/gallery-page';
+import { galleryContent } from '@saas-maker/templates/schema';
+import { EXPERIENCE_ENTRIES } from '../../../src/lib/experiences';
+import json from '../content/live.json';
+import Layout from '../layouts/Layout.astro';
 
-const TITLE = 'Live — Make your bucket list happen';
-const DESCRIPTION =
-  'Find bucket-list ideas and side quests, keep your own list, log what you do, and write one private entry each week.';
+const content = galleryContent.parse({
+  ...json,
+  sections: json.sections.map((section) => section.kind === 'grid'
+    ? { ...section, lede: section.lede?.replace('{count}', String(EXPERIENCE_ENTRIES.length)) }
+    : section),
+});
 ---
 
-<Layout title={TITLE} description={DESCRIPTION}>
-  <main id="main">
-    <section class="cinematic-hero">
-      <video
-        class="cinematic-hero__video"
-        poster="/hero/hobby-horizon-poster.jpg"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="auto"
-        width="1280"
-        height="720"
-        aria-hidden="true"
-      >
-        <source src="/hero/hobby-horizon.mp4" type="video/mp4" />
-      </video>
-      <div class="cinematic-hero__scrim" aria-hidden="true"></div>
-
-      <div class="cinematic-hero__inner">
-        <p class="cinematic-hero__wordmark">Live by Significant Hobbies</p>
-        <div class="cinematic-hero__copy">
-          <h1>
-            <span>Make your bucket list</span>
-            <span>happen.</span>
-          </h1>
-          <p>
-            Find things you want to do, from big bucket-list experiences to small
-            side quests. Keep your own list, mark things done, and remember your week.
-          </p>
-          <a class="cinematic-hero__cta" href="/experiences" data-log="catalog_opened">
-            Explore the catalog
-            <span aria-hidden="true">→</span>
-          </a>
-          <p class="cinematic-hero__note">
-            Free to use. No account required to begin.
-            <a class="cinematic-hero__secondary" href="/life-in-weeks">See your life in weeks</a>.
-          </p>
-        </div>
-
-        <p class="cinematic-hero__prompt" aria-hidden="true">
-          The rest is still unwritten.
-        </p>
-      </div>
-    </section>
-
-    <BucketListPanel />
-    <HowItWorks />
-    <FaqSection />
-    <FinalCta />
-  </main>
-  <FleetFooter />
+<Layout content={content}>
+  <GalleryPage content={content} />
 </Layout>
-
-<script>
-  const heroVideo = document.querySelector<HTMLVideoElement>('.cinematic-hero__video');
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    heroVideo?.pause();
-  }
-</script>
