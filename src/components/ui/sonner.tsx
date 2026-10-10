@@ -10,6 +10,8 @@ import {
 import { useTheme } from 'next-themes';
 import { Toaster as Sonner, type ToasterProps } from 'sonner';
 
+// Keep the app's Sonner instance: the library currently resolves a separate
+// version, whose toast store would not receive existing app toast calls.
 const Toaster = ({ ...props }: ToasterProps) => {
   const { theme = 'system' } = useTheme();
 
