@@ -125,7 +125,7 @@ jobs:
             echo "ERROR: the apex is not serving a self-canonical page — it is redirecting or serving another host's HTML"
             exit 1
           fi
-          if ! printf '%s' "$html" | grep -q 'id="apps-title"'; then
+          if ! printf '%s' "$html" | grep -q 'id="apps"'; then
             echo "ERROR: stale overlay — the apex is missing the Hub apps section"
             exit 1
           fi
