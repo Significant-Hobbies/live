@@ -3,10 +3,9 @@ main = "worker.mjs"
 compatibility_date = "2025-09-23"
 compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
 
-# Serve overlaid Astro index.html for GET / without invoking the Worker
-# (avoids cold-start TTFB on the LCP path). Auth redirect is inline in
-# landing-astro Layout.astro; all app routes still hit worker.mjs first.
-assets = { directory = ".open-next/assets", binding = "ASSETS", run_worker_first = [ "/*" ] }
+# All routes hit worker.mjs first except content-hashed immutable Astro and
+# Next.js assets, which bypass the Worker to avoid cold-start TTFB.
+assets = { directory = ".open-next/assets", binding = "ASSETS", run_worker_first = [ "/*", "!/_astro/*", "!/_next/static/*" ] }
 
 routes = [
   { pattern = "significanthobbies.com/*", zone_name = "significanthobbies.com" },

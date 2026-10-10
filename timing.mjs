@@ -7,8 +7,12 @@
  */
 import { observeRequest } from './app-health.mjs';
 
+let firstRequest = true;
+
 export function withTiming(handler) {
   return async (request, env, ctx) => {
+    const cold = firstRequest ? 1 : 0;
+    firstRequest = false;
     const start = performance.now();
     const url = new URL(request.url);
     const response = await handler(request, env, ctx);
@@ -32,7 +36,7 @@ export function withTiming(handler) {
       console.warn(`[slow] ${request.method} ${url.pathname} — ${Math.round(duration)}ms`);
     }
 
-    observeRequest(request, timedResponse, duration, env, ctx);
+    observeRequest(request, timedResponse, duration, env, ctx, cold);
     return timedResponse;
   };
 }
