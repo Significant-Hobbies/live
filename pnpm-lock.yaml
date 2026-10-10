@@ -62,8 +62,8 @@ importers:
         specifier: ^0.4.0
         version: 0.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@saas-maker/ui':
-        specifier: github:sass-maker/ui-library#v0.1.11&path:/packages/ui
-        version: https://codeload.github.com/sass-maker/ui-library/tar.gz/2bc53a5a497bc5f31a963d7dd2cdcfb33714da86#path:/packages/ui(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tailwindcss@4.3.3)
+        specifier: github:sass-maker/ui-library#v0.1.14&path:/packages/ui
+        version: https://codeload.github.com/sass-maker/ui-library/tar.gz/404a34ef1b1f0ecebe76015d73bd8133bd255c89#path:/packages/ui(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tailwindcss@4.3.3)
       better-auth:
         specifier: 1.6.25
         version: 1.6.25(@opentelemetry/api@1.9.1)(drizzle-kit@0.31.10)(drizzle-orm@0.45.2(@libsql/client@0.17.4)(@opentelemetry/api@1.9.1)(@types/pg@8.6.1)(kysely@0.29.4))(next@16.3.8(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(@playwright/test@1.62.0)(@types/node@25.6.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vitest@4.1.10)
@@ -1942,24 +1942,6 @@ packages:
   '@floating-ui/utils@0.2.12':
     resolution: {integrity: sha512-HpCo8tmWzLVad5s2d19EhAz5zqrrQ6s69qd6moPMQvkOuSwDT1YgRfWSVuc4ennqrgv3OHppiOGMQ7oC13yIww==}
 
-  '@fontsource-variable/figtree@5.3.0':
-    resolution: {integrity: sha512-VRVodD7OiG7apQwE8/2fMjaqpY/a0qRJqL5HtYj8CKIVps+9amaFcdfKmDIf7iqYQx6iPLlArVXAfKeIZmVcNQ==}
-
-  '@fontsource-variable/fraunces@5.3.0':
-    resolution: {integrity: sha512-9BYGySn4AHEJdgp9Z28tQ3X+laJMEOITXkQarZXeloWQZDq5oOvXJ3kDA8c7MGIfpogIaZfjrQBqmda8POOCKA==}
-
-  '@fontsource-variable/geist-mono@5.3.0':
-    resolution: {integrity: sha512-vBbuwDEo9AkrqADMXOrlAR3DFcJi4/JxeuU43FoiQERnNwsfXNnvxvReZG02cQKmyk4DZkZdBZX3oTDvy2zBAw==}
-
-  '@fontsource-variable/geist@5.3.0':
-    resolution: {integrity: sha512-j0m+vLQuG5XAYoHtGCVu0spvlGreR3EzpECUVzkFmI1mTVnAO38l/NEPDCFgZ177JxzYJCLSmTQibIiYPilGrA==}
-
-  '@fontsource-variable/newsreader@5.3.0':
-    resolution: {integrity: sha512-rrzYi43qMpbzwuFtf9OkWH8sxAPVPcQQQEwXpPtwaKYeJ8yVg5aLs5kawmo1f2Q1t1M38TLmEKCkGVDsYwgdFw==}
-
-  '@fontsource/instrument-serif@5.3.0':
-    resolution: {integrity: sha512-mDiaIg0u67sYV59fie92Wz4sM8UiVlbL7fLxnFPCKkX15DMASEnQTREbaP5S5/3DCcsoAOcQ0sV9E4AeY4QqYQ==}
-
   '@hono/node-server@2.1.4':
     resolution: {integrity: sha512-2g1qeHl4BduwDn6L8nkAvDrPUWPMlkQ//a5NhP/zIyaXKMjZNRV+cG9Csu+BiJFf6+68pqzjf4Hi5sJGKHuS1g==}
     engines: {node: '>=20'}
@@ -3583,14 +3565,6 @@ packages:
       '@saas-maker/ui': 0.x
       astro: '>=7'
       react: '>=19'
-
-  '@saas-maker/ui@https://codeload.github.com/sass-maker/ui-library/tar.gz/2bc53a5a497bc5f31a963d7dd2cdcfb33714da86#path:/packages/ui':
-    resolution: {path: /packages/ui, tarball: https://codeload.github.com/sass-maker/ui-library/tar.gz/2bc53a5a497bc5f31a963d7dd2cdcfb33714da86}
-    version: 0.1.11
-    peerDependencies:
-      react: '>=19'
-      react-dom: '>=19'
-      tailwindcss: '>=4.3'
 
   '@saas-maker/ui@https://codeload.github.com/sass-maker/ui-library/tar.gz/404a34ef1b1f0ecebe76015d73bd8133bd255c89#path:/packages/ui':
     resolution: {path: /packages/ui, tarball: https://codeload.github.com/sass-maker/ui-library/tar.gz/404a34ef1b1f0ecebe76015d73bd8133bd255c89}
@@ -9165,18 +9139,6 @@ snapshots:
 
   '@floating-ui/utils@0.2.12': {}
 
-  '@fontsource-variable/figtree@5.3.0': {}
-
-  '@fontsource-variable/fraunces@5.3.0': {}
-
-  '@fontsource-variable/geist-mono@5.3.0': {}
-
-  '@fontsource-variable/geist@5.3.0': {}
-
-  '@fontsource-variable/newsreader@5.3.0': {}
-
-  '@fontsource/instrument-serif@5.3.0': {}
-
   '@hono/node-server@2.1.4(hono@4.12.25)':
     dependencies:
       hono: 4.12.25
@@ -11356,14 +11318,8 @@ snapshots:
       lucide-react: 1.48.0(react@19.3.0)
       react: 19.3.0
 
-  '@saas-maker/ui@https://codeload.github.com/sass-maker/ui-library/tar.gz/2bc53a5a497bc5f31a963d7dd2cdcfb33714da86#path:/packages/ui(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tailwindcss@4.3.3)':
+  '@saas-maker/ui@https://codeload.github.com/sass-maker/ui-library/tar.gz/404a34ef1b1f0ecebe76015d73bd8133bd255c89#path:/packages/ui(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tailwindcss@4.3.3)':
     dependencies:
-      '@fontsource-variable/figtree': 5.3.0
-      '@fontsource-variable/fraunces': 5.3.0
-      '@fontsource-variable/geist': 5.3.0
-      '@fontsource-variable/geist-mono': 5.3.0
-      '@fontsource-variable/newsreader': 5.3.0
-      '@fontsource/instrument-serif': 5.3.0
       '@tanstack/react-table': 9.2.4(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       class-variance-authority: 0.7.1
       clsx: 2.1.1
