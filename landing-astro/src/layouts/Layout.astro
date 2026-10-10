@@ -8,6 +8,16 @@ interface Props {
 }
 const { content } = Astro.props;
 const SITE_URL = 'https://live.significanthobbies.com';
+const faq = content.sections.find((section) => section.kind === 'faq');
+const faqJsonLd = faq && {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.items.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a },
+  })),
+};
 ---
 
 <Base {...baseProps(content)}>
@@ -42,6 +52,7 @@ const SITE_URL = 'https://live.significanthobbies.com';
         "url": "https://sarthakagrawal.dev"
       }
     })} />
+    {faqJsonLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />}
     <script is:inline>
       // Gallery links have no data-attribute API. Register before the deferred logger.
       document.addEventListener('DOMContentLoaded', function () {
