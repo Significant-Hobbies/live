@@ -157,7 +157,8 @@ export function WeeklyLogSurface({
         id="weekly-entry"
         value={textareaValue}
         onChange={(event) => {
-          setDrafts((current) => ({ ...current, [weekOf]: event.target.value }));
+          const value = event.target.value;
+          setDrafts((current) => ({ ...current, [weekOf]: value }));
           setSaved(false);
         }}
         placeholder="One honest paragraph is enough."

@@ -413,9 +413,11 @@ function ItemPanel({
                 type="checkbox"
                 checked={entry.done}
                 disabled={saving || entry.readOnly}
-                onChange={(event) =>
-                  void mutate((adapter) => adapter.setStep(item.id, entry.id, event.target.checked))
-                }
+                onChange={(event) => {
+                  // Read before queueing: React resets a controlled input after this handler.
+                  const done = event.target.checked;
+                  void mutate((adapter) => adapter.setStep(item.id, entry.id, done));
+                }}
                 className="size-5 shrink-0 accent-muted-foreground"
               />
               <span
@@ -476,13 +478,10 @@ function ItemPanel({
         id={`year-${item.id}`}
         value={item.targetYear ?? ''}
         disabled={saving}
-        onChange={(event) =>
-          void mutate((adapter) =>
-            adapter.update(item.id, {
-              targetYear: event.target.value ? Number(event.target.value) : null,
-            })
-          )
-        }
+        onChange={(event) => {
+          const targetYear = event.target.value ? Number(event.target.value) : null;
+          void mutate((adapter) => adapter.update(item.id, { targetYear }));
+        }}
         className="mt-2 min-h-11 w-full rounded-xl border border-border bg-surface px-3 text-sm"
       >
         <option value="">Someday (no date)</option>
@@ -504,9 +503,10 @@ function ItemPanel({
             id={`visibility-${item.id}`}
             value={item.visibility ?? 'private'}
             disabled={saving}
-            onChange={(event) =>
-              void mutate((adapter) => adapter.update(item.id, { visibility: event.target.value }))
-            }
+            onChange={(event) => {
+              const visibility = event.target.value;
+              void mutate((adapter) => adapter.update(item.id, { visibility }));
+            }}
             className="mt-2 min-h-11 w-full rounded-xl border border-border bg-surface px-3 text-sm"
           >
             <option value="private">Private</option>
