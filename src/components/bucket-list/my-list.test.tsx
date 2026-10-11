@@ -1,15 +1,22 @@
 import { act } from 'react';
 import { createRoot, type Root } from 'react-dom/client';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { QuickAddBucketItem } from './quick-add-item';
+import { MyList } from './my-list';
 import { parseCatalogQuery, searchCatalogSeed } from '~/lib/catalog-seed';
 
-const { addItem, refresh, submit } = vi.hoisted(() => ({
+const { addItem, refresh, submit, updateNotes, updateStatus } = vi.hoisted(() => ({
   addItem: vi.fn(),
   refresh: vi.fn(),
   submit: vi.fn(),
+  updateNotes: vi.fn(),
+  updateStatus: vi.fn(),
 }));
-vi.mock('~/lib/actions/bucket-list', () => ({ addBucketListItem: addItem }));
+vi.mock('~/lib/actions/bucket-list', () => ({
+  addBucketListItem: addItem,
+  updateBucketListItem: updateNotes,
+  updateBucketListItemStatus: updateStatus,
+}));
+vi.mock('~/lib/actions/bucket-steps', () => ({}));
 vi.mock('next/navigation', () => ({ useRouter: () => ({ refresh }) }));
 vi.mock('~/lib/actions/catalog', () => ({ submitCatalogIdea: submit }));
 
@@ -27,12 +34,12 @@ beforeEach(async () => {
         searchCatalogSeed(parseCatalogQuery(new URL(url, 'http://localhost').searchParams)),
     }))
   );
-  addItem.mockResolvedValue({ id: 'saved' });
+  addItem.mockResolvedValue({ success: true, id: 'saved', added: true });
   Object.assign(globalThis, { IS_REACT_ACT_ENVIRONMENT: true });
   container = document.createElement('div');
   document.body.append(container);
   root = createRoot(container);
-  await act(async () => root.render(<QuickAddBucketItem />));
+  await act(async () => root.render(<MyList initialItems={[]} />));
 });
 afterEach(async () => {
   await act(async () => root.unmount());
@@ -59,11 +66,84 @@ async function click(label: string) {
 }
 
 describe('Account manual entry', () => {
-  it('saves exact custom wording and refreshes after success', async () => {
+  async function openNotesItem() {
+    await act(async () =>
+      root.render(
+        <MyList
+          key="notes"
+          initialItems={[
+            { id: 'one', title: 'Sail', status: 'planned', steps: [], notes: 'Before' },
+            { id: 'two', title: 'Swim', status: 'planned', steps: [] },
+          ]}
+        />
+      )
+    );
+    await act(async () =>
+      (container.querySelector('[aria-label="Open Sail"]') as HTMLButtonElement).click()
+    );
+    const field = container.querySelector('textarea')!;
+    await act(async () => {
+      Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, 'value')?.set?.call(
+        field,
+        'My unsaved notes'
+      );
+      field.dispatchEvent(new Event('input', { bubbles: true }));
+    });
+    return field;
+  }
+
+  it('retains a failed notes draft after switching away and back', async () => {
+    let rejectSave: (error: Error) => void = () => {};
+    updateNotes.mockImplementation(
+      () =>
+        new Promise((_resolve, reject) => {
+          rejectSave = reject;
+        })
+    );
+    const field = await openNotesItem();
+    await act(async () => {
+      field.dispatchEvent(new FocusEvent('focusout', { bubbles: true }));
+      (container.querySelector('[aria-label="Open Swim"]') as HTMLButtonElement).click();
+    });
+    await act(async () => rejectSave(new Error('Write failed')));
+    await act(async () =>
+      (container.querySelector('[aria-label="Open Sail"]') as HTMLButtonElement).click()
+    );
+    expect(container.querySelector('textarea')?.value).toBe('My unsaved notes');
+    expect(container.textContent).toContain('Your draft is still here.');
+    expect(container.querySelectorAll('textarea')).toHaveLength(1);
+  });
+
+  it('allows a status click during notes autosave and serializes both writes', async () => {
+    let finishNotes: () => void = () => {};
+    updateNotes.mockImplementation(
+      () =>
+        new Promise<void>((resolve) => {
+          finishNotes = resolve;
+        })
+    );
+    updateStatus.mockResolvedValue({ success: true });
+    const field = await openNotesItem();
+    await act(async () => field.dispatchEvent(new FocusEvent('focusout', { bubbles: true })));
+    const doing = [...container.querySelectorAll<HTMLButtonElement>('[role="radio"]')].find(
+      (button) => button.textContent === 'Doing'
+    )!;
+    expect(doing.disabled).toBe(false);
+    await act(async () => doing.click());
+    expect(updateStatus).not.toHaveBeenCalled();
+    await act(async () => finishNotes());
+    expect(updateNotes).toHaveBeenCalledWith('one', { description: 'My unsaved notes' });
+    expect(updateStatus).toHaveBeenCalledWith('one', 'in_progress');
+    expect(container.querySelector('[role="radio"][aria-checked="true"]')?.textContent).toBe(
+      'Doing'
+    );
+  });
+
+  it('saves exact custom wording and updates the row after success', async () => {
     await input('  Teach my niece to make a bowl  ');
-    await click('Add my wording');
+    await click('Add');
     expect(addItem).toHaveBeenCalledWith({ title: 'Teach my niece to make a bowl' });
-    expect(refresh).toHaveBeenCalledOnce();
+    expect(container.textContent).toContain('To do');
     expect(container.querySelector('input')?.value).toBe('');
     expect(submit).not.toHaveBeenCalled();
   });
@@ -78,7 +158,7 @@ describe('Account manual entry', () => {
         category: 'creative',
       })
     );
-    expect(refresh).toHaveBeenCalledOnce();
+    expect(container.textContent).toContain('To do');
   });
 
   it('shows server-paginated suggestions after the first page', async () => {
@@ -95,9 +175,9 @@ describe('Account manual entry', () => {
   it('retains input and exposes feedback when saving fails', async () => {
     addItem.mockRejectedValue(new Error('Unavailable'));
     await input('My personal idea');
-    await click('Add my wording');
+    await click('Add');
     expect(container.querySelector('input')?.value).toBe('My personal idea');
-    expect(container.querySelector('[role="status"]')?.textContent).toContain('Could not save');
+    expect(container.querySelector('[role="alert"]')?.textContent).toContain('could not be saved');
     expect(refresh).not.toHaveBeenCalled();
   });
 
@@ -127,7 +207,7 @@ describe('Account manual entry', () => {
     );
     await input('My own quiet afternoon');
     expect(container.textContent).toContain('Ideas could not be loaded');
-    await click('Add my wording');
+    await click('Add');
     expect(addItem).toHaveBeenCalledWith({ title: 'My own quiet afternoon' });
     expect(submit).not.toHaveBeenCalled();
   });

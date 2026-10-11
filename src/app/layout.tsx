@@ -22,12 +22,12 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   title: {
     default: 'Live — Bucket Lists, Side Quests & Weekly Journal',
-    template: '%s | Live by Significant Hobbies',
+    template: '%s · Live',
   },
   description:
     'Find bucket-list ideas and side quests, keep your own list, log what you do, and write one private entry each week.',
   keywords: ['bucket list', 'experiences', 'side quests', 'weekly journal'],
-  authors: [{ name: 'Live by Significant Hobbies' }],
+  authors: [{ name: 'Live' }],
   robots: {
     index: true,
     follow: true,
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
         url: 'https://live.significanthobbies.com/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'Live by Significant Hobbies',
+        alt: 'Live',
       },
     ],
   },
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#0c2b29',
+  themeColor: '#120e09',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

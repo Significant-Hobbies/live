@@ -42,7 +42,9 @@ export function RouteChrome({
   return (
     <>
       {!isOnboarding && navigation}
-      <main id="main">{children}</main>
+      <main id="main" className="pb-20">
+        {children}
+      </main>
       {!hidesPeripheralChrome && !isWorkspace && footer}
       {feedback}
     </>

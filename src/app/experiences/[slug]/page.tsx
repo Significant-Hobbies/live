@@ -38,7 +38,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const entry = resolve((await params).slug);
-  if (!entry) return { title: 'Not found — SignificantHobbies' };
+  if (!entry) return { title: 'Not found' };
   const guide = EXPERIENCE_GUIDES[entry.slug];
   return experienceMetadata(
     guide?.title ?? `${entry.title} | Bucket list idea`,

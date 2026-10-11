@@ -1,30 +1,12 @@
 'use server';
 
-import { and, count, eq } from 'drizzle-orm';
+import { and, eq } from 'drizzle-orm';
 import { revalidatePath } from 'next/cache';
 
-import { bucketListItems, habits, userQuests, timelines, users } from '~/db/schema';
-import { generateQuestChain } from '~/lib/quest-chains';
+import { habits, userQuests, timelines, users } from '~/db/schema';
 import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
 import type { TimelinePin } from '~/lib/types';
-
-// ─── Types ─────────────────────────────────────────────────────────────────
-
-export type UserQuestRow = {
-  id: string;
-  questId: string;
-  type: string;
-  sourceHobby: string | null;
-  sourceTimelineId: string | null;
-  sourceBucketItemId: string | null;
-  title: string;
-  description: string | null;
-  emoji: string | null;
-  status: string;
-  startedAt: Date;
-  completedAt: Date | null;
-};
 
 // ─── Start a quest ──────────────────────────────────────────────────────────
 // Creates a UserQuest row with status='active'. If the user already has an
@@ -123,12 +105,11 @@ export async function startQuest(params: {
 // Marks the quest as completed AND auto-adds a pin to the source timeline.
 // This is the loop-closing moment: quest completion → timeline pin.
 
+/** @public Retained for quest callers; completion never changes bucket-item status. */
 export async function completeUserQuest(userQuestPkId: string): Promise<{
   success: boolean;
   error?: string;
   pinAdded?: boolean;
-  /** True when this completion finished the last quest of a bucket item's chain. */
-  bucketItemCompleted?: boolean;
 }> {
   const session = await getServerAuthSession();
   if (!session?.user?.id) return { success: false, error: 'Not authenticated' };
@@ -210,155 +191,11 @@ export async function completeUserQuest(userQuestPkId: string): Promise<{
     }
   }
 
-  // Close the bucket-item loop. `sourceBucketItemId` was written when the quest
-  // chain was generated and then never read back, so you could finish every
-  // quest decomposed from "Learn to sail" and the bucket item stayed `planned` —
-  // the chain led nowhere. Marking the item done only once its last active quest
-  // is gone keeps the item honest for multi-quest chains.
-  let bucketItemCompleted = false;
-  if (quest.sourceBucketItemId) {
-    const [item] = await db
-      .select({
-        id: bucketListItems.id,
-        status: bucketListItems.status,
-        title: bucketListItems.title,
-        category: bucketListItems.category,
-      })
-      .from(bucketListItems)
-      .where(
-        and(
-          eq(bucketListItems.id, quest.sourceBucketItemId),
-          eq(bucketListItems.userId, session.user.id)
-        )
-      )
-      .limit(1);
-
-    if (item && item.status !== 'done') {
-      const [{ remaining } = { remaining: 0 }] = await db
-        .select({ remaining: count() })
-        .from(userQuests)
-        .where(
-          and(
-            eq(userQuests.userId, session.user.id),
-            eq(userQuests.sourceBucketItemId, quest.sourceBucketItemId),
-            eq(userQuests.status, 'active')
-          )
-        );
-
-      // "Nothing active" is NOT "chain finished" — it is also true after the
-      // very first step of a five-step chain, which would have marked a whole
-      // life goal done on one step. Compare completed steps against the chain
-      // this item actually generates; the generator is a pure function of
-      // (id, title, category), so the server can rebuild it exactly.
-      const [{ finished } = { finished: 0 }] = await db
-        .select({ finished: count() })
-        .from(userQuests)
-        .where(
-          and(
-            eq(userQuests.userId, session.user.id),
-            eq(userQuests.sourceBucketItemId, quest.sourceBucketItemId),
-            eq(userQuests.status, 'completed')
-          )
-        );
-
-      const chainLength = generateQuestChain({
-        bucketItemId: item.id,
-        title: item.title,
-        category: item.category,
-      }).length;
-
-      if (remaining === 0 && finished >= chainLength) {
-        await db
-          .update(bucketListItems)
-          .set({ status: 'done', completedAt: new Date(), updatedAt: new Date() })
-          .where(eq(bucketListItems.id, item.id));
-        bucketItemCompleted = true;
-        revalidatePath('/bucket-list');
-        revalidatePath('/live-more');
-      }
-    }
-  }
-
   revalidatePath('/');
   revalidatePath('/side-quests');
   revalidatePath('/timeline');
 
-  return { success: true, pinAdded, bucketItemCompleted };
-}
-
-// ─── Abandon a quest ────────────────────────────────────────────────────────
-
-export async function abandonQuest(
-  userQuestPkId: string
-): Promise<{ success: boolean; error?: string }> {
-  const session = await getServerAuthSession();
-  if (!session?.user?.id) return { success: false, error: 'Not authenticated' };
-
-  await db
-    .update(userQuests)
-    .set({ status: 'abandoned' })
-    .where(and(eq(userQuests.id, userQuestPkId), eq(userQuests.userId, session.user.id)));
-
-  // Archive the auto-created daily habit for this quest (best-effort).
-  try {
-    await db
-      .update(habits)
-      .set({ status: 'archived' })
-      .where(and(eq(habits.sourceQuestId, userQuestPkId), eq(habits.userId, session.user.id)));
-  } catch {
-    // Best-effort; quest abandonment should still succeed.
-  }
-
-  revalidatePath('/');
-  revalidatePath('/side-quests');
-
-  return { success: true };
-}
-
-// ─── Get active quests ──────────────────────────────────────────────────────
-
-/**
- * Loads the signed-in user's quests in one status, oldest first.
- *
- * 'active' and 'abandoned' order by startedAt (completedAt is null for both);
- * 'completed' orders by completedAt.
- */
-async function getQuestsByStatus(
-  status: 'active' | 'completed' | 'abandoned'
-): Promise<UserQuestRow[]> {
-  const session = await getServerAuthSession();
-  if (!session?.user?.id) return [];
-
-  const rows = await db
-    .select()
-    .from(userQuests)
-    .where(and(eq(userQuests.userId, session.user.id), eq(userQuests.status, status)))
-    .orderBy(status === 'completed' ? userQuests.completedAt : userQuests.startedAt);
-
-  return rows.map((r) => ({
-    id: r.id,
-    questId: r.questId,
-    type: r.type,
-    sourceHobby: r.sourceHobby,
-    sourceTimelineId: r.sourceTimelineId,
-    sourceBucketItemId: r.sourceBucketItemId,
-    title: r.title,
-    description: r.description,
-    emoji: r.emoji,
-    status: r.status,
-    startedAt: r.startedAt,
-    completedAt: r.completedAt,
-  }));
-}
-
-export async function getActiveQuests(): Promise<UserQuestRow[]> {
-  return await getQuestsByStatus('active');
-}
-
-// ─── Get completed quests ───────────────────────────────────────────────────
-
-export async function getCompletedQuests(): Promise<UserQuestRow[]> {
-  return await getQuestsByStatus('completed');
+  return { success: true, pinAdded };
 }
 
 // ─── Profile visibility ─────────────────────────────────────────────────────

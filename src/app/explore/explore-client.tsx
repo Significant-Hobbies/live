@@ -17,18 +17,6 @@ import { HOBBY_CATEGORIES } from '~/lib/hobbies';
 import { getTimelineUrl } from '~/lib/timeline-url';
 import type { TimelineData } from '~/lib/types';
 
-// Phase strip colors cycling through warm/cool hues
-const PHASE_COLORS = [
-  'bg-foreground',
-  'bg-field-sky-ink',
-  'bg-field-lilac-ink',
-  'bg-field-coral-ink',
-  'bg-field-rose-ink',
-  'bg-field-green-ink',
-  'bg-primary',
-  'bg-field-lilac-ink',
-];
-
 type SortOption = 'all' | 'most-phases' | 'most-hobbies' | 'recent';
 
 interface ExploreClientProps {
@@ -101,11 +89,8 @@ function ExploreTimelineCard({ timeline }: { timeline: TimelineData }) {
         {/* Phase color strip */}
         {phases.length > 0 && (
           <div className="mb-4 flex h-1.5 w-full overflow-hidden rounded-full gap-px">
-            {phases.map((p, i) => (
-              <div
-                key={p.id}
-                className={`flex-1 rounded-full ${PHASE_COLORS[i % PHASE_COLORS.length]}`}
-              />
+            {phases.map((p) => (
+              <div key={p.id} className="flex-1 rounded-full bg-muted-foreground" />
             ))}
           </div>
         )}
@@ -164,15 +149,13 @@ function ExploreTimelineCard({ timeline }: { timeline: TimelineData }) {
 
         {visiblePhases.length > 0 && (
           <div className="mt-4 space-y-2">
-            {visiblePhases.map((phase, index) => (
+            {visiblePhases.map((phase) => (
               <div
                 key={phase.id}
                 className="rounded-lg border border-border bg-card/40/70 px-3 py-2"
               >
                 <div className="flex items-center gap-2">
-                  <span
-                    className={`h-2 w-2 rounded-full ${PHASE_COLORS[index % PHASE_COLORS.length]}`}
-                  />
+                  <span className="h-2 w-2 rounded-full bg-muted-foreground" />
                   <p className="truncate text-xs font-semibold text-foreground">{phase.label}</p>
                 </div>
                 <p className="mt-1 truncate text-xs text-muted-foreground">
@@ -199,7 +182,7 @@ function ExploreTimelineCard({ timeline }: { timeline: TimelineData }) {
                 key={category.name}
                 className="rounded-full bg-foreground/10 px-2.5 py-1 text-xs font-medium text-foreground"
               >
-                {category.emoji} {category.name}
+                {category.name}
               </span>
             ))}
           </div>
@@ -281,7 +264,7 @@ function ExploreFooter() {
   return (
     <section className="mt-10 rounded-xl border border-border bg-card px-5 py-6 text-foreground md:flex md:items-center md:justify-between md:gap-6">
       <div>
-        <p className="text-sm font-semibold text-brand">Community signal</p>
+        <p className="text-sm font-semibold text-muted-foreground">Community signal</p>
         <h2 className="mt-2 text-xl font-semibold">Explore grows with every public phase.</h2>
         <p className="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground">
           Add a timeline with hobbies, dates, and phase labels so other people can discover patterns
@@ -391,7 +374,7 @@ export function ExploreClient({ timelines }: ExploreClientProps) {
           onClick={() => setCategoryFilter(null)}
           className={`min-h-11 rounded-full px-3.5 py-1.5 text-sm font-medium transition-colors ${
             categoryFilter === null
-              ? 'bg-primary text-primary-foreground'
+              ? 'bg-muted text-foreground'
               : 'border border-border bg-card text-muted-foreground hover:border-border hover:text-foreground'
           }`}
         >
@@ -404,11 +387,11 @@ export function ExploreClient({ timelines }: ExploreClientProps) {
             onClick={() => setCategoryFilter(categoryFilter === cat.name ? null : cat.name)}
             className={`min-h-11 rounded-full px-3.5 py-1.5 text-sm font-medium transition-colors ${
               categoryFilter === cat.name
-                ? 'bg-primary text-primary-foreground'
+                ? 'bg-muted text-foreground'
                 : 'border border-border bg-card text-muted-foreground hover:border-border hover:text-foreground'
             }`}
           >
-            {cat.emoji} {cat.name}
+            {cat.name}
           </button>
         ))}
       </div>

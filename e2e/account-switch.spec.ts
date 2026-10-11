@@ -63,7 +63,7 @@ test('a second account on the same browser cannot see or be forwarded the first 
   await keep.click();
   await expect(page.getByText('1 dream is now in your atlas.')).toBeVisible();
   await page.goto('/bucket-list');
-  const aRow = page.getByRole('group', { name: `Controls for ${secret}` });
+  const aRow = page.getByRole('button', { name: `Mark ${secret} as lived` });
   await expect(aRow).toHaveCount(1);
 
   // Sign out through the real nav control — that path also refreshes the
@@ -80,7 +80,7 @@ test('a second account on the same browser cannot see or be forwarded the first 
 
   // Anonymous again on this browser: whichever surface renders, A's row must not.
   await page.goto('/bucket-list');
-  await expect(page.getByRole('group', { name: `Controls for ${secret}` })).toHaveCount(0);
+  await expect(page.getByRole('button', { name: `Mark ${secret} as lived` })).toHaveCount(0);
   await expect(page.getByText(secret)).toHaveCount(0);
 
   // B signs in on the same browser profile.
@@ -105,7 +105,7 @@ test('a second account on the same browser cannot see or be forwarded the first 
   expect(spoofed.status()).toBe(401);
 
   await page.goto('/bucket-list');
-  await expect(page.getByRole('group', { name: `Controls for ${secret}` })).toHaveCount(0);
+  await expect(page.getByRole('button', { name: `Mark ${secret} as lived` })).toHaveCount(0);
   await expect(page.getByText(secret)).toHaveCount(0);
 });
 

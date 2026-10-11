@@ -22,7 +22,7 @@ test.describe('Life Atlas shell', () => {
       'href',
       '/bucket-list'
     );
-    await expect(nav.getByRole('link', { name: 'Weekly journal', exact: true })).toHaveAttribute(
+    await expect(nav.getByRole('link', { name: 'Journal', exact: true })).toHaveAttribute(
       'href',
       '/journal'
     );

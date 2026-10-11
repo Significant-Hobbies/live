@@ -47,13 +47,11 @@ The interface is a map of a finite, inhabited life. Live uses paths, horizons, c
 
 **Owner decision, 11 October 2026: dark everywhere.** The public Astro landing and the Next.js app share one warm night canvas, atlas-gold actions with ink text, tonal cards, and quiet borders. Dark is the only theme, independent of system preference; it is the product shell as well as the storytelling space. Keep Geist, Fraunces, and Geist Mono.
 
-Journal remains a calm ritual with dark morning-yellow or evening-lavender fields and a substantial dark writing surface. History is a personal almanac: yellow mortality, blue direction, and coral, lavender, or warm night story passages. Gold indicates chosen direction; sage indicates lived evidence and learning. Content should feel placed in a landscape, not packed into a grid of interchangeable cards.
-
 ## Colors
 
 The canonical roles are background `#120e09` (approximately `oklch(0.165 0.012 72)`), foreground `#f7f3e9`, card `#1e1812`, surface `#17130d`, muted `#26211a`, muted foreground `#b7b0a3`, border `#3b342a`, primary/brand atlas gold `#e7bf57`, brand/primary foreground ink `#1d1409`, destructive `#f66d67`, and growth/sage `#62bb78`. Base radius is `0.75rem`: controls use 12px corners and bounded surfaces 16px.
 
-Live uses a restrained field palette—sun yellow, open-sky blue, coral, fresh green, and lilac—to distinguish kinds of possibility. Large, flat fields use dark tonal variants at OKLCH lightness 0.30 with the same hue family, rather than luminous pastel fills. Their cream, muted, and pale chromatic text must reach WCAG AA (4.5:1 for body copy). Semantic field roles live in `src/app/globals.css`; the local landing overrides use the same roles. Photography keeps its original pixels.
+One palette. Every surface uses the neutral dark family (background, surface, card, muted, border). Atlas gold is reserved for the primary action and the active state (active nav underline, selected segment). No per-section or per-page tints; no indigo, lilac, coral, rust, sky or green panels. Sage is not used for decoration.
 
 The Significant Hobbies Hub renders in its independent repository. Delegated Hub pages and their design are outside this decision's implementation scope here.
 
@@ -69,7 +67,7 @@ Primary pages use one dominant spatial field followed by quieter supporting pass
 
 Live leads with a verb and an immediate invitation. It must make the user want to choose an activity, not admire a planning system. Mortality belongs in History and acts as context, never as the dominant emotional register of the action surface.
 
-The global shell exposes Explore, My list, Weekly journal, and Life in weeks. These reuse the incumbent shell and workspaces. The bucket-list cleanup removes competing steps and navigation without replacing typography, colors, imagery, or layout.
+The global shell exposes Explore, My list, Journal, and Life in weeks. These reuse the incumbent shell and workspaces. The bucket-list cleanup removes competing steps and navigation without replacing typography, colors, imagery, or layout.
 
 Completion logging stays in My list. There is no Habits page or navigation link; its old URL redirects to My list. The old Daily URL redirects to the weekly journal.
 
@@ -85,7 +83,7 @@ Controls use 12px corners and major bounded surfaces use 16px corners. Paths, co
 
 ### Navigation
 
-The wordmark is `SH` with an accessible full name. Explore, My list, Weekly journal, and Life in weeks are direct links in that order on desktop and mobile. Preserve the established destination colors and responsive menu.
+The wordmark is the Live ring mark plus 'Live'. Explore, My list, Journal, and Life in weeks are direct links in that order on desktop and mobile. Keep the responsive menu and use a gold underline for the active link.
 
 ### Cards / Containers
 

@@ -1,11 +1,16 @@
 'use client';
 
-import { CalendarDays, Check, Loader2 } from 'lucide-react';
-import Link from 'next/link';
-import { useEffect, useMemo, useState } from 'react';
-
+import { useEffect, useState } from 'react';
 import { shiftDayKey } from '~/lib/day';
-import { formatWeekOf, formatWeekSpan, weekStartFor, type WeekStartsOn } from '~/lib/weekly-log';
+import {
+  defaultWritingWeek,
+  entryWeekFor,
+  findEntryForWeek,
+  formatWeekChooserSpan,
+  formatWeekSpan,
+  weekStartFor,
+  type WeekStartsOn,
+} from '~/lib/weekly-log';
 
 export type WeeklyLogEntryView = {
   id: string;
@@ -15,17 +20,16 @@ export type WeeklyLogEntryView = {
   turns?: Array<{ questionText: string; answer: string }>;
 };
 
-export type WeeklyLogData = {
-  firstName: string;
+type WeeklyLogData = {
   today: string;
   weekStartsOn: WeekStartsOn;
   entries: WeeklyLogEntryView[];
-  weeksRemaining: number | null;
   archiveSlot?: React.ReactNode;
+  storageSlot?: React.ReactNode;
   emailOptIn?: boolean;
 };
 
-export type WeeklyLogActions = {
+type WeeklyLogActions = {
   onSave: (weekOf: string, text: string, promptText: string | null) => Promise<boolean>;
   onWeekStartsOnChange: (value: WeekStartsOn) => Promise<void>;
   onEmailOptInChange?: (optIn: boolean) => Promise<void>;
@@ -40,45 +44,50 @@ export function WeeklyLogSurface({
 }) {
   const [weekStartsOn, setWeekStartsOn] = useState(data.weekStartsOn);
   const [entries, setEntries] = useState(data.entries);
+  const [weekOf, setWeekOf] = useState(() => defaultWritingWeek(data.today, data.weekStartsOn));
   useEffect(() => setEntries(data.entries), [data.entries]);
-  useEffect(() => setWeekStartsOn(data.weekStartsOn), [data.weekStartsOn]);
-
-  const [text, setText] = useState('');
-  const [editedWeek, setEditedWeek] = useState<string | null>(null);
+  const [drafts, setDrafts] = useState<Record<string, string>>({});
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
-  const [saveError, setSaveError] = useState<string | null>(null);
-  const weekOf = useMemo(
-    () => weekStartFor(shiftDayKey(data.today, -7), weekStartsOn),
-    [data.today, weekStartsOn]
+  const [saveError, setSaveError] = useState('');
+  const currentWeek = weekStartFor(data.today, weekStartsOn);
+  const lastWeek = shiftDayKey(currentWeek, -7);
+  const currentEntry = findEntryForWeek(entries, weekOf, weekStartsOn);
+  const textareaValue = drafts[weekOf] ?? currentEntry?.text ?? '';
+  const hasUnsavedChanges = textareaValue !== (currentEntry?.text ?? '');
+  const anyUnsavedChanges = Object.entries(drafts).some(
+    ([key, value]) => value !== (findEntryForWeek(entries, key, weekStartsOn)?.text ?? '')
   );
-  const currentEntry = entries.find((entry) => entry.weekOf === weekOf) ?? null;
-  const textareaValue = editedWeek === weekOf ? text : (currentEntry?.text ?? '');
-  const hasUnsavedChanges = editedWeek === weekOf && text !== (currentEntry?.text ?? '');
+  const relative = weekOf === currentWeek ? 'This week' : weekOf === lastWeek ? 'Last week' : '';
+  const heading = `What did ${weekOf === currentWeek ? 'this' : weekOf === lastWeek ? 'last' : 'that'} week hold?`;
 
   async function handleSave() {
     const composed = textareaValue.trim();
     if (!composed || saving) return;
     setSaving(true);
     setSaved(false);
-    setSaveError(null);
+    setSaveError('');
     try {
-      const promptText = currentEntry?.promptText ?? 'What did you do last week?';
-      const ok = await actions.onSave(weekOf, composed, promptText);
-      if (!ok) throw new Error('not saved');
-      setEntries((current) => {
-        const next = {
-          id: currentEntry?.id ?? `week-${weekOf}`,
-          weekOf,
-          text: composed,
-          promptText,
-        };
-        return current.some((entry) => entry.weekOf === weekOf)
-          ? current.map((entry) => (entry.weekOf === weekOf ? next : entry))
-          : [next, ...current];
+      const originalKey = currentEntry?.weekOf ?? weekOf;
+      const promptText = currentEntry ? currentEntry.promptText : heading;
+      if (!(await actions.onSave(originalKey, composed, promptText))) throw new Error('not saved');
+      const next = {
+        ...currentEntry,
+        id: currentEntry?.id ?? `week-${originalKey}`,
+        weekOf: originalKey,
+        text: composed,
+        promptText,
+      };
+      setEntries((current) =>
+        currentEntry
+          ? current.map((entry) => (entry.id === currentEntry.id ? next : entry))
+          : [next, ...current]
+      );
+      setDrafts((current) => {
+        const nextDrafts = { ...current };
+        delete nextDrafts[weekOf];
+        return nextDrafts;
       });
-      setText('');
-      setEditedWeek(null);
       setSaved(true);
     } catch {
       setSaveError('Your words are still here — Live could not save yet. Try again.');
@@ -87,228 +96,185 @@ export function WeeklyLogSurface({
     }
   }
 
+  function selectWeek(next: string) {
+    setWeekOf(next);
+    setSaved(false);
+    setSaveError('');
+  }
   async function changeWeekStart(value: WeekStartsOn) {
-    if (value === weekStartsOn || saving || hasUnsavedChanges) return;
-    const previous = weekStartsOn;
-    setWeekStartsOn(value);
+    if (value === weekStartsOn || saving || anyUnsavedChanges) return;
+    setSaving(true);
+    setSaved(false);
+    setSaveError('');
     try {
       await actions.onWeekStartsOnChange(value);
+      setWeekStartsOn(value);
+      setWeekOf(entryWeekFor(weekOf, value));
+      setDrafts({});
     } catch {
-      setWeekStartsOn(previous);
+      setSaveError('The week setting could not be saved. Try again.');
+    } finally {
+      setSaving(false);
     }
   }
 
   return (
-    <div className="mx-auto max-w-4xl space-y-6 px-4 py-6 sm:py-8">
-      <HeaderCard
-        firstName={data.firstName}
-        weekOf={weekOf}
-        weekStartsOn={weekStartsOn}
-        weeksRemaining={data.weeksRemaining}
-        weekStartDisabled={saving || hasUnsavedChanges}
-        onWeekStart={changeWeekStart}
-      />
-      <section
-        aria-labelledby="weekly-entry-title"
-        className="overflow-hidden rounded-2xl bg-card shadow-[0_12px_36px_color-mix(in_srgb,var(--scrim)_10%,transparent)]"
-      >
-        <div className="border-b border-border px-5 py-5 sm:px-7">
-          <p className="text-sm font-semibold text-subtle">{formatWeekOf(weekOf)}</p>
-          <h2
-            id="weekly-entry-title"
-            className="mt-1 font-serif text-3xl font-medium tracking-tight text-foreground"
-          >
-            What did you do last week?
-          </h2>
-        </div>
-        <div className="px-5 py-6 sm:px-7 sm:py-8">
-          <label htmlFor="weekly-entry" className="sr-only">
-            What did you do last week?
-          </label>
-          <textarea
-            id="weekly-entry"
-            value={textareaValue}
-            onChange={(event) => {
-              setText(event.target.value);
-              setEditedWeek(weekOf);
-              setSaved(false);
-            }}
-            placeholder="One honest paragraph is enough. What did you try, finish, or enjoy?"
-            rows={7}
+    <div className="mx-auto min-h-[75vh] max-w-[760px] px-4 py-6 sm:px-6 sm:py-11">
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <div className="flex min-w-0 items-center gap-2 text-sm text-muted-foreground">
+          <button
+            type="button"
+            aria-label="Previous week"
             disabled={saving}
-            maxLength={8000}
-            className="w-full resize-y rounded-xl border border-border bg-card px-4 py-3 text-base leading-relaxed outline-none focus:border-growth focus:ring-2 focus:ring-growth/20"
-          />
-          <div className="mt-4 flex flex-wrap items-center gap-3">
-            <button
-              type="button"
-              onClick={handleSave}
-              disabled={saving || !textareaValue.trim()}
-              className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-primary px-5 font-bold text-primary-foreground disabled:opacity-45"
-            >
-              {saving ? <Loader2 className="size-4 animate-spin" /> : <Check className="size-4" />}
-              {currentEntry ? 'Update this week' : 'Keep this week'}
-            </button>
-            <p aria-live="polite" className="text-sm font-semibold text-growth">
-              {saved ? 'Kept. This week is on record.' : ''}
-            </p>
-          </div>
-          {saveError ? (
-            <p role="alert" className="mt-3 text-sm font-bold text-destructive">
-              {saveError}
-            </p>
-          ) : null}
-          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-            Your entry stays private. No daily writing requirement, streaks, or scores.
-          </p>
+            onClick={() => selectWeek(shiftDayKey(weekOf, -7))}
+            className="size-11 shrink-0 rounded-xl border border-border text-xl disabled:opacity-40"
+          >
+            ‹
+          </button>
+          <span className="tabular-nums">
+            {relative && `${relative} · `}
+            {formatWeekChooserSpan(weekOf)}
+          </span>
+          <button
+            type="button"
+            aria-label="Next week"
+            disabled={saving || weekOf >= currentWeek}
+            onClick={() => selectWeek(shiftDayKey(weekOf, 7))}
+            className="size-11 shrink-0 rounded-xl border border-border text-xl disabled:opacity-40"
+          >
+            ›
+          </button>
         </div>
-      </section>
-      {data.emailOptIn !== undefined && actions.onEmailOptInChange ? (
-        <EmailNudgeCard optIn={data.emailOptIn} onChange={actions.onEmailOptInChange} />
-      ) : null}
-      <WeekHistoryCard entries={entries.filter((entry) => entry.weekOf !== weekOf)} />
+        {data.storageSlot}
+      </div>
+      <h1 className="mt-3 font-serif text-[30px] font-medium leading-tight sm:text-[40px]">
+        {heading}
+      </h1>
+      <label htmlFor="weekly-entry" className="sr-only">
+        {heading}
+      </label>
+      <textarea
+        id="weekly-entry"
+        value={textareaValue}
+        onChange={(event) => {
+          setDrafts((current) => ({ ...current, [weekOf]: event.target.value }));
+          setSaved(false);
+        }}
+        placeholder="One honest paragraph is enough."
+        rows={7}
+        disabled={saving}
+        maxLength={8000}
+        className="mt-6 min-h-[220px] w-full resize-y rounded-xl border border-border bg-card px-4 py-3 text-base leading-relaxed"
+      />
+      <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center">
+        <button
+          type="button"
+          onClick={handleSave}
+          disabled={saving || !textareaValue.trim()}
+          className="min-h-11 rounded-xl bg-brand px-5 text-sm font-semibold text-brand-foreground disabled:opacity-45"
+        >
+          {saving ? 'Saving…' : currentEntry ? 'Update this week' : 'Save this week'}
+        </button>
+        <span className="text-[13px] text-muted-foreground">Private. No streaks, no scores.</span>
+        <span role="status" className="text-sm text-muted-foreground">
+          {saved && !hasUnsavedChanges ? 'Saved.' : ''}
+        </span>
+      </div>
+      {saveError && (
+        <p role="alert" className="mt-3 text-sm text-destructive">
+          {saveError}
+        </p>
+      )}
+      {data.emailOptIn !== undefined && actions.onEmailOptInChange && (
+        <EmailNudge optIn={data.emailOptIn} onChange={actions.onEmailOptInChange} />
+      )}
+      <WeekHistory
+        entries={entries
+          .filter((entry) => entry.id !== currentEntry?.id)
+          .sort((a, b) => b.weekOf.localeCompare(a.weekOf))}
+      />
       {data.archiveSlot}
+      <div className="mt-6 text-[13px] text-muted-foreground">
+        <div className="flex flex-wrap items-center gap-2">
+          <label htmlFor="week-start">Weeks start on</label>
+          <select
+            id="week-start"
+            value={weekStartsOn}
+            disabled={saving || anyUnsavedChanges}
+            onChange={(event) => void changeWeekStart(event.target.value as WeekStartsOn)}
+            className="min-h-11 rounded-xl border border-border bg-surface px-3"
+          >
+            <option value="monday">Monday</option>
+            <option value="sunday">Sunday</option>
+          </select>
+        </div>
+        <p className="mt-2">
+          Only changes how weeks are grouped. Saved entries stay with the week you wrote them for.
+        </p>
+      </div>
     </div>
   );
 }
 
-function HeaderCard({
-  firstName,
-  weekOf,
-  weekStartsOn,
-  weeksRemaining,
-  weekStartDisabled,
-  onWeekStart,
-}: {
-  firstName: string;
-  weekOf: string;
-  weekStartsOn: WeekStartsOn;
-  weeksRemaining: number | null;
-  weekStartDisabled: boolean;
-  onWeekStart: (value: WeekStartsOn) => void;
-}) {
-  return (
-    <section className="relative overflow-hidden rounded-2xl bg-field-lilac px-5 py-5 text-foreground shadow-[0_10px_30px_color-mix(in_srgb,var(--scrim)_8%,transparent)] sm:px-7 sm:py-6">
-      <div className="relative flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-        <div>
-          <div className="flex items-center gap-2 text-sm font-semibold">
-            <CalendarDays className="size-5" aria-hidden="true" />
-            {formatWeekSpan(weekOf)}
-          </div>
-          <h1 className="mt-2 font-serif text-3xl font-medium leading-tight tracking-[-0.02em] sm:text-4xl">
-            The week in your own words{firstName !== 'there' ? `, ${firstName}` : ''}.
-          </h1>
-          <p className="mt-2 text-sm opacity-75">
-            One entry about the previous week. Write whenever you like.
-          </p>
-        </div>
-        <div className="flex flex-wrap items-center gap-2 text-xs font-semibold">
-          {weeksRemaining !== null && (
-            <Link href="/life-in-weeks" className="rounded-full bg-card/65 px-3 py-2 tabular-nums">
-              {weeksRemaining.toLocaleString()} weeks
-            </Link>
-          )}
-          <span className="inline-flex rounded-full bg-card/65 p-1" aria-label="Week starts on">
-            {(['monday', 'sunday'] as const).map((value) => (
-              <button
-                key={value}
-                type="button"
-                aria-pressed={weekStartsOn === value}
-                aria-label={`Weeks start ${value}`}
-                onClick={() => onWeekStart(value)}
-                disabled={weekStartDisabled}
-                className={`min-h-11 rounded-full px-3 capitalize transition-colors ${
-                  weekStartsOn === value ? 'bg-surface text-foreground' : 'text-muted-foreground'
-                }`}
-              >
-                {value}
-              </button>
-            ))}
-          </span>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function WeekHistoryCard({ entries }: { entries: WeeklyLogEntryView[] }) {
+function WeekHistory({ entries }: { entries: WeeklyLogEntryView[] }) {
   if (!entries.length) return null;
   return (
-    <section
-      aria-labelledby="weekly-history-title"
-      className="overflow-hidden rounded-2xl bg-card shadow-[0_12px_36px_color-mix(in_srgb,var(--scrim)_10%,transparent)]"
-    >
-      <div className="border-b border-border bg-field-coral p-5 sm:p-7">
-        <p className="text-sm font-bold text-field-coral-ink">Weeks on record</p>
-        <h2
-          id="weekly-history-title"
-          className="mt-1 font-serif text-3xl text-foreground sm:text-4xl"
-        >
-          {entries.length} {entries.length === 1 ? 'week' : 'weeks'} written
-        </h2>
-      </div>
-      <div className="divide-y divide-border px-5 sm:px-7">
-        {entries.map((entry, index) => (
-          <details key={entry.id} open={index === 0} className="group py-1">
-            <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 py-3 marker:content-none">
-              <span className="font-serif text-xl">{formatWeekOf(entry.weekOf)}</span>
-              <span className="text-xs font-semibold text-muted-foreground">
-                {formatWeekSpan(entry.weekOf)}
-              </span>
-            </summary>
-            <div className="pb-5">
-              <p className="mt-2 whitespace-pre-wrap text-sm leading-relaxed text-muted-foreground">
-                {entry.text}
-              </p>
-            </div>
-          </details>
-        ))}
-      </div>
+    <section aria-labelledby="weekly-history-title" className="mt-14">
+      <h2
+        id="weekly-history-title"
+        className="border-b border-border/60 pb-3 font-serif text-[22px]"
+      >
+        Earlier weeks
+      </h2>
+      {entries.map((entry) => (
+        <article key={entry.id} className="border-b border-border/60 py-4">
+          <p className="text-[13px] tabular-nums text-muted-foreground">
+            {formatWeekSpan(entry.weekOf)}
+          </p>
+          <p className="mt-1 line-clamp-3 whitespace-pre-wrap break-words text-[15px] text-muted-foreground">
+            {entry.text}
+          </p>
+        </article>
+      ))}
     </section>
   );
 }
 
-function EmailNudgeCard({
+function EmailNudge({
   optIn,
   onChange,
 }: {
   optIn: boolean;
-  onChange: (optIn: boolean) => Promise<void>;
+  onChange: (value: boolean) => Promise<void>;
 }) {
   const [on, setOn] = useState(optIn);
   const [pending, setPending] = useState(false);
+  const [error, setError] = useState('');
   return (
-    <section className="flex items-center justify-between gap-4 rounded-2xl border border-border bg-card px-5 py-4 shadow-[0_12px_36px_color-mix(in_srgb,var(--scrim)_6%,transparent)] sm:px-7">
-      <div>
-        <p className="font-serif text-lg">A Sunday nudge, if you want one.</p>
-        <p className="mt-0.5 text-sm text-muted-foreground">
-          One quiet email when the week turns — nothing counted, nothing scored.
-        </p>
-      </div>
-      <button
-        type="button"
-        role="switch"
-        aria-checked={on}
-        disabled={pending}
-        onClick={async () => {
-          const next = !on;
-          setOn(next);
-          setPending(true);
-          try {
-            await onChange(next);
-          } catch {
-            setOn(!next);
-          } finally {
-            setPending(false);
-          }
-        }}
-        className={`relative h-7 w-12 shrink-0 rounded-full transition-colors disabled:opacity-50 ${on ? 'bg-growth' : 'bg-muted'}`}
-        aria-label="Email me a Sunday nudge"
-      >
-        <span
-          className={`absolute top-0.5 size-6 rounded-full bg-card shadow transition-transform ${on ? 'translate-x-5' : 'translate-x-0.5'}`}
+    <div className="mt-5 text-sm text-muted-foreground">
+      <label className="flex min-h-11 items-center gap-3">
+        <input
+          type="checkbox"
+          checked={on}
+          disabled={pending}
+          className="size-5 accent-muted-foreground"
+          onChange={async (event) => {
+            const next = event.target.checked;
+            setPending(true);
+            setError('');
+            try {
+              await onChange(next);
+              setOn(next);
+            } catch {
+              setError('Could not save your email preference. Try again.');
+            } finally {
+              setPending(false);
+            }
+          }}
         />
-      </button>
-    </section>
+        Email me a quiet Sunday nudge.
+      </label>
+      {error && <p role="alert">{error}</p>}
+    </div>
   );
 }

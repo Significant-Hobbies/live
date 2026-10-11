@@ -59,6 +59,7 @@ export async function readLocalWeeklyLog(
   const stored = await readLocalRecord(adapter, LOCAL_WEEKLY_LOG_KEY, 'weekly-log', isState);
   if (!stored) return EMPTY_LOCAL_WEEKLY_LOG;
   return {
+    ...stored,
     weekStartsOn: normalizeWeekStartsOn(stored.weekStartsOn),
     entries: stored.entries,
     servedQuestionIds: Array.isArray(stored.servedQuestionIds)
@@ -78,6 +79,7 @@ export async function saveLocalWeeklyEntry(
   const trimmed = text.trim().slice(0, 8000);
   const existing = current.entries.find((entry) => entry.weekOf === weekOf);
   const entry: LocalWeeklyEntry = {
+    ...existing,
     id: existing?.id ?? `local-week-${crypto.randomUUID()}`,
     weekOf,
     text: trimmed,

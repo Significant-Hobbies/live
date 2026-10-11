@@ -14,7 +14,7 @@ import { ExperiencesClient } from './experiences-client';
 const description =
   'Every experience we know about, in one searchable list: places to go, milestones to reach, and ideas worth stealing. No account needed.';
 export const metadata: Metadata = {
-  title: { absolute: 'Experiences worth making room for' },
+  title: 'Experiences worth making room for',
   description,
   alternates: { canonical: '/experiences' },
   openGraph: {

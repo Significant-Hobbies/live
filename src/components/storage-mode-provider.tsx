@@ -20,13 +20,17 @@ export function useStorageMode(): StorageMode {
   return useContext(StorageModeContext);
 }
 
-export function StorageModeStatus() {
+export function StorageModeStatus({ compact = false }: { compact?: boolean }) {
   const mode = useStorageMode();
   return (
     <p className="text-xs text-muted-foreground" role="status">
-      {mode === 'account'
-        ? 'Saved to your account and available across your devices.'
-        : 'Saved privately on this device. Sign in only when you want cross-device access.'}
+      {compact
+        ? mode === 'account'
+          ? 'Saved to your account'
+          : 'Saved on this device'
+        : mode === 'account'
+          ? 'Saved to your account and available across your devices.'
+          : 'Saved privately on this device. Sign in only when you want cross-device access.'}
     </p>
   );
 }

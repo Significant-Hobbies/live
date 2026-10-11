@@ -57,9 +57,11 @@ test('a visitor can choose a collection, save an activity and complete it after 
   ).toBeVisible();
   await page.goto('/bucket-list');
   await page.reload();
-  await page.getByRole('button', { name: 'Complete Make pasta from scratch' }).click();
+  await page.getByRole('button', { name: 'Mark Make pasta from scratch as lived' }).click();
   await page.reload();
-  await expect(page.getByRole('button', { name: 'Reopen Make pasta from scratch' })).toBeVisible();
+  await expect(
+    page.getByRole('button', { name: 'Reopen Make pasta from scratch to To do' })
+  ).toBeVisible();
 });
 
 test('the idea roundup reports its actual count and links directly to activity pages', async ({

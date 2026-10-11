@@ -48,13 +48,13 @@ export default function LifeBingoPage() {
   return (
     <div data-life-bingo-page className="overflow-hidden bg-background text-foreground">
       <section className="px-4 py-10 sm:py-14">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 overflow-hidden rounded-2xl bg-field-lilac px-6 py-10 shadow-[0_16px_44px_color-mix(in_srgb,var(--scrim)_12%,transparent)] lg:grid-cols-[0.84fr_1.16fr] lg:gap-16 lg:px-12 lg:py-14">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 overflow-hidden rounded-2xl bg-card px-6 py-10 shadow-[0_16px_44px_color-mix(in_srgb,var(--scrim)_12%,transparent)] lg:grid-cols-[0.84fr_1.16fr] lg:gap-16 lg:px-12 lg:py-14">
           <div className="text-foreground">
             <p className="mb-5 text-base font-bold">A bucket list you can play</p>
             <h1 className="max-w-2xl font-serif text-5xl font-medium leading-[0.94] tracking-[-0.035em] sm:text-6xl lg:text-7xl">
               Make life less repetitive.
             </h1>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-field-lilac-ink sm:text-xl">
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-xl">
               Turn the things you keep saying “someday” about into a board of real experiences. Then
               go live them.
             </p>
@@ -64,8 +64,8 @@ export default function LifeBingoPage() {
                   Make my Life Bingo <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
-              <span className="flex min-h-11 items-center gap-2 px-2 text-sm text-field-lilac-ink">
-                <Check className="h-4 w-4 text-growth" /> No account needed
+              <span className="flex min-h-11 items-center gap-2 px-2 text-sm text-muted-foreground">
+                <Check className="h-4 w-4 text-muted-foreground" /> No account needed
               </span>
             </div>
           </div>
@@ -79,7 +79,7 @@ export default function LifeBingoPage() {
       <section className="mt-10 bg-card px-4 py-20 sm:py-28">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-24">
           <div>
-            <p className="text-sm font-semibold text-primary">Not another goal tracker.</p>
+            <p className="text-sm font-semibold text-foreground">Not another goal tracker.</p>
             <h2 className="mt-4 max-w-xl font-serif text-4xl font-semibold leading-[1.02] tracking-[-0.03em] sm:text-5xl">
               A list should pull you into your life.
             </h2>
@@ -87,7 +87,7 @@ export default function LifeBingoPage() {
           <ol className="grid list-none gap-8 sm:grid-cols-3">
             {steps.map(([number, title, copy]) => (
               <li key={number} className="border-t border-border pt-5">
-                <p className="font-serif text-2xl text-primary">{number}</p>
+                <p className="font-serif text-2xl text-foreground">{number}</p>
                 <h3 className="mt-8 text-base font-bold text-foreground">{title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{copy}</p>
               </li>
@@ -96,7 +96,7 @@ export default function LifeBingoPage() {
         </div>
       </section>
 
-      <section className="bg-field-sky px-4 py-20 sm:py-28">
+      <section className="bg-surface px-4 py-20 sm:py-28">
         <div className="mx-auto grid max-w-5xl items-end gap-10 border-y border-border py-12 md:grid-cols-[1fr_auto] sm:py-16">
           <div>
             <p className="text-sm font-semibold text-foreground">One list. Two ways to use it.</p>
@@ -105,13 +105,13 @@ export default function LifeBingoPage() {
             </h2>
             <div className="mt-7 flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">
-                <Circle className="h-3.5 w-3.5 text-primary" /> Add your own ideas
+                <Circle className="h-3.5 w-3.5 text-foreground" /> Add your own ideas
               </span>
               <span className="flex items-center gap-2">
-                <Circle className="h-3.5 w-3.5 text-primary" /> Mark moments lived
+                <Circle className="h-3.5 w-3.5 text-foreground" /> Mark moments lived
               </span>
               <span className="flex items-center gap-2">
-                <Circle className="h-3.5 w-3.5 text-primary" /> Export the board
+                <Circle className="h-3.5 w-3.5 text-foreground" /> Export the board
               </span>
             </div>
           </div>

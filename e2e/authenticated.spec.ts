@@ -55,7 +55,7 @@ test.describe('authenticated surfaces', () => {
 
     await page.goto('/bucket-list');
     await expect(page).toHaveURL(/\/bucket-list$/);
-    await expect(page.getByRole('heading', { name: 'Your Bucket List' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'My list' })).toBeVisible();
 
     await page.goto('/experiences');
     await page.getByLabel('Search everything').fill('Make pasta from scratch');
@@ -67,22 +67,19 @@ test.describe('authenticated surfaces', () => {
     await add.click();
     await expect(page.getByText('Added to your bucket list')).toBeVisible();
     await page.goto('/bucket-list');
-    const item = page.getByRole('group', { name: 'Controls for Make pasta from scratch' });
-    await item.getByRole('button', { name: 'Done', exact: true }).click();
-    await expect(item.getByRole('button', { name: 'Done', exact: true })).toHaveAttribute(
-      'aria-pressed',
-      'true'
-    );
+    await page.getByRole('button', { name: 'Mark Make pasta from scratch as lived' }).click();
+    await expect(
+      page.getByRole('button', { name: 'Reopen Make pasta from scratch to To do' })
+    ).toBeVisible();
     await page.reload();
-    await expect(item.getByRole('button', { name: 'Done', exact: true })).toHaveAttribute(
-      'aria-pressed',
-      'true'
-    );
+    await expect(
+      page.getByRole('button', { name: 'Reopen Make pasta from scratch to To do' })
+    ).toBeVisible();
 
     await page.goto('/journal');
     await page.locator('#weekly-entry').fill('Made pasta and took a long walk last week.');
-    await page.getByRole('button', { name: 'Keep this week', exact: true }).click();
-    await expect(page.getByText('Kept. This week is on record.')).toBeVisible();
+    await page.getByRole('button', { name: 'Save this week', exact: true }).click();
+    await expect(page.getByText('Saved.')).toBeVisible();
     await page.reload();
     await expect(page.locator('#weekly-entry')).toHaveValue(
       'Made pasta and took a long walk last week.'
@@ -133,7 +130,7 @@ test.describe('authenticated surfaces', () => {
     const journal = 'I noticed something new today.';
     await authedPage.goto('/journal');
     await authedPage.locator('#weekly-entry').fill(journal);
-    await authedPage.getByRole('button', { name: /Keep this week|Update this week/ }).click();
+    await authedPage.getByRole('button', { name: /Save this week|Update this week/ }).click();
     await authedPage.goto('/live-more');
     await authedPage.getByLabel('What do you still want to live?').fill(chosenIdea);
     await expect(authedPage.getByRole('button', { name: 'Calling now' })).toBeVisible();
@@ -153,13 +150,13 @@ test.describe('authenticated surfaces', () => {
   test('the weekly journal offers one entry about last week', async ({ authedPage }) => {
     await authedPage.goto('/journal');
     await expect(authedPage.locator('#weekly-entry')).toBeVisible();
-    await expect(authedPage.getByText(/Week of /).first()).toBeVisible();
+    await expect(authedPage.getByRole('button', { name: 'Previous week' })).toBeVisible();
     await expect(
-      authedPage.getByRole('heading', { name: 'What did you do last week?' })
+      authedPage.getByRole('heading', { name: /What did (this|last|that) week hold\?/ })
     ).toBeVisible();
     await expect(authedPage.getByRole('button', { name: 'Next question' })).toHaveCount(0);
     await expect(
-      authedPage.getByRole('button', { name: /Keep this week|Update this week/ })
+      authedPage.getByRole('button', { name: /Save this week|Update this week/ })
     ).toBeVisible();
   });
 
@@ -176,40 +173,30 @@ test.describe('authenticated surfaces', () => {
     }
   });
 
-  test('a quest can be started AND finished, closing its bucket item', async ({ authedPage }) => {
-    // `completeUserQuest` and `abandonQuest` had zero callers app-wide, so the
-    // quest lifecycle was one-way: startable, never finishable. Nothing could
-    // reach 'completed', which is why the dashboard's completed section, the
-    // profile's "The evidence" and four behavioural insights were all
-    // permanently empty. This walks the whole loop through the UI.
-    await authedPage.goto('/bucket-lists/will-smith');
-
-    const addButton = authedPage
-      .getByRole('button', { name: /^Add .+ to my bucket list$/ })
-      .first();
-    await expect(addButton).toBeVisible();
-    await addButton.click();
-    await expect(authedPage.getByText('Added to your bucket list').first()).toBeVisible();
-
+  test('manual steps persist independently of lived status', async ({ authedPage }) => {
+    const title = `Sail with a friend ${crypto.randomUUID().slice(0, 8)}`;
     await authedPage.goto('/bucket-list');
-    const start = authedPage.getByRole('button', { name: /Start step 1/ }).first();
-    await expect(start, 'a planned bucket item should offer its first quest step').toBeVisible();
-    await start.click();
-
-    // Now in progress — and crucially, finishable.
-    const markDone = authedPage.getByRole('button', { name: 'Mark done' }).first();
-    await expect(markDone, 'an active step must be completable').toBeVisible();
-    await markDone.click();
-
-    // The step reports Done rather than staying "In progress" forever.
-    await expect(authedPage.getByText('Done', { exact: true }).first()).toBeVisible();
-
-    // And the bucket item must NOT be closed yet. My first version of the
-    // quest→bucket edge treated "no quests currently active" as "chain
-    // finished", so finishing step 1 of five marked a whole life goal done.
-    // The chain card stays in the detailed bucket-list workspace and reports
-    // partial progress.
-    await expect(authedPage.getByText(/1\/\d+ steps done/).first()).toBeVisible();
+    await waitForHydrated(authedPage.getByLabel('Add something you want to do'));
+    await authedPage.getByLabel('Add something you want to do').fill(title);
+    await authedPage.getByRole('button', { name: 'Add', exact: true }).click();
+    await authedPage.getByRole('button', { name: `Open ${title}` }).click();
+    const panel = authedPage
+      .getByRole('complementary', { name: `Item: ${title}` })
+      .filter({ visible: true });
+    await panel.getByLabel('Add a step').fill('Ask a friend');
+    await panel.getByRole('button', { name: 'Add', exact: true }).click();
+    await panel.getByRole('checkbox', { name: 'Ask a friend' }).check();
+    await expect(panel.getByRole('radio', { name: 'To do', exact: true })).toHaveAttribute(
+      'aria-checked',
+      'true'
+    );
+    await authedPage.reload();
+    await authedPage.getByRole('button', { name: `Open ${title}` }).click();
+    await expect(panel.getByRole('checkbox', { name: 'Ask a friend' })).toBeChecked();
+    await panel.getByRole('radio', { name: 'Lived', exact: true }).click();
+    await expect(
+      authedPage.getByRole('button', { name: `Reopen ${title} to To do` })
+    ).toBeVisible();
   });
 
   test('the creed can be written and remains durable', async ({ authedPage }) => {
@@ -259,53 +246,27 @@ test.describe('authenticated surfaces', () => {
   });
 
   test('a bucket item can be advanced, published, and deleted', async ({ authedPage }) => {
-    // All four item mutations existed with zero callers, so items were
-    // write-once: 'in_progress' was unreachable (leaving /live-more's "In
-    // progress" panel permanently empty), nothing could be made public (leaving
-    // the profile's bucket-list block empty for every user), and nothing could
-    // be removed. They also revalidated only /dashboard, which does not render
-    // bucket items at all.
-    // A different source list from the quest-lifecycle test above. The suite runs
-    // fullyParallel against one dev.db, so two tests adding the same item title
-    // would each see the other's row and the delete assertion would never settle.
-    await authedPage.goto('/bucket-lists/richard-branson');
-    const add = authedPage.getByRole('button', { name: /^Add .+ to my bucket list$/ }).first();
-    // Same hydration trap as the commitments trigger: an unhydrated click is
-    // silent, so the toast never fires and this reads as a broken add button.
-    await waitForHydrated(add);
-    await add.click();
-    await expect(authedPage.getByText('Added to your bucket list').first()).toBeVisible();
-
+    const title = `Make a bowl ${crypto.randomUUID().slice(0, 8)}`;
     await authedPage.goto('/bucket-list');
-
-    // Scope every interaction to one item's own control group. The test user may
-    // already own other items, so unscoped `.first()` lookups would drift.
-    const controls = authedPage.getByRole('group', { name: /^Controls for / }).first();
-    await expect(controls, 'a bucket item should expose owner controls').toBeVisible();
-    const label = (await controls.getAttribute('aria-label')) as string;
-    // Local dev data survives between runs, so the same public-list item can
-    // already exist more than once. Keep this test scoped to one concrete row
-    // and prove deletion by the count changing instead of assuming a clean DB.
-    const matchingRows = authedPage.getByRole('group', { name: label });
-    const matchingCount = await matchingRows.count();
-    const scoped = matchingRows.first();
-
-    // Advance it — this status was previously unreachable. Re-resolve through the
-    // labelled locator after each router.refresh() so the handle stays attached.
-    await scoped.getByRole('button', { name: 'In progress' }).click();
-    await expect(scoped.getByRole('button', { name: 'In progress' })).toHaveAttribute(
-      'aria-pressed',
+    await waitForHydrated(authedPage.getByLabel('Add something you want to do'));
+    await authedPage.getByLabel('Add something you want to do').fill(title);
+    await authedPage.getByRole('button', { name: 'Add', exact: true }).click();
+    await authedPage.getByRole('button', { name: `Open ${title}` }).click();
+    const panel = authedPage
+      .getByRole('complementary', { name: `Item: ${title}` })
+      .filter({ visible: true });
+    await panel.getByRole('radio', { name: 'Doing', exact: true }).click();
+    await expect(panel.getByRole('radio', { name: 'Doing', exact: true })).toHaveAttribute(
+      'aria-checked',
       'true'
     );
-
-    // Publish it — the only path to the public profile's bucket-list block.
-    await scoped.getByRole('button', { name: 'Private' }).click();
-    await expect(scoped.getByRole('button', { name: 'Public' })).toBeVisible();
-
-    // And remove it, behind a confirm step.
-    await scoped.getByRole('button', { name: /^Remove / }).click();
-    await scoped.getByRole('button', { name: 'Delete', exact: true }).click();
-    await expect(matchingRows, 'one matching item should be gone').toHaveCount(matchingCount - 1);
+    await panel.getByLabel('Visibility').selectOption('public');
+    await expect(panel.getByLabel('Visibility')).toHaveValue('public');
+    await panel.getByRole('button', { name: 'Remove from list', exact: true }).click();
+    await panel.getByRole('button', { name: 'Remove', exact: true }).click();
+    await expect(authedPage.getByRole('button', { name: `Mark ${title} as lived` })).toHaveCount(0);
+    await authedPage.reload();
+    await expect(authedPage.getByRole('button', { name: `Mark ${title} as lived` })).toHaveCount(0);
   });
 
   test('a logged stamp shows its proof back, and never as a javascript: link', async ({
@@ -377,7 +338,7 @@ test.describe('authenticated surfaces', () => {
     await expect(authedPage.getByText('1 dream is now in your atlas.')).toBeVisible();
 
     await authedPage.goto('/bucket-list');
-    await expect(authedPage.getByRole('group', { name: `Controls for ${dream}` })).toHaveCount(1);
+    await expect(authedPage.getByRole('button', { name: `Mark ${dream} as lived` })).toHaveCount(1);
 
     await authedPage.goto('/live-more');
     await authedPage.getByLabel('What do you still want to live?').fill(dream);

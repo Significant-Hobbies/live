@@ -5,12 +5,12 @@ import { getBingoProgress, type BucketListDraft, type BucketListItem } from '~/l
 import { cn } from '~/lib/utils';
 
 const TONE_CLASSES: Record<BucketListItem['tone'], string> = {
-  moss: 'border-field-green-ink bg-field-green text-foreground',
-  clay: 'border-field-coral-ink bg-field-coral text-foreground',
-  marigold: 'border-brand bg-field-sun text-foreground',
-  sky: 'border-field-sky-ink bg-field-sky text-foreground',
-  rose: 'border-field-rose-ink bg-field-rose text-foreground',
-  ink: 'border-border bg-surface text-foreground',
+  moss: 'border-border bg-card text-foreground',
+  clay: 'border-border bg-card text-foreground',
+  marigold: 'border-border bg-card text-foreground',
+  sky: 'border-border bg-card text-foreground',
+  rose: 'border-border bg-card text-foreground',
+  ink: 'border-border bg-card text-foreground',
 };
 
 export function BingoBoard({
@@ -141,13 +141,11 @@ export function BingoBoard({
                 {item.text}
               </span>
               {item.completedAt && (
-                <span className="life-bingo-stamp absolute bottom-1.5 right-1.5 z-20 flex h-[43%] w-[43%] rotate-[-8deg] items-center justify-center rounded-full border-2 border-growth bg-card text-growth mix-blend-normal sm:bottom-2.5 sm:right-2.5">
-                  <span className="flex h-[76%] w-[76%] flex-col items-center justify-center rounded-full border border-current">
-                    <Check className="h-1/3 w-1/3 stroke-[3]" aria-hidden="true" />
-                    <span className="text-[0.5rem] font-black uppercase tracking-[0.1em] sm:text-[0.58rem]">
-                      Lived
-                    </span>
-                  </span>
+                <span
+                  aria-label="Lived"
+                  className="absolute bottom-1 right-1 flex size-5 items-center justify-center text-muted-foreground"
+                >
+                  <Check className="size-3.5" aria-hidden="true" />
                 </span>
               )}
               {item.isWildcard && !item.completedAt && (
@@ -167,7 +165,7 @@ export function BingoBoard({
             position % 4 === 2 && 'rounded-[0.8rem_1rem_0.65rem_1.05rem]',
             position % 4 === 3 && 'rounded-[1.05rem_0.8rem_0.95rem_0.65rem]',
             onSelectItem &&
-              'hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-growth focus-visible:ring-offset-2'
+              'hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
           );
 
           return onSelectItem ? (
@@ -194,7 +192,7 @@ export function BingoBoard({
             ? `${progress.lines.length} bingo ${progress.lines.length === 1 ? 'line' : 'lines'}`
             : 'In progress'}
         </span>
-        {showAttribution && <span>Significant Hobbies · Life Bingo</span>}
+        {showAttribution && <span>Live · Life Bingo</span>}
       </footer>
     </section>
   );

@@ -85,8 +85,8 @@ export function AddToMyListButton({
 
   if (added) {
     return (
-      <span className="inline-flex items-center gap-1.5 text-xs font-medium text-brand">
-        <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-primary text-primary-foreground text-[9px] font-bold">
+      <span className="inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
+        <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-muted text-foreground text-[9px] font-bold">
           ✓
         </span>
         Added to your bucket list
@@ -105,7 +105,7 @@ export function AddToMyListButton({
       aria-describedby={
         failed ? `add-${title.replace(/\W+/g, '-').toLowerCase()}-error` : undefined
       }
-      className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-lumi-200 bg-card px-3 py-1 text-xs font-medium text-brand transition-colors hover:bg-primary/10 disabled:cursor-not-allowed disabled:opacity-50"
+      className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted-foreground transition-colors hover:bg-muted disabled:cursor-not-allowed disabled:opacity-50"
     >
       {isPending ? 'Adding…' : failed ? 'Could not save — retry' : '+ Add to my list'}
       {failed ? (

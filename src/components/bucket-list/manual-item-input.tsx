@@ -90,30 +90,20 @@ export function ManualItemInput({
 
   return (
     <div>
-      <div className="mb-3 flex flex-wrap items-center gap-3 text-sm">
-        <p id={`${id}-help`}>Type to find ideas, or add your own wording.</p>
-        <Link
-          href="/experiences"
-          className="min-h-11 inline-flex items-center underline underline-offset-4"
-        >
-          Explore for inspiration →
-        </Link>
-      </div>
       <form
         onSubmit={(event) => {
           event.preventDefault();
           if (value.trim()) void add({ title: value.trim() });
         }}
-        className={`flex flex-col gap-3 rounded-2xl p-4 sm:flex-row sm:items-center ${dark ? 'bg-surface text-foreground' : 'border border-border bg-card'}`}
+        className="flex flex-col gap-2.5 min-[760px]:flex-row"
       >
-        <label htmlFor={id} className="shrink-0 font-serif text-xl">
-          I want to…
+        <label htmlFor={id} className="sr-only">
+          Add something you want to do
         </label>
         <input
           id={id}
           type="text"
           autoComplete="off"
-          aria-describedby={`${id}-help`}
           aria-controls={value.trim() ? `${id}-suggestions` : undefined}
           value={value}
           disabled={disabled || pending || submitting}
@@ -124,23 +114,27 @@ export function ManualItemInput({
             setMessage('');
             setSubmissionMessage('');
           }}
-          placeholder="Something I want to do…"
-          className={`min-h-11 min-w-0 flex-1 rounded-xl border px-4 text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-growth ${dark ? 'border-foreground/20 bg-card/10 text-foreground placeholder:text-muted-foreground' : 'border-border bg-card'}`}
+          placeholder="Add something you want to do — e.g. learn to sail"
+          className={`min-h-11 min-w-0 flex-1 rounded-xl border px-4 text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${dark ? 'border-foreground/20 bg-card/10 text-foreground placeholder:text-muted-foreground' : 'border-border bg-card'}`}
         />
         <button
           type="submit"
-          disabled={disabled || pending || submitting || !value.trim()}
-          className="min-h-11 rounded-xl bg-brand px-5 font-bold text-brand-foreground disabled:opacity-50"
+          disabled={disabled || pending || submitting}
+          className="min-h-12 rounded-xl bg-brand px-5 font-bold text-brand-foreground disabled:opacity-50"
         >
-          {pending ? 'Adding…' : 'Add my wording'}
+          {pending ? 'Adding…' : 'Add'}
         </button>
       </form>
+      <Link
+        href="/experiences"
+        className="mt-2 inline-flex min-h-11 items-center text-sm text-muted-foreground underline underline-offset-4"
+      >
+        Explore ideas
+      </Link>
       {value.trim() && (
-        <div id={`${id}-suggestions`} className="mt-3 rounded-2xl border border-border bg-card p-4">
+        <div id={`${id}-suggestions`} className="mt-3 text-sm">
           <p aria-live="polite" className="text-sm text-muted-foreground">
-            {catalog.loading
-              ? 'Looking for ideas…'
-              : catalog.error || `${catalog.data?.matches ?? 0} matching ideas`}
+            {catalog.loading ? 'Looking for ideas…' : catalog.error || 'Matching ideas'}
           </p>
           {results.length ? (
             <ul className="mt-2 divide-y divide-border">
@@ -222,14 +216,6 @@ export function ManualItemInput({
             </p>
           )}
         </details>
-      )}
-      {value.trim() && !canSubmitToCatalog && (
-        <p className="mt-3 text-sm text-muted-foreground">
-          <Link href="/login" className="underline underline-offset-4">
-            Sign in
-          </Link>{' '}
-          to submit an idea to the shared catalog for review.
-        </p>
       )}
       {message && (
         <p role="status" className="mt-3 text-sm">

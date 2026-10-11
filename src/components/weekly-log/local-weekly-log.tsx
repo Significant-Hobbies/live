@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 
+import { JournalSkeleton } from '~/components/weekly-log/journal-skeleton';
 import { JournalArchive } from '~/components/journal-archive';
 import { StorageModeProvider, StorageModeStatus } from '~/components/storage-mode-provider';
 import {
@@ -21,38 +22,35 @@ import {
   type LocalWeeklyLogState,
 } from '~/lib/local-weekly-log';
 
-type LocalProfile = { name?: string };
-
 function useLocalWeeklyLogData() {
   const [state, setState] = useState<LocalWeeklyLogState>(EMPTY_LOCAL_WEEKLY_LOG);
-  const [profile, setProfile] = useState<LocalProfile>({});
   const [legacyEntries, setLegacyEntries] = useState<LocalJournal[]>([]);
   const [loaded, setLoaded] = useState(false);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     const adapter = browserRecordAdapter();
     Promise.all([
       readLocalWeeklyLog(adapter),
-      readLocalRecord(
-        adapter,
-        'onboarding:profile',
-        'onboarding',
-        (value): value is LocalProfile => !!value && typeof value === 'object'
-      ),
       readLocalRecord(adapter, 'daily:state', 'daily', isLocalDailyState),
-    ]).then(([log, storedProfile, daily]) => {
-      setState(log);
-      setProfile(storedProfile ?? {});
-      setLegacyEntries(daily?.journals ?? []);
-      setLoaded(true);
-    });
+    ])
+      .then(([log, daily]) => {
+        setState(log);
+        setLegacyEntries(daily?.journals ?? []);
+        setLoaded(true);
+      })
+      .catch(() =>
+        setError(
+          'Your journal could not be opened. Reload to try again; existing entries have not been changed.'
+        )
+      );
   }, []);
 
-  return { state, setState, profile, legacyEntries, loaded };
+  return { state, setState, legacyEntries, loaded, error };
 }
 
 export function LocalWeeklyLog({ today }: { today: string }) {
-  const { state, setState, profile, legacyEntries, loaded } = useLocalWeeklyLogData();
+  const { state, setState, legacyEntries, loaded, error } = useLocalWeeklyLogData();
 
   const entries: WeeklyLogEntryView[] = useMemo(
     () =>
@@ -68,26 +66,22 @@ export function LocalWeeklyLog({ today }: { today: string }) {
     [state.entries]
   );
 
-  if (!loaded) {
+  if (error)
     return (
-      <p className="p-8 text-center text-sm text-muted-foreground">
-        Loading your weekly log from this device…
+      <p role="alert" className="mx-auto max-w-[760px] p-6 text-sm text-destructive">
+        {error}
       </p>
     );
-  }
+  if (!loaded) return <JournalSkeleton />;
 
   return (
     <StorageModeProvider mode="local">
-      <div className="mx-auto max-w-3xl px-4 pt-6">
-        <StorageModeStatus />
-      </div>
       <WeeklyLogSurface
         data={{
-          firstName: profile.name?.trim().split(/\s+/)[0] || 'there',
           today,
           weekStartsOn: state.weekStartsOn,
           entries,
-          weeksRemaining: null,
+          storageSlot: <StorageModeStatus compact />,
           archiveSlot: <JournalArchive records={legacyEntries} />,
         }}
         actions={{
