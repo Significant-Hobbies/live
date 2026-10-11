@@ -142,6 +142,7 @@ export function BingoBoard({
               </span>
               {item.completedAt && (
                 <span
+                  role="img"
                   aria-label="Lived"
                   className="absolute bottom-1 right-1 flex size-5 items-center justify-center text-muted-foreground"
                 >

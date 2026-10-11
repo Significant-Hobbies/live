@@ -1,6 +1,7 @@
 export function MyListSkeleton() {
   return (
     <div
+      role="status"
       aria-label="Loading My list"
       aria-busy="true"
       className="mx-auto max-w-[1180px] px-4 py-6 sm:px-6 sm:py-10"

@@ -1,6 +1,7 @@
 export function JournalSkeleton() {
   return (
     <div
+      role="status"
       aria-label="Loading Journal"
       aria-busy="true"
       className="mx-auto max-w-[760px] px-4 py-6 sm:px-6 sm:py-11"

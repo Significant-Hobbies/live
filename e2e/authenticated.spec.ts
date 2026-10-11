@@ -129,6 +129,7 @@ test.describe('authenticated surfaces', () => {
 
     const journal = 'I noticed something new today.';
     await authedPage.goto('/journal');
+    await waitForHydrated(authedPage.locator('#weekly-entry'));
     await authedPage.locator('#weekly-entry').fill(journal);
     await authedPage.getByRole('button', { name: /Save this week|Update this week/ }).click();
     await authedPage.goto('/live-more');
@@ -179,19 +180,20 @@ test.describe('authenticated surfaces', () => {
     await waitForHydrated(authedPage.getByLabel('Add something you want to do'));
     await authedPage.getByLabel('Add something you want to do').fill(title);
     await authedPage.getByRole('button', { name: 'Add', exact: true }).click();
-    await authedPage.getByRole('button', { name: `Open ${title}` }).click();
+    await authedPage.getByRole('button', { name: `Open ${title}`, exact: true }).click();
     const panel = authedPage
       .getByRole('complementary', { name: `Item: ${title}` })
       .filter({ visible: true });
     await panel.getByLabel('Add a step').fill('Ask a friend');
     await panel.getByRole('button', { name: 'Add', exact: true }).click();
-    await panel.getByRole('checkbox', { name: 'Ask a friend' }).check();
+    await panel.getByRole('checkbox', { name: 'Ask a friend' }).click();
+    await expect(panel.getByRole('checkbox', { name: 'Ask a friend' })).toBeChecked();
     await expect(panel.getByRole('radio', { name: 'To do', exact: true })).toHaveAttribute(
       'aria-checked',
       'true'
     );
     await authedPage.reload();
-    await authedPage.getByRole('button', { name: `Open ${title}` }).click();
+    await authedPage.getByRole('button', { name: `Open ${title}`, exact: true }).click();
     await expect(panel.getByRole('checkbox', { name: 'Ask a friend' })).toBeChecked();
     await panel.getByRole('radio', { name: 'Lived', exact: true }).click();
     await expect(
@@ -251,7 +253,7 @@ test.describe('authenticated surfaces', () => {
     await waitForHydrated(authedPage.getByLabel('Add something you want to do'));
     await authedPage.getByLabel('Add something you want to do').fill(title);
     await authedPage.getByRole('button', { name: 'Add', exact: true }).click();
-    await authedPage.getByRole('button', { name: `Open ${title}` }).click();
+    await authedPage.getByRole('button', { name: `Open ${title}`, exact: true }).click();
     const panel = authedPage
       .getByRole('complementary', { name: `Item: ${title}` })
       .filter({ visible: true });

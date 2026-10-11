@@ -47,9 +47,13 @@ test.describe('private work is locally available without an account', () => {
     await waitForHydrated(page.getByLabel('Add something you want to do'));
     await page.getByLabel('Add something you want to do').fill('Sleep under the stars');
     await page.getByRole('button', { name: 'Add', exact: true }).click();
-    await expect(page.getByText('Sleep under the stars', { exact: true })).toBeVisible();
+    await expect(
+      page.getByRole('button', { name: 'Open Sleep under the stars', exact: true })
+    ).toBeVisible();
     await page.reload();
-    await expect(page.getByText('Sleep under the stars', { exact: true })).toBeVisible();
+    await expect(
+      page.getByRole('button', { name: 'Open Sleep under the stars', exact: true })
+    ).toBeVisible();
     await page.getByRole('button', { name: 'Mark Sleep under the stars as lived' }).click();
     await expect(
       page.getByRole('button', { name: 'Reopen Sleep under the stars to To do' })
@@ -101,7 +105,7 @@ test('bucket draft survives a transaction abort and retries without losing saved
   await expect(
     page.getByRole('button', { name: 'Reopen Sleep under the stars to To do' })
   ).toBeVisible();
-  await page.getByRole('button', { name: 'Open Sleep under the stars' }).click();
+  await page.getByRole('button', { name: 'Open Sleep under the stars', exact: true }).click();
   await page
     .getByRole('button', { name: 'Remove from list', exact: true })
     .filter({ visible: true })
