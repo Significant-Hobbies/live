@@ -201,13 +201,9 @@ export function MyList({
               </p>
             )}
             {loaded && items.length === 0 && (
-              <p className="mt-7 text-sm text-muted-foreground">
-                Nothing here yet. Add the first thing you don't want to leave unlived, or{' '}
-                <Link href="/experiences" className="underline underline-offset-4">
-                  browse ideas
-                </Link>
-                .
-              </p>
+              // Short on purpose: this renders after the device store loads, so a long
+              // paragraph would outgrow the server-rendered heading as the LCP element.
+              <p className="mt-7 text-sm text-muted-foreground">Nothing here yet.</p>
             )}
             {!loaded && !error ? (
               <div role="status" aria-label="Loading My list">
