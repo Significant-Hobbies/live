@@ -238,7 +238,7 @@ function Result({ result }: { result: LifeInWeeks }) {
         style={{ textWrap: 'balance', lineHeight: 1.15 }}
       >
         That leaves roughly{' '}
-        <span className="tabular-nums text-primary">{fmt.format(saturdays?.count ?? 0)}</span>{' '}
+        <span className="tabular-nums text-foreground">{fmt.format(saturdays?.count ?? 0)}</span>{' '}
         Saturdays.
       </p>
 

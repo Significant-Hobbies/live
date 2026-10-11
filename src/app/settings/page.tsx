@@ -10,7 +10,7 @@ import { db } from '~/server/db';
 import { ProfileForm } from './profile-form';
 
 export const metadata = {
-  title: 'Settings — SignificantHobbies',
+  title: 'Settings',
   robots: { index: false, follow: false },
 };
 
@@ -44,7 +44,7 @@ export default async function SettingsPage() {
         </Link>
       )}
 
-      <header className="mb-8 rounded-2xl bg-field-lilac px-6 py-10 text-foreground shadow-[0_14px_40px_color-mix(in_srgb,var(--scrim)_10%,transparent)] sm:px-10">
+      <header className="mb-8 rounded-2xl bg-card px-6 py-10 text-foreground shadow-[0_14px_40px_color-mix(in_srgb,var(--scrim)_10%,transparent)] sm:px-10">
         <p className="text-base font-bold">Your corner of the atlas</p>
         <h1 className="mt-4 font-serif text-5xl font-medium leading-none tracking-[-0.03em] sm:text-6xl">
           Settings

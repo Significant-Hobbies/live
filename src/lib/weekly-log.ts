@@ -36,6 +36,36 @@ export function weekEndExclusive(weekOf: string): string {
   return shiftDayKey(weekOf, 7);
 }
 
+/** Group by the midpoint of the original stored week; never rewrite its key. */
+export function entryWeekFor(entryWeekOf: string, weekStartsOn: WeekStartsOn): string {
+  return weekStartFor(shiftDayKey(entryWeekOf, 3), weekStartsOn);
+}
+
+export function findEntryForWeek<T extends { weekOf: string }>(
+  entries: T[],
+  weekOf: string,
+  weekStartsOn: WeekStartsOn
+): T | undefined {
+  return entries.find((entry) => entryWeekFor(entry.weekOf, weekStartsOn) === weekOf);
+}
+
+export function defaultWritingWeek(today: string, weekStartsOn: WeekStartsOn): string {
+  const current = weekStartFor(today, weekStartsOn);
+  return today === shiftDayKey(current, 6) ? current : shiftDayKey(current, -7);
+}
+
+export function formatWeekChooserSpan(weekOf: string): string {
+  const start = keyToDate(weekOf);
+  const end = keyToDate(shiftDayKey(weekOf, 6));
+  const format = (date: Date, month: boolean) =>
+    new Intl.DateTimeFormat('en-GB', {
+      weekday: 'short',
+      day: 'numeric',
+      ...(month ? { month: 'short' as const } : {}),
+    }).format(date);
+  return `${format(start, start.getMonth() !== end.getMonth())} – ${format(end, true)}`;
+}
+
 /**
  * Whether `dayKey` is the log's suggested writing moment — Sunday.
  * Sunday sits at the end of a Monday-start week and the start of a

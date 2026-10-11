@@ -155,14 +155,14 @@ test.describe('Experiences', () => {
 test.describe('Manual bucket-list entry', () => {
   test('searches, saves locally, then accepts personal wording', async ({ page }) => {
     await page.goto('/bucket-list');
-    await expect(page.getByLabel('I want to…')).toBeEnabled();
-    await waitForHydrated(page.getByLabel('I want to…'));
-    await page.getByLabel('I want to…').fill('learn');
-    await expect(page.getByText(/matching ideas/)).toBeVisible();
-    await expect(page.locator('form + div ul > li')).toHaveCount(5);
+    await expect(page.getByLabel('Add something you want to do')).toBeEnabled();
+    await waitForHydrated(page.getByLabel('Add something you want to do'));
+    await page.getByLabel('Add something you want to do').fill('learn');
+    await expect(page.getByText(/Matching ideas/)).toBeVisible();
+    await expect(page.locator('[id$="-suggestions"] ul > li')).toHaveCount(5);
     await page.getByRole('button', { name: 'Next', exact: true }).click();
     await expect(page.getByText(/^Page 2 of/)).toBeVisible();
-    await page.getByLabel('I want to…').fill('pottery');
+    await page.getByLabel('Add something you want to do').fill('pottery');
     await page
       .getByRole('button', {
         name: 'Add Take a pottery class and make a finished piece to my list',
@@ -170,15 +170,25 @@ test.describe('Manual bucket-list entry', () => {
       })
       .click();
     await expect(
-      page.getByText('Take a pottery class and make a finished piece', { exact: true })
+      page.getByRole('button', {
+        name: 'Open Take a pottery class and make a finished piece',
+        exact: true,
+      })
     ).toBeVisible();
-    await page.getByLabel('I want to…').fill('Teach my niece to make a bowl');
-    await page.getByRole('button', { name: 'Add my wording', exact: true }).click();
-    await expect(page.getByText('Teach my niece to make a bowl', { exact: true })).toBeVisible();
-    await page.reload();
-    await expect(page.getByText('Teach my niece to make a bowl', { exact: true })).toBeVisible();
+    await page.getByLabel('Add something you want to do').fill('Teach my niece to make a bowl');
+    await page.getByRole('button', { name: 'Add', exact: true }).click();
     await expect(
-      page.getByText('Take a pottery class and make a finished piece', { exact: true })
+      page.getByRole('button', { name: 'Open Teach my niece to make a bowl', exact: true })
+    ).toBeVisible();
+    await page.reload();
+    await expect(
+      page.getByRole('button', { name: 'Open Teach my niece to make a bowl', exact: true })
+    ).toBeVisible();
+    await expect(
+      page.getByRole('button', {
+        name: 'Open Take a pottery class and make a finished piece',
+        exact: true,
+      })
     ).toBeVisible();
   });
 
@@ -186,20 +196,24 @@ test.describe('Manual bucket-list entry', () => {
     page,
   }) => {
     await page.goto('/bucket-list');
-    await waitForHydrated(page.getByLabel('I want to…'));
-    await expect(page.getByLabel('I want to…')).toBeEnabled();
-    await page.getByLabel('I want to…').pressSequentially('pot', { delay: 50 });
-    await expect(page.getByLabel('I want to…')).toHaveValue('pot');
+    await waitForHydrated(page.getByLabel('Add something you want to do'));
+    await expect(page.getByLabel('Add something you want to do')).toBeEnabled();
+    await page.getByLabel('Add something you want to do').pressSequentially('pot', { delay: 50 });
+    await expect(page.getByLabel('Add something you want to do')).toHaveValue('pot');
     await expect(
       page.getByRole('button', {
         name: 'Add Take a pottery class and make a finished piece to my list',
         exact: true,
       })
     ).toBeVisible();
-    await page.getByLabel('I want to…').fill('My very personal zzzzqqqq idea');
+    await page.getByLabel('Add something you want to do').fill('My very personal zzzzqqqq idea');
     await expect(page.getByText(/No matching ideas/)).toBeVisible();
-    await expect(page.getByLabel('I want to…')).toHaveValue('My very personal zzzzqqqq idea');
-    await page.getByRole('button', { name: 'Add my wording', exact: true }).click();
-    await expect(page.getByText('My very personal zzzzqqqq idea', { exact: true })).toBeVisible();
+    await expect(page.getByLabel('Add something you want to do')).toHaveValue(
+      'My very personal zzzzqqqq idea'
+    );
+    await page.getByRole('button', { name: 'Add', exact: true }).click();
+    await expect(
+      page.getByRole('button', { name: 'Open My very personal zzzzqqqq idea', exact: true })
+    ).toBeVisible();
   });
 });

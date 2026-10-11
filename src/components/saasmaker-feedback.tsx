@@ -67,7 +67,7 @@ export function SaaSMakerFeedback() {
         onSubmit={submitFeedback}
         position="bottom-right"
         theme="dark"
-        accentColor="var(--brand)"
+        accentColor="var(--muted-foreground)"
       />
       <style>{`
         [data-feedback-widget].smw--dark {
@@ -82,15 +82,15 @@ export function SaaSMakerFeedback() {
           --smw-input-border: var(--input);
           --smw-skeleton-bg: var(--muted);
           --smw-skeleton-shine: var(--border);
-          --smw-bug: var(--destructive);
-          --smw-feature: var(--field-lilac-ink);
-          --smw-feedback: var(--field-sky-ink);
+          --smw-bug: var(--muted-foreground);
+          --smw-feature: var(--muted-foreground);
+          --smw-feedback: var(--muted-foreground);
         }
         [data-feedback-widget] .smw-trigger,
         [data-feedback-widget] .smw-btn--primary,
         [data-feedback-widget] .smw-filter-pill--active,
         [data-feedback-widget] .smw-filter-pill--active:hover {
-          color: var(--brand-foreground);
+          color: var(--background);
         }
 
         @media (max-width: 639px) {

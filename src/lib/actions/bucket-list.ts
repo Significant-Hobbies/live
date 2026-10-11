@@ -340,13 +340,14 @@ export async function setCallingBucketListDream(title: string): Promise<{ succes
 }
 
 const UpdateItemSchema = z.object({
+  description: z.string().max(500).nullable().optional(),
   targetYear: z.number().int().min(1900).max(2200).nullable().optional(),
   category: z.enum(CATEGORIES).nullable().optional(),
 });
 
 export async function updateBucketListItem(
   id: string,
-  patch: { targetYear?: number | null; category?: string | null }
+  patch: { targetYear?: number | null; category?: string | null; description?: string | null }
 ): Promise<{ success: boolean }> {
   const session = await getServerAuthSession();
   if (!session?.user?.id) throw new Error('Not authenticated');

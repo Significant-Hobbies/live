@@ -6,10 +6,10 @@ const COLUMNS = 52;
  * Colour of a week already spent.
  *
  * Must be **opaque**: this layer sits above the lit one, so any transparency
- * lets gold bleed through and the two states merge into one.
+ * lets neutral ink bleed through and the two states merge into one.
  *
  * The opaque --week-spent token gives lived weeks mass above the night canvas,
- * while remaining much quieter than atlas gold. It must not blend with gold
+ * while remaining much quieter than atlas neutral ink. It must not blend with neutral ink
  * underneath, or the two states would merge.
  */
 const SPENT = 'var(--week-spent)';
@@ -32,7 +32,7 @@ type Props = {
  *
  * The colour encoding is the argument the page is making, so it runs the
  * opposite way to a progress bar: weeks already spent recede into the
- * background, and the weeks still ahead are the ones lit in gold. Open space,
+ * background, and the weeks still ahead are the ones lit in neutral ink. Open space,
  * not empty space.
  *
  * Two stacked layers rather than thousands of individually-animated cells: the
@@ -54,7 +54,7 @@ export function WeeksGrid({ weeksLived, totalWeeks, animate }: Props) {
         {/* Layer 1 — every week of the life, lit as open space. */}
         <Grid>
           {cells.map((i) => (
-            <span key={i} className="aspect-square rounded-[1px] bg-primary/55" />
+            <span key={i} className="aspect-square rounded-[1px] bg-muted-foreground/55" />
           ))}
         </Grid>
 

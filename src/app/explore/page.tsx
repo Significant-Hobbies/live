@@ -18,7 +18,7 @@ const description =
   'Discover how people spend their time across life phases. Browse community hobby timelines, trending interests, and inspiring journeys.';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Explore public hobby timelines' },
+  title: 'Explore public hobby timelines',
   description,
   alternates: { canonical: `${SITE_URL}/explore` },
   openGraph: {

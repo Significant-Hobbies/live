@@ -5,10 +5,10 @@ import { eq } from 'drizzle-orm';
 import { users } from '~/db/schema';
 import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
-import { BRAND_NAME, DEFAULT_SOCIAL_IMAGE } from '~/lib/site-metadata';
+import { DEFAULT_SOCIAL_IMAGE } from '~/lib/site-metadata';
 
 export const metadata: Metadata = {
-  title: `Your Life in Weeks — ${BRAND_NAME}`,
+  title: 'Life in weeks',
   description:
     'See your whole life as one grid of weeks, using your exact birth date when available. Then decide what the remaining ones are for.',
   alternates: { canonical: '/life-in-weeks' },

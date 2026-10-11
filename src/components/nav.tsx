@@ -18,7 +18,7 @@ import { NavSignOut } from './nav-sign-out';
 const NAV_LINKS = [
   { href: '/experiences', label: 'Explore' },
   { href: '/bucket-list', label: 'My list' },
-  { href: '/journal', label: 'Weekly journal' },
+  { href: '/journal', label: 'Journal' },
   { href: '/life-in-weeks', label: 'Life in weeks' },
 ];
 
@@ -27,28 +27,19 @@ export async function Nav() {
   const links = NAV_LINKS;
 
   return (
-    <nav
-      data-site-nav
-      className="sticky top-0 z-50 border-b border-border bg-card/95 shadow-[0_3px_18px_color-mix(in_srgb,var(--scrim)_6%,transparent)] backdrop-blur-md"
-    >
-      <div className="mx-auto flex h-[4.5rem] max-w-6xl items-center justify-between px-4">
+    <nav data-site-nav className="sticky top-0 z-50 border-b border-border bg-background">
+      <div className="mx-auto flex h-16 max-w-[1180px] items-center justify-between px-4">
         <Link
           href={session?.user ? '/bucket-list' : '/experiences'}
           prefetch={false}
           className="group inline-flex min-h-11 items-center gap-2.5 text-base font-bold text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
         >
-          <span
-            aria-hidden="true"
-            className="flex size-10 items-center justify-center rounded-xl bg-brand font-serif text-lg font-bold tracking-[-0.04em] text-brand-foreground shadow-[0_3px_0_var(--border)] transition-transform group-hover:-rotate-3 group-hover:-translate-y-0.5"
-          >
-            SH
-          </span>
-          <span className="hidden text-sm leading-none xl:block">
-            Significant
-            <br />
-            Hobbies
-          </span>
-          <span className="sr-only">SignificantHobbies</span>
+          <svg aria-hidden="true" viewBox="0 0 26 26" className="size-[26px]">
+            <rect width="26" height="26" rx="7" fill="var(--muted)" />
+            <circle cx="13" cy="13" r="6.5" fill="none" stroke="var(--brand)" strokeWidth="2" />
+            <circle cx="13" cy="13" r="2.2" fill="var(--brand)" />
+          </svg>
+          <span>Live</span>
         </Link>
 
         {/* Desktop nav */}
@@ -57,7 +48,7 @@ export async function Nav() {
             caught by the content-flywheel overflow check on /blog. Labels and
             order are unchanged; only the switch point moves. */}
         <div className="hidden items-center gap-3 lg:flex">
-          <div className="flex items-center gap-1 rounded-2xl border border-border bg-card p-1 shadow-[0_2px_8px_color-mix(in_srgb,var(--scrim)_5%,transparent)]">
+          <div className="flex items-center gap-7">
             <NavLinks links={links} />
           </div>
 
@@ -102,7 +93,7 @@ export async function Nav() {
           ) : (
             <Button
               asChild
-              className="h-11 rounded-xl bg-primary px-5 text-primary-foreground hover:bg-primary/90"
+              className="h-11 rounded-xl bg-transparent px-5 normal-case text-muted-foreground hover:bg-muted"
             >
               <Link href="/login" prefetch={false}>
                 Sign in

@@ -15,15 +15,13 @@ import {
   setWeekStartsOn,
 } from '~/lib/actions/weekly-log';
 import { dayKeyIn } from '~/lib/day';
-import { parseBirthDate } from '~/lib/life-in-weeks';
-import { birthDateFromYear, buildLifeGrid } from '~/lib/mortality';
 
 import type { WeekStartsOn } from '~/lib/weekly-log';
 import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
 
 export const metadata = {
-  title: 'Weekly log — Significant Hobbies',
+  title: 'Journal',
   description: 'A private weekly record of what you actually lived.',
   robots: { index: false, follow: false },
 };
@@ -39,8 +37,6 @@ export default async function JournalPage() {
   const me = await db.query.users.findFirst({
     where: eq(users.id, session.user.id),
     columns: {
-      birthYear: true,
-      birthDate: true,
       timezone: true,
       name: true,
     },
@@ -53,18 +49,12 @@ export default async function JournalPage() {
     getWeeklyEmailOptIn(),
   ]);
   const today = dayKeyIn(me?.timezone ?? null);
-  const birth =
-    me?.birthDate && parseBirthDate(me?.birthDate)
-      ? new Date(`${me?.birthDate}T12:00:00`)
-      : birthDateFromYear(me?.birthYear ?? null);
-  const weeksRemaining = birth ? buildLifeGrid(birth, new Set()).weeksRemaining : null;
 
   return (
     <>
       <TimezoneSync storedTimezone={me?.timezone ?? null} />
       <WeeklyLogSurface
         data={{
-          firstName: me?.name?.split(' ')[0] ?? session.user.name?.split(' ')[0] ?? 'there',
           today,
           weekStartsOn,
           entries: entries.map((entry) => ({
@@ -75,7 +65,6 @@ export default async function JournalPage() {
             turns: parseTurns(entry.turnsJson),
           })),
           emailOptIn,
-          weeksRemaining,
           archiveSlot: <JournalArchive records={journalHistory} />,
         }}
         actions={{
@@ -86,11 +75,11 @@ export default async function JournalPage() {
           },
           onEmailOptInChange: async (optIn: boolean) => {
             'use server';
-            await setWeeklyEmailOptIn(optIn);
+            if (!(await setWeeklyEmailOptIn(optIn)).saved) throw new Error('Preference not saved');
           },
           onWeekStartsOnChange: async (value: WeekStartsOn) => {
             'use server';
-            await setWeekStartsOn(value);
+            if (!(await setWeekStartsOn(value)).saved) throw new Error('Preference not saved');
           },
         }}
       />

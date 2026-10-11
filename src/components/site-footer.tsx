@@ -7,7 +7,7 @@ const groups = [
     links: [
       ['Explore', '/experiences'],
       ['My list', '/bucket-list'],
-      ['Weekly journal', '/journal'],
+      ['Journal', '/journal'],
     ],
   },
   {
@@ -40,14 +40,27 @@ const groups = [
 
 export function SiteFooter() {
   return (
-    <footer data-site-footer className="bg-field-sun px-4 py-10 text-foreground">
-      <div className="mx-auto max-w-6xl overflow-hidden rounded-2xl border border-brand bg-card shadow-[0_18px_45px_color-mix(in_srgb,var(--scrim)_10%,transparent)]">
+    <footer
+      data-site-footer
+      className="border-t border-border bg-background px-4 py-10 text-foreground"
+    >
+      <div className="mx-auto max-w-6xl">
         <div className="grid gap-9 p-7 sm:p-10 lg:grid-cols-[1.25fr_3fr]">
           <div>
-            <div className="flex size-11 items-center justify-center rounded-full bg-field-sun font-serif text-xl font-bold">
-              SH
-            </div>
-            <p className="mt-4 font-serif text-2xl font-semibold">Significant Hobbies</p>
+            <p className="flex items-center gap-2.5 font-serif text-2xl font-semibold">
+              <svg aria-hidden="true" viewBox="0 0 26 26" className="size-[26px]">
+                <rect width="26" height="26" rx="7" fill="var(--muted)" />
+                <circle cx="13" cy="13" r="6.5" fill="none" stroke="var(--brand)" strokeWidth="2" />
+                <circle cx="13" cy="13" r="2.2" fill="var(--brand)" />
+              </svg>
+              Live
+            </p>
+            <a
+              href="https://significanthobbies.com"
+              className="inline-flex min-h-11 items-center text-sm text-muted-foreground"
+            >
+              by Significant Hobbies
+            </a>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">
               A companion for living intentionally—because life is finite and the rest is still
               unwritten.

@@ -173,9 +173,6 @@ export function ExperiencesClient({ initialPage, initialQuery, mode }: Props) {
           {filtered.map((e) => (
             <li key={e.slug} className="py-3.5">
               <div className="flex items-baseline gap-3">
-                <span aria-hidden="true" className="shrink-0 text-base">
-                  {e.emoji}
-                </span>
                 <div className="min-w-0">
                   {e.description ? (
                     <Link
@@ -243,9 +240,9 @@ function Chip({
       type="button"
       onClick={onClick}
       aria-pressed={active}
-      className={`rounded-full border px-3 py-1.5 text-sm transition-colors ${
+      className={`min-h-11 rounded-full border px-3 py-1.5 text-sm transition-colors ${
         active
-          ? 'border-primary bg-primary text-primary-foreground'
+          ? 'border-border bg-muted text-foreground'
           : 'border-border bg-card text-muted-foreground hover:border-foreground/30 hover:text-foreground'
       }`}
     >

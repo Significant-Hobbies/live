@@ -56,7 +56,7 @@
   --radius: 0.75rem;
   --brand: #e7bf57;
   --brand-foreground: #1d1409;
-  --brand-soft: var(--field-sun);
+  --brand-soft: var(--muted);
   --brand-ink: var(--brand);
   --background: #120e09;
   --foreground: #f7f3e9;
@@ -85,9 +85,9 @@
   --week-spent: oklch(0.34 0.012 72);
   --chart-1: var(--brand);
   --chart-2: var(--success);
-  --chart-3: var(--field-sky-ink);
-  --chart-4: var(--field-coral-ink);
-  --chart-5: var(--field-lilac-ink);
+  --chart-3: #90c4e4;
+  --chart-4: #e6a08b;
+  --chart-5: #c4a5df;
   --sidebar: var(--surface);
   --sidebar-foreground: var(--foreground);
   --sidebar-primary: var(--primary);
@@ -96,22 +96,22 @@
   --sidebar-accent-foreground: var(--foreground);
   --sidebar-border: var(--border);
   --sidebar-ring: var(--ring);
-  --field-sun: oklch(0.30 0.055 95);
-  --field-sun-ink: oklch(0.86 0.09 95);
-  --field-sky: oklch(0.30 0.05 240);
-  --field-sky-ink: oklch(0.86 0.06 240);
-  --field-coral: oklch(0.30 0.065 40);
-  --field-coral-ink: oklch(0.86 0.06 40);
-  --field-green: oklch(0.30 0.05 145);
-  --field-green-ink: oklch(0.86 0.07 145);
-  --field-lilac: oklch(0.30 0.065 300);
-  --field-lilac-ink: oklch(0.86 0.06 300);
-  --field-rose: oklch(0.30 0.05 350);
-  --field-rose-ink: oklch(0.86 0.06 350);
-  --tone-1: var(--field-coral);
-  --tone-2: var(--field-lilac);
-  --tone-3: var(--field-green);
-  --tone-4: var(--field-sun);
+  --field-sun: #1e1812;
+  --field-sun-ink: #d9d2c4;
+  --field-sky: #1e1812;
+  --field-sky-ink: #d9d2c4;
+  --field-coral: #1e1812;
+  --field-coral-ink: #d9d2c4;
+  --field-green: #1e1812;
+  --field-green-ink: #d9d2c4;
+  --field-lilac: #1e1812;
+  --field-lilac-ink: #d9d2c4;
+  --field-rose: #1e1812;
+  --field-rose-ink: #d9d2c4;
+  --tone-1: var(--muted);
+  --tone-2: var(--muted);
+  --tone-3: var(--muted);
+  --tone-4: var(--muted);
   --tone-ink: var(--surface);
   --accent-ink: var(--brand);
 }
@@ -710,4 +710,10 @@
     display: none;
     transition: none;
   }
+}
+
+/* All interactive controls share a visible keyboard focus. */
+:where(button, a, input, textarea, select, summary):focus-visible {
+  outline: 2px solid var(--muted-foreground);
+  outline-offset: 3px;
 }

@@ -1,6 +1,9 @@
 import { describe, expect, it } from 'vitest';
 
 import {
+  defaultWritingWeek,
+  entryWeekFor,
+  findEntryForWeek,
   formatWeekOf,
   formatWeekSpan,
   isSuggestedLogDay,
@@ -8,6 +11,27 @@ import {
   weekEndExclusive,
   weekStartFor,
 } from '~/lib/weekly-log';
+
+describe('stored week matching', () => {
+  it('attaches Monday entries to the same lived week after switching to Sunday', () => {
+    const entry = { weekOf: '2026-03-09', text: 'A walk.' };
+    expect(entryWeekFor(entry.weekOf, 'sunday')).toBe('2026-03-08');
+    expect(findEntryForWeek([entry], '2026-03-08', 'sunday')).toBe(entry);
+    expect(entry.weekOf).toBe('2026-03-09');
+  });
+  it('attaches Sunday entries after switching to Monday without rewriting them', () => {
+    const entry = { weekOf: '2026-03-08', text: 'A swim.' };
+    expect(entryWeekFor(entry.weekOf, 'monday')).toBe('2026-03-09');
+    expect(findEntryForWeek([entry], '2026-03-09', 'monday')).toBe(entry);
+    expect(findEntryForWeek([entry], '2026-03-16', 'monday')).toBeUndefined();
+  });
+  it('defaults to this week on its last day, otherwise the previous week', () => {
+    expect(defaultWritingWeek('2026-10-11', 'monday')).toBe('2026-10-05');
+    expect(defaultWritingWeek('2026-10-10', 'monday')).toBe('2026-09-28');
+    expect(defaultWritingWeek('2026-10-10', 'sunday')).toBe('2026-10-04');
+    expect(defaultWritingWeek('2026-10-11', 'sunday')).toBe('2026-10-04');
+  });
+});
 
 describe('weekStartFor', () => {
   it('buckets days into Monday-start weeks', () => {
