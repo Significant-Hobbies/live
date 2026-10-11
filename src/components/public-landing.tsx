@@ -71,7 +71,7 @@ const questions = [
 
 export function PublicLandingShell() {
   return (
-    <div className={`${archivo.className} public-landing bg-[#0b1320]`}>
+    <div className={`${archivo.className} public-landing bg-surface`}>
       <section className="landing-cinematic-hero">
         <div className="landing-cinematic-hero__scrim" aria-hidden="true" />
         <div className="landing-cinematic-hero__inner">
@@ -100,7 +100,7 @@ export function PublicLanding() {
   const [videoReady, setVideoReady] = useState(false);
 
   return (
-    <div className={`${archivo.className} public-landing bg-[#fff8d6] text-[#2b261d]`}>
+    <div className={`${archivo.className} public-landing bg-field-sun text-foreground`}>
       <section className="landing-cinematic-hero">
         <video
           className={`landing-cinematic-hero__video ${videoReady ? 'is-ready' : ''}`}
@@ -143,7 +143,7 @@ export function PublicLanding() {
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-end lg:gap-20">
             <div>
-              <p className="mb-5 text-base font-semibold text-[#795416]">
+              <p className="mb-5 text-base font-semibold text-brand">
                 A record of what made you, you.
               </p>
               <h2 className="max-w-xl text-4xl font-semibold leading-[1.02] tracking-[-0.035em] sm:text-5xl lg:text-6xl">
@@ -151,7 +151,7 @@ export function PublicLanding() {
               </h2>
             </div>
             <div className="max-w-2xl">
-              <p className="text-lg leading-relaxed text-[#554c3f] sm:text-xl">
+              <p className="text-lg leading-relaxed text-muted-foreground sm:text-xl">
                 Put every hobby you remember on one timeline. The abandoned experiments, lifelong
                 obsessions, and quiet returns become a map of the life you have lived.
               </p>
@@ -159,11 +159,11 @@ export function PublicLanding() {
             </div>
           </div>
 
-          <ol className="mt-16 grid list-none border-y border-[#c9bfa8] sm:grid-cols-2 lg:mt-20 lg:grid-cols-4">
+          <ol className="mt-16 grid list-none border-y border-border sm:grid-cols-2 lg:mt-20 lg:grid-cols-4">
             {phases.map(([label, image, hobbies], index) => (
               <li
                 key={label}
-                className="group py-6 sm:[&:nth-child(odd)]:border-r sm:[&:nth-child(odd)]:border-[#c9bfa8] lg:border-r lg:border-[#c9bfa8] lg:last:border-r-0"
+                className="group py-6 sm:[&:nth-child(odd)]:border-r sm:[&:nth-child(odd)]:border-border lg:border-r lg:border-border lg:last:border-r-0"
               >
                 <div className="relative mx-4 aspect-[4/3] overflow-hidden sm:mx-6">
                   <img
@@ -174,14 +174,14 @@ export function PublicLanding() {
                     height={600}
                     className="size-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                  <span className="absolute bottom-3 right-3 text-xs font-bold text-[#fff1a8]">
+                  <div className="absolute inset-0 bg-gradient-to-t from-scrim/70 to-transparent" />
+                  <span className="absolute bottom-3 right-3 text-xs font-bold text-brand">
                     0{index + 1}
                   </span>
                 </div>
                 <div className="px-4 pt-5 sm:px-6">
                   <h3 className="text-lg font-bold">{label}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-[#62594c]">{hobbies}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{hobbies}</p>
                 </div>
               </li>
             ))}
@@ -189,14 +189,14 @@ export function PublicLanding() {
         </div>
       </section>
 
-      <section className="border-y border-[#c9bfa8] bg-[#ffd0bd] px-6 py-24 lg:px-12 lg:py-32">
+      <section className="border-y border-border bg-field-coral px-6 py-24 lg:px-12 lg:py-32">
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
             <div className="max-w-3xl">
               <h2 className="text-4xl font-semibold leading-[1.02] tracking-[-0.035em] sm:text-5xl lg:text-6xl">
                 What will you do before you die?
               </h2>
-              <p className="mt-5 max-w-2xl text-lg leading-relaxed text-[#554c3f]">
+              <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
                 Remarkable people wrote theirs down. Borrow an idea, reject the obvious, then make a
                 list that could only belong to you.
               </p>
@@ -204,12 +204,12 @@ export function PublicLanding() {
             <TextLink href="/bucket-lists">Browse every list</TextLink>
           </div>
 
-          <div className="mt-14 grid gap-px overflow-hidden bg-[#b6aa95] sm:grid-cols-3">
+          <div className="mt-14 grid gap-px overflow-hidden bg-muted sm:grid-cols-3">
             {famousLists.map(([name, slug, image, preview]) => (
               <Link
                 key={slug}
                 href={`/bucket-lists/${slug}`}
-                className="group relative block min-h-[28rem] overflow-hidden bg-[#211e18] sm:min-h-[32rem]"
+                className="group relative block min-h-[28rem] overflow-hidden bg-surface sm:min-h-[32rem]"
               >
                 <img
                   src={image}
@@ -219,9 +219,9 @@ export function PublicLanding() {
                   height={1000}
                   className="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-6 text-white sm:p-8">
-                  <p className="text-sm font-semibold text-[#fff1a8]">{name}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-scrim via-scrim/35 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-6 text-foreground sm:p-8">
+                  <p className="text-sm font-semibold text-brand">{name}</p>
                   <h3 className="mt-3 max-w-[18ch] text-2xl font-semibold leading-tight sm:text-3xl">
                     “{preview}”
                   </h3>
@@ -235,30 +235,34 @@ export function PublicLanding() {
         </div>
       </section>
 
-      <section className="bg-[#c5abfa] px-6 py-24 lg:px-12 lg:py-32">
+      <section className="bg-field-lilac px-6 py-24 lg:px-12 lg:py-32">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <div>
-            <p className="mb-5 font-semibold text-[#4b306b]">A life, assembled in three moves.</p>
+            <p className="mb-5 font-semibold text-field-lilac-ink">
+              A life, assembled in three moves.
+            </p>
             <h2 className="text-4xl font-semibold leading-[1.04] tracking-[-0.035em] sm:text-5xl">
               Onboarding should feel like remembering, not paperwork.
             </h2>
             <Link
               href="/onboarding"
-              className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#281f31] px-6 text-sm font-bold text-white transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+              className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-xl bg-primary px-6 text-sm font-bold text-primary-foreground transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground"
             >
               Begin onboarding <span aria-hidden="true">→</span>
             </Link>
           </div>
-          <ol className="list-none border-t border-[#8f78bd]">
+          <ol className="list-none border-t border-field-lilac-ink">
             {onboardingSteps.map(([number, title, description, detail]) => (
               <li
                 key={number}
-                className="grid gap-4 border-b border-[#8f78bd] py-8 sm:grid-cols-[3.5rem_1fr_auto] sm:gap-7 sm:py-9"
+                className="grid gap-4 border-b border-field-lilac-ink py-8 sm:grid-cols-[3.5rem_1fr_auto] sm:gap-7 sm:py-9"
               >
-                <span className="text-xl font-bold text-[#4b306b]">{number}</span>
+                <span className="text-xl font-bold text-field-lilac-ink">{number}</span>
                 <div>
                   <h3 className="text-xl font-bold sm:text-2xl">{title}</h3>
-                  <p className="mt-3 max-w-xl leading-relaxed text-[#44375c]">{description}</p>
+                  <p className="mt-3 max-w-xl leading-relaxed text-muted-foreground">
+                    {description}
+                  </p>
                 </div>
                 <p className="self-center text-sm font-bold sm:max-w-28 sm:text-right">{detail}</p>
               </li>
@@ -267,11 +271,11 @@ export function PublicLanding() {
         </div>
       </section>
 
-      <section className="border-y border-[#9fb8c8] bg-[#b9dcf5] px-6 py-24 lg:px-12 lg:py-32">
+      <section className="border-y border-field-sky-ink bg-field-sky px-6 py-24 lg:px-12 lg:py-32">
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
             <div className="max-w-2xl">
-              <p className="mb-4 font-semibold text-[#315d77]">Lives shaped by curiosity</p>
+              <p className="mb-4 font-semibold text-field-sky-ink">Lives shaped by curiosity</p>
               <h2 className="text-4xl font-semibold tracking-[-0.035em] sm:text-5xl">
                 One interest rarely tells the whole story.
               </h2>
@@ -286,7 +290,7 @@ export function PublicLanding() {
               title="From calligraphy to Apple"
               hobbies="Electronics · Calligraphy · Yoga · Meditation · Walking · Reading"
             />
-            <div className="border-t border-[#8eb0c5]">
+            <div className="border-t border-field-sky-ink">
               <JourneyRow
                 href="/u/alberteinstein"
                 image="/categories/music-800.webp"
@@ -306,19 +310,19 @@ export function PublicLanding() {
         </div>
       </section>
 
-      <section className="bg-[#dceabf] px-6 py-24 lg:px-12 lg:py-32">
+      <section className="bg-field-green px-6 py-24 lg:px-12 lg:py-32">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
           <div>
             <h2 className="text-4xl font-semibold tracking-[-0.035em] sm:text-5xl">
               Questions, answered.
             </h2>
-            <p className="mt-5 max-w-sm leading-relaxed text-[#4d5c3e]">
+            <p className="mt-5 max-w-sm leading-relaxed text-muted-foreground">
               Start without an account, keep control of what is public, and make the map your own.
             </p>
           </div>
-          <div className="border-t border-[#9cab82]">
+          <div className="border-t border-field-green-ink">
             {questions.map(([question, answer]) => (
-              <details key={question} className="group border-b border-[#9cab82]">
+              <details key={question} className="group border-b border-field-green-ink">
                 <summary className="flex min-h-20 cursor-pointer list-none items-center justify-between gap-5 py-5 text-left">
                   <h3 className="text-lg font-bold sm:text-xl">{question}</h3>
                   <span
@@ -328,7 +332,7 @@ export function PublicLanding() {
                     +
                   </span>
                 </summary>
-                <p className="max-w-2xl pb-7 pr-14 text-[15px] leading-relaxed text-[#4d5c3e]">
+                <p className="max-w-2xl pb-7 pr-14 text-[15px] leading-relaxed text-muted-foreground">
                   {answer}
                 </p>
               </details>
@@ -346,15 +350,15 @@ export function PublicLanding() {
           height={720}
           className="absolute inset-0 size-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#090f1a] via-[#090f1a]/75 to-[#090f1a]/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-scrim via-scrim/75 to-scrim/30" />
         <div className="relative mx-auto w-full max-w-6xl">
-          <p className="mb-5 font-semibold text-[#fff1a8]">The rest is still unwritten.</p>
-          <h2 className="max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.035em] text-white sm:text-6xl lg:text-7xl">
+          <p className="mb-5 font-semibold text-brand">The rest is still unwritten.</p>
+          <h2 className="max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.035em] text-foreground sm:text-6xl lg:text-7xl">
             The next chapter needs something worth remembering.
           </h2>
           <Link
             href="/onboarding"
-            className="mt-9 inline-flex min-h-13 items-center gap-3 rounded-xl bg-[#ffe45c] px-7 text-sm font-bold text-[#1d1a14] transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+            className="mt-9 inline-flex min-h-13 items-center gap-3 rounded-xl bg-brand px-7 text-sm font-bold text-brand-foreground transition-colors hover:bg-brand/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground"
           >
             Begin your story <span aria-hidden="true">→</span>
           </Link>
@@ -368,7 +372,7 @@ function TextLink({ href, children }: { href: string; children: React.ReactNode 
   return (
     <Link
       href={href}
-      className="mt-7 inline-flex min-h-11 items-center gap-2 border-b border-[#795416] pb-1 text-sm font-bold text-[#5f4212] transition-colors hover:text-[#211e18] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#795416]"
+      className="mt-7 inline-flex min-h-11 items-center gap-2 border-b border-brand pb-1 text-sm font-bold text-brand transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
     >
       {children} <span aria-hidden="true">→</span>
     </Link>
@@ -401,11 +405,11 @@ function JourneyFeature({
         height={800}
         className="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-transparent" />
-      <div className="absolute inset-x-0 bottom-0 max-w-2xl p-7 text-white sm:p-10">
-        <p className="text-sm font-semibold text-[#fff1a8]">{person}</p>
+      <div className="absolute inset-0 bg-gradient-to-t from-scrim via-scrim/35 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 max-w-2xl p-7 text-foreground sm:p-10">
+        <p className="text-sm font-semibold text-brand">{person}</p>
         <h3 className="mt-3 text-3xl font-semibold leading-tight sm:text-5xl">{title}</h3>
-        <p className="mt-4 text-sm leading-relaxed text-white/80 sm:text-base">{hobbies}</p>
+        <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">{hobbies}</p>
         <span className="mt-7 inline-flex min-h-11 items-center text-sm font-bold">
           See the full journey <span className="ml-2 group-hover:translate-x-1">→</span>
         </span>
@@ -430,7 +434,7 @@ function JourneyRow({
   return (
     <Link
       href={href}
-      className="group grid grid-cols-[5.5rem_1fr] gap-5 border-b border-[#8eb0c5] py-7 sm:grid-cols-[7rem_1fr] sm:py-9"
+      className="group grid grid-cols-[5.5rem_1fr] gap-5 border-b border-field-sky-ink py-7 sm:grid-cols-[7rem_1fr] sm:py-9"
     >
       <div className="aspect-square overflow-hidden">
         <img
@@ -443,9 +447,9 @@ function JourneyRow({
         />
       </div>
       <div className="self-center">
-        <p className="text-sm font-semibold text-[#315d77]">{person}</p>
+        <p className="text-sm font-semibold text-field-sky-ink">{person}</p>
         <h3 className="mt-2 text-xl font-bold leading-tight sm:text-2xl">{title}</h3>
-        <p className="mt-3 text-sm leading-relaxed text-[#405d6f]">{hobbies}</p>
+        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{hobbies}</p>
         <span className="mt-4 inline-flex min-h-11 items-center text-sm font-bold">
           View journey <span className="ml-2 group-hover:translate-x-1">→</span>
         </span>

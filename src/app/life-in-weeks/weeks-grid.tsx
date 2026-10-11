@@ -8,13 +8,11 @@ const COLUMNS = 52;
  * Must be **opaque**: this layer sits above the lit one, so any transparency
  * lets gold bleed through and the two states merge into one.
  *
- * No token fits. `--muted` (L 0.23) and `--border` (L 0.27) both sit too close
- * to the L 0.15 page — at that contrast the weeks already lived read as empty
- * space rather than as decades of a life. L 0.34 gives them mass while staying
- * far below the L 0.82 gold, so the remainder still leads. The app has no
- * light theme, so a fixed value is safe here.
+ * The opaque --week-spent token gives lived weeks mass above the night canvas,
+ * while remaining much quieter than atlas gold. It must not blend with gold
+ * underneath, or the two states would merge.
  */
-const SPENT = 'oklch(0.34 0.005 285)';
+const SPENT = 'var(--week-spent)';
 
 type Props = {
   weeksLived: number;

@@ -35,11 +35,11 @@ export const metadata: Metadata = {
 };
 
 const CATEGORY_BORDER_HOVER: Record<string, string> = {
-  travel: 'hover:border-sky-300',
-  adventure: 'hover:border-orange-300',
-  creative: 'hover:border-purple-300',
+  travel: 'hover:border-field-sky-ink',
+  adventure: 'hover:border-field-coral-ink',
+  creative: 'hover:border-field-lilac-ink',
   achievement: 'hover:border-lumi-200',
-  social: 'hover:border-rose-300',
+  social: 'hover:border-field-rose-ink',
   humanitarian: 'hover:border-foreground/30',
 };
 
@@ -176,7 +176,7 @@ export default function BucketListsPage() {
                             cy="30"
                             r={r}
                             fill="none"
-                            stroke="#f5f5f4"
+                            stroke="var(--muted)"
                             strokeWidth="4"
                           />
                           <circle
@@ -197,7 +197,7 @@ export default function BucketListsPage() {
                             dominantBaseline="middle"
                             style={{
                               fontSize: '11px',
-                              fill: '#78716c',
+                              fill: 'var(--muted-foreground)',
                               fontWeight: 600,
                               transform: 'rotate(90deg)',
                               transformOrigin: '30px 30px',
@@ -257,7 +257,7 @@ export default function BucketListsPage() {
       </section>
 
       {/* ── Bottom CTA ───────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-[#f7e957]">
+      <section className="relative overflow-hidden bg-field-sun">
         <div className="relative mx-auto max-w-3xl px-4 py-20 text-center space-y-6">
           <div className="flex justify-center">
             <Whale size={80} glow float onDark />
@@ -266,7 +266,7 @@ export default function BucketListsPage() {
             Your turn. What do you want to do
             <br className="hidden sm:block" /> before you die?
           </h2>
-          <p className="mx-auto max-w-sm text-base text-[#3f3a20]">
+          <p className="mx-auto max-w-sm text-base text-muted-foreground">
             Whale will help you discover what belongs on your list — based on who you are, not who
             everyone else expects you to be.
           </p>
@@ -279,7 +279,7 @@ export default function BucketListsPage() {
             </Link>
             <Link
               href="/find-your-hobby"
-              className="inline-flex items-center gap-2 rounded-full border-2 border-[#211e18] bg-white px-7 py-3.5 text-sm font-semibold text-[#211e18] transition-colors duration-150 hover:bg-[#fff8d6]"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-border bg-card px-7 py-3.5 text-sm font-semibold text-foreground transition-colors duration-150 hover:bg-field-sun"
             >
               Take the hobby quiz →
             </Link>

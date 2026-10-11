@@ -27,7 +27,7 @@ export function LifeGrid({ grid }: Props) {
         aria-hidden="true"
         style={{
           background:
-            'radial-gradient(ellipse 60% 50% at 70% 40%, oklch(0.82 0.13 88 / 0.06), transparent 70%)',
+            'radial-gradient(ellipse 60% 50% at 70% 40%, color-mix(in srgb, var(--brand) 6%, transparent), transparent 70%)',
         }}
       />
 

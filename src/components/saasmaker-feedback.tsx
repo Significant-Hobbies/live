@@ -63,8 +63,36 @@ async function submitFeedback(submission: FeedbackSubmission): Promise<void> {
 export function SaaSMakerFeedback() {
   return (
     <>
-      <FeedbackWidget onSubmit={submitFeedback} position="bottom-right" theme="auto" />
+      <FeedbackWidget
+        onSubmit={submitFeedback}
+        position="bottom-right"
+        theme="dark"
+        accentColor="var(--brand)"
+      />
       <style>{`
+        [data-feedback-widget].smw--dark {
+          --smw-bg: var(--card);
+          --smw-bg-secondary: var(--surface);
+          --smw-bg-hover: var(--muted);
+          --smw-text: var(--foreground);
+          --smw-text-secondary: var(--muted-foreground);
+          --smw-text-muted: var(--subtle);
+          --smw-border: var(--border);
+          --smw-input-bg: var(--surface);
+          --smw-input-border: var(--input);
+          --smw-skeleton-bg: var(--muted);
+          --smw-skeleton-shine: var(--border);
+          --smw-bug: var(--destructive);
+          --smw-feature: var(--field-lilac-ink);
+          --smw-feedback: var(--field-sky-ink);
+        }
+        [data-feedback-widget] .smw-trigger,
+        [data-feedback-widget] .smw-btn--primary,
+        [data-feedback-widget] .smw-filter-pill--active,
+        [data-feedback-widget] .smw-filter-pill--active:hover {
+          color: var(--brand-foreground);
+        }
+
         @media (max-width: 639px) {
           [data-feedback-widget] .smw-trigger {
             width: 44px;

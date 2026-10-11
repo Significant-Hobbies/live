@@ -118,7 +118,7 @@ export default async function FamousBucketListPage({ params }: Props) {
               {/* Circular progress — desktop */}
               <div className="shrink-0 hidden sm:block">
                 <svg width="72" height="72" viewBox="0 0 72 72" className="-rotate-90">
-                  <circle cx="36" cy="36" r={r} fill="none" stroke="#f5f5f4" strokeWidth="5" />
+                  <circle cx="36" cy="36" r={r} fill="none" stroke="var(--muted)" strokeWidth="5" />
                   <circle
                     cx="36"
                     cy="36"
@@ -233,7 +233,7 @@ export default async function FamousBucketListPage({ params }: Props) {
                         {item.completedNote && (
                           <div className="mt-2.5 flex items-start gap-2 rounded-lg bg-primary/10 border border-lumi-200 px-3 py-2">
                             <span className="text-primary text-sm shrink-0">✓</span>
-                            <p className="text-xs leading-relaxed text-[#684e00]">
+                            <p className="text-xs leading-relaxed text-brand">
                               {item.completedNote}
                             </p>
                           </div>

@@ -4,87 +4,132 @@
 
 @theme inline {
   --font-serif: var(--font-serif);
-  --font-mono: var(--font-geist-mono);
-  --radius-2xl: calc(var(--radius) + 8px);
-  --radius-3xl: calc(var(--radius) + 12px);
-  --radius-4xl: calc(var(--radius) + 16px);
-  /* Brand — gold (Lumi guiding light, primary actions) */
-  --color-brand-50: oklch(0.97 0.03 88);
-  --color-brand-100: oklch(0.93 0.06 88);
-  --color-brand-500: oklch(0.82 0.13 88);
-  --color-brand-600: oklch(0.72 0.14 88);
-  --color-brand-700: oklch(0.60 0.13 88);
-  --color-brand-900: oklch(0.40 0.10 88);
-  /* Lumi — amber/gold guiding light (per PRODUCT.md) */
-  --color-lumi: oklch(0.82 0.13 88);
-  --color-lumi-50: oklch(0.97 0.03 88);
-  --color-lumi-100: oklch(0.93 0.06 88);
-  --color-lumi-200: oklch(0.88 0.09 88);
-  --color-lumi-300: oklch(0.84 0.12 88);
-  --color-lumi-400: oklch(0.82 0.13 88);
-  --color-lumi-500: oklch(0.72 0.14 88);
-  --color-lumi-600: oklch(0.60 0.13 88);
-  --color-lumi-700: oklch(0.48 0.11 88);
-  /* Growth — sage green (practice / stamps / progress) */
-  --color-growth: oklch(0.72 0.13 150);
-  --color-growth-soft: oklch(0.72 0.13 150 / 0.16);
-  /* Hero surfaces — warm paper for the daylight product world */
-  --color-hero: oklch(0.975 0.018 88);
-  --color-hero-surface: oklch(0.94 0.025 88);
-  /* Subtle — the accessible third text tier.
-     There used to be no token quieter than --muted-foreground, so 174 call
-     sites reached for opacity instead: text-muted-foreground/60 lands at
-     3.44:1 on --card and /40 at 2.20:1, both below the 4.5:1 body minimum.
-     This is solid rather than alpha-blended, measuring 5.18:1 on --background
-     and 4.87:1 on --card while staying clearly quieter than --muted-foreground
-     (7.4:1). Reach for this instead of fading muted text. */
-  --color-subtle: oklch(0.46 0.018 72);
+  --font-mono: var(--font-geist-mono, "Geist Mono Variable");
+  --radius-xl: var(--radius);
+  --radius-2xl: calc(var(--radius) + 4px);
+  --radius-3xl: calc(var(--radius) + 4px);
+  --radius-4xl: calc(var(--radius) + 4px);
+  /* Atlas actions, dark fields, and readable field accents. */
+  --color-brand-50: var(--field-sun);
+  --color-brand-100: var(--field-sun);
+  --color-brand-500: var(--brand);
+  --color-brand-600: var(--brand);
+  --color-brand-700: var(--brand);
+  --color-brand-900: var(--field-sun);
+  --color-lumi: var(--brand);
+  --color-lumi-50: var(--field-sun);
+  --color-lumi-100: var(--field-sun);
+  --color-lumi-200: var(--field-sun);
+  --color-lumi-300: var(--brand);
+  --color-lumi-400: var(--brand);
+  --color-lumi-500: var(--brand);
+  --color-lumi-600: var(--brand);
+  --color-lumi-700: var(--field-sun);
+  --color-growth: var(--success);
+  --color-growth-soft: color-mix(in srgb, var(--success) 16%, transparent);
+  --color-hero: var(--surface);
+  --color-hero-surface: var(--card);
+  /* Solid third text tier: 7.60:1 on background, 6.95:1 on card,
+     and at least 5.29:1 on every dark field (WCAG sRGB luminance).
+     Muted foreground is 8.93:1 / 8.16:1 on background / card.
+     Use this solid role instead of fading text with opacity. */
+  --color-subtle: var(--subtle);
+  --color-scrim: var(--scrim);
+  --color-week-spent: var(--week-spent);
+  --color-field-sun: var(--field-sun);
+  --color-field-sun-ink: var(--field-sun-ink);
+  --color-field-sky: var(--field-sky);
+  --color-field-sky-ink: var(--field-sky-ink);
+  --color-field-coral: var(--field-coral);
+  --color-field-coral-ink: var(--field-coral-ink);
+  --color-field-green: var(--field-green);
+  --color-field-green-ink: var(--field-green-ink);
+  --color-field-lilac: var(--field-lilac);
+  --color-field-lilac-ink: var(--field-lilac-ink);
+  --color-field-rose: var(--field-rose);
+  --color-field-rose-ink: var(--field-rose-ink);
 }
 
-/* ─── Warm daylight palette ───────────────────────────────────────────────────
-   Paper canvas, dark olive ink, and sun-gold action. The product is meant to
-   be used in ordinary daytime life, so darkness is a local storytelling tool,
-   not the application shell. All values OKLCH.
-*/
+/* Owner decision, 11 Oct 2026: dark everywhere, including the landing. */
 :root {
-  --brand: oklch(0.82 0.13 88);
-  --brand-foreground: oklch(0.20 0.025 72);
-  --brand-soft: oklch(0.93 0.06 88);
-  --brand-ink: oklch(0.50 0.12 72);
-  --background: oklch(0.985 0.012 88);
-  --foreground: oklch(0.20 0.025 72);
-  --primary: oklch(0.50 0.12 72);
-  --primary-foreground: oklch(0.985 0.012 88);
-  --secondary: oklch(0.94 0.025 88);
-  --secondary-foreground: oklch(0.24 0.025 72);
-  --muted: oklch(0.95 0.018 88);
-  --muted-foreground: oklch(0.46 0.018 72);
-  --accent: oklch(0.92 0.045 88);
-  --accent-foreground: oklch(0.20 0.025 72);
-  --destructive: oklch(0.56 0.20 25);
-  --border: oklch(0.86 0.025 82);
-  --input: oklch(0.82 0.025 82);
-  --ring: oklch(0.50 0.12 72);
-  --chart-1: oklch(0.68 0.15 82);
-  --chart-2: oklch(0.57 0.13 150);
-  --chart-3: oklch(0.78 0.10 200);
-  --chart-4: oklch(0.70 0.15 50);
-  --chart-5: oklch(0.80 0.08 320);
-  --sidebar: oklch(0.97 0.018 88);
-  --sidebar-accent: oklch(0.92 0.045 88);
-  --sidebar-ring: oklch(0.60 0.14 82);
+  color-scheme: dark;
+  --radius: 0.75rem;
+  --brand: #e7bf57;
+  --brand-foreground: #1d1409;
+  --brand-soft: var(--field-sun);
+  --brand-ink: var(--brand);
+  --background: #120e09;
+  --foreground: #f7f3e9;
+  --card: #1e1812;
+  --card-foreground: var(--foreground);
+  --surface: #17130d;
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+  --primary: var(--brand);
+  --primary-foreground: var(--brand-foreground);
+  --secondary: #26211a;
+  --secondary-foreground: var(--foreground);
+  --muted: var(--secondary);
+  --muted-foreground: #b7b0a3;
+  --accent: var(--muted);
+  --accent-foreground: var(--foreground);
+  --destructive: #f66d67;
+  --success: #62bb78;
+  --warning: var(--brand);
+  --border: #3b342a;
+  --hairline: var(--border);
+  --input: var(--border);
+  --ring: var(--brand);
+  --subtle: #aaa293;
+  --scrim: oklch(0 0 0);
+  --week-spent: oklch(0.34 0.012 72);
+  --chart-1: var(--brand);
+  --chart-2: var(--success);
+  --chart-3: var(--field-sky-ink);
+  --chart-4: var(--field-coral-ink);
+  --chart-5: var(--field-lilac-ink);
+  --sidebar: var(--surface);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+  --field-sun: oklch(0.30 0.055 95);
+  --field-sun-ink: oklch(0.86 0.09 95);
+  --field-sky: oklch(0.30 0.05 240);
+  --field-sky-ink: oklch(0.86 0.06 240);
+  --field-coral: oklch(0.30 0.065 40);
+  --field-coral-ink: oklch(0.86 0.06 40);
+  --field-green: oklch(0.30 0.05 145);
+  --field-green-ink: oklch(0.86 0.07 145);
+  --field-lilac: oklch(0.30 0.065 300);
+  --field-lilac-ink: oklch(0.86 0.06 300);
+  --field-rose: oklch(0.30 0.05 350);
+  --field-rose-ink: oklch(0.86 0.06 350);
+  --tone-1: var(--field-coral);
+  --tone-2: var(--field-lilac);
+  --tone-3: var(--field-green);
+  --tone-4: var(--field-sun);
+  --tone-ink: var(--surface);
+  --accent-ink: var(--brand);
 }
 
 @layer base {
   html {
-    color-scheme: light;
+    color-scheme: dark;
   }
   body {
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+  input::placeholder, textarea::placeholder {
+    color: var(--subtle);
+    opacity: 1;
+  }
   ::selection {
-    background: oklch(0.82 0.13 88 / 0.45);
-    color: oklch(0.20 0.025 72);
+    background: var(--brand);
+    color: var(--brand-foreground);
   }
   /* Balance text wrapping on headings by default for better multi-line layout */
   h1, h2, h3 {
@@ -105,7 +150,7 @@
 
 @layer components {
   .field-input {
-    @apply mt-2 min-h-12 w-full rounded-xl border-2 border-[#d9cfbd] bg-white px-4 text-base text-[#211e18] placeholder:text-[#8c8273] focus-visible:border-[#176b4a] focus-visible:outline-none;
+    @apply mt-2 min-h-12 w-full rounded-xl border-2 border-input bg-card px-4 text-base text-foreground placeholder:text-subtle focus-visible:border-ring focus-visible:outline-none;
   }
 }
 
@@ -114,32 +159,32 @@
   /* Subtle elevation — Stripe-like card shadow */
   .shadow-soft {
     box-shadow:
-      0 1px 2px 0 oklch(0 0 0 / 0.05),
-      0 1px 3px 0 oklch(0 0 0 / 0.08);
+      0 1px 2px 0 color-mix(in srgb, var(--scrim) 5%, transparent),
+      0 1px 3px 0 color-mix(in srgb, var(--scrim) 8%, transparent);
   }
   .shadow-elevated {
     box-shadow:
-      0 2px 4px 0 oklch(0 0 0 / 0.06),
-      0 4px 12px 0 oklch(0 0 0 / 0.1);
+      0 2px 4px 0 color-mix(in srgb, var(--scrim) 6%, transparent),
+      0 4px 12px 0 color-mix(in srgb, var(--scrim) 10%, transparent);
   }
   .shadow-float {
     box-shadow:
-      0 4px 8px 0 oklch(0 0 0 / 0.08),
-      0 8px 24px 0 oklch(0 0 0 / 0.12);
+      0 4px 8px 0 color-mix(in srgb, var(--scrim) 8%, transparent),
+      0 8px 24px 0 color-mix(in srgb, var(--scrim) 12%, transparent);
   }
   /* Gold glow for primary CTAs */
   .shadow-glow {
-    box-shadow: 0 0 20px oklch(0.82 0.13 88 / 0.25);
+    box-shadow: 0 0 20px color-mix(in srgb, var(--brand) 25%, transparent);
   }
   .shadow-glow-lg {
-    box-shadow: 0 0 40px oklch(0.82 0.13 88 / 0.3);
+    box-shadow: 0 0 40px color-mix(in srgb, var(--brand) 30%, transparent);
   }
   /* Gradient border — premium card edge */
   .border-gradient {
     border: 1px solid transparent;
     background:
       linear-gradient(var(--card), var(--card)) padding-box,
-      linear-gradient(135deg, oklch(0.82 0.13 88 / 0.3), oklch(0.72 0.13 150 / 0.2)) border-box;
+      linear-gradient(135deg, color-mix(in srgb, var(--brand) 30%, transparent), color-mix(in srgb, var(--success) 20%, transparent)) border-box;
   }
 }
 
@@ -253,8 +298,8 @@
 }
 
 @keyframes glowPulse {
-  0%, 100% { box-shadow: 0 0 20px oklch(0.82 0.13 88 / 0.20), 0 0 40px oklch(0.82 0.13 88 / 0.08); }
-  50%       { box-shadow: 0 0 32px oklch(0.82 0.13 88 / 0.35), 0 0 64px oklch(0.82 0.13 88 / 0.15); }
+  0%, 100% { box-shadow: 0 0 20px color-mix(in srgb, var(--brand) 20%, transparent), 0 0 40px color-mix(in srgb, var(--brand) 8%, transparent); }
+  50%       { box-shadow: 0 0 32px color-mix(in srgb, var(--brand) 35%, transparent), 0 0 64px color-mix(in srgb, var(--brand) 15%, transparent); }
 }
 
 @keyframes shinePass {
@@ -413,8 +458,8 @@
   animation: float2 9s ease-in-out infinite;
 }
 @keyframes lumiGlowPulse {
-  0%, 100% { filter: drop-shadow(0 0 12px oklch(0.82 0.13 88 / 0.55)); }
-  50%       { filter: drop-shadow(0 0 28px oklch(0.82 0.13 88 / 0.85)); }
+  0%, 100% { filter: drop-shadow(0 0 12px color-mix(in srgb, var(--brand) 55%, transparent)); }
+  50%       { filter: drop-shadow(0 0 28px color-mix(in srgb, var(--brand) 85%, transparent)); }
 }
 .animate-lumi-glow {
   animation: lumiGlowPulse 3s ease-in-out infinite;
@@ -429,8 +474,8 @@
   animation: whaleFloat 8s ease-in-out infinite;
 }
 @keyframes whaleGlowPulse {
-  0%, 100% { filter: drop-shadow(0 0 10px oklch(0.82 0.13 88 / 0.35)); }
-  50%      { filter: drop-shadow(0 0 22px oklch(0.82 0.13 88 / 0.6)); }
+  0%, 100% { filter: drop-shadow(0 0 10px color-mix(in srgb, var(--brand) 35%, transparent)); }
+  50%      { filter: drop-shadow(0 0 22px color-mix(in srgb, var(--brand) 60%, transparent)); }
 }
 .animate-whale-glow {
   animation: whaleGlowPulse 6s ease-in-out infinite;
@@ -512,7 +557,7 @@
   min-height: calc(100svh - 4.5rem);
   overflow: hidden;
   isolation: isolate;
-  background: #0b1320 url('/hero/hobby-horizon-poster.jpg') center / cover no-repeat;
+  background: var(--background) url('/hero/hobby-horizon-poster.jpg') center / cover no-repeat;
 }
 
 .landing-cinematic-hero__video,
@@ -536,8 +581,8 @@
 
 .landing-cinematic-hero__scrim {
   background:
-    linear-gradient(90deg, oklch(0.08 0.025 250 / 0.92) 0%, oklch(0.08 0.025 250 / 0.7) 38%, oklch(0.08 0.025 250 / 0.18) 72%),
-    linear-gradient(180deg, oklch(0.08 0.025 250 / 0.48) 0%, transparent 35%, oklch(0.08 0.025 250 / 0.72) 100%);
+    linear-gradient(90deg, color-mix(in srgb, var(--scrim) 92%, transparent) 0%, color-mix(in srgb, var(--scrim) 70%, transparent) 38%, color-mix(in srgb, var(--scrim) 18%, transparent) 72%),
+    linear-gradient(180deg, color-mix(in srgb, var(--scrim) 48%, transparent) 0%, transparent 35%, color-mix(in srgb, var(--scrim) 72%, transparent) 100%);
 }
 
 .landing-cinematic-hero__inner {
@@ -566,7 +611,7 @@
 .landing-cinematic-hero h1 {
   margin: 0;
   max-width: 14ch;
-  color: oklch(0.99 0.004 90);
+  color: var(--foreground);
   font-size: clamp(3rem, 6.8vw, 6rem);
   font-weight: 720;
   letter-spacing: -0.035em;
@@ -581,7 +626,7 @@
 .landing-cinematic-hero__copy > p {
   max-width: 47ch;
   margin: clamp(1.5rem, 3vw, 2rem) 0 0;
-  color: oklch(0.92 0.018 88);
+  color: var(--foreground);
   font-size: clamp(1.05rem, 1.5vw, 1.25rem);
   line-height: 1.55;
   text-wrap: pretty;
@@ -595,8 +640,8 @@
   align-items: center;
   gap: 0.75rem;
   border-radius: 0.75rem;
-  background: oklch(0.84 0.14 85);
-  color: oklch(0.16 0.025 250);
+  background: var(--brand);
+  color: var(--brand-foreground);
   font-size: 0.98rem;
   font-weight: 700;
   text-decoration: none;
@@ -604,24 +649,24 @@
 }
 
 .landing-cinematic-hero__cta:hover {
-  background: oklch(0.91 0.12 85);
+  background: color-mix(in srgb, var(--brand) 90%, var(--foreground));
 }
 
 .landing-cinematic-hero__cta:focus-visible {
-  outline: 3px solid white;
+  outline: 3px solid var(--ring);
   outline-offset: 4px;
 }
 
 .landing-cinematic-hero__copy > .landing-cinematic-hero__note {
   margin-top: 0.85rem;
-  color: oklch(0.81 0.018 88);
+  color: var(--muted-foreground);
   font-size: 0.875rem;
 }
 
 .landing-cinematic-hero__prompt {
   align-self: flex-end;
   margin: 0;
-  color: oklch(0.92 0.018 88);
+  color: var(--foreground);
   font-size: 0.875rem;
 }
 
@@ -647,8 +692,8 @@
 
   .landing-cinematic-hero__scrim {
     background:
-      linear-gradient(90deg, oklch(0.08 0.025 250 / 0.84) 0%, oklch(0.08 0.025 250 / 0.46) 100%),
-      linear-gradient(180deg, oklch(0.08 0.025 250 / 0.56) 0%, transparent 30%, oklch(0.08 0.025 250 / 0.86) 100%);
+      linear-gradient(90deg, color-mix(in srgb, var(--scrim) 84%, transparent) 0%, color-mix(in srgb, var(--scrim) 46%, transparent) 100%),
+      linear-gradient(180deg, color-mix(in srgb, var(--scrim) 56%, transparent) 0%, transparent 30%, color-mix(in srgb, var(--scrim) 86%, transparent) 100%);
   }
 
   .landing-cinematic-hero h1 {

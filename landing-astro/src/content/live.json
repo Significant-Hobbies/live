@@ -6,10 +6,10 @@
     "theme": "gallery",
     "icon": "icon.svg",
     "tokens": {
-      "--brand": "oklch(0.8 0.16 80)",
-      "--brand-foreground": "oklch(0.2 0.02 60)",
-      "--brand-soft": "oklch(0.94 0.06 85)",
-      "--brand-ink": "oklch(0.55 0.13 60)"
+      "--brand": "#e7bf57",
+      "--brand-foreground": "#1d1409",
+      "--brand-soft": "var(--field-sun)",
+      "--brand-ink": "var(--brand)"
     },
     "assetBase": "/",
     "canonical": "https://live.significanthobbies.com",
@@ -50,7 +50,7 @@
       "href": "/experiences"
     },
     "note": "Free to use. No account required to begin.",
-    "image": "hero/hobby-horizon-poster.webp"
+    "image": "hero/live-hero-v3.webp"
   },
   "sections": [
     {
@@ -175,7 +175,7 @@
       "label": "Explore the catalog",
       "href": "/experiences"
     },
-    "image": "hero/dawn-valley-1920.webp",
+    "image": "hero/live-closing-v3-1536.webp",
     "credit": "Illustrative artwork"
   },
   "footer": {

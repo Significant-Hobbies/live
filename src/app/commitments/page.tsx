@@ -64,13 +64,13 @@ export default async function CommitmentsPage() {
 
   return (
     <div className="mx-auto max-w-4xl space-y-12 px-4 py-10 sm:py-14">
-      <header className="relative overflow-hidden rounded-[1.75rem] bg-[#a8dc91] px-6 py-10 text-[#192817] shadow-[0_14px_40px_rgba(53,80,40,0.10)] sm:px-10 sm:py-12">
+      <header className="relative overflow-hidden rounded-2xl bg-field-green px-6 py-10 text-foreground shadow-[0_14px_40px_color-mix(in_srgb,var(--scrim)_10%,transparent)] sm:px-10 sm:py-12">
         <div className="relative max-w-2xl">
           <p className="text-base font-bold">Living promises</p>
           <h1 className="mt-4 font-serif text-5xl font-medium leading-none tracking-[-0.03em] sm:text-6xl">
             Commitments
           </h1>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-[#344b31]">
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground">
             Proof. A commitment is a promise you can show your work for — one stamp a day, each with
             evidence attached.
           </p>

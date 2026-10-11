@@ -19,11 +19,11 @@ export function ExportCard({ timeline, exportRef }: Props) {
   return (
     <div
       ref={exportRef}
-      className="w-[600px] rounded-2xl bg-slate-950 p-8 overflow-hidden select-none"
+      className="w-[600px] rounded-2xl bg-background p-8 overflow-hidden select-none"
       style={{
-        background: 'linear-gradient(135deg, #020617 0%, #0f172a 50%, #020617 100%)',
+        background: 'var(--card)',
         fontFamily: 'system-ui, -apple-system, sans-serif',
-        boxShadow: '0 0 60px rgba(16,185,129,0.08)',
+        boxShadow: '0 0 60px color-mix(in srgb, var(--success) 8%, transparent)',
       }}
     >
       {/* Glow */}
@@ -31,7 +31,7 @@ export function ExportCard({ timeline, exportRef }: Props) {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse 70% 40% at 50% -5%, rgba(16,185,129,0.15) 0%, transparent 70%)',
+            'radial-gradient(ellipse 70% 40% at 50% -5%, color-mix(in srgb, var(--success) 15%, transparent) 0%, transparent 70%)',
         }}
       />
 
@@ -39,17 +39,17 @@ export function ExportCard({ timeline, exportRef }: Props) {
       <div className="relative mb-6">
         <div className="flex items-start justify-between">
           <div>
-            <p className="text-xs font-medium text-emerald-400 mb-1">significanthobbies</p>
-            <h1 className="text-2xl font-bold text-slate-100">
+            <p className="text-xs font-medium text-growth mb-1">significanthobbies</p>
+            <h1 className="text-2xl font-bold text-foreground">
               {timeline.title ?? 'My Hobby Journey'}
             </h1>
             {timeline.user?.username && (
-              <p className="mt-0.5 text-sm text-slate-400">@{timeline.user.username}</p>
+              <p className="mt-0.5 text-sm text-muted-foreground">@{timeline.user.username}</p>
             )}
           </div>
           <div className="text-right">
-            <div className="text-3xl font-black text-emerald-400">{totalHobbies}</div>
-            <div className="text-xs text-slate-400">hobbies</div>
+            <div className="text-3xl font-black text-growth">{totalHobbies}</div>
+            <div className="text-xs text-muted-foreground">hobbies</div>
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@ export function ExportCard({ timeline, exportRef }: Props) {
       <div className="relative mb-6">
         <div className="flex gap-px overflow-hidden rounded-lg">
           {phases.map((phase, i) => (
-            <div key={phase.id} className="flex-1 bg-slate-800" style={{ minWidth: 0 }}>
+            <div key={phase.id} className="flex-1 bg-muted" style={{ minWidth: 0 }}>
               <div
                 className="h-2"
                 style={{
@@ -66,8 +66,8 @@ export function ExportCard({ timeline, exportRef }: Props) {
                 }}
               />
               <div className="px-2 py-1.5">
-                <p className="text-xs font-medium text-slate-300 truncate">{phase.label}</p>
-                <p className="text-xs text-slate-500">{phase.hobbies.length} hobbies</p>
+                <p className="text-xs font-medium text-muted-foreground truncate">{phase.label}</p>
+                <p className="text-xs text-muted-foreground">{phase.hobbies.length} hobbies</p>
               </div>
             </div>
           ))}
@@ -81,7 +81,7 @@ export function ExportCard({ timeline, exportRef }: Props) {
           return (
             <span
               key={hobby.name}
-              className="inline-flex items-center gap-1 rounded-full border border-slate-700 bg-slate-800/80 px-2.5 py-0.5 text-xs text-slate-300"
+              className="inline-flex items-center gap-1 rounded-full border border-border bg-muted/80 px-2.5 py-0.5 text-xs text-muted-foreground"
             >
               {cat && <span>{cat.emoji}</span>}
               {hobby.name}
@@ -89,7 +89,7 @@ export function ExportCard({ timeline, exportRef }: Props) {
           );
         })}
         {totalHobbies > 20 && (
-          <span className="inline-flex items-center rounded-full border border-slate-700 bg-slate-800/80 px-2.5 py-0.5 text-xs text-slate-400">
+          <span className="inline-flex items-center rounded-full border border-border bg-muted/80 px-2.5 py-0.5 text-xs text-muted-foreground">
             +{totalHobbies - 20} more
           </span>
         )}
@@ -97,37 +97,39 @@ export function ExportCard({ timeline, exportRef }: Props) {
 
       {/* Personality */}
       {personality && (
-        <div className="mb-6 rounded-lg bg-slate-800/40 border border-slate-700/50 px-4 py-3">
+        <div className="mb-6 rounded-lg bg-muted/40 border border-border/50 px-4 py-3">
           <div className="flex items-center gap-2 mb-1">
             <span className="text-xl leading-none">{personality.archetype.emoji}</span>
-            <span className="font-bold text-emerald-400">{personality.archetype.name}</span>
+            <span className="font-bold text-growth">{personality.archetype.name}</span>
           </div>
-          <p className="text-xs text-slate-400 leading-relaxed">{personality.narrative}</p>
+          <p className="text-xs text-muted-foreground leading-relaxed">{personality.narrative}</p>
         </div>
       )}
 
       {/* Insights row */}
       {insights && (
         <div className="grid grid-cols-3 gap-3 mb-6">
-          <div className="rounded-lg bg-slate-800/60 p-3 text-center">
-            <div className="text-xl font-bold text-orange-400">{insights.rekindled.length}</div>
-            <div className="text-xs text-slate-400">rekindled</div>
+          <div className="rounded-lg bg-muted/60 p-3 text-center">
+            <div className="text-xl font-bold text-field-coral-ink">
+              {insights.rekindled.length}
+            </div>
+            <div className="text-xs text-muted-foreground">rekindled</div>
           </div>
-          <div className="rounded-lg bg-slate-800/60 p-3 text-center">
-            <div className="text-xl font-bold text-blue-400">
+          <div className="rounded-lg bg-muted/60 p-3 text-center">
+            <div className="text-xl font-bold text-field-sky-ink">
               {insights.mostPersistent.filter((h) => h.count >= 2).length}
             </div>
-            <div className="text-xs text-slate-400">persistent</div>
+            <div className="text-xs text-muted-foreground">persistent</div>
           </div>
-          <div className="rounded-lg bg-slate-800/60 p-3 text-center">
-            <div className="text-xl font-bold text-purple-400">{phases.length}</div>
-            <div className="text-xs text-slate-400">phases</div>
+          <div className="rounded-lg bg-muted/60 p-3 text-center">
+            <div className="text-xl font-bold text-field-lilac-ink">{phases.length}</div>
+            <div className="text-xs text-muted-foreground">phases</div>
           </div>
         </div>
       )}
 
       {/* Footer */}
-      <div className="flex items-center justify-between border-t border-slate-800 pt-4">
+      <div className="flex items-center justify-between border-t border-border pt-4">
         <div className="flex gap-1">
           {['🎨', '🎵', '💪', '📚', '🎮'].map((emoji) => (
             <span key={emoji} className="text-sm opacity-60">
@@ -135,7 +137,7 @@ export function ExportCard({ timeline, exportRef }: Props) {
             </span>
           ))}
         </div>
-        <p className="text-xs text-slate-500">live.significanthobbies.com</p>
+        <p className="text-xs text-muted-foreground">live.significanthobbies.com</p>
       </div>
     </div>
   );

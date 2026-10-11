@@ -10,16 +10,40 @@ interface Props {
 const INTENSITY_LABELS = ['', 'Trying', 'Casual', 'Regular', 'Passionate', 'Core'];
 
 const PHASE_COLORS = [
-  { border: 'oklch(0.72 0.13 150)', bg: 'oklch(0.72 0.13 150 / 0.06)' }, // sage
-  { border: 'oklch(0.70 0.13 250)', bg: 'oklch(0.70 0.13 250 / 0.06)' }, // blue
-  { border: 'oklch(0.65 0.15 290)', bg: 'oklch(0.65 0.15 290 / 0.06)' }, // violet
-  { border: 'oklch(0.82 0.13 88)', bg: 'oklch(0.82 0.13 88 / 0.06)' }, // gold
-  { border: 'oklch(0.70 0.15 350)', bg: 'oklch(0.70 0.15 350 / 0.06)' }, // pink
-  { border: 'oklch(0.72 0.11 200)', bg: 'oklch(0.72 0.11 200 / 0.06)' }, // teal
-  { border: 'oklch(0.72 0.16 55)', bg: 'oklch(0.72 0.16 55 / 0.06)' }, // orange
-  { border: 'oklch(0.65 0.14 270)', bg: 'oklch(0.65 0.14 270 / 0.06)' }, // indigo
-  { border: 'oklch(0.72 0.12 210)', bg: 'oklch(0.72 0.12 210 / 0.06)' }, // cyan
-  { border: 'oklch(0.65 0.18 15)', bg: 'oklch(0.65 0.18 15 / 0.06)' }, // rose
+  { border: 'var(--success)', bg: 'color-mix(in srgb, var(--success) 6%, transparent)' }, // sage
+  {
+    border: 'var(--field-sky-ink)',
+    bg: 'color-mix(in srgb, var(--field-sky-ink) 6%, transparent)',
+  }, // blue
+  {
+    border: 'var(--field-lilac-ink)',
+    bg: 'color-mix(in srgb, var(--field-lilac-ink) 6%, transparent)',
+  }, // violet
+  { border: 'var(--brand)', bg: 'color-mix(in srgb, var(--brand) 6%, transparent)' }, // gold
+  {
+    border: 'var(--field-rose-ink)',
+    bg: 'color-mix(in srgb, var(--field-rose-ink) 6%, transparent)',
+  }, // pink
+  {
+    border: 'var(--field-green-ink)',
+    bg: 'color-mix(in srgb, var(--field-green-ink) 6%, transparent)',
+  }, // teal
+  {
+    border: 'var(--field-coral-ink)',
+    bg: 'color-mix(in srgb, var(--field-coral-ink) 6%, transparent)',
+  }, // orange
+  {
+    border: 'var(--field-lilac-ink)',
+    bg: 'color-mix(in srgb, var(--field-lilac-ink) 6%, transparent)',
+  }, // indigo
+  {
+    border: 'var(--field-sky-ink)',
+    bg: 'color-mix(in srgb, var(--field-sky-ink) 6%, transparent)',
+  }, // cyan
+  {
+    border: 'var(--field-rose-ink)',
+    bg: 'color-mix(in srgb, var(--field-rose-ink) 6%, transparent)',
+  }, // rose
 ];
 
 function uniqueHobbies(hobbies: Phase['hobbies']) {

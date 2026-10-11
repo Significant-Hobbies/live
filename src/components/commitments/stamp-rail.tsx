@@ -69,7 +69,7 @@ export function StampRail({ stamps, goalDays }: Props) {
                   <ExternalLink className="h-2.5 w-2.5 shrink-0 self-center" aria-hidden />
                 </a>
               ) : (
-                <span className="text-foreground/80">{s.proofUrl}</span>
+                <span className="text-muted-foreground">{s.proofUrl}</span>
               )}
               {s.note && <span className="ml-1.5 text-muted-foreground">— {s.note}</span>}
             </span>

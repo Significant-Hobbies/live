@@ -16,19 +16,22 @@ export function GradientMesh({ className, variant = 'gold' }: Props) {
     variant === 'gold'
       ? [
           {
-            background: 'radial-gradient(circle, oklch(0.82 0.13 88 / 0.08), transparent 60%)',
+            background:
+              'radial-gradient(circle, color-mix(in srgb, var(--brand) 8%, transparent), transparent 60%)',
             top: '-20%',
             right: '10%',
             size: '400px',
           },
           {
-            background: 'radial-gradient(circle, oklch(0.72 0.13 150 / 0.06), transparent 60%)',
+            background:
+              'radial-gradient(circle, color-mix(in srgb, var(--success) 6%, transparent), transparent 60%)',
             bottom: '-30%',
             left: '5%',
             size: '350px',
           },
           {
-            background: 'radial-gradient(circle, oklch(0.82 0.13 88 / 0.04), transparent 50%)',
+            background:
+              'radial-gradient(circle, color-mix(in srgb, var(--brand) 4%, transparent), transparent 50%)',
             top: '20%',
             left: '40%',
             size: '300px',
@@ -36,13 +39,15 @@ export function GradientMesh({ className, variant = 'gold' }: Props) {
         ]
       : [
           {
-            background: 'radial-gradient(circle, oklch(0.72 0.13 150 / 0.08), transparent 60%)',
+            background:
+              'radial-gradient(circle, color-mix(in srgb, var(--success) 8%, transparent), transparent 60%)',
             top: '-20%',
             right: '10%',
             size: '400px',
           },
           {
-            background: 'radial-gradient(circle, oklch(0.82 0.13 88 / 0.05), transparent 60%)',
+            background:
+              'radial-gradient(circle, color-mix(in srgb, var(--brand) 5%, transparent), transparent 60%)',
             bottom: '-30%',
             left: '5%',
             size: '350px',

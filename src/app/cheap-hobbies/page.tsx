@@ -272,7 +272,7 @@ export default function CheapHobbiesPage() {
         </a>
         <a
           href="#cheap"
-          className="rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-xs font-semibold text-blue-800 hover:opacity-80 transition-opacity"
+          className="rounded-full border border-field-sky-ink bg-field-sky px-4 py-1.5 text-xs font-semibold text-field-sky-ink hover:opacity-80 transition-opacity"
         >
           10 Under $50
         </a>
@@ -335,7 +335,7 @@ export default function CheapHobbiesPage() {
                     >
                       {hobby.name}
                     </Link>
-                    <span className="flex-shrink-0 rounded-full border border-blue-200 bg-blue-50 px-3 py-0.5 text-xs font-medium text-blue-700">
+                    <span className="flex-shrink-0 rounded-full border border-field-sky-ink bg-field-sky px-3 py-0.5 text-xs font-medium text-field-sky-ink">
                       {hobby.cost}
                     </span>
                   </div>

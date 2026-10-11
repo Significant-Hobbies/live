@@ -159,12 +159,12 @@ export function DreamAtlasExplorer({
       {!exactQuery && callingDream && callingDoor ? (
         <section
           aria-labelledby="calling-dream-title"
-          className="overflow-hidden rounded-[1.75rem] bg-[#b9dcf5]"
+          className="overflow-hidden rounded-2xl bg-field-sky"
         >
           <div className="grid lg:grid-cols-[1.22fr_0.78fr]">
             <div className="p-6 sm:p-8 lg:p-10">
-              <div className="flex items-center gap-3 text-sm font-bold text-[#22526b]">
-                <span className="flex size-10 items-center justify-center rounded-full bg-[#211e18] text-white">
+              <div className="flex items-center gap-3 text-sm font-bold text-field-sky-ink">
+                <span className="flex size-10 items-center justify-center rounded-full bg-primary text-primary-foreground">
                   <Compass className="size-5" aria-hidden="true" />
                 </span>
                 Calling now
@@ -175,12 +175,12 @@ export function DreamAtlasExplorer({
               >
                 {callingDream.title}
               </h1>
-              <div className="mt-7 border-t border-[#22526b]/25 pt-6">
-                <p className="text-sm font-bold text-[#22526b]">{callingDoor.label}</p>
+              <div className="mt-7 border-t border-border/25 pt-6">
+                <p className="text-sm font-bold text-field-sky-ink">{callingDoor.label}</p>
                 <h2 className="mt-2 max-w-2xl font-serif text-2xl leading-tight sm:text-3xl">
                   {callingDoor.title}
                 </h2>
-                <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[#344f5d] sm:text-base">
+                <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
                   {callingDoor.description}
                 </p>
                 {callingDoor.href.startsWith('http') ? (
@@ -188,7 +188,7 @@ export function DreamAtlasExplorer({
                     href={callingDoor.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-5 inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#211e18] px-5 font-bold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#211e18]"
+                    className="mt-5 inline-flex min-h-12 items-center gap-2 rounded-xl bg-primary px-5 font-bold text-primary-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
                   >
                     Open this door <span className="sr-only">(opens in a new tab)</span>
                     <ArrowRight className="size-4" aria-hidden="true" />
@@ -196,7 +196,7 @@ export function DreamAtlasExplorer({
                 ) : (
                   <Link
                     href={callingDoor.href}
-                    className="mt-5 inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#211e18] px-5 font-bold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#211e18]"
+                    className="mt-5 inline-flex min-h-12 items-center gap-2 rounded-xl bg-primary px-5 font-bold text-primary-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
                   >
                     Open this door <ArrowRight className="size-4" aria-hidden="true" />
                   </Link>
@@ -204,14 +204,14 @@ export function DreamAtlasExplorer({
               </div>
             </div>
 
-            <aside className="bg-[#fffdf8] p-6 sm:p-8 lg:p-10">
-              <p className="text-sm font-bold text-[#176b4a]">Other dreams still calling</p>
-              <p className="mt-2 text-sm leading-relaxed text-[#625b50]">
+            <aside className="bg-card p-6 sm:p-8 lg:p-10">
+              <p className="text-sm font-bold text-growth">Other dreams still calling</p>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 Choose another and Live will bring its next door here. Your other in-progress dreams
                 stay intact.
               </p>
               {items.length > 1 ? (
-                <ul className="mt-4 divide-y divide-[#e8dfd1]">
+                <ul className="mt-4 divide-y divide-border">
                   {items
                     .filter((item) => item.id !== callingDream.id)
                     .slice(0, 3)
@@ -222,7 +222,7 @@ export function DreamAtlasExplorer({
                           type="button"
                           disabled={callingPendingId !== null}
                           onClick={() => callDreamForward(item)}
-                          className="mt-1 inline-flex min-h-11 items-center gap-1.5 text-left text-xs font-bold text-[#6c3d2b] underline decoration-[#d79b7f] underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6c3d2b] disabled:opacity-50"
+                          className="mt-1 inline-flex min-h-11 items-center gap-1.5 text-left text-xs font-bold text-field-coral-ink underline decoration-field-coral-ink underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring disabled:opacity-50"
                           aria-label={`Bring ${item.title} forward and find its first door`}
                         >
                           {callingPendingId === item.id ? (
@@ -236,37 +236,37 @@ export function DreamAtlasExplorer({
                     ))}
                 </ul>
               ) : (
-                <p className="mt-4 text-sm leading-relaxed text-[#625b50]">
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
                   One dream is enough. You can add another whenever something new starts tugging at
                   you.
                 </p>
               )}
               {items.length > 4 ? (
-                <p className="mt-3 text-sm text-[#625b50]">
+                <p className="mt-3 text-sm text-muted-foreground">
                   And {items.length - 4} more in your atlas.
                 </p>
               ) : null}
               <Link
                 href="/bucket-list"
-                className="mt-5 inline-flex min-h-11 items-center gap-2 font-bold underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#211e18]"
+                className="mt-5 inline-flex min-h-11 items-center gap-2 font-bold underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
               >
                 Manage the whole atlas <ArrowRight className="size-4" aria-hidden="true" />
               </Link>
             </aside>
           </div>
-          <div className="bg-[#211e18] px-6 py-5 text-white sm:px-8 lg:px-10">
-            <p className="max-w-3xl text-sm leading-relaxed text-white/70">
-              <strong className="text-white">Dreams are not a contract.</strong> Changing direction
-              is part of the atlas, not a failed streak.
+          <div className="bg-surface px-6 py-5 text-foreground sm:px-8 lg:px-10">
+            <p className="max-w-3xl text-sm leading-relaxed text-muted-foreground">
+              <strong className="text-foreground">Dreams are not a contract.</strong> Changing
+              direction is part of the atlas, not a failed streak.
             </p>
           </div>
         </section>
       ) : null}
 
-      <section className="overflow-hidden rounded-[2rem] bg-[#a8dc91] text-[#192817] shadow-[0_18px_55px_rgba(53,80,40,0.13)]">
+      <section className="overflow-hidden rounded-2xl bg-field-green text-foreground shadow-[0_18px_55px_color-mix(in_srgb,var(--scrim)_13%,transparent)]">
         <div className="grid gap-8 px-6 py-9 sm:px-10 sm:py-11 lg:grid-cols-[1.08fr_0.92fr] lg:items-end">
           <div>
-            <p className="text-sm font-bold text-[#0f593c]">An open world. A private atlas.</p>
+            <p className="text-sm font-bold text-growth">An open world. A private atlas.</p>
             {!exactQuery && callingDream ? (
               <h2 className="mt-3 max-w-4xl font-serif text-5xl font-medium leading-[0.94] tracking-[-0.045em] sm:text-7xl">
                 There are more ways to live{name ? `, ${name}` : ''}.
@@ -276,19 +276,19 @@ export function DreamAtlasExplorer({
                 There are more ways to live{name ? `, ${name}` : ''}.
               </h1>
             )}
-            <p className="mt-5 max-w-2xl text-base leading-relaxed text-[#344b31] sm:text-lg">
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
               Name anything—even if it sounds impossible or only makes sense to you. Live will show
               what it genuinely knows, keep the exact dream, and open the wider world when its own
               atlas ends.
             </p>
           </div>
-          <div className="rounded-[1.5rem] bg-[#211e18] p-4 text-white sm:p-5">
+          <div className="rounded-2xl bg-surface p-4 text-foreground sm:p-5">
             <label htmlFor="dream-atlas-search" className="font-serif text-xl">
               What do you still want to live?
             </label>
             <div className="mt-3 flex gap-2">
-              <span className="flex min-h-12 min-w-0 flex-1 items-center gap-2 rounded-xl bg-white/10 px-3 ring-1 ring-white/20 focus-within:ring-2 focus-within:ring-[#f7e957]">
-                <Search className="size-4 shrink-0 text-white/60" />
+              <span className="flex min-h-12 min-w-0 flex-1 items-center gap-2 rounded-xl bg-card/10 px-3 ring-1 ring-foreground/20 focus-within:ring-2 focus-within:ring-ring">
+                <Search className="size-4 shrink-0 text-muted-foreground" />
                 <input
                   id="dream-atlas-search"
                   value={query}
@@ -297,13 +297,13 @@ export function DreamAtlasExplorer({
                     setStatus('');
                   }}
                   placeholder="go to space, start a band…"
-                  className="min-w-0 flex-1 bg-transparent py-3 text-base text-white outline-none placeholder:text-white/45"
+                  className="min-w-0 flex-1 bg-transparent py-3 text-base text-foreground outline-none placeholder:text-muted-foreground"
                 />
                 {query ? (
                   <button
                     type="button"
                     onClick={() => setQuery('')}
-                    className="flex size-11 shrink-0 items-center justify-center rounded-full text-white/65 hover:bg-white/10 hover:text-white"
+                    className="flex size-11 shrink-0 items-center justify-center rounded-full text-muted-foreground hover:bg-card/10 hover:text-foreground"
                     aria-label="Clear dream search"
                   >
                     <X className="size-4" />
@@ -315,14 +315,14 @@ export function DreamAtlasExplorer({
               <button
                 type="button"
                 onClick={surpriseMe}
-                className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-[#f7e957] px-4 text-sm font-bold text-[#211e18]"
+                className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-brand px-4 text-sm font-bold text-brand-foreground"
               >
                 <Sparkles className="size-4" /> Surprise me
               </button>
               <button
                 type="button"
                 onClick={() => setImportOpen((current) => !current)}
-                className="inline-flex min-h-11 items-center gap-2 rounded-xl border border-white/25 px-4 text-sm font-bold text-white"
+                className="inline-flex min-h-11 items-center gap-2 rounded-xl border border-foreground/25 px-4 text-sm font-bold text-foreground"
               >
                 {importOpen ? <X className="size-4" /> : <ListPlus className="size-4" />}
                 {importOpen ? 'Close list import' : 'Paste a whole list'}
@@ -332,19 +332,19 @@ export function DreamAtlasExplorer({
         </div>
       </section>
 
-      <p aria-live="polite" className="text-sm font-medium text-[#176b4a]">
+      <p aria-live="polite" className="text-sm font-medium text-growth">
         {status}
       </p>
 
       {importOpen ? (
-        <section className="rounded-[1.75rem] border border-[#d9cfbd] bg-[#fffdf8] p-5 sm:p-8">
+        <section className="rounded-2xl border border-border bg-card p-5 sm:p-8">
           <div className="grid gap-6 lg:grid-cols-[0.78fr_1.22fr]">
             <div>
-              <p className="text-sm font-bold text-[#176b4a]">Bring your existing dreams</p>
+              <p className="text-sm font-bold text-growth">Bring your existing dreams</p>
               <h2 className="mt-2 font-serif text-4xl leading-tight">
                 Paste the list exactly as it is.
               </h2>
-              <p className="mt-3 text-sm leading-relaxed text-[#625b50]">
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 Numbering and bullets are removed. Your wording is not. Exact duplicates are
                 collapsed before anything is saved.
               </p>
@@ -357,13 +357,13 @@ export function DreamAtlasExplorer({
                 onChange={(event) => setImportText(event.target.value)}
                 rows={10}
                 placeholder={'1. Participate in a car race\n2. Start my band\n3. Go to space'}
-                className="mt-5 w-full resize-y rounded-xl border border-[#cfc3b0] bg-white px-4 py-3 text-base outline-none focus:border-[#176b4a] focus:ring-2 focus:ring-[#176b4a]/20"
+                className="mt-5 w-full resize-y rounded-xl border border-border bg-card px-4 py-3 text-base outline-none focus:border-growth focus:ring-2 focus:ring-growth/20"
               />
             </div>
-            <div className="rounded-2xl bg-[#f6efe3] p-4 sm:p-5">
+            <div className="rounded-2xl bg-muted p-4 sm:p-5">
               <div className="flex items-baseline justify-between gap-4">
                 <div>
-                  <p className="text-sm font-bold text-[#176b4a]">Import preview</p>
+                  <p className="text-sm font-bold text-growth">Import preview</p>
                   <h3 className="mt-1 font-serif text-2xl">Dreams Live will keep</h3>
                 </div>
                 <span className="font-serif text-3xl tabular-nums">{approvedImports.length}</span>
@@ -378,8 +378,8 @@ export function DreamAtlasExplorer({
                         key={key}
                         className={`flex items-start gap-2 rounded-xl px-3 py-2 text-sm ${
                           excluded
-                            ? 'bg-white/40 text-[#8a8175] line-through'
-                            : 'bg-white text-[#211e18]'
+                            ? 'bg-card/40 text-muted-foreground line-through'
+                            : 'bg-card text-foreground'
                         }`}
                       >
                         <span className="min-w-0 flex-1">{title}</span>
@@ -393,7 +393,7 @@ export function DreamAtlasExplorer({
                               return next;
                             })
                           }
-                          className="flex size-11 shrink-0 items-center justify-center rounded-full hover:bg-[#eee4d4]"
+                          className="flex size-11 shrink-0 items-center justify-center rounded-full hover:bg-muted"
                           aria-label={`${excluded ? 'Restore' : 'Exclude'} ${title}`}
                         >
                           {excluded ? <Check className="size-3.5" /> : <X className="size-3.5" />}
@@ -403,7 +403,7 @@ export function DreamAtlasExplorer({
                   })}
                 </ul>
               ) : (
-                <p className="mt-8 text-sm leading-relaxed text-[#766f65]">
+                <p className="mt-8 text-sm leading-relaxed text-muted-foreground">
                   Your preview will appear here. Live accepts up to 100 lines at once.
                 </p>
               )}
@@ -416,7 +416,7 @@ export function DreamAtlasExplorer({
                     `${approvedImports.length} dreams are now in your atlas.`
                   )
                 }
-                className="mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#176b4a] px-5 font-bold text-white disabled:opacity-45"
+                className="mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 font-bold text-primary-foreground disabled:opacity-45"
               >
                 {isPending ? (
                   <Loader2 className="size-4 animate-spin" />
@@ -434,12 +434,12 @@ export function DreamAtlasExplorer({
         <section aria-label="Dream search results" className="space-y-5">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <p className="text-sm font-bold text-[#176b4a]">
+              <p className="text-sm font-bold text-growth">
                 {hasNativeMatch ? 'Live knows a path into this' : 'The native atlas ends here'}
               </p>
               <h2 className="mt-1 font-serif text-4xl sm:text-5xl">“{exactQuery}”</h2>
             </div>
-            <p className="max-w-md text-sm leading-relaxed text-[#625b50]">
+            <p className="max-w-md text-sm leading-relaxed text-muted-foreground">
               {hasNativeMatch
                 ? 'Keep your exact wording or borrow a developed possibility from Live.'
                 : 'Live will not force this into an unrelated category. Keep it exactly, then explore current doors beyond the catalogue.'}
@@ -447,16 +447,16 @@ export function DreamAtlasExplorer({
           </div>
 
           {hasNativeMatch && exactOwnedDream ? (
-            <div className="flex flex-col gap-4 rounded-2xl bg-[#fff8d6] p-5 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex flex-col gap-4 rounded-2xl bg-field-sun p-5 sm:flex-row sm:items-center sm:justify-between">
               <div>
-                <p className="text-sm font-bold text-[#176b4a]">Saved exactly as you wrote it</p>
+                <p className="text-sm font-bold text-growth">Saved exactly as you wrote it</p>
                 <p className="mt-1 font-serif text-2xl">{exactOwnedDream.title}</p>
               </div>
               <button
                 type="button"
                 disabled={callingPendingId !== null || exactOwnedDream.id === callingDream?.id}
                 onClick={() => callDreamForward(exactOwnedDream)}
-                className="inline-flex min-h-11 shrink-0 items-center justify-center gap-2 rounded-xl bg-[#211e18] px-4 font-bold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#211e18] disabled:opacity-55"
+                className="inline-flex min-h-11 shrink-0 items-center justify-center gap-2 rounded-xl bg-primary px-4 font-bold text-primary-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring disabled:opacity-55"
               >
                 {callingPendingId === exactOwnedDream.id ? (
                   <Loader2 className="size-4 animate-spin" aria-hidden="true" />
@@ -471,14 +471,14 @@ export function DreamAtlasExplorer({
           ) : null}
 
           {!hasNativeMatch ? (
-            <div className="overflow-hidden rounded-[1.5rem] bg-[#f7e957] p-5 sm:p-7">
+            <div className="overflow-hidden rounded-2xl bg-field-sun p-5 sm:p-7">
               <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
                 <div className="max-w-xl">
                   <p className="text-sm font-bold">Only yours—for now</p>
                   <h3 className="mt-2 font-serif text-3xl leading-tight">
                     Keep the dream. Open the world.
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-[#575344]">
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                     This exact dream is not developed inside Live yet. Saving it does not make a
                     false promise; it gives you a durable place to return while the external world
                     supplies the changing details.
@@ -495,7 +495,7 @@ export function DreamAtlasExplorer({
                         ? callDreamForward(exactOwnedDream)
                         : save([{ title: exactQuery }])
                     }
-                    className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-xl bg-[#211e18] px-4 font-bold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#211e18] disabled:opacity-55"
+                    className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-xl bg-primary px-4 font-bold text-primary-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring disabled:opacity-55"
                   >
                     {pendingTitles.has(normalizeDreamTitle(exactQuery)) ? (
                       <Loader2 className="size-4 animate-spin" />
@@ -522,7 +522,7 @@ export function DreamAtlasExplorer({
 
           {nativeMatches.length > 0 ? (
             <div>
-              <p className="mb-3 text-sm font-bold text-[#176b4a]">Developed in Live</p>
+              <p className="mb-3 text-sm font-bold text-growth">Developed in Live</p>
               <div className="grid gap-3 sm:grid-cols-2">
                 {nativeMatches.map(({ entry }, index) => {
                   const key = normalizeDreamTitle(entry.title);
@@ -535,7 +535,9 @@ export function DreamAtlasExplorer({
                     <article
                       key={entry.slug}
                       className={`flex min-h-56 flex-col justify-between rounded-[1.25rem] p-5 ${
-                        ['bg-[#ffd0bd]', 'bg-[#b9dcf5]', 'bg-[#dceabf]', 'bg-[#c5abfa]'][index % 4]
+                        ['bg-field-coral', 'bg-field-sky', 'bg-field-green', 'bg-field-lilac'][
+                          index % 4
+                        ]
                       } ${index === 0 ? 'sm:col-span-2 sm:min-h-64' : ''}`}
                     >
                       <div>
@@ -571,7 +573,7 @@ export function DreamAtlasExplorer({
                                   },
                                 ])
                           }
-                          className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-[#211e18] px-4 text-sm font-bold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#211e18] disabled:opacity-55"
+                          className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-primary px-4 text-sm font-bold text-primary-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring disabled:opacity-55"
                         >
                           {pending ? (
                             <Loader2 className="size-4 animate-spin" />
@@ -590,7 +592,7 @@ export function DreamAtlasExplorer({
                         </button>
                         <Link
                           href={`/experiences/${entry.slug}`}
-                          className="inline-flex min-h-11 items-center gap-2 rounded-xl border border-[#211e18]/25 px-4 text-sm font-bold"
+                          className="inline-flex min-h-11 items-center gap-2 rounded-xl border border-border/25 px-4 text-sm font-bold"
                         >
                           See the path <ArrowRight className="size-4" />
                         </Link>
@@ -606,28 +608,28 @@ export function DreamAtlasExplorer({
         <section>
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <p className="text-sm font-bold text-[#176b4a]">Ways into a larger life</p>
+              <p className="text-sm font-bold text-growth">Ways into a larger life</p>
               <h2 className="mt-1 max-w-3xl font-serif text-4xl leading-tight sm:text-5xl">
                 Wander beyond the categories you already know.
               </h2>
             </div>
             <Link
               href="/experiences"
-              className="inline-flex min-h-11 items-center gap-2 font-bold underline decoration-[#176b4a] underline-offset-4"
+              className="inline-flex min-h-11 items-center gap-2 font-bold underline decoration-growth underline-offset-4"
             >
               Explore the full native atlas <ArrowRight className="size-4" />
             </Link>
           </div>
-          <div className="relative mt-6 overflow-hidden rounded-2xl bg-[#fffdf8] px-5 py-8 sm:px-8 lg:px-12 lg:py-12">
+          <div className="relative mt-6 overflow-hidden rounded-2xl bg-card px-5 py-8 sm:px-8 lg:px-12 lg:py-12">
             <div
               aria-hidden="true"
-              className="absolute bottom-10 left-8 top-10 w-px bg-[#176b4a]/25 lg:hidden"
+              className="absolute bottom-10 left-8 top-10 w-px bg-growth/25 lg:hidden"
             />
             <svg
               aria-hidden="true"
               viewBox="0 0 1000 1500"
               preserveAspectRatio="none"
-              className="absolute inset-12 hidden h-[calc(100%_-_6rem)] w-[calc(100%_-_6rem)] text-[#176b4a]/20 lg:block"
+              className="absolute inset-12 hidden h-[calc(100%_-_6rem)] w-[calc(100%_-_6rem)] text-growth lg:block"
             >
               <path
                 d="M190 0 C 190 190, 790 130, 790 330 S 170 500, 190 700 S 810 850, 770 1050 S 180 1230, 220 1500"
@@ -646,25 +648,25 @@ export function DreamAtlasExplorer({
                   >
                     <span
                       aria-hidden="true"
-                      className={`absolute left-0 top-5 flex size-9 items-center justify-center rounded-full border-4 border-[#fffdf8] font-serif text-lg lg:-left-5 ${territory.color}`}
+                      className={`absolute left-0 top-5 flex size-9 items-center justify-center rounded-full border-4 border-border font-serif text-lg lg:-left-5 ${territory.color}`}
                     >
                       {territory.emoji}
                     </span>
                     <article className={`rounded-2xl p-5 sm:p-6 ${territory.color}`}>
                       <h3 className="font-serif text-3xl leading-tight">{territory.label}</h3>
-                      <p className="mt-3 text-sm leading-relaxed text-[#49433b]">
+                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                         {territory.description}
                       </p>
                       <button
                         type="button"
                         onClick={() => setQuery(territory.prompts[0] ?? '')}
-                        className="group mt-5 flex min-h-11 w-full items-center justify-between gap-3 border-b border-[#211e18]/15 text-left text-sm font-semibold"
+                        className="group mt-5 flex min-h-11 w-full items-center justify-between gap-3 border-b border-border/15 text-left text-sm font-semibold"
                       >
                         <span>{territory.prompts[0]}</span>
                         <ArrowRight className="size-3.5 shrink-0 transition-transform group-hover:translate-x-1" />
                       </button>
                       <details className="group/more mt-1">
-                        <summary className="flex min-h-11 cursor-pointer list-none items-center text-sm font-bold text-[#211e18] marker:content-none">
+                        <summary className="flex min-h-11 cursor-pointer list-none items-center text-sm font-bold text-foreground marker:content-none">
                           Two more ways into this territory
                         </summary>
                         <div className="space-y-1">
@@ -673,7 +675,7 @@ export function DreamAtlasExplorer({
                               key={prompt}
                               type="button"
                               onClick={() => setQuery(prompt)}
-                              className="flex min-h-11 w-full items-center justify-between gap-3 border-b border-[#211e18]/15 text-left text-sm font-semibold"
+                              className="flex min-h-11 w-full items-center justify-between gap-3 border-b border-border/15 text-left text-sm font-semibold"
                             >
                               <span>{prompt}</span>
                               <ArrowRight className="size-3.5 shrink-0" />
@@ -690,7 +692,7 @@ export function DreamAtlasExplorer({
               <button
                 type="button"
                 onClick={() => setTerritoriesExpanded(true)}
-                className="relative mx-auto mt-8 flex min-h-11 items-center gap-2 rounded-xl bg-[#211e18] px-5 text-sm font-bold text-white"
+                className="relative mx-auto mt-8 flex min-h-11 items-center gap-2 rounded-xl bg-primary px-5 text-sm font-bold text-primary-foreground"
               >
                 Continue into three more territories <ArrowRight className="size-4" />
               </button>

@@ -31,9 +31,9 @@ const CATEGORY_COLORS: Record<QuestCategory, { border: string; bg: string; text:
     text: 'text-foreground',
   },
   creative: {
-    border: 'border-purple-200',
-    bg: 'bg-purple-50',
-    text: 'text-purple-700',
+    border: 'border-field-lilac-ink',
+    bg: 'bg-field-lilac',
+    text: 'text-field-lilac-ink',
   },
   culinary: {
     border: 'border-primary/30',
@@ -41,19 +41,19 @@ const CATEGORY_COLORS: Record<QuestCategory, { border: string; bg: string; text:
     text: 'text-foreground',
   },
   social: {
-    border: 'border-blue-200',
-    bg: 'bg-blue-50',
-    text: 'text-blue-700',
+    border: 'border-field-sky-ink',
+    bg: 'bg-field-sky',
+    text: 'text-field-sky-ink',
   },
   exploration: {
-    border: 'border-teal-200',
-    bg: 'bg-teal-50',
-    text: 'text-teal-700',
+    border: 'border-field-green-ink',
+    bg: 'bg-field-green',
+    text: 'text-field-green-ink',
   },
   mindful: {
-    border: 'border-violet-200',
-    bg: 'bg-violet-50',
-    text: 'text-violet-700',
+    border: 'border-field-lilac-ink',
+    bg: 'bg-field-lilac',
+    text: 'text-field-lilac-ink',
   },
 };
 
@@ -124,11 +124,11 @@ function QuestCard({
 
   return (
     <SpotlightCard
-      className="mx-auto w-full max-w-4xl overflow-hidden border-0 shadow-[0_18px_50px_rgba(53,80,40,0.12)]"
+      className="mx-auto w-full max-w-4xl overflow-hidden border-0 shadow-[0_18px_50px_color-mix(in_srgb,var(--scrim)_12%,transparent)]"
       innerClassName="p-0"
     >
       <div className="grid md:grid-cols-[0.72fr_1.28fr]">
-        <div className="flex min-h-56 flex-col justify-between bg-[#a8dc91] p-7 text-[#192817] sm:p-9">
+        <div className="flex min-h-56 flex-col justify-between bg-field-green p-7 text-foreground sm:p-9">
           <div className="flex items-center justify-between">
             <span className="font-semibold">A small departure</span>
             <span className="text-5xl" aria-hidden="true">
@@ -164,7 +164,7 @@ function QuestCard({
               {quest.relatedHobbies.map((hobby) => (
                 <span
                   key={hobby}
-                  className="rounded-full bg-[#f1eee5] px-2.5 py-1 text-xs text-muted-foreground"
+                  className="rounded-full bg-muted px-2.5 py-1 text-xs text-muted-foreground"
                 >
                   {hobby}
                 </span>
@@ -456,9 +456,9 @@ function SideQuestsInner() {
     <div className="min-h-screen bg-background">
       {/* Hero */}
       <section className="relative overflow-hidden px-4 py-10 sm:py-14">
-        <FadeIn className="relative mx-auto max-w-6xl rounded-[1.75rem] bg-[#a8dc91] px-6 py-12 text-center text-[#192817] shadow-[0_16px_44px_rgba(53,80,40,0.10)] sm:px-10 sm:py-16">
+        <FadeIn className="relative mx-auto max-w-6xl rounded-2xl bg-field-green px-6 py-12 text-center text-foreground shadow-[0_16px_44px_color-mix(in_srgb,var(--scrim)_10%,transparent)] sm:px-10 sm:py-16">
           <div className="mb-5 inline-flex items-center gap-2 text-base font-bold">
-            <span className="h-2 w-2 rounded-full bg-[#192817]" />
+            <span className="h-2 w-2 rounded-full bg-surface" />
             Side Quests
           </div>
 
@@ -466,7 +466,7 @@ function SideQuestsInner() {
             Take the scenic route through your week.
           </h1>
 
-          <p className="mx-auto max-w-xl text-lg leading-relaxed text-[#344b31] sm:text-xl">
+          <p className="mx-auto max-w-xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
             Fifty small reasons to leave the usual path. Roll one, choose one, or take on the whole
             board.
           </p>
@@ -475,7 +475,7 @@ function SideQuestsInner() {
             {[...Array(5)].map((_, i) => (
               <div
                 key={i}
-                className="h-1.5 w-1.5 rounded-full bg-[#192817]"
+                className="h-1.5 w-1.5 rounded-full bg-surface"
                 style={{ opacity: 0.4 + i * 0.12 }}
               />
             ))}
@@ -485,7 +485,7 @@ function SideQuestsInner() {
 
       {/* Tab bar */}
       <section className="px-4 pt-2">
-        <div className="mx-auto flex max-w-2xl items-center justify-center gap-1 overflow-x-auto rounded-2xl bg-white p-1 shadow-[0_5px_18px_rgba(66,55,22,0.08)]">
+        <div className="mx-auto flex max-w-2xl items-center justify-center gap-1 overflow-x-auto rounded-2xl bg-card p-1 shadow-[0_5px_18px_color-mix(in_srgb,var(--scrim)_8%,transparent)]">
           {TABS.map((tab) => (
             <button
               key={tab.id}
@@ -493,7 +493,7 @@ function SideQuestsInner() {
               onClick={() => setActiveTab(tab.id)}
               className={`relative min-h-12 shrink-0 rounded-xl px-5 text-base font-semibold transition-all ${
                 activeTab === tab.id
-                  ? 'bg-[#a8dc91] text-[#192817]'
+                  ? 'bg-field-green text-foreground'
                   : 'text-muted-foreground hover:text-foreground'
               }`}
             >
@@ -533,10 +533,10 @@ function SideQuestsInner() {
           {activeTab === 'pick' && (
             <div>
               {sourcePossibility ? (
-                <div className="mx-auto mb-5 max-w-lg rounded-2xl bg-[#f7e957] p-5 text-[#211e18]">
+                <div className="mx-auto mb-5 max-w-lg rounded-2xl bg-field-sun p-5 text-foreground">
                   <p className="text-sm font-bold">Make this possibility smaller</p>
                   <p className="mt-1 font-serif text-2xl leading-tight">{sourcePossibility}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-[#575344]">
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                     Pick the time and energy you actually have. We will suggest one nearby move, not
                     ask you to finish the whole dream today.
                   </p>
@@ -587,14 +587,16 @@ function SideQuestsInner() {
                     rollLabel="Try Another"
                   />
                 ) : (
-                  <div className="w-full max-w-2xl rounded-2xl bg-[#b9dcf5] p-6 text-[#211e18] sm:p-8">
+                  <div className="w-full max-w-2xl rounded-2xl bg-field-sky p-6 text-foreground sm:p-8">
                     {sourcePossibility ? (
                       <>
-                        <p className="text-sm font-bold text-[#175475]">No honest shortcut yet</p>
+                        <p className="text-sm font-bold text-field-sky-ink">
+                          No honest shortcut yet
+                        </p>
                         <h2 className="mt-2 font-serif text-3xl leading-tight">
                           We will not hand you an unrelated task.
                         </h2>
-                        <p className="mt-3 max-w-xl text-sm leading-relaxed text-[#415968]">
+                        <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
                           Live does not have a small quest that genuinely continues “
                           {sourcePossibility}” yet. Keep the dream intact and research a real first
                           doorway instead.

@@ -50,7 +50,7 @@ export default async function NewTimelinePage({ searchParams }: Props) {
           offers: { '@type': 'Offer', price: '0' },
         }}
       />
-      <div className="relative mb-8 rounded-[1.75rem] bg-[#b9dcf5] px-6 py-9 text-[#192a36] shadow-[0_14px_40px_rgba(39,74,97,0.10)] sm:px-9">
+      <div className="relative mb-8 rounded-2xl bg-field-sky px-6 py-9 text-foreground shadow-[0_14px_40px_color-mix(in_srgb,var(--scrim)_10%,transparent)] sm:px-9">
         <div className="relative max-w-2xl">
           <Link
             href="/"
@@ -61,7 +61,7 @@ export default async function NewTimelinePage({ searchParams }: Props) {
           <h1 className="font-serif text-5xl font-medium leading-[1.02] tracking-[-0.03em]">
             Build your hobby timeline
           </h1>
-          <p className="mt-4 text-base leading-relaxed text-[#405b6c]">
+          <p className="mt-4 text-base leading-relaxed text-muted-foreground">
             {starter
               ? `We started with ${starter.hobbyName}. Shape it into a story that feels true.`
               : 'Add life phases and the hobbies that defined each one.'}

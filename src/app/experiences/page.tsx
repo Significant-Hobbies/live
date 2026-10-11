@@ -70,7 +70,7 @@ export default async function ExperiencesPage({
       >
         Things you could do.
       </h1>
-      <p className="mt-5 max-w-[62ch] text-lg text-foreground/80" style={{ lineHeight: 1.6 }}>
+      <p className="mt-5 max-w-[62ch] text-lg text-muted-foreground" style={{ lineHeight: 1.6 }}>
         {catalog.total} ideas in one shared catalog — places to go, milestones worth reaching, and
         things worth trying. Explore by category, and keep the ones that matter in your own list.
       </p>

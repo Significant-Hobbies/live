@@ -28,7 +28,7 @@ export function ExportButton({ timeline }: Props) {
       const { toPng } = await import('html-to-image');
       const dataUrl = await toPng(cardRef.current, {
         pixelRatio: 2,
-        backgroundColor: '#020617',
+        backgroundColor: getComputedStyle(cardRef.current).getPropertyValue('--background').trim(),
       });
       const link = document.createElement('a');
       link.download = `${timeline.title ?? 'hobby-timeline'}.png`;

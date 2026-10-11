@@ -100,7 +100,7 @@ export function ExperiencesClient({ initialPage, initialQuery, mode }: Props) {
               updateUrl({ query: e.target.value, page: 1 });
             }}
             placeholder="Search — northern lights, marathon, learn…"
-            className="w-full rounded-xl border-2 border-border bg-card px-4 py-3 text-base text-foreground placeholder:text-muted-foreground/60 focus-visible:border-primary focus-visible:outline-none"
+            className="w-full rounded-xl border-2 border-border bg-card px-4 py-3 text-base text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:outline-none"
           />
         </div>
 

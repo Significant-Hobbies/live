@@ -36,7 +36,7 @@ export function RediscoveryNudges({ phases }: Props) {
                 {item.name}
               </span>
               {item.type === 'rekindle' ? (
-                <Badge className="shrink-0 bg-orange-100 text-orange-700 border border-orange-200 text-[10px] px-1.5 py-0">
+                <Badge className="shrink-0 bg-field-coral text-field-coral-ink border border-field-coral-ink text-[10px] px-1.5 py-0">
                   rekindle
                 </Badge>
               ) : (

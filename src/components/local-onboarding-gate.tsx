@@ -38,7 +38,7 @@ export function LocalOnboardingGate({ children }: { children: React.ReactNode })
 
   if (!complete) {
     return (
-      <div className="grid min-h-[60vh] place-items-center bg-[#fbf8ef] px-4">
+      <div className="grid min-h-[60vh] place-items-center bg-background px-4">
         <p className="text-sm text-muted-foreground" role="status">
           {complete === null ? 'Opening your workspace…' : 'Starting with you…'}
         </p>

@@ -162,10 +162,10 @@ export default async function LookBackPage() {
 
         <section
           id="personal-timeline"
-          className="mt-8 scroll-mt-24 overflow-hidden rounded-[1.75rem] border border-[#d9cfbd] bg-white"
+          className="mt-8 scroll-mt-24 overflow-hidden rounded-2xl border border-border bg-card"
         >
           <div className="grid lg:grid-cols-[0.72fr_1.28fr]">
-            <div className="relative min-h-72 overflow-hidden bg-[#211e18]">
+            <div className="relative min-h-72 overflow-hidden bg-surface">
               <Image
                 src="/categories/creative-1200.webp"
                 alt="Hands making something as part of a lived hobby chapter"
@@ -173,9 +173,9 @@ export default async function LookBackPage() {
                 sizes="(min-width: 1024px) 34vw, 100vw"
                 className="object-cover opacity-75"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#211e18] via-transparent to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-6 text-white sm:p-8">
-                <p className="text-sm font-bold text-[#f7e957]">Your personal timeline</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-scrim via-transparent to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-6 text-foreground sm:p-8">
+                <p className="text-sm font-bold text-brand">Your personal timeline</p>
                 <h2 className="mt-2 font-serif text-4xl">The chapters that made you.</h2>
               </div>
             </div>
@@ -218,10 +218,10 @@ export default async function LookBackPage() {
                 <SpotlightCard
                   className={`relative overflow-hidden rounded-2xl border-0 p-8 sm:p-10 ${
                     index % 3 === 0
-                      ? 'bg-[#ffd0bd]'
+                      ? 'bg-field-coral'
                       : index % 3 === 1
-                        ? 'bg-[#d8c8fa]'
-                        : 'bg-white shadow-[0_10px_30px_rgba(66,55,22,0.08)]'
+                        ? 'bg-field-lilac'
+                        : 'bg-card shadow-[0_10px_30px_color-mix(in_srgb,var(--scrim)_8%,transparent)]'
                   }`}
                 >
                   {section.kind === 'opening' && <GradientMesh variant="gold" />}

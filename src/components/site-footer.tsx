@@ -40,15 +40,15 @@ const groups = [
 
 export function SiteFooter() {
   return (
-    <footer data-site-footer className="bg-[#f7e957] px-4 py-10 text-[#211e18]">
-      <div className="mx-auto max-w-6xl overflow-hidden rounded-[2rem] border border-[#d4c74c] bg-[#fffdf8] shadow-[0_18px_45px_rgba(80,67,23,0.10)]">
+    <footer data-site-footer className="bg-field-sun px-4 py-10 text-foreground">
+      <div className="mx-auto max-w-6xl overflow-hidden rounded-2xl border border-brand bg-card shadow-[0_18px_45px_color-mix(in_srgb,var(--scrim)_10%,transparent)]">
         <div className="grid gap-9 p-7 sm:p-10 lg:grid-cols-[1.25fr_3fr]">
           <div>
-            <div className="flex size-11 items-center justify-center rounded-full bg-[#f7e957] font-serif text-xl font-bold">
+            <div className="flex size-11 items-center justify-center rounded-full bg-field-sun font-serif text-xl font-bold">
               SH
             </div>
             <p className="mt-4 font-serif text-2xl font-semibold">Significant Hobbies</p>
-            <p className="mt-3 max-w-xs text-sm leading-relaxed text-[#625b50]">
+            <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">
               A companion for living intentionally—because life is finite and the rest is still
               unwritten.
             </p>
@@ -57,13 +57,13 @@ export function SiteFooter() {
             {groups.map((group) => (
               <div key={group.title}>
                 <p className="text-sm font-bold">{group.title}</p>
-                <ul className="mt-4 space-y-3 text-sm text-[#625b50]">
+                <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
                   {group.links.map(([label, href]) => (
                     <li key={href}>
                       <Link
                         href={href}
                         prefetch={false}
-                        className="inline-flex min-h-11 items-center hover:text-[#211e18] hover:underline hover:underline-offset-4 sm:min-h-0"
+                        className="inline-flex min-h-11 items-center hover:text-foreground hover:underline hover:underline-offset-4 sm:min-h-0"
                       >
                         {label}
                       </Link>
@@ -74,12 +74,12 @@ export function SiteFooter() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col gap-4 border-t border-[#e4dccb] bg-[#f7f1e7] px-7 py-5 text-xs text-[#625b50] sm:flex-row sm:items-center sm:justify-between sm:px-10">
+        <div className="flex flex-col gap-4 border-t border-border bg-background px-7 py-5 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-10">
           <span>
             Made by{' '}
             <a
               href="https://sarthakagrawal.dev"
-              className="font-semibold text-[#211e18] hover:underline"
+              className="font-semibold text-foreground hover:underline"
             >
               Sarthak
             </a>
@@ -87,7 +87,7 @@ export function SiteFooter() {
           <div className="flex flex-wrap gap-x-5 gap-y-2">
             <a
               href="https://github.com/Significant-Hobbies/live/issues"
-              className="inline-flex min-h-11 items-center hover:text-[#211e18] sm:min-h-0"
+              className="inline-flex min-h-11 items-center hover:text-foreground sm:min-h-0"
             >
               Roadmap
             </a>
@@ -97,7 +97,7 @@ export function SiteFooter() {
               title="GitHub repository"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-11 items-center hover:text-[#211e18] sm:min-h-0"
+              className="inline-flex min-h-11 items-center hover:text-foreground sm:min-h-0"
             >
               <GitHubIcon />
             </a>

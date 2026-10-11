@@ -21,9 +21,9 @@ export function QuizResultCard({
       style={{
         width: '600px',
         height: '400px',
-        background: 'linear-gradient(135deg, #020617 0%, #0f172a 50%, #020617 100%)',
+        background: 'var(--card)',
         fontFamily: 'system-ui, -apple-system, sans-serif',
-        boxShadow: '0 0 60px rgba(16,185,129,0.08)',
+        boxShadow: '0 0 60px color-mix(in srgb, var(--success) 8%, transparent)',
         borderRadius: '16px',
         padding: '40px',
         overflow: 'hidden',
@@ -39,7 +39,7 @@ export function QuizResultCard({
           position: 'absolute',
           inset: 0,
           background:
-            'radial-gradient(ellipse 70% 40% at 50% -5%, rgba(16,185,129,0.18) 0%, transparent 70%)',
+            'radial-gradient(ellipse 70% 40% at 50% -5%, color-mix(in srgb, var(--success) 18%, transparent) 0%, transparent 70%)',
           pointerEvents: 'none',
         }}
       />
@@ -52,7 +52,7 @@ export function QuizResultCard({
             fontWeight: 600,
             letterSpacing: '0.15em',
             textTransform: 'uppercase',
-            color: '#10b981',
+            color: 'var(--success)',
             margin: 0,
           }}
         >
@@ -81,7 +81,7 @@ export function QuizResultCard({
               fontWeight: 600,
               letterSpacing: '0.12em',
               textTransform: 'uppercase',
-              color: '#10b981',
+              color: 'var(--success)',
               margin: '0 0 6px 0',
             }}
           >
@@ -91,7 +91,7 @@ export function QuizResultCard({
             style={{
               fontSize: '32px',
               fontWeight: 800,
-              color: '#f1f5f9',
+              color: 'var(--foreground)',
               margin: 0,
               lineHeight: 1.1,
             }}
@@ -109,9 +109,9 @@ export function QuizResultCard({
                 style={{
                   fontSize: '11px',
                   fontWeight: 500,
-                  color: '#6ee7b7',
-                  background: 'rgba(16,185,129,0.12)',
-                  border: '1px solid rgba(16,185,129,0.25)',
+                  color: 'var(--field-green-ink)',
+                  background: 'var(--field-green)',
+                  border: '1px solid var(--border)',
                   borderRadius: '9999px',
                   padding: '3px 10px',
                 }}
@@ -131,9 +131,9 @@ export function QuizResultCard({
               key={hobby}
               style={{
                 fontSize: '11px',
-                color: '#94a3b8',
-                background: 'rgba(51,65,85,0.8)',
-                border: '1px solid rgba(71,85,105,0.6)',
+                color: 'var(--muted-foreground)',
+                background: 'var(--muted)',
+                border: '1px solid var(--border)',
                 borderRadius: '9999px',
                 padding: '4px 10px',
               }}
@@ -151,15 +151,15 @@ export function QuizResultCard({
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          borderTop: '1px solid rgba(51,65,85,0.6)',
+          borderTop: '1px solid var(--border)',
           paddingTop: '12px',
           marginTop: '12px',
         }}
       >
-        <p style={{ fontSize: '11px', color: '#475569', margin: 0 }}>
+        <p style={{ fontSize: '11px', color: 'var(--subtle)', margin: 0 }}>
           live.significanthobbies.com/find-your-hobby
         </p>
-        <p style={{ fontSize: '11px', fontWeight: 600, color: '#10b981', margin: 0 }}>
+        <p style={{ fontSize: '11px', fontWeight: 600, color: 'var(--success)', margin: 0 }}>
           Take the quiz →
         </p>
       </div>

@@ -40,9 +40,9 @@ const CATEGORIES: Category[] = [
   {
     title: 'Leadership & Initiative',
     description: 'These hobbies show you take charge, organize others, and drive outcomes.',
-    color: 'text-blue-700',
-    bgColor: 'bg-blue-50',
-    borderColor: 'border-blue-200',
+    color: 'text-field-sky-ink',
+    bgColor: 'bg-field-sky',
+    borderColor: 'border-field-sky-ink',
     hobbies: [
       {
         name: 'Volunteering',
@@ -75,9 +75,9 @@ const CATEGORIES: Category[] = [
     title: 'Creativity & Innovation',
     description:
       'These signal original thinking, aesthetic judgment, and the ability to produce something from nothing.',
-    color: 'text-purple-700',
-    bgColor: 'bg-purple-50',
-    borderColor: 'border-purple-200',
+    color: 'text-field-lilac-ink',
+    bgColor: 'bg-field-lilac',
+    borderColor: 'border-field-lilac-ink',
     hobbies: [
       {
         name: 'Photography',
@@ -154,9 +154,9 @@ const CATEGORIES: Category[] = [
   {
     title: 'Teamwork & Collaboration',
     description: 'These show you work well with others, support teammates, and share credit.',
-    color: 'text-orange-700',
-    bgColor: 'bg-orange-50',
-    borderColor: 'border-orange-200',
+    color: 'text-field-coral-ink',
+    bgColor: 'bg-field-coral',
+    borderColor: 'border-field-coral-ink',
     hobbies: [
       {
         name: 'Basketball',
@@ -189,9 +189,9 @@ const CATEGORIES: Category[] = [
     title: 'Problem-Solving & Analysis',
     description:
       'These signal a systematic mind — the ability to break down complexity and think through problems.',
-    color: 'text-teal-700',
-    bgColor: 'bg-teal-50',
-    borderColor: 'border-teal-200',
+    color: 'text-field-green-ink',
+    bgColor: 'bg-field-green',
+    borderColor: 'border-field-green-ink',
     hobbies: [
       {
         name: 'Coding',
@@ -321,8 +321,8 @@ export default function HobbiesForResumePage() {
           className="border-primary/30 bg-primary/10 shadow-soft"
           innerClassName="rounded-xl p-5"
         >
-          <h2 className="mb-1 text-sm font-bold text-[#684e00]">How to choose what to include</h2>
-          <ul className="space-y-1.5 text-sm text-[#514630]">
+          <h2 className="mb-1 text-sm font-bold text-brand">How to choose what to include</h2>
+          <ul className="space-y-1.5 text-sm text-muted-foreground">
             <li>
               Include hobbies where you&apos;ve reached a notable level — a rank, a project, a
               milestone

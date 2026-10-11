@@ -21,9 +21,9 @@ export const metadata: Metadata = {
 
 const CATEGORY_STYLES: Record<string, string> = {
   Creative: 'border-foreground/30 bg-foreground/10 text-foreground',
-  Outdoor: 'border-teal-300 bg-teal-50 text-teal-800',
-  Physical: 'border-blue-300 bg-blue-50 text-blue-800',
-  Intellectual: 'border-purple-300 bg-purple-50 text-purple-800',
+  Outdoor: 'border-field-green-ink bg-field-green text-field-green-ink',
+  Physical: 'border-field-sky-ink bg-field-sky text-field-sky-ink',
+  Intellectual: 'border-field-lilac-ink bg-field-lilac text-field-lilac-ink',
   Culinary: 'border-primary/40 bg-primary/10 text-lumi-300',
 };
 

@@ -19,7 +19,7 @@ export function SpotlightCard({
   return (
     <div
       className={cn(
-        'group relative overflow-hidden rounded-2xl border border-[#e5ddc4] bg-white shadow-[0_8px_24px_rgba(66,55,22,0.08)] transition-[border-color,transform,box-shadow] duration-200 hover:-translate-y-px hover:border-[#cfc29d] hover:shadow-[0_12px_30px_rgba(66,55,22,0.11)]',
+        'group relative overflow-hidden rounded-2xl border border-border bg-card shadow-[0_8px_24px_color-mix(in_srgb,var(--scrim)_8%,transparent)] transition-[border-color,transform,box-shadow] duration-200 hover:-translate-y-px hover:border-border hover:shadow-[0_12px_30px_color-mix(in_srgb,var(--scrim)_11%,transparent)]',
         className
       )}
     >

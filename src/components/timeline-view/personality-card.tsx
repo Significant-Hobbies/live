@@ -8,16 +8,16 @@ interface Props {
 
 // Map category name → Tailwind bg color class for bars
 const CATEGORY_COLORS: Record<string, string> = {
-  Creative: 'bg-pink-400',
-  Music: 'bg-violet-400',
+  Creative: 'bg-field-rose-ink',
+  Music: 'bg-field-lilac-ink',
   Physical: 'bg-growth',
-  Intellectual: 'bg-blue-500',
-  Gaming: 'bg-indigo-400',
-  Outdoor: 'bg-green-400',
+  Intellectual: 'bg-field-sky-ink',
+  Gaming: 'bg-field-lilac-ink',
+  Outdoor: 'bg-growth',
   Culinary: 'bg-primary',
-  Collecting: 'bg-orange-400',
-  Making: 'bg-stone-400',
-  Social: 'bg-teal-400',
+  Collecting: 'bg-field-coral-ink',
+  Making: 'bg-muted',
+  Social: 'bg-field-green-ink',
   Other: 'bg-foreground/15',
 };
 

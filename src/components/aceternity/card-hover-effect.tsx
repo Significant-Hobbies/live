@@ -13,7 +13,7 @@ import { cn } from '~/lib/utils';
 export function CardHoverEffect({
   children,
   className,
-  glowColor = 'oklch(0.82 0.13 88 / 0.12)',
+  glowColor = 'color-mix(in srgb, var(--brand) 12%, transparent)',
 }: {
   children: ReactNode;
   className?: string;

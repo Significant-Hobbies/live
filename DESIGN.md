@@ -2,12 +2,17 @@
 name: Significant Hobbies
 description: A life atlas for choosing, living, and remembering what matters.
 colors:
-  paper: "oklch(0.985 0.012 88)"
-  ink: "oklch(0.20 0.025 72)"
-  atlas-gold: "oklch(0.82 0.13 88)"
-  lived-sage: "oklch(0.72 0.13 150)"
-  quiet-ink: "oklch(0.46 0.018 72)"
-  contour: "oklch(0.86 0.025 82)"
+  background: "#120e09"
+  foreground: "#f7f3e9"
+  card: "#1e1812"
+  surface: "#17130d"
+  muted: "#26211a"
+  muted-foreground: "#b7b0a3"
+  border: "#3b342a"
+  atlas-gold: "#e7bf57"
+  brand-foreground: "#1d1409"
+  destructive: "#f66d67"
+  lived-sage: "#62bb78"
 typography:
   display:
     fontFamily: "var(--font-serif), Georgia, serif"
@@ -27,7 +32,7 @@ spacing:
 components:
   button-primary:
     backgroundColor: "{colors.atlas-gold}"
-    textColor: "{colors.ink}"
+    textColor: "{colors.brand-foreground}"
     rounded: "{rounded.control}"
     padding: "12px 20px"
 ---
@@ -40,11 +45,17 @@ components:
 
 The interface is a map of a finite, inhabited life. Live uses paths, horizons, clusters, and wayfinding to turn possibility into a next move. History uses the same atlas language as chronology: week fields, dated markers, bends in direction, and remembered evidence. The weekly journal is a focused close-up scale of the same world.
 
-The system is warm light mode by default: sunlit, colorful, energetic, and action-led. Live should make leaving the screen feel tempting. Journal is a calm ritual expressed through morning yellow or evening lavender and a substantial white writing surface. History is a personal almanac: yellow mortality, blue direction, and coral, lavender, or paper story passages. Gold indicates chosen direction; sage indicates lived evidence and learning. Content should feel placed in a landscape, not packed into a grid of interchangeable cards.
+**Owner decision, 11 October 2026: dark everywhere.** The public Astro landing and the Next.js app share one warm night canvas, atlas-gold actions with ink text, tonal cards, and quiet borders. Dark is the only theme, independent of system preference; it is the product shell as well as the storytelling space. Keep Geist, Fraunces, and Geist Mono.
+
+Journal remains a calm ritual with dark morning-yellow or evening-lavender fields and a substantial dark writing surface. History is a personal almanac: yellow mortality, blue direction, and coral, lavender, or warm night story passages. Gold indicates chosen direction; sage indicates lived evidence and learning. Content should feel placed in a landscape, not packed into a grid of interchangeable cards.
 
 ## Colors
 
-Warm paper and dark olive ink make the whole product feel usable in daylight. Live More uses a restrained field palette—sun yellow, open-sky blue, coral, fresh green, and lilac—to distinguish kinds of possibility and create emotional lift. These colors belong to large, flat regions rather than decorative gradients. Atlas gold is reserved for direction; lived sage marks evidence, feedback, and completed experience.
+The canonical roles are background `#120e09` (approximately `oklch(0.165 0.012 72)`), foreground `#f7f3e9`, card `#1e1812`, surface `#17130d`, muted `#26211a`, muted foreground `#b7b0a3`, border `#3b342a`, primary/brand atlas gold `#e7bf57`, brand/primary foreground ink `#1d1409`, destructive `#f66d67`, and growth/sage `#62bb78`. Base radius is `0.75rem`: controls use 12px corners and bounded surfaces 16px.
+
+Live uses a restrained field palette—sun yellow, open-sky blue, coral, fresh green, and lilac—to distinguish kinds of possibility. Large, flat fields use dark tonal variants at OKLCH lightness 0.30 with the same hue family, rather than luminous pastel fills. Their cream, muted, and pale chromatic text must reach WCAG AA (4.5:1 for body copy). Semantic field roles live in `src/app/globals.css`; the local landing overrides use the same roles. Photography keeps its original pixels.
+
+The Significant Hobbies Hub renders in its independent repository. Delegated Hub pages and their design are outside this decision's implementation scope here.
 
 Photography is candid, tactile evidence of ordinary adults living: hands making things, friends outdoors, accessible local adventures, natural daylight, real texture, and imperfect motion. Avoid generic stock smiles, luxury travel, staged influencer imagery, and motivational text embedded in images.
 

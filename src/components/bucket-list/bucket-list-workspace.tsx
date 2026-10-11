@@ -399,7 +399,9 @@ export function BucketListWorkspace({
       const dataUrl = await toPng(boardExportRef.current, {
         pixelRatio: 2,
         cacheBust: true,
-        backgroundColor: '#f8f1e4',
+        backgroundColor: getComputedStyle(boardExportRef.current)
+          .getPropertyValue('--background')
+          .trim(),
       });
       const link = document.createElement('a');
       link.download = `${
@@ -445,7 +447,7 @@ export function BucketListWorkspace({
 
   if (!draft) {
     return (
-      <div className="min-h-[calc(100vh-4.5rem)] bg-[#ffd0bd] px-4 py-10 sm:py-14">
+      <div className="min-h-[calc(100vh-4.5rem)] bg-field-coral px-4 py-10 sm:py-14">
         <div className="mx-auto max-w-5xl">
           <Link
             href="/life-bingo"
@@ -454,21 +456,21 @@ export function BucketListWorkspace({
             <ChevronLeft className="h-3.5 w-3.5" /> About Life Bingo
           </Link>
           <div className="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:gap-16">
-            <header className="rounded-[1.5rem] bg-[#ff9d7d] p-7 text-[#261e18] shadow-[0_12px_36px_rgba(102,52,35,0.10)] lg:sticky lg:top-24 lg:self-start sm:p-9">
+            <header className="rounded-2xl bg-field-coral p-7 text-foreground shadow-[0_12px_36px_color-mix(in_srgb,var(--scrim)_10%,transparent)] lg:sticky lg:top-24 lg:self-start sm:p-9">
               <p className="text-base font-bold">Make your list</p>
               <h1 className="mt-4 max-w-xl font-serif text-5xl font-medium leading-[0.98] tracking-[-0.035em] sm:text-6xl">
                 What should this chapter feel like?
               </h1>
-              <p className="mt-5 max-w-md text-base leading-relaxed text-[#49382f]">
+              <p className="mt-5 max-w-md text-base leading-relaxed text-muted-foreground">
                 Choose a horizon and a few things you want more of. We’ll turn them into concrete
                 experiences, not vague goals.
               </p>
-              <p className="mt-8 hidden max-w-sm border-t border-[#261e18]/20 pt-5 font-serif text-xl lg:block">
+              <p className="mt-8 hidden max-w-sm border-t border-border/20 pt-5 font-serif text-xl lg:block">
                 “A good list should make Tuesday feel full of possibility.”
               </p>
             </header>
 
-            <div className="space-y-9 rounded-[1.5rem] bg-white p-6 shadow-[0_12px_36px_rgba(102,52,35,0.10)] sm:p-9">
+            <div className="space-y-9 rounded-2xl bg-card p-6 shadow-[0_12px_36px_color-mix(in_srgb,var(--scrim)_10%,transparent)] sm:p-9">
               <fieldset>
                 <legend className="mb-4 text-sm font-bold text-foreground">
                   <span className="mr-2 font-serif text-xl text-primary">01</span> How far are we

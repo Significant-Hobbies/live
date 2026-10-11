@@ -25,21 +25,21 @@ export function HistoryAtlas({
     cadence: 'monthly' as const,
   };
   return (
-    <section className="overflow-hidden rounded-[1.75rem] bg-white shadow-[0_18px_50px_rgba(66,55,22,0.10)]">
+    <section className="overflow-hidden rounded-2xl bg-card shadow-[0_18px_50px_color-mix(in_srgb,var(--scrim)_10%,transparent)]">
       <div className="grid lg:grid-cols-[23rem_1fr]">
-        <div className="border-b border-[#cdbd36] bg-[#f7e957] p-7 text-[#201f18] sm:p-10 lg:border-b-0 lg:border-r">
+        <div className="border-b border-brand bg-field-sun p-7 text-foreground sm:p-10 lg:border-b-0 lg:border-r">
           <p className="text-base font-bold">History</p>
           <h1 className="mt-5 font-serif text-5xl font-medium leading-[1.02] tracking-[-0.03em]">
             Your life so far
           </h1>
-          <p className="mt-5 text-base leading-relaxed text-[#4b493d]">
+          <p className="mt-5 text-base leading-relaxed text-muted-foreground">
             The weeks are finite. The record is not a score—it is evidence that you were here.
           </p>
           <div className="mt-7 flex items-baseline gap-2">
             <span className="font-serif text-5xl tabular-nums">
               {life.weeksRemaining.toLocaleString()}
             </span>
-            <span className="text-base text-[#4b493d]">
+            <span className="text-base text-muted-foreground">
               {birthDate || birthYear ? 'weeks remain, roughly' : 'weeks, roughly'}
             </span>
           </div>
@@ -51,7 +51,7 @@ export function HistoryAtlas({
             Open the full life grid →
           </Link>
         </div>
-        <div className="bg-[#b9dcf5] p-6 text-[#192a36] sm:p-10">
+        <div className="bg-field-sky p-6 text-foreground sm:p-10">
           <div className="flex items-start justify-between gap-4">
             <div>
               <p className="text-base font-bold">Direction</p>
@@ -67,7 +67,7 @@ export function HistoryAtlas({
             </Link>
           </div>
           {!trajectory && (
-            <p className="mt-6 max-w-lg text-base leading-relaxed text-[#344b5a]">
+            <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground">
               Trajectory connects the constraints and intent of the present to a decision policy and
               feedback loop for what comes next.
             </p>
@@ -77,10 +77,10 @@ export function HistoryAtlas({
           </div>
         </div>
       </div>
-      <div className="grid border-t border-[#e4dccb] bg-[#fffdf8] sm:grid-cols-2">
+      <div className="grid border-t border-border bg-card sm:grid-cols-2">
         <Link
           href="/history#personal-timeline"
-          className="p-6 transition-colors hover:bg-[#ffd0bd] sm:p-8"
+          className="p-6 transition-colors hover:bg-field-coral sm:p-8"
         >
           <p className="text-sm font-bold">Personal timeline</p>
           <h3 className="mt-2 font-serif text-3xl">The chapters you have lived</h3>
@@ -90,7 +90,7 @@ export function HistoryAtlas({
         </Link>
         <Link
           href="/journal#journal-history"
-          className="border-t border-[#e4dccb] p-6 transition-colors hover:bg-[#dceabf] sm:border-l sm:border-t-0 sm:p-8"
+          className="border-t border-border p-6 transition-colors hover:bg-field-green sm:border-l sm:border-t-0 sm:p-8"
         >
           <p className="text-sm font-bold">Journal history</p>
           <h3 className="mt-2 font-serif text-3xl">The days in your own words</h3>
@@ -113,7 +113,7 @@ function LifeWeekField({ cells }: { cells: Array<{ weekIndex: number; lived: boo
       {cells.map((cell) => (
         <span
           key={cell.weekIndex}
-          className={`aspect-square min-w-px ${cell.lived ? 'bg-[#201f18]/70' : 'bg-[#201f18]/15'}`}
+          className={`aspect-square min-w-px ${cell.lived ? 'bg-surface/70' : 'bg-surface/15'}`}
           aria-hidden="true"
         />
       ))}
