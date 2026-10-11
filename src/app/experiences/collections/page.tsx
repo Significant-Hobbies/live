@@ -42,7 +42,7 @@ export default function ExperienceCollectionsPage() {
       >
         Choose by the kind of time you have.
       </h1>
-      <p className="mt-5 max-w-[62ch] text-lg leading-relaxed text-foreground/80">
+      <p className="mt-5 max-w-[62ch] text-lg leading-relaxed text-muted-foreground">
         A few deliberate selections from the catalog. Start with a weekend, a small budget, time on
         your own or something to make with a friend.
       </p>

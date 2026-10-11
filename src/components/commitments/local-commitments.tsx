@@ -96,12 +96,12 @@ export function LocalCommitments() {
     <StorageModeProvider mode="local">
       <div className="space-y-8">
         <StorageModeStatus />
-        <header className="rounded-[1.75rem] bg-[#a8dc91] px-6 py-10 text-[#192817] shadow-[0_14px_40px_rgba(53,80,40,0.10)] sm:px-9">
+        <header className="rounded-2xl bg-field-green px-6 py-10 text-foreground shadow-[0_14px_40px_color-mix(in_srgb,var(--scrim)_10%,transparent)] sm:px-9">
           <p className="text-base font-bold">Living promises</p>
           <h1 className="mt-4 font-serif text-5xl font-medium leading-none tracking-[-0.03em] sm:text-6xl">
             Commitments
           </h1>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-[#344b31]">
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground">
             Choose something worth returning to, then keep honest proof of the days you showed up.
           </p>
         </header>
@@ -113,7 +113,7 @@ export function LocalCommitments() {
             {items.map((item) => (
               <section
                 key={item.id}
-                className="rounded-2xl bg-white p-6 shadow-[0_8px_24px_rgba(66,55,22,0.08)]"
+                className="rounded-2xl bg-card p-6 shadow-[0_8px_24px_color-mix(in_srgb,var(--scrim)_8%,transparent)]"
               >
                 <p className="font-serif text-2xl font-medium">{item.hobbyName}</p>
                 <p className="mt-2 text-sm text-muted-foreground">

@@ -36,7 +36,9 @@ export default function Error({
             Home
           </button>
         </div>
-        {error.digest ? <p className="mt-6 text-xs opacity-40">Reference: {error.digest}</p> : null}
+        {error.digest ? (
+          <p className="mt-6 text-xs text-subtle">Reference: {error.digest}</p>
+        ) : null}
       </div>
     </div>
   );

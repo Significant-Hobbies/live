@@ -28,7 +28,7 @@ export function MobileMenu({ links, isLoggedIn }: MobileMenuProps) {
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#f7e957] text-[#201f18] shadow-[0_3px_0_#c8b92e] transition-transform hover:-translate-y-0.5"
+        className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand text-brand-foreground shadow-[0_3px_0_var(--border)] transition-transform hover:-translate-y-0.5"
         aria-label={open ? 'Close menu' : 'Open menu'}
         aria-expanded={open}
         aria-controls="mobile-site-menu"
@@ -39,19 +39,19 @@ export function MobileMenu({ links, isLoggedIn }: MobileMenuProps) {
       {open && (
         <div
           id="mobile-site-menu"
-          className="absolute left-0 top-[4.5rem] z-50 w-full border-b border-[#ddd4b7] bg-[#fffdf3] shadow-[0_16px_32px_rgba(66,55,22,0.14)]"
+          className="absolute left-0 top-[4.5rem] z-50 w-full border-b border-border bg-card shadow-[0_16px_32px_color-mix(in_srgb,var(--scrim)_14%,transparent)]"
         >
           <div className="flex flex-col gap-2 px-4 py-4">
             {links.map((link) => {
               const isActive = pathname === link.href;
               const colorClass =
                 link.href === '/'
-                  ? 'bg-[#fffdf8] text-[#201f18] border border-[#ddd4b7]'
+                  ? 'bg-card text-foreground border border-border'
                   : link.href === '/experiences' || link.href === '/bucket-list'
-                    ? 'bg-[#f7e957] text-[#201f18]'
+                    ? 'bg-field-sun text-foreground'
                     : link.href === '/journal'
-                      ? 'bg-[#c5abfa] text-[#241a31]'
-                      : 'bg-[#b9dcf5] text-[#192a36]';
+                      ? 'bg-field-lilac text-foreground'
+                      : 'bg-field-sky text-foreground';
               return (
                 <Link
                   key={link.href}
@@ -72,7 +72,7 @@ export function MobileMenu({ links, isLoggedIn }: MobileMenuProps) {
                 href="/settings"
                 prefetch={false}
                 onClick={() => setOpen(false)}
-                className="flex min-h-12 items-center justify-center rounded-xl bg-[#201f18] px-4 text-center text-base font-bold text-white transition-colors hover:bg-[#36342a]"
+                className="flex min-h-12 items-center justify-center rounded-xl bg-primary px-4 text-center text-base font-bold text-primary-foreground transition-colors hover:bg-primary/90"
               >
                 Account settings
               </Link>
@@ -81,7 +81,7 @@ export function MobileMenu({ links, isLoggedIn }: MobileMenuProps) {
                 href="/login"
                 prefetch={false}
                 onClick={() => setOpen(false)}
-                className="flex min-h-12 items-center justify-center rounded-xl bg-[#201f18] px-4 text-center text-base font-bold text-white transition-colors hover:bg-[#36342a]"
+                className="flex min-h-12 items-center justify-center rounded-xl bg-primary px-4 text-center text-base font-bold text-primary-foreground transition-colors hover:bg-primary/90"
               >
                 Sign in
               </Link>

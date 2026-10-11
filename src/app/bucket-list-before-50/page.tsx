@@ -93,7 +93,7 @@ export default function BucketListBefore50Page() {
                 <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
                   <Link
                     href="/"
-                    className="inline-flex items-center gap-2 rounded-full bg-[#211e18] px-6 py-3 text-sm font-semibold text-white shadow-md transition-colors hover:bg-[#39352d]"
+                    className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-md transition-colors hover:bg-primary/90"
                   >
                     Build my bucket list
                   </Link>
@@ -200,7 +200,7 @@ export default function BucketListBefore50Page() {
           <div className="flex flex-wrap gap-3 justify-center">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 rounded-full bg-[#211e18] px-6 py-3 text-sm font-semibold text-white shadow-md transition-colors hover:bg-[#39352d]"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-md transition-colors hover:bg-primary/90"
             >
               Build my bucket list
             </Link>

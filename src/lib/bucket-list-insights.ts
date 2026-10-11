@@ -25,8 +25,8 @@ const ARCHETYPES: Record<BucketItemCategory, BucketListArchetype> = {
     tagline: 'Home is everywhere',
     description:
       'You measure life in stamps, not steps. Every destination is a door to a new version of yourself.',
-    color: 'bg-sky-500',
-    textColor: 'text-sky-600',
+    color: 'bg-field-sky-ink',
+    textColor: 'text-field-sky-ink',
   },
   adventure: {
     id: 'daredevil',
@@ -35,8 +35,8 @@ const ARCHETYPES: Record<BucketItemCategory, BucketListArchetype> = {
     tagline: 'Fear is just fuel',
     description:
       "You're most alive at the edge. Heights, speed, the unknown — these aren't risks, they're invitations.",
-    color: 'bg-orange-500',
-    textColor: 'text-orange-600',
+    color: 'bg-field-coral-ink',
+    textColor: 'text-field-coral-ink',
   },
   creative: {
     id: 'creator',
@@ -45,8 +45,8 @@ const ARCHETYPES: Record<BucketItemCategory, BucketListArchetype> = {
     tagline: 'Life as a canvas',
     description:
       'You see the world as raw material. Your bucket list reads like a portfolio — performance, craft, expression.',
-    color: 'bg-purple-500',
-    textColor: 'text-purple-600',
+    color: 'bg-field-lilac-ink',
+    textColor: 'text-field-lilac-ink',
   },
   achievement: {
     id: 'achiever',
@@ -55,8 +55,8 @@ const ARCHETYPES: Record<BucketItemCategory, BucketListArchetype> = {
     tagline: 'Every peak has a next one',
     description:
       "You set audacious goals because ordinary ones don't get you out of bed. Mastery is your love language.",
-    color: 'bg-amber-500',
-    textColor: 'text-amber-600',
+    color: 'bg-brand',
+    textColor: 'text-brand',
   },
   relationships: {
     id: 'connector',
@@ -65,8 +65,8 @@ const ARCHETYPES: Record<BucketItemCategory, BucketListArchetype> = {
     tagline: 'People are the point',
     description:
       'For you, experiences only count when shared. Your bucket list is really a list of people you want to show up for.',
-    color: 'bg-rose-500',
-    textColor: 'text-rose-600',
+    color: 'bg-field-rose-ink',
+    textColor: 'text-field-rose-ink',
   },
   contribution: {
     id: 'changemaker',
@@ -75,8 +75,8 @@ const ARCHETYPES: Record<BucketItemCategory, BucketListArchetype> = {
     tagline: 'Leave it better than you found it',
     description:
       "You don't want to just witness history — you want to shape it. Your ambitions scale with the problems you see.",
-    color: 'bg-emerald-500',
-    textColor: 'text-emerald-600',
+    color: 'bg-growth',
+    textColor: 'text-growth',
   },
   food: {
     id: 'epicurean',
@@ -85,8 +85,8 @@ const ARCHETYPES: Record<BucketItemCategory, BucketListArchetype> = {
     tagline: 'Life is tasted, not counted',
     description:
       'You measure your days in flavours, textures, and the meals you shared. Cooking, foraging, tasting — food is your way of being present.',
-    color: 'bg-amber-600',
-    textColor: 'text-amber-700',
+    color: 'bg-brand',
+    textColor: 'text-brand',
   },
   health: {
     id: 'vitalist',
@@ -95,8 +95,8 @@ const ARCHETYPES: Record<BucketItemCategory, BucketListArchetype> = {
     tagline: 'Your body is the project',
     description:
       "You treat your body as the one asset you can't replace. Movement, sleep, strength — vitality is the foundation everything else stands on.",
-    color: 'bg-lime-600',
-    textColor: 'text-lime-700',
+    color: 'bg-field-green-ink',
+    textColor: 'text-field-green-ink',
   },
   mindfulness: {
     id: 'presence-seeker',
@@ -105,8 +105,8 @@ const ARCHETYPES: Record<BucketItemCategory, BucketListArchetype> = {
     tagline: 'Here is the only place',
     description:
       'You are drawn to stillness, ritual, and the present moment. Meditation, nature, silence — your bucket list is a practice of attention.',
-    color: 'bg-teal-600',
-    textColor: 'text-teal-700',
+    color: 'bg-field-green-ink',
+    textColor: 'text-field-green-ink',
   },
   reflection: {
     id: 'wise-elder',
@@ -115,8 +115,8 @@ const ARCHETYPES: Record<BucketItemCategory, BucketListArchetype> = {
     tagline: 'A life worth reviewing',
     description:
       'You are drawn to meaning-making — journaling, memoir, forgiveness, life review. Your bucket list is a conversation with your own story.',
-    color: 'bg-indigo-500',
-    textColor: 'text-indigo-600',
+    color: 'bg-field-lilac-ink',
+    textColor: 'text-field-lilac-ink',
   },
 };
 
@@ -127,8 +127,8 @@ const MIXED_ARCHETYPE: BucketListArchetype = {
   tagline: 'Everything, deeply',
   description:
     "You refuse to be put in a box. Explorer, creator, achiever, connector — you're all of these, and the world is your curriculum.",
-  color: 'bg-violet-500',
-  textColor: 'text-violet-600',
+  color: 'bg-field-lilac-ink',
+  textColor: 'text-field-lilac-ink',
 };
 
 export function getBucketListArchetype(

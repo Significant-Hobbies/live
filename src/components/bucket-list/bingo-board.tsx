@@ -5,12 +5,12 @@ import { getBingoProgress, type BucketListDraft, type BucketListItem } from '~/l
 import { cn } from '~/lib/utils';
 
 const TONE_CLASSES: Record<BucketListItem['tone'], string> = {
-  moss: 'border-[#8fa67e] bg-[#d8e6ce] text-[#263529]',
-  clay: 'border-[#c28e72] bg-[#efd0bc] text-[#4a2f28]',
-  marigold: 'border-[#c99f36] bg-[#f4d77a] text-[#493815]',
-  sky: 'border-[#83aeb8] bg-[#cfe3e8] text-[#20383d]',
-  rose: 'border-[#b98991] bg-[#ead0d3] text-[#482d31]',
-  ink: 'border-[#1e3029] bg-[#1e3029] text-[#fffaf0]',
+  moss: 'border-field-green-ink bg-field-green text-foreground',
+  clay: 'border-field-coral-ink bg-field-coral text-foreground',
+  marigold: 'border-brand bg-field-sun text-foreground',
+  sky: 'border-field-sky-ink bg-field-sky text-foreground',
+  rose: 'border-field-rose-ink bg-field-rose text-foreground',
+  ink: 'border-border bg-surface text-foreground',
 };
 
 export function BingoBoard({
@@ -37,7 +37,7 @@ export function BingoBoard({
   return (
     <section
       className={cn(
-        'relative overflow-hidden rounded-[1.5rem] border border-[#cfc2aa] bg-[#fbf5e8] p-4 text-[#1e3029] shadow-[0_20px_60px_rgba(67,54,36,0.13)] sm:p-6',
+        'relative overflow-hidden rounded-2xl border border-border bg-card p-4 text-foreground shadow-[0_20px_60px_color-mix(in_srgb,var(--scrim)_13%,transparent)] sm:p-6',
         className
       )}
       aria-label={`${draft.title} Bingo board`}
@@ -58,7 +58,7 @@ export function BingoBoard({
         )}
       >
         <div className="min-w-0">
-          <p className="mb-1 text-[0.6rem] font-bold uppercase tracking-[0.28em] text-[#597064] sm:text-[0.68rem]">
+          <p className="mb-1 text-[0.6rem] font-bold uppercase tracking-[0.28em] text-muted-foreground sm:text-[0.68rem]">
             A life less ordinary
           </p>
           <h2
@@ -70,7 +70,7 @@ export function BingoBoard({
             {draft.title}
           </h2>
           {!compact && (
-            <p className="mt-2 max-w-xl text-xs leading-relaxed text-[#637169] sm:text-sm">
+            <p className="mt-2 max-w-xl text-xs leading-relaxed text-muted-foreground sm:text-sm">
               {draft.subtitle}
             </p>
           )}
@@ -83,9 +83,9 @@ export function BingoBoard({
             )}
           >
             {progress.completed}
-            <span className="text-[#9aa59e]">/{progress.total}</span>
+            <span className="text-muted-foreground">/{progress.total}</span>
           </p>
-          <p className="mt-1 text-[0.55rem] font-bold uppercase tracking-[0.2em] text-[#6a7a71]">
+          <p className="mt-1 text-[0.55rem] font-bold uppercase tracking-[0.2em] text-muted-foreground">
             moments lived
           </p>
         </div>
@@ -103,7 +103,7 @@ export function BingoBoard({
                 key={`empty-${position}`}
                 onClick={() => onSelectEmpty?.(position)}
                 disabled={!onSelectEmpty}
-                className="aspect-square rounded-lg border border-dashed border-[#c9beaa] bg-white/30 p-1 text-[0.55rem] font-semibold uppercase tracking-wider text-[#998f7e] transition hover:bg-white/60 disabled:cursor-default sm:rounded-xl sm:text-[0.65rem]"
+                className="aspect-square rounded-lg border border-dashed border-border bg-card/30 p-1 text-[0.55rem] font-semibold uppercase tracking-wider text-muted-foreground transition hover:bg-card/60 disabled:cursor-default sm:rounded-xl sm:text-[0.65rem]"
                 aria-label={`Empty Bingo position ${position + 1}`}
               >
                 Add a wish
@@ -116,7 +116,7 @@ export function BingoBoard({
               <span
                 className={cn(
                   'absolute left-1.5 top-1.5 text-[0.5rem] font-bold uppercase tracking-[0.14em] sm:left-2 sm:top-2 sm:text-[0.58rem]',
-                  item.isWildcard ? 'text-[#dce8e1]' : 'text-[#4a463b]'
+                  item.isWildcard ? 'text-foreground' : 'text-muted-foreground'
                 )}
               >
                 {item.isWildcard ? 'wild card' : item.effort}
@@ -124,7 +124,7 @@ export function BingoBoard({
               <span
                 className={cn(
                   'absolute right-1.5 top-1.5 font-serif text-[0.62rem] sm:right-2 sm:top-2 sm:text-xs',
-                  item.isWildcard ? 'text-[#dce8e1]' : 'text-[#514c41]'
+                  item.isWildcard ? 'text-foreground' : 'text-muted-foreground'
                 )}
                 aria-hidden="true"
               >
@@ -141,7 +141,7 @@ export function BingoBoard({
                 {item.text}
               </span>
               {item.completedAt && (
-                <span className="life-bingo-stamp absolute bottom-1.5 right-1.5 z-20 flex h-[43%] w-[43%] rotate-[-8deg] items-center justify-center rounded-full border-2 border-[#0f5a3c] bg-[#f9f2e3] text-[#0f5a3c] mix-blend-multiply sm:bottom-2.5 sm:right-2.5">
+                <span className="life-bingo-stamp absolute bottom-1.5 right-1.5 z-20 flex h-[43%] w-[43%] rotate-[-8deg] items-center justify-center rounded-full border-2 border-growth bg-card text-growth mix-blend-normal sm:bottom-2.5 sm:right-2.5">
                   <span className="flex h-[76%] w-[76%] flex-col items-center justify-center rounded-full border border-current">
                     <Check className="h-1/3 w-1/3 stroke-[3]" aria-hidden="true" />
                     <span className="text-[0.5rem] font-black uppercase tracking-[0.1em] sm:text-[0.58rem]">
@@ -167,7 +167,7 @@ export function BingoBoard({
             position % 4 === 2 && 'rounded-[0.8rem_1rem_0.65rem_1.05rem]',
             position % 4 === 3 && 'rounded-[1.05rem_0.8rem_0.95rem_0.65rem]',
             onSelectItem &&
-              'hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#176b4a] focus-visible:ring-offset-2'
+              'hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-growth focus-visible:ring-offset-2'
           );
 
           return onSelectItem ? (
@@ -188,7 +188,7 @@ export function BingoBoard({
         })}
       </div>
 
-      <footer className="relative mt-4 flex items-center justify-between gap-3 border-t border-[#d8cdb9] pt-3 text-[0.58rem] font-semibold uppercase tracking-[0.16em] text-[#6f7c74] sm:mt-6 sm:pt-4 sm:text-[0.65rem]">
+      <footer className="relative mt-4 flex items-center justify-between gap-3 border-t border-border pt-3 text-[0.58rem] font-semibold uppercase tracking-[0.16em] text-muted-foreground sm:mt-6 sm:pt-4 sm:text-[0.65rem]">
         <span>
           {progress.lines.length > 0
             ? `${progress.lines.length} bingo ${progress.lines.length === 1 ? 'line' : 'lines'}`

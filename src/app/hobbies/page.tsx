@@ -48,7 +48,7 @@ export default function HobbiesPage() {
         {/* Soft gold glow at top */}
         <div
           className="pointer-events-none absolute -top-24 left-1/2 h-48 w-[36rem] -translate-x-1/2 rounded-full opacity-20 blur-3xl"
-          style={{ background: 'oklch(0.82 0.13 88 / 0.5)' }}
+          style={{ background: 'color-mix(in srgb, var(--brand) 50%, transparent)' }}
           aria-hidden="true"
         />
         <FadeIn className="relative px-6 pt-16 pb-12 text-center sm:px-10">
@@ -185,7 +185,7 @@ export default function HobbiesPage() {
         <div className="relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-card to-background p-8 text-center shadow-soft sm:p-10">
           <div
             className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full opacity-10 blur-2xl"
-            style={{ background: 'oklch(0.82 0.13 88)' }}
+            style={{ background: 'var(--brand)' }}
             aria-hidden="true"
           />
           <h2 className="font-serif text-2xl font-semibold text-foreground sm:text-3xl">

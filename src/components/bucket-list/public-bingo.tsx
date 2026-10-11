@@ -32,7 +32,9 @@ export function PublicBingo({
       const dataUrl = await toPng(exportRef.current, {
         pixelRatio: 2,
         cacheBust: true,
-        backgroundColor: '#f8f1e4',
+        backgroundColor: getComputedStyle(exportRef.current)
+          .getPropertyValue('--background')
+          .trim(),
       });
       const link = document.createElement('a');
       link.download = 'life-bingo.png';
@@ -58,30 +60,27 @@ export function PublicBingo({
   }
 
   return (
-    <div className="min-h-[calc(100vh-3.5rem)] bg-[#e8e2d6] px-4 py-10 sm:py-16">
+    <div className="min-h-[calc(100vh-3.5rem)] bg-background px-4 py-10 sm:py-16">
       <main className="mx-auto max-w-4xl">
         <header className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.24em] text-emerald-800">
+            <p className="text-xs font-bold uppercase tracking-[0.24em] text-growth">
               {ownerName ? `${ownerName}’s Life Bingo` : 'A Life Bingo'}
             </p>
-            <p className="mt-2 text-sm text-stone-600">A bucket list in its most playable form.</p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              A bucket list in its most playable form.
+            </p>
           </div>
           <div className="flex flex-wrap gap-2">
             <Button
               variant="outline"
               size="sm"
               onClick={exportBoard}
-              className="border-stone-300 bg-[#fffdf8]"
+              className="border-border bg-card"
             >
               <Download className="h-3.5 w-3.5" /> Save image
             </Button>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={share}
-              className="border-stone-300 bg-[#fffdf8]"
-            >
+            <Button variant="outline" size="sm" onClick={share} className="border-border bg-card">
               <Share2 className="h-3.5 w-3.5" /> Share
             </Button>
           </div>
@@ -91,15 +90,15 @@ export function PublicBingo({
           <BingoBoard draft={draft} />
         </div>
 
-        <section className="mt-8 grid gap-5 rounded-[1.5rem] border border-[#cfc4b2] bg-[#fffdf8] p-6 sm:grid-cols-[1fr_auto] sm:items-center sm:p-8">
+        <section className="mt-8 grid gap-5 rounded-2xl border border-border bg-card p-6 sm:grid-cols-[1fr_auto] sm:items-center sm:p-8">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-emerald-700">
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-growth">
               Borrow the inspiration
             </p>
-            <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-stone-900">
+            <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-foreground">
               Keep the ideas. Make the life yours.
             </h2>
-            <p className="mt-2 text-sm leading-relaxed text-stone-500">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
               Remixing copies the prompts into a fresh private draft. Completed moments and personal
               notes never come with it.
             </p>
@@ -107,7 +106,7 @@ export function PublicBingo({
           <Button
             onClick={remix}
             size="lg"
-            className="rounded-xl bg-[#176b4a] text-white hover:bg-[#10583d]"
+            className="rounded-xl bg-primary text-primary-foreground hover:bg-primary/90"
           >
             <Grid3X3 className="h-4 w-4" /> Make my version
           </Button>

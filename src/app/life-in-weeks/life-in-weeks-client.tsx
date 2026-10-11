@@ -121,7 +121,7 @@ export function LifeInWeeksClient({
       >
         Your life, in weeks.
       </h1>
-      <p className="mt-5 max-w-[62ch] text-lg text-foreground/80" style={{ lineHeight: 1.6 }}>
+      <p className="mt-5 max-w-[62ch] text-lg text-muted-foreground" style={{ lineHeight: 1.6 }}>
         One square for every week you have lived, and every week people your age tend to have left.
         Your exact date makes the lived weeks precise. The estimate ahead is population context, not
         a prediction.

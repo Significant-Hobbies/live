@@ -36,7 +36,7 @@ export const DREAM_TERRITORIES: DreamTerritory[] = [
       'Skydive from 15,000 feet',
       'Climb a mountain over 4,000 metres',
     ],
-    color: 'bg-[#ffd0bd]',
+    color: 'bg-field-coral',
     emoji: '↗',
   },
   {
@@ -44,7 +44,7 @@ export const DREAM_TERRITORIES: DreamTerritory[] = [
     label: 'Make & perform',
     description: 'Songs, films, books, stages, paint, and things that did not exist before you.',
     prompts: ['Record a song and release it', 'Create a short film', 'Write and finish a novel'],
-    color: 'bg-[#c5abfa]',
+    color: 'bg-field-lilac',
     emoji: '✦',
   },
   {
@@ -56,7 +56,7 @@ export const DREAM_TERRITORIES: DreamTerritory[] = [
       'Experience Carnival in Rio de Janeiro',
       'Visit every continent',
     ],
-    color: 'bg-[#b9dcf5]',
+    color: 'bg-field-sky',
     emoji: '◎',
   },
   {
@@ -68,7 +68,7 @@ export const DREAM_TERRITORIES: DreamTerritory[] = [
       'Attend a multi-day music festival',
       'Join a community choir or theatre group',
     ],
-    color: 'bg-[#f7e957]',
+    color: 'bg-field-sun',
     emoji: '∞',
   },
   {
@@ -80,7 +80,7 @@ export const DREAM_TERRITORIES: DreamTerritory[] = [
       'Do a serious meditation retreat (10+ days)',
       'Learn a new language to conversational fluency',
     ],
-    color: 'bg-[#dceabf]',
+    color: 'bg-field-green',
     emoji: '◇',
   },
   {
@@ -92,7 +92,7 @@ export const DREAM_TERRITORIES: DreamTerritory[] = [
       'Start a foundation',
       'Build something that outlasts you',
     ],
-    color: 'bg-[#a8dc91]',
+    color: 'bg-field-green',
     emoji: '＋',
   },
 ] as const;

@@ -25,10 +25,10 @@ export default async function LoginPage({
   const guestRoute = guestRouteFor(callbackUrl);
 
   return (
-    <div className="relative flex min-h-[80vh] items-center justify-center overflow-hidden bg-[#f7e957] px-4 py-12">
+    <div className="relative flex min-h-[80vh] items-center justify-center overflow-hidden bg-field-sun px-4 py-12">
       <FadeIn className="relative w-full max-w-md">
         <SpotlightCard
-          className="border-0 shadow-[0_18px_50px_rgba(66,55,22,0.14)]"
+          className="border-0 shadow-[0_18px_50px_color-mix(in_srgb,var(--scrim)_14%,transparent)]"
           innerClassName="p-7 sm:p-9"
         >
           <div className="mb-8">

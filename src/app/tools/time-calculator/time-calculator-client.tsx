@@ -38,7 +38,7 @@ const INPUTS: SliderInput[] = [
     min: 0,
     max: 80,
     default: 40,
-    color: '#3B82F6',
+    color: 'var(--field-sky-ink)',
   },
   {
     id: 'commute',
@@ -47,7 +47,7 @@ const INPUTS: SliderInput[] = [
     min: 0,
     max: 20,
     default: 5,
-    color: '#6366F1',
+    color: 'var(--field-lilac-ink)',
   },
   {
     id: 'sleep',
@@ -56,7 +56,7 @@ const INPUTS: SliderInput[] = [
     min: 28,
     max: 70,
     default: 56,
-    color: '#8B5CF6',
+    color: 'var(--field-lilac-ink)',
   },
   {
     id: 'eating',
@@ -65,7 +65,7 @@ const INPUTS: SliderInput[] = [
     min: 0,
     max: 20,
     default: 10,
-    color: '#F59E0B',
+    color: 'var(--brand)',
   },
   {
     id: 'chores',
@@ -74,7 +74,7 @@ const INPUTS: SliderInput[] = [
     min: 0,
     max: 20,
     default: 5,
-    color: '#78716C',
+    color: 'var(--muted-foreground)',
   },
   {
     id: 'family',
@@ -83,7 +83,7 @@ const INPUTS: SliderInput[] = [
     min: 0,
     max: 30,
     default: 10,
-    color: '#EC4899',
+    color: 'var(--field-rose-ink)',
   },
   {
     id: 'exercise',
@@ -92,7 +92,7 @@ const INPUTS: SliderInput[] = [
     min: 0,
     max: 15,
     default: 3,
-    color: '#10B981',
+    color: 'var(--success)',
   },
   {
     id: 'screen',
@@ -101,7 +101,7 @@ const INPUTS: SliderInput[] = [
     min: 0,
     max: 40,
     default: 15,
-    color: '#EF4444',
+    color: 'var(--destructive)',
   },
 ];
 
@@ -160,7 +160,7 @@ export function TimeCalculatorClient() {
     {
       id: 'free',
       label: 'Free time',
-      color: 'oklch(0.72 0.13 150)',
+      color: 'var(--success)',
       hours: freeTime,
       pct: (freeTime / TOTAL_HOURS) * 100,
     },
@@ -344,15 +344,15 @@ export function TimeCalculatorClient() {
                 </div>
               )}
 
-              <div className="rounded-2xl border border-blue-200 bg-blue-50 p-6 shadow-sm">
+              <div className="rounded-2xl border border-field-sky-ink bg-field-sky p-6 shadow-sm">
                 <div className="mb-2 flex items-center gap-2">
                   <Timer className="h-4 w-4 text-primary" aria-hidden="true" />
                   <h3 className="font-bold text-foreground">The 30-minute rule</h3>
                 </div>
                 <p className="text-sm text-muted-foreground">
                   Even 30 minutes a day ={' '}
-                  <span className="font-bold text-blue-700">3.5 hours/week</span> of hobby time.
-                  Consistency beats marathon sessions every time.
+                  <span className="font-bold text-field-sky-ink">3.5 hours/week</span> of hobby
+                  time. Consistency beats marathon sessions every time.
                 </p>
               </div>
             </>

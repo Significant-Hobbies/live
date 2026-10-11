@@ -75,17 +75,17 @@ export function LocalBucketList() {
 
   return (
     <StorageModeProvider mode="local">
-      <div className="min-h-[calc(100vh-4rem)] bg-[#f7f1e7] px-4 py-10 text-[#211e18] sm:py-14">
+      <div className="min-h-[calc(100vh-4rem)] bg-background px-4 py-10 text-foreground sm:py-14">
         <div className="mx-auto max-w-5xl">
           <div className="flex justify-end">
             <StorageModeStatus />
           </div>
-          <header className="mt-5 overflow-hidden rounded-[2rem] bg-[#a8dc91] px-6 py-10 shadow-[0_18px_55px_rgba(53,80,40,0.13)] sm:px-10 sm:py-12">
-            <p className="text-sm font-bold text-[#0f593c]">Every meaningful someday</p>
+          <header className="mt-5 overflow-hidden rounded-2xl bg-field-green px-6 py-10 shadow-[0_18px_55px_color-mix(in_srgb,var(--scrim)_13%,transparent)] sm:px-10 sm:py-12">
+            <p className="text-sm font-bold text-growth">Every meaningful someday</p>
             <h1 className="mt-3 max-w-3xl font-serif text-5xl font-semibold leading-[0.94] tracking-[-0.045em] sm:text-7xl">
               Your bucket list, all in one place.
             </h1>
-            <p className="mt-5 max-w-2xl text-base leading-relaxed text-[#344b31]">
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
               Keep the things you want to live here. They stay on this device unless you choose to
               sign in.
             </p>
@@ -109,15 +109,15 @@ export function LocalBucketList() {
           </div>
 
           {error && (
-            <p role="alert" className="mt-4 text-sm text-red-800">
+            <p role="alert" className="mt-4 text-sm text-destructive">
               {error}
             </p>
           )}
 
-          <section className="mt-7 rounded-[2rem] border border-[#d9cfbd] bg-[#fffdf8] p-5 sm:p-8">
+          <section className="mt-7 rounded-2xl border border-border bg-card p-5 sm:p-8">
             <div className="flex flex-col items-start justify-between gap-8 sm:flex-row sm:items-end sm:gap-5">
               <div>
-                <p className="text-sm font-bold text-[#176b4a]">Still calling</p>
+                <p className="text-sm font-bold text-growth">Still calling</p>
                 <h2 className="mt-1 font-serif text-4xl leading-[1.05]">What comes next</h2>
               </div>
               <Link
@@ -129,16 +129,16 @@ export function LocalBucketList() {
             </div>
 
             {!loaded ? (
-              <p className="mt-8 text-sm text-[#625b50]">Opening your list…</p>
+              <p className="mt-8 text-sm text-muted-foreground">Opening your list…</p>
             ) : items.length === 0 ? (
-              <div className="mt-8 rounded-2xl bg-[#fff8d6] p-6 sm:p-8">
+              <div className="mt-8 rounded-2xl bg-field-sun p-6 sm:p-8">
                 <p className="font-serif text-3xl">What would make this year feel more alive?</p>
-                <p className="mt-3 max-w-xl text-sm leading-relaxed text-[#625b50]">
+                <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
                   Add your own answer above, or browse ideas when you want a spark.
                 </p>
               </div>
             ) : (
-              <ul className="mt-9 divide-y divide-[#e8dfd1] sm:mt-7">
+              <ul className="mt-9 divide-y divide-border sm:mt-7">
                 {items.map((item, index) => {
                   const done = item.status === 'done';
                   return (
@@ -156,12 +156,12 @@ export function LocalBucketList() {
                             )
                           )
                         }
-                        className={`flex size-10 shrink-0 items-center justify-center rounded-full border-2 ${done ? 'border-[#176b4a] bg-[#176b4a] text-white' : 'border-[#b9af9e] bg-white text-transparent'}`}
+                        className={`flex size-10 shrink-0 items-center justify-center rounded-full border-2 ${done ? 'border-growth bg-growth text-brand-foreground' : 'border-border bg-card text-transparent'}`}
                       >
                         <Check className="size-5" />
                       </button>
                       <p
-                        className={`min-w-0 flex-1 font-serif text-2xl ${done ? 'text-[#766f65] line-through' : ''}`}
+                        className={`min-w-0 flex-1 font-serif text-2xl ${done ? 'text-muted-foreground line-through' : ''}`}
                       >
                         {item.title}
                       </p>
@@ -172,7 +172,7 @@ export function LocalBucketList() {
                         onClick={() =>
                           void persist(items.filter((_, itemIndex) => itemIndex !== index))
                         }
-                        className="flex size-10 shrink-0 items-center justify-center rounded-full text-[#766f65] hover:bg-[#f1e8da] hover:text-[#211e18]"
+                        className="flex size-10 shrink-0 items-center justify-center rounded-full text-muted-foreground hover:bg-muted hover:text-foreground"
                       >
                         <Trash2 className="size-4" />
                       </button>

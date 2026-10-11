@@ -37,16 +37,16 @@ export const revalidate = 3600; // 1 hour ISR
 export const dynamicParams = false;
 
 const CATEGORY_COLORS: Record<string, string> = {
-  Creative: 'bg-[#c5abfa]',
-  Music: 'bg-[#f2a4bc]',
-  Physical: 'bg-[#b5d98f]',
-  Intellectual: 'bg-[#b9dcf5]',
-  Gaming: 'bg-[#ff9d7d]',
-  Outdoor: 'bg-[#b5d98f]',
-  Culinary: 'bg-[#f7c36f]',
-  Collecting: 'bg-[#c5abfa]',
-  Making: 'bg-[#ff9d7d]',
-  Social: 'bg-[#b9dcf5]',
+  Creative: 'bg-field-lilac',
+  Music: 'bg-field-rose',
+  Physical: 'bg-field-green',
+  Intellectual: 'bg-field-sky',
+  Gaming: 'bg-field-coral',
+  Outdoor: 'bg-field-green',
+  Culinary: 'bg-field-sun',
+  Collecting: 'bg-field-lilac',
+  Making: 'bg-field-coral',
+  Social: 'bg-field-sky',
 };
 
 export async function generateStaticParams() {
@@ -117,10 +117,10 @@ export default async function HobbyDetailPage({ params }: Props) {
   const mentions = journeysForHobby(hobbyName);
 
   const categoryImage = `/categories/${category.name.toLowerCase()}-1200.webp`;
-  const categoryColor = CATEGORY_COLORS[category.name] ?? 'bg-[#f7e957]';
+  const categoryColor = CATEGORY_COLORS[category.name] ?? 'bg-field-sun';
 
   return (
-    <main className="bg-[#fbf8ef] pb-20 text-[#211e18]">
+    <main className="bg-background pb-20 text-foreground">
       <JsonLd
         data={{
           '@context': 'https://schema.org',
@@ -142,7 +142,7 @@ export default async function HobbyDetailPage({ params }: Props) {
         }}
       />
       <section className="px-4 pb-10 pt-6 sm:pb-14 sm:pt-10">
-        <div className="mx-auto max-w-6xl overflow-hidden rounded-3xl shadow-[0_22px_60px_rgba(65,55,28,0.14)]">
+        <div className="mx-auto max-w-6xl overflow-hidden rounded-3xl shadow-[0_22px_60px_color-mix(in_srgb,var(--scrim)_14%,transparent)]">
           <div className="grid min-h-[34rem] lg:grid-cols-[1.08fr_0.92fr]">
             <div className={`${categoryColor} flex flex-col justify-between p-7 sm:p-10 lg:p-14`}>
               <Link
@@ -159,7 +159,7 @@ export default async function HobbyDetailPage({ params }: Props) {
                 <h1 className="font-serif text-6xl font-medium leading-[0.88] tracking-[-0.045em] text-balance sm:text-8xl">
                   {hobbyName}
                 </h1>
-                <p className="mt-6 max-w-xl text-lg leading-relaxed text-[#39352d]">
+                <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
                   You do not need a five-year plan. You need one honest beginning and enough
                   curiosity to return tomorrow.
                 </p>
@@ -168,11 +168,11 @@ export default async function HobbyDetailPage({ params }: Props) {
               <div className="flex flex-wrap items-center gap-3">
                 <Link
                   href="/timeline/new"
-                  className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#211e18] px-6 font-bold text-white transition-transform hover:-translate-y-0.5"
+                  className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-primary px-6 font-bold text-primary-foreground transition-transform hover:-translate-y-0.5"
                 >
                   Begin this hobby <ArrowRight className="size-4" />
                 </Link>
-                <span className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-white/55 px-4 text-sm font-semibold">
+                <span className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-card/55 px-4 text-sm font-semibold">
                   <Users className="size-4" />
                   {popularityCount === 0
                     ? 'Be the first public story'
@@ -190,8 +190,8 @@ export default async function HobbyDetailPage({ params }: Props) {
                 sizes="(min-width: 1024px) 46vw, 100vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#211e18]/35 via-transparent to-transparent" />
-              <p className="absolute bottom-7 left-7 right-7 max-w-md font-serif text-2xl leading-tight text-white drop-shadow-sm sm:bottom-10 sm:left-10">
+              <div className="absolute inset-0 bg-gradient-to-t from-scrim/35 via-transparent to-transparent" />
+              <p className="absolute bottom-7 left-7 right-7 max-w-md font-serif text-2xl leading-tight text-foreground drop-shadow-sm sm:bottom-10 sm:left-10">
                 Start small enough that beginning feels almost obvious.
               </p>
             </div>
@@ -201,7 +201,7 @@ export default async function HobbyDetailPage({ params }: Props) {
 
       <div className="mx-auto max-w-5xl px-4">
         {!isLoggedIn && (
-          <div className="mb-8 flex flex-col justify-between gap-4 rounded-2xl bg-[#f7e957] px-6 py-5 sm:flex-row sm:items-center">
+          <div className="mb-8 flex flex-col justify-between gap-4 rounded-2xl bg-field-sun px-6 py-5 sm:flex-row sm:items-center">
             <p className="font-serif text-xl">
               Keep your {hobbyName.toLowerCase()} story private on this device.
             </p>
@@ -229,7 +229,7 @@ export default async function HobbyDetailPage({ params }: Props) {
                   href={r.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`group flex items-center gap-4 rounded-2xl border border-[#d8d0bd] bg-white transition-all hover:-translate-y-0.5 hover:shadow-md ${
+                  className={`group flex items-center gap-4 rounded-2xl border border-border bg-card transition-all hover:-translate-y-0.5 hover:shadow-md ${
                     i === 0 ? 'p-5' : 'px-5 py-3'
                   }`}
                 >
@@ -305,7 +305,7 @@ export default async function HobbyDetailPage({ params }: Props) {
             <div className="space-y-3">
               {relatedPosts.map((post) => (
                 <Link key={post.slug} href={`/blog/${post.slug}`} prefetch={false}>
-                  <div className="group rounded-2xl bg-[#b9dcf5] p-5 transition-transform hover:-translate-y-0.5">
+                  <div className="group rounded-2xl bg-field-sky p-5 transition-transform hover:-translate-y-0.5">
                     <h3 className="font-medium text-foreground group-hover:text-foreground transition-colors">
                       {post.title}
                     </h3>
@@ -338,7 +338,7 @@ export default async function HobbyDetailPage({ params }: Props) {
                     })}
                     prefetch={false}
                   >
-                    <div className="group rounded-2xl border border-[#d8d0bd] bg-white p-5 transition-transform hover:-translate-y-0.5">
+                    <div className="group rounded-2xl border border-border bg-card p-5 transition-transform hover:-translate-y-0.5">
                       <h3 className="font-medium text-foreground group-hover:text-foreground transition-colors">
                         {t.title ?? 'Hobby Timeline'}
                       </h3>
@@ -356,8 +356,8 @@ export default async function HobbyDetailPage({ params }: Props) {
               })}
             </div>
           ) : (
-            <div className="rounded-2xl bg-[#f2a4bc] p-8 text-center">
-              <p className="text-[#49333a]">No public timelines feature {hobbyName} yet.</p>
+            <div className="rounded-2xl bg-field-rose p-8 text-center">
+              <p className="text-muted-foreground">No public timelines feature {hobbyName} yet.</p>
               <Link href="/timeline/new">
                 <button className="mt-3 text-sm text-foreground hover:text-foreground">
                   Be the first →
@@ -411,18 +411,20 @@ export default async function HobbyDetailPage({ params }: Props) {
                     className="block h-full"
                     prefetch={false}
                   >
-                    <div className="h-full rounded-2xl bg-[#c5abfa] p-5 transition-transform hover:-translate-y-0.5">
+                    <div className="h-full rounded-2xl bg-field-lilac p-5 transition-transform hover:-translate-y-0.5">
                       <div className="mb-1">
                         <span className="font-semibold text-foreground text-sm group-hover:text-foreground transition-colors">
                           {affinity.name}
                         </span>
                         {affinityCategory && (
-                          <span className="ml-2 text-xs text-[#3f3747]">
+                          <span className="ml-2 text-xs text-muted-foreground">
                             {affinityCategory.name}
                           </span>
                         )}
                       </div>
-                      <p className="text-xs leading-relaxed text-[#3f3747]">{affinity.reason}</p>
+                      <p className="text-xs leading-relaxed text-muted-foreground">
+                        {affinity.reason}
+                      </p>
                     </div>
                   </Link>
                 );

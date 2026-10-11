@@ -261,7 +261,7 @@ export function QuestChainCard({
               </div>
 
               {/* Step content */}
-              <div className={`flex-1 min-w-0 ${isLocked ? 'opacity-40' : ''}`}>
+              <div className={`flex-1 min-w-0 ${isLocked ? 'text-muted-foreground' : ''}`}>
                 <div className="flex items-center gap-2">
                   <span className="text-base leading-none">{step.emoji}</span>
                   <p

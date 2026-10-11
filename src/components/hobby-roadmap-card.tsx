@@ -79,7 +79,7 @@ export function HobbyRoadmapCard({ roadmap }: { roadmap: HobbyRoadmap }) {
   const allDone = doneCount === total;
 
   return (
-    <section className="overflow-hidden rounded-3xl bg-[#b9dcf5] p-6 text-[#211e18] sm:p-8">
+    <section className="overflow-hidden rounded-3xl bg-field-sky p-6 text-foreground sm:p-8">
       <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
         <div>
           <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em]">
@@ -88,12 +88,12 @@ export function HobbyRoadmapCard({ roadmap }: { roadmap: HobbyRoadmap }) {
           <h2 className="font-serif text-4xl font-medium leading-none sm:text-5xl">
             Your {roadmap.hobby.toLowerCase()} roadmap
           </h2>
-          <p className="mt-3 max-w-2xl text-sm text-[#454a4c] sm:text-base">
+          <p className="mt-3 max-w-2xl text-sm text-muted-foreground sm:text-base">
             A concrete path from today to three months in. Check off as you go — progress saves on
             this device.
           </p>
         </div>
-        <span className="rounded-full bg-white/65 px-4 py-2 text-sm font-bold">
+        <span className="rounded-full bg-card/65 px-4 py-2 text-sm font-bold">
           {hydrated ? `${doneCount}/${total} done` : `${total} steps`}
         </span>
       </div>
@@ -106,8 +106,8 @@ export function HobbyRoadmapCard({ roadmap }: { roadmap: HobbyRoadmap }) {
               <label
                 className={`flex min-h-40 cursor-pointer items-start gap-3 rounded-2xl border p-5 transition-all ${
                   isDone
-                    ? 'border-[#4e7654] bg-[#b5d98f]'
-                    : 'border-white/80 bg-white/80 hover:-translate-y-0.5 hover:bg-white'
+                    ? 'border-field-green-ink bg-field-green'
+                    : 'border-foreground/80 bg-card/80 hover:-translate-y-0.5 hover:bg-card'
                 }`}
               >
                 <input
@@ -139,14 +139,14 @@ export function HobbyRoadmapCard({ roadmap }: { roadmap: HobbyRoadmap }) {
         })}
       </ol>
 
-      <div className="mt-6 rounded-2xl bg-white/65 p-5">
+      <div className="mt-6 rounded-2xl bg-card/65 p-5">
         <label className="text-sm font-bold">What are you noticing?</label>
         <textarea
           value={progress.notes}
           onChange={(e) => updateNotes(e.target.value)}
           rows={3}
           placeholder="What worked, what didn't, what to try next…"
-          className="mt-2 w-full resize-none rounded-xl border border-[#a4b9c8] bg-white px-4 py-3 text-sm outline-none focus:border-[#211e18]"
+          className="mt-2 w-full resize-none rounded-xl border border-field-sky-ink bg-card px-4 py-3 text-sm outline-none focus:border-border"
         />
         {hydrated && progress.updatedAt && (
           <p className="mt-1 text-[11px] text-subtle">
@@ -158,7 +158,7 @@ export function HobbyRoadmapCard({ roadmap }: { roadmap: HobbyRoadmap }) {
       <div className="mt-5 flex flex-wrap items-center gap-3">
         <Link
           href="/timeline/new"
-          className="rounded-xl bg-[#211e18] px-5 py-3 text-sm font-bold text-white transition-transform hover:-translate-y-0.5"
+          className="rounded-xl bg-primary px-5 py-3 text-sm font-bold text-primary-foreground transition-transform hover:-translate-y-0.5"
         >
           {allDone ? 'Log it in a timeline →' : 'Track this in a timeline →'}
         </Link>

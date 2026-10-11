@@ -19,7 +19,10 @@ function CostBadge({ cost }: { cost: HobbyDetail['cost'] }) {
   const map: Record<HobbyDetail['cost'], { label: string; className: string }> = {
     free: { label: 'Free', className: 'bg-foreground/10 text-foreground border-foreground/20' },
     low: { label: 'Low ($)', className: 'bg-foreground/10 text-foreground border-foreground/20' },
-    medium: { label: 'Medium ($$)', className: 'bg-orange-100 text-orange-700 border-orange-200' },
+    medium: {
+      label: 'Medium ($$)',
+      className: 'bg-field-coral text-field-coral-ink border-field-coral-ink',
+    },
     high: {
       label: 'High ($$$)',
       className: 'bg-destructive/15 text-destructive border-destructive/30',
@@ -91,12 +94,12 @@ function LocationTags({ indoor, outdoor }: { indoor: boolean; outdoor: boolean }
   return (
     <span className="flex flex-wrap gap-1">
       {indoor && (
-        <span className="rounded-full border border-blue-200 bg-blue-50 px-2.5 py-0.5 text-xs text-blue-700">
+        <span className="rounded-full border border-field-sky-ink bg-field-sky px-2.5 py-0.5 text-xs text-field-sky-ink">
           Indoor
         </span>
       )}
       {outdoor && (
-        <span className="rounded-full border border-green-200 bg-green-50 px-2.5 py-0.5 text-xs text-green-700">
+        <span className="rounded-full border border-growth bg-field-green px-2.5 py-0.5 text-xs text-growth">
           Outdoor
         </span>
       )}

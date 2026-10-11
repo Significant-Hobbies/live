@@ -9,8 +9,8 @@ export function BorderBeam({
   size = 200,
   duration = 12,
   delay = 0,
-  colorFrom = 'oklch(0.82 0.13 88)',
-  colorTo = 'oklch(0.72 0.13 150)',
+  colorFrom = 'var(--brand)',
+  colorTo = 'var(--success)',
 }: {
   className?: string;
   size?: number;

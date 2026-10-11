@@ -261,21 +261,21 @@ const SECTIONS: Section[] = [
     label: 'This Weekend',
     subtitle: '10 low-barrier hobbies to explore in a few hours',
     hobbies: THIS_WEEKEND,
-    badgeColor: 'bg-blue-100 text-blue-800 border-blue-200',
+    badgeColor: 'bg-field-sky text-field-sky-ink border-field-sky-ink',
   },
   {
     id: 'this-month',
     label: 'This Month',
     subtitle: '10 hobbies worth a 30-day honest attempt',
     hobbies: THIS_MONTH,
-    badgeColor: 'bg-purple-100 text-purple-800 border-purple-200',
+    badgeColor: 'bg-field-lilac text-field-lilac-ink border-field-lilac-ink',
   },
   {
     id: 'this-year',
     label: 'This Year',
     subtitle: '10 deep-dive hobbies for people ready to commit',
     hobbies: THIS_YEAR,
-    badgeColor: 'bg-[#fff4c2] text-[#684e00] border-[#c6a935]',
+    badgeColor: 'bg-field-sun text-brand border-brand',
   },
 ];
 

@@ -55,16 +55,16 @@ export async function generateMetadata({ params }: Props) {
 }
 
 const CATEGORY_BADGE_COLORS: Record<string, string> = {
-  Creative: 'border-purple-400/30 bg-purple-400/10 text-purple-300',
-  Music: 'border-pink-400/30 bg-pink-400/10 text-pink-300',
-  Physical: 'border-orange-400/30 bg-orange-400/10 text-orange-300',
-  Intellectual: 'border-blue-400/30 bg-blue-400/10 text-blue-300',
-  Gaming: 'border-violet-400/30 bg-violet-400/10 text-violet-300',
+  Creative: 'border-field-lilac-ink/30 bg-field-lilac-ink/10 text-field-lilac-ink',
+  Music: 'border-field-rose-ink/30 bg-field-rose-ink/10 text-field-rose-ink',
+  Physical: 'border-field-coral-ink/30 bg-field-coral-ink/10 text-field-coral-ink',
+  Intellectual: 'border-field-sky-ink/30 bg-field-sky-ink/10 text-field-sky-ink',
+  Gaming: 'border-field-lilac-ink/30 bg-field-lilac-ink/10 text-field-lilac-ink',
   Outdoor: 'border-foreground/20 bg-foreground/10 text-foreground',
   Culinary: 'border-foreground/20 bg-foreground/10 text-foreground',
   Collecting: 'border-border bg-foreground/5 text-muted-foreground',
   Making: 'border-primary/30 bg-primary/10 text-lumi-300',
-  Social: 'border-teal-400/30 bg-teal-400/10 text-teal-300',
+  Social: 'border-field-green-ink/30 bg-field-green-ink/10 text-field-green-ink',
 };
 
 export default async function ProfilePage({ params }: Props) {
@@ -205,17 +205,17 @@ export default async function ProfilePage({ params }: Props) {
       <div className="relative">
         <div className="flex flex-col items-center text-center pt-8 pb-12">
           {/* Avatar — gold-bordered circle, the face on the plaque */}
-          <div className="rounded-full p-1 ring-1 ring-[oklch(0.82_0.13_88/0.4)] shadow-[0_0_24px_4px_oklch(0.82_0.13_88/0.12)]">
+          <div className="rounded-full p-1 ring-1 ring-brand/40 shadow-[0_0_24px_4px_color-mix(in srgb, var(--brand) 12%, transparent)]">
             {user.image ? (
               <Image
                 src={user.image}
                 alt={displayName}
                 width={96}
                 height={96}
-                className="rounded-full border-2 border-[oklch(0.82_0.13_88/0.5)]"
+                className="rounded-full border-2 border-brand/50"
               />
             ) : (
-              <div className="h-[96px] w-[96px] rounded-full border-2 border-[oklch(0.82_0.13_88/0.5)] bg-foreground/5 flex items-center justify-center text-3xl font-serif font-semibold text-muted-foreground">
+              <div className="h-[96px] w-[96px] rounded-full border-2 border-brand/50 bg-foreground/5 flex items-center justify-center text-3xl font-serif font-semibold text-muted-foreground">
                 {displayName.charAt(0).toUpperCase()}
               </div>
             )}
@@ -228,14 +228,14 @@ export default async function ProfilePage({ params }: Props) {
                 <p className="font-serif text-2xl sm:text-3xl italic leading-relaxed text-foreground">
                   &ldquo;{user.creed}&rdquo;
                 </p>
-                <div className="mx-auto mt-6 h-px w-16 bg-[oklch(0.82_0.13_88/0.4)]" />
+                <div className="mx-auto mt-6 h-px w-16 bg-brand/40" />
               </>
             ) : user.bio ? (
               <>
                 <p className="font-serif text-2xl sm:text-3xl italic leading-relaxed text-foreground">
                   &ldquo;{user.bio}&rdquo;
                 </p>
-                <div className="mx-auto mt-6 h-px w-16 bg-[oklch(0.82_0.13_88/0.4)]" />
+                <div className="mx-auto mt-6 h-px w-16 bg-brand/40" />
               </>
             ) : (
               <p className="font-serif text-xl italic text-muted-foreground">
@@ -278,7 +278,7 @@ export default async function ProfilePage({ params }: Props) {
               <Link href="/timeline/new">
                 <Button
                   variant="outline"
-                  className="border-[oklch(0.82_0.13_88/0.4)] text-foreground hover:bg-[oklch(0.82_0.13_88/0.08)]"
+                  className="border-brand/40 text-foreground hover:bg-brand/8"
                 >
                   <Plus className="mr-1.5 h-4 w-4" />
                   New timeline
@@ -295,7 +295,7 @@ export default async function ProfilePage({ params }: Props) {
       <div className="relative py-12">
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
           <SpotlightCard className="shadow-soft h-full" innerClassName="p-5 text-center">
-            <span className="font-serif text-3xl font-semibold text-[oklch(0.82_0.13_88)]">
+            <span className="font-serif text-3xl font-semibold text-brand">
               {timelineList.length}
             </span>
             <p className="mt-1 text-xs text-muted-foreground">
@@ -303,7 +303,7 @@ export default async function ProfilePage({ params }: Props) {
             </p>
           </SpotlightCard>
           <SpotlightCard className="shadow-soft h-full" innerClassName="p-5 text-center">
-            <span className="font-serif text-3xl font-semibold text-[oklch(0.82_0.13_88)]">
+            <span className="font-serif text-3xl font-semibold text-brand">
               {allHobbies.length}
             </span>
             <p className="mt-1 text-xs text-muted-foreground">
@@ -311,7 +311,7 @@ export default async function ProfilePage({ params }: Props) {
             </p>
           </SpotlightCard>
           <SpotlightCard className="shadow-soft h-full" innerClassName="p-5 text-center">
-            <span className="font-serif text-3xl font-semibold text-[oklch(0.82_0.13_88)]">
+            <span className="font-serif text-3xl font-semibold text-brand">
               {completedQuestRows.length}
             </span>
             <p className="mt-1 text-xs text-muted-foreground">
@@ -320,9 +320,7 @@ export default async function ProfilePage({ params }: Props) {
           </SpotlightCard>
           <SpotlightCard className="shadow-soft h-full" innerClassName="p-5 text-center">
             {yearsLived > 0 ? (
-              <span className="font-serif text-3xl font-semibold text-[oklch(0.82_0.13_88)]">
-                {yearsLived}
-              </span>
+              <span className="font-serif text-3xl font-semibold text-brand">{yearsLived}</span>
             ) : (
               <span className="font-serif text-3xl font-semibold text-subtle">&mdash;</span>
             )}
@@ -437,7 +435,7 @@ export default async function ProfilePage({ params }: Props) {
                         {q.title}
                       </h3>
                       <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
-                        <span className="inline-flex items-center gap-1 rounded-full border border-[oklch(0.82_0.13_88/0.3)] bg-[oklch(0.82_0.13_88/0.08)] px-2 py-0.5 text-[10px] font-medium text-[oklch(0.82_0.13_88)]">
+                        <span className="inline-flex items-center gap-1 rounded-full border border-brand/30 bg-brand/8 px-2 py-0.5 text-[10px] font-medium text-brand">
                           Completed
                         </span>
                         {isOwner && (

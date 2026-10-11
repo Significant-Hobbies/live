@@ -104,7 +104,7 @@ export function ManualItemInput({
           event.preventDefault();
           if (value.trim()) void add({ title: value.trim() });
         }}
-        className={`flex flex-col gap-3 rounded-2xl p-4 sm:flex-row sm:items-center ${dark ? 'bg-[#211e18] text-white' : 'border border-[#d9cfbd] bg-[#fffdf8]'}`}
+        className={`flex flex-col gap-3 rounded-2xl p-4 sm:flex-row sm:items-center ${dark ? 'bg-surface text-foreground' : 'border border-border bg-card'}`}
       >
         <label htmlFor={id} className="shrink-0 font-serif text-xl">
           I want to…
@@ -125,12 +125,12 @@ export function ManualItemInput({
             setSubmissionMessage('');
           }}
           placeholder="Something I want to do…"
-          className={`min-h-11 min-w-0 flex-1 rounded-xl border px-4 text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#176b4a] ${dark ? 'border-white/20 bg-white/10 text-white placeholder:text-white/60' : 'border-[#d9cfbd] bg-white'}`}
+          className={`min-h-11 min-w-0 flex-1 rounded-xl border px-4 text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-growth ${dark ? 'border-foreground/20 bg-card/10 text-foreground placeholder:text-muted-foreground' : 'border-border bg-card'}`}
         />
         <button
           type="submit"
           disabled={disabled || pending || submitting || !value.trim()}
-          className="min-h-11 rounded-xl bg-[#f7e957] px-5 font-bold text-[#211e18] disabled:opacity-50"
+          className="min-h-11 rounded-xl bg-brand px-5 font-bold text-brand-foreground disabled:opacity-50"
         >
           {pending ? 'Adding…' : 'Add my wording'}
         </button>

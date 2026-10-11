@@ -94,7 +94,7 @@ export default async function ExperiencePage({ params }: { params: Promise<{ slu
         {entry.emoji} {entry.title}
       </h1>
 
-      <p className="mt-5 max-w-[62ch] text-lg text-foreground/80" style={{ lineHeight: 1.6 }}>
+      <p className="mt-5 max-w-[62ch] text-lg text-muted-foreground" style={{ lineHeight: 1.6 }}>
         {guide?.summary ?? entry.description}
       </p>
 

@@ -28,7 +28,7 @@ const REDISCOVERY_BADGE: Record<
   },
   dormant: {
     label: 'Dormant',
-    className: 'border-emerald-300/40 bg-emerald-100/60 text-emerald-800',
+    className: 'border-growth/40 bg-field-green/60 text-growth',
   },
   dropped: {
     label: 'Dropped',

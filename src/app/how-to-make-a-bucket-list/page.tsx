@@ -122,7 +122,7 @@ export default function HowToMakeABucketListPage() {
                 <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
                   <Link
                     href="/"
-                    className="inline-flex items-center gap-2 rounded-full bg-[#211e18] px-6 py-3 text-sm font-semibold text-white shadow-md transition-colors hover:bg-[#39352d]"
+                    className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-md transition-colors hover:bg-primary/90"
                   >
                     Start my bucket list
                   </Link>
@@ -171,7 +171,7 @@ export default function HowToMakeABucketListPage() {
                     className="border border-lumi-200 bg-primary/10 shadow-soft"
                     innerClassName="px-5 py-4"
                   >
-                    <p className="text-sm font-semibold text-[#684e00]">Whale tip: {step.tip}</p>
+                    <p className="text-sm font-semibold text-brand">Whale tip: {step.tip}</p>
                     {step.link && (
                       <Link
                         href={step.link.href}
@@ -225,7 +225,7 @@ export default function HowToMakeABucketListPage() {
               <div className="flex flex-wrap gap-3 justify-center">
                 <Link
                   href="/"
-                  className="inline-flex items-center gap-2 rounded-full bg-[#211e18] px-6 py-3 text-sm font-semibold text-white shadow-md transition-colors hover:bg-[#39352d]"
+                  className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-md transition-colors hover:bg-primary/90"
                 >
                   Start my bucket list
                 </Link>

@@ -69,36 +69,38 @@ function templateToPhases(template: TimelineTemplate): Phase[] {
 
 function TemplatePicker({ onPick }: { onPick: (template: TimelineTemplate) => void }) {
   return (
-    <div className="mx-auto max-w-4xl rounded-[2rem] border border-[#d9cfbd] bg-[#fffdf8] p-5 shadow-[0_22px_60px_rgba(72,58,38,0.08)] sm:p-9">
+    <div className="mx-auto max-w-4xl rounded-2xl border border-border bg-card p-5 shadow-[0_22px_60px_color-mix(in_srgb,var(--scrim)_8%,transparent)] sm:p-9">
       <div className="mb-8 max-w-2xl">
-        <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#176b4a]">
+        <p className="text-sm font-bold uppercase tracking-[0.18em] text-growth">
           Personal timeline
         </p>
-        <h2 className="mt-2 font-serif text-4xl font-medium tracking-[-0.03em] text-[#211e18]">
+        <h2 className="mt-2 font-serif text-4xl font-medium tracking-[-0.03em] text-foreground">
           Where does your story begin?
         </h2>
-        <p className="mt-3 text-base leading-relaxed text-[#625b50]">
+        <p className="mt-3 text-base leading-relaxed text-muted-foreground">
           Start empty or borrow a shape. Every phase stays editable.
         </p>
       </div>
-      <div className="divide-y divide-[#e8dfd1] border-y border-[#e8dfd1]">
+      <div className="divide-y divide-border border-y border-border">
         {TIMELINE_TEMPLATES.map((template) => (
           <button
             key={template.id}
             type="button"
             onClick={() => onPick(template)}
-            className="group grid w-full grid-cols-[2.5rem_1fr_auto] items-center gap-4 px-2 py-5 text-left transition-colors hover:bg-[#f7f1e7] focus-visible:bg-[#f7e957] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#211e18]"
+            className="group grid w-full grid-cols-[2.5rem_1fr_auto] items-center gap-4 px-2 py-5 text-left transition-colors hover:bg-background focus-visible:bg-field-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
-            <span className="flex size-10 items-center justify-center rounded-full bg-[#b9dcf5] font-serif text-lg font-bold text-[#192a36]">
+            <span className="flex size-10 items-center justify-center rounded-full bg-field-sky font-serif text-lg font-bold text-foreground">
               {template.name.charAt(0)}
             </span>
             <span>
-              <span className="block font-serif text-2xl font-medium text-[#211e18]">
+              <span className="block font-serif text-2xl font-medium text-foreground">
                 {template.name}
               </span>
-              <span className="mt-1 block text-sm text-[#625b50]">{template.description}</span>
+              <span className="mt-1 block text-sm text-muted-foreground">
+                {template.description}
+              </span>
             </span>
-            <span className="rounded-full border border-[#d9cfbd] bg-white px-3 py-1.5 text-xs font-bold text-[#625b50]">
+            <span className="rounded-full border border-border bg-card px-3 py-1.5 text-xs font-bold text-muted-foreground">
               {template.phases.length ? `${template.phases.length} phases` : 'Empty'}
             </span>
           </button>

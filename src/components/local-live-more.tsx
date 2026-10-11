@@ -41,7 +41,7 @@ export function LocalLiveMore({ entries }: { entries: DreamAtlasEntry[] }) {
   );
   return (
     <StorageModeProvider mode="local">
-      <div className="bg-[#fbf8ef] px-4 py-8 text-[#211e18] sm:py-12">
+      <div className="bg-background px-4 py-8 text-foreground sm:py-12">
         <div className="mx-auto max-w-6xl space-y-10 sm:space-y-14">
           <div className="flex justify-end">
             <StorageModeStatus />

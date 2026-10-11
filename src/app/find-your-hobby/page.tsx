@@ -39,7 +39,7 @@ export default function FindYourHobbyPage() {
           offers: { '@type': 'Offer', price: '0' },
         }}
       />
-      <div className="relative bg-[#b9dcf5]">
+      <div className="relative bg-field-sky">
         <HobbyQuiz />
       </div>
     </>

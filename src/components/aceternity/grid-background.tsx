@@ -8,7 +8,7 @@ export function GridBackground({
   className,
   variant = 'dots',
   size = 20,
-  color = 'oklch(0.97 0.003 285 / 0.04)',
+  color = 'color-mix(in srgb, var(--foreground) 4%, transparent)',
 }: {
   className?: string;
   variant?: 'dots' | 'lines';

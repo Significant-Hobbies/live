@@ -101,11 +101,11 @@ export function LocalLookBack({ today }: { today: string }) {
         <HistoryAtlas birthYear={birthYear} birthDate={birthDate} trajectory={trajectory} />
         <section
           id="personal-timeline"
-          className="scroll-mt-24 rounded-[1.75rem] border border-[#d9cfbd] bg-white p-5 sm:p-8"
+          className="scroll-mt-24 rounded-2xl border border-border bg-card p-5 sm:p-8"
         >
           <div className="mb-6 flex items-end justify-between gap-4">
             <div>
-              <p className="text-sm font-bold text-[#176b4a]">Personal timeline</p>
+              <p className="text-sm font-bold text-growth">Personal timeline</p>
               <h2 className="mt-1 font-serif text-3xl">The chapters that shaped you</h2>
             </div>
           </div>
@@ -123,15 +123,15 @@ export function LocalLookBack({ today }: { today: string }) {
               key={section.id}
               className={`rounded-2xl px-6 py-8 sm:px-10 sm:py-10 ${
                 index % 3 === 0
-                  ? 'bg-[#ffd0bd]'
+                  ? 'bg-field-coral'
                   : index % 3 === 1
-                    ? 'bg-[#d8c8fa]'
-                    : 'bg-white shadow-[0_10px_30px_rgba(66,55,22,0.08)]'
+                    ? 'bg-field-lilac'
+                    : 'bg-card shadow-[0_10px_30px_color-mix(in_srgb,var(--scrim)_8%,transparent)]'
               }`}
             >
               <h2 className="font-serif text-3xl font-medium">{section.title}</h2>
               {section.paragraphs.map((paragraph) => (
-                <p key={paragraph} className="mt-4 text-base leading-7 text-foreground/75">
+                <p key={paragraph} className="mt-4 text-base leading-7 text-muted-foreground">
                   {paragraph}
                 </p>
               ))}

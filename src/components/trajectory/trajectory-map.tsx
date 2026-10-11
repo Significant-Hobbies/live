@@ -205,7 +205,7 @@ export function TrajectoryMap({ value, selected, onSelect, mode = 'edit' }: Traj
         })}
       </div>
 
-      <div className="mt-3 flex items-center justify-center gap-2 text-xs font-medium text-[#28733d] md:mt-1">
+      <div className="mt-3 flex items-center justify-center gap-2 text-xs font-medium text-growth md:mt-1">
         <span className="h-px w-8 border-t border-dashed border-growth/60" />
         What you learn changes where you go next
         <span className="h-px w-8 border-t border-dashed border-growth/60" />

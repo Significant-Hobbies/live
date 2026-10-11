@@ -338,7 +338,7 @@ export default function HobbiesForAdultsPage() {
         </p>
       </FadeIn>
 
-      <Section title="Creative" hobbies={CREATIVE} color="text-purple-700" />
+      <Section title="Creative" hobbies={CREATIVE} color="text-field-lilac-ink" />
       <Section title="Physical" hobbies={PHYSICAL} color="text-foreground" />
 
       <FadeIn className="my-8">
@@ -351,9 +351,9 @@ export default function HobbiesForAdultsPage() {
         </SpotlightCard>
       </FadeIn>
 
-      <Section title="Intellectual" hobbies={INTELLECTUAL} color="text-blue-700" />
-      <Section title="Social" hobbies={SOCIAL} color="text-orange-700" />
-      <Section title="Outdoor" hobbies={OUTDOOR} color="text-teal-700" />
+      <Section title="Intellectual" hobbies={INTELLECTUAL} color="text-field-sky-ink" />
+      <Section title="Social" hobbies={SOCIAL} color="text-field-coral-ink" />
+      <Section title="Outdoor" hobbies={OUTDOOR} color="text-field-green-ink" />
       <Section title="Making" hobbies={MAKING} color="text-foreground" />
 
       <FadeIn className="mt-12">

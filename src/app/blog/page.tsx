@@ -40,9 +40,17 @@ const CATEGORY_COLORS: Record<string, { bg: string; text: string; border: string
     text: 'text-foreground',
     border: 'border-primary/30',
   },
-  Psychology: { bg: 'bg-violet-50', text: 'text-violet-700', border: 'border-violet-200' },
-  Reflection: { bg: 'bg-blue-50', text: 'text-blue-700', border: 'border-blue-200' },
-  Inspiration: { bg: 'bg-orange-50', text: 'text-orange-700', border: 'border-orange-200' },
+  Psychology: {
+    bg: 'bg-field-lilac',
+    text: 'text-field-lilac-ink',
+    border: 'border-field-lilac-ink',
+  },
+  Reflection: { bg: 'bg-field-sky', text: 'text-field-sky-ink', border: 'border-field-sky-ink' },
+  Inspiration: {
+    bg: 'bg-field-coral',
+    text: 'text-field-coral-ink',
+    border: 'border-field-coral-ink',
+  },
 };
 
 function categoryStyle(category: string) {

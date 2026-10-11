@@ -41,11 +41,11 @@ export function JournalArchive({ records }: { records: JournalRecord[] }) {
     <section
       id="journal-history"
       aria-labelledby="journal-history-title"
-      className="scroll-mt-24 overflow-hidden rounded-[1.5rem] bg-white shadow-[0_12px_36px_rgba(66,55,22,0.10)]"
+      className="scroll-mt-24 overflow-hidden rounded-2xl bg-card shadow-[0_12px_36px_color-mix(in_srgb,var(--scrim)_10%,transparent)]"
     >
-      <div className="border-b border-[#e8dfd1] bg-[#ffd0bd] p-5 sm:p-7">
+      <div className="border-b border-border bg-field-coral p-5 sm:p-7">
         <BookOpen className="size-6" />
-        <p className="mt-5 text-sm font-bold text-[#713f2d]">Before the weekly log</p>
+        <p className="mt-5 text-sm font-bold text-field-coral-ink">Before the weekly log</p>
         <div className="mt-1 flex items-end justify-between gap-4">
           <h2 id="journal-history-title" className="font-serif text-3xl sm:text-4xl">
             Earlier daily entries
@@ -57,17 +57,17 @@ export function JournalArchive({ records }: { records: JournalRecord[] }) {
       </div>
 
       {writtenEntries.length ? (
-        <div className="divide-y divide-[#e8dfd1] px-5 sm:px-7">
+        <div className="divide-y divide-border px-5 sm:px-7">
           {writtenEntries.map((entry, index) => (
             <details key={entry.dayDate} open={index === 0} className="group py-1">
               <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 py-3 font-serif text-xl marker:content-none">
                 {formatJournalDay(entry.dayDate)}
                 <ChevronDown className="size-4 shrink-0 transition-transform group-open:rotate-180" />
               </summary>
-              <div className="space-y-5 pb-6 text-base leading-7 text-[#514b42]">
+              <div className="space-y-5 pb-6 text-base leading-7 text-muted-foreground">
                 {entry.amEntry?.trim() ? (
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#176b4a]">
+                    <p className="text-xs font-bold uppercase tracking-[0.14em] text-growth">
                       Morning
                     </p>
                     <p className="mt-2 whitespace-pre-wrap">{entry.amEntry}</p>
@@ -75,7 +75,7 @@ export function JournalArchive({ records }: { records: JournalRecord[] }) {
                 ) : null}
                 {entry.pmEntry?.trim() ? (
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#7658ad]">
+                    <p className="text-xs font-bold uppercase tracking-[0.14em] text-field-lilac-ink">
                       Evening
                     </p>
                     <p className="mt-2 whitespace-pre-wrap">{entry.pmEntry}</p>

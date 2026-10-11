@@ -110,9 +110,9 @@ export function WeeklyLogSurface({
       />
       <section
         aria-labelledby="weekly-entry-title"
-        className="overflow-hidden rounded-[1.5rem] bg-white shadow-[0_12px_36px_rgba(66,55,22,0.10)]"
+        className="overflow-hidden rounded-2xl bg-card shadow-[0_12px_36px_color-mix(in_srgb,var(--scrim)_10%,transparent)]"
       >
-        <div className="border-b border-[#e8dfd1] px-5 py-5 sm:px-7">
+        <div className="border-b border-border px-5 py-5 sm:px-7">
           <p className="text-sm font-semibold text-subtle">{formatWeekOf(weekOf)}</p>
           <h2
             id="weekly-entry-title"
@@ -137,28 +137,28 @@ export function WeeklyLogSurface({
             rows={7}
             disabled={saving}
             maxLength={8000}
-            className="w-full resize-y rounded-xl border border-[#cfc3b0] bg-[#fffdf8] px-4 py-3 text-base leading-relaxed outline-none focus:border-[#176b4a] focus:ring-2 focus:ring-[#176b4a]/20"
+            className="w-full resize-y rounded-xl border border-border bg-card px-4 py-3 text-base leading-relaxed outline-none focus:border-growth focus:ring-2 focus:ring-growth/20"
           />
           <div className="mt-4 flex flex-wrap items-center gap-3">
             <button
               type="button"
               onClick={handleSave}
               disabled={saving || !textareaValue.trim()}
-              className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#176b4a] px-5 font-bold text-white disabled:opacity-45"
+              className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-primary px-5 font-bold text-primary-foreground disabled:opacity-45"
             >
               {saving ? <Loader2 className="size-4 animate-spin" /> : <Check className="size-4" />}
               {currentEntry ? 'Update this week' : 'Keep this week'}
             </button>
-            <p aria-live="polite" className="text-sm font-semibold text-[#176b4a]">
+            <p aria-live="polite" className="text-sm font-semibold text-growth">
               {saved ? 'Kept. This week is on record.' : ''}
             </p>
           </div>
           {saveError ? (
-            <p role="alert" className="mt-3 text-sm font-bold text-red-700">
+            <p role="alert" className="mt-3 text-sm font-bold text-destructive">
               {saveError}
             </p>
           ) : null}
-          <p className="mt-4 text-sm leading-relaxed text-[#625b50]">
+          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
             Your entry stays private. No daily writing requirement, streaks, or scores.
           </p>
         </div>
@@ -188,7 +188,7 @@ function HeaderCard({
   onWeekStart: (value: WeekStartsOn) => void;
 }) {
   return (
-    <section className="relative overflow-hidden rounded-[1.5rem] bg-[#c5abfa] px-5 py-5 text-[#241a31] shadow-[0_10px_30px_rgba(66,55,22,0.08)] sm:px-7 sm:py-6">
+    <section className="relative overflow-hidden rounded-2xl bg-field-lilac px-5 py-5 text-foreground shadow-[0_10px_30px_color-mix(in_srgb,var(--scrim)_8%,transparent)] sm:px-7 sm:py-6">
       <div className="relative flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <div className="flex items-center gap-2 text-sm font-semibold">
@@ -204,11 +204,11 @@ function HeaderCard({
         </div>
         <div className="flex flex-wrap items-center gap-2 text-xs font-semibold">
           {weeksRemaining !== null && (
-            <Link href="/life-in-weeks" className="rounded-full bg-white/65 px-3 py-2 tabular-nums">
+            <Link href="/life-in-weeks" className="rounded-full bg-card/65 px-3 py-2 tabular-nums">
               {weeksRemaining.toLocaleString()} weeks
             </Link>
           )}
-          <span className="inline-flex rounded-full bg-white/65 p-1" aria-label="Week starts on">
+          <span className="inline-flex rounded-full bg-card/65 p-1" aria-label="Week starts on">
             {(['monday', 'sunday'] as const).map((value) => (
               <button
                 key={value}
@@ -218,7 +218,7 @@ function HeaderCard({
                 onClick={() => onWeekStart(value)}
                 disabled={weekStartDisabled}
                 className={`min-h-11 rounded-full px-3 capitalize transition-colors ${
-                  weekStartsOn === value ? 'bg-[#241a31] text-white' : 'text-[#241a31]/70'
+                  weekStartsOn === value ? 'bg-surface text-foreground' : 'text-muted-foreground'
                 }`}
               >
                 {value}
@@ -236,10 +236,10 @@ function WeekHistoryCard({ entries }: { entries: WeeklyLogEntryView[] }) {
   return (
     <section
       aria-labelledby="weekly-history-title"
-      className="overflow-hidden rounded-[1.5rem] bg-white shadow-[0_12px_36px_rgba(66,55,22,0.10)]"
+      className="overflow-hidden rounded-2xl bg-card shadow-[0_12px_36px_color-mix(in_srgb,var(--scrim)_10%,transparent)]"
     >
-      <div className="border-b border-[#e8dfd1] bg-[#ffd0bd] p-5 sm:p-7">
-        <p className="text-sm font-bold text-[#713f2d]">Weeks on record</p>
+      <div className="border-b border-border bg-field-coral p-5 sm:p-7">
+        <p className="text-sm font-bold text-field-coral-ink">Weeks on record</p>
         <h2
           id="weekly-history-title"
           className="mt-1 font-serif text-3xl text-foreground sm:text-4xl"
@@ -247,17 +247,17 @@ function WeekHistoryCard({ entries }: { entries: WeeklyLogEntryView[] }) {
           {entries.length} {entries.length === 1 ? 'week' : 'weeks'} written
         </h2>
       </div>
-      <div className="divide-y divide-[#e8dfd1] px-5 sm:px-7">
+      <div className="divide-y divide-border px-5 sm:px-7">
         {entries.map((entry, index) => (
           <details key={entry.id} open={index === 0} className="group py-1">
             <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 py-3 marker:content-none">
               <span className="font-serif text-xl">{formatWeekOf(entry.weekOf)}</span>
-              <span className="text-xs font-semibold text-[#625b50]">
+              <span className="text-xs font-semibold text-muted-foreground">
                 {formatWeekSpan(entry.weekOf)}
               </span>
             </summary>
             <div className="pb-5">
-              <p className="mt-2 whitespace-pre-wrap text-sm leading-relaxed text-foreground/80">
+              <p className="mt-2 whitespace-pre-wrap text-sm leading-relaxed text-muted-foreground">
                 {entry.text}
               </p>
             </div>
@@ -278,10 +278,10 @@ function EmailNudgeCard({
   const [on, setOn] = useState(optIn);
   const [pending, setPending] = useState(false);
   return (
-    <section className="flex items-center justify-between gap-4 rounded-[1.5rem] border border-[#d9cfbd] bg-[#fffdf8] px-5 py-4 shadow-[0_12px_36px_rgba(66,55,22,0.06)] sm:px-7">
+    <section className="flex items-center justify-between gap-4 rounded-2xl border border-border bg-card px-5 py-4 shadow-[0_12px_36px_color-mix(in_srgb,var(--scrim)_6%,transparent)] sm:px-7">
       <div>
         <p className="font-serif text-lg">A Sunday nudge, if you want one.</p>
-        <p className="mt-0.5 text-sm text-[#625b50]">
+        <p className="mt-0.5 text-sm text-muted-foreground">
           One quiet email when the week turns — nothing counted, nothing scored.
         </p>
       </div>
@@ -302,11 +302,11 @@ function EmailNudgeCard({
             setPending(false);
           }
         }}
-        className={`relative h-7 w-12 shrink-0 rounded-full transition-colors disabled:opacity-50 ${on ? 'bg-[#176b4a]' : 'bg-[#cfc3b0]'}`}
+        className={`relative h-7 w-12 shrink-0 rounded-full transition-colors disabled:opacity-50 ${on ? 'bg-growth' : 'bg-muted'}`}
         aria-label="Email me a Sunday nudge"
       >
         <span
-          className={`absolute top-0.5 size-6 rounded-full bg-white shadow transition-transform ${on ? 'translate-x-5' : 'translate-x-0.5'}`}
+          className={`absolute top-0.5 size-6 rounded-full bg-card shadow transition-transform ${on ? 'translate-x-5' : 'translate-x-0.5'}`}
         />
       </button>
     </section>

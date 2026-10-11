@@ -34,8 +34,8 @@ export function InsightsPanel({ phases }: Props) {
           className="rounded-lg p-3 text-center"
           style={{
             background:
-              'linear-gradient(135deg, rgba(16,185,129,0.08) 0%, rgba(16,185,129,0.03) 100%)',
-            border: '1px solid rgba(16,185,129,0.2)',
+              'linear-gradient(135deg, color-mix(in srgb, var(--success) 8%, transparent) 0%, color-mix(in srgb, var(--success) 3%, transparent) 100%)',
+            border: '1px solid color-mix(in srgb, var(--success) 20%, transparent)',
           }}
         >
           <div className="text-2xl font-bold text-growth">{totalHobbies}</div>
@@ -45,30 +45,30 @@ export function InsightsPanel({ phases }: Props) {
           className="rounded-lg p-3 text-center"
           style={{
             background:
-              'linear-gradient(135deg, rgba(59,130,246,0.08) 0%, rgba(59,130,246,0.03) 100%)',
-            border: '1px solid rgba(59,130,246,0.2)',
+              'linear-gradient(135deg, color-mix(in srgb, var(--field-sky-ink) 8%, transparent) 0%, color-mix(in srgb, var(--field-sky-ink) 3%, transparent) 100%)',
+            border: '1px solid color-mix(in srgb, var(--field-sky-ink) 20%, transparent)',
           }}
         >
-          <div className="text-2xl font-bold text-blue-600">{rekindled.length}</div>
+          <div className="text-2xl font-bold text-field-sky-ink">{rekindled.length}</div>
           <div className="text-xs text-muted-foreground mt-0.5">rekindled</div>
         </div>
         <div
           className="rounded-lg p-3 text-center"
           style={{
             background:
-              'linear-gradient(135deg, rgba(168,85,247,0.08) 0%, rgba(168,85,247,0.03) 100%)',
-            border: '1px solid rgba(168,85,247,0.2)',
+              'linear-gradient(135deg, color-mix(in srgb, var(--field-lilac-ink) 8%, transparent) 0%, color-mix(in srgb, var(--field-lilac-ink) 3%, transparent) 100%)',
+            border: '1px solid color-mix(in srgb, var(--field-lilac-ink) 20%, transparent)',
           }}
         >
-          <div className="text-2xl font-bold text-purple-600">{topPersistent.length}</div>
+          <div className="text-2xl font-bold text-field-lilac-ink">{topPersistent.length}</div>
           <div className="text-xs text-muted-foreground mt-0.5">persistent</div>
         </div>
         <div
           className="rounded-lg p-3 text-center"
           style={{
             background:
-              'linear-gradient(135deg, rgba(245,158,11,0.08) 0%, rgba(245,158,11,0.03) 100%)',
-            border: '1px solid rgba(245,158,11,0.2)',
+              'linear-gradient(135deg, color-mix(in srgb, var(--brand) 8%, transparent) 0%, color-mix(in srgb, var(--brand) 3%, transparent) 100%)',
+            border: '1px solid color-mix(in srgb, var(--brand) 20%, transparent)',
           }}
         >
           <div className="text-2xl font-bold text-primary">{categoryDiversity}</div>
@@ -84,7 +84,7 @@ export function InsightsPanel({ phases }: Props) {
             {rekindled.map((h) => (
               <Badge
                 key={h}
-                className="bg-orange-100 text-orange-700 border border-orange-200 capitalize"
+                className="bg-field-coral text-field-coral-ink border border-field-coral-ink capitalize"
               >
                 {h}
               </Badge>

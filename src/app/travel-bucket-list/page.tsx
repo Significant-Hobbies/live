@@ -61,18 +61,18 @@ const REGION_STYLES: Record<
   { bg: string; border: string; text: string; badge: string; dot: string }
 > = {
   sky: {
-    bg: 'bg-sky-50',
-    border: 'border-sky-200',
-    text: 'text-sky-700',
-    badge: 'bg-sky-100 text-sky-700 border-sky-200',
-    dot: 'bg-sky-400',
+    bg: 'bg-field-sky',
+    border: 'border-field-sky-ink',
+    text: 'text-field-sky-ink',
+    badge: 'bg-field-sky text-field-sky-ink border-field-sky-ink',
+    dot: 'bg-field-sky-ink',
   },
   red: {
     bg: 'bg-destructive/10',
     border: 'border-destructive/30',
-    text: 'text-red-800',
-    badge: 'bg-red-100 text-red-800 border-red-300',
-    dot: 'bg-red-700',
+    text: 'text-destructive',
+    badge: 'bg-field-coral text-destructive border-destructive',
+    dot: 'bg-destructive',
   },
   emerald: {
     bg: 'bg-foreground/10',
@@ -89,11 +89,11 @@ const REGION_STYLES: Record<
     dot: 'bg-primary',
   },
   teal: {
-    bg: 'bg-teal-50',
-    border: 'border-teal-200',
-    text: 'text-teal-700',
-    badge: 'bg-teal-100 text-teal-700 border-teal-200',
-    dot: 'bg-teal-400',
+    bg: 'bg-field-green',
+    border: 'border-field-green-ink',
+    text: 'text-field-green-ink',
+    badge: 'bg-field-green text-field-green-ink border-field-green-ink',
+    dot: 'bg-field-green-ink',
   },
 };
 
@@ -159,7 +159,7 @@ export default function TravelBucketListPage() {
                 <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
                   <Link
                     href="/"
-                    className="inline-flex items-center gap-2 rounded-full bg-[#211e18] px-6 py-3 text-sm font-semibold text-white shadow-md transition-colors hover:bg-[#39352d]"
+                    className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-md transition-colors hover:bg-primary/90"
                   >
                     Build my travel list
                   </Link>
@@ -291,7 +291,7 @@ export default function TravelBucketListPage() {
           <div className="flex flex-wrap gap-3 justify-center">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 rounded-full bg-[#211e18] px-6 py-3 text-sm font-semibold text-white shadow-md transition-colors hover:bg-[#39352d]"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-md transition-colors hover:bg-primary/90"
             >
               Build my bucket list
             </Link>

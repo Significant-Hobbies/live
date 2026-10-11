@@ -30,8 +30,9 @@ export default function GlobalError({
           alignItems: 'center',
           justifyContent: 'center',
           fontFamily: 'system-ui, -apple-system, Segoe UI, Roboto, sans-serif',
-          background: '#fafaf9',
-          color: '#1c1917',
+          colorScheme: 'dark',
+          background: '#120e09',
+          color: '#f7f3e9',
           padding: '2rem',
         }}
       >
@@ -39,7 +40,7 @@ export default function GlobalError({
           <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 12 }}>
             Something went wrong
           </h2>
-          <p style={{ fontSize: '0.875rem', opacity: 0.7, marginBottom: 24 }}>
+          <p style={{ fontSize: '0.875rem', color: '#b7b0a3', marginBottom: 24 }}>
             The app failed to load. Please reload the page — if it keeps happening, try again in a
             few minutes.
           </p>
@@ -47,17 +48,17 @@ export default function GlobalError({
             onClick={reset}
             style={{
               padding: '0.5rem 1rem',
-              borderRadius: 6,
-              border: '1px solid #d6d3d1',
-              background: 'transparent',
-              color: 'inherit',
+              borderRadius: 12,
+              border: '1px solid #3b342a',
+              background: '#e7bf57',
+              color: '#1d1409',
               cursor: 'pointer',
             }}
           >
             Reload
           </button>
           {error.digest ? (
-            <p style={{ marginTop: 24, fontSize: '0.75rem', opacity: 0.4 }}>
+            <p style={{ marginTop: 24, fontSize: '0.75rem', color: '#aaa293' }}>
               Reference: {error.digest}
             </p>
           ) : null}

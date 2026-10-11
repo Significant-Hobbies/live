@@ -446,7 +446,7 @@ export function HobbyQuiz() {
       const { toPng } = await import('html-to-image');
       const dataUrl = await toPng(cardRef.current, {
         pixelRatio: 2,
-        backgroundColor: '#020617',
+        backgroundColor: getComputedStyle(cardRef.current).getPropertyValue('--background').trim(),
       });
       const link = document.createElement('a');
       link.download = 'my-hobby-personality.png';
@@ -518,12 +518,12 @@ export function HobbyQuiz() {
       <div className="mx-auto min-h-[calc(100svh-4.5rem)] max-w-3xl px-4 py-10 sm:py-14">
         {/* Header */}
         {!isResults && (
-          <div className="mb-10 rounded-[1.5rem] bg-white px-6 py-9 text-center shadow-[0_12px_36px_rgba(39,74,97,0.10)] sm:px-10">
-            <p className="text-base font-bold text-[#274a61]">Find a hobby</p>
-            <h1 className="mt-3 font-serif text-5xl font-medium leading-[1.02] tracking-[-0.03em] text-[#192a36] sm:text-6xl">
+          <div className="mb-10 rounded-2xl bg-card px-6 py-9 text-center shadow-[0_12px_36px_color-mix(in_srgb,var(--scrim)_10%,transparent)] sm:px-10">
+            <p className="text-base font-bold text-field-sky-ink">Find a hobby</p>
+            <h1 className="mt-3 font-serif text-5xl font-medium leading-[1.02] tracking-[-0.03em] text-foreground sm:text-6xl">
               Find Your Perfect Hobby
             </h1>
-            <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-[#405b6c]">
+            <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted-foreground">
               Nine focused questions, about three minutes, and a shortlist built around how you
               actually like to spend your time.
             </p>
@@ -552,7 +552,7 @@ export function HobbyQuiz() {
         {!isResults && currentQuestion && (
           <div key={step} className="animate-in fade-in slide-in-from-right-4 duration-300">
             <SpotlightCard
-              className="rounded-[1.5rem] border-0 bg-white shadow-[0_12px_36px_rgba(39,74,97,0.12)]"
+              className="rounded-2xl border-0 bg-card shadow-[0_12px_36px_color-mix(in_srgb,var(--scrim)_12%,transparent)]"
               innerClassName="p-6 sm:p-9"
             >
               <div className="mb-3 text-center text-base font-medium text-subtle">
@@ -571,7 +571,7 @@ export function HobbyQuiz() {
                       key={i}
                       data-quiz-option
                       onClick={() => handleSelect(i)}
-                      className={`flex min-h-16 items-center gap-3 rounded-xl border-2 p-4 text-left transition-all duration-150 hover:border-[#4c7895] hover:bg-[#eaf6ff] focus:outline-none focus:ring-2 focus:ring-[#4c7895] focus:ring-offset-2 ${
+                      className={`flex min-h-16 items-center gap-3 rounded-xl border-2 p-4 text-left transition-all duration-150 hover:border-field-sky-ink hover:bg-field-sky focus:outline-none focus:ring-2 focus:ring-field-sky-ink focus:ring-offset-2 ${
                         isSelected
                           ? 'border-foreground/30 bg-foreground/10 shadow-sm'
                           : 'border-border bg-card'
@@ -614,7 +614,7 @@ export function HobbyQuiz() {
         {isResults && archetype && (
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
             {/* Archetype reveal */}
-            <div className="relative mb-10 overflow-hidden rounded-2xl border border-foreground/20 bg-gradient-to-br from-foreground/10 to-white p-8 text-center shadow-soft">
+            <div className="relative mb-10 overflow-hidden rounded-2xl border border-foreground/20 bg-gradient-to-br from-foreground/10 to-card p-8 text-center shadow-soft">
               <div className="mb-4 text-6xl">{archetype.emoji}</div>
               <p className="mb-1 text-sm font-semibold text-foreground">Your Hobby Archetype</p>
               <h1 className="mb-3 text-3xl font-bold text-foreground">{archetype.title}</h1>

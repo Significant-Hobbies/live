@@ -146,16 +146,16 @@ export function AmbientMusic({
   return (
     <div ref={playerRef} className={`relative ${className}`}>
       <div
-        className={`inline-flex min-h-11 items-stretch overflow-hidden rounded-full border shadow-[0_3px_0_rgba(44,38,20,0.08)] transition-colors ${
+        className={`inline-flex min-h-11 items-stretch overflow-hidden rounded-full border shadow-[0_3px_0_color-mix(in_srgb,var(--scrim)_8%,transparent)] transition-colors ${
           isPlaying
-            ? 'border-[#aa8b1f]/45 bg-[#fff1a8] text-[#413713]'
+            ? 'border-brand/45 bg-field-sun text-muted-foreground'
             : 'border-border bg-card/95 text-muted-foreground'
         }`}
       >
         <button
           type="button"
           onClick={isPlaying ? stop : play}
-          className="inline-flex min-h-11 items-center gap-2.5 px-3.5 py-2 text-xs font-semibold transition-colors hover:bg-black/[0.035] focus-visible:z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset"
+          className="inline-flex min-h-11 items-center gap-2.5 px-3.5 py-2 text-xs font-semibold transition-colors hover:bg-scrim/[0.035] focus-visible:z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset"
           aria-label={isPlaying ? `Stop ${track.label}` : `Play ${track.label} by ${track.artist}`}
           aria-pressed={isPlaying}
         >
@@ -180,7 +180,7 @@ export function AmbientMusic({
               setPlayerOpen(true);
             }
           }}
-          className="inline-flex min-h-11 w-10 items-center justify-center border-l border-current/15 transition-colors hover:bg-black/[0.035] focus-visible:z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset"
+          className="inline-flex min-h-11 w-10 items-center justify-center border-l border-current/15 transition-colors hover:bg-scrim/[0.035] focus-visible:z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset"
           aria-label="Choose music"
           aria-expanded={playerOpen}
           aria-controls="soundtrack-player"
@@ -198,18 +198,18 @@ export function AmbientMusic({
           id="soundtrack-player"
           role="dialog"
           aria-label="Music player"
-          className="absolute right-0 top-[calc(100%+0.5rem)] z-50 w-[min(16.5rem,calc(100vw-1.5rem))] rounded-2xl bg-[#fffdf5] p-2.5 text-[#2f2919] shadow-[0_12px_30px_rgba(62,48,16,0.18)] ring-1 ring-[#d9cfad]"
+          className="absolute right-0 top-[calc(100%+0.5rem)] z-50 w-[min(16.5rem,calc(100vw-1.5rem))] rounded-2xl bg-card p-2.5 text-foreground shadow-[0_12px_30px_color-mix(in_srgb,var(--scrim)_18%,transparent)] ring-1 ring-ring"
         >
           <div className="flex min-h-10 items-center justify-between gap-3 px-1 pb-2">
             <p className="font-serif font-medium tracking-[-0.02em]">
               {track.label}{' '}
-              <span className="font-sans text-xs text-[#746b53]">· {track.artist}</span>
+              <span className="font-sans text-xs text-muted-foreground">· {track.artist}</span>
             </p>
             {isPlaying ? (
               <button
                 type="button"
                 onClick={stop}
-                className="inline-flex min-h-10 shrink-0 items-center gap-1.5 rounded-xl px-2 text-xs font-bold hover:bg-[#f4edda] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9a7411]"
+                className="inline-flex min-h-10 shrink-0 items-center gap-1.5 rounded-xl px-2 text-xs font-bold hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
               >
                 <Square className="size-3 fill-current" aria-hidden="true" /> Stop
               </button>
@@ -221,7 +221,7 @@ export function AmbientMusic({
               key={track.youtubeId}
               title={`${track.label} by ${track.artist}`}
               src={getYoutubeEmbedUrl(trackId)}
-              className="aspect-video w-full rounded-xl bg-[#211e18]"
+              className="aspect-video w-full rounded-xl bg-surface"
               allow="autoplay; encrypted-media; picture-in-picture"
               allowFullScreen
             />
@@ -229,11 +229,11 @@ export function AmbientMusic({
             <button
               type="button"
               onClick={play}
-              className="flex aspect-video w-full flex-col items-center justify-center rounded-xl bg-[#211e18] px-5 text-center text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9a7411] focus-visible:ring-offset-2"
+              className="flex aspect-video w-full flex-col items-center justify-center rounded-xl bg-primary px-5 text-center text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
             >
-              <Music className="mb-2 size-6 text-[#f7e957]" aria-hidden="true" />
+              <Music className="mb-2 size-6 text-brand" aria-hidden="true" />
               <span className="font-bold">Play {track.label}</span>
-              <span className="mt-1 text-xs text-white/65">by {track.artist}</span>
+              <span className="mt-1 text-xs text-muted-foreground">by {track.artist}</span>
             </button>
           )}
 
@@ -249,8 +249,8 @@ export function AmbientMusic({
                   aria-checked={selected}
                   onClick={() => chooseTrack(id)}
                   title={`${option.artist} · ${option.mood}`}
-                  className={`min-h-11 min-w-0 rounded-xl px-1.5 text-center text-[11px] font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9a7411] ${
-                    selected ? 'bg-[#f4e6a6]' : 'hover:bg-[#f7f1dd]'
+                  className={`min-h-11 min-w-0 rounded-xl px-1.5 text-center text-[11px] font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand ${
+                    selected ? 'bg-field-sun' : 'hover:bg-muted'
                   }`}
                 >
                   {option.label}
@@ -259,7 +259,7 @@ export function AmbientMusic({
             })}
           </div>
 
-          <p className="px-1 pt-2 text-[10px] leading-4 text-[#746b53]">
+          <p className="px-1 pt-2 text-[10px] leading-4 text-muted-foreground">
             YouTube · If autoplay pauses, tap the video once.
           </p>
         </div>

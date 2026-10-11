@@ -77,7 +77,7 @@ export default async function ExperienceCollectionPage({ params }: Props) {
       >
         {collection.title}
       </h1>
-      <p className="mt-5 max-w-[62ch] text-lg leading-relaxed text-foreground/80">
+      <p className="mt-5 max-w-[62ch] text-lg leading-relaxed text-muted-foreground">
         {collection.introduction}
       </p>
       <section className="mt-14">

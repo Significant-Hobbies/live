@@ -148,11 +148,15 @@ export default async function CategoryPage({ params }: Props) {
         ) : (
           <div className="absolute inset-0 bg-card" />
         )}
-        <GridBackground variant="lines" size={28} color="oklch(0.97 0.003 285 / 0.10)" />
+        <GridBackground
+          variant="lines"
+          size={28}
+          color="color-mix(in srgb, var(--foreground) 10%, transparent)"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-background/85 via-background/30 to-transparent" />
         <FadeIn className="absolute bottom-0 left-0 right-0 p-5 sm:p-6" y={16}>
           <h1 className="text-2xl sm:text-3xl font-semibold text-foreground">{cat.name}</h1>
-          <p className="mt-1 text-sm text-foreground/70">{cat.hobbies.length} hobbies</p>
+          <p className="mt-1 text-sm text-muted-foreground">{cat.hobbies.length} hobbies</p>
         </FadeIn>
       </div>
 
