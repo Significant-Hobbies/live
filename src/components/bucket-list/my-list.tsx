@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 import { StorageModeProvider, StorageModeStatus } from '~/components/storage-mode-provider';
 import { normalizeDreamTitle } from '~/lib/dream-atlas';
 import { ManualItemInput } from './manual-item-input';
-import { MyListSkeleton } from './my-list-skeleton';
+import { MyListRowsSkeleton } from './my-list-skeleton';
 import {
   localMyListStorage,
   serverMyListStorage,
@@ -140,7 +140,6 @@ export function MyList({
     />
   ) : null;
 
-  if (!loaded && !error) return <MyListSkeleton />;
   function row(item: MyListItem) {
     return (
       <div key={item.id}>
@@ -170,7 +169,9 @@ export function MyList({
                   My list
                 </h1>
                 <p className="mt-1 text-muted-foreground">
-                  {active.length} still calling · {lived.length} lived
+                  {loaded
+                    ? `${active.length} still calling · ${lived.length} lived`
+                    : 'Opening your list…'}
                 </p>
               </div>
               <div className="max-w-32 pt-2 text-right">
@@ -208,7 +209,13 @@ export function MyList({
                 .
               </p>
             )}
-            <div className="mt-7 divide-y divide-border/60">{active.map(row)}</div>
+            {!loaded && !error ? (
+              <div role="status" aria-label="Loading My list">
+                <MyListRowsSkeleton />
+              </div>
+            ) : (
+              <div className="mt-7 divide-y divide-border/60">{active.map(row)}</div>
+            )}
             {lived.length > 0 && (
               <details open className="mt-9">
                 <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between border-t border-border/60 px-3 text-sm text-muted-foreground">
