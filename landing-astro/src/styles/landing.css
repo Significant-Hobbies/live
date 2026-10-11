@@ -108,7 +108,10 @@ html[data-theme="gallery"] h2 {
 /* Hold text contrast over every photo, including a worst-case white pixel.
    The image pixels stay intact; only the existing readability scrim changes. */
 html[data-theme="gallery"] main > section:has(img.motion-parallax, img.motion-drift) > [aria-hidden]:nth-child(2) {
-  background: color-mix(in srgb, var(--background) 85%, transparent);
+  background: color-mix(in srgb, var(--background) 60%, transparent);
+}
+html[data-theme="gallery"] main > section:has(img.motion-parallax) > [aria-hidden]:nth-child(2) {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--background) 82%, transparent) 0%, color-mix(in srgb, var(--background) 55%, transparent) 55%, color-mix(in srgb, var(--background) 8%, transparent) 100%);
 }
 
 html[data-theme="gallery"] main > section > span.absolute {
