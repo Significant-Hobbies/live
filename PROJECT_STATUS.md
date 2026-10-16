@@ -1,6 +1,6 @@
 # Live — PROJECT STATUS
 
-Last updated: 2026-10-02
+Last updated: 2026-10-16
 
 ## Why / What
 
@@ -24,12 +24,7 @@ remain available on secondary routes.
 
 ## Status and next
 
-- Local candidate for [#40](https://github.com/Significant-Hobbies/live/issues/40):
-  live typeahead, server-paginated categorized Explore, shared seed catalog and
-  explicit reviewed contributions. The additive 0007 schema and seed artifact
-  are prepared; production migration, seed import and release have not run.
-  Existing built-in seed discovery stays available during activation. Operator
-  steps are in [shared catalog](docs/product/shared-catalog.md).
+- Shared catalog activation is verified in production for [#58](https://github.com/Significant-Hobbies/live/issues/58): migration 0007 is applied, and all 419 catalog rows have unique normalized titles. Public catalog reads return `source: database`, including bounded search and pagination. Existing built-in seeds remain the fallback when the shared catalog is unavailable or incomplete. The October 16 verification was read-only; it did not rerun migrations, seed imports or deployment. Operator behavior is documented in [shared catalog](docs/product/shared-catalog.md).
 
 Live is actively usable but remains an ongoing product. Continue from observed
 usage and improve discovery and long-lived planning on the independent Live

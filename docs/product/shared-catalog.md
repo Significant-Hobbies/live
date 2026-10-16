@@ -13,8 +13,10 @@ updates the submission. There is no public moderation endpoint.
 
 ## Operator tooling
 
-The additive 0007 migration is prepared, not applied by this work. Apply schema
-changes only through the existing, separately authorized migration workflow.
+Production activation was verified read-only on October 16, 2026: migration 0007
+is applied, all 419 seed entries are present with unique normalized titles, and
+public reads return `source: database`. No migration or import was rerun during
+this verification. Apply future schema changes through the existing migration workflow.
 The CLI supports local data only and refuses --remote. Do not use the unrelated
 journey seed script: that script also edits demo timelines and users.
 
@@ -45,5 +47,7 @@ unrelated database failure returns an error instead of silently replacing
 shared results. Writes require the new tables; they do not pretend to succeed.
 Approval requires the seed import to be complete before publishing new ideas.
 
-Production migration, seed import, reviewer access and release remain explicit
-operator actions. No production database changes were performed here.
+Production migration and seed import are complete for the shared seed catalog.
+Reviewer access remains a separate operator concern; the local CLI does not
+authenticate a production reviewer. No production database changes were performed
+by the October 16 verification.
