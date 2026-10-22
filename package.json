@@ -112,7 +112,7 @@
       "devalue@<=5.9.2": "5.9.3",
       "proxy-addr@<2.0.8": "2.0.8",
       "source-map-js@<1.2.2": "1.2.2",
-      "@modelcontextprotocol/sdk@<1.31.0": "1.31.0",
+      "@modelcontextprotocol/sdk@<1.32.0": "1.32.0",
       "hono@<4.12.25": "4.12.25",
       "postcss@<8.5.18": "8.5.18",
       "ip-address@<10.3.1": "10.3.1",
