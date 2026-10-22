@@ -3,6 +3,7 @@ import { createRoot, type Root } from 'react-dom/client';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { MyList } from './my-list';
 import { parseCatalogQuery, searchCatalogSeed } from '~/lib/catalog-seed';
+import * as localRecords from '~/lib/local-record-store';
 
 const { addItem, refresh, submit, updateNotes, updateStatus } = vi.hoisted(() => ({
   addItem: vi.fn(),
@@ -46,6 +47,30 @@ afterEach(async () => {
   container.remove();
   vi.useRealTimers();
   vi.unstubAllGlobals();
+  vi.restoreAllMocks();
+});
+
+it('ends the opening status when a device read fails without enabling writes or showing empty data', async () => {
+  let rejectRead: (error: Error) => void = () => {};
+  const put = vi.fn();
+  const remove = vi.fn();
+  vi.spyOn(localRecords, 'browserRecordAdapter').mockReturnValue({
+    get: () =>
+      new Promise((_resolve, reject) => {
+        rejectRead = reject;
+      }),
+    put,
+    remove,
+  });
+  await act(async () => root.render(<MyList key="failed-device-read" />));
+  expect(container.textContent).toContain('Opening your list…');
+  await act(async () => rejectRead(new Error('Storage temporarily unavailable')));
+  expect(container.querySelector('[role="alert"]')?.textContent).toContain('Reload to try again');
+  expect(container.textContent).not.toContain('Opening your list…');
+  expect(container.textContent).not.toContain('Nothing here yet.');
+  expect(container.querySelector('input')?.disabled).toBe(true);
+  expect(put).not.toHaveBeenCalled();
+  expect(remove).not.toHaveBeenCalled();
 });
 
 async function input(value: string) {

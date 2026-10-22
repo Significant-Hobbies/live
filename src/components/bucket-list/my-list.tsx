@@ -171,7 +171,9 @@ export function MyList({
                 <p className="mt-1 text-muted-foreground">
                   {loaded
                     ? `${active.length} still calling · ${lived.length} lived`
-                    : 'Opening your list…'}
+                    : error
+                      ? 'Your list is unavailable.'
+                      : 'Opening your list…'}
                 </p>
               </div>
               <div className="max-w-32 pt-2 text-right">
