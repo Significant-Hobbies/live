@@ -58,7 +58,7 @@
     "lucide-react": "1.27.0",
     "motion": "^12.42.2",
     "nanoid": "5.1.9",
-    "next": "16.3.8",
+    "next": "16.4.1",
     "posthog-js": "^1.407.3",
     "react": "19.2.8",
     "react-dom": "19.2.8",
@@ -70,7 +70,7 @@
   "devDependencies": {
     "@axe-core/playwright": "^4.12.1",
     "@biomejs/biome": "2.5.5",
-    "@opennextjs/cloudflare": "1.20.2",
+    "@opennextjs/cloudflare": "1.20.12",
     "@playwright/test": "1.62.0",
     "@tailwindcss/postcss": "^4.3.3",
     "@types/node": "25.6.0",
@@ -93,7 +93,7 @@
     "typescript": "6.0.3",
     "ultracite": "7.10.2",
     "vitest": "4.1.10",
-    "wrangler": "4.114.0"
+    "wrangler": "4.149.0"
   },
   "packageManager": "pnpm@10.33.2",
   "pnpm": {
@@ -116,10 +116,13 @@
       "hono@<4.12.25": "4.12.25",
       "postcss@<8.5.18": "8.5.18",
       "ip-address@<10.3.1": "10.3.1",
-      "http-cache-semantics@<4.3.0": "4.3.0"
+      "http-cache-semantics@<4.3.0": "4.3.0",
+      "dompurify@<3.4.17": "3.4.17",
+      "glob@>=10.2.0 <10.5.0": "10.5.0"
     },
     "patchedDependencies": {
-      "braces@3.0.3": "patches/braces@3.0.3.patch"
+      "braces@3.0.3": "patches/braces@3.0.3.patch",
+      "@saas-maker/templates@0.1.18": "patches/saas-maker-templates-footer-retry-0.1.18.patch"
     }
   }
 }
