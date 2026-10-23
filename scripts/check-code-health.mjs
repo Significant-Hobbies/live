@@ -41,12 +41,6 @@ const acceptedHighAdvisories = new Set([
   // No upstream release: checked-in pnpm patch bounds the dev-only shadcn glob
   // AST depth; dependency-patches.test.ts verifies the installed mitigation.
   'GHSA-vfj7-8cjw-p6xm',
-  'GHSA-6g55-p6wh-862q',
-  'GHSA-88fw-hqm2-52qc',
-  'GHSA-ch52-4w7c-c8xp',
-  'GHSA-mwp4-54f8-5fhr',
-  'GHSA-r28c-9q8g-f849',
-  'GHSA-vfj7-8cjw-p6xm',
 ]);
 
 function run(command, args, options = {}) {
