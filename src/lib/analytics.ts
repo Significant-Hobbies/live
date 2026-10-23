@@ -6,7 +6,7 @@
  * build one cross-fleet funnel (signup -> activated -> core_action) and a
  * D1/D7 retention insight, with no custom dashboard.
  *
- * Every event carries `project_id: "significanthobbies"`.
+ * Every event carries `project_id: "live"`, separate from the private Hub.
  *
  *  - `signup`      — first session after a SignificantHobbies account is created.
  *  - `activated`   — first real value: the user saves their first timeline.
@@ -23,7 +23,7 @@
  */
 import posthog from 'posthog-js';
 
-const PROJECT = 'significanthobbies' as const;
+const PROJECT = 'live' as const;
 
 // Shared PostHog project for the whole fleet.
 const POSTHOG_KEY =
@@ -71,7 +71,7 @@ export function trackEvent(
   properties: Record<string, unknown> = {},
   distinctId?: string
 ): void {
-  const payload = { project_id: PROJECT, ...properties };
+  const payload = { ...properties, project_id: PROJECT };
   try {
     if (typeof window === 'undefined') {
       emitServer(event, payload, distinctId);
