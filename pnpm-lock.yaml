@@ -29,7 +29,7 @@ overrides:
 
 patchedDependencies:
   '@saas-maker/templates@0.1.18':
-    hash: e0cd335f2e7a836d2cb1082ca1f3c608c8acab3970b2e2fa217c6488cc195309
+    hash: 35059754af42f56f4fee97d3f7271fe36653af91fb6982503f88158084deb594
     path: patches/saas-maker-templates-footer-retry-0.1.18.patch
   braces@3.0.3:
     hash: 23b8709992d8652827921cede0fade1183ff2c443c17dc8f41b8bff4b1ec3eba
@@ -189,7 +189,7 @@ importers:
         version: https://codeload.github.com/sass-maker/ui-library/tar.gz/f61aad320ba3bed99c48df40fc16a7f55f508ba5#path:/packages/motion(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@saas-maker/templates':
         specifier: github:sass-maker/ui-library#v0.1.18&path:/packages/templates
-        version: https://codeload.github.com/sass-maker/ui-library/tar.gz/f61aad320ba3bed99c48df40fc16a7f55f508ba5#path:/packages/templates(patch_hash=e0cd335f2e7a836d2cb1082ca1f3c608c8acab3970b2e2fa217c6488cc195309)(@saas-maker/motion@https://codeload.github.com/sass-maker/ui-library/tar.gz/f61aad320ba3bed99c48df40fc16a7f55f508ba5#path:/packages/motion(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(@saas-maker/ui@https://codeload.github.com/sass-maker/ui-library/tar.gz/f61aad320ba3bed99c48df40fc16a7f55f508ba5#path:/packages/ui(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(tailwindcss@4.3.3))(astro@7.2.8(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.3)(@types/node@25.6.0)(@vercel/functions@3.7.5(@aws-sdk/credential-provider-web-identity@3.972.67)(ws@8.22.0))(aws4fetch@1.0.20)(jiti@2.7.0)(terser@5.36.0)(tsx@4.23.1)(yaml@2.9.1))(react@19.3.0)
+        version: https://codeload.github.com/sass-maker/ui-library/tar.gz/f61aad320ba3bed99c48df40fc16a7f55f508ba5#path:/packages/templates(patch_hash=35059754af42f56f4fee97d3f7271fe36653af91fb6982503f88158084deb594)(@saas-maker/motion@https://codeload.github.com/sass-maker/ui-library/tar.gz/f61aad320ba3bed99c48df40fc16a7f55f508ba5#path:/packages/motion(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(@saas-maker/ui@https://codeload.github.com/sass-maker/ui-library/tar.gz/f61aad320ba3bed99c48df40fc16a7f55f508ba5#path:/packages/ui(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(tailwindcss@4.3.3))(astro@7.2.8(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.3)(@types/node@25.6.0)(@vercel/functions@3.7.5(@aws-sdk/credential-provider-web-identity@3.972.67)(ws@8.22.0))(aws4fetch@1.0.20)(jiti@2.7.0)(terser@5.36.0)(tsx@4.23.1)(yaml@2.9.1))(react@19.3.0)
       '@saas-maker/ui':
         specifier: github:sass-maker/ui-library#v0.1.18&path:/packages/ui
         version: https://codeload.github.com/sass-maker/ui-library/tar.gz/f61aad320ba3bed99c48df40fc16a7f55f508ba5#path:/packages/ui(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(tailwindcss@4.3.3)
@@ -10921,7 +10921,7 @@ snapshots:
       - react
       - react-dom
 
-  '@saas-maker/templates@https://codeload.github.com/sass-maker/ui-library/tar.gz/f61aad320ba3bed99c48df40fc16a7f55f508ba5#path:/packages/templates(patch_hash=e0cd335f2e7a836d2cb1082ca1f3c608c8acab3970b2e2fa217c6488cc195309)(@saas-maker/motion@https://codeload.github.com/sass-maker/ui-library/tar.gz/f61aad320ba3bed99c48df40fc16a7f55f508ba5#path:/packages/motion(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(@saas-maker/ui@https://codeload.github.com/sass-maker/ui-library/tar.gz/f61aad320ba3bed99c48df40fc16a7f55f508ba5#path:/packages/ui(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(tailwindcss@4.3.3))(astro@7.2.8(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.3)(@types/node@25.6.0)(@vercel/functions@3.7.5(@aws-sdk/credential-provider-web-identity@3.972.67)(ws@8.22.0))(aws4fetch@1.0.20)(jiti@2.7.0)(terser@5.36.0)(tsx@4.23.1)(yaml@2.9.1))(react@19.3.0)':
+  '@saas-maker/templates@https://codeload.github.com/sass-maker/ui-library/tar.gz/f61aad320ba3bed99c48df40fc16a7f55f508ba5#path:/packages/templates(patch_hash=35059754af42f56f4fee97d3f7271fe36653af91fb6982503f88158084deb594)(@saas-maker/motion@https://codeload.github.com/sass-maker/ui-library/tar.gz/f61aad320ba3bed99c48df40fc16a7f55f508ba5#path:/packages/motion(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(@saas-maker/ui@https://codeload.github.com/sass-maker/ui-library/tar.gz/f61aad320ba3bed99c48df40fc16a7f55f508ba5#path:/packages/ui(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(tailwindcss@4.3.3))(astro@7.2.8(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.3)(@types/node@25.6.0)(@vercel/functions@3.7.5(@aws-sdk/credential-provider-web-identity@3.972.67)(ws@8.22.0))(aws4fetch@1.0.20)(jiti@2.7.0)(terser@5.36.0)(tsx@4.23.1)(yaml@2.9.1))(react@19.3.0)':
     dependencies:
       '@saas-maker/motion': https://codeload.github.com/sass-maker/ui-library/tar.gz/f61aad320ba3bed99c48df40fc16a7f55f508ba5#path:/packages/motion(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@saas-maker/ui': https://codeload.github.com/sass-maker/ui-library/tar.gz/f61aad320ba3bed99c48df40fc16a7f55f508ba5#path:/packages/ui(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(tailwindcss@4.3.3)
