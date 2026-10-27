@@ -10,7 +10,7 @@ Allow: /api/ai
 Allow: /api/md/
 Disallow: /api/
 Disallow: /setup
-Disallow: /timeline/
+Disallow: /timeline/new
 Disallow: /daily
 Disallow: /settings
 Disallow: /auth/
@@ -34,7 +34,7 @@ Allow: /api/ai
 Allow: /api/md/
 Disallow: /api/
 Disallow: /setup
-Disallow: /timeline/
+Disallow: /timeline/new
 Disallow: /daily
 Disallow: /settings
 Disallow: /auth/
@@ -58,7 +58,7 @@ Allow: /api/ai
 Allow: /api/md/
 Disallow: /api/
 Disallow: /setup
-Disallow: /timeline/
+Disallow: /timeline/new
 Disallow: /daily
 Disallow: /settings
 Disallow: /auth/
@@ -82,7 +82,7 @@ Allow: /api/ai
 Allow: /api/md/
 Disallow: /api/
 Disallow: /setup
-Disallow: /timeline/
+Disallow: /timeline/new
 Disallow: /daily
 Disallow: /settings
 Disallow: /auth/
@@ -106,7 +106,7 @@ Allow: /api/ai
 Allow: /api/md/
 Disallow: /api/
 Disallow: /setup
-Disallow: /timeline/
+Disallow: /timeline/new
 Disallow: /daily
 Disallow: /settings
 Disallow: /auth/
@@ -130,7 +130,7 @@ Allow: /api/ai
 Allow: /api/md/
 Disallow: /api/
 Disallow: /setup
-Disallow: /timeline/
+Disallow: /timeline/new
 Disallow: /daily
 Disallow: /settings
 Disallow: /auth/
@@ -154,7 +154,7 @@ Allow: /api/ai
 Allow: /api/md/
 Disallow: /api/
 Disallow: /setup
-Disallow: /timeline/
+Disallow: /timeline/new
 Disallow: /daily
 Disallow: /settings
 Disallow: /auth/

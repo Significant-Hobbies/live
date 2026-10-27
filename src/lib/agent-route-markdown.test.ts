@@ -228,7 +228,16 @@ describe('Markdown representation protocol', () => {
     }
   });
   it('never shares cached public user/community records', async () => {
-    for (const path of ['/u/owner.md', '/explore.md', '/hobbies/drawing.md']) {
+    for (const path of [
+      '/u/owner.md',
+      '/explore.md',
+      '/hobbies/drawing.md',
+      '//u/owner.md',
+      '/api/md/u/owner',
+      '/api/md/u/owner.md',
+      '//hobbies/drawing.md',
+      '/explore/index.md',
+    ]) {
       const match = vi.fn();
       const put = vi.fn();
       const response = await handleCachedPublicRouteMarkdown(

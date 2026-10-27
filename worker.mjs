@@ -185,9 +185,8 @@ export default {
       }
 
       // Agent / LLM indexing surfaces (fleet GEO standard)
-      // `/llms-full.txt` is owned by the application because it is generated
-      // from the complete editorial corpus. The portable fallback must not mask
-      // that richer route with its generic product brief.
+      // Discovery is owned by the source-backed handler above; the portable
+      // fallback remains for other legacy agent surfaces.
       if (requestUrl.pathname !== '/llms-full.txt') {
         const agent = handleAgentEdge(request);
         if (agent) return agent;

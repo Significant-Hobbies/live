@@ -132,13 +132,16 @@ export async function handlePublicRouteMarkdown(request, loadMarkdown) {
  */
 export async function handleCachedPublicRouteMarkdown(request, loadMarkdown, options = {}) {
   const requestedUrl = new URL(request.url);
+  const sourcePath = requestedUrl.pathname.startsWith('/api/md/')
+    ? normalizePath(`/${requestedUrl.pathname.slice('/api/md/'.length)}`)
+    : htmlPathFromMarkdown(requestedUrl.pathname);
   const cacheEnabled =
     options.cacheEnabled !== false &&
     request.method === 'GET' &&
     requestedUrl.search === '' &&
-    !requestedUrl.pathname.startsWith('/u/') &&
-    !requestedUrl.pathname.startsWith('/hobbies/') &&
-    requestedUrl.pathname !== '/explore.md' &&
+    !sourcePath.startsWith('/u/') &&
+    !sourcePath.startsWith('/hobbies/') &&
+    sourcePath !== '/explore' &&
     isMarkdownAlternatePath(requestedUrl.pathname) &&
     options.cache;
 
@@ -159,6 +162,7 @@ export async function handleCachedPublicRouteMarkdown(request, loadMarkdown, opt
     !response ||
     response.status !== 200 ||
     response.headers.has('set-cookie') ||
+    /(?:private|no-store|no-cache)/i.test(response.headers.get('cache-control') || '') ||
     !response.headers.get('content-type')?.includes('text/markdown')
   ) {
     return response;
