@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -11,12 +12,12 @@ import {
 } from '~/components/aceternity';
 import { JsonLd } from '~/components/json-ld';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPublicMetadata({
   title: '40 New Hobbies to Try in 2026 — From Beginner-Friendly to Bold | SignificantHobbies',
   description:
     '40 hobbies to try in 2026, organized by how much effort they take to start. From tonight with no equipment to deep year-long commitments.',
   alternates: { canonical: 'https://live.significanthobbies.com/hobbies-to-try' },
-};
+});
 
 function hobbySlug(name: string) {
   return name.toLowerCase().replace(/\s+/g, '-');

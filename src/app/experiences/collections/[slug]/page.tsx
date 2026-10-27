@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -18,11 +19,13 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const collection = findExperienceCollection((await params).slug);
-  if (!collection) return { title: 'Collection not found' };
-  return experienceMetadata(
-    collection.title,
-    collection.description,
-    `/experiences/collections/${collection.slug}`
+  if (!collection) return withPublicMetadata({ title: 'Collection not found' });
+  return withPublicMetadata(
+    experienceMetadata(
+      collection.title,
+      collection.description,
+      `/experiences/collections/${collection.slug}`
+    )
   );
 }
 

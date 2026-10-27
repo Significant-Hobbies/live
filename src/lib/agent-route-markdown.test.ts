@@ -1,3 +1,4 @@
+import { handlePublicReadability } from './public-readability';
 import { describe, expect, it, vi } from 'vitest';
 
 import sitemap from '~/app/sitemap';
@@ -44,7 +45,9 @@ describe('public route Markdown boundary', () => {
 
     expect(response?.status).toBe(200);
     expect(response?.headers.get('content-type')).toBe('text/markdown; charset=utf-8');
-    expect(response?.headers.get('content-location')).toBe('/hobbies/painting.md');
+    expect(response?.headers.get('content-location')).toBe(
+      'https://live.significanthobbies.com/hobbies/painting'
+    );
     expect(await response?.text()).toContain('# Painting');
     expect(load).toHaveBeenCalledWith('/hobbies/painting', expect.any(Request));
   });
@@ -60,7 +63,7 @@ describe('public route Markdown boundary', () => {
         entries.set(request.url, response.clone());
       },
     } as Cache;
-    const load = vi.fn(async () => '# Painting\n');
+    const load = vi.fn(async () => '# About\n');
     const options = {
       cache,
       waitUntil(promise: Promise<unknown>) {
@@ -69,7 +72,7 @@ describe('public route Markdown boundary', () => {
     };
 
     const miss = await handleCachedPublicRouteMarkdown(
-      new Request('https://live.significanthobbies.com/hobbies/painting.md'),
+      new Request('https://live.significanthobbies.com/about.md'),
       load,
       options
     );
@@ -77,16 +80,16 @@ describe('public route Markdown boundary', () => {
     await Promise.all(writes);
 
     const hit = await handleCachedPublicRouteMarkdown(
-      new Request('https://live.significanthobbies.com/hobbies/painting.md'),
+      new Request('https://live.significanthobbies.com/about.md'),
       load,
       options
     );
     expect(hit?.headers.get('x-edge-cache')).toBe('AGENT-HIT');
-    expect(await hit?.text()).toBe('# Painting\n');
+    expect(await hit?.text()).toBe('# About\n');
     expect(load).toHaveBeenCalledTimes(1);
 
     await handleCachedPublicRouteMarkdown(
-      new Request('https://live.significanthobbies.com/hobbies/painting', {
+      new Request('https://live.significanthobbies.com/about', {
         headers: { Accept: 'text/markdown' },
       }),
       load,
@@ -154,9 +157,9 @@ describe('public route Markdown boundary', () => {
     const journey = await renderPublicRouteMarkdown(`/journeys/${FAMOUS_JOURNEYS[0]!.slug}`);
     const blog = await renderPublicRouteMarkdown(`/blog/${editorialArticles[0]!.slug}`);
 
-    expect(hobby).toContain('## A path from today to three months');
-    expect(hobby).toContain('## Resources');
-    expect(experience).toContain('## How to start');
+    expect(hobby).toContain('Your drawing roadmap');
+    expect(hobby).toContain('Tools & resources for Drawing');
+    expect(experience).toContain('## How you would actually start');
     expect(journey).toContain(FAMOUS_JOURNEYS[0]!.name);
     expect(blog).toContain('> Source: https://live.significanthobbies.com/blog/');
     expect(await renderPublicRouteMarkdown('/daily')).toBeNull();
@@ -178,4 +181,93 @@ describe('public route Markdown boundary', () => {
       ).toBe(true);
     }
   });
+});
+
+vi.mock('~/server/db', () => {
+  const rows: never[] = [];
+  const chain = Object.assign(Promise.resolve(rows), {
+    from: () => chain,
+    leftJoin: () => chain,
+    innerJoin: () => chain,
+    where: () => chain,
+    groupBy: () => chain,
+    orderBy: () => chain,
+    limit: async () => rows,
+  });
+  return { db: { select: () => chain, query: { users: { findFirst: async () => null } } } };
+});
+
+describe('Markdown representation protocol', () => {
+  it.each(['text/markdown;q=0', 'text/markdown;q=0.2,text/html;q=0.8', 'text/markdown,text/html'])(
+    'keeps HTML when Accept is %s',
+    async (accept) => {
+      const loader = vi.fn();
+      expect(
+        await handlePublicRouteMarkdown(
+          new Request('https://live.significanthobbies.com/about', { headers: { accept } }),
+          loader
+        )
+      ).toBeNull();
+      expect(loader).not.toHaveBeenCalled();
+    }
+  );
+  it('serves direct Markdown and HEAD with canonical, CORS, noindex and token headers', async () => {
+    for (const method of ['GET', 'HEAD']) {
+      const response = await handlePublicRouteMarkdown(
+        new Request('https://live.significanthobbies.com/api/md/about', { method }),
+        async () => '# About'
+      );
+      expect(response?.status).toBe(200);
+      expect(response?.headers.get('Content-Location')).toBe(
+        'https://live.significanthobbies.com/about'
+      );
+      expect(response?.headers.get('Access-Control-Allow-Origin')).toBe('*');
+      expect(response?.headers.get('X-Robots-Tag')).toContain('noindex');
+      expect(Number(response?.headers.get('X-Markdown-Tokens'))).toBeGreaterThan(0);
+      expect(await response?.text()).toBe(method === 'HEAD' ? '' : '# About');
+    }
+  });
+  it('never shares cached public user/community records', async () => {
+    for (const path of ['/u/owner.md', '/explore.md', '/hobbies/drawing.md']) {
+      const match = vi.fn();
+      const put = vi.fn();
+      const response = await handleCachedPublicRouteMarkdown(
+        new Request(`https://live.significanthobbies.com${path}`),
+        async () => '# Public',
+        { cache: { match, put } as unknown as Cache }
+      );
+      expect(response?.headers.get('Cache-Control')).toBe('private, no-store');
+      expect(match).not.toHaveBeenCalled();
+      expect(put).not.toHaveBeenCalled();
+    }
+  });
+});
+
+describe('complete public discovery', () => {
+  it('lists the same static public routes as the sitemap and bounds the full export honestly', async () => {
+    const response = await handlePublicReadability(
+      new Request('https://live.significanthobbies.com/api/md/_catalog')
+    );
+    const catalog = (await response?.json()) as { path: string; url: string; md: string }[];
+    expect(catalog.length).toBeGreaterThan(500);
+    expect(catalog.some((entry) => entry.path.startsWith('/u/'))).toBe(false);
+    expect(catalog.some((entry) => entry.path === '/daily')).toBe(false);
+    expect(catalog.every((entry) => entry.md.endsWith('.md'))).toBe(true);
+    const full = await handlePublicReadability(
+      new Request('https://live.significanthobbies.com/llms-full.txt')
+    );
+    const body = await full?.text();
+    expect(body).toContain('registered public pages');
+    expect(body?.includes('The reps on a thing you actually care about')).toBe(true);
+    expect(body?.length).toBeLessThanOrEqual(500000);
+    const policy = await handlePublicReadability(
+      new Request('https://live.significanthobbies.com/ai.txt')
+    );
+    expect(await policy?.text()).toContain('training: allowed on public pages only');
+  });
+});
+
+vi.mock('~/server/experience-catalog', async () => {
+  const { searchCatalogSeed } = await import('./catalog-seed');
+  return { searchExperienceCatalog: searchCatalogSeed };
 });

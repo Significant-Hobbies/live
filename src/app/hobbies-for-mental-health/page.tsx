@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -11,12 +12,12 @@ import {
 } from '~/components/aceternity';
 import { JsonLd } from '~/components/json-ld';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPublicMetadata({
   title: '15 Hobbies That Improve Mental Health — Science-Backed | SignificantHobbies',
   description:
     'Discover 15 science-backed hobbies that genuinely improve mental health — from yoga and running to gardening and writing. Learn why each one works.',
   alternates: { canonical: 'https://live.significanthobbies.com/hobbies-for-mental-health' },
-};
+});
 
 function hobbySlug(name: string) {
   return name.toLowerCase().replace(/\s+/g, '-');

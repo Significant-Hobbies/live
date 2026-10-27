@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -23,7 +24,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const person = FAMOUS_JOURNEYS.find((p) => p.slug === slug);
-  if (!person) return {};
+  if (!person) return withPublicMetadata({});
 
   const firstPhaseLabel = person.phases[0]?.label ?? 'early life';
   const lastPhaseLabel = person.phases[person.phases.length - 1]?.label ?? 'peak career';
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = `${person.name}'s hobby journey — ${BRAND_NAME}`;
   const description = `Explore ${person.name}'s hobby journey — from ${firstPhaseLabel} to ${lastPhaseLabel}. See how their hobbies shaped who they became.`;
 
-  return {
+  return withPublicMetadata({
     title: { absolute: title },
     description,
     alternates: { canonical },
@@ -48,7 +49,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       images: [DEFAULT_SOCIAL_IMAGE],
     },
-  };
+  });
 }
 
 // Phase color palette — cycling through visually distinct hues

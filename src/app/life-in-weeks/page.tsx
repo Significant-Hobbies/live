@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
 import type { Metadata } from 'next';
 
 import { LifeInWeeksClient } from './life-in-weeks-client';
@@ -7,7 +8,7 @@ import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
 import { DEFAULT_SOCIAL_IMAGE } from '~/lib/site-metadata';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPublicMetadata({
   title: 'Life in weeks',
   description:
     'See your whole life as one grid of weeks, using your exact birth date when available. Then decide what the remaining ones are for.',
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
       'One square for every week of an average life. It takes one number to draw, and nobody needs to know you were here.',
     images: [DEFAULT_SOCIAL_IMAGE],
   },
-};
+});
 
 export default async function LifeInWeeksPage() {
   const session = await getServerAuthSession();

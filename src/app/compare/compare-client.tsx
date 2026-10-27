@@ -1,4 +1,5 @@
 'use client';
+import { CompareView, comparisonLabels } from '~/components/public-pages/compare';
 
 import { ArrowRight, Search, User, UserCheck, Users, UsersRound, X } from 'lucide-react';
 import Link from 'next/link';
@@ -179,7 +180,7 @@ function HobbyCombobox({ label, value, onChange, exclude }: HobbyComboboxProps) 
                 setOpen(true);
               }}
               onFocus={() => setOpen(true)}
-              placeholder="Search a hobby…"
+              placeholder={comparisonLabels.placeholder}
               className="h-11 border-border bg-card pl-10 placeholder:text-subtle"
             />
           </div>
@@ -350,69 +351,30 @@ export function CompareClient() {
   const detailB = hobbyB ? HOBBY_DETAILS[hobbyB] : null;
 
   return (
-    <div>
-      {/* Selectors */}
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-end">
-        <HobbyCombobox label="Hobby A" value={hobbyA} onChange={setHobbyA} exclude={hobbyB} />
-        <div className="flex items-center justify-center pb-1 text-sm font-bold text-subtle sm:pb-3">
-          VS
-        </div>
-        <HobbyCombobox label="Hobby B" value={hobbyB} onChange={setHobbyB} exclude={hobbyA} />
-      </div>
-
-      {/* Prompt when none selected */}
-      {!detailA && !detailB && (
-        <div className="mt-12 flex flex-col items-center justify-center rounded-2xl border border-dashed border-border bg-card/40 px-6 py-16 text-center">
-          <p className="text-2xl">⚖️</p>
-          <p className="mt-3 font-medium text-muted-foreground">Select two hobbies to compare</p>
-          <p className="mt-1 text-sm text-subtle">
-            Use the dropdowns above to pick Hobby A and Hobby B
-          </p>
-        </div>
-      )}
-
-      {/* Partial selection */}
-      {(detailA || detailB) && !(detailA && detailB) && (
-        <div className="mt-10 flex flex-col items-center justify-center rounded-2xl border border-dashed border-border bg-card/40 px-6 py-12 text-center">
-          <p className="text-muted-foreground">
-            Now pick{' '}
-            <span className="font-semibold text-foreground">{detailA ? 'Hobby B' : 'Hobby A'}</span>{' '}
-            to see the comparison
-          </p>
-        </div>
-      )}
-
-      {/* Full comparison */}
-      {detailA && detailB && <ComparisonCard a={detailA} b={detailB} />}
-
-      {/* Quick picks */}
-      {!hobbyA && !hobbyB && (
-        <div className="mt-10">
-          <p className="mb-3 text-sm font-semibold text-subtle">Popular comparisons</p>
-          <div className="flex flex-wrap gap-2">
-            {[
-              ['Running', 'Cycling'],
-              ['Guitar', 'Piano'],
-              ['Chess', 'Reading'],
-              ['Cooking', 'Baking'],
-              ['Yoga', 'Dance'],
-              ['Drawing', 'Painting'],
-            ].map(([a, b]) => (
-              <button
-                key={`${a}-${b}`}
-                type="button"
-                onClick={() => {
-                  setHobbyA(a);
-                  setHobbyB(b);
-                }}
-                className="rounded-full border border-border bg-card px-3.5 py-1.5 text-sm text-muted-foreground hover:border-foreground/30 hover:text-foreground transition-colors"
-              >
-                {a} vs {b}
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
-    </div>
+    <CompareView
+      hobbyA={hobbyA}
+      hobbyB={hobbyB}
+      detailA={Boolean(detailA)}
+      detailB={Boolean(detailB)}
+      selectorA={
+        <HobbyCombobox
+          label={comparisonLabels.a}
+          value={hobbyA}
+          onChange={setHobbyA}
+          exclude={hobbyB}
+        />
+      }
+      selectorB={
+        <HobbyCombobox
+          label={comparisonLabels.b}
+          value={hobbyB}
+          onChange={setHobbyB}
+          exclude={hobbyA}
+        />
+      }
+      comparison={detailA && detailB ? <ComparisonCard a={detailA} b={detailB} /> : null}
+      setHobbyA={setHobbyA}
+      setHobbyB={setHobbyB}
+    />
   );
 }

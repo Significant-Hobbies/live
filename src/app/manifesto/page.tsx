@@ -1,14 +1,15 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import { GridBackground, SpotlightCard } from '~/components/aceternity';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPublicMetadata({
   title: 'Manifesto — SignificantHobbies',
   description:
     'Life is finite. We build tools to help you spend your remaining weeks on what matters — hobbies, bucket lists, and side quests.',
   alternates: { canonical: 'https://live.significanthobbies.com/manifesto' },
-};
+});
 
 export default function ManifestoPage() {
   return (

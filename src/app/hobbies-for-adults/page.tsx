@@ -1,26 +1,17 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
+import { AdultHobbySection } from '~/components/public-adult-hobby-section';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-import {
-  FadeIn,
-  GridBackground,
-  SpotlightCard,
-  StaggerContainer,
-  StaggerItem,
-  TextGenerateEffect,
-} from '~/components/aceternity';
+import { FadeIn, GridBackground, SpotlightCard, TextGenerateEffect } from '~/components/aceternity';
 import { JsonLd } from '~/components/json-ld';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPublicMetadata({
   title: '50 Best Hobbies for Adults — Find What Excites You | SignificantHobbies',
   description:
     'Discover 50 hobbies perfect for adults. From creative pursuits to physical adventures, find your next passion with our curated guide.',
   alternates: { canonical: 'https://live.significanthobbies.com/hobbies-for-adults' },
-};
-
-function hobbySlug(name: string) {
-  return name.toLowerCase().replace(/\s+/g, '-');
-}
+});
 
 type Hobby = { name: string; desc: string };
 
@@ -233,40 +224,6 @@ const MAKING: Hobby[] = [
   },
 ];
 
-function HobbyCard({ hobby }: { hobby: Hobby }) {
-  return (
-    <SpotlightCard className="shadow-soft" innerClassName="rounded-lg p-4">
-      <div className="flex-1">
-        <Link
-          href={`/hobbies/${hobbySlug(hobby.name)}`}
-          className="font-semibold text-foreground hover:text-foreground transition-colors"
-          prefetch={false}
-        >
-          {hobby.name}
-        </Link>
-        <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{hobby.desc}</p>
-      </div>
-    </SpotlightCard>
-  );
-}
-
-function Section({ title, hobbies, color }: { title: string; hobbies: Hobby[]; color: string }) {
-  return (
-    <FadeIn className="mb-10">
-      <section className="mb-10">
-        <h2 className={`text-xl font-bold mb-4 ${color}`}>{title}</h2>
-        <StaggerContainer className="space-y-3">
-          {hobbies.map((h) => (
-            <StaggerItem key={h.name}>
-              <HobbyCard hobby={h} />
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
-      </section>
-    </FadeIn>
-  );
-}
-
 export default function HobbiesForAdultsPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-12">
@@ -338,8 +295,8 @@ export default function HobbiesForAdultsPage() {
         </p>
       </FadeIn>
 
-      <Section title="Creative" hobbies={CREATIVE} color="text-field-lilac-ink" />
-      <Section title="Physical" hobbies={PHYSICAL} color="text-foreground" />
+      <AdultHobbySection title="Creative" hobbies={CREATIVE} color="text-field-lilac-ink" />
+      <AdultHobbySection title="Physical" hobbies={PHYSICAL} color="text-foreground" />
 
       <FadeIn className="my-8">
         <SpotlightCard className="shadow-soft" innerClassName="rounded-xl p-6">
@@ -351,10 +308,10 @@ export default function HobbiesForAdultsPage() {
         </SpotlightCard>
       </FadeIn>
 
-      <Section title="Intellectual" hobbies={INTELLECTUAL} color="text-field-sky-ink" />
-      <Section title="Social" hobbies={SOCIAL} color="text-field-coral-ink" />
-      <Section title="Outdoor" hobbies={OUTDOOR} color="text-field-green-ink" />
-      <Section title="Making" hobbies={MAKING} color="text-foreground" />
+      <AdultHobbySection title="Intellectual" hobbies={INTELLECTUAL} color="text-field-sky-ink" />
+      <AdultHobbySection title="Social" hobbies={SOCIAL} color="text-field-coral-ink" />
+      <AdultHobbySection title="Outdoor" hobbies={OUTDOOR} color="text-field-green-ink" />
+      <AdultHobbySection title="Making" hobbies={MAKING} color="text-foreground" />
 
       <FadeIn className="mt-12">
         <SpotlightCard

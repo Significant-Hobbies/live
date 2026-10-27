@@ -1,15 +1,16 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
 import type { Metadata } from 'next';
 
 import { FadeIn, GridBackground } from '~/components/aceternity';
 
 import { CompareClient } from './compare-client';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPublicMetadata({
   title: 'Compare Hobbies Side by Side — SignificantHobbies',
   description:
     "Can't decide between two hobbies? Compare them on cost, time commitment, social level, difficulty, and more. Make an informed choice about your next hobby.",
   alternates: { canonical: 'https://live.significanthobbies.com/compare' },
-};
+});
 
 export default function ComparePage() {
   return (

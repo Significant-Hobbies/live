@@ -11,6 +11,7 @@
     "ignoreUnknown": true,
     "includes": [
       "**",
+      "!src/lib/agent-surfaces",
       "!**/.next",
       "!**/.open-next",
       "!**/.wrangler",

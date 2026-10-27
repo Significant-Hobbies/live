@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -12,12 +13,12 @@ import {
 import { JsonLd } from '~/components/json-ld';
 import { STARTER_KIT_CATEGORIES, STARTER_KITS } from '~/lib/starter-kits';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPublicMetadata({
   title: 'Local Hobby Starter Kits - SignificantHobbies',
   description:
     'Beginner-friendly hobby starter kits you can run with local materials, small budgets, and one clear first experiment.',
   alternates: { canonical: 'https://live.significanthobbies.com/starter-kits' },
-};
+});
 
 const CATEGORY_STYLES: Record<string, string> = {
   Creative: 'border-foreground/30 bg-foreground/10 text-foreground',

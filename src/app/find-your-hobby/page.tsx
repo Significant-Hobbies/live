@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
 import type { Metadata } from 'next';
 
 import { JsonLd } from '~/components/json-ld';
@@ -5,7 +6,7 @@ import { DEFAULT_SOCIAL_IMAGE, SITE_URL } from '~/lib/site-metadata';
 
 import { HobbyQuiz } from './quiz-client';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPublicMetadata({
   title: 'Find Your Next Hobby — Hobby Quiz',
   description:
     'Take our free hobby quiz to discover your perfect hobby. Answer nine focused questions and get personalized recommendations based on your interests and preferred way of spending time.',
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     description: 'Answer nine focused questions. Get personalized hobby recommendations.',
     images: [DEFAULT_SOCIAL_IMAGE],
   },
-};
+});
 
 export default function FindYourHobbyPage() {
   return (

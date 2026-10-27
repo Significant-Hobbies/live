@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -11,12 +12,12 @@ import {
 } from '~/components/aceternity';
 import { JsonLd } from '~/components/json-ld';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPublicMetadata({
   title: '25 Free & Cheap Hobbies That Are Actually Fun | SignificantHobbies',
   description:
     '25 free and cheap hobbies that are genuinely worth your time. 15 completely free + 10 under $50 to start. With honest cost breakdowns.',
   alternates: { canonical: 'https://live.significanthobbies.com/cheap-hobbies' },
-};
+});
 
 function hobbySlug(name: string) {
   return name.toLowerCase().replace(/\s+/g, '-');

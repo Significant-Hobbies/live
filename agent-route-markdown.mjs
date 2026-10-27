@@ -1,3 +1,7 @@
+import {
+  wantsMarkdown as acceptsMarkdown,
+  markdownResponse,
+} from './src/lib/agent-surfaces/http.mjs';
 const PUBLIC_EXACT_PATHS = new Set([
   '/',
   '/about',
@@ -45,7 +49,7 @@ const PUBLIC_PATH_PREFIXES = [
   '/journeys/',
 ];
 
-const FIXED_AGENT_PATHS = new Set(['/api/ai', '/index.md', '/llms-full.txt', '/llms.txt']);
+const FIXED_AGENT_PATHS = new Set(['/api/ai', '/llms-full.txt', '/llms.txt']);
 
 /**
  * Handle Markdown negotiation and explicit `.md` alternates for public
@@ -59,15 +63,19 @@ const FIXED_AGENT_PATHS = new Set(['/api/ai', '/index.md', '/llms-full.txt', '/l
  * @returns {Promise<Response | null>}
  */
 export async function handlePublicRouteMarkdown(request, loadMarkdown) {
-  if (request.method !== 'GET' && request.method !== 'HEAD') return null;
+  if (!['GET', 'HEAD', 'OPTIONS'].includes(request.method)) return null;
 
   const requestedUrl = new URL(request.url);
   if (FIXED_AGENT_PATHS.has(requestedUrl.pathname)) return null;
 
-  const explicitMarkdown = isMarkdownAlternatePath(requestedUrl.pathname);
-  const sourcePath = explicitMarkdown
-    ? htmlPathFromMarkdown(requestedUrl.pathname)
-    : normalizePath(requestedUrl.pathname);
+  const direct =
+    requestedUrl.pathname === '/api/md' || requestedUrl.pathname.startsWith('/api/md/');
+  const explicitMarkdown = direct || isMarkdownAlternatePath(requestedUrl.pathname);
+  const sourcePath = direct
+    ? normalizePath(`/${requestedUrl.pathname.replace(/^\/api\/md\/?/, '')}`)
+    : explicitMarkdown
+      ? htmlPathFromMarkdown(requestedUrl.pathname)
+      : normalizePath(requestedUrl.pathname);
 
   if (explicitMarkdown && !isPublicAgentDocumentPath(sourcePath)) {
     return markdownError(404, 'Not found', requestedUrl.pathname, request.method);
@@ -88,17 +96,28 @@ export async function handlePublicRouteMarkdown(request, loadMarkdown) {
     return markdownError(404, 'Public document unavailable', sourcePath, request.method);
   }
 
-  const markdownPath = markdownPathFor(sourcePath);
-  return new Response(request.method === 'HEAD' ? null : markdown, {
-    status: 200,
-    headers: {
-      'Cache-Control': 'public, max-age=300, s-maxage=3600, stale-while-revalidate=86400',
-      'Content-Location': markdownPath,
-      'Content-Type': 'text/markdown; charset=utf-8',
-      Link: `<${sourcePath}>; rel="canonical"; type="text/html"`,
-      Vary: 'Accept',
-      'X-Content-Type-Options': 'nosniff',
-    },
+  if (request.method === 'OPTIONS')
+    return new Response(null, {
+      status: 204,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, HEAD, OPTIONS',
+        'Access-Control-Allow-Headers': 'Accept',
+        'Access-Control-Max-Age': '86400',
+      },
+    });
+  const canonical = new URL(sourcePath, 'https://live.significanthobbies.com').href;
+  return markdownResponse(markdown, request, {
+    'Content-Location': canonical,
+    Link: `<${canonical}>; rel="canonical"; type="text/html"`,
+    ...(sourcePath.startsWith('/u/') ||
+    sourcePath.startsWith('/hobbies/') ||
+    sourcePath === '/explore'
+      ? { 'Cache-Control': 'private, no-store' }
+      : {}),
+    ...(!explicitMarkdown
+      ? { 'CDN-Cache-Control': 'no-store', 'Cloudflare-CDN-Cache-Control': 'no-store' }
+      : {}),
   });
 }
 
@@ -117,6 +136,9 @@ export async function handleCachedPublicRouteMarkdown(request, loadMarkdown, opt
     options.cacheEnabled !== false &&
     request.method === 'GET' &&
     requestedUrl.search === '' &&
+    !requestedUrl.pathname.startsWith('/u/') &&
+    !requestedUrl.pathname.startsWith('/hobbies/') &&
+    requestedUrl.pathname !== '/explore.md' &&
     isMarkdownAlternatePath(requestedUrl.pathname) &&
     options.cache;
 
@@ -183,10 +205,7 @@ function isMarkdownAlternatePath(pathname) {
 
 function wantsMarkdown(request) {
   if (request.headers.get('x-fleet-markdown-source') === '1') return false;
-  const accept = (request.headers.get('accept') || '').toLowerCase();
-  if (!accept.includes('text/markdown')) return false;
-  if (!accept.includes('text/html')) return true;
-  return accept.indexOf('text/markdown') < accept.indexOf('text/html');
+  return acceptsMarkdown(request);
 }
 
 function normalizePath(pathname) {
@@ -201,6 +220,8 @@ function markdownError(status, title, path, method) {
     status,
     headers: {
       'Cache-Control': 'no-store',
+      'X-Robots-Tag': 'noindex, follow',
+      'Access-Control-Allow-Origin': '*',
       'Content-Type': 'text/markdown; charset=utf-8',
       'X-Content-Type-Options': 'nosniff',
     },

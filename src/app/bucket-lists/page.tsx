@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -16,7 +17,7 @@ import { DEFAULT_SOCIAL_IMAGE, SITE_URL } from '~/lib/site-metadata';
 
 const description =
   'Create bucket lists that mean something. Browse verified public lists, practical ideas, and anonymous tools for planning what matters.';
-export const metadata: Metadata = {
+export const metadata: Metadata = withPublicMetadata({
   title: { absolute: 'Bucket lists for what matters' },
   description,
   alternates: { canonical: `${SITE_URL}/bucket-lists` },
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
     description,
     images: [DEFAULT_SOCIAL_IMAGE],
   },
-};
+});
 
 const CATEGORY_BORDER_HOVER: Record<string, string> = {
   travel: 'hover:border-field-sky-ink',

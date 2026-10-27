@@ -11,6 +11,7 @@
 //
 // All non-GET, non-`/` requests pass straight through to OpenNext.
 
+import { withPublicDocumentHints } from './public-document-hints.mjs';
 import openNext from './.open-next/worker.js';
 import { buildId } from './.open-next/cache-release.mjs';
 import { createReleaseCache } from './release-cache.mjs';
@@ -158,186 +159,204 @@ export default {
   async scheduled(_event, env, ctx) {
     ctx.waitUntil(sendWeeklyNudges(env));
   },
-  fetch: withTiming(async function fetch(request, env, ctx) {
-    request = markPersonalPlatformInternalRequest(request);
-    const requestUrl = new URL(request.url);
-    const hubResponse = await fetchHubRoute(request, env);
-    if (hubResponse) return hubResponse;
-    const legacyRedirect = legacyLiveRedirect(requestUrl);
-    if (legacyRedirect) return Response.redirect(legacyRedirect, 308);
+  fetch: withTiming(
+    withPublicDocumentHints(async function fetch(request, env, ctx) {
+      request = markPersonalPlatformInternalRequest(request);
+      const requestUrl = new URL(request.url);
+      const hubResponse = await fetchHubRoute(request, env);
+      if (hubResponse) return hubResponse;
+      const legacyRedirect = legacyLiveRedirect(requestUrl);
+      if (legacyRedirect) return Response.redirect(legacyRedirect, 308);
 
-    // Agent / LLM indexing surfaces (fleet GEO standard)
-    // `/llms-full.txt` is owned by the application because it is generated
-    // from the complete editorial corpus. The portable fallback must not mask
-    // that richer route with its generic product brief.
-    if (requestUrl.pathname !== '/llms-full.txt') {
-      const agent = handleAgentEdge(request);
-      if (agent) return agent;
-    }
-    try {
-      const markdown = await handleCachedPublicRouteMarkdown(
-        request,
-        async (sourcePath) => {
-          const sourceUrl = new URL('/api/ai/markdown', request.url);
-          sourceUrl.searchParams.set('path', sourcePath);
-          const sourceResponse = await openNext.fetch(
-            new Request(sourceUrl, {
-              headers: {
-                Accept: 'text/markdown',
-                'x-fleet-markdown-source': '1',
-              },
-            }),
-            env,
-            ctx
-          );
-          if (!sourceResponse.ok) return null;
-          const contentType = sourceResponse.headers.get('content-type') || '';
-          if (!contentType.toLowerCase().includes('text/markdown')) return null;
-          return sourceResponse.text();
-        },
-        {
-          cache: caches.default,
-          cacheEnabled: !hasAuthCookie(request),
-          waitUntil: (promise) => ctx.waitUntil(promise),
-        }
-      );
-      if (markdown) return markdown;
+      const discoveryPaths = new Set([
+        '/llms.txt',
+        '/llms-full.txt',
+        '/ai.txt',
+        '/api/ai',
+        '/api/md/_catalog',
+      ]);
+      if (
+        ['GET', 'HEAD', 'OPTIONS'].includes(request.method) &&
+        discoveryPaths.has(requestUrl.pathname)
+      ) {
+        const sourceUrl = new URL('/api/ai/discovery', request.url);
+        sourceUrl.searchParams.set('path', requestUrl.pathname);
+        return openNext.fetch(new Request(sourceUrl, { method: request.method }), env, ctx);
+      }
 
-      // HEAD must get the same routing decision as GET — the branches below
-      // (the Astro asset overlay especially) are what actually answers "/"
-      // at all; OpenNext has no route registered for it, so a HEAD that
-      // fell straight through to fetchOpenNext 404'd instead of getting the
-      // 200 a browser's GET sees (Significant-Hobbies/live#10). Every fetch
-      // below runs as GET and the body is dropped from the final response
-      // when the original request was HEAD.
-      const isHead = request.method === 'HEAD';
-      if (request.method !== 'GET' && !isHead) {
-        return fetchOpenNext(request, env, ctx);
+      // Agent / LLM indexing surfaces (fleet GEO standard)
+      // `/llms-full.txt` is owned by the application because it is generated
+      // from the complete editorial corpus. The portable fallback must not mask
+      // that richer route with its generic product brief.
+      if (requestUrl.pathname !== '/llms-full.txt') {
+        const agent = handleAgentEdge(request);
+        if (agent) return agent;
       }
-      const url = requestUrl;
-      if (!isCacheableDocumentPath(url.pathname)) {
-        return fetchOpenNext(request, env, ctx);
-      }
-      // Session-bearing requests enter the list at the root and bypass shared
-      // HTML caching elsewhere. Workspaces still validate the real session.
-      const isLiveLanding = url.hostname === LIVE_HOST && url.pathname === '/';
-      if (hasAuthCookie(request) && isLiveLanding) {
-        // Enter the list directly. The workspace validates the real session;
-        // cookie presence only selects routing and never grants data access.
-        return new Response(null, {
-          status: 307,
-          headers: {
-            Location: new URL('/bucket-list', request.url).href,
-            'Cache-Control': 'private, no-store',
-            Vary: 'Cookie',
+      try {
+        const markdown = await handleCachedPublicRouteMarkdown(
+          request,
+          async (sourcePath) => {
+            const sourceUrl = new URL('/api/ai/markdown', request.url);
+            sourceUrl.searchParams.set('path', sourcePath);
+            const sourceResponse = await openNext.fetch(
+              new Request(sourceUrl, {
+                headers: {
+                  Accept: 'text/markdown',
+                  'x-fleet-markdown-source': '1',
+                },
+              }),
+              env,
+              ctx
+            );
+            if (!sourceResponse.ok) return null;
+            const contentType = sourceResponse.headers.get('content-type') || '';
+            if (!contentType.toLowerCase().includes('text/markdown')) return null;
+            return sourceResponse.text();
           },
-        });
-      }
-      if (hasAuthCookie(request)) {
-        return fetchOpenNext(request, env, ctx);
-      }
-      const getRequest = isHead ? new Request(request, { method: 'GET' }) : request;
+          {
+            cache: caches.default,
+            cacheEnabled: !hasAuthCookie(request),
+            waitUntil: (promise) => ctx.waitUntil(promise),
+          }
+        );
+        if (markdown) return markdown;
 
-      // Short-circuit: the Astro landing is overlaid into
-      // `.open-next/assets/index.html` by `scripts/overlay-astro-landing.mjs`.
-      // For anon GET /, serve straight from the assets binding instead of
-      // booting the full OpenNext stack (next-server, middleware handler,
-      // Beasties pipeline, etc.). Cuts TTFB from ~250ms to ~30ms.
-      //
-      // Only the Astro overlay at `/` is static; marketing pages use the edge
-      // HTML cache. Leave content encoding to Cloudflare's response boundary.
-      // Manually piping this body through CompressionStream caused the timing
-      // wrapper and CDN to encode it again, leaving browsers with gzip bytes
-      // rendered as text after the cached variants crossed.
-      if (env.ASSETS && url.pathname === '/') {
-        const assetRequest = isLiveLanding
-          ? new Request(new URL('/live.html', request.url), { headers: request.headers })
-          : getRequest;
-        const assetResp = await env.ASSETS.fetch(assetRequest);
-        // The assets binding answers If-None-Match revalidations with 304.
-        // Pass those through — falling through would serve the wrong page.
-        if (assetResp.status === 304) {
-          const headers = new Headers(assetResp.headers);
-          headers.set('Cache-Control', CACHE_CONTROL);
-          headers.set('x-edge-cache', 'ASSET');
-          return new Response(null, { status: 304, headers });
+        // HEAD must get the same routing decision as GET — the branches below
+        // (the Astro asset overlay especially) are what actually answers "/"
+        // at all; OpenNext has no route registered for it, so a HEAD that
+        // fell straight through to fetchOpenNext 404'd instead of getting the
+        // 200 a browser's GET sees (Significant-Hobbies/live#10). Every fetch
+        // below runs as GET and the body is dropped from the final response
+        // when the original request was HEAD.
+        const isHead = request.method === 'HEAD';
+        if (request.method !== 'GET' && !isHead) {
+          return fetchOpenNext(request, env, ctx);
         }
-        if (assetResp.ok && assetResp.body) {
-          const headers = new Headers(assetResp.headers);
-          headers.set('Cache-Control', CACHE_CONTROL);
-          headers.set('x-edge-cache', 'ASSET');
-
-          return new Response(isHead ? null : assetResp.body, {
-            status: assetResp.status,
-            statusText: assetResp.statusText,
-            headers,
+        const url = requestUrl;
+        if (!isCacheableDocumentPath(url.pathname)) {
+          return fetchOpenNext(request, env, ctx);
+        }
+        // Session-bearing requests enter the list at the root and bypass shared
+        // HTML caching elsewhere. Workspaces still validate the real session.
+        const isLiveLanding = url.hostname === LIVE_HOST && url.pathname === '/';
+        if (hasAuthCookie(request) && isLiveLanding) {
+          // Enter the list directly. The workspace validates the real session;
+          // cookie presence only selects routing and never grants data access.
+          return new Response(null, {
+            status: 307,
+            headers: {
+              Location: new URL('/bucket-list', request.url).href,
+              'Cache-Control': 'private, no-store',
+              Vary: 'Cookie',
+            },
           });
         }
+        if (hasAuthCookie(request)) {
+          return fetchOpenNext(request, env, ctx);
+        }
+        const getRequest = isHead ? new Request(request, { method: 'GET' }) : request;
+
+        // Short-circuit: the Astro landing is overlaid into
+        // `.open-next/assets/index.html` by `scripts/overlay-astro-landing.mjs`.
+        // For anon GET /, serve straight from the assets binding instead of
+        // booting the full OpenNext stack (next-server, middleware handler,
+        // Beasties pipeline, etc.). Cuts TTFB from ~250ms to ~30ms.
+        //
+        // Only the Astro overlay at `/` is static; marketing pages use the edge
+        // HTML cache. Leave content encoding to Cloudflare's response boundary.
+        // Manually piping this body through CompressionStream caused the timing
+        // wrapper and CDN to encode it again, leaving browsers with gzip bytes
+        // rendered as text after the cached variants crossed.
+        if (env.ASSETS && url.pathname === '/') {
+          const assetRequest = isLiveLanding
+            ? new Request(new URL('/live.html', request.url), { headers: request.headers })
+            : getRequest;
+          const assetResp = await env.ASSETS.fetch(assetRequest);
+          // The assets binding answers If-None-Match revalidations with 304.
+          // Pass those through — falling through would serve the wrong page.
+          if (assetResp.status === 304) {
+            const headers = new Headers(assetResp.headers);
+            headers.set('Cache-Control', CACHE_CONTROL);
+            headers.set('x-edge-cache', 'ASSET');
+            return new Response(null, { status: 304, headers });
+          }
+          if (assetResp.ok && assetResp.body) {
+            const headers = new Headers(assetResp.headers);
+            headers.set('Cache-Control', CACHE_CONTROL);
+            headers.set('x-edge-cache', 'ASSET');
+
+            return new Response(isHead ? null : assetResp.body, {
+              status: assetResp.status,
+              statusText: assetResp.statusText,
+              headers,
+            });
+          }
+        }
+
+        const cache = createReleaseCache(caches.default, buildId);
+        const cached = await cache.match(getRequest);
+        if (cached) {
+          const hit = new Response(isHead ? null : cached.body, cached);
+          // Cache storage can rewrite browser max-age; restore the route policy.
+          hit.headers.set('Cache-Control', cacheControlForPath(url.pathname));
+          hit.headers.set('x-edge-cache', 'HIT');
+          return hit;
+        }
+
+        const response = await openNext.fetch(getRequest, env, ctx);
+
+        // Only cache 2xx HTML responses — never error pages or redirects.
+        const contentType = response.headers.get('content-type') ?? '';
+        if (
+          response.status !== 200 ||
+          response.headers.has('set-cookie') ||
+          !isCacheableContentType(url.pathname, contentType)
+        ) {
+          return isHead ? new Response(null, response) : response;
+        }
+
+        // Read the body into memory once so we can hand the same bytes to
+        // both the client response and the cache.put. The earlier pattern
+        // (`new Response(response.body, response)` then `.clone()`) was
+        // silently dropping the inlined critical-CSS chunk somewhere in the
+        // stream-fork; reading once and constructing both responses from
+        // the same Uint8Array sidesteps the streaming edge case entirely.
+        const body = await response.arrayBuffer();
+        const headers = new Headers(response.headers);
+        headers.set('Cache-Control', cacheControlForPath(url.pathname));
+        // HTML pages with markdown alternates must Vary on Accept so caches
+        // don't serve the wrong representation to markdown clients.
+        const existingVary = headers.get('Vary');
+        headers.set('Vary', existingVary ? `${existingVary}, Accept` : 'Accept, Accept-Encoding');
+
+        const cacheable = new Response(body, {
+          status: response.status,
+          statusText: response.statusText,
+          headers,
+        });
+        // The Cache API only accepts GET-keyed requests — key on getRequest so
+        // a HEAD probe still populates (and later hits) the same cache entry
+        // a GET to the same URL uses.
+        ctx.waitUntil(cache.put(getRequest, cacheable.clone()));
+
+        const clientResponse = new Response(isHead ? null : body, {
+          status: response.status,
+          statusText: response.statusText,
+          headers,
+        });
+        clientResponse.headers.set('x-edge-cache', 'MISS');
+        return clientResponse;
+      } catch (err) {
+        console.error(
+          `[error] ${request.method} ${new URL(request.url).pathname}:`,
+          err.message,
+          err.stack
+        );
+        return new Response(JSON.stringify({ error: 'Internal Server Error' }), {
+          status: 500,
+          headers: { 'Content-Type': 'application/json' },
+        });
       }
-
-      const cache = createReleaseCache(caches.default, buildId);
-      const cached = await cache.match(getRequest);
-      if (cached) {
-        const hit = new Response(isHead ? null : cached.body, cached);
-        // Cache storage can rewrite browser max-age; restore the route policy.
-        hit.headers.set('Cache-Control', cacheControlForPath(url.pathname));
-        hit.headers.set('x-edge-cache', 'HIT');
-        return hit;
-      }
-
-      const response = await openNext.fetch(getRequest, env, ctx);
-
-      // Only cache 2xx HTML responses — never error pages or redirects.
-      const contentType = response.headers.get('content-type') ?? '';
-      if (
-        response.status !== 200 ||
-        response.headers.has('set-cookie') ||
-        !isCacheableContentType(url.pathname, contentType)
-      ) {
-        return isHead ? new Response(null, response) : response;
-      }
-
-      // Read the body into memory once so we can hand the same bytes to
-      // both the client response and the cache.put. The earlier pattern
-      // (`new Response(response.body, response)` then `.clone()`) was
-      // silently dropping the inlined critical-CSS chunk somewhere in the
-      // stream-fork; reading once and constructing both responses from
-      // the same Uint8Array sidesteps the streaming edge case entirely.
-      const body = await response.arrayBuffer();
-      const headers = new Headers(response.headers);
-      headers.set('Cache-Control', cacheControlForPath(url.pathname));
-      // HTML pages with markdown alternates must Vary on Accept so caches
-      // don't serve the wrong representation to markdown clients.
-      const existingVary = headers.get('Vary');
-      headers.set('Vary', existingVary ? `${existingVary}, Accept` : 'Accept, Accept-Encoding');
-
-      const cacheable = new Response(body, {
-        status: response.status,
-        statusText: response.statusText,
-        headers,
-      });
-      // The Cache API only accepts GET-keyed requests — key on getRequest so
-      // a HEAD probe still populates (and later hits) the same cache entry
-      // a GET to the same URL uses.
-      ctx.waitUntil(cache.put(getRequest, cacheable.clone()));
-
-      const clientResponse = new Response(isHead ? null : body, {
-        status: response.status,
-        statusText: response.statusText,
-        headers,
-      });
-      clientResponse.headers.set('x-edge-cache', 'MISS');
-      return clientResponse;
-    } catch (err) {
-      console.error(
-        `[error] ${request.method} ${new URL(request.url).pathname}:`,
-        err.message,
-        err.stack
-      );
-      return new Response(JSON.stringify({ error: 'Internal Server Error' }), {
-        status: 500,
-        headers: { 'Content-Type': 'application/json' },
-      });
-    }
-  }),
+    })
+  ),
 };

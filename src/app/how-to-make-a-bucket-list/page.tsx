@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -11,7 +12,7 @@ import {
 import { JsonLd } from '~/components/json-ld';
 import { Whale } from '~/components/whale';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPublicMetadata({
   title: "How to Make a Bucket List That You'll Actually Complete — SignificantHobbies",
   description:
     "A step-by-step guide to making a bucket list you'll actually finish — not just write. Six proven steps, from choosing what scares you to quarterly reviews with Whale.",
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
       'Most bucket lists die in a drawer. These six steps keep yours alive — from choosing the right goals to reviewing them quarterly with Whale.',
   },
   alternates: { canonical: 'https://live.significanthobbies.com/how-to-make-a-bucket-list' },
-};
+});
 
 const STEPS = [
   {

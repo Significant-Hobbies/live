@@ -14,7 +14,8 @@ vi.mock('../../.open-next/worker.js', () => ({
 vi.mock('../../.open-next/cache-release.mjs', () => ({ buildId: 'test-release' }));
 vi.mock('../../timing.mjs', () => ({ withTiming: (handler: unknown) => handler }));
 vi.mock('../../agent-edge.mjs', () => ({ handleAgentEdge: () => null }));
-vi.mock('../../agent-route-markdown.mjs', () => ({
+vi.mock('../../agent-route-markdown.mjs', async (importOriginal) => ({
+  ...(await importOriginal<Record<string, unknown>>()),
   handleCachedPublicRouteMarkdown: async () => null,
 }));
 vi.mock('../../weekly-nudge-email.mjs', () => ({ sendWeeklyNudges: vi.fn() }));

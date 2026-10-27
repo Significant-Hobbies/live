@@ -1,4 +1,6 @@
 'use client';
+import { QUESTIONS, type Category } from '~/lib/hobby-quiz-questions';
+import { QuizQuestions } from '~/components/public-pages/hobby-quiz';
 
 import type { LucideIcon } from 'lucide-react';
 import {
@@ -31,29 +33,6 @@ import { QuizResultCard } from '~/components/quiz-result-card';
 import { trackDiscovery, trackDiscoveryFunnel, trackEvent } from '~/lib/analytics';
 import { HOBBY_CATEGORIES, pickAcrossEffort } from '~/lib/hobbies';
 
-type Category =
-  | 'Creative'
-  | 'Physical'
-  | 'Outdoor'
-  | 'Intellectual'
-  | 'Gaming'
-  | 'Social'
-  | 'Culinary'
-  | 'Making'
-  | 'Music'
-  | 'Collecting';
-
-interface QuizOption {
-  icon: LucideIcon;
-  label: string;
-  categories: Category[];
-}
-
-interface QuizQuestion {
-  question: string;
-  options: QuizOption[];
-}
-
 interface HobbyExperiment {
   hobby: string;
   category: Category;
@@ -62,198 +41,6 @@ interface HobbyExperiment {
   firstStep: string;
   reason: string;
 }
-
-const QUESTIONS: QuizQuestion[] = [
-  {
-    question: "When you have free time, you'd rather...",
-    options: [
-      { icon: Wrench, label: 'Make something with my hands', categories: ['Creative', 'Making'] },
-      { icon: Activity, label: 'Get moving and active', categories: ['Physical', 'Outdoor'] },
-      { icon: BookOpen, label: 'Learn something new', categories: ['Intellectual'] },
-      { icon: Users, label: 'Hang out with people', categories: ['Social', 'Culinary'] },
-    ],
-  },
-  {
-    question: "At a party, you're most likely...",
-    options: [
-      {
-        icon: Pencil,
-        label: 'In the corner sketching or people-watching',
-        categories: ['Creative'],
-      },
-      { icon: PartyPopper, label: 'Organizing a group activity', categories: ['Social'] },
-      {
-        icon: MessageCircle,
-        label: 'Deep in conversation about ideas',
-        categories: ['Intellectual'],
-      },
-      {
-        icon: Gamepad2,
-        label: 'Challenging someone to a game',
-        categories: ['Gaming', 'Physical'],
-      },
-    ],
-  },
-  {
-    question: 'Your ideal weekend involves...',
-    options: [
-      { icon: Mountain, label: 'A long hike or bike ride', categories: ['Physical', 'Outdoor'] },
-      { icon: Palette, label: 'A workshop or class', categories: ['Making', 'Creative'] },
-      {
-        icon: ChefHat,
-        label: 'Cooking a big meal for friends',
-        categories: ['Culinary', 'Social'],
-      },
-      {
-        icon: BookOpen,
-        label: 'Getting lost in a book or puzzle',
-        categories: ['Intellectual', 'Gaming'],
-      },
-    ],
-  },
-  {
-    question: 'You feel most satisfied when you...',
-    options: [
-      {
-        icon: Lightbulb,
-        label: "Create something that didn't exist before",
-        categories: ['Creative', 'Making'],
-      },
-      { icon: Dumbbell, label: 'Push past a physical challenge', categories: ['Physical'] },
-      {
-        icon: Music,
-        label: 'Master a skill through practice',
-        categories: ['Music', 'Intellectual'],
-      },
-      {
-        icon: HeartHandshake,
-        label: 'Connect with others over shared interests',
-        categories: ['Social'],
-      },
-    ],
-  },
-  {
-    question: 'Your energy level right now...',
-    options: [
-      { icon: Zap, label: 'High — I want to DO something', categories: ['Physical', 'Outdoor'] },
-      {
-        icon: Hammer,
-        label: 'Medium — I want to create or build',
-        categories: ['Creative', 'Making'],
-      },
-      {
-        icon: Coffee,
-        label: 'Chill — I want to relax and explore',
-        categories: ['Intellectual', 'Gaming', 'Collecting'],
-      },
-      {
-        icon: Users,
-        label: 'Social — I want to be around people',
-        categories: ['Social', 'Culinary'],
-      },
-    ],
-  },
-  {
-    question: 'What kind of progress would keep you coming back?',
-    options: [
-      {
-        icon: Palette,
-        label: 'Having something tangible I made',
-        categories: ['Creative', 'Making'],
-      },
-      {
-        icon: Activity,
-        label: 'Feeling stronger or more capable',
-        categories: ['Physical', 'Outdoor'],
-      },
-      {
-        icon: Lightbulb,
-        label: 'Understanding something at a deeper level',
-        categories: ['Intellectual', 'Gaming'],
-      },
-      {
-        icon: Coffee,
-        label: 'Building a collection with a point of view',
-        categories: ['Collecting'],
-      },
-    ],
-  },
-  {
-    question: 'Where would you most like this hobby to take you?',
-    options: [
-      {
-        icon: BookOpen,
-        label: 'A quiet corner I can make my own',
-        categories: ['Collecting', 'Intellectual'],
-      },
-      {
-        icon: Mountain,
-        label: 'Outside, away from the usual routine',
-        categories: ['Outdoor', 'Physical'],
-      },
-      {
-        icon: Hammer,
-        label: 'A workshop, studio, or maker space',
-        categories: ['Making', 'Creative'],
-      },
-      {
-        icon: Users,
-        label: 'A table, club, or room full of people',
-        categories: ['Social', 'Culinary', 'Music'],
-      },
-    ],
-  },
-  {
-    question: 'How do you enjoy learning something new?',
-    options: [
-      {
-        icon: BookOpen,
-        label: 'Following a self-guided rabbit hole',
-        categories: ['Intellectual', 'Collecting', 'Gaming'],
-      },
-      {
-        icon: HeartHandshake,
-        label: 'Learning alongside other people',
-        categories: ['Social', 'Music', 'Culinary'],
-      },
-      {
-        icon: Wrench,
-        label: 'Trying, adjusting, and using my hands',
-        categories: ['Making', 'Creative'],
-      },
-      {
-        icon: Dumbbell,
-        label: 'Repeating a practice until it clicks',
-        categories: ['Physical', 'Outdoor', 'Music'],
-      },
-    ],
-  },
-  {
-    question: 'Six months from now, what would feel most worthwhile?',
-    options: [
-      {
-        icon: Palette,
-        label: 'I have a body of work I am proud of',
-        categories: ['Creative', 'Making'],
-      },
-      {
-        icon: Zap,
-        label: 'I can do something my body could not do before',
-        categories: ['Physical', 'Outdoor'],
-      },
-      {
-        icon: Users,
-        label: 'I have people and a place I look forward to',
-        categories: ['Social', 'Culinary', 'Music'],
-      },
-      {
-        icon: Gamepad2,
-        label: 'I have mastered a system or built real knowledge',
-        categories: ['Intellectual', 'Gaming', 'Collecting'],
-      },
-    ],
-  },
-];
 
 const ARCHETYPE_MAP: Record<Category, { title: string; emoji: string; description: string }> = {
   Creative: {
@@ -378,7 +165,6 @@ export function HobbyQuiz() {
   const trackedFunnelEngagedRef = useRef(false);
 
   const isResults = step >= QUESTIONS.length;
-  const currentQuestion = QUESTIONS[step];
 
   function handleSelect(optionIndex: number) {
     setSelectedOption(optionIndex);
@@ -516,98 +302,13 @@ export function HobbyQuiz() {
   return (
     <FadeIn>
       <div className="mx-auto min-h-[calc(100svh-4.5rem)] max-w-3xl px-4 py-10 sm:py-14">
-        {/* Header */}
         {!isResults && (
-          <div className="mb-10 rounded-2xl bg-card px-6 py-9 text-center shadow-[0_12px_36px_color-mix(in_srgb,var(--scrim)_10%,transparent)] sm:px-10">
-            <p className="text-base font-bold text-field-sky-ink">Find a hobby</p>
-            <h1 className="mt-3 font-serif text-5xl font-medium leading-[1.02] tracking-[-0.03em] text-foreground sm:text-6xl">
-              Find Your Perfect Hobby
-            </h1>
-            <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted-foreground">
-              Nine focused questions, about three minutes, and a shortlist built around how you
-              actually like to spend your time.
-            </p>
-          </div>
-        )}
-
-        {/* Progress indicator */}
-        {!isResults && (
-          <div className="mb-8 flex items-center justify-center gap-2">
-            {QUESTIONS.map((_, i) => (
-              <div
-                key={i}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  i < step
-                    ? 'w-8 bg-foreground'
-                    : i === step
-                      ? 'w-8 bg-foreground/60'
-                      : 'w-4 bg-foreground/10'
-                }`}
-              />
-            ))}
-          </div>
-        )}
-
-        {/* Quiz question */}
-        {!isResults && currentQuestion && (
-          <div key={step} className="animate-in fade-in slide-in-from-right-4 duration-300">
-            <SpotlightCard
-              className="rounded-2xl border-0 bg-card shadow-[0_12px_36px_color-mix(in_srgb,var(--scrim)_12%,transparent)]"
-              innerClassName="p-6 sm:p-9"
-            >
-              <div className="mb-3 text-center text-base font-medium text-subtle">
-                Question {step + 1} of {QUESTIONS.length}
-              </div>
-              <h2 className="mb-8 text-center font-serif text-3xl font-medium text-foreground">
-                {currentQuestion.question}
-              </h2>
-
-              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                {currentQuestion.options.map((option, i) => {
-                  const isSelected = selectedOption === i;
-                  const OptionIcon = option.icon;
-                  return (
-                    <button
-                      key={i}
-                      data-quiz-option
-                      onClick={() => handleSelect(i)}
-                      className={`flex min-h-16 items-center gap-3 rounded-xl border-2 p-4 text-left transition-all duration-150 hover:border-field-sky-ink hover:bg-field-sky focus:outline-none focus:ring-2 focus:ring-field-sky-ink focus:ring-offset-2 ${
-                        isSelected
-                          ? 'border-foreground/30 bg-foreground/10 shadow-sm'
-                          : 'border-border bg-card'
-                      }`}
-                    >
-                      <OptionIcon
-                        className={`h-4 w-4 shrink-0 ${isSelected ? 'text-primary' : 'text-muted-foreground'}`}
-                        aria-hidden="true"
-                      />
-                      <span
-                        className={`text-base font-medium ${
-                          isSelected ? 'text-foreground' : 'text-foreground'
-                        }`}
-                      >
-                        {option.label}
-                      </span>
-                    </button>
-                  );
-                })}
-              </div>
-
-              <div className="mt-6 flex justify-center">
-                <button
-                  onClick={handleNext}
-                  disabled={selectedOption === null}
-                  className={`rounded-lg px-8 py-3 text-sm font-semibold transition-all duration-150 ${
-                    selectedOption !== null
-                      ? 'bg-primary text-primary-foreground hover:opacity-90 shadow-sm hover:shadow-md'
-                      : 'cursor-not-allowed bg-foreground/5 text-subtle'
-                  }`}
-                >
-                  {step === QUESTIONS.length - 1 ? 'See my results →' : 'Next →'}
-                </button>
-              </div>
-            </SpotlightCard>
-          </div>
+          <QuizQuestions
+            step={step}
+            selectedOption={selectedOption}
+            handleSelect={handleSelect}
+            handleNext={handleNext}
+          />
         )}
 
         {/* Results screen */}

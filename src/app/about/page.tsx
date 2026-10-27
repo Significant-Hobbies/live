@@ -1,14 +1,15 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import { FadeIn, GradientMesh, GridBackground, SpotlightCard } from '~/components/aceternity';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPublicMetadata({
   title: 'About — Significant Hobbies',
   description:
     'Significant Hobbies turns your hobby history into a shareable timeline. Quiz-based recommendations, gamified discovery, and a public profile.',
   alternates: { canonical: 'https://live.significanthobbies.com/about' },
-};
+});
 
 export default function AboutPage() {
   return (

@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
 import { desc, eq } from 'drizzle-orm';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -62,12 +63,12 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category: slug } = await params;
   const cat = slugToCategory(slug);
-  if (!cat) return { title: 'Category — SignificantHobbies' };
-  return {
+  if (!cat) return withPublicMetadata({ title: 'Category — SignificantHobbies' });
+  return withPublicMetadata({
     title: `${cat.name} Hobbies — SignificantHobbies`,
     description: `Explore ${cat.hobbies.length} ${cat.name.toLowerCase()} hobbies. Browse community timelines, find tools, and discover your next ${cat.name.toLowerCase()} passion.`,
     alternates: { canonical: `https://live.significanthobbies.com/hobbies/category/${slug}` },
-  };
+  });
 }
 
 export default async function CategoryPage({ params }: Props) {

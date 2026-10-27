@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -13,7 +14,7 @@ import { JsonLd } from '~/components/json-ld';
 import { Whale } from '~/components/whale';
 import { MILESTONES } from '~/lib/experiences';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPublicMetadata({
   title: '50 Things to Do Before You Turn 30 — Your Ultimate Bucket List',
   description:
     '50 bucket list goals worth achieving before 30: backpack SE Asia, fall in love, start something, negotiate your first raise, skydive, write something real. Real and varied — not a travel brochure.',
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
       'Travel, career, love, adventure, and creativity — 50 bucket list goals that define what your 20s are actually for.',
   },
   alternates: { canonical: 'https://live.significanthobbies.com/bucket-list-before-30' },
-};
+});
 
 // Sourced from ~/lib/experiences so the suggestion engine can see these
 // too; this page renders them, it no longer owns them.

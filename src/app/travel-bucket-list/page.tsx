@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -14,7 +15,7 @@ import {
 import { JsonLd } from '~/components/json-ld';
 import { Whale } from '~/components/whale';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPublicMetadata({
   title: 'Ultimate Travel Bucket List: 75 Destinations to See Before You Die',
   description:
     '75 travel bucket list destinations organized by region: Europe, Asia, Americas, Africa & Middle East, Oceania & Antarctica. With notes on why each one belongs on every serious list.',
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
       'From Stonehenge (Obama) to the Serengeti (Oprah) to Namibia (Clinton) — 75 destinations worth crossing the world for.',
   },
   alternates: { canonical: 'https://live.significanthobbies.com/travel-bucket-list' },
-};
+});
 
 // Sourced from ~/lib/experiences. These 75 destinations were unreachable by
 // any other code while they lived here; the page renders them now, it does not

@@ -1,5 +1,6 @@
 'use client';
 
+import { addToMyListLabel } from '~/lib/public-button-copy';
 import { Check, Loader2, Sparkles } from 'lucide-react';
 import { useState, useTransition } from 'react';
 
@@ -72,7 +73,7 @@ export function AddToMyListButton({
           ) : (
             <Sparkles className="size-4" />
           )}
-          {isPending ? 'Saving privately…' : added ? 'In my list' : 'Add to my list'}
+          {isPending ? 'Saving privately…' : added ? 'In my list' : addToMyListLabel}
         </button>
         {failed ? (
           <p className="mt-2 text-xs font-medium text-destructive" role="status">
@@ -107,7 +108,7 @@ export function AddToMyListButton({
       }
       className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted-foreground transition-colors hover:bg-muted disabled:cursor-not-allowed disabled:opacity-50"
     >
-      {isPending ? 'Adding…' : failed ? 'Could not save — retry' : '+ Add to my list'}
+      {isPending ? 'Adding…' : failed ? 'Could not save — retry' : `+ ${addToMyListLabel}`}
       {failed ? (
         <span id={`add-${title.replace(/\W+/g, '-').toLowerCase()}-error`} className="sr-only">
           Live could not save this yet. Please try again.
