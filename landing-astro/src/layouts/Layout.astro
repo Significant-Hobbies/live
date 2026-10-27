@@ -1,4 +1,5 @@
 ---
+import { publicIdentity } from '../../../src/lib/public-identity';
 import Base from '@saas-maker/templates/Base.astro';
 import '../styles/landing.css';
 import { baseProps } from '@saas-maker/templates/page';
@@ -50,19 +51,9 @@ const faqJsonLd = faq && {
     <link rel="preload" href={bodyFont} as="font" type="font/woff2" crossorigin />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
-    <script is:inline type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Live",
-      "alternateName": ["Live by Significant Hobbies", "live.significanthobbies.com"],
-      "url": SITE_URL,
-      "description": "Discover hobbies and experiences worth trying, turn them into bucket lists and commitments, and keep a private-by-default record through timelines, side quests, and personal history.",
-      "creator": {
-        "@type": "Person",
-        "name": "Sarthak Agrawal",
-        "url": "https://sarthakagrawal.dev"
-      }
-    })} />
+    <meta name="ai-summary" content={content.page.description} />
+    <link rel="alternate" type="text/markdown" href={`${SITE_URL}/index.md`} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(publicIdentity)} />
     {faqJsonLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />}
     <script is:inline>
       // Gallery links have no data-attribute API. Register before the deferred logger.

@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -11,7 +12,7 @@ import {
 } from '~/components/aceternity';
 import { JsonLd } from '~/components/json-ld';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPublicMetadata({
   title: 'What Are Significant Hobbies? — SignificantHobbies',
   description:
     'Significant hobbies are the interests that shape who you are across life phases. Learn how to map your hobby journey, discover your hobby personality, and find what to try next.',
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     description: 'The interests that shape who you are across life phases.',
   },
   alternates: { canonical: 'https://live.significanthobbies.com/what-are-significant-hobbies' },
-};
+});
 
 const ARCHETYPES = [
   {
@@ -519,10 +520,9 @@ export default function WhatAreSignificantHobbiesPage() {
                       </div>
                       <div>
                         <h3 className="mb-2 font-bold text-foreground">{title}</h3>
-                        <p
-                          className="text-sm leading-relaxed text-muted-foreground"
-                          dangerouslySetInnerHTML={{ __html: body }}
-                        />
+                        <p className="text-sm leading-relaxed text-muted-foreground">
+                          {body.replaceAll('&apos;', "'")}
+                        </p>
                       </div>
                     </SpotlightCard>
                   </StaggerItem>

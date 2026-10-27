@@ -1,5 +1,6 @@
 'use client';
 
+import { randomHobbyMessage } from '~/lib/public-button-copy';
 import { useEffect, useState } from 'react';
 
 import { FadeIn, GradientMesh, SpotlightCard } from '~/components/aceternity';
@@ -13,7 +14,7 @@ function slugify(s: string): string {
 }
 
 export default function RandomHobby() {
-  const [msg, setMsg] = useState('Picking a random hobby…');
+  const [msg, setMsg] = useState(randomHobbyMessage);
 
   useEffect(() => {
     const all = HOBBY_CATEGORIES.flatMap((c) => c.hobbies);

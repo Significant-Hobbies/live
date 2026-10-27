@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
 import { count, desc, eq, like, or } from 'drizzle-orm';
 import Link from 'next/link';
 
@@ -17,10 +18,10 @@ import { db } from '~/server/db';
 
 import { SearchPageClient } from './search-client';
 
-export const metadata = {
+export const metadata = withPublicMetadata({
   title: 'Search — SignificantHobbies',
   alternates: { canonical: 'https://live.significanthobbies.com/search' },
-};
+});
 
 interface Props {
   searchParams: Promise<{ q?: string }>;

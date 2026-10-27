@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -11,12 +12,12 @@ import {
 } from '~/components/aceternity';
 import { JsonLd } from '~/components/json-ld';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPublicMetadata({
   title: '30 Impressive Hobbies to Put on Your Resume | SignificantHobbies',
   description:
     'Learn which hobbies to include on your resume and why. 30 hobbies organized by what they signal to employers — leadership, creativity, discipline, and more.',
   alternates: { canonical: 'https://live.significanthobbies.com/hobbies-for-resume' },
-};
+});
 
 function hobbySlug(name: string) {
   return name.toLowerCase().replace(/\s+/g, '-');
@@ -357,10 +358,9 @@ export default function HobbiesForResumePage() {
                         >
                           {hobby.name}
                         </Link>
-                        <p
-                          className="mt-1 text-sm text-muted-foreground leading-relaxed"
-                          dangerouslySetInnerHTML={{ __html: hobby.signal }}
-                        />
+                        <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
+                          {hobby.signal.replaceAll('&apos;', "'")}
+                        </p>
                       </div>
                     </SpotlightCard>
                   </StaggerItem>

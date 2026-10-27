@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
 import { ArrowRight } from 'lucide-react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -18,7 +19,7 @@ import { HobbyFacetsClient } from './hobby-facets-client';
 const description =
   'Browse 110+ hobbies across 10 categories. Find your next passion — from creative arts and music to outdoor adventures and making.';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPublicMetadata({
   title: { absolute: 'Hobby directory: 110+ pursuits to explore' },
   description,
   alternates: { canonical: `${SITE_URL}/hobbies` },
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     description,
     images: [DEFAULT_SOCIAL_IMAGE],
   },
-};
+});
 
 export default function HobbiesPage() {
   const totalCategories = HOBBY_CATEGORIES.length;

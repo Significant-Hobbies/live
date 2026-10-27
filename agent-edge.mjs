@@ -66,9 +66,6 @@ export function handleAgentEdge(request) {
   if (path === '/llms-full.txt' && AGENT_SURFACE.llmsFullTxt) {
     return text(AGENT_SURFACE.llmsFullTxt, 'text/plain; charset=utf-8');
   }
-  if (path === '/index.md') {
-    return text(AGENT_SURFACE.indexMd, 'text/markdown; charset=utf-8');
-  }
   if (path === '/api/ai') {
     // Re-bind origin so preview/custom domains stay correct
     const catalog = {
@@ -93,22 +90,7 @@ export function handleAgentEdge(request) {
     return json(openApiSpec(url.origin));
   }
 
-  // Homepage markdown negotiation
-  if ((path === '/' || path === '') && wantsMarkdown(request)) {
-    return text(AGENT_SURFACE.indexMd, 'text/markdown; charset=utf-8', {
-      Link: '</index.md>; rel="alternate"; type="text/markdown"',
-      Vary: 'Accept',
-    });
-  }
-
   return null;
-}
-
-function wantsMarkdown(request) {
-  const accept = (request.headers.get('accept') || '').toLowerCase();
-  if (!accept.includes('text/markdown')) return false;
-  if (!accept.includes('text/html')) return true;
-  return accept.indexOf('text/markdown') < accept.indexOf('text/html');
 }
 
 function text(body, type, extra = {}) {

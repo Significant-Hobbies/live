@@ -1,3 +1,4 @@
+import { markdownResponse } from '~/lib/agent-surfaces/http.mjs';
 import { type NextRequest, NextResponse } from 'next/server';
 
 import { renderPublicRouteMarkdown } from '~/lib/public-route-markdown';
@@ -18,11 +19,9 @@ export async function GET(request: NextRequest) {
     });
   }
 
-  return new NextResponse(markdown, {
-    status: 200,
-    headers: {
-      'Cache-Control': 'public, max-age=300, s-maxage=3600, stale-while-revalidate=86400',
-      'Content-Type': 'text/markdown; charset=utf-8',
-    },
+  return markdownResponse(markdown, request, {
+    // This is the internal source API. Only the edge's reviewed static-document
+    // boundary may cache a response; normalized aliases must not cache profiles.
+    'Cache-Control': 'private, no-store',
   });
 }

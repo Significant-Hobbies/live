@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -15,7 +16,7 @@ import { DEFAULT_SOCIAL_IMAGE, SITE_URL } from '~/lib/site-metadata';
 
 const description =
   "Explore how hobbies shaped famous lives—from Steve Jobs' calligraphy to Einstein's violin—across childhood, career, and reinvention.";
-export const metadata: Metadata = {
+export const metadata: Metadata = withPublicMetadata({
   title: { absolute: 'Famous hobby journeys across remarkable lives' },
   description,
   alternates: { canonical: `${SITE_URL}/journeys` },
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     description,
     images: [DEFAULT_SOCIAL_IMAGE],
   },
-};
+});
 
 export default function JourneysPage() {
   return (

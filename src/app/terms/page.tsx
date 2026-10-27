@@ -1,12 +1,13 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
 import Link from 'next/link';
 
 import { FadeIn, GridBackground, SpotlightCard } from '~/components/aceternity';
 
-export const metadata = {
+export const metadata = withPublicMetadata({
   title: 'Terms — Significant Hobbies',
   description: 'Use of Significant Hobbies is provided as-is.',
   alternates: { canonical: 'https://live.significanthobbies.com/terms' },
-};
+});
 
 export default function TermsPage() {
   return (

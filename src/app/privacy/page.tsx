@@ -1,13 +1,14 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import { FadeIn, GridBackground, SpotlightCard } from '~/components/aceternity';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPublicMetadata({
   title: 'Privacy — Significant Hobbies',
   description: "Short and clear: what we store, what we don't, and how to delete.",
   alternates: { canonical: 'https://live.significanthobbies.com/privacy' },
-};
+});
 
 export default function PrivacyPage() {
   return (

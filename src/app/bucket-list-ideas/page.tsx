@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
 import Link from 'next/link';
 
 import {
@@ -19,10 +20,12 @@ import { FAMOUS_BUCKET_LISTS } from '~/lib/famous-bucket-lists';
 const IDEAS_BY_CATEGORY = EXPERIENCES_BY_CATEGORY;
 const totalIdeas = Object.values(IDEAS_BY_CATEGORY).reduce((sum, cat) => sum + cat.ideas.length, 0);
 const experienceByTitle = new Map(EXPERIENCE_ENTRIES.map((entry) => [entry.title, entry]));
-export const metadata = experienceMetadata(
-  `${totalIdeas} Bucket List Ideas by Category | Live`,
-  `Explore ${totalIdeas} bucket list ideas across travel, creativity, relationships and more. Read practical guides and save ideas privately to your own list.`,
-  '/bucket-list-ideas'
+export const metadata = withPublicMetadata(
+  experienceMetadata(
+    `${totalIdeas} Bucket List Ideas by Category | Live`,
+    `Explore ${totalIdeas} bucket list ideas across travel, creativity, relationships and more. Read practical guides and save ideas privately to your own list.`,
+    '/bucket-list-ideas'
+  )
 );
 
 export default function BucketListIdeasPage() {

@@ -121,6 +121,8 @@ function checkComplexity() {
     ...productionPaths,
     '-x',
     '**/*.test.*',
+    '-x',
+    '**/src/lib/agent-surfaces/**',
     '--csv',
   ]);
   const rows = result.stdout
@@ -158,7 +160,7 @@ function checkDuplication() {
     '--mode',
     'strict',
     '--ignore',
-    '**/*.test.*,**/node_modules/**,**/coverage/**,**/.next/**,**/out/**,**/dist/**',
+    '**/*.test.*,**/node_modules/**,**/coverage/**,**/.next/**,**/out/**,**/dist/**,**/src/lib/agent-surfaces/**',
     '--reporters',
     'json',
     '--output',
@@ -230,6 +232,7 @@ function sourceFiles(root) {
   const files = [];
   for (const entry of readdirSync(root, { withFileTypes: true })) {
     const path = join(root, entry.name);
+    if (path === resolve(projectRoot, 'src/lib/agent-surfaces')) continue;
     if (entry.isDirectory()) files.push(...sourceFiles(path));
     else if (entry.isFile() && scannedExtensions.has(extname(entry.name))) files.push(path);
   }

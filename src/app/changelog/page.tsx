@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { GitHubIcon } from '@/components/github-icon';
@@ -39,14 +40,14 @@ const releases = [
   },
 ] as const;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPublicMetadata({
   title: 'Changelog',
   description:
     'Meaningful improvements to SignificantHobbies, from daily reflection to hobby discovery and life planning.',
   alternates: {
     canonical: '/changelog',
   },
-};
+});
 
 export default function ChangelogPage() {
   return (

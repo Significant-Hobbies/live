@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, Check, Circle } from 'lucide-react';
@@ -5,7 +6,7 @@ import { BingoBoard } from '~/components/bucket-list/bingo-board';
 import { Button } from '~/components/ui/button';
 import { generateLifeBingo } from '~/lib/life-bingo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPublicMetadata({
   title: 'Life Bingo — Make Life Less Repetitive',
   description:
     'Turn the life you want into a beautiful, playable bucket list. Make a personal Life Bingo board, live it, and keep the stories.',
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     description: 'A bucket list you can actually play. Make a personal board in under a minute.',
     type: 'website',
   },
-};
+});
 
 const sample = generateLifeBingo({
   horizon: 'season',

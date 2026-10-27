@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '~/lib/public-metadata';
 import type { LucideIcon } from 'lucide-react';
 import { Calculator, Package, Scale, Target, Timer } from 'lucide-react';
 import type { Metadata } from 'next';
@@ -11,12 +12,12 @@ import {
   StaggerItem,
 } from '~/components/aceternity';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPublicMetadata({
   title: 'Hobby Tools — SignificantHobbies',
   description:
     'Free tools to help you discover, plan, and commit to hobbies. Hobby quiz, time calculator, hobby comparison, and more.',
   alternates: { canonical: 'https://live.significanthobbies.com/tools' },
-};
+});
 
 interface Tool {
   icon: LucideIcon;
