@@ -407,7 +407,7 @@ export async function renderPublicBucketListSource(slug: string): Promise<string
 }
 function renderPublicTree(tree: ReactNode, path: string): string {
   const content = reactSourceMarkdown(createElement('main', null, tree), {
-    origin: 'https://live.significanthobbies.com',
+    origin: 'https://significanthobbies.com',
     includeFormDefaults: path.startsWith('/tools/'),
     components: [
       AdultHobbySection,
@@ -431,7 +431,7 @@ function renderPublicTree(tree: ReactNode, path: string): string {
     ],
     adapters,
   });
-  return `${content}\n\n> Source: https://live.significanthobbies.com${path}\n`;
+  return `${content}\n\n> Source: https://significanthobbies.com${path}\n`;
 }
 
 export async function renderPublicCollectionSource(slug: string): Promise<string | null> {

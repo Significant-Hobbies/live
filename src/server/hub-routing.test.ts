@@ -1,9 +1,7 @@
 import { describe, expect, it } from 'vitest';
-
 import {
   fetchHubRoute,
   shouldDelegateHub,
-  HUB_AGENT_CONTRACT_PATHS,
   hubServiceRequest,
   isHubServicePath,
   legacyLiveRedirect,
@@ -11,132 +9,58 @@ import {
   PERSONAL_PLATFORM_INTERNAL_HEADER,
 } from '../../hub-routing.mjs';
 
-describe('Hub edge routing', () => {
-  it.each(['/', '/hub', '/health', '/mcp', '/v1/life/today', '/v1/sync/push'])(
-    'delegates %s to Personal Platform',
+const PUBLIC_DISCOVERY_PATHS = [
+  '/robots.txt',
+  '/sitemap.xml',
+  '/llms.txt',
+  '/llms-full.txt',
+  '/index.md',
+  '/api/ai',
+  '/api-ai.json',
+  '/.well-known/security.txt',
+];
+describe('Hub compatibility routing', () => {
+  it.each(['/hub', '/health', '/mcp', '/v1/life/today', '/v1/sync/push', '/landing/home.css'])(
+    'retains only the compatibility path %s',
     (pathname) => {
       expect(isHubServicePath(pathname)).toBe(true);
+      expect(shouldDelegateHub(new URL(`https://significanthobbies.com${pathname}`))).toBe(true);
+      expect(legacyLiveRedirect(new URL(`https://significanthobbies.com${pathname}`))).toBeNull();
     }
   );
-
-  it.each(['/api/auth/session', '/library', '/experiences'])('keeps %s in Live', (pathname) => {
+  it.each([
+    '/',
+    '/experiences',
+    '/about',
+    '/landing',
+    '/landing-extra/home.css',
+    '/.well-known/agent-skills/hub',
+    ...PUBLIC_DISCOVERY_PATHS,
+  ])('serves Live directly at the apex for %s', (pathname) => {
+    const url = new URL(`https://significanthobbies.com${pathname}`);
     expect(isHubServicePath(pathname)).toBe(false);
+    expect(shouldDelegateHub(url)).toBe(false);
+    expect(legacyLiveRedirect(url)).toBeNull();
   });
-
-  describe('Hub landing assets', () => {
-    it.each([
-      '/landing/',
-      '/landing/x',
-      '/landing/fonts/home.woff2',
-      '/landing/home.css',
-      '/landing/images/home.webp',
-    ])('delegates the precise prefix %s only on apex hosts', (pathname) => {
-      expect(isHubServicePath(pathname)).toBe(true);
-      for (const hostname of ['significanthobbies.com', 'www.significanthobbies.com']) {
-        const url = new URL(`https://${hostname}${pathname}`);
-        expect(shouldDelegateHub(url)).toBe(true);
-        expect(legacyLiveRedirect(url)).toBeNull();
-      }
-      expect(shouldDelegateHub(new URL(`https://live.significanthobbies.com${pathname}`))).toBe(
-        false
-      );
-      expect(shouldDelegateHub(new URL(`https://other.example${pathname}`))).toBe(false);
-    });
-
-    it.each(['/landing', '/landing-extra/home.css', '/landings/home.css'])(
-      'redirects the non-prefix path %s to Live',
-      (pathname) => {
-        expect(isHubServicePath(pathname)).toBe(false);
-        for (const hostname of ['significanthobbies.com', 'www.significanthobbies.com']) {
-          const url = new URL(`https://${hostname}${pathname}`);
-          expect(shouldDelegateHub(url)).toBe(false);
-          expect(legacyLiveRedirect(url)?.href).toBe(
-            `https://live.significanthobbies.com${pathname}`
-          );
-        }
-      }
-    );
-
-    it('forwards apex assets and preserves their Hub cache headers', async () => {
-      const request = new Request('https://significanthobbies.com/landing/home.css');
-      const response = await fetchHubRoute(request, {
-        HUB_SERVICE: {
-          fetch: async (forwarded: Request) => {
-            expect(forwarded).toBe(request);
-            return new Response('body {}', {
-              headers: { 'Cache-Control': 'public, max-age=3600' },
-            });
-          },
-        },
-      });
-      expect(await response?.text()).toBe('body {}');
-      expect(response?.headers.get('cache-control')).toBe('public, max-age=3600');
-      expect(response?.headers.has('cdn-cache-control')).toBe(false);
-      expect(
-        await fetchHubRoute(new Request('https://live.significanthobbies.com/landing/home.css'), {})
-      ).toBeNull();
-    });
+  it('retains the complete old Live origin without redirecting guest work or sessions', () => {
+    for (const path of [
+      '/',
+      '/bucket-list',
+      '/journal',
+      '/login',
+      '/api/auth/callback/google',
+      '/live-more?from=bookmark',
+    ]) {
+      expect(legacyLiveRedirect(new URL(`https://live.significanthobbies.com${path}`))).toBeNull();
+    }
   });
-
-  it('keeps every Live path on the Live host', () => {
-    expect(legacyLiveRedirect(new URL('https://live.significanthobbies.com/live-more'))).toBeNull();
-  });
-
-  it('redirects legacy apex Live paths without losing path or query', () => {
+  it('canonicalizes only the www alias without losing path or query', () => {
     expect(
-      legacyLiveRedirect(new URL('https://significanthobbies.com/live-more?from=old-bookmark'))
+      legacyLiveRedirect(new URL('https://www.significanthobbies.com/live-more?from=bookmark'))
         ?.href
-    ).toBe('https://live.significanthobbies.com/live-more?from=old-bookmark');
+    ).toBe('https://significanthobbies.com/live-more?from=bookmark');
+    expect(legacyLiveRedirect(new URL('https://evil.example/live-more'))).toBeNull();
   });
-
-  it.each(['/', '/hub', '/health', '/mcp', '/v1/life/today'])(
-    'does not redirect the Hub route %s',
-    (pathname) => {
-      expect(legacyLiveRedirect(new URL(`https://significanthobbies.com${pathname}`))).toBeNull();
-    }
-  );
-
-  it.each(HUB_AGENT_CONTRACT_PATHS)(
-    'keeps the apex agent contract file %s on the apex',
-    (pathname) => {
-      expect(isHubServicePath(pathname)).toBe(true);
-      expect(legacyLiveRedirect(new URL(`https://significanthobbies.com${pathname}`))).toBeNull();
-      expect(
-        legacyLiveRedirect(new URL(`https://www.significanthobbies.com${pathname}`))
-      ).toBeNull();
-    }
-  );
-
-  it('covers the whole crawler and agent contract', () => {
-    expect(new Set(HUB_AGENT_CONTRACT_PATHS)).toEqual(
-      new Set([
-        '/robots.txt',
-        '/sitemap.xml',
-        '/llms.txt',
-        '/llms-full.txt',
-        '/index.md',
-        '/api/ai',
-        '/api-ai.json',
-        '/.well-known/security.txt',
-      ])
-    );
-  });
-
-  it.each(['/blog/side-quests', '/compare', '/about', '/side-quests'])(
-    'still moves the Live-owned content path %s to the Live host',
-    (pathname) => {
-      expect(legacyLiveRedirect(new URL(`https://significanthobbies.com${pathname}`))?.href).toBe(
-        `https://live.significanthobbies.com${pathname}`
-      );
-    }
-  );
-
-  it.each(HUB_AGENT_CONTRACT_PATHS)('leaves the Live host to serve its own %s', (pathname) => {
-    expect(
-      legacyLiveRedirect(new URL(`https://live.significanthobbies.com${pathname}`))
-    ).toBeNull();
-  });
-
   it('marks only the private service-binding request as trusted', () => {
     const request = markPersonalPlatformInternalRequest(
       new Request('https://personal-auth.internal/api/personal-platform/live/summary')
@@ -158,16 +82,13 @@ describe('Hub edge routing', () => {
   // routes and got a 401 instead of the 200 a GET receives. Run HEAD as GET
   // against the service binding and let the caller drop the body.
   describe('HEAD parity for the Hub service binding', () => {
-    it.each(['/', '/hub', '/health', ...HUB_AGENT_CONTRACT_PATHS])(
-      'rewrites a HEAD request for %s to GET',
-      (pathname) => {
-        const request = hubServiceRequest(
-          new Request(`https://significanthobbies.com${pathname}`, { method: 'HEAD' })
-        );
-        expect(request.method).toBe('GET');
-        expect(request.url).toBe(`https://significanthobbies.com${pathname}`);
-      }
-    );
+    it.each(['/hub', '/health', '/mcp'])('rewrites a HEAD request for %s to GET', (pathname) => {
+      const request = hubServiceRequest(
+        new Request(`https://significanthobbies.com${pathname}`, { method: 'HEAD' })
+      );
+      expect(request.method).toBe('GET');
+      expect(request.url).toBe(`https://significanthobbies.com${pathname}`);
+    });
 
     it.each(['GET', 'POST', 'OPTIONS'])('leaves a %s request untouched', (method) => {
       const original = new Request('https://significanthobbies.com/v1/sync/push', { method });
@@ -183,18 +104,18 @@ describe('Hub edge routing', () => {
     it('redirects /hub-opengraph-image to the real Live route name', () => {
       expect(
         legacyLiveRedirect(new URL('https://significanthobbies.com/hub-opengraph-image'))?.href
-      ).toBe('https://live.significanthobbies.com/opengraph-image');
+      ).toBe('https://significanthobbies.com/opengraph-image');
     });
 
     it('redirects the www apex host the same way', () => {
       expect(
         legacyLiveRedirect(new URL('https://www.significanthobbies.com/hub-opengraph-image'))?.href
-      ).toBe('https://live.significanthobbies.com/opengraph-image');
+      ).toBe('https://significanthobbies.com/opengraph-image');
     });
 
     it('leaves the real Live route name alone on the Live host', () => {
       expect(
-        legacyLiveRedirect(new URL('https://live.significanthobbies.com/opengraph-image'))
+        legacyLiveRedirect(new URL('https://significanthobbies.com/opengraph-image'))
       ).toBeNull();
     });
   });

@@ -56,26 +56,26 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'Live',
-    url: 'https://live.significanthobbies.com',
+    url: 'https://significanthobbies.com',
     title: 'Live — Bucket Lists, Side Quests & Weekly Journal',
     description:
       'Find bucket-list ideas and side quests, keep your own list, log what you do, and write one private entry each week.',
     images: [
       {
-        url: 'https://live.significanthobbies.com/opengraph-image',
+        url: 'https://significanthobbies.com/opengraph-image',
         width: 1200,
         height: 630,
         alt: 'Live',
       },
     ],
   },
-  metadataBase: new URL('https://live.significanthobbies.com'),
+  metadataBase: new URL('https://significanthobbies.com'),
   twitter: {
     card: 'summary_large_image',
     title: 'Live — Bucket Lists, Side Quests & Weekly Journal',
     description:
       'Find bucket-list ideas and side quests, keep your own list, log what you do, and write one private entry each week.',
-    images: ['https://live.significanthobbies.com/opengraph-image'],
+    images: ['https://significanthobbies.com/opengraph-image'],
   },
 };
 

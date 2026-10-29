@@ -20,7 +20,7 @@ import { SearchPageClient } from './search-client';
 
 export const metadata = withPublicMetadata({
   title: 'Search — SignificantHobbies',
-  alternates: { canonical: 'https://live.significanthobbies.com/search' },
+  alternates: { canonical: 'https://significanthobbies.com/search' },
 });
 
 interface Props {

@@ -37,7 +37,7 @@ describe('public route Markdown boundary', () => {
   it('negotiates Markdown from the canonical route source', async () => {
     const load = vi.fn(async (path: string) => renderPublicRouteMarkdown(path));
     const response = await handlePublicRouteMarkdown(
-      new Request('https://live.significanthobbies.com/hobbies/painting', {
+      new Request('https://significanthobbies.com/hobbies/painting', {
         headers: { Accept: 'text/markdown, text/html;q=0.1' },
       }),
       load
@@ -46,7 +46,7 @@ describe('public route Markdown boundary', () => {
     expect(response?.status).toBe(200);
     expect(response?.headers.get('content-type')).toBe('text/markdown; charset=utf-8');
     expect(response?.headers.get('content-location')).toBe(
-      'https://live.significanthobbies.com/hobbies/painting'
+      'https://significanthobbies.com/hobbies/painting'
     );
     expect(await response?.text()).toContain('# Painting');
     expect(load).toHaveBeenCalledWith('/hobbies/painting', expect.any(Request));
@@ -72,7 +72,7 @@ describe('public route Markdown boundary', () => {
     };
 
     const miss = await handleCachedPublicRouteMarkdown(
-      new Request('https://live.significanthobbies.com/about.md'),
+      new Request('https://significanthobbies.com/about.md'),
       load,
       options
     );
@@ -80,7 +80,7 @@ describe('public route Markdown boundary', () => {
     await Promise.all(writes);
 
     const hit = await handleCachedPublicRouteMarkdown(
-      new Request('https://live.significanthobbies.com/about.md'),
+      new Request('https://significanthobbies.com/about.md'),
       load,
       options
     );
@@ -89,7 +89,7 @@ describe('public route Markdown boundary', () => {
     expect(load).toHaveBeenCalledTimes(1);
 
     await handleCachedPublicRouteMarkdown(
-      new Request('https://live.significanthobbies.com/about', {
+      new Request('https://significanthobbies.com/about', {
         headers: { Accept: 'text/markdown' },
       }),
       load,
@@ -100,14 +100,14 @@ describe('public route Markdown boundary', () => {
 
   it('returns explicit Markdown failures instead of exposing private or empty shells', async () => {
     const privateResponse = await handlePublicRouteMarkdown(
-      new Request('https://live.significanthobbies.com/daily.md'),
+      new Request('https://significanthobbies.com/daily.md'),
       vi.fn()
     );
     expect(privateResponse?.status).toBe(404);
     expect(privateResponse?.headers.get('content-type')).toContain('text/markdown');
 
     const emptyResponse = await handlePublicRouteMarkdown(
-      new Request('https://live.significanthobbies.com/explore.md'),
+      new Request('https://significanthobbies.com/explore.md'),
       async () => null
     );
     expect(emptyResponse?.status).toBe(404);
@@ -116,7 +116,7 @@ describe('public route Markdown boundary', () => {
 
   it('returns a Markdown 404 for Accept-negotiated unknown HTML paths', async () => {
     const response = await handlePublicRouteMarkdown(
-      new Request('https://live.significanthobbies.com/this-route-does-not-exist', {
+      new Request('https://significanthobbies.com/this-route-does-not-exist', {
         headers: { Accept: 'text/markdown, text/html;q=0.1' },
       }),
       vi.fn()
@@ -126,7 +126,7 @@ describe('public route Markdown boundary', () => {
     expect(await response?.text()).toContain('Not found');
     // Non-markdown requests for the same unknown path still fall through.
     const passthrough = await handlePublicRouteMarkdown(
-      new Request('https://live.significanthobbies.com/this-route-does-not-exist'),
+      new Request('https://significanthobbies.com/this-route-does-not-exist'),
       vi.fn()
     );
     expect(passthrough).toBeNull();
@@ -161,7 +161,7 @@ describe('public route Markdown boundary', () => {
     expect(hobby).toContain('Tools & resources for Drawing');
     expect(experience).toContain('## How you would actually start');
     expect(journey).toContain(FAMOUS_JOURNEYS[0]!.name);
-    expect(blog).toContain('> Source: https://live.significanthobbies.com/blog/');
+    expect(blog).toContain('> Source: https://significanthobbies.com/blog/');
     expect(await renderPublicRouteMarkdown('/daily')).toBeNull();
   });
 
@@ -204,7 +204,7 @@ describe('Markdown representation protocol', () => {
       const loader = vi.fn();
       expect(
         await handlePublicRouteMarkdown(
-          new Request('https://live.significanthobbies.com/about', { headers: { accept } }),
+          new Request('https://significanthobbies.com/about', { headers: { accept } }),
           loader
         )
       ).toBeNull();
@@ -214,12 +214,12 @@ describe('Markdown representation protocol', () => {
   it('serves direct Markdown and HEAD with canonical, CORS, noindex and token headers', async () => {
     for (const method of ['GET', 'HEAD']) {
       const response = await handlePublicRouteMarkdown(
-        new Request('https://live.significanthobbies.com/api/md/about', { method }),
+        new Request('https://significanthobbies.com/api/md/about', { method }),
         async () => '# About'
       );
       expect(response?.status).toBe(200);
       expect(response?.headers.get('Content-Location')).toBe(
-        'https://live.significanthobbies.com/about'
+        'https://significanthobbies.com/about'
       );
       expect(response?.headers.get('Access-Control-Allow-Origin')).toBe('*');
       expect(response?.headers.get('X-Robots-Tag')).toContain('noindex');
@@ -241,7 +241,7 @@ describe('Markdown representation protocol', () => {
       const match = vi.fn();
       const put = vi.fn();
       const response = await handleCachedPublicRouteMarkdown(
-        new Request(`https://live.significanthobbies.com${path}`),
+        new Request(`https://significanthobbies.com${path}`),
         async () => '# Public',
         { cache: { match, put } as unknown as Cache }
       );
@@ -255,7 +255,7 @@ describe('Markdown representation protocol', () => {
 describe('complete public discovery', () => {
   it('lists the same static public routes as the sitemap and bounds the full export honestly', async () => {
     const response = await handlePublicReadability(
-      new Request('https://live.significanthobbies.com/api/md/_catalog')
+      new Request('https://significanthobbies.com/api/md/_catalog')
     );
     const catalog = (await response?.json()) as { path: string; url: string; md: string }[];
     expect(catalog.length).toBeGreaterThan(500);
@@ -263,14 +263,14 @@ describe('complete public discovery', () => {
     expect(catalog.some((entry) => entry.path === '/daily')).toBe(false);
     expect(catalog.every((entry) => entry.md.endsWith('.md'))).toBe(true);
     const full = await handlePublicReadability(
-      new Request('https://live.significanthobbies.com/llms-full.txt')
+      new Request('https://significanthobbies.com/llms-full.txt')
     );
     const body = await full?.text();
     expect(body).toContain('registered public pages');
     expect(body?.includes('The reps on a thing you actually care about')).toBe(true);
     expect(body?.length).toBeLessThanOrEqual(500000);
     const policy = await handlePublicReadability(
-      new Request('https://live.significanthobbies.com/ai.txt')
+      new Request('https://significanthobbies.com/ai.txt')
     );
     expect(await policy?.text()).toContain('training: allowed on public pages only');
   });

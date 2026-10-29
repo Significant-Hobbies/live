@@ -11,7 +11,7 @@ test('all curated collections serve crawlable activity links and match their str
     const response = await request.get(path);
     expect(response.status(), path).toBe(200);
     const html = await response.text();
-    expect(html).toContain(`rel="canonical" href="https://live.significanthobbies.com${path}"`);
+    expect(html).toContain(`rel="canonical" href="https://significanthobbies.com${path}"`);
     expect(html).toContain('BreadcrumbList');
     expect(html).toContain('CollectionPage');
     for (const item of collection.items) expect(html).toContain(`href="/experiences/${item.slug}"`);
@@ -30,7 +30,7 @@ test('every enhanced guide serves its unique plan to a visitor without JavaScrip
     expect(response.status(), slug).toBe(200);
     const html = await response.text();
     expect(html).toContain(
-      `rel="canonical" href="https://live.significanthobbies.com/experiences/${slug}"`
+      `rel="canonical" href="https://significanthobbies.com/experiences/${slug}"`
     );
     expect(html).toContain('Plan the experience');
     expect(html).toContain('What counts as done');

@@ -1,3 +1,6 @@
+import type { BetterAuthOptions } from 'better-auth';
+import { LIVE_ORIGIN, LIVE_HOSTS, LIVE_ORIGINS } from '../../live-origins.mjs';
+
 /**
  * Where sign-in sends people, and where it lets them go instead.
  *
@@ -29,8 +32,8 @@ export function safeCallbackUrl(value: string | undefined, returnTo?: string): s
       Array.from(decoded).some((char) => char === '\\' || char.charCodeAt(0) <= 32)
     )
       return '/bucket-list';
-    const target = new URL(value, 'https://live.significanthobbies.com');
-    if (target.origin !== 'https://live.significanthobbies.com' || target.pathname === '/login') {
+    const target = new URL(value, 'https://significanthobbies.com');
+    if (target.origin !== 'https://significanthobbies.com' || target.pathname === '/login') {
       return '/bucket-list';
     }
     return value;
@@ -49,7 +52,7 @@ export type GuestRoute = {
 /** Continue the same task using local storage, without setup or sign-in. */
 export function guestRouteFor(callbackUrl: string): GuestRoute {
   if (callbackUrl === '/hub') {
-    return { href: 'https://significanthobbies.com/', label: 'return to the public app directory' };
+    return { href: '/', label: 'return to Live' };
   }
   if (callbackUrl.startsWith('/bucket-list')) {
     return { href: '/bucket-list', label: 'keep your list on this device' };
@@ -66,15 +69,25 @@ export function guestRouteFor(callbackUrl: string): GuestRoute {
   return { href: '/experiences', label: 'browse the catalog without an account' };
 }
 
-/** Production auth stays on Live even when inherited settings name the former apex. */
+/** Resolve OAuth on the incoming allowed origin so its host-only state cookie returns. */
 export function authBaseUrl(options: {
   production: boolean;
   configuredUrl?: string;
   testAuthEnabled: boolean;
-}): string {
-  if (options.production) return 'https://live.significanthobbies.com';
+}): NonNullable<BetterAuthOptions['baseURL']> {
+  if (options.production) {
+    return { allowedHosts: [...LIVE_HOSTS], fallback: LIVE_ORIGIN, protocol: 'https' };
+  }
   return (
     options.configuredUrl?.trim() ||
-    (options.testAuthEnabled ? 'http://localhost:3000' : 'https://live.significanthobbies.com')
+    (options.testAuthEnabled ? 'http://localhost:3000' : LIVE_ORIGIN)
   );
+}
+
+export function authTrustedOrigins(baseURL: NonNullable<BetterAuthOptions['baseURL']>): string[] {
+  return [
+    ...(typeof baseURL === 'string' ? [baseURL] : LIVE_ORIGINS),
+    'https://appleid.apple.com',
+    'significanthobbies://auth',
+  ];
 }

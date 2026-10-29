@@ -19,7 +19,7 @@ explicitly public Living surfaces before choosing whether to create an account.
 Significant Hobbies helps a person name the life they want to live and walk
 toward it — a family of focused personal products:
 
-- **Significant Hobbies** is the read-only directory and future dashboard.
+- **Significant Hobbies** is the brand behind Live; the former Hub directory is retired.
 - **Live** leads with a searchable catalog of bucket-list ideas and side quests,
   a personal list, and optional Life Bingo boards.
 - **Weekly log** owns the private weekly record of what the user actually
@@ -42,11 +42,12 @@ progress systems are limited to surfaces where proof is the explicit job.
 
 ## Operating Context
 
-- Live is canonical at `live.significanthobbies.com`. Every Live page, API,
-  discovery document, and generated URL belongs to that host.
-- The apex `significanthobbies.com` is the separately owned Significant Hobbies
-  Hub, and legacy apex Live paths permanently redirect to the same path on the
-  Live host. The host split is specified in
+- Live's full application is canonical at `significanthobbies.com`.
+  `live.significanthobbies.com` remains a full serving and sign-in alias so
+  existing host-only sessions and origin-local guest records stay accessible.
+- The retired Hub retains only `/hub`, `/health`, `/mcp`, `/v1/*` and
+  `/landing/*` compatibility through its existing backend. Live owns the
+  apex homepage, application routes and public discovery documents. See
   [`docs/architecture/overview.md`](docs/architecture/overview.md).
 - Signed-out `/` serves the preserved Live landing with a catalog call to
   action. A session-bearing request enters `/bucket-list`; the application
@@ -60,7 +61,7 @@ progress systems are limited to surfaces where proof is the explicit job.
   secondary routes; they are not the primary journey.
 - Cloudflare Workers/OpenNext serves the application; Cloudflare D1 stores
   authenticated application data through Drizzle. Signed-out private work
-  remains in IndexedDB on the canonical Live origin.
+  remains in IndexedDB on the origin where it was created.
 - Production database migrations and deployments are manual and
   operator-owned.
 

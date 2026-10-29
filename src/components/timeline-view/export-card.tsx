@@ -137,7 +137,7 @@ export function ExportCard({ timeline, exportRef }: Props) {
             </span>
           ))}
         </div>
-        <p className="text-xs text-muted-foreground">live.significanthobbies.com</p>
+        <p className="text-xs text-muted-foreground">significanthobbies.com</p>
       </div>
     </div>
   );

@@ -10,9 +10,9 @@ Turn hobbies, experiences, bucket lists, and side quests into a life worth antic
 
 ## Agent entrypoints
 
-- https://live.significanthobbies.com/llms.txt
-- https://live.significanthobbies.com/llms-full.txt
-- https://live.significanthobbies.com/api/ai
-- https://live.significanthobbies.com/index.md
+- https://significanthobbies.com/llms.txt
+- https://significanthobbies.com/llms-full.txt
+- https://significanthobbies.com/api/ai
+- https://significanthobbies.com/index.md
 
 Auth-walled personal data is not agent-indexed.

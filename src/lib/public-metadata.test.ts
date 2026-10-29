@@ -7,20 +7,20 @@ describe('public document metadata', () => {
     const metadata = withPublicMetadata({
       title: 'About',
       description: 'Authored description.',
-      alternates: { canonical: 'https://live.significanthobbies.com/about' },
+      alternates: { canonical: 'https://significanthobbies.com/about' },
       robots: { index: true },
       other: { existing: 'retained' },
     });
     expect(metadata.other).toEqual({ existing: 'retained', 'ai-summary': 'Authored description.' });
     expect(metadata.alternates?.types?.['text/markdown']).toBe(
-      'https://live.significanthobbies.com/about.md'
+      'https://significanthobbies.com/about.md'
     );
     expect(metadata.robots).toEqual({ index: true });
   });
   it('resolves the home alternate and shared identity relationships', () => {
     expect(
       withPublicMetadata({ alternates: { canonical: '/' } }).alternates?.types?.['text/markdown']
-    ).toBe('https://live.significanthobbies.com/index.md');
+    ).toBe('https://significanthobbies.com/index.md');
     const site = publicIdentity['@graph'].find((node) => node['@type'] === 'WebSite');
     expect(site?.publisher).toEqual({ '@id': 'https://significanthobbies.com/#org' });
     expect(publicIdentity['@graph'].some((node) => node['@type'] === 'Person')).toBe(true);

@@ -15,14 +15,15 @@ Trigger: `.github/workflows/deploy.yml` → `workflow_dispatch` from `main`.
 The workflow:
 1. `node scripts/cf-build.mjs` — builds `.open-next/` (Next + Astro overlay).
    Does **not** run `populateCache` (that needs Cloudflare creds).
-2. `wrangler deploy --minify` via `cloudflare/wrangler-action@v3` with
-   `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` secrets.
+2. Upload the exact Git SHA with `wrangler versions upload --minify --tag <sha> --keep-vars`,
+   then promote that version to 100% through `cloudflare/wrangler-action@v3`.
+   Existing routes, domains, schedules and variables remain in place.
 3. Best-effort whole-zone edge cache purge via the Cloudflare API. Uses
    `continue-on-error: true` — a missing `cache_purge` permission (401) must
    not fail a good deploy.
-4. Smoke check: verifies the Hub heading on the apex, the cinematic Live
-   landing, a Worker-rendered page on the Live host, and the legacy apex
-   redirect to that Live page.
+4. Smoke check: verifies the apex-canonical Live landing on both the main
+   domain and the existing Live alias, plus a Worker-rendered `/hobbies` page
+   served directly on each origin. The apex no longer redirects app routes.
 
 HTML cache entries are namespaced by `.next/BUILD_ID`, emitted into the
 bundle by `scripts/cf-build.mjs`. A new build cannot reuse HTML that references
@@ -53,7 +54,7 @@ zone_id=$(curl -fsS -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
 curl -fsS -X POST "https://api.cloudflare.com/client/v4/zones/$zone_id/purge_cache" \
   -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
   -H "Content-Type: application/json" \
-  --data '{"files":["https://live.significanthobbies.com/"]}'
+  --data '{"files":["https://significanthobbies.com/","https://live.significanthobbies.com/"]}'
 ```
 
 The deploy workflow purges the **whole zone** (`purge_everything`), not just
@@ -68,7 +69,7 @@ Use the single-file form above only for a landing hotfix that skips a full
 deploy (e.g. rebuilding the Astro overlay by hand).
 
 **Why `/` is not enough to verify a deploy:** anon `GET /` is static Astro HTML
-that skips the Worker entirely ([decisions.md](../architecture/decisions.md)
+that skips Next.js rendering ([decisions.md](../architecture/decisions.md)
 A1), so it tells you nothing about the cached HTML paths. The deploy also smoke
 checks `/hobbies`, which does go through the Worker cache.
 
@@ -77,10 +78,10 @@ full request URL, so a query string is a guaranteed miss:
 
 ```bash
 # Fresh render — proves what the deployed code produces
-curl -s "https://live.significanthobbies.com/hobbies?cb=$RANDOM" | grep -c 'Browse by what suits you'
+curl -s "https://significanthobbies.com/hobbies?cb=$RANDOM" | grep -c 'Browse by what suits you'
 
 # What a real visitor gets, plus whether it came from cache
-curl -sI https://live.significanthobbies.com/hobbies | grep -i x-edge-cache
+curl -sI https://significanthobbies.com/hobbies | grep -i x-edge-cache
 ```
 
 A `Cache-Control: no-cache` **request header does not bypass the Worker cache** —
@@ -153,8 +154,10 @@ applies. See [`architecture/overview.md`](../architecture/overview.md).
 ## Production smoke probe
 
 `.github/workflows/smoke.yml` runs every 6 hours (`0 */6 * * *`) and probes the
-Hub apex, the canonical Live `/live-more` route, and the legacy apex redirect.
-The probe uses `User-Agent: smoke-probe/1.0`.
+Live apex and the working `live.significanthobbies.com` alias, including
+`/live-more` served directly on both origins.
+The probe also checks Live discovery identity, HEAD parity and the retained
+social-image alias. It uses `User-Agent: smoke-probe/1.0`.
 
 ## Observability
 

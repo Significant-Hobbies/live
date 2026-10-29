@@ -23,7 +23,7 @@ export const metadata: Metadata = withPublicMetadata({
     description:
       'Travel, career, love, adventure, and creativity — 50 bucket list goals that define what your 20s are actually for.',
   },
-  alternates: { canonical: 'https://live.significanthobbies.com/bucket-list-before-30' },
+  alternates: { canonical: 'https://significanthobbies.com/bucket-list-before-30' },
 });
 
 // Sourced from ~/lib/experiences so the suggestion engine can see these

@@ -67,7 +67,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return withPublicMetadata({
     title: `${cat.name} Hobbies — SignificantHobbies`,
     description: `Explore ${cat.hobbies.length} ${cat.name.toLowerCase()} hobbies. Browse community timelines, find tools, and discover your next ${cat.name.toLowerCase()} passion.`,
-    alternates: { canonical: `https://live.significanthobbies.com/hobbies/category/${slug}` },
+    alternates: { canonical: `https://significanthobbies.com/hobbies/category/${slug}` },
   });
 }
 
@@ -117,13 +117,13 @@ export default async function CategoryPage({ params }: Props) {
               '@type': 'ListItem',
               position: 1,
               name: 'Hobbies',
-              item: 'https://live.significanthobbies.com/hobbies',
+              item: 'https://significanthobbies.com/hobbies',
             },
             {
               '@type': 'ListItem',
               position: 2,
               name: `${cat.name} Hobbies`,
-              item: `https://live.significanthobbies.com/hobbies/category/${slug}`,
+              item: `https://significanthobbies.com/hobbies/category/${slug}`,
             },
           ],
         }}

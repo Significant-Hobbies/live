@@ -12,7 +12,7 @@ describe('authored public editorial Markdown', () => {
     'renders the complete source of %s without client hooks',
     (path) => {
       const result = renderPublicEditorialSource(path);
-      expect(result).toContain('Source: https://live.significanthobbies.com');
+      expect(result).toContain('Source: https://significanthobbies.com');
       expect(result).toMatch(/^# /m);
       expect(result?.trim()).not.toBe('');
       expect(result).not.toContain('[object Object]');

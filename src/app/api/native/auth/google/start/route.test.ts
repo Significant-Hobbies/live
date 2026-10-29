@@ -25,7 +25,13 @@ describe('native Google auth start', () => {
       )
     );
 
-    expect(signInSocial).toHaveBeenCalledWith(expect.objectContaining({ returnHeaders: true }));
+    expect(signInSocial).toHaveBeenCalledWith(
+      expect.objectContaining({
+        request: expect.any(Request),
+        asResponse: false,
+        returnHeaders: true,
+      })
+    );
     expect(response.status).toBe(302);
     expect(response.headers.get('Location')).toBe('https://accounts.google.test/authorize');
     expect(response.headers.get('Set-Cookie')).toContain('oauth-state=one-time');

@@ -65,11 +65,6 @@ afterEach(() => {
   vi.restoreAllMocks();
 });
 
-function utcDayOfWeek(): number {
-  const dayKey = new Intl.DateTimeFormat('en-CA', { timeZone: 'UTC' }).format(new Date());
-  return new Date(`${dayKey}T12:00:00Z`).getUTCDay();
-}
-
 const utcUser = {
   id: 'u1',
   name: 'Sarthak Tester',
@@ -152,19 +147,17 @@ describe('sendWeeklyNudges', () => {
     expect(sent[0]?.text).toContain(fallbackQuestion('2026-09-28').text);
   });
 
-  it('emails an opted-in user whose local day is Sunday and week is unwritten', async () => {
+  it('requires account sign-in before an opted-in owner writes the Sunday journal', async () => {
+    vi.useFakeTimers({ now: new Date('2026-10-04T12:00:00.000Z') });
     const { env, sent } = makeEnv({ users: [utcUser] });
     await sendWeeklyNudges(env as never);
-    if (utcDayOfWeek() === 0) {
-      expect(sent).toHaveLength(1);
-      expect(sent[0].to).toBe('sarthak@example.com');
-      expect(sent[0].subject).toContain('week');
-      expect(sent[0].text).toContain('Hi Sarthak');
-      expect(sent[0].text).toContain('live.significanthobbies.com/journal');
-      expect(sent[0].html).toContain('?');
-    } else {
-      expect(sent).toHaveLength(0);
-    }
+    expect(sent).toHaveLength(1);
+    expect(sent[0].to).toBe('sarthak@example.com');
+    expect(sent[0].subject).toContain('week');
+    expect(sent[0].text).toContain('Hi Sarthak');
+    const journalLogin = 'https://significanthobbies.com/login?callbackUrl=%2Fjournal';
+    expect(sent[0].text).toContain(journalLogin);
+    expect(sent[0].html).toContain(`href="${journalLogin}"`);
   });
 
   it('never nudges a week that is already on record', async () => {

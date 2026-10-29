@@ -1,6 +1,6 @@
 # Live — PROJECT STATUS
 
-Last updated: 2026-10-16
+Last updated: 2026-10-29
 
 ## Why / What
 
@@ -16,11 +16,20 @@ remain available on secondary routes.
 - Runtime remains the existing `significanthobbies` Cloudflare Worker.
 - Authenticated records remain in the existing Significant Hobbies D1;
   signed-out private records remain in IndexedDB on the canonical Live origin.
-- Every Live page, API, discovery document, and generated URL is canonical at
-  `https://live.significanthobbies.com`.
-- Apex `/`, `/hub`, `/health`, `/mcp`, and `/v1/*` delegate to the separately
-  owned Hub through the `personal-platform` service binding. Legacy apex Live
-  paths permanently redirect to the same path on the Live host.
+- Public canonical identity is `https://significanthobbies.com`. The full
+  application also remains available at `https://live.significanthobbies.com`
+  so existing host-only sessions and origin-local guest records stay accessible.
+- OAuth callbacks resolve on the incoming exact allowed origin; host-only
+  cookies, D1 authority, native handoffs and storage identities are unchanged.
+- Only `/hub`, `/health`, `/mcp`, `/v1/*` and `/landing/*` retain the separately
+  owned retired Hub backend through `HUB_SERVICE`. Public root and discovery
+  surfaces belong to Live. `www` public links canonicalize to the apex.
+- Production qualification requires deployment, sign-in on both origins and
+  legacy-session checks. Source or CI success alone does not qualify runtime.
+- At source-review time on 2026-10-29 (revision `b63f3a1`), production still
+  served the retired Hub at the apex. The routing above was not production-qualified
+  at that time. Deployment and both-origin sign-in and legacy-session checks are
+  separate runtime evidence.
 
 ## Status and next
 

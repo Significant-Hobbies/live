@@ -12,16 +12,16 @@
       "--brand-ink": "var(--brand)"
     },
     "assetBase": "/",
-    "canonical": "https://live.significanthobbies.com",
+    "canonical": "https://significanthobbies.com",
     "og": {
-      "image": "https://live.significanthobbies.com/opengraph-image",
+      "image": "https://significanthobbies.com/opengraph-image",
       "siteName": "Live",
       "twitterCard": "summary_large_image"
     },
     "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
   },
   "product": "Live",
-  "url": "https://live.significanthobbies.com",
+  "url": "https://significanthobbies.com",
   "mark": "icon.svg",
   "nav": [
     {
@@ -202,8 +202,8 @@
         "href": "/privacy"
       },
       {
-        "label": "Significant Hobbies",
-        "href": "https://significanthobbies.com"
+        "label": "SaaS Maker",
+        "href": "https://sassmaker.com/projects"
       }
     ],
     "legal": "© 2026 Significant Hobbies",

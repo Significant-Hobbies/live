@@ -18,7 +18,7 @@ import { parseJSONColumn } from '~/lib/utils';
 import { db } from '~/server/db';
 import type { Phase } from '~/lib/types';
 
-const SITE_URL = 'https://live.significanthobbies.com';
+const SITE_URL = 'https://significanthobbies.com';
 
 export async function renderPublicRouteMarkdown(pathname: string): Promise<string | null> {
   const path = normalizePath(pathname);

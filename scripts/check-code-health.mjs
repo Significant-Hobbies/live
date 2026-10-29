@@ -43,6 +43,12 @@ const acceptedHighAdvisories = new Set([
   'GHSA-vfj7-8cjw-p6xm',
 ]);
 
+const optionalAuthAdvisories = new Set([
+  'GHSA-965c-763c-88jm',
+  'GHSA-q84f-53jg-9ppm',
+  'GHSA-r4xp-prcw-77qf',
+]);
+
 function run(command, args, options = {}) {
   const result = spawnSync(command, args, {
     cwd: options.cwd ?? projectRoot,
@@ -195,8 +201,69 @@ function checkCycles() {
 
 function checkDependencies() {
   const report = parseJson(run('pnpm', ['audit', '--json'], { allowFailure: true }), 'pnpm audit');
-  const severe = Object.values(report.advisories ?? {}).filter((advisory) =>
+  if (!report.advisories || !report.metadata?.vulnerabilities || report.error) {
+    throw new Error('pnpm audit did not return a complete vulnerability report.');
+  }
+  const severe = Object.values(report.advisories).filter((advisory) =>
     ['critical', 'high'].includes(advisory.severity)
+  );
+  const optionalAuth = severe.filter(
+    (advisory) =>
+      advisory.module_name === 'better-auth' &&
+      optionalAuthAdvisories.has(advisory.github_advisory_id)
+  );
+  if (optionalAuth.length > 0) {
+    const qualificationPath = 'src/lib/auth-dependency-qualification.test.ts';
+    const qualification = parseJson(
+      run('pnpm', ['exec', 'vitest', 'run', qualificationPath, '--reporter=json']),
+      'Auth dependency qualification'
+    );
+    const zeroCounts = ['numFailedTests', 'numPendingTests', 'numTodoTests'];
+    const optionalZeroCounts = [
+      'numSkippedTests',
+      'numFailedTestSuites',
+      'numPendingTestSuites',
+      'numSkippedTestSuites',
+      'numTodoTestSuites',
+    ];
+    const suiteCounts = ['numTotalTestSuites', 'numPassedTestSuites'];
+    const suites = qualification.testResults;
+    if (
+      qualification.success !== true ||
+      qualification.numPassedTests !== 1 ||
+      qualification.numTotalTests !== 1 ||
+      !zeroCounts.every((field) => qualification[field] === 0) ||
+      !optionalZeroCounts.every(
+        (field) => qualification[field] === undefined || qualification[field] === 0
+      ) ||
+      !suiteCounts.every(
+        (field) =>
+          qualification[field] === undefined ||
+          (Number.isInteger(qualification[field]) && qualification[field] > 0)
+      ) ||
+      (qualification.numTotalTestSuites !== undefined &&
+        qualification.numPassedTestSuites !== qualification.numTotalTestSuites) ||
+      !Array.isArray(suites) ||
+      suites.length !== 1 ||
+      suites.some(
+        (suite) =>
+          suite.name !== resolve(projectRoot, qualificationPath) ||
+          suite.status !== 'passed' ||
+          !Array.isArray(suite.assertionResults) ||
+          suite.assertionResults.length !== 1 ||
+          suite.assertionResults.some((assertion) => assertion.status !== 'passed')
+      )
+    ) {
+      throw new Error(
+        'Dependency qualification must execute exactly one passing test with no failed, skipped or todo tests or suites.'
+      );
+    }
+    console.log('Actual production auth qualification: one test executed and passed.');
+  }
+  const unexpected = severe.filter(
+    (advisory) =>
+      !optionalAuth.includes(advisory) &&
+      !(advisory.severity === 'high' && acceptedHighAdvisories.has(advisory.github_advisory_id))
   );
   const critical = new Set(
     severe
@@ -208,15 +275,16 @@ function checkDependencies() {
       .filter((advisory) => advisory.severity === 'high')
       .map((advisory) => advisory.github_advisory_id)
   );
-  const unexpected = [...critical, ...high].filter((id) => !acceptedHighAdvisories.has(id));
-  const disappeared = [...acceptedHighAdvisories].filter((id) => !high.has(id));
   console.log(
     `Dependencies: ${critical.size} critical, ${high.size} distinct high, ` +
-      `${unexpected.length} unexpected; ${high.size - unexpected.length} accepted legacy advisories.`
+      `${optionalAuth.length} qualified non-applicable optional-auth advisories, ${unexpected.length} unexpected.`
   );
-  if (critical.size > 0 || unexpected.length > 0) {
-    throw new Error(`Unexpected critical/high advisories: ${unexpected.join(', ') || 'critical'}`);
+  if (unexpected.length > 0) {
+    throw new Error(
+      `Unexpected critical/high advisories: ${unexpected.map((advisory) => advisory.github_advisory_id).join(', ')}`
+    );
   }
+  const disappeared = [...acceptedHighAdvisories].filter((id) => !high.has(id));
   if (disappeared.length > 0) {
     console.log(
       `Dependency risk improved; remove resolved advisory baselines: ${disappeared.join(', ')}.`
