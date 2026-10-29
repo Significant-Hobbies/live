@@ -52,7 +52,7 @@ export type GuestRoute = {
 /** Continue the same task using local storage, without setup or sign-in. */
 export function guestRouteFor(callbackUrl: string): GuestRoute {
   if (callbackUrl === '/hub') {
-    return { href: 'https://significanthobbies.com/', label: 'return to Live' };
+    return { href: '/', label: 'return to Live' };
   }
   if (callbackUrl.startsWith('/bucket-list')) {
     return { href: '/bucket-list', label: 'keep your list on this device' };

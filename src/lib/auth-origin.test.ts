@@ -61,7 +61,7 @@ function expectedObservation(origin: string) {
 }
 
 describe('Live auth origins', () => {
-  it('keeps local development explicit and restricts production to exact HTTPS aliases', () => {
+  it('keeps local development explicit and selects HTTPS serving origins in production', () => {
     expect(
       authBaseUrl({
         production: true,
@@ -130,12 +130,25 @@ describe('Live auth origins', () => {
     expect(response.status).toBe(403);
   });
   it.each(['https://evil.example', 'https://significanthobbies.com.evil.example'])(
-    'rejects an unlisted request host %s',
+    'rejects an untrusted browser Origin from %s',
     async (origin) => {
       const response = await signIn(fixture(), origin);
       expect(response.status).toBeGreaterThanOrEqual(400);
     }
   );
+  it('uses the apex fallback for an unlisted host without a browser Origin', async () => {
+    const request = new Request('https://internal.example/api/auth/sign-in/social', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        provider: 'google',
+        callbackURL: '/bucket-list',
+        disableRedirect: true,
+      }),
+    });
+    const response = await fixture().handler(request);
+    expect(await oauthObservation(response)).toEqual(expectedObservation(origins[0]));
+  });
   it.each(origins)(
     'resolves headerless native API calls from the original Request on %s',
     async (origin) => {

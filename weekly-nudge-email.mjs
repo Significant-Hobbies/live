@@ -22,7 +22,8 @@ import {
 const CLASSIFIER_TIMEOUT_MS = 3000;
 const GATEWAY_COMPLETIONS_URL = 'https://fleet-gateway.internal/v1/chat/completions';
 const GATEWAY_PROJECT_ID = 'live';
-const JOURNAL_URL = 'https://significanthobbies.com/journal';
+// An account reminder must require sign-in before opening the optional-auth editor.
+const JOURNAL_URL = 'https://significanthobbies.com/login?callbackUrl=%2Fjournal';
 const FROM = { email: 'weekly@significanthobbies.com', name: 'Live — weekly log' };
 
 /** Today's YYYY-MM-DD and day-of-week (0=Sunday) in an IANA zone. */

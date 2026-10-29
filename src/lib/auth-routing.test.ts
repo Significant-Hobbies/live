@@ -86,7 +86,7 @@ describe('Hub login continuity', () => {
     expect(safeCallbackUrl(undefined, '/hub')).toBe('/hub');
     expect(safeCallbackUrl(undefined, 'https://evil.example')).toBe('/bucket-list');
     expect(safeCallbackUrl('/journal', '/hub')).toBe('/journal');
-    expect(guestRouteFor('/hub').href).toBe('https://significanthobbies.com/');
+    expect(guestRouteFor('/hub').href).toBe('/');
   });
   it.each([
     '/\\evil.example',

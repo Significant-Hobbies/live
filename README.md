@@ -8,7 +8,7 @@ commitments, timelines, side quests, the weekly log, and personal history.
 This is Live's canonical repository and issue tracker. Its Git history was
 preserved when it was extracted from
 [`Significant-Hobbies/significanthobbies`](https://github.com/Significant-Hobbies/significanthobbies).
-The Hub and `PersonalSyncKit` remain there. The former Journal product now lives
+The retired Hub backend and `PersonalSyncKit` remain there. The former Journal product now lives
 inside Live as the weekly log at `/journal`; earlier AM/PM entries remain
 readable as archive.
 
@@ -22,11 +22,14 @@ pnpm typecheck
 pnpm build
 ```
 
-The existing `significanthobbies` Worker and D1 remain Live's runtime and data
-authority. Apex Hub paths remain delegated through the existing service binding.
-The private `/hub` page also delegates on the Live host so sign-in and Hub rendering
-use the existing host-only Live session. Hub rendering and data remain Hub-owned;
-other legacy apex application paths remain compatible.
+The full Live app is canonical at `https://significanthobbies.com`.
+`https://live.significanthobbies.com` remains a full serving and sign-in alias
+for existing host-only sessions and browser-local guest records. The existing
+`significanthobbies` Worker and D1 remain Live's runtime and data authority.
+Only `/hub`, `/health`, `/mcp`, `/v1/*` and `/landing/*` retain the retired Hub
+backend through the existing service binding. Exactly `/hub` also delegates
+on the Live alias. Hub compatibility data stays backend-owned; the public
+homepage and discovery identity belong to Live.
 
 ## Verification and retained work
 

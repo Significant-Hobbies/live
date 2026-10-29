@@ -13,20 +13,21 @@ description: Runtime shape — Cloudflare Worker (OpenNext) + Astro landing over
 
 ```
 Browser → Cloudflare Worker `significanthobbies` (OpenNext, worker.mjs)
-  ├── significanthobbies.com Hub routes → HUB_SERVICE → canonical Hub
-  ├── significanthobbies.com legacy Live path → 308 → live.significanthobbies.com/<path>
-  ├── live.significanthobbies.com/ → ASSETS binding → cinematic Live landing
-  └── live.significanthobbies.com/<path> → OpenNext Next.js 16 App Router handlers
-        ├── Cloudflare D1 via Drizzle ORM
-        ├── better-auth Google OAuth sessions
+  ├── apex compatibility /hub, /health, /mcp, /v1/*, /landing/* → HUB_SERVICE
+  ├── live.significanthobbies.com/hub → HUB_SERVICE (same-origin session)
+  ├── www public Live paths → 308 → significanthobbies.com/<path>
+  ├── apex or Live alias / → ASSETS /live.html (or signed-in /bucket-list)
+  └── apex or Live alias /<path> → OpenNext Next.js 16 App Router handlers
+        ├── Existing Cloudflare D1 via Drizzle ORM
+        ├── better-auth Google OAuth with same-origin, host-only state cookies
         └── PostHog analytics via posthog-js wrapper
 ```
 
 `worker.mjs` is a custom Worker entry that wraps OpenNext. For cacheable anon
 HTML paths it consults `caches.default` first and only falls through to the
 Next handler on a miss — eliminating the Worker cold-start path for warm-cache
-hits on marketing/tool pages. Cache headers are explicit (`public, max-age=3600,
-s-maxage=86400, stale-while-revalidate=604800`) because s-maxage-only was
+hits on marketing/tool pages. Cache headers are explicit (`public, max-age=0,
+s-maxage=86400, must-revalidate`) because s-maxage-only was
 getting marked DYNAMIC at the zone level.
 
 The cacheable path list lives in `worker.mjs` (`CACHEABLE_EXACT`,
@@ -36,13 +37,19 @@ should be edge-cached.
 ## Astro Live overlay and Hub delegation
 
 `landing-astro/` is a separate Astro package (pnpm workspace member) that
-builds the cinematic Live landing. The build pipeline overlays it into
-`.open-next/assets/`, and `worker.mjs` serves `/live.html` at the Live custom
-domain root. Apex `/` and `/hub` requests are delegated to the canonical Hub
-through the `HUB_SERVICE` binding. Other legacy apex Live paths permanently
-redirect to the same path on the canonical Live host.
+builds the preserved Live landing. The build pipeline overlays it into
+`.open-next/assets/`. `worker.mjs` serves `/live.html` at both the canonical
+apex root and the existing Live alias root. Session-bearing root requests
+enter `/bucket-list`; the application still validates the session.
 
-See [`decisions.md`](decisions.md) A1 for why this split exists.
+Public pages, metadata and discovery documents identify Live at
+`https://significanthobbies.com`. The old Live alias keeps serving the full app
+because cookies and guest IndexedDB records remain origin-local. OAuth resolves
+on each supported request origin; it does not transfer cookies or local records.
+Only the bounded compatibility routes above delegate to the retired Hub backend.
+
+[`decisions.md`](decisions.md) A1 records the earlier host split; the owner
+approved restoring the full Live app to the apex on 29 October 2026.
 
 ## Build pipeline
 
