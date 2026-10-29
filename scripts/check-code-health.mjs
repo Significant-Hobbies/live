@@ -213,13 +213,58 @@ function checkDependencies() {
       optionalAuthAdvisories.has(advisory.github_advisory_id)
   );
   if (optionalAuth.length > 0) {
-    const qualification = run('pnpm', [
-      'exec',
-      'vitest',
-      'run',
-      'src/lib/auth-dependency-qualification.test.ts',
-    ]);
-    process.stdout.write(qualification.stdout);
+    const qualification = parseJson(
+      run('pnpm', [
+        'exec',
+        'vitest',
+        'run',
+        'src/lib/auth-dependency-qualification.test.ts',
+        '--reporter=json',
+      ]),
+      'Auth dependency qualification'
+    );
+    const zeroCounts = ['numFailedTests', 'numPendingTests', 'numTodoTests'];
+    const optionalZeroCounts = [
+      'numSkippedTests',
+      'numFailedTestSuites',
+      'numPendingTestSuites',
+      'numSkippedTestSuites',
+      'numTodoTestSuites',
+    ];
+    const suiteCounts = ['numTotalTestSuites', 'numPassedTestSuites'];
+    const suites = qualification.testResults;
+    if (
+      qualification.success !== true ||
+      qualification.numPassedTests !== 1 ||
+      qualification.numTotalTests !== 1 ||
+      !zeroCounts.every((field) => qualification[field] === 0) ||
+      !optionalZeroCounts.every(
+        (field) => qualification[field] === undefined || qualification[field] === 0
+      ) ||
+      !suiteCounts.every(
+        (field) =>
+          qualification[field] === undefined ||
+          (Number.isInteger(qualification[field]) && qualification[field] > 0)
+      ) ||
+      (qualification.numTotalTestSuites !== undefined &&
+        qualification.numPassedTestSuites !== qualification.numTotalTestSuites) ||
+      (suites !== undefined &&
+        (!Array.isArray(suites) ||
+          suites.length === 0 ||
+          suites.some(
+            (suite) =>
+              suite.status !== 'passed' ||
+              (suite.assertionResults !== undefined &&
+                (!Array.isArray(suite.assertionResults) ||
+                  suite.assertionResults.length === 0 ||
+                  suite.assertionResults.some((assertion) => assertion.status !== 'passed')))
+          )))
+    ) {
+      throw new Error(
+        'Dependency qualification must execute exactly one passing test with no failed, skipped or todo tests or suites.'
+      );
+    }
+    console.log('Actual production auth qualification: one test executed and passed.');
   }
   const unexpected = severe.filter(
     (advisory) =>

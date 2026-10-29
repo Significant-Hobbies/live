@@ -24,8 +24,8 @@ remain available on secondary routes.
 - Only `/hub`, `/health`, `/mcp`, `/v1/*` and `/landing/*` retain the separately
   owned retired Hub backend through `HUB_SERVICE`. Public root and discovery
   surfaces belong to Live. `www` public links canonicalize to the apex.
-- The apex restoration source needs deployment and both-origin production
-  qualification before this change can be called shipped.
+- Production qualification requires deployment, sign-in on both origins and
+  legacy-session checks. Source or CI success alone does not qualify runtime.
 
 ## Status and next
 

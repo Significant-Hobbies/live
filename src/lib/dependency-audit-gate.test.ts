@@ -15,12 +15,31 @@ const authAdvisories = optionalAuthIds.map((github_advisory_id, index) => ({
   severity: index === 0 ? 'critical' : 'high',
 }));
 
-function gate(advisories: object[], guardExit = 0, completeReport = true) {
+const passedQualification = {
+  success: true,
+  numTotalTests: 1,
+  numPassedTests: 1,
+  numFailedTests: 0,
+  numPendingTests: 0,
+  numTodoTests: 0,
+  numTotalTestSuites: 1,
+  numPassedTestSuites: 1,
+  numFailedTestSuites: 0,
+  numPendingTestSuites: 0,
+  testResults: [{ status: 'passed' }],
+};
+
+function gate(
+  advisories: object[],
+  guardExit = 0,
+  completeReport = true,
+  guardReport = JSON.stringify(passedQualification)
+) {
   const directory = mkdtempSync(join(tmpdir(), 'live-audit-gate-'));
   const pnpm = join(directory, 'pnpm');
   writeFileSync(
     pnpm,
-    `#!${process.execPath}\nif (process.argv[2] === 'audit') process.stdout.write(process.env.TEST_AUDIT_REPORT);\nelse if (process.argv.slice(2).join(' ') === 'exec vitest run src/lib/auth-dependency-qualification.test.ts') process.exit(Number(process.env.TEST_GUARD_EXIT));\nelse process.exit(2);\n`,
+    `#!${process.execPath}\nif (process.argv[2] === 'audit') process.stdout.write(process.env.TEST_AUDIT_REPORT);\nelse if (process.argv.slice(2, 6).join(' ') === 'exec vitest run src/lib/auth-dependency-qualification.test.ts') { process.stdout.write(process.env.TEST_GUARD_REPORT); process.exit(Number(process.env.TEST_GUARD_EXIT)); }\nelse process.exit(2);\n`,
     { mode: 0o700 }
   );
   const report = completeReport
@@ -37,6 +56,7 @@ function gate(advisories: object[], guardExit = 0, completeReport = true) {
         PATH: `${directory}:${process.env.PATH}`,
         TEST_AUDIT_REPORT: JSON.stringify(report),
         TEST_GUARD_EXIT: String(guardExit),
+        TEST_GUARD_REPORT: guardReport,
       },
     });
   } finally {
@@ -77,5 +97,29 @@ describe('dependency release gate', () => {
     const result = gate([], 0, false);
     expect(result.status).toBe(1);
     expect(result.stderr).toContain('complete vulnerability report');
+  });
+  it.each([
+    [
+      'skipped test',
+      JSON.stringify({ ...passedQualification, numPassedTests: 0, numPendingTests: 1 }),
+    ],
+    ['todo test', JSON.stringify({ ...passedQualification, numPassedTests: 0, numTodoTests: 1 })],
+    [
+      'zero executed tests',
+      JSON.stringify({ ...passedQualification, numTotalTests: 0, numPassedTests: 0 }),
+    ],
+    ['pending suite', JSON.stringify({ ...passedQualification, numPendingTestSuites: 1 })],
+    [
+      'skipped suite result',
+      JSON.stringify({ ...passedQualification, testResults: [{ status: 'skipped' }] }),
+    ],
+    ['unsuccessful suite run', JSON.stringify({ ...passedQualification, success: false })],
+    ['empty report', ''],
+    ['malformed report', '{'],
+    ['missing counters', '{}'],
+  ])('rejects a %s even when Vitest exits zero', (_label, guardReport) => {
+    const result = gate(authAdvisories, 0, true, guardReport);
+    expect(result.status).toBe(1);
+    expect(result.stdout).not.toContain('qualified non-applicable optional-auth advisories');
   });
 });
