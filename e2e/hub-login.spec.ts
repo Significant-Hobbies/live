@@ -31,7 +31,7 @@ for (const intent of ['callbackUrl', 'returnTo']) {
     ]);
     await expect(
       page.getByRole('link', { name: 'continue as guest', exact: true })
-    ).toHaveAttribute('href', 'https://significanthobbies.com/');
+    ).toHaveAttribute('href', '/');
   });
 }
 
@@ -40,6 +40,6 @@ test('cancelled Hub sign-in displays retry and a public exit', async ({ page }) 
   await expect(page.getByText('Sign-in did not finish.', { exact: false })).toBeVisible();
   await expect(page.getByRole('link', { name: 'continue as guest', exact: true })).toHaveAttribute(
     'href',
-    'https://significanthobbies.com/'
+    '/'
   );
 });
