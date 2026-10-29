@@ -10,7 +10,7 @@ interface Props {
   content: GalleryContent;
 }
 const { content } = Astro.props;
-const SITE_URL = 'https://live.significanthobbies.com';
+const SITE_URL = 'https://significanthobbies.com';
 const faq = content.sections.find((section) => section.kind === 'faq');
 const faqJsonLd = faq && {
   '@context': 'https://schema.org',

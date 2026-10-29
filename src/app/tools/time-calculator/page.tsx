@@ -7,7 +7,7 @@ export const metadata: Metadata = withPublicMetadata({
   title: 'Hobby Time Calculator — How Much Free Time Do You Have? | SignificantHobbies',
   description:
     "Calculate how much free time you actually have for hobbies each week. Input your schedule and discover hidden hours you didn't know existed.",
-  alternates: { canonical: 'https://live.significanthobbies.com/tools/time-calculator' },
+  alternates: { canonical: 'https://significanthobbies.com/tools/time-calculator' },
 });
 
 export default function TimeCalculatorPage() {

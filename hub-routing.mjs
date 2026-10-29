@@ -1,39 +1,11 @@
-const HUB_HOSTS = new Set(['significanthobbies.com', 'www.significanthobbies.com']);
-export const LIVE_HOST = 'live.significanthobbies.com';
+import { LIVE_ALIAS_HOST, LIVE_CANONICAL_HOST } from './live-origins.mjs';
 
-/**
- * Crawler and agent contract files owned by the apex itself.
- *
- * These are the files a crawler or an LLM reads to work out what
- * `significanthobbies.com` *is*. Redirecting them to `live.` handed the whole
- * hub's identity — and its only crawl path — to one of the six apps it hosts,
- * and left the apex advertising a sitemap on a foreign host. They are served
- * by the Hub service instead. Content paths are unaffected and still move
- * permanently to the canonical Live host.
- *
- * Background: Significant-Hobbies/live#7 and
- * Significant-Hobbies/significanthobbies#148. The bodies are served by the
- * personal-platform Worker (significanthobbies repo, services/hub-backend).
- */
-export const HUB_AGENT_CONTRACT_PATHS = [
-  '/robots.txt',
-  '/sitemap.xml',
-  '/llms.txt',
-  '/llms-full.txt',
-  '/index.md',
-  '/api/ai',
-  '/api-ai.json',
-  '/.well-known/security.txt',
-];
+const HUB_HOSTS = new Set([LIVE_CANONICAL_HOST, `www.${LIVE_CANONICAL_HOST}`]);
 
-const HUB_SERVICE_EXACT_PATHS = new Set([
-  '/',
-  '/hub',
-  '/health',
-  '/mcp',
-  ...HUB_AGENT_CONTRACT_PATHS,
-]);
-const HUB_SERVICE_PREFIX_PATHS = ['/.well-known/agent-skills/', '/landing/'];
+// The retired Hub retains only native/auth/sync compatibility, never Live's
+// public homepage, crawler identity or retired agent-skill recommendations.
+const HUB_SERVICE_EXACT_PATHS = new Set(['/hub', '/health', '/mcp']);
+const HUB_SERVICE_PREFIX_PATHS = ['/landing/'];
 const PERSONAL_PLATFORM_INTERNAL_HOST = 'personal-auth.internal';
 export const PERSONAL_PLATFORM_INTERNAL_HEADER = 'X-Personal-Platform-Internal';
 
@@ -45,32 +17,15 @@ export function isHubServicePath(pathname) {
   );
 }
 
-/**
- * Legacy apex paths whose name changes, not just its host, when it moves to
- * Live. `/hub-opengraph-image` is the social-preview image the apex's own
- * OG tags reference (rendered by the Hub Backend's HTML) — it was never a
- * route under that name on Live, only Next's App Router convention path
- * `/opengraph-image` generates the image. The identity redirect every other
- * apex path gets therefore sent crawlers to a same-named path that 404s
- * (Significant-Hobbies/live#10). Map the alias to its real target instead of
- * teaching Live to answer a name nothing else calls it by.
- */
-const LEGACY_LIVE_PATH_ALIASES = new Map([['/hub-opengraph-image', '/opengraph-image']]);
-
-/**
- * Legacy apex Live links move permanently to the canonical Live host while
- * actual Hub routes remain on the apex service binding.
- *
- * @param {URL} url
- * @returns {URL | null}
- */
+/** Old social-image links retain their real route; www is a public alias. */
 export function legacyLiveRedirect(url) {
   if (!HUB_HOSTS.has(url.hostname) || isHubServicePath(url.pathname)) return null;
-
+  const isImageAlias = url.pathname === '/hub-opengraph-image';
+  if (url.hostname === LIVE_CANONICAL_HOST && !isImageAlias) return null;
   const target = new URL(url);
-  target.hostname = LIVE_HOST;
+  target.hostname = LIVE_CANONICAL_HOST;
   target.port = '';
-  target.pathname = LEGACY_LIVE_PATH_ALIASES.get(url.pathname) ?? url.pathname;
+  if (isImageAlias) target.pathname = '/opengraph-image';
   return target;
 }
 
@@ -113,7 +68,7 @@ export function markPersonalPlatformInternalRequest(request) {
 export function shouldDelegateHub(url) {
   return (
     (HUB_HOSTS.has(url.hostname) && isHubServicePath(url.pathname)) ||
-    (url.hostname === LIVE_HOST && url.pathname === '/hub')
+    (url.hostname === LIVE_ALIAS_HOST && url.pathname === '/hub')
   );
 }
 

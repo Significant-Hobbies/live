@@ -8,7 +8,7 @@ import { db } from '~/server/db';
 
 import { nativeAppleAudiences } from './native-apple';
 import { ping } from '~/lib/ping';
-import { authBaseUrl } from './auth-routing';
+import { authBaseUrl, authTrustedOrigins } from './auth-routing';
 
 const canUseLocalAuthSecret =
   process.env.NODE_ENV !== 'production' ||
@@ -56,6 +56,7 @@ const appleNativeAudiences = nativeAppleAudiences(
 export const auth = betterAuth({
   secret: authSecret,
   baseURL,
+  advanced: { trustedProxyHeaders: false },
   database: drizzleAdapter(db, {
     provider: 'sqlite',
     schema: { user, session, account, verification },
@@ -89,7 +90,7 @@ export const auth = betterAuth({
     deleteUser: { enabled: true },
   },
   plugins: [bearer()],
-  trustedOrigins: [baseURL, 'https://appleid.apple.com', 'significanthobbies://auth'],
+  trustedOrigins: authTrustedOrigins(baseURL),
   databaseHooks: {
     user: {
       create: {

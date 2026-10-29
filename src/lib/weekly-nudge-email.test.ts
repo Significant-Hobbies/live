@@ -160,7 +160,7 @@ describe('sendWeeklyNudges', () => {
       expect(sent[0].to).toBe('sarthak@example.com');
       expect(sent[0].subject).toContain('week');
       expect(sent[0].text).toContain('Hi Sarthak');
-      expect(sent[0].text).toContain('live.significanthobbies.com/journal');
+      expect(sent[0].text).toContain('significanthobbies.com/journal');
       expect(sent[0].html).toContain('?');
     } else {
       expect(sent).toHaveLength(0);

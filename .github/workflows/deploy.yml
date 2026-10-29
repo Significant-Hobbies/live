@@ -104,40 +104,20 @@ jobs:
             --data '{"purge_everything":true}'
           echo "Purged the whole zone for significanthobbies.com"
       - name: Smoke check production
-        # These two checks answer one question: is each host serving its own
-        # page, rather than the other host's?
-        #
-        # They used to assert on headline copy ("Your personal apps", "Live —
-        # Map your hobby journey across life"). Both strings have since been
-        # rewritten on the pages themselves, so the assertions would now fail
-        # a perfectly good deploy — a marketing copy edit should never be able
-        # to break the deploy pipeline. Assert on structural markers instead:
-        # the apex's apps-section id and each host's self-canonical link. Those
-        # change only when the page's identity changes, which is exactly the
-        # regression worth failing on.
+        # Both origins serve Live; public canonical identity belongs to the apex.
+        # Keep the old origin available for existing sessions and local guest records.
         run: |
-          if ! html=$(curl -fsS --retry 3 --retry-delay 5 --max-time 20 \
-            -H "Cache-Control: no-cache" https://significanthobbies.com/); then
-            echo "ERROR: failed to fetch homepage"
-            exit 1
-          fi
-          if ! printf '%s' "$html" | grep -q 'rel="canonical" href="https://significanthobbies.com/"'; then
-            echo "ERROR: the apex is not serving a self-canonical page — it is redirecting or serving another host's HTML"
-            exit 1
-          fi
-          if ! printf '%s' "$html" | grep -q 'id="apps"'; then
-            echo "ERROR: stale overlay — the apex is missing the Hub apps section"
-            exit 1
-          fi
-          echo "Hub OK: the apex serves its own self-canonical Hub page"
-
-          live_html=$(curl -fsS --retry 6 --retry-all-errors --retry-delay 10 --max-time 20 \
-            -H "Cache-Control: no-cache" https://live.significanthobbies.com/)
-          if ! printf '%s' "$live_html" | grep -q 'rel="canonical" href="https://live.significanthobbies.com'; then
-            echo "ERROR: the Live custom domain is not serving the Live landing"
-            exit 1
-          fi
-          echo "Live OK: the cinematic landing is available on its custom domain"
+          for origin in https://significanthobbies.com https://live.significanthobbies.com; do
+            html=$(curl -fsS --retry 3 --retry-delay 5 --max-time 20 "${origin}/")
+            if ! printf '%s' "$html" | grep -q 'rel="canonical" href="https://significanthobbies.com'; then
+              echo "ERROR: ${origin} is not serving the apex-canonical Live landing"
+              exit 1
+            fi
+            if printf '%s' "$html" | grep -q 'id="apps"'; then
+              echo "ERROR: ${origin} still serves the retired Hub landing"
+              exit 1
+            fi
+          done
       - name: Smoke check a Worker-rendered page
         # Two different questions, and only the first should fail a deploy.
         #
@@ -152,7 +132,7 @@ jobs:
         #    Cloudflare purge propagation is asynchronous, so a stale answer here
         #    is a timing fact, not a broken release — it warns and moves on.
         run: |
-          url=https://live.significanthobbies.com/hobbies
+          url=https://significanthobbies.com/hobbies
           marker='Browse by what suits you'
 
           fresh=$(curl -fsS --retry 3 --retry-delay 5 --max-time 20 "${url}?cb=${GITHUB_RUN_ID}")
@@ -163,13 +143,12 @@ jobs:
           fi
           echo "Deployed code OK: /hobbies renders the facet browser."
 
-          legacy=https://significanthobbies.com/hobbies
-          redirect=$(curl -sS -o /dev/null -w '%{redirect_url}' "$legacy")
-          if [ "$redirect" != "$url" ]; then
-            echo "ERROR: legacy apex Live route did not redirect to $url"
+          alias=https://live.significanthobbies.com/hobbies
+          alias_html=$(curl -fsS --max-time 20 "$alias")
+          if ! printf '%s' "$alias_html" | grep -q "$marker"; then
+            echo "ERROR: existing Live alias no longer serves the app"
             exit 1
           fi
-          echo "Host boundary OK: legacy apex Live route redirects to the Live host."
 
           for attempt in 1 2 3 4 5 6; do
             if curl -fsS --max-time 20 "$url" | grep -q "$marker"; then

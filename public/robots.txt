@@ -168,4 +168,4 @@ Disallow: /local-workspace
 Disallow: /onboarding
 Disallow: /hub
 
-Sitemap: https://live.significanthobbies.com/sitemap.xml
+Sitemap: https://significanthobbies.com/sitemap.xml

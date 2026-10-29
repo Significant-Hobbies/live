@@ -49,9 +49,7 @@ function TimelineOgHeader({ username }: { username: string | null }) {
         marginBottom: 40,
       }}
     >
-      <div style={{ fontSize: 22, color: '#059669', fontWeight: 700 }}>
-        live.significanthobbies.com
-      </div>
+      <div style={{ fontSize: 22, color: '#059669', fontWeight: 700 }}>significanthobbies.com</div>
       {username && <div style={{ fontSize: 22, color: '#78716C' }}>@{username}</div>}
     </div>
   );

@@ -106,7 +106,7 @@ export async function handlePublicRouteMarkdown(request, loadMarkdown) {
         'Access-Control-Max-Age': '86400',
       },
     });
-  const canonical = new URL(sourcePath, 'https://live.significanthobbies.com').href;
+  const canonical = new URL(sourcePath, 'https://significanthobbies.com').href;
   return markdownResponse(markdown, request, {
     'Content-Location': canonical,
     Link: `<${canonical}>; rel="canonical"; type="text/html"`,

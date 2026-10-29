@@ -45,10 +45,14 @@ export const publicIdentity = {
     },
     {
       '@type': 'WebApplication',
-      '@id': 'https://live.significanthobbies.com/#app',
+      '@id': 'https://significanthobbies.com/#app',
       name: 'Live',
-      alternateName: ['Live by Significant Hobbies', 'live.significanthobbies.com'],
-      url: 'https://live.significanthobbies.com',
+      alternateName: [
+        'Live by Significant Hobbies',
+        'Significant Hobbies',
+        'significanthobbies.com',
+      ],
+      url: 'https://significanthobbies.com',
       applicationCategory: 'LifestyleApplication',
       description:
         'Find bucket-list ideas and side quests, keep your own list, log what you do, and write one private entry each week.',
@@ -62,9 +66,9 @@ export const publicIdentity = {
     },
     {
       '@type': 'WebSite',
-      '@id': 'https://live.significanthobbies.com/#website',
+      '@id': 'https://significanthobbies.com/#website',
       name: 'Live',
-      url: 'https://live.significanthobbies.com',
+      url: 'https://significanthobbies.com',
       publisher: {
         '@id': 'https://significanthobbies.com/#org',
       },

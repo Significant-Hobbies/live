@@ -67,7 +67,7 @@ async function publicProfileEntries(
 }
 
 export function publicStaticSitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://live.significanthobbies.com';
+  const baseUrl = 'https://significanthobbies.com';
   const now = new Date();
 
   const categoryPages = [
@@ -361,6 +361,6 @@ export function publicStaticSitemap(): MetadataRoute.Sitemap {
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     ...publicStaticSitemap(),
-    ...(await publicProfileEntries('https://live.significanthobbies.com', new Date())),
+    ...(await publicProfileEntries('https://significanthobbies.com', new Date())),
   ];
 }

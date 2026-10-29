@@ -14,11 +14,7 @@ describe('HTML discovery hints', () => {
       })
   );
   it('keeps body and existing headers while advertising Markdown', async () => {
-    const response = await handler(
-      new Request('https://live.significanthobbies.com/about'),
-      {},
-      {}
-    );
+    const response = await handler(new Request('https://significanthobbies.com/about'), {}, {});
     expect(await response.text()).toBe(html);
     expect(response.headers.get('vary')).toBe('Cookie, Accept');
     expect(response.headers.get('link')).toContain('</about.md>');
@@ -28,17 +24,13 @@ describe('HTML discovery hints', () => {
   it.each(['/daily', '/u/person', '/u/person/timeline', '/hub'])(
     'does not advertise private or separately owned %s',
     async (path) => {
-      const response = await handler(
-        new Request(`https://live.significanthobbies.com${path}`),
-        {},
-        {}
-      );
+      const response = await handler(new Request(`https://significanthobbies.com${path}`), {}, {});
       expect(response.headers.get('vary')).toBe('Cookie');
       expect(response.headers.get('link')).not.toContain('.md');
     }
   );
-  it('preserves apex Hub ownership', async () => {
-    const response = await handler(new Request('https://significanthobbies.com/'), {}, {});
+  it('does not advertise discovery on unrelated hosts', async () => {
+    const response = await handler(new Request('https://other.example/'), {}, {});
     expect(response.headers.get('link')).not.toContain('.md');
   });
 });

@@ -1,7 +1,7 @@
 import content from '../../landing-astro/src/content/live.json';
 import { EXPERIENCE_ENTRIES } from './experiences';
 
-const origin = 'https://live.significanthobbies.com';
+const origin = 'https://significanthobbies.com';
 const link = (value: { label: string; href: string }) =>
   `[${value.label}](${new URL(value.href, origin).href})`;
 

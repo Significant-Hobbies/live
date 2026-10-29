@@ -10,7 +10,7 @@ export const metadata: Metadata = withPublicMetadata({
   title: '50 Best Hobbies for Adults — Find What Excites You | SignificantHobbies',
   description:
     'Discover 50 hobbies perfect for adults. From creative pursuits to physical adventures, find your next passion with our curated guide.',
-  alternates: { canonical: 'https://live.significanthobbies.com/hobbies-for-adults' },
+  alternates: { canonical: 'https://significanthobbies.com/hobbies-for-adults' },
 });
 
 type Hobby = { name: string; desc: string };

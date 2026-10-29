@@ -12,7 +12,7 @@ export async function GET(request: Request) {
   if (!path || !documents.has(path)) return new Response('Not found', { status: 404 });
   return (
     (await handlePublicReadability(
-      new Request(new URL(path, 'https://live.significanthobbies.com'), { method: request.method })
+      new Request(new URL(path, 'https://significanthobbies.com'), { method: request.method })
     )) ?? new Response('Not found', { status: 404 })
   );
 }

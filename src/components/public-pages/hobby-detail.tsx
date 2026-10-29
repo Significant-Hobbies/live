@@ -130,13 +130,13 @@ export async function renderHobbyContent(params: Props['params'], isLoggedIn = f
               '@type': 'ListItem',
               position: 1,
               name: 'Hobbies',
-              item: 'https://live.significanthobbies.com/hobbies',
+              item: 'https://significanthobbies.com/hobbies',
             },
             {
               '@type': 'ListItem',
               position: 2,
               name: hobbyName,
-              item: `https://live.significanthobbies.com/hobbies/${hobbySlug}`,
+              item: `https://significanthobbies.com/hobbies/${hobbySlug}`,
             },
           ],
         }}

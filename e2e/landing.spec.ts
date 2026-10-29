@@ -17,7 +17,7 @@ test.describe('Live landing (Astro overlay)', () => {
     ).toHaveCount(0);
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
       'href',
-      'https://live.significanthobbies.com'
+      'https://significanthobbies.com'
     );
     expect(
       await page

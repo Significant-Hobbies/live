@@ -2,7 +2,7 @@
   "name": "live-significant-hobbies",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://live.significanthobbies.com",
+  "homepage": "https://significanthobbies.com",
   "scripts": {
     "dev": "next dev",
     "build": "next build --webpack && node scripts/run-inline-critical-css.mjs",

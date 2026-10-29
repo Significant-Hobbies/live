@@ -8,7 +8,7 @@ export const metadata: Metadata = withPublicMetadata({
   title: 'About — Significant Hobbies',
   description:
     'Significant Hobbies turns your hobby history into a shareable timeline. Quiz-based recommendations, gamified discovery, and a public profile.',
-  alternates: { canonical: 'https://live.significanthobbies.com/about' },
+  alternates: { canonical: 'https://significanthobbies.com/about' },
 });
 
 export default function AboutPage() {

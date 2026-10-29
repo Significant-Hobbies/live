@@ -16,7 +16,7 @@ export const metadata: Metadata = withPublicMetadata({
   title: '25 Free & Cheap Hobbies That Are Actually Fun | SignificantHobbies',
   description:
     '25 free and cheap hobbies that are genuinely worth your time. 15 completely free + 10 under $50 to start. With honest cost breakdowns.',
-  alternates: { canonical: 'https://live.significanthobbies.com/cheap-hobbies' },
+  alternates: { canonical: 'https://significanthobbies.com/cheap-hobbies' },
 });
 
 function hobbySlug(name: string) {

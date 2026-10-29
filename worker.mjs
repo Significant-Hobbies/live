@@ -11,6 +11,7 @@
 //
 // All non-GET, non-`/` requests pass straight through to OpenNext.
 
+import { isLiveHost } from './live-origins.mjs';
 import { withPublicDocumentHints } from './public-document-hints.mjs';
 import openNext from './.open-next/worker.js';
 import { buildId } from './.open-next/cache-release.mjs';
@@ -22,7 +23,6 @@ import { sendWeeklyNudges } from './weekly-nudge-email.mjs';
 import {
   fetchHubRoute,
   legacyLiveRedirect,
-  LIVE_HOST,
   markPersonalPlatformInternalRequest,
 } from './hub-routing.mjs';
 
@@ -237,7 +237,7 @@ export default {
         }
         // Session-bearing requests enter the list at the root and bypass shared
         // HTML caching elsewhere. Workspaces still validate the real session.
-        const isLiveLanding = url.hostname === LIVE_HOST && url.pathname === '/';
+        const isLiveLanding = isLiveHost(url.hostname) && url.pathname === '/';
         if (hasAuthCookie(request) && isLiveLanding) {
           // Enter the list directly. The workspace validates the real session;
           // cookie presence only selects routing and never grants data access.

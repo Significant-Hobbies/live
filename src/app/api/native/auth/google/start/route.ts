@@ -20,7 +20,9 @@ export async function GET(request: Request): Promise<Response> {
       callbackURL: completeURL.toString(),
       errorCallbackURL: completeURL.toString(),
     },
+    request,
     headers: request.headers,
+    asResponse: false,
     returnHeaders: true,
   });
   if (!result.url) {
