@@ -213,14 +213,9 @@ function checkDependencies() {
       optionalAuthAdvisories.has(advisory.github_advisory_id)
   );
   if (optionalAuth.length > 0) {
+    const qualificationPath = 'src/lib/auth-dependency-qualification.test.ts';
     const qualification = parseJson(
-      run('pnpm', [
-        'exec',
-        'vitest',
-        'run',
-        'src/lib/auth-dependency-qualification.test.ts',
-        '--reporter=json',
-      ]),
+      run('pnpm', ['exec', 'vitest', 'run', qualificationPath, '--reporter=json']),
       'Auth dependency qualification'
     );
     const zeroCounts = ['numFailedTests', 'numPendingTests', 'numTodoTests'];
@@ -248,17 +243,16 @@ function checkDependencies() {
       ) ||
       (qualification.numTotalTestSuites !== undefined &&
         qualification.numPassedTestSuites !== qualification.numTotalTestSuites) ||
-      (suites !== undefined &&
-        (!Array.isArray(suites) ||
-          suites.length === 0 ||
-          suites.some(
-            (suite) =>
-              suite.status !== 'passed' ||
-              (suite.assertionResults !== undefined &&
-                (!Array.isArray(suite.assertionResults) ||
-                  suite.assertionResults.length === 0 ||
-                  suite.assertionResults.some((assertion) => assertion.status !== 'passed')))
-          )))
+      !Array.isArray(suites) ||
+      suites.length !== 1 ||
+      suites.some(
+        (suite) =>
+          suite.name !== resolve(projectRoot, qualificationPath) ||
+          suite.status !== 'passed' ||
+          !Array.isArray(suite.assertionResults) ||
+          suite.assertionResults.length !== 1 ||
+          suite.assertionResults.some((assertion) => assertion.status !== 'passed')
+      )
     ) {
       throw new Error(
         'Dependency qualification must execute exactly one passing test with no failed, skipped or todo tests or suites.'

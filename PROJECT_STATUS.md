@@ -26,6 +26,10 @@ remain available on secondary routes.
   surfaces belong to Live. `www` public links canonicalize to the apex.
 - Production qualification requires deployment, sign-in on both origins and
   legacy-session checks. Source or CI success alone does not qualify runtime.
+- At source-review time on 2026-10-29 (revision `b63f3a1`), production still
+  served the retired Hub at the apex. The routing above was not production-qualified
+  at that time. Deployment and both-origin sign-in and legacy-session checks are
+  separate runtime evidence.
 
 ## Status and next
 

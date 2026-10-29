@@ -8,6 +8,9 @@ import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
 
 const script = fileURLToPath(new URL('../../scripts/check-code-health.mjs', import.meta.url));
+const qualificationFile = fileURLToPath(
+  new URL('./auth-dependency-qualification.test.ts', import.meta.url)
+);
 const optionalAuthIds = ['GHSA-965c-763c-88jm', 'GHSA-q84f-53jg-9ppm', 'GHSA-r4xp-prcw-77qf'];
 const authAdvisories = optionalAuthIds.map((github_advisory_id, index) => ({
   github_advisory_id,
@@ -26,7 +29,9 @@ const passedQualification = {
   numPassedTestSuites: 1,
   numFailedTestSuites: 0,
   numPendingTestSuites: 0,
-  testResults: [{ status: 'passed' }],
+  testResults: [
+    { name: qualificationFile, status: 'passed', assertionResults: [{ status: 'passed' }] },
+  ],
 };
 
 function gate(
@@ -117,6 +122,52 @@ describe('dependency release gate', () => {
     ['empty report', ''],
     ['malformed report', '{'],
     ['missing counters', '{}'],
+    ['missing test results', JSON.stringify({ ...passedQualification, testResults: undefined })],
+    ['empty test results', JSON.stringify({ ...passedQualification, testResults: [] })],
+    [
+      'missing assertions',
+      JSON.stringify({
+        ...passedQualification,
+        testResults: [{ ...passedQualification.testResults[0], assertionResults: undefined }],
+      }),
+    ],
+    [
+      'empty assertions',
+      JSON.stringify({
+        ...passedQualification,
+        testResults: [{ ...passedQualification.testResults[0], assertionResults: [] }],
+      }),
+    ],
+    [
+      'skipped assertion',
+      JSON.stringify({
+        ...passedQualification,
+        testResults: [
+          { ...passedQualification.testResults[0], assertionResults: [{ status: 'skipped' }] },
+        ],
+      }),
+    ],
+    [
+      'todo assertion',
+      JSON.stringify({
+        ...passedQualification,
+        testResults: [
+          { ...passedQualification.testResults[0], assertionResults: [{ status: 'todo' }] },
+        ],
+      }),
+    ],
+    [
+      'wrong test file',
+      JSON.stringify({
+        ...passedQualification,
+        testResults: [
+          {
+            ...passedQualification.testResults[0],
+            name: fileURLToPath(new URL('./auth-origin.test.ts', import.meta.url)),
+          },
+        ],
+      }),
+    ],
   ])('rejects a %s even when Vitest exits zero', (_label, guardReport) => {
     const result = gate(authAdvisories, 0, true, guardReport);
     expect(result.status).toBe(1);
