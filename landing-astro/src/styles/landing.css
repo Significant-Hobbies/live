@@ -1,3 +1,18 @@
+/* Match Georgia to the existing Fraunces 500 headings while the webfont loads.
+   The landing's heading text measures 144731.625 / 135304.203125 at 1000px;
+   Fraunces ascent/descent are 978/255. Divide those metrics by size-adjust
+   so the local face keeps the same line breaks and baseline as Fraunces. */
+@font-face {
+  font-family: "Live Heading Fallback";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Georgia");
+  size-adjust: 106.9676%;
+  ascent-override: 91.4296%;
+  descent-override: 23.839%;
+  line-gap-override: 0%;
+}
+
 /* Same Life Atlas roles as src/app/globals.css. Preset selectors are explicit
    so shared Gallery defaults cannot restore a light canvas or cool ink. */
 :root,
@@ -6,7 +21,7 @@ html[data-theme="gallery"] [data-surface="editorial-dark"] {
   color-scheme: dark;
   --font-display: "Geist Variable", system-ui, sans-serif;
   --font-text: var(--font-sans);
-  --font-accent: "Fraunces Variable", Georgia, serif;
+  --font-accent: "Fraunces Variable", "Live Heading Fallback", Georgia, serif;
   --radius: 0.75rem;
   --brand: #e7bf57;
   --brand-foreground: #1d1409;
@@ -100,7 +115,7 @@ html[data-theme="gallery"] :focus-visible {
 /* The same Geist controls and Fraunces landmarks as the app. */
 html[data-theme="gallery"] h1,
 html[data-theme="gallery"] h2 {
-  font-family: "Fraunces Variable", Georgia, serif;
+  font-family: "Fraunces Variable", "Live Heading Fallback", Georgia, serif;
   font-weight: 500;
   letter-spacing: -0.02em;
 }
