@@ -92,6 +92,7 @@ import {
 import { renderBucketListContent } from '~/components/public-pages/bucket-list-detail';
 import { AddToMyListButton } from '~/components/add-to-my-list-button';
 import { ExperienceCollectionLinks } from '~/components/experience-collection-links';
+import { ExperiencePhoto } from '~/components/experience-photo';
 import { addToMyListLabel } from './public-button-copy';
 import { findExperience } from './experiences';
 import { getFamousBucketList } from './famous-bucket-lists';
@@ -414,6 +415,7 @@ function renderPublicTree(tree: ReactNode, path: string): string {
       HobbyCard,
       ExperienceTag,
       ExperienceCollectionLinks,
+      ExperiencePhoto,
       PostCard,
       PostCardContent,
       BlogContent,
