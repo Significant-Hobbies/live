@@ -79,10 +79,16 @@ describe('private bucket item updates', () => {
     }
     expect(insert).not.toHaveBeenCalled();
   });
-  it('does not report success for a conflicting token or an unconfirmed write', async () => {
+  it('does not report success for a token outside this item and account', async () => {
     saved.mockResolvedValueOnce(null);
     await expect(addBucketItemUpdate('item', input)).rejects.toThrow('Update could not be saved');
-    saved.mockResolvedValueOnce({ ...input, text: 'Other content', createdAt });
-    await expect(addBucketItemUpdate('item', input)).rejects.toThrow('Update could not be saved');
+  });
+  it('returns the original saved text when an edited retry reuses its token', async () => {
+    expect(
+      await addBucketItemUpdate('item', { ...input, text: 'Edited after a lost response' })
+    ).toEqual({
+      ...input,
+      createdAt: createdAt.toISOString(),
+    });
   });
 });

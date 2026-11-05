@@ -143,10 +143,7 @@ export function localMyListStorage(
       const item = items.find((entry) => entry.id === id);
       if (!item) throw new Error('Item not found');
       const existing = item.updates?.find((entry) => entry.id === update.id);
-      if (existing) {
-        if (existing.text !== update.text) throw new Error('Update identifier is already in use');
-        return items;
-      }
+      if (existing) return items;
       return persist(
         items.map((entry) =>
           entry.id === id

@@ -36,7 +36,9 @@ export function MyList({
   const [notesDrafts, setNotesDrafts] = useState<Record<string, string>>({});
   const [notesFailures, setNotesFailures] = useState<Record<string, boolean>>({});
   const [updateDrafts, setUpdateDrafts] = useState<Record<string, BucketUpdateInput>>({});
-  const [updateFailures, setUpdateFailures] = useState<Record<string, boolean>>({});
+  const [updateFeedback, setUpdateFeedback] = useState<
+    Record<string, 'failed' | 'recovered' | undefined>
+  >({});
   const postingUpdates = useRef(new Set<string>());
   const [desktop, setDesktop] = useState(false);
   useEffect(() => {
@@ -121,15 +123,30 @@ export function MyList({
     const draft = updateDrafts[item.id];
     if (!draft?.text.trim() || postingUpdates.current.has(item.id)) return;
     postingUpdates.current.add(item.id);
-    const ok = await mutate((adapter) => adapter.addUpdate(item.id, draft), false, true);
+    let savedText: string | undefined;
+    const ok = await mutate(
+      async (adapter) => {
+        const next = await adapter.addUpdate(item.id, draft);
+        savedText = next
+          .find((entry) => entry.id === item.id)
+          ?.updates?.find((entry) => entry.id === draft.id)?.text;
+        if (savedText === undefined) throw new Error('Update could not be confirmed');
+        return next;
+      },
+      false,
+      true
+    );
     postingUpdates.current.delete(item.id);
-    setUpdateFailures((current) => ({ ...current, [item.id]: !ok }));
+    setUpdateFeedback((current) => ({
+      ...current,
+      [item.id]: !ok ? 'failed' : savedText !== draft.text.trim() ? 'recovered' : undefined,
+    }));
     if (ok) {
       setUpdateDrafts((current) => {
         const currentDraft = current[item.id];
         if (!currentDraft || currentDraft.id !== draft.id) return current;
         const next = { ...current };
-        if (currentDraft.text === draft.text) delete next[item.id];
+        if (currentDraft.text.trim() === savedText) delete next[item.id];
         else next[item.id] = { id: crypto.randomUUID(), text: currentDraft.text };
         return next;
       });
@@ -165,7 +182,7 @@ export function MyList({
       onNotesSave={() => void saveNotes(selected, notesDrafts[selected.id] ?? selected.notes ?? '')}
       updateComposer={{
         draft: updateDrafts[selected.id]?.text ?? '',
-        error: updateFailures[selected.id] ?? false,
+        feedback: updateFeedback[selected.id],
         onChange: (text) =>
           setUpdateDrafts((current) => ({
             ...current,
@@ -386,7 +403,7 @@ function ItemPanel({
   onNotesSave: () => void;
   updateComposer: {
     draft: string;
-    error: boolean;
+    feedback: 'failed' | 'recovered' | undefined;
     onChange: (text: string) => void;
     onPost: () => void;
   };
@@ -623,10 +640,15 @@ function ItemPanel({
               Post update
             </button>
           </div>
-          {updateComposer.error && (
+          {updateComposer.feedback === 'failed' && (
             <p role="alert" className="mt-2 text-sm text-destructive">
               Update could not be confirmed. Your draft is still here. Retry, or reload to check
               your history.
+            </p>
+          )}
+          {updateComposer.feedback === 'recovered' && (
+            <p role="status" className="mt-2 text-sm text-muted-foreground">
+              An earlier version was already saved. Your edited text is still here as a new draft.
             </p>
           )}
         </form>

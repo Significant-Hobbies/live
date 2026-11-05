@@ -60,8 +60,8 @@ describe('local My list storage', () => {
     const retried = await storage.addUpdate('item', input);
     expect(retried[0]!.updates).toHaveLength(1);
     await expect(storage.addUpdate('missing', input)).rejects.toThrow('Item not found');
-    await expect(storage.addUpdate('item', { ...input, text: 'Changed' })).rejects.toThrow(
-      'identifier'
+    expect((await storage.addUpdate('item', { ...input, text: 'Changed' }))[0]!.updates).toEqual(
+      retried[0]!.updates
     );
   });
   it('reads strings and objects without writing, then preserves unknown fields and stable IDs', async () => {

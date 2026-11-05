@@ -81,14 +81,24 @@ test('an aborted guest update retains its draft and retries once', async ({ page
 });
 
 test('account updates survive reload and are absent from another account', async ({
-  authedPage: page,
+  page,
   browser,
 }) => {
   const title = `Make a first ceramic bowl ${crypto.randomUUID()}`;
   const secret = `Found a pottery studio ${crypto.randomUUID()}`;
-  const profile = '/u/e2e-bucket-updates';
+  const username = `bucket-${crypto.randomUUID().slice(0, 16)}`;
+  const profile = `/u/${username}`;
+  const signupOwner = await page.request.post('/api/auth/sign-up/email', {
+    data: {
+      email: `bucket-owner-${crypto.randomUUID()}@significanthobbies.test`,
+      password: 'e2e-test-password-not-a-secret',
+      name: 'Bucket update owner',
+    },
+  });
+  test.skip(signupOwner.status() === 404, 'Test auth disabled');
+  expect(signupOwner.ok()).toBeTruthy();
   const prepareProfile = await page.request.post('/api/test/complete-onboarding', {
-    data: { username: 'e2e-bucket-updates' },
+    data: { username },
   });
   expect(prepareProfile.ok()).toBeTruthy();
   let panel = await addItem(page, title);
@@ -96,9 +106,24 @@ test('account updates survive reload and are absent from another account', async
   const draft = panel.getByRole('textbox', { name: 'Add an update', exact: true });
   await expect(draft).toBeEnabled();
   await draft.fill(secret);
+  let loseNextPost = true;
+  await page.route('**/bucket-list', async (route) => {
+    if (route.request().method() === 'POST' && loseNextPost) {
+      loseNextPost = false;
+      await route.fetch();
+      await route.abort('failed');
+    } else await route.continue();
+  });
+  await panel.getByRole('button', { name: 'Post update', exact: true }).click();
+  await expect(panel.getByRole('alert')).toContainText('Update could not be confirmed');
+  await draft.fill('Finished glazing the bowl.');
   await panel.getByRole('button', { name: 'Post update', exact: true }).click();
   await expect(panel.getByRole('list', { name: 'Item updates' })).toContainText(secret);
-  await draft.fill('Finished glazing the bowl.');
+  await expect(panel.getByRole('list', { name: 'Item updates' }).getByRole('listitem')).toHaveCount(
+    1
+  );
+  await expect(draft).toHaveValue('Finished glazing the bowl.');
+  await expect(panel.getByRole('status')).toContainText('An earlier version was already saved');
   await panel.getByRole('button', { name: 'Post update', exact: true }).click();
   await expect(draft).toHaveValue('');
   await page.reload();

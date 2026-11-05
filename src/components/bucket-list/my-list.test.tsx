@@ -175,6 +175,34 @@ describe('item updates', () => {
     expect(container.querySelectorAll('[aria-label="Item updates"] li')).toHaveLength(2);
     expect(field.value).toBe('');
   });
+
+  it('recovers an unconfirmed saved original and keeps its edited retry as a fresh draft', async () => {
+    postUpdate.mockRejectedValueOnce(new Error('Response lost'));
+    const field = await openUpdateItem();
+    await click('Post update');
+    const submitted = postUpdate.mock.calls[0]![1];
+    await act(async () => {
+      Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, 'value')?.set?.call(
+        field,
+        'Went sailing today'
+      );
+      field.dispatchEvent(new Event('input', { bubbles: true }));
+    });
+    postUpdate.mockResolvedValueOnce({ ...submitted, createdAt: '2026-11-05T10:00:00.123Z' });
+    await click('Post update');
+    expect(field.value).toBe('Went sailing today');
+    expect(container.querySelectorAll('[aria-label="Item updates"] li')).toHaveLength(1);
+    expect(container.textContent).toContain('An earlier version was already saved');
+    expect(container.querySelectorAll('[role="alert"]')).toHaveLength(0);
+    postUpdate.mockImplementationOnce(async (_id, input) => ({
+      ...input,
+      createdAt: '2026-11-05T11:00:00.123Z',
+    }));
+    await click('Post update');
+    expect(postUpdate.mock.calls[2]![1].id).not.toBe(submitted.id);
+    expect(field.value).toBe('');
+    expect(container.querySelectorAll('[aria-label="Item updates"] li')).toHaveLength(2);
+  });
 });
 afterEach(async () => {
   await act(async () => root.unmount());

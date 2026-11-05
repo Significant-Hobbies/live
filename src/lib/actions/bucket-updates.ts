@@ -25,6 +25,7 @@ export async function addBucketItemUpdate(
     columns: { id: true },
   });
   if (!item) throw new Error('Item not found');
+  // Replays return the stored post so the client can recover an uncertain save.
   await db
     .insert(bucketItemUpdates)
     .values({ ...update, itemId, userId: session.user.id, createdAt: new Date() })
@@ -36,7 +37,7 @@ export async function addBucketItemUpdate(
       eq(bucketItemUpdates.userId, session.user.id)
     ),
   });
-  if (!saved || saved.text !== update.text) throw new Error('Update could not be saved');
+  if (!saved) throw new Error('Update could not be saved');
   revalidatePath('/bucket-list');
   return { id: saved.id, text: saved.text, createdAt: saved.createdAt.toISOString() };
 }
