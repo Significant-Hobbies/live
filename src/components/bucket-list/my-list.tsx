@@ -648,7 +648,7 @@ function ItemPanel({
           )}
           {updateComposer.feedback === 'recovered' && (
             <p role="status" className="mt-2 text-sm text-muted-foreground">
-              An earlier version was already saved. Your edited text is still here as a new draft.
+              An earlier version was already saved.
             </p>
           )}
         </form>
