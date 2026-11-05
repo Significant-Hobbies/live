@@ -70,7 +70,10 @@ export function MyList({
     };
   }, [storage]);
 
-  function mutate(action: (adapter: MyListStorage) => Promise<MyListItem[]>, quiet = false) {
+  function mutate(
+    action: (adapter: MyListStorage) => Promise<MyListItem[]>,
+    { quiet = false, inlineError = false }: { quiet?: boolean; inlineError?: boolean } = {}
+  ) {
     if (!loaded) return Promise.resolve(false);
     if (!quiet) {
       blockingWrites.current += 1;
@@ -82,11 +85,12 @@ export function MyList({
         setItems(await action(storage));
         return true;
       } catch (cause) {
-        setError(
-          cause instanceof Error && cause.message === 'This item is already in your list.'
-            ? cause.message
-            : 'Changes could not be saved. Your list and input are unchanged. Try again.'
-        );
+        if (!inlineError)
+          setError(
+            cause instanceof Error && cause.message === 'This item is already in your list.'
+              ? cause.message
+              : 'Changes could not be saved. Your list and input are unchanged. Try again.'
+          );
         return false;
       } finally {
         if (!quiet) {
@@ -101,7 +105,9 @@ export function MyList({
 
   async function saveNotes(item: MyListItem, notes: string) {
     if (notes === (item.notes ?? '')) return;
-    const ok = await mutate((adapter) => adapter.update(item.id, { notes: notes || null }), true);
+    const ok = await mutate((adapter) => adapter.update(item.id, { notes: notes || null }), {
+      quiet: true,
+    });
     setNotesFailures((current) => ({ ...current, [item.id]: !ok }));
     if (ok)
       setNotesDrafts((current) => {
@@ -116,12 +122,15 @@ export function MyList({
     const draft = updateDrafts[item.id];
     if (!draft?.text.trim() || postingUpdates.current.has(item.id)) return;
     postingUpdates.current.add(item.id);
-    const ok = await mutate((adapter) => adapter.addUpdate(item.id, draft));
+    const ok = await mutate((adapter) => adapter.addUpdate(item.id, draft), { inlineError: true });
     postingUpdates.current.delete(item.id);
     setUpdateFailures((current) => ({ ...current, [item.id]: !ok }));
     if (ok)
       setUpdateDrafts((current) => {
         if (current[item.id]?.id !== draft.id) return current;
+        if (current[item.id]?.text !== draft.text) {
+          return { ...current, [item.id]: { ...current[item.id]!, id: crypto.randomUUID() } };
+        }
         const next = { ...current };
         delete next[item.id];
         return next;
@@ -161,7 +170,7 @@ export function MyList({
         onChange: (text) =>
           setUpdateDrafts((current) => ({
             ...current,
-            [selected.id]: { id: crypto.randomUUID(), text },
+            [selected.id]: { id: current[selected.id]?.id ?? crypto.randomUUID(), text },
           })),
         onPost: () => void postUpdate(selected),
       }}
@@ -617,7 +626,8 @@ function ItemPanel({
           </div>
           {updateComposer.error && (
             <p role="alert" className="mt-2 text-sm text-destructive">
-              Update could not be saved. Your draft is still here. Try again.
+              Update could not be confirmed. Your draft is still here. Retry, or reload to check
+              your history.
             </p>
           )}
         </form>

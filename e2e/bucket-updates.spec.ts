@@ -86,6 +86,11 @@ test('account updates survive reload and are absent from another account', async
 }) => {
   const title = `Make a first ceramic bowl ${crypto.randomUUID()}`;
   const secret = `Found a pottery studio ${crypto.randomUUID()}`;
+  const profile = '/u/e2e-bucket-updates';
+  const prepareProfile = await page.request.post('/api/test/complete-onboarding', {
+    data: { username: 'e2e-bucket-updates' },
+  });
+  expect(prepareProfile.ok()).toBeTruthy();
   let panel = await addItem(page, title);
   await panel.getByRole('combobox', { name: 'Visibility', exact: true }).selectOption('public');
   const draft = panel.getByRole('textbox', { name: 'Add an update', exact: true });
@@ -121,6 +126,10 @@ test('account updates survive reload and are absent from another account', async
     await expect(otherPage.getByRole('button', { name: `Open ${title}`, exact: true })).toHaveCount(
       0
     );
+    await otherPage.goto(profile);
+    await expect(otherPage.getByText(title, { exact: true })).toBeVisible();
+    await expect(otherPage.getByText(secret, { exact: true })).toHaveCount(0);
+    await expect(otherPage.getByText('Finished glazing the bowl.', { exact: true })).toHaveCount(0);
   } finally {
     await other.close();
   }

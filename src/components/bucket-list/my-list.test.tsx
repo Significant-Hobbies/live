@@ -87,10 +87,28 @@ describe('item updates', () => {
     expect(container.querySelector<HTMLTextAreaElement>('#update-one')?.value).toBe(
       'Booked a lesson'
     );
-    expect(container.textContent).toContain('Update could not be saved. Your draft is still here.');
-    postUpdate.mockResolvedValueOnce({ ...submitted, createdAt: '2026-11-05T10:00:00.123Z' });
+    expect(container.textContent).toContain(
+      'Update could not be confirmed. Your draft is still here.'
+    );
+    expect(container.querySelectorAll('[role="alert"]')).toHaveLength(1);
+    const field = container.querySelector<HTMLTextAreaElement>('#update-one')!;
+    await act(async () => {
+      Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, 'value')?.set?.call(
+        field,
+        'Booked a lesson with Sam'
+      );
+      field.dispatchEvent(new Event('input', { bubbles: true }));
+    });
+    postUpdate.mockResolvedValueOnce({
+      ...submitted,
+      text: 'Booked a lesson with Sam',
+      createdAt: '2026-11-05T10:00:00.123Z',
+    });
     await click('Post update');
-    expect(postUpdate).toHaveBeenLastCalledWith('one', submitted);
+    expect(postUpdate).toHaveBeenLastCalledWith('one', {
+      ...submitted,
+      text: 'Booked a lesson with Sam',
+    });
     expect(container.querySelector<HTMLTextAreaElement>('#update-one')?.value).toBe('');
     expect(container.querySelector('[aria-label="Item updates"]')?.textContent).toContain(
       'Booked a lesson'
