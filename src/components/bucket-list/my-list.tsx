@@ -72,7 +72,8 @@ export function MyList({
 
   function mutate(
     action: (adapter: MyListStorage) => Promise<MyListItem[]>,
-    { quiet = false, inlineError = false }: { quiet?: boolean; inlineError?: boolean } = {}
+    quiet = false,
+    inlineError = false
   ) {
     if (!loaded) return Promise.resolve(false);
     if (!quiet) {
@@ -105,9 +106,7 @@ export function MyList({
 
   async function saveNotes(item: MyListItem, notes: string) {
     if (notes === (item.notes ?? '')) return;
-    const ok = await mutate((adapter) => adapter.update(item.id, { notes: notes || null }), {
-      quiet: true,
-    });
+    const ok = await mutate((adapter) => adapter.update(item.id, { notes: notes || null }), true);
     setNotesFailures((current) => ({ ...current, [item.id]: !ok }));
     if (ok)
       setNotesDrafts((current) => {
@@ -122,19 +121,19 @@ export function MyList({
     const draft = updateDrafts[item.id];
     if (!draft?.text.trim() || postingUpdates.current.has(item.id)) return;
     postingUpdates.current.add(item.id);
-    const ok = await mutate((adapter) => adapter.addUpdate(item.id, draft), { inlineError: true });
+    const ok = await mutate((adapter) => adapter.addUpdate(item.id, draft), false, true);
     postingUpdates.current.delete(item.id);
     setUpdateFailures((current) => ({ ...current, [item.id]: !ok }));
-    if (ok)
+    if (ok) {
       setUpdateDrafts((current) => {
-        if (current[item.id]?.id !== draft.id) return current;
-        if (current[item.id]?.text !== draft.text) {
-          return { ...current, [item.id]: { ...current[item.id]!, id: crypto.randomUUID() } };
-        }
+        const currentDraft = current[item.id];
+        if (!currentDraft || currentDraft.id !== draft.id) return current;
         const next = { ...current };
-        delete next[item.id];
+        if (currentDraft.text === draft.text) delete next[item.id];
+        else next[item.id] = { id: crypto.randomUUID(), text: currentDraft.text };
         return next;
       });
+    }
   }
 
   const active = [...items]

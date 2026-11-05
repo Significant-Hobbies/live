@@ -145,6 +145,36 @@ describe('item updates', () => {
     expect(container.querySelectorAll('[aria-label="Item updates"] li')).toHaveLength(1);
     expect(container.querySelector<HTMLTextAreaElement>('#update-one')?.value).toBe('');
   });
+
+  it('keeps a newer edit when an earlier post succeeds and gives it a fresh token', async () => {
+    let finish: (value: unknown) => void = () => {};
+    postUpdate.mockImplementationOnce(
+      () =>
+        new Promise((resolve) => {
+          finish = resolve;
+        })
+    );
+    const field = await openUpdateItem();
+    await click('Post update');
+    const submitted = postUpdate.mock.calls[0]![1];
+    await act(async () => {
+      Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, 'value')?.set?.call(
+        field,
+        'Went sailing today'
+      );
+      field.dispatchEvent(new Event('input', { bubbles: true }));
+      finish({ ...submitted, createdAt: '2026-11-05T10:00:00.123Z' });
+    });
+    expect(field.value).toBe('Went sailing today');
+    postUpdate.mockImplementationOnce(async (_id, input) => ({
+      ...input,
+      createdAt: '2026-11-05T11:00:00.123Z',
+    }));
+    await click('Post update');
+    expect(postUpdate.mock.calls[1]![1].id).not.toBe(submitted.id);
+    expect(container.querySelectorAll('[aria-label="Item updates"] li')).toHaveLength(2);
+    expect(field.value).toBe('');
+  });
 });
 afterEach(async () => {
   await act(async () => root.unmount());
