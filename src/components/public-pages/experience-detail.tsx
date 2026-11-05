@@ -19,6 +19,7 @@ import {
 } from '~/lib/experiences';
 import { safeDecodeURIComponent } from '~/lib/slug';
 import { SITE_URL } from '~/lib/site-metadata';
+import { ExperiencePhoto } from '~/components/experience-photo';
 
 /** Preserve catalog URLs; detailed editorial plans can be added independently. */
 export async function generateStaticParams() {
@@ -101,7 +102,7 @@ export async function renderExperienceContent(
         className="mt-6 font-serif text-4xl font-medium tracking-tight text-foreground sm:text-5xl"
         style={{ textWrap: 'balance', lineHeight: 1.12 }}
       >
-        {entry.emoji} {entry.title}
+        {entry.title}
       </h1>
 
       <p className="mt-5 max-w-[62ch] text-lg text-muted-foreground" style={{ lineHeight: 1.6 }}>
@@ -113,6 +114,14 @@ export async function renderExperienceContent(
         {entry.region ? <ExperienceTag>{entry.region.replace(/-/g, ' ')}</ExperienceTag> : null}
         {entry.horizon ? <ExperienceTag>{entry.horizon.replace('-', ' ')}</ExperienceTag> : null}
       </p>
+
+      <ExperiencePhoto
+        title={entry.title}
+        category={entry.category}
+        eager
+        sizes="(min-width: 768px) 704px, 100vw"
+        className="mt-7 aspect-[2/1] w-full rounded-2xl"
+      />
 
       <div className="mt-8">
         <AddToMyListButton

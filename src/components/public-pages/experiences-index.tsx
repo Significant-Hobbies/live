@@ -12,6 +12,7 @@ import { parseCatalogQuery } from '~/lib/catalog-seed';
 import { searchExperienceCatalog } from '~/server/experience-catalog';
 import { DEFAULT_SOCIAL_IMAGE, SITE_URL } from '~/lib/site-metadata';
 import { ExperiencesClient } from '~/app/experiences/experiences-client';
+import { ExperiencePhoto } from '~/components/experience-photo';
 
 const description =
   'Every experience we know about, in one searchable list: places to go, milestones to reach, and ideas worth stealing. No account needed.';
@@ -67,7 +68,7 @@ export function ExperiencesIndexView({
   mode: 'account' | 'local';
 }) {
   return (
-    <div className="mx-auto w-full max-w-3xl px-5 py-16 sm:px-8 sm:py-24">
+    <div className="mx-auto w-full max-w-6xl px-5 py-10 sm:px-8 sm:py-14">
       <JsonLd
         data={{
           '@context': 'https://schema.org',
@@ -78,16 +79,44 @@ export function ExperiencesIndexView({
           dateModified: EXPERIENCE_CONTENT_UPDATED,
         }}
       />
-      <h1
-        className="font-serif text-4xl font-medium tracking-tight text-foreground sm:text-5xl"
-        style={{ textWrap: 'balance', lineHeight: 1.12 }}
-      >
-        Things you could do.
-      </h1>
-      <p className="mt-5 max-w-[62ch] text-lg text-muted-foreground" style={{ lineHeight: 1.6 }}>
-        {catalog.total} ideas in one shared catalog — places to go, milestones worth reaching, and
-        things worth trying. Explore by category, and keep the ones that matter in your own list.
-      </p>
+      <header className="grid items-center gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
+        <div>
+          <h1
+            className="font-serif text-4xl font-medium tracking-tight text-foreground sm:text-5xl"
+            style={{ textWrap: 'balance', lineHeight: 1.12 }}
+          >
+            Things you could do.
+          </h1>
+          <p
+            className="mt-5 max-w-[48ch] text-lg text-muted-foreground"
+            style={{ lineHeight: 1.6 }}
+          >
+            {catalog.total} ideas in one shared catalog — places to go, milestones worth reaching,
+            and things worth trying. Explore by category, and keep the ones that matter in your own
+            list.
+          </p>
+        </div>
+        <div className="grid h-44 grid-cols-[1.2fr_0.8fr] gap-3 sm:h-56 lg:h-64" aria-hidden="true">
+          <div className="relative min-h-0 overflow-hidden rounded-2xl">
+            <ExperiencePhoto
+              title="swim"
+              decorative
+              eager
+              sizes="(min-width: 1024px) 270px, 60vw"
+              className="absolute inset-0 h-full w-full"
+            />
+          </div>
+          <div className="relative mt-5 min-h-0 overflow-hidden rounded-2xl">
+            <ExperiencePhoto
+              title="pottery"
+              decorative
+              eager
+              sizes="(min-width: 1024px) 180px, 40vw"
+              className="absolute inset-0 h-full w-full"
+            />
+          </div>
+        </div>
+      </header>
 
       <p className="mt-4 text-base text-muted-foreground">
         Want a shorter starting list?{' '}

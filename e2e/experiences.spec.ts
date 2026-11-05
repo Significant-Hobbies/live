@@ -7,6 +7,39 @@ import { waitForHydrated } from './fixtures/hydration';
  * mistake the mortality frame had (decisions.md A9).
  */
 test.describe('Experiences', () => {
+  test('carries a discovery photo into a saved item after reload', async ({ page }) => {
+    const title = 'See the Northern Lights in Iceland or Norway';
+    await page.goto('/experiences');
+    const card = page
+      .locator('li')
+      .filter({ has: page.getByRole('link', { name: title, exact: true }) });
+    const photo = card.locator('img');
+    await expect(photo).toBeVisible();
+    await expect
+      .poll(() =>
+        photo.evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0)
+      )
+      .toBe(true);
+    const add = card.getByRole('button');
+    await waitForHydrated(add);
+    await add.click();
+    await expect(card).toContainText('Added to your bucket list');
+    await page.goto('/bucket-list');
+    await page.getByRole('button', { name: `Open ${title}`, exact: true }).click();
+    const panel = page.getByRole('complementary', { name: `Item: ${title}` });
+    await expect(panel.locator('img')).toHaveAttribute('src', /\/aurora-/);
+    await page.reload();
+    const saved = page.getByRole('button', { name: `Open ${title}`, exact: true });
+    await expect(saved.locator('img')).toHaveAttribute('src', /\/aurora-/);
+    await expect
+      .poll(() =>
+        saved
+          .locator('img')
+          .evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0)
+      )
+      .toBe(true);
+  });
+
   test('makes the whole corpus available in bounded pages for a signed-out visitor', async ({
     page,
   }) => {

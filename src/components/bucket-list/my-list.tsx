@@ -4,6 +4,9 @@ import { Check, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { StorageModeProvider, StorageModeStatus } from '~/components/storage-mode-provider';
+import { ExperiencePhoto } from '~/components/experience-photo';
+import { ListInspiration } from '~/components/list-inspiration';
+import { experienceImage } from '~/lib/experience-images';
 import { normalizeDreamTitle } from '~/lib/dream-atlas';
 import type { BucketUpdateInput } from '~/lib/bucket-updates';
 import { ManualItemInput } from './manual-item-input';
@@ -216,7 +219,9 @@ export function MyList({
   return (
     <StorageModeProvider mode={account ? 'account' : 'local'}>
       <div className="mx-auto min-h-[75vh] max-w-[1180px] px-4 py-6 sm:px-6 sm:py-10">
-        <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_420px]">
+        <div
+          className={`grid items-start gap-10 ${items.length > 0 ? 'lg:grid-cols-[minmax(0,1fr)_420px]' : ''}`}
+        >
           <section className="min-w-0">
             <header className="flex items-start justify-between gap-4">
               <div>
@@ -258,9 +263,10 @@ export function MyList({
               </p>
             )}
             {loaded && items.length === 0 && (
-              // Short on purpose: this renders after the device store loads, so a long
-              // paragraph would outgrow the server-rendered heading as the LCP element.
-              <p className="mt-7 text-sm text-muted-foreground">Nothing here yet.</p>
+              <div>
+                <p className="mt-7 text-sm text-muted-foreground">Nothing here yet.</p>
+                <ListInspiration />
+              </div>
             )}
             {!loaded && !error ? (
               <div role="status" aria-label="Loading My list">
@@ -302,7 +308,9 @@ export function MyList({
               </section>
             )}
           </section>
-          <div className="sticky top-24 hidden min-w-0 lg:block">{desktop && panel}</div>
+          {items.length > 0 && (
+            <div className="sticky top-24 hidden min-w-0 lg:block">{desktop && panel}</div>
+          )}
         </div>
       </div>
     </StorageModeProvider>
@@ -350,6 +358,13 @@ function ItemRow({
         aria-label={`Open ${item.title}`}
         className="flex min-h-11 min-w-0 flex-1 items-start gap-3 rounded-lg py-2 pr-2 text-left focus-visible:ring-2 focus-visible:ring-ring"
       >
+        <ExperiencePhoto
+          title={item.title}
+          category={item.category}
+          decorative
+          sizes="64px"
+          className="h-14 w-14 shrink-0 rounded-lg"
+        />
         <span className="min-w-0 flex-1">
           <span
             className={`block break-words text-[17px] leading-snug ${done ? 'text-muted-foreground' : ''}`}
@@ -424,6 +439,19 @@ function ItemPanel({
       aria-label={`Item: ${item.title}`}
       className="rounded-2xl border border-border/60 bg-card p-5 sm:p-7"
     >
+      {experienceImage(item.title, item.category) && (
+        <figure className="-mx-5 -mt-5 mb-5 overflow-hidden rounded-t-2xl sm:-mx-7 sm:-mt-7">
+          <ExperiencePhoto
+            title={item.title}
+            category={item.category}
+            sizes="(min-width: 1024px) 420px, 100vw"
+            className="aspect-[2/1] w-full"
+          />
+          <figcaption className="px-5 pt-2 text-xs text-muted-foreground sm:px-7">
+            Inspiration for your next experience
+          </figcaption>
+        </figure>
+      )}
       <button
         type="button"
         onClick={onBack}
