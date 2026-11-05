@@ -7,6 +7,12 @@ import {
 } from '~/lib/actions/bucket-list';
 import { addBucketStep, removeBucketStep, setBucketStepDone } from '~/lib/actions/bucket-steps';
 import type { BucketStep } from '~/lib/bucket-steps';
+import { addBucketItemUpdate } from '~/lib/actions/bucket-updates';
+import {
+  BucketUpdateInputSchema,
+  type BucketItemUpdate,
+  type BucketUpdateInput,
+} from '~/lib/bucket-updates';
 import {
   browserRecordAdapter,
   readLocalRecord,
@@ -22,6 +28,7 @@ export type MyListItem = {
   visibility?: string;
   notes?: string | null;
   steps: BucketStep[];
+  updates?: BucketItemUpdate[];
   createdAt?: string | null;
   updatedAt?: string | null;
   completedAt?: string | null;
@@ -40,6 +47,7 @@ export interface MyListStorage {
   addStep(id: string, text: string): Promise<MyListItem[]>;
   setStep(id: string, stepId: string, done: boolean): Promise<MyListItem[]>;
   removeStep(id: string, stepId: string): Promise<MyListItem[]>;
+  addUpdate(id: string, input: BucketUpdateInput): Promise<MyListItem[]>;
 }
 
 function newItem(input: NewItem, id = crypto.randomUUID()): MyListItem {
@@ -50,6 +58,7 @@ function newItem(input: NewItem, id = crypto.randomUUID()): MyListItem {
     visibility: 'private',
     notes: input.description ?? null,
     steps: [],
+    updates: [],
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
   };
@@ -112,6 +121,7 @@ export function localMyListStorage(
             status:
               item.status === 'done' || item.status === 'in_progress' ? item.status : 'planned',
             steps: Array.isArray(item.steps) ? item.steps : [],
+            updates: Array.isArray(item.updates) ? item.updates : [],
           } as MyListItem,
         ];
       });
@@ -128,6 +138,29 @@ export function localMyListStorage(
       ),
     removeStep: (id, stepId) =>
       changeSteps(id, (steps) => steps.filter((step) => step.id !== stepId)),
+    async addUpdate(id, input) {
+      const update = BucketUpdateInputSchema.parse(input);
+      const item = items.find((entry) => entry.id === id);
+      if (!item) throw new Error('Item not found');
+      const existing = item.updates?.find((entry) => entry.id === update.id);
+      if (existing) {
+        if (existing.text !== update.text) throw new Error('Update identifier is already in use');
+        return items;
+      }
+      return persist(
+        items.map((entry) =>
+          entry.id === id
+            ? {
+                ...entry,
+                updates: [
+                  { ...update, createdAt: new Date().toISOString() },
+                  ...(entry.updates ?? []),
+                ],
+              }
+            : entry
+        )
+      );
+    },
   };
 }
 
@@ -181,6 +214,13 @@ export function serverMyListStorage(initial: MyListItem[]): MyListStorage {
       return replace(id, (item) => ({
         ...item,
         steps: item.steps.filter((step) => step.id !== stepId),
+      }));
+    },
+    async addUpdate(id, input) {
+      const saved = await addBucketItemUpdate(id, input);
+      return replace(id, (item) => ({
+        ...item,
+        updates: [saved, ...(item.updates ?? []).filter((entry) => entry.id !== saved.id)],
       }));
     },
   };

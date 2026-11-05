@@ -4,6 +4,7 @@ import type { LocalRecordAdapter } from '~/lib/local-record-store';
 
 vi.mock('~/lib/actions/bucket-list', () => ({}));
 vi.mock('~/lib/actions/bucket-steps', () => ({}));
+vi.mock('~/lib/actions/bucket-updates', () => ({}));
 
 function memoryAdapter(value: unknown) {
   const values = new Map([
@@ -30,6 +31,39 @@ function memoryAdapter(value: unknown) {
 }
 
 describe('local My list storage', () => {
+  it('persists dated updates separately from notes and steps, newest first and once per token', async () => {
+    const { adapter } = memoryAdapter({
+      items: [{ id: 'item', title: 'Sail', notes: 'Keep this', extra: 42 }],
+    });
+    const storage = localMyListStorage(adapter);
+    expect((await storage.load())[0]!.updates).toEqual([]);
+    const first = { id: crypto.randomUUID(), text: '  Booked a lesson.\nWith Sam.  ' };
+    const second = { id: crypto.randomUUID(), text: 'First day on the water!' };
+    await storage.addUpdate('item', first);
+    await storage.addUpdate('item', second);
+    const next = await storage.addUpdate('item', first);
+    expect(next[0]).toMatchObject({ status: 'planned', notes: 'Keep this', extra: 42, steps: [] });
+    expect(next[0]!.updates).toEqual([
+      { ...second, createdAt: expect.any(String) },
+      { ...first, text: first.text.trim(), createdAt: expect.any(String) },
+    ]);
+    expect(await localMyListStorage(adapter).load()).toEqual(next);
+  });
+  it('retains prior updates when persistence fails and safely retries', async () => {
+    const { adapter } = memoryAdapter({ items: [{ id: 'item', title: 'Sail' }] });
+    const storage = localMyListStorage(adapter);
+    await storage.load();
+    const input = { id: crypto.randomUUID(), text: 'Booked a lesson' };
+    vi.mocked(adapter.put).mockRejectedValueOnce(new Error('aborted'));
+    await expect(storage.addUpdate('item', input)).rejects.toThrow('aborted');
+    expect((await localMyListStorage(adapter).load())[0]!.updates).toEqual([]);
+    const retried = await storage.addUpdate('item', input);
+    expect(retried[0]!.updates).toHaveLength(1);
+    await expect(storage.addUpdate('missing', input)).rejects.toThrow('Item not found');
+    await expect(storage.addUpdate('item', { ...input, text: 'Changed' })).rejects.toThrow(
+      'identifier'
+    );
+  });
   it('reads strings and objects without writing, then preserves unknown fields and stable IDs', async () => {
     const { adapter, values } = memoryAdapter({
       annualFocus: 'Adventure',
