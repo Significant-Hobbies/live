@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { asc, desc, eq } from 'drizzle-orm';
 import { MyList } from '~/components/bucket-list/my-list';
-import { bucketListItems, bucketLists, userQuests } from '~/db/schema';
+import { bucketItemUpdates, bucketListItems, bucketLists, userQuests } from '~/db/schema';
 import { visibleBucketSteps } from '~/lib/bucket-steps';
 import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
@@ -11,7 +11,7 @@ export const metadata: Metadata = { title: 'My list', robots: { index: false, fo
 export default async function BucketListPage() {
   const session = await getServerAuthSession();
   if (!session?.user?.id) return <MyList key="local" />;
-  const [items, quests, boards] = await Promise.all([
+  const [items, quests, boards, updates] = await Promise.all([
     db
       .select()
       .from(bucketListItems)
@@ -28,6 +28,11 @@ export default async function BucketListPage() {
       .from(bucketLists)
       .where(eq(bucketLists.userId, session.user.id))
       .orderBy(desc(bucketLists.updatedAt)),
+    db
+      .select()
+      .from(bucketItemUpdates)
+      .where(eq(bucketItemUpdates.userId, session.user.id))
+      .orderBy(desc(bucketItemUpdates.createdAt), desc(bucketItemUpdates.id)),
   ]);
   return (
     <MyList
@@ -41,6 +46,13 @@ export default async function BucketListPage() {
         updatedAt: item.updatedAt.toISOString(),
         completedAt: item.completedAt?.toISOString() ?? null,
         steps: visibleBucketSteps(quests.filter((quest) => quest.sourceBucketItemId === item.id)),
+        updates: updates
+          .filter((update) => update.itemId === item.id)
+          .map((update) => ({
+            id: update.id,
+            text: update.text,
+            createdAt: update.createdAt.toISOString(),
+          })),
       }))}
     />
   );

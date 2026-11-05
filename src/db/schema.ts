@@ -311,6 +311,22 @@ export const bucketListItems = sqliteTable(
   (table) => [index('BucketListItem_userId_idx').on(table.userId)]
 );
 
+export const bucketItemUpdates = sqliteTable(
+  'BucketItemUpdate',
+  {
+    id: text('id').primaryKey(),
+    itemId: text('itemId')
+      .notNull()
+      .references(() => bucketListItems.id, { onDelete: 'cascade' }),
+    userId: text('userId')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    text: text('text').notNull(),
+    createdAt: integer('createdAt', { mode: 'timestamp_ms' }).notNull(),
+  },
+  (table) => [index('BucketItemUpdate_userId_itemId_idx').on(table.userId, table.itemId)]
+);
+
 // Shared approved ideas and an entirely separate private review queue.
 export const experienceCatalog = sqliteTable(
   'ExperienceCatalog',

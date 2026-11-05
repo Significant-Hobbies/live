@@ -5,12 +5,13 @@ import { MyList } from './my-list';
 import { parseCatalogQuery, searchCatalogSeed } from '~/lib/catalog-seed';
 import * as localRecords from '~/lib/local-record-store';
 
-const { addItem, refresh, submit, updateNotes, updateStatus } = vi.hoisted(() => ({
+const { addItem, refresh, submit, updateNotes, updateStatus, postUpdate } = vi.hoisted(() => ({
   addItem: vi.fn(),
   refresh: vi.fn(),
   submit: vi.fn(),
   updateNotes: vi.fn(),
   updateStatus: vi.fn(),
+  postUpdate: vi.fn(),
 }));
 vi.mock('~/lib/actions/bucket-list', () => ({
   addBucketListItem: addItem,
@@ -18,6 +19,7 @@ vi.mock('~/lib/actions/bucket-list', () => ({
   updateBucketListItemStatus: updateStatus,
 }));
 vi.mock('~/lib/actions/bucket-steps', () => ({}));
+vi.mock('~/lib/actions/bucket-updates', () => ({ addBucketItemUpdate: postUpdate }));
 vi.mock('next/navigation', () => ({ useRouter: () => ({ refresh }) }));
 vi.mock('~/lib/actions/catalog', () => ({ submitCatalogIdea: submit }));
 
@@ -41,6 +43,166 @@ beforeEach(async () => {
   document.body.append(container);
   root = createRoot(container);
   await act(async () => root.render(<MyList initialItems={[]} />));
+});
+
+describe('item updates', () => {
+  async function openUpdateItem() {
+    await act(async () =>
+      root.render(
+        <MyList
+          key="updates"
+          initialItems={[
+            { id: 'one', title: 'Sail', status: 'planned', steps: [], notes: 'Keep these notes' },
+            { id: 'two', title: 'Swim', status: 'planned', steps: [] },
+          ]}
+        />
+      )
+    );
+    await act(async () =>
+      (container.querySelector('[aria-label="Open Sail"]') as HTMLButtonElement).click()
+    );
+    const field = container.querySelector<HTMLTextAreaElement>('#update-one')!;
+    await act(async () => {
+      Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, 'value')?.set?.call(
+        field,
+        'Booked a lesson'
+      );
+      field.dispatchEvent(new Event('input', { bubbles: true }));
+    });
+    return field;
+  }
+
+  it('retains a failed draft across item switches and retries with the same token', async () => {
+    postUpdate.mockRejectedValueOnce(new Error('Offline'));
+    await openUpdateItem();
+    await click('Post update');
+    const submitted = postUpdate.mock.calls[0]![1];
+    await act(async () =>
+      (container.querySelector('[aria-label="Open Swim"]') as HTMLButtonElement).click()
+    );
+    expect(container.querySelector<HTMLTextAreaElement>('#update-two')?.value).toBe('');
+    await act(async () =>
+      (container.querySelector('[aria-label="Open Sail"]') as HTMLButtonElement).click()
+    );
+    expect(container.querySelector<HTMLTextAreaElement>('#update-one')?.value).toBe(
+      'Booked a lesson'
+    );
+    expect(container.textContent).toContain(
+      'Update could not be confirmed. Your draft is still here.'
+    );
+    expect(container.querySelectorAll('[role="alert"]')).toHaveLength(1);
+    const field = container.querySelector<HTMLTextAreaElement>('#update-one')!;
+    await act(async () => {
+      Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, 'value')?.set?.call(
+        field,
+        'Booked a lesson with Sam'
+      );
+      field.dispatchEvent(new Event('input', { bubbles: true }));
+    });
+    postUpdate.mockResolvedValueOnce({
+      ...submitted,
+      text: 'Booked a lesson with Sam',
+      createdAt: '2026-11-05T10:00:00.123Z',
+    });
+    await click('Post update');
+    expect(postUpdate).toHaveBeenLastCalledWith('one', {
+      ...submitted,
+      text: 'Booked a lesson with Sam',
+    });
+    expect(container.querySelector<HTMLTextAreaElement>('#update-one')?.value).toBe('');
+    expect(container.querySelector('[aria-label="Item updates"]')?.textContent).toContain(
+      'Booked a lesson'
+    );
+    expect(container.querySelector<HTMLTextAreaElement>('#notes-one')?.value).toBe(
+      'Keep these notes'
+    );
+    expect(container.querySelector('[aria-checked="true"]')?.textContent).toBe('To do');
+  });
+
+  it('locks duplicate submissions and keeps another item’s newer draft when a save completes', async () => {
+    let finish: (value: unknown) => void = () => {};
+    postUpdate.mockImplementationOnce(
+      () =>
+        new Promise((resolve) => {
+          finish = resolve;
+        })
+    );
+    const field = await openUpdateItem();
+    await act(async () => {
+      field.form!.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
+      field.form!.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
+    });
+    expect(postUpdate).toHaveBeenCalledOnce();
+    await act(async () =>
+      (container.querySelector('[aria-label="Open Swim"]') as HTMLButtonElement).click()
+    );
+    const submitted = postUpdate.mock.calls[0]![1];
+    await act(async () => finish({ ...submitted, createdAt: '2026-11-05T10:00:00.123Z' }));
+    expect(container.querySelector<HTMLTextAreaElement>('#update-two')?.value).toBe('');
+    await act(async () =>
+      (container.querySelector('[aria-label="Open Sail"]') as HTMLButtonElement).click()
+    );
+    expect(container.querySelectorAll('[aria-label="Item updates"] li')).toHaveLength(1);
+    expect(container.querySelector<HTMLTextAreaElement>('#update-one')?.value).toBe('');
+  });
+
+  it('keeps a newer edit when an earlier post succeeds and gives it a fresh token', async () => {
+    let finish: (value: unknown) => void = () => {};
+    postUpdate.mockImplementationOnce(
+      () =>
+        new Promise((resolve) => {
+          finish = resolve;
+        })
+    );
+    const field = await openUpdateItem();
+    await click('Post update');
+    const submitted = postUpdate.mock.calls[0]![1];
+    await act(async () => {
+      Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, 'value')?.set?.call(
+        field,
+        'Went sailing today'
+      );
+      field.dispatchEvent(new Event('input', { bubbles: true }));
+      finish({ ...submitted, createdAt: '2026-11-05T10:00:00.123Z' });
+    });
+    expect(field.value).toBe('Went sailing today');
+    postUpdate.mockImplementationOnce(async (_id, input) => ({
+      ...input,
+      createdAt: '2026-11-05T11:00:00.123Z',
+    }));
+    await click('Post update');
+    expect(postUpdate.mock.calls[1]![1].id).not.toBe(submitted.id);
+    expect(container.querySelectorAll('[aria-label="Item updates"] li')).toHaveLength(2);
+    expect(field.value).toBe('');
+  });
+
+  it('recovers an unconfirmed saved original and keeps its edited retry as a fresh draft', async () => {
+    postUpdate.mockRejectedValueOnce(new Error('Response lost'));
+    const field = await openUpdateItem();
+    await click('Post update');
+    const submitted = postUpdate.mock.calls[0]![1];
+    await act(async () => {
+      Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, 'value')?.set?.call(
+        field,
+        'Went sailing today'
+      );
+      field.dispatchEvent(new Event('input', { bubbles: true }));
+    });
+    postUpdate.mockResolvedValueOnce({ ...submitted, createdAt: '2026-11-05T10:00:00.123Z' });
+    await click('Post update');
+    expect(field.value).toBe('Went sailing today');
+    expect(container.querySelectorAll('[aria-label="Item updates"] li')).toHaveLength(1);
+    expect(container.textContent).toContain('An earlier version was already saved');
+    expect(container.querySelectorAll('[role="alert"]')).toHaveLength(0);
+    postUpdate.mockImplementationOnce(async (_id, input) => ({
+      ...input,
+      createdAt: '2026-11-05T11:00:00.123Z',
+    }));
+    await click('Post update');
+    expect(postUpdate.mock.calls[2]![1].id).not.toBe(submitted.id);
+    expect(field.value).toBe('');
+    expect(container.querySelectorAll('[aria-label="Item updates"] li')).toHaveLength(2);
+  });
 });
 afterEach(async () => {
   await act(async () => root.unmount());
@@ -136,7 +298,7 @@ describe('Account manual entry', () => {
     );
     expect(container.querySelector('textarea')?.value).toBe('My unsaved notes');
     expect(container.textContent).toContain('Your draft is still here.');
-    expect(container.querySelectorAll('textarea')).toHaveLength(1);
+    expect(container.querySelectorAll('textarea[id^="notes-"]')).toHaveLength(1);
   });
 
   it('allows a status click during notes autosave and serializes both writes', async () => {

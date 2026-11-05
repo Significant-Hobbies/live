@@ -57,6 +57,13 @@
       "when": 1791478392897,
       "tag": "0007_wandering_bloodscream",
       "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "6",
+      "when": 1793877814327,
+      "tag": "0008_living_korg",
+      "breakpoints": true
     }
   ]
 }

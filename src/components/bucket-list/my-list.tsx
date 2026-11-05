@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { StorageModeProvider, StorageModeStatus } from '~/components/storage-mode-provider';
 import { normalizeDreamTitle } from '~/lib/dream-atlas';
+import type { BucketUpdateInput } from '~/lib/bucket-updates';
 import { ManualItemInput } from './manual-item-input';
 import { MyListRowsSkeleton } from './my-list-skeleton';
 import {
@@ -34,6 +35,11 @@ export function MyList({
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [notesDrafts, setNotesDrafts] = useState<Record<string, string>>({});
   const [notesFailures, setNotesFailures] = useState<Record<string, boolean>>({});
+  const [updateDrafts, setUpdateDrafts] = useState<Record<string, BucketUpdateInput>>({});
+  const [updateFeedback, setUpdateFeedback] = useState<
+    Record<string, 'failed' | 'recovered' | undefined>
+  >({});
+  const postingUpdates = useRef(new Set<string>());
   const [desktop, setDesktop] = useState(false);
   useEffect(() => {
     if (!window.matchMedia) return;
@@ -66,7 +72,11 @@ export function MyList({
     };
   }, [storage]);
 
-  function mutate(action: (adapter: MyListStorage) => Promise<MyListItem[]>, quiet = false) {
+  function mutate(
+    action: (adapter: MyListStorage) => Promise<MyListItem[]>,
+    quiet = false,
+    inlineError = false
+  ) {
     if (!loaded) return Promise.resolve(false);
     if (!quiet) {
       blockingWrites.current += 1;
@@ -78,11 +88,12 @@ export function MyList({
         setItems(await action(storage));
         return true;
       } catch (cause) {
-        setError(
-          cause instanceof Error && cause.message === 'This item is already in your list.'
-            ? cause.message
-            : 'Changes could not be saved. Your list and input are unchanged. Try again.'
-        );
+        if (!inlineError)
+          setError(
+            cause instanceof Error && cause.message === 'This item is already in your list.'
+              ? cause.message
+              : 'Changes could not be saved. Your list and input are unchanged. Try again.'
+          );
         return false;
       } finally {
         if (!quiet) {
@@ -106,6 +117,40 @@ export function MyList({
         delete next[item.id];
         return next;
       });
+  }
+
+  async function postUpdate(item: MyListItem) {
+    const draft = updateDrafts[item.id];
+    if (!draft?.text.trim() || postingUpdates.current.has(item.id)) return;
+    postingUpdates.current.add(item.id);
+    let savedText: string | undefined;
+    const ok = await mutate(
+      async (adapter) => {
+        const next = await adapter.addUpdate(item.id, draft);
+        savedText = next
+          .find((entry) => entry.id === item.id)
+          ?.updates?.find((entry) => entry.id === draft.id)?.text;
+        if (savedText === undefined) throw new Error('Update could not be confirmed');
+        return next;
+      },
+      false,
+      true
+    );
+    postingUpdates.current.delete(item.id);
+    setUpdateFeedback((current) => ({
+      ...current,
+      [item.id]: !ok ? 'failed' : savedText !== draft.text.trim() ? 'recovered' : undefined,
+    }));
+    if (ok) {
+      setUpdateDrafts((current) => {
+        const currentDraft = current[item.id];
+        if (!currentDraft || currentDraft.id !== draft.id) return current;
+        const next = { ...current };
+        if (currentDraft.text.trim() === savedText) delete next[item.id];
+        else next[item.id] = { id: crypto.randomUUID(), text: currentDraft.text };
+        return next;
+      });
+    }
   }
 
   const active = [...items]
@@ -135,6 +180,16 @@ export function MyList({
       notesError={notesFailures[selected.id] ?? false}
       onNotesChange={(value) => setNotesDrafts((current) => ({ ...current, [selected.id]: value }))}
       onNotesSave={() => void saveNotes(selected, notesDrafts[selected.id] ?? selected.notes ?? '')}
+      updateComposer={{
+        draft: updateDrafts[selected.id]?.text ?? '',
+        feedback: updateFeedback[selected.id],
+        onChange: (text) =>
+          setUpdateDrafts((current) => ({
+            ...current,
+            [selected.id]: { id: current[selected.id]?.id ?? crypto.randomUUID(), text },
+          })),
+        onPost: () => void postUpdate(selected),
+      }}
       onBack={() => setSelectedId(null)}
       mutate={mutate}
     />
@@ -335,6 +390,7 @@ function ItemPanel({
   notesError,
   onNotesChange,
   onNotesSave,
+  updateComposer,
   onBack,
   mutate,
 }: {
@@ -345,6 +401,12 @@ function ItemPanel({
   notesError: boolean;
   onNotesChange: (value: string) => void;
   onNotesSave: () => void;
+  updateComposer: {
+    draft: string;
+    feedback: 'failed' | 'recovered' | undefined;
+    onChange: (text: string) => void;
+    onPost: () => void;
+  };
   onBack: () => void;
   mutate: Mutate;
 }) {
@@ -537,6 +599,84 @@ function ItemPanel({
           Notes could not be saved. Your draft is still here.
         </p>
       )}
+      <section
+        aria-labelledby={`updates-heading-${item.id}`}
+        className="mt-7 border-t border-border/60 pt-5"
+      >
+        <h3 id={`updates-heading-${item.id}`} className="text-sm">
+          Updates
+        </h3>
+        <p className="mt-1 text-[13px] text-muted-foreground">
+          Small steps, new plans, moments worth keeping. Only you can see these.
+        </p>
+        <form
+          className="mt-3"
+          onSubmit={(event) => {
+            event.preventDefault();
+            updateComposer.onPost();
+          }}
+        >
+          <label htmlFor={`update-${item.id}`} className="sr-only">
+            Add an update
+          </label>
+          <textarea
+            id={`update-${item.id}`}
+            value={updateComposer.draft}
+            onChange={(event) => updateComposer.onChange(event.target.value)}
+            maxLength={2000}
+            disabled={saving}
+            placeholder="What’s happened with this one?"
+            className="min-h-24 w-full resize-y rounded-xl border border-border bg-surface px-4 py-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          />
+          <div className="mt-2 flex items-center justify-between gap-3">
+            <span className="text-xs text-muted-foreground">
+              {updateComposer.draft.length} / 2000
+            </span>
+            <button
+              type="submit"
+              disabled={saving || !updateComposer.draft.trim()}
+              className="min-h-11 rounded-xl bg-brand px-4 text-sm font-medium text-brand-foreground focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-50"
+            >
+              Post update
+            </button>
+          </div>
+          {updateComposer.feedback === 'failed' && (
+            <p role="alert" className="mt-2 text-sm text-destructive">
+              Update could not be confirmed. Your draft is still here. Retry, or reload to check
+              your history.
+            </p>
+          )}
+          {updateComposer.feedback === 'recovered' && (
+            <p role="status" className="mt-2 text-sm text-muted-foreground">
+              An earlier version was already saved.
+            </p>
+          )}
+        </form>
+        {(item.updates ?? []).length > 0 ? (
+          <ol aria-label="Item updates" className="mt-5 divide-y divide-border/60">
+            {(item.updates ?? []).map((update) => (
+              <li key={update.id} className="py-4 first:pt-0">
+                <time dateTime={update.createdAt} className="text-xs text-muted-foreground">
+                  {formatDate(update.createdAt, {
+                    day: 'numeric',
+                    month: 'short',
+                    year: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                  })}
+                </time>
+                <p className="mt-1.5 whitespace-pre-wrap break-words text-sm leading-relaxed">
+                  {update.text}
+                </p>
+              </li>
+            ))}
+          </ol>
+        ) : (
+          <p className="mt-4 text-sm text-muted-foreground">
+            Your story with this one starts here.
+          </p>
+        )}
+      </section>
       <div className="mt-6 flex flex-wrap items-center justify-between gap-2 border-t border-border/60 pt-3 text-[13px] text-muted-foreground">
         <span>
           {item.createdAt
