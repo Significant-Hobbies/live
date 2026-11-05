@@ -47,7 +47,7 @@ test('a visitor can choose a collection, save an activity and complete it after 
     .getByRole('link', { name: 'Browse collections for weekends, solo time and more' })
     .click();
   await page
-    .getByRole('link', { name: 'Weekend bucket list ideas with a finish in sight →' })
+    .getByRole('link', { name: 'Weekend bucket list ideas with a finish in sight', exact: true })
     .click();
   await page.getByRole('link', { name: 'Make pasta from scratch', exact: true }).click();
   await expect(page.getByRole('heading', { name: 'Plan the experience' })).toBeVisible();
