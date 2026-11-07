@@ -88,6 +88,7 @@ test('article filters and pagination are crawlable and preserve canonical identi
   const response = await request.get('/blog?page=2');
   expect(response.ok()).toBe(true);
   expect(await response.text()).toContain('https://significanthobbies.com/blog?page=2');
+  expect(await response.text()).toContain('https://significanthobbies.com/blog.md?page=2');
   await page.goto('/blog');
   await expect(
     page

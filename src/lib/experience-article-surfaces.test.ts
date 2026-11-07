@@ -112,6 +112,9 @@ describe('experience articles on public surfaces', () => {
   it('keeps paginated HTML metadata and Markdown discovery on the selected page', async () => {
     const metadata = await blogIndexMetadata({ searchParams: Promise.resolve({ page: '2' }) });
     expect(metadata.alternates?.canonical).toBe('https://significanthobbies.com/blog?page=2');
+    expect(metadata.alternates?.types?.['text/markdown']).toBe(
+      'https://significanthobbies.com/blog.md?page=2'
+    );
     const markdown = await renderPublicRouteMarkdown('/blog?page=2');
     expect(markdown).toContain(editorialArticles[18].title);
     expect(markdown).not.toContain(article.title);
@@ -119,6 +122,9 @@ describe('experience articles on public surfaces', () => {
       searchParams: Promise.resolve({ q: 'paper peepshow' }),
     });
     expect(search.robots).toMatchObject({ index: false, follow: true });
+    expect(search.alternates?.types?.['text/markdown']).toBe(
+      'https://significanthobbies.com/blog.md?q=paper+peepshow'
+    );
     expect(await renderPublicRouteMarkdown('/bucket-list?article=anything')).toBeNull();
   });
 
