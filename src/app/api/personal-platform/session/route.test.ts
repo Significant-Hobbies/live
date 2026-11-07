@@ -251,7 +251,7 @@ describe('Personal Platform product MCP identity', () => {
   it.each(['anchor.read', 'anchor.write'])(
     'resolves the linked Google provider identity for %s',
     async (scope) => {
-      const response = await request({}, scope);
+      const response = await request({ scope: 'anchor.read anchor.write' }, scope);
       expect(response.status).toBe(200);
       expect(response.headers.get('Cache-Control')).toBe('no-store');
       expect(await response.json()).toEqual({ userId: 'linked-user' });
@@ -276,6 +276,10 @@ describe('Personal Platform product MCP identity', () => {
     { iss: 'https://attacker.auth0.com/' },
     { scope: 'reader.read' },
     { scope: 'anchor.read', permissions: [] },
+    { scope: 'anchor.read', permissions: ['anchor.read', 'anchor.write'] },
+    { scope: undefined, permissions: ['anchor.read', 'anchor.write'] },
+    { scope: undefined, scopes: ['anchor.read', 'anchor.write'] },
+    { scope: ['anchor.read', 'anchor.write'] },
     { exp: now - 1 },
     { exp: now + 4_000 },
     { iat: now + 120 },
@@ -315,6 +319,18 @@ describe('Personal Platform product MCP identity', () => {
     expect(state.findMany).toHaveBeenCalledOnce();
     expect(await response.json()).toMatchObject({
       message: 'Link this Google account to your existing Live account before connecting Anchor.',
+    });
+    expect(state.getSession).not.toHaveBeenCalled();
+  });
+
+  it('returns a private no-store service error when account resolution fails', async () => {
+    state.findMany.mockRejectedValueOnce(new Error('private database failure details'));
+    const response = await request();
+    expect(response.status).toBe(503);
+    expect(response.headers.get('Cache-Control')).toBe('no-store');
+    expect(await response.json()).toEqual({
+      code: 'SERVICE_UNAVAILABLE',
+      message: 'Account resolution is temporarily unavailable. Try again.',
     });
     expect(state.getSession).not.toHaveBeenCalled();
   });

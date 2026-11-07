@@ -53,12 +53,6 @@ function object(segment: string): Record<string, unknown> {
   return value as Record<string, unknown>;
 }
 
-function scopes(value: unknown): string[] {
-  if (typeof value === 'string') return value.split(/\s+/u).filter(Boolean);
-  if (Array.isArray(value) && value.every((item) => typeof item === 'string')) return value;
-  return [];
-}
-
 /** Validate the original access token here; the forwarded scope header grants no authority. */
 export async function verifyPersonalMcpGoogleSubject(
   token: string,
@@ -127,11 +121,10 @@ export async function verifyPersonalMcpGoogleSubject(
     const payload = object(encodedPayload);
     const now = options.now ?? Date.now() / 1_000;
     const audiences = typeof payload.aud === 'string' ? [payload.aud] : payload.aud;
-    const grantedScopes = new Set([
-      ...scopes(payload.scope),
-      ...scopes(payload.scopes),
-      ...scopes(payload.permissions),
-    ]);
+    // RBAC permissions describe capability, not this client's delegated consent.
+    const grantedScopes = new Set(
+      typeof payload.scope === 'string' ? payload.scope.split(' ').filter(Boolean) : []
+    );
     const subject = typeof payload.sub === 'string' ? GOOGLE_SUBJECT.exec(payload.sub) : null;
     if (
       payload.iss !== issuer ||

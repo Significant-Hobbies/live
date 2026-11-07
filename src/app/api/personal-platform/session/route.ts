@@ -36,11 +36,22 @@ export async function GET(request: Request): Promise<Response> {
     if (!googleId) {
       return json({ code: 'UNAUTHORIZED', message: 'Invalid product access token.' }, 401);
     }
-    const linkedAccounts = await db.query.account.findMany({
-      where: and(eq(account.providerId, 'google'), eq(account.accountId, googleId)),
-      columns: { userId: true },
-      limit: 2,
-    });
+    let linkedAccounts: { userId: string }[];
+    try {
+      linkedAccounts = await db.query.account.findMany({
+        where: and(eq(account.providerId, 'google'), eq(account.accountId, googleId)),
+        columns: { userId: true },
+        limit: 2,
+      });
+    } catch {
+      return json(
+        {
+          code: 'SERVICE_UNAVAILABLE',
+          message: 'Account resolution is temporarily unavailable. Try again.',
+        },
+        503
+      );
+    }
     const linkedAccount = linkedAccounts.length === 1 ? linkedAccounts[0] : undefined;
     if (!linkedAccount?.userId) {
       return json(
