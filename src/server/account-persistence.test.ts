@@ -500,6 +500,31 @@ describe('bucket-list readiness on durable storage', () => {
       ],
     };
   }
+  it('imports and renames distinct non-Latin titles without false duplicates', async () => {
+    const owner = await signUp(issuer(db), 'bucket-unicode@example.test', 'Unicode Owner');
+    asUser(owner);
+    const first = guestItem('東京を旅する');
+    const second = guestItem('京都を旅する');
+    expect(await importLocalBucketItems({ items: [first, second] })).toMatchObject({
+      success: true,
+      imported: 2,
+      conflicts: [],
+    });
+    const rows = await itemRows(owner.userId);
+    expect(rows).toHaveLength(2);
+    const tokyo = rows.find((row) => row.title === first.title)!;
+    const kyoto = rows.find((row) => row.title === second.title)!;
+    expect(await updateBucketListItem(tokyo.id, { title: 'हिन्दी सीखना' })).toEqual({
+      success: true,
+    });
+    expect(await updateBucketListItem(kyoto.id, { title: 'हिन्दी सीखना' })).toEqual({
+      success: false,
+      reason: 'duplicate',
+    });
+    await addBucketListItem({ title: '!!!' });
+    await addBucketListItem({ title: '???' });
+    expect(await itemRows(owner.userId)).toHaveLength(4);
+  });
   it('imports full private graphs once, replays a lost acknowledgement, and preserves rename evidence', async () => {
     const a = await signUp(issuer(db), 'bucket-graph@example.test', 'Graph Owner');
     asUser(a);
@@ -567,7 +592,7 @@ describe('bucket-list readiness on durable storage', () => {
     await addBucketListItem({ title: 'Sail around an island' });
     await expect(
       updateBucketListItem(saved!.id, { title: 'SAIL around an ISLAND!' })
-    ).rejects.toThrow('already in your list');
+    ).resolves.toEqual({ success: false, reason: 'duplicate' });
     await expect(updateBucketListItem(saved!.id, { title: '   ' })).rejects.toThrow();
   });
   it('retains account versions on conflicts and rejects forged owner data before writing', async () => {

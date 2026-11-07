@@ -43,6 +43,13 @@ export const bucketTransferItemSchema = z
   .strict();
 
 export type BucketTransferItem = z.infer<typeof bucketTransferItemSchema>;
+export type BucketImportResult = {
+  success: boolean;
+  imported: number;
+  matched: number;
+  conflicts: string[];
+  error?: string;
+};
 export type MyListQuery = {
   search: string;
   status: 'all' | MyListItem['status'];
@@ -50,11 +57,15 @@ export type MyListQuery = {
 };
 
 export function matchesMyListQuery(item: MyListItem, query: MyListQuery) {
-  const text = normalizeDreamTitle(
-    [item.title, item.notes, ...item.steps.map((step) => step.text)].join(' ')
-  );
+  const source = [item.title, item.notes, ...item.steps.map((step) => step.text)].join(' ');
+  const text = normalizeDreamTitle(source);
   return (
-    (!query.search || text.includes(normalizeDreamTitle(query.search))) &&
+    (!query.search ||
+      text.includes(normalizeDreamTitle(query.search)) ||
+      source
+        .normalize('NFKC')
+        .toLowerCase()
+        .includes(query.search.normalize('NFKC').trim().toLowerCase())) &&
     (query.status === 'all' || item.status === query.status) &&
     (query.category === 'all' || (item.category || 'uncategorized') === query.category)
   );

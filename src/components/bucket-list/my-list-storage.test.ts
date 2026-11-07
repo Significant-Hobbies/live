@@ -135,3 +135,18 @@ it('renames without replacing evidence, rejects duplicates, and keeps cleared le
   await expect(storage.update('one', { title: 'SWIM!' })).rejects.toThrow('already in your list');
   await expect(storage.update('one', { title: ' ' })).rejects.toThrow();
 });
+
+it('keeps distinct non-Latin names while rejecting the same renamed title', async () => {
+  const { adapter } = memoryAdapter({
+    items: [
+      { id: 'one', title: '東京' },
+      { id: 'two', title: '京都' },
+    ],
+  });
+  const storage = localMyListStorage(adapter);
+  await storage.load();
+  expect((await storage.update('one', { title: 'हिन्दी सीखना' }))[0]!.title).toBe('हिन्दी सीखना');
+  await expect(storage.update('two', { title: 'हिन्दी सीखना' })).rejects.toThrow(
+    'already in your list'
+  );
+});

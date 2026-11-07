@@ -160,7 +160,7 @@ export function MyList({
     }
     await queue.current;
     try {
-      downloadBucketJson(bucketListExport(await storage.load()));
+      downloadBucketJson(bucketListExport(storage.snapshot()));
     } catch {
       setError('Your list could not be exported. Try again.');
     }

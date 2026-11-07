@@ -54,19 +54,16 @@ export function LocalImportCoordinator({ isAuthenticated }: { isAuthenticated: b
       setPayload(null);
     });
   }
-  const hasWork = [payload, living.bucket, living.timeline, deviceImport.visible, error].some(
-    Boolean
-  );
+  const hasOtherWork = [payload, living.bucket, living.timeline].some(Boolean);
+  const hasWork = [hasOtherWork, deviceImport.visible, error].some(Boolean);
   if (!isAuthenticated || dismissed || !hasWork) return null;
   return (
     <aside className="fixed bottom-4 left-1/2 z-[90] w-[min(42rem,calc(100%-2rem))] -translate-x-1/2 rounded-2xl border border-primary/30 bg-card p-5 shadow-xl">
-      <p className="font-semibold">
-        {deviceImport.complete && !payload && !living.bucket && !living.timeline
-          ? 'Your device list is saved to your account.'
-          : 'Work from this device is ready to move into your account.'}
-      </p>
+      <p className="font-semibold">{importHeading(deviceImport, hasOtherWork)}</p>
       <p className="mt-1 text-sm text-muted-foreground">
-        Nothing local is removed until its database save succeeds.
+        {deviceImport.archived
+          ? 'The original device snapshot is retained as an archive.'
+          : 'Nothing local is removed until its database save succeeds.'}
       </p>
       {deviceImport.message && (
         <p role="status" className="mt-2 text-sm text-muted-foreground">
@@ -113,6 +110,12 @@ export function LocalImportCoordinator({ isAuthenticated }: { isAuthenticated: b
       </div>
     </aside>
   );
+}
+
+function importHeading(state: ReturnType<typeof useDeviceBucketImport>, hasOtherWork: boolean) {
+  if (state.archived) return 'Your device copy is archived.';
+  if (state.complete && !hasOtherWork) return 'Your device list is saved to your account.';
+  return 'Work from this device is ready to move into your account.';
 }
 
 function isObject(value: unknown): value is Record<string, unknown> {

@@ -122,13 +122,15 @@ const STOPWORDS = new Set([
 ]);
 
 export function normalizeDreamTitle(value: string): string {
-  return value
+  const folded = value
     .normalize('NFKD')
     .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, ' ')
+    .toLowerCase();
+  const words = folded
+    .replace(/[^\p{L}\p{N}\p{M}]+/gu, ' ')
     .trim()
     .replace(/\s+/g, ' ');
+  return /[\p{L}\p{N}]/u.test(words) ? words : folded.normalize('NFKC').trim().replace(/\s+/g, ' ');
 }
 
 function tokens(value: string): string[] {

@@ -35,6 +35,33 @@ async function signUp(page: Page, email: string, origin = new URL(page.url()).or
   expect((await page.request.post('/api/test/complete-onboarding')).ok()).toBeTruthy();
 }
 
+async function seedDeviceItems(page: Page, items: unknown[]) {
+  await page.evaluate(async (items) => {
+    const database = await new Promise<IDBDatabase>((resolve, reject) => {
+      const request = indexedDB.open('significant-hobbies-local', 1);
+      request.onsuccess = () => resolve(request.result);
+      request.onerror = () => reject(request.error);
+    });
+    const transaction = database.transaction('records', 'readwrite');
+    transaction.objectStore('records').put(
+      {
+        key: 'onboarding:bucket-items',
+        domain: 'bucket-list',
+        schemaVersion: 1,
+        installationId: 'review-regression',
+        updatedAt: new Date().toISOString(),
+        value: { items },
+      },
+      'onboarding:bucket-items'
+    );
+    await new Promise<void>((resolve, reject) => {
+      transaction.oncomplete = () => resolve();
+      transaction.onabort = () => reject(transaction.error);
+    });
+    database.close();
+  }, items);
+}
+
 test('a 42-item guest list can be searched, filtered, renamed, fully exported and removed with Undo', async ({
   page,
 }, testInfo) => {
@@ -292,4 +319,145 @@ test('an aborted device archive keeps the local original and import can be retri
   await expect(page.getByRole('button', { name: `Open ${title}`, exact: true })).toHaveCount(1);
   await page.reload();
   await expect(page.getByRole('button', { name: `Open ${title}`, exact: true })).toHaveCount(1);
+});
+
+test('exporting legacy guest items preserves later edits and leaving the Undo window cancels removal', async ({
+  page,
+}) => {
+  await page.goto('/bucket-list');
+  await waitForHydrated(
+    page.getByRole('textbox', { name: 'Add something you want to do', exact: true })
+  );
+  await seedDeviceItems(page, ['Legacy sailing goal', { title: 'Legacy garden goal' }]);
+  await page.reload();
+  let panel = await openItem(page, 'Legacy sailing goal');
+  const downloading = page.waitForEvent('download');
+  await page.getByRole('button', { name: 'Export all', exact: true }).click();
+  const backup = JSON.parse(await readFile((await (await downloading).path())!, 'utf8'));
+  expect(backup.items).toHaveLength(2);
+  await panel.getByRole('button', { name: 'Edit title', exact: true }).click();
+  await panel
+    .getByRole('textbox', { name: 'Item title', exact: true })
+    .fill('Sail with old friends');
+  await panel.getByRole('button', { name: 'Save title', exact: true }).click();
+  panel = await openItem(page, 'Sail with old friends');
+  await panel.getByRole('button', { name: 'Remove from list', exact: true }).click();
+  await panel.getByRole('button', { name: 'Remove', exact: true }).click();
+  await expect(page.getByRole('button', { name: 'Undo', exact: true })).toBeVisible();
+  await page.reload();
+  await expect(
+    page.getByRole('button', { name: 'Open Sail with old friends', exact: true })
+  ).toBeVisible();
+});
+
+test('a large guest list imports in batches and keeps non-Latin goals distinct with duplicate rename feedback', async ({
+  page,
+}) => {
+  test.setTimeout(60_000);
+  await page.goto('/bucket-list');
+  await waitForHydrated(
+    page.getByRole('textbox', { name: 'Add something you want to do', exact: true })
+  );
+  const titles = ['東京を旅する', '京都を旅する', 'हिन्दी सीखना', '!!!', '???'];
+  await seedDeviceItems(
+    page,
+    Array.from({ length: 101 }, (_, index) => ({
+      id: `large-${index}`,
+      title: titles[index] ?? `Imported goal ${index}`,
+      status: 'planned',
+      steps: [],
+      updates: [],
+    }))
+  );
+  await signUp(page, `bucket-large-${crypto.randomUUID()}@significanthobbies.test`);
+  await page.reload();
+  await page.getByRole('button', { name: 'Import device list (101)', exact: true }).click();
+  await expect(
+    page.getByText('All items, steps and private updates are saved.', { exact: true })
+  ).toBeVisible({ timeout: 30_000 });
+  await page.getByRole('button', { name: 'Not now', exact: true }).click();
+  await expect(page.locator('main button[aria-expanded]')).toHaveCount(101);
+  const search = page.getByRole('searchbox', { name: 'Search my list', exact: true });
+  await search.fill('東京');
+  await expect(page.locator('main button[aria-expanded]')).toHaveCount(1);
+  let panel = await openItem(page, titles[0]!);
+  await panel.getByRole('button', { name: 'Edit title', exact: true }).click();
+  await panel.getByRole('textbox', { name: 'Item title', exact: true }).fill(titles[1]!);
+  await panel.getByRole('button', { name: 'Save title', exact: true }).click();
+  await expect(
+    page.getByRole('alert').filter({ hasText: 'This item is already in your list.' })
+  ).toBeVisible();
+  await expect(panel.getByRole('textbox', { name: 'Item title', exact: true })).toHaveValue(
+    titles[1]!
+  );
+  await page.reload();
+  await expect(page.locator('main button[aria-expanded]')).toHaveCount(101);
+  panel = await openItem(page, titles[0]!);
+  await expect(panel.getByRole('combobox', { name: 'Visibility', exact: true })).toHaveValue(
+    'private'
+  );
+});
+
+test('conflicting device work can be explicitly exported and archived without changing account content', async ({
+  page,
+}, testInfo) => {
+  const title = `Conflicting goal ${crypto.randomUUID()}`;
+  await page.goto('/bucket-list');
+  await signUp(page, `bucket-resolution-${crypto.randomUUID()}@significanthobbies.test`);
+  let panel = await addItem(page, title);
+  await panel.getByRole('textbox', { name: 'Notes', exact: true }).fill('Account version to keep');
+  await panel.getByRole('radio', { name: 'Doing', exact: true }).click();
+  await expect(panel.getByRole('radio', { name: 'Doing', exact: true })).toBeChecked();
+  await seedDeviceItems(page, [
+    {
+      id: 'conflicting-device-item',
+      title,
+      notes: 'Different device notes',
+      status: 'planned',
+      steps: [],
+      updates: [],
+    },
+  ]);
+  await page.reload();
+  await page.getByRole('button', { name: 'Import device list (1)', exact: true }).click();
+  await expect(page.getByText(/1 device items need review/)).toBeVisible();
+  await page.getByRole('button', { name: 'Keep account versions', exact: true }).click();
+  await expect(page.getByText(/A complete JSON backup will download first/)).toBeVisible();
+  await page.screenshot({ path: testInfo.outputPath('device-conflict-confirm.png') });
+  const downloading = page.waitForEvent('download');
+  await page.getByRole('button', { name: 'Export and archive device copy', exact: true }).click();
+  const backup = JSON.parse(await readFile((await (await downloading).path())!, 'utf8'));
+  expect(backup.items[0]).toMatchObject({ title, notes: 'Different device notes' });
+  await expect(page.getByText('Your device copy is archived.', { exact: true })).toBeVisible();
+  const archiveRetained = await page.evaluate(async () => {
+    const database = await new Promise<IDBDatabase>((resolve) => {
+      const open = indexedDB.open('significant-hobbies-local', 1);
+      open.onsuccess = () => resolve(open.result);
+    });
+    const transaction = database.transaction('records', 'readonly');
+    const store = transaction.objectStore('records');
+    const active = store.get('onboarding:bucket-items');
+    const copies = store.getAll();
+    await new Promise<void>((resolve) => {
+      transaction.oncomplete = () => resolve();
+    });
+    database.close();
+    return {
+      active: active.result ?? null,
+      notes: copies.result
+        .flatMap((copy) => copy.value?.items ?? [])
+        .map((item: { notes?: string }) => item.notes),
+    };
+  });
+  expect(archiveRetained.active).toBeNull();
+  expect(archiveRetained.notes).toContain('Different device notes');
+  await page.reload();
+  await expect(
+    page.getByRole('button', { name: 'Import device list (1)', exact: true })
+  ).toHaveCount(0);
+  panel = await openItem(page, title);
+  await expect(panel.getByRole('textbox', { name: 'Notes', exact: true })).toHaveValue(
+    'Account version to keep'
+  );
+  await expect(panel.getByRole('radio', { name: 'Doing', exact: true })).toBeChecked();
 });

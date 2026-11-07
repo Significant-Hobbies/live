@@ -1,4 +1,8 @@
-import { bucketTransferItemSchema, type BucketTransferItem } from './bucket-list-data';
+import {
+  bucketTransferItemSchema,
+  type BucketTransferItem,
+  type BucketImportResult,
+} from './bucket-list-data';
 import {
   browserRecordAdapter,
   compareAndReplaceLocalRecord,
@@ -107,4 +111,52 @@ export async function readLocalBucketSnapshot(): Promise<LocalBucketSnapshot | n
 
 export async function archiveImportedBucketSnapshot(snapshot: LocalBucketSnapshot) {
   return compareAndReplaceLocalRecord(LOCAL_BUCKET_KEY, snapshot.envelope, undefined, true);
+}
+
+function importBatches(items: BucketTransferItem[]) {
+  const batches: BucketTransferItem[][] = [];
+  let batch: BucketTransferItem[] = [];
+  let children = 0;
+  let bytes = 12;
+  for (const item of items) {
+    const size = new TextEncoder().encode(JSON.stringify(item)).byteLength;
+    if (size + 12 > 700_000) return null;
+    const count = item.steps.length + item.updates.length;
+    if (
+      batch.length &&
+      (batch.length === 100 || children + count > 1000 || bytes + size + 1 > 700_000)
+    ) {
+      batches.push(batch);
+      batch = [];
+      children = 0;
+      bytes = 12;
+    }
+    batch.push(item);
+    children += count;
+    bytes += size + 1;
+  }
+  if (batch.length) batches.push(batch);
+  return batches;
+}
+
+export async function importBucketItems(
+  items: BucketTransferItem[],
+  save: (input: { items: BucketTransferItem[] }) => Promise<BucketImportResult>
+): Promise<BucketImportResult> {
+  const batches = importBatches(items);
+  const total: BucketImportResult = { success: true, imported: 0, matched: 0, conflicts: [] };
+  if (!batches)
+    return {
+      ...total,
+      success: false,
+      error: 'One device item is too large to import. Export the device copy to keep its details.',
+    };
+  for (const batch of batches) {
+    const result = await save({ items: batch });
+    total.imported += result.imported;
+    total.matched += result.matched;
+    total.conflicts.push(...result.conflicts);
+    if (!result.success) return { ...total, success: false, error: result.error };
+  }
+  return total;
 }

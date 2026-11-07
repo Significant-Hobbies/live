@@ -62,6 +62,18 @@ describe('searchDreamAtlas', () => {
   it('normalizes diacritics and punctuation for stable deduplication', () => {
     expect(normalizeDreamTitle('  Tomatina — España! ')).toBe('tomatina espana');
   });
+  it('keeps distinct non-Latin and punctuation-only titles searchable and distinct', () => {
+    expect(normalizeDreamTitle('東京を旅する')).toBe('東京を旅する');
+    expect(normalizeDreamTitle('हिन्दी सीखना')).toBe('हिन्दी सीखना');
+    expect(normalizeDreamTitle('!!!')).toBe('!!!');
+    expect(normalizeDreamTitle('🌍')).toBe('🌍');
+    expect(parseDreamList('東京を旅する\n京都を旅する\n!!!\n???')).toEqual([
+      '東京を旅する',
+      '京都を旅する',
+      '!!!',
+      '???',
+    ]);
+  });
 });
 
 describe('externalDreamResearchLinks', () => {

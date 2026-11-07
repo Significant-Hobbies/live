@@ -43,6 +43,7 @@ beforeEach(async () => {
     }))
   );
   addItem.mockResolvedValue({ success: true, id: 'saved', added: true });
+  updateNotes.mockReset().mockResolvedValue({ success: true });
   Object.assign(globalThis, { IS_REACT_ACT_ENVIRONMENT: true });
   container = document.createElement('div');
   document.body.append(container);
@@ -438,6 +439,65 @@ describe('Account manual entry', () => {
 });
 
 describe('saved-list controls, export and removal recovery', () => {
+  it('searches non-Latin and punctuation-only titles without matching unrelated rows', async () => {
+    await act(async () =>
+      root.render(
+        <MyList
+          key="unicode-search"
+          initialItems={['東京を旅する', '京都を旅する', '!!!', '???'].map((title, index) => ({
+            id: String(index),
+            title,
+            status: 'planned',
+            steps: [],
+          }))}
+        />
+      )
+    );
+    await fill('#my-list-search', '東京');
+    expect(container.querySelectorAll('button[aria-expanded]')).toHaveLength(1);
+    expect(container.querySelector('[aria-label="Open 東京を旅する"]')).not.toBeNull();
+    await fill('#my-list-search', '!!!');
+    expect(container.querySelectorAll('button[aria-expanded]')).toHaveLength(1);
+    expect(container.querySelector('[aria-label="Open !!!"]')).not.toBeNull();
+  });
+
+  it('shows the client duplicate message from a typed account rename response', async () => {
+    await list();
+    await openSail();
+    updateNotes.mockResolvedValue({ success: false, reason: 'duplicate' });
+    await click('Edit title');
+    await fill('#title-one', 'Paint');
+    await click('Save title');
+    expect(container.textContent).toContain('This item is already in your list.');
+    expect(container.querySelector('[aria-label="Open Sail"]')).not.toBeNull();
+    expect(container.querySelector<HTMLInputElement>('#title-one')!.value).toBe('Paint');
+  });
+  it('exports legacy idless items without changing the identifiers used by subsequent edits', async () => {
+    let record: unknown = { items: ['Learn to sail', { title: 'Plant a tree' }] };
+    vi.spyOn(localRecords, 'readLocalRecord').mockImplementation(async () => record);
+    vi.spyOn(localRecords, 'writeLocalRecord').mockImplementation(
+      async (_adapter, _key, _domain, value) => {
+        record = value;
+      }
+    );
+    const download = vi.spyOn(bucketData, 'downloadBucketJson').mockImplementation(() => {});
+    await act(async () => root.render(<MyList key="legacy-export" />));
+    await act(async () =>
+      (container.querySelector('[aria-label="Open Learn to sail"]') as HTMLButtonElement).click()
+    );
+    const titleId = container.querySelector('textarea[id^="notes-"]')!.id.replace('notes-', '');
+    await click('Export all');
+    expect((download.mock.calls[0]![0] as { items: Array<{ id: string }> }).items[0]!.id).toBe(
+      titleId
+    );
+    await click('Edit title');
+    await fill(`#title-${titleId}`, 'Sail with friends');
+    await click('Save title');
+    expect(container.querySelector('[aria-label="Open Sail with friends"]')).not.toBeNull();
+    expect(record).toMatchObject({
+      items: [{ id: titleId, title: 'Sail with friends' }, { title: 'Plant a tree' }],
+    });
+  });
   async function list() {
     updateNotes.mockResolvedValue({ success: true });
     removeItem.mockResolvedValue({ success: true });

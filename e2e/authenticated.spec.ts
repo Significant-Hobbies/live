@@ -267,6 +267,9 @@ test.describe('authenticated surfaces', () => {
     await panel.getByRole('button', { name: 'Remove from list', exact: true }).click();
     await panel.getByRole('button', { name: 'Remove', exact: true }).click();
     await expect(authedPage.getByRole('button', { name: `Mark ${title} as lived` })).toHaveCount(0);
+    await expect(
+      authedPage.getByRole('status').filter({ hasText: `Removing “${title}”` })
+    ).toHaveCount(0, { timeout: 20_000 });
     await authedPage.reload();
     await expect(authedPage.getByRole('button', { name: `Mark ${title} as lived` })).toHaveCount(0);
   });

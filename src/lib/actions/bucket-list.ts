@@ -354,7 +354,7 @@ export async function updateBucketListItem(
     category?: string | null;
     description?: string | null;
   }
-): Promise<{ success: boolean }> {
+): Promise<{ success: true } | { success: false; reason: 'duplicate' }> {
   const session = await getServerAuthSession();
   if (!session?.user?.id) throw new Error('Not authenticated');
   const parsed = UpdateItemSchema.parse(patch);
@@ -370,7 +370,7 @@ export async function updateBucketListItem(
           item.id !== id && normalizeDreamTitle(item.title) === normalizeDreamTitle(parsed.title!)
       )
     )
-      throw new Error('This item is already in your list.');
+      return { success: false, reason: 'duplicate' };
   }
   await db
     .update(bucketListItems)

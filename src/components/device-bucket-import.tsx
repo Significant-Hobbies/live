@@ -6,9 +6,22 @@ import { importLocalBucketItems } from '~/lib/actions/local-bucket-import';
 import { downloadBucketJson } from '~/lib/bucket-list-data';
 import {
   archiveImportedBucketSnapshot,
+  importBucketItems,
   readLocalBucketSnapshot,
   type LocalBucketSnapshot,
 } from '~/lib/local-bucket-import';
+
+function exportCopy(current: LocalBucketSnapshot) {
+  downloadBucketJson(
+    {
+      ...current.envelope.value,
+      format: 'live-device-bucket-list',
+      version: 1,
+      exportedAt: new Date().toISOString(),
+    },
+    'live-device-bucket-list'
+  );
+}
 
 export function useDeviceBucketImport(authenticated: boolean) {
   const router = useRouter();
@@ -16,6 +29,7 @@ export function useDeviceBucketImport(authenticated: boolean) {
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
   const [complete, setComplete] = useState(false);
+  const [archived, setArchived] = useState(false);
   const [pending, startTransition] = useTransition();
   useEffect(() => {
     if (!authenticated) return;
@@ -44,7 +58,7 @@ export function useDeviceBucketImport(authenticated: boolean) {
       const current = await readLocalBucketSnapshot();
       setSnapshot(current);
       if (!current || current.items.length === 0) return;
-      const result = await importLocalBucketItems({ items: current.items });
+      const result = await importBucketItems(current.items, importLocalBucketItems);
       if (!result.success) {
         setError(result.error ?? 'Import failed. Your device copy is safe.');
         return;
@@ -69,14 +83,41 @@ export function useDeviceBucketImport(authenticated: boolean) {
     }
   }
 
+  async function archiveCopy() {
+    if (!snapshot) return;
+    setError('');
+    try {
+      exportCopy(snapshot);
+      if (await archiveImportedBucketSnapshot(snapshot)) {
+        setSnapshot(null);
+        setArchived(true);
+        setMessage(
+          'Your account versions are unchanged. A backup was downloaded and the device copy is archived.'
+        );
+      } else {
+        setMessage(
+          'The device copy changed, so it has not been archived. Export or import its latest version.'
+        );
+        setSnapshot(await readLocalBucketSnapshot());
+      }
+    } catch {
+      setError('The device copy could not be archived. Its original is safe. Retry or export it.');
+    }
+  }
+
   return {
     snapshot,
     message,
     error,
     complete,
+    archived,
     pending,
     visible: Boolean(snapshot?.envelope.value.items.length || message || error),
     importList: () => startTransition(importSnapshot),
+    exportCopy: () => {
+      if (snapshot) exportCopy(snapshot);
+    },
+    archiveCopy: () => startTransition(archiveCopy),
   };
 }
 
@@ -85,8 +126,36 @@ export function DeviceBucketImportControls({
 }: {
   state: ReturnType<typeof useDeviceBucketImport>;
 }) {
+  const [confirmArchive, setConfirmArchive] = useState(false);
   const snapshot = state.snapshot;
   if (!snapshot?.envelope.value.items.length) return null;
+  if (confirmArchive)
+    return (
+      <div className="space-y-2 text-sm">
+        <p>
+          Keep the account versions and archive this device copy? A complete JSON backup will
+          download first. No account items will change.
+        </p>
+        <div className="flex flex-wrap gap-2">
+          <button
+            type="button"
+            disabled={state.pending}
+            onClick={state.archiveCopy}
+            className="min-h-11 rounded-lg border border-border px-4 py-2 text-sm"
+          >
+            Export and archive device copy
+          </button>
+          <button
+            type="button"
+            disabled={state.pending}
+            onClick={() => setConfirmArchive(false)}
+            className="min-h-11 px-3 py-2 text-sm"
+          >
+            Cancel archive
+          </button>
+        </div>
+      </div>
+    );
   return (
     <>
       <button
@@ -100,20 +169,18 @@ export function DeviceBucketImportControls({
       <button
         type="button"
         disabled={state.pending}
-        onClick={() =>
-          downloadBucketJson(
-            {
-              format: 'live-device-bucket-list',
-              version: 1,
-              exportedAt: new Date().toISOString(),
-              ...snapshot.envelope.value,
-            },
-            'live-device-bucket-list'
-          )
-        }
+        onClick={state.exportCopy}
         className="min-h-11 rounded-lg border border-border px-4 py-2 text-sm"
       >
         Export device copy
+      </button>
+      <button
+        type="button"
+        disabled={state.pending}
+        onClick={() => setConfirmArchive(true)}
+        className="min-h-11 rounded-lg border border-border px-4 py-2 text-sm"
+      >
+        Keep account versions
       </button>
     </>
   );

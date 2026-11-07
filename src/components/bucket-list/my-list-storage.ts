@@ -45,6 +45,7 @@ type BucketRecord = { items?: Array<string | Record<string, unknown>>; [key: str
 
 export interface MyListStorage {
   load(): Promise<MyListItem[]>;
+  snapshot(): MyListItem[];
   syncFromServer?(next: MyListItem[]): MyListItem[];
   add(item: NewItem): Promise<MyListItem[]>;
   update(id: string, patch: ItemPatch): Promise<MyListItem[]>;
@@ -115,6 +116,7 @@ export function localMyListStorage(
     );
   }
   return {
+    snapshot: () => items,
     async load() {
       record =
         (await readLocalRecord(
@@ -192,6 +194,7 @@ export function serverMyListStorage(initial: MyListItem[]): MyListStorage {
   }
   return {
     load: async () => items,
+    snapshot: () => items,
     syncFromServer(next) {
       items = next;
       return items;
@@ -208,12 +211,19 @@ export function serverMyListStorage(initial: MyListItem[]): MyListStorage {
       if (patch.status) await updateBucketListItemStatus(id, patch.status);
       if (patch.visibility === 'public' || patch.visibility === 'private')
         await updateBucketListItemVisibility(id, patch.visibility);
-      if ('title' in patch || 'targetYear' in patch || 'notes' in patch)
-        await updateBucketListItem(id, {
+      if ('title' in patch || 'targetYear' in patch || 'notes' in patch) {
+        const result = await updateBucketListItem(id, {
           ...('title' in patch ? { title: patch.title } : {}),
           ...('targetYear' in patch ? { targetYear: patch.targetYear } : {}),
           ...('notes' in patch ? { description: patch.notes } : {}),
         });
+        if (!result?.success)
+          throw new Error(
+            result?.reason === 'duplicate'
+              ? 'This item is already in your list.'
+              : 'Item could not be saved'
+          );
+      }
       return replace(id, (item) =>
         patchItem(item, {
           ...patch,

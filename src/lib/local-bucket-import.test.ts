@@ -1,5 +1,10 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { archiveImportedBucketSnapshot, readLocalBucketSnapshot } from './local-bucket-import';
+import {
+  archiveImportedBucketSnapshot,
+  importBucketItems,
+  readLocalBucketSnapshot,
+} from './local-bucket-import';
+import type { BucketTransferItem } from './bucket-list-data';
 
 const { records, replace } = vi.hoisted(() => ({
   records: new Map<string, unknown>(),
@@ -28,6 +33,82 @@ beforeEach(() => {
     if (next === undefined) records.delete(name);
     else records.set(name, next);
     return true;
+  });
+});
+
+describe('bounded device import batches', () => {
+  function item(index: number): BucketTransferItem {
+    return {
+      id: `item-${index}`,
+      title: `Goal ${index}`,
+      status: 'planned',
+      steps: [],
+      updates: [],
+    };
+  }
+  const accepted = (imported: number) => ({ success: true, imported, matched: 0, conflicts: [] });
+
+  it('imports every item beyond the server cap and retries a partial acknowledgement with the same IDs', async () => {
+    const items = Array.from({ length: 101 }, (_, index) => item(index));
+    const saved = new Set<string>();
+    let failLast = true;
+    const save = vi.fn(async ({ items: batch }: { items: BucketTransferItem[] }) => {
+      expect(batch.length).toBeLessThanOrEqual(100);
+      if (batch[0]!.id === 'item-100' && failLast) {
+        failLast = false;
+        return { ...accepted(0), success: false, error: 'Interrupted' };
+      }
+      const added = batch.filter((entry) => !saved.has(entry.id));
+      batch.forEach((entry) => {
+        saved.add(entry.id);
+      });
+      return { ...accepted(added.length), matched: batch.length - added.length };
+    });
+    expect(await importBucketItems(items, save)).toMatchObject({
+      success: false,
+      imported: 100,
+      error: 'Interrupted',
+    });
+    expect(await importBucketItems(items, save)).toMatchObject({
+      success: true,
+      imported: 1,
+      matched: 100,
+    });
+    expect([...saved]).toEqual(items.map((entry) => entry.id));
+  });
+
+  it('partitions child graphs and encoded payload bytes without dropping evidence', async () => {
+    const items = Array.from({ length: 6 }, (_, index) => ({
+      ...item(index),
+      steps: Array.from({ length: 100 }, (_, step) => ({
+        id: `step-${step}`,
+        text: 'A next step',
+        done: false,
+      })),
+      updates: Array.from({ length: 100 }, () => ({
+        id: crypto.randomUUID(),
+        text: 'A private update',
+        createdAt: new Date().toISOString(),
+      })),
+    }));
+    const save = vi.fn(async ({ items: batch }: { items: BucketTransferItem[] }) => {
+      expect(
+        batch.reduce((count, entry) => count + entry.steps.length + entry.updates.length, 0)
+      ).toBeLessThanOrEqual(1000);
+      expect(
+        new TextEncoder().encode(JSON.stringify({ items: batch })).byteLength
+      ).toBeLessThanOrEqual(700_000);
+      return accepted(batch.length);
+    });
+    expect(await importBucketItems(items, save)).toMatchObject({ success: true, imported: 6 });
+    expect(save.mock.calls.flatMap(([input]) => input.items)).toEqual(items);
+    save.mockClear();
+    const heavy = items.slice(0, 2).map((entry) => ({
+      ...entry,
+      updates: entry.updates.map((update) => ({ ...update, text: '語'.repeat(2000) })),
+    }));
+    expect(await importBucketItems(heavy, save)).toMatchObject({ success: true, imported: 2 });
+    expect(save).toHaveBeenCalledTimes(2);
   });
 });
 
