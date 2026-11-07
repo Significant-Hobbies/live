@@ -45,6 +45,26 @@ context, caps output at 48 tokens, and retains deterministic questions when the
 gateway is absent or fails. Both family classification and exhausted-family
 generation use the same managed binding; neither request includes journal text.
 
+## Anchor MCP identity activation (2026-11-08)
+
+Source support is prepared at `/api/personal-platform/session?mcpProduct=anchor`.
+Deployment and these runtime configuration requirements remain unverified:
+
+- Live must receive `AUTH0_ISSUER` for the real shared hosted Auth0 tenant.
+  The current gateway and Live verifier require an HTTPS `*.auth0.com` issuer;
+  a custom domain needs a separately reviewed change to that contract.
+- Register the exact API audience `https://mcp.significanthobbies.com/anchor/mcp`
+  with the `anchor.read` and `anchor.write` scopes. Configure access tokens with
+  a lifetime of at most 3,600 seconds; longer tokens are rejected.
+- If Auth0 RBAC is enabled, effective delegated scopes must appear in the
+  standard OAuth `scope` string. RBAC `permissions` alone do not grant consent.
+- Verify the deployed gateway forwards the original bearer token and required
+  scope to Live. Resolve only an existing, uniquely linked Google provider
+  account; users must link Google to their existing Live account before connecting.
+
+No issuer, OAuth registration, credential or production configuration was changed
+as part of this source preparation.
+
 ## Features (shipped)
 
 - Core navigation is Catalog, My list, Weekly journal and Life in weeks.
