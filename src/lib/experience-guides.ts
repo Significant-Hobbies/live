@@ -1,20 +1,12 @@
-/** Practical plans are written per activity, not generated from its category. */
-export type ExperienceGuide = {
-  title: string;
-  summary: string;
-  time: string;
-  cost: string;
-  place: string;
-  preparation: string;
-  steps: { title: string; body: string }[];
-  completion: string;
-  tip: string;
-};
+import { CURATED_EXPERIENCE_GUIDES } from './catalog-expansion/plans';
+import type { ExperienceGuide } from './catalog-expansion/types';
+export type { ExperienceGuide } from './catalog-expansion/types';
 
 // Editorial revision date. Change this when this content is actually edited.
-export const EXPERIENCE_CONTENT_UPDATED = '2026-10-02';
+export const EXPERIENCE_CONTENT_UPDATED = '2026-11-08';
 
 export const EXPERIENCE_GUIDES: Record<string, ExperienceGuide> = {
+  ...CURATED_EXPERIENCE_GUIDES,
   'make-pasta-from-scratch': {
     title: 'Make pasta from scratch: a first-afternoon plan',
     summary:

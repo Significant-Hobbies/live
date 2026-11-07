@@ -278,5 +278,9 @@ describe('complete public discovery', () => {
 
 vi.mock('~/server/experience-catalog', async () => {
   const { searchCatalogSeed } = await import('./catalog-seed');
-  return { searchExperienceCatalog: searchCatalogSeed };
+  const { BUNDLED_PUBLIC_CATALOG } = await import('./catalog-model');
+  return {
+    searchExperienceCatalog: searchCatalogSeed,
+    publicExperienceCatalog: async () => BUNDLED_PUBLIC_CATALOG,
+  };
 });

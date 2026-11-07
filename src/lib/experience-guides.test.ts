@@ -1,13 +1,10 @@
 import { describe, expect, it } from 'vitest';
 
-import {
-  EXPERIENCE_COLLECTIONS,
-  collectionsForExperience,
-  findExperienceCollection,
-} from './experience-collections';
+import { EXPERIENCE_COLLECTIONS, findExperienceCollection } from './experience-collections';
 import { EXPERIENCE_GUIDES, EXPERIENCE_CONTENT_UPDATED } from './experience-guides';
 import { EXPERIENCE_ENTRIES, EXPERIENCES_BY_CATEGORY, findExperience } from './experiences';
 import { experienceBreadcrumbs, experienceMetadata } from './experience-seo';
+import { BUNDLED_PUBLIC_CATALOG, filterPublicCatalog } from './catalog-model';
 import { SITE_URL } from './site-metadata';
 import { renderPublicRouteMarkdown } from './public-route-markdown';
 
@@ -49,10 +46,15 @@ describe('practical experience content', () => {
         expect(bodies.has(step.body), `${slug} repeats a step from another guide`).toBe(false);
         bodies.add(step.body);
       }
+      const discoverable = filterPublicCatalog(BUNDLED_PUBLIC_CATALOG, {
+        query: findExperience(slug)?.title ?? '',
+        category: 'all',
+        kind: 'all',
+      });
       expect(
-        collectionsForExperience(slug).length,
-        `${slug} needs a discovery link`
-      ).toBeGreaterThan(0);
+        discoverable.some((entry) => entry.slug === slug),
+        `${slug} needs a search discovery link`
+      ).toBe(true);
     }
     expect(EXPERIENCE_CONTENT_UPDATED).toMatch(/^\d{4}-\d{2}-\d{2}$/);
   });

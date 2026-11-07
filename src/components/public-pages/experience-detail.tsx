@@ -10,13 +10,9 @@ import { ExperienceCollectionLinks } from '~/components/experience-collection-li
 import { collectionsForExperience } from '~/lib/experience-collections';
 import { EXPERIENCE_GUIDES, EXPERIENCE_CONTENT_UPDATED } from '~/lib/experience-guides';
 import { experienceBreadcrumbs, experienceMetadata } from '~/lib/experience-seo';
-import {
-  type ExperienceEntry,
-  findExperience,
-  firstSteps,
-  PAGED_EXPERIENCES,
-  relatedExperiences,
-} from '~/lib/experiences';
+import { firstSteps, PAGED_EXPERIENCES } from '~/lib/experiences';
+import { publicExperienceCatalog } from '~/server/experience-catalog';
+import type { PublicCatalog } from '~/lib/catalog-model';
 import { safeDecodeURIComponent } from '~/lib/slug';
 import { SITE_URL } from '~/lib/site-metadata';
 import { ExperiencePhoto } from '~/components/experience-photo';
@@ -26,12 +22,9 @@ export async function generateStaticParams() {
   return PAGED_EXPERIENCES.map((e) => ({ slug: e.slug }));
 }
 
-function resolve(raw: string): ExperienceEntry | undefined {
+function resolve(raw: string, catalog: PublicCatalog) {
   const slug = safeDecodeURIComponent(raw);
-  if (!slug) return undefined;
-  const entry = findExperience(slug);
-  // Findable in the corpus is not the same as having a page.
-  return entry?.description ? entry : undefined;
+  return slug ? catalog.bySlug.get(slug) : undefined;
 }
 
 export async function generateMetadata({
@@ -39,16 +32,17 @@ export async function generateMetadata({
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const entry = resolve((await params).slug);
+  const entry = resolve((await params).slug, await publicExperienceCatalog());
   if (!entry) return withPublicMetadata({ title: 'Not found' });
-  const guide = EXPERIENCE_GUIDES[entry.slug];
-  return withPublicMetadata(
-    experienceMetadata(
-      guide?.title ?? `${entry.title} | Bucket list idea`,
-      guide?.summary ?? entry.description ?? '',
+  const guide = EXPERIENCE_GUIDES[entry.editorialSlug ?? ''];
+  return withPublicMetadata({
+    ...experienceMetadata(
+      `${entry.title} | Bucket list idea`,
+      entry.description ?? guide?.summary ?? '',
       `/experiences/${entry.slug}`
-    )
-  );
+    ),
+    ...(!entry.curated ? { robots: { index: false, follow: true } } : {}),
+  });
 }
 
 export default async function ExperiencePage({ params }: { params: Promise<{ slug: string }> }) {
@@ -58,20 +52,19 @@ export default async function ExperiencePage({ params }: { params: Promise<{ slu
 
 export async function renderExperienceContent(
   params: Promise<{ slug: string }>,
-  isLoggedIn = false
+  isLoggedIn = false,
+  suppliedCatalog?: PublicCatalog
 ) {
-  const entry = resolve((await params).slug);
+  const catalog = suppliedCatalog ?? (await publicExperienceCatalog());
+  const entry = resolve((await params).slug, catalog);
   if (!entry) notFound();
 
-  const guide = EXPERIENCE_GUIDES[entry.slug];
-  const chain = guide?.steps ?? firstSteps(entry);
-  const related = relatedExperiences(entry, 12)
-    .sort(
-      (a, b) =>
-        Number(Boolean(EXPERIENCE_GUIDES[b.slug])) - Number(Boolean(EXPERIENCE_GUIDES[a.slug]))
-    )
+  const guide = EXPERIENCE_GUIDES[entry.editorialSlug ?? ''];
+  const chain = guide?.steps ?? (entry.curated ? firstSteps(entry) : []);
+  const related = catalog.items
+    .filter((item) => item.slug !== entry.slug && item.category === entry.category)
     .slice(0, 6);
-  const collections = collectionsForExperience(entry.slug);
+  const collections = collectionsForExperience(entry.editorialSlug ?? entry.slug);
 
   return (
     <div className="mx-auto w-full max-w-3xl px-5 py-16 sm:px-8 sm:py-24">
@@ -81,8 +74,8 @@ export async function renderExperienceContent(
           '@type': 'WebPage',
           url: `${SITE_URL}/experiences/${entry.slug}`,
           name: entry.title,
-          description: guide?.summary ?? entry.description,
-          ...(guide ? { dateModified: EXPERIENCE_CONTENT_UPDATED } : {}),
+          description: entry.description ?? guide?.summary,
+          ...(guide ? { dateModified: guide.updatedAt ?? EXPERIENCE_CONTENT_UPDATED } : {}),
         }}
       />
       <JsonLd
@@ -106,7 +99,7 @@ export async function renderExperienceContent(
       </h1>
 
       <p className="mt-5 max-w-[62ch] text-lg text-muted-foreground" style={{ lineHeight: 1.6 }}>
-        {guide?.summary ?? entry.description}
+        {entry.description ?? guide?.summary}
       </p>
 
       <p className="mt-4 flex flex-wrap gap-2 text-xs text-muted-foreground">
@@ -126,7 +119,7 @@ export async function renderExperienceContent(
       <div className="mt-8">
         <AddToMyListButton
           title={entry.title}
-          description={guide?.summary ?? entry.description}
+          description={entry.description ?? guide?.summary}
           category={entry.category}
           sourceSlug={entry.slug}
           variant="primary"
@@ -145,6 +138,9 @@ export async function renderExperienceContent(
             <h2 id="planning-heading" className="font-serif text-2xl text-foreground">
               Plan the experience
             </h2>
+            <p className="mt-4 max-w-[62ch] text-base leading-relaxed text-muted-foreground">
+              {guide.summary}
+            </p>
             <p className="mt-3 text-sm text-muted-foreground">
               Planning estimates, not a price quote or a deadline. Your version may vary.
             </p>
@@ -183,17 +179,25 @@ export async function renderExperienceContent(
         </p>
       ) : null}
 
-      <section className="mt-14">
-        <h2 className="font-serif text-2xl text-foreground">How you would actually start</h2>
-        <ol className="mt-5 space-y-4">
-          {chain.map((step) => (
-            <li key={step.title} className="border-border border-l-2 pl-4">
-              <p className="font-medium text-foreground">{step.title}</p>
-              <p className="mt-1 max-w-[62ch] text-base text-muted-foreground">{step.body}</p>
-            </li>
-          ))}
-        </ol>
-      </section>
+      {chain.length > 0 ? (
+        <section className="mt-14">
+          <h2 className="font-serif text-2xl text-foreground">How you would actually start</h2>
+          <ol className="mt-5 space-y-4">
+            {chain.map((step) => (
+              <li key={step.title} className="border-border border-l-2 pl-4">
+                <p className="font-medium text-foreground">{step.title}</p>
+                <p className="mt-1 max-w-[62ch] text-base text-muted-foreground">{step.body}</p>
+              </li>
+            ))}
+          </ol>
+        </section>
+      ) : null}
+
+      {!entry.curated ? (
+        <p className="mt-10 text-sm text-muted-foreground">
+          A community idea. A detailed editorial plan has not been added yet.
+        </p>
+      ) : null}
 
       {guide ? (
         <section className="mt-14">
@@ -215,6 +219,33 @@ export async function renderExperienceContent(
             </Link>
             .
           </p>
+        </section>
+      ) : null}
+
+      {guide?.resources?.length ? (
+        <section className="mt-14" aria-labelledby="sources-heading">
+          <h2 id="sources-heading" className="font-serif text-2xl text-foreground">
+            Useful sources
+          </h2>
+          <ul className="mt-5 space-y-4">
+            {guide.resources.map((resource) => (
+              <li key={resource.url}>
+                <a
+                  href={resource.url}
+                  className="text-foreground underline underline-offset-4"
+                  rel="noopener noreferrer"
+                >
+                  {resource.title}
+                </a>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  {resource.publisher} · {resource.purpose}
+                </p>
+              </li>
+            ))}
+          </ul>
+          {guide.updatedAt ? (
+            <p className="mt-4 text-xs text-muted-foreground">Guide updated {guide.updatedAt}</p>
+          ) : null}
         </section>
       ) : null}
 

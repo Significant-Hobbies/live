@@ -22,6 +22,7 @@
  * owning the data.
  */
 
+import { CURATED_EXPERIENCES } from './catalog-expansion/entries';
 import type { BucketItemCategory } from '~/lib/famous-bucket-lists';
 
 /**
@@ -1651,6 +1652,10 @@ export type ExperienceEntry = {
   region?: DestinationRegion;
   horizon?: MilestoneHorizon;
   famous?: { name: string; slug: string; note: string };
+  tags?: string[];
+  budget?: import('./catalog-expansion/types').CuratedExperience['budget'];
+  effort?: import('./catalog-expansion/types').CuratedExperience['effort'];
+  company?: import('./catalog-expansion/types').CuratedExperience['company'];
 };
 
 /** URL-safe slug. Not exported for reuse — see `slugForExperience`. */
@@ -2258,6 +2263,9 @@ export const EXPERIENCE_ENTRIES: ExperienceEntry[] = (() => {
   // front, so the browse page opened on a wall of rows with nothing to read
   // and nowhere to click. Stable within each half, so the order is still
   // deterministic and slugs never shuffle.
+  for (const entry of CURATED_EXPERIENCES) {
+    if (!bySlug.has(entry.slug)) bySlug.set(entry.slug, entry);
+  }
   const all = [...bySlug.values()];
   return [...all.filter((e) => e.description), ...all.filter((e) => !e.description)];
 })();

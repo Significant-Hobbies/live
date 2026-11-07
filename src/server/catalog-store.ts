@@ -1,6 +1,11 @@
 import { CATALOG_CATEGORIES, normalizeCatalogTitle } from '~/lib/catalog-seed';
 import type { CatalogPage, CatalogQuery } from '~/lib/catalog-types';
-import { EXPERIENCE_ENTRIES } from '~/lib/experiences';
+import {
+  catalogPage,
+  isBundledCatalogTitle,
+  mergePublicCatalog,
+  type PublicCatalogRow,
+} from '~/lib/catalog-model';
 
 export interface CatalogStatement {
   bind(...values: Array<string | number>): CatalogStatement;
@@ -13,64 +18,21 @@ export interface CatalogDatabase {
   batch(statements: CatalogStatement[]): Promise<unknown>;
 }
 
-type CatalogRow = {
-  slug: string;
-  title: string;
-  description: string | null;
-  emoji: string;
-  category: CatalogPage['items'][number]['category'];
-  kind: CatalogPage['items'][number]['kind'];
-};
+/** This projection deliberately excludes submissions and all user/private tables. */
+export async function readStoredPublicCatalog(database: CatalogDatabase) {
+  const { results } = await database
+    .prepare(
+      'SELECT slug,title,description,emoji,category,kind FROM ExperienceCatalog ORDER BY sortOrder,slug'
+    )
+    .all<PublicCatalogRow>();
+  return mergePublicCatalog(results, 'database');
+}
 
-/** No public reads of submissions, submitters, notes, or personal-list tables. */
 export async function searchStoredCatalog(
   database: CatalogDatabase,
   query: CatalogQuery
 ): Promise<CatalogPage> {
-  const conditions: string[] = [];
-  const bindings: string[] = [];
-  const term = normalizeCatalogTitle(query.query);
-  if (term) {
-    conditions.push('searchText LIKE ?');
-    bindings.push(`%${term}%`);
-  }
-  if (query.category !== 'all') {
-    conditions.push('category = ?');
-    bindings.push(query.category);
-  }
-  if (query.kind !== 'all') {
-    conditions.push('kind = ?');
-    bindings.push(query.kind);
-  }
-  const where = conditions.length ? ` WHERE ${conditions.join(' AND ')}` : '';
-  const total =
-    (await database
-      .prepare('SELECT count(*) AS count FROM ExperienceCatalog')
-      .first<number>('count')) ?? 0;
-  const matches =
-    (await database
-      .prepare(`SELECT count(*) AS count FROM ExperienceCatalog${where}`)
-      .bind(...bindings)
-      .first<number>('count')) ?? 0;
-  const page = Math.min(query.page, Math.max(1, Math.ceil(matches / query.pageSize)));
-  const { results } = await database
-    .prepare(
-      `SELECT slug,title,description,emoji,category,kind FROM ExperienceCatalog${where} ORDER BY sortOrder,slug LIMIT ? OFFSET ?`
-    )
-    .bind(...bindings, query.pageSize, (page - 1) * query.pageSize)
-    .all<CatalogRow>();
-  return {
-    items: results.map(({ description, ...entry }) => ({
-      ...entry,
-      ...(description ? { description } : {}),
-    })),
-    total,
-    matches,
-    page,
-    pageSize: query.pageSize,
-    source: 'database',
-    categories: CATALOG_CATEGORIES,
-  };
+  return catalogPage(await readStoredPublicCatalog(database), query, CATALOG_CATEGORIES);
 }
 
 export async function submitStoredCatalogIdea(
@@ -80,6 +42,7 @@ export async function submitStoredCatalogIdea(
   category: string
 ) {
   const normalized = normalizeCatalogTitle(title);
+  if (isBundledCatalogTitle(title)) return { status: 'already-shared' as const };
   const approved = await database
     .prepare('SELECT slug FROM ExperienceCatalog WHERE normalizedTitle = ?')
     .bind(normalized)
@@ -108,25 +71,17 @@ export async function reviewStoredCatalogIdea(
   reviewer: string
 ) {
   if (!reviewer.trim()) throw new Error('A reviewer is required');
-  if (decision === 'approve') {
-    const seedCount =
-      (await database
-        .prepare("SELECT count(*) AS count FROM ExperienceCatalog WHERE source = 'seed'")
-        .first<number>('count')) ?? 0;
-    if (seedCount < EXPERIENCE_ENTRIES.length)
-      throw new Error('Seed the shared catalog before approving submissions.');
-  }
   const submission = await database
-    .prepare('SELECT status FROM CatalogSubmission WHERE id = ?')
+    .prepare('SELECT status,title FROM CatalogSubmission WHERE id = ?')
     .bind(id)
-    .first<{ status: string }>();
+    .first<{ status: string; title: string }>();
   if (!submission || submission.status !== 'pending') throw new Error('Submission is not pending');
   const update = database
     .prepare(
       `UPDATE CatalogSubmission SET status = ?,reviewedBy = ?,reviewedAt = unixepoch() WHERE id = ? AND status = 'pending'`
     )
     .bind(decision === 'approve' ? 'approved' : 'rejected', reviewer, id);
-  if (decision === 'reject') {
+  if (decision === 'reject' || isBundledCatalogTitle(submission.title)) {
     await update.run();
     return;
   }

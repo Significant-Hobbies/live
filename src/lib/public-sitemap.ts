@@ -7,7 +7,7 @@ import { FAMOUS_BUCKET_LISTS } from '~/lib/famous-bucket-lists';
 import { FAMOUS_JOURNEYS } from '~/lib/famous-journeys';
 import { PAGED_EXPERIENCES } from '~/lib/experiences';
 import { EXPERIENCE_COLLECTIONS } from '~/lib/experience-collections';
-import { EXPERIENCE_CONTENT_UPDATED } from '~/lib/experience-guides';
+import { EXPERIENCE_CONTENT_UPDATED, EXPERIENCE_GUIDES } from '~/lib/experience-guides';
 import { HOBBY_CATEGORIES } from '~/lib/hobbies';
 import { sitemapLastModified } from '~/lib/sitemap-last-modified';
 import { db } from '~/server/db';
@@ -151,7 +151,7 @@ export function publicStaticSitemap(): MetadataRoute.Sitemap {
     // Catalog pages use an editorial revision date, not request-time freshness.
     ...PAGED_EXPERIENCES.map((e) => ({
       url: `${baseUrl}/experiences/${e.slug}`,
-      lastModified: EXPERIENCE_CONTENT_UPDATED,
+      lastModified: EXPERIENCE_GUIDES[e.slug]?.updatedAt ?? EXPERIENCE_CONTENT_UPDATED,
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     })),

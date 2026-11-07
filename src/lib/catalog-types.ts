@@ -1,9 +1,6 @@
 import type { ExperienceCategory, ExperienceEntry, ExperienceKind } from './experiences';
 
-type CatalogIdea = Pick<
-  ExperienceEntry,
-  'slug' | 'title' | 'description' | 'emoji' | 'category' | 'kind'
->;
+type CatalogIdea = ExperienceEntry;
 export type CatalogQuery = {
   query: string;
   category: ExperienceCategory | 'all';

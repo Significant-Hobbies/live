@@ -94,7 +94,7 @@ import { AddToMyListButton } from '~/components/add-to-my-list-button';
 import { ExperienceCollectionLinks } from '~/components/experience-collection-links';
 import { ExperiencePhoto } from '~/components/experience-photo';
 import { addToMyListLabel } from './public-button-copy';
-import { findExperience } from './experiences';
+import { publicExperienceCatalog } from '~/server/experience-catalog';
 import { getFamousBucketList } from './famous-bucket-lists';
 import { createElement, type ReactNode } from 'react';
 import Link from 'next/link';
@@ -393,10 +393,12 @@ export async function renderPublicJourneySource(slug: string): Promise<string | 
 }
 
 export async function renderPublicExperienceSource(slug: string): Promise<string | null> {
-  if (!findExperience(slug)?.description) return null;
+  const catalog = await publicExperienceCatalog();
+  const entry = catalog.bySlug.get(slug);
+  if (!entry) return null;
   return renderPublicTree(
-    await renderExperienceContent(Promise.resolve({ slug })),
-    `/experiences/${slug}`
+    await renderExperienceContent(Promise.resolve({ slug }), false, catalog),
+    `/experiences/${entry.slug}`
   );
 }
 export async function renderPublicBucketListSource(slug: string): Promise<string | null> {

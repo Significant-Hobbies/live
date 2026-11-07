@@ -12,6 +12,7 @@ import {
   PAGED_EXPERIENCES,
   relatedExperiences,
 } from './experiences';
+import { CURATED_EXPERIENCES } from './catalog-expansion/entries';
 import { FAMOUS_BUCKET_LISTS } from './famous-bucket-lists';
 import { getBucketListSuggestions } from './bucket-list-insights';
 import { getOnboardingPossibilities } from './onboarding-possibilities';
@@ -126,7 +127,7 @@ describe('the suggestion engine reads the shared corpus', () => {
 
 describe('browsable entries', () => {
   it('indexes the whole corpus with unique, non-empty slugs', () => {
-    expect(EXPERIENCE_ENTRIES.length).toBe(419);
+    expect(EXPERIENCE_ENTRIES.length).toBe(419 + CURATED_EXPERIENCES.length);
     const slugs = EXPERIENCE_ENTRIES.map((e) => e.slug);
     expect(slugs.filter((s) => !s)).toHaveLength(0);
     expect(new Set(slugs).size).toBe(slugs.length);

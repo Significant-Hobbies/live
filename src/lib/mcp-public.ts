@@ -1,10 +1,7 @@
+import { firstSteps } from './experiences';
 import { HOBBY_CATEGORIES, HOBBY_FACETS } from '@/lib/hobbies';
-import {
-  EXPERIENCE_ENTRIES,
-  findExperience,
-  firstSteps,
-  relatedExperiences,
-} from '@/lib/experiences';
+import { BUNDLED_PUBLIC_CATALOG, filterPublicCatalog, type PublicCatalog } from './catalog-model';
+import { EXPERIENCE_GUIDES } from './experience-guides';
 
 const MCP_PAGE_MAX = 50;
 const EPOCH_MILLISECONDS_THRESHOLD = 10_000_000_000;
@@ -55,34 +52,43 @@ export function searchPublicHobbies(searchParams: URLSearchParams) {
   return page(hobbies, limit, offset);
 }
 
-export function searchPublicExperiences(searchParams: URLSearchParams) {
-  const q = searchParams.get('q')?.trim().toLocaleLowerCase() ?? '';
-  const category = searchParams.get('category')?.trim().toLocaleLowerCase() ?? '';
+export function searchPublicExperiences(
+  searchParams: URLSearchParams,
+  catalog: PublicCatalog = BUNDLED_PUBLIC_CATALOG
+) {
   const { limit, offset } = boundedPage(searchParams);
-  const experiences = EXPERIENCE_ENTRIES.filter(
-    (item) =>
-      (!q || `${item.title} ${item.description ?? ''}`.toLocaleLowerCase().includes(q)) &&
-      (!category || item.category.toLocaleLowerCase() === category)
-  ).map((item) => ({
+  const experiences = filterPublicCatalog(catalog, {
+    query: searchParams.get('q')?.trim() ?? '',
+    category: (searchParams.get('category')?.trim().toLowerCase() ||
+      'all') as import('./catalog-types').CatalogQuery['category'],
+    kind: (searchParams.get('kind')?.trim().toLowerCase() ||
+      'all') as import('./catalog-types').CatalogQuery['kind'],
+  }).map(({ curated: _curated, editorialSlug: _editorialSlug, ...item }) => ({
     ...item,
     canonicalUrl: `https://significanthobbies.com/experiences/${item.slug}`,
   }));
   return page(experiences, limit, offset);
 }
 
-export function getPublicExperience(slug: string) {
-  const experience = findExperience(slug);
+export function getPublicExperience(slug: string, catalog: PublicCatalog = BUNDLED_PUBLIC_CATALOG) {
+  const experience = catalog.bySlug.get(slug);
   if (!experience) return null;
+  const { curated, editorialSlug, ...entry } = experience;
+  const guide = editorialSlug ? EXPERIENCE_GUIDES[editorialSlug] : undefined;
   return {
-    ...experience,
-    firstSteps: firstSteps(experience),
-    related: relatedExperiences(experience).map((item) => ({
-      slug: item.slug,
-      title: item.title,
-      category: item.category,
-      canonicalUrl: `https://significanthobbies.com/experiences/${item.slug}`,
-    })),
-    canonicalUrl: `https://significanthobbies.com/experiences/${experience.slug}`,
+    ...entry,
+    firstSteps: guide?.steps ?? (curated ? firstSteps(entry) : []),
+    ...(guide ? { guide } : {}),
+    related: catalog.items
+      .filter((item) => item.slug !== entry.slug && item.category === entry.category)
+      .slice(0, 6)
+      .map((item) => ({
+        slug: item.slug,
+        title: item.title,
+        category: item.category,
+        canonicalUrl: `https://significanthobbies.com/experiences/${item.slug}`,
+      })),
+    canonicalUrl: `https://significanthobbies.com/experiences/${entry.slug}`,
   };
 }
 

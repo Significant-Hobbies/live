@@ -15,6 +15,7 @@ import { getTimelineUrl } from '~/lib/timeline-url';
 import type { Phase, TimelineVisibility } from '~/lib/types';
 import { parseJSONColumn } from '~/lib/utils';
 import { db } from '~/server/db';
+import { searchExperienceCatalog } from '~/server/experience-catalog';
 
 import { SearchPageClient } from './search-client';
 
@@ -41,14 +42,18 @@ export default async function SearchPage({ searchParams }: Props) {
         <GridBackground variant="dots" size={22} />
         <FadeIn className="relative mb-8">
           <h1 className="font-serif text-3xl font-semibold text-foreground">Search</h1>
-          <p className="mt-2 text-muted-foreground">Find timelines, people, and hobbies.</p>
+          <p className="mt-2 text-muted-foreground">
+            Find experiences, timelines, people, and hobbies.
+          </p>
         </FadeIn>
         <SearchPageClient initialQuery="" />
         <FadeIn className="relative mt-12" delay={0.1}>
           <div className="flex flex-col items-center justify-center rounded-2xl border border-border bg-card/40 py-20 text-center shadow-soft">
             <span className="mb-4 text-4xl">🔍</span>
             <p className="text-muted-foreground font-medium">Start typing to search</p>
-            <p className="mt-1 text-sm text-subtle">Search for timelines, usernames, or hobbies</p>
+            <p className="mt-1 text-sm text-subtle">
+              Search for experiences, timelines, usernames, or hobbies
+            </p>
           </div>
         </FadeIn>
       </div>
@@ -132,18 +137,66 @@ export default async function SearchPage({ searchParams }: Props) {
       .map((h) => ({ hobby: h, category: cat.name, emoji: cat.emoji }))
   ).slice(0, 20);
 
+  const experienceResults = await searchExperienceCatalog({
+    query,
+    category: 'all',
+    kind: 'all',
+    page: 1,
+    pageSize: 20,
+  });
+
   return (
     <div className="relative mx-auto max-w-3xl px-4 py-12">
       <GridBackground variant="dots" size={22} />
       {/* Page header */}
       <FadeIn className="relative mb-8">
         <h1 className="font-serif text-3xl font-semibold text-foreground">Search</h1>
-        <p className="mt-2 text-muted-foreground">Find timelines, people, and hobbies.</p>
+        <p className="mt-2 text-muted-foreground">
+          Find experiences, timelines, people, and hobbies.
+        </p>
       </FadeIn>
 
       <SearchPageClient initialQuery={query} />
 
       <div className="relative mt-8 space-y-10">
+        <section className="scroll-reveal">
+          <h2 className="mb-4 flex items-center gap-2 text-sm font-semibold text-muted-foreground">
+            Experiences
+            <span className="rounded-full bg-foreground/5 px-2 py-0.5 text-xs font-medium text-muted-foreground">
+              {experienceResults.matches}
+            </span>
+          </h2>
+          {experienceResults.items.length > 0 ? (
+            <ul className="divide-y divide-border rounded-xl border border-border bg-card/40 px-5">
+              {experienceResults.items.map((entry) => (
+                <li key={entry.slug} className="py-4">
+                  <Link
+                    href={`/experiences/${entry.slug}`}
+                    prefetch={false}
+                    className="font-medium text-foreground underline-offset-4 hover:underline"
+                  >
+                    {entry.emoji} {entry.title}
+                  </Link>
+                  {entry.description ? (
+                    <p className="mt-1 text-sm text-muted-foreground">{entry.description}</p>
+                  ) : null}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="text-sm text-muted-foreground">
+              No experiences found for &ldquo;{query}&rdquo;
+            </p>
+          )}
+          {experienceResults.matches > experienceResults.items.length ? (
+            <Link
+              href={`/experiences?q=${encodeURIComponent(query)}`}
+              className="mt-3 inline-block text-sm text-foreground underline underline-offset-4"
+            >
+              See all {experienceResults.matches} experiences
+            </Link>
+          ) : null}
+        </section>
         {/* --- Timelines section --- */}
         <section className="scroll-reveal">
           <h2 className="mb-4 flex items-center gap-2 text-sm font-semibold text-muted-foreground">
