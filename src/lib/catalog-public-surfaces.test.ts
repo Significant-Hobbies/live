@@ -161,6 +161,23 @@ describe('shared public experience surfaces', () => {
   });
 
   it('keeps sitemap URLs unique and excludes community targets after conflicting D1 edits', () => {
+    const aliased = publicStaticSitemap(
+      mergePublicCatalog([
+        {
+          slug: 'make-a-fixture-loom',
+          title: 'Make pasta from scratch',
+          description: null,
+          emoji: '✨',
+          category: 'creative',
+          kind: 'idea',
+        },
+      ])
+    );
+    expect(
+      aliased.find(
+        (entry) => entry.url === 'https://significanthobbies.com/experiences/make-a-fixture-loom'
+      )?.lastModified
+    ).toBe(EXPERIENCE_GUIDES['make-a-fixture-loom'].updatedAt);
     const row = {
       slug: 'make-pasta-from-scratch',
       title: 'Make a fixture loom',

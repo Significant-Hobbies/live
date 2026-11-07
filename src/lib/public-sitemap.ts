@@ -159,7 +159,9 @@ export function publicStaticSitemap(
         ? [
             {
               url: `${baseUrl}/experiences/${entry.slug}`,
-              lastModified: EXPERIENCE_GUIDES[e.slug]?.updatedAt ?? EXPERIENCE_CONTENT_UPDATED,
+              lastModified:
+                EXPERIENCE_GUIDES[entry.editorialSlug ?? '']?.updatedAt ??
+                EXPERIENCE_CONTENT_UPDATED,
               changeFrequency: 'monthly' as const,
               priority: 0.6,
             },
