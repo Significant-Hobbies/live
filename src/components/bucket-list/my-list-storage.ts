@@ -7,6 +7,7 @@ import {
 } from '~/lib/actions/bucket-list';
 import { addBucketStep, removeBucketStep, setBucketStepDone } from '~/lib/actions/bucket-steps';
 import type { BucketStep } from '~/lib/bucket-steps';
+import { normalizeDreamTitle } from '~/lib/dream-atlas';
 import { addBucketItemUpdate } from '~/lib/actions/bucket-updates';
 import {
   BucketUpdateInputSchema,
@@ -27,6 +28,7 @@ export type MyListItem = {
   targetYear?: number | null;
   visibility?: string;
   notes?: string | null;
+  category?: string | null;
   steps: BucketStep[];
   updates?: BucketItemUpdate[];
   createdAt?: string | null;
@@ -36,11 +38,14 @@ export type MyListItem = {
 };
 
 type NewItem = { title: string; description?: string; category?: string };
-type ItemPatch = Partial<Pick<MyListItem, 'status' | 'targetYear' | 'visibility' | 'notes'>>;
+type ItemPatch = Partial<
+  Pick<MyListItem, 'title' | 'status' | 'targetYear' | 'visibility' | 'notes'>
+>;
 type BucketRecord = { items?: Array<string | Record<string, unknown>>; [key: string]: unknown };
 
 export interface MyListStorage {
   load(): Promise<MyListItem[]>;
+  syncFromServer?(next: MyListItem[]): MyListItem[];
   add(item: NewItem): Promise<MyListItem[]>;
   update(id: string, patch: ItemPatch): Promise<MyListItem[]>;
   remove(id: string): Promise<MyListItem[]>;
@@ -90,6 +95,18 @@ export function localMyListStorage(
     return items;
   }
   async function update(id: string, patch: ItemPatch) {
+    if (patch.title !== undefined) {
+      const title = patch.title.trim();
+      if (!title || title.length > 200)
+        throw new Error('Use a title between 1 and 200 characters.');
+      if (
+        items.some(
+          (item) => item.id !== id && normalizeDreamTitle(item.title) === normalizeDreamTitle(title)
+        )
+      )
+        throw new Error('This item is already in your list.');
+      patch = { ...patch, title };
+    }
     return persist(items.map((item) => (item.id === id ? patchItem(item, patch) : item)));
   }
   async function changeSteps(id: string, change: (steps: BucketStep[]) => BucketStep[]) {
@@ -118,6 +135,12 @@ export function localMyListStorage(
             ...item,
             id: typeof item.id === 'string' && item.id ? item.id : crypto.randomUUID(),
             title: item.title,
+            notes:
+              item.notes !== undefined
+                ? (item.notes as string | null)
+                : typeof item.description === 'string'
+                  ? item.description
+                  : null,
             status:
               item.status === 'done' || item.status === 'in_progress' ? item.status : 'planned',
             steps: Array.isArray(item.steps) ? item.steps : [],
@@ -169,23 +192,34 @@ export function serverMyListStorage(initial: MyListItem[]): MyListStorage {
   }
   return {
     load: async () => items,
+    syncFromServer(next) {
+      items = next;
+      return items;
+    },
     async add(input) {
       const result = await addBucketListItem(input);
       if (!result.success || !result.id) throw new Error('Item could not be saved');
       if (result.added === false) throw new Error('This item is already in your list.');
-      items = [...items, newItem(input, result.id)];
+      if (!items.some((item) => item.id === result.id))
+        items = [...items, newItem(input, result.id)];
       return items;
     },
     async update(id, patch) {
       if (patch.status) await updateBucketListItemStatus(id, patch.status);
       if (patch.visibility === 'public' || patch.visibility === 'private')
         await updateBucketListItemVisibility(id, patch.visibility);
-      if ('targetYear' in patch || 'notes' in patch)
+      if ('title' in patch || 'targetYear' in patch || 'notes' in patch)
         await updateBucketListItem(id, {
+          ...('title' in patch ? { title: patch.title } : {}),
           ...('targetYear' in patch ? { targetYear: patch.targetYear } : {}),
           ...('notes' in patch ? { description: patch.notes } : {}),
         });
-      return replace(id, (item) => patchItem(item, patch));
+      return replace(id, (item) =>
+        patchItem(item, {
+          ...patch,
+          ...(patch.title !== undefined ? { title: patch.title.trim() } : {}),
+        })
+      );
     },
     async remove(id) {
       await removeBucketListItem(id);
@@ -196,7 +230,9 @@ export function serverMyListStorage(initial: MyListItem[]): MyListStorage {
       const step = await addBucketStep(id, text);
       return replace(id, (item) => ({
         ...item,
-        steps: [...item.steps, { id: step.id, text, done: false }],
+        steps: item.steps.some((entry) => entry.id === step.id)
+          ? item.steps
+          : [...item.steps, { id: step.id, text, done: false }],
       }));
     },
     async setStep(id, stepId, done) {

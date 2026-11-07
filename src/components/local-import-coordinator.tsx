@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useDeviceBucketImport, DeviceBucketImportControls } from './device-bucket-import';
 import { useEffect, useState, useTransition } from 'react';
 import { importLocalAccountData, type LocalAccountImport } from '~/lib/actions/local-import';
 import {
@@ -17,6 +18,7 @@ const DIRECT_KEYS = [
 ] as const;
 
 export function LocalImportCoordinator({ isAuthenticated }: { isAuthenticated: boolean }) {
+  const deviceImport = useDeviceBucketImport(isAuthenticated);
   const [payload, setPayload] = useState<LocalAccountImport | null>(null);
   const [living, setLiving] = useState({ bucket: false, timeline: false });
   const [dismissed, setDismissed] = useState(false);
@@ -32,32 +34,14 @@ export function LocalImportCoordinator({ isAuthenticated }: { isAuthenticated: b
       readLocalRecord(adapter, 'commitments:state', 'commitments', Array.isArray),
       readLocalRecord(adapter, 'significant-hobbies:bucket-list-draft:v1', 'bucket-list', isObject),
       readLocalRecord(adapter, 'timeline-draft-new', 'timelines', isObject),
-    ]).then(([profile, onboarding, daily, commitments, bucket, timeline]) => {
-      const direct: LocalAccountImport = {
-        profile: profile
-          ? {
-              name: text(profile.name),
-              bio: text(profile.bio),
-              website: text(profile.website),
-              creed: text(profile.creed),
-            }
-          : null,
-        onboarding: onboarding
-          ? {
-              ...(validUsername(onboarding.username) ? { username: onboarding.username } : {}),
-              birthYear: typeof onboarding.birthYear === 'number' ? onboarding.birthYear : 2000,
-              droppedHobby: text(onboarding.droppedHobby),
-              lastFinished: nullableText(onboarding.lastFinished),
-              nextYearFeeling: nullableText(onboarding.nextYearFeeling),
-            }
-          : null,
-        daily: daily as LocalAccountImport['daily'],
-        commitments: commitments as LocalAccountImport['commitments'],
-      };
-      if (direct.profile || direct.onboarding || direct.daily || direct.commitments)
-        setPayload(direct);
-      setLiving({ bucket: Boolean(bucket), timeline: Boolean(timeline) });
-    });
+    ])
+      .then(([profile, onboarding, daily, commitments, bucket, timeline]) => {
+        const direct = accountImportPayload(profile, onboarding, daily, commitments);
+        if (direct.profile || direct.onboarding || direct.daily || direct.commitments)
+          setPayload(direct);
+        setLiving({ bucket: Boolean(bucket), timeline: Boolean(timeline) });
+      })
+      .catch(() => setError('Device records could not be opened. Reload to retry.'));
   }, [isAuthenticated]);
   function importDirect() {
     if (!payload) return;
@@ -70,16 +54,32 @@ export function LocalImportCoordinator({ isAuthenticated }: { isAuthenticated: b
       setPayload(null);
     });
   }
-  if (!isAuthenticated || dismissed || (!payload && !living.bucket && !living.timeline))
-    return null;
+  const hasWork = [payload, living.bucket, living.timeline, deviceImport.visible, error].some(
+    Boolean
+  );
+  if (!isAuthenticated || dismissed || !hasWork) return null;
   return (
     <aside className="fixed bottom-4 left-1/2 z-[90] w-[min(42rem,calc(100%-2rem))] -translate-x-1/2 rounded-2xl border border-primary/30 bg-card p-5 shadow-xl">
-      <p className="font-semibold">Work from this device is ready to move into your account.</p>
+      <p className="font-semibold">
+        {deviceImport.complete && !payload && !living.bucket && !living.timeline
+          ? 'Your device list is saved to your account.'
+          : 'Work from this device is ready to move into your account.'}
+      </p>
       <p className="mt-1 text-sm text-muted-foreground">
         Nothing local is removed until its database save succeeds.
       </p>
-      {error && <p className="mt-2 text-sm text-destructive">{error}</p>}
+      {deviceImport.message && (
+        <p role="status" className="mt-2 text-sm text-muted-foreground">
+          {deviceImport.message}
+        </p>
+      )}
+      {(deviceImport.error || error) && (
+        <p role="alert" className="mt-2 text-sm text-destructive">
+          {deviceImport.error || error}
+        </p>
+      )}
       <div className="mt-4 flex flex-wrap gap-2">
+        <DeviceBucketImportControls state={deviceImport} />
         {payload && (
           <button
             type="button"
@@ -126,4 +126,33 @@ function nullableText(value: unknown) {
 }
 function validUsername(value: unknown): value is string {
   return typeof value === 'string' && /^[a-z0-9-]{3,30}$/.test(value);
+}
+
+function accountImportPayload(
+  profile: Record<string, unknown> | null,
+  onboarding: Record<string, unknown> | null,
+  daily: unknown,
+  commitments: unknown
+): LocalAccountImport {
+  return {
+    profile: profile
+      ? {
+          name: text(profile.name),
+          bio: text(profile.bio),
+          website: text(profile.website),
+          creed: text(profile.creed),
+        }
+      : null,
+    onboarding: onboarding
+      ? {
+          ...(validUsername(onboarding.username) ? { username: onboarding.username } : {}),
+          birthYear: typeof onboarding.birthYear === 'number' ? onboarding.birthYear : 2000,
+          droppedHobby: text(onboarding.droppedHobby),
+          lastFinished: nullableText(onboarding.lastFinished),
+          nextYearFeeling: nullableText(onboarding.nextYearFeeling),
+        }
+      : null,
+    daily: daily as LocalAccountImport['daily'],
+    commitments: commitments as LocalAccountImport['commitments'],
+  };
 }
