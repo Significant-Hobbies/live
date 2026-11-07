@@ -10,7 +10,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <StorageModeProvider mode={session?.user ? 'account' : 'local'}>
       {children}
-      <LocalImportCoordinator isAuthenticated={Boolean(session?.user)} />
+      <LocalImportCoordinator key={session?.user.id ?? 'guest'} userId={session?.user.id ?? null} />
       <Toaster />
     </StorageModeProvider>
   );
