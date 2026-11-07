@@ -15,7 +15,8 @@ export async function GET(request: Request): Promise<Response> {
   if (products.length > 0) {
     const product = products[0] ?? '';
     const scope = request.headers.get('X-Personal-MCP-Scope') ?? '';
-    if (products.length !== 1 || !personalMcpProduct(product, scope)) {
+    const productConfig = personalMcpProduct(product, scope);
+    if (products.length !== 1 || !productConfig) {
       return json({ code: 'FORBIDDEN', message: 'Unsupported MCP product or scope.' }, 403);
     }
     const bearer = /^Bearer ([^\s]+)$/iu.exec(request.headers.get('Authorization') ?? '');
@@ -63,7 +64,13 @@ export async function GET(request: Request): Promise<Response> {
         403
       );
     }
-    return json({ userId: linkedAccount.userId });
+    return json({
+      userId: linkedAccount.userId,
+      mcpProduct: product,
+      scope,
+      audience: productConfig.audience,
+      authorizationVersion: 1,
+    });
   }
 
   const session = await auth.api.getSession({ headers: request.headers });

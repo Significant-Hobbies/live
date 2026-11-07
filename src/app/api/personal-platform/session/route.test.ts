@@ -254,7 +254,13 @@ describe('Personal Platform product MCP identity', () => {
       const response = await request({ scope: 'anchor.read anchor.write' }, scope);
       expect(response.status).toBe(200);
       expect(response.headers.get('Cache-Control')).toBe('no-store');
-      expect(await response.json()).toEqual({ userId: 'linked-user' });
+      expect(await response.json()).toEqual({
+        userId: 'linked-user',
+        mcpProduct: 'anchor',
+        scope,
+        audience,
+        authorizationVersion: 1,
+      });
       expect(state.getSession).not.toHaveBeenCalled();
       const query = state.findMany.mock.calls[0]?.[0];
       expect(query.columns).toEqual({ userId: true });
@@ -293,6 +299,7 @@ describe('Personal Platform product MCP identity', () => {
     const response = await request(claims, 'anchor.write');
     expect(response.status).toBe(401);
     expect(response.headers.get('Cache-Control')).toBe('no-store');
+    expect(await response.json()).not.toHaveProperty('authorizationVersion');
     expect(state.getSession).not.toHaveBeenCalled();
     expect(state.findFirst).not.toHaveBeenCalled();
     expect(state.findMany).not.toHaveBeenCalled();
