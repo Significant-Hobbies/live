@@ -7,10 +7,12 @@ import { FAMOUS_BUCKET_LISTS } from '~/lib/famous-bucket-lists';
 import { FAMOUS_JOURNEYS } from '~/lib/famous-journeys';
 import { PAGED_EXPERIENCES } from '~/lib/experiences';
 import { EXPERIENCE_COLLECTIONS } from '~/lib/experience-collections';
-import { EXPERIENCE_CONTENT_UPDATED } from '~/lib/experience-guides';
+import { EXPERIENCE_CONTENT_UPDATED, EXPERIENCE_GUIDES } from '~/lib/experience-guides';
 import { HOBBY_CATEGORIES } from '~/lib/hobbies';
 import { sitemapLastModified } from '~/lib/sitemap-last-modified';
 import { db } from '~/server/db';
+import { BUNDLED_PUBLIC_CATALOG, type PublicCatalog } from './catalog-model';
+import { publicExperienceCatalog } from '~/server/experience-catalog';
 
 // D1 is request-scoped under OpenNext. Generating this route at build time has
 // no Worker context and would silently omit public profiles.
@@ -66,7 +68,9 @@ async function publicProfileEntries(
   }
 }
 
-export function publicStaticSitemap(): MetadataRoute.Sitemap {
+export function publicStaticSitemap(
+  catalog: PublicCatalog = BUNDLED_PUBLIC_CATALOG
+): MetadataRoute.Sitemap {
   const baseUrl = 'https://significanthobbies.com';
   const now = new Date();
 
@@ -149,12 +153,23 @@ export function publicStaticSitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     // Catalog pages use an editorial revision date, not request-time freshness.
-    ...PAGED_EXPERIENCES.map((e) => ({
-      url: `${baseUrl}/experiences/${e.slug}`,
-      lastModified: EXPERIENCE_CONTENT_UPDATED,
-      changeFrequency: 'monthly' as const,
-      priority: 0.6,
-    })),
+    ...PAGED_EXPERIENCES.flatMap((e) => {
+      const entry = catalog.bySlug.get(e.slug);
+      return entry?.curated
+        ? [
+            {
+              url: `${baseUrl}/experiences/${entry.slug}`,
+              lastModified:
+                EXPERIENCE_GUIDES[entry.editorialSlug ?? '']?.updatedAt ??
+                EXPERIENCE_CONTENT_UPDATED,
+              changeFrequency: 'monthly' as const,
+              priority: 0.6,
+            },
+          ]
+        : [];
+    }).filter(
+      (entry, index, entries) => entries.findIndex((other) => other.url === entry.url) === index
+    ),
     {
       url: `${baseUrl}/experiences/collections`,
       lastModified: EXPERIENCE_CONTENT_UPDATED,
@@ -359,8 +374,10 @@ export function publicStaticSitemap(): MetadataRoute.Sitemap {
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  // Preserve the static sitemap during an outage, as with public profiles below.
+  const catalog = await publicExperienceCatalog().catch(() => BUNDLED_PUBLIC_CATALOG);
   return [
-    ...publicStaticSitemap(),
+    ...publicStaticSitemap(catalog),
     ...(await publicProfileEntries('https://significanthobbies.com', new Date())),
   ];
 }

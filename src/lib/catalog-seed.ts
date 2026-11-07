@@ -6,14 +6,8 @@ export const CATALOG_CATEGORIES = EXPERIENCE_CATEGORIES.map((id) => ({
   label: EXPERIENCES_BY_CATEGORY[id].label,
 }));
 
-export function normalizeCatalogTitle(title: string) {
-  return title
-    .normalize('NFKC')
-    .toLowerCase()
-    .replace(/[^\p{L}\p{N}]+/gu, ' ')
-    .trim()
-    .replace(/\s+/g, ' ');
-}
+export { normalizeCatalogTitle } from './catalog-model';
+import { BUNDLED_PUBLIC_CATALOG, catalogPage, normalizeCatalogTitle } from './catalog-model';
 
 export function parseCatalogQuery(params: URLSearchParams): CatalogQuery {
   const query = (params.get('q') ?? '').trim();
@@ -47,32 +41,7 @@ export function parseCatalogQuery(params: URLSearchParams): CatalogQuery {
 }
 
 export function searchCatalogSeed(query: CatalogQuery): CatalogPage {
-  const term = normalizeCatalogTitle(query.query);
-  const filtered = EXPERIENCE_ENTRIES.filter(
-    (entry) =>
-      (query.category === 'all' || entry.category === query.category) &&
-      (query.kind === 'all' || entry.kind === query.kind) &&
-      (!term || normalizeCatalogTitle(`${entry.title} ${entry.description ?? ''}`).includes(term))
-  );
-  const page = Math.min(query.page, Math.max(1, Math.ceil(filtered.length / query.pageSize)));
-  return {
-    items: filtered
-      .slice((page - 1) * query.pageSize, page * query.pageSize)
-      .map(({ slug, title, description, emoji, category, kind }) => ({
-        slug,
-        title,
-        description,
-        emoji,
-        category,
-        kind,
-      })),
-    total: EXPERIENCE_ENTRIES.length,
-    matches: filtered.length,
-    page,
-    pageSize: query.pageSize,
-    source: 'seed',
-    categories: CATALOG_CATEGORIES,
-  };
+  return catalogPage(BUNDLED_PUBLIC_CATALOG, query, CATALOG_CATEGORIES);
 }
 
 /** SQL artifact only: rerunning never replaces approved edits or personal data. */

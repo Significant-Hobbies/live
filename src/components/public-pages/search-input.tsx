@@ -14,7 +14,7 @@ export function PublicSearchInput({
       <Input
         value={value}
         onChange={handleChange}
-        placeholder="Search timelines, people, hobbies..."
+        placeholder="Search experiences, timelines, people, hobbies..."
         className="h-12 border-border bg-card pl-10 text-base placeholder:text-subtle"
         autoFocus
       />

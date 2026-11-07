@@ -9,7 +9,7 @@ import { waitForHydrated } from './fixtures/hydration';
 test.describe('Experiences', () => {
   test('carries a discovery photo into a saved item after reload', async ({ page }) => {
     const title = 'See the Northern Lights in Iceland or Norway';
-    await page.goto('/experiences');
+    await page.goto('/experiences?q=Northern+Lights');
     const card = page
       .locator('li')
       .filter({ has: page.getByRole('link', { name: title, exact: true }) });

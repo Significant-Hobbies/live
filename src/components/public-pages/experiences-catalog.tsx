@@ -3,7 +3,7 @@ import type { RefObject } from 'react';
 import { AddToMyListButton } from '~/components/add-to-my-list-button';
 import { ResultPagination } from '~/components/result-pagination';
 import type { CatalogPage, CatalogQuery } from '~/lib/catalog-types';
-import type { ExperienceCategory, ExperienceKind } from '~/lib/experiences';
+import type { ExperienceCategory, ExperienceKind, ExperienceEntry } from '~/lib/experiences';
 import { ExperiencePhoto } from '~/components/experience-photo';
 export const KINDS: { id: ExperienceKind | 'all'; label: string }[] = [
   { id: 'all', label: 'Everything' },
@@ -138,60 +138,50 @@ export function ExperiencesView(props: {
         <ul className="mt-5 grid gap-x-6 gap-y-9 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((e, index) => (
             <li key={e.slug} className="flex min-w-0 flex-col">
-              {e.description ? (
-                <Link
-                  href={`/experiences/${e.slug}`}
-                  prefetch={false}
-                  tabIndex={-1}
-                  aria-hidden="true"
-                  className="block aspect-[3/2] overflow-hidden rounded-2xl bg-muted"
-                >
-                  <ExperiencePhoto
-                    title={e.title}
-                    category={e.category}
-                    decorative
-                    eager={index < 3}
-                    className="h-full w-full"
-                  />
-                </Link>
-              ) : (
-                <div className="aspect-[3/2] overflow-hidden rounded-2xl bg-muted">
-                  <ExperiencePhoto
-                    title={e.title}
-                    category={e.category}
-                    className="h-full w-full"
-                  />
-                </div>
-              )}
+              <Link
+                href={`/experiences/${e.slug}`}
+                prefetch={false}
+                tabIndex={-1}
+                aria-hidden="true"
+                className="block aspect-[3/2] overflow-hidden rounded-2xl bg-muted"
+              >
+                <ExperiencePhoto
+                  title={e.title}
+                  category={e.category}
+                  decorative
+                  eager={index < 3}
+                  className="h-full w-full"
+                />
+              </Link>
               <p className="mt-4 text-xs text-muted-foreground">
                 {categories.find((item) => item.id === e.category)?.label ?? e.category}
               </p>
               <div className="mt-2 min-w-0">
-                {e.description ? (
-                  <Link
-                    href={`/experiences/${e.slug}`}
-                    prefetch={false}
-                    className="font-serif text-xl font-medium leading-snug text-foreground underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
-                  >
-                    {e.title}
-                  </Link>
-                ) : (
-                  <span className="font-serif text-xl font-medium leading-snug text-foreground">
-                    {e.title}
-                  </span>
-                )}
+                <Link
+                  href={`/experiences/${e.slug}`}
+                  prefetch={false}
+                  className="font-serif text-xl font-medium leading-snug text-foreground underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+                >
+                  {e.title}
+                </Link>
                 {e.description ? (
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                     {e.description}
                   </p>
                 ) : null}
               </div>
+              {practicalSummary(e) ? (
+                <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
+                  {practicalSummary(e)}
+                </p>
+              ) : null}
               <div className="mt-auto pt-4">
                 <AddToMyListButton
                   title={e.title}
                   description={e.description}
                   category={e.category}
                   mode={mode}
+                  sourceSlug={e.slug}
                 />
               </div>
             </li>
@@ -249,4 +239,24 @@ export function CatalogChip({
       {children}
     </button>
   );
+}
+
+function practicalSummary(entry: ExperienceEntry) {
+  const budget = entry.budget
+    ? { free: 'Free', low: 'Low cost', moderate: 'Moderate cost', substantial: 'Larger budget' }[
+        entry.budget
+      ]
+    : '';
+  const effort = entry.effort
+    ? { short: 'A short try', session: 'One session', weekend: 'A weekend', ongoing: 'Over time' }[
+        entry.effort
+      ]
+    : '';
+  const companyOptions = entry.company?.map(
+    (value) => ({ solo: 'solo', pair: 'with someone', group: 'with a group' })[value]
+  );
+  const company =
+    companyOptions?.length === 3 ? 'solo or together' : (companyOptions?.join(' or ') ?? '');
+  const companyLabel = company ? company.charAt(0).toUpperCase() + company.slice(1) : '';
+  return [budget, effort, companyLabel].filter(Boolean).join(' · ');
 }

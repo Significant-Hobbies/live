@@ -179,6 +179,58 @@ describe('Shared catalog persistence', () => {
     );
   });
 
+  it('preserves community and every bundle with only one seeded D1 row', async () => {
+    sqlite.exec("DELETE FROM ExperienceCatalog WHERE slug != 'make-pasta-from-scratch'");
+    const submitted = await submitStoredCatalogIdea(
+      database,
+      'alice',
+      'Build a public weaving sampler',
+      'creative'
+    );
+    if (!('id' in submitted)) throw new Error('Missing submission');
+    await reviewStoredCatalogIdea(database, submitted.id, 'approve', 'operator');
+    expect((await searchStoredCatalog(database, query())).total).toBe(
+      EXPERIENCE_ENTRIES.length + 1
+    );
+    expect((await searchStoredCatalog(database, query('q=public+weaving+sampler'))).matches).toBe(
+      1
+    );
+    expect(
+      (await submitStoredCatalogIdea(database, 'bob', 'Make pasta from scratch', 'culinary')).status
+    ).toBe('already-shared');
+  });
+
+  it('does not silently cap a growing community catalog', async () => {
+    sqlite.exec(`WITH RECURSIVE counter(n) AS (SELECT 1 UNION ALL SELECT n+1 FROM counter WHERE n < 1100)
+      INSERT INTO ExperienceCatalog(slug,title,normalizedTitle,searchText,emoji,category,kind,source)
+      SELECT 'community-extra-'||n,'Community extra '||n,'community extra '||n,'community extra '||n,'✨','creative','idea','community' FROM counter`);
+    const page = await searchStoredCatalog(database, query('q=community+extra&page=55'));
+    expect(page.matches).toBe(1100);
+    expect(page.total).toBe(EXPERIENCE_ENTRIES.length + 1100);
+    expect(page.items).toHaveLength(20);
+  });
+
+  it('approves a stale submission already covered by a bundle without duplicating it', async () => {
+    sqlite.exec("DELETE FROM ExperienceCatalog WHERE slug = 'make-pasta-from-scratch'");
+    sqlite.exec(
+      "INSERT INTO CatalogSubmission(id,userId,title,normalizedTitle,category) VALUES ('stale','alice','Make pasta from scratch','make pasta from scratch','food')"
+    );
+    await reviewStoredCatalogIdea(database, 'stale', 'approve', 'operator');
+    expect(
+      sqlite.prepare("SELECT status FROM CatalogSubmission WHERE id = 'stale'").get()?.status
+    ).toBe('approved');
+    expect(
+      sqlite
+        .prepare(
+          "SELECT count(*) AS count FROM ExperienceCatalog WHERE normalizedTitle = 'make pasta from scratch'"
+        )
+        .get()?.count
+    ).toBe(0);
+    expect((await searchStoredCatalog(database, query('q=make+pasta+from+scratch'))).matches).toBe(
+      1
+    );
+  });
+
   it('validates pagination and filters before querying storage', () => {
     for (const params of ['page=0', 'pageSize=21', 'page=1.5', 'category=unknown', 'kind=pending'])
       expect(() => query(params)).toThrow('Invalid catalog');
