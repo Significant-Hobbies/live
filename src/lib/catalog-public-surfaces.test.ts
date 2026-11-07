@@ -77,6 +77,7 @@ import { searchExperienceCatalog, publicExperienceCatalog } from '~/server/exper
 import { parseCatalogQuery } from './catalog-seed';
 import { EXPERIENCE_GUIDES } from './experience-guides';
 import { renderPublicExperienceSource } from './public-editorial-source';
+import { publicStaticSitemap } from './public-sitemap';
 
 beforeEach(() => {
   vi.clearAllMocks();
@@ -104,6 +105,60 @@ beforeEach(() => {
 });
 
 describe('shared public experience surfaces', () => {
+  it('returns structured, uncacheable MCP errors during a D1 outage', async () => {
+    all.mockRejectedValue(new Error('D1 temporarily unavailable'));
+    for (const response of [
+      await searchRoute(new Request('https://significanthobbies.com/api/mcp/experiences')),
+      await detailRoute(new Request('https://significanthobbies.com/api/mcp/experiences/test'), {
+        params: Promise.resolve({ slug: 'test' }),
+      }),
+    ]) {
+      expect(response.status).toBe(503);
+      expect(response.headers.get('Cache-Control')).toBe('no-store');
+      expect(await response.json()).toEqual({
+        code: 'UNAVAILABLE',
+        message: 'Experiences could not be loaded. Try again.',
+      });
+    }
+  });
+
+  it('preserves authored metadata unless D1 has changed the corresponding field', async () => {
+    const metadata = await generateMetadata({
+      params: Promise.resolve({ slug: 'make-pasta-from-scratch' }),
+    });
+    expect(metadata.title).toEqual({
+      absolute: EXPERIENCE_GUIDES['make-pasta-from-scratch'].title,
+    });
+    expect(metadata.description).toBe(EXPERIENCE_GUIDES['make-pasta-from-scratch'].summary);
+    const overridden = await generateMetadata({
+      params: Promise.resolve({ slug: 'make-a-fixture-loom' }),
+    });
+    expect(overridden.title).toEqual({ absolute: 'A small first loom' });
+    expect(overridden.description).toBe('The operator kept this public description.');
+    all.mockResolvedValue({
+      results: [
+        {
+          slug: 'make-a-fixture-loom',
+          title: 'An operator title',
+          description: null,
+          emoji: '🧵',
+          category: 'creative',
+          kind: 'idea',
+        },
+      ],
+    });
+    expect(
+      (await generateMetadata({ params: Promise.resolve({ slug: 'make-a-fixture-loom' }) })).title
+    ).toEqual({ absolute: 'An operator title | Bucket list idea' });
+  });
+
+  it('lists canonical D1 URLs in the sitemap when a bundle joins an older community title', async () => {
+    const urls = publicStaticSitemap(await publicExperienceCatalog()).map((entry) => entry.url);
+    expect(urls).toContain('https://significanthobbies.com/experiences/canonical-loom');
+    expect(urls).not.toContain('https://significanthobbies.com/experiences/make-a-fixture-loom');
+    expect(urls).not.toContain('https://significanthobbies.com/experiences/community-basic');
+  });
+
   it('keeps web, HTML, Markdown and MCP on the same identity and authored content', async () => {
     const catalog = await publicExperienceCatalog();
     const guide = EXPERIENCE_GUIDES['make-a-fixture-loom'];

@@ -89,6 +89,29 @@ function orderForDiscovery(items: PublicCatalogEntry[]) {
 
 export const BUNDLED_PUBLIC_CATALOG = mergePublicCatalog();
 
+export function relatedPublicExperiences(
+  catalog: PublicCatalog,
+  entry: ExperienceEntry,
+  limit = 6
+) {
+  const words = new Set(
+    normalizeCatalogTitle(`${entry.title} ${entry.tags?.join(' ') ?? ''}`)
+      .split(' ')
+      .filter((word) => word.length > 3)
+  );
+  return catalog.items
+    .filter((item) => item.slug !== entry.slug && item.category === entry.category)
+    .map((item) => ({
+      item,
+      score: [
+        ...new Set(normalizeCatalogTitle(`${item.title} ${item.tags?.join(' ') ?? ''}`).split(' ')),
+      ].filter((word) => words.has(word)).length,
+    }))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map(({ item }) => item);
+}
+
 export function filterPublicCatalog(
   catalog: PublicCatalog,
   query: Pick<CatalogQuery, 'query' | 'category' | 'kind'>

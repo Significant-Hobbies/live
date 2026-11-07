@@ -10,9 +10,9 @@ import { ExperienceCollectionLinks } from '~/components/experience-collection-li
 import { collectionsForExperience } from '~/lib/experience-collections';
 import { EXPERIENCE_GUIDES, EXPERIENCE_CONTENT_UPDATED } from '~/lib/experience-guides';
 import { experienceBreadcrumbs, experienceMetadata } from '~/lib/experience-seo';
-import { firstSteps, PAGED_EXPERIENCES } from '~/lib/experiences';
+import { findExperience, firstSteps, PAGED_EXPERIENCES } from '~/lib/experiences';
 import { publicExperienceCatalog } from '~/server/experience-catalog';
-import type { PublicCatalog } from '~/lib/catalog-model';
+import { relatedPublicExperiences, type PublicCatalog } from '~/lib/catalog-model';
 import { safeDecodeURIComponent } from '~/lib/slug';
 import { SITE_URL } from '~/lib/site-metadata';
 import { ExperiencePhoto } from '~/components/experience-photo';
@@ -35,10 +35,14 @@ export async function generateMetadata({
   const entry = resolve((await params).slug, await publicExperienceCatalog());
   if (!entry) return withPublicMetadata({ title: 'Not found' });
   const guide = EXPERIENCE_GUIDES[entry.editorialSlug ?? ''];
+  const authored = findExperience(entry.editorialSlug ?? '');
   return withPublicMetadata({
     ...experienceMetadata(
-      `${entry.title} | Bucket list idea`,
-      entry.description ?? guide?.summary ?? '',
+      (authored?.title === entry.title ? guide?.title : undefined) ??
+        `${entry.title} | Bucket list idea`,
+      (authored?.description === entry.description ? guide?.summary : undefined) ??
+        entry.description ??
+        '',
       `/experiences/${entry.slug}`
     ),
     ...(!entry.curated ? { robots: { index: false, follow: true } } : {}),
@@ -61,9 +65,7 @@ export async function renderExperienceContent(
 
   const guide = EXPERIENCE_GUIDES[entry.editorialSlug ?? ''];
   const chain = guide?.steps ?? (entry.curated ? firstSteps(entry) : []);
-  const related = catalog.items
-    .filter((item) => item.slug !== entry.slug && item.category === entry.category)
-    .slice(0, 6);
+  const related = relatedPublicExperiences(catalog, entry);
   const collections = collectionsForExperience(entry.editorialSlug ?? entry.slug);
 
   return (

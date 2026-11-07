@@ -49,6 +49,7 @@ import {
   catalogPage,
   filterPublicCatalog,
   mergePublicCatalog,
+  relatedPublicExperiences,
   type PublicCatalogRow,
 } from './catalog-model';
 import { CATALOG_CATEGORIES, parseCatalogQuery } from './catalog-seed';
@@ -66,6 +67,19 @@ const community: PublicCatalogRow = {
 };
 
 describe('one public catalog model', () => {
+  it('ranks related suggestions by shared subject and keeps canonical identities', () => {
+    const catalog = mergePublicCatalog([
+      { ...community, slug: 'canonical-related', title: 'Weave another test sampler' },
+    ]);
+    const entry = catalog.bySlug.get('weave-a-test-sampler')!;
+    const related = relatedPublicExperiences(catalog, entry);
+    expect(related[0].slug).toBe('canonical-related');
+    expect(related.some((item) => item.slug === entry.slug)).toBe(false);
+    expect(getPublicExperience(entry.slug, catalog)?.related.map((item) => item.slug)).toEqual(
+      related.map((item) => item.slug)
+    );
+  });
+
   it('unions an old full seed, community and new bundles without dropping records', () => {
     const oldSeed = EXPERIENCE_ENTRIES.filter((entry) => !entry.tags).map((entry) => ({
       ...entry,

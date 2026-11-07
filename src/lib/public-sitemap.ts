@@ -11,6 +11,8 @@ import { EXPERIENCE_CONTENT_UPDATED, EXPERIENCE_GUIDES } from '~/lib/experience-
 import { HOBBY_CATEGORIES } from '~/lib/hobbies';
 import { sitemapLastModified } from '~/lib/sitemap-last-modified';
 import { db } from '~/server/db';
+import { BUNDLED_PUBLIC_CATALOG, type PublicCatalog } from './catalog-model';
+import { publicExperienceCatalog } from '~/server/experience-catalog';
 
 // D1 is request-scoped under OpenNext. Generating this route at build time has
 // no Worker context and would silently omit public profiles.
@@ -66,7 +68,9 @@ async function publicProfileEntries(
   }
 }
 
-export function publicStaticSitemap(): MetadataRoute.Sitemap {
+export function publicStaticSitemap(
+  catalog: PublicCatalog = BUNDLED_PUBLIC_CATALOG
+): MetadataRoute.Sitemap {
   const baseUrl = 'https://significanthobbies.com';
   const now = new Date();
 
@@ -150,7 +154,7 @@ export function publicStaticSitemap(): MetadataRoute.Sitemap {
     },
     // Catalog pages use an editorial revision date, not request-time freshness.
     ...PAGED_EXPERIENCES.map((e) => ({
-      url: `${baseUrl}/experiences/${e.slug}`,
+      url: `${baseUrl}/experiences/${catalog.bySlug.get(e.slug)?.slug ?? e.slug}`,
       lastModified: EXPERIENCE_GUIDES[e.slug]?.updatedAt ?? EXPERIENCE_CONTENT_UPDATED,
       changeFrequency: 'monthly' as const,
       priority: 0.6,
@@ -359,8 +363,10 @@ export function publicStaticSitemap(): MetadataRoute.Sitemap {
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  // Preserve the static sitemap during an outage, as with public profiles below.
+  const catalog = await publicExperienceCatalog().catch(() => BUNDLED_PUBLIC_CATALOG);
   return [
-    ...publicStaticSitemap(),
+    ...publicStaticSitemap(catalog),
     ...(await publicProfileEntries('https://significanthobbies.com', new Date())),
   ];
 }

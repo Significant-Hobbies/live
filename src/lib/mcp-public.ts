@@ -1,6 +1,11 @@
 import { firstSteps } from './experiences';
 import { HOBBY_CATEGORIES, HOBBY_FACETS } from '@/lib/hobbies';
-import { BUNDLED_PUBLIC_CATALOG, filterPublicCatalog, type PublicCatalog } from './catalog-model';
+import {
+  BUNDLED_PUBLIC_CATALOG,
+  filterPublicCatalog,
+  relatedPublicExperiences,
+  type PublicCatalog,
+} from './catalog-model';
 import { EXPERIENCE_GUIDES } from './experience-guides';
 
 const MCP_PAGE_MAX = 50;
@@ -79,15 +84,12 @@ export function getPublicExperience(slug: string, catalog: PublicCatalog = BUNDL
     ...entry,
     firstSteps: guide?.steps ?? (curated ? firstSteps(entry) : []),
     ...(guide ? { guide } : {}),
-    related: catalog.items
-      .filter((item) => item.slug !== entry.slug && item.category === entry.category)
-      .slice(0, 6)
-      .map((item) => ({
-        slug: item.slug,
-        title: item.title,
-        category: item.category,
-        canonicalUrl: `https://significanthobbies.com/experiences/${item.slug}`,
-      })),
+    related: relatedPublicExperiences(catalog, entry).map((item) => ({
+      slug: item.slug,
+      title: item.title,
+      category: item.category,
+      canonicalUrl: `https://significanthobbies.com/experiences/${item.slug}`,
+    })),
     canonicalUrl: `https://significanthobbies.com/experiences/${entry.slug}`,
   };
 }
