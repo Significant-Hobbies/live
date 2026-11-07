@@ -58,12 +58,12 @@ export function LocalImportCoordinator({ isAuthenticated }: { isAuthenticated: b
   const hasWork = [hasOtherWork, deviceImport.visible, error].some(Boolean);
   if (!isAuthenticated || dismissed || !hasWork) return null;
   return (
-    <aside className="fixed bottom-4 left-1/2 z-[90] w-[min(42rem,calc(100%-2rem))] -translate-x-1/2 rounded-2xl border border-primary/30 bg-card p-5 shadow-xl">
+    <aside className="fixed bottom-4 left-1/2 z-[90] max-h-[calc(100dvh-2rem)] w-[min(42rem,calc(100%-2rem))] -translate-x-1/2 overflow-y-auto rounded-2xl border border-primary/30 bg-card p-5 shadow-xl">
       <p className="font-semibold">{importHeading(deviceImport, hasOtherWork)}</p>
       <p className="mt-1 text-sm text-muted-foreground">
         {deviceImport.archived
           ? 'The original device snapshot is retained as an archive.'
-          : 'Nothing local is removed until its database save succeeds.'}
+          : 'Your device copy stays here until its import succeeds or you choose to archive it.'}
       </p>
       {deviceImport.message && (
         <p role="status" className="mt-2 text-sm text-muted-foreground">

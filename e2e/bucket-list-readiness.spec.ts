@@ -419,15 +419,68 @@ test('conflicting device work can be explicitly exported and archived without ch
     },
   ]);
   await page.reload();
+  await expect(
+    page.getByRole('button', { name: 'Keep account versions', exact: true })
+  ).toHaveCount(0);
   await page.getByRole('button', { name: 'Import device list (1)', exact: true }).click();
   await expect(page.getByText(/1 device items need review/)).toBeVisible();
   await page.getByRole('button', { name: 'Keep account versions', exact: true }).click();
-  await expect(page.getByText(/A complete JSON backup will download first/)).toBeVisible();
+  await expect(page.getByText(/Download the full device backup and check/)).toBeVisible();
+  const archiveButton = page.getByRole('button', { name: 'Archive device copy', exact: true });
+  await expect(archiveButton).toBeDisabled();
+  await expect(page.getByRole('checkbox', { name: 'I have saved the backup' })).toBeDisabled();
   await page.screenshot({ path: testInfo.outputPath('device-conflict-confirm.png') });
   const downloading = page.waitForEvent('download');
-  await page.getByRole('button', { name: 'Export and archive device copy', exact: true }).click();
+  await page.getByRole('button', { name: 'Download device backup', exact: true }).click();
   const backup = JSON.parse(await readFile((await (await downloading).path())!, 'utf8'));
   expect(backup.items[0]).toMatchObject({ title, notes: 'Different device notes' });
+  await expect(archiveButton).toBeDisabled();
+  const activeAfterDownload = await page.evaluate(async () => {
+    const database = await new Promise<IDBDatabase>((resolve) => {
+      const open = indexedDB.open('significant-hobbies-local', 1);
+      open.onsuccess = () => resolve(open.result);
+    });
+    const transaction = database.transaction('records', 'readonly');
+    const active = transaction.objectStore('records').get('onboarding:bucket-items');
+    await new Promise<void>((resolve) => {
+      transaction.oncomplete = () => resolve();
+    });
+    database.close();
+    return active.result?.value.items;
+  });
+  expect(activeAfterDownload).toHaveLength(1);
+  await page.getByRole('checkbox', { name: 'I have saved the backup' }).check();
+  // An older backup acknowledgment must never authorize archiving newer device goals.
+  const newerTitle = `New device goal ${crypto.randomUUID()}`;
+  await seedDeviceItems(page, [
+    ...backup.items,
+    { id: 'newer-device-item', title: newerTitle, status: 'planned', steps: [], updates: [] },
+  ]);
+  await archiveButton.click();
+  await expect(
+    page.getByText(/The device copy changed, so it has not been archived/)
+  ).toBeVisible();
+  await expect(archiveButton).toHaveCount(0);
+  await expect(
+    page.getByRole('button', { name: 'Keep account versions', exact: true })
+  ).toHaveCount(0);
+  await page.getByRole('button', { name: 'Import device list (2)', exact: true }).click();
+  await expect(
+    page.getByText(/1 imported, 0 already saved. 1 device items need review/)
+  ).toBeVisible();
+  await page.getByRole('button', { name: 'Keep account versions', exact: true }).click();
+  await expect(archiveButton).toBeDisabled();
+  await expect(page.getByRole('checkbox', { name: 'I have saved the backup' })).not.toBeChecked();
+  const latestDownloading = page.waitForEvent('download');
+  await page.getByRole('button', { name: 'Download device backup', exact: true }).click();
+  const latestBackup = JSON.parse(
+    await readFile((await (await latestDownloading).path())!, 'utf8')
+  );
+  expect(latestBackup.items).toHaveLength(2);
+  await expect(archiveButton).toBeDisabled();
+  await page.getByRole('checkbox', { name: 'I have saved the backup' }).check();
+  await page.screenshot({ path: testInfo.outputPath('device-conflict-backup-confirmed.png') });
+  await archiveButton.click();
   await expect(page.getByText('Your device copy is archived.', { exact: true })).toBeVisible();
   const archiveRetained = await page.evaluate(async () => {
     const database = await new Promise<IDBDatabase>((resolve) => {
@@ -455,6 +508,7 @@ test('conflicting device work can be explicitly exported and archived without ch
   await expect(
     page.getByRole('button', { name: 'Import device list (1)', exact: true })
   ).toHaveCount(0);
+  await expect(page.getByRole('button', { name: `Open ${newerTitle}`, exact: true })).toBeVisible();
   panel = await openItem(page, title);
   await expect(panel.getByRole('textbox', { name: 'Notes', exact: true })).toHaveValue(
     'Account version to keep'
