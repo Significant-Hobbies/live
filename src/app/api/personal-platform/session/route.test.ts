@@ -1,20 +1,31 @@
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+// @vitest-environment node
+import { SQLiteSyncDialect } from 'drizzle-orm/sqlite-core';
+import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
+
+import { verifyPersonalMcpGoogleSubject } from '@/lib/personal-mcp-auth';
 
 const state = vi.hoisted(() => ({
   session: null as null | { user: { id: string; email: string } },
   appleSubject: null as string | null,
+  mcpUserId: 'linked-user' as string | null,
+  issuer: 'https://test.auth0.com/' as string | undefined,
+  getSession: vi.fn(),
+  findFirst: vi.fn(),
 }));
 
 vi.mock('@/lib/auth', () => ({
-  auth: { api: { getSession: async () => state.session } },
+  auth: { api: { getSession: state.getSession } },
+}));
+
+vi.mock('@opennextjs/cloudflare', () => ({
+  getCloudflareContext: () => ({ env: { AUTH0_ISSUER: state.issuer } }),
 }));
 
 vi.mock('@/server/db', () => ({
   db: {
     query: {
       account: {
-        findFirst: async () =>
-          state.appleSubject === null ? undefined : { accountId: state.appleSubject },
+        findFirst: state.findFirst,
       },
     },
   },
@@ -24,8 +35,17 @@ import { GET } from './route';
 
 describe('Personal Platform identity session', () => {
   beforeEach(() => {
+    vi.clearAllMocks();
     state.session = null;
     state.appleSubject = null;
+    state.getSession.mockImplementation(async () => state.session);
+    state.findFirst.mockImplementation(async (query) =>
+      query.columns.userId
+        ? state.mcpUserId && { userId: state.mcpUserId }
+        : state.appleSubject === null
+          ? undefined
+          : { accountId: state.appleSubject }
+    );
   });
 
   it('fails closed without a Better Auth bearer session', async () => {
@@ -47,10 +67,207 @@ describe('Personal Platform identity session', () => {
     );
 
     expect(response.status).toBe(200);
+    expect(response.headers.get('Cache-Control')).toBe('no-store');
     expect(await response.json()).toEqual({
       userId: 'shared-user',
       email: 'owner@example.com',
       appleSubject: 'apple-subject',
     });
+  });
+});
+
+describe('Personal Platform product MCP identity', () => {
+  let signingKey: CryptoKey;
+  let publicKey: JsonWebKey;
+  const audience = 'https://mcp.significanthobbies.com/anchor/mcp';
+  const now = Math.floor(Date.now() / 1_000);
+  const encode = (value: unknown) => Buffer.from(JSON.stringify(value)).toString('base64url');
+
+  async function token(
+    claims: Record<string, unknown> = {},
+    header = { alg: 'RS256', kid: 'test' }
+  ) {
+    const body = `${encode(header)}.${encode({
+      iss: 'https://test.auth0.com/',
+      aud: audience,
+      sub: 'google-oauth2|google-123',
+      iat: now - 10,
+      exp: now + 300,
+      scope: 'anchor.read anchor.write',
+      ...claims,
+    })}`;
+    const signature = await crypto.subtle.sign(
+      'RSASSA-PKCS1-v1_5',
+      signingKey,
+      new TextEncoder().encode(body)
+    );
+    return `${body}.${Buffer.from(signature).toString('base64url')}`;
+  }
+
+  async function request(claims = {}, scope = 'anchor.read', query = 'mcpProduct=anchor') {
+    return GET(
+      new Request(`https://live.significanthobbies.com/api/personal-platform/session?${query}`, {
+        headers: {
+          Authorization: `Bearer ${await token(claims)}`,
+          'X-Personal-MCP-Scope': scope,
+          Cookie: 'better-auth.session_token=valid-browser-cookie',
+        },
+      })
+    );
+  }
+
+  beforeAll(async () => {
+    const pair = (await crypto.subtle.generateKey(
+      {
+        name: 'RSASSA-PKCS1-v1_5',
+        hash: 'SHA-256',
+        modulusLength: 2048,
+        publicExponent: new Uint8Array([1, 0, 1]),
+      },
+      true,
+      ['sign', 'verify']
+    )) as CryptoKeyPair;
+    signingKey = pair.privateKey;
+    publicKey = await crypto.subtle.exportKey('jwk', pair.publicKey);
+  });
+
+  beforeEach(() => {
+    vi.clearAllMocks();
+    state.issuer = 'https://test.auth0.com/';
+    state.mcpUserId = 'linked-user';
+    state.session = { user: { id: 'browser-user', email: 'private@example.com' } };
+    state.getSession.mockImplementation(async () => state.session);
+    state.findFirst.mockImplementation(async () => state.mcpUserId && { userId: state.mcpUserId });
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async () => Response.json({ keys: [{ ...publicKey, kid: 'test' }] }))
+    );
+  });
+
+  afterEach(() => vi.unstubAllGlobals());
+
+  it('supports independently supplied public keys and exact Auth0 audience arrays', async () => {
+    const googleId = await verifyPersonalMcpGoogleSubject(
+      await token({ aud: [audience, 'https://test.auth0.com/userinfo'] }),
+      state.issuer,
+      'anchor',
+      'anchor.read',
+      { keys: [{ ...publicKey, kid: 'test' }], now }
+    );
+    expect(googleId).toBe('google-123');
+    expect(fetch).not.toHaveBeenCalled();
+  });
+
+  it('rejects a changed signature and an algorithm substitution', async () => {
+    const signed = await token();
+    const [header, payload, signature] = signed.split('.');
+    const forged = `${header}.${payload}.${signature?.startsWith('A') ? 'B' : 'A'}${signature?.slice(1)}`;
+    for (const value of [forged, await token({}, { alg: 'HS256', kid: 'test' })]) {
+      expect(
+        await verifyPersonalMcpGoogleSubject(value, state.issuer, 'anchor', 'anchor.read', {
+          keys: [{ ...publicKey, kid: 'test' }],
+          now,
+        })
+      ).toBeNull();
+    }
+  });
+
+  it('rejects missing or ambiguous signing keys and unavailable JWKS', async () => {
+    const signed = await token();
+    const key = { ...publicKey, kid: 'test' };
+    for (const keys of [[], [key, key]]) {
+      expect(
+        await verifyPersonalMcpGoogleSubject(signed, state.issuer, 'anchor', 'anchor.read', {
+          keys,
+          now,
+        })
+      ).toBeNull();
+    }
+    vi.mocked(fetch).mockResolvedValue(new Response(null, { status: 503 }));
+    expect((await request()).status).toBe(401);
+    expect(state.getSession).not.toHaveBeenCalled();
+  });
+
+  it.each(['anchor.read', 'anchor.write'])(
+    'resolves the linked Google provider identity for %s',
+    async (scope) => {
+      const response = await request({}, scope);
+      expect(response.status).toBe(200);
+      expect(response.headers.get('Cache-Control')).toBe('no-store');
+      expect(await response.json()).toEqual({ userId: 'linked-user' });
+      expect(state.getSession).not.toHaveBeenCalled();
+      const query = state.findFirst.mock.calls[0]?.[0];
+      expect(query.columns).toEqual({ userId: true });
+      const sql = new SQLiteSyncDialect().sqlToQuery(query.where);
+      expect(sql.sql).toContain('"auth_account"."providerId" = ?');
+      expect(sql.sql).toContain('"auth_account"."accountId" = ?');
+      expect(sql.params).toEqual(['google', 'google-123']);
+      expect(fetch).toHaveBeenCalledWith(
+        new URL('https://test.auth0.com/.well-known/jwks.json'),
+        expect.any(Object)
+      );
+    }
+  );
+
+  it.each([
+    { aud: 'https://mcp.significanthobbies.com/reader/mcp' },
+    { aud: `${audience}/other` },
+    { iss: 'https://attacker.auth0.com/' },
+    { scope: 'reader.read' },
+    { scope: 'anchor.read', permissions: [] },
+    { exp: now - 1 },
+    { exp: now + 4_000 },
+    { iat: now + 30 },
+    { iat: undefined },
+    { exp: undefined },
+    { nbf: now + 60 },
+    { nbf: 'yesterday' },
+    { sub: 'auth0|google-123' },
+    { sub: 'google-oauth2|' },
+  ])('rejects invalid claims without native fallback: %j', async (claims) => {
+    const response = await request(claims, 'anchor.write');
+    expect(response.status).toBe(401);
+    expect(response.headers.get('Cache-Control')).toBe('no-store');
+    expect(state.getSession).not.toHaveBeenCalled();
+    expect(state.findFirst).not.toHaveBeenCalled();
+  });
+
+  it.each([
+    ['mcpProduct=reader', 'reader.read'],
+    ['mcpProduct=anchor', 'reader.read'],
+    ['mcpProduct=anchor', ''],
+    ['mcpProduct=', 'anchor.read'],
+    ['mcpProduct=anchor&mcpProduct=anchor', 'anchor.read'],
+  ])('rejects unknown or ambiguous product/scope: %s %s', async (query, scope) => {
+    const response = await request({}, scope, query);
+    expect(response.status).toBe(403);
+    expect(state.getSession).not.toHaveBeenCalled();
+    expect(state.findFirst).not.toHaveBeenCalled();
+  });
+
+  it('rejects an unlinked provider without matching a private email or creating an account', async () => {
+    state.mcpUserId = null;
+    const response = await request({ email: 'private@example.com' });
+    expect(response.status).toBe(403);
+    expect(state.findFirst).toHaveBeenCalledOnce();
+    expect(state.getSession).not.toHaveBeenCalled();
+  });
+
+  it('requires the original bearer token even when a valid native session exists', async () => {
+    const response = await GET(
+      new Request(
+        'https://live.significanthobbies.com/api/personal-platform/session?mcpProduct=anchor',
+        { headers: { 'X-Personal-MCP-Scope': 'anchor.read' } }
+      )
+    );
+    expect(response.status).toBe(401);
+    expect(state.getSession).not.toHaveBeenCalled();
+  });
+
+  it('fails closed when the trusted issuer is not configured', async () => {
+    state.issuer = undefined;
+    expect((await request()).status).toBe(401);
+    expect(fetch).not.toHaveBeenCalled();
+    expect(state.getSession).not.toHaveBeenCalled();
   });
 });
