@@ -276,6 +276,31 @@ describe('Personal Platform product MCP identity', () => {
     }
   );
 
+  it('uses the same read-only delegated token for reads and rejects writes', async () => {
+    const bearer = await token({ scope: 'anchor.read' });
+    const resolve = (scope: string) =>
+      GET(
+        new Request(
+          'https://live.significanthobbies.com/api/personal-platform/session?mcpProduct=anchor',
+          { headers: { Authorization: `Bearer ${bearer}`, 'X-Personal-MCP-Scope': scope } }
+        )
+      );
+    const read = await resolve('anchor.read');
+    expect(read.status).toBe(200);
+    expect(await read.json()).toEqual({
+      userId: 'linked-user',
+      mcpProduct: 'anchor',
+      scope: 'anchor.read',
+      audience,
+      authorizationVersion: 1,
+    });
+    const write = await resolve('anchor.write');
+    expect(write.status).toBe(401);
+    expect(await write.json()).not.toHaveProperty('authorizationVersion');
+    expect(state.findMany).toHaveBeenCalledOnce();
+    expect(state.getSession).not.toHaveBeenCalled();
+  });
+
   it.each([
     { aud: 'https://mcp.significanthobbies.com/reader/mcp' },
     { aud: `${audience}/other` },

@@ -56,6 +56,8 @@ Deployment and these runtime configuration requirements remain unverified:
 - Register the exact API audience `https://mcp.significanthobbies.com/anchor/mcp`
   with the `anchor.read` and `anchor.write` scopes. Configure access tokens with
   a lifetime of at most 3,600 seconds; longer tokens are rejected.
+- If Auth0 RBAC is enabled, effective delegated scopes must appear in the
+  standard OAuth `scope` string. RBAC `permissions` alone do not grant consent.
 - Verify the deployed gateway forwards the original bearer token and required
   scope to Live. Resolve only an existing, uniquely linked Google provider
   account; users must link Google to their existing Live account before connecting.
