@@ -26,4 +26,10 @@ describe('editorial content adapter', () => {
       getEditorialArticlesForHobby('Bridge').map((article) => article.experience?.experienceSlug)
     ).not.toContain('learn-living-root-bridge-stewardship-from-a-local-guide');
   });
+
+  it('recommends experience articles carrying an exact hobby topic tag', () => {
+    expect(
+      getEditorialArticlesForHobby('Tai Chi').map((article) => article.experience?.experienceSlug)
+    ).toContain('attend-a-beginner-tai-chi-session');
+  });
 });
