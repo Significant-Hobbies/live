@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "compare-whole-spices-before-and-after-toasting",
+  "slug": "compare-whole-spices-before-and-after-toasting",
+  "title": "A small whole-spice tasting to understand what toasting changes",
+  "description": "Compare raw and gently toasted whole spices using aroma, taste and texture notes, then decide which versions suit a dish you already cook.",
+  "intent": "How can I compare whole spices before and after toasting without burning them or relying on vague tasting notes? This guide sets up a small, controlled kitchen comparison.",
+  "sections": [
+    {
+      "heading": "Pick one spice and one question",
+      "paragraphs": [
+        "Choose a spice you already use whole—cumin, coriander seed or fennel, for example—and begin with a small amount. Decide what you want to learn: whether toasting makes the aroma easier to notice, whether the seed tastes different after grinding, or which treatment works better in a familiar dish. One spice makes the comparison easier to interpret than a mix whose ingredients all change at once.",
+        "Use fresh, clearly identified food-grade spices and check for allergies or dietary needs if others will taste them. Keep the raw sample separate from the toasted one, and use a clean pan and spoon. The aim is exploration, not a recipe or a promise that every spice improves with heat. Some are delicate, and the outcome depends on the spice, freshness and cooking method."
+      ]
+    },
+    {
+      "heading": "Notice the raw sample before heating",
+      "paragraphs": [
+        "Pour a teaspoon of whole seeds onto a plate. Look at colour and shape, then smell them without rubbing or crushing. Write down your first impression using simple terms such as woody, citrusy, grassy, earthy or faint. Taste a tiny amount only if it is a spice you normally eat this way and it is safe for you; otherwise keep the activity to aroma and appearance.",
+        "Smell and taste overlap, and your notes do not need to be technical. Penn State’s sensory evaluation guide explains that perceived flavour combines basic tastes with aromatic compounds and that a useful description may change from first impression through aftertaste. That sequence is a helpful prompt: note what arrives first, what develops, and what lingers rather than reaching immediately for a score."
+      ]
+    },
+    {
+      "heading": "Toast gently and watch the pan",
+      "paragraphs": [
+        "Warm a dry pan over low to medium-low heat, then add a small measured portion. Shake or stir continuously and stay beside it. Stop when the aroma becomes noticeably stronger or the seeds change in a way you recognise; remove them to a cool plate so residual heat does not keep cooking them. Exact timing varies with pan, burner and spice, so do not depend on a universal number of minutes.",
+        "Smoke or a bitter, acrid smell is a sign to stop. Do not lean over the pan to inhale. Let the seeds cool before tasting or grinding. If the first batch burns, discard it and clean the pan before trying again with lower heat and less time. The point is to learn the threshold where aroma changes, not to push until the seeds are dark."
+      ]
+    },
+    {
+      "heading": "Compare like with like",
+      "paragraphs": [
+        "After the toasted sample cools, place it beside the raw sample. Smell both in the same order and use the same distance. You might notice a warmer or nuttier aroma, but write what you actually perceive. Grind a small portion of each with the same tool and compare again; grinding exposes more surface, so it may change the aroma even without heat.",
+        "If you taste them, use equal pinches and pause between samples. Water and a plain food such as bread can reset your palate. Avoid serving the seeds as a meal or asking anyone to swallow an unfamiliar ingredient. You can invite another person to describe the samples independently before comparing notes, because people can notice different things without either being wrong."
+      ]
+    },
+    {
+      "heading": "Connect the result to a dish",
+      "paragraphs": [
+        "Choose one simple dish you know well, such as lentils, roasted vegetables or a soup, and add a measured amount of toasted spice to one small portion and raw spice to another. Keep the other ingredients as similar as practical. This is a kitchen experiment, not a formal sensory panel; the comparison simply helps you decide which version you prefer for that particular use.",
+        "Record the spice, its source if known, how you heated it, and what you would change next time. A failed or subtle result is still useful: perhaps the spice was old, the pan too cool, or the dish too assertive."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Sensory Evaluation Guide",
+      "url": "https://extension.psu.edu/downloadable/download/sample/sample_id/23609/",
+      "publisher": "Penn State Extension",
+      "purpose": "Supports describing aroma and flavor as changing sensory impressions and using consistent terms when comparing samples; the toasting procedure here is original kitchen advice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "host-a-blind-apple-tasting",
+    "press-corn-tortillas-and-serve-them-warm",
+    "roll-vegetarian-maki-for-a-picnic-at-home"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

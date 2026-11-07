@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "transcribe-a-historical-manuscript-for-the-smithsonian",
+  "slug": "transcribe-a-historical-manuscript-for-the-smithsonian",
+  "title": "Smithsonian manuscript transcription: a careful first page",
+  "description": "Choose a Smithsonian transcription project, preserve the wording you see, mark uncertain text honestly, and save a manageable first contribution.",
+  "intent": "Guides a new volunteer through selecting a Smithsonian page and transcribing with the institution’s conventions for accuracy and uncertainty.",
+  "sections": [
+    {
+      "heading": "Choose a project before decoding handwriting",
+      "paragraphs": [
+        "The Smithsonian Transcription Center lets digital volunteers work on collection material, but each project can have its own instructions. Start with the project page and read any special directions before typing. Select a page whose subject interests you and whose writing is within reach; a short, legible printed page can be a better first task than an elegant but difficult hand. You do not need to finish an entire collection or page in one sitting.",
+        "The Smithsonian distinguishes transcription from translation: the task is to make a written copy of what is present, in its original language. That means you are not rewriting an author’s spelling into modern English or summarising the document. If the page is in a language you do not know, choose another page or follow the project’s instructions for noting the limitation."
+      ]
+    },
+    {
+      "heading": "Work in short visual passes",
+      "paragraphs": [
+        "Open the page image large enough to inspect letters and punctuation. Read one line or phrase at a time, then compare your typed text against the image before moving on. Keep line breaks or paragraph structure when the project asks for them, but do not use spaces to imitate centering or layout unless instructed. Capture notes and marginal text according to the Smithsonian style guide and project-specific rules.",
+        "When handwriting is difficult, compare the same letter elsewhere on the page, look for repeated names or words, and use the institution’s historic-handwriting resources. Do not guess from context if the marks are not visible. The page itself is evidence; a plausible sentence is still inaccurate if it is not what the author wrote."
+      ]
+    },
+    {
+      "heading": "Mark uncertainty rather than hiding it",
+      "paragraphs": [
+        "Use the project’s uncertainty convention for a word you cannot confidently read. The Smithsonian transcription instructions use double square brackets, including [[?]] for a word that cannot be deciphered and a question mark after a guess that is not certain. Follow current project instructions because conventions may be specialized. If text is cut off, transcribe only what can be seen rather than supplying the missing ending.",
+        "The Smithsonian says a page with more than two [[?]] markers should be saved for continued work rather than submitted for review. That is a useful reminder that uncertainty is part of collaborative transcription. A careful saved draft lets another volunteer take a fresh look; silently inventing a word makes later correction harder."
+      ]
+    },
+    {
+      "heading": "Preserve what the historical page says",
+      "paragraphs": [
+        "Do not correct grammar, spelling or historical language just because a modern reader might phrase it differently. Type what appears, in the original language, and use the project’s conventions for insertions, margin notes, strikethroughs and punctuation. Keep the difference between the document and your interpretation clear. If an item includes offensive or sensitive content, use the Smithsonian’s guidance and take a break or choose a different page if needed.",
+        "Transcription is not about deciding what information matters. The institution asks volunteers to capture all text because the transcript supports discovery by later readers. That includes an annotation or an awkward heading when the project directions say it belongs. Do not add a historical explanation inside the transcript; if the project provides notes, put contextual questions there."
+      ]
+    },
+    {
+      "heading": "Save, compare and stop at a good boundary",
+      "paragraphs": [
+        "Before you submit, reread the image and transcript side by side. Check names, dates, numbers and line endings carefully; they are easy to misread and can be important to researchers. If you run out of time, save your progress at a natural boundary and leave a note only if the platform provides a place for it. The Center uses review as a separate quality step, so do not submit a page that still needs substantial work.",
+        "A rewarding first session can be a single paragraph transcribed carefully. Save the experience and record the collection or project name and what handwriting feature slowed you down. Next time, you will know whether to continue the page, choose a different hand or try the review task after learning its separate rules."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How to Transcribe",
+      "url": "https://transcription.si.edu/instructions/transcribe",
+      "publisher": "Smithsonian Transcription Center",
+      "purpose": "Transcription conventions including preserving spelling, representing uncertain or illegible words, languages, annotations and when to save rather than submit."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "translate-a-free-software-resource-into-a-language-you-know",
+    "write-captions-for-ten-unlabelled-personal-photos",
+    "record-a-conversation-with-an-elder-and-preserve-it"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

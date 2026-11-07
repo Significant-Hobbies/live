@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "attend-an-indian-observatory-s-public-visitor-session",
+  "slug": "attend-an-indian-observatory-s-public-visitor-session",
+  "title": "Prepare for a public visit to an Indian observatory",
+  "description": "Plan an observatory visit around its visitor rules, instruments and weather-dependent sky viewing, with questions that connect public outreach to research.",
+  "intent": "How should I plan a public observatory session and get something useful from it even if clouds block the sky?",
+  "relatedExperienceSlugs": [
+    "build-a-model-of-the-moon-s-phases",
+    "map-impact-melt-features-on-the-moon",
+    "analyze-an-exoplanet-transit-with-real-telescope-data"
+  ],
+  "sections": [
+    {
+      "heading": "Check whether the observatory is receiving visitors",
+      "paragraphs": [
+        "A working observatory is not a walk-in attraction. Start with the official visit page and follow its current booking, ID, transport and photography instructions. The Indian Institute of Astrophysics describes public outreach visits to Vainu Bappu Observatory in Kavalur, with a chance to explore the site, learn about telescopes and, when skies allow, join guided stargazing. Because travel and admission details can change, confirm them on the operator’s site before setting out.",
+        "Do not assume that a public visit means access to every telescope or research area. An observatory needs quiet, safety controls and protected equipment. Stay with the group, use only the public route and ask before photographing a device or staff member."
+      ]
+    },
+    {
+      "heading": "Choose a question to carry through the visit",
+      "paragraphs": [
+        "Pick one question that fits what you want to understand: How does a telescope gather light? Why are some instruments placed away from cities? How does a telescope mount follow a target? A specific question helps you notice a display or demonstration instead of trying to absorb every technical detail.",
+        "Bring a small notebook and write down the name of one instrument, one use described by the guide and one question that remains. If you do not know the vocabulary, ask the guide to explain it in ordinary language. A good visit is a conversation with the place, not a quiz in astronomy terms."
+      ]
+    },
+    {
+      "heading": "Let weather change the plan, not the value",
+      "paragraphs": [
+        "Outdoor sky viewing depends on conditions. The IIA page explicitly notes that evening stargazing is subject to weather and clear skies. If clouds arrive, use the time to look at instrument models, the history of the observatory or the way astronomers collect and interpret data. Ask what a telescope would have observed on a clear evening and how the team knows whether a measurement is reliable.",
+        "Avoid promising children or travel companions a view of a specific planet unless the organizer confirms the program and conditions. Even a scheduled observing session can be affected by cloud, wind or operational needs. Carry the attitude that the visit is to learn about the work, with stargazing as a possible extra."
+      ]
+    },
+    {
+      "heading": "Make the visit accessible and comfortable",
+      "paragraphs": [
+        "Check how far the group walks, what terrain to expect and whether there are stairs or long periods standing. If someone in your party needs mobility, sensory or language support, ask the visitor team before booking. Bring weather-appropriate clothing, water if allowed, and any needed medication. Follow the site’s rules about food, lights and noise so that your group does not interfere with observing.",
+        "The IIA page describes visitor access arrangements, but those may change. Use the contact route on the official visit page for current timing, entry and accommodation questions. Do not depend on an old blog or an unofficial map for the last part of the journey."
+      ]
+    },
+    {
+      "heading": "Carry one idea home",
+      "paragraphs": [
+        "After the visit, write a short note that separates what the guide said from what you inferred. For example: “The guide demonstrated how the telescope tracks an object; I want to learn how long observations are combined.” That gives you a practical next step such as exploring a public dataset or building a model of the Moon’s phases."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Visiting Vainu Bappu Observatory",
+      "url": "https://www.iiap.res.in/outreach/visit-us/visiting-vbo/",
+      "publisher": "Indian Institute of Astrophysics",
+      "purpose": "Official public visitor information, outreach description and weather dependence of stargazing; current arrangements should be rechecked before travel."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

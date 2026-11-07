@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "arrange-an-accessible-outing-with-a-friend",
+  "slug": "arrange-an-accessible-outing-with-a-friend",
+  "title": "Plan an accessible outing around what your friend wants",
+  "description": "Choose an activity together, check the route and venue details that matter, and make a flexible plan that allows for rest or a change of pace.",
+  "intent": "How can I arrange an accessible outing with a friend without making assumptions about their needs? This guide focuses on asking, checking concrete details and keeping the plan flexible.",
+  "sections": [
+    {
+      "heading": "Ask what would make the outing feel good",
+      "paragraphs": [
+        "Start with an invitation that gives your friend room to shape the plan. Ask what they would enjoy, what kinds of places work well, and whether there is anything they would like you to check. Do not make access decisions on their behalf based on a diagnosis, mobility aid or past outing. Needs vary by person and can change from one day to another.",
+        "Offer a few choices with useful information: a museum with seating, a park path, a quiet café or a film with a relaxed arrival time. Include the parts you know, such as distance from transit or whether there are stairs, and be honest about details you have not confirmed. Your friend can then choose based on their own priorities."
+      ]
+    },
+    {
+      "heading": "Check the whole route, not just the destination",
+      "paragraphs": [
+        "An accessible venue is only one piece of an outing. Consider how you will get there, the distance from a drop-off or stop, crossing points, pavement surface, entrance, ticketing and toilets. Contact the venue or check a recent official access guide for specifics. A page may describe a step-free entrance while leaving other questions unanswered, so ask directly about the details that matter to your friend.",
+        "For a city visit, use official visitor information as a starting point rather than a guarantee. Edinburgh’s accessible highlights guide, for instance, collects venue and route information for that city. For your own plan, verify the current arrangements with each destination and transport provider. Construction, lift outages, crowds and weather can change what is practical."
+      ]
+    },
+    {
+      "heading": "Make a plan with a comfortable amount of structure",
+      "paragraphs": [
+        "Agree on a start time and one main activity, then leave open space around it. A tightly scheduled day can make a small delay feel like failure. Find a place to pause, eat or change plans without crossing the whole city. Ask whether your friend prefers to know the itinerary in advance or decide as you go, and share the information in a format they can use.",
+        "Before booking, check cancellation policies, companion arrangements, accessible ticketing and whether advance notice is needed for a ramp, hearing support or other service. Avoid promising that a route is fully accessible unless the source supports that claim and your friend agrees it meets their needs. A specific note such as ‘there are two steps at the side entrance; staff can open the lift entrance’ is more useful than a broad label."
+      ]
+    },
+    {
+      "heading": "Travel together without taking over",
+      "paragraphs": [
+        "At the venue, let your friend set the pace and make choices about help. Ask before moving a wheelchair, opening a mobility device or stepping in to assist. If the route is crowded, talk through options instead of steering or speaking for them. Build in time to stop, find a quieter area or skip a section without explanation.",
+        "Stay alert to the difference between a planned access feature and what is actually available that day. If the lift is out or a path is blocked, tell your friend what you know and decide together whether to use an alternative. Do not insist on continuing because tickets are booked. A good outing can change shape and still be a good time together."
+      ]
+    },
+    {
+      "heading": "End by asking what to keep for next time",
+      "paragraphs": [
+        "Afterward, ask one open question: what worked well, and what would they change next time? Take notes only with their agreement. You may discover that the quieter café mattered more than the headline attraction, or that a shorter route made the day easier. Those details help you plan together without turning a friend’s access needs into a checklist you own.",
+        "Accessible planning is a shared conversation. Leave room for the person who knows their own priorities, and check current venue information where facts may change."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Edinburgh: Accessible Highlights Guide",
+      "url": "https://edinburgh.org/accessiblehighlights/",
+      "publisher": "Forever Edinburgh",
+      "purpose": "Provides an example of city-level visitor guidance that gathers accessible places and highlights; current route details should still be verified with venues."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "document-access-details-for-public-places-on-wheelmap",
+    "play-an-introductory-game-of-boccia",
+    "try-a-supervised-water-aerobics-class"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

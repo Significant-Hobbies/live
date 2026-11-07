@@ -18,6 +18,7 @@ import { db } from '~/server/db';
 import { searchExperienceCatalog } from '~/server/experience-catalog';
 
 import { SearchPageClient } from './search-client';
+import { editorialArticles } from '~/lib/editorial-content';
 
 export const metadata = withPublicMetadata({
   title: 'Search — SignificantHobbies',
@@ -144,6 +145,9 @@ export default async function SearchPage({ searchParams }: Props) {
     page: 1,
     pageSize: 20,
   });
+  const articleResults = editorialArticles.filter((article) =>
+    `${article.title} ${article.excerpt}`.toLowerCase().includes(lower)
+  );
 
   return (
     <div className="relative mx-auto max-w-3xl px-4 py-12">
@@ -197,6 +201,37 @@ export default async function SearchPage({ searchParams }: Props) {
             </Link>
           ) : null}
         </section>
+        {articleResults.length > 0 ? (
+          <section className="scroll-reveal" aria-labelledby="article-results">
+            <h2 id="article-results" className="mb-4 text-sm font-semibold text-muted-foreground">
+              Articles ({articleResults.length})
+            </h2>
+            <ul className="divide-y divide-border rounded-xl border border-border bg-card/40 px-5">
+              {articleResults.slice(0, 6).map((article) => (
+                <li key={article.slug} className="py-4">
+                  <Link
+                    href={`/blog/${article.slug}`}
+                    prefetch={false}
+                    className="font-medium text-foreground underline-offset-4 hover:underline"
+                  >
+                    {article.title}
+                  </Link>
+                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                    {article.excerpt}
+                  </p>
+                </li>
+              ))}
+            </ul>
+            {articleResults.length > 6 ? (
+              <Link
+                href={`/blog?q=${encodeURIComponent(query)}`}
+                className="mt-3 inline-block text-sm underline underline-offset-4"
+              >
+                See all {articleResults.length} articles
+              </Link>
+            ) : null}
+          </section>
+        ) : null}
         {/* --- Timelines section --- */}
         <section className="scroll-reveal">
           <h2 className="mb-4 flex items-center gap-2 text-sm font-semibold text-muted-foreground">

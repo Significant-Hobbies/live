@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "build-a-radio-jove-receiver-with-a-radio-club",
+  "slug": "build-a-radio-jove-receiver-with-a-radio-club",
+  "title": "What to plan before building a Radio JOVE receiver",
+  "description": "Understand what a Radio JOVE kit receives, how a club can help with the build, and what to test before your first radio astronomy observation.",
+  "intent": "How can I start a Radio JOVE receiver project with a local club? This guide helps a beginner plan the build, separate hardware troubleshooting from observing and avoid premature equipment purchases.",
+  "sections": [
+    {
+      "heading": "Decide what you want to learn",
+      "paragraphs": [
+        "Radio JOVE is a citizen-science project for observing natural radio emissions, including signals from Jupiter and the Sun. Before assembling anything, decide whether the appeal is electronics, radio astronomy, data recording or doing a project with other people. That choice helps you and a club decide what to build first and which parts of the setup to understand together.",
+        "Read the current kit and project information rather than relying on an old parts list. NASA’s Radio JOVE site describes the current 2.1 kit as an SDR receiver, dual-dipole antenna, cables and software for displaying and recording data, and notes that earlier hardware versions differ. Availability and equipment details can change, so check the project’s latest instructions before placing an order or adapting an older receiver."
+      ]
+    },
+    {
+      "heading": "Ask a club to make the invisible setup visible",
+      "paragraphs": [
+        "A local radio club can help you understand the chain from antenna to display: where the antenna sits, how the cable reaches the receiver, how software is configured and what a healthy signal looks like. Ask whether a member has built or operated Radio JOVE before. A short demonstration can show which steps are sensitive to connectors, orientation or interference and which can be changed safely during a test.",
+        "Write down the exact kit version, software and operating system being used. This simple record helps distinguish a setup mismatch from a faulty connection. If the club has a shared station or test equipment, arrange supervision before changing the antenna or receiver. Radio equipment and antennas should be installed with attention to electrical safety, weather, height and local permissions; do not climb or connect to building wiring as an experiment."
+      ]
+    },
+    {
+      "heading": "Build from the documentation, one stage at a time",
+      "paragraphs": [
+        "Lay out parts and match them to the kit checklist before construction. Read each step before assembling it, and keep small connectors or screws in labelled containers. If the project includes soldering or other tools, use appropriate supervision, ventilation and protective equipment. Do not rush to power the system until the club’s instructions say the assembly is ready.",
+        "After each stage, make a brief note of what you completed and what test confirms it worked. When a result differs from the guide, stop and compare wiring, connection order and software settings before replacing components. A photo of your own assembly may help you remember a cable route, but keep personal details and any restricted site information out of public project posts."
+      ]
+    },
+    {
+      "heading": "Treat the display as data to investigate",
+      "paragraphs": [
+        "A changing trace is not automatically a detection of Jupiter. Learn what ordinary background noise, local interference and solar activity look like in the project’s training material. The Radio JOVE site notes that its receiver is designed around a specified frequency range and that automatic gain control can distort the background level when using some alternative shortwave receivers. That is a reason to follow project setup guidance, not a reason to generalize results from another rig.",
+        "Keep an observing log with date, time zone, configuration, weather if relevant, software settings and what you saw. Repeat a test when you change one variable. A stable baseline and clear notes make comparisons possible; dramatic-looking noise by itself is not a scientific conclusion. Ask the club or project community how data should be checked before describing it as an observation."
+      ]
+    },
+    {
+      "heading": "Choose a next step after the first successful test",
+      "paragraphs": [
+        "Once the receiver displays a repeatable signal, learn one analysis task or join a coordinated observing session. If something is not working, describe the setup version and symptoms precisely when asking for help. Avoid buying a replacement receiver or adding a more complex antenna until you know which part of the chain is limiting your experiment.",
+        "The build is useful even when the first session mostly teaches troubleshooting. Save a diagram of the signal path and a list of questions for the next club visit."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Radio JOVE Kits",
+      "url": "https://radiojove.gsfc.nasa.gov/kits/",
+      "publisher": "NASA Radio JOVE Project",
+      "purpose": "Verifies the current kit components, observing range and software, along with a caution about receiver automatic gain control and version changes."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "earn-an-amateur-radio-license-in-your-country",
+    "build-a-spectroscope-and-compare-household-lights",
+    "control-a-scratch-project-with-a-physical-object"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

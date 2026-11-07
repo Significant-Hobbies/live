@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "make-a-friendship-map-together",
+  "slug": "make-a-friendship-map-together",
+  "title": "Make a friendship map from places and shared moments",
+  "description": "Turn a friendship into a small hand-drawn map of places, rituals and memories, with prompts that keep the activity warm, mutual and comfortable.",
+  "intent": "How can two friends make a meaningful shared map without turning it into a test of who remembers more?",
+  "relatedExperienceSlugs": [
+    "go-on-a-friend-led-neighbourhood-tour",
+    "create-a-shared-household-agreement",
+    "join-a-community-choir-or-theatre-group"
+  ],
+  "sections": [
+    {
+      "heading": "Agree what belongs on the map",
+      "paragraphs": [
+        "A friendship map is a conversation with marks on paper. It can show a café where you talk, the route of a recurring walk, a family recipe, a joke that became a greeting, or a difficult moment you supported each other through. It does not need to cover the whole friendship. Before you begin, agree on a time span or a handful of shared moments so the exercise feels manageable.",
+        "Ask whether either person wants to keep some stories private. A map can use initials, symbols or invented names for sensitive places. The UC Berkeley Greater Good in Action “Feeling Connected” activity invites people to recall a specific time they felt close to someone and write what made them feel connected. Use that as a gentle starting prompt, not as proof that every friendship must feel the same way."
+      ]
+    },
+    {
+      "heading": "Draw a route, not a ranking",
+      "paragraphs": [
+        "Put a shared starting point in the middle of the page, perhaps where you met or a place you both know. Draw paths outward for different kinds of connection: ordinary routines, celebrations, learning something together, or showing up when life was hard. Add a small symbol or a few words at each stop. If your memories differ, draw two branches rather than trying to establish one official version.",
+        "One friend may remember the exact shop; the other may remember the conversation on the walk home. Both are valid contributions. Leave open space for a memory that emerges while you talk. If the page becomes crowded, add another sheet rather than shrinking every detail until nobody can read it."
+      ]
+    },
+    {
+      "heading": "Use prompts that invite, not interrogate",
+      "paragraphs": [
+        "Take turns choosing one prompt: “Where do we feel most like ourselves?” “What small ritual would we miss?” or “When did we learn how to help each other?” Then let the other person pass, answer briefly, or add a memory of their own. Avoid asking for a secret, a painful detail or a date just to make the map feel complete.",
+        "A useful rhythm is to listen, reflect back one detail, and then draw. For example: “You remember the rainy bus stop because we shared an umbrella” can become a small umbrella icon on the route. This helps the map carry the texture of the memory without forcing either person into a long explanation. Keep the conversation reciprocal; the activity should not become one person interviewing the other."
+      ]
+    },
+    {
+      "heading": "Let the drawing stay imperfect",
+      "paragraphs": [
+        "You do not need cartography skills. A line can be a route, a cluster can mean a season, and color can separate kinds of memory. Add a simple legend if you want to revisit the drawing later. Include places that are emotional rather than geographic: a song, a phrase, a kind of meal, or a shared habit. A friendship exists in patterns as much as in addresses.",
+        "If one person is doing most of the drawing, pause and invite the other to add a mark or choose a symbol. The goal is not an attractive poster. It is a shared record in which both people recognize something true. Keep the map private unless both of you agree to share it."
+      ]
+    },
+    {
+      "heading": "Finish with one small next step",
+      "paragraphs": [
+        "When the page feels complete enough, each person can name one memory they are glad to have revisited and one ordinary thing they would enjoy doing together next. That next step can be a walk, a recipe, or simply checking in next week. Do not turn it into a promise you cannot keep.",
+        "A first version can fit into an hour over tea and a blank sheet. Take a photo only if both people want a digital copy.  The map is useful even if you never add another mark: it makes a few connections visible and gives you a new way to talk about them."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Feeling Connected",
+      "url": "https://ggia.berkeley.edu/practice/feeling_connected",
+      "publisher": "Greater Good in Action, UC Berkeley Greater Good Science Center and HopeLab",
+      "purpose": "Primary reflection prompt for recalling one specific shared experience and what made it feel connecting; the collaborative map format is original advice."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

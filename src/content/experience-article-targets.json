@@ -1,0 +1,4902 @@
+[
+  {
+    "experienceSlug": "achieve-a-serious-physical-certification",
+    "articleSlug": "achieve-a-serious-physical-certification",
+    "title": "Achieve a serious physical certification",
+    "category": "health",
+    "emoji": "🤿"
+  },
+  {
+    "experienceSlug": "adopt-or-foster-a-child",
+    "articleSlug": "adopt-or-foster-a-child",
+    "title": "Adopt or foster a child",
+    "category": "contribution",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "advocate-for-a-policy-change-you-believe-in",
+    "articleSlug": "advocate-for-a-policy-change-you-believe-in",
+    "title": "Advocate for a policy change you believe in",
+    "category": "contribution",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "alaska-wilderness-at-scale",
+    "articleSlug": "alaska-wilderness-at-scale",
+    "title": "Alaska: wilderness at scale",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "analyze-an-exoplanet-transit-with-real-telescope-data",
+    "articleSlug": "analyze-an-exoplanet-transit-with-real-telescope-data",
+    "title": "Analyze an exoplanet transit with real telescope data",
+    "category": "achievement",
+    "emoji": "🪐"
+  },
+  {
+    "experienceSlug": "angkor-wat-cambodia",
+    "articleSlug": "angkor-wat-cambodia",
+    "title": "Angkor Wat, Cambodia",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "animate-a-strip-in-a-homemade-zoetrope",
+    "articleSlug": "animate-a-strip-in-a-homemade-zoetrope",
+    "title": "Animate a strip in a homemade zoetrope",
+    "category": "creative",
+    "emoji": "🎞️"
+  },
+  {
+    "experienceSlug": "antarctica",
+    "articleSlug": "antarctica",
+    "title": "Antarctica",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "arrange-an-accessible-outing-with-a-friend",
+    "articleSlug": "arrange-an-accessible-outing-with-a-friend",
+    "title": "Arrange an accessible outing with a friend",
+    "category": "relationships",
+    "emoji": "♿"
+  },
+  {
+    "experienceSlug": "ask-forgiveness-from-someone-you-hurt",
+    "articleSlug": "ask-forgiveness-from-someone-you-hurt",
+    "title": "Ask forgiveness from someone you hurt",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "attend-a-beginner-tai-chi-session",
+    "articleSlug": "attend-a-beginner-tai-chi-session",
+    "title": "Attend a beginner tai chi session",
+    "category": "health",
+    "emoji": "☯️"
+  },
+  {
+    "experienceSlug": "attend-a-festival-that-changes-your-taste",
+    "articleSlug": "attend-a-festival-that-changes-your-taste",
+    "title": "Attend a festival that changes your taste",
+    "category": "contribution",
+    "emoji": "🎪"
+  },
+  {
+    "experienceSlug": "attend-a-human-library-conversation",
+    "articleSlug": "attend-a-human-library-conversation",
+    "title": "Attend a Human Library conversation",
+    "category": "relationships",
+    "emoji": "📖"
+  },
+  {
+    "experienceSlug": "attend-a-multi-day-music-festival",
+    "articleSlug": "attend-a-multi-day-music-festival",
+    "title": "Attend a multi-day music festival",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "attend-a-world-class-sporting-event-live",
+    "articleSlug": "attend-a-world-class-sporting-event-live",
+    "title": "Attend a world-class sporting event live",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "attend-an-indian-observatory-s-public-visitor-session",
+    "articleSlug": "attend-an-indian-observatory-s-public-visitor-session",
+    "title": "Attend an Indian observatory's public visitor session",
+    "category": "travel",
+    "emoji": "🔭"
+  },
+  {
+    "experienceSlug": "backpack-through-southeast-asia",
+    "articleSlug": "backpack-through-southeast-asia",
+    "title": "Backpack through Southeast Asia",
+    "category": "travel",
+    "emoji": "🌏"
+  },
+  {
+    "experienceSlug": "bake-a-wedding-cake-for-someone-you-love",
+    "articleSlug": "bake-a-wedding-cake-for-someone-you-love",
+    "title": "Bake a wedding cake for someone you love",
+    "category": "food",
+    "emoji": "🍽️"
+  },
+  {
+    "experienceSlug": "bake-hollow-choux-pastry-and-fill-it",
+    "articleSlug": "bake-hollow-choux-pastry-and-fill-it",
+    "title": "Bake hollow choux pastry and fill it",
+    "category": "food",
+    "emoji": "🧁"
+  },
+  {
+    "experienceSlug": "bake-sourdough-weekly-for-a-year",
+    "articleSlug": "bake-sourdough-weekly-for-a-year",
+    "title": "Bake sourdough weekly for a year",
+    "category": "food",
+    "emoji": "🍽️"
+  },
+  {
+    "experienceSlug": "balance-a-hanging-mobile-from-found-materials",
+    "articleSlug": "balance-a-hanging-mobile-from-found-materials",
+    "title": "Balance a hanging mobile from found materials",
+    "category": "creative",
+    "emoji": "⚖️"
+  },
+  {
+    "experienceSlug": "bali-s-rice-terraces-and-temples",
+    "articleSlug": "bali-s-rice-terraces-and-temples",
+    "title": "Bali's rice terraces and temples",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "be-present-for-a-birth",
+    "articleSlug": "be-present-for-a-birth",
+    "title": "Be present for a birth",
+    "category": "relationships",
+    "emoji": "👶"
+  },
+  {
+    "experienceSlug": "be-quoted-or-profiled-in-the-press",
+    "articleSlug": "be-quoted-or-profiled-in-the-press",
+    "title": "Be quoted or profiled in the press",
+    "category": "adventure",
+    "emoji": "📰"
+  },
+  {
+    "experienceSlug": "become-a-certified-scuba-diver",
+    "articleSlug": "become-a-certified-scuba-diver",
+    "title": "Become a certified scuba diver",
+    "category": "achievement",
+    "emoji": "🏆"
+  },
+  {
+    "experienceSlug": "become-a-recognised-expert-in-your-field",
+    "articleSlug": "become-a-recognised-expert-in-your-field",
+    "title": "Become a recognised expert in your field",
+    "category": "achievement",
+    "emoji": "🏆"
+  },
+  {
+    "experienceSlug": "become-a-recognized-expert-in-your-field",
+    "articleSlug": "become-a-recognized-expert-in-your-field",
+    "title": "Become a recognized expert in your field",
+    "category": "achievement",
+    "emoji": "🧠"
+  },
+  {
+    "experienceSlug": "become-completely-debt-free",
+    "articleSlug": "become-completely-debt-free",
+    "title": "Become completely debt-free",
+    "category": "achievement",
+    "emoji": "🏆"
+  },
+  {
+    "experienceSlug": "become-fluent-in-a-second-language",
+    "articleSlug": "become-fluent-in-a-second-language",
+    "title": "Become fluent in a second language",
+    "category": "achievement",
+    "emoji": "🏆"
+  },
+  {
+    "experienceSlug": "become-genuinely-good-at-one-thing",
+    "articleSlug": "become-genuinely-good-at-one-thing",
+    "title": "Become genuinely good at one thing",
+    "category": "achievement",
+    "emoji": "🧠"
+  },
+  {
+    "experienceSlug": "bhutan",
+    "articleSlug": "bhutan",
+    "title": "Bhutan",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "bind-a-pocket-notebook-by-hand",
+    "articleSlug": "bind-a-pocket-notebook-by-hand",
+    "title": "Bind a pocket notebook by hand",
+    "category": "creative",
+    "emoji": "📓"
+  },
+  {
+    "experienceSlug": "bolivia-s-salar-de-uyuni",
+    "articleSlug": "bolivia-s-salar-de-uyuni",
+    "title": "Bolivia's Salar de Uyuni",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "break-a-personal-athletic-record",
+    "articleSlug": "break-a-personal-athletic-record",
+    "title": "Break a personal athletic record",
+    "category": "health",
+    "emoji": "💪"
+  },
+  {
+    "experienceSlug": "brew-your-own-beer-or-wine",
+    "articleSlug": "brew-your-own-beer-or-wine",
+    "title": "Brew your own beer or wine",
+    "category": "food",
+    "emoji": "🍽️"
+  },
+  {
+    "experienceSlug": "build-a-chain-reaction-machine-from-household-objects",
+    "articleSlug": "build-a-chain-reaction-machine-from-household-objects",
+    "title": "Build a chain-reaction machine from household objects",
+    "category": "creative",
+    "emoji": "⛓️"
+  },
+  {
+    "experienceSlug": "build-a-cooperative-table-tennis-rally",
+    "articleSlug": "build-a-cooperative-table-tennis-rally",
+    "title": "Build a cooperative table-tennis rally",
+    "category": "health",
+    "emoji": "🏓"
+  },
+  {
+    "experienceSlug": "build-a-folding-paper-peepshow",
+    "articleSlug": "build-a-folding-paper-peepshow",
+    "title": "Build a folding paper peepshow",
+    "category": "creative",
+    "emoji": "🎭"
+  },
+  {
+    "experienceSlug": "build-a-fruit-battery-and-measure-its-output",
+    "articleSlug": "build-a-fruit-battery-and-measure-its-output",
+    "title": "Build a fruit battery and measure its output",
+    "category": "achievement",
+    "emoji": "🍋"
+  },
+  {
+    "experienceSlug": "build-a-hand-cranked-cardboard-automaton",
+    "articleSlug": "build-a-hand-cranked-cardboard-automaton",
+    "title": "Build a hand-cranked cardboard automaton",
+    "category": "creative",
+    "emoji": "⚙️"
+  },
+  {
+    "experienceSlug": "build-a-kite-and-test-it-in-an-open-park",
+    "articleSlug": "build-a-kite-and-test-it-in-an-open-park",
+    "title": "Build a kite and test it in an open park",
+    "category": "adventure",
+    "emoji": "🪁"
+  },
+  {
+    "experienceSlug": "build-a-model-of-the-moon-s-phases",
+    "articleSlug": "build-a-model-of-the-moon-s-phases",
+    "title": "Build a model of the Moon's phases",
+    "category": "achievement",
+    "emoji": "🌙"
+  },
+  {
+    "experienceSlug": "build-a-model-water-filter-and-measure-what-changes",
+    "articleSlug": "build-a-model-water-filter-and-measure-what-changes",
+    "title": "Build a model water filter and measure what changes",
+    "category": "achievement",
+    "emoji": "💧"
+  },
+  {
+    "experienceSlug": "build-a-motorised-scribbling-machine",
+    "articleSlug": "build-a-motorised-scribbling-machine",
+    "title": "Build a motorised scribbling machine",
+    "category": "creative",
+    "emoji": "🤖"
+  },
+  {
+    "experienceSlug": "build-a-personal-reading-family-tree",
+    "articleSlug": "build-a-personal-reading-family-tree",
+    "title": "Build a personal reading family tree",
+    "category": "reflection",
+    "emoji": "🌳"
+  },
+  {
+    "experienceSlug": "build-a-piece-of-furniture-from-scratch",
+    "articleSlug": "build-a-piece-of-furniture-from-scratch",
+    "title": "Build a piece of furniture from scratch",
+    "category": "creative",
+    "emoji": "🎨"
+  },
+  {
+    "experienceSlug": "build-a-private-archive-of-your-creative-versions",
+    "articleSlug": "build-a-private-archive-of-your-creative-versions",
+    "title": "Build a private archive of your creative versions",
+    "category": "reflection",
+    "emoji": "🗂️"
+  },
+  {
+    "experienceSlug": "build-a-radio-jove-receiver-with-a-radio-club",
+    "articleSlug": "build-a-radio-jove-receiver-with-a-radio-club",
+    "title": "Build a Radio JOVE receiver with a radio club",
+    "category": "achievement",
+    "emoji": "📡"
+  },
+  {
+    "experienceSlug": "build-a-school-or-library-in-an-underserved-community",
+    "articleSlug": "build-a-school-or-library-in-an-underserved-community",
+    "title": "Build a school or library in an underserved community",
+    "category": "contribution",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "build-a-seasonal-millet-thali",
+    "articleSlug": "build-a-seasonal-millet-thali",
+    "title": "Build a seasonal millet thali",
+    "category": "food",
+    "emoji": "🍛"
+  },
+  {
+    "experienceSlug": "build-a-solar-oven-and-chart-its-heating",
+    "articleSlug": "build-a-solar-oven-and-chart-its-heating",
+    "title": "Build a solar oven and chart its heating",
+    "category": "achievement",
+    "emoji": "📦"
+  },
+  {
+    "experienceSlug": "build-a-spectroscope-and-compare-household-lights",
+    "articleSlug": "build-a-spectroscope-and-compare-household-lights",
+    "title": "Build a spectroscope and compare household lights",
+    "category": "achievement",
+    "emoji": "🌈"
+  },
+  {
+    "experienceSlug": "build-a-sundial-and-compare-it-with-clock-time",
+    "articleSlug": "build-a-sundial-and-compare-it-with-clock-time",
+    "title": "Build a sundial and compare it with clock time",
+    "category": "achievement",
+    "emoji": "☀️"
+  },
+  {
+    "experienceSlug": "build-a-tabletop-seismograph",
+    "articleSlug": "build-a-tabletop-seismograph",
+    "title": "Build a tabletop seismograph",
+    "category": "achievement",
+    "emoji": "〰️"
+  },
+  {
+    "experienceSlug": "build-an-investment-portfolio",
+    "articleSlug": "build-an-investment-portfolio",
+    "title": "Build an investment portfolio",
+    "category": "achievement",
+    "emoji": "🏆"
+  },
+  {
+    "experienceSlug": "build-and-dismantle-a-small-outdoor-den",
+    "articleSlug": "build-and-dismantle-a-small-outdoor-den",
+    "title": "Build and dismantle a small outdoor den",
+    "category": "adventure",
+    "emoji": "🪵"
+  },
+  {
+    "experienceSlug": "build-and-troubleshoot-a-battery-powered-switch-circuit",
+    "articleSlug": "build-and-troubleshoot-a-battery-powered-switch-circuit",
+    "title": "Build and troubleshoot a battery-powered switch circuit",
+    "category": "achievement",
+    "emoji": "🔋"
+  },
+  {
+    "experienceSlug": "build-homes-with-habitat-for-humanity",
+    "articleSlug": "build-homes-with-habitat-for-humanity",
+    "title": "Build homes with Habitat for Humanity",
+    "category": "contribution",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "build-logic-gates-in-a-circuit-simulator",
+    "articleSlug": "build-logic-gates-in-a-circuit-simulator",
+    "title": "Build logic gates in a circuit simulator",
+    "category": "achievement",
+    "emoji": "🔀"
+  },
+  {
+    "experienceSlug": "build-or-restore-a-home",
+    "articleSlug": "build-or-restore-a-home",
+    "title": "Build or restore a home",
+    "category": "contribution",
+    "emoji": "🏡"
+  },
+  {
+    "experienceSlug": "build-something-in-a-cooperative-video-game",
+    "articleSlug": "build-something-in-a-cooperative-video-game",
+    "title": "Build something in a cooperative video game",
+    "category": "relationships",
+    "emoji": "🎮"
+  },
+  {
+    "experienceSlug": "build-something-that-outlasts-you",
+    "articleSlug": "build-something-that-outlasts-you",
+    "title": "Build something that outlasts you",
+    "category": "contribution",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "build-something-that-reaches-a-million-people",
+    "articleSlug": "build-something-that-reaches-a-million-people",
+    "title": "Build something that reaches a million people",
+    "category": "achievement",
+    "emoji": "📡"
+  },
+  {
+    "experienceSlug": "bungee-jump-off-a-bridge",
+    "articleSlug": "bungee-jump-off-a-bridge",
+    "title": "Bungee jump off a bridge",
+    "category": "adventure",
+    "emoji": "⛰️"
+  },
+  {
+    "experienceSlug": "cage-dive-with-great-white-sharks",
+    "articleSlug": "cage-dive-with-great-white-sharks",
+    "title": "Cage dive with great white sharks",
+    "category": "adventure",
+    "emoji": "⛰️"
+  },
+  {
+    "experienceSlug": "cape-town-and-the-cape-peninsula",
+    "articleSlug": "cape-town-and-the-cape-peninsula",
+    "title": "Cape Town and the Cape Peninsula",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "carve-a-reusable-rubber-stamp",
+    "articleSlug": "carve-a-reusable-rubber-stamp",
+    "title": "Carve a reusable rubber stamp",
+    "category": "creative",
+    "emoji": "🔖"
+  },
+  {
+    "experienceSlug": "celebrate-someone-else-s-milestone-as-if-it-were-your-own",
+    "articleSlug": "celebrate-someone-else-s-milestone-as-if-it-were-your-own",
+    "title": "Celebrate someone else's milestone as if it were your own",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "change-your-mind-publicly-on-something-important",
+    "articleSlug": "change-your-mind-publicly-on-something-important",
+    "title": "Change your mind publicly on something important",
+    "category": "reflection",
+    "emoji": "🌓"
+  },
+  {
+    "experienceSlug": "choreograph-and-perform-a-dance",
+    "articleSlug": "choreograph-and-perform-a-dance",
+    "title": "Choreograph and perform a dance",
+    "category": "creative",
+    "emoji": "🎨"
+  },
+  {
+    "experienceSlug": "churn-butter-in-a-jar",
+    "articleSlug": "churn-butter-in-a-jar",
+    "title": "Churn butter in a jar",
+    "category": "food",
+    "emoji": "🧈"
+  },
+  {
+    "experienceSlug": "clean-up-a-beach-or-river-in-your-community",
+    "articleSlug": "clean-up-a-beach-or-river-in-your-community",
+    "title": "Clean up a beach or river in your community",
+    "category": "contribution",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "climb-a-mountain-over-4-000-metres",
+    "articleSlug": "climb-a-mountain-over-4-000-metres",
+    "title": "Climb a mountain over 4,000 metres",
+    "category": "adventure",
+    "emoji": "⛰️"
+  },
+  {
+    "experienceSlug": "climb-a-tree-with-a-qualified-recreational-climbing-provider",
+    "articleSlug": "climb-a-tree-with-a-qualified-recreational-climbing-provider",
+    "title": "Climb a tree with a qualified recreational climbing provider",
+    "category": "adventure",
+    "emoji": "🌳"
+  },
+  {
+    "experienceSlug": "climb-el-capitan-in-yosemite",
+    "articleSlug": "climb-el-capitan-in-yosemite",
+    "title": "Climb El Capitan in Yosemite",
+    "category": "adventure",
+    "emoji": "⛰️"
+  },
+  {
+    "experienceSlug": "climb-something-that-genuinely-frightens-you",
+    "articleSlug": "climb-something-that-genuinely-frightens-you",
+    "title": "Climb something that genuinely frightens you",
+    "category": "achievement",
+    "emoji": "🧗"
+  },
+  {
+    "experienceSlug": "climb-the-corporate-ladder-to-a-role-you-dreamed-of",
+    "articleSlug": "climb-the-corporate-ladder-to-a-role-you-dreamed-of",
+    "title": "Climb the corporate ladder to a role you dreamed of",
+    "category": "achievement",
+    "emoji": "🏆"
+  },
+  {
+    "experienceSlug": "climb-your-first-mountain",
+    "articleSlug": "climb-your-first-mountain",
+    "title": "Climb your first mountain",
+    "category": "health",
+    "emoji": "💪"
+  },
+  {
+    "experienceSlug": "co-write-something-with-a-friend",
+    "articleSlug": "co-write-something-with-a-friend",
+    "title": "Co-write something with a friend",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "coil-a-basket-from-recycled-paper",
+    "articleSlug": "coil-a-basket-from-recycled-paper",
+    "title": "Coil a basket from recycled paper",
+    "category": "creative",
+    "emoji": "🧺"
+  },
+  {
+    "experienceSlug": "community-01fde0a3-3684-5c7a-b97f-1aa9174144f1",
+    "articleSlug": "celebrate-halloween-tomatino-and-all-sorts-of-other-festivals",
+    "title": "Celebrate Halloween, Tomatino, and all sorts of other festivals",
+    "category": "travel",
+    "emoji": "🎃"
+  },
+  {
+    "experienceSlug": "community-065ff51d-0609-555b-9a4b-a38fcecd3e69",
+    "articleSlug": "drive-monster-truck",
+    "title": "Drive monster truck",
+    "category": "adventure",
+    "emoji": "🛻"
+  },
+  {
+    "experienceSlug": "community-0bf243ad-4d43-51c9-8a94-16fdeb88d54d",
+    "articleSlug": "learn-another-language",
+    "title": "Learn another language",
+    "category": "achievement",
+    "emoji": "🗣️"
+  },
+  {
+    "experienceSlug": "community-0fdd0463-2766-56e0-8a92-2c726b03da13",
+    "articleSlug": "on-a-farm-in-switzerland-eat-chocolate-while-lying-next-to-a-black-and-white-cow",
+    "title": "On a farm in Switzerland eat chocolate while lying next to a black and white cow",
+    "category": "travel",
+    "emoji": "🐄"
+  },
+  {
+    "experienceSlug": "community-29347b3a-a4f7-5af0-85b1-671434cf1a0c",
+    "articleSlug": "own-an-extremely-powerful-computer-setup",
+    "title": "Own an extremely powerful computer setup",
+    "category": "achievement",
+    "emoji": "🖥️"
+  },
+  {
+    "experienceSlug": "community-2f917272-a593-5978-b653-7b5b702eacea",
+    "articleSlug": "go-on-a-long-car-ride-1wk",
+    "title": "Go on a long car ride ( 1wk+)",
+    "category": "travel",
+    "emoji": "🚗"
+  },
+  {
+    "experienceSlug": "community-3040d8d6-b237-5f83-b423-28ef6bfd9e94",
+    "articleSlug": "go-on-a-solo-trip-1wk",
+    "title": "Go on a solo trip ( 1wk+ )",
+    "category": "travel",
+    "emoji": "🎒"
+  },
+  {
+    "experienceSlug": "community-38e6f335-b5f1-5ec0-a7c2-28cd02e9b0d2",
+    "articleSlug": "try-all-adventure-sports-skydiving-and-all",
+    "title": "Try all adventure sports (skydiving and all)",
+    "category": "adventure",
+    "emoji": "🪂"
+  },
+  {
+    "experienceSlug": "community-3ac454c5-a98e-5154-b557-87a2c61777d8",
+    "articleSlug": "live-in-a-different-country-for-a-year",
+    "title": "Live in a different country for a year",
+    "category": "travel",
+    "emoji": "🌏"
+  },
+  {
+    "experienceSlug": "community-445e35e6-060a-5b06-83f0-8104abb00796",
+    "articleSlug": "fly-a-plane",
+    "title": "Fly a plane",
+    "category": "adventure",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "community-49750c68-c587-592d-98cb-806ea19460d4",
+    "articleSlug": "play-snow-sports",
+    "title": "Play snow sports",
+    "category": "adventure",
+    "emoji": "🏂"
+  },
+  {
+    "experienceSlug": "community-4d64d5ce-969f-56f1-922e-53eee4ef0673",
+    "articleSlug": "buy-a-store-and-let-my-parents-shop-and-apply-unlimited-discount-on-it",
+    "title": "Buy a store and let my parents shop and apply unlimited discount on it.",
+    "category": "relationships",
+    "emoji": "🛍️"
+  },
+  {
+    "experienceSlug": "community-573cdefc-9b87-56e0-b085-c87606daa940",
+    "articleSlug": "finish-a-marathon",
+    "title": "Finish a marathon",
+    "category": "health",
+    "emoji": "🏃"
+  },
+  {
+    "experienceSlug": "community-597ae363-b3f4-5d68-b94a-74c4eb25d7e8",
+    "articleSlug": "act-like-a-painter-in-a-public-place-resort-beach",
+    "title": "Act like a painter in a public place (resort/beach)",
+    "category": "creative",
+    "emoji": "🎨"
+  },
+  {
+    "experienceSlug": "community-7bca1f54-cb8e-542c-afc8-a7ef31f47655",
+    "articleSlug": "write-a-song-and-or-poem",
+    "title": "Write a song and/or poem.",
+    "category": "creative",
+    "emoji": "✍️"
+  },
+  {
+    "experienceSlug": "community-7f215cd4-f912-58a4-8af1-e66667cc0cb5",
+    "articleSlug": "live-a-day-literally-like-a-king",
+    "title": "Live a day literally like a king.",
+    "category": "adventure",
+    "emoji": "👑"
+  },
+  {
+    "experienceSlug": "community-8016e36a-5dfc-516f-a448-fdd50b154365",
+    "articleSlug": "start-a-food-truck",
+    "title": "Start a food truck",
+    "category": "food",
+    "emoji": "🚚"
+  },
+  {
+    "experienceSlug": "community-807327a1-50db-5455-8a88-3aef3d2e8d9c",
+    "articleSlug": "undergo-monk-training",
+    "title": "Undergo Monk training",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "community-8577dd08-fdcf-5213-a4df-d79ed90d453a",
+    "articleSlug": "start-my-band",
+    "title": "Start my band",
+    "category": "creative",
+    "emoji": "🎸"
+  },
+  {
+    "experienceSlug": "community-882ff75a-9a84-5fc9-aea6-776fff8d3e06",
+    "articleSlug": "participate-in-a-car-race-with-a-sports-car",
+    "title": "Participate in a car race with a sports car",
+    "category": "adventure",
+    "emoji": "🏎️"
+  },
+  {
+    "experienceSlug": "community-9202817e-a5ac-54a2-ab23-9ba20834d4a7",
+    "articleSlug": "dramatically-swipe-everything-off-a-table-to-display-a-huge-piece-of-paper-describing-the-plan",
+    "title": "Dramatically swipe everything off a table to display a huge piece of paper describing the plan.",
+    "category": "creative",
+    "emoji": "🗺️"
+  },
+  {
+    "experienceSlug": "community-92838b0f-a9e1-597d-b174-e8f1584072ef",
+    "articleSlug": "visit-a-comic-con-in-a-costume",
+    "title": "Visit a comic con in a costume",
+    "category": "relationships",
+    "emoji": "🦸"
+  },
+  {
+    "experienceSlug": "community-95b4b914-db8a-5d49-94d9-669d56fc7a9a",
+    "articleSlug": "make-wine-at-home",
+    "title": "Make wine at home",
+    "category": "food",
+    "emoji": "🍷"
+  },
+  {
+    "experienceSlug": "community-9841e758-cdf9-54d0-822a-2900292100b7",
+    "articleSlug": "be-a-part-of-the-american-high-school-college-home-party",
+    "title": "Be a part of the American high school/college home party.",
+    "category": "relationships",
+    "emoji": "🎉"
+  },
+  {
+    "experienceSlug": "community-991b141b-c36b-527d-9558-1372317b9d93",
+    "articleSlug": "publish-your-book",
+    "title": "Publish your book",
+    "category": "creative",
+    "emoji": "📚"
+  },
+  {
+    "experienceSlug": "community-a3939ea7-9932-5169-ba32-934e1c2b5aa0",
+    "articleSlug": "play-a-big-game-of-dungeons-and-dragons",
+    "title": "Play a big game of Dungeons and dragons",
+    "category": "relationships",
+    "emoji": "🎲"
+  },
+  {
+    "experienceSlug": "community-a81fc47e-80f2-51ea-80e0-bf3914c6ba58",
+    "articleSlug": "visit-ces-event",
+    "title": "Visit CES event",
+    "category": "achievement",
+    "emoji": "💡"
+  },
+  {
+    "experienceSlug": "community-abed89fc-7a36-5cb0-9868-e400c8d9d95b",
+    "articleSlug": "ride-a-sports-dirt-bike",
+    "title": "Ride a sports/dirt bike",
+    "category": "adventure",
+    "emoji": "🏍️"
+  },
+  {
+    "experienceSlug": "community-b7afa496-ff89-5980-8a6d-e094af103e1b",
+    "articleSlug": "be-under-the-influence-of-laughing-gas",
+    "title": "Be under the influence of Laughing gas",
+    "category": "adventure",
+    "emoji": "✨"
+  },
+  {
+    "experienceSlug": "community-c18cb715-267e-53ac-9690-ef2b845914e4",
+    "articleSlug": "act-as-a-spy-for-a-few-days",
+    "title": "Act as a spy for a few days",
+    "category": "adventure",
+    "emoji": "🕵️"
+  },
+  {
+    "experienceSlug": "community-c3300923-5d72-5a6e-986f-8e0c74967fb2",
+    "articleSlug": "travel-at-least-70-of-the-countries",
+    "title": "Travel at least 70% of the countries",
+    "category": "travel",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "community-cb5bc408-0171-54cc-b6a2-5600c9a2f021",
+    "articleSlug": "open-a-hospital-nonprofit",
+    "title": "Open a hospital - nonprofit",
+    "category": "contribution",
+    "emoji": "🏥"
+  },
+  {
+    "experienceSlug": "community-d511273f-b104-5228-b141-f343c01a5e5e",
+    "articleSlug": "climb-a-mountain-in-the-himalayas",
+    "title": "Climb a mountain in the Himalayas",
+    "category": "adventure",
+    "emoji": "🏔️"
+  },
+  {
+    "experienceSlug": "community-d8967a41-df65-54b7-a798-49a2ffcfb258",
+    "articleSlug": "look-after-a-plant",
+    "title": "Look after a plant",
+    "category": "mindfulness",
+    "emoji": "🌱"
+  },
+  {
+    "experienceSlug": "community-dc650875-3ef1-5e87-b87b-c62da34a4ce0",
+    "articleSlug": "play-golf-with-caddy",
+    "title": "Play golf with caddy",
+    "category": "health",
+    "emoji": "⛳"
+  },
+  {
+    "experienceSlug": "community-e16bda77-15e6-59fe-b063-051fbd456cbd",
+    "articleSlug": "jump-to-a-crowd-such-that-they-catch-you-and-move-you-around",
+    "title": "Jump to a crowd, such that they catch you and move you around.",
+    "category": "adventure",
+    "emoji": "🙌"
+  },
+  {
+    "experienceSlug": "community-e62581a3-63bf-5377-b303-ddf458d28e96",
+    "articleSlug": "try-the-tablecloth-magic-trick",
+    "title": "Try the tablecloth magic trick",
+    "category": "creative",
+    "emoji": "🪄"
+  },
+  {
+    "experienceSlug": "community-f01cb503-7cd7-5f60-b95e-a958373c2c41",
+    "articleSlug": "have-a-dog",
+    "title": "Have a dog",
+    "category": "relationships",
+    "emoji": "🐕"
+  },
+  {
+    "experienceSlug": "community-f29de36c-a221-59d0-8947-1efec2a2887d",
+    "articleSlug": "go-to-space",
+    "title": "Go to space",
+    "category": "adventure",
+    "emoji": "🚀"
+  },
+  {
+    "experienceSlug": "community-f748e747-91ff-52ba-b71c-9b6edc70cf53",
+    "articleSlug": "experience-0-gravity",
+    "title": "Experience 0 gravity",
+    "category": "adventure",
+    "emoji": "🚀"
+  },
+  {
+    "experienceSlug": "community-fc08829e-7969-5edb-8ae2-89070b4b217e",
+    "articleSlug": "be-a-part-of-shooting-a-movie-tv-series",
+    "title": "Be a part of shooting a movie/ TV series",
+    "category": "creative",
+    "emoji": "🎬"
+  },
+  {
+    "experienceSlug": "compare-a-place-across-two-satellite-images",
+    "articleSlug": "compare-a-place-across-two-satellite-images",
+    "title": "Compare a place across two satellite images",
+    "category": "achievement",
+    "emoji": "🛰️"
+  },
+  {
+    "experienceSlug": "compare-two-sorting-algorithms-on-the-same-dataset",
+    "articleSlug": "compare-two-sorting-algorithms-on-the-same-dataset",
+    "title": "Compare two sorting algorithms on the same dataset",
+    "category": "achievement",
+    "emoji": "📊"
+  },
+  {
+    "experienceSlug": "compare-whole-spices-before-and-after-toasting",
+    "articleSlug": "compare-whole-spices-before-and-after-toasting",
+    "title": "Compare whole spices before and after toasting",
+    "category": "food",
+    "emoji": "🌿"
+  },
+  {
+    "experienceSlug": "compete-in-a-national-championship",
+    "articleSlug": "compete-in-a-national-championship",
+    "title": "Compete in a national championship",
+    "category": "achievement",
+    "emoji": "🏆"
+  },
+  {
+    "experienceSlug": "compete-in-an-obstacle-course-race",
+    "articleSlug": "compete-in-an-obstacle-course-race",
+    "title": "Compete in an obstacle course race",
+    "category": "achievement",
+    "emoji": "🏆"
+  },
+  {
+    "experienceSlug": "complete-a-100-mile-ultramarathon",
+    "articleSlug": "complete-a-100-mile-ultramarathon",
+    "title": "Complete a 100-mile ultramarathon",
+    "category": "health",
+    "emoji": "💪"
+  },
+  {
+    "experienceSlug": "complete-a-bounded-un-online-volunteering-assignment",
+    "articleSlug": "complete-a-bounded-un-online-volunteering-assignment",
+    "title": "Complete a bounded UN online-volunteering assignment",
+    "category": "contribution",
+    "emoji": "🤝"
+  },
+  {
+    "experienceSlug": "complete-a-major-cycling-challenge",
+    "articleSlug": "complete-a-major-cycling-challenge",
+    "title": "Complete a major cycling challenge",
+    "category": "health",
+    "emoji": "🚴"
+  },
+  {
+    "experienceSlug": "complete-a-tough-mudder",
+    "articleSlug": "complete-a-tough-mudder",
+    "title": "Complete a Tough Mudder",
+    "category": "achievement",
+    "emoji": "🏆"
+  },
+  {
+    "experienceSlug": "complete-a-triathlon",
+    "articleSlug": "complete-a-triathlon",
+    "title": "Complete a triathlon",
+    "category": "health",
+    "emoji": "🏊"
+  },
+  {
+    "experienceSlug": "complete-an-earthcache-geology-field-challenge",
+    "articleSlug": "complete-an-earthcache-geology-field-challenge",
+    "title": "Complete an EarthCache geology field challenge",
+    "category": "adventure",
+    "emoji": "🪨"
+  },
+  {
+    "experienceSlug": "complete-an-in-person-first-aid-and-cpr-course",
+    "articleSlug": "complete-an-in-person-first-aid-and-cpr-course",
+    "title": "Complete an in-person first-aid and CPR course",
+    "category": "achievement",
+    "emoji": "🩹"
+  },
+  {
+    "experienceSlug": "complete-an-ironman-triathlon",
+    "articleSlug": "complete-an-ironman-triathlon",
+    "title": "Complete an Ironman triathlon",
+    "category": "health",
+    "emoji": "💪"
+  },
+  {
+    "experienceSlug": "compose-an-original-piece-of-music",
+    "articleSlug": "compose-an-original-piece-of-music",
+    "title": "Compose an original piece of music",
+    "category": "creative",
+    "emoji": "🎨"
+  },
+  {
+    "experienceSlug": "conduct-an-after-action-review-of-a-personal-project",
+    "articleSlug": "conduct-an-after-action-review-of-a-personal-project",
+    "title": "Conduct an after-action review of a personal project",
+    "category": "reflection",
+    "emoji": "🔎"
+  },
+  {
+    "experienceSlug": "contribute-speech-recordings-to-common-voice",
+    "articleSlug": "contribute-speech-recordings-to-common-voice",
+    "title": "Contribute speech recordings to Common Voice",
+    "category": "contribution",
+    "emoji": "🗣️"
+  },
+  {
+    "experienceSlug": "control-a-scratch-project-with-a-physical-object",
+    "articleSlug": "control-a-scratch-project-with-a-physical-object",
+    "title": "Control a Scratch project with a physical object",
+    "category": "achievement",
+    "emoji": "💻"
+  },
+  {
+    "experienceSlug": "cook-a-meal-entirely-from-your-existing-pantry",
+    "articleSlug": "cook-a-meal-entirely-from-your-existing-pantry",
+    "title": "Cook a meal entirely from your existing pantry",
+    "category": "food",
+    "emoji": "🥫"
+  },
+  {
+    "experienceSlug": "cook-a-meal-over-an-open-fire",
+    "articleSlug": "cook-a-meal-over-an-open-fire",
+    "title": "Cook a meal over an open fire",
+    "category": "food",
+    "emoji": "🍽️"
+  },
+  {
+    "experienceSlug": "cook-a-whole-animal-from-nose-to-tail",
+    "articleSlug": "cook-a-whole-animal-from-nose-to-tail",
+    "title": "Cook a whole animal from nose to tail",
+    "category": "food",
+    "emoji": "🍽️"
+  },
+  {
+    "experienceSlug": "create-a-family-cookbook-with-old-recipes",
+    "articleSlug": "create-a-family-cookbook-with-old-recipes",
+    "title": "Create a family cookbook with old recipes",
+    "category": "food",
+    "emoji": "🍽️"
+  },
+  {
+    "experienceSlug": "create-a-free-resource-that-helps-thousands-of-people",
+    "articleSlug": "create-a-free-resource-that-helps-thousands-of-people",
+    "title": "Create a free resource that helps thousands of people",
+    "category": "contribution",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "create-a-home-that-feels-like-you",
+    "articleSlug": "create-a-home-that-feels-like-you",
+    "title": "Create a home that feels like you",
+    "category": "relationships",
+    "emoji": "🏠"
+  },
+  {
+    "experienceSlug": "create-a-map-of-languages-in-your-life",
+    "articleSlug": "create-a-map-of-languages-in-your-life",
+    "title": "Create a map of languages in your life",
+    "category": "reflection",
+    "emoji": "🗣️"
+  },
+  {
+    "experienceSlug": "create-a-morning-ritual-you-keep-for-a-year",
+    "articleSlug": "create-a-morning-ritual-you-keep-for-a-year",
+    "title": "Create a morning ritual you keep for a year",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "create-a-personal-annual-report",
+    "articleSlug": "create-a-personal-annual-report",
+    "title": "Create a personal annual report",
+    "category": "reflection",
+    "emoji": "📖"
+  },
+  {
+    "experienceSlug": "create-a-photo-book-of-one-year-of-your-life",
+    "articleSlug": "create-a-photo-book-of-one-year-of-your-life",
+    "title": "Create a photo book of one year of your life",
+    "category": "reflection",
+    "emoji": "📖"
+  },
+  {
+    "experienceSlug": "create-a-shared-household-agreement",
+    "articleSlug": "create-a-shared-household-agreement",
+    "title": "Create a shared household agreement",
+    "category": "relationships",
+    "emoji": "🏠"
+  },
+  {
+    "experienceSlug": "create-a-short-film",
+    "articleSlug": "create-a-short-film",
+    "title": "Create a short film",
+    "category": "creative",
+    "emoji": "🎨"
+  },
+  {
+    "experienceSlug": "curate-a-five-object-museum-of-your-life",
+    "articleSlug": "curate-a-five-object-museum-of-your-life",
+    "title": "Curate a five-object museum of your life",
+    "category": "reflection",
+    "emoji": "🏛️"
+  },
+  {
+    "experienceSlug": "cycle-coast-to-coast",
+    "articleSlug": "cycle-coast-to-coast",
+    "title": "Cycle coast to coast",
+    "category": "health",
+    "emoji": "💪"
+  },
+  {
+    "experienceSlug": "decode-railway-signals-at-a-rail-museum",
+    "articleSlug": "decode-railway-signals-at-a-rail-museum",
+    "title": "Decode railway signals at a rail museum",
+    "category": "travel",
+    "emoji": "🚂"
+  },
+  {
+    "experienceSlug": "decorate-cookies-with-edible-pattern-work",
+    "articleSlug": "decorate-cookies-with-edible-pattern-work",
+    "title": "Decorate cookies with edible pattern work",
+    "category": "food",
+    "emoji": "🍪"
+  },
+  {
+    "experienceSlug": "design-and-3d-print-a-small-functional-bracket",
+    "articleSlug": "design-and-3d-print-a-small-functional-bracket",
+    "title": "Design and 3D-print a small functional bracket",
+    "category": "achievement",
+    "emoji": "🖨️"
+  },
+  {
+    "experienceSlug": "design-and-build-something-with-your-hands",
+    "articleSlug": "design-and-build-something-with-your-hands",
+    "title": "Design and build something with your hands",
+    "category": "creative",
+    "emoji": "🎨"
+  },
+  {
+    "experienceSlug": "design-and-make-your-own-clothes",
+    "articleSlug": "design-and-make-your-own-clothes",
+    "title": "Design and make your own clothes",
+    "category": "creative",
+    "emoji": "🎨"
+  },
+  {
+    "experienceSlug": "dive-the-blue-hole-in-belize",
+    "articleSlug": "dive-the-blue-hole-in-belize",
+    "title": "Dive the Blue Hole in Belize",
+    "category": "adventure",
+    "emoji": "⛰️"
+  },
+  {
+    "experienceSlug": "do-100-push-ups-in-a-row",
+    "articleSlug": "do-100-push-ups-in-a-row",
+    "title": "Do 100 push-ups in a row",
+    "category": "health",
+    "emoji": "💪"
+  },
+  {
+    "experienceSlug": "do-a-10-day-silent-meditation-retreat",
+    "articleSlug": "do-a-10-day-silent-meditation-retreat",
+    "title": "Do a 10-day silent meditation retreat",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "do-a-30-day-yoga-challenge",
+    "articleSlug": "do-a-30-day-yoga-challenge",
+    "title": "Do a 30-day yoga challenge",
+    "category": "health",
+    "emoji": "💪"
+  },
+  {
+    "experienceSlug": "do-a-digital-detox-for-a-full-week",
+    "articleSlug": "do-a-digital-detox-for-a-full-week",
+    "title": "Do a digital detox for a full week",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "do-a-group-charity-challenge-with-friends",
+    "articleSlug": "do-a-group-charity-challenge-with-friends",
+    "title": "Do a group charity challenge with friends",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "do-a-polar-bear-plunge",
+    "articleSlug": "do-a-polar-bear-plunge",
+    "title": "Do a polar bear plunge",
+    "category": "health",
+    "emoji": "💪"
+  },
+  {
+    "experienceSlug": "do-a-serious-meditation-retreat-10-days",
+    "articleSlug": "do-a-serious-meditation-retreat-10-days",
+    "title": "Do a serious meditation retreat (10+ days)",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "do-a-silent-meditation-retreat",
+    "articleSlug": "do-a-silent-meditation-retreat",
+    "title": "Do a silent meditation retreat",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "do-a-solo-camping-trip-with-no-phone",
+    "articleSlug": "do-a-solo-camping-trip-with-no-phone",
+    "title": "Do a solo camping trip with no phone",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "do-a-spontaneous-eurotrip",
+    "articleSlug": "do-a-spontaneous-eurotrip",
+    "title": "Do a spontaneous Eurotrip",
+    "category": "travel",
+    "emoji": "🚂"
+  },
+  {
+    "experienceSlug": "do-a-structured-life-review-decade-by-decade",
+    "articleSlug": "do-a-structured-life-review-decade-by-decade",
+    "title": "Do a structured life review: decade by decade",
+    "category": "reflection",
+    "emoji": "📖"
+  },
+  {
+    "experienceSlug": "do-a-walking-meditation-every-morning-for-a-month",
+    "articleSlug": "do-a-walking-meditation-every-morning-for-a-month",
+    "title": "Do a walking meditation every morning for a month",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "do-something-that-gets-you-recognized-publicly",
+    "articleSlug": "do-something-that-gets-you-recognized-publicly",
+    "title": "Do something that gets you recognized publicly",
+    "category": "adventure",
+    "emoji": "🌟"
+  },
+  {
+    "experienceSlug": "do-your-first-pull-up",
+    "articleSlug": "do-your-first-pull-up",
+    "title": "Do your first pull-up",
+    "category": "health",
+    "emoji": "💪"
+  },
+  {
+    "experienceSlug": "document-a-wild-species-for-inaturalist",
+    "articleSlug": "document-a-wild-species-for-inaturalist",
+    "title": "Document a wild species for iNaturalist",
+    "category": "contribution",
+    "emoji": "🔎"
+  },
+  {
+    "experienceSlug": "document-access-details-for-public-places-on-wheelmap",
+    "articleSlug": "document-access-details-for-public-places-on-wheelmap",
+    "title": "Document access details for public places on Wheelmap",
+    "category": "contribution",
+    "emoji": "♿"
+  },
+  {
+    "experienceSlug": "dog-sled-in-alaska",
+    "articleSlug": "dog-sled-in-alaska",
+    "title": "Dog sled in Alaska",
+    "category": "adventure",
+    "emoji": "⛰️"
+  },
+  {
+    "experienceSlug": "donate-a-kidney-or-be-a-living-donor",
+    "articleSlug": "donate-a-kidney-or-be-a-living-donor",
+    "title": "Donate a kidney or be a living donor",
+    "category": "contribution",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "donate-anonymously-and-tell-no-one",
+    "articleSlug": "donate-anonymously-and-tell-no-one",
+    "title": "Donate anonymously and tell no one",
+    "category": "contribution",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "donate-spare-computing-time-to-a-distributed-research-project",
+    "articleSlug": "donate-spare-computing-time-to-a-distributed-research-project",
+    "title": "Donate spare computing time to a distributed research project",
+    "category": "contribution",
+    "emoji": "🖥️"
+  },
+  {
+    "experienceSlug": "draw-a-leaf-without-looking-at-the-page",
+    "articleSlug": "draw-a-leaf-without-looking-at-the-page",
+    "title": "Draw a leaf without looking at the page",
+    "category": "mindfulness",
+    "emoji": "🍃"
+  },
+  {
+    "experienceSlug": "draw-a-wordless-six-panel-comic",
+    "articleSlug": "draw-a-wordless-six-panel-comic",
+    "title": "Draw a wordless six-panel comic",
+    "category": "creative",
+    "emoji": "💬"
+  },
+  {
+    "experienceSlug": "drive-a-racecar-at-full-speed",
+    "articleSlug": "drive-a-racecar-at-full-speed",
+    "title": "Drive a racecar at full speed",
+    "category": "adventure",
+    "emoji": "⛰️"
+  },
+  {
+    "experienceSlug": "drive-route-66-end-to-end-across-america",
+    "articleSlug": "drive-route-66-end-to-end-across-america",
+    "title": "Drive Route 66 end to end across America",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "dubrovnik-s-old-city-croatia",
+    "articleSlug": "dubrovnik-s-old-city-croatia",
+    "title": "Dubrovnik's Old City, Croatia",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "earn-a-black-belt-in-a-martial-art",
+    "articleSlug": "earn-a-black-belt-in-a-martial-art",
+    "title": "Earn a black belt in a martial art",
+    "category": "achievement",
+    "emoji": "🏆"
+  },
+  {
+    "experienceSlug": "earn-a-black-belt-or-equivalent-mastery",
+    "articleSlug": "earn-a-black-belt-or-equivalent-mastery",
+    "title": "Earn a black belt or equivalent mastery",
+    "category": "achievement",
+    "emoji": "🥋"
+  },
+  {
+    "experienceSlug": "earn-a-postgraduate-degree",
+    "articleSlug": "earn-a-postgraduate-degree",
+    "title": "Earn a postgraduate degree",
+    "category": "achievement",
+    "emoji": "🏆"
+  },
+  {
+    "experienceSlug": "earn-an-amateur-radio-license-in-your-country",
+    "articleSlug": "earn-an-amateur-radio-license-in-your-country",
+    "title": "Earn an amateur-radio license in your country",
+    "category": "achievement",
+    "emoji": "📻"
+  },
+  {
+    "experienceSlug": "eat-a-12-course-tasting-menu",
+    "articleSlug": "eat-a-12-course-tasting-menu",
+    "title": "Eat a 12-course tasting menu",
+    "category": "food",
+    "emoji": "🍽️"
+  },
+  {
+    "experienceSlug": "eat-a-meal-cooked-by-a-grandmother-in-her-home",
+    "articleSlug": "eat-a-meal-cooked-by-a-grandmother-in-her-home",
+    "title": "Eat a meal cooked by a grandmother in her home",
+    "category": "food",
+    "emoji": "🍽️"
+  },
+  {
+    "experienceSlug": "eat-at-a-3-star-michelin-restaurant",
+    "articleSlug": "eat-at-a-3-star-michelin-restaurant",
+    "title": "Eat at a 3-star Michelin restaurant",
+    "category": "food",
+    "emoji": "🍽️"
+  },
+  {
+    "experienceSlug": "eat-at-the-source-coffee-in-ethiopia-tea-in-japan-chocolate-in-ecuador",
+    "articleSlug": "eat-at-the-source-coffee-in-ethiopia-tea-in-japan-chocolate-in-ecuador",
+    "title": "Eat at the source: coffee in Ethiopia, tea in Japan, chocolate in Ecuador",
+    "category": "food",
+    "emoji": "🍽️"
+  },
+  {
+    "experienceSlug": "eat-one-ordinary-snack-with-full-attention",
+    "articleSlug": "eat-one-ordinary-snack-with-full-attention",
+    "title": "Eat one ordinary snack with full attention",
+    "category": "mindfulness",
+    "emoji": "🍊"
+  },
+  {
+    "experienceSlug": "eat-something-you-foraged-or-caught-yourself",
+    "articleSlug": "eat-something-you-foraged-or-caught-yourself",
+    "title": "Eat something you foraged or caught yourself",
+    "category": "food",
+    "emoji": "🍽️"
+  },
+  {
+    "experienceSlug": "eat-street-food-in-bangkok",
+    "articleSlug": "eat-street-food-in-bangkok",
+    "title": "Eat street food in Bangkok",
+    "category": "food",
+    "emoji": "🍽️"
+  },
+  {
+    "experienceSlug": "eat-your-way-through-a-country-one-market-at-a-time",
+    "articleSlug": "eat-your-way-through-a-country-one-market-at-a-time",
+    "title": "Eat your way through a country one market at a time",
+    "category": "food",
+    "emoji": "🍽️"
+  },
+  {
+    "experienceSlug": "engineer-a-pop-up-paper-scene",
+    "articleSlug": "engineer-a-pop-up-paper-scene",
+    "title": "Engineer a pop-up paper scene",
+    "category": "creative",
+    "emoji": "🏗️"
+  },
+  {
+    "experienceSlug": "engrave-a-palm-leaf-keepsake-with-an-odisha-artisan",
+    "articleSlug": "engrave-a-palm-leaf-keepsake-with-an-odisha-artisan",
+    "title": "Engrave a palm-leaf keepsake with an Odisha artisan",
+    "category": "creative",
+    "emoji": "🌴"
+  },
+  {
+    "experienceSlug": "ethiopia-s-danakil-depression",
+    "articleSlug": "ethiopia-s-danakil-depression",
+    "title": "Ethiopia's Danakil Depression",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "evaluate-an-air-quality-sensor-with-a-community-group",
+    "articleSlug": "evaluate-an-air-quality-sensor-with-a-community-group",
+    "title": "Evaluate an air-quality sensor with a community group",
+    "category": "achievement",
+    "emoji": "🌫️"
+  },
+  {
+    "experienceSlug": "exchange-handwritten-recipes-through-the-post",
+    "articleSlug": "exchange-handwritten-recipes-through-the-post",
+    "title": "Exchange handwritten recipes through the post",
+    "category": "relationships",
+    "emoji": "✉️"
+  },
+  {
+    "experienceSlug": "experience-carnival-in-rio-de-janeiro",
+    "articleSlug": "experience-carnival-in-rio-de-janeiro",
+    "title": "Experience Carnival in Rio de Janeiro",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "explore-a-building-during-an-open-house-festival",
+    "articleSlug": "explore-a-building-during-an-open-house-festival",
+    "title": "Explore a building during an Open House festival",
+    "category": "travel",
+    "emoji": "🏛️"
+  },
+  {
+    "experienceSlug": "explore-a-garden-through-scent",
+    "articleSlug": "explore-a-garden-through-scent",
+    "title": "Explore a garden through scent",
+    "category": "mindfulness",
+    "emoji": "🌸"
+  },
+  {
+    "experienceSlug": "explore-a-historic-stepwell-s-water-architecture",
+    "articleSlug": "explore-a-historic-stepwell-s-water-architecture",
+    "title": "Explore a historic stepwell's water architecture",
+    "category": "travel",
+    "emoji": "🏗️"
+  },
+  {
+    "experienceSlug": "explore-a-nature-trail-using-an-all-terrain-wheelchair",
+    "articleSlug": "explore-a-nature-trail-using-an-all-terrain-wheelchair",
+    "title": "Explore a nature trail using an all-terrain wheelchair",
+    "category": "adventure",
+    "emoji": "♿"
+  },
+  {
+    "experienceSlug": "explore-a-tidepool-with-a-naturalist",
+    "articleSlug": "explore-a-tidepool-with-a-naturalist",
+    "title": "Explore a tidepool with a naturalist",
+    "category": "adventure",
+    "emoji": "🦀"
+  },
+  {
+    "experienceSlug": "explore-an-everyday-object-through-touch",
+    "articleSlug": "explore-an-everyday-object-through-touch",
+    "title": "Explore an everyday object through touch",
+    "category": "mindfulness",
+    "emoji": "🪨"
+  },
+  {
+    "experienceSlug": "explore-mangroves-from-sungei-buloh-s-public-boardwalks",
+    "articleSlug": "explore-mangroves-from-sungei-buloh-s-public-boardwalks",
+    "title": "Explore mangroves from Sungei Buloh's public boardwalks",
+    "category": "travel",
+    "emoji": "🦎"
+  },
+  {
+    "experienceSlug": "explore-reconstructed-yayoi-life-at-yoshinogari",
+    "articleSlug": "explore-reconstructed-yayoi-life-at-yoshinogari",
+    "title": "Explore reconstructed Yayoi life at Yoshinogari",
+    "category": "travel",
+    "emoji": "🛖"
+  },
+  {
+    "experienceSlug": "explore-the-amazon-rainforest",
+    "articleSlug": "explore-the-amazon-rainforest",
+    "title": "Explore the Amazon rainforest",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "extract-fruit-dna-in-an-educational-workshop",
+    "articleSlug": "extract-fruit-dna-in-an-educational-workshop",
+    "title": "Extract fruit DNA in an educational workshop",
+    "category": "achievement",
+    "emoji": "🧬"
+  },
+  {
+    "experienceSlug": "fall-in-love",
+    "articleSlug": "fall-in-love",
+    "title": "Fall in love",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "fast-for-24-hours-at-least-once",
+    "articleSlug": "fast-for-24-hours-at-least-once",
+    "title": "Fast for 24 hours at least once",
+    "category": "health",
+    "emoji": "💪"
+  },
+  {
+    "experienceSlug": "feed-a-hundred-families",
+    "articleSlug": "feed-a-hundred-families",
+    "title": "Feed a hundred families",
+    "category": "contribution",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "ferment-something-for-the-first-time",
+    "articleSlug": "ferment-something-for-the-first-time",
+    "title": "Ferment something for the first time",
+    "category": "food",
+    "emoji": "🍽️"
+  },
+  {
+    "experienceSlug": "find-a-permitted-geocache-near-home",
+    "articleSlug": "find-a-permitted-geocache-near-home",
+    "title": "Find a permitted geocache near home",
+    "category": "adventure",
+    "emoji": "📍"
+  },
+  {
+    "experienceSlug": "finish-what-you-started",
+    "articleSlug": "finish-what-you-started",
+    "title": "Finish what you started",
+    "category": "contribution",
+    "emoji": "🎯"
+  },
+  {
+    "experienceSlug": "fiordland-new-zealand",
+    "articleSlug": "fiordland-new-zealand",
+    "title": "Fiordland, New Zealand",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "fold-an-interlocking-origami-sculpture",
+    "articleSlug": "fold-an-interlocking-origami-sculpture",
+    "title": "Fold an interlocking origami sculpture",
+    "category": "creative",
+    "emoji": "🔷"
+  },
+  {
+    "experienceSlug": "fold-three-dumpling-shapes-from-one-filling",
+    "articleSlug": "fold-three-dumpling-shapes-from-one-filling",
+    "title": "Fold three dumpling shapes from one filling",
+    "category": "food",
+    "emoji": "🥟"
+  },
+  {
+    "experienceSlug": "follow-a-colour-through-your-neighbourhood",
+    "articleSlug": "follow-a-colour-through-your-neighbourhood",
+    "title": "Follow a colour through your neighbourhood",
+    "category": "mindfulness",
+    "emoji": "🟠"
+  },
+  {
+    "experienceSlug": "follow-cotton-through-a-handloom-village-with-a-weaver",
+    "articleSlug": "follow-cotton-through-a-handloom-village-with-a-weaver",
+    "title": "Follow cotton through a handloom village with a weaver",
+    "category": "travel",
+    "emoji": "🧵"
+  },
+  {
+    "experienceSlug": "follow-one-ingredient-through-a-market",
+    "articleSlug": "follow-one-ingredient-through-a-market",
+    "title": "Follow one ingredient through a market",
+    "category": "food",
+    "emoji": "🛒"
+  },
+  {
+    "experienceSlug": "follow-the-narrative-reliefs-around-sanchi-s-gateways",
+    "articleSlug": "follow-the-narrative-reliefs-around-sanchi-s-gateways",
+    "title": "Follow the narrative reliefs around Sanchi's gateways",
+    "category": "travel",
+    "emoji": "🛕"
+  },
+  {
+    "experienceSlug": "forage-for-wild-mushrooms",
+    "articleSlug": "forage-for-wild-mushrooms",
+    "title": "Forage for wild mushrooms",
+    "category": "food",
+    "emoji": "🍽️"
+  },
+  {
+    "experienceSlug": "forgive-someone-who-hurt-you",
+    "articleSlug": "forgive-someone-who-hurt-you",
+    "title": "Forgive someone who hurt you",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "forgive-someone-you-haven-t-forgiven",
+    "articleSlug": "forgive-someone-you-haven-t-forgiven",
+    "title": "Forgive someone you haven't forgiven",
+    "category": "relationships",
+    "emoji": "🤝"
+  },
+  {
+    "experienceSlug": "franz-josef-glacier-new-zealand",
+    "articleSlug": "franz-josef-glacier-new-zealand",
+    "title": "Franz Josef Glacier, New Zealand",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "free-dive-to-20-metres",
+    "articleSlug": "free-dive-to-20-metres",
+    "title": "Free dive to 20 metres",
+    "category": "adventure",
+    "emoji": "⛰️"
+  },
+  {
+    "experienceSlug": "freeze-a-batch-of-homemade-ice-cream",
+    "articleSlug": "freeze-a-batch-of-homemade-ice-cream",
+    "title": "Freeze a batch of homemade ice cream",
+    "category": "food",
+    "emoji": "🍨"
+  },
+  {
+    "experienceSlug": "fund-a-child-s-education-for-a-year",
+    "articleSlug": "fund-a-child-s-education-for-a-year",
+    "title": "Fund a child's education for a year",
+    "category": "contribution",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "fund-a-child-s-education-from-start-to-finish",
+    "articleSlug": "fund-a-child-s-education-from-start-to-finish",
+    "title": "Fund a child's education from start to finish",
+    "category": "contribution",
+    "emoji": "🎓"
+  },
+  {
+    "experienceSlug": "fuse-a-small-glass-panel-in-a-studio",
+    "articleSlug": "fuse-a-small-glass-panel-in-a-studio",
+    "title": "Fuse a small glass panel in a studio",
+    "category": "creative",
+    "emoji": "🟦"
+  },
+  {
+    "experienceSlug": "galapagos-islands-ecuador",
+    "articleSlug": "galapagos-islands-ecuador",
+    "title": "Galápagos Islands, Ecuador",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "georgia-the-country",
+    "articleSlug": "georgia-the-country",
+    "title": "Georgia (the country)",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "get-a-full-health-checkup-including-bloodwork",
+    "articleSlug": "get-a-full-health-checkup-including-bloodwork",
+    "title": "Get a full health checkup including bloodwork",
+    "category": "health",
+    "emoji": "💪"
+  },
+  {
+    "experienceSlug": "get-a-pilot-s-licence",
+    "articleSlug": "get-a-pilot-s-licence",
+    "title": "Get a pilot's licence",
+    "category": "achievement",
+    "emoji": "🏆"
+  },
+  {
+    "experienceSlug": "get-featured-in-a-major-publication",
+    "articleSlug": "get-featured-in-a-major-publication",
+    "title": "Get featured in a major publication",
+    "category": "achievement",
+    "emoji": "🏆"
+  },
+  {
+    "experienceSlug": "get-fired-from-a-job-once",
+    "articleSlug": "get-fired-from-a-job-once",
+    "title": "Get fired from a job once",
+    "category": "achievement",
+    "emoji": "💼"
+  },
+  {
+    "experienceSlug": "get-into-the-best-shape-of-your-life",
+    "articleSlug": "get-into-the-best-shape-of-your-life",
+    "title": "Get into the best shape of your life",
+    "category": "health",
+    "emoji": "💪"
+  },
+  {
+    "experienceSlug": "get-married-or-celebrate-a-long-term-partnership",
+    "articleSlug": "get-married-or-celebrate-a-long-term-partnership",
+    "title": "Get married or celebrate a long-term partnership",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "get-your-hearing-and-vision-checked",
+    "articleSlug": "get-your-hearing-and-vision-checked",
+    "title": "Get your hearing and vision checked",
+    "category": "health",
+    "emoji": "💪"
+  },
+  {
+    "experienceSlug": "give-a-public-talk-or-presentation",
+    "articleSlug": "give-a-public-talk-or-presentation",
+    "title": "Give a public talk or presentation",
+    "category": "achievement",
+    "emoji": "🎤"
+  },
+  {
+    "experienceSlug": "give-a-ted-talk",
+    "articleSlug": "give-a-ted-talk",
+    "title": "Give a TED talk",
+    "category": "achievement",
+    "emoji": "🏆"
+  },
+  {
+    "experienceSlug": "give-blood-50-times-in-your-life",
+    "articleSlug": "give-blood-50-times-in-your-life",
+    "title": "Give blood 50 times in your life",
+    "category": "contribution",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "give-something-away-that-costs-you-something",
+    "articleSlug": "give-something-away-that-costs-you-something",
+    "title": "Give something away that costs you something",
+    "category": "contribution",
+    "emoji": "🤲"
+  },
+  {
+    "experienceSlug": "give-up-something-that-s-running-your-life",
+    "articleSlug": "give-up-something-that-s-running-your-life",
+    "title": "Give up something that's running your life",
+    "category": "health",
+    "emoji": "🚫"
+  },
+  {
+    "experienceSlug": "go-canyoneering",
+    "articleSlug": "go-canyoneering",
+    "title": "Go canyoneering",
+    "category": "adventure",
+    "emoji": "⛰️"
+  },
+  {
+    "experienceSlug": "go-on-a-friend-led-neighbourhood-tour",
+    "articleSlug": "go-on-a-friend-led-neighbourhood-tour",
+    "title": "Go on a friend-led neighbourhood tour",
+    "category": "relationships",
+    "emoji": "🚶"
+  },
+  {
+    "experienceSlug": "go-on-a-polar-expedition",
+    "articleSlug": "go-on-a-polar-expedition",
+    "title": "Go on a polar expedition",
+    "category": "adventure",
+    "emoji": "⛰️"
+  },
+  {
+    "experienceSlug": "gorilla-trekking-rwanda-or-uganda",
+    "articleSlug": "gorilla-trekking-rwanda-or-uganda",
+    "title": "Gorilla trekking, Rwanda or Uganda",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "grow-edible-sugar-crystals",
+    "articleSlug": "grow-edible-sugar-crystals",
+    "title": "Grow edible sugar crystals",
+    "category": "food",
+    "emoji": "💎"
+  },
+  {
+    "experienceSlug": "grow-salt-crystals-and-keep-a-measurement-record",
+    "articleSlug": "grow-salt-crystals-and-keep-a-measurement-record",
+    "title": "Grow salt crystals and keep a measurement record",
+    "category": "achievement",
+    "emoji": "🧂"
+  },
+  {
+    "experienceSlug": "grow-something-you-can-eat",
+    "articleSlug": "grow-something-you-can-eat",
+    "title": "Grow something you can eat",
+    "category": "contribution",
+    "emoji": "🌱"
+  },
+  {
+    "experienceSlug": "grow-something-you-can-eat-from-seed-to-plate",
+    "articleSlug": "grow-something-you-can-eat-from-seed-to-plate",
+    "title": "Grow something you can eat from seed to plate",
+    "category": "food",
+    "emoji": "🍽️"
+  },
+  {
+    "experienceSlug": "ha-long-bay-vietnam",
+    "articleSlug": "ha-long-bay-vietnam",
+    "title": "Ha Long Bay, Vietnam",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "havana-cuba",
+    "articleSlug": "havana-cuba",
+    "title": "Havana, Cuba",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "have-a-consent-based-question-evening",
+    "articleSlug": "have-a-consent-based-question-evening",
+    "title": "Have a consent-based question evening",
+    "category": "relationships",
+    "emoji": "❓"
+  },
+  {
+    "experienceSlug": "have-a-meaningful-conversation-with-a-complete-stranger-every-week-for-a-year",
+    "articleSlug": "have-a-meaningful-conversation-with-a-complete-stranger-every-week-for-a-year",
+    "title": "Have a meaningful conversation with a complete stranger every week for a year",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "have-one-real-conversation-with-a-grandparent",
+    "articleSlug": "have-one-real-conversation-with-a-grandparent",
+    "title": "Have one real conversation with a grandparent",
+    "category": "relationships",
+    "emoji": "👴"
+  },
+  {
+    "experienceSlug": "have-one-real-conversation-with-a-grandparent-before-it-is-too-late",
+    "articleSlug": "have-one-real-conversation-with-a-grandparent-before-it-is-too-late",
+    "title": "Have one real conversation with a grandparent before it is too late",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "have-your-work-shown-publicly",
+    "articleSlug": "have-your-work-shown-publicly",
+    "title": "Have your work shown publicly",
+    "category": "creative",
+    "emoji": "🖼️"
+  },
+  {
+    "experienceSlug": "help-catalog-seeds-at-a-community-seed-library",
+    "articleSlug": "help-catalog-seeds-at-a-community-seed-library",
+    "title": "Help catalog seeds at a community seed library",
+    "category": "contribution",
+    "emoji": "🌱"
+  },
+  {
+    "experienceSlug": "help-classify-research-images-with-stall-catchers",
+    "articleSlug": "help-classify-research-images-with-stall-catchers",
+    "title": "Help classify research images with Stall Catchers",
+    "category": "contribution",
+    "emoji": "🔬"
+  },
+  {
+    "experienceSlug": "help-host-a-neighborhood-repair-cafe-session",
+    "articleSlug": "help-host-a-neighborhood-repair-cafe-session",
+    "title": "Help host a neighborhood Repair Cafe session",
+    "category": "contribution",
+    "emoji": "🛠️"
+  },
+  {
+    "experienceSlug": "help-repair-library-books-under-staff-supervision",
+    "articleSlug": "help-repair-library-books-under-staff-supervision",
+    "title": "Help repair library books under staff supervision",
+    "category": "contribution",
+    "emoji": "📘"
+  },
+  {
+    "experienceSlug": "hike-a-mountain-that-scares-you",
+    "articleSlug": "hike-a-mountain-that-scares-you",
+    "title": "Hike a mountain that scares you",
+    "category": "travel",
+    "emoji": "🏔️"
+  },
+  {
+    "experienceSlug": "hike-the-appalachian-trail-end-to-end",
+    "articleSlug": "hike-the-appalachian-trail-end-to-end",
+    "title": "Hike the Appalachian Trail end to end",
+    "category": "adventure",
+    "emoji": "⛰️"
+  },
+  {
+    "experienceSlug": "hike-the-pacific-crest-trail",
+    "articleSlug": "hike-the-pacific-crest-trail",
+    "title": "Hike the Pacific Crest Trail",
+    "category": "adventure",
+    "emoji": "⛰️"
+  },
+  {
+    "experienceSlug": "hike-through-patagonia",
+    "articleSlug": "hike-through-patagonia",
+    "title": "Hike through Patagonia",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "hike-weekly-for-a-year",
+    "articleSlug": "hike-weekly-for-a-year",
+    "title": "Hike weekly for a year",
+    "category": "health",
+    "emoji": "💪"
+  },
+  {
+    "experienceSlug": "hold-a-playlist-listening-exchange",
+    "articleSlug": "hold-a-playlist-listening-exchange",
+    "title": "Hold a playlist listening exchange",
+    "category": "relationships",
+    "emoji": "🎶"
+  },
+  {
+    "experienceSlug": "host-a-blind-apple-tasting",
+    "articleSlug": "host-a-blind-apple-tasting",
+    "title": "Host a blind apple tasting",
+    "category": "food",
+    "emoji": "🍎"
+  },
+  {
+    "experienceSlug": "host-a-bring-one-object-story-circle",
+    "articleSlug": "host-a-bring-one-object-story-circle",
+    "title": "Host a bring-one-object story circle",
+    "category": "relationships",
+    "emoji": "🧸"
+  },
+  {
+    "experienceSlug": "host-a-clothing-swap-with-clear-boundaries",
+    "articleSlug": "host-a-clothing-swap-with-clear-boundaries",
+    "title": "Host a clothing swap with clear boundaries",
+    "category": "relationships",
+    "emoji": "👕"
+  },
+  {
+    "experienceSlug": "host-a-dinner-party-for-20-people",
+    "articleSlug": "host-a-dinner-party-for-20-people",
+    "title": "Host a dinner party for 20+ people",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "host-a-family-reunion",
+    "articleSlug": "host-a-family-reunion",
+    "title": "Host a family reunion",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "host-a-shared-silent-reading-hour",
+    "articleSlug": "host-a-shared-silent-reading-hour",
+    "title": "Host a shared silent reading hour",
+    "category": "relationships",
+    "emoji": "📚"
+  },
+  {
+    "experienceSlug": "iceland-fire-ice-and-the-aurora",
+    "articleSlug": "iceland-fire-ice-and-the-aurora",
+    "title": "Iceland: fire, ice, and the aurora",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "identify-a-small-mineral-collection-using-observable-properties",
+    "articleSlug": "identify-a-small-mineral-collection-using-observable-properties",
+    "title": "Identify a small mineral collection using observable properties",
+    "category": "achievement",
+    "emoji": "🪨"
+  },
+  {
+    "experienceSlug": "illustrate-a-children-s-book",
+    "articleSlug": "illustrate-a-children-s-book",
+    "title": "Illustrate a children's book",
+    "category": "creative",
+    "emoji": "🎨"
+  },
+  {
+    "experienceSlug": "inspect-an-original-record-in-an-archive-reading-room",
+    "articleSlug": "inspect-an-original-record-in-an-archive-reading-room",
+    "title": "Inspect an original record in an archive reading room",
+    "category": "travel",
+    "emoji": "🗃️"
+  },
+  {
+    "experienceSlug": "install-a-locally-appropriate-wildlife-shelter-with-expert-advice",
+    "articleSlug": "install-a-locally-appropriate-wildlife-shelter-with-expert-advice",
+    "title": "Install a locally appropriate wildlife shelter with expert advice",
+    "category": "contribution",
+    "emoji": "🐞"
+  },
+  {
+    "experienceSlug": "invest-your-first-serious-money",
+    "articleSlug": "invest-your-first-serious-money",
+    "title": "Invest your first serious money",
+    "category": "achievement",
+    "emoji": "📈"
+  },
+  {
+    "experienceSlug": "investigate-a-pendulum-with-timed-trials",
+    "articleSlug": "investigate-a-pendulum-with-timed-trials",
+    "title": "Investigate a pendulum with timed trials",
+    "category": "achievement",
+    "emoji": "⏱️"
+  },
+  {
+    "experienceSlug": "join-a-beginner-shape-note-singing-session",
+    "articleSlug": "join-a-beginner-shape-note-singing-session",
+    "title": "Join a beginner shape-note singing session",
+    "category": "relationships",
+    "emoji": "🎼"
+  },
+  {
+    "experienceSlug": "join-a-beginner-welcoming-garba-circle",
+    "articleSlug": "join-a-beginner-welcoming-garba-circle",
+    "title": "Join a beginner-welcoming garba circle",
+    "category": "relationships",
+    "emoji": "👏"
+  },
+  {
+    "experienceSlug": "join-a-bird-safe-building-monitoring-route",
+    "articleSlug": "join-a-bird-safe-building-monitoring-route",
+    "title": "Join a bird-safe-building monitoring route",
+    "category": "contribution",
+    "emoji": "🏙️"
+  },
+  {
+    "experienceSlug": "join-a-community-choir-or-theatre-group",
+    "articleSlug": "join-a-community-choir-or-theatre-group",
+    "title": "Join a community choir or theatre group",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "join-a-dusk-bat-walk-with-a-detector",
+    "articleSlug": "join-a-dusk-bat-walk-with-a-detector",
+    "title": "Join a dusk bat walk with a detector",
+    "category": "adventure",
+    "emoji": "🦇"
+  },
+  {
+    "experienceSlug": "join-a-facilitated-community-drum-circle",
+    "articleSlug": "join-a-facilitated-community-drum-circle",
+    "title": "Join a facilitated community drum circle",
+    "category": "relationships",
+    "emoji": "🪘"
+  },
+  {
+    "experienceSlug": "join-a-fossil-walk-led-by-a-local-geologist",
+    "articleSlug": "join-a-fossil-walk-led-by-a-local-geologist",
+    "title": "Join a fossil walk led by a local geologist",
+    "category": "adventure",
+    "emoji": "🦴"
+  },
+  {
+    "experienceSlug": "join-a-moth-recording-evening-with-a-nature-group",
+    "articleSlug": "join-a-moth-recording-evening-with-a-nature-group",
+    "title": "Join a moth-recording evening with a nature group",
+    "category": "adventure",
+    "emoji": "🦋"
+  },
+  {
+    "experienceSlug": "join-a-supervised-invasive-plant-removal-workday",
+    "articleSlug": "join-a-supervised-invasive-plant-removal-workday",
+    "title": "Join a supervised invasive-plant removal workday",
+    "category": "contribution",
+    "emoji": "🌿"
+  },
+  {
+    "experienceSlug": "join-an-adapted-tee-ball-session",
+    "articleSlug": "join-an-adapted-tee-ball-session",
+    "title": "Join an adapted tee-ball session",
+    "category": "health",
+    "emoji": "⚾"
+  },
+  {
+    "experienceSlug": "kayak-the-grand-canyon",
+    "articleSlug": "kayak-the-grand-canyon",
+    "title": "Kayak the Grand Canyon",
+    "category": "adventure",
+    "emoji": "⛰️"
+  },
+  {
+    "experienceSlug": "keep-a-journal-for-a-decade",
+    "articleSlug": "keep-a-journal-for-a-decade",
+    "title": "Keep a journal for a decade",
+    "category": "reflection",
+    "emoji": "✍️"
+  },
+  {
+    "experienceSlug": "keep-a-journal-for-a-full-year",
+    "articleSlug": "keep-a-journal-for-a-full-year",
+    "title": "Keep a journal for a full year",
+    "category": "reflection",
+    "emoji": "📖"
+  },
+  {
+    "experienceSlug": "keep-a-short-distance-friendship-walking-appointment",
+    "articleSlug": "keep-a-short-distance-friendship-walking-appointment",
+    "title": "Keep a short-distance friendship walking appointment",
+    "category": "relationships",
+    "emoji": "👟"
+  },
+  {
+    "experienceSlug": "komodo-island-indonesia",
+    "articleSlug": "komodo-island-indonesia",
+    "title": "Komodo Island, Indonesia",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "kyoto-japan-in-cherry-blossom-season",
+    "articleSlug": "kyoto-japan-in-cherry-blossom-season",
+    "title": "Kyoto, Japan in cherry blossom season",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "lalibela-s-rock-hewn-churches-ethiopia",
+    "articleSlug": "lalibela-s-rock-hewn-churches-ethiopia",
+    "title": "Lalibela's rock-hewn churches, Ethiopia",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "laminate-pastry-and-bake-a-first-batch-of-croissants",
+    "articleSlug": "laminate-pastry-and-bake-a-first-batch-of-croissants",
+    "title": "Laminate pastry and bake a first batch of croissants",
+    "category": "food",
+    "emoji": "🥐"
+  },
+  {
+    "experienceSlug": "learn-a-beginner-hula-hoop-sequence",
+    "articleSlug": "learn-a-beginner-hula-hoop-sequence",
+    "title": "Learn a beginner hula-hoop sequence",
+    "category": "health",
+    "emoji": "⭕"
+  },
+  {
+    "experienceSlug": "learn-a-beginner-kolam-from-a-practitioner",
+    "articleSlug": "learn-a-beginner-kolam-from-a-practitioner",
+    "title": "Learn a beginner kolam from a practitioner",
+    "category": "creative",
+    "emoji": "⚪"
+  },
+  {
+    "experienceSlug": "learn-a-mahjong-ruleset-and-finish-a-game",
+    "articleSlug": "learn-a-mahjong-ruleset-and-finish-a-game",
+    "title": "Learn a mahjong ruleset and finish a game",
+    "category": "relationships",
+    "emoji": "🀄"
+  },
+  {
+    "experienceSlug": "learn-a-new-language-to-conversational-fluency",
+    "articleSlug": "learn-a-new-language-to-conversational-fluency",
+    "title": "Learn a new language to conversational fluency",
+    "category": "creative",
+    "emoji": "🎨"
+  },
+  {
+    "experienceSlug": "learn-a-second-discipline-deeply",
+    "articleSlug": "learn-a-second-discipline-deeply",
+    "title": "Learn a second discipline deeply",
+    "category": "achievement",
+    "emoji": "🔬"
+  },
+  {
+    "experienceSlug": "learn-a-short-supported-balance-routine",
+    "articleSlug": "learn-a-short-supported-balance-routine",
+    "title": "Learn a short supported balance routine",
+    "category": "health",
+    "emoji": "⚖️"
+  },
+  {
+    "experienceSlug": "learn-an-instrument-to-a-playable-level",
+    "articleSlug": "learn-an-instrument-to-a-playable-level",
+    "title": "Learn an instrument to a playable level",
+    "category": "creative",
+    "emoji": "🎸"
+  },
+  {
+    "experienceSlug": "learn-another-language-to-conversation-level",
+    "articleSlug": "learn-another-language-to-conversation-level",
+    "title": "Learn another language to conversation level",
+    "category": "achievement",
+    "emoji": "🗣️"
+  },
+  {
+    "experienceSlug": "learn-calligraphy",
+    "articleSlug": "learn-calligraphy",
+    "title": "Learn calligraphy",
+    "category": "creative",
+    "emoji": "🎨"
+  },
+  {
+    "experienceSlug": "learn-how-a-dutch-storm-surge-barrier-works",
+    "articleSlug": "learn-how-a-dutch-storm-surge-barrier-works",
+    "title": "Learn how a Dutch storm-surge barrier works",
+    "category": "travel",
+    "emoji": "🌊"
+  },
+  {
+    "experienceSlug": "learn-living-root-bridge-stewardship-from-a-local-guide",
+    "articleSlug": "learn-living-root-bridge-stewardship-from-a-local-guide",
+    "title": "Learn living-root-bridge stewardship from a local guide",
+    "category": "travel",
+    "emoji": "🌉"
+  },
+  {
+    "experienceSlug": "learn-madhubani-linework-from-a-practicing-artist",
+    "articleSlug": "learn-madhubani-linework-from-a-practicing-artist",
+    "title": "Learn Madhubani linework from a practicing artist",
+    "category": "creative",
+    "emoji": "🐟"
+  },
+  {
+    "experienceSlug": "learn-non-contact-boxing-footwork-and-pad-skills",
+    "articleSlug": "learn-non-contact-boxing-footwork-and-pad-skills",
+    "title": "Learn non-contact boxing footwork and pad skills",
+    "category": "health",
+    "emoji": "🥊"
+  },
+  {
+    "experienceSlug": "learn-pickleball-and-play-a-short-game",
+    "articleSlug": "learn-pickleball-and-play-a-short-game",
+    "title": "Learn pickleball and play a short game",
+    "category": "health",
+    "emoji": "🏸"
+  },
+  {
+    "experienceSlug": "learn-someone-s-language-to-have-a-conversation-with-them",
+    "articleSlug": "learn-someone-s-language-to-have-a-conversation-with-them",
+    "title": "Learn someone's language to have a conversation with them",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "learn-something-completely-outside-your-field",
+    "articleSlug": "learn-something-completely-outside-your-field",
+    "title": "Learn something completely outside your field",
+    "category": "contribution",
+    "emoji": "🎓"
+  },
+  {
+    "experienceSlug": "learn-to-butcher-a-whole-fish",
+    "articleSlug": "learn-to-butcher-a-whole-fish",
+    "title": "Learn to butcher a whole fish",
+    "category": "food",
+    "emoji": "🍽️"
+  },
+  {
+    "experienceSlug": "learn-to-code-and-ship-an-app",
+    "articleSlug": "learn-to-code-and-ship-an-app",
+    "title": "Learn to code and ship an app",
+    "category": "achievement",
+    "emoji": "🏆"
+  },
+  {
+    "experienceSlug": "learn-to-cook-10-healthy-meals-from-scratch",
+    "articleSlug": "learn-to-cook-10-healthy-meals-from-scratch",
+    "title": "Learn to cook 10 healthy meals from scratch",
+    "category": "health",
+    "emoji": "💪"
+  },
+  {
+    "experienceSlug": "learn-to-draw-portraits",
+    "articleSlug": "learn-to-draw-portraits",
+    "title": "Learn to draw portraits",
+    "category": "creative",
+    "emoji": "🎨"
+  },
+  {
+    "experienceSlug": "learn-to-fly-a-plane",
+    "articleSlug": "learn-to-fly-a-plane",
+    "title": "Learn to fly a plane",
+    "category": "achievement",
+    "emoji": "🏆"
+  },
+  {
+    "experienceSlug": "learn-to-free-solo-climb",
+    "articleSlug": "learn-to-free-solo-climb",
+    "title": "Learn to free solo climb",
+    "category": "adventure",
+    "emoji": "⛰️"
+  },
+  {
+    "experienceSlug": "learn-to-identify-10-bird-species-by-song",
+    "articleSlug": "learn-to-identify-10-bird-species-by-song",
+    "title": "Learn to identify 10 bird species by song",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "learn-to-meditate-for-20-minutes-straight",
+    "articleSlug": "learn-to-meditate-for-20-minutes-straight",
+    "title": "Learn to meditate for 20 minutes straight",
+    "category": "health",
+    "emoji": "💪"
+  },
+  {
+    "experienceSlug": "learn-to-play-a-musical-instrument",
+    "articleSlug": "learn-to-play-a-musical-instrument",
+    "title": "Learn to play a musical instrument",
+    "category": "creative",
+    "emoji": "🎨"
+  },
+  {
+    "experienceSlug": "learn-to-sit-with-discomfort-without-reaching-for-your-phone",
+    "articleSlug": "learn-to-sit-with-discomfort-without-reaching-for-your-phone",
+    "title": "Learn to sit with discomfort without reaching for your phone",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "learn-watercolour-painting",
+    "articleSlug": "learn-watercolour-painting",
+    "title": "Learn watercolour painting",
+    "category": "creative",
+    "emoji": "🎨"
+  },
+  {
+    "experienceSlug": "leave-a-legacy-gift-to-a-charity-in-your-will",
+    "articleSlug": "leave-a-legacy-gift-to-a-charity-in-your-will",
+    "title": "Leave a legacy gift to a charity in your will",
+    "category": "contribution",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "leave-a-place-cleaner-and-more-hopeful-than-you-found-it",
+    "articleSlug": "leave-a-place-cleaner-and-more-hopeful-than-you-found-it",
+    "title": "Leave a place cleaner and more hopeful than you found it",
+    "category": "contribution",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "light-up-a-paper-circuit-card",
+    "articleSlug": "light-up-a-paper-circuit-card",
+    "title": "Light up a paper circuit card",
+    "category": "creative",
+    "emoji": "💡"
+  },
+  {
+    "experienceSlug": "lisbon-portugal",
+    "articleSlug": "lisbon-portugal",
+    "title": "Lisbon, Portugal",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "listen-to-a-whole-album-without-multitasking",
+    "articleSlug": "listen-to-a-whole-album-without-multitasking",
+    "title": "Listen to a whole album without multitasking",
+    "category": "mindfulness",
+    "emoji": "🎧"
+  },
+  {
+    "experienceSlug": "live-abroad-for-at-least-one-full-year",
+    "articleSlug": "live-abroad-for-at-least-one-full-year",
+    "title": "Live abroad for at least one full year",
+    "category": "achievement",
+    "emoji": "🌐"
+  },
+  {
+    "experienceSlug": "live-somewhere-for-more-than-a-tourist",
+    "articleSlug": "live-somewhere-for-more-than-a-tourist",
+    "title": "Live somewhere for more than a tourist",
+    "category": "contribution",
+    "emoji": "🏠"
+  },
+  {
+    "experienceSlug": "live-with-friends-not-just-roommates",
+    "articleSlug": "live-with-friends-not-just-roommates",
+    "title": "Live with friends, not just roommates",
+    "category": "relationships",
+    "emoji": "👯"
+  },
+  {
+    "experienceSlug": "look-at-one-museum-object-for-twenty-minutes",
+    "articleSlug": "look-at-one-museum-object-for-twenty-minutes",
+    "title": "Look at one museum object for twenty minutes",
+    "category": "mindfulness",
+    "emoji": "🖼️"
+  },
+  {
+    "experienceSlug": "lord-howe-island-australia",
+    "articleSlug": "lord-howe-island-australia",
+    "title": "Lord Howe Island, Australia",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "lose-something-significant-and-rebuild-from-it",
+    "articleSlug": "lose-something-significant-and-rebuild-from-it",
+    "title": "Lose something significant and rebuild from it",
+    "category": "creative",
+    "emoji": "🗺️"
+  },
+  {
+    "experienceSlug": "machu-picchu-peru",
+    "articleSlug": "machu-picchu-peru",
+    "title": "Machu Picchu, Peru",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "make-a-batik-sample-with-a-trained-practitioner",
+    "articleSlug": "make-a-batik-sample-with-a-trained-practitioner",
+    "title": "Make a batik sample with a trained practitioner",
+    "category": "creative",
+    "emoji": "🕯️"
+  },
+  {
+    "experienceSlug": "make-a-best-friend-in-a-foreign-country",
+    "articleSlug": "make-a-best-friend-in-a-foreign-country",
+    "title": "Make a best friend in a foreign country",
+    "category": "relationships",
+    "emoji": "🤝"
+  },
+  {
+    "experienceSlug": "make-a-bet-on-yourself",
+    "articleSlug": "make-a-bet-on-yourself",
+    "title": "Make a bet on yourself",
+    "category": "adventure",
+    "emoji": "💰"
+  },
+  {
+    "experienceSlug": "make-a-close-friend-in-another-country",
+    "articleSlug": "make-a-close-friend-in-another-country",
+    "title": "Make a close friend in another country",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "make-a-cyanotype-print-from-everyday-objects",
+    "articleSlug": "make-a-cyanotype-print-from-everyday-objects",
+    "title": "Make a cyanotype print from everyday objects",
+    "category": "creative",
+    "emoji": "🔵"
+  },
+  {
+    "experienceSlug": "make-a-documentary-about-something-you-care-about",
+    "articleSlug": "make-a-documentary-about-something-you-care-about",
+    "title": "Make a documentary about something you care about",
+    "category": "creative",
+    "emoji": "🎬"
+  },
+  {
+    "experienceSlug": "make-a-family-emergency-contact-plan-together",
+    "articleSlug": "make-a-family-emergency-contact-plan-together",
+    "title": "Make a family emergency contact plan together",
+    "category": "relationships",
+    "emoji": "📞"
+  },
+  {
+    "experienceSlug": "make-a-friendship-map-together",
+    "articleSlug": "make-a-friendship-map-together",
+    "title": "Make a friendship map together",
+    "category": "relationships",
+    "emoji": "🗺️"
+  },
+  {
+    "experienceSlug": "make-a-group-portrait-with-everyone-directing",
+    "articleSlug": "make-a-group-portrait-with-everyone-directing",
+    "title": "Make a group portrait with everyone directing",
+    "category": "relationships",
+    "emoji": "📸"
+  },
+  {
+    "experienceSlug": "make-a-lippan-mud-and-mirror-panel",
+    "articleSlug": "make-a-lippan-mud-and-mirror-panel",
+    "title": "Make a Lippan mud-and-mirror panel",
+    "category": "creative",
+    "emoji": "🪞"
+  },
+  {
+    "experienceSlug": "make-a-list-of-100-things-you-are-grateful-for",
+    "articleSlug": "make-a-list-of-100-things-you-are-grateful-for",
+    "title": "Make a list of 100 things you are grateful for",
+    "category": "reflection",
+    "emoji": "📖"
+  },
+  {
+    "experienceSlug": "make-a-local-walking-loop-using-a-public-ferry",
+    "articleSlug": "make-a-local-walking-loop-using-a-public-ferry",
+    "title": "Make a local walking loop using a public ferry",
+    "category": "adventure",
+    "emoji": "⛴️"
+  },
+  {
+    "experienceSlug": "make-a-low-voltage-accessibility-switch-with-a-mentor",
+    "articleSlug": "make-a-low-voltage-accessibility-switch-with-a-mentor",
+    "title": "Make a low-voltage accessibility switch with a mentor",
+    "category": "achievement",
+    "emoji": "🔘"
+  },
+  {
+    "experienceSlug": "make-a-map-of-places-you-call-home",
+    "articleSlug": "make-a-map-of-places-you-call-home",
+    "title": "Make a map of places you call home",
+    "category": "reflection",
+    "emoji": "🏠"
+  },
+  {
+    "experienceSlug": "make-a-pinhole-camera-and-develop-a-photograph",
+    "articleSlug": "make-a-pinhole-camera-and-develop-a-photograph",
+    "title": "Make a pinhole camera and develop a photograph",
+    "category": "achievement",
+    "emoji": "📷"
+  },
+  {
+    "experienceSlug": "make-a-requested-item-for-a-hospital-craft-program",
+    "articleSlug": "make-a-requested-item-for-a-hospital-craft-program",
+    "title": "Make a requested item for a hospital craft program",
+    "category": "contribution",
+    "emoji": "🧶"
+  },
+  {
+    "experienceSlug": "make-a-sheet-of-paper-from-recycled-fibres",
+    "articleSlug": "make-a-sheet-of-paper-from-recycled-fibres",
+    "title": "Make a sheet of paper from recycled fibres",
+    "category": "creative",
+    "emoji": "📃"
+  },
+  {
+    "experienceSlug": "make-a-sheet-of-washi-with-a-papermaker",
+    "articleSlug": "make-a-sheet-of-washi-with-a-papermaker",
+    "title": "Make a sheet of washi with a papermaker",
+    "category": "creative",
+    "emoji": "📄"
+  },
+  {
+    "experienceSlug": "make-a-short-film",
+    "articleSlug": "make-a-short-film",
+    "title": "Make a short film",
+    "category": "creative",
+    "emoji": "🎬"
+  },
+  {
+    "experienceSlug": "make-a-skills-history-from-things-you-can-now-do",
+    "articleSlug": "make-a-skills-history-from-things-you-can-now-do",
+    "title": "Make a skills history from things you can now do",
+    "category": "reflection",
+    "emoji": "🛠️"
+  },
+  {
+    "experienceSlug": "make-a-small-mosaic-panel",
+    "articleSlug": "make-a-small-mosaic-panel",
+    "title": "Make a small mosaic panel",
+    "category": "creative",
+    "emoji": "🧩"
+  },
+  {
+    "experienceSlug": "make-a-sound-map-from-a-single-seat",
+    "articleSlug": "make-a-sound-map-from-a-single-seat",
+    "title": "Make a sound map from a single seat",
+    "category": "mindfulness",
+    "emoji": "👂"
+  },
+  {
+    "experienceSlug": "make-a-tactile-relief-artwork",
+    "articleSlug": "make-a-tactile-relief-artwork",
+    "title": "Make a tactile relief artwork",
+    "category": "creative",
+    "emoji": "🖐️"
+  },
+  {
+    "experienceSlug": "make-a-temporary-arrangement-and-take-it-apart",
+    "articleSlug": "make-a-temporary-arrangement-and-take-it-apart",
+    "title": "Make a temporary arrangement and take it apart",
+    "category": "mindfulness",
+    "emoji": "⭕"
+  },
+  {
+    "experienceSlug": "make-a-timeline-of-the-five-most-important-moments-of-your-life",
+    "articleSlug": "make-a-timeline-of-the-five-most-important-moments-of-your-life",
+    "title": "Make a timeline of the five most important moments of your life",
+    "category": "reflection",
+    "emoji": "📖"
+  },
+  {
+    "experienceSlug": "make-and-exchange-friendship-bracelets",
+    "articleSlug": "make-and-exchange-friendship-bracelets",
+    "title": "Make and exchange friendship bracelets",
+    "category": "relationships",
+    "emoji": "🧵"
+  },
+  {
+    "experienceSlug": "make-cheese-from-scratch",
+    "articleSlug": "make-cheese-from-scratch",
+    "title": "Make cheese from scratch",
+    "category": "food",
+    "emoji": "🍽️"
+  },
+  {
+    "experienceSlug": "make-edible-juice-pearls-with-a-spherification-kit",
+    "articleSlug": "make-edible-juice-pearls-with-a-spherification-kit",
+    "title": "Make edible juice pearls with a spherification kit",
+    "category": "food",
+    "emoji": "🫧"
+  },
+  {
+    "experienceSlug": "make-instant-steamed-dhokla",
+    "articleSlug": "make-instant-steamed-dhokla",
+    "title": "Make instant steamed dhokla",
+    "category": "food",
+    "emoji": "🟨"
+  },
+  {
+    "experienceSlug": "make-pasta-from-scratch",
+    "articleSlug": "make-pasta-from-scratch",
+    "title": "Make pasta from scratch",
+    "category": "food",
+    "emoji": "🍽️"
+  },
+  {
+    "experienceSlug": "make-something-with-your-hands-you-re-proud-of",
+    "articleSlug": "make-something-with-your-hands-you-re-proud-of",
+    "title": "Make something with your hands you're proud of",
+    "category": "creative",
+    "emoji": "🎨"
+  },
+  {
+    "experienceSlug": "make-tofu-from-soy-milk",
+    "articleSlug": "make-tofu-from-soy-milk",
+    "title": "Make tofu from soy milk",
+    "category": "food",
+    "emoji": "⬜"
+  },
+  {
+    "experienceSlug": "make-your-own-condiments-from-scratch",
+    "articleSlug": "make-your-own-condiments-from-scratch",
+    "title": "Make your own condiments from scratch",
+    "category": "food",
+    "emoji": "🍽️"
+  },
+  {
+    "experienceSlug": "maldives-above-and-below-water",
+    "articleSlug": "maldives-above-and-below-water",
+    "title": "Maldives above and below water",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "map-impact-melt-features-on-the-moon",
+    "articleSlug": "map-impact-melt-features-on-the-moon",
+    "title": "Map impact-melt features on the Moon",
+    "category": "achievement",
+    "emoji": "🌔"
+  },
+  {
+    "experienceSlug": "marble-a-sheet-of-paper",
+    "articleSlug": "marble-a-sheet-of-paper",
+    "title": "Marble a sheet of paper",
+    "category": "creative",
+    "emoji": "🌀"
+  },
+  {
+    "experienceSlug": "marrakech-s-medina-morocco",
+    "articleSlug": "marrakech-s-medina-morocco",
+    "title": "Marrakech's medina, Morocco",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "master-a-complex-card-trick",
+    "articleSlug": "master-a-complex-card-trick",
+    "title": "Master a complex card trick",
+    "category": "achievement",
+    "emoji": "🏆"
+  },
+  {
+    "experienceSlug": "master-one-dish-so-well-you-could-teach-it",
+    "articleSlug": "master-one-dish-so-well-you-could-teach-it",
+    "title": "Master one dish so well you could teach it",
+    "category": "food",
+    "emoji": "🍽️"
+  },
+  {
+    "experienceSlug": "match-cloud-observations-to-satellite-science",
+    "articleSlug": "match-cloud-observations-to-satellite-science",
+    "title": "Match cloud observations to satellite science",
+    "category": "contribution",
+    "emoji": "☁️"
+  },
+  {
+    "experienceSlug": "measure-the-speed-of-sound-with-a-repeatable-experiment",
+    "articleSlug": "measure-the-speed-of-sound-with-a-repeatable-experiment",
+    "title": "Measure the speed of sound with a repeatable experiment",
+    "category": "achievement",
+    "emoji": "🔊"
+  },
+  {
+    "experienceSlug": "meditate-every-day-for-365-days",
+    "articleSlug": "meditate-every-day-for-365-days",
+    "title": "Meditate every day for 365 days",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "memorise-a-long-poem-or-speech",
+    "articleSlug": "memorise-a-long-poem-or-speech",
+    "title": "Memorise a long poem or speech",
+    "category": "achievement",
+    "emoji": "🏆"
+  },
+  {
+    "experienceSlug": "mend-a-favourite-garment-with-visible-stitches",
+    "articleSlug": "mend-a-favourite-garment-with-visible-stitches",
+    "title": "Mend a favourite garment with visible stitches",
+    "category": "creative",
+    "emoji": "🪡"
+  },
+  {
+    "experienceSlug": "mentor-10-people-meaningfully",
+    "articleSlug": "mentor-10-people-meaningfully",
+    "title": "Mentor 10 people meaningfully",
+    "category": "contribution",
+    "emoji": "👩‍🏫"
+  },
+  {
+    "experienceSlug": "mentor-someone-just-starting-out-in-your-field",
+    "articleSlug": "mentor-someone-just-starting-out-in-your-field",
+    "title": "Mentor someone just starting out in your field",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "milford-sound-new-zealand",
+    "articleSlug": "milford-sound-new-zealand",
+    "title": "Milford Sound, New Zealand",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "mill-grain-into-flour-for-a-small-bake",
+    "articleSlug": "mill-grain-into-flour-for-a-small-bake",
+    "title": "Mill grain into flour for a small bake",
+    "category": "food",
+    "emoji": "🌾"
+  },
+  {
+    "experienceSlug": "mount-fuji-japan",
+    "articleSlug": "mount-fuji-japan",
+    "title": "Mount Fuji, Japan",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "namibia",
+    "articleSlug": "namibia",
+    "title": "Namibia",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "navigate-a-beginner-orienteering-course-with-a-paper-map",
+    "articleSlug": "navigate-a-beginner-orienteering-course-with-a-paper-map",
+    "title": "Navigate a beginner orienteering course with a paper map",
+    "category": "adventure",
+    "emoji": "🧭"
+  },
+  {
+    "experienceSlug": "negotiate-your-first-raise",
+    "articleSlug": "negotiate-your-first-raise",
+    "title": "Negotiate your first raise",
+    "category": "achievement",
+    "emoji": "💰"
+  },
+  {
+    "experienceSlug": "new-orleans-usa",
+    "articleSlug": "new-orleans-usa",
+    "title": "New Orleans, USA",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "new-york-city-properly",
+    "articleSlug": "new-york-city-properly",
+    "title": "New York City, properly",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "niagara-falls-canada",
+    "articleSlug": "niagara-falls-canada",
+    "title": "Niagara Falls, Canada",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "notice-shadows-move-across-a-room",
+    "articleSlug": "notice-shadows-move-across-a-room",
+    "title": "Notice shadows move across a room",
+    "category": "mindfulness",
+    "emoji": "🪟"
+  },
+  {
+    "experienceSlug": "observe-a-forest-canopy-from-a-public-treetop-walkway",
+    "articleSlug": "observe-a-forest-canopy-from-a-public-treetop-walkway",
+    "title": "Observe a forest canopy from a public treetop walkway",
+    "category": "travel",
+    "emoji": "🌿"
+  },
+  {
+    "experienceSlug": "okavango-delta-botswana",
+    "articleSlug": "okavango-delta-botswana",
+    "title": "Okavango Delta, Botswana",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "organise-a-neighbourhood-event",
+    "articleSlug": "organise-a-neighbourhood-event",
+    "title": "Organise a neighbourhood event",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "own-something-that-matters-to-your-community",
+    "articleSlug": "own-something-that-matters-to-your-community",
+    "title": "Own something that matters to your community",
+    "category": "adventure",
+    "emoji": "🔑"
+  },
+  {
+    "experienceSlug": "paint-something-you-re-proud-to-hang-on-a-wall",
+    "articleSlug": "paint-something-you-re-proud-to-hang-on-a-wall",
+    "title": "Paint something you're proud to hang on a wall",
+    "category": "creative",
+    "emoji": "🎨"
+  },
+  {
+    "experienceSlug": "pair-nonalcoholic-drinks-with-a-small-snack-menu",
+    "articleSlug": "pair-nonalcoholic-drinks-with-a-small-snack-menu",
+    "title": "Pair nonalcoholic drinks with a small snack menu",
+    "category": "food",
+    "emoji": "🥤"
+  },
+  {
+    "experienceSlug": "paraglide-over-the-swiss-alps",
+    "articleSlug": "paraglide-over-the-swiss-alps",
+    "title": "Paraglide over the Swiss Alps",
+    "category": "adventure",
+    "emoji": "⛰️"
+  },
+  {
+    "experienceSlug": "paris-at-dawn",
+    "articleSlug": "paris-at-dawn",
+    "title": "Paris at dawn",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "patagonia-argentina-and-chile",
+    "articleSlug": "patagonia-argentina-and-chile",
+    "title": "Patagonia, Argentina and Chile",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "patent-an-invention",
+    "articleSlug": "patent-an-invention",
+    "title": "Patent an invention",
+    "category": "achievement",
+    "emoji": "🏆"
+  },
+  {
+    "experienceSlug": "pause-at-the-same-window-for-a-week",
+    "articleSlug": "pause-at-the-same-window-for-a-week",
+    "title": "Pause at the same window for a week",
+    "category": "mindfulness",
+    "emoji": "🪟"
+  },
+  {
+    "experienceSlug": "perform-in-front-of-an-audience",
+    "articleSlug": "perform-in-front-of-an-audience",
+    "title": "Perform in front of an audience",
+    "category": "creative",
+    "emoji": "🎵"
+  },
+  {
+    "experienceSlug": "perform-live-foley-for-a-silent-clip",
+    "articleSlug": "perform-live-foley-for-a-silent-clip",
+    "title": "Perform live Foley for a silent clip",
+    "category": "creative",
+    "emoji": "🎧"
+  },
+  {
+    "experienceSlug": "perform-on-a-stage-in-front-of-a-crowd",
+    "articleSlug": "perform-on-a-stage-in-front-of-a-crowd",
+    "title": "Perform on a stage in front of a crowd",
+    "category": "creative",
+    "emoji": "🎨"
+  },
+  {
+    "experienceSlug": "perform-or-exhibit-something-you-made",
+    "articleSlug": "perform-or-exhibit-something-you-made",
+    "title": "Perform or exhibit something you made",
+    "category": "achievement",
+    "emoji": "🎭"
+  },
+  {
+    "experienceSlug": "perform-stand-up-comedy",
+    "articleSlug": "perform-stand-up-comedy",
+    "title": "Perform stand-up comedy",
+    "category": "creative",
+    "emoji": "🎨"
+  },
+  {
+    "experienceSlug": "petra-jordan",
+    "articleSlug": "petra-jordan",
+    "title": "Petra, Jordan",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "plant-1-000-trees",
+    "articleSlug": "plant-1-000-trees",
+    "title": "Plant 1,000 trees",
+    "category": "contribution",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "plant-something-that-will-outlive-you",
+    "articleSlug": "plant-something-that-will-outlive-you",
+    "title": "Plant something that will outlive you",
+    "category": "contribution",
+    "emoji": "🌱"
+  },
+  {
+    "experienceSlug": "plate-a-meal-inspired-by-a-food-history-collection",
+    "articleSlug": "plate-a-meal-inspired-by-a-food-history-collection",
+    "title": "Plate a meal inspired by a food history collection",
+    "category": "food",
+    "emoji": "🏺"
+  },
+  {
+    "experienceSlug": "play-a-complete-doubles-carrom-match",
+    "articleSlug": "play-a-complete-doubles-carrom-match",
+    "title": "Play a complete doubles carrom match",
+    "category": "relationships",
+    "emoji": "⚫"
+  },
+  {
+    "experienceSlug": "play-a-first-game-of-walking-football",
+    "articleSlug": "play-a-first-game-of-walking-football",
+    "title": "Play a first game of walking football",
+    "category": "health",
+    "emoji": "⚽"
+  },
+  {
+    "experienceSlug": "play-a-short-adapted-disc-golf-round",
+    "articleSlug": "play-a-short-adapted-disc-golf-round",
+    "title": "Play a short adapted disc-golf round",
+    "category": "health",
+    "emoji": "🥏"
+  },
+  {
+    "experienceSlug": "play-an-antakshari-song-relay-with-friends",
+    "articleSlug": "play-an-antakshari-song-relay-with-friends",
+    "title": "Play an antakshari song relay with friends",
+    "category": "relationships",
+    "emoji": "🎤"
+  },
+  {
+    "experienceSlug": "play-an-exquisite-corpse-drawing-game",
+    "articleSlug": "play-an-exquisite-corpse-drawing-game",
+    "title": "Play an exquisite-corpse drawing game",
+    "category": "relationships",
+    "emoji": "🖍️"
+  },
+  {
+    "experienceSlug": "play-an-introductory-game-of-boccia",
+    "articleSlug": "play-an-introductory-game-of-boccia",
+    "title": "Play an introductory game of boccia",
+    "category": "health",
+    "emoji": "🔴"
+  },
+  {
+    "experienceSlug": "play-sitting-volleyball-with-an-inclusive-club",
+    "articleSlug": "play-sitting-volleyball-with-an-inclusive-club",
+    "title": "Play sitting volleyball with an inclusive club",
+    "category": "health",
+    "emoji": "🏐"
+  },
+  {
+    "experienceSlug": "plot-a-week-of-public-earthquake-records",
+    "articleSlug": "plot-a-week-of-public-earthquake-records",
+    "title": "Plot a week of public earthquake records",
+    "category": "achievement",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "practice-ichigo-ichie-treat-one-ordinary-day-as-unrepeatable",
+    "articleSlug": "practice-ichigo-ichie-treat-one-ordinary-day-as-unrepeatable",
+    "title": "Practice ichigo ichie: treat one ordinary day as unrepeatable",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "practice-three-vegetable-knife-cuts-for-one-meal",
+    "articleSlug": "practice-three-vegetable-knife-cuts-for-one-meal",
+    "title": "Practice three vegetable knife cuts for one meal",
+    "category": "food",
+    "emoji": "🥕"
+  },
+  {
+    "experienceSlug": "prepare-a-bento-with-contrasting-textures",
+    "articleSlug": "prepare-a-bento-with-contrasting-textures",
+    "title": "Prepare a bento with contrasting textures",
+    "category": "food",
+    "emoji": "🍱"
+  },
+  {
+    "experienceSlug": "prepare-enrichment-materials-for-an-animal-shelter",
+    "articleSlug": "prepare-enrichment-materials-for-an-animal-shelter",
+    "title": "Prepare enrichment materials for an animal shelter",
+    "category": "contribution",
+    "emoji": "🐕"
+  },
+  {
+    "experienceSlug": "preserve-a-season-jam-pickle-ferment",
+    "articleSlug": "preserve-a-season-jam-pickle-ferment",
+    "title": "Preserve a season: jam, pickle, ferment",
+    "category": "food",
+    "emoji": "🍽️"
+  },
+  {
+    "experienceSlug": "press-corn-tortillas-and-serve-them-warm",
+    "articleSlug": "press-corn-tortillas-and-serve-them-warm",
+    "title": "Press corn tortillas and serve them warm",
+    "category": "food",
+    "emoji": "🌽"
+  },
+  {
+    "experienceSlug": "print-a-set-of-foam-relief-postcards",
+    "articleSlug": "print-a-set-of-foam-relief-postcards",
+    "title": "Print a set of foam relief postcards",
+    "category": "creative",
+    "emoji": "🖨️"
+  },
+  {
+    "experienceSlug": "program-a-small-digital-weather-station",
+    "articleSlug": "program-a-small-digital-weather-station",
+    "title": "Program a small digital weather station",
+    "category": "achievement",
+    "emoji": "🌡️"
+  },
+  {
+    "experienceSlug": "program-conway-s-game-of-life",
+    "articleSlug": "program-conway-s-game-of-life",
+    "title": "Program Conway's Game of Life",
+    "category": "achievement",
+    "emoji": "🟩"
+  },
+  {
+    "experienceSlug": "proofread-a-public-domain-book-page-for-project-gutenberg",
+    "articleSlug": "proofread-a-public-domain-book-page-for-project-gutenberg",
+    "title": "Proofread a public-domain book page for Project Gutenberg",
+    "category": "contribution",
+    "emoji": "📖"
+  },
+  {
+    "experienceSlug": "publish-an-article-in-a-magazine",
+    "articleSlug": "publish-an-article-in-a-magazine",
+    "title": "Publish an article in a magazine",
+    "category": "creative",
+    "emoji": "🎨"
+  },
+  {
+    "experienceSlug": "pull-an-all-nighter-with-people-you-love",
+    "articleSlug": "pull-an-all-nighter-with-people-you-love",
+    "title": "Pull an all-nighter with people you love",
+    "category": "achievement",
+    "emoji": "🌅"
+  },
+  {
+    "experienceSlug": "qualify-for-the-boston-marathon",
+    "articleSlug": "qualify-for-the-boston-marathon",
+    "title": "Qualify for the Boston Marathon",
+    "category": "health",
+    "emoji": "💪"
+  },
+  {
+    "experienceSlug": "queenstown-new-zealand",
+    "articleSlug": "queenstown-new-zealand",
+    "title": "Queenstown, New Zealand",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "raise-money-for-a-cause-you-deeply-believe-in",
+    "articleSlug": "raise-money-for-a-cause-you-deeply-believe-in",
+    "title": "Raise money for a cause you deeply believe in",
+    "category": "contribution",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "raja-ampat-indonesia",
+    "articleSlug": "raja-ampat-indonesia",
+    "title": "Raja Ampat, Indonesia",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "rajasthan-india",
+    "articleSlug": "rajasthan-india",
+    "title": "Rajasthan, India",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "re-read-a-book-that-changed-your-life-and-see-what-you-notice-now",
+    "articleSlug": "re-read-a-book-that-changed-your-life-and-see-what-you-notice-now",
+    "title": "Re-read a book that changed your life and see what you notice now",
+    "category": "reflection",
+    "emoji": "📖"
+  },
+  {
+    "experienceSlug": "reach-peak-physical-fitness-for-your-age",
+    "articleSlug": "reach-peak-physical-fitness-for-your-age",
+    "title": "Reach peak physical fitness for your age",
+    "category": "health",
+    "emoji": "⛰️"
+  },
+  {
+    "experienceSlug": "read-50-books-in-a-year",
+    "articleSlug": "read-50-books-in-a-year",
+    "title": "Read 50 books in a year",
+    "category": "achievement",
+    "emoji": "📚"
+  },
+  {
+    "experienceSlug": "read-52-books-in-a-year",
+    "articleSlug": "read-52-books-in-a-year",
+    "title": "Read 52 books in a year",
+    "category": "achievement",
+    "emoji": "🏆"
+  },
+  {
+    "experienceSlug": "read-a-play-aloud-around-a-table",
+    "articleSlug": "read-a-play-aloud-around-a-table",
+    "title": "Read a play aloud around a table",
+    "category": "relationships",
+    "emoji": "📜"
+  },
+  {
+    "experienceSlug": "read-old-postcards-as-historical-evidence",
+    "articleSlug": "read-old-postcards-as-historical-evidence",
+    "title": "Read old postcards as historical evidence",
+    "category": "reflection",
+    "emoji": "📮"
+  },
+  {
+    "experienceSlug": "read-prehistoric-rock-art-at-bhimbetka-with-a-guide",
+    "articleSlug": "read-prehistoric-rock-art-at-bhimbetka-with-a-guide",
+    "title": "Read prehistoric rock art at Bhimbetka with a guide",
+    "category": "travel",
+    "emoji": "🪨"
+  },
+  {
+    "experienceSlug": "read-the-100-books-you-always-meant-to-read",
+    "articleSlug": "read-the-100-books-you-always-meant-to-read",
+    "title": "Read the 100 books you always meant to read",
+    "category": "creative",
+    "emoji": "📚"
+  },
+  {
+    "experienceSlug": "reconnect-with-someone-you-ve-lost-touch-with",
+    "articleSlug": "reconnect-with-someone-you-ve-lost-touch-with",
+    "title": "Reconnect with someone you've lost touch with",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "reconstruct-one-ordinary-childhood-day",
+    "articleSlug": "reconstruct-one-ordinary-childhood-day",
+    "title": "Reconstruct one ordinary childhood day",
+    "category": "reflection",
+    "emoji": "🧩"
+  },
+  {
+    "experienceSlug": "record-a-conversation-with-an-elder-and-preserve-it",
+    "articleSlug": "record-a-conversation-with-an-elder-and-preserve-it",
+    "title": "Record a conversation with an elder and preserve it",
+    "category": "reflection",
+    "emoji": "📖"
+  },
+  {
+    "experienceSlug": "record-a-place-as-a-sound-portrait",
+    "articleSlug": "record-a-place-as-a-sound-portrait",
+    "title": "Record a place as a sound portrait",
+    "category": "creative",
+    "emoji": "🎙️"
+  },
+  {
+    "experienceSlug": "record-a-public-domain-audiobook-chapter",
+    "articleSlug": "record-a-public-domain-audiobook-chapter",
+    "title": "Record a public-domain audiobook chapter",
+    "category": "contribution",
+    "emoji": "🎙️"
+  },
+  {
+    "experienceSlug": "record-a-song-and-release-it",
+    "articleSlug": "record-a-song-and-release-it",
+    "title": "Record a song and release it",
+    "category": "creative",
+    "emoji": "🎨"
+  },
+  {
+    "experienceSlug": "record-and-release-music-you-made",
+    "articleSlug": "record-and-release-music-you-made",
+    "title": "Record and release music you made",
+    "category": "creative",
+    "emoji": "🎵"
+  },
+  {
+    "experienceSlug": "record-frog-calls-for-frogid-in-australia",
+    "articleSlug": "record-frog-calls-for-frogid-in-australia",
+    "title": "Record frog calls for FrogID in Australia",
+    "category": "contribution",
+    "emoji": "🐸"
+  },
+  {
+    "experienceSlug": "record-your-parents-life-stories",
+    "articleSlug": "record-your-parents-life-stories",
+    "title": "Record your parents life stories",
+    "category": "reflection",
+    "emoji": "📖"
+  },
+  {
+    "experienceSlug": "reduce-your-carbon-footprint-to-near-zero",
+    "articleSlug": "reduce-your-carbon-footprint-to-near-zero",
+    "title": "Reduce your carbon footprint to near zero",
+    "category": "contribution",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "renew-your-vows-or-celebrate-a-major-partnership-milestone",
+    "articleSlug": "renew-your-vows-or-celebrate-a-major-partnership-milestone",
+    "title": "Renew your vows or celebrate a major partnership milestone",
+    "category": "relationships",
+    "emoji": "💍"
+  },
+  {
+    "experienceSlug": "repair-a-relationship-you-damaged",
+    "articleSlug": "repair-a-relationship-you-damaged",
+    "title": "Repair a relationship you damaged",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "repair-a-relationship-you-ve-damaged",
+    "articleSlug": "repair-a-relationship-you-ve-damaged",
+    "title": "Repair a relationship you've damaged",
+    "category": "relationships",
+    "emoji": "🤗"
+  },
+  {
+    "experienceSlug": "reproduce-one-chart-from-an-open-dataset",
+    "articleSlug": "reproduce-one-chart-from-an-open-dataset",
+    "title": "Reproduce one chart from an open dataset",
+    "category": "achievement",
+    "emoji": "📈"
+  },
+  {
+    "experienceSlug": "review-basic-website-accessibility-for-a-community-organization",
+    "articleSlug": "review-basic-website-accessibility-for-a-community-organization",
+    "title": "Review basic website accessibility for a community organization",
+    "category": "contribution",
+    "emoji": "♿"
+  },
+  {
+    "experienceSlug": "revisit-a-saved-prediction-and-score-it-fairly",
+    "articleSlug": "revisit-a-saved-prediction-and-score-it-fairly",
+    "title": "Revisit a saved prediction and score it fairly",
+    "category": "reflection",
+    "emoji": "🔮"
+  },
+  {
+    "experienceSlug": "ride-a-motorcycle-across-a-country",
+    "articleSlug": "ride-a-motorcycle-across-a-country",
+    "title": "Ride a motorcycle across a country",
+    "category": "adventure",
+    "emoji": "⛰️"
+  },
+  {
+    "experienceSlug": "ride-a-velodrome-in-a-coached-beginner-session",
+    "articleSlug": "ride-a-velodrome-in-a-coached-beginner-session",
+    "title": "Ride a velodrome in a coached beginner session",
+    "category": "adventure",
+    "emoji": "🚴"
+  },
+  {
+    "experienceSlug": "ride-the-orient-express",
+    "articleSlug": "ride-the-orient-express",
+    "title": "Ride the Orient Express",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "rio-de-janeiro-during-carnival",
+    "articleSlug": "rio-de-janeiro-during-carnival",
+    "title": "Rio de Janeiro during Carnival",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "road-trip-across-new-zealand",
+    "articleSlug": "road-trip-across-new-zealand",
+    "title": "Road trip across New Zealand",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "road-trip-with-no-fixed-destination",
+    "articleSlug": "road-trip-with-no-fixed-destination",
+    "title": "Road trip with no fixed destination",
+    "category": "travel",
+    "emoji": "🗺️"
+  },
+  {
+    "experienceSlug": "roast-your-own-coffee-beans",
+    "articleSlug": "roast-your-own-coffee-beans",
+    "title": "Roast your own coffee beans",
+    "category": "food",
+    "emoji": "🍽️"
+  },
+  {
+    "experienceSlug": "roll-couscous-grains-by-hand-with-a-knowledgeable-cook",
+    "articleSlug": "roll-couscous-grains-by-hand-with-a-knowledgeable-cook",
+    "title": "Roll couscous grains by hand with a knowledgeable cook",
+    "category": "food",
+    "emoji": "🥣"
+  },
+  {
+    "experienceSlug": "roll-vegetarian-maki-for-a-picnic-at-home",
+    "articleSlug": "roll-vegetarian-maki-for-a-picnic-at-home",
+    "title": "Roll vegetarian maki for a picnic at home",
+    "category": "food",
+    "emoji": "🍣"
+  },
+  {
+    "experienceSlug": "route-66-usa",
+    "articleSlug": "route-66-usa",
+    "title": "Route 66, USA",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "run-a-household-listening-circle",
+    "articleSlug": "run-a-household-listening-circle",
+    "title": "Run a household listening circle",
+    "category": "relationships",
+    "emoji": "🪑"
+  },
+  {
+    "experienceSlug": "run-a-marathon",
+    "articleSlug": "run-a-marathon",
+    "title": "Run a marathon",
+    "category": "health",
+    "emoji": "🏃"
+  },
+  {
+    "experienceSlug": "run-a-race-you-had-to-train-for",
+    "articleSlug": "run-a-race-you-had-to-train-for",
+    "title": "Run a race you had to train for",
+    "category": "contribution",
+    "emoji": "🏃"
+  },
+  {
+    "experienceSlug": "run-a-small-coffee-cupping",
+    "articleSlug": "run-a-small-coffee-cupping",
+    "title": "Run a small coffee cupping",
+    "category": "food",
+    "emoji": "☕"
+  },
+  {
+    "experienceSlug": "run-for-local-office",
+    "articleSlug": "run-for-local-office",
+    "title": "Run for local office",
+    "category": "contribution",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "run-with-the-bulls-in-pamplona",
+    "articleSlug": "run-with-the-bulls-in-pamplona",
+    "title": "Run with the bulls in Pamplona",
+    "category": "adventure",
+    "emoji": "⛰️"
+  },
+  {
+    "experienceSlug": "run-your-first-5k",
+    "articleSlug": "run-your-first-5k",
+    "title": "Run your first 5K",
+    "category": "health",
+    "emoji": "💪"
+  },
+  {
+    "experienceSlug": "safari-in-the-serengeti-at-sunrise",
+    "articleSlug": "safari-in-the-serengeti-at-sunrise",
+    "title": "Safari in the Serengeti at sunrise",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "sail-somewhere-that-requires-real-navigation",
+    "articleSlug": "sail-somewhere-that-requires-real-navigation",
+    "title": "Sail somewhere that requires real navigation",
+    "category": "adventure",
+    "emoji": "🛥️"
+  },
+  {
+    "experienceSlug": "sail-the-greek-islands-for-a-week",
+    "articleSlug": "sail-the-greek-islands-for-a-week",
+    "title": "Sail the Greek Islands for a week",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "santorini-greece",
+    "articleSlug": "santorini-greece",
+    "title": "Santorini, Greece",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "scott-base-antarctica",
+    "articleSlug": "scott-base-antarctica",
+    "title": "Scott Base, Antarctica",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "scuba-dive-somewhere-extraordinary",
+    "articleSlug": "scuba-dive-somewhere-extraordinary",
+    "title": "Scuba dive somewhere extraordinary",
+    "category": "adventure",
+    "emoji": "🤿"
+  },
+  {
+    "experienceSlug": "see-a-natural-wonder-up-close",
+    "articleSlug": "see-a-natural-wonder-up-close",
+    "title": "See a natural wonder up close",
+    "category": "adventure",
+    "emoji": "🌋"
+  },
+  {
+    "experienceSlug": "see-conservation-work-at-a-heritage-open-day",
+    "articleSlug": "see-conservation-work-at-a-heritage-open-day",
+    "title": "See conservation work at a heritage open day",
+    "category": "travel",
+    "emoji": "🖼️"
+  },
+  {
+    "experienceSlug": "see-the-cherry-blossoms-in-kyoto-japan",
+    "articleSlug": "see-the-cherry-blossoms-in-kyoto-japan",
+    "title": "See the cherry blossoms in Kyoto, Japan",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "see-the-great-barrier-reef",
+    "articleSlug": "see-the-great-barrier-reef",
+    "title": "See the Great Barrier Reef",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "see-the-midnight-sun-in-scandinavia",
+    "articleSlug": "see-the-midnight-sun-in-scandinavia",
+    "title": "See the midnight sun in Scandinavia",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "see-the-northern-lights-in-iceland-or-norway",
+    "articleSlug": "see-the-northern-lights-in-iceland-or-norway",
+    "title": "See the Northern Lights in Iceland or Norway",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "see-the-pyramids-of-giza",
+    "articleSlug": "see-the-pyramids-of-giza",
+    "title": "See the Pyramids of Giza",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "see-the-tulip-fields-in-the-netherlands",
+    "articleSlug": "see-the-tulip-fields-in-the-netherlands",
+    "title": "See the tulip fields in the Netherlands",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "send-and-receive-a-short-morse-code-message",
+    "articleSlug": "send-and-receive-a-short-morse-code-message",
+    "title": "Send and receive a short Morse-code message",
+    "category": "achievement",
+    "emoji": "📟"
+  },
+  {
+    "experienceSlug": "separate-pen-inks-with-paper-chromatography",
+    "articleSlug": "separate-pen-inks-with-paper-chromatography",
+    "title": "Separate pen inks with paper chromatography",
+    "category": "achievement",
+    "emoji": "🖋️"
+  },
+  {
+    "experienceSlug": "service-a-clock-during-a-five-day-beginner-course",
+    "articleSlug": "service-a-clock-during-a-five-day-beginner-course",
+    "title": "Service a clock during a five-day beginner course",
+    "category": "achievement",
+    "emoji": "🕰️"
+  },
+  {
+    "experienceSlug": "set-and-print-a-line-of-letterpress-type",
+    "articleSlug": "set-and-print-a-line-of-letterpress-type",
+    "title": "Set and print a line of letterpress type",
+    "category": "creative",
+    "emoji": "🔠"
+  },
+  {
+    "experienceSlug": "shape-a-batch-of-pitha-with-a-knowledgeable-cook",
+    "articleSlug": "shape-a-batch-of-pitha-with-a-knowledgeable-cook",
+    "title": "Shape a batch of pitha with a knowledgeable cook",
+    "category": "food",
+    "emoji": "🥟"
+  },
+  {
+    "experienceSlug": "share-a-childhood-game-across-generations",
+    "articleSlug": "share-a-childhood-game-across-generations",
+    "title": "Share a childhood game across generations",
+    "category": "relationships",
+    "emoji": "🪀"
+  },
+  {
+    "experienceSlug": "share-an-iftar-at-an-open-community-gathering",
+    "articleSlug": "share-an-iftar-at-an-open-community-gathering",
+    "title": "Share an iftar at an open community gathering",
+    "category": "relationships",
+    "emoji": "🌙"
+  },
+  {
+    "experienceSlug": "share-langar-respectfully-at-a-gurdwara",
+    "articleSlug": "share-langar-respectfully-at-a-gurdwara",
+    "title": "Share langar respectfully at a gurdwara",
+    "category": "food",
+    "emoji": "🍽️"
+  },
+  {
+    "experienceSlug": "show-up-for-someone-in-a-crisis-without-being-asked",
+    "articleSlug": "show-up-for-someone-in-a-crisis-without-being-asked",
+    "title": "Show up for someone in a crisis without being asked",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "sit-with-a-dying-person-and-just-be-present",
+    "articleSlug": "sit-with-a-dying-person-and-just-be-present",
+    "title": "Sit with a dying person and just be present",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "ski-or-snowboard-a-black-diamond-run",
+    "articleSlug": "ski-or-snowboard-a-black-diamond-run",
+    "title": "Ski or snowboard a black diamond run",
+    "category": "adventure",
+    "emoji": "🎿"
+  },
+  {
+    "experienceSlug": "skydive",
+    "articleSlug": "skydive",
+    "title": "Skydive",
+    "category": "adventure",
+    "emoji": "🪂"
+  },
+  {
+    "experienceSlug": "skydive-from-15-000-feet",
+    "articleSlug": "skydive-from-15-000-feet",
+    "title": "Skydive from 15,000 feet",
+    "category": "adventure",
+    "emoji": "⛰️"
+  },
+  {
+    "experienceSlug": "sleep-8-hours-a-night-for-30-days",
+    "articleSlug": "sleep-8-hours-a-night-for-30-days",
+    "title": "Sleep 8 hours a night for 30 days",
+    "category": "health",
+    "emoji": "💪"
+  },
+  {
+    "experienceSlug": "sleep-on-a-beach-under-the-stars",
+    "articleSlug": "sleep-on-a-beach-under-the-stars",
+    "title": "Sleep on a beach under the stars",
+    "category": "travel",
+    "emoji": "🌊"
+  },
+  {
+    "experienceSlug": "sleep-under-the-stars-in-the-sahara",
+    "articleSlug": "sleep-under-the-stars-in-the-sahara",
+    "title": "Sleep under the stars in the Sahara",
+    "category": "adventure",
+    "emoji": "⛰️"
+  },
+  {
+    "experienceSlug": "solve-a-rubik-s-cube-in-under-a-minute",
+    "articleSlug": "solve-a-rubik-s-cube-in-under-a-minute",
+    "title": "Solve a Rubik's cube in under a minute",
+    "category": "achievement",
+    "emoji": "🏆"
+  },
+  {
+    "experienceSlug": "solve-an-escape-room-with-a-small-team",
+    "articleSlug": "solve-an-escape-room-with-a-small-team",
+    "title": "Solve an escape room with a small team",
+    "category": "adventure",
+    "emoji": "🔐"
+  },
+  {
+    "experienceSlug": "sort-supplies-during-a-food-bank-volunteer-shift",
+    "articleSlug": "sort-supplies-during-a-food-bank-volunteer-shift",
+    "title": "Sort supplies during a food-bank volunteer shift",
+    "category": "contribution",
+    "emoji": "🥫"
+  },
+  {
+    "experienceSlug": "speak-a-second-language-fluently",
+    "articleSlug": "speak-a-second-language-fluently",
+    "title": "Speak a second language fluently",
+    "category": "creative",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "spend-a-birthday-alone-reflecting-on-the-past-year",
+    "articleSlug": "spend-a-birthday-alone-reflecting-on-the-past-year",
+    "title": "Spend a birthday alone reflecting on the past year",
+    "category": "reflection",
+    "emoji": "📖"
+  },
+  {
+    "experienceSlug": "spend-a-day-in-complete-silence",
+    "articleSlug": "spend-a-day-in-complete-silence",
+    "title": "Spend a day in complete silence",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "spend-a-day-reviewing-every-job-relationship-and-home-you-have-had",
+    "articleSlug": "spend-a-day-reviewing-every-job-relationship-and-home-you-have-had",
+    "title": "Spend a day reviewing every job, relationship, and home you have had",
+    "category": "reflection",
+    "emoji": "📖"
+  },
+  {
+    "experienceSlug": "spend-a-day-visiting-places-that-shaped-you",
+    "articleSlug": "spend-a-day-visiting-places-that-shaped-you",
+    "title": "Spend a day visiting places that shaped you",
+    "category": "reflection",
+    "emoji": "📖"
+  },
+  {
+    "experienceSlug": "spend-a-full-day-with-no-screens",
+    "articleSlug": "spend-a-full-day-with-no-screens",
+    "title": "Spend a full day with no screens",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "spend-a-month-in-japan",
+    "articleSlug": "spend-a-month-in-japan",
+    "title": "Spend a month in Japan",
+    "category": "travel",
+    "emoji": "🗾"
+  },
+  {
+    "experienceSlug": "spend-a-month-living-with-a-foreign-family",
+    "articleSlug": "spend-a-month-living-with-a-foreign-family",
+    "title": "Spend a month living with a foreign family",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "spend-a-night-alone-in-the-wilderness",
+    "articleSlug": "spend-a-night-alone-in-the-wilderness",
+    "title": "Spend a night alone in the wilderness",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "spend-a-night-stargazing-with-no-agenda",
+    "articleSlug": "spend-a-night-stargazing-with-no-agenda",
+    "title": "Spend a night stargazing with no agenda",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "spend-a-week-fully-off-grid",
+    "articleSlug": "spend-a-week-fully-off-grid",
+    "title": "Spend a week fully off-grid",
+    "category": "adventure",
+    "emoji": "🏕️"
+  },
+  {
+    "experienceSlug": "spend-a-week-in-a-monastery-or-retreat-centre",
+    "articleSlug": "spend-a-week-in-a-monastery-or-retreat-centre",
+    "title": "Spend a week in a monastery or retreat centre",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "spend-a-week-in-antarctica",
+    "articleSlug": "spend-a-week-in-antarctica",
+    "title": "Spend a week in Antarctica",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "spend-a-week-with-each-of-your-parents-while-they-are-well-enough-to-travel",
+    "articleSlug": "spend-a-week-with-each-of-your-parents-while-they-are-well-enough-to-travel",
+    "title": "Spend a week with each of your parents while they are well enough to travel",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "spend-a-week-with-your-grandparents-or-elders",
+    "articleSlug": "spend-a-week-with-your-grandparents-or-elders",
+    "title": "Spend a week with your grandparents or elders",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "spend-a-year-strength-training",
+    "articleSlug": "spend-a-year-strength-training",
+    "title": "Spend a year strength training",
+    "category": "health",
+    "emoji": "💪"
+  },
+  {
+    "experienceSlug": "spend-a-year-volunteering-at-serious-scale",
+    "articleSlug": "spend-a-year-volunteering-at-serious-scale",
+    "title": "Spend a year volunteering at serious scale",
+    "category": "contribution",
+    "emoji": "🙏"
+  },
+  {
+    "experienceSlug": "spend-an-afternoon-doing-one-thing-at-a-time",
+    "articleSlug": "spend-an-afternoon-doing-one-thing-at-a-time",
+    "title": "Spend an afternoon doing one thing at a time",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "spend-an-hour-watching-a-single-tree",
+    "articleSlug": "spend-an-hour-watching-a-single-tree",
+    "title": "Spend an hour watching a single tree",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "sponsor-a-refugee-family",
+    "articleSlug": "sponsor-a-refugee-family",
+    "title": "Sponsor a refugee family",
+    "category": "contribution",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "stage-a-shadow-puppet-story",
+    "articleSlug": "stage-a-shadow-puppet-story",
+    "title": "Stage a shadow puppet story",
+    "category": "creative",
+    "emoji": "👤"
+  },
+  {
+    "experienceSlug": "start-a-community-garden",
+    "articleSlug": "start-a-community-garden",
+    "title": "Start a community garden",
+    "category": "contribution",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "start-a-foundation",
+    "articleSlug": "start-a-foundation",
+    "title": "Start a foundation",
+    "category": "contribution",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "start-a-foundation-or-fund-something-that-outlasts-you",
+    "articleSlug": "start-a-foundation-or-fund-something-that-outlasts-you",
+    "title": "Start a foundation or fund something that outlasts you",
+    "category": "contribution",
+    "emoji": "🏛️"
+  },
+  {
+    "experienceSlug": "start-a-podcast",
+    "articleSlug": "start-a-podcast",
+    "title": "Start a podcast",
+    "category": "creative",
+    "emoji": "🎨"
+  },
+  {
+    "experienceSlug": "start-a-scholarship-fund",
+    "articleSlug": "start-a-scholarship-fund",
+    "title": "Start a scholarship fund",
+    "category": "contribution",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "start-and-grow-a-business",
+    "articleSlug": "start-and-grow-a-business",
+    "title": "Start and grow a business",
+    "category": "achievement",
+    "emoji": "🏆"
+  },
+  {
+    "experienceSlug": "start-something-a-business-blog-or-side-project",
+    "articleSlug": "start-something-a-business-blog-or-side-project",
+    "title": "Start something — a business, blog, or side project",
+    "category": "achievement",
+    "emoji": "🚀"
+  },
+  {
+    "experienceSlug": "stay-up-all-night-to-watch-a-sunrise",
+    "articleSlug": "stay-up-all-night-to-watch-a-sunrise",
+    "title": "Stay up all night to watch a sunrise",
+    "category": "contribution",
+    "emoji": "🌙"
+  },
+  {
+    "experienceSlug": "stencil-a-reusable-fabric-bag",
+    "articleSlug": "stencil-a-reusable-fabric-bag",
+    "title": "Stencil a reusable fabric bag",
+    "category": "creative",
+    "emoji": "👜"
+  },
+  {
+    "experienceSlug": "stitch-a-patchwork-cushion-cover-from-scraps",
+    "articleSlug": "stitch-a-patchwork-cushion-cover-from-scraps",
+    "title": "Stitch a patchwork cushion cover from scraps",
+    "category": "creative",
+    "emoji": "🟨"
+  },
+  {
+    "experienceSlug": "stonehenge-england",
+    "articleSlug": "stonehenge-england",
+    "title": "Stonehenge, England",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "stretch-strudel-dough-by-hand",
+    "articleSlug": "stretch-strudel-dough-by-hand",
+    "title": "Stretch strudel dough by hand",
+    "category": "food",
+    "emoji": "🍏"
+  },
+  {
+    "experienceSlug": "submit-a-complete-bird-checklist-to-ebird",
+    "articleSlug": "submit-a-complete-bird-checklist-to-ebird",
+    "title": "Submit a complete bird checklist to eBird",
+    "category": "contribution",
+    "emoji": "🐦"
+  },
+  {
+    "experienceSlug": "submit-a-month-of-rain-gauge-observations-to-a-science-network",
+    "articleSlug": "submit-a-month-of-rain-gauge-observations-to-a-science-network",
+    "title": "Submit a month of rain-gauge observations to a science network",
+    "category": "contribution",
+    "emoji": "🌧️"
+  },
+  {
+    "experienceSlug": "summit-a-volcano",
+    "articleSlug": "summit-a-volcano",
+    "title": "Summit a volcano",
+    "category": "adventure",
+    "emoji": "⛰️"
+  },
+  {
+    "experienceSlug": "support-a-computer-learning-session-through-a-community-program",
+    "articleSlug": "support-a-computer-learning-session-through-a-community-program",
+    "title": "Support a computer-learning session through a community program",
+    "category": "contribution",
+    "emoji": "🖱️"
+  },
+  {
+    "experienceSlug": "surf-a-real-wave",
+    "articleSlug": "surf-a-real-wave",
+    "title": "Surf a real wave",
+    "category": "adventure",
+    "emoji": "🏄"
+  },
+  {
+    "experienceSlug": "surf-a-wave-over-10-feet",
+    "articleSlug": "surf-a-wave-over-10-feet",
+    "title": "Surf a wave over 10 feet",
+    "category": "adventure",
+    "emoji": "⛰️"
+  },
+  {
+    "experienceSlug": "survive-a-wilderness-expedition",
+    "articleSlug": "survive-a-wilderness-expedition",
+    "title": "Survive a wilderness expedition",
+    "category": "adventure",
+    "emoji": "🏜️"
+  },
+  {
+    "experienceSlug": "swim-a-mile-without-stopping",
+    "articleSlug": "swim-a-mile-without-stopping",
+    "title": "Swim a mile without stopping",
+    "category": "health",
+    "emoji": "💪"
+  },
+  {
+    "experienceSlug": "swim-in-all-five-oceans",
+    "articleSlug": "swim-in-all-five-oceans",
+    "title": "Swim in all five oceans",
+    "category": "health",
+    "emoji": "🌊"
+  },
+  {
+    "experienceSlug": "swim-in-the-dead-sea",
+    "articleSlug": "swim-in-the-dead-sea",
+    "title": "Swim in the Dead Sea",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "swim-with-humpback-whales",
+    "articleSlug": "swim-with-humpback-whales",
+    "title": "Swim with humpback whales",
+    "category": "adventure",
+    "emoji": "⛰️"
+  },
+  {
+    "experienceSlug": "take-a-beginner-badminton-lesson",
+    "articleSlug": "take-a-beginner-badminton-lesson",
+    "title": "Take a beginner badminton lesson",
+    "category": "health",
+    "emoji": "🏸"
+  },
+  {
+    "experienceSlug": "take-a-beginner-land-yachting-lesson",
+    "articleSlug": "take-a-beginner-land-yachting-lesson",
+    "title": "Take a beginner land-yachting lesson",
+    "category": "adventure",
+    "emoji": "⛵"
+  },
+  {
+    "experienceSlug": "take-a-beginner-pilates-class",
+    "articleSlug": "take-a-beginner-pilates-class",
+    "title": "Take a beginner Pilates class",
+    "category": "health",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "take-a-cold-plunge-every-morning-for-a-month",
+    "articleSlug": "take-a-cold-plunge-every-morning-for-a-month",
+    "title": "Take a cold plunge every morning for a month",
+    "category": "health",
+    "emoji": "💪"
+  },
+  {
+    "experienceSlug": "take-a-cooking-class-in-the-country-the-cuisine-is-from",
+    "articleSlug": "take-a-cooking-class-in-the-country-the-cuisine-is-from",
+    "title": "Take a cooking class in the country the cuisine is from",
+    "category": "food",
+    "emoji": "🍽️"
+  },
+  {
+    "experienceSlug": "take-a-forest-bathing-walk",
+    "articleSlug": "take-a-forest-bathing-walk",
+    "title": "Take a forest bathing walk",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "take-a-photograph-that-stops-people",
+    "articleSlug": "take-a-photograph-that-stops-people",
+    "title": "Take a photograph that stops people",
+    "category": "creative",
+    "emoji": "📷"
+  },
+  {
+    "experienceSlug": "take-a-photograph-that-stops-people-in-their-tracks",
+    "articleSlug": "take-a-photograph-that-stops-people-in-their-tracks",
+    "title": "Take a photograph that stops people in their tracks",
+    "category": "creative",
+    "emoji": "🎨"
+  },
+  {
+    "experienceSlug": "take-a-pottery-class-and-make-a-finished-piece",
+    "articleSlug": "take-a-pottery-class-and-make-a-finished-piece",
+    "title": "Take a pottery class and make a finished piece",
+    "category": "creative",
+    "emoji": "🎨"
+  },
+  {
+    "experienceSlug": "take-a-road-trip-with-your-best-friends",
+    "articleSlug": "take-a-road-trip-with-your-best-friends",
+    "title": "Take a road trip with your best friends",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "take-a-sheltered-water-paddleboard-starter-lesson",
+    "articleSlug": "take-a-sheltered-water-paddleboard-starter-lesson",
+    "title": "Take a sheltered-water paddleboard starter lesson",
+    "category": "adventure",
+    "emoji": "🏄"
+  },
+  {
+    "experienceSlug": "take-a-slow-travel-trip-one-town-one-week-no-plan",
+    "articleSlug": "take-a-slow-travel-trip-one-town-one-week-no-plan",
+    "title": "Take a slow travel trip: one town, one week, no plan",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "take-a-supervised-introductory-caving-trip",
+    "articleSlug": "take-a-supervised-introductory-caving-trip",
+    "title": "Take a supervised introductory caving trip",
+    "category": "adventure",
+    "emoji": "🔦"
+  },
+  {
+    "experienceSlug": "take-a-tea-ceremony-class",
+    "articleSlug": "take-a-tea-ceremony-class",
+    "title": "Take a tea ceremony class",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "take-a-trip-completely-alone",
+    "articleSlug": "take-a-trip-completely-alone",
+    "title": "Take a trip completely alone",
+    "category": "travel",
+    "emoji": "🏝️"
+  },
+  {
+    "experienceSlug": "take-a-trip-with-your-parents-before-it-s-too-late",
+    "articleSlug": "take-a-trip-with-your-parents-before-it-s-too-late",
+    "title": "Take a trip with your parents before it's too late",
+    "category": "relationships",
+    "emoji": "🌅"
+  },
+  {
+    "experienceSlug": "take-a-volunteer-call-through-be-my-eyes",
+    "articleSlug": "take-a-volunteer-call-through-be-my-eyes",
+    "title": "Take a volunteer call through Be My Eyes",
+    "category": "contribution",
+    "emoji": "👁️"
+  },
+  {
+    "experienceSlug": "take-an-adult-beginner-swimming-lesson",
+    "articleSlug": "take-an-adult-beginner-swimming-lesson",
+    "title": "Take an adult beginner swimming lesson",
+    "category": "health",
+    "emoji": "💦"
+  },
+  {
+    "experienceSlug": "take-an-introductory-indoor-bouldering-lesson",
+    "articleSlug": "take-an-introductory-indoor-bouldering-lesson",
+    "title": "Take an introductory indoor bouldering lesson",
+    "category": "adventure",
+    "emoji": "🧗"
+  },
+  {
+    "experienceSlug": "take-part-in-a-seasonal-butterfly-count",
+    "articleSlug": "take-part-in-a-seasonal-butterfly-count",
+    "title": "Take part in a seasonal butterfly count",
+    "category": "contribution",
+    "emoji": "🦋"
+  },
+  {
+    "experienceSlug": "take-the-trans-siberian-railway-across-russia",
+    "articleSlug": "take-the-trans-siberian-railway-across-russia",
+    "title": "Take the Trans-Siberian Railway across Russia",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "taste-chocolate-from-three-origins",
+    "articleSlug": "taste-chocolate-from-three-origins",
+    "title": "Taste chocolate from three origins",
+    "category": "food",
+    "emoji": "🍫"
+  },
+  {
+    "experienceSlug": "taste-one-dish-from-three-local-traditions",
+    "articleSlug": "taste-one-dish-from-three-local-traditions",
+    "title": "Taste one dish from three local traditions",
+    "category": "food",
+    "emoji": "🍲"
+  },
+  {
+    "experienceSlug": "teach-a-class-or-course",
+    "articleSlug": "teach-a-class-or-course",
+    "title": "Teach a class or course",
+    "category": "creative",
+    "emoji": "🏛️"
+  },
+  {
+    "experienceSlug": "teach-a-skill-you-re-good-at-to-a-group-of-strangers",
+    "articleSlug": "teach-a-skill-you-re-good-at-to-a-group-of-strangers",
+    "title": "Teach a skill you're good at to a group of strangers",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "teach-english-in-a-developing-country",
+    "articleSlug": "teach-english-in-a-developing-country",
+    "title": "Teach English in a developing country",
+    "category": "contribution",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "tell-a-short-story-in-sand-animation",
+    "articleSlug": "tell-a-short-story-in-sand-animation",
+    "title": "Tell a short story in sand animation",
+    "category": "creative",
+    "emoji": "⌛"
+  },
+  {
+    "experienceSlug": "tell-the-most-important-people-in-your-life-why-they-matter",
+    "articleSlug": "tell-the-most-important-people-in-your-life-why-they-matter",
+    "title": "Tell the most important people in your life why they matter",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "temper-chocolate-and-mould-a-small-batch",
+    "articleSlug": "temper-chocolate-and-mould-a-small-batch",
+    "title": "Temper chocolate and mould a small batch",
+    "category": "food",
+    "emoji": "🍫"
+  },
+  {
+    "experienceSlug": "test-a-paper-glider-with-controlled-design-changes",
+    "articleSlug": "test-a-paper-glider-with-controlled-design-changes",
+    "title": "Test a paper glider with controlled design changes",
+    "category": "achievement",
+    "emoji": "🛩️"
+  },
+  {
+    "experienceSlug": "test-how-salt-changes-a-simple-dish",
+    "articleSlug": "test-how-salt-changes-a-simple-dish",
+    "title": "Test how salt changes a simple dish",
+    "category": "food",
+    "emoji": "🧂"
+  },
+  {
+    "experienceSlug": "the-alhambra-granada-spain",
+    "articleSlug": "the-alhambra-granada-spain",
+    "title": "The Alhambra, Granada, Spain",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "the-amalfi-coast-italy",
+    "articleSlug": "the-amalfi-coast-italy",
+    "title": "The Amalfi Coast, Italy",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "the-amazon-rainforest-brazil",
+    "articleSlug": "the-amazon-rainforest-brazil",
+    "title": "The Amazon Rainforest, Brazil",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "the-atacama-desert-chile",
+    "articleSlug": "the-atacama-desert-chile",
+    "title": "The Atacama Desert, Chile",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "the-camino-de-santiago",
+    "articleSlug": "the-camino-de-santiago",
+    "title": "The Camino de Santiago",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "the-canadian-rockies",
+    "articleSlug": "the-canadian-rockies",
+    "title": "The Canadian Rockies",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "the-daintree-rainforest-australia",
+    "articleSlug": "the-daintree-rainforest-australia",
+    "title": "The Daintree Rainforest, Australia",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "the-dead-sea-jordan-israel",
+    "articleSlug": "the-dead-sea-jordan-israel",
+    "title": "The Dead Sea, Jordan/Israel",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "the-grand-canyon-usa",
+    "articleSlug": "the-grand-canyon-usa",
+    "title": "The Grand Canyon, USA",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "the-great-barrier-reef-australia",
+    "articleSlug": "the-great-barrier-reef-australia",
+    "title": "The Great Barrier Reef, Australia",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "the-kimberley-australia",
+    "articleSlug": "the-kimberley-australia",
+    "title": "The Kimberley, Australia",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "the-kimberley-coast-by-boat",
+    "articleSlug": "the-kimberley-coast-by-boat",
+    "title": "The Kimberley coast by boat",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "the-korean-dmz",
+    "articleSlug": "the-korean-dmz",
+    "title": "The Korean DMZ",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "the-norwegian-fjords",
+    "articleSlug": "the-norwegian-fjords",
+    "title": "The Norwegian Fjords",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "the-pyramids-of-giza-egypt",
+    "articleSlug": "the-pyramids-of-giza-egypt",
+    "title": "The Pyramids of Giza, Egypt",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "the-sahara-desert",
+    "articleSlug": "the-sahara-desert",
+    "title": "The Sahara Desert",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "the-scottish-highlands",
+    "articleSlug": "the-scottish-highlands",
+    "title": "The Scottish Highlands",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "the-serengeti-tanzania",
+    "articleSlug": "the-serengeti-tanzania",
+    "title": "The Serengeti, Tanzania",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "the-silk-road-uzbekistan",
+    "articleSlug": "the-silk-road-uzbekistan",
+    "title": "The Silk Road, Uzbekistan",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "the-swiss-alps",
+    "articleSlug": "the-swiss-alps",
+    "title": "The Swiss Alps",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "the-taj-mahal-india",
+    "articleSlug": "the-taj-mahal-india",
+    "title": "The Taj Mahal, India",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "the-temples-of-bagan-myanmar",
+    "articleSlug": "the-temples-of-bagan-myanmar",
+    "title": "The temples of Bagan, Myanmar",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "the-whitsunday-islands-australia",
+    "articleSlug": "the-whitsunday-islands-australia",
+    "title": "The Whitsunday Islands, Australia",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "throw-a-kiln-fired-ceramic-pot",
+    "articleSlug": "throw-a-kiln-fired-ceramic-pot",
+    "title": "Throw a kiln-fired ceramic pot",
+    "category": "creative",
+    "emoji": "🎨"
+  },
+  {
+    "experienceSlug": "throw-a-party-worth-remembering",
+    "articleSlug": "throw-a-party-worth-remembering",
+    "title": "Throw a party worth remembering",
+    "category": "relationships",
+    "emoji": "🎉"
+  },
+  {
+    "experienceSlug": "throw-a-surprise-party-that-genuinely-surprises-someone",
+    "articleSlug": "throw-a-surprise-party-that-genuinely-surprises-someone",
+    "title": "Throw a surprise party that genuinely surprises someone",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "tibet-and-the-tibetan-plateau",
+    "articleSlug": "tibet-and-the-tibetan-plateau",
+    "title": "Tibet and the Tibetan Plateau",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "trace-buildings-for-a-humanitarian-mapping-task",
+    "articleSlug": "trace-buildings-for-a-humanitarian-mapping-task",
+    "title": "Trace buildings for a humanitarian mapping task",
+    "category": "contribution",
+    "emoji": "🗺️"
+  },
+  {
+    "experienceSlug": "trace-the-journey-of-one-inherited-object",
+    "articleSlug": "trace-the-journey-of-one-inherited-object",
+    "title": "Trace the journey of one inherited object",
+    "category": "reflection",
+    "emoji": "⌚"
+  },
+  {
+    "experienceSlug": "train-a-small-image-classifier-on-your-own-objects",
+    "articleSlug": "train-a-small-image-classifier-on-your-own-objects",
+    "title": "Train a small image classifier on your own objects",
+    "category": "achievement",
+    "emoji": "🧠"
+  },
+  {
+    "experienceSlug": "transcribe-a-historical-manuscript-for-the-smithsonian",
+    "articleSlug": "transcribe-a-historical-manuscript-for-the-smithsonian",
+    "title": "Transcribe a historical manuscript for the Smithsonian",
+    "category": "contribution",
+    "emoji": "📜"
+  },
+  {
+    "experienceSlug": "translate-a-free-software-resource-into-a-language-you-know",
+    "articleSlug": "translate-a-free-software-resource-into-a-language-you-know",
+    "title": "Translate a free-software resource into a language you know",
+    "category": "contribution",
+    "emoji": "🌐"
+  },
+  {
+    "experienceSlug": "transylvania-romania",
+    "articleSlug": "transylvania-romania",
+    "title": "Transylvania, Romania",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "trek-across-iceland",
+    "articleSlug": "trek-across-iceland",
+    "title": "Trek across Iceland",
+    "category": "adventure",
+    "emoji": "⛰️"
+  },
+  {
+    "experienceSlug": "trek-to-everest-base-camp",
+    "articleSlug": "trek-to-everest-base-camp",
+    "title": "Trek to Everest Base Camp",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "try-a-beginner-body-scan-with-a-guided-recording",
+    "articleSlug": "try-a-beginner-body-scan-with-a-guided-recording",
+    "title": "Try a beginner body scan with a guided recording",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "try-a-short-seated-movement-session",
+    "articleSlug": "try-a-short-seated-movement-session",
+    "title": "Try a short seated movement session",
+    "category": "health",
+    "emoji": "🪑"
+  },
+  {
+    "experienceSlug": "try-a-sport-that-terrifies-you",
+    "articleSlug": "try-a-sport-that-terrifies-you",
+    "title": "Try a sport that terrifies you",
+    "category": "adventure",
+    "emoji": "🎿"
+  },
+  {
+    "experienceSlug": "try-a-supervised-water-aerobics-class",
+    "articleSlug": "try-a-supervised-water-aerobics-class",
+    "title": "Try a supervised water-aerobics class",
+    "category": "health",
+    "emoji": "🏊"
+  },
+  {
+    "experienceSlug": "try-curling-at-a-supervised-ice-rink-taster",
+    "articleSlug": "try-curling-at-a-supervised-ice-rink-taster",
+    "title": "Try curling at a supervised ice-rink taster",
+    "category": "adventure",
+    "emoji": "🥌"
+  },
+  {
+    "experienceSlug": "try-fencing-in-a-supervised-beginner-class",
+    "articleSlug": "try-fencing-in-a-supervised-beginner-class",
+    "title": "Try fencing in a supervised beginner class",
+    "category": "health",
+    "emoji": "🤺"
+  },
+  {
+    "experienceSlug": "try-goalball-at-an-inclusive-sports-session",
+    "articleSlug": "try-goalball-at-an-inclusive-sports-session",
+    "title": "Try goalball at an inclusive sports session",
+    "category": "health",
+    "emoji": "🔔"
+  },
+  {
+    "experienceSlug": "try-kalamkari-drawing-on-cloth-with-an-artisan",
+    "articleSlug": "try-kalamkari-drawing-on-cloth-with-an-artisan",
+    "title": "Try Kalamkari drawing on cloth with an artisan",
+    "category": "creative",
+    "emoji": "🖋️"
+  },
+  {
+    "experienceSlug": "try-polybat-on-an-adapted-table",
+    "articleSlug": "try-polybat-on-an-adapted-table",
+    "title": "Try polybat on an adapted table",
+    "category": "health",
+    "emoji": "🏓"
+  },
+  {
+    "experienceSlug": "try-target-archery-at-a-supervised-range",
+    "articleSlug": "try-target-archery-at-a-supervised-range",
+    "title": "Try target archery at a supervised range",
+    "category": "adventure",
+    "emoji": "🏹"
+  },
+  {
+    "experienceSlug": "try-wheelchair-basketball-at-an-introductory-club-session",
+    "articleSlug": "try-wheelchair-basketball-at-an-introductory-club-session",
+    "title": "Try wheelchair basketball at an introductory club session",
+    "category": "health",
+    "emoji": "🏀"
+  },
+  {
+    "experienceSlug": "turn-vegetable-trimmings-into-stock-and-soup",
+    "articleSlug": "turn-vegetable-trimmings-into-stock-and-soup",
+    "title": "Turn vegetable trimmings into stock and soup",
+    "category": "food",
+    "emoji": "🥣"
+  },
+  {
+    "experienceSlug": "turn-your-next-decade-birthday-into-a-mission",
+    "articleSlug": "turn-your-next-decade-birthday-into-a-mission",
+    "title": "Turn your next decade birthday into a mission",
+    "category": "adventure",
+    "emoji": "🎂"
+  },
+  {
+    "experienceSlug": "tuscany-italy",
+    "articleSlug": "tuscany-italy",
+    "title": "Tuscany, Italy",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "uluru-ayers-rock-australia",
+    "articleSlug": "uluru-ayers-rock-australia",
+    "title": "Uluru (Ayers Rock), Australia",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "understand-your-own-health-at-a-deep-level",
+    "articleSlug": "understand-your-own-health-at-a-deep-level",
+    "title": "Understand your own health at a deep level",
+    "category": "health",
+    "emoji": "🧬"
+  },
+  {
+    "experienceSlug": "vanuatu-s-volcanoes",
+    "articleSlug": "vanuatu-s-volcanoes",
+    "title": "Vanuatu's volcanoes",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "venice-before-mass-tourism-erases-it",
+    "articleSlug": "venice-before-mass-tourism-erases-it",
+    "title": "Venice before mass tourism erases it",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "victoria-falls-zambia-zimbabwe",
+    "articleSlug": "victoria-falls-zambia-zimbabwe",
+    "title": "Victoria Falls, Zambia/Zimbabwe",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "visit-a-country-you-know-nothing-about",
+    "articleSlug": "visit-a-country-you-know-nothing-about",
+    "title": "Visit a country you know nothing about",
+    "category": "travel",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "visit-a-repair-cafe-with-a-friend",
+    "articleSlug": "visit-a-repair-cafe-with-a-friend",
+    "title": "Visit a repair cafe with a friend",
+    "category": "relationships",
+    "emoji": "🔧"
+  },
+  {
+    "experienceSlug": "visit-all-50-us-states",
+    "articleSlug": "visit-all-50-us-states",
+    "title": "Visit all 50 US states",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "visit-all-seven-wonders-of-the-world",
+    "articleSlug": "visit-all-seven-wonders-of-the-world",
+    "title": "Visit all seven wonders of the world",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "visit-every-continent",
+    "articleSlug": "visit-every-continent",
+    "title": "Visit every continent",
+    "category": "adventure",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "visit-majuli-s-mask-making-tradition-with-a-local-practitioner",
+    "articleSlug": "visit-majuli-s-mask-making-tradition-with-a-local-practitioner",
+    "title": "Visit Majuli's mask-making tradition with a local practitioner",
+    "category": "travel",
+    "emoji": "🎭"
+  },
+  {
+    "experienceSlug": "visit-the-taj-mahal-at-dawn",
+    "articleSlug": "visit-the-taj-mahal-at-dawn",
+    "title": "Visit the Taj Mahal at dawn",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "visit-the-temples-of-angkor-wat-cambodia",
+    "articleSlug": "visit-the-temples-of-angkor-wat-cambodia",
+    "title": "Visit the temples of Angkor Wat, Cambodia",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "volunteer-abroad-for-at-least-a-month",
+    "articleSlug": "volunteer-abroad-for-at-least-a-month",
+    "title": "Volunteer abroad for at least a month",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "volunteer-at-a-hospital-for-a-year",
+    "articleSlug": "volunteer-at-a-hospital-for-a-year",
+    "title": "Volunteer at a hospital for a year",
+    "category": "contribution",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "volunteer-for-something-you-believe-in",
+    "articleSlug": "volunteer-for-something-you-believe-in",
+    "title": "Volunteer for something you believe in",
+    "category": "contribution",
+    "emoji": "🙌"
+  },
+  {
+    "experienceSlug": "wadi-rum-jordan",
+    "articleSlug": "wadi-rum-jordan",
+    "title": "Wadi Rum, Jordan",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "walk-10-000-steps-a-day-for-a-month",
+    "articleSlug": "walk-10-000-steps-a-day-for-a-month",
+    "title": "Walk 10,000 steps a day for a month",
+    "category": "health",
+    "emoji": "💪"
+  },
+  {
+    "experienceSlug": "walk-a-labyrinth-or-pilgrimage-slowly",
+    "articleSlug": "walk-a-labyrinth-or-pilgrimage-slowly",
+    "title": "Walk a labyrinth or pilgrimage slowly",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "walk-a-long-distance-trail-over-100km",
+    "articleSlug": "walk-a-long-distance-trail-over-100km",
+    "title": "Walk a long-distance trail over 100km",
+    "category": "health",
+    "emoji": "💪"
+  },
+  {
+    "experienceSlug": "walk-away-from-something-comfortable-but-wrong",
+    "articleSlug": "walk-away-from-something-comfortable-but-wrong",
+    "title": "Walk away from something comfortable but wrong",
+    "category": "adventure",
+    "emoji": "🚪"
+  },
+  {
+    "experienceSlug": "walk-the-camino-de-santiago-800km-across-spain",
+    "articleSlug": "walk-the-camino-de-santiago-800km-across-spain",
+    "title": "Walk the Camino de Santiago (800km across Spain)",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "watch-a-meteor-shower-from-a-dark-sky-location",
+    "articleSlug": "watch-a-meteor-shower-from-a-dark-sky-location",
+    "title": "Watch a meteor shower from a dark sky location",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "watch-a-rocket-launch-from-an-authorized-public-gallery",
+    "articleSlug": "watch-a-rocket-launch-from-an-authorized-public-gallery",
+    "title": "Watch a rocket launch from an authorized public gallery",
+    "category": "travel",
+    "emoji": "🚀"
+  },
+  {
+    "experienceSlug": "watch-a-storm-roll-in-from-start-to-finish",
+    "articleSlug": "watch-a-storm-roll-in-from-start-to-finish",
+    "title": "Watch a storm roll in from start to finish",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "watch-a-sunrise-and-a-sunset-in-the-same-day",
+    "articleSlug": "watch-a-sunrise-and-a-sunset-in-the-same-day",
+    "title": "Watch a sunrise and a sunset in the same day",
+    "category": "mindfulness",
+    "emoji": "🧘"
+  },
+  {
+    "experienceSlug": "watch-the-sunrise-from-a-place-that-moved-you",
+    "articleSlug": "watch-the-sunrise-from-a-place-that-moved-you",
+    "title": "Watch the sunrise from a place that moved you",
+    "category": "adventure",
+    "emoji": "🌙"
+  },
+  {
+    "experienceSlug": "watch-the-sunrise-from-machu-picchu-peru",
+    "articleSlug": "watch-the-sunrise-from-machu-picchu-peru",
+    "title": "Watch the sunrise from Machu Picchu, Peru",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "weave-a-miniature-tapestry-on-cardboard",
+    "articleSlug": "weave-a-miniature-tapestry-on-cardboard",
+    "title": "Weave a miniature tapestry on cardboard",
+    "category": "creative",
+    "emoji": "🧶"
+  },
+  {
+    "experienceSlug": "white-water-raft-a-class-v-river",
+    "articleSlug": "white-water-raft-a-class-v-river",
+    "title": "White water raft a Class V river",
+    "category": "adventure",
+    "emoji": "⛰️"
+  },
+  {
+    "experienceSlug": "win-a-competition-you-genuinely-trained-for",
+    "articleSlug": "win-a-competition-you-genuinely-trained-for",
+    "title": "Win a competition you genuinely trained for",
+    "category": "achievement",
+    "emoji": "🏆"
+  },
+  {
+    "experienceSlug": "win-something-you-genuinely-competed-for",
+    "articleSlug": "win-something-you-genuinely-competed-for",
+    "title": "Win something you genuinely competed for",
+    "category": "adventure",
+    "emoji": "🏆"
+  },
+  {
+    "experienceSlug": "witness-a-geological-or-astronomical-event",
+    "articleSlug": "witness-a-geological-or-astronomical-event",
+    "title": "Witness a geological or astronomical event",
+    "category": "adventure",
+    "emoji": "🌋"
+  },
+  {
+    "experienceSlug": "work-or-intern-in-another-country",
+    "articleSlug": "work-or-intern-in-another-country",
+    "title": "Work or intern in another country",
+    "category": "achievement",
+    "emoji": "🌐"
+  },
+  {
+    "experienceSlug": "work-through-a-celestial-navigation-sight-reduction",
+    "articleSlug": "work-through-a-celestial-navigation-sight-reduction",
+    "title": "Work through a celestial-navigation sight reduction",
+    "category": "achievement",
+    "emoji": "🧭"
+  },
+  {
+    "experienceSlug": "write-a-book",
+    "articleSlug": "write-a-book",
+    "title": "Write a book",
+    "category": "contribution",
+    "emoji": "📖"
+  },
+  {
+    "experienceSlug": "write-a-book-that-changes-someone-s-life",
+    "articleSlug": "write-a-book-that-changes-someone-s-life",
+    "title": "Write a book that changes someone's life",
+    "category": "contribution",
+    "emoji": "🌍"
+  },
+  {
+    "experienceSlug": "write-a-forgiveness-letter-to-yourself",
+    "articleSlug": "write-a-forgiveness-letter-to-yourself",
+    "title": "Write a forgiveness letter to yourself",
+    "category": "reflection",
+    "emoji": "📖"
+  },
+  {
+    "experienceSlug": "write-a-letter-to-someone-who-changed-your-life",
+    "articleSlug": "write-a-letter-to-someone-who-changed-your-life",
+    "title": "Write a letter to someone who changed your life",
+    "category": "relationships",
+    "emoji": "💌"
+  },
+  {
+    "experienceSlug": "write-a-letter-to-someone-who-changed-your-life-and-send-it",
+    "articleSlug": "write-a-letter-to-someone-who-changed-your-life-and-send-it",
+    "title": "Write a letter to someone who changed your life and send it",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "write-a-letter-to-someone-you-have-not-forgiven-and-then-decide-whether-to-send-",
+    "articleSlug": "write-a-letter-to-someone-you-have-not-forgiven-and-then-decide-whether-to-send-",
+    "title": "Write a letter to someone you have not forgiven and then decide whether to send it",
+    "category": "reflection",
+    "emoji": "📖"
+  },
+  {
+    "experienceSlug": "write-a-letter-to-your-future-self-and-read-it-in-10-years",
+    "articleSlug": "write-a-letter-to-your-future-self-and-read-it-in-10-years",
+    "title": "Write a letter to your future self and read it in 10 years",
+    "category": "reflection",
+    "emoji": "📖"
+  },
+  {
+    "experienceSlug": "write-a-letter-to-your-younger-self",
+    "articleSlug": "write-a-letter-to-your-younger-self",
+    "title": "Write a letter to your younger self",
+    "category": "reflection",
+    "emoji": "📖"
+  },
+  {
+    "experienceSlug": "write-a-manifesto-for-how-you-want-to-live",
+    "articleSlug": "write-a-manifesto-for-how-you-want-to-live",
+    "title": "Write a manifesto for how you want to live",
+    "category": "reflection",
+    "emoji": "📖"
+  },
+  {
+    "experienceSlug": "write-and-finish-a-novel",
+    "articleSlug": "write-and-finish-a-novel",
+    "title": "Write and finish a novel",
+    "category": "creative",
+    "emoji": "🎨"
+  },
+  {
+    "experienceSlug": "write-and-perform-spoken-word-poetry",
+    "articleSlug": "write-and-perform-spoken-word-poetry",
+    "title": "Write and perform spoken word poetry",
+    "category": "creative",
+    "emoji": "🎨"
+  },
+  {
+    "experienceSlug": "write-captions-for-ten-unlabelled-personal-photos",
+    "articleSlug": "write-captions-for-ten-unlabelled-personal-photos",
+    "title": "Write captions for ten unlabelled personal photos",
+    "category": "reflection",
+    "emoji": "🖼️"
+  },
+  {
+    "experienceSlug": "write-down-everything-you-know-about-your-family-history",
+    "articleSlug": "write-down-everything-you-know-about-your-family-history",
+    "title": "Write down everything you know about your family history",
+    "category": "reflection",
+    "emoji": "📖"
+  },
+  {
+    "experienceSlug": "write-down-your-core-values-and-check-them-against-how-you-actually-spend-your-t",
+    "articleSlug": "write-down-your-core-values-and-check-them-against-how-you-actually-spend-your-t",
+    "title": "Write down your core values and check them against how you actually spend your time",
+    "category": "reflection",
+    "emoji": "📖"
+  },
+  {
+    "experienceSlug": "write-heartfelt-letters-to-10-people-who-changed-your-life",
+    "articleSlug": "write-heartfelt-letters-to-10-people-who-changed-your-life",
+    "title": "Write heartfelt letters to 10 people who changed your life",
+    "category": "relationships",
+    "emoji": "❤️"
+  },
+  {
+    "experienceSlug": "write-something-and-publish-it",
+    "articleSlug": "write-something-and-publish-it",
+    "title": "Write something and publish it",
+    "category": "achievement",
+    "emoji": "✍️"
+  },
+  {
+    "experienceSlug": "write-the-speech-you-would-give-at-your-own-retirement",
+    "articleSlug": "write-the-speech-you-would-give-at-your-own-retirement",
+    "title": "Write the speech you would give at your own retirement",
+    "category": "reflection",
+    "emoji": "📖"
+  },
+  {
+    "experienceSlug": "write-the-story-of-how-you-became-who-you-are",
+    "articleSlug": "write-the-story-of-how-you-became-who-you-are",
+    "title": "Write the story of how you became who you are",
+    "category": "reflection",
+    "emoji": "📖"
+  },
+  {
+    "experienceSlug": "write-your-ethical-will",
+    "articleSlug": "write-your-ethical-will",
+    "title": "Write your ethical will",
+    "category": "contribution",
+    "emoji": "📜"
+  },
+  {
+    "experienceSlug": "write-your-ethical-will-values-lessons-what-you-want-passed-down",
+    "articleSlug": "write-your-ethical-will-values-lessons-what-you-want-passed-down",
+    "title": "Write your ethical will: values, lessons, what you want passed down",
+    "category": "reflection",
+    "emoji": "📖"
+  },
+  {
+    "experienceSlug": "write-your-memoir",
+    "articleSlug": "write-your-memoir",
+    "title": "Write your memoir",
+    "category": "creative",
+    "emoji": "🎨"
+  },
+  {
+    "experienceSlug": "write-your-obituary-the-way-you-would-want-it-read",
+    "articleSlug": "write-your-obituary-the-way-you-would-want-it-read",
+    "title": "Write your obituary the way you would want it read",
+    "category": "reflection",
+    "emoji": "📖"
+  },
+  {
+    "experienceSlug": "zanzibar-tanzania",
+    "articleSlug": "zanzibar-tanzania",
+    "title": "Zanzibar, Tanzania",
+    "category": "travel",
+    "emoji": "✈️"
+  },
+  {
+    "experienceSlug": "zipline-through-a-rainforest-canopy",
+    "articleSlug": "zipline-through-a-rainforest-canopy",
+    "title": "Zipline through a rainforest canopy",
+    "category": "adventure",
+    "emoji": "⛰️"
+  }
+]

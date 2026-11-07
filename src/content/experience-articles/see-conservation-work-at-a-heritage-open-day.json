@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "see-conservation-work-at-a-heritage-open-day",
+  "slug": "see-conservation-work-at-a-heritage-open-day",
+  "title": "Heritage open day conservation: what to ask a conservator",
+  "description": "Find a public conservation demonstration, notice the choices behind an object’s care, and ask useful questions without touching collection material.",
+  "intent": "Prepares a visitor to get more from a heritage open day by observing conservation choices and asking respectful, specific questions.",
+  "sections": [
+    {
+      "heading": "Find the event that actually shows conservation",
+      "paragraphs": [
+        "A heritage open day can open a door to a place or practice that is usually out of view, but the label alone does not guarantee a conservation demonstration. Read the event description for words such as studio, workshop, treatment, collection care or practitioner talk. If the listing is vague, contact the organiser and ask what visitors will see and whether there will be time for questions. Some programmes combine a talk with a remote or online session; that can still be a worthwhile introduction if the subject is clear.",
+        "The Institute of Conservation’s Heritage Open Days case study describes conservators being matched with sites for pop-up events, alongside a workshop about caring for inherited or personally held objects. It also shows that event formats can change when preparation time is short. Check the current organiser details rather than assuming a past case study means a specific site is open this year."
+      ]
+    },
+    {
+      "heading": "Look for decisions, not a dramatic before-and-after",
+      "paragraphs": [
+        "Conservation is often careful observation and a series of choices: what material is present, what has changed, what should be preserved, and what intervention would create new risk. At a demonstration, notice how the practitioner explains the object’s condition and the limits of what can be done. A stable result may mean keeping evidence of age visible rather than making an object look newly made.",
+        "You may see tools, condition photographs, supports, storage materials or a discussion about light, handling and environment. Ask before taking photographs, especially if staff are working on an object or sharing information that is not meant to be recorded. Never handle an object, touch a tool or lean over a work surface unless the practitioner explicitly invites you."
+      ]
+    },
+    {
+      "heading": "Ask one question that follows the work",
+      "paragraphs": [
+        "Specific questions usually lead to more useful explanations than “How old is this?” Try: “What did you notice first when you examined it?” “Which part of the treatment is reversible?” or “What do you want to preserve even though it looks like damage?” You can ask how the team decided whether to intervene, what information they still do not have, or how storage changes after treatment.",
+        "If the object has a personal or community history, ask how that context affects the conservation decision. A conservator may not be able to disclose every detail or answer a question outside their role. Let them set the boundaries and distinguish what they know from what remains uncertain."
+      ]
+    },
+    {
+      "heading": "Make a first visit easy for everyone",
+      "paragraphs": [
+        "Before travelling, check opening times, booking rules, access information, photography policy and whether the demonstration is drop-in or timed. These details can change, so use the event host’s current listing. Arrive with enough time to find the venue and read the room. If several visitors are waiting to speak with the practitioner, keep your question concise and leave space for others.",
+        "A simple observation can be the whole visit: compare a detail you noticed before the explanation with what you notice afterward. For instance, a scratch may be a record of use rather than a defect to erase. Avoid treating the expert as a source of a personalised repair plan for your own valuable object in a crowded public session."
+      ]
+    },
+    {
+      "heading": "Carry one idea home responsibly",
+      "paragraphs": [
+        "Afterward, jot down the principle that changed how you look at the object: perhaps that storage matters as much as treatment, or that a conservator documents a decision rather than hiding it. If you have a family photograph, textile or inherited object, do not copy a treatment from a brief demonstration. Ask a qualified conservator or relevant institution for advice specific to its materials and condition.",
+        "Save the experience with the event name and one question you want to ask next time. That small record makes a future museum visit more attentive without turning a public open day into a promise of access to collections or specialist services."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Institute of Conservation (Icon)",
+      "url": "https://www.heritageopendays.org.uk/resource/the-institute-of-conservation-icon.html",
+      "publisher": "Heritage Open Days",
+      "purpose": "Example of conservators partnering with sites for public events and adapting between in-person and online workshops."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "transcribe-a-historical-manuscript-for-the-smithsonian",
+    "visit-majuli-s-mask-making-tradition-with-a-local-practitioner",
+    "observe-a-forest-canopy-from-a-public-treetop-walkway"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

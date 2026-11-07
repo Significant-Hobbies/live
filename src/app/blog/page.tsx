@@ -1,1 +1,1 @@
-export { default, metadata } from '~/components/public-pages/blog-index';
+export { default, generateMetadata } from '~/components/public-pages/blog-index';

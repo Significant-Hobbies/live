@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "follow-a-colour-through-your-neighbourhood",
+  "slug": "follow-a-colour-through-your-neighbourhood",
+  "title": "Try a neighbourhood colour walk with one simple prompt",
+  "description": "Take a gentle neighbourhood walk guided by one colour, noticing its shades, settings and small details without needing a route or photo goal.",
+  "intent": "Offers a low-pressure way to plan and reflect on a colour-led noticing walk while adapting the route to access, safety and interest.",
+  "sections": [
+    {
+      "heading": "Pick a colour with enough room for surprise",
+      "paragraphs": [
+        "Choose a colour before you leave, but keep the rule loose. “Blue” could include a painted door, a reflection, a sign or a small detail in a window; it does not have to be an exact shade match. If your neighbourhood has few examples, choose a broader family such as warm colours or green things, or let the colour change after a few minutes. The prompt should direct your attention, not turn the walk into a scavenger hunt you can fail.",
+        "The National Park Service’s outdoor colour activity uses visibility and camouflage to prompt observation of colour in a landscape. You can borrow the idea of comparing what stands out with what blends in, without scattering objects or leaving anything behind. A walk can be done on a familiar street, a park path or even by looking from a window if going out is not comfortable."
+      ]
+    },
+    {
+      "heading": "Choose a route that makes attention possible",
+      "paragraphs": [
+        "Pick a short loop with places to pause safely, such as a quiet block, courtyard or accessible path. Check weather, traffic and any park rules as you would for an ordinary walk. Choose a route where you can look around without needing to step into the road or trespass for a better view. If mobility, sensory access or fatigue affects the outing, shorten the distance, take a companion or do the exercise from a bench.",
+        "Leave your camera in your pocket for the first few minutes. Looking for a photo can narrow attention to what fits the frame; noticing shape, faded paint, shadow and reflection gives you more to work with. You can take a picture later if it is safe, allowed and respectful of people’s privacy."
+      ]
+    },
+    {
+      "heading": "Notice where the colour changes",
+      "paragraphs": [
+        "As you walk, notice one instance of the colour and then ask what changes around it. Does it look brighter beside a neutral wall? Does it fade in shade? Is it a small mark on a large object or a broad area on a building? You might compare natural and made colours without assuming one is more valuable. Look at how light changes the same surface when you pass it from another angle.",
+        "A useful practice is to stop at a place where the chosen colour appears and describe it without naming the object first: pale, chipped, reflective, warm, or partly hidden. Then name what it belongs to. That small pause can reveal details that would be easy to miss on a normal errand."
+      ]
+    },
+    {
+      "heading": "Keep the walk easy to adapt",
+      "paragraphs": [
+        "If the colour is not appearing, do not keep extending the route just to complete a target. Switch to a nearby shade, change the prompt to “where the colour is absent,” or end the walk. If a spot feels unsafe or private, skip it. A mindful-looking activity should not ask you to cross boundaries or ignore your surroundings.",
+        "If you walk with someone, try taking turns choosing what counts as a match. One person may notice a reflection; another may notice a painted sign. There is no scoring system and no need to agree on every shade. The conversation can be a pleasant part of the walk."
+      ]
+    },
+    {
+      "heading": "Bring back one detail",
+      "paragraphs": [
+        "After you return, write down the most unexpected place you saw the colour and one change in how it looked. A quick sketch, a pair of descriptive words or a photograph you took appropriately can keep the memory. You do not need to document every instance. The aim is to remember a detail that changed because you gave it attention.",
+        "Save the experience and note a different colour you might follow another day. If you enjoyed the quiet, repeat the same route with a new prompt; if you preferred company, invite someone to choose the next colour."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "You Can't See Me",
+      "url": "https://www.nps.gov/teachers/classrooms/you-cant-see-me.htm",
+      "publisher": "National Park Service",
+      "purpose": "Outdoor colour observation activity exploring how colour stands out or blends into an environment; includes a reminder to remove materials and protect wildlife."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "explore-an-everyday-object-through-touch",
+    "make-a-temporary-arrangement-and-take-it-apart",
+    "take-a-forest-bathing-walk"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

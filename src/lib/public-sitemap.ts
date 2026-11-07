@@ -103,7 +103,7 @@ export function publicStaticSitemap(
 
   const blogPages = editorialArticles.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: now,
+    lastModified: post.experience?.updatedAt ?? now,
     changeFrequency: 'monthly' as const,
     priority: 0.6,
   }));

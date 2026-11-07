@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "draw-a-leaf-without-looking-at-the-page",
+  "slug": "draw-a-leaf-without-looking-at-the-page",
+  "title": "Try blind-contour leaf drawing by following the edge with your eyes",
+  "description": "Use a leaf and a slow blind-contour drawing to practise looking closely, moving your hand steadily and accepting an imperfect line as observation.",
+  "intent": "How do I try a blind-contour leaf drawing without turning it into a test of drawing skill?",
+  "relatedExperienceSlugs": [
+    "make-a-sound-map-from-a-single-seat",
+    "notice-shadows-move-across-a-room",
+    "draw-a-wordless-six-panel-comic"
+  ],
+  "sections": [
+    {
+      "heading": "Set up the leaf and paper",
+      "paragraphs": [
+        "Choose a leaf with an edge you can follow: a broad, intact leaf is easier than a delicate one. Put it beside the paper where you can see it clearly. Use a pencil or pen and make a promise to yourself that the drawing is an observation exercise, not a likeness contest. In blind-contour drawing, you look at the object while your hand moves, resisting the urge to inspect the page as you draw.",
+        "The San Francisco Museum of Modern Art essay on Vija Celmins describes the experience of attending to an object while drawing without visual checking, including the way attention changes when sight is not used in the usual way. Treat this as a way of paying attention, not as a claim that one exercise reproduces an artist’s practice."
+      ]
+    },
+    {
+      "heading": "Follow one edge at a time",
+      "paragraphs": [
+        "Rest your drawing hand on the page and place your eyes at one point on the leaf. Move your gaze slowly along the contour. Let your hand travel at roughly the same pace, as if the pencil tip were following your eyes around the leaf. Notice changes: a notch, a pointed tip, a curve that tightens, a vein meeting the edge. Do not look down to correct the line.",
+        "If you lose track, pause with the pencil still touching paper, return your gaze to the leaf and continue from the place you think you left. The resulting line may wander or cross itself. That is useful evidence of how your attention moved, not a reason to start over."
+      ]
+    },
+    {
+      "heading": "Add veins with the same patience",
+      "paragraphs": [
+        "When the outer contour is complete, move to one prominent vein. Trace it from the central stem toward the edge, then choose another. Do not try to copy every fine branching line. A few careful paths can make the structure more visible than a dense web of marks.",
+        "Keep your wrist relaxed and take a break if it feels strained. If looking at the leaf without checking the page feels uncomfortable, stop and switch to an ordinary contour drawing. This activity is voluntary; concentration should feel curious rather than punishing."
+      ]
+    },
+    {
+      "heading": "Compare what you noticed",
+      "paragraphs": [
+        "Now look at the page. Notice where you followed the leaf closely and where your hand jumped ahead. Compare the drawing with the actual leaf and identify one detail you did not notice before, such as a small bite mark or a vein that changes direction. Avoid judging whether the drawing is “good.” The point is the difference between looking at an object and relying on a remembered symbol of it.",
+        "A first attempt might take five minutes and use only the outside edge plus two veins. You can repeat it with a different leaf or use a continuous line without lifting the pencil. SFMOMA’s essay discusses an artist’s descriptive work and visual attention; your own short exercise can remain simple and personal."
+      ]
+    },
+    {
+      "heading": "Keep one observation for later",
+      "paragraphs": [
+        "Write a sentence beside the drawing: “I noticed…” or “I kept wanting to…” This makes it easier to see how your attention changes across attempts. If you repeat the activity another day, use a differently shaped leaf and compare the observation notes instead of grading the drawings."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Turning a Blind Eye on Vija Celmins: Describing Redescription",
+      "url": "https://www.sfmoma.org/read/turning-a-blind-eye-on-vija-celmins-describing-redescription/",
+      "publisher": "San Francisco Museum of Modern Art",
+      "purpose": "Museum essay on visual attention and drawing without visual checking; the short leaf exercise is original advice."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "make-a-sound-map-from-a-single-seat",
+  "slug": "make-a-sound-map-from-a-single-seat",
+  "title": "How to make a sound map from one quiet spot",
+  "description": "Try a simple sound map by staying in one place, marking where sounds seem to come from and noticing how listening changes your picture of a familiar space.",
+  "intent": "What should I record on a sound map if I cannot identify the source of every sound?",
+  "relatedExperienceSlugs": [
+    "notice-shadows-move-across-a-room",
+    "draw-a-leaf-without-looking-at-the-page",
+    "make-a-friendship-map-together"
+  ],
+  "sections": [
+    {
+      "heading": "Choose a spot where you can safely stay",
+      "paragraphs": [
+        "A sound map is a record of what reaches your ears from one fixed place. You do not need special equipment or a silent setting. Choose a place where you can sit or stand without blocking a path: a garden bench, a quiet corner of a courtyard, or a chair near an open window. The National Park Service activity suggests choosing a bounded outdoor area and allowing people to sit or stand comfortably. The same principle works at home: pick a safe boundary and let your body settle.",
+        "Bring a page and a pencil. Put a small X near the middle to represent yourself. Leave the page unlabelled at first; a blank surface makes it easier to draw before explaining. Try for five minutes on a first attempt, then continue only if attention still feels easy. This is an observation exercise, not a test of concentration."
+      ]
+    },
+    {
+      "heading": "Mark direction before naming a source",
+      "paragraphs": [
+        "When a sound appears, place a dot, short line or symbol in the direction you think it came from. Use rough distance: near, middle distance or far. If you are unsure, draw a question mark or a wavering line. A birdlike call can be marked as a call without deciding which bird made it; a low rumble can remain a rumble. Your map is allowed to show uncertainty.",
+        "Use a few simple marks consistently. For example, wavy lines can mean wind, small dots can mean repeated taps, and a long bar can mean a continuous hum. Write a tiny legend in a corner so a friend can read the marks later. Do not try to draw every passing car or conversation. Note a sound when it changes your attention, then return to listening."
+      ]
+    },
+    {
+      "heading": "Listen in passes instead of chasing every noise",
+      "paragraphs": [
+        "For the first minute, notice only continuous sounds: ventilation, distant traffic, flowing water, or a steady insect chorus. In the next minute, notice repeated sounds such as footsteps, birds, a bell or a machine cycling on and off. In the final pass, listen for brief events and silences. This order gives a beginner a way to notice quieter layers that may be masked by the obvious sound.",
+        "If a sound is intrusive or makes the place feel uncomfortable, you can stop or move. You do not have to sit through distress to complete the map. When you return to the page, mark any change in the sound’s position or volume. A sound that comes and goes can be more informative than an elaborate label."
+      ]
+    },
+    {
+      "heading": "Compare the map with the place",
+      "paragraphs": [
+        "After listening, turn the page to match the direction you faced and add a short note: time, weather, and whether the spot was indoors or out. These details help explain why the map might differ on another day. Avoid guessing at an unseen source if you are not sure. Instead write what you directly heard: “three quick knocks, then quiet” is more useful than a confident but unsupported label.",
+        "A first map might show a steady road wash to the left, a few nearby footsteps and one repeated call above. Ask a companion what they heard only after each of you has made a map; otherwise the first person’s interpretation can steer the second listener. Circle one sound you would like to hear again in a different place."
+      ]
+    },
+    {
+      "heading": "Take the practice somewhere familiar",
+      "paragraphs": [
+        "Repeat the exercise at the same spot at another time of day or in a different season. Compare the shape of the maps rather than scoring them. You may notice that a familiar location has a quieter side, or that a sound you usually ignore becomes easier to separate when you are still."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Sound Map Activity",
+      "url": "https://www.nps.gov/common/uploads/teachers/lessonplans/Sound%20Mapping%20Activity.pdf",
+      "publisher": "National Park Service",
+      "purpose": "Primary lesson activity for selecting a safe bounded listening spot and representing the listener and heard sounds on a map."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

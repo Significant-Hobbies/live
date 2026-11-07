@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "run-a-small-coffee-cupping",
+  "slug": "run-a-small-coffee-cupping",
+  "title": "Run a small coffee cupping that makes comparison easier",
+  "description": "Taste a few coffees side by side with a simple note sheet, consistent preparation and a calm order that helps you notice differences without expert jargon.",
+  "intent": "How do I host an approachable coffee cupping and keep my comparisons fair without buying specialist equipment?",
+  "relatedExperienceSlugs": [
+    "roast-your-own-coffee-beans",
+    "shape-a-batch-of-pitha-with-a-knowledgeable-cook",
+    "plate-a-meal-inspired-by-a-food-history-collection"
+  ],
+  "sections": [
+    {
+      "heading": "Keep the tasting small and purposeful",
+      "paragraphs": [
+        "Cupping is a structured way to compare coffees, but a home version can be modest. Choose two or three coffees that differ in one understandable way, such as origin, roast level or processing, and keep everything else as similar as you can. Avoid selecting a dozen bags; too many samples turn a relaxed comparison into a memory test. The Specialty Coffee Association recommends that people new to cupping look for an introductory workshop or a public tasting, and points to its current standard for formal practice.",
+        "If you can join a public cupping, it is a useful way to see how someone prepares and presents samples. If you are hosting at home, call it an informal comparison and avoid claiming that it follows a professional standard unless you actually follow that standard."
+      ]
+    },
+    {
+      "heading": "Make preparation consistent",
+      "paragraphs": [
+        "Use the same cups, water, grind style and serving order for every sample. Write a code or letter on each cup before pouring, and keep the coffee names hidden until you have finished your first notes if you want to reduce expectation bias. Use clean cups and a spoon for each taster, or rinse spoons between samples. Keep hot water accessible and give people room to spit or pause if they prefer not to drink every sample.",
+        "For a first session, a kitchen scale and timer can help you repeat what you did, but the purpose is consistency rather than exact imitation of a formal protocol. If someone is sensitive to caffeine, offer decaf or let them taste only a small amount. Ask about allergies or preferences before serving additions such as milk or flavorings."
+      ]
+    },
+    {
+      "heading": "Write observations before reaching for flavor labels",
+      "paragraphs": [
+        "Begin with broad sensory notes: smell, perceived sweetness, acidity, body and finish. “Citrus-like” or “roasted nuts” are useful only if they are what you actually notice. You do not need to agree with a coffee bag’s description. A good note can be “lighter, sharper, and shorter finish than sample B.” Comparison words often say more than elaborate tasting vocabulary.",
+        "Taste one coffee, rinse or clear your palate with water, and return to the first cup after trying the others. Let the samples cool enough that they are comfortable to taste; aromas and impressions can shift with temperature. Note whether a coffee becomes sweeter, more bitter or more revealing as it cools."
+      ]
+    },
+    {
+      "heading": "Invite different impressions without arguing",
+      "paragraphs": [
+        "Ask each person to write one private note first, then compare observations. If one person tastes berries and another tastes cocoa, neither needs to be corrected. Ask what feature led to each description: sweetness, acidity, aroma or aftertaste. A group can learn from different attention without deciding which person has the “right” palate.",
+        "A first cupping could be three coffees poured in matching mugs, with a sheet that has columns for aroma, taste, texture and one comparison. Keep water nearby and take a break between rounds. If the conversation becomes about price or status, return to the cup: what did you notice, and what would you choose to drink again?"
+      ]
+    },
+    {
+      "heading": "End with a preference, not a score",
+      "paragraphs": [
+        "At the end, reveal the coffees and ask which one each person would choose for an ordinary morning. Preference is a valid outcome; it does not have to match a scorecard. Record what you would repeat next time, such as using a lighter roast or comparing beans from one region.",
+        "The SCA’s beginner guidance points newcomers toward an introductory workshop and public cuppings, so treat those as a natural next step if you enjoy the format."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How to Prepare for the Q Grader Course",
+      "url": "https://sca.coffee/education/how-to-prepare",
+      "publisher": "Specialty Coffee Association",
+      "purpose": "SCA recommends a beginner Intro to Cupping workshop and local public cuppings, and identifies its current SCA-102 standard."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

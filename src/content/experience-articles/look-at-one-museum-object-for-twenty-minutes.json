@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "look-at-one-museum-object-for-twenty-minutes",
+  "slug": "look-at-one-museum-object-for-twenty-minutes",
+  "title": "How to spend twenty attentive minutes with one museum object",
+  "description": "Use a slow-looking routine to notice an artwork or artifact, separate observation from interpretation, and leave with a question worth following.",
+  "intent": "What should I do during a twenty-minute slow-looking visit at a museum? This article gives a paced method that keeps observation personal without confusing it with verified history.",
+  "sections": [
+    {
+      "heading": "Choose one object and let the label wait",
+      "paragraphs": [
+        "Pick something you can view comfortably without blocking other visitors: a painting, tool, sculpture, garment or photograph. Read any access or photography guidance and keep a respectful distance from the case or artwork. If the gallery is crowded, choose another object or return later; slow looking should not make the space harder for others to use.",
+        "Begin with the object itself rather than its label. Set a timer if that helps, but do not treat twenty minutes as a test. MoMA’s slow-looking itinerary suggests starting with a short timed look and gradually increasing the time. You can divide your visit into stages so the long pause has a shape: notice, describe, wonder, then check context."
+      ]
+    },
+    {
+      "heading": "Spend the first minutes collecting visible details",
+      "paragraphs": [
+        "Look across the whole object once, then move your attention slowly. Where does your eye land first? What colours, edges, textures, repetitions or worn areas can you see? If it is a sculpture, notice how its silhouette changes from your current viewpoint. For a textile or painting, look for a detail you did not notice at first. Write observations in plain language: ‘three parallel scratches near the base’ is more precise than ‘it feels old.’",
+        "The Smithsonian’s object-looking guide separates describing visible details from analysing their significance and interpreting who may have made or used an object. That sequence is useful because interpretation can arrive quickly and then shape what you think you see. Keep a line between the two: record what is present, then what you think it might mean."
+      ]
+    },
+    {
+      "heading": "Let one question guide your second look",
+      "paragraphs": [
+        "Choose a question that grows from an actual detail. Why is one corner polished? What might explain the repeated pattern? Does the object seem designed for a hand, a room or public display? Look again for evidence rather than rushing to an answer. A label, material, date or maker’s note may later confirm or complicate your guess; the point is to notice what sparked the question.",
+        "Try moving your viewing angle only when the gallery permits it. A sculpture can reveal an opening or support from the side; a framed picture may have reflections that improve if you shift slightly. Do not circle into restricted areas or lean over barriers. If movement is not possible, imagine another viewpoint and make clear that it is imagined."
+      ]
+    },
+    {
+      "heading": "Notice your response without making it the object’s history",
+      "paragraphs": [
+        "A colour might remind you of a place; a repeated mark may feel rhythmic or unsettling. Those responses are part of your encounter, but they do not establish what the maker intended. Write ‘this reminds me of…’ or ‘I wonder if…’ rather than turning a hunch into a fact. That distinction allows a personal interpretation to be vivid and honest at the same time.",
+        "If you are with someone else, each person can look quietly before sharing. Compare one detail you both noticed and one that only one person saw. MoMA’s prompts encourage viewers to follow shapes, imagine movement and record what emerges as they take more time. You can use your own prompts instead; there is no required interpretation to uncover."
+      ]
+    },
+    {
+      "heading": "Use the label as a new layer, not a final answer",
+      "paragraphs": [
+        "After your looking period, read the wall text or collection record. Note which guesses were supported, which details surprised you, and which questions remain. Museum labels usually provide selected context rather than every possible story. If the object’s ownership, cultural meaning or history feels complicated, resist filling gaps with speculation; seek a reputable source or ask museum staff where more information is available.",
+        "End by writing three short lines: what you saw, what you think, and what you now wonder. That record makes a better souvenir than a photo taken where photography is not allowed, and it gives you a path back to the object later."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Slow Looking",
+      "url": "https://www.moma.org/visit/itineraries/slow-looking",
+      "publisher": "Museum of Modern Art",
+      "purpose": "Provides a museum-led slow-looking approach and recommends timed looking, descriptive notes and prompts for focused observation."
+    },
+    {
+      "title": "Getting Started Guide: How to Look at Objects",
+      "url": "https://asia-archive.si.edu/learn/for-educators/teaching-china-with-the-smithsonian/lesson-plans/lesson-plan-object-based-teaching-strategies/",
+      "publisher": "Smithsonian National Museum of Asian Art",
+      "purpose": "Supports separating description, analysis and interpretation during close observation of museum objects."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "curate-a-five-object-museum-of-your-life",
+    "read-old-postcards-as-historical-evidence",
+    "explore-a-building-during-an-open-house-festival"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

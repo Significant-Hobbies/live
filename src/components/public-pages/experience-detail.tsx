@@ -13,6 +13,7 @@ import { experienceBreadcrumbs, experienceMetadata } from '~/lib/experience-seo'
 import { findExperience, firstSteps, PAGED_EXPERIENCES } from '~/lib/experiences';
 import { publicExperienceCatalog } from '~/server/experience-catalog';
 import { relatedPublicExperiences, type PublicCatalog } from '~/lib/catalog-model';
+import { experienceArticle, experienceArticlePath } from '~/lib/experience-articles';
 import { safeDecodeURIComponent } from '~/lib/slug';
 import { SITE_URL } from '~/lib/site-metadata';
 import { ExperiencePhoto } from '~/components/experience-photo';
@@ -66,6 +67,7 @@ export async function renderExperienceContent(
 
   const guide = EXPERIENCE_GUIDES[entry.editorialSlug ?? ''];
   const chain = guide?.steps ?? (entry.curated ? firstSteps(entry) : []);
+  const article = experienceArticle(entry.slug) ?? experienceArticle(entry.editorialSlug ?? '');
   const related = relatedPublicExperiences(catalog, entry);
   const collections = collectionsForExperience(entry.editorialSlug ?? entry.slug);
 
@@ -134,6 +136,21 @@ export async function renderExperienceContent(
             : 'Saves privately on this device. No account needed.'}
         </p>
       </div>
+      {article ? (
+        <section className="mt-10 border-y border-border py-6" aria-label="Read the full guide">
+          <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+            Read the full guide
+          </p>
+          <h2 className="mt-3 font-serif text-xl text-foreground">
+            <Link href={experienceArticlePath(article)} className="underline underline-offset-4">
+              {article.title}
+            </Link>
+          </h2>
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+            {article.description}
+          </p>
+        </section>
+      ) : null}
 
       {guide ? (
         <>

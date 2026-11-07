@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "print-a-set-of-foam-relief-postcards",
+  "slug": "print-a-set-of-foam-relief-postcards",
+  "title": "Design foam relief postcards with clean, repeatable prints",
+  "description": "Turn a simple drawing into a foam relief plate, test ink coverage on scrap paper, and adjust pressure before printing a small postcard set.",
+  "intent": "How do I make a small set of foam relief postcards that prints clearly? This guide focuses on image design, safe mark-making, ink control and troubleshooting uneven impressions.",
+  "sections": [
+    {
+      "heading": "Draw for a small relief plate",
+      "paragraphs": [
+        "Begin with one bold image that can survive a small print: a leaf, doorway, cup or simple pattern. Relief printing works by putting colour on the raised surface while recessed marks remain lighter. On a foam plate, shallow lines can disappear under pressure and overly detailed drawings can crowd together. Sketch at the final postcard size and keep the shapes large enough to read from arm’s length.",
+        "Decide whether the printed image should read in reverse. Text and directional symbols reverse when transferred, so avoid lettering on a first design or draw it backwards on the plate. If you plan several cards, make a simple design that can repeat consistently; a clean border or one central image often works better than a crowded scene."
+      ]
+    },
+    {
+      "heading": "Transfer the drawing without tearing the foam",
+      "paragraphs": [
+        "Use a dull pencil or a tool recommended for your foam so the lines press in without cutting through the plate. Test pressure on a spare corner. The Getty’s washable-marker printmaking activity suggests sketching the design onto a foam surface, tracing lines and pressing firmly but not too hard; use the materials and safety instructions suited to the specific foam you have.",
+        "Keep the plate flat and supported. If you are working with children, supervise any sharp tools and choose a material intended for the activity. Check the product label before using inks or coatings, and protect the work surface. Once the lines are pressed, tilt the plate toward a light source to see whether the grooves are deep enough to hold their shape but not so deep that the plate splits."
+      ]
+    },
+    {
+      "heading": "Use a test print to tune colour and pressure",
+      "paragraphs": [
+        "Apply a thin, even layer of printmaking ink or a suitable washable medium with a brayer or tool made for it. Too much colour can fill the recessed lines; too little leaves gaps on raised areas. Place the plate onto scrap paper, cover it and press evenly across the back with your hand or a clean baren. Lift one edge to inspect the result before removing the paper completely.",
+        "If the image is blotchy, check whether the plate is flat, the colour layer even and the paper in full contact. If recessed marks fill in, reduce the amount of colour or roll more evenly. If the print is faint, add a little colour or increase pressure across the plate rather than pushing hard at one corner. Change one thing per test so you can tell which adjustment helped."
+      ]
+    },
+    {
+      "heading": "Make a postcard set with a little variation",
+      "paragraphs": [
+        "When a test looks clear, print on postcard-weight paper cut to a consistent size. Keep a dry area for clean prints and label the back of test sheets with the plate and settings used. You can create a small edition with identical images or vary one colour or paper choice at a time. Allow each card to dry fully before stacking, writing on it or placing it in an envelope.",
+        "If you want to mail the cards, check your postal service’s current size, thickness and addressing rules. Do not assume a handmade print automatically meets postage requirements. A card meant to stay in a journal can be any size you like; a card for delivery needs legible writing on the reverse and a surface that will not smear."
+      ]
+    },
+    {
+      "heading": "Keep the plate and notes for a second round",
+      "paragraphs": [
+        "Wash or clean tools according to the medium’s instructions, and store the plate flat so it does not crease. Note the paper, ink, pressure and any problem you noticed. If one line printed poorly, deepen that groove only after the first edition is complete; the comparison between versions will show what changed.",
+        "A finished set does not have to be uniform. Slight differences can show the hand-printing process, while a consistent image helps you focus on technique."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Printmaking with Washable Markers",
+      "url": "https://www.getty.edu/education/k-12-learning/printmaking-with-washable-markers/",
+      "publisher": "J. Paul Getty Museum",
+      "purpose": "Provides a foam-plate printmaking process and guidance on tracing a design and applying pressure; additional ink choices here are framed as general practical advice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "marble-a-sheet-of-paper",
+    "animate-a-strip-in-a-homemade-zoetrope",
+    "control-a-scratch-project-with-a-physical-object"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "try-a-short-seated-movement-session",
+  "slug": "try-a-short-seated-movement-session",
+  "title": "Seated movement for beginners: set up a comfortable short session",
+  "description": "Choose a stable chair, make a small seated movement plan, and adjust each exercise to your comfort rather than chasing repetitions or range.",
+  "intent": "Helps someone build a comfortable first seated movement session, including room setup, pacing, and when to ask a clinician about suitability.",
+  "sections": [
+    {
+      "heading": "Set the room up before choosing movements",
+      "paragraphs": [
+        "Start with the chair, not the exercise list. The NHS advises using a solid chair without wheels, with feet flat and knees bent; loose clothing and water nearby make it easier to settle in. Place the chair on a clear surface where you can get in and out without stepping around clutter. If your balance, joint movement or transfer needs make that setup unsuitable, use the equipment and support recommended by your care team rather than improvising.",
+        "If you have not exercised for a while or have a condition that affects movement, check with a GP or health professional involved in your care about which movements fit you. Seated does not mean suitable for every person in every circumstance. The aim is a small, controlled session that leaves you feeling steady afterward."
+      ]
+    },
+    {
+      "heading": "Choose a few movements with different purposes",
+      "paragraphs": [
+        "A balanced first session can include gentle range of motion and a little leg movement. For example, you might try a comfortable upper-body turn, ankle pointing and flexing, and a small seated march. The NHS page also describes a chest stretch and neck rotations, but there is no need to try every option on day one. Pick two or three that feel relevant and leave time between them to notice how your body responds.",
+        "Think in terms of movement quality rather than a target. Move slowly enough to stay aware of where your feet and hands are. Keep a stable support close if you use one, and make the movement smaller if a full range feels awkward. Stop if you feel pain, dizziness, unusual breathlessness or unwell; do not treat discomfort as something you must push through."
+      ]
+    },
+    {
+      "heading": "Try a ten-minute first pass",
+      "paragraphs": [
+        "Before you begin, sit in a position that feels secure and take a moment to notice whether the chair is stable. Start with a gentle ankle movement on one side, then the other. Add a small march only if lifting your feet feels controlled. Finish with an upper-body movement that does not require you to pull against the chair. Rest between movements as needed. You can end after a few minutes; a shorter comfortable attempt is more useful than forcing a routine you cannot repeat.",
+        "If you use the NHS examples, follow the full instructions on its page and stay within a range that is comfortable for you. The numbers shown there are examples of how the routine is structured, not a test of whether you are fit enough. A practical first attempt might simply be one slow set, with breaks, so you can learn what the positions feel like."
+      ]
+    },
+    {
+      "heading": "Adjust the routine without making it a test",
+      "paragraphs": [
+        "The next time, change just one thing: the order, the amount of rest, or one movement. That makes it easier to understand what helped. A chair with arms may feel reassuring for support but can limit some arm movements; choose stability and your own safe way to sit over copying an illustration exactly. If a movement repeatedly feels wrong, leave it out and ask a professional for an alternative.",
+        "Avoid comparing your repetitions, flexibility or pace with someone else. Fatigue, medication, pain, disability and the reason you are moving all affect what a reasonable session looks like. Rest is part of a session, not a failed attempt."
+      ]
+    },
+    {
+      "heading": "Finish with a useful note",
+      "paragraphs": [
+        "Afterward, notice how you feel getting up and later in the day. Record which movements felt comfortable, which needed a smaller range, and whether you want advice before repeating them. If you have a clinician or therapist guiding your activity, share those observations rather than changing an advised plan on your own.",
+        "Save the experience and note a realistic next step, such as trying the same short sequence again or asking which seated movements are appropriate for you. The NHS describes its routine as something to build up gradually; there is no need to turn the first session into a weekly quota."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Sitting exercises",
+      "url": "https://www.nhs.uk/live-well/exercise/sitting-exercises/",
+      "publisher": "NHS",
+      "purpose": "Stable chair setup, gradual progression, example seated movements and advice to check suitability with a health professional."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "take-a-beginner-pilates-class",
+    "join-an-adapted-tee-ball-session",
+    "try-goalball-at-an-inclusive-sports-session"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

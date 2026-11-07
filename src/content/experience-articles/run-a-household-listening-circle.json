@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "run-a-household-listening-circle",
+  "slug": "run-a-household-listening-circle",
+  "title": "A household check-in that gives everyone a fair turn",
+  "description": "Plan a low-pressure household conversation with clear turn-taking, reflective listening, and a small next step everyone can genuinely support.",
+  "intent": "Shows how to host a voluntary household check-in that helps people understand one another before trying to solve a practical issue.",
+  "sections": [
+    {
+      "heading": "Pick a topic small enough to hold",
+      "paragraphs": [
+        "A listening circle works best as a conversation with a boundary, not a surprise trial about everything that has gone wrong. Choose one ordinary question, such as how shared chores are working or what would make weekday evenings calmer. Tell people the topic in advance and invite them to join; do not make attendance a test of affection or loyalty. Anyone should be able to pass, pause or leave.",
+        "Choose a time when people are not rushing out the door or already exhausted. A familiar room, water and comfortable seats help, but the main preparation is agreement: each person gets an uninterrupted turn, and the purpose is to understand before deciding. If a household member feels unsafe or there is a serious power imbalance, a home meeting may not be an appropriate setting; seek suitable outside support instead."
+      ]
+    },
+    {
+      "heading": "Agree on a few listening rules together",
+      "paragraphs": [
+        "Before starting, ask what would help each person speak freely. You might agree on a short first turn, one person to keep time, phones set aside, and no recording or sharing private comments afterward. A timer can keep turns fair, but let someone finish a thought rather than cutting them off mid-sentence. Agree that anyone can ask for a break and that advice comes only after the speaker says they want it.",
+        "These rules are not a way to control what someone is allowed to feel. They protect the quieter person from being crowded out and keep the meeting from turning into rebuttals. If one person is likely to dominate, offer a written prompt or let people speak in an order they help choose. The facilitator should follow the same rules as everyone else."
+      ]
+    },
+    {
+      "heading": "Listen for meaning before responding",
+      "paragraphs": [
+        "Invite one person to start with a concrete observation: “I feel rushed when the kitchen is still busy at bedtime,” is easier to work with than “Nobody helps.” While they speak, attend to what they say instead of composing a defence. When they finish a thought, reflect back the meaning in your own words: “You want the kitchen to feel settled before you go to bed—is that right?” Then let them correct or add to it.",
+        "UC Berkeley’s Greater Good in Action describes active listening as paraphrasing, asking clarifying questions, expressing empathy, avoiding judgment and advice, and taking turns. A household circle can adapt those actions without pretending that a short meeting solves every disagreement. Useful questions are curious and specific: “Which part of the evening feels most difficult?” Avoid questions that are really accusations in disguise."
+      ]
+    },
+    {
+      "heading": "Give each person a full turn",
+      "paragraphs": [
+        "Go around once before opening discussion. Listeners can jot down a word they want to remember, but should not build a case file of grievances. After each turn, the facilitator can ask the speaker whether they want a reflection, a question or simply a pause. If people disagree about what happened, record the difference in perspective rather than forcing a verdict. One person may experience a reminder as helpful; another may hear it as criticism. Both can describe that experience without either becoming the household’s official truth.",
+        "If someone becomes overwhelmed, stop. Offer a break and agree whether to return to the topic later. Do not press for a confession, apology or decision while emotions are high. The point of listening is not to extract agreement; it is to learn what each person means well enough to choose a workable next move."
+      ]
+    },
+    {
+      "heading": "End with one experiment, not a grand promise",
+      "paragraphs": [
+        "After all willing participants have spoken, ask whether anyone wants to suggest a small change. For the kitchen example, the household might try a ten-minute shared reset after dinner on two evenings, or agree that each person handles their own dishes by a chosen time. Make the action observable and voluntary: who will try what, when will you check whether it helped, and what would make it easier? If there is no agreement, write down the open question and stop there.",
+        "Close by asking each person what they want remembered from the conversation. Keep notes to the agreed action rather than circulating private remarks. At the next check-in, ask what happened and adjust without scoring anyone’s effort. A useful circle may end with one modest experiment—or with clearer understanding and no immediate fix. Save the experience and record the next step only if everyone is comfortable with that record."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Active Listening",
+      "url": "https://ggia.berkeley.edu/practice/active_listening",
+      "publisher": "Greater Good in Action, UC Berkeley Greater Good Science Center",
+      "purpose": "Paraphrasing, clarifying questions, empathy, nonjudgment, avoiding premature advice, and taking turns."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "host-a-bring-one-object-story-circle",
+    "share-a-childhood-game-across-generations",
+    "read-a-play-aloud-around-a-table"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

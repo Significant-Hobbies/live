@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "analyze-an-exoplanet-transit-with-real-telescope-data",
+  "slug": "analyze-an-exoplanet-transit-with-real-telescope-data",
+  "title": "Turn exoplanet telescope images into a first light curve",
+  "description": "Follow NASA Exoplanet Watch’s beginner route from telescope images to a light curve, then learn what a transit-shaped dip can and cannot tell you.",
+  "intent": "How can I make a first exoplanet transit light curve from real telescope data without mistaking noise for a planet signal?",
+  "relatedExperienceSlugs": [
+    "attend-an-indian-observatory-s-public-visitor-session",
+    "build-a-model-of-the-moon-s-phases",
+    "map-impact-melt-features-on-the-moon"
+  ],
+  "sections": [
+    {
+      "heading": "Start with a dataset that has a documented route",
+      "paragraphs": [
+        "An exoplanet transit is a small dip in a star’s measured brightness when a planet crosses in front of it from our point of view. The observations are not usually a ready-made picture of a planet; they are a series of star images that must be measured consistently and plotted over time. NASA Exoplanet Watch provides a beginner tutorial using sample data and a standard path for turning telescope images into a transit light curve. That is a more useful first project than downloading an unexplained file and guessing what to do with it.",
+        "Choose the tutorial’s sample dataset and keep its accompanying instructions with it. Note the target star, date or observation sequence, and tool version if provided. Your first aim is to reproduce the plot and understand each stage, not to make a new discovery."
+      ]
+    },
+    {
+      "heading": "Learn what the axes mean",
+      "paragraphs": [
+        "A light curve places observation time on one axis and measured brightness on the other. A transit may appear as a dip with a beginning, a flatter middle and a return to baseline. NASA’s analysis guide describes EXOTIC as a tool for reducing telescope images into light curves and explains that the graph tracks stellar brightness during a possible transit. The shape is evidence to examine, not a standalone proof: clouds, tracking, focus changes and measurement choices can also shift points.",
+        "Before interpreting the dip, inspect the full curve. Is the baseline steady before and after the event? Are there scattered points or a gradual drift? Mark unusual points rather than deleting them without explanation. If a feature disappears when the tool’s settings change slightly, note that uncertainty."
+      ]
+    },
+    {
+      "heading": "Follow the reduction steps in order",
+      "paragraphs": [
+        "Use the beginner module first, then follow the output it asks you to examine. In broad terms, the reduction workflow measures the target star’s brightness in each image, compares it with reference stars, and places the measurements in time order. Keep the original files untouched and work from a copy so you can repeat a step if needed. Save a note of the inputs and settings you used.",
+        "Do not jump straight to fitting a smooth curve. First learn how the data were selected, how comparison stars were chosen and what checks the tutorial recommends. If your plot looks unlike the example, compare one setting or input at a time rather than changing several variables together. A written log makes the difference between a reproducible result and a screenshot with no history."
+      ]
+    },
+    {
+      "heading": "Separate a measurement from its interpretation",
+      "paragraphs": [
+        "Describe what the graph shows in plain language: “brightness falls over this interval, then rises” is an observation. “This proves an Earth-like planet” is an interpretation the curve alone does not justify. Keep questions about transit depth, timing and data quality separate. NASA explains that Exoplanet Watch participants can share light curves through the AAVSO’s Exoplanet Database after registering and obtaining an observer code; if you reach that stage, follow the project’s current submission instructions.",
+        "If you are unsure whether a curve is good enough to submit, NASA’s FAQ says participants can ask for advice in the project community or upload it for review. That invitation is a reminder to seek review rather than quietly treating a rough plot as a confirmed result."
+      ]
+    },
+    {
+      "heading": "Finish with one reproducible result",
+      "paragraphs": [
+        "For a first session, save the plotted curve, the source dataset, the tutorial step you completed and one question. A useful outcome could be being able to point to a dip and explain how the image measurements became that curve. Do not promise that every provided observation will show a clear transit; data quality varies.",
+        "The next step may be repeating the beginner tutorial, comparing a second dataset, or asking the Exoplanet Watch community about a confusing feature."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Exoplanet Watch FAQs",
+      "url": "https://science.nasa.gov/citizen-science/exoplanet-watch/exoplanet-watch-faqs/",
+      "publisher": "NASA",
+      "purpose": "Primary FAQs on observations, light curve sharing, data questions and seeking feedback."
+    },
+    {
+      "title": "How to Analyze Your Exoplanet Observations",
+      "url": "https://science.nasa.gov/citizen-science/exoplanet-watch/how-to-contribute/how-to-analyze-your-data/",
+      "publisher": "NASA",
+      "purpose": "Official analysis pathway and EXOTIC tools for converting image files into transit light curves."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

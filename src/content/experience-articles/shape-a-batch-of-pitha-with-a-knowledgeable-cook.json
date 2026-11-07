@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "shape-a-batch-of-pitha-with-a-knowledgeable-cook",
+  "slug": "shape-a-batch-of-pitha-with-a-knowledgeable-cook",
+  "title": "Learn the texture and shaping of pitha from a cook",
+  "description": "Learn one named pitha by working alongside someone who makes it, paying attention to dough texture, filling, shaping and the cook’s regional method.",
+  "intent": "What should I ask and notice when learning to shape pitha from a knowledgeable cook?",
+  "relatedExperienceSlugs": [
+    "roll-couscous-grains-by-hand-with-a-knowledgeable-cook",
+    "create-a-family-cookbook-with-old-recipes",
+    "plate-a-meal-inspired-by-a-food-history-collection"
+  ],
+  "sections": [
+    {
+      "heading": "Let the cook name the pitha",
+      "paragraphs": [
+        "Pitha refers to a wide family of foods, and the name, filling and method can vary by region and household. Choose one specific pitha and learn it from a person who makes that version. The Bihar Tourism page for Bihari dal pittha describes rice-flour dumplings with a spicy lentil filling and steaming, but that is one regional example, not a definition of every pitha. Ask your cook what name they use, where their method comes from and whether the batch will be sweet or savory.",
+        "If this is a family or community recipe, ask whether the cook is comfortable teaching it and how they want it credited if you write it down. Avoid presenting one person’s version as the only authentic method."
+      ]
+    },
+    {
+      "heading": "Watch the dough before you try to shape it",
+      "paragraphs": [
+        "Observe how the cook mixes and rests the dough, then ask what texture they are looking for. Is it soft enough to close without cracking? Does it need more water, flour or resting time? Words such as “soft” and “firm” can mean different things in different kitchens, so let your fingers learn the reference texture under the cook’s guidance.",
+        "Start with one small piece and shape it slowly. Keep the work surface clean and follow the cook’s food-safety habits for hands, utensils and cooked fillings. If the cook uses a tool or method you have not tried, ask for a demonstration before copying it."
+      ]
+    },
+    {
+      "heading": "Make a few imperfect pieces",
+      "paragraphs": [
+        "Your first dumpling may have a thick edge or an uneven seal. That is useful feedback. Ask the cook to show where to pinch, fold or smooth the edge, then try again. Make only a few pieces before asking whether the batch needs adjustment. Changing the dough, filling and shaping technique at once makes it hard to learn which change helped.",
+        "Notice how the filling is portioned and whether the cook leaves room for the dough to close. If one piece opens during cooking, do not assume the whole batch is ruined. Ask the cook how they handle it and what they would change next time."
+      ]
+    },
+    {
+      "heading": "Share the work and remember the source",
+      "paragraphs": [
+        "A good lesson includes the cook’s decisions, not just a list of ingredient amounts. Write down the name of the dish, the person who taught you, the region or family connection they shared, and any variations they mentioned. Ask permission before taking photographs or posting the recipe. If a detail is uncertain, label it as something to ask next time rather than filling in a guess.",
+        "Serve the pitha the way the cook recommends and let them lead the tasting. For the Bihar Tourism dal pittha version, the page describes the dumplings as steamed with a lentil filling; your cook’s pitha may be prepared differently, and that difference is part of the learning."
+      ]
+    },
+    {
+      "heading": "Make one version again while the lesson is fresh",
+      "paragraphs": [
+        "A realistic next step is to repeat the same named pitha with the cook’s notes nearby, or ask to help with one more batch. Compare the dough texture and the shaping step, not just the final appearance. The experience is about learning with someone who carries the method, so leave room for their corrections and stories."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Bihari Dal Pittha",
+      "url": "https://tourism.bihar.gov.in/en/experiences/food-and-cuisine/main-course/pittha",
+      "publisher": "Bihar Tourism",
+      "purpose": "Official regional example of rice-flour dumplings with lentil filling and steaming; the article treats it as one version rather than a universal definition."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

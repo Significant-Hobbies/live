@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "earn-an-amateur-radio-license-in-your-country",
+  "slug": "earn-an-amateur-radio-license-in-your-country",
+  "title": "Getting an amateur radio license: a practical route to your first station",
+  "description": "Find your country’s official amateur-radio licensing route, study the right syllabus, and understand your operating privileges before buying equipment.",
+  "intent": "What should a beginner do before applying for an amateur-radio license? This guide shows how to verify the local rules, build a study routine, and prepare for the first lawful operation.",
+  "sections": [
+    {
+      "heading": "Begin with the regulator, not a radio shop",
+      "paragraphs": [
+        "Amateur radio is a licensed activity, and the path depends on where you live. Search for your national communications regulator and find its current amateur service or operator qualification page. Check who may apply, what examination or assessment is required, how to apply, and what certificate or call sign follows. A club’s advice can make the process easier to understand, but the regulator’s rules decide what you may do.",
+        "Avoid borrowing an exam guide from another country as if the privileges were universal. Names for grades, frequency allocations, power limits, callsigns and permitted modes differ. If a page is unclear, ask a local radio club to point you to the matching official rule or syllabus. In India, for example, the Department of Telecommunications describes the Amateur Station Operator Certificate process and links to the applicable rules; readers elsewhere should use their own authority’s instructions."
+      ]
+    },
+    {
+      "heading": "Use a club visit to make the syllabus concrete",
+      "paragraphs": [
+        "A radio club can turn abstract terms into things you can see and hear. Ask whether you can attend a beginner meeting, observe a demonstration or speak with someone who recently passed the local assessment. Bring the official syllabus and mark topics that feel unfamiliar: operating procedure, regulations, basic electronics, propagation or safety. Then ask which study materials match the current examination rather than relying on an old question bank.",
+        "You do not need to buy a transceiver to start learning. A demonstration can show how an antenna, receiver, controls and operator procedure fit together. Listen for how operators identify themselves and share a channel. If someone offers a supervised practical activity, follow the club’s setup and local rules; do not transmit independently unless you hold the permissions required where you are."
+      ]
+    },
+    {
+      "heading": "Build a study plan that reveals weak spots",
+      "paragraphs": [
+        "Set a repeatable study slot and work in short blocks. Read one topic, explain it in ordinary language, and then solve a few questions without looking at the answer. Keep an error list: perhaps you confuse units, miss a condition in a regulation, or know a formula but not when to use it. Return to those items later instead of rereading everything equally.",
+        "Treat practice questions as feedback, not as a promise that the same questions will appear. For a calculation, write down what each quantity represents before substituting numbers. For a procedure or rule, explain the situation it covers and where to verify the wording. If your country publishes an official syllabus or examination notice, compare your notes against it periodically; changes to the assessment can make an old guide incomplete."
+      ]
+    },
+    {
+      "heading": "Apply only when you know the sequence",
+      "paragraphs": [
+        "Once you are comfortable with the material, follow the authority’s application instructions from beginning to end. Confirm the form, identity documents, fee if any, examination booking, and how results or certificates are issued. Keep copies of receipts and official correspondence. If a step is handled through a separate government portal, start from the regulator’s own link so you know you have reached the correct service.",
+        "Passing an exam and being ready to operate are related but separate milestones. Read the certificate conditions and the current rules for the operating privileges you received. Note any restrictions on bands, equipment, station location or supervision. Do not infer permissions from a friend’s license, a foreign website or what a radio can technically transmit."
+      ]
+    },
+    {
+      "heading": "Make the first station modest and lawful",
+      "paragraphs": [
+        "Before spending money, decide what you want to try: listening, local club nets, portable operation or learning antenna basics. Ask a club member to help match that interest to equipment that complies with your privileges and local technical requirements. Borrowing or trying a club station first can prevent an expensive mismatch. Keep notes on the model, antenna arrangement and settings you use, and ask an experienced operator to check your setup.",
+        "Your first goal can be small: understand a station demonstration, complete the official application, or make a first contact when your authorization is in force. Record what you learned and what still needs checking."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Amateur Station Operator Certificate (ASOC)",
+      "url": "https://eservices.dot.gov.in/amateur-station-operator-certificate-asoc",
+      "publisher": "Department of Telecommunications, Government of India",
+      "purpose": "Verifies India-specific certificate categories, eligibility, required documents and the broad application and examination sequence; used only as an example of consulting a national authority."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-a-radio-jove-receiver-with-a-radio-club",
+    "build-a-spectroscope-and-compare-household-lights",
+    "control-a-scratch-project-with-a-physical-object"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

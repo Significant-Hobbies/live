@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "build-a-folding-paper-peepshow",
+  "slug": "build-a-folding-paper-peepshow",
+  "title": "Plan the view before you build a paper peepshow",
+  "description": "Design a small folded theatre with clear sightlines, layered depth and a structure that opens smoothly. A practical paper peepshow guide for a first build.",
+  "intent": "How do I plan a paper peepshow that reads clearly through its tiny viewing window, and what should I test before committing to glue?",
+  "relatedExperienceSlugs": [
+    "engineer-a-pop-up-paper-scene",
+    "make-a-sheet-of-paper-from-recycled-fibres",
+    "marble-a-sheet-of-paper"
+  ],
+  "sections": [
+    {
+      "heading": "Choose one moment worth looking into",
+      "paragraphs": [
+        "A peepshow works because the viewer sees a framed slice of a world. Begin with one scene that can be understood at a glance: a bus disappearing around a bend, a room with a bright window, or a garden gate opening onto a path. A tiny scene does not need a plot with many events. It needs a clear direction for the eye and a reason to look from front to back.",
+        "Make a thumbnail sketch of the view through the opening, then mark three depth zones: a foreground frame, a middle layer with the main action, and a back wall or horizon. Keep the most important shape away from the edges where folds or supports may cover it. If you are working with a partner, ask what they notice first in the sketch. If they describe different scenes, simplify before cutting."
+      ]
+    },
+    {
+      "heading": "Plan the layers as silhouettes",
+      "paragraphs": [
+        "Draw each layer separately on scrap paper and hold them between your eye and a lamp or bright window. The foreground can be darker and more open, like branches around a stage, while the middle layer gives the eye a subject to land on. The rear panel can carry the most distant shapes and a calm area of color. Overlap is what suggests distance; fine detail is optional.",
+        "Leave gaps around the central subject so it does not disappear behind the layer in front. A common first attempt is to fill every panel with decoration. Instead, make one quick cutout mock-up from scrap card and look through it from the planned viewing point. Move the panels closer or farther apart until the shapes separate. This small test can save a finished image from being hidden by its own frame."
+      ]
+    },
+    {
+      "heading": "Mock up the folding mechanism first",
+      "paragraphs": [
+        "Paper peepshows use connected panels that concertina open while staying aligned. The V&A’s maker guide provides a printable construction plan, and notes that its template should be printed at 100 percent. Use its measurements if you follow that design; if you adapt the form, make a rough paper version before using your chosen artwork. The folds must open without twisting and close without forcing the scene flat.",
+        "Fold a plain sheet into a loose zigzag, attach temporary paper tabs, and check that the front and rear panels remain roughly parallel. Put a small mark where the structure stops naturally. If the opening pulls one side inward, widen the connecting folds or reduce the number of layers. Do not glue until the dummy opens and closes several times without catching."
+      ]
+    },
+    {
+      "heading": "Cut safely and assemble in stages",
+      "paragraphs": [
+        "Choose paper that can hold a fold without sagging. Light card is often easier to handle than very thin printer paper, but overly thick stock can make the concertina stiff. The V&A template calls for precise cutting and mentions a craft knife or scalpel. If you do not already have safe tool habits, choose scissors and simplify the silhouette; for a blade, work on a cutting mat, keep fingers out of the cutting path, and ask an experienced adult to supervise children.",
+        "Transfer one layer at a time, keeping the flat fold lines distinct from the areas to remove. Dry-fit each piece before applying a small amount of glue to its tabs. Let an attached layer set before adding the next; wet paper can buckle, and correcting several glued panels at once is frustrating. Check from the viewing opening after each addition, not only from above."
+      ]
+    },
+    {
+      "heading": "Make a first version, then record what changed",
+      "paragraphs": [
+        "Set aside a relaxed session and aim for a prototype rather than a keepsake. A useful first version can be made from a window scene, a few cut silhouettes and a simple rear panel. Test it in normal room light, then near a brighter window. If the image only works under one angle, adjust the opening or move a layer instead of adding more decoration.",
+        "When someone else looks through it, ask one specific question: “Which layer feels closest?” Their answer will show whether your spacing is legible. Note one improvement for a second build, such as a wider viewing slot or a larger gap around the main figure."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Make your own: paper peepshow",
+      "url": "https://www.vam.ac.uk/articles/make-your-own-paper-peepshow",
+      "publisher": "Victoria and Albert Museum",
+      "purpose": "Primary construction reference for layered paper peepshows, template scale, cutting requirements and historical examples."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

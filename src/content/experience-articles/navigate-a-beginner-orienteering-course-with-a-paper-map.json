@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "navigate-a-beginner-orienteering-course-with-a-paper-map",
+  "slug": "navigate-a-beginner-orienteering-course-with-a-paper-map",
+  "title": "Beginner orienteering: choose a course and navigate it calmly",
+  "description": "Choose a genuinely beginner-friendly orienteering course, read its paper map one leg at a time, and know what to do when you lose your place.",
+  "intent": "Helps a first-timer select a suitable course and make understandable route decisions with a paper map, beyond the experience page’s basic event plan.",
+  "sections": [
+    {
+      "heading": "Choose a course that leaves room to learn",
+      "paragraphs": [
+        "Look for a course explicitly marked for newcomers, often called white, yellow or orange in British Orienteering’s system. These courses tend to keep controls near paths or in visible places; longer technical courses are a poor way to judge whether you enjoy the sport. Ask the organiser about distance, terrain, whether the route crosses uneven ground, and the time by which everyone must report back. If the event offers a score course, you choose which controls to visit within a time limit; a fixed beginner course is simpler when you want to practise visiting them in order.",
+        "You do not need to run. Wear clothing suited to the weather and shoes with grip, and check the event’s clothing and access notes. Tell the organiser it is your first course. They can explain the map, timing device, control symbols and what to do if you stop early."
+      ]
+    },
+    {
+      "heading": "Make the map match the ground before moving",
+      "paragraphs": [
+        "At the start, find the triangle marking your position and point the map so its north lines correspond to north. A compass can help, but you can also turn the map until visible features—such as a path junction, boundary or stream—line up with what is around you. The map legend is there to consult; for a first outing, focus on paths, fences, water and the colours that distinguish open ground from woodland.",
+        "Fold the map so the next part of the course is easy to see. Keep a finger or thumb at your current position, then identify one nearby feature you expect to pass. This is more reliable than staring at the whole map and trying to memorise a route. The map may show details more finely than a street map, so compare both direction and distance: a junction can arrive sooner than you expect."
+      ]
+    },
+    {
+      "heading": "Navigate in small, checkable legs",
+      "paragraphs": [
+        "For each control, pick a route you can explain in a sentence: follow the path to the bend, then look for the fence corner. On a beginner course, staying on a clear path may be more useful than taking a shorter line through unfamiliar ground. Pause at recognizable features and move your thumb along the map as you go. When you reach a control, check its code against the control description rather than assuming that any marker at the site is yours.",
+        "Imagine the first leg crosses a small park. If the map shows a fork ahead, decide which branch you expect before reaching it. At the fork, stop, look around and confirm the landmarks. If the scene does not match, do not keep walking in the hope that it will become clear. Turn back to the last feature you confidently identified, orient the map again and ask an organiser for help if needed."
+      ]
+    },
+    {
+      "heading": "Treat uncertainty as a navigation moment",
+      "paragraphs": [
+        "Losing your position is part of learning, not a reason to rush. Stop somewhere safe, take a breath and identify something definite: a path edge, junction, fence, or water feature. Rotate the map until that feature agrees with the ground. Retrace your steps to a known point rather than cutting across an area you cannot identify. Keep within the event boundaries and follow the organiser’s safety instructions. If you decide you have had enough, use the stated help or withdrawal procedure.",
+        "The most common beginner trap is confusing “near the control” with “at the control.” Several similar features may appear close together. Read the control description, check the marker code and use the map to distinguish a path end from a nearby bend or boundary. Speed can wait until the symbols and ground start to feel familiar."
+      ]
+    },
+    {
+      "heading": "Finish well and take one lesson forward",
+      "paragraphs": [
+        "Report to the finish or download point even if you have skipped a control or stopped early. Organisers need to know you are back; follow the event’s required procedure for returning timing equipment. Then review only a couple of decisions: one place where the map helped you, and one where you lost confidence. Marking those moments on the map turns a pleasant walk into a useful record.",
+        "For another attempt, choose one small focus—orienting the map at every junction, keeping your position marked, or checking each control code. Save the experience and note the course type and what you learned; those details will make your next choice easier."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "What is Orienteering?",
+      "url": "https://www.britishorienteering.org.uk/newcomers_guide",
+      "publisher": "British Orienteering",
+      "purpose": "Course grades, beginner course character, map colours, control order and event finish procedure."
+    },
+    {
+      "title": "Top Tips for Beginners",
+      "url": "https://www.britishorienteering.org.uk/tipsforbeginners?fpwd=1",
+      "publisher": "British Orienteering",
+      "purpose": "Orienting a map, judging scale, folding to track position and checking control codes."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "make-a-local-walking-loop-using-a-public-ferry",
+    "join-a-fossil-walk-led-by-a-local-geologist",
+    "document-a-wild-species-for-inaturalist"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

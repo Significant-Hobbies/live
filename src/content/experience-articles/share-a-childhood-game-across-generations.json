@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "share-a-childhood-game-across-generations",
+  "slug": "share-a-childhood-game-across-generations",
+  "title": "Share a childhood game across generations without correcting the rules",
+  "description": "Invite a relative to teach a game they remember, learn their version before comparing rules, and make room for the story around the play.",
+  "intent": "Shows how to turn an intergenerational game into a welcoming exchange that values the teacher’s remembered version and the shared story.",
+  "sections": [
+    {
+      "heading": "Invite a teacher, not a performance",
+      "paragraphs": [
+        "Ask a relative whether they would like to teach you a game they played when they were younger. Give them an easy way to say no, and let them choose the game. They may remember a playground game, a card game, a rhyme with actions, or something the family still plays. The goal is not to test their memory or prove a childhood story; it is to spend time learning something from their point of view.",
+        "Ask what would make the game comfortable now: number of players, table or floor, how long to play, and whether any pieces are hard to handle. You can adapt the setup together, but check before changing a rule that matters to the teacher."
+      ]
+    },
+    {
+      "heading": "Let the first explanation be imperfect",
+      "paragraphs": [
+        "People often learn games from peers rather than written rulebooks. Invite the teacher to explain the setup and show one turn, then try a practice round. If a rule is unclear, ask for an example rather than interrupting with a rule search. You might ask, “What happens if both players do this?” or “How did your family decide who starts?” That makes room for household variations and the memories that came with them.",
+        "Carrom can be one option if the family has a board. The Traditional Games Federation of India notes that carrom has many rule variations, even with formal bodies and written rules. A relative’s version can be different from a tournament version without being a mistake in this setting."
+      ]
+    },
+    {
+      "heading": "Make the game accessible and enjoyable",
+      "paragraphs": [
+        "Set up pieces where everyone can reach them and choose a pace that leaves time for conversation. If the game depends on quick movement, fine motor control or getting down to the floor, ask whether there is a seated or slower version. Keep the adaptation visible to everyone so nobody is secretly held to a different standard. For a game whose rules are forgotten, invent a simple version together and label it as a new household variant.",
+        "Do not turn the session into an interview with a checklist. A question such as “Who did you play with?” or “Where did you usually play?” can open a story, but let the person decide what to tell. If they do not remember a detail, move back to the game."
+      ]
+    },
+    {
+      "heading": "Finish one round before changing anything",
+      "paragraphs": [
+        "Play a complete round using the version you learned. If the game is long, agree on a stopping point before you begin, such as one hand or a short timer. During play, let the teacher remind you of a rule without treating it as criticism. If the instructions conflict, pause and ask which version they want to use for this round. A clear shared rule is kinder than arguing over which memory is historically correct.",
+        "Take a break if people are tired or frustrated. A good session can be short, especially if the point was to learn a new tradition together rather than win."
+      ]
+    },
+    {
+      "heading": "Record the game in the teacher’s words",
+      "paragraphs": [
+        "Afterward, ask if they would like you to write down the name, basic setup and one rule that makes their version distinctive. Check the wording with them before keeping or sharing it. Some family games or chants may be private, culturally specific or associated with a community; do not publish them without consent. A note can preserve a small memory without pretending to be a definitive account of a whole tradition.",
+        "Save the experience with one detail you learned and whether the relative wants another game session. Next time, they could teach a different person or show how the game changed across generations."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Carrom",
+      "url": "https://www.traditionalgamesindia.com/games-list/carrom/",
+      "publisher": "Traditional Games Federation of India",
+      "purpose": "Documents carrom as one traditional game option and notes variations in its rules."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "host-a-bring-one-object-story-circle",
+    "have-one-real-conversation-with-a-grandparent",
+    "read-a-play-aloud-around-a-table"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

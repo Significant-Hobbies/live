@@ -3,6 +3,7 @@ import { renderPublicExperiencesSource } from './public-editorial-source';
 import { renderPublicSearchSource } from './public-editorial-source';
 import { randomHobbyMessage } from './public-button-copy';
 import { renderPublicBlogSource } from './public-editorial-source';
+import { renderPublicBlogIndexSource } from './public-editorial-source';
 import { renderPublicHobbySource, renderPublicCategorySource } from './public-editorial-source';
 import {
   renderPublicExperienceSource,
@@ -21,6 +22,14 @@ import type { Phase } from '~/lib/types';
 const SITE_URL = 'https://significanthobbies.com';
 
 export async function renderPublicRouteMarkdown(pathname: string): Promise<string | null> {
+  if (pathname.startsWith('/blog?')) {
+    const query = new URLSearchParams(pathname.slice('/blog?'.length));
+    return renderPublicBlogIndexSource({
+      page: query.get('page') ?? undefined,
+      category: query.get('category') ?? undefined,
+      q: query.get('q') ?? undefined,
+    });
+  }
   const path = normalizePath(pathname);
   const source = `${SITE_URL}${path === '/' ? '' : path}`;
 

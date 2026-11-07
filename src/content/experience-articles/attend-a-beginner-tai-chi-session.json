@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "attend-a-beginner-tai-chi-session",
+  "slug": "attend-a-beginner-tai-chi-session",
+  "title": "What to look for in a beginner tai chi class",
+  "description": "Choose a first tai chi session by asking about teaching style, movement options and class pace, then arrive ready to learn a short sequence comfortably.",
+  "intent": "How can I choose a suitable beginner tai chi class and take part without trying to match everyone else?",
+  "relatedExperienceSlugs": [
+    "learn-a-short-supported-balance-routine",
+    "do-a-30-day-yoga-challenge",
+    "learn-non-contact-boxing-footwork-and-pad-skills"
+  ],
+  "sections": [
+    {
+      "heading": "Find out what kind of class it is",
+      "paragraphs": [
+        "Tai chi classes are not all organized around the same goal. Some emphasize gentle movement and exercise; others teach martial forms, weapons or a traditional sequence. The Tai Chi Union for Great Britain says its instructors meet standards for teaching and technical ability, while noting that instructors and classes vary in focus. Before booking, ask the teacher what a beginner actually does in the first session, whether the class welcomes newcomers mid-course, and whether movements can be adapted.",
+        "If you have a health condition, recent injury, balance concern or mobility need, ask a qualified healthcare professional what kind of movement is appropriate for you and tell the instructor what support would help. A good class can explain options without requiring you to disclose more than you want. You are choosing a learning environment, not auditioning for perfect form."
+      ]
+    },
+    {
+      "heading": "Notice the teacher’s way of teaching",
+      "paragraphs": [
+        "A useful introductory session gives you time to see and hear a movement before trying it. The teacher should explain where to place attention and offer a way to reduce range or pause. Ask if standing and seated variations are available, and whether you may observe a class before joining. The Tai Chi Union directory lets people search for instructors, but the union says it does not perform background checks; use the directory as a starting point and ask your own practical questions.",
+        "Pay attention to whether instructions are clear and whether questions are received respectfully. You may prefer a quiet class with detailed alignment cues, or a more social class that repeats a short set. The best fit is the one whose pace helps you learn safely and consistently."
+      ]
+    },
+    {
+      "heading": "Prepare for a low-pressure first visit",
+      "paragraphs": [
+        "Wear clothing that lets you move freely and shoes that feel secure on the class floor; ask the teacher if the venue has specific footwear guidance. Arrive early enough to find the room and tell the teacher that this is your first time. There is no need to memorize terminology before you go. Let the instructor know if you may need a chair, a position near a wall, or a break.",
+        "A first lesson might introduce how to shift weight slowly, soften the knees, or coordinate a simple arm movement with a step. Take only the range that feels steady. If a posture causes pain, dizziness or unusual discomfort, stop and tell the teacher. You can watch part of a sequence and rejoin when ready."
+      ]
+    },
+    {
+      "heading": "Learn one small piece instead of chasing the whole form",
+      "paragraphs": [
+        "When a teacher demonstrates a sequence, follow one cue at a time: where your weight is, where your hands travel, or which direction you face. Repeating a short section gives you a chance to notice transitions between positions. Beginners often focus so hard on copying the arms that the feet become unstable; simplify the movement and ask the instructor to break it down.",
+        "After class, write down one movement name or image that helps you remember the sequence, along with one question to ask next time. Do not treat a brief class as a workout benchmark. Tai chi is a skill you can revisit slowly, and remembering one clearer transition is a useful result."
+      ]
+    },
+    {
+      "heading": "Decide what would make a second session worthwhile",
+      "paragraphs": [
+        "After the session, note how the instruction felt, what movement options were available, and whether the schedule works for your life. You can try another teacher if you need a different pace. If the class suited you, ask what to practise between sessions and whether any movements should be avoided without supervision."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Find an Instructor",
+      "url": "https://www.taichiunion.com/tai-chi-instructors/",
+      "publisher": "Tai Chi Union for Great Britain",
+      "purpose": "Primary directory and class information; describes instructor standards, differing teaching focuses and its limitation on background checks."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

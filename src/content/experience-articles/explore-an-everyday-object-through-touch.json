@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "explore-an-everyday-object-through-touch",
+  "slug": "explore-an-everyday-object-through-touch",
+  "title": "Explore an everyday object through touch, then describe its texture",
+  "description": "Choose a safe everyday object, explore its shape and surface without looking, and write down tactile details before guessing what it is.",
+  "intent": "Provides a sensory noticing exercise for describing an object through touch while keeping the materials safe and the activity adaptable.",
+  "sections": [
+    {
+      "heading": "Choose objects that invite attention safely",
+      "paragraphs": [
+        "Select one or a few familiar objects with interesting surfaces and shapes: a piece of fruit, a soft brush, a smooth wooden spoon or a textured cloth. Avoid anything sharp, fragile, dirty, hot, leaking or small enough to be swallowed. If someone has sensory sensitivities, ask whether they would prefer to choose the object, use one hand, keep their eyes open or skip the activity. Participation should stay voluntary.",
+        "The Imbali Visual Literacy Project’s touch activity suggests using objects with varied textures and forms, while explicitly avoiding items that are sharp, fragile or flat. Its original lesson uses an opaque bag and a group. You can adapt it for one person by placing a single object on a table and looking away."
+      ]
+    },
+    {
+      "heading": "Describe before you try to identify",
+      "paragraphs": [
+        "Close your eyes only if comfortable, then explore one part of the object at a time. Notice edge, surface, weight, temperature, flexibility and shape. Use descriptive pairs: smooth and ridged, soft but springy, cool with a rounded edge. Try not to jump immediately to the object’s name; a slower description helps you notice details that vision normally supplies at once.",
+        "If you are doing this with someone else, let each person take a turn and describe their own sensation. Do not tell them what they should feel or make a wrong guess into a joke. The point is to build a richer vocabulary of touch, not to identify objects faster than another person."
+      ]
+    },
+    {
+      "heading": "Make a small tactile note",
+      "paragraphs": [
+        "Write three observations before opening your eyes: one about texture, one about shape and one about how the object changes when you move it. If writing is not comfortable, say the words aloud or make a quick sketch. The Imbali activity asks participants to remember touch sensations and describe them in writing to extend their art vocabulary; your notes can be short and ordinary.",
+        "For example: “It has a ridged edge, a soft centre, and a little weight near one end.” That kind of description remains useful even if your first guess is wrong."
+      ]
+    },
+    {
+      "heading": "Look, compare and notice your assumptions",
+      "paragraphs": [
+        "Open your eyes and look at the object. Which details were easy to feel? Which were hard to infer without sight? Did knowing its name change how you describe the surface? Notice the gap between what your hand detected and what your mind assumed. You might sketch the tactile feature larger than the whole object, or choose a colour or line that matches the feeling.",
+        "If an object is emotionally meaningful, decide whether you want to share that story. It is fine to keep the exercise focused on surface and shape. Do not use an object that belongs to someone else without asking."
+      ]
+    },
+    {
+      "heading": "Repeat with one useful variation",
+      "paragraphs": [
+        "Try a second object that differs in only one way, such as smooth versus rough or soft versus firm. Compare the descriptions without ranking them. If you use a bag, keep it clean, large enough to avoid choking hazards, and let participants opt out rather than reaching inside without knowing what is there. For young children or anyone who needs assistance, choose objects and supervision appropriate to them.",
+        "Save the experience with one word you want to remember and one object you might explore again. Next time, compare texture through fingertips, palm or a tool such as a soft brush, only if that feels comfortable."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Exploring through touch",
+      "url": "https://imbaliartbooks.org.za/exploring-through-touch/",
+      "publisher": "Imbali Visual Literacy Project",
+      "purpose": "Provides tactile object selection guidance, safety exclusions and a touch-first descriptive activity."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "follow-a-colour-through-your-neighbourhood",
+    "make-a-temporary-arrangement-and-take-it-apart",
+    "try-a-short-seated-movement-session"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "take-a-beginner-pilates-class",
+  "slug": "take-a-beginner-pilates-class",
+  "title": "Beginner Pilates: choose a class that lets you learn the basics",
+  "description": "Find a beginner Pilates class with clear instruction, ask about adaptations and transfers, and use feedback to choose a manageable first practice.",
+  "intent": "Helps a first-timer select an appropriate Pilates class and prepare useful questions about pace, floor work and safe modifications.",
+  "sections": [
+    {
+      "heading": "Check what “beginner” means at this studio",
+      "paragraphs": [
+        "Beginner can mean a class for people new to Pilates, a slower class that assumes prior movement experience, or a mixed-level session with options. Read the class description and ask the instructor whether the session is appropriate if you have never attended. Find out whether it involves a mat, equipment, floor transfers, kneeling or extended holds. Those details matter more than a general label.",
+        "The NHS describes its beginner Pilates video as general exercise for people in good health with a reasonable level of fitness. It advises checking with a health professional if you are unsure about suitability, have a health problem or injury, feel unwell, are pregnant or recently gave birth, or have other concerns. Use guidance that fits your situation rather than treating any beginner class as medical care."
+      ]
+    },
+    {
+      "heading": "Ask about teaching style and adaptations",
+      "paragraphs": [
+        "A useful instructor explains the purpose of a movement, shows how to set it up and offers a way to make it smaller or easier. Ask whether you can pause, sit out a movement or ask for a modification during class. If you have an injury, pain, a recent health event or a movement limitation, ask your clinician what types of activity are appropriate, then tell the instructor only what they need to support your participation.",
+        "Clarify what equipment is provided, what clothing works and whether the class expects you to follow verbal cues or mirror demonstrations. If you need a particular adaptation, contact the studio before booking so there is time to discuss it."
+      ]
+    },
+    {
+      "heading": "Make your first class a lesson in attention",
+      "paragraphs": [
+        "Arrive early enough to choose a place where you can see and hear the instructor. Bring water and a mat if the studio asks you to; do not assume you need special clothing or equipment. During class, notice how each movement begins and ends, where your breath is, and whether you can keep the movement controlled. You do not need to match the instructor’s range or pace.",
+        "Use the options offered and stop if something causes pain or makes you feel unwell. The NHS safety information says to stop immediately in those circumstances and seek advice if symptoms concern you or persist. A class is not a place to push through warning signs."
+      ]
+    },
+    {
+      "heading": "Separate learning from doing everything",
+      "paragraphs": [
+        "You may spend the first session learning positions, transitions and terminology rather than completing every exercise. That still counts as a useful first class. If a cue is unclear, ask the instructor to repeat or demonstrate after the group has settled. If getting down to or up from the floor is difficult, discuss that before class rather than improvising a transfer in the middle of the room.",
+        "After class, write down one cue that helped you and one question to bring next time. Avoid judging whether Pilates “worked” after a single session; notice instead whether the format felt understandable, accessible and worth returning to."
+      ]
+    },
+    {
+      "heading": "Choose a sensible next step",
+      "paragraphs": [
+        "If the class felt too fast, try a more introductory format or ask whether a smaller group is available. If the instructor’s options made movement comfortable, you may decide to return at the same level before progressing. If the session raised concerns about pain or symptoms, pause and get advice from a health professional rather than using another class to test it.",
+        "Save the experience and note the instructor or class style, what you practised and any adaptation you want to ask about. Your next step can be another class, a conversation with a clinician or simply waiting until you feel ready."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Pilates video for beginners",
+      "url": "https://www.nhs.uk/live-well/exercise/pilates-and-yoga/pilates-for-beginners/",
+      "publisher": "NHS",
+      "purpose": "Describes a beginner Pilates session and sets out health suitability and stop-exercise guidance."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "try-a-short-seated-movement-session",
+    "join-an-adapted-tee-ball-session",
+    "take-a-beginner-badminton-lesson"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

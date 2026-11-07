@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "make-a-map-of-places-you-call-home",
+  "slug": "make-a-map-of-places-you-call-home",
+  "title": "Map places that feel like home: a personal memory exercise",
+  "description": "Make a personal map of places where you have felt at home, using sensory details and symbols to show what belonging means to you.",
+  "intent": "Offers a gentle visual method for mapping more than one sense of home, including places that are temporary, complicated or remembered.",
+  "sections": [
+    {
+      "heading": "Decide what “home” can mean for this map",
+      "paragraphs": [
+        "A home map does not have to show your current address, follow a real scale or explain your life to anyone else. It can hold a childhood kitchen, a friend’s porch, a library where you felt welcome, a landscape you remember, or an imagined place you hope to find. You can make more than one map if a single page cannot hold the different meanings. Decide first whether this is private, shared with someone, or something you may want to keep.",
+        "MoMA’s classroom prompt for Zarina’s Home Is a Foreign Place begins with words associated with home and turns them into shapes and symbols. Its focus is one artist’s memory and experience; your page can take a different form. You do not need to imitate the artwork or disclose personal history to complete the exercise."
+      ]
+    },
+    {
+      "heading": "Collect details before drawing locations",
+      "paragraphs": [
+        "Write a short list of places, then add one detail beside each: a sound, texture, smell, view, routine or person you associate with it. “The window seat where I read in the rain” carries more of a place than a bare street name. If a place holds mixed feelings, include both: a familiar stairwell and the relief of leaving it, perhaps. You can skip anything you do not want to revisit.",
+        "Choose a visual key: a dot for a place, a line for a route, a wave for water, or a shape for the feeling of being welcome. Symbols can be literal or invented. The map is for making connections visible, not for proving that your memory is geographically precise."
+      ]
+    },
+    {
+      "heading": "Build a map that fits your memory",
+      "paragraphs": [
+        "Place the locations according to what matters to you. You might arrange them by chronology, emotional closeness or how they connect, rather than by distance. A cluster can show that several people or routines made a place feel safe. An empty area can remain empty; it may be a useful part of the page. Use pencil first if you want to change the layout without treating the first mark as final.",
+        "Try one visual choice deliberately: make a place larger because it matters, connect two homes with a path, or draw a boundary where you remember one. Add a small legend so another person could follow the symbols if you choose to share it. You can also keep the key private and let the drawing remain yours."
+      ]
+    },
+    {
+      "heading": "Let the page hold complexity",
+      "paragraphs": [
+        "A map of home is not a ranking of people, countries or childhoods. Belonging can come from repeated ordinary moments rather than a perfect place. Some people have moved often; some have difficult associations with home; others feel no single place fits. You can map a person, language, activity or landscape instead of a building, or make an abstract map of what home feels like now.",
+        "If the exercise brings up something unexpectedly painful, pause and put the page away. You do not owe anyone an explanation. A creative prompt is not therapy, and you can choose a lighter subject or stop. If you do share, say what kind of response you want—curiosity, listening, or simply looking together."
+      ]
+    },
+    {
+      "heading": "Finish with a note to future you",
+      "paragraphs": [
+        "Give the map a title that reflects your own definition: “places I could exhale,” “homes I carried,” or a simple date. Write one sentence about a detail you might have forgotten without the drawing. You can add another point later; a map of belonging can change as your life changes.",
+        "Save the experience and note what you made and whether you want to revisit it. If you want to continue, create a second page for places you have not visited yet that you hope might feel welcoming. The next step can be another map, or nothing more than keeping this one somewhere private."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Zarina: Draw your memory of home",
+      "url": "https://www.moma.org/momaorg/shared/pdfs/docs/learn/mondays/Zarina-Draw-your-memory-of-home.pdf",
+      "publisher": "The Museum of Modern Art",
+      "purpose": "Provides an art-learning prompt that translates words associated with home into symbols and a composition."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "create-a-map-of-languages-in-your-life",
+    "write-a-letter-to-your-younger-self",
+    "spend-a-day-visiting-places-that-shaped-you"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

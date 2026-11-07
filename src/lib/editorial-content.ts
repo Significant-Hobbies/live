@@ -1,12 +1,36 @@
 import { type BlogPost, blogPosts, type ContentBlock } from '~/lib/blog-posts';
 import {
   type ContentPackage,
-  getPackageBySlug,
   getPackagesForHobby,
   getPublishedPackages,
 } from '~/lib/content-packages';
+import { EXPERIENCE_ARTICLES, experienceArticleTarget } from './experience-articles';
+import {
+  articleWordCount,
+  experienceArticleBlocks,
+  type ExperienceArticle,
+} from './experience-article-model';
 
-export type EditorialArticle = BlogPost & { package?: ContentPackage };
+export type EditorialArticle = BlogPost & {
+  package?: ContentPackage;
+  experience?: ExperienceArticle;
+};
+
+function experienceToArticle(article: ExperienceArticle): EditorialArticle {
+  const target = experienceArticleTarget(article.experienceSlug);
+  if (!target) throw new Error(`Unknown article experience: ${article.experienceSlug}`);
+  return {
+    slug: article.slug,
+    title: article.title,
+    excerpt: article.description,
+    category: target.category[0].toUpperCase() + target.category.slice(1),
+    emoji: target.emoji,
+    readTime: Math.max(1, Math.ceil(articleWordCount(article) / 200)),
+    publishedAt: article.publishedAt,
+    content: experienceArticleBlocks(article),
+    experience: article,
+  };
+}
 
 function packageBlocks(pkg: ContentPackage): ContentBlock[] {
   return pkg.sections.flatMap((section) => [
@@ -39,13 +63,13 @@ function assertNoDuplicateSlugs(articles: EditorialArticle[]): EditorialArticle[
 }
 
 export const editorialArticles = assertNoDuplicateSlugs([
+  ...EXPERIENCE_ARTICLES.map(experienceToArticle),
   ...getPublishedPackages().map(packageToArticle),
   ...blogPosts,
 ]);
 
 export function getEditorialArticle(slug: string): EditorialArticle | undefined {
-  const pkg = getPackageBySlug(slug);
-  return pkg ? packageToArticle(pkg) : blogPosts.find((post) => post.slug === slug);
+  return editorialArticles.find((article) => article.slug === slug);
 }
 
 export function getEditorialArticlesForHobby(hobby: string): EditorialArticle[] {
@@ -59,5 +83,9 @@ export function getEditorialArticlesForHobby(hobby: string): EditorialArticle[] 
         (block) => block.type === 'paragraph' && block.text.toLowerCase().includes(search)
       )
   );
-  return assertNoDuplicateSlugs([...packageArticles, ...legacy]).slice(0, 4);
+  const experiences = editorialArticles.filter(
+    (article) =>
+      article.experience && `${article.title} ${article.excerpt}`.toLowerCase().includes(search)
+  );
+  return assertNoDuplicateSlugs([...experiences, ...packageArticles, ...legacy]).slice(0, 4);
 }

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "explore-a-historic-stepwell-s-water-architecture",
+  "slug": "explore-a-historic-stepwell-s-water-architecture",
+  "title": "Reading a historic stepwell through its water architecture",
+  "description": "Explore how a historic stepwell joins water access, shade and movement by looking closely at its levels, stairs, stonework and relationship to the surrounding place.",
+  "intent": "What should I look for when visiting a historic stepwell? This guide offers an observation route that connects architecture to water use while respecting the site and its living context.",
+  "sections": [
+    {
+      "heading": "Begin with the whole site, not the perfect photograph",
+      "paragraphs": [
+        "A stepwell is easiest to understand when you first notice how it meets the ground around it. From a permitted viewpoint, look for the entrance, the direction of the descent and any nearby structures that belong to the same complex. Ask what visitors and local residents use the site for today before treating it as a remnant of the past. In many places a stepwell is both an architectural landmark and part of a neighbourhood with present-day religious, social or practical meaning.",
+        "Choose a visit time and route using the managing institution’s current guidance. Heat, crowds, stairs and restricted areas can affect whether a visit is comfortable. Wear footwear suited to the approach and do not descend beyond open public areas. The depth and visual drama of a well can make a photograph tempting, but barriers and staff instructions set the boundary for safe viewing."
+      ]
+    },
+    {
+      "heading": "Follow the descent as a designed sequence",
+      "paragraphs": [
+        "As you look down the steps or tiers, notice how the architecture changes your sense of scale. Does the stair run straight, turn, or meet a landing? How do columns, walls or openings frame the next level? A descending route can organize access to water while offering shaded places to pause. Describe what is physically visible first; only then connect it to an interpretation about how people may have moved through the space.",
+        "Ahmedabad’s heritage record for Bai Harir ni Vav describes spiral stairs, successive platform levels and a lower hall where people could draw water. It also notes a larger complex that includes a mosque and mausoleum. Those details are specific to that site, but they suggest useful questions to ask at other stepwells: where would someone pause, how does the route change below ground, and what else sits alongside the water structure?"
+      ]
+    },
+    {
+      "heading": "Look for engineering within the ornament",
+      "paragraphs": [
+        "Carved surfaces are easy to notice, yet they often sit alongside structural decisions. Look at the thickness of pillars, repeated supports, joints between materials and how the walls hold the surrounding earth. Do not assume a decorative motif explains the building’s function. Instead, note how ornament and construction occupy the same space: a carved column can be both visually elaborate and part of the rhythm that carries the structure.",
+        "Notice light and temperature from outside the protected route. The transition into a lower level may change sound, brightness and air movement. These sensations can help you understand the spatial experience, but they do not tell you exactly how the building was used historically. A sign, guide or published heritage account can establish context; keep your own observation separate from that record."
+      ]
+    },
+    {
+      "heading": "Ask whose knowledge shapes the story",
+      "paragraphs": [
+        "Historical interpretation can flatten a complex site into a single story of rulers, architects or a named patron. Look for names of builders, artisans, donors, water managers and communities in the site interpretation. If the record is silent, do not fill in the gap with a confident guess. Ask a guide or site staff member whether there is a fuller account, and listen for what is documented versus what remains uncertain.",
+        "Consider how the structure relates to local water conditions without claiming that every feature had one purpose. Regional scarcity, seasonal rainfall, groundwater and social customs vary. An official heritage record may explain the context for one well; a site’s own signage or local scholarship is a better guide to another. Respect active practices, remove no material and avoid photographing people without permission."
+      ]
+    },
+    {
+      "heading": "Leave with one architectural observation",
+      "paragraphs": [
+        "After the visit, sketch a simple section from street level to the lowest visible tier. Mark stairs, platforms, openings and the point where water would have been accessed if the site interpretation confirms it. A rough diagram can help you remember the sequence better than a set of disconnected details. Add one sentence about a structural choice and one question you want to research later.",
+        "A thoughtful visit does not require you to solve the building. It is enough to connect a feature you saw with a plausible purpose that a source supports, while leaving unanswered questions open."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Bai Harir ni Vav heritage record",
+      "url": "https://heritage.ahmedabadcity.gov.in/details/111/heritage_site/tourism-details/en",
+      "publisher": "Ahmedabad Municipal Corporation Heritage City",
+      "purpose": "Provides site-specific information on Bai Harir ni Vav, including the wider complex, levels, stairways and water-drawing hall."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "explore-a-building-during-an-open-house-festival",
+    "follow-cotton-through-a-handloom-village-with-a-weaver",
+    "look-at-one-museum-object-for-twenty-minutes"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

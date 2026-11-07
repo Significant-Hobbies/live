@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "build-and-troubleshoot-a-battery-powered-switch-circuit",
+  "slug": "build-and-troubleshoot-a-battery-powered-switch-circuit",
+  "title": "Build a small battery circuit and find one deliberate fault",
+  "description": "Make a simple low-voltage battery, switch and light circuit, then troubleshoot one changed connection by checking the path step by step.",
+  "intent": "How can I build a beginner switch circuit and troubleshoot it methodically without turning wiring into guesswork?",
+  "relatedExperienceSlugs": [
+    "light-up-a-paper-circuit-card",
+    "build-logic-gates-in-a-circuit-simulator",
+    "build-a-fruit-battery-and-measure-its-output"
+  ],
+  "sections": [
+    {
+      "heading": "Use a simple, low-voltage setup",
+      "paragraphs": [
+        "Start with a battery holder, a small battery-powered light or buzzer, a switch and insulated leads. Use only the battery type and components rated for the project; do not connect the circuit to a wall outlet or household wiring. The Exploratorium’s circuit-boards activity begins with a battery powering a light and describes trying familiar components such as switches, lights and buzzers. A simple circuit is easier to understand when you can see every connection.",
+        "Set the parts on a nonconductive surface and check the battery holder’s polarity marks. Keep liquids away, and stop if a component becomes hot, leaks, smells unusual or shows damage. For young learners, have an experienced adult supervise and handle any parts that are not age appropriate."
+      ]
+    },
+    {
+      "heading": "Draw the path before connecting",
+      "paragraphs": [
+        "Sketch a loop from one battery terminal through the switch and output, then back to the other terminal. A circuit only works when there is a complete conducting path. The switch opens or closes that path. Point to each part on the sketch before you connect it; this makes it easier to find a break later.",
+        "Build the loop with the switch open. Check that the leads are firmly attached and that no exposed conductor can accidentally touch another terminal. Close the switch briefly. If the light turns on, open it again and label the parts. If it does not, begin troubleshooting without changing several things at once."
+      ]
+    },
+    {
+      "heading": "Troubleshoot one variable at a time",
+      "paragraphs": [
+        "Check the battery first: is it installed in the marked direction and charged? Next, inspect each connection and confirm that the component leads contact the intended terminals. Then check whether the switch is actually closing the circuit. If you have a known working output, swap only that component. Change one thing, test once, and record the result.",
+        "A good fault for a practice session is a loose lead or an open switch. Ask a partner to introduce one fault without telling you which one, then follow the loop from the battery and test each point. Do not create a short circuit by connecting the battery terminals directly; that can heat wires or damage the cell."
+      ]
+    },
+    {
+      "heading": "Explain the result in a few sentences",
+      "paragraphs": [
+        "After the fault is found, draw the corrected loop and explain why current can now reach the output and return to the battery. If the light still fails, write down which checks you completed and ask someone familiar with the kit to look at it. A useful result is a clear troubleshooting path, not a complicated circuit.",
+        "The Exploratorium describes circuit tinkering as a way to test inputs and outputs and suggests that a switch can become a next challenge after a basic battery-and-light circuit. Keep your first project at that level; adding motors and multiple batteries before the simple loop makes sense adds confusion rather than insight."
+      ]
+    },
+    {
+      "heading": "Choose one safe variation",
+      "paragraphs": [
+        "Once the basic circuit works, change one feature: try a buzzer instead of the light, add a second switch in a separate simple arrangement, or use a paper circuit card. Keep the same battery and output while learning each variation. Never move from battery experiments to mains electricity.",
+        "Save a photo of the diagram and note which fault you found."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Circuit Boards",
+      "url": "https://www.exploratorium.edu/tinkering/projects/circuit-boards",
+      "publisher": "Exploratorium",
+      "purpose": "Primary hands-on circuit activity describing basic battery-light loops and tinkering with switches, lights and other familiar components."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

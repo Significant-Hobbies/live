@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "curate-a-five-object-museum-of-your-life",
+  "slug": "curate-a-five-object-museum-of-your-life",
+  "title": "Build a five-object museum about one part of your life",
+  "description": "Choose five objects or memories, arrange them around a clear story, and write captions that show why each item belongs without oversharing.",
+  "intent": "How do I curate a small personal museum that tells a coherent story? This guide helps choose a focused theme, protect privacy, and write captions that distinguish memory from fact.",
+  "sections": [
+    {
+      "heading": "Pick a story small enough for five objects",
+      "paragraphs": [
+        "A five-object museum works best when it has a question or a boundary. Instead of trying to explain your whole life, choose one thread: the things that taught you to cook, a place you have returned to, how a friendship changed, or what a particular year felt like. A narrow theme helps you decide what belongs and what would distract. You can include a physical object, a photograph, a written memory, a song title or even an ordinary item that carries a strong association.",
+        "The Virginia Museum of History & Culture’s Museum of You activity treats personal objects and moments as things people can curate and caption. That is a useful starting point, but your exhibit can be private and made for one visitor: yourself. You do not need historically rare artifacts. The point is to explain why these five things help tell the chosen story."
+      ]
+    },
+    {
+      "heading": "Choose objects for different kinds of evidence",
+      "paragraphs": [
+        "Lay out more candidates than you need. Look for variety: one object connected to a person, one that marks a change, one that shows a routine, one whose meaning shifted, and perhaps one that represents something you still hope for. These are prompts rather than quotas. Five objects that all matter for different reasons can create a richer exhibit than five versions of the same keepsake.",
+        "Ask what each item lets you remember or explain. A worn recipe card may lead to a story about who taught you, while the handwriting itself offers a visible detail. Keep those layers distinct: the ink is observable; the person’s intention may be something you learned from them or something you infer. If an item belongs to someone else, get permission before displaying or photographing it."
+      ]
+    },
+    {
+      "heading": "Arrange for a visitor who knows less than you do",
+      "paragraphs": [
+        "Set the objects on a table, shelf or digital page in an order. A timeline is easy to follow, but other arrangements can work: from home to away, from inherited habits to chosen ones, or from a question to a partial answer. Imagine a visitor encountering the exhibit without knowing the backstory. What should they notice first? What detail needs context before the next object makes sense? ",
+        "Leave breathing room around each piece. If you use photos instead of the real items, keep the image clear and add a short note about scale or material where that matters. Avoid including private letters, faces or identifying details that another person has not agreed to share. A personal archive can be meaningful without becoming public."
+      ]
+    },
+    {
+      "heading": "Write captions that give the object a job",
+      "paragraphs": [
+        "A caption should name what a visitor is seeing and explain why it belongs. Try two sentences: first, identify the object and a detail; second, connect it to the theme. ‘Blue enamel mug, chipped near the handle. I kept using it after moving because it was the one familiar thing on the new kitchen shelf’ gives a reader something concrete. You do not need to make every caption poetic.",
+        "Do not force certainty. If you cannot remember when an object entered your life, say so. If a story comes from family recollection, note that it is what you were told. The caption is not a courtroom record; it is a small account of how you understand the object now. A sentence that leaves a question open can be more honest than a tidy moral."
+      ]
+    },
+    {
+      "heading": "Review what the collection says and what it leaves out",
+      "paragraphs": [
+        "Read the five captions together. Do they make one thread visible, or have you gathered five unrelated favourites? If the story feels scattered, rewrite the opening label as a question and check each object against it. You may discover that one piece belongs in another exhibit. Curating includes the decision to leave things out.",
+        "Finish with a short final note: what did you notice by placing these items together, and what would you ask a family member or friend while you still can? Store the objects safely and decide who may see the exhibit."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Museum of You",
+      "url": "https://virginiahistory.org/sites/default/files/VMHC%20-%20Museum%20Of%20You%20April%202025.pdf",
+      "publisher": "Virginia Museum of History & Culture",
+      "purpose": "Confirms the museum activity invites people to select personal objects or moments and write captions about why they matter."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "trace-the-journey-of-one-inherited-object",
+    "read-old-postcards-as-historical-evidence",
+    "write-a-letter-to-someone-who-changed-your-life"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

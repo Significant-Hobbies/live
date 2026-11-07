@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "try-a-supervised-water-aerobics-class",
+  "slug": "try-a-supervised-water-aerobics-class",
+  "title": "Choose a beginner-friendly water aerobics class",
+  "description": "Find a supervised water aerobics session that matches your comfort and ability, ask about access before booking, and pace your first class steadily.",
+  "intent": "What should I check before trying a supervised water aerobics class? This guide helps a beginner assess the venue, instructor, pool depth and personal comfort without promising a particular health outcome.",
+  "sections": [
+    {
+      "heading": "Choose a class by fit, not by the most energetic video",
+      "paragraphs": [
+        "Water aerobics classes vary in pace, depth, equipment and intended ability. Search local pools or recreation centres, then ask what a beginner should expect and whether the class is suitable for your current comfort in water. You do not have to be a strong swimmer to join every shallow-water class, but you should be honest about your swimming ability and follow the venue’s rules. If the class is in deep water or uses flotation equipment, ask how instruction and support work.",
+        "If you have a health condition, recent injury or uncertainty about exercise, ask an appropriate health professional whether this kind of class suits you. Better Health Channel recommends checking that a water-exercise class fits your fitness and ability level and asking about instructor qualifications. That is especially useful when comparing a general fitness session with a class designed for a particular population."
+      ]
+    },
+    {
+      "heading": "Check the pool and arrival details ahead of time",
+      "paragraphs": [
+        "Before attending, find out where to enter, what to bring, whether you need to arrive early and how changing facilities work. Ask about steps, ramps, handrails, pool lifts, accessible changing rooms or quieter arrival options if those affect your visit. Pool access is part of the class experience; you should not have to discover a barrier after you have changed and are standing at the water’s edge.",
+        "Ask whether the instructor demonstrates moves from the pool deck or from the water, how participants can modify an exercise, and what happens if you need a break. These questions are normal. A good first session gives you room to observe and follow at your own pace, rather than requiring you to keep up with every movement from the start."
+      ]
+    },
+    {
+      "heading": "Treat the first class as an introduction",
+      "paragraphs": [
+        "Arrive with time to find the changing area and speak with the instructor before the music starts. Mention relevant concerns privately and ask how to signal if you need a pause. Wear the swimwear and footwear the pool requires, and keep water nearby if the facility permits it. The NHS lists water aerobics as one example of moderate aerobic activity, but intensity depends on how hard you work and on the class itself.",
+        "During the warm-up, learn the basic patterns before adding speed or range. Water resistance can make a movement feel different from doing it on land, and the pool floor may be slippery. Follow the instructor, move smoothly and use a rail or supported alternative when offered. Better Health Channel advises warming up and getting out of the water if you feel light-headed, sick or dizzy."
+      ]
+    },
+    {
+      "heading": "Choose a pace you can repeat",
+      "paragraphs": [
+        "You are not obliged to perform the biggest movement in the room. Reduce the range, take a lower-impact variation or rest at the side when you need to. If a move causes sharp pain or makes you feel unwell, stop and tell the instructor. A class is more useful when you can leave feeling that you learned the format and can make an informed choice about returning.",
+        "Notice the conditions that affected your comfort: pool depth, water temperature, music level, pace, instructor cues and ease of getting in and out. These details make it easier to compare another class. One session cannot establish what activity is right for every person, so use your own experience and any professional guidance rather than a general claim about water exercise."
+      ]
+    },
+    {
+      "heading": "Decide what you want from a second visit",
+      "paragraphs": [
+        "After changing, jot down one thing that felt easier than expected and one question for the instructor. You might want a slower class, a shallower section, more explanation of the moves or a different access arrangement. If the first venue did not fit, that is useful information; another pool or class format may be more comfortable.",
+        "A first class is complete when you have tried the supervised session safely and learned whether its pace and setting suit you."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Arthritis and exercise",
+      "url": "https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/arthritis-and-exercise",
+      "publisher": "Better Health Channel, Victorian Department of Health",
+      "purpose": "Supports checking instructor qualifications, class suitability and pool access before joining water exercise, plus stopping if dizzy or unwell."
+    },
+    {
+      "title": "Physical activity guidelines for adults aged 19 to 64",
+      "url": "https://www.nhs.uk/live-well/exercise/physical-activity-guidelines-for-adults-aged-19-to-64/",
+      "publisher": "NHS",
+      "purpose": "Confirms water aerobics is an example of moderate aerobic activity, with intensity dependent on effort."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "play-an-introductory-game-of-boccia",
+    "try-polybat-on-an-adapted-table",
+    "arrange-an-accessible-outing-with-a-friend"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}
