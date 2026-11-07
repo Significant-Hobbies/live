@@ -78,6 +78,7 @@ import { parseCatalogQuery } from './catalog-seed';
 import { EXPERIENCE_GUIDES } from './experience-guides';
 import { renderPublicExperienceSource } from './public-editorial-source';
 import { publicStaticSitemap } from './public-sitemap';
+import { mergePublicCatalog } from './catalog-model';
 
 beforeEach(() => {
   vi.clearAllMocks();
@@ -157,6 +158,33 @@ describe('shared public experience surfaces', () => {
     expect(urls).toContain('https://significanthobbies.com/experiences/canonical-loom');
     expect(urls).not.toContain('https://significanthobbies.com/experiences/make-a-fixture-loom');
     expect(urls).not.toContain('https://significanthobbies.com/experiences/community-basic');
+  });
+
+  it('keeps sitemap URLs unique and excludes community targets after conflicting D1 edits', () => {
+    const row = {
+      slug: 'make-pasta-from-scratch',
+      title: 'Make a fixture loom',
+      description: null,
+      emoji: '✨',
+      category: 'creative' as const,
+      kind: 'idea' as const,
+    };
+    const urls = publicStaticSitemap(mergePublicCatalog([row])).map((entry) => entry.url);
+    expect(
+      urls.filter(
+        (url) => url === 'https://significanthobbies.com/experiences/make-pasta-from-scratch'
+      )
+    ).toHaveLength(1);
+    const community = { ...row, slug: 'community-exchange', title: 'Community exchange' };
+    const redirected = publicStaticSitemap(
+      mergePublicCatalog([community, { ...community, slug: 'make-a-fixture-loom' }])
+    ).map((entry) => entry.url);
+    expect(redirected).not.toContain(
+      'https://significanthobbies.com/experiences/community-exchange'
+    );
+    expect(redirected).not.toContain(
+      'https://significanthobbies.com/experiences/make-a-fixture-loom'
+    );
   });
 
   it('keeps web, HTML, Markdown and MCP on the same identity and authored content', async () => {

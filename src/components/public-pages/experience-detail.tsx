@@ -36,6 +36,7 @@ export async function generateMetadata({
   if (!entry) return withPublicMetadata({ title: 'Not found' });
   const guide = EXPERIENCE_GUIDES[entry.editorialSlug ?? ''];
   const authored = findExperience(entry.editorialSlug ?? '');
+  // Exact equality is intentional: case and punctuation edits in D1 are operator overrides too.
   return withPublicMetadata({
     ...experienceMetadata(
       (authored?.title === entry.title ? guide?.title : undefined) ??

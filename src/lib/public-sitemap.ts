@@ -153,12 +153,21 @@ export function publicStaticSitemap(
       priority: 0.9,
     },
     // Catalog pages use an editorial revision date, not request-time freshness.
-    ...PAGED_EXPERIENCES.map((e) => ({
-      url: `${baseUrl}/experiences/${catalog.bySlug.get(e.slug)?.slug ?? e.slug}`,
-      lastModified: EXPERIENCE_GUIDES[e.slug]?.updatedAt ?? EXPERIENCE_CONTENT_UPDATED,
-      changeFrequency: 'monthly' as const,
-      priority: 0.6,
-    })),
+    ...PAGED_EXPERIENCES.flatMap((e) => {
+      const entry = catalog.bySlug.get(e.slug);
+      return entry?.curated
+        ? [
+            {
+              url: `${baseUrl}/experiences/${entry.slug}`,
+              lastModified: EXPERIENCE_GUIDES[e.slug]?.updatedAt ?? EXPERIENCE_CONTENT_UPDATED,
+              changeFrequency: 'monthly' as const,
+              priority: 0.6,
+            },
+          ]
+        : [];
+    }).filter(
+      (entry, index, entries) => entries.findIndex((other) => other.url === entry.url) === index
+    ),
     {
       url: `${baseUrl}/experiences/collections`,
       lastModified: EXPERIENCE_CONTENT_UPDATED,
