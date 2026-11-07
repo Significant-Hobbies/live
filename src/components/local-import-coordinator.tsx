@@ -17,8 +17,9 @@ const DIRECT_KEYS = [
   'commitments:state',
 ] as const;
 
-export function LocalImportCoordinator({ isAuthenticated }: { isAuthenticated: boolean }) {
-  const deviceImport = useDeviceBucketImport(isAuthenticated);
+export function LocalImportCoordinator({ userId }: { userId: string | null }) {
+  const isAuthenticated = Boolean(userId);
+  const deviceImport = useDeviceBucketImport(userId);
   const [payload, setPayload] = useState<LocalAccountImport | null>(null);
   const [living, setLiving] = useState({ bucket: false, timeline: false });
   const [dismissed, setDismissed] = useState(false);

@@ -10,7 +10,10 @@ import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
 
 const payloadSchema = z
-  .object({ items: z.array(bucketTransferItemSchema).min(1).max(100) })
+  .object({
+    expectedUserId: z.string().min(1),
+    items: z.array(bucketTransferItemSchema).min(1).max(100),
+  })
   .strict()
   .refine(
     ({ items }) => new Set(items.map((item) => item.id)).size === items.length,
@@ -190,7 +193,10 @@ async function insertGraph(item: BucketTransferItem, id: string, owner: string) 
   await db.batch([parent, ...steps, ...updates]);
 }
 
-export async function importLocalBucketItems(input: { items: BucketTransferItem[] }): Promise<{
+export async function importLocalBucketItems(input: {
+  expectedUserId: string;
+  items: BucketTransferItem[];
+}): Promise<{
   success: boolean;
   imported: number;
   matched: number;
@@ -207,6 +213,14 @@ export async function importLocalBucketItems(input: { items: BucketTransferItem[
       matched: 0,
       conflicts: [],
       error: 'Some device items could not be validated. Your device copy is safe.',
+    };
+  if (parsed.data.expectedUserId !== session.user.id)
+    return {
+      success: false,
+      imported: 0,
+      matched: 0,
+      conflicts: [],
+      error: 'Your signed-in account changed. Your device copy is safe; start the import again.',
     };
   const { items } = parsed.data;
   if (items.reduce((count, item) => count + item.steps.length + item.updates.length, 0) > 1000)

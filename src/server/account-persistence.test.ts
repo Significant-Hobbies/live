@@ -46,6 +46,7 @@ import {
 } from '~/lib/actions/bucket-list';
 import { visibleBucketSteps } from '~/lib/bucket-steps';
 import { importLocalBucketItems } from '~/lib/actions/local-bucket-import';
+import { importBucketItems } from '~/lib/local-bucket-import';
 import { importLocalAccountData } from '~/lib/actions/local-import';
 import { getServerAuthSession } from '~/server/auth';
 import { readLiveRecords, readLiveSummary } from './personal-platform-live';
@@ -500,12 +501,89 @@ describe('bucket-list readiness on durable storage', () => {
       ],
     };
   }
+  it('binds every batch to its initiating account and permits a deliberate new import', async () => {
+    const a = await signUp(issuer(db), 'bucket-bound-a@example.test', 'Bound A');
+    const b = await signUp(issuer(db), 'bucket-bound-b@example.test', 'Bound B');
+    const items = Array.from({ length: 101 }, (_, index) => guestItem(`Bound goal ${index}`));
+    const expectedUserId = a.userId;
+    asUser(a);
+    let batches = 0;
+    const result = await importBucketItems(items, async (batch) => {
+      const saved = await importLocalBucketItems({ ...batch, expectedUserId });
+      if (++batches === 1) asUser(b);
+      return saved;
+    });
+    expect(batches).toBe(2);
+    expect(result).toMatchObject({ success: false, imported: 100, matched: 0, conflicts: [] });
+    expect(result.error).toContain('account changed');
+    expect(await itemRows(a.userId)).toHaveLength(100);
+    expect(await itemRows(b.userId)).toHaveLength(0);
+    expect(await db.select().from(userQuests).where(eq(userQuests.userId, b.userId))).toHaveLength(
+      0
+    );
+    expect(
+      await db.select().from(bucketItemUpdates).where(eq(bucketItemUpdates.userId, b.userId))
+    ).toHaveLength(0);
+
+    asUser(a);
+    expect(
+      await importBucketItems(items, (batch) =>
+        importLocalBucketItems({ ...batch, expectedUserId: a.userId })
+      )
+    ).toMatchObject({ success: true, imported: 1, matched: 100, conflicts: [] });
+    expect(await itemRows(a.userId)).toHaveLength(101);
+
+    // A fresh action started by B may deliberately copy guest data to B.
+    asUser(b);
+    expect(
+      await importBucketItems(items, (batch) =>
+        importLocalBucketItems({ ...batch, expectedUserId: b.userId })
+      )
+    ).toMatchObject({ success: true, imported: 101, matched: 0, conflicts: [] });
+    expect(await itemRows(b.userId)).toHaveLength(101);
+  });
+
+  it('rejects absent or forged initiating ownership before writing any graph', async () => {
+    const a = await signUp(issuer(db), 'bucket-expected-a@example.test', 'Expected A');
+    const b = await signUp(issuer(db), 'bucket-expected-b@example.test', 'Expected B');
+    asUser(b);
+    const items = [guestItem('Never write on mismatch')];
+    expect(await importLocalBucketItems({ items } as never)).toMatchObject({
+      success: false,
+      imported: 0,
+      matched: 0,
+      conflicts: [],
+    });
+    expect(await importLocalBucketItems({ items, expectedUserId: '' })).toMatchObject({
+      success: false,
+      imported: 0,
+      matched: 0,
+      conflicts: [],
+    });
+    expect(await importLocalBucketItems({ items, expectedUserId: a.userId })).toMatchObject({
+      success: false,
+      imported: 0,
+      matched: 0,
+      conflicts: [],
+    });
+    expect(await itemRows(a.userId)).toHaveLength(0);
+    expect(await itemRows(b.userId)).toHaveLength(0);
+    expect(await db.select().from(userQuests).where(eq(userQuests.userId, b.userId))).toHaveLength(
+      0
+    );
+    expect(
+      await db.select().from(bucketItemUpdates).where(eq(bucketItemUpdates.userId, b.userId))
+    ).toHaveLength(0);
+  });
+
   it('imports and renames distinct non-Latin titles without false duplicates', async () => {
     const owner = await signUp(issuer(db), 'bucket-unicode@example.test', 'Unicode Owner');
     asUser(owner);
     const first = guestItem('東京を旅する');
     const second = guestItem('京都を旅する');
-    expect(await importLocalBucketItems({ items: [first, second] })).toMatchObject({
+    expect(
+      await importLocalBucketItems({ expectedUserId: owner.userId, items: [first, second] })
+    ).toMatchObject({
       success: true,
       imported: 2,
       conflicts: [],
@@ -529,16 +607,20 @@ describe('bucket-list readiness on durable storage', () => {
     const a = await signUp(issuer(db), 'bucket-graph@example.test', 'Graph Owner');
     asUser(a);
     const item = guestItem();
-    expect(await importLocalBucketItems({ items: [item] })).toMatchObject({
-      success: true,
-      imported: 1,
-      conflicts: [],
-    });
-    expect(await importLocalBucketItems({ items: [item] })).toMatchObject({
-      success: true,
-      imported: 0,
-      matched: 1,
-    });
+    expect(await importLocalBucketItems({ expectedUserId: a.userId, items: [item] })).toMatchObject(
+      {
+        success: true,
+        imported: 1,
+        conflicts: [],
+      }
+    );
+    expect(await importLocalBucketItems({ expectedUserId: a.userId, items: [item] })).toMatchObject(
+      {
+        success: true,
+        imported: 0,
+        matched: 1,
+      }
+    );
     const [saved] = await itemRows(a.userId);
     expect(saved).toMatchObject({
       title: item.title,
@@ -566,10 +648,14 @@ describe('bucket-list readiness on durable storage', () => {
     expect(updates[0]!.createdAt.toISOString()).toBe(item.updates[0]!.createdAt);
     expect(visibleBucketSteps(steps)[0]!.readOnly).toBe(true);
     expect(
-      await importLocalBucketItems({ items: [item, { ...item, title: 'Another title' }] })
+      await importLocalBucketItems({
+        expectedUserId: a.userId,
+        items: [item, { ...item, title: 'Another title' }],
+      })
     ).toMatchObject({ success: false });
     expect(
       await importLocalBucketItems({
+        expectedUserId: a.userId,
         items: [
           { ...item, updates: [{ ...item.updates[0]!, createdAt: '2026-10-03T09:00:00.000Z' }] },
         ],
@@ -577,6 +663,7 @@ describe('bucket-list readiness on durable storage', () => {
     ).toMatchObject({ success: true, conflicts: [item.title] });
     expect(
       await importLocalBucketItems({
+        expectedUserId: a.userId,
         items: [{ ...item, completedAt: '2026-10-03T09:00:00.000Z' }],
       })
     ).toMatchObject({ success: true, conflicts: [item.title] });
@@ -600,16 +687,20 @@ describe('bucket-list readiness on durable storage', () => {
     const b = await signUp(issuer(db), 'bucket-conflict-b@example.test', 'Conflict B');
     asUser(a);
     const saved = await addBucketListItem({ title: 'Build a boat', description: 'Account notes' });
-    const result = await importLocalBucketItems({ items: [guestItem()] });
+    const result = await importLocalBucketItems({ expectedUserId: a.userId, items: [guestItem()] });
     expect(result).toMatchObject({ success: true, imported: 0, conflicts: ['Build a boat'] });
     expect((await itemRows(a.userId))[0]!.description).toBe('Account notes');
     asUser(b);
     expect(
-      await importLocalBucketItems({ items: [{ ...guestItem(), id: saved.id! }] })
+      await importLocalBucketItems({
+        expectedUserId: b.userId,
+        items: [{ ...guestItem(), id: saved.id! }],
+      })
     ).toMatchObject({ success: false });
     expect(await itemRows(b.userId)).toHaveLength(0);
     expect(
       await importLocalBucketItems({
+        expectedUserId: b.userId,
         items: [{ ...guestItem(), userId: a.userId, visibility: 'public' } as never],
       })
     ).toMatchObject({ success: false });
@@ -623,17 +714,23 @@ describe('bucket-list readiness on durable storage', () => {
     asUser(a);
     const item = guestItem('Learn to sail');
     store.failOn(/insert into "BucketItemUpdate"/i);
-    expect(await importLocalBucketItems({ items: [item] })).toMatchObject({ success: false });
+    expect(await importLocalBucketItems({ expectedUserId: a.userId, items: [item] })).toMatchObject(
+      { success: false }
+    );
     store.failOn(null);
     expect(await itemRows(a.userId)).toHaveLength(0);
-    expect(await importLocalBucketItems({ items: [item] })).toMatchObject({
-      success: true,
-      imported: 1,
-    });
-    expect(await importLocalBucketItems({ items: [item] })).toMatchObject({
-      success: true,
-      matched: 1,
-    });
+    expect(await importLocalBucketItems({ expectedUserId: a.userId, items: [item] })).toMatchObject(
+      {
+        success: true,
+        imported: 1,
+      }
+    );
+    expect(await importLocalBucketItems({ expectedUserId: a.userId, items: [item] })).toMatchObject(
+      {
+        success: true,
+        matched: 1,
+      }
+    );
     expect(await itemRows(a.userId)).toHaveLength(1);
   });
 });
@@ -658,13 +755,17 @@ it('retries a partially completed multi-item import without duplicating the conf
     ],
   };
   store.failOn(/insert into "BucketItemUpdate"/i);
-  expect(await importLocalBucketItems({ items: [first, second] })).toMatchObject({
+  expect(
+    await importLocalBucketItems({ expectedUserId: owner.userId, items: [first, second] })
+  ).toMatchObject({
     success: false,
     imported: 1,
   });
   store.failOn(null);
   expect(await itemRows(owner.userId)).toHaveLength(1);
-  expect(await importLocalBucketItems({ items: [first, second] })).toMatchObject({
+  expect(
+    await importLocalBucketItems({ expectedUserId: owner.userId, items: [first, second] })
+  ).toMatchObject({
     success: true,
     imported: 1,
     matched: 1,
