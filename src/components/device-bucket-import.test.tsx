@@ -24,7 +24,7 @@ let root: Root;
 let container: HTMLDivElement;
 let state: ReturnType<typeof useDeviceBucketImport>;
 function Harness() {
-  state = useDeviceBucketImport(true);
+  state = useDeviceBucketImport('owner-a');
   return (
     <>
       <p>{state.message}</p>

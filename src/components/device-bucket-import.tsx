@@ -1,6 +1,13 @@
 'use client';
 
-import { useEffect, useState, useTransition, type Dispatch, type SetStateAction } from 'react';
+import {
+  useEffect,
+  useRef,
+  useState,
+  useTransition,
+  type Dispatch,
+  type SetStateAction,
+} from 'react';
 import { useRouter } from 'next/navigation';
 import { importLocalBucketItems } from '~/lib/actions/local-bucket-import';
 import { downloadBucketJson } from '~/lib/bucket-list-data';
@@ -56,6 +63,7 @@ function useDeviceImportState(authenticated: boolean) {
   const [needsReview, setNeedsReview] = useState(false);
   const [archiveReview, setArchiveReview] = useState<ArchiveReview>('idle');
   const [pending, startTransition] = useTransition();
+  const active = useRef(false);
   function replaceSnapshot(next: LocalBucketSnapshot | null) {
     setSnapshot(next);
     setNeedsReview(Boolean(next?.invalid && next.items.length === 0));
@@ -66,6 +74,7 @@ function useDeviceImportState(authenticated: boolean) {
   }
   useEffect(() => {
     if (!authenticated) return;
+    active.current = true;
     let cancelled = false;
     void readLocalBucketSnapshot()
       .then((next) => {
@@ -78,6 +87,7 @@ function useDeviceImportState(authenticated: boolean) {
       });
     return () => {
       cancelled = true;
+      active.current = false;
     };
   }, [authenticated]);
   return {
@@ -97,58 +107,81 @@ function useDeviceImportState(authenticated: boolean) {
     setArchiveReview,
     replaceSnapshot,
     startTransition,
+    isActive: () => active.current,
+    assertActive: () => {
+      if (!active.current) throw new Error('Import owner changed.');
+    },
   };
 }
 
-export function useDeviceBucketImport(authenticated: boolean) {
-  const router = useRouter();
-  const state = useDeviceImportState(authenticated);
-  async function importSnapshot() {
-    state.setError('');
-    state.setNeedsReview(false);
-    state.setArchiveReview('idle');
-    state.setMessage('');
-    try {
-      const current = await readLocalBucketSnapshot();
-      state.replaceSnapshot(current);
-      if (!current || current.items.length === 0) return;
-      const result = await importBucketItems(current.items, importLocalBucketItems);
-      if (!result.success) {
-        state.setError(result.error ?? 'Import failed. Your device copy is safe.');
+async function importDeviceSnapshot(
+  userId: string,
+  state: ReturnType<typeof useDeviceImportState>,
+  router: ReturnType<typeof useRouter>
+) {
+  if (!state.isActive()) return;
+  state.setError('');
+  state.setNeedsReview(false);
+  state.setArchiveReview('idle');
+  state.setMessage('');
+  try {
+    const current = await readLocalBucketSnapshot();
+    state.assertActive();
+    state.replaceSnapshot(current);
+    if (!current || current.items.length === 0) return;
+    const result = await importBucketItems(current.items, async (batch) => {
+      state.assertActive();
+      return importLocalBucketItems({ ...batch, expectedUserId: userId });
+    });
+    state.assertActive();
+    if (!result.success) {
+      state.setError(result.error ?? 'Import failed. Your device copy is safe.');
+      return;
+    }
+    if (result.conflicts.length || current.invalid) {
+      const latest = await readLocalBucketSnapshot();
+      state.assertActive();
+      if (JSON.stringify(latest?.envelope) !== JSON.stringify(current.envelope)) {
+        state.replaceSnapshot(latest);
+        state.setMessage(
+          'Your device list changed during import. Import again to review its latest version.'
+        );
+        router.refresh();
         return;
       }
-      if (result.conflicts.length || current.invalid) {
-        const latest = await readLocalBucketSnapshot();
-        if (JSON.stringify(latest?.envelope) !== JSON.stringify(current.envelope)) {
-          state.replaceSnapshot(latest);
-          state.setMessage(
-            'Your device list changed during import. Import again to review its latest version.'
-          );
-          router.refresh();
-          return;
-        }
-        state.setNeedsReview(true);
-        state.setMessage(
-          `${result.imported} imported, ${result.matched} already saved. ${result.conflicts.length + current.invalid} device items need review. Your account versions are unchanged; the full device copy is kept here for export.`
-        );
-      } else if (await archiveImportedBucketSnapshot(current)) {
-        state.replaceSnapshot(null);
-        state.setComplete(true);
-        state.setMessage('All items, steps and private updates are saved.');
-      } else {
-        state.replaceSnapshot(await readLocalBucketSnapshot());
-        state.setMessage(
-          'The imported copy is saved. Your device list changed during import, so its newer copy is kept here. Import again to review the latest version.'
-        );
-      }
-      router.refresh();
-    } catch {
-      state.setError('Import could not be confirmed. Your device copy is safe. Retry to check it.');
+      state.setNeedsReview(true);
+      state.setMessage(
+        `${result.imported} imported, ${result.matched} already saved. ${result.conflicts.length + current.invalid} device items need review. Your account versions are unchanged; the full device copy is kept here for export.`
+      );
+    } else if (await archiveImportedBucketSnapshot(current)) {
+      state.replaceSnapshot(null);
+      state.setComplete(true);
+      state.setMessage('All items, steps and private updates are saved.');
+    } else {
+      state.replaceSnapshot(await readLocalBucketSnapshot());
+      state.setMessage(
+        'The imported copy is saved. Your device list changed during import, so its newer copy is kept here. Import again to review the latest version.'
+      );
     }
+    router.refresh();
+  } catch {
+    if (state.isActive())
+      state.setError('Import could not be confirmed. Your device copy is safe. Retry to check it.');
   }
+}
+
+export function useDeviceBucketImport(userId: string | null) {
+  const router = useRouter();
+  const state = useDeviceImportState(Boolean(userId));
 
   async function archiveCopy() {
-    if (!state.snapshot || !state.needsReview || state.archiveReview !== 'backup_confirmed') return;
+    if (
+      !state.isActive() ||
+      !state.snapshot ||
+      !state.needsReview ||
+      state.archiveReview !== 'backup_confirmed'
+    )
+      return;
     state.setError('');
     state.setArchiveReview('idle');
     try {
@@ -180,7 +213,10 @@ export function useDeviceBucketImport(authenticated: boolean) {
     archiveReview: state.archiveReview,
     pending: state.pending,
     visible: Boolean(state.snapshot?.envelope.value.items.length || state.message || state.error),
-    importList: () => state.startTransition(importSnapshot),
+    importList: () =>
+      state.startTransition(async () => {
+        if (userId) await importDeviceSnapshot(userId, state, router);
+      }),
     exportCopy: () => startBackupDownload(state.snapshot, state.setError),
     beginArchiveReview: () => {
       if (state.needsReview) state.setArchiveReview('confirm');
