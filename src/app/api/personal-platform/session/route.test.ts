@@ -7,10 +7,11 @@ import { verifyPersonalMcpGoogleSubject } from '@/lib/personal-mcp-auth';
 const state = vi.hoisted(() => ({
   session: null as null | { user: { id: string; email: string } },
   appleSubject: null as string | null,
-  mcpUserId: 'linked-user' as string | null,
+  mcpAccounts: [{ userId: 'linked-user' }],
   issuer: 'https://test.auth0.com/' as string | undefined,
   getSession: vi.fn(),
   findFirst: vi.fn(),
+  findMany: vi.fn(),
 }));
 
 vi.mock('@/lib/auth', () => ({
@@ -26,6 +27,7 @@ vi.mock('@/server/db', () => ({
     query: {
       account: {
         findFirst: state.findFirst,
+        findMany: state.findMany,
       },
     },
   },
@@ -39,12 +41,8 @@ describe('Personal Platform identity session', () => {
     state.session = null;
     state.appleSubject = null;
     state.getSession.mockImplementation(async () => state.session);
-    state.findFirst.mockImplementation(async (query) =>
-      query.columns.userId
-        ? state.mcpUserId && { userId: state.mcpUserId }
-        : state.appleSubject === null
-          ? undefined
-          : { accountId: state.appleSubject }
+    state.findFirst.mockImplementation(async () =>
+      state.appleSubject === null ? undefined : { accountId: state.appleSubject }
     );
   });
 
@@ -134,10 +132,10 @@ describe('Personal Platform product MCP identity', () => {
   beforeEach(() => {
     vi.clearAllMocks();
     state.issuer = 'https://test.auth0.com/';
-    state.mcpUserId = 'linked-user';
+    state.mcpAccounts = [{ userId: 'linked-user' }];
     state.session = { user: { id: 'browser-user', email: 'private@example.com' } };
     state.getSession.mockImplementation(async () => state.session);
-    state.findFirst.mockImplementation(async () => state.mcpUserId && { userId: state.mcpUserId });
+    state.findMany.mockImplementation(async () => state.mcpAccounts);
     vi.stubGlobal(
       'fetch',
       vi.fn(async () => Response.json({ keys: [{ ...publicKey, kid: 'test' }] }))
@@ -188,6 +186,68 @@ describe('Personal Platform product MCP identity', () => {
     expect(state.getSession).not.toHaveBeenCalled();
   });
 
+  it.each([301, 302, 307, 308])(
+    'rejects a JWKS redirect (%s) without following it',
+    async (status) => {
+      vi.mocked(fetch).mockResolvedValue(
+        new Response(null, {
+          status,
+          headers: { Location: 'https://untrusted.example/jwks.json' },
+        })
+      );
+      expect((await request()).status).toBe(401);
+      expect(fetch).toHaveBeenCalledOnce();
+      expect(fetch).toHaveBeenCalledWith(
+        expect.any(URL),
+        expect.objectContaining({ redirect: 'manual' })
+      );
+      expect(state.findMany).not.toHaveBeenCalled();
+    }
+  );
+
+  it('accepts at most 60 seconds of issuer clock lead while keeping expiry strict', async () => {
+    for (const claims of [{ iat: now + 60 }, { nbf: now + 60 }]) {
+      expect(
+        await verifyPersonalMcpGoogleSubject(
+          await token(claims),
+          state.issuer,
+          'anchor',
+          'anchor.read',
+          {
+            keys: [{ ...publicKey, kid: 'test' }],
+            now,
+          }
+        )
+      ).toBe('google-123');
+    }
+    for (const claims of [{ iat: now + 61 }, { nbf: now + 61 }]) {
+      expect(
+        await verifyPersonalMcpGoogleSubject(
+          await token(claims),
+          state.issuer,
+          'anchor',
+          'anchor.read',
+          {
+            keys: [{ ...publicKey, kid: 'test' }],
+            now,
+          }
+        )
+      ).toBeNull();
+    }
+    expect(
+      await verifyPersonalMcpGoogleSubject(
+        await token({ exp: now }),
+        state.issuer,
+        'anchor',
+        'anchor.read',
+        {
+          keys: [{ ...publicKey, kid: 'test' }],
+          now,
+        }
+      )
+    ).toBeNull();
+  });
+
   it.each(['anchor.read', 'anchor.write'])(
     'resolves the linked Google provider identity for %s',
     async (scope) => {
@@ -196,15 +256,16 @@ describe('Personal Platform product MCP identity', () => {
       expect(response.headers.get('Cache-Control')).toBe('no-store');
       expect(await response.json()).toEqual({ userId: 'linked-user' });
       expect(state.getSession).not.toHaveBeenCalled();
-      const query = state.findFirst.mock.calls[0]?.[0];
+      const query = state.findMany.mock.calls[0]?.[0];
       expect(query.columns).toEqual({ userId: true });
+      expect(query.limit).toBe(2);
       const sql = new SQLiteSyncDialect().sqlToQuery(query.where);
       expect(sql.sql).toContain('"auth_account"."providerId" = ?');
       expect(sql.sql).toContain('"auth_account"."accountId" = ?');
       expect(sql.params).toEqual(['google', 'google-123']);
       expect(fetch).toHaveBeenCalledWith(
         new URL('https://test.auth0.com/.well-known/jwks.json'),
-        expect.any(Object)
+        expect.objectContaining({ redirect: 'manual' })
       );
     }
   );
@@ -217,10 +278,10 @@ describe('Personal Platform product MCP identity', () => {
     { scope: 'anchor.read', permissions: [] },
     { exp: now - 1 },
     { exp: now + 4_000 },
-    { iat: now + 30 },
+    { iat: now + 120 },
     { iat: undefined },
     { exp: undefined },
-    { nbf: now + 60 },
+    { nbf: now + 120 },
     { nbf: 'yesterday' },
     { sub: 'auth0|google-123' },
     { sub: 'google-oauth2|' },
@@ -230,6 +291,7 @@ describe('Personal Platform product MCP identity', () => {
     expect(response.headers.get('Cache-Control')).toBe('no-store');
     expect(state.getSession).not.toHaveBeenCalled();
     expect(state.findFirst).not.toHaveBeenCalled();
+    expect(state.findMany).not.toHaveBeenCalled();
   });
 
   it.each([
@@ -243,15 +305,30 @@ describe('Personal Platform product MCP identity', () => {
     expect(response.status).toBe(403);
     expect(state.getSession).not.toHaveBeenCalled();
     expect(state.findFirst).not.toHaveBeenCalled();
+    expect(state.findMany).not.toHaveBeenCalled();
   });
 
   it('rejects an unlinked provider without matching a private email or creating an account', async () => {
-    state.mcpUserId = null;
+    state.mcpAccounts = [];
     const response = await request({ email: 'private@example.com' });
     expect(response.status).toBe(403);
-    expect(state.findFirst).toHaveBeenCalledOnce();
+    expect(state.findMany).toHaveBeenCalledOnce();
+    expect(await response.json()).toMatchObject({
+      message: 'Link this Google account to your existing Live account before connecting Anchor.',
+    });
     expect(state.getSession).not.toHaveBeenCalled();
   });
+
+  it.each(['first-user', 'other-user'])(
+    'fails closed for duplicate Google provider rows (second owner: %s)',
+    async (secondUserId) => {
+      state.mcpAccounts = [{ userId: 'first-user' }, { userId: secondUserId }];
+      const response = await request();
+      expect(response.status).toBe(403);
+      expect(state.findMany).toHaveBeenCalledOnce();
+      expect(state.getSession).not.toHaveBeenCalled();
+    }
+  );
 
   it('requires the original bearer token even when a valid native session exists', async () => {
     const response = await GET(

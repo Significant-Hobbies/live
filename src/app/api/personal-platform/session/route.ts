@@ -36,13 +36,19 @@ export async function GET(request: Request): Promise<Response> {
     if (!googleId) {
       return json({ code: 'UNAUTHORIZED', message: 'Invalid product access token.' }, 401);
     }
-    const linkedAccount = await db.query.account.findFirst({
+    const linkedAccounts = await db.query.account.findMany({
       where: and(eq(account.providerId, 'google'), eq(account.accountId, googleId)),
       columns: { userId: true },
+      limit: 2,
     });
+    const linkedAccount = linkedAccounts.length === 1 ? linkedAccounts[0] : undefined;
     if (!linkedAccount?.userId) {
       return json(
-        { code: 'FORBIDDEN', message: 'Sign in to Live with this Google account first.' },
+        {
+          code: 'FORBIDDEN',
+          message:
+            'Link this Google account to your existing Live account before connecting Anchor.',
+        },
         403
       );
     }

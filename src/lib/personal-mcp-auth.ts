@@ -7,6 +7,7 @@ const PRODUCTS = {
 
 const GOOGLE_SUBJECT = /^google-oauth2\|([A-Za-z0-9._-]{3,256})$/u;
 const MAX_TOKEN_LIFETIME_SECONDS = 3_600;
+const CLOCK_TOLERANCE_SECONDS = 60;
 type SigningKey = JsonWebKey & { kid?: string };
 
 export function personalMcpProduct(product: string, scope: string) {
@@ -89,7 +90,7 @@ export async function verifyPersonalMcpGoogleSubject(
     if (!keys) {
       const response = await fetch(new URL('.well-known/jwks.json', issuer), {
         signal: AbortSignal.timeout(5_000),
-        redirect: 'error',
+        redirect: 'manual',
         cf: { cacheEverything: true, cacheTtl: 300 },
       } as RequestInit);
       if (!response.ok) return null;
@@ -139,13 +140,13 @@ export async function verifyPersonalMcpGoogleSubject(
       !audiences.includes(config.audience) ||
       !Number.isSafeInteger(payload.iat) ||
       !Number.isSafeInteger(payload.exp) ||
-      (payload.iat as number) > now ||
+      (payload.iat as number) > now + CLOCK_TOLERANCE_SECONDS ||
       (payload.exp as number) <= now ||
       (payload.exp as number) <= (payload.iat as number) ||
       (payload.exp as number) - (payload.iat as number) > MAX_TOKEN_LIFETIME_SECONDS ||
       (payload.nbf !== undefined &&
         (!Number.isSafeInteger(payload.nbf) ||
-          (payload.nbf as number) > now ||
+          (payload.nbf as number) > now + CLOCK_TOLERANCE_SECONDS ||
           (payload.nbf as number) >= (payload.exp as number))) ||
       !grantedScopes.has(requiredScope) ||
       !subject
