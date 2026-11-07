@@ -1,4 +1,4 @@
-interface LocalEnvelope<T> {
+export interface LocalEnvelope<T> {
   key: string;
   domain: string;
   schemaVersion: number;
@@ -156,5 +156,39 @@ function openDatabase(): Promise<IDBDatabase> {
     };
     request.onsuccess = () => resolve(request.result);
     request.onerror = () => reject(request.error ?? new Error('Could not open browser storage.'));
+  });
+}
+
+export async function compareAndReplaceLocalRecord(
+  key: string,
+  expected: unknown,
+  replacement: unknown,
+  archive = false
+): Promise<boolean> {
+  const database = await openDatabase();
+  return new Promise((resolve, reject) => {
+    const transaction = database.transaction(STORE_NAME, 'readwrite');
+    const store = transaction.objectStore(STORE_NAME);
+    let changed = false;
+    const request = store.get(key);
+    request.onsuccess = () => {
+      if (JSON.stringify(request.result) !== JSON.stringify(expected)) return;
+      if (archive) store.put(request.result, `archive:${key}:${Date.now()}:${crypto.randomUUID()}`);
+      if (replacement === undefined) store.delete(key);
+      else store.put(replacement, key);
+      changed = true;
+    };
+    transaction.oncomplete = () => {
+      database.close();
+      resolve(changed);
+    };
+    transaction.onabort = () => {
+      database.close();
+      reject(transaction.error ?? new LocalRecordError('Your device copy could not be updated.'));
+    };
+    transaction.onerror = () => {
+      database.close();
+      reject(transaction.error ?? new LocalRecordError('Your device copy could not be updated.'));
+    };
   });
 }

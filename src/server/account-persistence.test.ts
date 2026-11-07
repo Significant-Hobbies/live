@@ -29,6 +29,8 @@ import * as schema from '~/db/schema';
 import {
   account,
   bucketListItems,
+  bucketItemUpdates,
+  userQuests,
   habitLogs,
   habits,
   session,
@@ -42,6 +44,8 @@ import {
   updateBucketListItem,
   updateBucketListItemStatus,
 } from '~/lib/actions/bucket-list';
+import { visibleBucketSteps } from '~/lib/bucket-steps';
+import { importLocalBucketItems } from '~/lib/actions/local-bucket-import';
 import { importLocalAccountData } from '~/lib/actions/local-import';
 import { getServerAuthSession } from '~/server/auth';
 import { readLiveRecords, readLiveSummary } from './personal-platform-live';
@@ -472,4 +476,198 @@ describe('local account import replay', () => {
     expect(crossAccount.success).toBe(false);
     expect(await db.select().from(habits).where(eq(habits.userId, b.userId))).toHaveLength(0);
   });
+});
+
+describe('bucket-list readiness on durable storage', () => {
+  function guestItem(title = 'Build a boat') {
+    return {
+      id: crypto.randomUUID(),
+      title,
+      notes: 'Bring a friend',
+      category: 'adventure' as const,
+      status: 'done' as const,
+      targetYear: 2027,
+      createdAt: '2026-10-01T09:00:00.000Z',
+      updatedAt: '2026-10-02T09:00:00.000Z',
+      completedAt: '2026-10-02T09:00:00.000Z',
+      steps: [{ id: crypto.randomUUID(), text: 'Book a workshop', done: true, readOnly: true }],
+      updates: [
+        {
+          id: crypto.randomUUID(),
+          text: 'First workshop completed.',
+          createdAt: '2026-10-02T09:00:00.000Z',
+        },
+      ],
+    };
+  }
+  it('imports and renames distinct non-Latin titles without false duplicates', async () => {
+    const owner = await signUp(issuer(db), 'bucket-unicode@example.test', 'Unicode Owner');
+    asUser(owner);
+    const first = guestItem('東京を旅する');
+    const second = guestItem('京都を旅する');
+    expect(await importLocalBucketItems({ items: [first, second] })).toMatchObject({
+      success: true,
+      imported: 2,
+      conflicts: [],
+    });
+    const rows = await itemRows(owner.userId);
+    expect(rows).toHaveLength(2);
+    const tokyo = rows.find((row) => row.title === first.title)!;
+    const kyoto = rows.find((row) => row.title === second.title)!;
+    expect(await updateBucketListItem(tokyo.id, { title: 'हिन्दी सीखना' })).toEqual({
+      success: true,
+    });
+    expect(await updateBucketListItem(kyoto.id, { title: 'हिन्दी सीखना' })).toEqual({
+      success: false,
+      reason: 'duplicate',
+    });
+    await addBucketListItem({ title: '!!!' });
+    await addBucketListItem({ title: '???' });
+    expect(await itemRows(owner.userId)).toHaveLength(4);
+  });
+  it('imports full private graphs once, replays a lost acknowledgement, and preserves rename evidence', async () => {
+    const a = await signUp(issuer(db), 'bucket-graph@example.test', 'Graph Owner');
+    asUser(a);
+    const item = guestItem();
+    expect(await importLocalBucketItems({ items: [item] })).toMatchObject({
+      success: true,
+      imported: 1,
+      conflicts: [],
+    });
+    expect(await importLocalBucketItems({ items: [item] })).toMatchObject({
+      success: true,
+      imported: 0,
+      matched: 1,
+    });
+    const [saved] = await itemRows(a.userId);
+    expect(saved).toMatchObject({
+      title: item.title,
+      description: item.notes,
+      status: 'done',
+      visibility: 'private',
+      targetYear: 2027,
+    });
+    expect(saved!.completedAt!.toISOString()).toBe(item.completedAt);
+    const steps = await db
+      .select()
+      .from(userQuests)
+      .where(eq(userQuests.sourceBucketItemId, saved!.id));
+    const updates = await db
+      .select()
+      .from(bucketItemUpdates)
+      .where(eq(bucketItemUpdates.itemId, saved!.id));
+    expect(steps).toHaveLength(1);
+    expect(steps[0]).toMatchObject({
+      title: item.steps[0]!.text,
+      status: 'completed',
+      visibility: 'private',
+    });
+    expect(updates).toHaveLength(1);
+    expect(updates[0]!.createdAt.toISOString()).toBe(item.updates[0]!.createdAt);
+    expect(visibleBucketSteps(steps)[0]!.readOnly).toBe(true);
+    expect(
+      await importLocalBucketItems({ items: [item, { ...item, title: 'Another title' }] })
+    ).toMatchObject({ success: false });
+    expect(
+      await importLocalBucketItems({
+        items: [
+          { ...item, updates: [{ ...item.updates[0]!, createdAt: '2026-10-03T09:00:00.000Z' }] },
+        ],
+      })
+    ).toMatchObject({ success: true, conflicts: [item.title] });
+    expect(
+      await importLocalBucketItems({
+        items: [{ ...item, completedAt: '2026-10-03T09:00:00.000Z' }],
+      })
+    ).toMatchObject({ success: true, conflicts: [item.title] });
+    await updateBucketListItem(saved!.id, { title: '  Build a wooden boat  ' });
+    expect((await itemRows(a.userId))[0]).toMatchObject({
+      id: saved!.id,
+      title: 'Build a wooden boat',
+      description: item.notes,
+    });
+    expect(
+      await db.select().from(bucketItemUpdates).where(eq(bucketItemUpdates.itemId, saved!.id))
+    ).toHaveLength(1);
+    await addBucketListItem({ title: 'Sail around an island' });
+    await expect(
+      updateBucketListItem(saved!.id, { title: 'SAIL around an ISLAND!' })
+    ).resolves.toEqual({ success: false, reason: 'duplicate' });
+    await expect(updateBucketListItem(saved!.id, { title: '   ' })).rejects.toThrow();
+  });
+  it('retains account versions on conflicts and rejects forged owner data before writing', async () => {
+    const a = await signUp(issuer(db), 'bucket-conflict-a@example.test', 'Conflict A');
+    const b = await signUp(issuer(db), 'bucket-conflict-b@example.test', 'Conflict B');
+    asUser(a);
+    const saved = await addBucketListItem({ title: 'Build a boat', description: 'Account notes' });
+    const result = await importLocalBucketItems({ items: [guestItem()] });
+    expect(result).toMatchObject({ success: true, imported: 0, conflicts: ['Build a boat'] });
+    expect((await itemRows(a.userId))[0]!.description).toBe('Account notes');
+    asUser(b);
+    expect(
+      await importLocalBucketItems({ items: [{ ...guestItem(), id: saved.id! }] })
+    ).toMatchObject({ success: false });
+    expect(await itemRows(b.userId)).toHaveLength(0);
+    expect(
+      await importLocalBucketItems({
+        items: [{ ...guestItem(), userId: a.userId, visibility: 'public' } as never],
+      })
+    ).toMatchObject({ success: false });
+    await expect(updateBucketListItem(saved.id!, { title: 'Stolen title' })).rejects.toThrow(
+      'Item not found'
+    );
+    expect((await itemRows(a.userId))[0]!.title).toBe('Build a boat');
+  });
+  it('rolls back failed graph writes and retries without orphaning or duplicating children', async () => {
+    const a = await signUp(issuer(db), 'bucket-atomic@example.test', 'Atomic Import');
+    asUser(a);
+    const item = guestItem('Learn to sail');
+    store.failOn(/insert into "BucketItemUpdate"/i);
+    expect(await importLocalBucketItems({ items: [item] })).toMatchObject({ success: false });
+    store.failOn(null);
+    expect(await itemRows(a.userId)).toHaveLength(0);
+    expect(await importLocalBucketItems({ items: [item] })).toMatchObject({
+      success: true,
+      imported: 1,
+    });
+    expect(await importLocalBucketItems({ items: [item] })).toMatchObject({
+      success: true,
+      matched: 1,
+    });
+    expect(await itemRows(a.userId)).toHaveLength(1);
+  });
+});
+
+it('retries a partially completed multi-item import without duplicating the confirmed first graph', async () => {
+  const owner = await signUp(issuer(db), 'bucket-partial@example.test', 'Partial import owner');
+  asUser(owner);
+  const first = {
+    id: crypto.randomUUID(),
+    title: 'First imported goal',
+    status: 'planned' as const,
+    steps: [],
+    updates: [],
+  };
+  const second = {
+    id: crypto.randomUUID(),
+    title: 'Second imported goal',
+    status: 'planned' as const,
+    steps: [],
+    updates: [
+      { id: crypto.randomUUID(), text: 'Private evidence', createdAt: '2026-10-02T09:00:00.000Z' },
+    ],
+  };
+  store.failOn(/insert into "BucketItemUpdate"/i);
+  expect(await importLocalBucketItems({ items: [first, second] })).toMatchObject({
+    success: false,
+    imported: 1,
+  });
+  store.failOn(null);
+  expect(await itemRows(owner.userId)).toHaveLength(1);
+  expect(await importLocalBucketItems({ items: [first, second] })).toMatchObject({
+    success: true,
+    imported: 1,
+    matched: 1,
+  });
+  expect(await itemRows(owner.userId)).toHaveLength(2);
 });

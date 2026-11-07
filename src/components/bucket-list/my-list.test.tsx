@@ -3,20 +3,25 @@ import { createRoot, type Root } from 'react-dom/client';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { MyList } from './my-list';
 import { parseCatalogQuery, searchCatalogSeed } from '~/lib/catalog-seed';
+import * as bucketData from '~/lib/bucket-list-data';
 import * as localRecords from '~/lib/local-record-store';
 
-const { addItem, refresh, submit, updateNotes, updateStatus, postUpdate } = vi.hoisted(() => ({
-  addItem: vi.fn(),
-  refresh: vi.fn(),
-  submit: vi.fn(),
-  updateNotes: vi.fn(),
-  updateStatus: vi.fn(),
-  postUpdate: vi.fn(),
-}));
+const { addItem, refresh, submit, updateNotes, updateStatus, postUpdate, removeItem } = vi.hoisted(
+  () => ({
+    addItem: vi.fn(),
+    refresh: vi.fn(),
+    submit: vi.fn(),
+    updateNotes: vi.fn(),
+    updateStatus: vi.fn(),
+    postUpdate: vi.fn(),
+    removeItem: vi.fn(),
+  })
+);
 vi.mock('~/lib/actions/bucket-list', () => ({
   addBucketListItem: addItem,
   updateBucketListItem: updateNotes,
   updateBucketListItemStatus: updateStatus,
+  removeBucketListItem: removeItem,
 }));
 vi.mock('~/lib/actions/bucket-steps', () => ({}));
 vi.mock('~/lib/actions/bucket-updates', () => ({ addBucketItemUpdate: postUpdate }));
@@ -38,6 +43,7 @@ beforeEach(async () => {
     }))
   );
   addItem.mockResolvedValue({ success: true, id: 'saved', added: true });
+  updateNotes.mockReset().mockResolvedValue({ success: true });
   Object.assign(globalThis, { IS_REACT_ACT_ENVIRONMENT: true });
   container = document.createElement('div');
   document.body.append(container);
@@ -430,4 +436,271 @@ describe('Account manual entry', () => {
     expect(container.textContent).toContain('Take a pottery class');
     expect(container.textContent).not.toContain('Learn calligraphy');
   });
+});
+
+describe('saved-list controls, export and removal recovery', () => {
+  it('searches non-Latin and punctuation-only titles without matching unrelated rows', async () => {
+    await act(async () =>
+      root.render(
+        <MyList
+          key="unicode-search"
+          initialItems={['東京を旅する', '京都を旅する', '!!!', '???'].map((title, index) => ({
+            id: String(index),
+            title,
+            status: 'planned',
+            steps: [],
+          }))}
+        />
+      )
+    );
+    await fill('#my-list-search', '東京');
+    expect(container.querySelectorAll('button[aria-expanded]')).toHaveLength(1);
+    expect(container.querySelector('[aria-label="Open 東京を旅する"]')).not.toBeNull();
+    await fill('#my-list-search', '!!!');
+    expect(container.querySelectorAll('button[aria-expanded]')).toHaveLength(1);
+    expect(container.querySelector('[aria-label="Open !!!"]')).not.toBeNull();
+  });
+
+  it('shows the client duplicate message from a typed account rename response', async () => {
+    await list();
+    await openSail();
+    updateNotes.mockResolvedValue({ success: false, reason: 'duplicate' });
+    await click('Edit title');
+    await fill('#title-one', 'Paint');
+    await click('Save title');
+    expect(container.textContent).toContain('This item is already in your list.');
+    expect(container.querySelector('[aria-label="Open Sail"]')).not.toBeNull();
+    expect(container.querySelector<HTMLInputElement>('#title-one')!.value).toBe('Paint');
+  });
+  it('exports legacy idless items without changing the identifiers used by subsequent edits', async () => {
+    let record: unknown = { items: ['Learn to sail', { title: 'Plant a tree' }] };
+    vi.spyOn(localRecords, 'readLocalRecord').mockImplementation(async () => record);
+    vi.spyOn(localRecords, 'writeLocalRecord').mockImplementation(
+      async (_adapter, _key, _domain, value) => {
+        record = value;
+      }
+    );
+    const download = vi.spyOn(bucketData, 'downloadBucketJson').mockImplementation(() => {});
+    await act(async () => root.render(<MyList key="legacy-export" />));
+    await act(async () =>
+      (container.querySelector('[aria-label="Open Learn to sail"]') as HTMLButtonElement).click()
+    );
+    const titleId = container.querySelector('textarea[id^="notes-"]')!.id.replace('notes-', '');
+    await click('Export all');
+    expect((download.mock.calls[0]![0] as { items: Array<{ id: string }> }).items[0]!.id).toBe(
+      titleId
+    );
+    await click('Edit title');
+    await fill(`#title-${titleId}`, 'Sail with friends');
+    await click('Save title');
+    expect(container.querySelector('[aria-label="Open Sail with friends"]')).not.toBeNull();
+    expect(record).toMatchObject({
+      items: [{ id: titleId, title: 'Sail with friends' }, { title: 'Plant a tree' }],
+    });
+  });
+  async function list() {
+    updateNotes.mockResolvedValue({ success: true });
+    removeItem.mockResolvedValue({ success: true });
+    await act(async () =>
+      root.render(
+        <MyList
+          key={crypto.randomUUID()}
+          initialItems={[
+            {
+              id: 'one',
+              title: 'Sail',
+              category: 'adventure',
+              status: 'in_progress',
+              notes: 'Near the harbor',
+              steps: [{ id: 'step', text: 'Find a club', done: true }],
+              updates: [
+                {
+                  id: crypto.randomUUID(),
+                  text: 'First lesson',
+                  createdAt: new Date().toISOString(),
+                },
+              ],
+            },
+            { id: 'two', title: 'Paint', category: 'creative', status: 'done', steps: [] },
+            { id: 'three', title: 'Swim', status: 'planned', steps: [] },
+          ]}
+        />
+      )
+    );
+  }
+  async function fill(selector: string, value: string) {
+    const field = container.querySelector<HTMLInputElement>(selector)!;
+    await act(async () => {
+      Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value')!.set!.call(field, value);
+      field.dispatchEvent(new Event('input', { bubbles: true }));
+    });
+  }
+  async function openSail() {
+    await act(async () =>
+      (container.querySelector('[aria-label="Open Sail"]') as HTMLButtonElement).click()
+    );
+  }
+  async function removeSail() {
+    await openSail();
+    await click('Remove from list');
+    await click('Remove');
+  }
+  it('searches saved notes and steps, combines status/category filters, and clears no matches', async () => {
+    await list();
+    await fill('#my-list-search', 'harbor');
+    expect(container.querySelector('[aria-label="Open Sail"]')).not.toBeNull();
+    expect(container.querySelector('[aria-label="Open Paint"]')).toBeNull();
+    await fill('#my-list-search', 'Find a club');
+    expect(container.querySelector('[aria-label="Open Sail"]')).not.toBeNull();
+    const filter = container.querySelector<HTMLSelectElement>('[aria-label="Filter by status"]')!;
+    await act(async () => {
+      filter.value = 'done';
+      filter.dispatchEvent(new Event('change', { bubbles: true }));
+    });
+    expect(container.textContent).toContain('No items match');
+    await click('Clear filters');
+    expect(container.querySelectorAll('button[aria-expanded]')).toHaveLength(3);
+    const category = container.querySelector<HTMLSelectElement>(
+      '[aria-label="Filter by category"]'
+    )!;
+    await act(async () => {
+      category.value = 'creative';
+      category.dispatchEvent(new Event('change', { bubbles: true }));
+    });
+    expect(container.querySelector('[aria-label="Open Paint"]')).not.toBeNull();
+    expect(container.querySelector('[aria-label="Open Sail"]')).toBeNull();
+  });
+  it('renames in place while preserving steps, notes and dated updates', async () => {
+    await list();
+    await openSail();
+    await click('Edit title');
+    await fill('#title-one', 'Learn to sail');
+    await click('Save title');
+    expect(updateNotes).toHaveBeenCalledWith('one', { title: 'Learn to sail' });
+    expect(container.querySelector('[aria-label="Open Learn to sail"]')).not.toBeNull();
+    expect(container.textContent).toContain('First lesson');
+    expect(container.querySelector<HTMLTextAreaElement>('#notes-one')!.value).toBe(
+      'Near the harbor'
+    );
+  });
+  it('exports every item despite filters and includes the latest notes before blur', async () => {
+    await list();
+    await openSail();
+    const download = vi.spyOn(bucketData, 'downloadBucketJson').mockImplementation(() => {});
+    const notes = container.querySelector<HTMLTextAreaElement>('#notes-one')!;
+    await act(async () => {
+      Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, 'value')!.set!.call(
+        notes,
+        'Latest notes'
+      );
+      notes.dispatchEvent(new Event('input', { bubbles: true }));
+    });
+    await fill('#my-list-search', 'harbor');
+    await click('Export all');
+    expect(updateNotes).toHaveBeenCalledWith('one', { description: 'Latest notes' });
+    const exported = download.mock.calls[0]![0] as { items: Array<Record<string, unknown>> };
+    expect(exported.items).toHaveLength(3);
+    expect(exported.items[0]).toMatchObject({
+      id: 'one',
+      notes: 'Latest notes',
+      steps: [{ id: 'step', text: 'Find a club', done: true }],
+    });
+    expect(exported.items[0]!.updates).toHaveLength(1);
+  });
+  it('does not export stale notes when the flush fails', async () => {
+    await list();
+    await openSail();
+    const download = vi.spyOn(bucketData, 'downloadBucketJson').mockImplementation(() => {});
+    updateNotes.mockRejectedValue(new Error('Offline'));
+    const notes = container.querySelector<HTMLTextAreaElement>('#notes-one')!;
+    await act(async () => {
+      Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, 'value')!.set!.call(
+        notes,
+        'Unsent'
+      );
+      notes.dispatchEvent(new Event('input', { bubbles: true }));
+    });
+    await click('Export all');
+    expect(download).not.toHaveBeenCalled();
+    expect(container.textContent).toContain('Export stopped');
+    expect(notes.value).toBe('Unsent');
+  });
+  it('keeps the saved graph intact until expiry and Undo cancels deletion', async () => {
+    await list();
+    await removeSail();
+    expect(container.textContent).toContain('in 10 seconds');
+    expect(removeItem).not.toHaveBeenCalled();
+    expect(container.querySelector('[aria-label="Open Sail"]')).toBeNull();
+    await click('Undo');
+    await act(async () => vi.advanceTimersByTimeAsync(11_000));
+    expect(removeItem).not.toHaveBeenCalled();
+    expect(container.querySelector('[aria-label="Open Sail"]')).not.toBeNull();
+  });
+  it('commits expiry once and returns the row when persistence rejects deletion', async () => {
+    await list();
+    await removeSail();
+    removeItem.mockRejectedValueOnce(new Error('Offline'));
+    await act(async () => vi.advanceTimersByTimeAsync(10_000));
+    expect(removeItem).toHaveBeenCalledTimes(1);
+    expect(container.querySelector('[aria-label="Open Sail"]')).not.toBeNull();
+    await act(async () => vi.advanceTimersByTimeAsync(10_000));
+    expect(removeItem).toHaveBeenCalledTimes(1);
+  });
+  it('cancels pending removal when the list unmounts', async () => {
+    await list();
+    await removeSail();
+    await act(async () => root.render(<div />));
+    await act(async () => vi.advanceTimersByTimeAsync(11_000));
+    expect(removeItem).not.toHaveBeenCalled();
+  });
+});
+
+it('loads refreshed account props after a device import without remounting the user', async () => {
+  const one = { id: 'one', title: 'Sail', status: 'planned' as const, steps: [] };
+  await act(async () => root.render(<MyList key="same-account" initialItems={[one]} />));
+  await act(async () =>
+    root.render(
+      <MyList
+        key="same-account"
+        initialItems={[one, { id: 'two', title: 'Swim', status: 'planned', steps: [] }]}
+      />
+    )
+  );
+  expect(container.querySelector('[aria-label="Open Swim"]')).not.toBeNull();
+});
+
+it('keeps newly refreshed account rows when an older notes save finishes', async () => {
+  let finish: () => void = () => {};
+  updateNotes.mockImplementation(
+    () =>
+      new Promise<void>((resolve) => {
+        finish = resolve;
+      })
+  );
+  const one = { id: 'one', title: 'Sail', notes: 'Before', status: 'planned' as const, steps: [] };
+  await act(async () => root.render(<MyList key="refresh-with-write" initialItems={[one]} />));
+  await act(async () =>
+    (container.querySelector('[aria-label="Open Sail"]') as HTMLButtonElement).click()
+  );
+  const notes = container.querySelector<HTMLTextAreaElement>('#notes-one')!;
+  await act(async () => {
+    Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, 'value')!.set!.call(
+      notes,
+      'New notes'
+    );
+    notes.dispatchEvent(new Event('input', { bubbles: true }));
+    notes.dispatchEvent(new FocusEvent('focusout', { bubbles: true }));
+  });
+  await act(async () =>
+    root.render(
+      <MyList
+        key="refresh-with-write"
+        initialItems={[one, { id: 'two', title: 'Imported Swim', status: 'planned', steps: [] }]}
+      />
+    )
+  );
+  expect(container.querySelector('[aria-label="Open Imported Swim"]')).not.toBeNull();
+  await act(async () => finish());
+  expect(container.querySelector('[aria-label="Open Imported Swim"]')).not.toBeNull();
+  expect(container.querySelector<HTMLTextAreaElement>('#notes-one')?.value).toBe('New notes');
 });

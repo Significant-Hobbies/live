@@ -106,3 +106,47 @@ describe('local My list storage', () => {
     expect(await storage.update(before[0]!.id, { status: 'done' })).toHaveLength(1);
   });
 });
+
+it('renames without replacing evidence, rejects duplicates, and keeps cleared legacy notes empty', async () => {
+  const { adapter } = memoryAdapter({
+    items: [
+      {
+        id: 'one',
+        title: 'Sail',
+        description: 'Legacy notes',
+        steps: [{ id: 'step', text: 'Find a club', done: true }],
+        updates: [{ id: crypto.randomUUID(), text: 'Booked', createdAt: new Date().toISOString() }],
+      },
+      { id: 'two', title: 'Swim' },
+    ],
+  });
+  const storage = localMyListStorage(adapter);
+  const before = await storage.load();
+  expect(before[0]!.notes).toBe('Legacy notes');
+  const renamed = await storage.update('one', { title: '  Learn to sail  ', notes: null });
+  expect(renamed[0]).toMatchObject({
+    id: 'one',
+    title: 'Learn to sail',
+    notes: null,
+    steps: before[0]!.steps,
+    updates: before[0]!.updates,
+  });
+  expect((await localMyListStorage(adapter).load())[0]!.notes).toBeNull();
+  await expect(storage.update('one', { title: 'SWIM!' })).rejects.toThrow('already in your list');
+  await expect(storage.update('one', { title: ' ' })).rejects.toThrow();
+});
+
+it('keeps distinct non-Latin names while rejecting the same renamed title', async () => {
+  const { adapter } = memoryAdapter({
+    items: [
+      { id: 'one', title: '東京' },
+      { id: 'two', title: '京都' },
+    ],
+  });
+  const storage = localMyListStorage(adapter);
+  await storage.load();
+  expect((await storage.update('one', { title: 'हिन्दी सीखना' }))[0]!.title).toBe('हिन्दी सीखना');
+  await expect(storage.update('two', { title: 'हिन्दी सीखना' })).rejects.toThrow(
+    'already in your list'
+  );
+});

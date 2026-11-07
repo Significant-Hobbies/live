@@ -340,6 +340,7 @@ export async function setCallingBucketListDream(title: string): Promise<{ succes
 }
 
 const UpdateItemSchema = z.object({
+  title: z.string().trim().min(1).max(200).optional(),
   description: z.string().max(500).nullable().optional(),
   targetYear: z.number().int().min(1900).max(2200).nullable().optional(),
   category: z.enum(CATEGORIES).nullable().optional(),
@@ -347,11 +348,30 @@ const UpdateItemSchema = z.object({
 
 export async function updateBucketListItem(
   id: string,
-  patch: { targetYear?: number | null; category?: string | null; description?: string | null }
-): Promise<{ success: boolean }> {
+  patch: {
+    title?: string;
+    targetYear?: number | null;
+    category?: string | null;
+    description?: string | null;
+  }
+): Promise<{ success: true } | { success: false; reason: 'duplicate' }> {
   const session = await getServerAuthSession();
   if (!session?.user?.id) throw new Error('Not authenticated');
   const parsed = UpdateItemSchema.parse(patch);
+  if (parsed.title !== undefined) {
+    const existing = await db
+      .select({ id: bucketListItems.id, title: bucketListItems.title })
+      .from(bucketListItems)
+      .where(eq(bucketListItems.userId, session.user.id));
+    if (!existing.some((item) => item.id === id)) throw new Error('Item not found');
+    if (
+      existing.some(
+        (item) =>
+          item.id !== id && normalizeDreamTitle(item.title) === normalizeDreamTitle(parsed.title!)
+      )
+    )
+      return { success: false, reason: 'duplicate' };
+  }
   await db
     .update(bucketListItems)
     .set({ ...parsed, updatedAt: new Date() })

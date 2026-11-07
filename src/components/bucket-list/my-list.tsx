@@ -1,6 +1,6 @@
 'use client';
 
-import { Check, ChevronRight } from 'lucide-react';
+import { Check, ChevronRight, Download } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { StorageModeProvider, StorageModeStatus } from '~/components/storage-mode-provider';
@@ -9,6 +9,13 @@ import { ListInspiration } from '~/components/list-inspiration';
 import { experienceImage } from '~/lib/experience-images';
 import { normalizeDreamTitle } from '~/lib/dream-atlas';
 import type { BucketUpdateInput } from '~/lib/bucket-updates';
+import {
+  bucketListExport,
+  downloadBucketJson,
+  matchesMyListQuery,
+  type MyListQuery,
+} from '~/lib/bucket-list-data';
+import { MyListControls } from './my-list-controls';
 import { ManualItemInput } from './manual-item-input';
 import { MyListRowsSkeleton } from './my-list-skeleton';
 import {
@@ -17,6 +24,11 @@ import {
   type MyListItem,
   type MyListStorage,
 } from './my-list-storage';
+
+type Removal =
+  | { phase: 'idle' }
+  | { phase: 'waiting' | 'committing'; itemId: string; title: string };
+const EMPTY_QUERY: MyListQuery = { search: '', status: 'all', category: 'all' };
 
 const STATUS_LABELS = { planned: 'To do', in_progress: 'Doing', done: 'Lived' };
 
@@ -28,11 +40,24 @@ export function MyList({
   boards?: Array<{ id: string; title: string }>;
 }) {
   const account = initialItems !== undefined;
+  const [query, setQuery] = useState<MyListQuery>(EMPTY_QUERY);
+  const [removal, setRemoval] = useState<Removal>({ phase: 'idle' });
+  const removalTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(
+    () => () => {
+      if (removalTimer.current) clearTimeout(removalTimer.current);
+    },
+    []
+  );
   const [storage] = useState(() =>
-    account ? serverMyListStorage(initialItems ?? []) : localMyListStorage()
+    initialItems !== undefined ? serverMyListStorage(initialItems) : localMyListStorage()
   );
   const [items, setItems] = useState(initialItems ?? []);
   const [loaded, setLoaded] = useState(account);
+  useEffect(() => {
+    if (initialItems !== undefined && storage.syncFromServer)
+      setItems(storage.syncFromServer(initialItems));
+  }, [initialItems, storage]);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -110,7 +135,7 @@ export function MyList({
   }
 
   async function saveNotes(item: MyListItem, notes: string) {
-    if (notes === (item.notes ?? '')) return;
+    if (notes === (item.notes ?? '')) return true;
     const ok = await mutate((adapter) => adapter.update(item.id, { notes: notes || null }), true);
     setNotesFailures((current) => ({ ...current, [item.id]: !ok }));
     if (ok)
@@ -120,6 +145,44 @@ export function MyList({
         delete next[item.id];
         return next;
       });
+    return ok;
+  }
+
+  async function exportList() {
+    for (const item of items) {
+      const draft = notesDrafts[item.id];
+      if (draft !== undefined && !(await saveNotes(item, draft))) {
+        setError(
+          'Export stopped because your latest notes could not be saved. Retry to keep your backup current.'
+        );
+        return;
+      }
+    }
+    await queue.current;
+    try {
+      downloadBucketJson(bucketListExport(storage.snapshot()));
+    } catch {
+      setError('Your list could not be exported. Try again.');
+    }
+  }
+
+  function scheduleRemoval(item: MyListItem) {
+    if (removal.phase !== 'idle') return;
+    setSelectedId(null);
+    setRemoval({ phase: 'waiting', itemId: item.id, title: item.title });
+    removalTimer.current = setTimeout(() => {
+      removalTimer.current = null;
+      setRemoval({ phase: 'committing', itemId: item.id, title: item.title });
+      void mutate((adapter) => adapter.remove(item.id)).then(() => setRemoval({ phase: 'idle' }));
+    }, 10_000);
+  }
+
+  function undoRemoval() {
+    if (removal.phase !== 'waiting') return;
+    if (removalTimer.current) clearTimeout(removalTimer.current);
+    removalTimer.current = null;
+    setSelectedId(removal.itemId);
+    setRemoval({ phase: 'idle' });
   }
 
   async function postUpdate(item: MyListItem) {
@@ -156,7 +219,11 @@ export function MyList({
     }
   }
 
-  const active = [...items]
+  const visibleItems = items.filter(
+    (item) =>
+      (removal.phase === 'idle' || item.id !== removal.itemId) && matchesMyListQuery(item, query)
+  );
+  const active = [...visibleItems]
     .reverse()
     .filter((item) => item.status !== 'done')
     .sort(
@@ -164,7 +231,7 @@ export function MyList({
         Number(b.status === 'in_progress') - Number(a.status === 'in_progress') ||
         (b.updatedAt ?? b.createdAt ?? '').localeCompare(a.updatedAt ?? a.createdAt ?? '')
     );
-  const lived = [...items]
+  const lived = [...visibleItems]
     .reverse()
     .filter((item) => item.status === 'done')
     .sort((a, b) =>
@@ -172,13 +239,17 @@ export function MyList({
     );
   // Desktop always shows one item beside the list, so the panel column is never empty.
   const selected =
-    items.find((item) => item.id === selectedId) ?? (desktop ? active[0] : undefined);
+    visibleItems.find((item) => item.id === selectedId) ?? (desktop ? active[0] : undefined);
   const panel = selected ? (
     <ItemPanel
       key={selected.id}
       item={selected}
       account={account}
       saving={saving}
+      removalControl={{
+        pending: removal.phase !== 'idle',
+        remove: () => scheduleRemoval(selected),
+      }}
       notes={notesDrafts[selected.id] ?? selected.notes ?? ''}
       notesError={notesFailures[selected.id] ?? false}
       onNotesChange={(value) => setNotesDrafts((current) => ({ ...current, [selected.id]: value }))}
@@ -230,7 +301,7 @@ export function MyList({
                 </h1>
                 <p className="mt-1 text-muted-foreground">
                   {loaded
-                    ? `${active.length} still calling · ${lived.length} lived`
+                    ? `${items.filter((item) => item.status !== 'done').length} still calling · ${items.filter((item) => item.status === 'done').length} lived`
                     : error
                       ? 'Your list is unavailable.'
                       : 'Opening your list…'}
@@ -238,6 +309,15 @@ export function MyList({
               </div>
               <div className="max-w-32 pt-2 text-right">
                 <StorageModeStatus compact />
+                <button
+                  type="button"
+                  disabled={!loaded || saving}
+                  onClick={() => void exportList()}
+                  className="mt-2 inline-flex min-h-11 items-center gap-2 text-sm underline underline-offset-4 disabled:opacity-50"
+                >
+                  <Download className="size-4" />
+                  Export all
+                </button>
               </div>
             </header>
             <div className="mt-7">
@@ -257,6 +337,36 @@ export function MyList({
                 }}
               />
             </div>
+            {removal.phase !== 'idle' && (
+              <div
+                role="status"
+                className="mt-4 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-border bg-card px-4 py-3 text-sm"
+              >
+                <span>
+                  {removal.phase === 'waiting'
+                    ? `Removing “${removal.title}” in 10 seconds. Leaving this page cancels removal.`
+                    : `Removing “${removal.title}”…`}
+                </span>
+                {removal.phase === 'waiting' && (
+                  <button
+                    type="button"
+                    onClick={undoRemoval}
+                    className="min-h-11 font-semibold underline underline-offset-4"
+                  >
+                    Undo
+                  </button>
+                )}
+              </div>
+            )}
+            {loaded && items.length > 0 && (
+              <MyListControls
+                items={items}
+                query={query}
+                onChange={setQuery}
+                matches={visibleItems.length}
+                removing={removal.phase !== 'idle'}
+              />
+            )}
             {error && (
               <p role="alert" className="mt-4 text-sm text-destructive">
                 {error}
@@ -401,6 +511,7 @@ function ItemPanel({
   item,
   account,
   saving,
+  removalControl,
   notes,
   notesError,
   onNotesChange,
@@ -412,6 +523,7 @@ function ItemPanel({
   item: MyListItem;
   account: boolean;
   saving: boolean;
+  removalControl: { pending: boolean; remove: () => void };
   notes: string;
   notesError: boolean;
   onNotesChange: (value: string) => void;
@@ -425,6 +537,8 @@ function ItemPanel({
   onBack: () => void;
   mutate: Mutate;
 }) {
+  const [title, setTitle] = useState(item.title);
+  const [editingTitle, setEditingTitle] = useState(false);
   const [step, setStep] = useState('');
   const [confirm, setConfirm] = useState(false);
   const year = new Date().getFullYear();
@@ -460,6 +574,62 @@ function ItemPanel({
         ‹ My list
       </button>
       <h2 className="break-words font-serif text-[26px] font-medium leading-tight">{item.title}</h2>
+      {editingTitle ? (
+        <form
+          className="mt-3 space-y-2"
+          onSubmit={async (event) => {
+            event.preventDefault();
+            if (
+              title.trim() &&
+              (await mutate((adapter) => adapter.update(item.id, { title: title.trim() })))
+            )
+              setEditingTitle(false);
+          }}
+        >
+          <label htmlFor={`title-${item.id}`} className="block text-sm text-muted-foreground">
+            Item title
+          </label>
+          <input
+            id={`title-${item.id}`}
+            value={title}
+            onChange={(event) => setTitle(event.target.value)}
+            maxLength={200}
+            required
+            disabled={saving}
+            className="min-h-11 w-full rounded-xl border border-border bg-surface px-3 text-base"
+          />
+          <div className="flex gap-3">
+            <button
+              type="submit"
+              disabled={saving || !title.trim()}
+              className="min-h-11 rounded-xl bg-brand px-4 text-sm text-brand-foreground disabled:opacity-50"
+            >
+              Save title
+            </button>
+            <button
+              type="button"
+              className="min-h-11 text-sm"
+              onClick={() => {
+                setTitle(item.title);
+                setEditingTitle(false);
+              }}
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      ) : (
+        <button
+          type="button"
+          onClick={() => {
+            setTitle(item.title);
+            setEditingTitle(true);
+          }}
+          className="min-h-11 text-sm text-muted-foreground underline underline-offset-4"
+        >
+          Edit title
+        </button>
+      )}
       <div
         role="radiogroup"
         aria-label="Item status"
@@ -716,10 +886,8 @@ function ItemPanel({
             <span>Remove this item?</span>
             <button
               type="button"
-              disabled={saving}
-              onClick={async () => {
-                if (await mutate((adapter) => adapter.remove(item.id))) onBack();
-              }}
+              disabled={saving || removalControl.pending}
+              onClick={removalControl.remove}
               className="min-h-11 px-2 text-destructive"
             >
               Remove
@@ -729,7 +897,12 @@ function ItemPanel({
             </button>
           </div>
         ) : (
-          <button type="button" onClick={() => setConfirm(true)} className="min-h-11">
+          <button
+            type="button"
+            disabled={saving || removalControl.pending}
+            onClick={() => setConfirm(true)}
+            className="min-h-11"
+          >
             Remove from list
           </button>
         )}
