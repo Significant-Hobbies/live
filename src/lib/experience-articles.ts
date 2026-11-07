@@ -1,8 +1,13 @@
-import { EXPERIENCE_ARTICLES } from '~/content/experience-articles';
+import { EXPERIENCE_ARTICLES as articleDocuments } from '~/content/experience-articles';
+import publication from '~/content/experience-articles/publication.json';
 import targetsJson from '~/content/experience-article-targets.json';
 import type { ExperienceArticle, ExperienceArticleTarget } from './experience-article-model';
 
 const EXPERIENCE_ARTICLE_TARGETS = targetsJson as ExperienceArticleTarget[];
+const EXPERIENCE_ARTICLES =
+  publication.status === 'reviewed' || process.env.NODE_ENV !== 'production'
+    ? articleDocuments
+    : [];
 const targets = new Map(
   EXPERIENCE_ARTICLE_TARGETS.map((target) => [target.experienceSlug, target])
 );

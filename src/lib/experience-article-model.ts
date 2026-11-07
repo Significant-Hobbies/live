@@ -20,6 +20,8 @@ export type ExperienceArticleTarget = {
   title: string;
   category: ExperienceCategory;
   emoji: string;
+  description?: string;
+  tags?: string[];
 };
 
 export function experienceArticleBlocks(article: ExperienceArticle): ContentBlock[] {

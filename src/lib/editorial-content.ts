@@ -75,6 +75,7 @@ export function getEditorialArticle(slug: string): EditorialArticle | undefined 
 export function getEditorialArticlesForHobby(hobby: string): EditorialArticle[] {
   const packageArticles = getPackagesForHobby(hobby).map(packageToArticle);
   const search = hobby.toLowerCase();
+  const topic = (value: string) => (value.toLowerCase().match(/[\p{L}\p{N}]+/gu) ?? []).join(' ');
   const legacy = blogPosts.filter(
     (post) =>
       post.title.toLowerCase().includes(search) ||
@@ -85,7 +86,10 @@ export function getEditorialArticlesForHobby(hobby: string): EditorialArticle[] 
   );
   const experiences = editorialArticles.filter(
     (article) =>
-      article.experience && `${article.title} ${article.excerpt}`.toLowerCase().includes(search)
+      article.experience &&
+      experienceArticleTarget(article.experience.experienceSlug)?.tags?.some(
+        (tag) => topic(tag) === topic(hobby)
+      )
   );
-  return assertNoDuplicateSlugs([...experiences, ...packageArticles, ...legacy]).slice(0, 4);
+  return assertNoDuplicateSlugs([...packageArticles, ...legacy, ...experiences]).slice(0, 4);
 }

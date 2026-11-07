@@ -121,4 +121,30 @@ describe('experience articles on public surfaces', () => {
     expect(search.robots).toMatchObject({ index: false, follow: true });
     expect(await renderPublicRouteMarkdown('/bucket-list?article=anything')).toBeNull();
   });
+
+  it('omits preview articles from every production registry and static route', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    vi.doMock('~/content/experience-articles/publication.json', () => ({
+      default: { status: 'preview' },
+    }));
+    vi.resetModules();
+    try {
+      const production = await import('./editorial-content');
+      const routes = await import('~/components/public-pages/blog-detail');
+      const sitemap = await import('./public-sitemap');
+      const mcp = await import('./mcp-public');
+      expect(production.getEditorialArticle(article.slug)).toBeUndefined();
+      expect(routes.generateStaticParams().some((entry) => entry.slug === article.slug)).toBe(
+        false
+      );
+      expect(
+        sitemap.publicStaticSitemap().some((entry) => entry.url.endsWith(`/blog/${article.slug}`))
+      ).toBe(false);
+      expect(mcp.getPublicExperience(article.experienceSlug)?.article).toBeUndefined();
+    } finally {
+      vi.unstubAllEnvs();
+      vi.doUnmock('~/content/experience-articles/publication.json');
+      vi.resetModules();
+    }
+  });
 });

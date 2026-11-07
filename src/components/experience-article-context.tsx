@@ -20,6 +20,7 @@ export function ExperienceArticleAction({ article }: { article: ExperienceArticl
           title={target.title}
           category={target.category}
           sourceSlug={target.experienceSlug}
+          description={target.description}
           variant="primary"
         />
         <Link

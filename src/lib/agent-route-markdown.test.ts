@@ -98,6 +98,35 @@ describe('public route Markdown boundary', () => {
     expect(load).toHaveBeenCalledTimes(2);
   });
 
+  it('preserves allowlisted article filters through negotiated and explicit Markdown without sharing their cache', async () => {
+    const load = vi.fn(async (path: string) => renderPublicRouteMarkdown(path));
+    const match = vi.fn();
+    const put = vi.fn();
+    for (const path of ['/blog', '/blog.md', '/api/md/blog']) {
+      const response = await handleCachedPublicRouteMarkdown(
+        new Request(`https://significanthobbies.com${path}?page=2&ignored=private`, {
+          headers: { Accept: 'text/markdown' },
+        }),
+        load,
+        { cache: { match, put } as unknown as Cache }
+      );
+      expect(response?.status).toBe(200);
+      expect(await response?.text()).toContain(editorialArticles[18].title);
+      expect(response?.headers.get('Content-Location')).toBe(
+        'https://significanthobbies.com/blog?page=2'
+      );
+      expect(load).toHaveBeenLastCalledWith('/blog?page=2', expect.any(Request));
+    }
+    expect(match).not.toHaveBeenCalled();
+    expect(put).not.toHaveBeenCalled();
+    const filtered = await handlePublicRouteMarkdown(
+      new Request('https://significanthobbies.com/blog.md?category=Food&q=chocolate'),
+      load
+    );
+    expect(await filtered?.text()).toContain('chocolate');
+    expect(load).toHaveBeenLastCalledWith('/blog?category=Food&q=chocolate', expect.any(Request));
+  });
+
   it('returns explicit Markdown failures instead of exposing private or empty shells', async () => {
     const privateResponse = await handlePublicRouteMarkdown(
       new Request('https://significanthobbies.com/daily.md'),

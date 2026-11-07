@@ -73,6 +73,12 @@ test('the article saves the actual experience and survives a guest reload', asyn
   await expect(
     page.getByRole('button', { name: `Open ${target.title}`, exact: true })
   ).toBeVisible();
+  const savedItem = page.getByRole('button', { name: `Open ${target.title}`, exact: true });
+  await waitForHydrated(savedItem);
+  await savedItem.click();
+  await expect(page.getByRole('textbox', { name: 'Notes', exact: true })).toHaveValue(
+    target.description ?? ''
+  );
 });
 
 test('article filters and pagination are crawlable and preserve canonical identity', async ({
