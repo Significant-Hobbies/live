@@ -66,6 +66,8 @@ export default async function SettingsPage() {
       <SpotlightCard className="border-0" innerClassName="p-6 sm:p-9">
         <h2 className="mb-6 font-serif text-3xl font-medium text-foreground">Edit profile</h2>
         <ProfileForm
+          key={user?.id ?? 'local'}
+          ownerId={user?.id ?? null}
           initialName={user?.name ?? ''}
           initialBio={user?.bio ?? ''}
           initialWebsite={user?.website ?? ''}

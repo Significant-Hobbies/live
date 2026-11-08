@@ -53,6 +53,7 @@ import { getServerAuthSession } from '~/server/auth';
 import { readLiveRecords, readLiveSummary } from './personal-platform-live';
 import { getVisibleProfile, getPublicProfileItems } from './profiles';
 import { setProfileVisibility } from '~/lib/actions/profile-privacy';
+import { updateProfile, updateCreed } from '~/lib/actions/user';
 import { renderPublicRouteMarkdown } from '~/lib/public-route-markdown';
 import ProfilePage, { generateMetadata as profileMetadata } from '~/app/u/[username]/page';
 import sitemap from '~/app/sitemap';
@@ -906,6 +907,53 @@ describe('public profile and individual item privacy on durable storage', () => 
     expect((await db.query.users.findFirst({ where: eq(users.id, a.userId) }))?.username).toBe(
       'privacy-claim'
     );
+  });
+
+  it('binds profile and creed edits to the initiating account before any durable write', async () => {
+    const a = await signUp(issuer(db), 'profile-editor-a@example.test', 'Editor A');
+    const b = await signUp(issuer(db), 'profile-editor-b@example.test', 'Editor B');
+    asUser(a);
+    expect(
+      await updateProfile(a.userId, {
+        name: 'Updated A',
+        bio: 'Owner A biography',
+        website: 'https://example.org',
+      })
+    ).toEqual({ success: true });
+    expect(await updateCreed(a.userId, 'Owner A creed')).toEqual({ success: true });
+    const owner = await db.query.users.findFirst({ where: eq(users.id, a.userId) });
+    expect(owner).toMatchObject({
+      name: 'Updated A',
+      bio: 'Owner A biography',
+      website: 'https://example.org',
+      creed: 'Owner A creed',
+    });
+
+    asUser(b);
+    expect(await updateProfile(a.userId, { bio: 'Private A draft' })).toMatchObject({
+      success: false,
+      error: 'Your signed-in account changed. Reload Settings and try again.',
+    });
+    expect(await updateCreed(a.userId, 'Private A creed draft')).toMatchObject({
+      success: false,
+      error: 'Your signed-in account changed. Reload Settings and try again.',
+    });
+    expect(await updateProfile(null, { bio: 'Unbound draft' })).toMatchObject({ success: false });
+    expect(await updateCreed(null, 'Unbound creed')).toMatchObject({ success: false });
+    expect(await db.query.users.findFirst({ where: eq(users.id, b.userId) })).toMatchObject({
+      name: 'Editor B',
+      bio: null,
+      website: null,
+      creed: null,
+    });
+    expect(await db.query.users.findFirst({ where: eq(users.id, a.userId) })).toEqual(owner);
+
+    mockSession.mockResolvedValue(null);
+    expect(await updateProfile(a.userId, { bio: 'Anonymous edit' })).toMatchObject({
+      success: false,
+      error: 'Not authenticated',
+    });
+    expect(await updateCreed(a.userId, 'Anonymous creed')).toMatchObject({ success: false });
   });
 
   it('migrates existing addressable profiles without publishing their private list items', () => {

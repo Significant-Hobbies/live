@@ -5,7 +5,7 @@ import { waitForHydrated } from './fixtures/hydration';
 
 test.setTimeout(90_000);
 
-async function signUp(page: Page, username?: string) {
+async function signUp(page: Page, username?: string, profileVisibility?: 'private' | 'public') {
   const id = randomUUID().slice(0, 8);
   const response = await page.request.post('/api/auth/sign-up/email', {
     headers: { Origin: 'http://localhost:3000' },
@@ -17,7 +17,11 @@ async function signUp(page: Page, username?: string) {
   });
   expect(response.ok()).toBe(true);
   expect(
-    (await page.request.post('/api/test/complete-onboarding', { data: { username } })).ok()
+    (
+      await page.request.post('/api/test/complete-onboarding', {
+        data: { username, profileVisibility },
+      })
+    ).ok()
   ).toBe(true);
 }
 
@@ -255,6 +259,51 @@ test('a stale Settings page cannot claim a first handle for a newly signed-in ac
     await expect(page.getByRole('textbox', { name: 'Public username', exact: true })).toHaveValue(
       ''
     );
+  } finally {
+    await visitor.close();
+  }
+});
+
+test('a stale profile editor cannot copy private drafts into another account’s public profile', async ({
+  page,
+  browser,
+}) => {
+  const first = `editor-${randomUUID().slice(0, 8)}`;
+  const second = `public-${randomUUID().slice(0, 8)}`;
+  const draftBio = `Private biography draft ${randomUUID()}`;
+  const draftCreed = `Private creed draft ${randomUUID()}`;
+  await signUp(page, first);
+  await page.goto('/settings');
+  const name = page.getByRole('textbox', { name: 'Display name', exact: true });
+  await waitForHydrated(name);
+  await page.getByRole('textbox', { name: 'Bio', exact: true }).fill(draftBio);
+  await page.getByRole('textbox', { name: 'Your creed', exact: true }).fill(draftCreed);
+  expect(
+    (
+      await page.request.post('/api/auth/sign-out', {
+        data: {},
+        headers: { Origin: 'http://localhost:3000' },
+      })
+    ).ok()
+  ).toBe(true);
+  await signUp(page, second, 'public');
+  await action(page, () => page.getByRole('button', { name: 'Save changes', exact: true }).click());
+  const visitor = await browser.newContext();
+  try {
+    const profile = await visitor.request.get(`http://localhost:3000/u/${second}`);
+    expect(profile.status()).toBe(200);
+    const html = await profile.text();
+    expect(html).not.toContain(draftBio);
+    expect(html).not.toContain(draftCreed);
+    await expect(
+      page.getByText('Your signed-in account changed. Reload Settings and try again.', {
+        exact: true,
+      })
+    ).toBeVisible();
+    await page.reload();
+    await waitForHydrated(name);
+    await expect(page.getByRole('textbox', { name: 'Bio', exact: true })).toHaveValue('');
+    await expect(page.getByRole('textbox', { name: 'Your creed', exact: true })).toHaveValue('');
   } finally {
     await visitor.close();
   }
