@@ -10,7 +10,7 @@ import { CommitmentCard } from '~/components/commitments/commitment-card';
 import { LifeGrid } from '~/components/life-grid';
 import { SuggestionsPanel } from '~/components/suggestions-panel';
 import { Button } from '~/components/ui/button';
-import { bucketListItems, timelines, userQuests, users } from '~/db/schema';
+import { timelines, userQuests } from '~/db/schema';
 import { ProfileShareButton } from '~/components/profile-share-button';
 import { ProfileVisibilityToggle } from '~/components/profile-visibility-toggle';
 import { getPublicCommitmentsForUser, setCommitmentVisibility } from '~/lib/actions/commitments';
@@ -24,6 +24,7 @@ import type { Phase, TimelineVisibility } from '~/lib/types';
 import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
 import { parseJSONColumn } from '~/lib/utils';
+import { getVisibleProfile, getPublicProfileItems } from '~/server/profiles';
 
 interface Props {
   params: Promise<{ username: string }>;
@@ -31,6 +32,8 @@ interface Props {
 
 export async function generateMetadata({ params }: Props) {
   const { username } = await params;
+  const profile = await getVisibleProfile(username);
+  if (!profile) return { title: 'Profile unavailable', robots: { index: false, follow: false } };
   const title = `@${username} — SignificantHobbies`;
   const description = `View @${username}'s hobby journey on SignificantHobbies — their timelines, hobby cloud, and badges.`;
   // Without an explicit openGraph block the shared card falls back to the root
@@ -71,21 +74,7 @@ export default async function ProfilePage({ params }: Props) {
   const { username } = await params;
   const session = await getServerAuthSession();
 
-  const user = await db.query.users.findFirst({
-    where: eq(users.username, username),
-    columns: {
-      id: true,
-      name: true,
-      username: true,
-      image: true,
-      bio: true,
-      website: true,
-      creed: true,
-      createdAt: true,
-      earnedBadges: true,
-      birthYear: true,
-    },
-  });
+  const user = await getVisibleProfile(username, session?.user?.id);
 
   if (!user) notFound();
 
@@ -113,11 +102,7 @@ export default async function ProfilePage({ params }: Props) {
   );
 
   // Public bucket list items for this profile
-  const publicBucketItems = await db
-    .select()
-    .from(bucketListItems)
-    .where(and(eq(bucketListItems.userId, user.id), eq(bucketListItems.visibility, 'public')))
-    .orderBy(desc(bucketListItems.createdAt));
+  const publicBucketItems = await getPublicProfileItems(user.id);
 
   // Commitments + stamps for the life grid and commitments section.
   const profileCommitments = await getPublicCommitmentsForUser(user.id, isOwner);
@@ -285,8 +270,28 @@ export default async function ProfilePage({ params }: Props) {
                 </Button>
               </Link>
             )}
-            <ProfileShareButton username={username} displayName={displayName} />
+            {user.profileVisibility === 'public' ? (
+              <ProfileShareButton username={username} displayName={displayName} />
+            ) : null}
           </div>
+          {isOwner ? (
+            <div className="mt-5 rounded-xl border border-border bg-card/40 px-5 py-4 text-sm text-muted-foreground">
+              <p>
+                {user.profileVisibility === 'public'
+                  ? 'Your profile is public.'
+                  : 'Your profile is private. Only you can view it.'}
+              </p>
+              <p className="mt-1">
+                Only items marked Public appear here. Your notes and updates stay private.
+              </p>
+              <Link
+                href="/settings#profile-privacy-heading"
+                className="mt-2 inline-block text-foreground underline underline-offset-4"
+              >
+                Manage profile privacy
+              </Link>
+            </div>
+          ) : null}
         </div>
       </div>
 
@@ -554,7 +559,7 @@ export default async function ProfilePage({ params }: Props) {
               <h2 className="text-sm font-medium text-foreground">Bucket list</h2>
               {isOwner && (
                 <a
-                  href="/"
+                  href="/bucket-list"
                   className="text-xs text-foreground hover:text-foreground transition-colors"
                 >
                   Manage →

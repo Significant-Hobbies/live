@@ -1,7 +1,7 @@
 import { eq } from 'drizzle-orm';
 import { ImageResponse } from 'next/og';
 
-import { timelines, users } from '~/db/schema';
+import { timelines } from '~/db/schema';
 import {
   fallbackTimelineImage,
   timelineOgImageContentType,
@@ -10,8 +10,10 @@ import {
 import type { Phase } from '~/lib/types';
 import { parseJSONColumn } from '~/lib/utils';
 import { db } from '~/server/db';
+import { getVisibleProfile } from '~/server/profiles';
 
 export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
 export const size = timelineOgImageSize;
 export const contentType = timelineOgImageContentType;
 
@@ -55,17 +57,21 @@ function UserProfileOgStats({
 export default async function OgImage({ params }: { params: Promise<{ username: string }> }) {
   const { username } = await params;
 
-  let user: Awaited<ReturnType<typeof db.query.users.findFirst>>;
+  let user: Awaited<ReturnType<typeof getVisibleProfile>>;
   try {
-    user = await db.query.users.findFirst({
-      where: eq(users.username, username),
-    });
+    user = await getVisibleProfile(username);
   } catch (err) {
     console.error('opengraph-image[u]: user lookup failed', err);
-    return fallbackTimelineImage('Significant Hobbies');
+    const image = fallbackTimelineImage('Profile unavailable');
+    image.headers.set('Cache-Control', 'private, no-store');
+    return image;
   }
 
-  if (!user) return fallbackTimelineImage('User not found');
+  if (!user) {
+    const image = fallbackTimelineImage('Profile unavailable');
+    image.headers.set('Cache-Control', 'private, no-store');
+    return image;
+  }
 
   let userTimelines: Array<{ phases: string; visibility: string }> = [];
   try {
@@ -145,6 +151,6 @@ export default async function OgImage({ params }: { params: Promise<{ username: 
 
       <UserProfileOgStats publicTimelines={publicTimelines} hobbyCount={allHobbies.size} />
     </div>,
-    { width: 1200, height: 630 }
+    { width: 1200, height: 630, headers: { 'Cache-Control': 'private, no-store' } }
   );
 }
