@@ -276,6 +276,20 @@ test('a stale profile editor cannot copy private drafts into another account’s
   await page.goto('/settings');
   const name = page.getByRole('textbox', { name: 'Display name', exact: true });
   await waitForHydrated(name);
+  await name.fill('Saved editor profile');
+  await page.getByRole('textbox', { name: 'Bio', exact: true }).fill('Saved owner biography');
+  await page.getByRole('textbox', { name: 'Your creed', exact: true }).fill('Saved owner creed');
+  await action(page, () => page.getByRole('button', { name: 'Save changes', exact: true }).click());
+  await page.waitForURL(`/u/${first}`);
+  await page.goto('/settings');
+  await waitForHydrated(name);
+  await expect(name).toHaveValue('Saved editor profile');
+  await expect(page.getByRole('textbox', { name: 'Bio', exact: true })).toHaveValue(
+    'Saved owner biography'
+  );
+  await expect(page.getByRole('textbox', { name: 'Your creed', exact: true })).toHaveValue(
+    'Saved owner creed'
+  );
   await page.getByRole('textbox', { name: 'Bio', exact: true }).fill(draftBio);
   await page.getByRole('textbox', { name: 'Your creed', exact: true }).fill(draftCreed);
   expect(
