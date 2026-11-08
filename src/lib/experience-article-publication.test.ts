@@ -110,8 +110,26 @@ describe('experience article publication boundary', () => {
   it('publishes a complete reviewed catalog and detects edited bytes or a preview manifest', () => {
     const f = fixture();
     try {
+      f.write('drafts/reviews/a002.json', {
+        reviewer: 'Fixture correction reviewer',
+        checkedAt: '2026-11-08T08:00:00Z',
+        articles: [
+          {
+            ...f.reviews[0],
+            reviewedAt: '2026-11-08T08:40:00Z',
+            recheckedAt: '2026-11-08T08:30:00Z',
+          },
+          { ...f.reviews[1], recheckedAt: '2026-11-08T08:45:00Z' },
+        ],
+      });
       expect(f.publish().status).toBe(0);
       expect(f.run(checker).status).toBe(0);
+      const records = JSON.parse(
+        readFileSync(join(f.root, 'src/content/experience-articles/publication.json'), 'utf8')
+      ).articles;
+      expect(records[0].reviewedAt).toBe('2026-11-08T08:40:00Z');
+      expect(records[1].reviewedAt).toBe('2026-11-08T08:45:00Z');
+      expect(records[2].reviewedAt).toBe('2026-11-08');
       const file = join(f.root, 'src/content/experience-articles/activity-0.json');
       const original = readFileSync(file, 'utf8');
       writeFileSync(file, original.replace('A specific first project', 'An edited first project'));

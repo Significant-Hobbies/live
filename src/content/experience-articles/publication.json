@@ -170,7 +170,7 @@
       "draftSha256": "6d10973f05f4f74db6bd88e0a384c39b7d432d563a3697855200062d946bb163",
       "reviewFile": "a007.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T08:46:07Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -390,7 +390,7 @@
       "draftSha256": "0bfceb043c2d4c72188bae67d2fd6e2027bd6585023d1a1ff1a783b97134d704",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -550,7 +550,7 @@
       "draftSha256": "d5f2859cbf0cbd819e17b95251f1ff5cbbc486dcf2017c00fb9261fe6840fd97",
       "reviewFile": "a004.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T06:28:41Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -650,7 +650,7 @@
       "draftSha256": "038cf331a51932b6a4ffd8283ff08f82f267924995ec590f3e65d54716c3fd2e",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -720,7 +720,7 @@
       "draftSha256": "adb6642b549ee4567c1ff7265c5d533a5f5b3e7dc0037b7ddd1c86fdd7fa80b4",
       "reviewFile": "a006.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T06:55:01.447Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -1030,7 +1030,7 @@
       "draftSha256": "9c70bb0a169b26b87b45dd2933ecb89720a73aa7bec8570272ea9f79a6d653f3",
       "reviewFile": "a016.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T08:46:07Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -1090,7 +1090,7 @@
       "draftSha256": "b3bdb1221b8006f9543469a53d184f95874991c965ae6e0534c067f8f82c8dcf",
       "reviewFile": "a016.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T08:46:07Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -1120,7 +1120,7 @@
       "draftSha256": "bd3ae16c78db99ec0eb925dfd4b5c0fb6fd4bec1f3639010b36eec94ca22ac28",
       "reviewFile": "a016.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T08:46:07Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -1230,7 +1230,7 @@
       "draftSha256": "1d687999176853a3af84c3e02ddb8a1af4f44ced40ce7e98300cae2604cd49d6",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -1540,7 +1540,7 @@
       "draftSha256": "ff6bec7887c4853e471bbdb1ef888027536a37772473af59b6e41aa3f0d9ae98",
       "reviewFile": "a004.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T06:28:41Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -1570,7 +1570,7 @@
       "draftSha256": "834586eb906acc1b9f30d887c2312fa3328da359eef20fcc9de6be16843c7a6a",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -1650,7 +1650,7 @@
       "draftSha256": "c4b2eeac5e0b31156e999f2180a0b3f9584845e1b365b2b5fddd420f6c3ef1cf",
       "reviewFile": "a007.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T08:46:07Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -1680,7 +1680,7 @@
       "draftSha256": "7987a1c06542f18fe02aa5fb376f34c44ccc36e8b6aa7d477083728f329f329b",
       "reviewFile": "a009.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T07:30:53.791Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -1750,7 +1750,7 @@
       "draftSha256": "e3d9f9ab709545362f671b3e58b65baa6145d69a39949269fa9e59dce44eb2f1",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -1760,7 +1760,7 @@
       "draftSha256": "63f426ed59bcc17d81672e070720ff37d3f34b3d07820ffc18dd5e52657b95cb",
       "reviewFile": "a006.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T06:55:01.447Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -1990,7 +1990,7 @@
       "draftSha256": "741c6a9fa523246f2716b6e442fc7677a9e16f3ca857d2f6afbf31afac7df0bd",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -2010,7 +2010,7 @@
       "draftSha256": "44faccd47db6e1ae54475cd2f23428f8cfcc9e1f9e0d708621393de35027617b",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -2130,7 +2130,7 @@
       "draftSha256": "6765ab4842e1d97a350f289cfa74af875b77b5c664d354a013bf597b51375fc8",
       "reviewFile": "a005.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T08:46:07Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -2140,7 +2140,7 @@
       "draftSha256": "6f5a7616b1e891e59e2f567026d88899520b1b5884b05d72f78c51276f407ea0",
       "reviewFile": "a006.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T06:55:01.447Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -2200,7 +2200,7 @@
       "draftSha256": "3d55465247aaa2ce15bee6b47ea93e9b08fe04f55b30b89c677f350127097b62",
       "reviewFile": "a004.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T06:28:41Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -2250,7 +2250,7 @@
       "draftSha256": "a50741dcc1373445d2581f9f64e10bdde1953d046d6980cdb5a38c205fb5547e",
       "reviewFile": "a005.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T08:46:07Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -2300,7 +2300,7 @@
       "draftSha256": "f3301a5c25e688fb43aee7ce478718b2f71c2a5ccbe0d4fa0f596822cce13362",
       "reviewFile": "a004.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T06:28:41Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -2420,7 +2420,7 @@
       "draftSha256": "012e607c5ca9cc5969076c7b38def4fe7b726fe78437c0089f2ead5603cd1005",
       "reviewFile": "a006.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T06:55:01.447Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -2480,7 +2480,7 @@
       "draftSha256": "31805a139b474758ac884e582c7610326f57b882ec4930a702078ac5b643389b",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -2510,7 +2510,7 @@
       "draftSha256": "e661b87d8e1206e0d1cf8bedf93a4437e5953c998e8f3d2a6ff1f92df5aecd67",
       "reviewFile": "a010.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T08:54:00Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -2570,7 +2570,7 @@
       "draftSha256": "d3fcf71cb8534f39ee987954f88b09e061cd1eab2da0b696d2a91a34317b8d82",
       "reviewFile": "a010.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T08:54:00Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -2700,7 +2700,7 @@
       "draftSha256": "de2c4a62cb6189f30b6c1d300603c622119ca4f55bc812fffd8bb45d44eb302c",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -2790,7 +2790,7 @@
       "draftSha256": "bf58dfe0a9ed93ac171304b351e6a9dbdce5a37a4b95be6af9e9b31bfbe498fe",
       "reviewFile": "a012.json",
       "reviewer": "Codex parent (not article author)",
-      "reviewedAt": "2026-11-08T08:44:40.189648+00:00",
+      "reviewedAt": "2026-11-08T08:44:40.189426+00:00",
       "verdict": "pass"
     },
     {
@@ -2810,7 +2810,7 @@
       "draftSha256": "9afb4eade7271e00fd4e92141947eeb4cd03cb17a45180d647ff79cf2fd753a7",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -2840,7 +2840,7 @@
       "draftSha256": "4c001a2993bdd0b89c041526a20c99e16bedeebe76b6812415a34f2d5e1c2ba8",
       "reviewFile": "a006.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T06:55:01.447Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -3120,7 +3120,7 @@
       "draftSha256": "f73541b942b48d5d509575e10f15c12935e1e21afbac7d96046e4a209df33a2b",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -3240,7 +3240,7 @@
       "draftSha256": "d91c4e61a531f2962d2567bc03df295a3ec9d62002754962424fb2bebb8b159b",
       "reviewFile": "a004.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T06:28:41Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -3270,7 +3270,7 @@
       "draftSha256": "fe6358ed059a59e2a838afb9a73b43704480a443373754cdba045c10f1f3dd2c",
       "reviewFile": "a005.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T08:46:07Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -3290,7 +3290,7 @@
       "draftSha256": "a6499a3ff8beb08b7128f078707d0e60bb4e5a677cd623f66646e80fffc7e614",
       "reviewFile": "a007.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T08:46:07Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -3360,7 +3360,7 @@
       "draftSha256": "8913e4f26f3725d36951bc92492a353635330f0392bcbf0d5932509351ac1625",
       "reviewFile": "a007.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T08:46:07Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -3430,7 +3430,7 @@
       "draftSha256": "e4fd9bf57ab1dab837c696e59083b290edb27bdd19abdd6f430d8fb2f895fffe",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -3460,7 +3460,7 @@
       "draftSha256": "bb16d5d475e6b5d9d55995a6321c9b1d2df173125b149306d4ac36b93121a65c",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -3550,7 +3550,7 @@
       "draftSha256": "41570d080ae1d018a938aec9975ee59446edf10a20e3f6fd81c4a800671c3324",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -3580,7 +3580,7 @@
       "draftSha256": "819cf40a57edc85cbe336a862d47093df572c3e225045cd033bcd9e6f98e2c35",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -3840,7 +3840,7 @@
       "draftSha256": "2367f87561a757bce5cde9b6a78beb7d4be83cef44c724cab9d44552bca1c7c1",
       "reviewFile": "a005.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T08:46:07Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -4020,7 +4020,7 @@
       "draftSha256": "fae411bdef7da81d07a241adf81df8f125e5d697c04f31138ebf6e077245d1b1",
       "reviewFile": "a012.json",
       "reviewer": "Codex parent (not article author)",
-      "reviewedAt": "2026-11-08T08:44:40.189648+00:00",
+      "reviewedAt": "2026-11-08T08:44:40.188609+00:00",
       "verdict": "pass"
     },
     {
@@ -4050,7 +4050,7 @@
       "draftSha256": "c69e27365ebe4ef770680c3be9b2acc47bb0cb5182c7a47f833488a490ec4672",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -4060,7 +4060,7 @@
       "draftSha256": "ff12eaa9bcc8d38e028ae218edbea18df41aec4528075eeb6c7c369f9c24f940",
       "reviewFile": "a008.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T07:24:43.677Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -4070,7 +4070,7 @@
       "draftSha256": "05a859ad82c80367bccbcc66ab98c83d4f00fc404b153a3adebb6e9743f092e8",
       "reviewFile": "a010.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T08:54:00Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -4570,7 +4570,7 @@
       "draftSha256": "2d490d51578c79657e4347aa88565203367d5bf04f2ff51470ec3c8fec498a8c",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -4750,7 +4750,7 @@
       "draftSha256": "190497044a774b7c475dd6802138a089e936c5fe21936d0fcbcd4d744cbe6265",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -4850,7 +4850,7 @@
       "draftSha256": "67552abe7a0f295cf73ed8c0128de5e6179e65698c82be272e49be943378c659",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -4880,7 +4880,7 @@
       "draftSha256": "3602e24adc7e4f69898f185bac0076eaf669d2829ef3767948039aebcd31919b",
       "reviewFile": "a012.json",
       "reviewer": "Codex parent (not article author)",
-      "reviewedAt": "2026-11-08T08:44:40.189648+00:00",
+      "reviewedAt": "2026-11-08T08:44:40.189250+00:00",
       "verdict": "pass"
     },
     {
@@ -4960,7 +4960,7 @@
       "draftSha256": "698708f1688802ff7fb56e6c8802c52d03eb654c33381e5b5a35eee32c0a5bc0",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -5000,7 +5000,7 @@
       "draftSha256": "fa0554964f248b02205dba75d4d70b555073fd9683987826eb4f698ad3e2d41a",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -5230,7 +5230,7 @@
       "draftSha256": "d37ccb0b98acefc1ed4b9f427814d5c3ce4e30c5d88420be3fdc8ef882832b7f",
       "reviewFile": "a005.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T08:46:07Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -5440,7 +5440,7 @@
       "draftSha256": "54ff822dd38a34eff5ece132f7550d38bf39b25aa29d1dd5f577328920d0ae34",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -5840,7 +5840,7 @@
       "draftSha256": "849549848c4fa7c2ac705e5595d1954e2d9b7d0cb48eb10d0d3ddf5e1be4b7fb",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -6150,7 +6150,7 @@
       "draftSha256": "369a5678f86f07e6a9acf0c1a58c2bc2f2cd2de386430dea1e3efef3dfde404e",
       "reviewFile": "a010.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T08:54:00Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -6250,7 +6250,7 @@
       "draftSha256": "5ebdc22a2158cc916047bf8ccd5143b3284a562e21c610b925f33f40729914ea",
       "reviewFile": "a012.json",
       "reviewer": "Codex parent (not article author)",
-      "reviewedAt": "2026-11-08T08:44:40.189648+00:00",
+      "reviewedAt": "2026-11-08T08:44:40.189646+00:00",
       "verdict": "pass"
     },
     {
@@ -6410,7 +6410,7 @@
       "draftSha256": "e441c6e1c04de0a65fe6c88659873526b6e3d9fc2bc02906d293a75e02d011ba",
       "reviewFile": "a008.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T07:24:43.677Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -6490,7 +6490,7 @@
       "draftSha256": "39053e2e975c728ad79b02d964f218be1b6bb2a794f6b5c2226894f96cd16418",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -6530,7 +6530,7 @@
       "draftSha256": "72928b804b79eb2c6a1952d989559e2fed29c4d6e2e1ffcaf87eac28fe50f0be",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -6610,7 +6610,7 @@
       "draftSha256": "7ca032488ee5fb3dabda99894736ead088e740c70a8a13d4aae76eeba49955cb",
       "reviewFile": "a005.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T08:46:07Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -6630,7 +6630,7 @@
       "draftSha256": "2ca1c67c1a7fac1626e1b47aa38b6b5441f696e3987dd8336f3a2c8267e570f2",
       "reviewFile": "a004.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T06:28:41Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -6740,7 +6740,7 @@
       "draftSha256": "9f0d1bf8b4f82a1c2f9b46839f332dd145949ecad99e67699728523416c05f78",
       "reviewFile": "a011.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T08:02:19.377Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -6760,7 +6760,7 @@
       "draftSha256": "9642533a396aaf6371300dc869df174dc7ea2593e15f95effdc02531ee9057e5",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -6860,7 +6860,7 @@
       "draftSha256": "a1ed361060cbefaf10220689991f7443a0d29e5abc0a31ea6f078fece3fac501",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -6890,7 +6890,7 @@
       "draftSha256": "5dd1b8b7ea7a96567ab8953d5198e5dd036a059f87833c00e2facb3bc37f50a8",
       "reviewFile": "a005.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T08:46:07Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -6970,7 +6970,7 @@
       "draftSha256": "13738c8265bf474448657da441a61e30b54d37820a4aa2d0fc07b56acb56ac8e",
       "reviewFile": "a005.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T08:46:07Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     },
     {
@@ -7000,7 +7000,7 @@
       "draftSha256": "236d50080003988799d56b943f5350cc73ae81abb2648674fc3ac240a326e2cb",
       "reviewFile": "a003.json",
       "reviewer": "Luna",
-      "reviewedAt": "2026-11-08T05:52:48Z",
+      "reviewedAt": "2026-11-08T09:09:24Z",
       "verdict": "pass"
     }
   ]

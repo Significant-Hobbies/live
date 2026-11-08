@@ -33,7 +33,8 @@ for (const name of readdirSync(reviewsRoot)
       ...article,
       reviewFile: name,
       reviewer: document.reviewer,
-      checkedAt: document.checkedAt,
+      checkedAt:
+        article.reviewedAt ?? article.recheckedAt ?? article.checkedAt ?? document.checkedAt,
     });
   }
 }
