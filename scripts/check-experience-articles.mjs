@@ -79,6 +79,7 @@ for (const file of files) {
   }
   let words = 0;
   const headings = new Set();
+  const ownParagraphs = [];
   for (const section of article.sections) {
     if (
       typeof section.heading !== 'string' ||
@@ -98,12 +99,21 @@ for (const file of files) {
       }
       words += paragraph.trim().split(/\s+/).length;
       if (
-        /\b(?:assignment brief|this assignment|topic-intents\.json|writer-contract\.md|source-checks\.jsonl|articleSlug|experienceSlug|staged catalog|canonical seed)\b/i.test(
+        /\b(?:assignment brief|this assignment|this draft|during (?:this|our) source review|topic-intents\.json|writer-contract\.md|source-checks\.jsonl|articleSlug|experienceSlug|staged catalog|canonical seed)\b/i.test(
           paragraph
         )
       )
         add(slug, 'Internal authoring instructions leaked into article prose');
       const normalized = normalize(paragraph);
+      if (normalized.split(' ').length >= 25) {
+        if (
+          ownParagraphs.some(
+            (previous) => previous.includes(normalized) || normalized.includes(previous)
+          )
+        )
+          add(slug, 'Repeated long passage within this article');
+        ownParagraphs.push(normalized);
+      }
       const previous = paragraphs.get(normalized);
       if (normalized.split(' ').length >= 25 && previous)
         add(slug, `Repeated long paragraph also in ${previous}`);
