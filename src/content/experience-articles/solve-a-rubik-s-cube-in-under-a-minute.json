@@ -1,0 +1,64 @@
+{
+  "experienceSlug": "solve-a-rubik-s-cube-in-under-a-minute",
+  "slug": "solve-a-rubik-s-cube-in-under-a-minute",
+  "title": "Make Your 3×3 Solve Faster by Fixing One Pause",
+  "description": "Improve a 3×3 cube time by learning the layer method cleanly, tracking one source of hesitation, and practicing with reliable timed solves.",
+  "intent": "Gives a beginner a diagnostic route from first solve to a sub-minute target, focused on reducing avoidable pauses rather than frantic turning.",
+  "sections": [
+    {
+      "heading": "Learn one method until its names make sense",
+      "paragraphs": [
+        "If you still need to remember what each color piece is, begin with a beginner layer method before chasing speed. Rubik’s official solve guide explains centers, edges, and corners and keeps the cube in a consistent orientation. That consistency matters: changing which face is up halfway through an algorithm makes a known sequence harder to retrieve.",
+        "Learn the method as a chain of visible goals: form a cross, place corners, solve the middle layer, orient the last layer, and permute pieces. Do not memorize a long algorithm without knowing which pieces it is meant to move. When a solve breaks, find the first step where the cube stopped matching the expected pattern."
+      ]
+    },
+    {
+      "heading": "Separate turning speed from thinking time",
+      "paragraphs": [
+        "Time a few ordinary solves and record both the total and where you paused. A video from above can reveal whether the hands stop while you search, whether you regrip often, or whether an algorithm itself is still uncertain. Fix the largest pause first. Turning faster while making repeated recognition mistakes usually creates more corrections, not a reliable sub-minute solve.",
+        "Use a small set of practice cases. Scramble the cube, solve just the cross, reset, and solve only the first-layer corners. Then join those stages. This isolates the part that consumes attention and gives your hands accurate repetitions without pressure to set a personal best on every attempt."
+      ]
+    },
+    {
+      "heading": "Reduce rotations and protect solved pieces",
+      "paragraphs": [
+        "Rubik’s guide emphasizes keeping the cube oriented and warns about undoing completed work. Before turning, check whether the intended edge or corner is in the correct place and direction. If a move threatens a solved section, stop and identify the piece relationships rather than adding random turns. This habit prevents a solved layer from becoming a repeated repair task.",
+        "Once your beginner sequence is reliable, learn how to recognize patterns earlier. Look ahead for the next piece while finishing the current one, but only as far as your level allows. For example, notice where a matching edge is while you place a corner. A small visual preview can shorten the gap between steps without adding advanced algorithms."
+      ]
+    },
+    {
+      "heading": "Practice for the actual timer",
+      "paragraphs": [
+        "Use a consistent timer and make some practice solves under the same starting conditions each time. An average of several attempts is more informative than one lucky result. Record the times and one note: cross planning, corner insertion, middle layer, last-layer recognition, or final alignment. Work on the slowest repeatable stage rather than chasing the single best solve.",
+        "When your solve is close to the target, practice calm starts. Set the cube down, take a breath, inspect only what you can reliably plan, then begin. WCA events use official timers, judges, scrambles, and result procedures; if you plan to compete, read the current rules and practice in their format. Your own home setup still provides useful comparisons if you keep it consistent."
+      ]
+    },
+    {
+      "heading": "Reach the target with fewer mistakes",
+      "paragraphs": [
+        "A sub-minute solve is a performance goal, not proof that you know every method. Celebrate a cleaner solve even when the clock is slower. If your average is inconsistent, track the first point of hesitation and drill that segment in short sessions. Once a stage is reliable, connect it to the next. Accuracy gives speed somewhere stable to grow.",
+        "Your next action is to time five solves and identify one recurring pause. Use the official beginner guide to review the relevant step, then practice that part separately before returning to full solves. A minute is easier to cross when you remove a hesitation at a time than when you simply spin the cube harder."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "3×3 Solve Guide",
+      "url": "https://rubiks.com/solve-guide",
+      "publisher": "Rubik’s",
+      "purpose": "Official beginner method explains cube pieces, orientation, step sequence, and keeping solved pieces intact."
+    },
+    {
+      "title": "WCA Regulations",
+      "url": "https://www.worldcubeassociation.org/regulations.html",
+      "publisher": "World Cube Association",
+      "purpose": "Official competition procedures including judges, scrambles, timing, and event formats."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "master-a-complex-card-trick",
+    "learn-a-mahjong-ruleset-and-finish-a-game"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "make-a-skills-history-from-things-you-can-now-do",
+  "slug": "make-a-skills-history-from-things-you-can-now-do",
+  "title": "Trace a personal skills history through real examples",
+  "description": "Build a practical history of what you can do by connecting skills to people, practice, mistakes and specific moments when you used them.",
+  "intent": "How do I recognize skills I have gained without turning reflection into self-promotion or a résumé exercise?",
+  "relatedExperienceSlugs": [
+    "learn-to-play-a-musical-instrument",
+    "build-a-personal-reading-family-tree",
+    "write-a-book"
+  ],
+  "sections": [
+    {
+      "heading": "Start with an action, not an adjective",
+      "paragraphs": [
+        "Choose something you can now do that once felt unfamiliar: cook a dish, organize a meeting, repair a button, explain a process, or find your way around a new city. Write the action as a verb. “I am creative” is hard to trace; “I can turn a rough idea into a clear six-panel story” points to specific practice and people who helped.",
+        "The University of Edinburgh’s reflection guide suggests asking what you learned, where you used a skill, what went well, what could improve and how to practise next. Use those questions to build a history of learning rather than to grade your personality."
+      ]
+    },
+    {
+      "heading": "Follow the thread back to its source",
+      "paragraphs": [
+        "For each ability, ask what helped it develop. Maybe a friend showed you a first step, a teacher gave feedback, a failed attempt revealed a missing tool, or repetition made a difficult action feel ordinary. Draw a line from the skill to these sources. Include people who supported you and circumstances that made practice possible.",
+        "Be precise about contribution. If you learned by assisting someone else, say so. If a team project helped you practise coordination, name the part you handled. This keeps the map honest and makes it easier to remember how you might keep learning."
+      ]
+    },
+    {
+      "heading": "Record an example with context",
+      "paragraphs": [
+        "Choose one moment that shows the skill in use. Write what was happening, what you did and what changed. Keep it factual: “At the community event, I noticed the queue was blocking the entrance, moved the sign-up table with the organizer’s agreement, and the doorway cleared.” You do not need to claim that one action proves you are a great leader.",
+        "Add one thing you would do differently next time. Reflection is more useful when it includes an unfinished edge: a question you want to ask, an area where you needed help or a way to practise. The Edinburgh guide recommends considering how to improve and how to continue practising; treat those prompts as invitations, not a performance review."
+      ]
+    },
+    {
+      "heading": "Make a map or timeline that fits your memory",
+      "paragraphs": [
+        "A timeline works when you remember when things happened. A branching map works when the connections matter more than dates. Put each skill on a card and add arrows to the experiences and people that shaped it. If you do not know an exact year, use “before I moved,” “during my first job” or “after I began volunteering.” Mark uncertain dates rather than inventing precision.",
+        "Keep the first version small: three skills and one example for each. A short, specific reflection is more likely to help you choose a next step than a complete biography."
+      ]
+    },
+    {
+      "heading": "Turn one branch into a next practice",
+      "paragraphs": [
+        "Choose one skill you would like to strengthen and write a modest practice step for the coming week. It could be asking for feedback, repeating a technique, helping with a task, or scheduling a lesson. Make the action small enough that you can tell whether you did it.",
+        "When you review the map later, add new evidence instead of rewriting the past to sound impressive."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Step 3: Reflecting on Progress",
+      "url": "https://www.sps.ed.ac.uk/students/development-hub/undergraduate/development-toolkit/step-3-reflecting",
+      "publisher": "University of Edinburgh, School of Social and Political Science",
+      "purpose": "University reflection prompts for identifying learning, examples of skill use, areas to improve and continued practice."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

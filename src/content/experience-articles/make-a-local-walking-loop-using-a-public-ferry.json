@@ -1,0 +1,54 @@
+{
+  "experienceSlug": "make-a-local-walking-loop-using-a-public-ferry",
+  "slug": "make-a-local-walking-loop-using-a-public-ferry",
+  "title": "How do you plan a walk that crosses a river by public ferry?",
+  "description": "Plan a ferry-linked walking loop by checking both banks, current service information, pier access, walking distance, and an easy return option.",
+  "intent": "Show how to plan a genuinely walkable outing around a public ferry crossing while accounting for service changes, accessible routes and missed-boat contingencies.",
+  "sections": [
+    {
+      "heading": "Find a crossing that belongs in a walk",
+      "paragraphs": [
+        "A ferry can turn a familiar riverbank walk into a small loop through two neighborhoods. Start with the crossings that carry ordinary passengers, not a sightseeing cruise that happens to travel the same water. Transport for London separates River Bus services, route maps and the Woolwich Ferry on its river transport page, illustrating why it helps to identify exactly what kind of boat links the two sides.",
+        "Look at a map for a manageable distance from your starting point to the first pier, from the far pier to a second landmark, and back to your original side by a different crossing or route. A ferry makes a loop possible only if the land connections also work. Check that paths are public, that the far-bank landing is open to pedestrians and that the return option is practical for everyone coming along."
+      ]
+    },
+    {
+      "heading": "Check the trip on the day",
+      "paragraphs": [
+        "Service patterns can change with season, weather, maintenance or local operations. Use the operator's current timetable and same-day service information on the day rather than relying on an old map or a remembered departure. TfL points visitors to service routes, timetables and same-day pier departures; other regions will have their own ferry operator and information source. Confirm the last sensible return option before setting out.",
+        "Check fares and how boarding works before arriving at the pier. A public ferry may have a different ticketing arrangement from nearby buses or trains. Look up access information for both piers and the vessel: a step-free route to the platform does not always mean the whole journey is accessible. If someone uses a mobility aid, needs seating or has limited stamina, contact the operator or consult its detailed access page rather than inferring from a route map.",
+        "Choose a backup that is real: an earlier boat, a nearby transit stop or a shorter out-and-back walk. Write down where you would cut the route if the weather turns or the crossing is delayed."
+      ]
+    },
+    {
+      "heading": "Design the walk around the banks",
+      "paragraphs": [
+        "Give each side a reason to be part of the route. One bank might offer a park or a market; the other might have a quiet path, a bridge view or a place to rest. Keep the walking section between piers simple enough that a late boat or an unexpected closure will not force a rushed march. A loop is more enjoyable when the ferry is the link between places, not a deadline that controls every minute.",
+        "Mark toilets, benches, sheltered stops and places to shorten the route. Use an official walking map or local authority path guide, then check recent notices for closures. Where the path runs beside traffic or water, follow signs and stay on the public route. The shoreline may look continuous on a map while a fence or construction site makes a section impassable.",
+        "If the crossing takes payment or boarding time, include that pause in your estimate. Leave enough slack for a queue instead of scheduling a café booking immediately after a particular sailing."
+      ]
+    },
+    {
+      "heading": "Make the trip resilient and memorable",
+      "paragraphs": [
+        "Before leaving, share the route and expected return plan with the group. Bring water and weather-appropriate clothing, and keep a charged phone with the operator's service page bookmarked. If the ferry is cancelled, decide whether to use the backup crossing or turn back; do not improvise a long detour late in the day without checking distance and access.",
+        "Afterward, note what was different from the map: a useful bench, a steep approach, a crowded pier or a stretch with a good view. Those details make the route easier to repeat and help you choose a better variation next time. A precise next step could be to walk the same loop in the opposite direction, once you have checked that the ferry timetable and pier access still fit."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "River",
+      "url": "https://tfl.gov.uk/modes/river/",
+      "publisher": "Transport for London",
+      "purpose": "Shows the distinction between river bus services and Woolwich Ferry and points to route maps, timetables, accessibility and current departures."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "keep-a-short-distance-friendship-walking-appointment",
+    "learn-living-root-bridge-stewardship-from-a-local-guide",
+    "explore-a-tidepool-with-a-naturalist"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,53 @@
+{
+  "experienceSlug": "see-the-great-barrier-reef",
+  "slug": "see-the-great-barrier-reef",
+  "title": "Choose your first reef day around comfort in the water",
+  "description": "Choose a supervised reef outing that fits your water comfort. Ask operators about beginner support and reef practices before booking.",
+  "intent": "How can a first-time snorkeler choose a supervised reef outing that fits their comfort in the water?",
+  "sections": [
+    {
+      "heading": "Choose a trip that fits",
+      "paragraphs": [
+        "The Great Barrier Reef is not one identical stop. Decide what kind of day feels manageable: a sheltered island visit, a boat trip to a reef site, or a tour with several activities and more time on the water. Ask what snorkeling support is offered, how a beginner is briefed, whether flotation aids are available, and how staff help someone who wants to return to the boat early. These questions are more useful than choosing from a dramatic photograph. The Great Barrier Reef Marine Park Authority recommends considering a High Standard Tourism Operator, recognized for sustainable operations and independently certified through Ecotourism Australia or EarthCheck. Use the Authority’s current list as a starting point, then check the exact itinerary and conditions. A recognized operator can still run a trip whose sea state, transfer, or pace does not suit you. Contact the operator with your practical questions before booking."
+      ]
+    },
+    {
+      "heading": "Ask how beginners are supported",
+      "paragraphs": [
+        "If you are uncertain in open water, say so when comparing tours. Ask staff to explain how guests enter and leave the water, whether you can stay near a platform or flotation aid, and what happens if you decide not to snorkel. Don’t assume a trip is beginner-friendly because it says “family.” Confirm what equipment is supplied and whether you need to swim independently. Follow the operator’s assessment and instructions on the day; conditions vary. Plan the travel day around time on the sea. Bring sun-protective clothing and personal items the operator says are permitted, plus dry clothes for afterward. Avoid extra gear that can snag or become waste. Secure everything as staff instruct and wait for the briefing before entering. If you have a specific access need, ask in advance what the boat and site can accommodate."
+      ]
+    },
+    {
+      "heading": "Give wildlife room",
+      "paragraphs": [
+        "Good reef viewing depends on not touching or chasing marine life. The Authority’s responsible-reef guidance asks visitors to avoid contact with coral and animals. Treat that as central to the experience: float calmly, keep fins away from the reef, and leave room for wildlife. If you see an animal, let it choose the distance. Your guide can point out details; listen before moving closer or changing direction. A beginner trap is trying to cover too much on the first outing. If you spend the morning worrying about a mask leak or feeling unwell, a second site will not improve the day. Ask the crew early for help adjusting equipment or taking a break. If conditions are uncomfortable, follow the crew’s guidance rather than pushing farther out to match other guests."
+      ]
+    },
+    {
+      "heading": "Compare the trip before booking",
+      "paragraphs": [
+        "Before reserving, compare two operators on beginner briefing, in-water supervision, flotation options, trip length, and reef protection. Check whether an operator appears on the Authority’s current High Standard list, then verify what that means for the exact tour. Ask if the day includes time at a location suited to beginners and what happens if wind or swell changes the plan. For a first attempt, choose one snorkel period and set a modest observation goal: notice three colors or textures without touching anything. If you would rather stay aboard, learn from the crew and watch the water. A thoughtful first reef day lets you stop, ask for help, and leave the place as you found it. Your next step is to contact a listed operator with these questions rather than assume every reef tour provides the same support."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Choosing a High Standard Tourism Operator",
+      "url": "https://www.gbrmpa.gov.au/visit/choosing-high-standard-tourism-operation",
+      "publisher": "Great Barrier Reef Marine Park Authority",
+      "purpose": "Supports using its High Standard Tourism Operator program and independent Ecotourism Australia or EarthCheck certification."
+    },
+    {
+      "title": "Responsible reef practices",
+      "url": "https://www.gbrmpa.gov.au/access/responsible-reef-practices",
+      "publisher": "Great Barrier Reef Marine Park Authority",
+      "purpose": "Supports advice to avoid touching coral and wildlife and observe reef life responsibly."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "the-great-barrier-reef-australia",
+    "swim-with-humpback-whales"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

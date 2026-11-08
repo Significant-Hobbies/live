@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "join-a-bird-safe-building-monitoring-route",
+  "slug": "join-a-bird-safe-building-monitoring-route",
+  "title": "Collect bird collision observations that a team can use",
+  "description": "Learn a conservation group’s route and reporting protocol, record both findings and empty checks, and leave all rescue work to trained volunteers.",
+  "intent": "How do I join a bird-safe building survey without confusing an observation route with bird rescue? This adds a field-note and role-boundary checklist.",
+  "sections": [
+    {
+      "heading": "Join a protocol before choosing a route",
+      "paragraphs": [
+        "Ask a local conservation group, campus team, or building program whether volunteers can join an established survey. Do not design a route from an online guide and report it as if it belonged to a monitoring project. FLAP Canada’s campus guidance asks organizers to identify survey locations, document effort, and keep incidental finds separate from the planned survey. Your route should have a named coordinator and reporting method.",
+        "Confirm whether the task is observation only or includes trained rescue responsibilities. FLAP separates patrol roles and explains that its bird rescue patrollers receive training and use permits and equipment. If you have not completed the organization’s training, do not pick up an injured bird or handle remains."
+      ]
+    },
+    {
+      "heading": "Agree what counts as a survey",
+      "paragraphs": [
+        "A useful route specifies which buildings or façades to check, where the route begins, how often it is walked, and what evidence to note. The FLAP campus program lists collision signs such as a bird, feathers, or an imprint on glass. Your organizer may define a narrower set of observations; follow their form instead of improvising extra categories.",
+        "Record empty checks as carefully as positive observations. FLAP recommends documenting survey effort and instances when no birds were found, because empty checks help the group understand the sampled area rather than only the dramatic reports. Note the time, route, people present, and any access area you could not inspect."
+      ]
+    },
+    {
+      "heading": "Keep field notes factual",
+      "paragraphs": [
+        "Use the group’s map or form and describe what you can see without guessing at species or cause. A location such as the north face of a named building is more useful than “near the entrance.” If you cannot identify a bird, leave that field unresolved or attach a photo only if the protocol allows it. Avoid photographing private occupants or security-sensitive spaces.",
+        "Separate a scheduled route observation from an incidental find elsewhere or later. A route is a defined sample; mixing extra sightings into its totals makes comparisons harder. The coordinator can tell you how to preserve the record without changing the sampling method."
+      ]
+    },
+    {
+      "heading": "Prepare for the building, not a rescue",
+      "paragraphs": [
+        "Wear clothing suited to the route and check with the coordinator about access, weather, and any local protective equipment. Follow property rules and do not enter restricted areas. Carry the approved note-taking tools and a charged phone only if the project needs photographs or an app. Do not bring improvised rescue gear or attempt to transport wildlife independently.",
+        "If you find a live injured bird, follow the program’s instructions for contacting a trained responder. FLAP provides a volunteer training process for its rescue patrollers; that distinction matters because rescue involves skills and precautions beyond recording. If no program exists nearby, use local wildlife authority guidance rather than handling an animal yourself."
+      ]
+    },
+    {
+      "heading": "Close the loop on the same day",
+      "paragraphs": [
+        "Submit the route sheet through the agreed channel, including zeros, missing access, and any incident reported separately. Check that the location is accurate before sending. Ask the coordinator whether a record needs clarification; do not quietly revise uncertain data later without a note.",
+        "A consistent record can help a team decide where to focus prevention work. Your next action is to contact one local bird conservation group and ask for its monitoring protocol, training boundary, and reporting channel before joining a walk."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Bird-Safe Campus Program",
+      "url": "https://www.flap.org/bird-safe-campus",
+      "publisher": "FLAP Canada",
+      "purpose": "Supports route planning, recording survey effort and empty checks, separating incidental observations, and using a trained monitoring protocol."
+    },
+    {
+      "title": "Volunteer for Bird Conservation",
+      "url": "https://www.flap.org/volunteer-for-flap-canada",
+      "publisher": "FLAP Canada",
+      "purpose": "Supports the distinction between trained rescue patrollers and other volunteer roles."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "join-a-supervised-invasive-plant-removal-workday",
+    "submit-a-complete-bird-checklist-to-ebird",
+    "help-catalog-seeds-at-a-community-seed-library"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

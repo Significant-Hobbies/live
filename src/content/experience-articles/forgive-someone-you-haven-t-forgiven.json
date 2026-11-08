@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "forgive-someone-you-haven-t-forgiven",
+  "slug": "forgive-someone-you-haven-t-forgiven",
+  "title": "Explore forgiveness without surrendering your boundaries",
+  "description": "Consider whether forgiveness is something you want, choose what contact feels safe and use trusted support without rushing reconciliation or excusing harm.",
+  "intent": "How do I approach forgiveness when I am unsure, hurt or do not want contact? Focus on agency, boundaries and support rather than an explanation of forgiveness. Choose boundaries and support when forgiveness remains difficult or unwanted; distinct from explaining forgiveness concepts.",
+  "sections": [
+    {
+      "heading": "Start with permission to choose",
+      "paragraphs": [
+        "Forgiveness is not a task another person can assign you. You may want it, feel undecided or decide that it is not right for you now. The American Psychological Association describes forgiveness as voluntary and distinguishes it from reconciling, excusing the harm or saying the event was acceptable. You do not have to contact the person to explore your own feelings.",
+        "Write down what you mean by “forgive” before acting. It might mean spending less time replaying an event, loosening resentment, or deciding to stop waiting for an apology. If the word feels wrong, choose a more accurate goal such as safety, grief, accountability or distance. Clear language prevents pressure disguised as a moral demand."
+      ]
+    },
+    {
+      "heading": "Separate forgiveness from access",
+      "paragraphs": [
+        "Decide what boundaries you need regardless of whether your feelings change. You can forgive and still refuse contact, keep a legal or workplace boundary, decline a family gathering or protect someone in your care. Reconciliation requires decisions from both people and evidence of changed behavior; it is not the automatic next step after forgiveness.",
+        "If contact is unavoidable, plan a narrow interaction: a neutral location, a time limit, a practical topic and an exit plan. You can communicate through an intermediary where appropriate. Do not meet alone if you feel unsafe, and do not ignore protective orders or professional advice to demonstrate that you have forgiven someone. Safety does not need to be proven."
+      ]
+    },
+    {
+      "heading": "Make room for the full account",
+      "paragraphs": [
+        "Name what happened in concrete terms, including what it cost you and what remains unresolved. Do not minimize the event to make your progress look more generous. You can distinguish what you know, what you suspect and what you may never learn. That separation can make it easier to decide what response is yours to choose.",
+        "An unsent letter can help organize thoughts: what you wish the person understood, what you will no longer accept and what you want for your own future. Keep it private unless sharing is safe and useful. The purpose is clarity, not creating a message that earns a particular response."
+      ]
+    },
+    {
+      "heading": "Use support at your own pace",
+      "paragraphs": [
+        "A trusted friend, counselor, faith leader or therapist may help you think through difficult feelings. Choose someone who respects your decision and does not pressure you to reunite. If the harm involved violence, coercive control or ongoing danger, seek a qualified local support service before any direct contact. This guide cannot assess your personal risk.",
+        "You can ask for a specific kind of help: listen without advice, help you rehearse a boundary, accompany you to an appointment or help plan for a shared event. If a professional frames forgiveness as required, you can seek another provider. Support should expand your choices, not narrow them."
+      ]
+    },
+    {
+      "heading": "Let the answer evolve",
+      "paragraphs": [
+        "Set a review date rather than forcing a final answer today. Notice whether your boundary is working and whether the situation has changed. You may find that your feelings soften, remain complicated or return after a reminder. That does not invalidate earlier work or require you to restart a relationship.",
+        "If you choose to communicate, define the purpose and conditions first. You might state a boundary, request an acknowledgment or simply say nothing. Do not use forgiveness as a substitute for accountability, restitution or a safety plan. A meaningful outcome is one you can live with while honoring your own limits."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Forgiveness",
+      "url": "https://www.apa.org/topics/forgiveness",
+      "publisher": "American Psychological Association",
+      "purpose": "APA distinguishes forgiveness from reconciliation, excusing harm or accepting what happened, and describes it as voluntary; this is not clinical treatment advice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "ask-forgiveness-from-someone-you-hurt",
+    "spend-a-day-reviewing-every-job-relationship-and-home-you-have-had"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

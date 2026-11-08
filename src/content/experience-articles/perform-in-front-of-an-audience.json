@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "perform-in-front-of-an-audience",
+  "slug": "perform-in-front-of-an-audience",
+  "title": "Prepare One Small Performance for a Room You Can Read",
+  "description": "Choose a short performance, rehearse its transitions, and check the room, sound, sightlines, and access needs before an audience arrives.",
+  "intent": "How do I prepare to perform live in front of people when the format might be music, spoken word, comedy, dance, or another craft?",
+  "sections": [
+    {
+      "heading": "Pick a format and a first audience",
+      "paragraphs": [
+        "Choose a performance you can finish in a few minutes: one song, a short monologue, a poem, a dance, a demonstration, or a scene with a partner. A first performance does not need to represent your whole identity or career. Pick the format that lets you practice the act itself rather than trying to master a new skill, write a long set, and solve a complicated production at once.",
+        "Match the audience to the work. A small open mic may suit a song or story; a community showcase may suit a short demonstration; a trusted group may be the right first room for a piece that feels personal. Confirm the event's format, length, content guidelines, and whether participation is invited or selected. Do not assume a venue accepts walk-ins or has a particular slot available."
+      ]
+    },
+    {
+      "heading": "Rehearse the whole sequence",
+      "paragraphs": [
+        "Practice from the moment you are introduced to the moment you leave the stage. Include the beginning, transitions, ending, and any handoff of equipment. A singer can practice where to stand and how to start after the host's introduction; a speaker can rehearse where to pause; a dancer can map how to enter and exit safely. Rehearsing only the most polished middle section can leave the most stressful moments unprepared.",
+        "Time the whole piece and keep a shorter version ready if the event runs late. Practice once in the clothes and shoes you plan to wear, if movement matters. For music, check instrument tuning and backup supplies. For spoken performance, bring the text in a format you can read without losing your place."
+      ]
+    },
+    {
+      "heading": "Check the room for the audience",
+      "paragraphs": [
+        "If you can, visit or ask about the space in advance. Consider how many people will attend, whether they can see and hear you, and whether the format invites interaction. The University of Michigan's CRLT Players performance-planning guide asks organizers to consider room size, visibility, acoustics, audience interaction, and accommodations. Their theatrical context is specific, but the questions are useful for a first performance in any room.",
+        "Ask whether a microphone, music playback, projector, floor space, or a clear aisle is available. If you rely on a track or presentation, find out how it will be cued and test it. Ask the host about accessibility needs and communicate yours early; do not improvise physical changes to the space without permission."
+      ]
+    },
+    {
+      "heading": "Have a plan for small mistakes",
+      "paragraphs": [
+        "A missed line, a late cue, or an imperfect note does not require a dramatic apology. Decide in advance how you will continue: repeat a line, move to the next section, or let a partner carry the transition. If a technical issue stops the performance, pause and ask the host for help rather than handling cables or equipment you are not trained to use.",
+        "Give yourself a short grounding routine before going on: put both feet where they feel stable, take a slow breath, and look at the first cue on your outline. This is a personal rehearsal aid, not a guarantee that nerves disappear. Let your attention return to the audience and the work."
+      ]
+    },
+    {
+      "heading": "Review the night without scoring yourself",
+      "paragraphs": [
+        "Afterward, write down one specific thing you did well and one thing to try next time. “The second verse felt steady” or “I could not hear the backing track at the side of the room” gives you a useful next step. Ask one listener what they remember most, not whether you were good. A performance is a shared moment, not a pass/fail assessment of your worth.",
+        "Your next step is to choose a short piece and ask one local organizer what the format and technical setup are before you rehearse."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Selecting and Preparing the Performance Space",
+      "url": "https://crlt.umich.edu/crltplayers/selecting-and-preparing-performance-space",
+      "publisher": "University of Michigan Center for Research on Learning and Teaching",
+      "purpose": "Supports specific venue-planning questions about audience size, visibility, acoustics, interaction, accommodations, and advance rehearsal; written for the university's theater program, not all venues."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "give-a-public-talk-or-presentation",
+    "teach-a-skill-you-re-good-at-to-a-group-of-strangers",
+    "write-the-speech-you-would-give-at-your-own-retirement"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

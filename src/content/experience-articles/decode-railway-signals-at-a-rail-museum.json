@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "decode-railway-signals-at-a-rail-museum",
+  "slug": "decode-railway-signals-at-a-rail-museum",
+  "title": "Read a railway signal display like a working system",
+  "description": "Use a rail museum visit to connect signals, track layouts and historic rolling stock, with questions that reveal how railway movements were coordinated.",
+  "intent": "What should I look for at a railway museum to understand signals as part of an operating system rather than isolated objects?",
+  "relatedExperienceSlugs": [
+    "look-at-one-museum-object-for-twenty-minutes",
+    "inspect-an-original-record-in-an-archive-reading-room",
+    "attend-an-indian-observatory-s-public-visitor-session"
+  ],
+  "sections": [
+    {
+      "heading": "Start with the route, not the lever",
+      "paragraphs": [
+        "A railway signal makes sense when you imagine the movement it is controlling. At a museum, begin by tracing a simple journey: a train approaches a junction, pauses, and enters one of two lines. Ask what information a signal gives the driver and what another worker must know before the signal changes. The National Rail Museum in Delhi lists signaling equipment among its exhibits alongside historic coaches, photographs and models, offering a chance to compare the control system with the vehicles it served.",
+        "A signal is not a decorative semaphore. It is one element in a safety arrangement involving track, people, procedures and other signals. If the exhibit gives a diagram, first locate the track direction and identify where the train would be. Then ask what the signal is telling the driver to do, not just what color or arm position you see."
+      ]
+    },
+    {
+      "heading": "Look for what changes and what stays fixed",
+      "paragraphs": [
+        "Choose one signal or control panel and sketch its visible parts. Note the post, arm or lamp, the line of sight, and any labels or mechanism nearby. If you can see a model layout, trace how a train’s route passes the signal. Look for interlocking clues: levers grouped together, a panel showing route selection, or labels that distinguish one track from another. Do not assume that every museum display represents the same era or railway practice.",
+        "A good question for a guide is: “What had to be true before this signal could be cleared?” The answer may reveal who communicated with whom, what the signal protected, and what changed when technology changed. Keep your notes tied to the specific exhibit so you do not turn one historical example into a claim about every railway."
+      ]
+    },
+    {
+      "heading": "Connect signals to the carriage and crew",
+      "paragraphs": [
+        "Move from the display to a carriage or locomotive and consider what the driver could see from the cab, where the signal appeared in relation to the track, and what a crew member might do if a signal was unclear. The Delhi tourism museum description names signaling equipment, working models and historic coaches as part of the collection. It does not provide a detailed catalogue for every object, so use exhibit labels or staff explanations for specifics.",
+        "If a model train is operating, watch one cycle rather than focusing on a single movement. Where does the train slow? Which signal is visible first? What do points or switches do to its route? If an exhibit is not operating, an imagined route drawn on paper can still help you connect separate artifacts."
+      ]
+    },
+    {
+      "heading": "Make a tiny field note",
+      "paragraphs": [
+        "Write three observations: one physical feature, one rule or process you learned, and one question you still have. For example: “The arm sits above the line of sight; the guide said it indicates permission to proceed; I still wonder how the signal box knew the track ahead was clear.” This keeps observation, explanation and uncertainty separate.",
+        "The Delhi Tourism listing is useful for collection context, but it also carries an old renovation notice. Before planning a visit, check current visitor arrangements with the National Rail Museum operator rather than relying on a tourism listing for hours or exhibit access."
+      ]
+    },
+    {
+      "heading": "Carry one system question into the next visit",
+      "paragraphs": [
+        "A first visit can focus on one question: how a signal protected a junction, how a station controlled traffic, or how drivers received information before modern communication systems. You do not need to decode every apparatus in the room. If you find a guide or reference, note its title so you can follow up later."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "National Rail Museum",
+      "url": "https://delhitourism.gov.in/entertainment/national_rail_museum.html",
+      "publisher": "Delhi Tourism",
+      "purpose": "Museum collection context for signaling equipment, models, coaches and historical photographs; no current visitor schedule relied on."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

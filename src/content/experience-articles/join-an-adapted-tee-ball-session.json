@@ -1,0 +1,51 @@
+{
+  "experienceSlug": "join-an-adapted-tee-ball-session",
+  "slug": "join-an-adapted-tee-ball-session",
+  "title": "How can a beginner find the right role in adapted tee ball?",
+  "description": "Prepare for an adapted tee-ball taster by asking about equipment, safe zones, player-led support, and ways to change the rules for different abilities.",
+  "intent": "Answer how a newcomer can participate in an adapted tee-ball session with useful choice over movement, equipment, and support rather than a one-size-fits-all drill.",
+  "sections": [
+    {
+      "heading": "Ask what the session will adapt",
+      "paragraphs": [
+        "Tee ball gives players a ball on a stationary tee to strike, then a group practises fielding and running or moving between bases. In an adapted session, equipment and rules can change to make participation workable for different players. The Australian Sports Commission’s Sports Ability cards are designed to modify rules, equipment, and techniques and include safety information. Before attending, ask the coach what versions are planned, how large the playing area is, and whether a participant can choose a stationary role or take part in a different way.",
+        "Tell the organiser what support would help you, without needing to give a medical history. You might prefer a lighter bat, a ball that is easier to see, a lower tee, a larger safe zone, a partner to retrieve equipment, or more time between turns. Ask whether the venue has an accessible entrance and changing area, and how the group handles pauses. A good session explains options before play so nobody has to negotiate an accommodation while the ball is in motion."
+      ]
+    },
+    {
+      "heading": "Learn the safety boundaries before swinging",
+      "paragraphs": [
+        "Before anyone bats, the coach should show where players wait, where bats are placed, and which area is clear for the swing. Keep bystanders outside the marked zone and do not walk behind someone holding a bat. Wait for the coach’s signal before retrieving a ball. If the group is using a modified bat or ball, learn the specific equipment rules rather than assuming standard baseball habits apply. The Australian Sports Commission’s inclusive activity approach emphasizes modifying the environment as well as the rule or equipment, so ask how the space will be arranged.",
+        "If the session uses a tee, check that it is stable and at a comfortable height. Take a slow practice swing only when the coach says the area is clear. You can also ask for a no-swing role first—placing the ball, directing a teammate, or practising fielding from a fixed spot—then choose whether to try striking later. Participation is a series of choices, not a test that must progress from observation to a full game in one visit."
+      ]
+    },
+    {
+      "heading": "Find the version that gives you useful feedback",
+      "paragraphs": [
+        "A first practice can focus on one clear outcome: making contact, sending the ball toward an open area, stopping a rolling ball, or remembering which base comes next. Ask the coach to adjust one element at a time. If contact is hard, they might alter the tee height, ball size, bat grip, or distance to a target. If the ball travels too quickly for a fielder, the coach can change its movement or the player’s starting point. These are examples to discuss with the coach, not instructions to improvise in an unsupervised game.",
+        "Agree on a signal for pause or stop. Use it as soon as a movement feels painful, confusing, or unsafe. If you are playing with support from another person, decide whether they should offer verbal directions, demonstrate, or wait until asked. Adapted sport works best when the participant has a say in that support. A useful taster leaves room to try a version, assess it, and change course without making anyone the cause of a delay."
+      ]
+    },
+    {
+      "heading": "Reflect on one thing you want to repeat",
+      "paragraphs": [
+        "At the end, name one adjustment that helped and one that did not. Perhaps a larger ball made tracking easier, or more space around the tee improved confidence. The coach can use that information to plan the next visit. You do not need to measure success only in hits or runs; a clear communication choice, a safe fielding attempt, or a new preference is meaningful progress for the session.",
+        "If you enjoyed it, ask whether the club or school has a regular adapted practice and what equipment to bring next time. If the environment did not fit, you can still give specific feedback about access, pace, or support. The Australian Sports Commission’s activity cards encourage questions that prompt players to consider skills and tactics; use that spirit to ask what role you would like to explore next. Your next step might be a second taster with the same adjustments or watching another session before deciding."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Sports Ability",
+      "url": "https://www.ausport.gov.au/schools/resource-hub/sports_ability",
+      "publisher": "Australian Sports Commission",
+      "purpose": "Supports the inclusive framework for adapting tee-ball rules, equipment, environment, and safety for different abilities."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "try-goalball-at-an-inclusive-sports-session",
+    "try-wheelchair-basketball-at-an-introductory-club-session"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

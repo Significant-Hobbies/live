@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "explore-reconstructed-yayoi-life-at-yoshinogari",
+  "slug": "explore-reconstructed-yayoi-life-at-yoshinogari",
+  "title": "What can you learn from Yoshinogari's reconstructed Yayoi village?",
+  "description": "Explore Yoshinogari by comparing reconstructed buildings with archaeological evidence, noticing what the park explains and what remains an interpretation.",
+  "intent": "How should I read a reconstructed Yayoi village at Yoshinogari? This guide helps visitors use buildings, site interpretation and archaeological context without mistaking reconstruction for an untouched ancient settlement.",
+  "sections": [
+    {
+      "heading": "Know what a reconstruction is showing",
+      "paragraphs": [
+        "Yoshinogari Historical Park presents a reconstructed village to help visitors imagine Yayoi life. Its official park overview says the site became known after ruins and relics were discovered, and that research identified a large moated village dating from the Yayoi period. The park's excavation page explains that the reconstructed village sits above protected original remains, with layers of fill covering them. That distinction is helpful: the buildings are educational reconstructions grounded in research, while the ancient structures remain preserved below.",
+        "Start your visit with the site map and a question, such as how the settlement was organized or what evidence supports one kind of building. Check the park's current hours, access guidance and interpretation before planning a route. The site is large enough that a focused visit to a few zones may be more rewarding than trying to see every structure in one rush."
+      ]
+    },
+    {
+      "heading": "Move from landscape to individual buildings",
+      "paragraphs": [
+        "First look at the wider layout: moats, gates, mounds, paths and the relation between buildings. Then choose one reconstructed building and notice its shape, height, doorway and materials. Ask what the structure might have been used for and which features the park identifies. Do not assume that a building's reconstructed appearance is a direct copy of one surviving house; the park says it studied remains from Yoshinogari and other Jomon-to-Kofun sites along with tools and depictions.",
+        "Use signs as evidence of how curators interpret the site. Write down the wording of the sign, then add what you can personally observe. If the label describes a function or social role, note whether that conclusion comes from unearthed objects, comparison with other sites or an interpretive reconstruction. That keeps your curiosity active without treating the display as either pure guesswork or an untouched time capsule."
+      ]
+    },
+    {
+      "heading": "Look for evidence in the daily details",
+      "paragraphs": [
+        "A reconstructed village becomes more legible when you ask practical questions: where would people enter, where might food be stored, how would a path connect buildings, what structures sit behind a barrier or moat? The park's excavation notes discuss research into moats, mounds, paddy fields, farms, gates, railings and house structures. Use those elements to compare your expectation of village life with what the site presents.",
+        "Pay attention to the difference between an object found during excavation and a modern reconstruction added to explain it. A displayed replica can show scale or technique, but it is not itself an ancient artifact unless the park identifies it as one. Photography may help you remember the layout; take it from public paths and follow any rules about indoor displays, people and restricted spaces."
+      ]
+    },
+    {
+      "heading": "Keep contested questions open",
+      "paragraphs": [
+        "Yoshinogari's scale and layout have attracted discussion about the ancient country Yamatai mentioned in Chinese chronicles. The park overview itself describes that resemblance as a source of interest, not as a settled identification. If you encounter a claim about the site being a specific capital or ruler's home, look for how the park phrases it and whether independent archaeological evidence supports it. “This is a possible connection” and “this is established” are different conclusions.",
+        "Let your visit hold uncertainty. A reconstruction can help you picture possible daily life while also reminding you that many details are inferred from evidence that survived unevenly. Ask what would be needed to know more: another excavation, a written record, material analysis or comparison with a neighboring site. That makes the question part of the experience rather than a flaw in it."
+      ]
+    },
+    {
+      "heading": "Bring one research question home",
+      "paragraphs": [
+        "After visiting, sketch the path between the buildings that most changed your understanding of the settlement. Add a note showing which parts were reconstructed and which were identified from archaeological remains, as described by the park. If you read more later, compare the park's interpretation with an archaeological article or museum source and keep the dates and evidence alongside it.",
+        "Your next action is to choose one reconstructed building, read its site interpretation, and write down one visible feature plus one question about the evidence behind it. That gives you a focused way to revisit the rest of the settlement."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Park Summary",
+      "url": "https://www.yoshinogari.jp/en/information/overview/",
+      "publisher": "Yoshinogari Historical Park",
+      "purpose": "Supports the park's account of the Yayoi-period settlement, its discovery and the role of reconstructed village buildings for visitors."
+    },
+    {
+      "title": "Excavation: Preservation of the Ruins",
+      "url": "https://www.yoshinogari.jp/en/introduction/excavation/",
+      "publisher": "Yoshinogari Historical Park",
+      "purpose": "Supports that reconstructions sit above protected original remains and that the park used broad archaeological research to inform reconstructed structures."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "follow-the-narrative-reliefs-around-sanchi-s-gateways",
+    "explore-a-historic-stepwell-s-water-architecture",
+    "explore-a-building-during-an-open-house-festival"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

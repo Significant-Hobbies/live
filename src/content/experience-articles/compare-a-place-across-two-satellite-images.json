@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "compare-a-place-across-two-satellite-images",
+  "slug": "compare-a-place-across-two-satellite-images",
+  "title": "A beginner’s method for comparing satellite images",
+  "description": "Compare two satellite images of the same place by matching the area, date context, and display settings before interpreting what changed.",
+  "intent": "How can a beginner make a fair comparison between two satellite images? This guide adds a cautious workflow for matching scenes and separating visible differences from conclusions.",
+  "sections": [
+    {
+      "heading": "Choose a question small enough to inspect",
+      "paragraphs": [
+        "Pick one place and one visible feature: a shoreline, a river bend, a new road, a burn scar, or the edge of a town. Write the question before opening imagery. “What changed near this bend between these years?” is answerable; “How has the climate changed?” asks far more than a pair of images can show. The purpose is to practice observation, not to diagnose a whole landscape.",
+        "Use a public archive or viewer that identifies its data source and scene date. USGS EarthExplorer lets users define an area, search datasets, inspect scene footprints or browse images, and select Landsat products. Keep the original scene identifiers or URLs so you can return to the same imagery later."
+      ]
+    },
+    {
+      "heading": "Make the comparison fair",
+      "paragraphs": [
+        "Start with images of the same area, similar season, and close to the same scale. A winter image and a summer image may look dramatically different even if land use has not changed. Cloud cover, shadows, haze, sensor type, and display stretch can also change appearance. Record those conditions before you decide that a feature is new or missing.",
+        "For a first exercise, compare natural-color browse images and note only what you can see: water boundary, shape of a field, road continuity, exposed ground, or cloud obstruction. Do not treat a color change as a measurement of pollution or vegetation health. Those questions need suitable calibrated data and methods, not intuition from screen colors."
+      ]
+    },
+    {
+      "heading": "Keep a field note beside each image",
+      "paragraphs": [
+        "Make a two-column note: scene date and visible observations. Describe location by a landmark or map position, then use plain language such as “the inlet appears wider” or “a rectangular patch is visible near the road.” Mark uncertainty in the same sentence. This practice distinguishes what the image shows from what you think caused it.",
+        "If you use a layer, index, or false-color view, write down what it represents and how it was created. USGS explains that Landsat search results can be viewed in different band combinations and that products vary by level and type. A different combination can reveal different features, so never compare two images without knowing whether their rendering matches."
+      ]
+    },
+    {
+      "heading": "Test the first interpretation",
+      "paragraphs": [
+        "Suppose the second image seems to show a smaller lake. Check whether both scenes cover the same shoreline, whether clouds or seasonal water levels obscure the edge, and whether a different zoom or contrast setting is misleading you. Look for a third date or a local map, and ask what evidence would disprove your first guess. That is a stronger exercise than finding a dramatic before-and-after.",
+        "Use the image as an entry point to a research question, not as proof of a social or environmental cause. Satellite images show surfaces at particular times. Explaining why a change happened may require field observations, official records, or local knowledge. If you share a comparison, include dates and source details, and describe uncertainty plainly."
+      ]
+    },
+    {
+      "heading": "Save a reproducible comparison",
+      "paragraphs": [
+        "Keep a screenshot or export only if the service permits it, and note the product, date, map extent, and view settings. Put the two scenes side by side at the same size. Add a north arrow or simple labels only if they help someone read the comparison. A small annotation such as “clouds mask the upper-right area” can prevent overconfident interpretations.",
+        "Your next step is to choose a familiar location and find two dated scenes from comparable seasons. Make three observations, one uncertainty, and one follow-up question. If you cannot find a fair pair, treat that as a useful result: try a different date range or location rather than forcing a conclusion."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Landsat Data Access",
+      "url": "https://www.usgs.gov/landsat-missions/landsat-data-access",
+      "publisher": "U.S. Geological Survey",
+      "purpose": "USGS EarthExplorer supports area searches, browse images and multiple Landsat band combinations."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-a-model-water-filter-and-measure-what-changes",
+    "evaluate-an-air-quality-sensor-with-a-community-group",
+    "work-through-a-celestial-navigation-sight-reduction"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

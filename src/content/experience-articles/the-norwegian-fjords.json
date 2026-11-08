@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "the-norwegian-fjords",
+  "slug": "the-norwegian-fjords",
+  "title": "Pick a Norwegian fjord base by the kind of day you want",
+  "description": "Compare Aurlandsfjord, Nærøyfjord, Geirangerfjord and Hjørundfjord before choosing a Norwegian fjord route and home base.",
+  "intent": "Which Norwegian fjord area fits a trip focused on rail connections, narrow-water scenery, waterfalls and farms, or a quieter village base?",
+  "sections": [
+    {
+      "heading": "Choose a fjord by the day it makes possible",
+      "paragraphs": [
+        "‘The fjords’ are not one interchangeable view. The official Visit Norway guide describes different landscapes and access patterns: Aurlandsfjord and nearby Flåm connect to the Flåm Railway; Nærøyfjord narrows into a branch of Sognefjord; Geirangerfjord is known for waterfalls and abandoned farms; and Hjørundfjord offers villages such as Sæbø, Urke and Øye. Start by choosing what you want to do between viewpoints, not by collecting the most famous names.",
+        "If you want a compact public-transport day with a rail component, compare a Flåm/Aurlandsfjord base. If you want to look at waterfall faces and old farm sites from the water or trails, investigate Geiranger. If you value a village-scale stay and are willing to check connections carefully, look at Hjørundfjord. These are planning distinctions, not guarantees about seasonal service."
+      ]
+    },
+    {
+      "heading": "Flåm and Nærøyfjord: rail, village and narrow water",
+      "paragraphs": [
+        "Flåm works as a recognizable anchor for a Sognefjord-area trip, with the railway providing a distinct land journey. Nærøyfjord is a narrow branch of the larger fjord system; Visit Norway lists ways to experience it that include day cruises, RIB trips and kayaking. Those options create different days: a cruise keeps you on a fixed route, a small craft changes the scale of the shoreline, and the rail trip makes the valley approach part of the memory.",
+        "Do not assume all options depart from the same village or connect neatly on the same day. Compare the exact start points, transfer time and return journey on the dates you can travel. If the schedule becomes complicated, choose one main experience and leave the rest for a second day instead of building a fragile chain around a single late connection."
+      ]
+    },
+    {
+      "heading": "Geirangerfjord: waterfalls and steep-sided history",
+      "paragraphs": [
+        "The official destination listing identifies the Seven Sisters and the Suitor waterfalls, remains of farms on steep slopes, the Norwegian Fjord Centre and the Fosseråsa National Hiking Trail. That offers several ways to read the place: from the water, from an established viewpoint, through a local interpretation centre or on foot. Pick one lens and one backup so you are not trying to see every feature in a rushed loop.",
+        "A water-level view helps you understand how the falls meet the fjord walls; a trail or viewpoint can make the height and land use more visible. Trail access and conditions can vary, so check current local guidance before setting out. If steep walking is not suitable for your group, the centre and a boat-based observation day can still make the landscape legible."
+      ]
+    },
+    {
+      "heading": "Hjørundfjord: choose a smaller village base deliberately",
+      "paragraphs": [
+        "Visit Norway describes Hjørundfjord as sharing dramatic mountain scenery while having fewer tourists than Geirangerfjord, and names Sæbø, Urke and Øye as village stops. Think about the experience you want outside the main outing: a longer pause in one village, a short walk, or a more remote-feeling base. The tradeoff is that you should verify transfers, meal options and opening dates with current local operators rather than assume the services of a larger hub.",
+        "An itinerary can pair one fjord town with one water or walking day. Keep the number of transfers low, especially if arriving by public transport. If a village stay depends on a particular ferry or bus, confirm the return leg before booking the lodging and have a fallback for weather disruption."
+      ]
+    },
+    {
+      "heading": "Make a route that survives real conditions",
+      "paragraphs": [
+        "Norway’s fjord region combines trains, buses, express boats, ferries, tunnels and bridges. Build a route from the actual operator pages for your travel dates, then check how each leg connects on the same day. A map distance can hide a ferry crossing or infrequent connection. Leave a buffer before an onward train or flight, and avoid assuming a scenic boat is a commuter service with multiple departures.",
+        "Choose one base that matches your main activity, one nearby alternative, and one weather-friendly plan. Write down which parts require advance booking, what can be changed, and what you would happily skip if conditions shift. Then pick a single named first stop—Flåm, Geiranger, Sæbø or another village—and verify the route to it with current transport information."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Norwegian fjords explained",
+      "url": "https://www.visitnorway.com/things-to-do/nature-attractions/fjords/the-fjords-explained/?ya_src=serp300",
+      "publisher": "Visit Norway",
+      "purpose": "Supports the distinct landscape and access descriptions for Aurlandsfjord, Nærøyfjord, Geirangerfjord and Hjørundfjord, plus regional transport modes."
+    },
+    {
+      "title": "Geirangerfjord",
+      "url": "https://www.visitnorway.com/listings/geirangerfjorden/239597/",
+      "publisher": "Visit Norway",
+      "purpose": "Supports named Geiranger features including waterfalls, farm remains, Fosseråsa hiking trail and Fjord Centre."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "ha-long-bay-vietnam",
+    "milford-sound-new-zealand",
+    "fiordland-new-zealand"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

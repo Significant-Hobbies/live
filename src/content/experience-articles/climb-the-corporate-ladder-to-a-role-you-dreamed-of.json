@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "climb-the-corporate-ladder-to-a-role-you-dreamed-of",
+  "slug": "climb-the-corporate-ladder-to-a-role-you-dreamed-of",
+  "title": "Turn a dream role into work you can demonstrate",
+  "description": "Move toward a dream role by translating it into needed skills, choosing visible work that builds evidence and asking for clear feedback.",
+  "intent": "Answer how to pursue a desired role through evidence, developmental assignments and manager conversations, while accounting for non-linear career paths.",
+  "relatedExperienceSlugs": [
+    "mentor-someone-just-starting-out-in-your-field",
+    "start-and-grow-a-business",
+    "start-something-a-business-blog-or-side-project"
+  ],
+  "sections": [
+    {
+      "heading": "Translate the title into the work",
+      "paragraphs": [
+        "Write down the role you want, then find current job descriptions for that position inside and outside your organization. Highlight the recurring responsibilities, decisions, and skills. Titles can mean different things from one employer to another, so compare the work itself: what problems does the person solve, which people do they work with, and what would a successful month look like?",
+        "Circle the requirements you already demonstrate and the ones you have not had a chance to show. Ask someone doing the work what the description leaves out. A short conversation can reveal whether the role requires a credential, a portfolio, a leadership example, or experience with a particular kind of project."
+      ]
+    },
+    {
+      "heading": "Build evidence in your current role",
+      "paragraphs": [
+        "Choose a project where you can practice one missing responsibility without abandoning your existing commitments. Agree with your manager on what success means, what authority you have, and how the work will be evaluated. A development plan can include training, shadowing, rotational work, or an assignment; the U.S. Office of Personnel Management frames individual development plans as a partnership that sets learning objectives and uses continuous feedback.",
+        "Keep a record of what you delivered and what changed because of it. Use concrete examples: a process you improved, a decision you supported, a customer problem you resolved, or a team you helped coordinate. Be accurate about your part and credit collaborators. A visible project is useful only if the evidence is clear."
+      ]
+    },
+    {
+      "heading": "Ask for feedback that can change your next step",
+      "paragraphs": [
+        "In a check-in, ask what evidence would make you credible for the next role, which skill gap matters most, and what assignment could let you practice it. Ask for a specific example of where you already meet the bar and where you do not. Write down the answer and set a date to revisit it.",
+        "If the manager cannot identify a path, do not assume you have failed. The organization may not have an opening, the role may be changing, or the requirements may be unclear. Consider a lateral move, a cross-functional project, a different employer, or a role that develops the same skills. A career can move sideways while gaining useful scope."
+      ]
+    },
+    {
+      "heading": "Make sponsorship and visibility specific",
+      "paragraphs": [
+        "Find people who can see the work firsthand and people who understand how the next role is filled. Share concise updates that make outcomes easy to discuss, and ask a mentor for candid advice about how decisions are made. A sponsor can only advocate credibly for work they know. Build relationships through reliable collaboration rather than collecting contacts or asking someone to promise a promotion.",
+        "Do not wait for an annual review to mention your direction. Bring a one-page plan with the role, evidence you have, the gap you want to close, and the support you need. Ask what part of the plan is realistic given team priorities."
+      ]
+    },
+    {
+      "heading": "Set a review point and keep options open",
+      "paragraphs": [
+        "Pick a date a few months away to review progress. Compare new evidence with the requirements you identified, and ask whether the target still interests you. If the path depends on a vacancy or organizational change outside your control, set a second route that could build similar skills elsewhere.",
+        "The next action is to request a short conversation with someone doing the role and ask which capability mattered most when they stepped into it. Then identify one current project where you can build that evidence with agreement from your manager. This is a practical step toward a role, not a promise that any promotion is guaranteed."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Career Development: Individual Development Plans",
+      "url": "https://www.opm.gov/policy-data-oversight/training-and-development/career-development",
+      "publisher": "U.S. Office of Personnel Management",
+      "purpose": "Opened federal career-development page on employee-manager partnership, learning objectives, continuous feedback and developmental assignments."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

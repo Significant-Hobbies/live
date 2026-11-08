@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "play-an-introductory-game-of-boccia",
+  "slug": "play-an-introductory-game-of-boccia",
+  "title": "A first boccia game with simple inclusive adjustments",
+  "description": "Set up a relaxed boccia game, learn the basic aim of placing balls near the jack, and adjust space or equipment so each player can take part.",
+  "intent": "How can a beginner organise an introductory boccia game? This guide explains a simple first round, inclusive adjustments and ways to keep the focus on learning rather than formal competition.",
+  "sections": [
+    {
+      "heading": "Understand the aim before arranging the court",
+      "paragraphs": [
+        "Boccia is a precision ball game in which players try to place their balls closer to the target ball, often called the jack, than an opponent’s. The exact rules and equipment depend on the version you are playing, so use a recognised activity card or club explanation if you want to follow formal play. For a first informal game, agree on a clear target, boundary and turn order before anyone starts.",
+        "The Australian Sports Commission’s Sports Ability materials provide inclusive activity cards and explain that rules, equipment and environment can be adapted so participants with different abilities can take part. Borrow that principle without assuming one adjustment works for everyone: ask each player what would make the game comfortable and fair for them."
+      ]
+    },
+    {
+      "heading": "Make the playing space workable for everyone",
+      "paragraphs": [
+        "Choose a flat, clear area with enough room for players to approach, position themselves and retrieve balls. Indoors, move loose furniture out of the throwing lane and keep pathways clear. Outdoors, check for slopes, wet patches or rough ground that could change how the balls travel. Place the jack where everyone can see it and reach their playing position safely.",
+        "Use soft or regulation boccia balls appropriate to the players and space. If a player uses a ramp or another assistive device in formal boccia, ask what equipment and support they want; do not touch or reposition it without permission. An informal game can use simpler equipment, but explain any differences so everyone understands what counts as a turn."
+      ]
+    },
+    {
+      "heading": "Start with an easy practice round",
+      "paragraphs": [
+        "Let each player try one ball before keeping score. Practice rolling or throwing toward the jack from a comfortable distance. The first goal is to learn how a ball moves across the surface and how much force feels manageable. Players can use a different delivery method if it suits them; the shared task is to send a ball into the playing area, not to copy one particular movement.",
+        "For a simple game, take turns placing balls and compare which is closest to the jack after everyone has played. You can play individually or in pairs. Keep the first round short and pause to check that the distance, ball weight and target position work for the group. If someone is still learning, give a practice throw before the scored round begins."
+      ]
+    },
+    {
+      "heading": "Adapt rules together and say what changed",
+      "paragraphs": [
+        "An adaptation might mean moving the throwing line closer, using a larger or softer ball, allowing a player to roll from a seated position, or giving more time between turns. Agree on changes before the round and apply them consistently. The point is to let each person participate, not to pretend every setup is identical when it is not.",
+        "The Sports Ability resource describes TREE—Teaching style, Rules, Equipment and Environment—as a way to think about inclusive changes. Use those categories to identify what is getting in the way. A different explanation may solve confusion; changing the target distance may help with movement; clearing a route may make access easier. Ask the player whether the adjustment works rather than assuming it does."
+      ]
+    },
+    {
+      "heading": "Keep the game social and the next step clear",
+      "paragraphs": [
+        "When the round ends, invite each person to say one thing they learned about the ball, the surface or their preferred position. If the group wants competition, keep the score simple and treat it as part of the game rather than a measure of ability. The strongest experience may be a close finish, a clever placement or learning a new way to take a turn.",
+        "If you want to play again, check a local disability sport organisation or boccia club for equipment and rules that suit your group. Do not promise a formal classification or tournament pathway from a casual session."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Sports Ability",
+      "url": "https://www.ausport.gov.au/schools/resource-hub/sports_ability",
+      "publisher": "Australian Sports Commission",
+      "purpose": "Supports inclusive activity cards, adaptations to rules, equipment and environment, and the TREE framework for making activities accessible."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "try-polybat-on-an-adapted-table",
+    "arrange-an-accessible-outing-with-a-friend",
+    "try-a-supervised-water-aerobics-class"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,71 @@
+{
+  "experienceSlug": "scuba-dive-somewhere-extraordinary",
+  "slug": "scuba-dive-somewhere-extraordinary",
+  "title": "Choose a Dive Site for the Conditions You Can Handle",
+  "description": "Compare a reef, wall, kelp forest, or blue hole by training, conditions, and the kind of underwater detail you want to notice.",
+  "intent": "How can I choose a memorable scuba destination without treating a famous site as a suitable beginner dive or exceeding my training?",
+  "sections": [
+    {
+      "heading": "Define what would make the place extraordinary",
+      "paragraphs": [
+        "Start with the underwater experience you want rather than an iconic name. A reef may draw you toward color and small marine life; a kelp forest may interest you in vertical structure and changing light; a wall or blue hole may feel compelling because of the sense of depth and open water. These are different kinds of scenery, not interchangeable difficulty ratings. Ask a qualified local dive operator how the specific site changes with season, weather, current, visibility, entry method, and your certification level.",
+        "Choose one or two features you want to see and one condition you do not want to negotiate, such as cold water, a boat entry, or overhead terrain. Then ask whether a shallower or more sheltered site can offer the same type of interest. A photograph cannot tell you whether the conditions fit your training or comfort."
+      ]
+    },
+    {
+      "heading": "Match the dive to your training and recent practice",
+      "paragraphs": [
+        "Scuba is a trained activity, not a self-guided sightseeing swim. The CDC's Yellow Book says diving requires training and certification, should be done with a trained and attentive buddy, and should remain within the diver's training limits. If you are new, use a recognized supervised introductory program or complete certification with an instructor before planning independent dives. Do not accept a promise that a brief holiday briefing replaces the skills and standards required for the dive you want.",
+        "A certification card does not mean every location is appropriate. Tell the operator when you last dived, what conditions you have experienced, and whether you have recently been ill, injured, or out of the water. PADI's course guidance says students complete a medical questionnaire and may need a physician's assessment depending on their answers and local rules. Discuss medical questions with a qualified clinician and dive professional; do not self-clear from an article."
+      ]
+    },
+    {
+      "heading": "Compare the brief, not only the photographs",
+      "paragraphs": [
+        "Ask for the planned depth range, time underwater, entry and exit method, current expectations, water temperature, group size, surface support, and emergency plan. Ask what will happen if conditions change or you decide not to enter. The CDC recommends considering health, weather and water conditions, planned depth and time, supervision, communication, and emergency care before a dive. A responsible operator should answer without pressuring you to book.",
+        "For a reef, ask whether the plan includes kneeling or touching the bottom—your answer should be no—and how the group handles a current. For a wall, ask whether the dive can be kept comfortably shallow. For a blue hole or overhead environment, be especially clear about training prerequisites; a guided tour is not permission to enter a space your training does not cover."
+      ]
+    },
+    {
+      "heading": "Protect the site while you look",
+      "paragraphs": [
+        "Good buoyancy and hands-off observation help protect both the diver and the environment. Keep equipment secured so it cannot drag over coral or other fragile habitat. Never chase animals, block their path, or take a specimen. Ask the operator how local rules address gloves, dive knives, reef-safe practices, and protected zones; rules vary by destination.",
+        "Choose a dive team that explains its environmental expectations and lets you ask questions. DAN's operator-safety guidance lists scope of training, local requirements, equipment, insurance, conditions, and costs among topics operators may discuss, and says customers should be screened in relation to their training, fitness, and risk. These are useful questions to raise with the specific operator, not a global certification rule."
+      ]
+    },
+    {
+      "heading": "Make the memory on the surface too",
+      "paragraphs": [
+        "After the dive, write down what you noticed before you look up species names: light, motion, distance, and the sound of your own breathing. Then ask the guide for help identifying one thing you could not name. That turns a destination into a learning experience rather than a checklist of famous places.",
+        "Your next step is to choose one underwater feature that interests you, then ask a qualified dive center what training and conditions a responsible visit requires."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Scuba Diving: Decompression Illness and Other Dive-Related Injuries",
+      "url": "https://www.cdc.gov/yellow-book/hcp/environmental-hazards-risks/scuba-diving-decompression-illness-and-other-dive-related-injuries.html",
+      "publisher": "U.S. Centers for Disease Control and Prevention",
+      "purpose": "Supports the need for training/certification, diving within training with an attentive buddy, considering health and environmental conditions, supervision, and emergency planning; U.S. travel-health guidance."
+    },
+    {
+      "title": "PADI Scuba Diving Certification FAQ",
+      "url": "https://www.padi.com/help/scuba-certification-faq",
+      "publisher": "Professional Association of Diving Instructors",
+      "purpose": "Supports the course's knowledge and confined/open-water skill components and medical-questionnaire/physician-assessment process in that training system; not a universal rule for all agencies or locations."
+    },
+    {
+      "title": "Dive Trips: Customer Safety",
+      "url": "https://dan.org/safety-tips-for-dive-operators/customer-safety/dive-trips/",
+      "publisher": "Divers Alert Network",
+      "purpose": "Lists operator briefing topics and screening considerations including training scope, conditions, equipment, medical fitness, experience, and safety-related refusal; guidance for dive operators."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "become-a-certified-scuba-diver",
+    "dive-the-blue-hole-in-belize",
+    "maldives-above-and-below-water"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

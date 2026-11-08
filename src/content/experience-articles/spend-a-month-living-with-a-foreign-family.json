@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "spend-a-month-living-with-a-foreign-family",
+  "slug": "spend-a-month-living-with-a-foreign-family",
+  "title": "Set up a month abroad as a household member",
+  "description": "Prepare for a month with a host family by agreeing on meals, privacy, routines and support before arrival, then asking questions as daily life unfolds.",
+  "intent": "Help the reader enter a month-long homestay as a respectful household member, with clear expectations, language practice and a route for concerns.",
+  "relatedExperienceSlugs": [
+    "make-a-close-friend-in-another-country",
+    "create-a-shared-household-agreement",
+    "exchange-handwritten-recipes-through-the-post"
+  ],
+  "sections": [
+    {
+      "heading": "Choose a program with a real support route",
+      "paragraphs": [
+        "Use a school, exchange organization, or homestay program that explains how host households are selected, what support is available, and whom you contact if something feels wrong. Read the agreement and ask how complaints, changes, or a request to move homes are handled. A direct private rental is not the same arrangement as a managed homestay.",
+        "The University of Calgary’s English program lists expectations for its own host households, including communication, inclusion in family activities, safety checks, and a coordinator students can contact. Those are program-specific rules, but they show the kinds of support questions worth asking any organization before you agree."
+      ]
+    },
+    {
+      "heading": "Ask about everyday routines before you arrive",
+      "paragraphs": [
+        "Exchange a short introduction and ask practical questions: what time meals usually happen, how laundry works, whether there are household quiet hours, what shoes are worn indoors, and how to reach the home from school or work. Share your dietary needs, allergies, mobility needs, and any routine you need the household to know about. Do not assume the family will guess what matters to you.",
+        "Agree what costs are included, whether you are expected to help with household chores, and how you will handle meals when you are out. A homestay is not a hotel, but expectations should be explained rather than discovered through conflict."
+      ]
+    },
+    {
+      "heading": "Use meals to learn, not to perform",
+      "paragraphs": [
+        "When invited to a meal, ask about the dish, offer to help in a way the host welcomes, and share a recipe or food story from home. Meals can be a natural time for conversation and language practice, but do not expect the family to teach you every evening. Ask before correcting, recording, or posting about someone’s cooking or traditions.",
+        "If you do not understand a house rule or instruction, repeat what you think you heard and ask whether you have it right. A simple note on your phone can help you remember a word or routine. Make space for the family’s own language and quiet time too."
+      ]
+    },
+    {
+      "heading": "Treat privacy and boundaries as shared",
+      "paragraphs": [
+        "Ask before inviting friends, using shared items, entering private rooms, or sharing household photos. Tell the host when your plans or expected return time change, using the communication method you agreed on. Respect the family’s privacy in return: do not record conversations or post images of their home without consent.",
+        "If a disagreement arises, raise it calmly and early rather than silently collecting resentment. If you feel unsafe, are being harassed, or cannot resolve an important issue, contact the program coordinator or another trusted local support person. Do not assume that discomfort is simply a cultural difference you must endure."
+      ]
+    },
+    {
+      "heading": "Build a month with both connection and independence",
+      "paragraphs": [
+        "Accept some invitations and suggest a few low-key activities, such as walking to a nearby shop or sharing a meal you can help prepare. Keep your own interests and friendships outside the home too; a month does not mean you must spend every free hour together.",
+        "At the end of the first week, ask whether your routines are working for everyone. Thank the family for specific help, settle any agreed costs, and share contact details only if both sides want to stay in touch. Your next action is to send the host program a short list of questions about meals, privacy, transport, costs, and support before the placement begins."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Homestay Guidelines",
+      "url": "https://esl.ucalgary.ca/homestay-guidelines",
+      "publisher": "University of Calgary English Language Program",
+      "purpose": "Opened host program guidance on communication, inclusion, safety and coordinator support; cited only as a program-specific example."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

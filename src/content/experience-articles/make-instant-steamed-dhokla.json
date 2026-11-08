@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "make-instant-steamed-dhokla",
+  "slug": "make-instant-steamed-dhokla",
+  "title": "What makes an instant khaman dhokla batter rise evenly?",
+  "description": "Follow one complete instant khaman recipe, prepare the steamer first, and mix the leavening only when the batter is ready to cook.",
+  "intent": "A practical preparation guide for understanding the timing and texture checks in one instant steamed khaman recipe.",
+  "sections": [
+    {
+      "heading": "Choose an instant recipe on purpose",
+      "paragraphs": [
+        "Dhokla includes different preparations, so pick a recipe written for instant khaman rather than replacing steps in a fermented batter method. Hebbar’s Kitchen describes its version as an instant khaman recipe using a leavener to create a light texture; it also distinguishes it from a soaked-and-fermented chana dal method. Read the full recipe once before measuring anything.",
+        "Check that the ingredients suit your kitchen and dietary needs. The selected recipe uses gram flour and semolina along with seasoning, water and a leavener. If you do not have an ingredient or equipment, choose another complete recipe rather than improvising a substitute that may change the batter’s rise."
+      ]
+    },
+    {
+      "heading": "Prepare the steamer before the batter",
+      "paragraphs": [
+        "Grease the steaming container and bring the steamer water to a steady simmer before the leavener goes in. Keep the lid and a safe way to place the container ready. The recipe’s notes recommend preheating the steaming setup. Starting the steam first helps avoid leaving a leavened batter waiting while equipment warms.",
+        "Use oven mitts or a suitable holder when handling hot cookware, and keep steam away from your hands and face. Do not fill a steamer beyond its instructions. If you are unfamiliar with the equipment, ask someone experienced to help before beginning."
+      ]
+    },
+    {
+      "heading": "Whisk for a smooth, even batter",
+      "paragraphs": [
+        "Sift the dry flour and follow the recipe’s ingredient order. Whisk until the batter looks smooth, then let it rest for the time the author specifies so the flour hydrates. The recipe asks for another whisk before adding the leavener. Those pauses are part of the method: they help create a uniform batter before the raising agent begins reacting.",
+        "Prepare your mold and finishing tempering ingredients while the batter rests. If the recipe calls for Eno or baking soda, measure it accurately and use only the substitution the author allows. Do not add extra leavener to compensate for a lumpy or thick batter."
+      ]
+    },
+    {
+      "heading": "Add the raising agent and steam promptly",
+      "paragraphs": [
+        "Fold in the leavener gently until the batter is evenly foamy, then transfer it to the prepared container and steam according to the complete recipe. Hebbar’s written recipe gives a steaming range and a doneness check; follow those instructions for your own pan and heat source. Do not rely on a guessed time from another steamer or a different batch size.",
+        "Avoid opening the lid repeatedly while the batter sets. When the recipe says it is ready, use a clean tester or its stated check, and handle the container carefully. Let the dhokla cool as directed before unmolding and cutting so it holds its shape."
+      ]
+    },
+    {
+      "heading": "Finish and learn from the crumb",
+      "paragraphs": [
+        "Make the tempering from the recipe and pour it over the pieces as directed. Notice whether the texture is even, whether the seasoning reached the centre and whether the pieces held together. A dense patch may come from uneven mixing, delayed steaming or a container issue; record what you observed before changing the recipe.",
+        "A useful next batch repeats the same recipe and changes only one thing, such as how evenly you whisked or the pan you used. Keep the source and the exact method together in your notes. Khaman styles vary, and one instant recipe is only one home method; ask a knowledgeable cook about the version they learned if you want cultural or regional context."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Instant Khaman Dhokla Recipe",
+      "url": "https://hebbarskitchen.com/INSTANT-KHAMAN-DHOKLA-RECIPE/",
+      "publisher": "Hebbar’s Kitchen",
+      "purpose": "Supports one author’s instant khaman method, ingredient order, batter rest, leavener timing and steaming instructions; not presented as the only dhokla tradition."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "shape-a-batch-of-pitha-with-a-knowledgeable-cook",
+    "exchange-handwritten-recipes-through-the-post"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

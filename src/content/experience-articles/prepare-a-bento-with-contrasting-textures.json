@@ -1,0 +1,61 @@
+{
+  "experienceSlug": "prepare-a-bento-with-contrasting-textures",
+  "slug": "prepare-a-bento-with-contrasting-textures",
+  "title": "How do you build a bento around contrasting textures?",
+  "description": "Plan a bento with crisp, tender, chewy and soft elements, then pack portions neatly while keeping perishable ingredients at a safe temperature.",
+  "intent": "Give a home cook a flexible method for assembling a compact bento whose colors and textures remain distinct instead of collapsing into one mixed container.",
+  "sections": [
+    {
+      "heading": "Choose texture before choosing decoration",
+      "paragraphs": [
+        "A satisfying bento has contrast that you can feel as well as see. Pair something tender, such as rice or soft tofu, with a crisp vegetable, a chewy bean or noodle, and a juicy fruit. It does not need a character-shaped garnish or a perfect arrangement. The useful question is whether every bite has enough variety and whether the food will still be pleasant after it travels.",
+        "Kikkoman's Global Cookbook describes a beginner sequence for assembling bento: place larger foods first, use dividers or food cups, balance color and fill gaps with smaller components. Use this as a layout principle rather than a strict formula. Start by selecting the largest item, then decide which foods need separation because their moisture or seasoning could soften neighboring pieces.",
+        "Choose a container that suits the portion and has a secure lid. If the compartments are shallow, cut foods into manageable pieces rather than stacking them high. A sturdy lunch container is more useful than one that looks elaborate but leaks in a bag."
+      ]
+    },
+    {
+      "heading": "Build a meal from a few contrasting parts",
+      "paragraphs": [
+        "A simple first box might include rice, roasted vegetables, edamame or another protein, pickled cucumber and orange segments. If using a sauce, place it in a leak-resistant cup. Try one crisp item and one soft one rather than filling every space with several versions of the same texture. Color can help you notice variety, but it does not guarantee nutritional completeness; adapt the ingredients to your needs and appetite.",
+        "Moisture moves. Juicy tomatoes, dressed greens, pickles and fruit can leak into dry foods, while steam from warm rice can make crisp ingredients limp. Cool cooked components before closing the container, and use a divider or small cup when you want textures to stay separate. If you enjoy a softened texture, combine foods intentionally rather than letting the whole box become damp by accident.",
+        "Season the components so the box tastes good at the temperature you expect to eat it. Some foods are pleasant cold, while others are better reheated. Keep any sauce separate until serving if its acidity or liquid would change the texture."
+      ]
+    },
+    {
+      "heading": "Pack for the journey, not just the photograph",
+      "paragraphs": [
+        "Pack the bento on a clean surface after washing hands and produce. Keep raw animal foods away from ready-to-eat ingredients during preparation, and use clean utensils for cooked food. If the meal contains perishable ingredients that must stay cold, use an insulated bag and cold sources according to USDA guidance. Its lunch-safety advice recommends cold sources placed around perishable foods; the exact arrangement should fit the container and bag.",
+        "For hot food, follow the safe handling method appropriate to your container rather than sealing a steaming dish beside crisp vegetables. Do not leave perishable food unrefrigerated for an extended outing. If you will not have a way to keep it cold or hot as needed, choose ingredients that remain suitable for the trip and consult local food-safety recommendations.",
+        "Secure small compartments and carry the box upright. A napkin, reusable utensil and small fork or chopsticks can make the meal easier to eat without unpacking everything onto a desk or bench."
+      ]
+    },
+    {
+      "heading": "Learn from the first lunch",
+      "paragraphs": [
+        "When you eat, notice which texture held up and which one changed. Maybe the cucumber stayed crisp but the rice dried out, or a sauce cup leaked into a soft roll. That observation gives you a practical next adjustment: separate the sauce, pack the crunchy item later, or choose a more secure container.",
+        "Plan the next bento around one change rather than redesigning the whole meal. You could try a warm-cold contrast, a crunchy topping in its own cup, or a different balance of soft and chewy ingredients. Keep the box inviting to eat, not merely attractive in a photograph; the best arrangement is one you can open, enjoy and clean without fuss."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Global Cookbook Launches a “Bento Recipes” Feature",
+      "url": "https://www.kikkoman.com/en/news/2026/20260427_1486.html",
+      "publisher": "Kikkoman Corporation",
+      "purpose": "Describes beginner bento assembly principles including larger foods first, dividers, color balance and filling gaps with smaller items."
+    },
+    {
+      "title": "Get an A+ in Food Safety This School Year",
+      "url": "https://www.foodsafety.gov/blog/get-food-safety-school-year",
+      "publisher": "FoodSafety.gov",
+      "purpose": "Supports packing perishable lunch foods in an insulated bag with a cold source and refrigerating food prepared ahead."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "make-tofu-from-soy-milk",
+    "turn-vegetable-trimmings-into-stock-and-soup",
+    "cook-a-meal-entirely-from-your-existing-pantry"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

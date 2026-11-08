@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "skydive-from-15-000-feet",
+  "slug": "skydive-from-15-000-feet",
+  "title": "Questions to ask before a 15,000-foot tandem skydive",
+  "description": "Understand why a 15,000-foot skydive needs an altitude-specific briefing, a clear oxygen plan, qualified staff, and a real answer about suitability.",
+  "intent": "What does a tandem skydive from 15,000 feet require me to confirm? This article focuses on altitude, operator procedures and readiness without teaching anyone to perform a jump.",
+  "sections": [
+    {
+      "heading": "Clarify what the altitude number means",
+      "paragraphs": [
+        "Ask whether the advertised altitude is measured above mean sea level (MSL) or above ground level (AGL). The United States Parachute Association defines a high-altitude skydive as an exit at or above 15,000 feet MSL but below 18,000 feet MSL, and explicitly says MSL is not the same as height above the drop zone. A headline number without its reference can hide a real difference.",
+        "At the USPA’s described altitude range, reduced atmospheric pressure, lower oxygen availability, temperature and wind increase risk. The manual says supplemental oxygen must be provided to aircraft occupants at cabin pressure altitudes at or above 15,000 feet MSL under the referenced U.S. regulation. This makes altitude a serious operational question, not simply a way to promise more freefall."
+      ]
+    },
+    {
+      "heading": "Ask the operator to explain its oxygen plan",
+      "paragraphs": [
+        "Before booking, ask who briefs you on the aircraft altitude and oxygen procedures, who aboard uses oxygen, how a delay above the threshold is managed and what happens if a system is unavailable. You are not expected to inspect or operate life-support equipment; the responsible operator and crew must explain the procedure and decide whether the jump can go ahead.",
+        "Ask for the exact exit altitude in writing and clarify whether this experience is actually offered as a tandem jump on your date. A 15,000-foot jump involves more than a standard tandem booking. If staff dismiss the question or say oxygen is irrelevant, choose another operator or do not proceed. USPA material describes high-altitude planning; it does not certify a specific commercial experience."
+      ]
+    },
+    {
+      "heading": "Check the briefing, instructor and suitability",
+      "paragraphs": [
+        "Ask who conducts the tandem jump, how the instructor’s qualification and currency are checked, how you will be secured, and what the ground briefing covers. In the United States, USPA materials describe requirements for tandem instructors and member operations; oversight differs by country. Verify local requirements with the aviation authority and drop zone, not a general travel page.",
+        "Share health conditions, medicines, recent procedures, mobility limits, fear of heights and other concerns before booking. This article cannot decide medical suitability. Ask whether the operator has written limits or needs clinician advice, and whether you may reschedule if the briefing or conditions leave you uncomfortable. A signature does not substitute for informed consent."
+      ]
+    },
+    {
+      "heading": "Read the day plan, not a duration promise",
+      "paragraphs": [
+        "Weather, cloud, wind and aircraft operations can delay or cancel a jump. Ask how the company communicates postponements, how long you could wait, and what happens to your booking if the instructor or aircraft changes. Find out what clothing and footwear the operator requires and whether it supplies specific equipment. Do not use a generic packing list to override local instructions.",
+        "Ask how arrival, briefing, waiting and debrief work. If a friend comes along, establish where they may watch and how you will reconnect after landing. Keep onward transport flexible rather than promising an exact return time. A responsible operation should be comfortable answering these questions without pressuring you to decide quickly."
+      ]
+    },
+    {
+      "heading": "Use the briefing as a decision point",
+      "paragraphs": [
+        "At the drop zone, listen for the same altitude and oxygen details you discussed beforehand. Ask for a plain-language explanation if the plan changed. You can say no before boarding or any point before the jump begins; changing your mind is legitimate. If you feel rushed, impaired or unsure about the equipment or procedure, step back and speak with the responsible staff member.",
+        "Your next action is to contact a licensed local operator with three questions: the altitude reference, the oxygen plan and the tandem instructor’s qualifications. Then review the written suitability and cancellation terms. Clear, unpressured answers are part of the experience you are choosing."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "5-6: High-Altitude Jumps",
+      "url": "https://www.uspa.org/SIM/5-6",
+      "publisher": "United States Parachute Association",
+      "purpose": "Defines high-altitude jumps in MSL, outlines altitude-associated hazards and describes oxygen planning."
+    },
+    {
+      "title": "USPA Skydiver's Information Manual",
+      "url": "https://www.uspa.org/sim",
+      "publisher": "United States Parachute Association",
+      "purpose": "Identifies USPA's manual as a reference for safety requirements, emergencies, equipment, weather and FAA guidance."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "skydive",
+    "paraglide-over-the-swiss-alps",
+    "bungee-jump-off-a-bridge"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

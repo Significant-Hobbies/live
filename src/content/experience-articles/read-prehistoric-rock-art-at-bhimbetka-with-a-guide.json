@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "read-prehistoric-rock-art-at-bhimbetka-with-a-guide",
+  "slug": "read-prehistoric-rock-art-at-bhimbetka-with-a-guide",
+  "title": "How should you look at the rock paintings at Bhimbetka?",
+  "description": "Choose a small number of marked shelters, describe what you can see before interpreting it, and follow site rules that protect the rock art.",
+  "intent": "A respectful viewing method for reading the visible features of Bhimbetka’s rock art while distinguishing observation, guide interpretation and uncertain dating.",
+  "sections": [
+    {
+      "heading": "Prepare for a site visit, not a checklist",
+      "paragraphs": [
+        "Bhimbetka is a landscape of rock shelters, not a single painting on a wall. Madhya Pradesh Tourism presents the site as a complex of prehistoric shelters and imagery within a wider forested setting. Before visiting, check the current official site guidance, access rules and whether a qualified guide is available. Do not plan your own route across unmarked or restricted areas.",
+        "Pick one question to carry with you: how does a painted figure relate to the shelter surface, what colours appear together, or how do images differ between two accessible places? A small question helps you look carefully without trying to identify every mark. Wear clothing and footwear appropriate to the conditions, and follow local instructions about photography and visitor movement."
+      ]
+    },
+    {
+      "heading": "Describe before you interpret",
+      "paragraphs": [
+        "At an approved viewing point, start with visible details: line, colour, scale, position and nearby forms. Is a figure outlined or filled? Are animals shown alone or in a group? Are several colours present? Keep your description separate from a claim about who painted it or why. Rock art can be difficult to date or interpret by sight alone, so avoid turning a resemblance into a confident explanation.",
+        "Listen to a guide’s interpretation and ask what evidence supports it. They may distinguish different periods, themes or painting layers using archaeological research that is not obvious from the visitor path. If you take notes, label which points came from the guide and which are your own observations. You do not need to touch the rock to understand the relation between image and surface."
+      ]
+    },
+    {
+      "heading": "Compare two shelters with care",
+      "paragraphs": [
+        "If the permitted route includes more than one shelter, compare just a few features. Perhaps one scene has repeated human forms while another includes animals, or the shapes sit on different parts of the rock face. Write what you actually saw and note the guide’s explanation alongside it. A comparison becomes useful when you have enough context to tell which shelter and viewing angle you mean.",
+        "Do not touch, trace, chalk, wet or lean against the rock. Even an attempt to make a mark easier to see could damage the surface. Keep a respectful distance and obey barriers. If a figure is hard to see, make that uncertainty part of your note rather than moving closer than permitted or using a flash."
+      ]
+    },
+    {
+      "heading": "Notice the landscape around the art",
+      "paragraphs": [
+        "Look at the shelter’s shape, openings, light and relation to the surrounding landscape from designated areas. The setting can help explain why a shelter mattered as a place, but it does not prove a single use or story. Ask your guide how environmental context informs interpretation and which details remain debated or uncertain.",
+        "Give other visitors space to observe, especially where the path is narrow. If you sketch, use your own notebook without leaning on the rock or blocking a viewing area. Follow any rules about photography and never publish an image of another visitor without permission. The experience is not improved by collecting a complete set of pictures."
+      ]
+    },
+    {
+      "heading": "Keep a careful record afterward",
+      "paragraphs": [
+        "After leaving a shelter, write one observation, one interpretation you heard and one unanswered question. Add the location name or route stop so you can connect the notes to the right place. If you later read about Bhimbetka, compare that account with what the guide said, and note whether each source is describing the same image or archaeological evidence.",
+        "A useful next step is to look at a public archaeological or museum explanation of a motif mentioned by your guide, or to revisit the site’s visitor guidance before another trip. Keep uncertainty visible: “I saw a red line that may be part of a figure” is more responsible than naming a subject you could not clearly distinguish."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Bhimbetka",
+      "url": "https://www.mptourism.com/destination-bhimbetka.php",
+      "publisher": "Madhya Pradesh Tourism",
+      "purpose": "Supports the regional tourism context that Bhimbetka is a rock-shelter complex with prehistoric art; no exact dates or interpretive claims are asserted from it."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "follow-the-narrative-reliefs-around-sanchi-s-gateways",
+    "take-a-supervised-introductory-caving-trip"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

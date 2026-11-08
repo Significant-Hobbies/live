@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "get-fired-from-a-job-once",
+  "slug": "get-fired-from-a-job-once",
+  "title": "Make Sense of an Involuntary Job Ending Without Blaming Yourself",
+  "description": "A grounded guide to processing a firing, saving the facts, checking local support options, and choosing what to learn before your next role.",
+  "intent": "If I have been fired, what practical steps can help me understand the event and move forward without treating job loss as a stunt or a verdict on my worth?",
+  "sections": [
+    {
+      "heading": "Treat this as reflection after a real event",
+      "paragraphs": [
+        "Being fired is not an experience to manufacture for a story. A job may end for many reasons, and the decision can affect money, health coverage, references, immigration status, or people who depend on you. If this has happened, give yourself a little room before turning it into a lesson. If you are considering leaving a job, use a planned transition instead of trying to provoke a termination.",
+        "Start with a factual timeline: what feedback or warnings came before the decision, what was said in the meeting, and what paperwork or property needs to be returned. Keep copies of documents you are allowed to retain, such as your own offer letter or performance reviews. Do not take confidential company files, client records, or private information when you leave."
+      ]
+    },
+    {
+      "heading": "Separate the event from the story you tell yourself",
+      "paragraphs": [
+        "Write two columns: what you know and what you are inferring. “My manager said the role was ending” belongs in the first. “No one will hire me again” belongs in the second. The event may involve a mistake, a mismatch, a restructure, conflict, or discrimination; the first explanation you reach is not automatically the complete one.",
+        "Ask one trusted person to help you reconstruct the sequence without forcing a cheerful spin. What went well in the role? What feedback was consistent? What did the workplace make difficult? A balanced account can hold both responsibility and context. Avoid posting angry accusations or confidential details publicly while emotions are sharp."
+      ]
+    },
+    {
+      "heading": "Handle immediate practical questions",
+      "paragraphs": [
+        "Ask the former employer for written details about final pay, benefits, return of equipment, and any deadlines or agreements. Rules differ by country, state, contract, and employment status. In the United States, USAGov says states set unemployment eligibility rules and administer their own programs; being fired does not by itself establish that you qualify. Check your state's official unemployment office promptly, because deadlines and procedures vary.",
+        "If you believe the decision involved discrimination, retaliation, unpaid wages, or a contract issue, preserve relevant documents and seek guidance from an appropriate local labor agency, union, or qualified employment lawyer. Do not rely on a broad internet checklist for a jurisdiction-specific legal conclusion. If a work visa or professional license is tied to the role, contact the relevant official authority or qualified adviser about your situation before making plans."
+      ]
+    },
+    {
+      "heading": "Extract a useful lesson without forcing one",
+      "paragraphs": [
+        "When the first shock settles, choose one question: what would I repeat, change, or clarify in a future role? Perhaps you need clearer written priorities, more frequent feedback, a different environment, or practice in a specific skill. Make each answer testable. “Become more professional” is vague; “confirm priorities in writing after a project kickoff” is concrete.",
+        "If the job ended because of a serious performance issue, ask for one example you can discuss with a mentor. If the explanation remains unclear, note what you still do not know rather than inventing certainty. A firing can expose a mismatch or a behavior to improve, but it does not define your whole character or career."
+      ]
+    },
+    {
+      "heading": "Take the next step at a human pace",
+      "paragraphs": [
+        "Choose one practical action for today: file a benefits question, update your résumé, contact a former colleague, or take a walk before deciding what the story means. If finances are urgent, prioritize local public assistance and trusted professional advice over expensive career promises. Recovery may include grief, relief, anger, or several of these at once.",
+        "Your next step is to write a private one-page account of what happened, what you need this week, and one change you want to carry into the next role. Keep it factual enough that you can revisit it later."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Unemployment benefits",
+      "url": "https://www.usa.gov/unemployment-benefits",
+      "publisher": "USAGov",
+      "purpose": "Explains that U.S. states set eligibility rules and administer unemployment programs, and links readers to state filing information; not an individual eligibility decision."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "negotiate-your-first-raise",
+    "start-something-a-business-blog-or-side-project",
+    "work-or-intern-in-another-country"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

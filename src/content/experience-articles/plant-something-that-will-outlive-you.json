@@ -1,0 +1,59 @@
+{
+  "slug": "plant-something-that-will-outlive-you",
+  "title": "Plant for the place that will inherit it",
+  "description": "Choose a long-lived plant for an authorized site, check local growing conditions, and arrange the early care that gives it a fair start.",
+  "intent": "Choose a suitable long-lived plant for an authorized site and plan who will care for it, without promising environmental outcomes.",
+  "sections": [
+    {
+      "heading": "Start with permission and a real site",
+      "paragraphs": [
+        "The first decision is not the species; it is where the plant is allowed to grow. For a yard, confirm property boundaries and underground utilities before digging. For a school, park, roadside or shared garden, get written permission from the land manager and ask about approved species, planting windows, irrigation, and long-term maintenance. A tree that is welcome today can still become a burden if it blocks access, conflicts with utilities or is planted on land scheduled for construction.",
+        "Walk the site at different times of day. Note sun and shade, standing water after rain, wind exposure, slopes, nearby buildings and the space available at maturity. If the location has compacted soil, drainage issues or utility lines, ask a local arborist, extension office or land manager to assess it before buying a plant."
+      ]
+    },
+    {
+      "heading": "Match the plant to conditions, not the label",
+      "paragraphs": [
+        "Choose a locally appropriate long-lived tree or shrub by matching its mature size, water needs, light, soil and climate tolerance to that exact site. The USDA Natural Resources Conservation Service standard describes selecting species suited to site conditions and the planned purpose, and using ecological site descriptions or comparable local references. Its linked document is a proposed 2022 standard, so use it as a planning prompt and confirm current local guidance rather than treating it as the final rule.",
+        "Ask a local nursery or forestry office for the botanical name, mature height and spread, root behavior, expected maintenance, and whether the species is native or invasive in your area. Names like ‘shade tree’ or ‘pollinator plant’ are not enough to judge fit. Avoid choosing solely because a species is said to store carbon or attract wildlife; the source standard lists those as possible purposes, not guaranteed outcomes for an individual planting."
+      ]
+    },
+    {
+      "heading": "Make care part of the gift",
+      "paragraphs": [
+        "Ask who will water and inspect the plant during establishment, especially through dry periods. Agree on a named caretaker and a fallback if that person moves away. Confirm the landowner’s maintenance plan for mulch, weed competition, pruning and replacement if the plant fails. If you cannot arrange ongoing care, choose a site with an existing stewardship team rather than leaving an unowned planting behind.",
+        "Buy healthy stock from a reputable local grower and ask for planting instructions for that plant type and season. Follow local advice on hole depth, root flare, staking and mulch; techniques vary by root system, soil and climate. Do not bury the stem under a mound of mulch or add fertilizer just because the planting is meant to be special. Keep the label and care notes where the next caretaker can find them."
+      ]
+    },
+    {
+      "heading": "Record why you chose it",
+      "paragraphs": [
+        "Create a small handover card with the date, plant’s full name, source, site owner, watering arrangement and the person to contact about care. Add the reason you selected this location: perhaps a family gathering place, a public courtyard or a garden someone will tend. The card turns an abstract wish to leave something lasting into useful information for the person who inherits the work.",
+        "If you want to mark the planting, ask the owner whether a plaque, ceremony or public post is welcome. Avoid placing a permanent marker or altering public land without explicit approval. If the land manager changes, a short note explaining the original intent can help the next team decide whether the planting still fits the site."
+      ]
+    },
+    {
+      "heading": "Make the first year observable",
+      "paragraphs": [
+        "Plan two check-ins rather than assuming planting day completes the project. At the first, confirm the plant is upright, the root area is not drying out and the planned watering is happening. At a later date, ask the caretaker whether the location, maintenance and growth match expectations. If it is struggling, ask a qualified local adviser before changing watering or pruning; a visible symptom can have several causes.",
+        "Take a dated photograph from the same spot and save the care record. A long-lived planting is not a promise that one tree will repair an ecosystem or survive forever. It is a thoughtful start matched to its place, with honest care and permission carried forward. If the site no longer suits it, ask the responsible land manager what a responsible next step would be."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Conservation Practice Standard: Tree-Shrub Establishment (Code 612), proposed text",
+      "url": "https://www.nrcs.usda.gov/sites/default/files/2022-12/612-NHCP-CPS-Tree-Shrub-Establishment-2022.pdf",
+      "publisher": "USDA Natural Resources Conservation Service",
+      "purpose": "Supports the narrow planning principle of selecting woody species suited to site conditions and purpose, and the use of local ecological references. The opened document labels itself proposed text and directs readers to the current state Field Office Technical Guide."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "plant-1-000-trees",
+    "start-a-community-garden",
+    "spend-an-hour-watching-a-single-tree"
+  ],
+  "experienceSlug": "plant-something-that-will-outlive-you",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

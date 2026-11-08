@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "have-a-meaningful-conversation-with-a-complete-stranger-every-week-for-a-year",
+  "slug": "have-a-meaningful-conversation-with-a-complete-stranger-every-week-for-a-year",
+  "title": "A respectful way to make stranger conversations a weekly practice",
+  "description": "Make weekly conversations with new people small and voluntary: choose an appropriate setting, start lightly, listen well and let either person end the exchange.",
+  "intent": "How can I have a meaningful conversation with a stranger each week without making people feel cornered? This builds a consent-aware practice around ordinary public settings.",
+  "sections": [
+    {
+      "heading": "Choose a setting where conversation is welcome",
+      "paragraphs": [
+        "A stranger is not automatically available for conversation. Choose a context with a natural opening: a community event, a shared class, a waiting area where people are already talking, a volunteer shift or a group activity. Avoid interrupting someone who is working, wearing headphones, rushing, caring for a child or visibly trying to be alone. Keep a public, easy exit available to both of you.",
+        "Research by Epley and Schroeder found that commuters who were asked to talk with a stranger on a train reported more positive experiences than those asked to sit in solitude in their experiments. That result is specific to the study settings and participants; it does not mean any person wants a conversation at any moment. Use it as a reason to make a low-pressure invitation, not to ignore a signal that someone wants space."
+      ]
+    },
+    {
+      "heading": "Open with the shared moment",
+      "paragraphs": [
+        "Start with the place or activity rather than a deeply personal question: “Have you been to this class before?” or “What brought you to the neighborhood event?” Give the other person an easy answer and a chance to continue. If they reply briefly, look away or return to what they were doing, accept that as a no. A meaningful conversation cannot be demanded as proof of your weekly goal.",
+        "Introduce yourself plainly and keep physical distance comfortable. Do not ask for contact details, home address or personal history unless the conversation has clearly earned that level of trust and they volunteer it. If your topic is sensitive, explain why you are asking and let them decline without follow-up."
+      ]
+    },
+    {
+      "heading": "Listen for what the person chooses to share",
+      "paragraphs": [
+        "Ask one open follow-up and then let the answer shape the next question. “What do you like about that?” invites more than “Is that good?” Reflect a detail you heard before changing the subject. You can share something about yourself too, but keep the exchange reciprocal. A stranger is not an interview subject, a representative of a group or a source of emotional support.",
+        "If you disagree, ask what led them to their view before trying to persuade. A conversation can be meaningful because you learned one small thing, found a shared interest or noticed where your perspectives differ. It does not need to become a confession or a debate."
+      ]
+    },
+    {
+      "heading": "Make the weekly practice sustainable",
+      "paragraphs": [
+        "Use a simple log that contains no identifying details: date, setting, what helped conversation start and what you learned about your own listening. Do not keep names or sensitive details without clear consent. If no conversation happens during a week, record that honestly and continue the practice later; do not try to compensate by approaching several unwilling people.",
+        "Vary the context so your practice does not depend on one place or a narrow kind of person. A language exchange, public lecture or shared volunteer project gives a clearer reason to talk than approaching people who have no connection to your activity. If you are using an official event, follow its rules and respect organizers’ boundaries."
+      ]
+    },
+    {
+      "heading": "End warmly and clearly",
+      "paragraphs": [
+        "Watch for a natural stopping point and offer an uncomplicated close: “Thanks, I enjoyed hearing about that. I’m going to find my friends now.” If the other person ends first, do not ask them to stay for your goal. A friendly exchange can be complete without a photo, a contact exchange or an ongoing relationship.",
+        "At the end of each month, review the settings where conversation felt most mutual and those where it felt awkward or intrusive. Change the context rather than pressuring yourself to make every interaction deep. Your next action is to choose one public activity with a shared topic and prepare one light opening question, plus an easy way to end the exchange."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Mistakenly Seeking Solitude",
+      "url": "https://faculty.haas.berkeley.edu/jschroeder/Publications/Epley%26Schroeder2014.pdf",
+      "publisher": "Nicholas Epley and Juliana Schroeder, University of Chicago / University of California Berkeley",
+      "purpose": "Primary research on conversations with strangers in commuter and laboratory settings; supports a narrowly stated example of participants’ experiences, not a general claim that strangers welcome being approached."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "attend-a-human-library-conversation",
+    "make-a-friendship-map-together",
+    "join-a-community-choir-or-theatre-group"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

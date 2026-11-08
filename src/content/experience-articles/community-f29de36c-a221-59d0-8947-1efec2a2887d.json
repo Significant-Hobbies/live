@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "community-f29de36c-a221-59d0-8947-1efec2a2887d",
+  "slug": "go-to-space",
+  "title": "Compare the real routes from Earth to space",
+  "description": "Spaceflight can mean an astronaut career or a commercial passenger seat; compare the official pathways, risks, and changing requirements.",
+  "intent": "How to distinguish a professional astronaut pathway from commercial human spaceflight and research current official requirements without assuming access.",
+  "sections": [
+    {
+      "heading": "Separate two very different goals",
+      "paragraphs": [
+        "“Go to space” can mean applying for a professional astronaut corps or participating in a commercial flight. The first is a career-selection process involving extensive qualifications, training and mission work. The second depends on a specific commercial operator, vehicle, mission and personal eligibility review. Neither is a simple travel booking, and neither guarantees that a particular person can fly. Start by deciding which meaning you have in mind.",
+        "A third way to make the goal tangible is to work in the space sector, visit an authorized launch-viewing site, or contribute to an astronomy project. Those do not mean you have gone to space, but they can help you learn about the work and decide whether to pursue a long-term route. Keep the language accurate so that a career, launch visit and flight experience do not blur together."
+      ]
+    },
+    {
+      "heading": "Treat NASA as one country-specific career path",
+      "paragraphs": [
+        "NASA’s current astronaut page says applicants must be U.S. citizens and lists education, professional experience, medical and other requirements. Those are requirements for NASA’s selection, not for every astronaut in the world; other national agencies recruit under their own rules. Selection calls are infrequent and criteria can change. If you are outside the United States, look up your own national space agency or an international partner’s official career page rather than assuming NASA’s path applies.",
+        "For a professional route, read the agency’s full current notice rather than a social post summarizing one bullet. Check the application window, required degree or equivalent experience, citizenship, medical standards and selection process. Then compare those requirements with your current qualifications and build a grounded plan. A degree or a flight license alone does not guarantee selection, and past astronaut profiles are not a substitute for the current notice."
+      ]
+    },
+    {
+      "heading": "Understand what commercial flight means",
+      "paragraphs": [
+        "Commercial human spaceflight involves operator-specific schedules, screening, training, safety procedures and terms. The FAA explains that U.S. law requires informed consent: operators must disclose risks, including known and unknown hazards, and the U.S. government has not certified a launch or reentry vehicle as safe for carrying humans. FAA licensing is not a promise that a flight is risk-free. Read the operator’s actual information and ask questions before considering any commitment.",
+        "Do not rely on a headline, a celebrity itinerary or an old advertised price to infer current availability. Operators can change missions, participant criteria and timelines. Ask for written information about medical screening, training, cancellation, refunds, insurance, emergency response and what happens if the mission is delayed. Have an independent qualified professional review any contract or medical question that needs expertise."
+      ]
+    },
+    {
+      "heading": "Check your own readiness and constraints",
+      "paragraphs": [
+        "Spaceflight involves unusual physical, psychological and financial demands. Do not diagnose your eligibility from a public checklist or hide a condition to qualify. If you are exploring a specific commercial opportunity, ask the operator’s medical screening team what process applies and discuss relevant personal health questions with a clinician. For NASA or another agency, use its stated medical criteria and selection contact; public biographies cannot establish your fitness.",
+        "Budget beyond any ticket figure you may encounter: travel to training or launch sites, time away from work, insurance limits, contract terms and an interrupted schedule can all matter. Do not borrow or liquidate assets based on an unverified offer. If the aspiration requires a major financial commitment, obtain independent financial and legal advice, and verify the company and contract directly."
+      ]
+    },
+    {
+      "heading": "Make a real first move",
+      "paragraphs": [
+        "Choose a route and make a one-page research sheet: agency or operator, official eligibility page, current status, application or inquiry contact, training, health screening, disclosed risk, financial terms and next date to verify. Put the date beside every time-sensitive requirement. If a page is vague or a seller pressures you to pay before answering basic questions, pause and request written details through the official organization.",
+        "If becoming an astronaut is the actual dream, the next action may be learning about a relevant science, engineering, medical, aviation or mission-support career. If a commercial flight is the goal, begin with the operator’s formal disclosure and an independent assessment. If neither route fits today, go watch a launch from an authorized public area or find an astronomy program. Those are meaningful steps on the subject without pretending to have secured a seat."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Become An Astronaut",
+      "url": "https://www.nasa.gov/humans-in-space/astronauts/become-an-astronaut/",
+      "publisher": "NASA",
+      "purpose": "States current NASA astronaut application qualifications, including U.S. citizenship; used as a U.S.-specific example rather than a global rule."
+    },
+    {
+      "title": "Human Space Flight",
+      "url": "https://www.faa.gov/space/human_spaceflight",
+      "publisher": "Federal Aviation Administration",
+      "purpose": "Explains the U.S. commercial human-spaceflight informed-consent framework, participant risk disclosures and that FAA does not certify vehicles as safe for humans."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "watch-a-rocket-launch-from-an-authorized-public-gallery",
+    "learn-to-fly-a-plane",
+    "analyze-an-exoplanet-transit-with-real-telescope-data"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

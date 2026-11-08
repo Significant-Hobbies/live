@@ -1,0 +1,60 @@
+{
+  "experienceSlug": "cook-a-meal-entirely-from-your-existing-pantry",
+  "title": "How to turn pantry odds and ends into a complete meal",
+  "description": "Turn a few pantry staples into a satisfying meal by sorting what needs using, choosing a flexible format, and building flavor with what is already at home.",
+  "intent": "A practical method for choosing and cooking a meal from existing ingredients, including how to make substitutions, balance a plate, and avoid unsafe guesses about storage.",
+  "sections": [
+    {
+      "heading": "Start with an honest inventory",
+      "paragraphs": [
+        "Put the groceries away and look through the refrigerator, freezer, and cupboards before choosing a recipe. Group what you find into a few useful roles: a base such as rice, pasta, bread, or potatoes; something filling such as beans, lentils, eggs, tofu, nuts, or safely stored leftovers; and vegetables or fruit that need attention. Note partial jars and small quantities. Check package directions, date labels, and storage notes rather than assuming an opened item is still usable. The point is to make a meal from real ingredients, not to force every stray item into one pan."
+      ]
+    },
+    {
+      "heading": "Choose a format that tolerates swaps",
+      "paragraphs": [
+        "Pick the meal shape first: a soup, grain bowl, pasta, fried rice, toast, omelet, or baked potato can all absorb substitutions better than a precise baking recipe. Then identify the ingredient that will anchor it and the one that needs using soon. A bowl might pair a cooked grain, beans, a crisp vegetable, and a bright dressing; soup can use a modest quantity of several vegetables with lentils or beans. Keep ingredients separate until you know how they behave. A strong, salty condiment can rescue a bland base, but add it gradually."
+      ]
+    },
+    {
+      "heading": "Build flavor in small steps",
+      "paragraphs": [
+        "Begin with the aromatics and fats you actually have: onion, garlic, scallion, oil, butter, or a spoonful of spice paste. If none are available, toast dry spices briefly or use herbs, citrus, vinegar, or a little pickle brine at the end. Add the longest-cooking ingredients first and quick-cooking greens or already-cooked foods later. Taste before adding more salt, especially when the meal includes canned goods, cheese, cured items, soy sauce, or stock. Reserve a little water from cooking pasta or beans to loosen a thick sauce without buying anything."
+      ]
+    },
+    {
+      "heading": "Make the plate feel complete",
+      "paragraphs": [
+        "The USDA MyPlate meal-planning guide recommends checking what is on hand, planning around existing foods, and looking for variety across food groups. Treat that as a useful prompt, not a rigid rule for a single plate: a vegetable, fruit, bean, egg, dairy food, or fortified alternative can add contrast or substance where it fits. Texture matters too. Add something crunchy to soft food, or a sharp pickle or citrus note to a rich dish. If the cupboard contains only a few ingredients, make a simple satisfying meal and record what would make the next version easier."
+      ]
+    },
+    {
+      "heading": "Keep the experiment safe and repeatable",
+      "paragraphs": [
+        "Pantry cooking should not become a reason to gamble on questionable food. Do not taste food to decide whether it is safe, and discard cans that are bulging, leaking, or badly damaged. Keep perishable ingredients chilled; refrigerate cooked leftovers promptly in shallow containers and follow current food-safety storage guidance. FoodSafety.gov advises refrigerating perishables within two hours, or within one hour above 90°F/32°C, and reheating leftovers to 165°F/74°C. If you cannot identify an ingredient or its handling history, leave it out. Write down the combination that worked and use that as a starting point for another no-shopping meal."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Meal Planning",
+      "url": "https://www.myplate.gov/sites/default/files/2024-06/TipSheet-24-Meal-Planning.pdf",
+      "publisher": "USDA MyPlate",
+      "purpose": "Supports inventorying freezer, cabinet and refrigerator foods, using foods already on hand, considering variety and planning leftovers."
+    },
+    {
+      "title": "4 Steps to Food Safety",
+      "url": "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety",
+      "publisher": "FoodSafety.gov",
+      "purpose": "Supports prompt refrigeration guidance for perishables and safe handling of cooked leftovers."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "make-pasta-from-scratch",
+    "make-your-own-condiments-from-scratch",
+    "roll-vegetarian-maki-for-a-picnic-at-home"
+  ],
+  "slug": "cook-a-meal-entirely-from-your-existing-pantry",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

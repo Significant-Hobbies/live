@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "trek-across-iceland",
+  "slug": "trek-across-iceland",
+  "title": "Plan an Iceland trek around the route you mean",
+  "description": "Compare Iceland’s Laugavegur trail with a longer crossing, then build a realistic itinerary around huts, weather checks and a clear turn-back plan.",
+  "intent": "Help the reader distinguish the well-known Laugavegur from an undefined “crossing Iceland” goal and plan around its actual hut and weather constraints.",
+  "relatedExperienceSlugs": [
+    "see-the-northern-lights-in-iceland-or-norway",
+    "hike-the-pacific-crest-trail",
+    "climb-a-mountain-over-4-000-metres"
+  ],
+  "sections": [
+    {
+      "heading": "Define the route before packing",
+      "paragraphs": [
+        "“Trek across Iceland” could mean a marked multi-day route or a much longer expedition across remote interior terrain. Decide which one you mean before comparing equipment lists. The Iceland Touring Association (Ferðafélag Íslands, or FÍ) describes the Laugavegur as about 55 kilometres and says most hikers spend five nights on it. That provides a bounded first goal with named huts and an established north-to-south booking direction.",
+        "A longer crossing is a different undertaking: more navigation, resupply, weather exposure, and contingency planning. Do not assume that a familiar trail’s hut information applies beyond that route. If you are new to multiday hiking, use a guided trip or the Laugavegur as a separate experience rather than turning an ambitious crossing into your first test."
+      ]
+    },
+    {
+      "heading": "Match days to the actual support",
+      "paragraphs": [
+        "FÍ says the usual Laugavegur season runs from late June to early September, and that hut accommodation is limited and should be booked ahead. Its FAQ notes that huts do not have Wi-Fi, phone coverage can be unstable, and wardens may tell hikers to delay departure when the weather is unsafe. These are practical planning constraints: choose a route and daily schedule that do not depend on constant connectivity or a rigid onward connection.",
+        "Decide whether you want to sleep in huts or camp, then check current booking conditions and capacity. Hut-to-hut travel reduces what you carry for sleeping but still requires food and clothing for conditions on the trail. Camping gives more independence while adding shelter, sleeping gear, and the need to check campsite rules. Neither choice removes the need to be able to pause."
+      ]
+    },
+    {
+      "heading": "Make weather part of the itinerary",
+      "paragraphs": [
+        "Before travel, learn how to check the official forecast for the actual highland area, not only Reykjavík. FÍ points hikers to the Icelandic Meteorological Office and says wardens monitor forecasts. Check again with wardens before setting out each day. A blue-sky photo from another week is not a forecast for your route.",
+        "Write down a simple decision rule before you start: if the warden advises waiting, the forecast or visibility is beyond your group’s competence, or a river or path looks unsafe, you stop and reassess with local guidance. Do not count a booking or a reserved bus as a reason to override conditions. Keep an extra day or a flexible exit where possible."
+      ]
+    },
+    {
+      "heading": "Make a systems rehearsal at home",
+      "paragraphs": [
+        "Try a full day walk with the shoes, pack, and layers you plan to use, then test how you handle a wet, windy stop. The point is not to forecast Iceland perfectly; it is to notice whether your equipment is reachable, whether your pack feels manageable, and whether your group can communicate when tired. Discuss who checks the forecast, who speaks to hut wardens, and how you respond when someone wants a slower day.",
+        "If you are planning a route beyond a marked hut trail, arrange instruction or an experienced guide and learn the navigation and emergency planning expected for that terrain. A map download does not guarantee that the route is passable or that your phone will have signal."
+      ]
+    },
+    {
+      "heading": "Take one concrete planning step",
+      "paragraphs": [
+        "Open FÍ’s current Laugavegur information and sketch a north-to-south itinerary with overnight stops, hut or camping decisions, and transport at both ends. Then check the forecast sources and cancellation terms for the dates you are considering. If you actually mean a broader crossing, write down the proposed route and ask an Icelandic trekking guide or relevant land manager which parts require additional expertise.",
+        "The aim is a plan that can absorb a delay. Book only after you understand what support exists, keep enough flexibility to heed local advice, and choose a shorter or guided option if the route demands more than your group can manage."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Everything you need to know about the Laugavegur huts",
+      "url": "https://www.fi.is/en/mountain-huts/faq",
+      "publisher": "Ferðafélag Íslands (Iceland Touring Association)",
+      "purpose": "Opened official hut/trail FAQ for route distance, typical time, season, bookings, communications, weather decisions and route direction."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "run-your-first-5k",
+  "slug": "run-your-first-5k",
+  "title": "Make your first 5K about finishing comfortably",
+  "description": "Use a beginner-friendly run-walk plan, choose a low-pressure event or route, and build in rest instead of chasing a time goal.",
+  "intent": "How can a new runner choose a realistic first 5K pathway and make race day feel manageable?",
+  "sections": [
+    {
+      "heading": "Choose what “first 5K” means",
+      "paragraphs": [
+        "A first 5K can be a timed community event, a charity run, or simply covering the distance on a familiar route. Decide whether your goal is to complete the distance continuously, use run-walk intervals, or take part with a friend. You do not need a pace target to make the finish meaningful.",
+        "If you prefer an organized event, read its official page for route surface, hills, start procedure, accessibility, participant rules and what happens if you walk. If you choose your own route, measure it in advance and pick a place where turning back or stopping is straightforward. A calm first attempt is easier to enjoy when basic logistics are settled."
+      ]
+    },
+    {
+      "heading": "Borrow structure, not someone else’s timeline",
+      "paragraphs": [
+        "The UK NHS Couch to 5K plan is one public example: it alternates walking and running three times a week over nine weeks, with rest days between runs. It builds toward running for 30 minutes, which may or may not cover a particular runner’s full 5K depending on pace. Treat it as an example plan for its intended audience, not a promise that every beginner reaches the same distance on the same date.",
+        "If you use a different program, check who created it, what starting ability it assumes and how it handles missed sessions. If you have health concerns, the NHS advises checking with a GP before starting. A clinician or qualified coach can help adapt the idea to your circumstances."
+      ]
+    },
+    {
+      "heading": "Make the first sessions repeatable",
+      "paragraphs": [
+        "Pick three realistic windows in your week rather than squeezing runs into every spare hour. Begin with the program’s first session or a walk-run format that feels manageable. Keep the route simple: a park loop with benches, a track, or a quiet neighborhood circuit can make it easy to finish without needing a ride home.",
+        "Notice how the session feels during and after, rather than trying to outrun a watch. If the intervals are too demanding, repeat a week or ask a qualified professional how to adjust. Progress is not invalidated by repetition. A common beginner mistake is increasing distance and speed together because one early outing felt surprisingly easy."
+      ]
+    },
+    {
+      "heading": "Practice the event’s practical details",
+      "paragraphs": [
+        "Before race day, learn where to arrive, where restrooms are, whether there is bag storage and when roads close. For an event, follow its official instructions about bibs, starting corrals and course cutoffs. For a self-run 5K, use a route you have already walked and check local rules for paths or shared trails.",
+        "Try the clothes and shoes you plan to use on an ordinary run; race day is a poor time to discover a rubbing seam or unfamiliar fit. Keep the morning routine uncomplicated. If walking breaks are part of the plan, decide that in advance so you do not interpret them as an emergency or a personal failure."
+      ]
+    },
+    {
+      "heading": "Mark the finish, then decide what comes next",
+      "paragraphs": [
+        "On the day, start at a pace that lets you settle into your breathing and pay attention to other participants. Follow marshals and course markers, and walk or stop if you need to. If you feel unwell or injured, seek help from event staff rather than forcing a finish for a time goal.",
+        "Afterward, record the distance, route, how you felt and what you would change. You might choose another 5K, a longer break or a different kind of movement. The accomplishment is completing your first deliberate 5K in a way that fits you. Your next step is to choose a route or event and select a beginner plan whose starting point matches your present routine."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Couch to 5K running plan",
+      "url": "https://www.nhs.uk/better-health/get-active/get-running-with-couch-to-5k/couch-to-5k-running-plan/",
+      "publisher": "National Health Service (England)",
+      "purpose": "Public example of a nine-week walk/run plan, three weekly runs with rest days, and health-check caveat; does not promise a 5K distance for every runner."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "run-a-marathon",
+    "qualify-for-the-boston-marathon",
+    "walk-a-long-distance-trail-over-100km"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

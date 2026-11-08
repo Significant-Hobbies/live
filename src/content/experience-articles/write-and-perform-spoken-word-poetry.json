@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "write-and-perform-spoken-word-poetry",
+  "slug": "write-and-perform-spoken-word-poetry",
+  "title": "Revise a poem by listening to it out loud",
+  "description": "Shape a spoken-word poem around breath, rhythm and one clear emotional turn, then revise it aloud before choosing how to perform it.",
+  "intent": "Answer how to move a spoken-word draft from page to performance through listening, breath-sized lines and a final rehearsal in the writer’s own voice.",
+  "relatedExperienceSlugs": [
+    "memorise-a-long-poem-or-speech",
+    "perform-on-a-stage-in-front-of-a-crowd",
+    "record-a-public-domain-audiobook-chapter"
+  ],
+  "sections": [
+    {
+      "heading": "Start with a moment, not a message",
+      "paragraphs": [
+        "Choose one moment you can picture and hear: a bus arriving in rain, a sentence you wished you had answered, or the silence after a door closes. Write what happened before explaining what it means. Concrete details give the listener something to hold while the poem’s larger idea develops.",
+        "Ask what changes between the beginning and the ending. The change might be small: the speaker notices something they had ignored, gives a memory a different name, or decides not to answer. Spoken word can hold anger, humor, tenderness, or uncertainty; it does not need to end with a lesson."
+      ]
+    },
+    {
+      "heading": "Write lines that a voice can carry",
+      "paragraphs": [
+        "Read a draft aloud while you write. Put a line break where a breath, thought, or shift in attention naturally occurs. If a sentence feels hard to say, try a simpler construction or a repeated phrase that can gather force as its meaning changes. Listen for alliteration and rhythm, but keep the words close to how you speak when the thought matters.",
+        "The Academy of American Poets notes that hearing a poem read aloud can make rhythm, melody, alliteration, and tone more apparent. Use that listening test to spot lines that look striking on a page but sound awkward in the mouth. You are not trying to imitate a favorite poet’s accent or gestures; find the cadence of your own sentence."
+      ]
+    },
+    {
+      "heading": "Use repetition to shape expectation",
+      "paragraphs": [
+        "Choose one phrase that can return with a different meaning. The first time it may sound like a question; later, the same words can sound like a refusal or a memory. Keep the repeated line short enough to land clearly. If every section repeats, the poem can become predictable, so decide where the phrase should change or disappear.",
+        "Mark the moment where the poem turns. Read up to that point and pause; then read the next section. If the turn is difficult to hear, add an image or action that makes the change tangible instead of explaining it in abstract terms."
+      ]
+    },
+    {
+      "heading": "Rehearse the room-sized version",
+      "paragraphs": [
+        "Record yourself reading once without trying to perform. Listen for swallowed endings, rushed transitions, and lines that need another breath. Make edits on the page, not just in your delivery. Then stand and read again, choosing where to look up, when to hold a pause, and how to end. Simple movement can support meaning, but do not choreograph every word.",
+        "If you are performing at a reading or open mic, find out the time limit, microphone setup, and whether you may use a page or phone. Practice with the same format. If you share a poem about someone identifiable, consider their privacy and your own boundaries before making the piece public."
+      ]
+    },
+    {
+      "heading": "Leave room for a poem to change",
+      "paragraphs": [
+        "A final rehearsal often reveals a word that is too literary for your voice, a line that needs silence, or an image that distracts from the turn. Change only what the reading shows you. Keep earlier drafts so you can recover a choice that worked better than the newest one.",
+        "Your next action is to read the poem into a voice memo and write down three things you hear: one strong sound, one confusing transition, and one place you want to pause. Revise those spots, then read it again to a trusted listener. The poem’s performance begins with listening to what your own words are doing."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Listen to Poetry on Your Commute",
+      "url": "https://poets.org/text/listen-poetry-your-commute",
+      "publisher": "Academy of American Poets",
+      "purpose": "Opened primary poetry education source about how listening reveals rhythm, melodic qualities, alliteration, tone, and the sound identity of a poem."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

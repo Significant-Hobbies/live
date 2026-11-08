@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "take-a-road-trip-with-your-best-friends",
+  "slug": "take-a-road-trip-with-your-best-friends",
+  "title": "Plan a road trip that leaves space for your friends",
+  "description": "Plan a friends’ road trip by agreeing on the budget, driving roles and one daily anchor while leaving unscheduled time for detours and quiet.",
+  "intent": "Help a close group design a road trip with shared expectations, safe driving roles and enough unscheduled time to enjoy each other’s company.",
+  "relatedExperienceSlugs": [
+    "road-trip-across-new-zealand",
+    "road-trip-with-no-fixed-destination"
+  ],
+  "sections": [
+    {
+      "heading": "Agree on what kind of trip this is",
+      "paragraphs": [
+        "Before choosing a route, ask each person what they want the trip to feel like: long drives and scenery, food stops, hikes, or relaxed time at one place. Also ask what would make the trip stressful: early starts, crowded attractions, tight budgets, or driving in unfamiliar terrain. Put those answers beside each other before deciding the itinerary.",
+        "Pick one anchor for each day—a place to reach, a meal to share, or an activity with a fixed booking—and leave other hours open. The empty space is useful. It gives the group time to sit over coffee, stop at an unexpected viewpoint, or rest without feeling that the plan is failing."
+      ]
+    },
+    {
+      "heading": "Talk about money and comfort before departure",
+      "paragraphs": [
+        "Agree how shared costs will work for fuel, lodging, tolls, parking, and groceries. Decide what is personal spending and what the group covers. If budgets differ, choose a plan that lets people opt out of an expensive activity without staying behind alone. A quick shared note can prevent awkward calculations after every meal.",
+        "Discuss music, temperature, quiet, and who gets carsick or needs breaks. Rotate control of the playlist and let people take turns being quiet. A long silence in the car does not need filling; close friends do not have to entertain one another every mile."
+      ]
+    },
+    {
+      "heading": "Give driving a clear owner",
+      "paragraphs": [
+        "Choose rested, licensed drivers for each leg and agree on how the group will respond if someone becomes tired. NHTSA recommends checking weather, traffic and road conditions, allowing enough time, reviewing directions even when using GPS, and planning stops to stretch, eat, or rest if drowsy. Those are practical constraints around which a flexible itinerary can be built.",
+        "Assign one passenger to handle navigation and messages so the driver can focus. Pull over before changing a route or checking a phone. Check the vehicle and emergency supplies before departure, and use official local guidance for road rules, weather, and remote routes."
+      ]
+    },
+    {
+      "heading": "Choose the route together",
+      "paragraphs": [
+        "Make a shortlist of two routes rather than presenting a finished itinerary as a decision. Compare total driving time, places to sleep, road type, and how easy it is to change plans. Ask each person to choose one stop they would be excited about and one thing they are willing to skip. If someone has mobility or dietary needs, include those in the route choice early.",
+        "Tell someone outside the car the rough route and expected arrival time, especially when traveling through remote areas. Keep the plan accessible offline if coverage may be limited.",
+        "Agree on a backup stop for any long leg, so a closed road or tired driver does not turn a flexible afternoon into an argument. Let the passenger handling navigation update the group before a change becomes urgent."
+      ]
+    },
+    {
+      "heading": "Make the group memory on the road",
+      "paragraphs": [
+        "Share small jobs: one person notices good rest stops, another keeps a photo record, another chooses a meal. Rotate those roles so no one becomes the permanent organizer. Ask before posting photos or stories that include someone else.",
+        "At the end of each day, ask whether tomorrow’s plan still works for everyone. A road trip can change when weather, energy, or interests change. Your next step is to schedule one planning call and agree on the budget, a first-day anchor, and who is driving the opening leg."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Summer Driving & Road Trip Tips",
+      "url": "https://www.nhtsa.gov/summer-driving-tips",
+      "publisher": "U.S. National Highway Traffic Safety Administration",
+      "purpose": "Opened primary government road-trip guidance on vehicle checks, route/weather/traffic planning, emergency supplies, time buffers and stopping/resting when drowsy."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

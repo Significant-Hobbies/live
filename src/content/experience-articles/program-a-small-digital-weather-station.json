@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "program-a-small-digital-weather-station",
+  "slug": "program-a-small-digital-weather-station",
+  "title": "How can you program a small weather station that teaches you something?",
+  "description": "Start with one microcontroller sensor, record a short labeled series, and test how placement changes a reading before adding features.",
+  "intent": "A focused project plan for programming one or two environmental readings and interpreting them as local sensor observations rather than official weather data.",
+  "sections": [
+    {
+      "heading": "Choose one sensor question",
+      "paragraphs": [
+        "Pick a question that a small device can answer: how does light vary between a window and a shaded corner, or how does a temperature reading change when the device is moved? The Micro:bit Educational Foundation describes its board’s temperature, compass, accelerometer, light and radio features and suggests small weather-station projects such as a rain gauge or temperature logger. Use a supported sensor project as your starting point.",
+        "Decide what a meaningful record looks like before coding. You may want a date, time, location label and one measured value. Keep the first version narrow so you can see whether the sensor reads and stores data consistently. A simple table is easier to understand than a screen full of several values you have not tested."
+      ]
+    },
+    {
+      "heading": "Build the smallest working program",
+      "paragraphs": [
+        "Start with the Foundation’s example or the editor’s beginner blocks. Make the device show a reading or store it at a clear interval. Test the simplest input first: does the display respond when light changes, or does the logger keep values after power is disconnected if the project is designed to do that? Follow the board’s official safety guidance for batteries, wires and connected components.",
+        "Change one block at a time and keep a copy of the working version before adding a feature. If a number stays fixed, check whether the program is reading the intended sensor and whether the sensor is available on your board version. Add helpful labels or units to the display so a future reader does not mistake a sensor value for a forecast."
+      ]
+    },
+    {
+      "heading": "Make a short baseline record",
+      "paragraphs": [
+        "Place the device in one location and take several readings under similar conditions. Note the time and setting instead of relying on memory. If readings jump, repeat the observation and inspect whether someone moved the device, a cloud passed or a hand warmed the board. A small microcontroller sensor is an educational instrument; do not treat its local reading as an official weather-station measurement.",
+        "Use a stable, safe position that will not be rained on or left in direct sun unless the project is designed for that exposure. Do not bring mains-powered equipment outdoors or modify electrical parts beyond the manufacturer’s instructions. If your project includes a rain gauge or wiring, follow the exact teacher or project guide and ask for supervision when needed."
+      ]
+    },
+    {
+      "heading": "Test placement as one variable",
+      "paragraphs": [
+        "Move the device to a second location and keep the program, logging interval and observation length the same. Compare the values and note the surroundings: window, shade, airflow or nearby electronics. The difference may come from the placement or the sensor, and one short trial cannot identify every cause. Write a question about what you would control next time.",
+        "A hand-held comparison can itself change temperature or shade the light sensor. Set the board down and step back for each reading. If you want to compare two sensors, place them together first to see whether their baseline readings differ, then swap their positions. Keep the raw values even if one looks odd; they help you diagnose the setup."
+      ]
+    },
+    {
+      "heading": "Improve the record, not just the display",
+      "paragraphs": [
+        "Once the first test works, add one feature that makes the data easier to interpret, such as a label, a maximum and minimum or a short display of recent readings. Check that the program still behaves as expected after a restart. Write down the board model, sensor choice and code version so you can reproduce the project later.",
+        "The next experiment could compare a sunny windowsill with a shaded spot at the same time, then repeat the comparison on another day. Be clear about what the device can and cannot tell you. A local sensor trace can spark a weather question; it does not replace calibrated instruments, forecasts or safety alerts."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Make a micro:bit weather station",
+      "url": "https://microbit.org/news/2020-07-06/make-a-microbit-weather-station/",
+      "publisher": "Micro:bit Educational Foundation",
+      "purpose": "Supports available micro:bit sensors and starter weather projects, including a data logger, thermometer and light sensor."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "evaluate-an-air-quality-sensor-with-a-community-group",
+    "build-a-sundial-and-compare-it-with-clock-time"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

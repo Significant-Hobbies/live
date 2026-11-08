@@ -1,0 +1,56 @@
+{
+  "experienceSlug": "stitch-a-patchwork-cushion-cover-from-scraps",
+  "slug": "stitch-a-patchwork-cushion-cover-from-scraps",
+  "title": "How do you turn fabric scraps into a cushion cover that fits?",
+  "description": "Plan a patchwork cushion cover from saved fabric by testing a block layout, adding seam allowances, and checking the finished fit on an insert.",
+  "intent": "Explain how to make a manageable patchwork cushion cover while avoiding common measuring and assembly mistakes that leave the finished cover too small or awkward to use.",
+  "sections": [
+    {
+      "heading": "Measure the insert before cutting fabric",
+      "paragraphs": [
+        "Start with the cushion insert you plan to use, not a pattern size remembered from another project. Measure its coverable face and decide whether you want a snug or relaxed finish. The patchwork tutorial from Treasurie treats the front as a small quilt top and uses an envelope back, where overlapping fabric closes the opening without a zipper or buttons. It is one workable construction method; adapt the dimensions to your insert and fabric.",
+        "Sort scraps by fabric weight and condition. Similar weights are easier to sew together because a very thick denim patch can pull against a fine cotton square. Wash fabric first if it is dirty or likely to shrink, and press it flat before measuring. Remove frayed edges, damaged areas and stiff seams that would make the finished cushion uncomfortable.",
+        "Sketch the cover on paper. A simple grid of squares is forgiving because repeated pieces can be rearranged until the colors balance. Write down the finished dimensions and keep the seam allowance visible on the sketch; forgetting that seams consume fabric is a common reason a patchwork front ends up undersized."
+      ]
+    },
+    {
+      "heading": "Test the patchwork layout on the floor",
+      "paragraphs": [
+        "Cut a few sample pieces first and arrange them in a block. A four-patch unit, made from four squares, is an easy starting structure. You can repeat the unit to build a larger front or alternate it with larger pieces. Lay the patches next to the insert or paper template and check that the overall panel will cover the face after the seams are joined.",
+        "Look for accidental clusters of the same color or print. Rotate pieces before sewing, and take a photo of the arrangement you like. If several scraps are visually busy, add a quiet fabric between them. The goal is a pattern you enjoy seeing every day, not mathematical symmetry unless that is what you want.",
+        "Cut matching pieces with a ruler and fabric scissors or a rotary cutter on a suitable mat. If using a rotary cutter, close and store its blade between cuts and keep fingers clear of the cutting path. Make only a small batch of pieces until you are confident the measurements and seam allowance produce the size you need."
+      ]
+    },
+    {
+      "heading": "Join the front in a repeatable order",
+      "paragraphs": [
+        "Sew neighboring pieces into rows, keeping the chosen seam allowance consistent. Press the seams as the fabric allows, then join the rows and check the panel against your template. Small inaccuracies can accumulate; if one seam wanders, correct it before attaching more rows rather than hoping the final edge will hide the difference.",
+        "When the front is complete, measure it again. Cut the back pieces to overlap enough for the insert to fit while keeping the opening closed during ordinary use. The envelope construction shown in the tutorial avoids hardware and makes the cover easier to remove, but the overlap needs to be generous enough that it does not gape when the cushion is compressed.",
+        "Pin or clip layers with the right sides together, sew around the perimeter and finish the raw edges with an appropriate method for your fabric. Leave the opening between the back pieces clear. Turn the cover right side out and gently shape the corners before inserting the cushion."
+      ]
+    },
+    {
+      "heading": "Check the fit and finish",
+      "paragraphs": [
+        "Insert the cushion without forcing it through the opening. If the fit is tight, check whether the seams or overlap are using more space than planned. A slightly fuller look can be comfortable, but fabric strained at the seams may tear with use. If the cover is loose, consider adjusting the back overlap or taking in a small amount at the sides.",
+        "Trim loose threads and inspect every seam under gentle pressure. Note the fabric care instructions and consider whether different scraps will shrink or fade at different rates. If the cover will be washed often, a simple, compatible fabric selection can make maintenance less frustrating.",
+        "A useful next step is to make a small sample four-patch from the scraps before cutting the final cover. It lets you test the color arrangement and sewing accuracy on a piece you can keep as a coaster or pocket, and it preserves the larger fabric pieces until the plan is proven."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How to Make a Patchwork Cushion The Easy Way",
+      "url": "https://blog.treasurie.com/how-to-make-a-patchwork-cushion/",
+      "publisher": "Treasurie",
+      "purpose": "Provides a patchwork cushion method using a four-patch front and envelope back; supports describing that construction choice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "mend-a-favourite-garment-with-visible-stitches",
+    "stencil-a-reusable-fabric-bag",
+    "bind-a-pocket-notebook-by-hand"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

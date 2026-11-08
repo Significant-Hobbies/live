@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "attend-a-human-library-conversation",
+  "slug": "attend-a-human-library-conversation",
+  "title": "Prepare for a thoughtful Human Library conversation",
+  "description": "Prepare for a Human Library conversation by choosing a topic, asking open questions, and treating the person sharing their experience as a person, not a spokesperson.",
+  "intent": "How can you take part in a Human Library conversation with curiosity and respect? This guide adds a practical plan for listening, asking questions, and protecting boundaries.",
+  "sections": [
+    {
+      "heading": "Choose a book because the topic interests you",
+      "paragraphs": [
+        "Read the event’s descriptions and choose a person whose subject you genuinely want to understand. A Human Library uses conversations with people who volunteer to share experience connected with a topic; it is not a chance to demand that someone defend an entire group. Human Library NYC describes its local format as dialogue intended to challenge stereotypes. Check the local event’s own format and rules rather than assuming every event works identically.",
+        "Check the local event’s format before booking: conversation length, group size, language, access arrangements, and whether you need to reserve a slot. Each event is run by local organizers, so do not assume the schedule or rules are identical everywhere. Arrive with enough time to find the check-in desk and read its current guidance."
+      ]
+    },
+    {
+      "heading": "Prepare questions that leave room for a real answer",
+      "paragraphs": [
+        "Think of one open question, such as “What do you wish people understood better?” or “Which part of your experience are you comfortable talking about?” American University Library’s reader guide for its own Human Library event encourages readers to keep questions on topic and treat the dialogue like a normal conversation. Human Library NYC offers different local suggestions, so let the event’s own guidance shape your approach.",
+        "You do not need to write a script. A short opening—“Thank you for speaking with me; what would you like me to know first?”—gives the other person control over where to begin. Avoid asking for traumatic details, medical records, private family information, or proof that their experience is representative. Curiosity does not create an obligation to disclose."
+      ]
+    },
+    {
+      "heading": "Listen for the person, not a category",
+      "paragraphs": [
+        "Let the speaker finish before you form a reply. If you hear something unfamiliar, ask what a term means rather than guessing. A gentle follow-up such as “Would you like to say more about that?” gives them room to decide. You can also share your own view, but make it an honest contribution rather than a debate trap.",
+        "A person’s story is not a universal explanation. Notice when you are tempted to turn one conversation into a claim about everyone who shares a label. You can leave with a changed assumption, a new question, or simply a clearer sense of the limits of what you now know."
+      ]
+    },
+    {
+      "heading": "Keep privacy and boundaries in view",
+      "paragraphs": [
+        "Follow the local event’s privacy rules. American University Library’s event guidance says its conversations are confidential and asks readers not to quote “books” without permission; Human Library NYC’s reader page says recording is not allowed at its events and both parties may end the conversation. These are event-specific rules, so check the rules for the event you attend. Do not record, photograph or post someone’s story without explicit permission.",
+        "The person may decline a question or end the conversation. If the discussion becomes uncomfortable, you can ask to pause or invite a librarian to help. Do not request off-site contact as an assumed next step. If you want to continue learning, ask for a public resource or a topic-based book recommendation instead."
+      ]
+    },
+    {
+      "heading": "Leave with one grounded next action",
+      "paragraphs": [
+        "Afterward, write down what surprised you without identifying details. Separate what the person said from your interpretation, and note one thing you want to learn from a book, organization, or additional viewpoint. If you appreciated the conversation, thank the person and follow any event feedback process.",
+        "For a first visit, choose one book, bring one open question, and give the other person room to steer. Your next step can be simple: check the local event’s guidelines and choose a time that allows you to arrive calmly."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Guidelines for Readers — Human Library: UnJudge Someone",
+      "url": "https://subjectguides.library.american.edu/humanlibrary/guidelinesforreaders",
+      "publisher": "American University Library",
+      "purpose": "Supports reader rules for the American University Library Human Library event: topic relevance, confidentiality, no quotation without permission and the right to end a loan."
+    },
+    {
+      "title": "For Readers",
+      "url": "https://www.humanlibrarynyc.org/for-readers.html",
+      "publisher": "Human Library NYC",
+      "purpose": "Primary guidance for Human Library NYC events, including its dialogue format, no-recording rule and each party’s right to end a conversation."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "run-a-household-listening-circle",
+    "make-a-friendship-map-together",
+    "hold-a-playlist-listening-exchange"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

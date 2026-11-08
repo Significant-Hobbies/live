@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "preserve-a-season-jam-pickle-ferment",
+  "slug": "preserve-a-season-jam-pickle-ferment",
+  "title": "Choose the preservation method before the produce ripens",
+  "description": "Match a seasonal glut to freezing, refrigerator pickles, fermentation or a tested canning recipe, and keep the method’s food-safety steps intact.",
+  "intent": "A decision guide for choosing among freezing, refrigerated pickles, fermentation and shelf-stable canning without adapting tested safety instructions.",
+  "sections": [
+    {
+      "heading": "Decide how you plan to use the food",
+      "paragraphs": [
+        "Before buying a case of fruit or hauling home a garden harvest, choose the job the preserved food should do. A freezer bag of berries can go into winter porridge; a jar of refrigerator pickles is for the next few weeks; a shelf-stable preserve needs a tested canning process. Those are different projects with different storage assumptions. Write down where the finished food will live and when you expect to eat it before choosing a recipe.",
+        "Use small batches for the first try. A single punnet of berries, a few cucumbers or one head of cabbage lets you learn the method without risking a whole season’s harvest. Select produce that is fresh and in sound condition. Damaged, moldy or overripe ingredients may not be fixed by preserving them."
+      ]
+    },
+    {
+      "heading": "Choose the method that fits your kitchen",
+      "paragraphs": [
+        "Freezing is a straightforward choice when you have reliable freezer space and do not need jars that can sit on a pantry shelf. Refrigerated pickles are another short-term option, but must stay refrigerated and should follow a recipe meant for that method. Lacto-fermentation is its own controlled process, with a tested recipe, appropriate salt and oxygen management; it is not simply vegetables left in a jar until they smell interesting.",
+        "If you want shelf-stable jam, fruit or pickles, use a current research-tested canning recipe from the National Center for Home Food Preservation or another authoritative extension source. Do not take a family fridge-pickle recipe and process it for pantry storage. The recipe’s proportions, jar size, preparation and processing method work together."
+      ]
+    },
+    {
+      "heading": "Treat a canning recipe as a complete process",
+      "paragraphs": [
+        "Read the full recipe before shopping. Check the specified ingredient forms, acidity, jar size, pack style, equipment and altitude adjustment. Write any required timing beside the canner before the food is ready. The National Center for Home Food Preservation warns that unsafe methods and untested recipes can create serious risk; its guidance also says not to improvise processing for larger jars when a tested process is unavailable.",
+        "Do not reduce vinegar, salt or sugar, add extra vegetables, thicken the mixture or substitute a jar size unless the recipe’s author explicitly permits the change. If a family tradition is important, preserve it as a refrigerated or frozen version when a tested shelf-stable method cannot be verified. Label it with the storage method and date."
+      ]
+    },
+    {
+      "heading": "Use one seasonal ingredient as a small study",
+      "paragraphs": [
+        "A useful first project is to buy one seasonal fruit and divide it between two safe uses: freeze some plain for baking, then make a small refrigerator preserve using a recipe designed for refrigeration. Taste both later and note what changed in sweetness, texture and convenience. For vegetables, choose a tested fermentation recipe and follow its ingredients, salt and temperature instructions; the University of Minnesota Extension distinguishes lactic-acid fermentation from alcohol fermentation and recommends tested recipes for fermented produce.",
+        "Keep the project narrow. Do not turn the same batch into jam, canned fruit and fermented vegetables by changing ratios on the fly. Each method has its own purpose and process. If there is mold, a damaged jar, an unexpected odor or uncertainty about storage, do not taste it; consult the source or discard it."
+      ]
+    },
+    {
+      "heading": "Make the harvest useful next month",
+      "paragraphs": [
+        "Label every container with what it is, when it was made, and whether it belongs in the refrigerator, freezer or pantry. Store it according to the recipe, and plan a meal that will use it rather than making jars only for their appearance. A winter breakfast with frozen local berries or a sandwich with refrigerator pickles can make the season visible long after the market has changed.",
+        "Start by checking what is in season near you and choosing a single ingredient with a reliable tested recipe. If canning, use the exact method from a current authoritative source. If the only recipe you have is untested, choose freezing or another method supported by a tested process instead."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "General Canning FAQs",
+      "url": "https://nchfp.uga.edu/faqs/general-canning/category/faq-canning",
+      "publisher": "National Center for Home Food Preservation, University of Georgia",
+      "purpose": "Explains that safe canning requires an up-to-date research-tested recipe and warns against unsupported processing and jar-size substitutions."
+    },
+    {
+      "title": "Preserving food at home: Fermentation",
+      "url": "https://extension.umn.edu/food/preparing/cooking-at-home/food-preservation/fermentation",
+      "publisher": "University of Minnesota Extension",
+      "purpose": "Distinguishes lactic-acid produce fermentation from alcohol fermentation and recommends tested recipes, fresh produce and specified salt."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "exchange-handwritten-recipes-through-the-post",
+    "create-a-family-cookbook-with-old-recipes",
+    "cook-a-meal-entirely-from-your-existing-pantry"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

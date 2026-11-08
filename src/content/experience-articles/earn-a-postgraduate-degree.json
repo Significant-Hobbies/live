@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "earn-a-postgraduate-degree",
+  "slug": "earn-a-postgraduate-degree",
+  "title": "Questions that reveal whether a postgraduate program fits",
+  "description": "Compare postgraduate programs by mentoring, completion expectations, funding, research fit and the everyday work required to finish.",
+  "intent": "How can I compare postgraduate programs beyond a name or ranking? This helps prospective students gather evidence about fit and obligations before applying.",
+  "sections": [
+    {
+      "heading": "Start with the work you want to do",
+      "paragraphs": [
+        "A postgraduate degree can mean a taught course, a professional qualification, a research master’s or a doctorate. The title alone does not tell you what your week will contain. Write down the work you hope the program enables: advanced practice, a research role, a career change, or sustained study of a specific question. Then check the curriculum and assessment pattern against that aim. A program with a famous name may be a poor fit if its methods, format or support do not match the work you want.",
+        "For research programs, look at faculty work and ask whether prospective supervisors have room to advise students in your area. For taught degrees, compare required modules, elective flexibility, placement or project components, and how much work happens in person. These are questions to verify on the program’s own current pages and in conversations with students, not universal features of every degree."
+      ]
+    },
+    {
+      "heading": "Ask about time and completion",
+      "paragraphs": [
+        "Ask the department what a typical completion path looks like, what milestones trigger review, and what commonly delays students. Cornell Graduate School’s question list recommends asking about average time to completion, retention and reasons students do not finish. Those answers help distinguish the formal duration in a catalog from the lived duration students experience. Ask for definitions and recent context; an average without a cohort or explanation can conceal large differences.",
+        "A postgraduate workload may include coursework, lab or field work, teaching, placements, writing and job applications. Ask current students to describe an ordinary week during a busy period, not only orientation week. If the program is part time or alongside employment, check which classes or milestones require fixed daytime availability."
+      ]
+    },
+    {
+      "heading": "Understand supervision and academic culture",
+      "paragraphs": [
+        "For research work, ask how a supervisor is selected, how often meetings happen and what happens if the match does not work. Cornell’s research advising guidance treats choosing an advisor as a major early responsibility. That advice reflects Cornell’s graduate structure; other institutions may allocate supervisors differently. Find out what the relevant process is in the program you are considering.",
+        "Ask students how feedback works: do they receive comments on drafts, how are disagreements handled, and what support exists when a project stalls? A highly cited scholar can be an excellent mentor for some students and unavailable for others. Try to learn about working practices rather than infer mentoring quality from reputation alone."
+      ]
+    },
+    {
+      "heading": "Read the funding terms closely",
+      "paragraphs": [
+        "Request the full funding picture in writing: tuition, stipend or salary, fees, summer support, teaching obligations, health coverage and conditions for renewal. Ask what happens if a project takes longer than expected. Cornell’s program questions explicitly raise reliability of support from year to year and whether students need to teach. Those questions are useful across fields, but any actual offer depends on the institution and country.",
+        "Compare the cost of attendance with realistic living costs in the location. Do not assume that an assistantship or scholarship covers every expense. Ask whether the award is guaranteed, competitive, taxable under local rules, or tied to work hours. For a major financial commitment, a qualified financial or student-aid adviser can help interpret your circumstances; this article cannot determine affordability for you."
+      ]
+    },
+    {
+      "heading": "Make a fit matrix and talk to people",
+      "paragraphs": [
+        "Create a simple table with rows for curriculum, supervision, funding, time, location, accessibility and career outcomes. For each program, write evidence and a question still unanswered. Avoid assigning false precision such as a score of 9.2 for “culture.” The point is to reveal trade-offs and gaps, especially if one offer is a better research match but has less certain support.",
+        "Speak with a current student and, if possible, a recent graduate who can describe what happened after the program. Ask what surprised them, what they would verify earlier, and what kind of student tends to thrive there. Students cannot promise the same experience for you, but they can provide details absent from marketing material. Your next action is to send each program the same three questions about funding, milestones and advising, then compare the actual replies."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Important Questions to Ask",
+      "url": "https://gradschool.cornell.edu/wp-content/uploads/2024/06/Important-Questions-to-Ask-1.pdf",
+      "publisher": "Cornell University Graduate School",
+      "purpose": "Supports questions about time to completion, financial support, retention, reasons for non-completion, mentoring and graduate-student experience; advice is not universal policy."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "learn-a-second-discipline-deeply",
+    "get-featured-in-a-major-publication",
+    "learn-to-code-and-ship-an-app"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

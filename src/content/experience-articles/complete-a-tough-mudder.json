@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "complete-a-tough-mudder",
+  "slug": "complete-a-tough-mudder",
+  "title": "Pick the Tough Mudder format that fits your day",
+  "description": "Choose a Tough Mudder event by comparing the current 5K, 15K and endurance formats, obstacle expectations and your own training plan.",
+  "intent": "Help the reader choose an appropriate Tough Mudder event from the current official format and plan for participation without assuming distance or availability.",
+  "relatedExperienceSlugs": [
+    "compete-in-an-obstacle-course-race",
+    "run-a-race-you-had-to-train-for",
+    "climb-a-mountain-over-4-000-metres"
+  ],
+  "sections": [
+    {
+      "heading": "Start with the 2026 event menu",
+      "paragraphs": [
+        "The current Tough Mudder first-time page lists four 2026 formats: 5K, 15K, Infinity, and World’s Toughest Mudder. It describes the 5K as 12 or more obstacles and roughly one and a half to two hours, and the 15K as 20 obstacles and roughly three to four hours. Infinity is an eight-hour format of repeated 5K and 15K laps; World’s Toughest is listed as 24 hours of repeated five-mile loops. This is a current snapshot, not a promise that every format runs at every venue or remains unchanged.",
+        "Do not rely on an old article that calls the event a single ten-mile distance. Open the official event page for your location and date, then compare the listed distance, obstacles, participant rules, and schedule. If the event you want is not available, do not assume the next format is a simple substitute."
+      ]
+    },
+    {
+      "heading": "Choose by the experience you want",
+      "paragraphs": [
+        "If you want to share a single muddy day with friends, the 5K may be the clearest format to investigate. If you want a longer route and more obstacles, compare the 15K with your current running and hiking base. Infinity and the 24-hour event are endurance formats: choose them only if repeated laps and long-duration logistics are part of your goal, not because the name sounds more impressive.",
+        "Make a list of what you are excited about and what you would prefer to avoid. The official first-timer page mentions obstacles that may involve tight spaces, heights, live wires, or cold water. Read the event’s current obstacle information and rules, and contact the organizer about accommodations or participation questions."
+      ]
+    },
+    {
+      "heading": "Build readiness around a modest rehearsal",
+      "paragraphs": [
+        "Before committing, do a local practice session that resembles the basic demands you expect: a comfortable jog or brisk walk, stairs or hills, grip work, and getting up and down from the ground. Keep the effort within your current ability and stop if you feel unwell. This is not an event training prescription; a qualified coach or clinician can help if you have a health concern or are unsure how to prepare.",
+        "Practice with the shoes, clothing, and group arrangement you expect to use, but avoid buying specialized gear before checking the event’s rules. Decide whether you and your friends plan to stay together or complete obstacles at different paces. Helping each other is part of the social appeal, but no one should feel pressured into an obstacle they do not want to attempt."
+      ]
+    },
+    {
+      "heading": "Read the event rules and logistics",
+      "paragraphs": [
+        "Open the official participant information for your exact event. Confirm arrival window, parking or transit, bag rules, obstacle participation rules, age or guardian requirements, refund and transfer conditions, and how the organizer handles weather or course changes. Do not infer a rule from last year’s event or from another country’s page.",
+        "Decide how you will manage the day around travel, food, water, clean clothes, and a way home. Keep plans flexible enough that you can leave early if you need to. If an obstacle feels unsuitable, ask staff for the current bypass or alternative process rather than improvising."
+      ]
+    },
+    {
+      "heading": "Make a choice without promising a finish",
+      "paragraphs": [
+        "The goal can be to attempt a format, move through the course at your own pace, and make deliberate decisions at each obstacle. Finishing time and completion are not fully under your control; course conditions, other participants, and your own body can change how the day goes. Pick an event you would still value if you chose to skip one challenge or stop early.",
+        "Your next action is to compare the 2026 official format page with the location-specific event listing and write down the course, obstacles, and rules you need to confirm. If you are new to obstacle events, ask an experienced friend to help you choose a manageable distance and train for that actual course."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "First Time: Tough Mudder",
+      "url": "https://toughmudder.com/first-time/",
+      "publisher": "Tough Mudder",
+      "purpose": "Opened official 2026 first-timer page for current event formats, stated obstacle counts and approximate duration ranges; event-by-event availability requires separate confirmation."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

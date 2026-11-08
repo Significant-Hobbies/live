@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "bake-sourdough-weekly-for-a-year",
+  "slug": "bake-sourdough-weekly-for-a-year",
+  "title": "Make sourdough a weekly rhythm, not a daily test",
+  "description": "Plan a year of sourdough baking around one repeatable loaf, a realistic starter schedule and a simple record of what changed each week.",
+  "intent": "How can I bake sourdough weekly for a year without letting the starter dictate every day? This builds a flexible weekly loop and useful baking notes.",
+  "sections": [
+    {
+      "heading": "Pick one loaf as your baseline",
+      "paragraphs": [
+        "Choose a recipe you can repeat with the time, tools and flour you actually have. Keep the first version simple: one flour blend, one dough shape and one baking method. Changing three variables at once makes it hard to tell why a loaf was tight, flat or more sour than you expected. A year gives you many chances to experiment; the baseline gives the experiments a reference point.",
+        "Before the first week, make a short checklist of what you need: a kitchen scale if the recipe is written by weight, a container for starter, a bowl, a way to cover dough and a safe way to bake it. Use a tested recipe from a source you trust and follow its specific timing and food-handling instructions."
+      ]
+    },
+    {
+      "heading": "Choose a starter routine that matches your week",
+      "paragraphs": [
+        "A sourdough starter is a culture you feed and keep for later bakes. King Arthur Baking describes two basic maintenance patterns: room-temperature storage with frequent feeding or refrigeration with roughly weekly feeding. Its refrigerated-starter method uses equal weights of retained starter, flour and water, then returns the starter to the refrigerator after a short room-temperature rest. This is one baker’s tested approach, not the only successful routine.",
+        "Tie maintenance to an existing habit: after your weekly grocery trip, before Sunday dinner, or when you make the dough. Keep a note of the day you fed it. If life interrupts the rhythm, do not try to make up for every missed feeding at once; follow the recipe’s recovery guidance and wait until the starter is active before using it."
+      ]
+    },
+    {
+      "heading": "Give the week a simple sequence",
+      "paragraphs": [
+        "Set a loose schedule with three anchors: feed the starter, mix the dough, and bake. Decide which parts can happen while you are already home. You may mix after work and bake the next day, or prepare dough on a weekend morning. The schedule in a chosen recipe should guide fermentation; room temperature and starter activity can affect the pace, so look for the recipe’s visual cues as well as the clock.",
+        "Leave space around the bake. A loaf can take more attention than a grocery-store loaf, and forcing every step into a narrow window makes the hobby feel like a deadline. If a week is crowded, keep the starter alive and choose an easier bake from the same dough or postpone the loaf. A year of practice does not require perfect weekly output."
+      ]
+    },
+    {
+      "heading": "Record one useful observation",
+      "paragraphs": [
+        "Write the date, recipe, flour, room conditions if known, timing, dough feel and result. Keep the note short: “dough felt slack after shaping,” “crust browned faster,” or “crumb was tighter than last time.” Add one adjustment for the next loaf, such as using a wider bowl to watch expansion or shaping more gently. Avoid making several changes in response to one loaf.",
+        "Photograph the crumb only if the picture will help you compare. Keep the recipe name with it so a year of images does not become an unlabeled gallery. A loaf that failed is useful evidence: note where the process diverged and return to the recipe’s cues next week rather than trying an unrelated method."
+      ]
+    },
+    {
+      "heading": "Let the practice evolve deliberately",
+      "paragraphs": [
+        "After several repeats, choose one experiment: a different flour, a new shape, a seeded topping or a slightly different schedule from a reliable recipe. Keep the rest of the process steady long enough to notice the effect. If you enjoy variety more than comparison, make the experiment the new baseline and record why you changed it. There is no need to chase a dramatic hole pattern or a particular sourness.",
+        "At the end of the year, choose a few notes and recipes worth keeping. You may find that the best outcome is a dependable loaf, a set of troubleshooting observations or a shared weekly ritual. Start by choosing the loaf you will bake twice before changing anything."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Feeding and Maintaining Your Sourdough Starter",
+      "url": "https://www.kingarthurbaking.com/recipes/feeding-and-maintaining-your-sourdough-starter-recipe",
+      "publisher": "King Arthur Baking Test Kitchen",
+      "purpose": "Supports one source-specific maintenance example: room-temperature daily feeding versus refrigerated weekly maintenance, equal-weight starter/flour/water feed and activity cues before baking."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "make-cheese-from-scratch",
+    "make-pasta-from-scratch",
+    "preserve-a-season-jam-pickle-ferment"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

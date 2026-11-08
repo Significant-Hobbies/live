@@ -70,9 +70,19 @@ import {
 } from 'lucide-react';
 import { GetStartedView } from '~/components/public-pages/get-started';
 import { Link2, Map as MapIcon } from 'lucide-react';
-import BlogIndex, { PostCard, PostCardContent } from '~/components/public-pages/blog-index';
+import { BlogIndexView, PostCard, PostCardContent } from '~/components/public-pages/blog-index';
 import BlogPage, { BlogContent, RelatedCard } from '~/components/public-pages/blog-detail';
-import { getEditorialArticle } from './editorial-content';
+import {
+  ExperienceArticleAction,
+  ExperienceArticleReferences,
+} from '~/components/experience-article-context';
+import { getEditorialArticle, editorialArticles } from './editorial-content';
+import { articleIndexPath, articlePage, type ArticleFilters } from './article-discovery';
+import {
+  ArticleFiltersForm,
+  ArticleCategoryLinks,
+  ArticlePagination,
+} from '~/components/article-discovery-controls';
 import CategoryPage from '~/app/hobbies/category/[category]/page';
 import Image from 'next/image';
 import { ArrowRight, BookOpen, Compass, Users } from 'lucide-react';
@@ -201,7 +211,7 @@ const pages: Record<string, () => ReactNode> = {
       validationError: null,
       handleChange: () => undefined,
     }),
-  '/blog': BlogIndex,
+  '/blog': () => BlogIndexView(),
   '/experiences/collections': CollectionsIndex,
   '/journeys': JourneysIndex,
   '/bucket-lists': BucketListsIndex,
@@ -422,6 +432,11 @@ function renderPublicTree(tree: ReactNode, path: string): string {
       PostCardContent,
       BlogContent,
       RelatedCard,
+      ArticleFiltersForm,
+      ArticleCategoryLinks,
+      ArticlePagination,
+      ExperienceArticleAction,
+      ExperienceArticleReferences,
       CostStat,
       CategoryPill,
       DifficultyDots,
@@ -473,6 +488,11 @@ export async function renderPublicCategorySource(slug: string): Promise<string |
 export async function renderPublicBlogSource(slug: string): Promise<string | null> {
   if (!getEditorialArticle(slug)) return null;
   return renderPublicTree(await BlogPage({ params: Promise.resolve({ slug }) }), `/blog/${slug}`);
+}
+
+export function renderPublicBlogIndexSource(filters: ArticleFilters): string {
+  const page = articlePage(editorialArticles, filters);
+  return renderPublicTree(BlogIndexView(filters), articleIndexPath(page));
 }
 
 export async function renderPublicSearchSource(): Promise<string> {

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "complete-an-in-person-first-aid-and-cpr-course",
+  "slug": "complete-an-in-person-first-aid-and-cpr-course",
+  "title": "How to choose an in-person first aid and CPR course",
+  "description": "Compare first aid and CPR course formats, identify the practical skills you need to practise, and prepare for an instructor-led class.",
+  "intent": "Helps a learner select a relevant in-person first aid and CPR class and make the most of coached practice, beyond a general course listing.",
+  "sections": [
+    {
+      "heading": "Start with the situations you need to prepare for",
+      "paragraphs": [
+        "Before enrolling, consider why you want training: general confidence, workplace requirements, caring for children, or a role that calls for a specific level of response. The right class depends on that context. Ask your employer or governing body about accepted providers and course requirements if certification is needed; a general public class may not meet a workplace or professional standard.",
+        "The American Red Cross offers first aid training in classroom, online and blended formats, with blended learning combining online work and hands-on skills sessions. For this experience, look for a class that includes in-person practice. Confirm what the course covers, who it is designed for, how skills are assessed and what proof of completion it provides. Course names can sound similar while serving different audiences."
+      ]
+    },
+    {
+      "heading": "Check the practical details before booking",
+      "paragraphs": [
+        "Read the current class description from the provider rather than relying on a search snippet or an old certificate. Confirm whether CPR, AED use and first aid are included together or offered separately, whether you need to complete online learning first, and whether the session has a practical skills check. Ask what to bring and whether there are participation requirements that matter for you.",
+        "If you need an accommodation, ask the provider in advance how the practice can be adapted and whether that still satisfies the course requirements relevant to your role. Do not assume an instructor can change an assessment on the day. If the course is for a regulated job or volunteer role, get the requirement from that organisation before paying for a class."
+      ]
+    },
+    {
+      "heading": "Arrive ready to practise, not to perform",
+      "paragraphs": [
+        "Wear clothing that lets you move comfortably and arrive with enough time to settle in. Bring questions about the kinds of situations you are likely to encounter, while letting the instructor teach the official sequence and current guidance. First aid and CPR decisions are time-sensitive and depend on the person and circumstances; a blog checklist is not a substitute for training, local emergency services or professional care.",
+        "During practice, ask for a demonstration again if a step is unclear. Notice where your hands go, how the instructor positions equipment, what verbal checks accompany an action, and when the emergency call or AED enters the sequence. If a skill feels awkward, ask for another coached attempt rather than silently memorising what you think you saw."
+      ]
+    },
+    {
+      "heading": "Use the assessment as feedback",
+      "paragraphs": [
+        "A skills assessment is a chance to find out whether you can carry out the steps in the way the course expects. Listen to corrections without rushing to defend your first attempt. If you do not pass a component, ask what practice or next step is available and whether a retake is required. Training should leave you knowing both what you can do and when to get help.",
+        "A useful note after class is not a transcript of the instructor. Write down the provider, course date, certificate details if applicable, and one question you want clarified at refresher training. Follow the provider’s advice about when a credential expires or renewal is expected; validity varies by course and organisation."
+      ]
+    },
+    {
+      "heading": "Turn completion into readiness",
+      "paragraphs": [
+        "After the class, keep any completion record where you can find it and learn how to contact emergency services in your area. If you are learning for a workplace, family or community role, ask whether your training needs periodic renewal and where the relevant local protocol is documented. Skills fade, and a single class cannot prepare you for every emergency.",
+        "Save the experience and note whether the format matched your goal, what practical skill you want to revisit, and when to check renewal requirements. That makes this an ongoing readiness habit rather than a one-time certificate hunt."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "First Aid Training",
+      "url": "https://www.redcross.org/take-a-class/first-aid/first-aid-training",
+      "publisher": "American Red Cross",
+      "purpose": "Course format choices, including classroom, online and blended training with hands-on skills sessions."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "try-goalball-at-an-inclusive-sports-session",
+    "take-a-beginner-pilates-class",
+    "install-a-locally-appropriate-wildlife-shelter-with-expert-advice"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

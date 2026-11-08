@@ -1,0 +1,57 @@
+{
+  "experienceSlug": "spend-an-hour-watching-a-single-tree",
+  "slug": "spend-an-hour-watching-a-single-tree",
+  "title": "Give one tree an hour of careful attention",
+  "description": "Spend an hour observing one tree by choosing a comfortable public place, keeping a simple field log, and noticing small changes over time.",
+  "intent": "Make the hour specific and engaging by turning a tree into an observation subject without inventing ecological claims or disturbing it.",
+  "sections": [
+    {
+      "heading": "Choose the tree and your place to sit",
+      "paragraphs": [
+        "Pick a tree that you can see clearly from a public path, bench, or other permitted place. A tree beside a neighborhood sidewalk is as useful as one on a woodland trail. Choose a spot where you will not block other people, damage a planted bed, sit under an obvious hazard, or need to cross a barrier. If the location is managed land, follow the site’s rules and stay on paths where required. You do not need a rare species or dramatic landscape; an ordinary tree with a good view is enough.",
+        "Bring a notebook, pencil, water, and clothing suited to the weather. Keep a camera or phone put away for the first part if it helps you stay with the observation. Set a timer for an hour only if you want a gentle boundary; do not let it make you ignore weather, discomfort, or other people’s use of the space. The point is sustained attention, not proving endurance."
+      ]
+    },
+    {
+      "heading": "Begin with a slow inventory",
+      "paragraphs": [
+        "Spend the first few minutes taking in the whole tree: its outline, where the trunk splits, how much of it is visible, and what is around it. Then look closer without touching. Notice whether you see broad leaves or needles, the texture and pattern of the bark, any cones or seeds already on the ground, and the shape of branches against the sky. The National Park Service’s Rocky Mountain National Park tree guide uses leaves or needles, needle counts, bark, and cones as identification clues. Those observations can structure your attention, though the guide describes trees in that park and should not be treated as a species guide for other regions.",
+        "Write concrete descriptions before guesses. ‘Three dark branches angle over the bench’ is more useful than ‘the tree looks old’ if you do not know the tree’s history. If you want to identify it later, use a local field guide or ask a knowledgeable naturalist; do not strip leaves, break twigs, or collect parts from a protected site. A name is optional. Careful noticing is already a complete activity."
+      ]
+    },
+    {
+      "heading": "Watch for change without forcing a discovery",
+      "paragraphs": [
+        "Divide the hour into a few quiet intervals. At the start, record the light, wind, nearby sounds, and what the leaves or needles are doing. Later, look for differences: a moving shadow, a branch shifting in gusts, birds passing through, or a change in the sound around you. Some intervals may seem uneventful. That is not a problem; write down what stayed the same. A tree does not owe you a dramatic event to make the observation worthwhile.",
+        "Use several senses while keeping a respectful distance. Listen for leaves rubbing, insects, or nearby traffic. Notice the air temperature in the shade compared with the surrounding path, but do not present one moment as a scientific measurement. Look for small visitors only from where you sit. Avoid touching nests, fungi, insects, bark, or fallen wildlife, and do not feed animals to create activity."
+      ]
+    },
+    {
+      "heading": "Use a field note instead of a verdict",
+      "paragraphs": [
+        "A helpful note can have four columns: time, what you saw, what you heard, and what you are unsure about. You might write ‘light reached the lower trunk’ or ‘a bird landed twice; I could not identify it.’ That distinction between observation and interpretation makes the page more honest. If you have a field guide, sketch a leaf shape or bark pattern from the view you already have; do not collect a sample unless the land manager explicitly permits it.",
+        "If your attention wanders, return to one specific anchor: the edge of a leaf, the line of the trunk, or one sound. You are not required to empty your mind or feel peaceful. If sitting still becomes uncomfortable, stand and look from a permitted path, shorten the session, or leave. Adaptation is part of taking care of yourself and the place."
+      ]
+    },
+    {
+      "heading": "Close the hour with one comparison",
+      "paragraphs": [
+        "At the end, read the first notes and add one sentence about what changed or remained constant. If you return another day, use the same viewpoint and compare season, light, weather, or human activity. If you want to extend the project, observe a second tree later and note what differs, rather than deciding that one is objectively more interesting. Pack out everything you brought and leave the tree and site as you found them. Your next action is simple: choose a public spot and write the first observation before trying to name the tree."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tree Guide",
+      "url": "https://www.nps.gov/romo/learn/education/upload/treeguide_RS.pdf",
+      "publisher": "National Park Service, Rocky Mountain National Park",
+      "purpose": "The park’s field guide suggests looking at leaves versus needles, counting needles, observing bark, and comparing cones as tree-identification clues; species examples are specific to Rocky Mountain National Park."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "observe-a-forest-canopy-from-a-public-treetop-walkway",
+    "take-a-forest-bathing-walk"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

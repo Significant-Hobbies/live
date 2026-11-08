@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "explore-a-building-during-an-open-house-festival",
+  "slug": "explore-a-building-during-an-open-house-festival",
+  "title": "How to get more from an Open House building visit",
+  "description": "Choose an Open House visit that fits your curiosity, prepare for access and booking details, and leave with a clear reading of one design decision.",
+  "intent": "How do I choose and interpret one Open House building visit? This article helps turn a public tour into a focused architectural observation rather than a checklist of rooms.",
+  "sections": [
+    {
+      "heading": "Choose a building by the question it raises",
+      "paragraphs": [
+        "Start with something you genuinely wonder about: how a library welcomes people who stay all day, how a converted factory still shows its former work, or how a civic building makes a public entrance feel clear. That question gives you a reason to choose one listing over another. A striking photograph is useful, but the building’s everyday purpose often makes a visit more rewarding than its appearance alone.",
+        "Open House programmes change from year to year. Use the current festival listing as the source of truth, and treat old articles or saved itineraries as inspiration only. Read the description, visit format, booking requirement, access information and any photography rules before committing. If a detail could affect whether you can enjoy the visit, contact the organiser ahead of time rather than relying on assumptions."
+      ]
+    },
+    {
+      "heading": "Plan one visit you can actually notice",
+      "paragraphs": [
+        "A short itinerary is often better than racing across town to collect buildings. Choose one main visit and leave room for the journey, a queue, and time to look. Some open days accept drop-ins; others require a ticket and can fill. A festival’s own guidance may recommend adding even drop-in events to an itinerary so organisers can share changes. Check again shortly before leaving, since access arrangements and schedules belong to the specific listing.",
+        "Think through arrival as part of the design experience. Where does the public entrance meet the street? Is there a welcome desk, a threshold or a sequence of spaces before the main room? If the building is busy, follow the hosts’ route and let others pass. You are visiting a working or cared-for place, not gaining permission to explore every door. Ask before photographing people, private areas or anything the listing excludes."
+      ]
+    },
+    {
+      "heading": "Look for a relationship, not a grand verdict",
+      "paragraphs": [
+        "Choose one lens for the visit: movement, daylight, material, sound, or the connection between indoor and outdoor space. At the entrance, make a quick note of what you expect. As you move through the public route, look for evidence: a stair placed beside a busy entrance, a window that frames a shared room, or a change in floor surface that marks a transition. Describe what you can actually see before deciding what it means.",
+        "A useful observation has two parts: the feature and the job you think it does. For example, ‘The reading tables sit beside the tall windows, where daylight reaches them’ is grounded in what you saw. ‘The architect wanted everyone to feel inspired’ is a claim about intention you may not know. A volunteer, guide or building note can add context; make clear in your own notes which detail came from them and which is your interpretation."
+      ]
+    },
+    {
+      "heading": "Ask a question that respects the host’s time",
+      "paragraphs": [
+        "If there is a volunteer or guide, prepare one concise question tied to your chosen lens. ‘How has this entrance changed over time?’ invites a useful answer more readily than ‘Tell me everything about the building.’ Listen for what the person knows from their role, and avoid treating a volunteer’s impression as an official architectural history. If the answer is brief or the room is crowded, thank them and continue.",
+        "You can also learn without a conversation. Notice where people pause, how signs guide them, whether a room feels quiet or active, and what views open up as you move. These are observations about a particular visit and moment, not proof of how every user experiences the building. That distinction keeps your account both thoughtful and fair."
+      ]
+    },
+    {
+      "heading": "Leave with one finding and one next step",
+      "paragraphs": [
+        "After leaving, take five minutes somewhere that does not block the entrance. Write three lines: what you noticed, what the host or listing confirmed, and what remains a question. A rough sketch of the route or a small diagram of light, circulation or street connection can help you remember more than a gallery of rushed photos. If you enjoyed the format, look for another participating building that lets you compare the same design question in a different setting.",
+        "A satisfying first visit does not require expert vocabulary. It is enough to explain one design choice with something you observed and to be honest about what you do not know."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Open House Festival Visitor FAQs",
+      "url": "https://open-city.org.uk/ohf-visitor-faqs",
+      "publisher": "Open City",
+      "purpose": "Confirms that each programme is current-year specific, that some events are drop-in while ticketed events need advance booking, and that listing pages contain access and expectation information."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "curate-a-five-object-museum-of-your-life",
+    "look-at-one-museum-object-for-twenty-minutes",
+    "explore-a-garden-through-scent"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

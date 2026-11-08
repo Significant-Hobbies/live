@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "volunteer-abroad-for-at-least-a-month",
+  "slug": "volunteer-abroad-for-at-least-a-month",
+  "title": "Choose a volunteer role the host already needs",
+  "description": "Choose a month-long volunteer placement by matching your skills to a locally defined role, then checking supervision, support and the project’s continuity.",
+  "intent": "Help the reader assess whether a month abroad adds useful capacity to a host organization, rather than treating travel and enthusiasm as the contribution.",
+  "relatedExperienceSlugs": [
+    "complete-a-bounded-un-online-volunteering-assignment",
+    "mentor-someone-just-starting-out-in-your-field",
+    "make-a-close-friend-in-another-country"
+  ],
+  "sections": [
+    {
+      "heading": "Start with the work, not the destination",
+      "paragraphs": [
+        "Write down what you can do reliably: teaching, translation, repair, research, administration, design, or another specific skill. Then look for a host organization that has described a need for that contribution. If the role is framed mainly around what the visitor will see or feel, ask what the community gains after the placement ends.",
+        "UN Volunteers describes international assignments as linked to national program goals and says each assignment has its own professional, academic, experience, and language requirements. That is one structured route, not the only way to volunteer abroad. The useful principle is to read the actual role description and match it to what the host requests."
+      ]
+    },
+    {
+      "heading": "Ask how the work continues after you leave",
+      "paragraphs": [
+        "A month is short for a project that depends on trust, language, or long-term follow-up. Ask who will supervise you, what existing staff will need to spend time on, what training is provided, and who owns the work once you depart. A role that trains or supports a local team may have a clearer handover than a task that only you can perform.",
+        "Ask whether the organization would fill the same role with someone local if it could. That question is not a challenge; it can reveal whether your contribution is wanted or whether your presence creates extra management work. Respect a “no” or a request to apply through a formal process."
+      ]
+    },
+    {
+      "heading": "Check the organization before paying",
+      "paragraphs": [
+        "Ask for a written task description, a named local supervisor, safeguarding procedures, accommodation details, costs, insurance requirements, and emergency contacts. Find out what the fee covers and which money goes to the host organization. Verify the organization independently and talk with former volunteers who can describe the work, not just the sightseeing.",
+        "Do not volunteer in a role that requires credentials you do not have, especially with children, patients, legal issues, or protected environments. Ask how the host screens volunteers and what training is required. If the answer is that enthusiasm is enough, choose another placement."
+      ]
+    },
+    {
+      "heading": "Plan for language and cultural humility",
+      "paragraphs": [
+        "Learn basic greetings and the words needed for the task, and ask the host how you should communicate when you do not understand. UNV highlights working across cultures and drawing on local expertise in its own international volunteer requirements. Let local staff correct your assumptions. You are there to learn how the work is done, not to introduce a solution before understanding why earlier approaches were chosen.",
+        "Keep photographs and personal stories private unless people have agreed to the specific use. Ask before sharing images or details online, and follow host safeguarding rules. A person’s home or workplace is not a backdrop for your travel story."
+      ]
+    },
+    {
+      "heading": "Decide whether a month is enough",
+      "paragraphs": [
+        "Compare the time needed for onboarding with the time you can offer. If the role takes weeks to learn and lasts only a month, ask whether remote preparation or a longer commitment would serve the host better. If a short placement is still useful, define one modest deliverable and a clear handover with your supervisor.",
+        "Your next step is to contact a host organization with a concise description of your skills and ask what work they would actually need done over a month. If there is no clear role, volunteer locally first and build the experience that a future host requests."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Volunteer abroad: Requirements",
+      "url": "https://www.unv.org/node/1756",
+      "publisher": "United Nations Volunteers",
+      "purpose": "Opened UNV assignment guidance on role-specific skills/experience, linkage to national program goals, host assessment, language and respect for local expertise."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

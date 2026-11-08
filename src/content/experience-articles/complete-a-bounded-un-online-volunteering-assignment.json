@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "complete-a-bounded-un-online-volunteering-assignment",
+  "slug": "complete-a-bounded-un-online-volunteering-assignment",
+  "title": "Choose a remote volunteer task you can finish well",
+  "description": "Compare remote volunteer listings by deliverable, scope, skills, and review contact, then plan a first check-in before accepting a task.",
+  "intent": "How do I tell whether an online volunteer assignment is a good fit and keep the work bounded? This adds a listing-review and handover method to the short experience plan.",
+  "sections": [
+    {
+      "heading": "Read the listing as a work brief",
+      "paragraphs": [
+        "Before writing an application, translate the listing into a few plain questions: What will exist at the end? Who will use it? What skills are required? Who reviews the work? What is the expected schedule? The United Nations Volunteers platform says each assignment has its own host-set requirements, so a broad cause you care about is not by itself evidence that the specific task fits.",
+        "Circle any vague phrase such as support communications or help with research. Look for a concrete output beneath it: a language edit, a set of verified records, or a defined research memo. If the output, audience, or review path is unclear, ask before committing substantial time."
+      ]
+    },
+    {
+      "heading": "Match your real capacity to the task",
+      "paragraphs": [
+        "UNV states that online assignments are unpaid and may involve up to 20 hours a week for a maximum of 12 weeks. Treat that as a platform limit, not a recommended workload. Estimate your available hours in an ordinary week, including the time needed to learn the host’s tools and respond to feedback. Leave room for the rest of your life.",
+        "A realistic application names evidence rather than confidence: one relevant sample, a similar task, or a clear description of the skill you will use. Do not present a beginner skill as professional expertise. If the listing expects language fluency, specialist software, or field knowledge you do not have, choose a different assignment or state the limit honestly."
+      ]
+    },
+    {
+      "heading": "Ask the questions that define the boundary",
+      "paragraphs": [
+        "A short clarification can prevent a long mismatch. Ask which file format the host wants, whether there is an existing style guide, how often they expect check-ins, and what counts as complete. If the work may include unpublished information, ask which channel is approved and what should not be copied into personal tools. Avoid requesting sensitive data you do not need.",
+        "Keep the agreement in writing after selection: output, deadline, review contact, number of revision rounds if relevant, and what happens if the scope changes. A volunteer assignment is not an employment contract, but clarity still protects both sides and makes the work easier to hand over."
+      ]
+    },
+    {
+      "heading": "Make the first deliverable small",
+      "paragraphs": [
+        "Begin with a sample or outline that is large enough to test your understanding but small enough to revise cheaply. For a translation, that might be one representative page; for a data task, a few records checked against the host’s rules. Send it through the host’s requested channel and ask a focused question: does this format and level of detail match the need?",
+        "This first review is useful even when the sample is good. The host may reveal an audience assumption, terminology choice, or file convention that was absent from the listing. Update your own notes before continuing so the correction applies consistently rather than being patched only in the sample."
+      ]
+    },
+    {
+      "heading": "Close the loop with a usable handover",
+      "paragraphs": [
+        "As the deadline approaches, compare the finished work with the original agreement. Name files clearly, include a brief note about what changed, and list any unresolved questions rather than quietly guessing. Ask the host to confirm receipt. If a new request arrives, check whether it fits the original scope and schedule before taking it on.",
+        "UNV explains that volunteers are not paid and are not under contract with the programme or engaging organization, so do not imply a formal employment relationship. Your next action is to shortlist one listing and write a five-line fit check before applying."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Become an Online Volunteer",
+      "url": "https://www.unv.org/become-online-volunteer?page=1",
+      "publisher": "United Nations Volunteers",
+      "purpose": "Supports eligibility, host-specific requirements, unpaid status, remote format, and weekly-hour and duration limits."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "take-a-volunteer-call-through-be-my-eyes",
+    "sort-supplies-during-a-food-bank-volunteer-shift",
+    "help-repair-library-books-under-staff-supervision"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "run-a-race-you-had-to-train-for",
+  "slug": "run-a-race-you-had-to-train-for",
+  "title": "Choose a race that gives your training a useful finish line",
+  "description": "Pick a first running race by distance, surface, course and support, then use an appropriate plan with enough time to adapt rather than racing a calendar.",
+  "intent": "Answers how to choose and prepare for a running race that requires training; adds event-fit decisions and a flexible finish-line milestone without prescribing a rapid universal plan.",
+  "sections": [
+    {
+      "heading": "Choose the event before choosing the plan",
+      "paragraphs": [
+        "Start with the kind of day you want. A road 5K in a local park, a trail event with uneven ground and a longer race on city streets are different experiences even when the distance looks similar. Compare the surface, hills, start time, crowd size, route access and whether the organizer welcomes runners who plan to walk. Read the actual event page, including its course map and participant requirements, rather than choosing from a headline distance alone.",
+        "A 5K can be a useful first race because it is a distinct, limited-distance goal, but it is not the right distance for everyone. If you have not been running, the NHS Couch to 5K program is designed for absolute beginners and uses a progressive run-walk structure; it can take longer than its nine-week outline. It is an England-based general resource, not a personalized prescription. For other distances, use a qualified coach or an appropriate plan from a trustworthy running organization and leave room for your circumstances."
+      ]
+    },
+    {
+      "heading": "Choose a training route you can sustain",
+      "paragraphs": [
+        "Before registering, look at your current routine, available days, other commitments and the race date. If the plan requires more sessions than you can realistically fit, choose a later event or a shorter distance. A plan is a proposal to build toward the event, not an obligation to ignore fatigue, pain or a disruption. If you have a health concern, injury or a long break from activity, seek qualified advice before deciding what is suitable.",
+        "Treat missed days as information, not a debt to repay with a harder workout. Do not stack sessions to make up for a week you could not train. The NHS guide includes rest days in its beginner schedule and says its program may take longer depending on what works for the individual. Keep your plan adaptable, and ask a qualified coach if you are unsure how to adjust it."
+      ]
+    },
+    {
+      "heading": "Make each session answer a question",
+      "paragraphs": [
+        "For a local 5K, one outing can help you learn how your shoes feel on the surface you expect to race; another can help you practice a comfortable run-walk rhythm. You do not need to imitate a race pace from a stranger’s online post. Keep notes about route, weather, how the session felt and what you want to ask a coach. If your intended race is trail-based, practice only on suitable terrain and develop the relevant skills with qualified support.",
+        "Add one event-specific check to your preparation: test whether you know where the start is, how you will get there, what the organizer permits at the finish, and whether the course has any access or timing requirements. Those details vary by event. If you plan to run with a friend, agree whether you want to stay together or each follow your own pace."
+      ]
+    },
+    {
+      "heading": "Take pressure off race day",
+      "paragraphs": [
+        "Set a completion goal you can control: arrive with enough time, follow the course signs, stay within your own effort and finish without treating another runner’s result as your measure. Find the event’s rules about headphones, strollers, cutoffs, aid stations and bib pickup. Do not assume another race uses the same format. Decide what you will do if you need to walk, stop or withdraw.",
+        "If a friend is cheering, choose a place where they can see you without creating a crossing hazard. Plan your route home and a comfortable meal or rest afterward. Your first race can be meaningful without a personal best or a dramatic finish-line photo."
+      ]
+    },
+    {
+      "heading": "Use what you learned",
+      "paragraphs": [
+        "Afterward, record one thing that felt easier than expected, one thing you would prepare differently and one question for a coach or next event. If you enjoyed the race, choose the next challenge after you have had time to recover. If you did not enjoy it, the event still taught you about surfaces, crowds or the kind of exercise you prefer.",
+        "Start by finding a local event page with a course description and participant rules. Pick a distance that matches your current activity and the time you can give it, then choose a training route that can be adjusted if life changes."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Get running with Couch to 5K",
+      "url": "https://www.nhs.uk/better-health/get-active/get-running-with-couch-to-5k/",
+      "publisher": "National Health Service (England), Better Health",
+      "purpose": "Supports that the NHS beginner plan is a progressive run-walk 5K program with rest days and may take longer than nine weeks; it is general guidance and not a personalized plan for another distance or health situation."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "run-a-marathon",
+    "complete-a-100-mile-ultramarathon",
+    "community-573cdefc-9b87-56e0-b085-c87606daa940"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

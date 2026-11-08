@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "spend-a-year-strength-training",
+  "slug": "spend-a-year-strength-training",
+  "title": "Build a year of strength around repeatable sessions",
+  "description": "Plan a sustainable year of strength training by tracking a few movements, adapting for busy weeks, and treating recovery as part of practice.",
+  "intent": "Help a reader turn a year-long strength goal into a flexible practice with visible learning, without prescribing a universal exercise schedule or load.",
+  "sections": [
+    {
+      "heading": "Choose what ‘a year’ will measure",
+      "paragraphs": [
+        "A year of strength training can mean several things: attending a coached class regularly, practicing a home routine, or learning to use a gym safely. Define the commitment you can reasonably keep before setting targets for heavier weights or more sessions. For example, you might track whether a strength session happened each week, what movements you practiced, and what you learned. That makes the goal about a durable practice rather than a transformation promise or a single performance test.",
+        "The CDC’s adult activity overview describes general U.S. guidance that includes muscle-strengthening activity on at least two days a week and work across major muscle groups. It is broad population guidance, not a program written for your body, health history, or schedule. If you need an individualized plan, especially with a chronic condition, pregnancy, persistent pain, or a return from injury, ask a clinician or qualified exercise professional."
+      ]
+    },
+    {
+      "heading": "Start with movement patterns you can repeat",
+      "paragraphs": [
+        "A balanced beginner session can include a squat or sit-to-stand pattern, a hinge such as a light hip hinge, a push, a pull, and a trunk or carry exercise. You do not need a complicated catalogue of exercises to begin learning. At home, a chair, resistance band, or body weight may offer an entry point; a gym can provide machines that guide the path. Start with equipment you know how to adjust and ask staff or a coach to explain unfamiliar machines instead of guessing where a pin or safety stop belongs.",
+        "Keep a short log of the movement, load or assistance, repetitions, and how controlled it felt. An entry such as ‘leg press, light setting, moved smoothly’ is more useful than ‘worked hard.’ If a movement feels awkward, reduce complexity and ask for instruction. The aim of a year is to become more capable of choosing and performing training, not to collect increasingly elaborate exercises."
+      ]
+    },
+    {
+      "heading": "Use simple review points instead of constant tests",
+      "paragraphs": [
+        "At the end of each month, look back at the log. Are you practicing consistently? Which exercise has become easier to set up? Which one still feels uncertain? Change one thing at a time and make changes gradually. You can add a small amount of resistance, improve range or control, or make the schedule more reliable; you do not have to increase every variable at once. These are practical planning ideas, not medical directives.",
+        "Avoid turning every session into a test of maximum strength. A maximal lift requires appropriate preparation, technique, equipment, and often supervision; it is not necessary to prove that a year of practice counted. If you want a measurable performance target, choose a movement you can perform safely and have a qualified coach help you define the test. Consistent attendance and better understanding are meaningful outcomes even when a number remains unchanged."
+      ]
+    },
+    {
+      "heading": "Make room for life and recovery",
+      "paragraphs": [
+        "A year includes travel, illness, busy work periods, and weeks when motivation dips. Create a minimum version of the habit: a short session focused on a few familiar movements, or a planned return date after recovery. A missed week does not require doubling the next one. If you are sick, injured, or unusually fatigued, adjust or pause and seek appropriate advice when symptoms warrant it. A written fallback protects the goal from the all-or-nothing thinking that often ends long projects.",
+        "Strength training is not a substitute for sleep, balanced eating, medical treatment, or other kinds of movement. Do not use this article to diagnose symptoms or choose a rehabilitation plan. If lifting brings sharp pain, numbness, dizziness, or other concerning symptoms, stop and seek qualified help. The successful year is the one you can reflect on honestly, including the times you adapted rather than forcing a session."
+      ]
+    },
+    {
+      "heading": "Write the plan you will actually use",
+      "paragraphs": [
+        "Pick the setting for your first session, list two or three basic movements you already understand, and decide how you will record the work. If you are new to strength training, book an introductory session with a qualified instructor or ask a trusted professional to check your equipment and technique. Put a review date on the calendar for a month later. Then begin with a session that feels repeatable; the first useful result of the year is learning how to return for the next one."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Adult Activity: An Overview",
+      "url": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html",
+      "publisher": "U.S. Centers for Disease Control and Prevention",
+      "purpose": "Supports general adult activity guidance including muscle-strengthening on two or more days and covering major muscle groups; not an individualized training prescription."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "do-your-first-pull-up",
+    "do-100-push-ups-in-a-row",
+    "do-a-30-day-yoga-challenge"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

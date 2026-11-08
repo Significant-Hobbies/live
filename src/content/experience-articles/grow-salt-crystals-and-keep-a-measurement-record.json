@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "grow-salt-crystals-and-keep-a-measurement-record",
+  "slug": "grow-salt-crystals-and-keep-a-measurement-record",
+  "title": "Turn salt crystals into a repeatable observation project",
+  "description": "Grow salt crystals in a small supervised setup, change one condition at a time, and record position, size and shape instead of relying on memory or dramatic photos.",
+  "intent": "How to make salt-crystal growth a repeatable observation project through fixed variables, daily records and cautious interpretation of uneven results.",
+  "relatedExperienceSlugs": [
+    "grow-edible-sugar-crystals",
+    "map-impact-melt-features-on-the-moon",
+    "measure-the-speed-of-sound-with-a-repeatable-experiment"
+  ],
+  "sources": [
+    {
+      "title": "Growing Crystals",
+      "url": "https://igws.iu.edu/outreach/lesson_plans/growing.html",
+      "publisher": "Indiana Geological and Water Survey, Indiana University",
+      "purpose": "Supports salt and sugar crystal comparisons, the effect of evaporation, undisturbed observation and differences between crystal compounds."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Ask one question your setup can answer",
+      "paragraphs": [
+        "Choose a question that changes one condition: does salt form on the bottom of a shallow dish or on a suspended surface, or do crystals appear differently when one dish is placed in a brighter location? Use ordinary table salt and water, and keep the project small. Do not add household chemicals or mix several salts just to create a more colourful result.",
+        "The Indiana Geological and Water Survey’s classroom lesson describes growing crystals from solutions and comparing how different materials form. It also notes that evaporation conditions can affect growth. Treat your own setup as an observation, not as proof that one placement is best for all crystals. Room conditions and the container itself matter."
+      ]
+    },
+    {
+      "heading": "Make two matching samples",
+      "paragraphs": [
+        "Use identical clear containers and mark them A and B. Measure the same amount of salt and water into both, stir in the same way, and place them side by side. If you are comparing locations, move only one sample while keeping the other as a control. Write down what you changed before the first crystal appears.",
+        "Follow an established classroom procedure and have an adult supervise any hot-water preparation. For a simple comparison, prepare the solution with room-temperature water if that is the method your guide specifies; do not handle boiling water or heated equipment without appropriate supervision. Use containers that will not be mistaken for drinking glasses and keep them away from food and pets."
+      ]
+    },
+    {
+      "heading": "Record the start, not just the result",
+      "paragraphs": [
+        "Write the date, container, solution amounts, placement, light conditions and any visible particles before setting the dishes aside. Photograph them from the same angle with a ruler or fixed reference beside the container. A close-up without scale may look impressive but cannot tell you whether a feature changed size.",
+        "Check at the same time each day without stirring or moving the dishes. Note whether crystals are on the bottom, wall, string or another support; record whether they are clear, cloudy, clustered or isolated. If nothing changes, write that down. A quiet day is still an observation and helps distinguish a slow process from a failed record."
+      ]
+    },
+    {
+      "heading": "Separate crystal growth from evaporation clues",
+      "paragraphs": [
+        "As water leaves a solution, dissolved material can form solid crystals. The IU geology lesson suggests that sunlight or proximity to heat can change evaporation speed, and recommends comparing placements. Avoid assuming the warmest sample must produce the largest individual crystal; rapid drying can leave many small deposits, and a dish with different airflow may not be comparable.",
+        "Look at the pattern in both samples: Are there many small crystals or a few visible ones? Did a crust form at the edge? Has the water level changed? These clues help you explain what happened, but they are not a full measurement of growth rate unless you have recorded the starting and ending conditions and chosen a consistent way to measure."
+      ]
+    },
+    {
+      "heading": "Finish with a claim that matches your evidence",
+      "paragraphs": [
+        "When the growth looks stable, photograph each dish again and compare the same feature you tracked, such as the width of the largest crystal or the number of visible clusters in one marked area. Do not select only the most dramatic crystal from one sample. Report the sample size honestly: with two dishes, you have a small home observation, not a general scientific result.",
+        "Describe the difference in plain language: “the dish near the window had more visible deposits along its rim,” not “sunlight makes better salt crystals.” The Indiana guide also contrasts salt and sugar and notes their crystals differ, so keep this activity separate from the edible sugar experiment. Label your containers clearly, do not taste their contents, and dispose of the liquid as directed by your local sink and lab-safety guidance."
+      ]
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

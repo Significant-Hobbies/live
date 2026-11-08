@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "take-a-trip-completely-alone",
+  "slug": "take-a-trip-completely-alone",
+  "title": "Design a first solo trip around decisions you want to practice",
+  "description": "Plan a manageable first solo trip with a clear base, independent choices, support contacts, and a return plan that leaves room to change your mind.",
+  "intent": "Answers how to prepare for a first manageable solo trip with independent decisions, support contacts and a realistic trial, rather than treating solo travel as a test of bravery.",
+  "sections": [
+    {
+      "heading": "Choose a trip that is new in one way",
+      "paragraphs": [
+        "For a first trip alone, keep the unfamiliar parts to one or two. You might travel to a new city but stay near familiar transit; take a familiar route but book your own room; or visit a place where you already know the language while managing the itinerary yourself. A solo trip does not need to be remote or long to count. A one-night stay close to home can teach you how much structure you like before you commit to a longer journey.",
+        "Decide what independent means to you. Perhaps it is choosing meals without negotiating, navigating a transfer, or spending a full afternoon at your own pace. Write one goal that describes a choice you will make, not a feeling you must achieve. ‘I will choose the day’s first stop myself’ is more workable than ‘I will never feel lonely.’"
+      ]
+    },
+    {
+      "heading": "Book the parts that reduce avoidable stress",
+      "paragraphs": [
+        "Pick an arrival time that gives you a clear route to your lodging and a neighborhood where you can find food, transport and basic services. Keep the first evening simple. If you land late, choose a transfer you understand before departure instead of relying on improvisation while tired. Save the lodging address, booking details and arrival instructions offline. This does not remove every surprise; it means one delay does not require solving the whole trip at once.",
+        "Choose a base that matches the trip you want. A central place can make a short visit easier, while a quieter location may suit a slower stay if transit is clear. Read recent official transport and destination information. Do not assume the lowest fare or the most remote option is the best value if it adds stress or leaves you with few alternatives."
+      ]
+    },
+    {
+      "heading": "Build a support plan you would actually use",
+      "paragraphs": [
+        "Share your broad itinerary with someone you trust, agree on a check-in time and tell them what to do if you miss it. Set an easy message such as ‘arrived at the hotel’ rather than requiring a detailed diary. Keep emergency numbers and accommodation contact information somewhere you can access without mobile data. If you travel internationally, review your own government’s current destination guidance and entry requirements; the U.S. Department of State’s planning checklist is specifically for U.S. travelers.",
+        "A support plan is not a promise that nothing can go wrong. It is a way to avoid being entirely alone with a logistics problem. If you have access, disability, health, medication or safety needs, look up the relevant official information and arrange qualified support before travel rather than relying on assumptions about a destination."
+      ]
+    },
+    {
+      "heading": "Give each day one anchor and open space",
+      "paragraphs": [
+        "Plan one reason to leave your lodging: a museum you care about, a market, a walk with a clear endpoint, or a meal in a neighborhood you want to understand. Leave the rest open. Solo time can feel restful for one person and isolating for another; a public class, guided visit or scheduled call can add human contact without surrendering your independence. Carry a book or a short list of optional stops for pauses between plans.",
+        "Make your own choices about sharing location or trip details. Post in real time only if that suits your privacy and safety. A paper map or saved address can make an evening return easier if your phone loses power. These are ordinary redundancies, not a requirement to be constantly vigilant."
+      ]
+    },
+    {
+      "heading": "Treat changing the plan as a valid outcome",
+      "paragraphs": [
+        "Before departure, decide what would make you change course: a transport disruption, a neighborhood that feels wrong to you, poor weather, illness, or simply realizing you need more company. Write down a nearby alternative and a way to return earlier. Leaving a place or changing a booking is a decision, not a failed test of independence.",
+        "After the trip, note which choices felt satisfying, which needed more preparation and what you would repeat. Start by choosing one overnight destination you can reach with a straightforward arrival and one independent decision you want to make there."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Planning Your Travel",
+      "url": "https://travel.state.gov/en/international-travel/planning.html",
+      "publisher": "U.S. Department of State",
+      "purpose": "Supports the U.S.-traveler checklist for destination advisories, entry rules, documents, personal needs and travel insurance; does not apply to every nationality or replace destination-specific official advice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "do-a-spontaneous-eurotrip",
+    "make-a-family-emergency-contact-plan-together",
+    "go-on-a-friend-led-neighbourhood-tour"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

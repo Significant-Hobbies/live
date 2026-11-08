@@ -1,0 +1,47 @@
+{
+  "experienceSlug": "swim-with-humpback-whales",
+  "slug": "swim-with-humpback-whales",
+  "title": "A humpback swim begins with local permission",
+  "description": "Humpback swims depend on destination rules and specific operator licences. Verify the local authority’s requirements before booking.",
+  "intent": "How can a visitor verify that an in-water humpback tour is authorized and respectful of wildlife?",
+  "sections": [
+    {
+      "heading": "Treat this as a permitted activity",
+      "paragraphs": [
+        "A humpback swim is not a spontaneous wildlife encounter. It is a highly location-specific activity governed by marine wildlife rules, access permits, and operator conduct. Before planning a trip, choose a destination where in-water interaction is explicitly authorized and a licensed operator is responsible for the outing. Western Australia’s 2026 Commercial Operator Handbook says Ningaloo Marine Park is the only place in WA where licensed in-water humpback interactions may occur, and says those trips require restricted E-class licences. That is a rule for those waters, not a global permission. Other countries may prohibit swimming with whales, restrict how vessels approach, or allow only specific tour operations. Never enter the water from a private boat because you see whales nearby. Check the current wildlife authority for the exact destination, and do not assume that a tour listing proves an activity is lawful."
+      ]
+    },
+    {
+      "heading": "Verify the exact operator",
+      "paragraphs": [
+        "When comparing an operator, ask for the name of the responsible licensing authority, what authorization applies to the specific trip, and what conditions may cancel or change the swim. Ask how the guide decides whether a group may enter, what the crew tells swimmers about staying together, and what happens if the whale does not approach. A responsible outing should center the animal’s space and the guide’s instructions, not a promise of contact or a guaranteed close photograph. Ask whether the experience is appropriate for your swimming ability and what safety support is present; if the answer is vague, choose another activity. A boat-based whale watch can be a good alternative for visitors who do not want to enter the water."
+      ]
+    },
+    {
+      "heading": "Respect the wildlife decision",
+      "paragraphs": [
+        "The experience may involve waiting, changing seas, or seeing whales only from the boat. Build flexibility into the day and avoid adding a tight onward connection. Bring only the clothing and gear the operator requests, and listen to the full briefing before any in-water activity. Do not touch, chase, block, or swim toward an animal. If the guide asks the group to exit or stay aboard, follow that instruction immediately. A visitor’s wish to swim does not outrank the animal’s behavior, permit conditions, or the crew’s decision. Choose an operator that clearly describes this boundary before you pay. If a company guarantees an encounter or invites swimmers to improvise, treat that as a reason to ask more questions rather than an assurance of quality."
+      ]
+    },
+    {
+      "heading": "Choose the experience you want",
+      "paragraphs": [
+        "For a first attempt, decide whether your aim is to observe the whales or be in the water. Those are different experiences, and a regulated boat-based whale watch may match the first goal better. Read the local authority’s current rules and check the operator’s license directly with that agency when the information is public. Save the authority contact details and cancellation terms before confirming. On the day, be ready for a boat-only outing if conditions or whale behavior make swimming inappropriate. Take notes on the trip’s rules and what the guide explains about respectful observation. Your next action is to verify the destination’s official wildlife-interaction rules and identify the license or permit required for any in-water tour."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Commercial Operator Handbook",
+      "url": "https://www.dbca.wa.gov.au/media/581/download",
+      "publisher": "Department of Biodiversity, Conservation and Attractions, Western Australia",
+      "purpose": "Current operator handbook describes Ningaloo as the only WA location permitting licensed in-water humpback interactions and requires restricted E-class licences."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "the-great-barrier-reef-australia",
+    "see-the-great-barrier-reef"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

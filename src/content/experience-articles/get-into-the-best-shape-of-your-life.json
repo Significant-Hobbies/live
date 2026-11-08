@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "get-into-the-best-shape-of-your-life",
+  "slug": "get-into-the-best-shape-of-your-life",
+  "title": "Define your own version of being in the best shape",
+  "description": "Set a personal fitness goal around function, consistency, and support, with a starting point that reflects your body and circumstances rather than a comparison photo.",
+  "intent": "How can I work toward the best shape of my life by choosing meaningful, measurable goals while respecting age, health, recovery, disability, and professional advice?",
+  "sections": [
+    {
+      "heading": "Replace the comparison with a purpose",
+      "paragraphs": [
+        "“Best shape” is not one body type, weight, pace, or performance standard. Decide what you want your body to help you do: carry groceries comfortably, enjoy a long walk, return to a sport, improve balance, climb stairs with less effort, or feel more capable during a regular day. A personal purpose makes the goal yours and gives you something more useful to notice than a mirror comparison or a stranger’s training plan.",
+        "Choose one outcome you can observe, then define what a reasonable starting measure might be. That could be how long you can walk at a comfortable pace, how often you currently practice a movement, or a task you want to complete with less strain. Do not test a painful or risky maximum on your own. If you have a chronic condition, disability, recent injury, pregnancy-related question, or other health concern, ask a qualified clinician or appropriately trained exercise professional how to adapt the goal."
+      ]
+    },
+    {
+      "heading": "Start with a picture of your current routine",
+      "paragraphs": [
+        "For one ordinary week, note movement you already do: walking to transit, gardening, active work, adapted movement, recreational sport, or structured exercise. Write down duration and how it felt, but avoid treating a tracker’s number as a judgment. Include rest, sleep constraints, caregiving, work, and access to safe places. A plan that ignores those details is likely to fit an imaginary week rather than your life.",
+        "The U.S. Centers for Disease Control and Prevention summarizes national adult physical-activity guidelines and notes that activity can be spread into smaller chunks; its general recommendation is not an individualized training plan. Use public-health guidance as a conversation starter, then confirm what applies to your age, health status, and abilities with a qualified professional. Recommendations may differ by life stage or circumstance."
+      ]
+    },
+    {
+      "heading": "Choose one change and a way to notice it",
+      "paragraphs": [
+        "Select one modest change that fits your starting point: add a short walk on a day you already have time, try a supervised beginner class, or set aside a regular slot for a mobility or strength routine chosen with appropriate guidance. Write the exact cue—“after lunch on Tuesday, walk the flat loop”—and the easier version for a difficult day. A fallback might be five minutes of gentle movement at home, if that is appropriate for you.",
+        "Track the behavior and how it felt, not just a scale or a single best performance. A simple note might say: “Wednesday: attended class, took the lower-impact option, felt fine afterward.” Stop and seek appropriate advice if a movement causes concerning symptoms or pain; do not push through to meet an arbitrary target. Recovery and adaptation are part of training, and a coach or clinician can help you judge the right progression."
+      ]
+    },
+    {
+      "heading": "Build around professional feedback",
+      "paragraphs": [
+        "If your goal involves a new sport, heavier strength work, returning after injury, or substantial changes in training, work with a qualified coach who can observe your movement and adjust the plan. Bring your purpose, baseline, constraints, and questions. Ask what skill or quality the program is meant to develop, how progress will be measured, how rest is included, and what signs mean the plan should be changed.",
+        "Look for instruction that welcomes questions and offers modifications rather than framing one body or performance level as the only success. If you have a medical condition or symptoms that need evaluation, an exercise coach is not a substitute for a clinician. You may need both, with clear roles and advice grounded in your circumstances."
+      ]
+    },
+    {
+      "heading": "Review progress without moving the finish line",
+      "paragraphs": [
+        "After a few weeks, compare your current routine with the baseline. Did the activity fit your schedule? Do you feel more capable at the task you chose? Was the plan sustainable, or did it require constant negotiation with the rest of your life? If it is too demanding, reduce the load or ask for help. If it feels easy, progress only in a way that is appropriate for your body and goal.",
+        "Keep a record of what is getting better and what is not. You may find that your meaningful outcome changes: perhaps confidence or consistency matters more than the original metric. That is useful information, not a failure. Your next step is to write one function you would like to improve, describe your current routine, and bring both to a qualified professional if you need tailored guidance."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Adult Activity: An Overview",
+      "url": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html",
+      "publisher": "U.S. Centers for Disease Control and Prevention",
+      "purpose": "Supports the limited statement that U.S. public-health adult activity recommendations can be accumulated in smaller chunks and provides general guideline context; it is not an individualized or age-specific fitness plan."
+    },
+    {
+      "title": "Physical Activity Guidelines for Americans, 2nd edition",
+      "url": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf",
+      "publisher": "U.S. Department of Health and Human Services",
+      "purpose": "Supports consulting health-care or physical-activity specialists when chronic conditions or disabilities require adaptation; guidance is broad and must be matched to individual ability and circumstances."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "reach-peak-physical-fitness-for-your-age",
+    "try-a-short-seated-movement-session",
+    "learn-a-short-supported-balance-routine"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

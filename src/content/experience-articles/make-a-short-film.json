@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "make-a-short-film",
+  "slug": "make-a-short-film",
+  "title": "Tell One Small Story With Images, Sound, and a Clear Ending",
+  "description": "Make a short film easier to finish by limiting its cast and locations, planning a visual sequence, and editing for what the sound and shots add.",
+  "intent": "How can I complete a short film with a small crew and modest tools while making deliberate choices about story, shots, and sound?",
+  "sections": [
+    {
+      "heading": "Limit the idea until you can shoot it",
+      "paragraphs": [
+        "Start with a change that can happen in one place: someone waits for an answer, loses a key, or prepares to meet a person they have not seen in years. A short film can be a minute or several minutes; the useful constraint is a story you can finish. Write a one-sentence premise, then describe what changes between the first and last image.",
+        "Choose a location you can use with permission, a small cast, and props already available. A hallway, kitchen, or bus stop can carry a story if you make a clear choice about what the viewer should notice. If a scene depends on a crowd, a moving vehicle, or a difficult effect, ask whether a closer, simpler version preserves the idea."
+      ]
+    },
+    {
+      "heading": "Plan shots as pieces of information",
+      "paragraphs": [
+        "Sketch a rough shot list before filming. For each moment, ask whether the audience needs to see the whole room, a face, a hand, or a small object. An opening wide shot can establish where the scene takes place; a closer detail can show the key turning in someone's palm. Change the angle or distance only when it adds information or changes how the moment feels.",
+        "The BFI Education short-film guide suggests reading a shot by noticing what is included, where the camera sits, how objects are arranged, movement, light, and focus. Try that as a practical planning checklist. You do not need elaborate camera moves: a stable frame held long enough for the action to register can be more useful than constant motion."
+      ]
+    },
+    {
+      "heading": "Record the sound you actually need",
+      "paragraphs": [
+        "Film a short test before the full shoot. Listen for traffic, fans, room echo, clothing rustle, and the distance between speaker and microphone. If dialogue is hard to hear, move closer, quiet the room, or simplify the line. Capture a few seconds of the empty location's background sound so you have room tone to smooth cuts later.",
+        "Think of sound as part of the story. A character may hear a kettle click before we see the kitchen; a door closing can mark a decision. The BFI guide suggests listening to a sequence with the screen covered as a way to notice what sound contributes. Use that test during editing: if the audio changes nothing, it may not need to be there."
+      ]
+    },
+    {
+      "heading": "Edit for cause and effect",
+      "paragraphs": [
+        "Put the scenes in order and watch without polishing. Can a viewer tell where the character is, what they want, and what changed? Remove a shot that repeats information. If a transition feels abrupt, see whether you need a different angle, a pause, or a sound bridge rather than a longer explanation.",
+        "The BFI guide asks viewers to notice how shots cut or dissolve, how fast the sequence changes, and whether screen time differs from real time. Use those choices intentionally. A held close shot can make a hesitation noticeable; a quick sequence can compress preparation. Neither technique is automatically right—the story should earn it."
+      ]
+    },
+    {
+      "heading": "Show a rough cut before finishing",
+      "paragraphs": [
+        "Ask two viewers who have not read the script to watch the rough cut. Ask what they think changed and where they became confused. Do not explain the intended meaning before they answer. Their notes can show whether the images carry the story or whether the film relies on information only you know.",
+        "Check that people, locations, music, and images are used with permission and that the final file plays on the device where you plan to show it. Export a watchable version before chasing tiny edits. Your next step is to write a one-sentence story and a five-shot plan you could film in one afternoon."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How to Make a Short Film: Reading a Short Film or Scene",
+      "url": "https://ugc.futurelearn.com/uploads/files/d3/95/d395220f-bbb0-4e76-810f-e3caca25727b/Reading_a_short_film_or_scene.pdf",
+      "publisher": "BFI Education",
+      "purpose": "Provides an observation framework for shot content, camera position, framing, movement, light, focus, editing pace/transitions, and sound; the film's story and production plan are original advice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "tell-a-short-story-in-sand-animation",
+    "make-a-documentary-about-something-you-care-about",
+    "make-a-pinhole-camera-and-develop-a-photograph"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

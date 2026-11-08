@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "reproduce-one-chart-from-an-open-dataset",
+  "slug": "reproduce-one-chart-from-an-open-dataset",
+  "title": "Rebuild NOAA’s Mauna Loa CO₂ chart and keep the choices visible",
+  "description": "Use NOAA’s public Mauna Loa monthly CO₂ record to redraw a time series, label its units, and document the choices that shape the result.",
+  "intent": "How can I reproduce a public chart without silently changing what its data means? This walkthrough uses NOAA’s Mauna Loa CO₂ series to show a small, auditable path from source file to figure.",
+  "sections": [
+    {
+      "heading": "Choose a chart whose trail is inspectable",
+      "paragraphs": [
+        "Start with NOAA Global Monitoring Laboratory’s Mauna Loa monthly carbon dioxide dataset. Its dataset page identifies the site, parameter, measurement type, monthly frequency, and offers text and NetCDF downloads. That makes it a useful first reproduction: the source is clearly named and a plain-text file is available. Save the original chart or screenshot beside the downloaded file, record the retrieval date, and write down the page URL before changing anything.",
+        "Do not treat a chart image as the data. A curve traced from pixels can be a useful drawing exercise, but it cannot reproduce the underlying observations or support precise comparisons. Download the source table and preserve its header and README. The table’s own notes matter: NOAA’s trend page explains that Mauna Loa monthly means are derived from daily means and that the newest observations may be preliminary while quality checks continue."
+      ]
+    },
+    {
+      "heading": "Read the columns before plotting",
+      "paragraphs": [
+        "Open the file as text first. Identify the date fields, the measured quantity, units, missing-value markers, and any flags. A row that contains a sentinel value or a rejected observation should not be plotted as if it were a real concentration. If the file includes comment lines, preserve them in the archived original and load only the data rows into your analysis. Record the filtering rule in ordinary language, such as “kept rows NOAA marks as valid; omitted missing values.”",
+        "NOAA reports CO₂ as a dry-air mole fraction in parts per million on its trend page. Keep that unit in the y-axis label. Don’t convert it to a percentage just because percentages look familiar: such a conversion changes the visual scale and invites misreading. Keep dates as dates rather than plotting row number; otherwise a missing month can disappear without a gap."
+      ]
+    },
+    {
+      "heading": "Make a faithful first figure",
+      "paragraphs": [
+        "Use year or month on the horizontal axis and the source concentration on the vertical axis. A thin connected line with small markers is often enough for monthly values; if markers crowd together, keep the line and show points only when zoomed. Label the figure with the dataset name, station, units and time span. Keep the axis baseline and limits visible in your notes. A tightly cropped y-axis can make modest month-to-month movement look dramatic, while a very broad range can flatten it; neither is automatically wrong, but each should be a deliberate choice.",
+        "NOAA’s published trend chart distinguishes observed monthly means from a seasonally adjusted curve. If you reproduce only the raw monthly series, label it as raw monthly means and do not draw a smoothed line that suggests NOAA’s calculation. The NOAA explanation describes its seasonal adjustment as a method using neighboring seasonal cycles; that is a separate transformation, not a cosmetic line fit."
+      ]
+    },
+    {
+      "heading": "Compare like with like",
+      "paragraphs": [
+        "Match the reference chart’s start and end dates, measurement series and axis units before judging your plot. Compare a few points by date against the source table, then compare the overall shape. The recurring seasonal rise and fall should remain visible in a raw monthly plot, alongside the longer-term increase; if your line is perfectly smooth, you may have accidentally aggregated or smoothed it. If it looks jagged in a way the reference does not, investigate filtering and whether the reference shows adjusted data.",
+        "A difference does not mean your work is wrong. NOAA notes values can change after quality-control checks, so a fresh download may not match an older screenshot exactly. Record the reference’s publication date and use the same vintage of data if the source provides it. If you cannot recover that version, state that you are reproducing the design using a newer dataset."
+      ]
+    },
+    {
+      "heading": "Leave someone else a small audit trail",
+      "paragraphs": [
+        "Save the final image together with a short methods note: source URL, access date, file name, filter applied, date range, unit, plotting choices and any discrepancy from the reference. A second person should be able to rebuild your chart without guessing whether you removed values, rescaled a column or changed the time window. Do not infer a cause for the curve from the chart alone; the exercise is about faithful display, not a causal analysis.",
+        "For a compact first attempt, plot one continuous decade, annotate one missing or flagged row if present, and make a second version with a different vertical range. Compare how the same values read in both. Then restore the axis choice you can defend and add one sentence explaining why. That sentence, plus the source file and transformation note, is the real reproduction."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Dataset MLO CO₂: monthly averages",
+      "url": "https://gml.noaa.gov/data/dataset.php?item=mlo-co2-observatory-monthly",
+      "publisher": "NOAA Global Monitoring Laboratory",
+      "purpose": "Identifies the Mauna Loa in-situ monthly CO₂ dataset and its text and NetCDF downloads."
+    },
+    {
+      "title": "Trends in CO₂: Data and methods",
+      "url": "https://gml.noaa.gov/ccgg/trends/?os=app",
+      "publisher": "NOAA Global Monitoring Laboratory",
+      "purpose": "Explains monthly means, dry-air ppm units, raw versus seasonally adjusted curves, and preliminary recent data."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "analyze-an-exoplanet-transit-with-real-telescope-data",
+    "map-impact-melt-features-on-the-moon",
+    "compare-two-sorting-algorithms-on-the-same-dataset"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

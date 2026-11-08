@@ -1,0 +1,66 @@
+{
+  "experienceSlug": "marrakech-s-medina-morocco",
+  "slug": "marrakech-s-medina-morocco",
+  "title": "Navigate Marrakech by landmarks, not by rushing",
+  "description": "Use Marrakech’s historic gates, souks and Jemaa el-Fna as anchors for a respectful medina walk, with time to pause and retrace your route.",
+  "intent": "Plan a grounded medina visit by linking its living lanes to named heritage features and practical navigation habits, not a generic Morocco checklist.",
+  "relatedExperienceSlugs": [
+    "the-silk-road-uzbekistan",
+    "transylvania-romania",
+    "santorini-greece"
+  ],
+  "sections": [
+    {
+      "heading": "Understand the medina as a living town",
+      "paragraphs": [
+        "UNESCO describes the Medina of Marrakesh as a historic urban area with lanes, houses, souks, fondouks, crafts and traditional trades. That is a useful frame: the medina is not a themed maze built solely for visitors. People live, work, worship and move goods through it. Walk with awareness of that traffic, step aside when a cart or motorbike approaches, and avoid blocking a doorway while looking at your map.",
+        "The UNESCO description also identifies landmarks from different periods, including Koutoubia Mosque, the Kasbah, ramparts and monumental gates, as well as later buildings such as Bahia Palace, the Saadian Tombs and Ben Youssef Madrasa. Choose two or three anchors rather than trying to see everything in one sweep. Verify current entry and restoration conditions directly with each site."
+      ]
+    },
+    {
+      "heading": "Use a simple loop for orientation",
+      "paragraphs": [
+        "Begin at a public landmark whose location you can recognize, such as Jemaa el-Fna, then choose one destination on a named street or souk. UNESCO calls the square an open-air theatre and separately recognizes its cultural space; that description is a reminder that it has social life beyond its role as a meeting point. If you visit in the evening, observe from a respectful distance, ask before photographing performers or vendors, and do not assume a person’s presence makes them part of a free spectacle.",
+        "For the return, use a second landmark or a gate as your check point. Save an offline map before entering narrower lanes and note your accommodation’s location in a format you can show a driver or local guide. If the route becomes confusing, stop in a safe place and ask a shopkeeper or official guide rather than continuing deeper while distracted by a phone."
+      ]
+    },
+    {
+      "heading": "Look at craft and trade with care",
+      "paragraphs": [
+        "The souks are working markets. The Moroccan National Tourist Office describes Semmarine as a major market lane and points to craft stalls; it also identifies Attarine with brass and copper work. Those names can help you focus your walk. Compare how wares are displayed, what materials or processes a seller is willing to explain, and how one lane differs from another. Do not handle fragile goods without permission or photograph a workshop as if it were a public exhibit.",
+        "If you want to buy something, ask what it is made from, where it was produced and whether the quoted price includes any packaging or delivery. A polite question is useful; prolonged bargaining is not an obligation for either party. If you are only browsing, say so kindly and leave space for local customers."
+      ]
+    },
+    {
+      "heading": "Give monuments and courtyards their own time",
+      "paragraphs": [
+        "The Koutoubia Mosque and its surroundings are an important part of the city’s skyline and urban history. Non-Muslim visitors should respect religious restrictions and not assume access to prayer spaces. At a palace, madrasa or tomb site, move slowly enough to notice the way courtyards, carved surfaces and shaded rooms organize the visitor’s attention. Ask whether photography is allowed before taking pictures inside.",
+        "Some restorations and access arrangements can change after weather or earthquake damage. UNESCO’s heritage listing explains the place’s significance; it is not a live opening or safety notice. Check the current site page or ask a licensed local guide before making a long cross-city detour around a particular monument."
+      ]
+    },
+    {
+      "heading": "Leave room for the city beyond the walls",
+      "paragraphs": [
+        "A medina visit need not be a nonstop sequence of sights. Pause for tea or a meal where visitors are welcome, then choose a quieter route toward a garden or newer neighborhood if the crowds are tiring. Keep hydration, sun and modest dress in mind, and use a licensed guide if you want historical interpretation or help navigating.",
+        "Before setting out, save three landmarks: one starting point, one site you plan to visit and one return point. Pick a reasonable time window, confirm current access and local customs, and let the city’s working rhythm shape the pace."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Medina of Marrakesh",
+      "url": "https://whc.unesco.org/en/list/331",
+      "publisher": "UNESCO World Heritage Centre",
+      "purpose": "Supports the medina’s historic urban structure and named monuments, souks, crafts, traditional trades and Jemaa el-Fna cultural space."
+    },
+    {
+      "title": "Shopping in Marrakech",
+      "url": "https://visitmorocco.com/en/travel/marrakech/shopping",
+      "publisher": "Moroccan National Tourist Office",
+      "purpose": "Opened official tourism authority page identifying Semmarine souk and Attarine’s brass/copper craft focus as concrete navigation examples.",
+      "accessLimit": "Heritage and tourism pages do not confirm current openings, restoration closures, worship access or local photography permission; verify at the time of visit."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

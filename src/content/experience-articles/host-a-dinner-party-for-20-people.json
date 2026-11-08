@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "host-a-dinner-party-for-20-people",
+  "slug": "host-a-dinner-party-for-20-people",
+  "title": "Design a 20-person dinner so the host can sit down",
+  "description": "Plan a dinner for twenty around one make-ahead main, a clear service route, dietary checks and a simple seating plan that keeps hosting manageable.",
+  "intent": "How can I host twenty people without spending the evening trapped in the kitchen? This turns scale into a menu and room-flow problem with practical food safety.",
+  "sections": [
+    {
+      "heading": "Choose a menu that behaves well at scale",
+      "paragraphs": [
+        "For twenty guests, choose a main dish that can be prepared ahead and served in a batch, such as a braise, tray-baked vegetables with grains, or a large pot of beans with separate toppings. Avoid building the entire meal around individual plates that must be cooked to order. Pick one centerpiece you are confident making, then buy or delegate simple sides and dessert. The aim is a meal that holds its quality while you welcome people, not an impressive menu that requires minute-by-minute attention.",
+        "Ask about dietary restrictions before planning and be specific about ingredients. “Vegetarian” does not tell you whether someone avoids dairy, eggs or cross-contact, and a guest may have an allergy that needs careful handling. Keep ingredient labels for packaged items. If you cannot safely meet a requirement, tell the guest honestly and agree on an alternative rather than making a promise you cannot keep."
+      ]
+    },
+    {
+      "heading": "Use a prep timeline with a cold-storage check",
+      "paragraphs": [
+        "Work backward from the serving time. The day before, shop, chop sturdy vegetables, make a sauce and set out serving dishes. On the day, leave only the tasks that benefit from being fresh: dressing a salad, warming bread, or finishing herbs. Label each dish with its serving utensil and the place it will go. Put a simple timeline on the counter so a helper can take over one task without asking you to reconstruct the plan.",
+        "The FDA advises home hosts to keep cold food at 40°F or colder and hot food at 140°F or warmer, use smaller platters and replace them with fresh ones, and follow its two-hour rule for perishables at room temperature. If the room is above 90°F, the safe time is shorter. These are U.S. FDA consumer guidelines; follow local food-safety rules where you live. Use a food thermometer where recommended, and do not rely on smell or appearance to judge safety."
+      ]
+    },
+    {
+      "heading": "Set the room before guests arrive",
+      "paragraphs": [
+        "A group of twenty needs a path between the food, seats and drinks. Put drinks away from the buffet so people do not block the food while refilling a glass. If you have one table that cannot seat everyone, decide whether the dinner will be seated in two turns, family-style, or a relaxed buffet. Tell guests what to expect so nobody waits for a formal place setting that does not exist.",
+        "Place serving utensils, napkins, water and a waste bowl where people can find them. Make the route wide enough for someone carrying a plate and let guests with mobility needs know the room arrangement ahead of time. If children are coming, keep hot dishes and breakable serving pieces where small hands cannot easily reach them."
+      ]
+    },
+    {
+      "heading": "Give the meal a simple social shape",
+      "paragraphs": [
+        "A large dinner can fragment into several conversations. Use seating to connect people who share an interest, but avoid assigning every person a scripted icebreaker. Put a few open prompts on the table: a place someone wants to return to, a small skill they recently learned, or a meal that reminds them of home. Guests can ignore them if conversation has already started.",
+        "If there are people who do not know one another, introduce them with something more useful than job titles: “You both restore old furniture” creates a natural opening. Make a short welcome, explain how the meal is served and then sit down. The host should be part of the gathering rather than the permanent runner between kitchen and dining room."
+      ]
+    },
+    {
+      "heading": "Keep food safe and plan the handoff",
+      "paragraphs": [
+        "Serve hot dishes in small batches and keep the rest at safe holding temperatures. The FDA says not to add new food onto an already filled serving dish; replace a nearly empty dish with a fresh one instead. Keep perishable leftovers out for no longer than the published limit, and refrigerate them promptly in shallow containers. If your cooking setup cannot hold food hot or cold safely, serve the food in a shorter window or choose a menu that can be handled safely.",
+        "Set one person to refill water or bring out the next course, and tell them where supplies are. Thank them with a clear task rather than asking vaguely for help. After dessert, invite people to carry their plates to one station. Your next action is to choose a make-ahead main, confirm dietary needs and sketch the traffic path from kitchen to table before buying food."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Serving Up Safe Buffets",
+      "url": "https://www.fda.gov/food/buy-store-serve-safe-food/serving-safe-buffets",
+      "publisher": "U.S. Food and Drug Administration",
+      "purpose": "Supports small replacement platters, cold and hot holding temperatures, use of thermometers, and U.S. two-hour food-safety guidance for home entertaining."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "create-a-family-cookbook-with-old-recipes",
+    "host-a-family-reunion",
+    "shape-a-batch-of-pitha-with-a-knowledgeable-cook"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,55 @@
+{
+  "experienceSlug": "keep-a-short-distance-friendship-walking-appointment",
+  "slug": "keep-a-short-distance-friendship-walking-appointment",
+  "title": "How do you make a recurring friendship walk easy to keep?",
+  "description": "Set up a short recurring walk with a friend by agreeing on a reachable route, a flexible cancellation plan and a pace that leaves room for conversation.",
+  "intent": "Offer a practical way to turn occasional intentions to meet into a small, mutually chosen walking routine that can adapt when life changes.",
+  "sections": [
+    {
+      "heading": "Ask for a routine, not an open-ended promise",
+      "paragraphs": [
+        "A recurring walk is easiest to keep when both people choose it freely. Ask one friend whether they would enjoy meeting for a short walk a few times, then offer a concrete starting plan such as four outings over a month. That gives the idea a shape without quietly turning it into a permanent obligation. If they are unsure, suggest one walk first and decide afterward whether to repeat it.",
+        "Choose a route that is genuinely easy for both people to reach. Consider the walk from the meeting point, not just its distance once underway: transport, hills, crossings, surfaces, lighting and places to pause all affect how manageable it feels. The Ramblers' group-walk guidance emphasizes planning in advance, sharing key information and adapting to local circumstances. Apply the same care to a two-person plan by describing the route and letting your friend say what works.",
+        "Agree on a duration or turnaround point that feels comfortable to the slower walker. A short, pleasant loop is more likely to become a shared habit than a route selected to impress one person."
+      ]
+    },
+    {
+      "heading": "Make the arrangement flexible",
+      "paragraphs": [
+        "Pick a regular day or time only if it suits both schedules. Decide how either person can cancel, how much notice is helpful and whether rain means a different route, a sheltered walk or a reschedule. A simple text is often enough. The purpose is to remove guesswork, not to monitor attendance or ask for personal explanations.",
+        "Talk about access needs before the first outing in ordinary terms. Ask whether a bench, shorter route, restroom stop or step-free path would help. Agree that either person can turn back or pause without having to justify it. If someone uses a mobility aid or has a variable energy level, let them describe what makes the route comfortable instead of making assumptions.",
+        "Keep the plan affordable by choosing a public route and treating a café stop as optional. If you do add transport or food costs, agree who pays and what the plan is before meeting."
+      ]
+    },
+    {
+      "heading": "Let conversation have more than one pace",
+      "paragraphs": [
+        "A walk together does not require uninterrupted conversation. Ask a gentle question, notice something along the route, or let a quiet stretch happen. Some people find it easier to talk while walking than face-to-face; others want a slower pace or frequent breaks. Check whether the route and conversation feel comfortable rather than filling every silence with another prompt.",
+        "Avoid turning the outing into an unrequested workout, life-coaching session or problem-solving meeting. If your friend shares something difficult, listen and ask what kind of response they want. If they would rather talk about the weather, that is also a successful walk.",
+        "One practical way to build continuity is to repeat a familiar first half and vary the return path. It lowers the planning burden while still giving you something new to notice. Keep the route short enough that a late start does not force either person to hurry."
+      ]
+    },
+    {
+      "heading": "Review together after a few walks",
+      "paragraphs": [
+        "After each outing, notice what made it easy or awkward: meeting time, route surface, weather, pace or the length of the conversation. After the planned set of walks, ask whether both of you want to continue, change the frequency or let the experiment end. A routine has done its job even if it remains occasional.",
+        "If the plan no longer fits, say so plainly and kindly. Friendship does not need an attendance streak. A useful next step is to ask which version you would each choose next time: the same loop, a different meeting point, or a walk when your calendars happen to align."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Walk Leader Handbook",
+      "url": "https://cdn.ramblers.org.uk/media/files/walk-leader-handbook.pdf",
+      "publisher": "The Ramblers",
+      "purpose": "Supports planning ahead, sharing route information, preparing for changing conditions and adapting walks to participants and local circumstances."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "make-a-friendship-map-together",
+    "arrange-an-accessible-outing-with-a-friend",
+    "go-on-a-friend-led-neighbourhood-tour"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

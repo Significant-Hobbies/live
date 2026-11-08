@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "advocate-for-a-policy-change-you-believe-in",
+  "slug": "advocate-for-a-policy-change-you-believe-in",
+  "title": "Turn a policy belief into a specific public request",
+  "description": "Choose the decision-maker, describe the policy change in plain language, use a local process and make one evidence-based request people can answer.",
+  "intent": "A practical path from a broad concern to a focused policy ask, built around the responsible public body and a specific next decision.",
+  "sections": [
+    {
+      "heading": "Describe the change as a decision",
+      "paragraphs": [
+        "A policy belief becomes actionable when you can say who must decide what. “Make the city safer” could mean a budget allocation, a street redesign, a school policy or an enforcement change. Pick one decision you can point to in a public document, meeting agenda or agency responsibility. Then write a sentence such as: “Ask the council to fund a protected crossing on this street in the next capital plan.”",
+        "Before advocating, check that the decision-maker has authority. A city council may set a local budget or ordinance, while a state agency or school board may control another part of the issue. In the United States, USAGov provides official contact routes to federal, state and local elected officials. In another country, start with the relevant government directory and confirm the process on the authority’s own site."
+      ]
+    },
+    {
+      "heading": "Learn the local route before mobilizing people",
+      "paragraphs": [
+        "Find the current agenda, public-comment rules, consultation deadline or committee contact. These details differ by place and can change. Ask the clerk or public-information office where comments should go, whether there is a word limit, and what documents the body will consider. If the issue belongs to a public agency rather than elected officials, identify the staff office that administers it; sending every request to a politician may slow the work.",
+        "The U.S. Senate’s public guidance directs constituents to contact their own senators about public policy and legislation, using forms, letters, calls or visits. That is a federal example, not a rule for every level of government. For a local decision, identify the actual local body and its own participation rules."
+      ]
+    },
+    {
+      "heading": "Build a short evidence file",
+      "paragraphs": [
+        "Gather a small set of facts that bear on the decision: the current policy, the affected location or service, the relevant budget line, and what comparable options cost or require. Prefer public records, research and testimony from people directly affected. Mark which statements are observed facts, estimates, or values. If a number is uncertain, call it an estimate and say how you calculated it.",
+        "Ask people affected by the policy what outcome they want before speaking for them. Invite them to shape the request, and do not publish personal stories without permission. A resident’s experience may explain why an issue matters; it does not automatically prove a citywide trend. Pair testimony with the best available local data and make limits visible."
+      ]
+    },
+    {
+      "heading": "Make one request that can be answered",
+      "paragraphs": [
+        "A concise message can include who you are and where you live, the decision you are asking for, one or two supporting reasons, and a question about the next step. For a public comment, use the body’s format and deadline. For a meeting, send the request in advance so the office can direct it to the right staff member. Avoid sending the same long statement to every official without adapting it to their authority.",
+        "Ask for a response that moves the process forward: “Will this be considered at the October budget hearing?” or “Which committee is responsible for the draft?” A no or a referral is still useful information. Record the office’s answer, date and next milestone so your group can follow up accurately rather than repeating a message without learning."
+      ]
+    },
+    {
+      "heading": "Build a coalition without blurring consent",
+      "paragraphs": [
+        "A small group can divide tasks: one person follows agendas, one checks evidence, one speaks with affected residents, and one writes the public summary. Agree on the exact ask before gathering signatures. Tell supporters what their name, quote or donation will be used for. Do not imply that a list of signatures represents people who were never asked or that an official has endorsed the proposal.",
+        "After a meeting or decision, share a factual update: what the body did, what remains undecided, and when the next opportunity opens. If the policy changes, check the actual adopted text and implementation schedule before claiming a win. Start this week by finding the official agenda for the body with authority and locating one upcoming decision where a focused request can be considered."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Find and contact elected officials",
+      "url": "https://www.usa.gov/elected-officials",
+      "publisher": "USAGov, U.S. General Services Administration",
+      "purpose": "Provides official contact-finding routes for U.S. federal, state, territorial and local elected officials."
+    },
+    {
+      "title": "How to Contact U.S. Senators",
+      "url": "https://www.senate.gov/senators/How_to_correspond_senators.htm",
+      "publisher": "U.S. Senate",
+      "purpose": "Explains channels for contacting senators and says public-policy or legislative comments should go to senators from the constituent’s state."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "run-for-local-office",
+    "volunteer-for-something-you-believe-in",
+    "own-something-that-matters-to-your-community"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

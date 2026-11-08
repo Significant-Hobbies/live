@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "translate-a-free-software-resource-into-a-language-you-know",
+  "slug": "translate-a-free-software-resource-into-a-language-you-know",
+  "title": "Translate a free software resource with a reviewable first contribution",
+  "description": "Choose a short free software resource, check the project’s translation workflow and terminology, then submit a careful draft for review.",
+  "intent": "Helps a bilingual contributor choose a small translation task and preserve technical meaning while using a community’s review process.",
+  "sections": [
+    {
+      "heading": "Find a project that welcomes translation",
+      "paragraphs": [
+        "Start with a free software project or organisation that explicitly invites volunteer translations. Check its current contribution page before doing work; teams may use a translation platform, a web preview or a mailing list, and the process can change. Choose a short page, interface string or event announcement whose audience and purpose you understand. A small task is easier to review than a large page translated without feedback.",
+        "The Free Software Foundation Europe welcomes contributions to its materials and offers a web preview workflow as well as a Weblate project. That is one organization’s approach, not a universal process for every free software project. Follow the target project’s own current instructions."
+      ]
+    },
+    {
+      "heading": "Read for meaning before translating",
+      "paragraphs": [
+        "Read the whole source once to understand who is speaking, who the reader is and what action the text asks them to take. Make a short list of technical terms, product names, links and phrases that must stay consistent. Check the project’s glossary or word list before inventing a local equivalent. If a sentence is ambiguous, ask a coordinator or look for surrounding documentation rather than guessing.",
+        "Keep the translation close enough to preserve meaning but natural enough for someone in your language to understand. Do not add claims or remove qualifications because they sound awkward. Preserve links and markup according to the platform’s rules, and watch for punctuation, plural forms and text that appears inside buttons or interface labels."
+      ]
+    },
+    {
+      "heading": "Use the project’s tool and terminology",
+      "paragraphs": [
+        "If the project provides a web preview or translation platform, use it rather than copying text into an unrelated document. The FSFE describes selecting a page, opening it in its web preview tool, choosing a language, translating a section and sending the resulting link to the translators team. Its page also notes that automatic translation requires careful review. Machine suggestions can help with a first pass, but they are not a substitute for understanding the source and checking every sentence.",
+        "Keep a small terminology note as you work. If you encounter a phrase with no obvious equivalent, record the alternatives you considered and ask for a review. Consistency across one small contribution matters more than solving every terminology debate alone."
+      ]
+    },
+    {
+      "heading": "Review the result as a reader",
+      "paragraphs": [
+        "After translating, read only the target-language text from beginning to end. Check whether a reader could follow the instructions without seeing the source. Then compare the source and translation paragraph by paragraph to catch omissions, numbers, names, warnings and links. Use spellcheck if available, but do not accept a suggested replacement for a product name or technical term without checking the project’s wording.",
+        "If the platform shows untranslated strings or a review state, address those before submitting. The FSFE asks contributors to send their translation through the specified team workflow, where others can proofread it. Avoid publishing an unreviewed draft as the official project page."
+      ]
+    },
+    {
+      "heading": "Submit and learn from the review",
+      "paragraphs": [
+        "Send the contribution using the project’s requested route and include context if the interface provides a place for questions. Be open to edits; a reviewer may know an established term or style that is new to you. Keep a copy of your own notes if the platform does not preserve them, but do not redistribute copyrighted source text outside the project’s permitted workflow.",
+        "Save the experience with the language, project and type of resource you translated. Your next task can use the terminology you learned or help review someone else’s work if you are qualified. A small reviewed contribution is a useful first step into a collaborative translation team."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Information for Translators",
+      "url": "https://fsfe.org/contribute/translators/translators.en.html",
+      "publisher": "Free Software Foundation Europe",
+      "purpose": "Describes volunteer translation pathways through its web preview and Weblate, review workflow, glossary and careful review of automatic translation."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "transcribe-a-historical-manuscript-for-the-smithsonian",
+    "community-0bf243ad-4d43-51c9-8a94-16fdeb88d54d",
+    "document-a-wild-species-for-inaturalist"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

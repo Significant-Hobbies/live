@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "learn-a-mahjong-ruleset-and-finish-a-game",
+  "slug": "learn-a-mahjong-ruleset-and-finish-a-game",
+  "title": "Teach one mahjong ruleset at a patient table",
+  "description": "Pick a named mahjong tradition, match its tile set and reference sheet, and use a practice hand to make a first full game easier to follow.",
+  "intent": "How should a beginner group avoid mixing mahjong rule traditions while learning enough to finish a game? This adds a table setup and teaching sequence.",
+  "sections": [
+    {
+      "heading": "Name the ruleset before inviting players",
+      "paragraphs": [
+        "Mahjong refers to related games with meaningful differences in tiles, hand construction, calls, and scoring. Decide which tradition the table will use before anyone studies a guide or borrows a set. The American Mah Jongg Association describes a four-player American format using 152 tiles, racks, dice, and the current National Mah Jongg League card. That is not a universal equipment list.",
+        "Put the ruleset name in the invitation and have one experienced player agree to teach. Ask whether the set and reference material match the chosen tradition. A table that starts with one ruleset and then borrows a scoring rule from another creates confusion that looks like beginner error."
+      ]
+    },
+    {
+      "heading": "Make the tile vocabulary visible",
+      "paragraphs": [
+        "Lay out one example of each tile family and explain the names used by this ruleset. Let learners handle the pieces and group them with the reference sheet in view. For American Mah Jongg, the current card matters because playable hands change by year; the association notes that the core game structure persists while the hands on the card change.",
+        "Use a small practice question—which tiles are in this group?—before explaining strategy. Avoid asking a newcomer to memorize the full card. Give them a way to look up unfamiliar symbols and let the teacher narrate how an example hand fits the chosen card."
+      ]
+    },
+    {
+      "heading": "Rehearse the first sequence openly",
+      "paragraphs": [
+        "Before dealing a full game, walk through building walls, dealing, the Charleston, then drawing and discarding. In the American format described by the association, the Charleston is a tile-passing phase before ordinary turns. Practice passing tiles slowly so players can see direction and timing; confirm whether the table uses an optional second Charleston.",
+        "For the first teaching hand, keep the card visible and say each step aloud. A learner can ask why a tile is being passed without losing their place. If a mistake happens, agree in advance whether to rewind, continue as a teaching hand, or reset. Silent correction rules are harder to learn than visible correction."
+      ]
+    },
+    {
+      "heading": "Use calls as a deliberate lesson",
+      "paragraphs": [
+        "Calling a discarded tile can change both a hand and the turn order, so pause before the first call and explain what the selected ruleset permits. In the association’s American rules, certain exposed groupings can be called, and a call gives the player the next turn. Show the reference section when a question arises rather than relying on unsupported memory.",
+        "Keep the table’s pace comfortable. A beginner can announce that they are checking the card before acting. For the learning game, focus on maintaining the correct tile count and taking turns in order; scoring refinements can wait until the group has completed a hand."
+      ]
+    },
+    {
+      "heading": "Finish, review, and reset the table",
+      "paragraphs": [
+        "Define what finish means for your session: one complete hand, or a longer agreed format. Keep score only if the group wants it and can follow the chosen rules. At the end, ask each person to name one rule they now understand and one point that still needs checking. Separate uncertainty from a rule dispute so the next session begins with a useful question.",
+        "Collect tiles into the right compartments and put the current rules reference with the set. If the group enjoyed the game, schedule the next lesson around one remaining topic, such as the Charleston or a legal call. Your next action is to confirm the ruleset and its matching reference card before setting a date."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "American Mah Jongg Rules",
+      "url": "https://www.americanmahjonggassociation.com/american-mah-jongg-rules",
+      "publisher": "American Mah Jongg Association",
+      "purpose": "Supports the specifically labeled American format’s player count, equipment, current card, game sequence, and selected call rules."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "play-a-complete-doubles-carrom-match",
+    "host-a-shared-silent-reading-hour",
+    "play-an-antakshari-song-relay-with-friends"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

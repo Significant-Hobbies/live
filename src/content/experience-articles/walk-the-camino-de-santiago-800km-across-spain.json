@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "walk-the-camino-de-santiago-800km-across-spain",
+  "slug": "walk-the-camino-de-santiago-800km-across-spain",
+  "title": "Choose a Camino route by its real walking commitment",
+  "description": "Plan a Camino by route, walking days, recovery, and credential rules; the French Way is one option, not a universal 800-kilometre itinerary.",
+  "intent": "How do I decide whether a full Camino fits my time and body? This guide replaces a single distance promise with route-specific planning and a staged commitment.",
+  "sections": [
+    {
+      "heading": "Start with the route, not the headline distance",
+      "paragraphs": [
+        "The Camino de Santiago is a network of pilgrimage routes, not one fixed walk. The experience title’s 800-kilometre framing should not be read as a universal distance: route choice and starting point change the length, terrain, transport needs and time commitment. Decide what matters most before booking: a long continuous crossing, a particular historic route, a shorter first pilgrimage, or arrival in Santiago within a fixed leave window.",
+        "The official Galician Way site shows the French Way entering Galicia at O Cebreiro and gives separate local alignments through San Xil and Samos. Those are Galicia sections, not the entire French Way from a border. This distinction matters when you compare maps: a regional route page may show only the segment inside its jurisdiction. Trace the full itinerary on an official route source and note the exact starting town before estimating days."
+      ]
+    },
+    {
+      "heading": "Turn distance into days you can recover from",
+      "paragraphs": [
+        "Build a day-by-day draft from route maps, but do not divide a headline distance by an ambitious daily target and call the result a plan. Terrain, surface, weather, daylight, lodging location, and the weight you carry all change how a day feels. A shorter day with a steep climb or long descent may be more demanding than a longer day on easier ground. Leave room for an arrival day, laundry, a rest day, and a buffer at the end rather than using every available day for walking.",
+        "Use a staged test at home: take a walk in the shoes and pack you expect to use, then repeat on another day after ordinary life has resumed. This is a planning experiment, not a fitness test to pass. If a blister, joint pain, or unusual fatigue changes your stride, the daily plan should change too. Build the route around a pace that lets you stop, drink, eat, and still arrive with enough attention to find your lodging."
+      ]
+    },
+    {
+      "heading": "Separate the certificate rules from route folklore",
+      "paragraphs": [
+        "The Cathedral of Santiago’s Pilgrim Reception Office sets the certificate rules separately from the choice to walk a Camino. Its current Spanish requirements page says walkers and riders must complete 100 continuous kilometres toward Santiago on one recognized route, including the final stage; for a route that begins outside Spain, at least 70 kilometres must be in Spain. The office also states a 200-kilometre cycling threshold and additional credential requirements. Treat the Compostela as an optional certificate, not a measure of whether your journey counts. Confirm your own case with the issuer before departure.",
+        "Plan to collect stamps according to the official guidance for your credential and route, rather than assuming every café, church, or hostel can stamp it. Keep it dry and accessible. A damaged, missing, or incomplete document can turn a simple end-of-walk task into a frustrating administrative question, especially if you have followed a route variation."
+      ]
+    },
+    {
+      "heading": "Treat sleep, meals and stops as route infrastructure",
+      "paragraphs": [
+        "Make two lodging plans for each section: a preferred stop and a fallback if your day ends early or late. Use current official network information and contact providers directly for operating dates, booking rules, accessibility and beds. Do not rely on old blog prices or a promise that a bed will always be available. If a stage ends somewhere with limited alternatives, arrange that night before setting out or shorten the stage to a place with more options.",
+        "Mark water and food stops from current maps, but carry enough to bridge a closure or an unexpectedly long pause. In a group, agree whether the slowest person sets the day’s pace, how you regroup after junctions, and what happens if someone wants to stop. On a solo walk, share a broad itinerary with someone at home and decide how you will check in without treating a missed message as proof of danger."
+      ]
+    },
+    {
+      "heading": "Give the route a human-sized first decision",
+      "paragraphs": [
+        "A full Camino is easier to picture when you test one piece of the routine. Choose an official stage, walk a comparable local route with your intended daypack, and write down what surprised you: foot comfort, how long breaks took, or how much you wanted a quiet evening. Use that evidence to change the itinerary before reserving nonrefundable travel. If the available leave cannot accommodate the route you want, a shorter recognized route or a return visit is a legitimate design choice.",
+        "Finally, recheck current route advisories, border and transport arrangements, seasonal operations, and credential instructions close to departure. These details can change independently of the walking route. Your next step is to pick a route and start town, then map only the first few days with recovery and fallback stops before committing the rest."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "La Compostela: acreditación de la peregrinación",
+      "url": "https://oficinadelperegrino.com/peregrinacion/la-compostela/",
+      "publisher": "Pilgrim Reception Office, Cathedral of Santiago",
+      "purpose": "Current issuer requirements state continuous distance on one recognized route toward Santiago, final stage inclusion, and minimum Spanish distance when starting outside Spain; article confines this to optional Compostela planning."
+    },
+    {
+      "title": "The French Way",
+      "url": "https://www.caminodesantiago.gal/en/make-plans/the-ways/french-way",
+      "publisher": "Xunta de Galicia, Way of Saint James in Galicia",
+      "purpose": "Official route map and stages for the Galician portion of the French Way, used to clarify that a regional segment is not the whole route."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "walk-a-labyrinth-or-pilgrimage-slowly",
+    "navigate-a-beginner-orienteering-course-with-a-paper-map",
+    "hike-the-appalachian-trail-end-to-end"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

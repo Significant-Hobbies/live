@@ -1,0 +1,60 @@
+{
+  "experienceSlug": "community-3ac454c5-a98e-5154-b557-87a2c61777d8",
+  "slug": "live-in-a-different-country-for-a-year",
+  "title": "Build the first months of a life abroad",
+  "description": "After a move, make the first months manageable with repeatable routines, local support and deliberate connection to home.",
+  "intent": "Plan the first months after moving abroad around housing routines, local support and staying connected, distinct from visa and administrative preparation.",
+  "relatedExperienceSlugs": [
+    "live-somewhere-for-more-than-a-tourist",
+    "work-or-intern-in-another-country",
+    "make-a-best-friend-in-a-foreign-country"
+  ],
+  "sections": [
+    {
+      "heading": "Give arrival a rhythm before it has a social life",
+      "paragraphs": [
+        "A move abroad can feel like a holiday for a week and a series of small puzzles after that. Start with repeatable anchors: one grocery route, one way to get to work or study, one meal you can make, and one weekly activity outside the home. The first goal is not to “know the country”; it is to make ordinary days less tiring.",
+        "Choose a manageable neighborhood radius at first. Walk the route to a pharmacy, transit stop, park or community center when you are not rushed. Save addresses offline and keep an emergency contact plan. If you are still searching for long-term housing, make a realistic temporary plan and use reputable local resources rather than sending money under pressure."
+      ]
+    },
+    {
+      "heading": "Find support that matches your situation",
+      "paragraphs": [
+        "Look for a language class, hobby group, workplace network, library, faith community or volunteer organization that meets regularly. Consistency makes it easier to recognize people than a packed calendar of one-off events. Try one group twice before deciding whether it fits; first visits can feel awkward even when the group is welcoming.",
+        "If Canada is your destination, Immigration, Refugees and Citizenship Canada lists local settlement services that may help with community connections, language training or employment, but eligibility depends on immigration category and rules can change. This is a Canada-specific example, not a universal service. In any country, check the official local newcomer or municipal sources that apply to your status."
+      ]
+    },
+    {
+      "heading": "Make friendships through repeated, low-pressure contact",
+      "paragraphs": [
+        "Choose a setting where you can show up more than once: a weekly class, team, neighborhood activity or study group. Make a small invitation tied to the shared activity—“Would you like to get coffee after class next week?”—rather than expecting instant closeness. If someone is busy, accept it and keep the group connection easy.",
+        "A local friend is not a tour guide, translator or representative of an entire culture. Ask questions with care, listen, and share your own experience too. Learn a few everyday phrases even if you are studying the language formally. Small attempts can make errands smoother while you build deeper ability."
+      ]
+    },
+    {
+      "heading": "Stay connected to home without living only online",
+      "paragraphs": [
+        "Set one or two regular times for calls with family or friends, taking time zones into account. Keep a small ritual from home—a recipe, music, a weekly call or a familiar book—while making room for local routines. If every free hour becomes a video call, it can be harder to notice the new place; if you cut off your old support completely, homesickness can become heavier.",
+        "Create a private note for moments of culture shock: what happened, what you expected, what you learned and whether you need help. You do not have to turn every difference into a judgment about the country. Some issues are practical, some are personal, and some will become easier with time."
+      ]
+    },
+    {
+      "heading": "Review your first month, then adjust",
+      "paragraphs": [
+        "At the end of each week, check sleep, food, money, work or study load, movement and social contact. If something feels unsustainable, change one thing at a time: a closer grocery store, fewer late nights, a different language class or asking a settlement organization for guidance. Serious distress deserves support from qualified professionals in your location.",
+        "Your next action is to choose three weekly anchors: one practical errand, one recurring activity and one connection to someone you trust. Make those the spine of the first month, then add more after the basics feel steady."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Find free newcomer services near you",
+      "url": "https://ircc.canada.ca/english/newcomers/services/",
+      "publisher": "Immigration, Refugees and Citizenship Canada",
+      "purpose": "Official Canadian settlement-service finder lists services such as settlement plans, community connection, employment and job-related language learning for eligible groups.",
+      "accessLimit": "Canada-only example; eligibility and time limits vary and changed beginning April 1, 2026. Article says to verify current eligibility and does not imply these services apply in other countries."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

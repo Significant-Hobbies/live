@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "write-down-your-core-values-and-check-them-against-how-you-actually-spend-your-t",
+  "slug": "write-down-your-core-values-and-check-them-against-how-you-actually-spend-your-t",
+  "title": "Compare the Life You Value With the Week You Actually Have",
+  "description": "Name a few values, then compare them with a real week of time and spending to find one practical adjustment without self-judgment.",
+  "intent": "How can I turn a list of personal values into a useful comparison with daily choices, without treating the exercise as a score or diagnosis?",
+  "sections": [
+    {
+      "heading": "Describe a value as a direction",
+      "paragraphs": [
+        "Choose words that describe how you want to act, not only things you want to possess. “Curiosity” can guide a question you ask; “family” may point toward how you show up for relatives; “security” might shape how you plan. The Veterans Health Administration's Whole Health guide describes values as personal, changeable and useful for giving direction to choices. Borrow that directional idea, but make this a self-reflection exercise, not a clinical assessment.",
+        "Write six candidate words, then circle three that still feel like yours when nobody else sees the list. If “success” feels borrowed, translate it: do you mean mastery, recognition, independence, or contribution? More specific words lead to a more honest comparison."
+      ]
+    },
+    {
+      "heading": "Take a small, ordinary sample",
+      "paragraphs": [
+        "Use one recent week rather than your whole life. Look at a calendar, receipts, or a rough memory of how you spent your evenings. Mark recurring blocks: paid work, care work, sleep, travel, chores, rest, and time with people. Money and hours are clues, not a complete measure of what matters. A long shift may reflect financial need rather than a low value for family; an unpaid act of care may take time but leave little trace in a bank statement.",
+        "Beside each circled value, jot down two moments when it appeared and one moment you missed it. For “learning,” perhaps you asked a colleague to explain a process but skipped a class because of a deadline. Record circumstances too: obligations, health, money, and access shape what choices were available."
+      ]
+    },
+    {
+      "heading": "Look for alignment and constraint",
+      "paragraphs": [
+        "The useful question is not “Did I live my values perfectly?” It is “What pattern do I see, and what part of it can I influence?” A week with little leisure may reflect an unusually busy period; a year of postponing friends may reveal a pattern worth addressing. Separate a one-off exception from a repeated trade-off.",
+        "Avoid ranking values as if only one can matter. Family time and financial stability can compete in the same decision; rest and responsibility can both be legitimate. Write the tension as two values you are trying to honor, not as a moral failure. This keeps the comparison curious rather than punitive."
+      ]
+    },
+    {
+      "heading": "Choose one small experiment",
+      "paragraphs": [
+        "Pick one action small enough to test for seven days: reserve a short call with a friend, put a modest amount toward a goal if your budget allows, or protect a brief reading period. Specify when and where it might happen. If the action is blocked by an obligation or resource you cannot change, choose a different expression of the same value rather than adding guilt to the obstacle.",
+        "At week's end, ask whether the action felt aligned, what got in the way, and whether the value itself still feels important. The exercise should be revisable. The VA guide presents values as capable of changing over time; your list can change as roles and circumstances change too."
+      ]
+    },
+    {
+      "heading": "Keep the notes private and useful",
+      "paragraphs": [
+        "Do not turn this page into a ledger for judging yourself or someone else. Your actual spending and calendar may contain sensitive information; use a summary rather than sharing raw records. If the exercise makes you feel stuck, set it aside and talk with someone you trust. It is a planning prompt, not treatment, financial advice, or a substitute for help with a serious problem.",
+        "For your first comparison, write down one value, one moment from last week that expressed it, and one low-cost action you could try next week."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Values",
+      "url": "https://www.va.gov/WHOLEHEALTHLIBRARY/tools/values.asp",
+      "publisher": "U.S. Department of Veterans Affairs, Whole Health Library",
+      "purpose": "Supports describing values as individual, changeable directions that guide choices and priorities; the draft's weekly comparison is original planning advice, not a VA clinical protocol."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "write-a-manifesto-for-how-you-want-to-live",
+    "create-a-personal-annual-report",
+    "spend-a-birthday-alone-reflecting-on-the-past-year"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

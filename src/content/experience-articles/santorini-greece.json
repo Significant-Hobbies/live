@@ -1,0 +1,64 @@
+{
+  "experienceSlug": "santorini-greece",
+  "slug": "santorini-greece",
+  "title": "Read Santorini through its villages, not a single viewpoint",
+  "description": "Compare Fira, Imerovigli, Oia, Akrotiri and Emporio by the history and landscape each reveals, then shape a respectful island itinerary.",
+  "intent": "How can I experience Santorini beyond one sunset stop? This guide uses village character and two distinct archaeological sites to shape a slower visit.",
+  "sections": [
+    {
+      "heading": "Use Fira as a reference point",
+      "paragraphs": [
+        "Start by deciding whether you want an island village, an archaeological site or a caldera view. Fira is the capital and commercial center, so it is a practical place to orient yourself, find museums and compare onward options. It is also busy; plan time to move beyond the main streets if you want a quieter sense of place.",
+        "Imerovigli offers a different caldera setting, while Oia is known for protected architecture and houses overlooking the water. These are not interchangeable sunset platforms. Choose one for its village form and allow the other to be a separate visit only if your transport plan gives you enough room. The Municipal Port Fund’s descriptions support these contrasts, but do not establish current crowd levels or walking times."
+      ]
+    },
+    {
+      "heading": "Pair one village with one site",
+      "paragraphs": [
+        "Akrotiri village contains a prehistoric archaeological site, while Ancient Thera sits at Mesa Vouno. The Greek National Tourism Organisation describes the former as a preserved Bronze Age settlement and the latter as a terraced ancient city with sanctuaries and a theatre. They answer different questions: how a prehistoric settlement was preserved, and how a later city used a naturally fortified position.",
+        "Choose one site for a focused visit instead of rushing through both. Read the site’s current access, opening and reservation details directly before travel; GNTO lists seasonal schedules that can change. For the remaining time, use Akrotiri village or a nearby settlement as the slower part of the day, rather than treating the site visit as a photo stop."
+      ]
+    },
+    {
+      "heading": "Notice the island’s settlement patterns",
+      "paragraphs": [
+        "Emporio is a useful counterpoint to the caldera villages. The municipal description highlights its well-preserved kasteli and narrow lanes; the national tourism guide notes fortified architecture and windmills. Walk respectfully through lived-in streets, keep voices low near homes and avoid treating doorways as public viewpoints. A short loop through the settlement can reveal how local architecture responds to terrain differently from a cliff-edge promenade.",
+        "Megalochori offers well-preserved houses, churches and squares, while Pyrgos is arranged around castle walls and a summit monastery. Pick one village based on whether you want a relaxed square, a fortified settlement or a high viewpoint. Verify access and any religious-site expectations locally, and do not enter private courtyards simply because a gate is open."
+      ]
+    },
+    {
+      "heading": "Plan movement without inventing a timetable",
+      "paragraphs": [
+        "The source pages describe places, not transport frequency or route duration. Check current bus, ferry, taxi and site-opening information with the operator before setting a day plan. Cluster stops by area and leave a buffer for transfers. A plan with Akrotiri village and its site is easier to adapt than a cross-island sequence that depends on several timed connections.",
+        "If walking between settlements, use a current map and official route information; do not assume a scenic caldera path is level or appropriate for every traveler. Wear footwear suited to uneven surfaces, carry water and step aside for residents and service vehicles where paths are narrow. In warm weather, build shade and indoor breaks into your visit."
+      ]
+    },
+    {
+      "heading": "Leave space for the place to register",
+      "paragraphs": [
+        "Choose one observation for each stop: how the view changes as the path bends, how a fortified lane narrows, or how the museum presents finds from the site. These specific details make a day more memorable than repeating the same caldera photograph from different villages. If you take pictures of people, ask permission and avoid blocking a working street.",
+        "A simple itinerary could anchor one morning at an archaeological site, follow it with a village lunch, then end at a different settlement rather than racing toward every famous overlook. Let current conditions determine which stops fit. Santorini becomes more legible when you compare how its people built, traded, worshipped and lived across distinct settings."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Villages",
+      "url": "https://www.santoriniports.gov.gr/en/villages",
+      "publisher": "Municipal Port Fund of Thira",
+      "purpose": "The municipal page describes Fira as the island capital and commercial/administrative center, Imerovigli on the caldera, Oia’s protected architecture, and Akrotiri’s nearby archaeological site; it gives no transport schedules."
+    },
+    {
+      "title": "Archaeological Sites of Santorini",
+      "url": "https://www.visitgreece.gr/en/experiences/culture/archaeological-sites-monuments/archaeological-sites-of-santorini",
+      "publisher": "Greek National Tourism Organisation",
+      "purpose": "The GNTO distinguishes prehistoric Akrotiri from Ancient Thera at Mesa Vouno and describes Emporio’s fortified architecture; schedules and prices need current operator confirmation."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "summit-a-volcano",
+    "the-amalfi-coast-italy"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

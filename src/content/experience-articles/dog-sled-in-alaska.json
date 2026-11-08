@@ -1,0 +1,47 @@
+{
+  "experienceSlug": "dog-sled-in-alaska",
+  "slug": "dog-sled-in-alaska",
+  "title": "Choose an Alaska dog-sled outing by its format",
+  "description": "Compare Alaska dog-sled tours by kennel time, passenger ride, transfer, weather plan, and how the musher introduces the dogs.",
+  "intent": "How can a visitor choose an Alaska dog-sled experience that matches their interest in the ride, dogs, and logistics?",
+  "sections": [
+    {
+      "heading": "Choose what kind of outing you want",
+      "paragraphs": [
+        "A dog-sled visit in Alaska can mean a short kennel visit, a ride as a passenger, a glacier camp, or a longer backcountry trip. Those are very different days. The state’s Travel Alaska guide describes year-round tour and demonstration options, including kennel visits and rides, and says longer trips can involve guided winter backcountry camping. Start by choosing the version that fits your time, comfort, and interest in the dogs themselves. If meeting a musher and learning how a team is raised matters more than the ride, ask about a kennel-focused visit. If the landscape is your main interest, ask exactly where the ride takes place and how you get there. A helicopter transfer to a glacier is a separate choice with its own weather and mobility considerations; don’t mistake it for a simple ground-based outing."
+      ]
+    },
+    {
+      "heading": "Ask about dogs and logistics",
+      "paragraphs": [
+        "When comparing operators, ask what the dogs’ routine looks like on the day, whether there is time to meet them without crowding, and how the crew decides whether conditions suit a ride. Ask whether guests ride as passengers or are expected to drive a team, and whether any instruction is part of the experience. Do not assume the word “mushing” means you will be steering. Confirm age, accessibility, transfer, clothing, duration, and cancellation policies in writing. Alaska weather and travel logistics can change; leave margin around flights or cruise connections. A kennel visit can be a meaningful alternative if the ride is canceled or if you prefer observing to participating. Choose an operator that welcomes questions about animal care and gives clear, calm answers."
+      ]
+    },
+    {
+      "heading": "Follow the handler’s lead",
+      "paragraphs": [
+        "Dress for being outside and follow the operator’s current clothing advice. Bring only what the crew allows on the sled or in a kennel area; loose objects can be difficult to manage. Listen to staff around the dogs, approach only when invited, and let the handler explain where and how to interact. The team’s behavior and spacing belong to the musher, not visitors. Avoid feeding, shouting, or attempting to handle equipment or animals without permission. If a dog steps away or a handler asks guests to give space, follow that direction. Take photos only when permitted, and remember that the quiet moments—harnesses being prepared, the team settling, snow under runners—can be more compelling than posing beside a dog."
+      ]
+    },
+    {
+      "heading": "Make the first visit informative",
+      "paragraphs": [
+        "For a first visit, choose a short demonstration or kennel tour with enough time to ask the musher about training, daily care, and the differences between a passenger ride and handling a team. Travel Alaska notes that visitor experiences vary from demonstrations and short rides to multi-day adventures, so compare the format rather than relying on one generic tour description. If your preferred day includes a ride, confirm the exact terrain and transfer and leave a backup activity in your schedule. Afterward, write down one detail about the dogs’ work and one thing the musher explained that you had not known. Your next step is to compare two Alaska providers on animal interaction, weather plans, and whether the experience is a kennel visit, passenger ride, or guided trip."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Dog Sledding in Alaska",
+      "url": "https://www.travelalaska.com/things-to-do/winter-activities/dog-sledding",
+      "publisher": "Travel Alaska",
+      "purpose": "Describes visitor formats ranging from kennel visits and short rides to guided multi-day trips and glacier-based experiences."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "alaska-wilderness-at-scale",
+    "go-on-a-polar-expedition"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

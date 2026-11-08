@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "volunteer-for-something-you-believe-in",
+  "slug": "volunteer-for-something-you-believe-in",
+  "title": "Turn a cause you care about into a useful volunteer role",
+  "description": "Choose a volunteer commitment by matching a cause to a real task, your skills, and your limits, then check what the organization expects before joining.",
+  "intent": "How do I find a volunteer role for a cause I believe in and make sure the work is useful, clearly scoped, and sustainable for me?",
+  "sections": [
+    {
+      "heading": "Translate belief into a specific need",
+      "paragraphs": [
+        "Start with the issue that draws you in—food access, literacy, wildlife, disability inclusion, housing, or another cause. Then ask what work is currently needed. A group working on food access might need someone to sort deliveries, translate a flyer, coordinate transport, or help with a recurring meal. The role you choose should respond to the organization’s stated priorities, not only the part of the cause that feels most dramatic to you.",
+        "Write a sentence that connects your belief to a task: “I want to support local literacy by helping an existing program prepare materials twice a month.” Add the time, travel, language, skills, and emotional limits you can realistically offer. A bounded role is easier for an organization to plan around than an open-ended promise to do anything."
+      ]
+    },
+    {
+      "heading": "Look for the actual role description",
+      "paragraphs": [
+        "Use local nonprofit networks, community centers, municipal volunteer offices, or national opportunity databases as discovery tools. AmeriCorps’s public volunteer-listing help page explains that listings can be searched by interests and that details can include the program, start date, location, and a fuller project description with contact information. A listing is a lead; read the specific organization’s current description and speak with its coordinator before committing.",
+        "Ask what a typical shift involves, who supervises volunteers, what training is provided, how cancellations work, and what happens if a role exposes you to children, vulnerable adults, confidential information, or physical hazards. If you do not receive clear answers, ask again or choose another role. For work involving regulated services, clinical settings, or legal matters, follow the organization’s training and eligibility requirements rather than improvising a helper role."
+      ]
+    },
+    {
+      "heading": "Check the organization and the fit",
+      "paragraphs": [
+        "Look for a real address and contact person, a clear description of who benefits, and a way to ask questions before sharing personal information. Ask how the organization uses volunteers and what a good shift looks like from the perspective of the people served. If you plan to donate money as well as time, independently verify the organization through a government charity or nonprofit registry where one exists.",
+        "In the United States, the IRS Tax Exempt Organization Search lets users review certain tax-exempt status and filings, but its records have limits and it is not a rating of program quality. Other countries have different regulators and rules. Tax status does not tell you whether a role is well managed or whether the group’s approach aligns with your values, so also review its work, leadership, safeguarding practices, and community relationships."
+      ]
+    },
+    {
+      "heading": "Try a realistic first commitment",
+      "paragraphs": [
+        "Choose one orientation or trial shift if available. Arrive with the contact person’s name, the agreed task, the expected finish time, and any required clothing or supplies. Ask before taking photos or sharing stories about the people you meet. Respect confidentiality and do not promise services or resources the organization has not authorized you to provide.",
+        "Notice the role from both sides: what did you contribute, and what did the coordinator or community need from you? If the work is not a fit, tell the organizer early and finish any agreed handoff. If it is a fit, ask what repeat schedule would help most rather than adding yourself to every open task."
+      ]
+    },
+    {
+      "heading": "Keep the commitment sustainable",
+      "paragraphs": [
+        "After a few shifts, review the time and energy the work takes. A short, regular commitment may be more valuable than an intense burst followed by a sudden disappearance. Put shifts in your calendar and revisit the arrangement if employment, health, caregiving, or study changes. It is acceptable to set an end date or ask to move into a different role.",
+        "Keep learning about the issue from people directly affected and from credible local sources, not only from volunteer stories. The next step is to find one organization addressing your chosen cause, read a current role description, and ask the coordinator what a useful first shift looks like."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How do I search for Volunteer Opportunities?",
+      "url": "https://my.americorps.gov/trust/help/applicant/How_do_I_search_for_Volunteer_Opportunities_.htm",
+      "publisher": "AmeriCorps",
+      "purpose": "Supports that volunteers can search listings by interests and that listing details may include program, start date, location, description and contact information; it is a discovery aid, not an endorsement of any placement."
+    },
+    {
+      "title": "Search for tax exempt organizations",
+      "url": "https://www.irs.gov/charities-non-profits/search-for-tax-exempt-organizations",
+      "publisher": "Internal Revenue Service",
+      "purpose": "Supports the U.S.-specific example that the IRS search can show certain tax status, donation eligibility and filings; it is not a quality rating and has listed exceptions and data limitations."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "sort-supplies-during-a-food-bank-volunteer-shift",
+    "complete-a-bounded-un-online-volunteering-assignment",
+    "do-a-group-charity-challenge-with-friends"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

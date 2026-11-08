@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "ask-forgiveness-from-someone-you-hurt",
+  "slug": "ask-forgiveness-from-someone-you-hurt",
+  "title": "How to ask for forgiveness without demanding it",
+  "description": "Prepare a specific apology, ask whether a conversation is welcome, and let the other person choose silence, distance or a response in their own time.",
+  "intent": "A consent-first approach to deciding whether and how to apologize, with practical language that leaves the recipient free to decline or not forgive.",
+  "sections": [
+    {
+      "heading": "Decide whether contact is welcome",
+      "paragraphs": [
+        "Before drafting the perfect apology, consider the other person’s boundaries. If they have asked you not to contact them, blocked you, or used a formal no-contact process, respect that instruction. Do not recruit friends, family, coworkers or public posts to get around it. If there is no known boundary, a brief message can ask whether they would be open to hearing an apology, without requiring an explanation or a meeting.",
+        "This first invitation might be: “I’ve been thinking about what I did. I’m sorry for [specific action]. Would you be open to hearing an apology? No reply is needed, and I’ll respect it if you don’t want contact.” Keep it short enough that the recipient can understand the choice without having to comfort you."
+      ]
+    },
+    {
+      "heading": "Name the action and its effect",
+      "paragraphs": [
+        "An apology starts with what you did, not with a long account of what you meant. “I was under pressure” may be true, but it can sound like a case for reducing your responsibility. Try a plain sentence: “I shared the story you told me privately, and that broke your trust.” If you do not know how it affected them, do not guess at their feelings as if you know better; you can say that you understand your action may have caused harm.",
+        "A University of California, Berkeley Greater Good article by psychiatrist Aaron Lazare describes acknowledgment, remorse and some form of reparation among possible parts of an effective apology. These are useful prompts, not a script that guarantees forgiveness. Be concrete and brief. The more you add explanations, the easier it is for the recipient to hear the apology as a defense."
+      ]
+    },
+    {
+      "heading": "Offer a repair that belongs to them",
+      "paragraphs": [
+        "Ask whether there is a practical step that would help, especially if the harm has a concrete consequence. If you damaged an item, offer to replace or pay for it. If you spread a false claim, correct it with the same people who heard it, without making the correction another opportunity to describe yourself as a good person. Do not turn a repair offer into a bargain: “I’ll do this if you forgive me” makes it conditional.",
+        "Some harms cannot be reversed. In that case, name what you are changing so the action is less likely to recur. A person who repeatedly interrupted could agree to a specific meeting norm; someone who disclosed private information can stop sharing it and ask before mentioning it again. Avoid grand promises about becoming a different person overnight."
+      ]
+    },
+    {
+      "heading": "Make room for a no, silence or anger",
+      "paragraphs": [
+        "The person may accept your apology, reject it, ask questions, respond angrily, or say nothing. Each is a possible response, not a cue to send a second message explaining that you are sincere. Forgiveness is their decision and may take time; reconciliation is a separate decision about renewed closeness. Berkeley’s forgiveness resource emphasizes that forgiving does not require forgetting, excusing harm or resuming a relationship. That distinction matters when trust or safety is involved.",
+        "If they decline contact, acknowledge it once if a reply is appropriate, then stop. If they ask for time, do not set your own deadline. Do not make mutual friends carry messages or ask them to report how the person feels. Your work is the apology and the behavior change, not managing the other person’s emotional timeline."
+      ]
+    },
+    {
+      "heading": "Prepare a clean, low-pressure apology",
+      "paragraphs": [
+        "Write a draft you do not send immediately. Circle any sentence that explains your intention, describes your guilt, or asks for reassurance. Keep only what helps the recipient understand the action, the acknowledgment, a sincere expression of regret, and a practical offer to make things right. If the situation involves abuse, threats, a workplace investigation or legal proceedings, get qualified guidance before contacting the person; direct contact can create pressure or complicate safety.",
+        "The first useful step may be a private note to yourself: what happened, what you are responsible for, and what you will change whether or not the person forgives you. If you do reach out, use one respectful channel, ask whether a conversation is welcome, and let their answer—or silence—be the end of the request."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "What an Apology Must Do",
+      "url": "https://greatergood.berkeley.edu/article/item/what_an_apology_must_do",
+      "publisher": "Greater Good Science Center, University of California, Berkeley",
+      "purpose": "Outlines acknowledgment, remorse, explanation and reparation as possible apology components; it does not promise an outcome."
+    },
+    {
+      "title": "How Therapists Can Help Clients Move Toward Forgiveness",
+      "url": "https://greatergood.berkeley.edu/article/item/how_therapists_can_help_clients_move_toward_forgiveness",
+      "publisher": "Greater Good Science Center, University of California, Berkeley",
+      "purpose": "Explains forgiveness is distinct from reconciliation and does not require contact; supports respecting boundaries."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "write-a-forgiveness-letter-to-yourself",
+    "repair-a-relationship-you-damaged",
+    "write-heartfelt-letters-to-10-people-who-changed-your-life"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

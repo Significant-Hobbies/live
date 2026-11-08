@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "build-a-solar-oven-and-chart-its-heating",
+  "slug": "build-a-solar-oven-and-chart-its-heating",
+  "title": "How do you chart heat in a homemade solar oven?",
+  "description": "Build a simple solar oven and track its temperature at regular intervals, changing one design feature at a time so the results are worth comparing.",
+  "intent": "How can I tell whether a homemade solar oven is heating effectively? This guide focuses on a controlled temperature chart, fair comparisons and safe use of a small test load.",
+  "sections": [
+    {
+      "heading": "Plan a test before building",
+      "paragraphs": [
+        "A solar oven test is easier to understand when you decide what to measure before changing the design. NASA's Jet Propulsion Laboratory lesson asks learners to build an oven, use a thermometer to track temperature, test the design and improve it based on results. Choose a simple goal such as comparing the temperature curve of a foil-lined lid with and without a black base. Keep the box, starting temperature, thermometer position and observation interval as similar as you can.",
+        "Use a cardboard box, reflective foil, a dark absorbent surface, a clear cover and a thermometer, following a reputable activity guide. An adult should handle blades, wire or hot materials. Put the oven on a stable surface in direct sun and never leave it unattended; the reflective lid can direct sunlight into eyes or onto nearby materials. Use a thermometer rather than touching the inside to decide whether it is hot."
+      ]
+    },
+    {
+      "heading": "Build a small, sealed test chamber",
+      "paragraphs": [
+        "Line the inside of the box with foil as smoothly as possible and cover the opening with clear plastic or a suitable window material. NASA JPL explains that the reflective surface can direct sunlight toward the test item and that a clear cover helps retain heat; insulation around the outside can reduce heat loss if it does not block the sunlight. Make the lid adjustable so you can change its angle without rebuilding the whole oven.",
+        "Place a thermometer where it will not touch the box or the food. Use the same position for every reading. If you are charting only heating, a small water container or thermometer probe can be the measurement target; if using food, choose an instructor-approved item and do not eat it unless it has been cooked safely. A warming marshmallow is a demonstration, not a complete cooking method for foods that require a safe internal temperature."
+      ]
+    },
+    {
+      "heading": "Record a temperature curve",
+      "paragraphs": [
+        "Write down the starting temperature, time, sky conditions and each reading at the same intervals. NASA's BEST activity suggests tracking temperature over time, while JPL's design lesson encourages testing and revising. A table with minutes in one column and degrees in another makes it easier to see whether the oven heats steadily, levels off or cools when a cloud passes. Record interruptions honestly instead of pretending the sun stayed constant.",
+        "Avoid opening the cover every minute because that changes the heat you are trying to measure. If you need to reposition the foil or box, write down when you did it. Take readings without looking directly at the Sun. Work with a partner: one person manages the timer and data sheet, the other reads the thermometer from a safe angle."
+      ]
+    },
+    {
+      "heading": "Change only one design feature",
+      "paragraphs": [
+        "After the first run, compare the curve and write one question. If the oven warms slowly, ask whether the foil angle, dark surface, cover or insulation might be responsible. Choose one change, repeat the test under similar conditions and plot both runs on the same axes. If weather differs, treat that as a limitation, not proof that the new design was better or worse.",
+        "A simple graph should have time along the bottom and temperature up the side, with units labeled. Mark the peak temperature and when it occurred, but do not treat the maximum alone as the only measure of success. A design that warms steadily may be more useful than one with a brief spike. Note the location of the thermometer and whether the box was opened so another person can understand the result."
+      ]
+    },
+    {
+      "heading": "Make a safe next test",
+      "paragraphs": [
+        "Let the box cool before handling the foil, cover or interior. Check that the stand is stable and no material has begun to soften or scorch. If the sun is too weak, windy or partly blocked, stop and try again on a clearer day rather than adding concentrated lenses or mirrors. Keep the experiment at box scale, away from children running through the area and away from flammable material.",
+        "Your next action is to build one small oven, take a starting reading and record the temperature every few minutes without opening the box. After the run, change one feature and repeat under similar conditions; the comparison matters more than reaching a particular target number."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Solar Oven",
+      "url": "https://www.jpl.nasa.gov/edu/resources/lesson-plan/solar-oven/",
+      "publisher": "NASA Jet Propulsion Laboratory Education",
+      "purpose": "Supports building a basic oven with foil and a transparent cover, using a thermometer, testing and iterating the design, and the roles of reflection and heat retention."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-a-tabletop-seismograph",
+    "build-a-spectroscope-and-compare-household-lights",
+    "press-corn-tortillas-and-serve-them-warm"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

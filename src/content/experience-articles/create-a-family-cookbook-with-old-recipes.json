@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "create-a-family-cookbook-with-old-recipes",
+  "slug": "create-a-family-cookbook-with-old-recipes",
+  "title": "Preserve the story beside each family recipe",
+  "description": "Turn old family recipes into a useful cookbook by recording the original, noting uncertain measures and testing a modern kitchen version.",
+  "intent": "How can I make a family cookbook that keeps memory without silently rewriting the recipes? This adds a method for preserving originals, testing and attribution.",
+  "sections": [
+    {
+      "heading": "Collect recipes with permission and context",
+      "paragraphs": [
+        "Ask relatives whether they would like to share a recipe, handwriting, story or photo. A recipe may belong to one person, a family, or a larger tradition; do not assume you can publish someone’s contribution just because you found it in a drawer. Ask how they would like to be credited and whether a private family edition is different from an online or commercial one.",
+        "For each recipe, record who shared it, what they call it, when it was usually served and any memory they want included. Ask open questions: “Who taught you this?” “What do you notice while it cooks?” “Is there an occasion when you make it?” A short anecdote, correction or note such as “bake longer” can explain more than a polished introduction."
+      ]
+    },
+    {
+      "heading": "Keep the original beside the typed version",
+      "paragraphs": [
+        "Photograph or scan the original card before you type it. The Library of Congress suggests saving an image of a handwritten recipe alongside an accessible typed version. Keep spelling, abbreviations and uncertain measurements in a faithful transcription, then put your tested kitchen version on a separate page. That preserves what the source actually says instead of making your interpretation look original.",
+        "If a card says “a teacup of sugar,” do not invent an exact weight. Mark it as an estimate or ask the person who wrote it, if possible. Use a separate note to explain that measuring cups and ovens vary. Avoid correcting a family spelling or traditional name without telling the contributor."
+      ]
+    },
+    {
+      "heading": "Test one recipe before designing the book",
+      "paragraphs": [
+        "Choose a recipe with a clear contributor and make it once in your own kitchen. Write down your equipment, ingredient amounts, order of steps, oven setting and time as you go. Keep notes about what is missing: whether a pan was greased, how a dough should feel, how to tell the dish is done. If the cook is available, ask them to review your reconstruction rather than assuming your version is definitive.",
+        "For current food safety, follow a reliable tested recipe and the guidance for the ingredients you are using. Older notes may omit temperature or handling details that matter in a modern kitchen. Do not serve unverified preserved foods or infer safe canning methods from a family memory. Mark adaptations plainly so readers can see which version they are following."
+      ]
+    },
+    {
+      "heading": "Organize for the person who will cook",
+      "paragraphs": [
+        "Choose an arrangement that helps someone find a recipe: by meal, ingredient, contributor, generation or occasion. The Library of Congress recommends considering an index. A short contents page with names and dish types can make the book easier to use than a decorative but vague chapter list. Include serving size only when you have tested or confirmed it.",
+        "Place ingredients in the order they are used and separate them from the method. Define unfamiliar terms in the contributor’s own language. Add substitutions only if a cook tested or approved them. If the recipe’s measure remains uncertain, say so in a note instead of presenting a guess as precision."
+      ]
+    },
+    {
+      "heading": "Make a version the family can actually keep",
+      "paragraphs": [
+        "Choose whether this is a printable booklet, a shared digital file, a small bound book or a set of recipe cards. Include a title, date and a brief explanation of how sources and edits are recorded. Keep a backup of the digital master and tell one other relative where it lives. If you share photographs of handwriting, protect details the contributor considers private.",
+        "Send a proof to each contributor and invite factual corrections before printing. Ask permission before distributing beyond the family. Your next step is to select one recipe, ask its contributor for the story they want preserved, and test a clearly labeled modern version without discarding the original."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How To Collect Family Recipes: Inspiration From the Library’s Cookbook Collection",
+      "url": "https://blogs.loc.gov/families/2023/11/how-to-collect-family-recipes-inspiration-from-the-librarys-cookbook-collection/",
+      "publisher": "Library of Congress",
+      "purpose": "Supports photographing handwritten originals alongside typed versions, preserving family anecdotes and comments, and indexing recipes; article adds original workflow advice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "eat-a-meal-cooked-by-a-grandmother-in-her-home",
+    "record-your-parents-life-stories",
+    "keep-a-journal-for-a-full-year"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

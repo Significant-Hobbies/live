@@ -1,0 +1,61 @@
+{
+  "experienceSlug": "contribute-speech-recordings-to-common-voice",
+  "slug": "contribute-speech-recordings-to-common-voice",
+  "title": "How can you make a careful first contribution to Common Voice?",
+  "description": "Compare recording with clip validation, check how your voice will be shared, and make a small, clear contribution in a language you know well.",
+  "intent": "A privacy-aware orientation to choosing between recording and validation, preparing usable clips, and deciding what consent and data reuse terms mean for you.",
+  "sections": [
+    {
+      "heading": "Decide what kind of help suits you",
+      "paragraphs": [
+        "Common Voice contributions generally ask you to record prompted speech or listen to clips and validate them. Recording may suit you if you can read the displayed sentence naturally and have a quiet place for a short session. Validation may fit better when recording is inconvenient but you are comfortable applying the project’s listening criteria. You can begin with a small amount and stop when your attention fades.",
+        "Mozilla Data Collective’s language contribution page points people without a dataset toward recording or validating on Common Voice. It also says people should check dataset rights and consent, choose how material may be used, and look for whether a language is already covered. Treat those as real decisions: an open dataset can travel far beyond the moment you submit a clip."
+      ],
+      "bullets": [
+        "Before contributing, check the current Common Voice participation and privacy terms for your language and locale."
+      ]
+    },
+    {
+      "heading": "Make an informed sharing choice",
+      "paragraphs": [
+        "Read the project’s current terms in the interface before accepting. Find out whether clips are public, how they may be reused, what attribution or license applies, and whether profile details are optional. Do not record other people speaking in the background without permission. If the recording could reveal a sensitive identity, accent, workplace or location, take time to decide whether that exposure is acceptable.",
+        "A public contribution is not the same as a private voice memo. You may want to contribute only if you are comfortable with broad reuse under the terms shown. If anything is unclear, pause and read the official documentation or ask the project team; do not rely on an old blog post or a friend’s description of what the platform used to do."
+      ]
+    },
+    {
+      "heading": "Set up a quiet, repeatable recording",
+      "paragraphs": [
+        "Choose a room where you can close the door and turn off avoidable noise. A phone or laptop microphone can be enough to learn the workflow; place it at a consistent distance and speak at an ordinary pace. Do not whisper, perform a character voice or over-enunciate unless the prompt asks for a particular style. The aim is intelligible natural speech, not a studio voice.",
+        "Read the prompt exactly as shown. If you stumble, follow the interface’s retry or skip controls rather than improvising a replacement sentence. Listen back to a few clips with headphones if available. Notice clipping, distant speech, room echo and accidental background conversation. Make one adjustment at a time, such as moving a soft surface closer to reduce room reflections, and compare again."
+      ]
+    },
+    {
+      "heading": "Validate with care rather than speed",
+      "paragraphs": [
+        "For validation, use the project’s written criteria instead of judging a speaker’s accent or style. The relevant question is whether the clip meets the stated requirements and matches its prompt, not whether it sounds like your own speech. Replay a doubtful clip once, then use the available option to skip or flag uncertainty if the guidelines allow it. A careful small batch is more useful than a long session after your concentration has slipped.",
+        "Keep the distinction between a recording problem and a language difference clear. Do not “correct” a contributor’s pronunciation to match a preferred dialect if the project accepts that variety. When you cannot confidently assess the language, stop that task or choose another one. If feedback later shows that you misunderstood a rule, treat it as a learning signal and adjust your next batch."
+      ]
+    },
+    {
+      "heading": "Finish with a traceable note",
+      "paragraphs": [
+        "After submitting, note the language, whether you recorded or validated, and roughly what you learned about the guidelines. Avoid copying or retaining other contributors’ audio outside the project. If you want to continue, return to the official contributor page to confirm the current route and rules; interface details and project policies can change.",
+        "A satisfying first session is a clear, informed contribution that you understand. You might discover that recording is enjoyable but validation is tiring, or that a different room makes your clips easier to hear. Note the language, task and one guideline you want to remember before you stop."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Contribute your language",
+      "url": "https://mozilladatacollective.com/contribute-language",
+      "publisher": "Mozilla Data Collective",
+      "purpose": "Supports the available Common Voice recording or validation route and the need to check rights, consent, reuse choice and language coverage."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "translate-a-free-software-resource-into-a-language-you-know",
+    "create-a-map-of-languages-in-your-life"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

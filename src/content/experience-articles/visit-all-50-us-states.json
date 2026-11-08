@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "visit-all-50-us-states",
+  "slug": "visit-all-50-us-states",
+  "title": "Keep a state-by-state record that separates visits from drive-throughs",
+  "description": "Build a personal fifty-state ledger, group visits into flexible regions, and keep Washington, D.C. and U.S. territories in their own categories.",
+  "intent": "How can I track a long-term visit-to-every-state goal without turning each trip into an exhausting mileage chase? This adds a clear counting rule and regional planning method.",
+  "sections": [
+    {
+      "heading": "Define your visit rule first",
+      "paragraphs": [
+        "Decide what counts as a meaningful visit for you: a night, a planned activity, or time spent exploring beyond a road stop. Write the rule at the top of your ledger and apply it consistently. The U.S. government directory lists states alongside the District of Columbia and territories, so keep those categories separate if your goal is specifically fifty states.",
+        "Create one row per state with date, place, what you did, and one thing you remember. Keep a separate section for D.C. and territories if you visit them. That simple separation prevents the map from becoming an argument about whether a federal district or island territory counts as a state."
+      ]
+    },
+    {
+      "heading": "Choose regional clusters around a reason",
+      "paragraphs": [
+        "Group nearby states when there is a reason to combine them: a museum route, a family visit, a landscape, or a shared event. Use an actual map and current transportation information to see what fits your available days. Do not assume that a short straight-line distance means an easy drive, train, or flight.",
+        "Leave slack in the schedule for weather, fatigue, and the experiences you discover after arriving. A cluster is a planning aid, not a quota. If your days become a chain of car parks and interstate exits, reduce the number of stops and return for a longer visit later."
+      ]
+    },
+    {
+      "heading": "Make each stop more than a border crossing",
+      "paragraphs": [
+        "Choose one local activity in each state that interests you, such as a public garden, historic site, neighborhood walk, or regional meal. Check the official venue or local tourism source for access details before travelling. You do not need to collect a famous landmark in every state; the purpose is to encounter the place on terms you care about.",
+        "Ask a local guide or museum worker one specific question instead of relying on a one-sentence stereotype. If you photograph people or private homes, ask first. Keep enough time for ordinary details—a market, a public library, a park—that rarely appear in a state checklist."
+      ]
+    },
+    {
+      "heading": "Track progress without making it a competition",
+      "paragraphs": [
+        "Mark a state complete only when it meets the rule you chose. Add a note when you were there but did not have the kind of visit you wanted; it can remain a future return rather than a false completion. The ledger is for your own memory, so include a favorite conversation or unexpected detour, not just a date and a dot.",
+        "A small map can show which regions remain, while the written notes explain why those places matter. Avoid comparing your pace with someone else’s; work, caregiving, budget, and mobility shape travel in different ways."
+      ]
+    },
+    {
+      "heading": "Build a plan that survives changing plans",
+      "paragraphs": [
+        "At the start of each year, choose only one or two clusters that fit your actual calendar and energy. Recheck weather, transport, and venue details before paying for travel. If a trip changes, update the route instead of forcing a visit just to complete a number.",
+        "Your next action is to create the fifty-state ledger, write your personal visit rule, and choose one nearby state that has a reason to interest you beyond checking it off."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "State governments",
+      "url": "https://www.usa.gov/state-governments",
+      "publisher": "USAGov, U.S. General Services Administration",
+      "purpose": "Supports the official directory distinction between states, the District of Columbia, and territories."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "drive-route-66-end-to-end-across-america",
+    "road-trip-with-no-fixed-destination"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

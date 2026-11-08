@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "learn-an-instrument-to-a-playable-level",
+  "slug": "learn-an-instrument-to-a-playable-level",
+  "title": "Make one complete piece your first measure of playable",
+  "description": "Reach a playable level by choosing a short complete piece, isolating its tricky transitions, and setting a small performance milestone you can repeat.",
+  "intent": "Answers what ‘playable’ can mean for a beginner instrument learner; adds a complete-piece milestone and practice method beyond choosing an instrument.",
+  "sections": [
+    {
+      "heading": "Define a piece you can finish",
+      "paragraphs": [
+        "‘Playable’ is not one official level. Define it for yourself as a short piece you can start, continue through a mistake and reach a clear ending at a tempo that feels steady enough to share. It might be a folk melody, a simplified pop arrangement, a short classical movement or a tune someone in your family knows. Choose music that makes you want to return to it, but keep the first piece short enough to practice in sections.",
+        "Ask a teacher or knowledgeable player to help choose a version that fits your current reading, fingering and instrument setup. If you are learning without a teacher, use a reputable beginner method and check that the arrangement is meant for your instrument. A song you love may have a simplified version; you do not need to start with the most impressive arrangement."
+      ]
+    },
+    {
+      "heading": "Separate the parts that compete for attention",
+      "paragraphs": [
+        "A new piece may ask you to read notes, keep rhythm, coordinate hands or breath, and manage the instrument at once. The Royal Conservatory of Music’s practice resource recommends breaking a piece into components and highlights counting or talking through rhythms and note names before playing. That guide is written for parents supporting young learners, but the underlying practice idea can be adapted with an instructor to your own instrument and skill level.",
+        "Mark two or three places that cause a stumble. Practice one short phrase slowly enough to keep the rhythm intact, then connect it to the phrase before and after. For guitar, that might mean the chord change rather than the whole song; for a wind instrument, the transition where a breath interrupts a phrase; for piano, the measure where both hands change position. Do not repeat a passage mindlessly if you are unsure what is wrong—ask a teacher or isolate one motion."
+      ]
+    },
+    {
+      "heading": "Keep a small practice loop",
+      "paragraphs": [
+        "Begin with a clear goal for the session: play the opening without stopping, make one transition smoother or keep the beat through a difficult bar. Play the passage once, notice the exact error, choose one adjustment, and try again. End by playing the whole piece for pleasure, even if it is not polished. A focused short session can be more useful than a long session spent restarting from the beginning every time.",
+        "Use a phone recording or metronome only if it helps you hear or feel a specific issue. Do not let a recording become a performance review. Note what improved and one question for your next lesson. If your hands, voice or breath feel strained or painful, stop and ask a qualified teacher or clinician rather than pushing through."
+      ]
+    },
+    {
+      "heading": "Prepare a low-pressure performance milestone",
+      "paragraphs": [
+        "Pick a small audience and a date: play for one friend, record a private take, join a beginner ensemble rehearsal or perform at a lesson. Tell the listener what kind of feedback you want—perhaps whether the melody was recognizable or where the rhythm felt unclear. You are not auditioning for permission to continue learning. The milestone exists to make finishing concrete.",
+        "Practice the beginning and ending deliberately. Beginners often know the middle better than how to start calmly or signal that the piece is over. Choose a tempo at which you can recover from a small mistake, and decide what you will do if you lose your place: pause, restart at a marked section or simply continue from the next phrase."
+      ]
+    },
+    {
+      "heading": "Keep the next piece within reach",
+      "paragraphs": [
+        "After sharing the piece, write down what felt secure and which passage still needs attention. Keep the notes and mark the date so you can hear your progress later. Do not confuse ‘playable’ with flawless or with an exam standard; different instruments, teachers and musical traditions use different pathways.",
+        "Choose the next piece by one new challenge—perhaps a longer phrase, a different rhythm or a simple accompaniment—while keeping something familiar. For now, pick one short piece and schedule a first listen-through with a teacher or trusted musician who can help make the version appropriate."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Practice Plans, Goals, and Techniques",
+      "url": "https://teacherportal.rcmusic.com/Resources/Practice-Plans-Goals-and-Techniques",
+      "publisher": "The Royal Conservatory of Music",
+      "purpose": "Supports breaking a learner’s music into components, setting small practice goals and counting or speaking through rhythms before playing; the resource is oriented to parents of young learners and does not define a universal playable level."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "learn-to-play-a-musical-instrument",
+    "compose-an-original-piece-of-music",
+    "record-and-release-music-you-made"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "help-host-a-neighborhood-repair-cafe-session",
+  "slug": "help-host-a-neighborhood-repair-cafe-session",
+  "title": "What a good Repair Café host does before, during and after a session",
+  "description": "A practical guide to volunteering at a Repair Café: agree a bounded role, welcome visitors, support repairers and hand over unfinished questions clearly.",
+  "intent": "How can I help host a Repair Café when I am not a repair expert, and how do I make the shift useful without promising a repair?",
+  "relatedExperienceSlugs": [
+    "visit-a-repair-cafe-with-a-friend",
+    "help-repair-library-books-under-staff-supervision",
+    "support-a-computer-learning-session-through-a-community-program"
+  ],
+  "sections": [
+    {
+      "heading": "Agree the role before you arrive",
+      "paragraphs": [
+        "A Repair Café depends on both practical repair skills and the small tasks that keep a shared event calm. The Repair Café Foundation describes host roles such as welcoming visitors at reception, serving coffee or tea and acting as a contact between visitors and repair experts. That gives a nontechnical volunteer a real contribution without pretending to diagnose an appliance or guarantee an outcome.",
+        "Contact the local organizer before the session. Ask who will brief you, what time to arrive, how long the shift runs, and which tasks need help that day. Clarify whether you are greeting people, writing down item details, keeping a queue moving or helping reset the room. Share any limits plainly: perhaps you are comfortable speaking with visitors but cannot lift heavy objects, manage cash or stay past a certain time. A clear boundary makes it easier for the coordinator to assign work you can complete."
+      ]
+    },
+    {
+      "heading": "Set up for a smooth welcome",
+      "paragraphs": [
+        "At the briefing, learn where visitors check in, how repairers signal that they are ready, and where people wait. Ask which information the event wants recorded: name, item, symptoms, or a contact method. Do not collect extra personal details just because a form has space for them. Find out what to do if someone arrives with an item the event cannot accept, if a repair takes longer than the session, or if someone needs an accessible route or quieter place to wait.",
+        "A small handwritten sign can answer repeat questions: where to register, where to sit, and whom to ask. Keep paths clear of bags and cables, and leave tools in the locations the repair team chose. If refreshments are part of your role, confirm where water and cups belong and who handles spills. The aim is not to create a polished reception desk; it is to help visitors and repairers find one another without interrupting concentration."
+      ]
+    },
+    {
+      "heading": "Guide the conversation without diagnosing",
+      "paragraphs": [
+        "When someone arrives, greet them and ask what they brought and what happened. Record their description in their own plain words; avoid converting “it makes a rattling sound” into a diagnosis. Then follow the organizer’s process to connect them with an available repairer. You can say, “I’ll find out whether someone is free to take a look,” but do not promise a fix, price, safety outcome or finish time.",
+        "Some items may be unsafe, too large, too complex, or outside the event’s scope. The repairer or organizer should make that call. If a visitor is disappointed, acknowledge the inconvenience and pass the decision back to the person responsible. Do not tell someone to open an electrical device, test a damaged cable or keep using an item that a repairer has deemed unsafe. Hosting means making the right handoff, not taking responsibility for technical advice."
+      ]
+    },
+    {
+      "heading": "Keep the queue fair and information accurate",
+      "paragraphs": [
+        "If there is a queue, explain how it works before people have waited a long time. Use the local system, whether it is a numbered ticket, a sign-up list or direct check-in. Update the organizer when a repairer becomes available, an item is declined, or a visitor leaves. If you are not sure whose turn it is, pause and check instead of guessing. A brief accurate update is kinder than an optimistic estimate that later has to be retracted.",
+        "Treat names, phone numbers and repair notes with care. Keep forms with the organizer and follow their instructions for storage or disposal after the event. Do not photograph visitors or their possessions for social media unless the organizer has permission procedures and the people involved have agreed. The easiest default is to focus on the work rather than documenting people."
+      ]
+    },
+    {
+      "heading": "Close with a useful handover",
+      "paragraphs": [
+        "Before leaving, ask the coordinator what remains: a visitor waiting for information, an item that needs to be collected, or a supply that ran out. Return signs, chairs and reception materials to the agreed places. Pass along facts rather than impressions: “Two visitors are waiting for the bicycle repairer” is actionable; “the queue was chaotic” is not. Mention what made the shift easier and what would help next time.",
+        "A first shift can be short and still matter. Choose one practical contribution to remember, such as a clearer sign or an earlier briefing, then ask whether the group needs another host on a specific date. The Foundation recommends contacting local organizers directly to volunteer; each café can explain its own process."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Become a volunteer",
+      "url": "https://www.repaircafe.org/en/join/become-a-volunteer/",
+      "publisher": "Repair Café Foundation",
+      "purpose": "Primary source for host and volunteer roles and the route for contacting local organizers."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

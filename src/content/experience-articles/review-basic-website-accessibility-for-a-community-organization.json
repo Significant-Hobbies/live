@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "review-basic-website-accessibility-for-a-community-organization",
+  "slug": "review-basic-website-accessibility-for-a-community-organization",
+  "title": "How can a small team review a community website for accessibility?",
+  "description": "Use a short accessibility review to check headings, keyboard access, link purpose, image text and form labels before reporting clear findings.",
+  "intent": "A bounded first-pass review for volunteers who want to find and report common website barriers without claiming a complete audit.",
+  "sections": [
+    {
+      "heading": "Set a clear scope and capture the starting point",
+      "paragraphs": [
+        "Choose one important page or task, such as finding opening hours, locating an event or submitting a contact form. Record the page address, date, browser and device, then note the task you are trying to complete. A small, repeatable scope makes findings easier for the organization to confirm and fix. Do not collect personal data or submit a real form unless the site owner has arranged a safe test.",
+        "The W3C Web Accessibility Initiative describes its Easy Checks as a first review that can reveal some common issues, while warning that it is not exhaustive. Treat the exercise as a way to spot barriers and guide deeper evaluation, not as certification or proof that the whole site is accessible. Include that limitation in your notes from the start."
+      ]
+    },
+    {
+      "heading": "Check page structure and readable content",
+      "paragraphs": [
+        "Scan the page for a meaningful title and headings that describe the sections beneath them. Headings should form a sensible outline rather than serve only as large decorative text. Read links out of context: labels such as “read more” may not tell someone where a link goes, especially when many similar links appear together. Write down the exact label and nearby context instead of making a vague judgment.",
+        "Look at text size, spacing and contrast for obvious problems, but do not rely on visual impression alone to judge contrast. A screenshot, page address and short description help the site maintainer reproduce the issue. Note whether the problem blocks a task or simply makes it slower; both observations are useful, but the distinction helps teams prioritize."
+      ]
+    },
+    {
+      "heading": "Try the page with a keyboard",
+      "paragraphs": [
+        "Set the mouse aside and use Tab to move through interactive elements, Shift+Tab to move backward and Enter or Space to activate controls where appropriate. Follow the visible focus indicator. Check whether you can reach navigation, buttons and form fields in a sensible order, and whether a menu can be opened and closed without a pointer. Do not press keys that could trigger a purchase or destructive action.",
+        "A page may look complete while hiding controls from keyboard users. Note where focus disappears, jumps unexpectedly or becomes trapped. If the review task includes a dialog, check that the focus enters it and can return to the page after it closes. These are observations for the site owner to investigate; a short volunteer review should not promise to diagnose every technical cause."
+      ]
+    },
+    {
+      "heading": "Review images, forms and instructions",
+      "paragraphs": [
+        "Notice whether informative images have text alternatives that convey their purpose. Decorative images generally should not add distracting words to a screen reader’s output. Since you may not be able to inspect the underlying markup, describe what the image communicates and what information seems absent rather than prescribing a specific code change.",
+        "For forms, check whether each field has a clear label and whether instructions explain required formats before submission. Look for errors that identify the affected field and explain how to correct it. Avoid sending test information to a live organization without agreement. A form that cannot be completed or whose error message is unclear is a concrete finding that can be reproduced safely."
+      ]
+    },
+    {
+      "heading": "Write findings that help the owner act",
+      "paragraphs": [
+        "Use a compact report: page and task, steps taken, what happened, why it may create a barrier, and a screenshot or recording if it contains no private information. Keep each finding to one issue. Separate direct observations from guesses about the cause, and say which browser or assistive setup you used. The W3C checklist is deliberately introductory, so identify any areas you did not examine.",
+        "Send the report through the organization’s agreed contact route and offer to retest specific fixes. Do not label the site “accessible” because the sampled pages passed a quick check. A useful next step is to ask a disabled user or experienced accessibility reviewer to evaluate the same high-priority task and add perspectives a volunteer checklist cannot provide."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Easy Checks – A First Review of Web Accessibility",
+      "url": "https://www.w3.org/WAI/test-evaluate/easy-checks/",
+      "publisher": "W3C Web Accessibility Initiative",
+      "purpose": "Defines the scope of quick accessibility checks and states they are not exhaustive; informs checks of headings, links, keyboard, images and forms."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "document-access-details-for-public-places-on-wheelmap",
+    "arrange-an-accessible-outing-with-a-friend"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "have-your-work-shown-publicly",
+  "title": "Get a finished piece into a public exhibition",
+  "description": "Choose a real open call, match its submission rules, and prepare your work, image, caption, rights and delivery plan before the deadline.",
+  "intent": "Give a practical route from finished work to a public display, using a current museum open call to show how eligibility and fees work.",
+  "sections": [
+    {
+      "heading": "Pick a venue and read its real terms",
+      "paragraphs": [
+        "Start with a place that already exhibits work like yours: a local museum, library, community gallery, festival or juried open call. Search its own website for the current application and save the full rules, not a repost. Check medium, size, residency or age limits, theme, deadline, entry fee, display dates, delivery and collection. A show is a partnership with a venue, so understand what you are agreeing to before you submit.",
+        "For example, Calderdale Museums’ 2026 Open Art Exhibition says it accepts two-dimensional media, sets a longest-side limit, asks for a digital image and charges an entry fee; it also says selection is not guaranteed. Those details belong to that call and can change. Use it as an example of the questions to answer, then check the current rules for your own venue."
+      ]
+    },
+    {
+      "heading": "Choose work you can stand behind",
+      "paragraphs": [
+        "Select one piece that fits the venue’s format and that you are comfortable displaying publicly. Check that you made it or have permission for the materials and imagery it contains. If the work includes another person’s photograph, identifiable subject, private story, logo or music, clarify permissions before submission. Keep the original file, process notes and any release forms in one folder.",
+        "Write a two-sentence label: what the viewer is seeing and what choice shaped the work. Avoid a long explanation that tells people what they must feel. Ask a trusted reader whether the description is legible to someone unfamiliar with you. If the venue offers an artist statement field, follow its word limit instead of attaching a separate essay."
+      ]
+    },
+    {
+      "heading": "Prepare the submission file",
+      "paragraphs": [
+        "Make a checklist from the venue’s exact requirements. Record file type, dimensions, resolution, file-size ceiling, naming convention, image orientation and any crop rules. Photograph or scan the work in even light; avoid glare and perspective distortion. Use a neutral background when that is allowed, and do not digitally alter the piece in a way that misrepresents the original.",
+        "Name the file with your surname and the work title if the portal does not specify another format. Open the final file on a different device before uploading. Keep a copy of your entry, payment receipt and confirmation message. For a physical piece, also check framing, hanging hardware, labeling, insurance and whether the venue accepts drop-off or requires shipping."
+      ]
+    },
+    {
+      "heading": "Check rights, costs and access",
+      "paragraphs": [
+        "Read the clauses about image use, publicity, insurance, sale, commission and collection. The Calderdale call, for instance, says artists are credited with displayed work and describes promotional image use with an opt-out; it places insurance responsibility on the artist. Another venue may use different terms. Ask questions before submission if a clause is unclear, and keep the response in writing.",
+        "Add up the entry fee, framing, transport, packaging and possible return shipping. Decide what you can afford to lose if the work is not selected; some calls do not refund fees. If traveling to the exhibition, check venue accessibility and opening times directly. Your piece can be meaningful without an award or sale, so make the decision on the value of being considered and shown."
+      ]
+    },
+    {
+      "heading": "Submit early and prepare both outcomes",
+      "paragraphs": [
+        "Give yourself a buffer before the deadline for a portal problem or file correction. Submit one finished entry, confirm that the system accepted it and note when the selection decision is expected. If selected, read installation instructions and meet delivery dates. If the work is not selected, collect it on time and ask whether feedback is available, but do not treat silence as a verdict on your ability.",
+        "On 8 November 2026, Calderdale Museums listed a 15 November deadline for its 2026 call; that date is an immediate, time-limited example, not a future promise. Recheck the venue page before acting. Public display is the concrete achievement: a real work reaches an audience under terms you understand, whether or not it wins a prize."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Calderdale Open Art Exhibition 2026",
+      "url": "https://museums.calderdale.gov.uk/explore/open-art-exhibition-2026",
+      "publisher": "Calderdale Museums Service",
+      "purpose": "Supports the specific 2026 call example: eligibility, original-work and format rules, file specifications, fees, deadline, no-selection guarantee, public display, artist credit and image-use/insurance terms. These terms apply to that call only and are time-sensitive."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "perform-or-exhibit-something-you-made",
+    "publish-an-article-in-a-magazine",
+    "take-a-photograph-that-stops-people"
+  ],
+  "experienceSlug": "have-your-work-shown-publicly",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

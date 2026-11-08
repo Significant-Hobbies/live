@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "community-0fdd0463-2766-56e0-8a92-2c726b03da13",
+  "slug": "on-a-farm-in-switzerland-eat-chocolate-while-lying-next-to-a-black-and-white-cow",
+  "title": "Plan a Swiss farm visit around food, animals and the host",
+  "description": "Pair a Swiss farm stay with a local chocolate stop, but let the farmer set the animal boundaries and choose a comfortable place to enjoy a treat.",
+  "intent": "How can I make a Swiss farm-and-chocolate day memorable while keeping the visit comfortable for the animals and the people who care for them?",
+  "sections": [
+    {
+      "heading": "Look for a farm visit, not a photo prop",
+      "paragraphs": [
+        "Search for an actual farm-hosted visit or overnight stay, then read what the host invites guests to do. Switzerland Tourism lists farm experiences such as visits to Treilocrêt in Rossinière, where guests may learn about dairy work and butter making, and it describes farm stays in several settings. The point is not to arrive expecting access to a cow; it is to book a host-led activity that fits the farm’s work and the animals’ routines.",
+        "A farm is a workplace and home as well as a visitor destination. Ask whether the activity is guided, what spaces guests can enter, whether food is included and what footwear is suitable. If a farm is not running visits on your dates, choose a public dairy or chocolate workshop instead of trying to improvise an animal encounter."
+      ]
+    },
+    {
+      "heading": "Make the chocolate part a second stop",
+      "paragraphs": [
+        "Swiss chocolate can mean very different things: tasting finished bars, watching production, learning about cocoa, or making something yourself. Pick the format that matches your curiosity. A guided tasting lets you compare texture and flavor without the time commitment of a workshop; a factory or maker visit may show a production process; a hands-on session gives you a small product to take home. Check the maker’s current visitor page for booking, language and allergy information.",
+        "If you are staying on a farm, ask the host for a nearby chocolate maker or local dairy product that fits the region. Avoid planning a long transfer between stops that leaves only a hurried photo at each. A slower lunch or a walk between a village and a farm can create more of the day’s sense of place than a checklist of branded attractions."
+      ]
+    },
+    {
+      "heading": "Keep your distance unless the farmer invites contact",
+      "paragraphs": [
+        "The “lie next to a cow” image is a playful fantasy, not a visitor instruction. Never enter a pasture, barn or milking area without permission, and do not touch, feed or lie beside livestock unless the person responsible for the animal explicitly invites and supervises that interaction. A resting cow needs space; even a calm animal can move suddenly. The farmer’s directions matter more than a photograph or a visitor’s expectation.",
+        "If an approved encounter does happen, follow the host’s rules about hand washing, barriers, children and food. Avoid holding chocolate or other food near animals, and keep wrappers out of fields. You can still capture the mood of the visit with a pasture landscape, a dairy product or a farm building without turning the animal into a prop."
+      ]
+    },
+    {
+      "heading": "Choose a region with enough time to linger",
+      "paragraphs": [
+        "Switzerland is compact on a map but mountain roads, train changes and weather can stretch a day. Choose a farm base near one chocolate or dairy visit instead of trying to cross several cantons. Ask the accommodation host which public transport or local road approach works, and build a cushion for a missed connection. If your goal includes the alpine setting, check the season and whether the farm operates at elevation year round.",
+        "The best fit may be a simple farm overnight with breakfast and one maker visit, or a guided dairy activity followed by a chocolate tasting near a town. Those versions differ in animal access, travel time and pace. Do not assume that a “Swiss farm” listing implies cows are available for interaction or that a chocolate stop is included."
+      ]
+    },
+    {
+      "heading": "Confirm the details and leave the place as you found it",
+      "paragraphs": [
+        "Before booking, send the host three questions: what activity is actually included, what animal boundaries should visitors know, and how do I arrive without disrupting farm work? For the chocolate stop, check opening and ticket details directly with its operator. Switzerland Tourism’s listings are useful discovery starting points, but an individual offer’s dates and availability can change.",
+        "Pack comfortable shoes, a layer and a washable bag for purchases. Ask before taking photos of workers or guests. If the farm is busy, let the host shorten or change the visit. Your next step is to find one confirmed host-led farm activity and one nearby chocolate experience, then build the day around their real schedule."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Discovering Treilocrêt Farm",
+      "url": "https://www.myswitzerland.com/en-gb/planning/offers/discovering-treilocret-farm/",
+      "publisher": "Switzerland Tourism",
+      "purpose": "Provides one example of a host-led farm experience in Rossinière involving dairy products and farm animals; its listed offer dates have passed and are not used as a current availability claim."
+    },
+    {
+      "title": "On the farm",
+      "url": "https://www.myswitzerland.com/en-us/accommodations/other-types-of-accommodations/on-the-farm/",
+      "publisher": "Switzerland Tourism",
+      "purpose": "Supports that farm stays and accommodation formats exist in different Swiss settings; no individual booking availability is inferred."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "taste-chocolate-from-three-origins",
+    "temper-chocolate-and-mould-a-small-batch",
+    "take-a-cooking-class-in-the-country-the-cuisine-is-from"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

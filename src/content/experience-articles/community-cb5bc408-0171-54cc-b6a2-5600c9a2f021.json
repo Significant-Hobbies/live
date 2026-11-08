@@ -1,0 +1,70 @@
+{
+  "experienceSlug": "community-cb5bc408-0171-54cc-b6a2-5600c9a2f021",
+  "slug": "open-a-hospital-nonprofit",
+  "title": "Test the case for a Texas nonprofit hospital before forming one",
+  "description": "Map community need, clinical leadership, Texas hospital licensing and nonprofit governance before investing in a new hospital concept.",
+  "intent": "Help a prospective founder understand early feasibility and governance questions for a Texas nonprofit hospital without presenting a simplistic startup path.",
+  "sections": [
+    {
+      "heading": "Start with a defined community need",
+      "paragraphs": [
+        "A hospital is a licensed clinical institution with a public-service mission, not simply a nonprofit company that rents a building. Start by defining the community and the unmet need: which population is affected, what services are missing, what other providers already serve the area and what evidence supports a new facility? Speak with residents, public-health professionals, health systems, local government and potential referral partners. A needs assessment should include people who are often missed by formal planning, not only organizations that might benefit from a new project.",
+        "For U.S. charitable hospital organizations, the IRS describes a community health needs assessment as a formal process that defines the community, assesses and prioritizes needs, considers input from people representing broad community interests, documents the result and makes the report public. Section 501(r) includes a three-year assessment cycle and an implementation strategy for qualifying organizations. Those federal tax rules are not a substitute for Texas facility licensing or a feasibility study."
+      ]
+    },
+    {
+      "heading": "Separate nonprofit governance from hospital authorization",
+      "paragraphs": [
+        "Choose the jurisdiction before spending on an entity or a site. This guide uses Texas as a regulatory example. The Texas Health and Human Services Commission (HHSC) says a general hospital is defined by the services and facilities it maintains and is licensed and regulated by HHSC under state law. A different service model or facility category may follow a different pathway, so first describe the proposed scope and ask HHSC which rules apply.",
+        "For a general hospital, HHSC lists Form 3228 among initial licensure applications and says an applicant must submit a complete application, fee and applicable documents; the agency reviews the materials before issuing a license. This is a starting point for regulator questions, not a complete application guide or permission to open. Confirm current forms, facility category and all prerequisites directly with HHSC before committing capital."
+      ]
+    },
+    {
+      "heading": "Build qualified clinical and operating leadership",
+      "paragraphs": [
+        "A credible plan needs experienced clinical leadership, a governing board with appropriate oversight, a proposed medical staff structure, compliance expertise and a realistic operating model. Ask who will be accountable for quality, credentialing, infection prevention, pharmacy, laboratory, records, emergency preparedness, staffing, facilities and patient privacy. A hospital requires qualified people and systems across many departments; one founder cannot substitute for them.",
+        "The IRS’s charitable-hospital exemption guidance describes community-benefit factors including a community-drawn board, access to care and the use of surplus to improve facilities, equipment or patient care. It evaluates the full facts and circumstances, and no single checklist item guarantees exemption. Use the guidance to frame governance questions, then obtain specialist legal and accounting advice for the actual plan."
+      ]
+    },
+    {
+      "heading": "Model capital and ongoing obligations",
+      "paragraphs": [
+        "A feasibility model needs more than a construction estimate. Include land or lease, design, licensing, equipment, utilities, staffing, insurance, clinical supplies, technology, maintenance, compliance and working capital. Estimate the cost of operating before the facility reaches its intended service level. Identify likely revenue sources and the timing, restrictions and conditions attached to grants or donations. Do not treat a fundraising goal or tax-exempt application as evidence that the project is financeable.",
+        "Ask lenders, philanthropic funders, public agencies and potential partners what evidence they would require before considering support. Use independent cost estimates and sensitivity cases for delayed approvals, lower utilization and higher labor costs. A hospital is a long-term operating commitment; a budget with no allowance for continuous staffing or equipment replacement is not a viable plan."
+      ]
+    },
+    {
+      "heading": "Create a go/no-go research plan",
+      "paragraphs": [
+        "Before spending on a site or architectural drawings, assemble a feasibility packet: target community, documented health need, existing services, proposed service scope, potential clinical leadership, governance model, initial capital assumptions and regulator questions. Bring the scope to Texas HHSC and ask which general or special hospital category and application materials fit. The HHSC page also links its licensing rules and initial forms; use the current agency page for updates rather than relying on an old checklist.",
+        "Set a stop point if the need is not supported, required clinical leadership is unavailable, the licensing pathway remains unclear or the capital plan depends on unsupported assumptions. The next step is a jurisdiction-specific feasibility and legal review, not an opening announcement. Nonprofit governance, clinical operations, hospital licensing and financing are separate workstreams that have to fit together."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Community Health Needs Assessment for Charitable Hospital Organizations",
+      "url": "https://www.irs.gov/charities-non-profits/community-health-needs-assessment-for-charitable-hospital-organizations-section-501r3",
+      "publisher": "Internal Revenue Service",
+      "purpose": "Supports U.S. Section 501(r) CHNA process, public input, publication and implementation-strategy requirements for qualifying charitable hospital organizations."
+    },
+    {
+      "title": "Charitable Hospitals: General Requirements for Tax Exemption",
+      "url": "https://www.irs.gov/charities-non-profits/charitable-hospitals-general-requirements-for-tax-exemption-under-section-501c3",
+      "publisher": "Internal Revenue Service",
+      "purpose": "Supports that charitable-hospital exemption analysis considers community benefit and relevant facts, including governance and use of surplus; no single factor guarantees exemption."
+    },
+    {
+      "title": "Hospitals - General Hospitals",
+      "url": "https://www.hhs.texas.gov/providers/health-care-facilities-regulation/hospitals-general-hospitals",
+      "publisher": "Texas Health and Human Services Commission",
+      "purpose": "Supports Texas HHSC general-hospital definition, licensing responsibility, complete application and fee requirement, initial Form 3228 listing, review before license issuance, and agency contact for current requirements."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "volunteer-at-a-hospital-for-a-year",
+    "make-a-requested-item-for-a-hospital-craft-program"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

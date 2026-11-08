@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "have-a-consent-based-question-evening",
+  "slug": "have-a-consent-based-question-evening",
+  "title": "How do you host a question evening that feels safe to join?",
+  "description": "Agree what is off limits, invite people to pass, and use prompts that open a conversation without demanding personal disclosure.",
+  "intent": "A consent-centered format for sharing questions with friends while keeping privacy, pacing and the option to stop in everyone’s control.",
+  "sections": [
+    {
+      "heading": "Agree on the shape before anyone arrives",
+      "paragraphs": [
+        "Tell guests what the evening is: an optional conversation around questions, not an exercise in forced vulnerability. Agree on a rough end time, how questions will be chosen and whether anyone is taking notes or photos. Let people know they can leave early, pass on any prompt or simply listen. Ask before inviting someone else.",
+        "UC Berkeley’s Greater Good in Action presents a structured set of questions intended to encourage closeness. The exercise has a particular sequence and time commitment; you can use it as inspiration, but your group should choose a pace and level of sharing that suits everyone. Do not tell participants that a particular prompt will make them disclose more than they want."
+      ]
+    },
+    {
+      "heading": "Set boundaries that are easy to use",
+      "paragraphs": [
+        "At the start, name a few simple rules: passing needs no explanation, stories stay private unless the speaker says otherwise, and no one gives advice unless it is requested. Ask whether people want a light, reflective or mixed set of questions. Avoid prompts about trauma, health, finances or family conflict unless everyone has freely agreed to discuss that subject.",
+        "You can make the pass visible with a card or a spoken “skip.” That keeps people from needing to justify a boundary in front of the group. If someone changes their mind, move on without asking why. Consent applies throughout the evening, not only when people first agree to come."
+      ]
+    },
+    {
+      "heading": "Choose questions that leave room for an answer",
+      "paragraphs": [
+        "Start with an ordinary prompt such as “What place do you return to when you need a quiet hour?” or “What small skill would you like to learn?” Open questions give each person control over the answer’s depth. A person can answer briefly without feeling that they have failed the activity.",
+        "Take turns drawing a question or let people choose from a small menu. Read the prompt aloud, then leave a pause. Do not fill silence by explaining what someone should say. If a question feels too personal, pass it yourself and choose another. A light prompt can still lead to a meaningful conversation without requiring a dramatic reveal."
+      ]
+    },
+    {
+      "heading": "Listen without turning the room into a debate",
+      "paragraphs": [
+        "Give the speaker time to finish. Ask a follow-up only if they seem comfortable, and make it easy to decline. You might ask, “Would you like to say more, or shall we move on?” Avoid correcting a memory, comparing hardships or guessing what the answer means. Curiosity works best when the other person can steer it.",
+        "If several people want to respond, let them do so one at a time. A short reflection such as “I hadn’t thought about it that way” can show you listened without claiming to understand someone’s whole experience. Do not repeat a personal story later unless you have permission to share it."
+      ]
+    },
+    {
+      "heading": "End with choice, not a verdict",
+      "paragraphs": [
+        "Close at the agreed time. Invite people to name a question they enjoyed, write one privately or say nothing. Do not rank answers or announce that the group is now closer. The value lies in the chance to hear one another, and each person gets to decide what the conversation meant to them.",
+        "A useful next step is to ask guests privately whether they would like another evening and what they would change. Keep the feedback optional and do not record intimate details without consent. If you want a structured source, read the full Berkeley practice and choose only prompts that suit your group’s boundaries."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "36 Questions for Increasing Closeness",
+      "url": "https://ggia.berkeley.edu/practice/36_questions_for_increasing_closeness",
+      "publisher": "UC Berkeley Greater Good Science Center",
+      "purpose": "Supports an example of a structured question practice for conversation; the article makes participation optional and adapts only the format, not claims of guaranteed closeness."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "hold-a-playlist-listening-exchange",
+    "host-a-bring-one-object-story-circle"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "learn-a-beginner-kolam-from-a-practitioner",
+  "slug": "learn-a-beginner-kolam-from-a-practitioner",
+  "title": "How do you learn a first kolam pattern respectfully?",
+  "description": "Ask a kolam practitioner to teach one small dot-grid design, learn its rhythm and context, and practise the lines without treating a living tradition as a template.",
+  "intent": "A respectful first lesson in learning a small kolam from a practitioner, balancing geometric practice with the tradition’s cultural context.",
+  "sections": [
+    {
+      "heading": "Learn from a person, not just a pattern sheet",
+      "paragraphs": [
+        "Kolam is a living South Indian practice with meanings and forms that vary by family, region and occasion. The Indira Gandhi National Centre for the Arts inventory describes Tamil Nadu kolam as threshold drawings made on dotted grids, including lines that interlace around dots or connect them. That overview is context, not a complete account of every practitioner’s practice. Ask the person teaching you how they learned their design and what they want a beginner to understand.",
+        "If someone has offered to teach you, ask whether a particular design is suitable for a first attempt and whether it carries a meaning or occasion you should know. Do not call your version “traditional” just because it resembles an image online. A practitioner’s own words and demonstrations are the best guide for the design they are sharing."
+      ]
+    },
+    {
+      "heading": "Start with the dot grid",
+      "paragraphs": [
+        "Use the paper or ground surface your teacher recommends. A small, regular dot grid keeps the first design manageable and lets you see where each line travels. Before drawing, point out the start, turns and closing path. Some designs connect dots, while others loop around them; learn the route your teacher demonstrates rather than mixing patterns from different sources.",
+        "If you are using loose powder or chalk, try the motion on scrap material first. Ask how much to hold and how to release it smoothly. Practise a short curve or crossing line until your hand can move without pressing hard. The goal is to understand the path and rhythm, not to make a perfectly even line on the first pass."
+      ]
+    },
+    {
+      "heading": "Trace the route slowly before speeding up",
+      "paragraphs": [
+        "Follow the design one segment at a time. Pause at a corner or crossing and check which dot comes next. If the pattern loops around dots, watch how the line turns without covering the point itself. A teacher may use a repeated hand motion; ask them to show it from the angle where you can see both the hand and the design.",
+        "Avoid erasing the practice route as soon as a line wobbles. Look at how the variation changes the pattern and ask whether it still reads as the intended design. Some kolam is drawn freehand and includes the artist’s own line quality. Your practice marks are part of learning, not evidence that you have failed to reproduce a printed diagram."
+      ]
+    },
+    {
+      "heading": "Ask what the design means in its setting",
+      "paragraphs": [
+        "The IGNCA inventory connects kolam with household and temple thresholds and with everyday and ceremonial settings. It also describes inherited design knowledge and geometric patterns. Ask your teacher how those descriptions relate to their own practice; do not assume that one institutional summary captures everyone’s experience. If the design is used for a specific event, ask whether a beginner should choose another one.",
+        "Treat the practitioner as the source of the lesson. Credit their teaching if you share a photograph, and ask before recording or publishing. Do not use a sacred or family design as decoration in a way the teacher has told you would be inappropriate. A short conversation can help you understand why a form belongs in a place, not only how the lines are made."
+      ]
+    },
+    {
+      "heading": "Complete one version and reflect",
+      "paragraphs": [
+        "When you can follow the full route, draw one complete version at a comfortable pace. Stand back and check whether the line closes and whether the dots remain legible. If the practice surface is a public or shared threshold, get permission and leave it clean afterward. Photograph only if the teacher agrees and the setting allows it.",
+        "A useful next step is to repeat the same small grid on another day and notice which turn became easier. Keep the practitioner’s name and the design context with your private notes if they consent. Your record should describe what you learned, not claim ownership of a form that has been carried and adapted by communities for generations."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Kolam: Ritualistic Threshold Drawings and Designs of Tamil Nadu, India",
+      "url": "https://ignca.gov.in/ICH/ich_detail/ich00008.pdf",
+      "publisher": "Indira Gandhi National Centre for the Arts",
+      "purpose": "Supports context that kolam uses dotted grids, interlaced or connecting lines, and is practiced in South India in domestic and temple thresholds; treated as an overview rather than comprehensive cultural authority."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "learn-madhubani-linework-from-a-practicing-artist",
+    "draw-a-wordless-six-panel-comic"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

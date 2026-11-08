@@ -1,0 +1,67 @@
+{
+  "experienceSlug": "vanuatu-s-volcanoes",
+  "slug": "vanuatu-s-volcanoes",
+  "title": "Plan a volcano visit around the official alert, not the spectacle",
+  "description": "Vanuatu’s volcanic islands need current VMGD alerts and local directions; plan a legal, supervised viewpoint and be ready to cancel.",
+  "intent": "Help a traveler approach Vanuatu’s volcano experiences through current official hazard information, local supervision and a clear cancellation rule.",
+  "relatedExperienceSlugs": [
+    "summit-a-volcano",
+    "the-atacama-desert-chile",
+    "ethiopia-s-danakil-depression"
+  ],
+  "sections": [
+    {
+      "heading": "Recognize that each island has a different volcano",
+      "paragraphs": [
+        "Vanuatu is an archipelago with several active volcanoes, not one single summit trip. The Vanuatu Meteorology and Geohazards Department (VMGD) lists sites including Yasur on Tanna, Ambrym’s Benbow and Marum, Ambae’s Manaro Voui and other volcanoes. Its official pages publish alert levels and bulletins because activity can change. Choose a destination only after checking the exact volcano and island, not because a photo resembles a route you saw elsewhere.",
+        "A hazard alert is not a tourism rating. It describes volcanic status and hazards; local authorities and land managers determine where visitors may go. Do not infer that a low alert level means a crater rim is safe or that an operator can take you into any area."
+      ]
+    },
+    {
+      "heading": "Check the live warning before travel and again on the day",
+      "paragraphs": [
+        "VMGD says it issues Volcanic Alert Bulletins when there is a significant change in activity and presents current alert levels for each volcano. Read the bulletin for the volcano you plan to visit and any warnings from local authorities. The status can change between booking and arrival, so check again with your accommodation or licensed local operator on the day.",
+        "For example, VMGD’s bulletins identify hazard zones and sometimes explicitly tell boats or visitors not to approach an active vent area. Follow the current exclusion distance and do not treat it as negotiable. If a warning or operator says the visit is cancelled, accept the cancellation and choose a different island activity."
+      ]
+    },
+    {
+      "heading": "Use a responsible local operator",
+      "paragraphs": [
+        "Ask who guides the route, what authority permits the visit and how the operator handles sudden changes. Confirm what transport, protective equipment and communication plan are included. A reputable guide should explain where the group may stop, which areas are off limits, and how everyone leaves if conditions change. Do not book an itinerary that advertises crossing a closure or getting as close as possible to lava, gas or ash.",
+        "Keep the group together, stay behind boundaries, and do not wander from a designated viewing area for a photograph. If you feel unwell or a guide calls for departure, move as directed. Volcanic gases, ash, heat and unstable ground can present serious hazards that a visitor cannot assess by sight."
+      ]
+    },
+    {
+      "heading": "Make the visit part of an island stay",
+      "paragraphs": [
+        "Give travel days and weather buffers to the plan. Flights and boats between islands can be affected by conditions, and a volcano outing should not be the only purpose of a nonrefundable short trip. Choose a base that gives you alternative experiences such as a village visit, coastal walk or cultural site, all with local permission and current access checked.",
+        "Ask before photographing residents or ceremonies and learn whether a guide expects a customary payment or contribution. Do not frame community life as a backdrop to volcanic spectacle. The best local guide helps you understand land, weather and cultural context as well as the view."
+      ]
+    },
+    {
+      "heading": "Keep a clear go/no-go rule",
+      "paragraphs": [
+        "Before paying, read the operator’s cancellation and refund terms and decide what level of uncertainty you can tolerate. Make the go/no-go rule the latest official alert plus the guide’s local decision, not a personal desire to see an eruption. Pack for the actual conditions, follow local instructions and do not attempt a self-guided approach to any volcano.",
+        "Your next action is to pick one volcano by island, open the matching VMGD page, and ask a licensed local operator how they follow its current alert bulletin. If those sources disagree about access, wait for clarification or choose another activity."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Volcanoes",
+      "url": "https://www.vmgd.gov.vu/geohazards/volcanoes",
+      "publisher": "Vanuatu Meteorology and Geohazards Department",
+      "purpose": "Supports that Vanuatu has multiple named volcanic sites, publishes current alert levels and issues bulletins when activity significantly changes; page includes current hazard notices. Used to direct readers to exact volcano-specific alerts.",
+      "accessLimit": "Current alerts can change quickly and are not a travel authorization. Article does not state that any route is currently open; access decisions belong to local authorities and operators."
+    },
+    {
+      "title": "Current Warnings",
+      "url": "https://www.vmgd.gov.vu/warnings",
+      "publisher": "VMGD",
+      "purpose": "Opened government warning page for volcano alerts/hazards; supports the need to obey explicit danger zones and updated warnings.",
+      "accessLimit": "Warning status is time-sensitive and must be checked again immediately before any planned visit."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

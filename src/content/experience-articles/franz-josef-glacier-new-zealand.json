@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "franz-josef-glacier-new-zealand",
+  "slug": "franz-josef-glacier-new-zealand",
+  "title": "Visit Franz Josef Glacier from the safe side of the barriers",
+  "description": "Plan a short Franz Josef valley walk for rainforest, river and glacier views, while understanding why the viewing point is not a glacier-access route.",
+  "intent": "What can I safely see on foot at Franz Josef Glacier, and how should I plan when the valley itself limits access?",
+  "sections": [
+    {
+      "heading": "Set the right expectation for a walk",
+      "paragraphs": [
+        "The Department of Conservation’s Franz Josef Glacier/Kā Roimata o Hine Hukatere Walk is a short rainforest route to a valley viewing area. It is not a trail to the glacier face. DOC explains that the Waiho River has cut off access up the valley, so visitors cannot continue on foot from the viewing point. The walk’s value is seeing the landscape left behind by ice, the river corridor and mountain weather together.",
+        "This distinction matters because photographs can make the ice appear close enough to approach. The safe and useful visit is the official track to its signed end, where you can observe the valley and follow current barriers. Do not climb over a fence or walk up the riverbed to get closer. DOC warns that parts of the valley are hazardous and directs visitors to remain behind barriers."
+      ]
+    },
+    {
+      "heading": "Notice rainforest, river and former ice landscape",
+      "paragraphs": [
+        "The walk begins through rainforest and offers glimpses of mountain tops and waterfalls before opening toward the valley. The Waiho River forms a visible line toward the coast, making it a helpful way to read how water moves through the landscape. From the official viewing area, compare the green forest edge, the open valley floor and the high mountain backdrop. That contrast explains why a glacier can descend into temperate rainforest in this part of New Zealand.",
+        "UNESCO includes the Franz Josef and Fox Glaciers among the landforms of Te Wāhipounamu, where glaciation has shaped mountains, rivers, forests and coast. Its wider account helps frame the walk as an observation of continuing landscape processes. A distant view can be informative even when you cannot walk onto the ice."
+      ]
+    },
+    {
+      "heading": "Choose a day by weather and access",
+      "paragraphs": [
+        "The West Coast can change quickly. Check the Department of Conservation track status and weather before you go, then check again at the car park or visitor information point. Heavy rain, river conditions, rockfall or maintenance can close a route or change the safe viewing area. Plan a flexible day so that a closure does not become pressure to improvise an unsafe alternative.",
+        "DOC describes the walk as short, but footwear still matters on damp paths and uneven ground. Take a warm layer and rain protection, and allow time to stop without blocking other walkers. If the cloud obscures the upper ice, the walk can still reveal forest, water and glacier-shaped valley terrain. Do not interpret poor visibility as a reason to leave the marked trail."
+      ]
+    },
+    {
+      "heading": "Compare a walk with a supervised flight",
+      "paragraphs": [
+        "Some visitors consider scenic flights or guided glacier experiences, which are separate commercial activities with their own operators, permits, weather limits and safety rules. This article does not verify providers or current availability. If you are considering one, check the official Department of Conservation information and operator directly, including what the experience actually includes and what happens if weather cancels it. Do not assume a flight or landing is a substitute for a walking route, or that a view from above grants access to the glacier surface.",
+        "For many travelers, the DOC walk answers the key question: what does the valley look like from a legal, marked and supervised public viewing point? A flight may answer a different question about aerial scale. Make the choice based on comfort, weather buffer and budget after checking current official and operator details."
+      ]
+    },
+    {
+      "heading": "Make the valley visit complete without extending the risk",
+      "paragraphs": [
+        "At the end of the track, take a few quiet minutes to look for the river’s route and the valley’s boundaries. Note where forest begins and where the open rock and gravel begin. These are useful visual details to remember after the ice itself becomes hidden by cloud. If you are with children or a group, agree in advance that the signed end is the turn-around point.",
+        "Before leaving the township, check official notices for track and road access, and avoid relying on an old photograph or social post for current conditions. Leave rocks, plants and any cultural material in place, carry rubbish back and give space to other visitors. The best next step is simple: verify the DOC route status, then enjoy the marked walk for the landscape it actually opens up."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Franz Josef Glacier/Kā Roimata o Hine Hukatere Walk",
+      "url": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/west-coast/places/westland-tai-poutini-national-park/things-to-do/tracks/franz-josef-glacierka--roimata-o-hine-hukatere-walk/",
+      "publisher": "New Zealand Department of Conservation",
+      "purpose": "Supports the walk’s rainforest-to-viewpoint character, the Waiho River access barrier and warning to stay behind barriers in hazardous valley areas."
+    },
+    {
+      "title": "Te Wāhipounamu – South West New Zealand",
+      "url": "https://whc.unesco.org/en/list/551",
+      "publisher": "UNESCO World Heritage Centre",
+      "purpose": "Supports regional context that Franz Josef and Fox Glaciers descend into temperate rainforest within a landscape shaped by glaciation."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "fiordland-new-zealand",
+    "queenstown-new-zealand",
+    "the-canadian-rockies"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

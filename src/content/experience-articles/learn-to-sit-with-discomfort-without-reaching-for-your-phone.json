@@ -1,0 +1,57 @@
+{
+  "experienceSlug": "learn-to-sit-with-discomfort-without-reaching-for-your-phone",
+  "slug": "learn-to-sit-with-discomfort-without-reaching-for-your-phone",
+  "title": "Pause before the familiar reach for your phone",
+  "description": "Practice a brief, safe pause before checking your phone by noticing the urge, deciding what you need, and keeping access to urgent help.",
+  "intent": "Offer a realistic way to notice low-stakes discomfort and choose what to do next without framing phone use as a moral failure or ignoring genuine needs.",
+  "sections": [
+    {
+      "heading": "Choose a moment where pausing is safe",
+      "paragraphs": [
+        "Start with an ordinary moment when you reach for your phone out of habit: waiting for the kettle, sitting down after work, or standing in a short line. Do not use this exercise when you are driving, watching a child, waiting for an important message, managing a health need, navigating an unfamiliar place, or responsible for an emergency. The point is to create a small choice in an unhurried moment, not to prove that you can ignore a real need.",
+        "Before you start, make sure your phone remains available for safety. You might place it face down on the table rather than in another room, or set a short timer if you would otherwise worry about losing track of time. Silence non-urgent alerts if that is useful, but keep any contact or accessibility settings you rely on. On Android, Modes or Do Not Disturb filters can allow or block selected people and apps; settings vary by phone. This is not a digital detox or a ban. You are experimenting with the moment between an urge and an action."
+      ]
+    },
+    {
+      "heading": "Name what is happening without judging it",
+      "paragraphs": [
+        "When the urge to check arrives, pause for a few breaths and describe it plainly: ‘I feel restless,’ ‘I’m worried I missed a message,’ or ‘I want something to do.’ Notice where the feeling shows up in your body, if that is comfortable—perhaps a tight shoulder, a bouncing foot, or no clear sensation at all. You do not have to make the feeling disappear. The exercise is simply to notice what is there before deciding whether the phone is the right response.",
+        "This short pause is a practical experiment, not a treatment or a promise of calm. If paying attention makes you feel worse, stop and use a different form of support. You are allowed to reach for your phone, talk with someone, or leave the situation when that is what you need."
+      ]
+    },
+    {
+      "heading": "Ask what the urge is trying to solve",
+      "paragraphs": [
+        "Use one concrete question: ‘What do I need right now?’ The answer might be information, connection, a practical action, stimulation, or a break. If there is a message you need to send, send it. If you are avoiding an urgent task, choose the smallest next action. If you are tired, stand up or get water. If you simply want to check a feed, you can choose to do that deliberately rather than pretending the urge is forbidden.",
+        "A useful distinction is between discomfort that can safely wait for a minute and a signal that requires action. A missed appointment reminder, a transit update, a care alert, or a message from someone depending on you may be a real responsibility. Do not use ‘mindfulness’ to excuse ignoring it. The goal is not less phone use at any cost; it is a more intentional match between what is happening and what you choose to do."
+      ]
+    },
+    {
+      "heading": "Increase the pause only if it remains useful",
+      "paragraphs": [
+        "Begin with a brief pause—perhaps the time it takes to notice one breath—then check in. If that feels manageable, try a slightly longer interval on another low-stakes occasion. You do not need a streak or a fixed progression. Write down what prompted the reach and what you chose instead, but keep the note short enough that it does not become another performance metric. Sometimes you will check immediately; sometimes you will wait. Either result can teach you something about the role the phone plays in that moment.",
+        "If the urge is connected to distress you cannot manage, do not turn this exercise into self-treatment. Consider talking with a qualified professional or a trusted person, and use the phone to reach support when needed."
+      ]
+    },
+    {
+      "heading": "Make one intentional choice today",
+      "paragraphs": [
+        "Pick one predictable, safe moment and decide in advance what a useful pause would look like. Put the phone somewhere visible and reachable, notice the first urge without scolding yourself, and ask what you need before choosing. If the answer is to check the phone, check it. The experience is the choice becoming visible—not a rule that you must always choose silence."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Limit interruptions with Modes & Do Not Disturb on Android",
+      "url": "https://support.google.com/android/answer/9069335?hl=en",
+      "publisher": "Android Help, Google",
+      "purpose": "Supports the device-specific example that Android Modes/Do Not Disturb offers notification filters to allow or block selected people and apps, and that settings vary by phone; it does not evaluate the brief pause exercise."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "do-a-digital-detox-for-a-full-week",
+    "learn-to-meditate-for-20-minutes-straight"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

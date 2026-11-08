@@ -1,0 +1,66 @@
+{
+  "slug": "live-abroad-for-at-least-one-full-year",
+  "title": "Plan a year abroad around permission and continuity",
+  "description": "Build a year-abroad plan from official immigration, work, health, tax and housing guidance for your passport and destination.",
+  "intent": "Investigate the practical legal and administrative requirements of a year abroad through official country-specific sources.",
+  "sections": [
+    {
+      "heading": "Define the year you are planning",
+      "paragraphs": [
+        "Choose the destination and the reason for staying: work, study, family, a sabbatical or a combination. Set a realistic date range and identify what must remain stable at home, such as care for a dependent, lease, job, prescriptions or financial obligations. Make a list of assumptions you still need to verify instead of booking around a visa rumor or a friend’s past experience.",
+        "Your passport, citizenship, destination, purpose and length of stay affect the rules. A short tourist permission should not be assumed to allow a year, employment, study or repeated border entry. Start with official immigration and foreign-affairs sources for both your home country and destination, then confirm details with the destination’s consulate if your case is unclear."
+      ]
+    },
+    {
+      "heading": "Build a permission checklist",
+      "paragraphs": [
+        "Create separate rows for entry, residence, work or study, registration after arrival, dependants and travel in and out during the year. For each, record the official source, the date you checked it, what document is required and any deadline. Save screenshots or PDFs of the relevant official instructions and keep a note of the office that can answer questions. If the destination has different rules by region or visa category, identify the exact category before treating an answer as yours.",
+        "The U.S. State Department’s planning pages are designed for American travelers and point readers to country information, laws abroad, travel documents and living-abroad resources. They are useful examples of how to organize official research; they do not establish requirements for non-U.S. nationals or grant permission to live in another country. Use the government guidance for your own passport and destination.",
+        "For a concrete example, Immigration New Zealand’s USA Working Holiday Visa page says U.S. citizens aged 18–30 who normally live in the United States may apply for a stay of up to 12 months, subject to its conditions. The page lists at least NZD $4,200 for living expenses, full medical insurance, and plans to leave New Zealand; the visa permits temporary work and up to six months of study, not a permanent job. This is one route for a narrowly defined group, not a general year-abroad solution or a guarantee of approval. Check the live page on the date you apply; I reviewed it on 8 November 2026. If you do not meet those nationality, age or residence criteria, use the official visa finder for your own case rather than adapting this example."
+      ]
+    },
+    {
+      "heading": "Solve work, money and health questions",
+      "paragraphs": [
+        "Ask your employer or school in writing whether remote work, leave or enrollment is permitted from that country. A job contract’s location clause may matter even if your employer is happy with the idea. Ask a qualified tax professional familiar with both countries what records and filings may apply; do not infer tax residence from a simple day count taken out of context.",
+        "Check healthcare eligibility, insurance exclusions, prescription rules and how to obtain continuing care. Ask your clinician and pharmacist before travel if treatment continuity needs planning. Keep a secure list of local emergency contacts, medical facilities and the process for renewing medicines. These details vary by person and jurisdiction, so official pages are a starting point rather than individualized medical, legal or tax advice."
+      ]
+    },
+    {
+      "heading": "Make a housing and arrival plan",
+      "paragraphs": [
+        "Compare a first-month stay with a long lease. Before paying, verify the landlord or agent through local channels, inspect contract terms, deposit rules and move-out notice, and understand what address registration the destination requires. Ask whether utilities, internet, heating, furniture and local fees are included. Do not send a large deposit based only on photos or a social-media conversation.",
+        "Plan how you will reach your accommodation from the airport, get a local phone connection and access money if a card is blocked. Keep copies of key documents separately from the originals, and tell a trusted person how to reach you. If you will cross borders during the year, confirm whether that affects your permission or required reporting before buying nonrefundable travel."
+      ]
+    },
+    {
+      "heading": "Use a staged commitment",
+      "paragraphs": [
+        "First, create a one-page requirement tracker and identify the official authority responsible for each answer. Next, price a refundable first month and the costs of maintaining your home commitments. Then choose a check-in date before you sign a year-long lease or resign from work. If a visa decision is delayed or a requirement is unclear, change the sequence rather than guessing.",
+        "After arrival, save registration receipts, contracts, insurance documents and official notices in one secure place. Schedule a monthly review of deadlines, finances, health continuity and the reason you moved. A full year abroad is an experience built from ordinary administration as much as travel. Clear permission and a workable return plan give you room to enjoy it without treating a hoped-for stay as guaranteed."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Planning Your Travel",
+      "url": "https://travel.state.gov/en/international-travel/planning.html",
+      "publisher": "U.S. Department of State",
+      "purpose": "Supports the use of country information, laws-abroad, passport and living-abroad resources as planning steps for U.S. citizens; it does not establish destination visa eligibility or requirements for other nationalities."
+    },
+    {
+      "title": "USA Working Holiday Visa",
+      "url": "https://www.immigration.govt.nz/visas/usa-working-holiday-visa/",
+      "publisher": "Immigration New Zealand",
+      "purpose": "As reviewed 8 November 2026, provides a bounded example of eligibility and conditions for the New Zealand working holiday visa available to U.S. citizens aged 18–30 who normally live in the U.S.; it does not apply to other nationalities or guarantee approval."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "spend-a-month-in-japan",
+    "volunteer-abroad-for-at-least-a-month",
+    "spend-a-month-living-with-a-foreign-family"
+  ],
+  "experienceSlug": "live-abroad-for-at-least-one-full-year",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

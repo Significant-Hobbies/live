@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "host-a-blind-apple-tasting",
+  "slug": "host-a-blind-apple-tasting",
+  "title": "A blind apple tasting that reveals more than sweetness",
+  "description": "Set up a relaxed blind apple tasting with fair portions, useful sensory prompts, and a reveal that helps everyone choose fruit for different uses.",
+  "intent": "How can I host a blind apple tasting that feels curious rather than competitive? This guide focuses on designing a fair comparison and turning preferences into practical food choices.",
+  "sections": [
+    {
+      "heading": "Choose apples that make a useful comparison",
+      "paragraphs": [
+        "Three varieties are enough for a first tasting. Look for apples with differences you can notice, such as a firm tart variety beside a sweeter, softer one, or choose several types sold at your local market. You do not need rare fruit. Availability changes by season and region, and a tasting can still work if the labels are familiar. Buy similar-sized fruit so the pieces are easy to compare and the group can see each whole apple after the blind round.",
+        "Ask guests about allergies, dietary needs and comfort with raw fruit before cutting anything. Wash the apples, use a clean board and knife, and keep samples chilled if you are preparing ahead. If someone has trouble chewing or swallowing, ask what texture and cut size works for them instead of assuming small pieces are always suitable."
+      ]
+    },
+    {
+      "heading": "Keep the comparison fair without making it fussy",
+      "paragraphs": [
+        "Give each apple a code such as A, B and C, and have one person keep the key folded away. Cut similar wedges from each fruit and serve them on separate plates in the same order for everyone. Room temperature, lighting and scent can affect what you notice, so keep the setting calm and avoid strongly scented candles, coffee or perfume nearby. Put water and plain crackers on the table for people who want a pause between samples.",
+        "The aim is not a laboratory test. It is simply helpful to change one thing at a time: if every person tastes samples in the same sequence, the group can discuss the same comparison. Use napkins and individual forks if that is more comfortable. Leave space for someone to skip a sample without explaining why."
+      ]
+    },
+    {
+      "heading": "Describe first, decide later",
+      "paragraphs": [
+        "Before anyone reveals a preference aloud, give each person a minute to jot down words for aroma, crispness, juiciness, sweetness and acidity. Invite concrete descriptions: ‘snaps when I bite it’ or ‘smells floral’ says more than ‘good.’ A quiet first note prevents the first confident opinion from becoming the group’s default answer. Nobody needs formal tasting vocabulary; comparisons such as firmer than A or less tart than C are perfectly useful.",
+        "Try asking what changed after chewing, not just what the first bite felt like. An apple may smell sweet yet taste sharp, or seem crisp near the skin and softer toward its centre. Keep preference separate from description: someone can recognise that a sample is tart and still love it. Do not score participants or hunt for a correct answer."
+      ]
+    },
+    {
+      "heading": "Reveal the labels and connect taste to use",
+      "paragraphs": [
+        "When everyone has finished notes, reveal the varieties and let people revisit the whole fruit. Which description now makes sense? Did a familiar name change expectations? The label can explain what you sampled, but it does not prove why a particular apple tasted a certain way: ripeness, storage and growing conditions also matter. Avoid turning one sitting into a universal ranking of a variety.",
+        "Finish by asking which apple each person would choose for a specific job: eating on a walk, baking into a tart, pairing with cheese or adding to a salad. Preferences become more actionable when tied to a use. Eat or cook the remaining fruit promptly, and note the combinations you might want to try another season."
+      ]
+    },
+    {
+      "heading": "Make the next tasting different on purpose",
+      "paragraphs": [
+        "If you repeat the activity, change one part: compare storage methods, serve the same variety at different ripeness, or pair apples with two cheeses. Keep a simple sheet with variety, texture words and intended use. A useful record is short enough to revisit while shopping; elaborate scores often obscure what the group actually enjoyed.",
+        "Slow Food’s sensory-education materials treat tasting as a way to pay attention to food and its context. You can borrow that spirit without copying a formal workshop: notice what is in front of you, explain what you sense, and leave room for other people’s perceptions."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Taste Workshop Guidelines",
+      "url": "https://resources.slowfood.com/asset/b767afdf-59e1-4539-bab4-74da2a14a41b",
+      "publisher": "Slow Food",
+      "purpose": "Supports using sensory education as a structured way to notice food and discuss its context; tasting setup and hosting suggestions here are original practical advice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "compare-whole-spices-before-and-after-toasting",
+    "press-corn-tortillas-and-serve-them-warm",
+    "roll-vegetarian-maki-for-a-picnic-at-home"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

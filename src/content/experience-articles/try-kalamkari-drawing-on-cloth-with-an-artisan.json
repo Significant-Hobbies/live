@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "try-kalamkari-drawing-on-cloth-with-an-artisan",
+  "slug": "try-kalamkari-drawing-on-cloth-with-an-artisan",
+  "title": "Follow the kalam from first line to cloth study",
+  "description": "Learn how a Kalamkari pen carries a line across prepared cotton, compare the pen and block traditions with an artisan, and build one small cloth study.",
+  "intent": "How to use a Kalamkari kalam thoughtfully in a short artisan-led session, focusing on line flow, cloth preparation, the distinction between pen and block work, and questions about color stages.",
+  "relatedExperienceSlugs": [
+    "carve-a-reusable-rubber-stamp",
+    "weave-a-miniature-tapestry-on-cardboard",
+    "make-a-small-mosaic-panel"
+  ],
+  "sources": [
+    {
+      "title": "Traditional Indian Textiles – Class XII",
+      "url": "https://cbseacademic.nic.in/web_material/Curriculum/Vocational/2018/Traditional%20Indian%20Textiles%20XII_777.pdf",
+      "publisher": "Central Board of Secondary Education, Government of India",
+      "purpose": "Describes Kalamkari as pen-craft, outlines regional styles, and describes a kalam made from bamboo with an absorbent tip and cloth preparation."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Start by asking which Kalamkari practice you will study",
+      "paragraphs": [
+        "Kalamkari covers more than one approach. The CBSE textiles handbook describes the Srikalahasti and Machilipatnam traditions, and notes that the term refers to pen craft while some work also uses block printing. Ask your artisan which local or studio practice the session follows before assuming every line or color is made with the same tool.",
+        "A useful question is whether your small study is meant to copy a motif, test a line, or explore how one color stage behaves on cloth. That answer sets a realistic goal. You are not trying to reproduce a whole finished textile in one sitting; you are learning to notice the decisions that make a line and a shape legible."
+      ]
+    },
+    {
+      "heading": "See how the kalam carries a line",
+      "paragraphs": [
+        "The textbook describes a kalam as a bamboo stick with a pointed edge and an absorbent wool or felt tip that helps maintain dye flow. Watch the practitioner load the tool, touch the cotton, and lift at the end of a stroke. If the line thickens or breaks, ask whether the cause is the amount of dye, the pressure, the cloth or the pace.",
+        "On your sample, practise one straight line, one curve and one stop-start mark before drawing a motif. Keep your wrist relaxed and let the artisan show how much pressure this particular pen needs. Do not press harder to fix a dry mark; a fresh tool load or a slower stroke may be the relevant adjustment."
+      ]
+    },
+    {
+      "heading": "Notice the cloth before the drawing",
+      "paragraphs": [
+        "Kalamkari work depends on prepared cloth as well as drawing. The CBSE handbook describes cotton being washed to remove starch and then treated before the design stage in the method it teaches. In a workshop, ask what preparation has already been done to your cloth and what that preparation makes possible. Do not rinse or handle a prepared sample unless asked.",
+        "A small outline can reveal how the surface behaves. Does the line feather, stay crisp, or pause where the weave catches the kalam? Test the same stroke on a spare edge if the artisan provides one. The goal is not to force every mark into identical uniformity but to understand what the cloth is doing under your hand."
+      ]
+    },
+    {
+      "heading": "Follow color as a sequence, not a palette",
+      "paragraphs": [
+        "Ask the artisan which stage of the textile you are seeing and how the chosen material changes the next step. The CBSE account describes mordants and natural dyes in particular Kalamkari processes; this is enough reason to ask which materials are being used rather than assuming a color is simply painted on like poster paint. Some stages are technical and should remain in the practitioner’s hands.",
+        "For your study, focus on one contour and a limited area of color. Observe how a wet mark dries and whether the artisan expects another process later. Avoid claiming your single swatch demonstrates a complete traditional workflow. Write down the name of the stage as the practitioner explains it, because studio methods can vary and terminology matters."
+      ]
+    },
+    {
+      "heading": "Leave with a sample and one precise question",
+      "paragraphs": [
+        "Label your cloth study with the date, the tool you used, and what you learned about line pressure or flow. If the artisan allows a photograph, ask first and do not photograph other work or people without consent. Ask whether your sample needs additional handling or drying before you take it away.",
+        "A worthwhile next question might be how pen-drawn outlining relates to block-printed areas in the specific tradition you studied, or how the artisan chooses a motif for a small surface. Keep the question open rather than requesting a simplified recipe for a craft that involves prepared fabric, tools and accumulated knowledge. Your one study becomes a reference for the next conversation, not a substitute for it."
+      ]
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

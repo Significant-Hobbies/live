@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "survive-a-wilderness-expedition",
+  "slug": "survive-a-wilderness-expedition",
+  "title": "Build an expedition plan around limits and contingencies",
+  "description": "Plan a remote multi-day expedition by matching route and group experience, assigning responsibilities, and agreeing on decisions that turn the team back.",
+  "intent": "Answers how to prepare for a self-supported wilderness expedition through conservative route choice and team planning, rather than treating survival as a solo stunt.",
+  "sections": [
+    {
+      "heading": "Define the expedition before choosing a destination",
+      "paragraphs": [
+        "Write down what makes the trip an expedition for you: how many days away, how remote the route is, whether the group carries its own supplies, what the route demands, and what would make the trip meaningful. Then write down your actual experience with navigation, weather, overnight systems, group leadership and the relevant terrain. If several of those are new, select a guided course or supported route that teaches them before attempting an isolated trip.",
+        "Choose the place and season with a qualified local guide, land manager or established expedition provider. “Remote” changes with local weather, communications, access and rescue resources. A route discussed by a friend may have different hazards at another time of year. Verify current land permissions, permits, closures and emergency arrangements directly with the responsible authority."
+      ]
+    },
+    {
+      "heading": "Compare route difficulty and camping difficulty separately",
+      "paragraphs": [
+        "A useful example comes from Shenandoah National Park in the United States. The National Park Service classifies suggested trips by both hike difficulty and camping experience. Its current list shows a one-night Hickerson Hollow trip as an easy hike with beginner camping and two miles, while a one-night Pass Mountain and Piney Ridge trip is listed as strenuous with advanced camping and 21 miles. The point is not to copy either itinerary: a modest distance can still require harder campsite decisions, and “short” does not automatically mean beginner-friendly.",
+        "The park’s backcountry planning page also tells groups to account for steep terrain, pack weight, the least-fit participant, navigation skills and backup if the most experienced person becomes unavailable. Apply the same questions with your local authority: how difficult is the route, how difficult is the camp, what skills are assumed, and who can change the plan?"
+      ]
+    },
+    {
+      "heading": "Write down who owns each decision",
+      "paragraphs": [
+        "Before leaving, make a shared trip sheet with the route, dates, party members, intended camps, transport, check-in plan, emergency contacts and the point at which a late return triggers action. Give an off-trip contact the plan and a way to reach the local authority or emergency service. Keep a copy available offline. A plan only helps if someone besides the lead knows what it says.",
+        "Assign responsibilities by experience: navigation, weather and route updates, group welfare, communications, food and equipment checks. Pair unfamiliar members with experienced people for learning, but do not make one person the only holder of essential knowledge. Ask a professional guide or training provider to assess the group’s readiness for technical terrain, remote travel or medical decisions."
+      ]
+    },
+    {
+      "heading": "Agree on the reasons to shorten or stop",
+      "paragraphs": [
+        "Choose turn-back triggers while everyone is calm. They could include a forecast or condition outside the agreed plan, an injury, a missing critical item, a participant unable to continue comfortably, or a schedule slip that removes the safe margin. The exact triggers depend on the area and route; use current local guidance and the judgment of qualified leaders. A summit, destination or calendar date should never outrank a changed condition.",
+        "Practice a short check-in at decision points: What has changed? Does the plan still fit? What is the safest next option for the whole party? Agree that any participant may raise concern without having to prove they are tough enough to continue. A good expedition can turn around early and still meet its purpose."
+      ]
+    },
+    {
+      "heading": "Debrief for the next journey",
+      "paragraphs": [
+        "When you return, record the decisions that mattered: what took longer than expected, which gear or information was hard to access, and where communication was unclear. Separate issues that belong to training from those that belong to the itinerary or equipment. Ask each participant what they would repeat and what they would change before planning another trip.",
+        "Do not judge the expedition only by whether the group reached its farthest point. Completion also means returning with the team, honoring the land’s rules and learning what you need before taking on more remote terrain. Choose one legitimate local course, supervised outing or route-planning session as the next preparation step."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Backcountry Trip Planning",
+      "url": "https://www.nps.gov/shen/planyourvisit/backcountry-planning.htm",
+      "publisher": "U.S. National Park Service, Shenandoah National Park",
+      "purpose": "Supports a park-specific example of planning for steep terrain, group capability, navigation skills, backups, and a first night before dark; its mileage and route advice are for Shenandoah, not general wilderness prescriptions."
+    },
+    {
+      "title": "Suggested Backcountry Trips",
+      "url": "https://home.nps.gov/shen/planyourvisit/backcountry-trips.htm",
+      "publisher": "U.S. National Park Service, Shenandoah National Park",
+      "purpose": "Supports the dated comparison between the beginner/easy Hickerson Hollow one-night itinerary and the advanced/strenuous Pass Mountain & Piney Ridge one-night itinerary; these are examples, not recommendations for other parks."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "do-a-solo-camping-trip-with-no-phone",
+    "hike-the-appalachian-trail-end-to-end",
+    "go-on-a-polar-expedition"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

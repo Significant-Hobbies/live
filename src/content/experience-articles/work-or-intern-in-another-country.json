@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "work-or-intern-in-another-country",
+  "slug": "work-or-intern-in-another-country",
+  "title": "Plan an Overseas Work Experience From the Permission Outward",
+  "description": "Compare a real overseas role by work authorization, learning, supervision, pay, and living arrangements before you commit to moving.",
+  "intent": "How do I evaluate an international job or internship without assuming that a tourist entry, school placement, or employer promise grants permission to work?",
+  "sections": [
+    {
+      "heading": "Start with your legal route",
+      "paragraphs": [
+        "Before comparing cities or job titles, find out whether you may legally do the proposed work. Rules depend on your citizenship, destination, employer, role, length of stay, and sometimes whether the placement is paid or unpaid. A visitor entry does not automatically authorize work. Check the destination government's immigration authority or embassy pages for your exact case, and ask the employer who is responsible for the application and costs.",
+        "Do not rely on a recruiter saying “everyone does it.” The UK government's guidance for UK-based employees sent temporarily to an EU country, for example, says the employer must follow some employment rules of the destination and directs readers to country-specific guidance. That is a limited UK-to-EU example, not a rule for every worker, destination, or internship. Establish your own jurisdiction before making travel commitments."
+      ]
+    },
+    {
+      "heading": "Compare the role's learning design",
+      "paragraphs": [
+        "Ask what you will do in a normal week, who will supervise you, and how feedback works. A substantive internship should be able to describe concrete tasks, expected skills, and a person who can answer questions. “International exposure” is not a job description. Compare two offers by the work itself: one may offer a clear project and weekly mentor check-ins, while another promises prestige but leaves duties vague.",
+        "Ask how the role fits your education or career plan, what language is used day to day, and whether required credentials are recognized in that country. Qualifications do not transfer automatically everywhere. The Northern Ireland government's working-abroad guide flags work permits, destination-country employment rights, qualification recognition, language, tax, and living costs as matters to investigate; its advice reflects UK context and points to local information."
+      ]
+    },
+    {
+      "heading": "Build a realistic living budget",
+      "paragraphs": [
+        "Calculate take-home pay only after you understand the applicable tax and payroll arrangement. List housing, deposit, utilities, transit, food, health coverage, visa fees, and a return journey. Ask whether accommodation is provided, whether its cost is deducted from pay, and what happens if the job ends early. Compare the total with your own financial capacity rather than assuming the salary will stretch because the role is abroad.",
+        "If it is unpaid or low-paid, be especially careful about who benefits from the arrangement and what expenses you carry. Get the terms in writing. A legitimate placement should not require you to surrender a passport, pay a personal fee to a recruiter without clear documentation, or accept work conditions you cannot verify. Ask your school, union, or a qualified local adviser to review an unfamiliar contract."
+      ]
+    },
+    {
+      "heading": "Check the support around the move",
+      "paragraphs": [
+        "Confirm the start and end dates, work location, arrival plan, housing, emergency contact, and what happens if the supervisor leaves. Ask whether you will receive an orientation and how to raise a safety or harassment concern. If you are moving through a university or exchange program, read both the program agreement and the employer's agreement; they may cover different responsibilities.",
+        "Make your own plan for communication and documents. Keep accessible copies of the contract, travel document, insurance information, and contact details, while protecting sensitive information. Learn how you would get help locally and how you would leave if the placement stopped being safe or lawful."
+      ]
+    },
+    {
+      "heading": "Decide with an exit option",
+      "paragraphs": [
+        "A valuable experience is not measured only by how long you stay. Agree on milestones for reassessing the role: after the first week, the first month, or the first project. Note what would make you continue, ask for changes, or return home. This turns the move into a decision you can review rather than a promise you must defend.",
+        "For a first step, choose one destination and one candidate role, then verify authorization with the destination's official source before paying a deposit or booking a nonrefundable ticket."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Working abroad",
+      "url": "https://www.nidirect.gov.uk/articles/working-abroad",
+      "publisher": "nidirect, Northern Ireland public services",
+      "purpose": "Supports the checklist of permits, destination employment rules, qualification recognition, language and living-cost considerations; the advice is UK/Northern Ireland oriented, not universal immigration advice."
+    },
+    {
+      "title": "Working abroad for a UK employer",
+      "url": "https://www.gov.uk/working-abroad/working-abroad-for-uk-employer",
+      "publisher": "GOV.UK",
+      "purpose": "Supports the narrow example that UK employers temporarily sending staff to an EU country must observe some destination-country employment rules and should consult country-specific guidance."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "make-a-best-friend-in-a-foreign-country",
+    "backpack-through-southeast-asia",
+    "negotiate-your-first-raise"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

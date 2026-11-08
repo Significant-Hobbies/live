@@ -1,0 +1,71 @@
+{
+  "experienceSlug": "the-serengeti-tanzania",
+  "slug": "the-serengeti-tanzania",
+  "title": "Choose a Serengeti base by habitat and trip length",
+  "description": "Compare a central Seronera stay with northern Mara or western Grumeti areas, and plan around wildlife movement without promising a crossing.",
+  "intent": "How should a visitor choose between central, northern and western Serengeti areas, authorized access and seasonal uncertainty for a safari?",
+  "sections": [
+    {
+      "heading": "Choose an area before choosing a wildlife promise",
+      "paragraphs": [
+        "The Serengeti is an ecosystem, not one game-drive loop. Tanzania National Parks’ guide map labels places such as Seronera Valley, the Grumeti River, the Mara River and Lake Ndutu along a much larger migration route. A public TANAPA brochure also identifies airstrips in the central, southern, western, eastern and northern parts of the park, including Seronera, Kusini, Kirawira, Lobo, Kogatende and Lamai. Those names are useful for choosing a base and understanding distances, not guarantees of a particular animal sighting.",
+        "Start with what you want from the safari: multiple habitats from a central base, a northern landscape with interest in the Mara River, or a western route that includes the Grumeti area. A shorter trip may be more satisfying if you focus on one region rather than trying to traverse a park this large between every game drive."
+      ]
+    },
+    {
+      "heading": "Central Seronera: a base for a focused park visit",
+      "paragraphs": [
+        "The official visitor guide identifies Seronera as a regular air access point and describes road arrival from Arusha as a long journey. If your schedule is short, compare the real transfer into central Serengeti with the time you would spend driving from another region. Staying near one hub can protect game-drive time and reduce the pressure to cover a huge distance in a few days.",
+        "Ask your operator which habitats are reachable from the actual lodge or camp, how long each drive takes, and whether the plan changes when roads are wet or wildlife closures are in force. The TANAPA map labels open grasslands, river areas and kopjes across the broader park; use that as a reminder that scenery changes even when you stay in one general area. Look at landscapes and animal behavior rather than counting sightings."
+      ]
+    },
+    {
+      "heading": "North and west: plan around possibility, not timing",
+      "paragraphs": [
+        "The northern park includes Kogatende and Lamai, and the Mara River lies in the northern part of the park. That can make it a reasonable area to consider for a trip interested in river landscapes and migration crossings. A crossing itself is unpredictable and never guaranteed. Park rules require vehicles to remain in designated areas and give animals space; follow the latest park guidance and your certified guide’s instructions.",
+        "The western corridor includes the Grumeti River and Kirawira on TANAPA’s park materials. If you are comparing west and north, ask which region your dates and trip length support, what the transfer costs in time, and whether your camp base is fixed or changes. One extra transfer can use hours better spent learning the landscape. Do not choose a camp solely because a migration calendar names a month."
+      ]
+    },
+    {
+      "heading": "Treat migration maps as context",
+      "paragraphs": [
+        "TANAPA’s map shows seasonal labels along a circular migration route through Tanzania and into Kenya. It is a planning illustration, not a live location tracker. Weather, grazing and animal movement do not align perfectly with a visitor’s travel dates. Ask the operator what they are seeing in the current area, how they adapt if herds are elsewhere, and what a good game drive would still look like without a crossing.",
+        "The park’s visitor guide says guests should travel with a guide or tour operator, stay in designated areas, avoid feeding wildlife and follow park rules. Use an operator that can explain its conservation practices and the latest access arrangements. A responsible guide may choose not to pursue an animal or may reroute around an area; that restraint is part of the experience."
+      ]
+    },
+    {
+      "heading": "Make the trip fit the time you have",
+      "paragraphs": [
+        "For a brief stay, choose one area, one nearby alternative and a camp whose transfer plan you understand. For a longer safari, compare central and northern or western regions only after mapping the drive or flight legs, park entry and overnight sequence with the operator. Confirm current accommodation and transport details; a guide map cannot tell you which camp has space or which flight runs on your dates.",
+        "Before booking, write down your priority in plain terms: ‘I want to understand Serengeti habitats from a central base’ or ‘I am interested in the northern river landscape but accept that a crossing may not happen.’ Share that with the operator and ask for a route that stands on its own even if wildlife movement differs. The park is still worth paying attention to when your hoped-for scene does not appear on schedule."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Visitor Guide",
+      "url": "https://tanzaniaparks.go.tz/serengeti/visitor-guide",
+      "publisher": "Tanzania National Parks (TANAPA)",
+      "purpose": "Supports broad road/air arrival context and current visitor rules about certified guides and designated areas."
+    },
+    {
+      "title": "TANAPA Tourist Guide Map",
+      "url": "https://www.tanzaniaparks.go.tz/fr/tourism/visitor-information/tourist-guide-map",
+      "publisher": "Tanzania National Parks (TANAPA)",
+      "purpose": "Identifies official map layers intended for park boundaries, access roads, routes, gates, accommodation and wildlife viewing areas."
+    },
+    {
+      "title": "Tanzania National Parks brochure: Serengeti",
+      "url": "https://www.tanzaniaparks.go.tz/uploads/publications/en-1689747542-TNPGENBROCHSWA2023.pdf",
+      "publisher": "Tanzania National Parks (TANAPA)",
+      "purpose": "Supports regional airstrip names and a map illustrating seasonal movement through Seronera Valley, Grumeti and Mara River areas; used only as broad geographic context."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "safari-in-the-serengeti-at-sunrise",
+    "gorilla-trekking-rwanda-or-uganda",
+    "okavango-delta-botswana"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

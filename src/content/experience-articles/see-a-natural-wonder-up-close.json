@@ -1,0 +1,64 @@
+{
+  "experienceSlug": "see-a-natural-wonder-up-close",
+  "slug": "see-a-natural-wonder-up-close",
+  "title": "Choose one natural feature and learn how it got there",
+  "description": "Plan a close look at a natural wonder with one observation question, an official visitor route, and respect for fragile geology and living landscapes.",
+  "intent": "How can I experience a natural wonder up close by noticing its geology or scale while protecting the place and following site-specific access rules?",
+  "sections": [
+    {
+      "heading": "Choose the kind of wonder you want to notice",
+      "paragraphs": [
+        "A natural wonder might be a canyon, cave, glacier, volcano, waterfall, barrier island, or a landscape shaped by wind and water. Pick one feature that interests you and decide what you want to understand: how its layers formed, how it changes with weather, what scale is hard to judge from a photograph, or how plants and animals use the surrounding habitat. A question gives the visit more depth than trying to take in every viewpoint in one day.",
+        "The U.S. National Park Service’s Geologic Wonders page organizes examples around forms such as glaciers, barrier islands, volcanoes, arches, canyons, caves, mountains, and dunes. That range is useful for choosing a type of landform; it is not a global list or a substitute for finding a site that is open and accessible to you."
+      ]
+    },
+    {
+      "heading": "Find the official way to approach it",
+      "paragraphs": [
+        "Once you name a place, use its official park, protected-area, or site authority to check access, opening conditions, trail or boardwalk closures, permits, accessibility information, and safety notices. A famous viewpoint may be reached by a short path, a guided visit, or a strenuous route; do not infer difficulty from a photograph. For a cave, glacier, coastal edge, or volcanic area, hazards and permitted access vary greatly, so follow the local authority rather than attempting an unmarked route.",
+        "Look for an interpretation page or geology map from the managing authority. Before the visit, learn one term that will help you notice the site—for example, a layer, channel, moraine, dune, or lava feature—and how the source says to recognize it. You do not have to become a geologist. One verified clue can turn the scene from scenery into a process you can observe."
+      ]
+    },
+    {
+      "heading": "Use a three-minute observation routine",
+      "paragraphs": [
+        "At the first safe viewpoint, stop before taking a photograph. Write three details: one about shape, one about color or texture, and one about movement or change. At a waterfall, that might be the edge where water breaks into spray, a darker rock band, and how the sound shifts with distance. At a dune, notice the crest, the plants holding a section of sand, and wind marks. These examples are prompts; the feature and its interpretation should be checked against local information.",
+        "Then ask what your viewpoint cannot show. A cliff may look like one wall from the overlook while the official interpretive map shows several layers; a waterfall may obscure how a river changes upstream. Read the sign or guide text, compare it with your own notes, and keep observation separate from inference. If your guess is wrong, the correction is part of the visit."
+      ]
+    },
+    {
+      "heading": "Keep the place intact",
+      "paragraphs": [
+        "Stay on the designated path or viewing area and leave rocks, fossils, plants, and cultural materials where they are. U.S. National Park Service guidance says geologic and soil resources in national parks are vulnerable and encourages durable surfaces and leaving what you find. Rules differ among parks and countries, so follow the authority for the particular site; even where collecting is permitted, do not assume that touching or removing a feature is harmless.",
+        "Avoid climbing for a better angle, stepping beyond a barrier, feeding wildlife, or blocking a narrow trail to frame a shot. If the viewpoint is crowded, wait or choose another public location. A photograph is not worth damaging a fragile surface or placing yourself near an edge. For places that are culturally important, read the posted visitor expectations and treat them with care as well as curiosity."
+      ]
+    },
+    {
+      "heading": "Make the visit about one detail",
+      "paragraphs": [
+        "Take a few photographs that answer different questions: one showing the feature in its wider setting, one showing a safe close detail, and one with a scale cue only if photography rules allow it. Do not use a person, tree, or building as an exact ruler unless you know its size. Add a note with the date, viewpoint, and source you used to learn about the feature; conditions and interpretation can change.",
+        "Before leaving, return to your first observation and write what you now understand differently. Then share one specific detail with someone else instead of calling the place simply “amazing.” The next action is to select a site whose official visitor page clearly explains how to reach and observe it, then write one question you want the landscape to answer."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Geologic Wonders",
+      "url": "https://home.nps.gov/subjects/geology/geologic-wonders.htm",
+      "publisher": "U.S. National Park Service",
+      "purpose": "Supports examples of geologic forms and the idea of experiencing a geological site in the field; it is a U.S. national-parks page and does not give current access rules for any specific site."
+    },
+    {
+      "title": "Get Involved: Geology",
+      "url": "https://www.nps.gov/subjects/geology/get-involved.htm",
+      "publisher": "U.S. National Park Service",
+      "purpose": "Supports leaving geological materials in place and minimizing impact on fragile geologic/soil resources in National Park System units; rules elsewhere may differ."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "complete-an-earthcache-geology-field-challenge",
+    "visit-all-seven-wonders-of-the-world"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

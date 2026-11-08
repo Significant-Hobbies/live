@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "walk-10-000-steps-a-day-for-a-month",
+  "slug": "walk-10-000-steps-a-day-for-a-month",
+  "title": "Make a 10,000-step month workable in real life",
+  "description": "Set up a month of daily walking with a realistic baseline, accessible routes, a useful step count, and room for ordinary life.",
+  "intent": "Help readers organize a month-long step-count challenge without presenting 10,000 as a universal medical requirement or assuming everyone has the same mobility and schedule.",
+  "sections": [
+    {
+      "heading": "Find your ordinary starting point",
+      "paragraphs": [
+        "Before day one, wear your usual step counter for several ordinary days and note the range rather than selecting the most active day as your baseline. Record the device and where you wear it; different phones and watches may count differently, especially when a device is left on a desk or carried in a bag. This baseline is a planning aid, not a fitness test.",
+        "The month’s 10,000-step target is a personal challenge, not the same thing as a public-health prescription. The CDC’s U.S. adult guidance describes weekly activity in minutes and also notes that some activity is better than none. It does not set 10,000 steps as a requirement. If that number is unsuitable for your circumstances, adapt the challenge with a health professional or choose another measure that fits your goal."
+      ]
+    },
+    {
+      "heading": "Turn the number into routes",
+      "paragraphs": [
+        "Look at your daily schedule and identify small routes that fit naturally: one block before work, a walk during a call when safe, an errand on foot, or an indoor corridor loop when weather makes the pavement difficult. If you have a desk job, two shorter breaks may be easier to protect than one long walk. If you use a mobility aid or wheelchair, ask whether your device’s step count represents the activity you want to track; distance, minutes, or another measure may be more meaningful.",
+        "Use a map to identify a familiar loop with a safe crossing, lighting, a restroom if needed, and a shorter return option. A route beside traffic or across an inaccessible curb is not a good daily default merely because it is convenient. Keep one indoor or transit-friendly backup route for rain, extreme heat, poor air quality, or a late finish."
+      ]
+    },
+    {
+      "heading": "Make the tally dependable",
+      "paragraphs": [
+        "Use the same device and carry or wear it the same way each day. At the start and end of the walk, check that it is tracking. If a phone stays at home during a walk, the missing steps are a device limitation, not evidence that the walk did not happen. A paper note or calendar can record both the number and what changed in your routine.",
+        "Do not spend the day walking in place just to force a counter over its threshold if that makes you uncomfortable or interferes with sleep, work, or recovery. A step count is only one way to describe movement. The CDC notes that activity may be broken into smaller chunks, so a few separate walks can contribute to an active week even when no single outing is long."
+      ]
+    },
+    {
+      "heading": "Expect a month to have uneven days",
+      "paragraphs": [
+        "Plan for the hard days before they arrive. Put a short loop near home for busy evenings, ask a friend to join on one regular day, and decide how you will handle a day when you are ill or caring for someone. Avoid treating a missed target as a debt that must be repaid with a punishing extra walk. Record why the day changed and restart with the next suitable opportunity.",
+        "Wear shoes and clothing appropriate to the route and conditions. If you have persistent pain, dizziness, unusual shortness of breath, or a health condition that may affect activity, seek individualized clinical advice. Do not use a challenge calendar to push through symptoms. If outdoor heat, cold, ice, or smoke make the planned walk unsafe, take the backup option or rest."
+      ]
+    },
+    {
+      "heading": "Review what the month taught you",
+      "paragraphs": [
+        "At the end, compare your ordinary schedule with your step log. Did a walking commute, regular lunch loop, or evening errand make the number easier? Did the device miss a recurring activity? Which routes felt pleasant enough to keep? These observations are more useful than a single perfect streak because they show what can fit into daily life after the challenge ends.",
+        "If you want to continue, select a target based on your actual experience and discuss any health questions with a clinician. The CDC adult guidance is a U.S. population recommendation expressed in minutes, not a personalized step prescription. A good next action is to choose tomorrow’s realistic route now and verify that your counter is set up consistently."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Adult Activity: An Overview",
+      "url": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html",
+      "publisher": "Centers for Disease Control and Prevention",
+      "purpose": "Supports the distinction between the CDC adult weekly activity guidance in minutes and this personal 10,000-step challenge; it does not establish an individual step target."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "hike-weekly-for-a-year",
+    "walk-a-long-distance-trail-over-100km",
+    "run-your-first-5k"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

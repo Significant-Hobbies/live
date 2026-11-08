@@ -1,0 +1,60 @@
+{
+  "experienceSlug": "stencil-a-reusable-fabric-bag",
+  "title": "How to make a clean stencil print on a reusable fabric bag",
+  "description": "Make a simple reusable bag print with a bold stencil, fabric-safe ink, a protected work surface, and the curing directions for your chosen materials.",
+  "intent": "A first-time fabric printing walkthrough centered on choosing a stencil design, testing placement, using compatible ink, and making the result wearable and washable.",
+  "sections": [
+    {
+      "heading": "Choose a design that survives fabric",
+      "paragraphs": [
+        "A reusable bag is a useful surface because it is large, flat, and easy to carry, but its weave and seams affect how a print lands. Pick a bold design with open shapes and bridges that keep the stencil pieces connected. A small icon, leaf, or two-word phrase is easier to register than fine lettering or many thin lines. Wash and dry the bag if its care label allows, then press the print area flat. Put cardboard inside the bag so ink cannot pass through to the other side. If the fabric has a heavy texture, simplify the image further; the print may lose tiny details."
+      ]
+    },
+    {
+      "heading": "Make a paper stencil and test the position",
+      "paragraphs": [
+        "Draw the image on sturdy paper and cut out the areas where ink should pass. Use a craft knife only on a cutting mat and away from fingers; if that is not comfortable, use pre-cut shapes or ask someone experienced to help. Tape the stencil edges temporarily to the bag and check the placement while the bag hangs naturally. A print centered on a folded bag can appear off-center when carried, so test the actual use position. Make one small test print on a scrap of similar fabric before committing to the finished panel. The result will reveal whether the design is too detailed and whether the ink looks opaque enough."
+      ]
+    },
+    {
+      "heading": "Use ink made for fabric",
+      "paragraphs": [
+        "Use an ink intended for fabric printing rather than assuming any water-based paint will survive washing. Speedball’s screen-printing manual says its fabric ink is meant for cloth and explains that printed fabric needs curing or heat-setting according to the ink and fabric directions. That is a product-specific instruction, not a universal temperature for all brands. Read the label for compatible fibers, drying time, curing method, and any ventilation or protective measures. Stir or mix the ink only as its manufacturer recommends. Keep the stencil from shifting while you dab or pull the ink through, and apply several light passes rather than flooding the cutouts."
+      ]
+    },
+    {
+      "heading": "Lift the stencil without smearing",
+      "paragraphs": [
+        "Hold the fabric flat and lift the stencil straight up from one edge when the ink has covered the intended area. Resist the urge to slide it sideways to inspect the image; wet ink can drag across the fibers. A few small gaps can be repaired after the first layer has dried, but only if the product allows it. Clean tools promptly according to the manufacturer’s directions and keep wet ink away from skin, pets, and food. Leave the bag flat until the printed area is fully dry, then follow the label exactly for curing. If the bag’s fabric cannot tolerate the stated heat, choose another ink system instead of risking damage."
+      ]
+    },
+    {
+      "heading": "Make the first use a test, not a surprise",
+      "paragraphs": [
+        "Before washing the bag, verify that the ink’s curing period is complete and check the care directions on both the ink and the bag. If possible, test a small printed swatch first. Fabric printing can vary with fiber, weave, pressure, and how much ink was applied, so a result that looks dry is not automatically washfast. Use the bag first for a low-stakes errand and note whether the design feels stiff, cracks at a fold, or rubs off. For a second print, change one factor—larger openings, lighter pressure, or a smoother fabric—so you can see which adjustment improves the result."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Creating Your Workspace: Screen Printing Manual",
+      "url": "https://www.speedballart.com/wp-content/uploads/2020/10/SP-Manual-LR.pdf",
+      "publisher": "Speedball Art Products",
+      "purpose": "Supports using fabric-specific ink and following compatible material and heat-setting instructions for the product."
+    },
+    {
+      "title": "Beginner Paper Stencil Kit",
+      "url": "https://www.speedballart.com/beginner-paper-stencil-kit/",
+      "publisher": "Speedball Art Products",
+      "purpose": "Supports the paper-stencil approach and warns that its acrylic ink is not recommended for washfast fabric printing."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "print-a-set-of-foam-relief-postcards",
+    "make-a-small-mosaic-panel",
+    "build-a-folding-paper-peepshow"
+  ],
+  "slug": "stencil-a-reusable-fabric-bag",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

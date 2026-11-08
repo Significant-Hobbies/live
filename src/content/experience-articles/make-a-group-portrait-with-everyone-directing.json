@@ -1,0 +1,55 @@
+{
+  "experienceSlug": "make-a-group-portrait-with-everyone-directing",
+  "slug": "make-a-group-portrait-with-everyone-directing",
+  "title": "How can everyone direct a group portrait without one person taking over?",
+  "description": "Make a group portrait collaboratively by rotating the director role, agreeing on image boundaries, and letting each person choose a pose or prop.",
+  "intent": "Offer a practical method for taking group portraits in which each participant has agency over the frame, their pose and whether the image is kept or shared.",
+  "sections": [
+    {
+      "heading": "Agree what the photograph is for",
+      "paragraphs": [
+        "A collaborative portrait begins before anyone reaches for a camera. Decide whether the pictures are simply for the group, part of an art exercise, or intended for sharing. Ask everyone whether they want to be photographed at all and make it easy to decline or step out. Consent to being in a private group photo does not automatically mean consent to posting it online.",
+        "The Museum of Contemporary Art Australia's portrait activity highlights the relationship between photographer and subject and asks how a subject can have agency over a portrait. Use that idea as a starting point: the person in front of the lens should be able to influence the pose and the image, not just comply with instructions. Set a simple boundary such as no surprise props, no unflattering frames shared without review, and no public posting without everyone's agreement.",
+        "Choose a place with enough room to move and a background that does not compete with the people. Keep the setup ordinary: a phone camera, a timer or a stable surface is enough. The point is shared decision-making, not equipment."
+      ]
+    },
+    {
+      "heading": "Rotate the director role",
+      "paragraphs": [
+        "Take turns being the director, photographer and subject. With a small group, one person can set the timer while everyone joins the frame; for the next image, a different person chooses the arrangement. If someone prefers not to be photographed, they can still direct or take the picture. Avoid assuming that each person wants an equal number of portraits in the same style.",
+        "Give each director one choice to make: where people stand, what the group holds, how formal the pose feels, or what part of the room becomes the background. Keep directions concrete and optional. 'Would you like to face the window or look toward each other?' gives more room than repeated demands to smile or move into a pose someone dislikes.",
+        "Try a few visual approaches: a straight line, a loose cluster, or people looking at one another rather than at the lens. A prop can suggest a shared interest, but only use items people are comfortable showing. Ask before touching someone's clothing, hair or mobility aid to adjust the frame; offer to move the camera instead."
+      ]
+    },
+    {
+      "heading": "Review the image together",
+      "paragraphs": [
+        "After each picture, invite the group to look at it before making the next one. Ask what feels right and what anyone would change. The subject can request another take, choose not to keep the image, or ask that it stay private. Treat a quiet response as a reason to check in, not as permission to publish.",
+        "A photograph can show power through small choices: who is centered, who is cropped, whose expression is treated as the joke, and who controls the camera. Notice these without making the exercise a debate someone must win. If one person's preference dominates, pause and give the next director a clear turn.",
+        "Keep the number of shots modest so the session does not become tiring. The aim is not to obtain a perfect group image but to make a few frames the participants recognize as their own. Delete accidental images if the person pictured asks, and check that backups or shared albums do not keep copies against their wishes."
+      ]
+    },
+    {
+      "heading": "Choose what to keep and where it goes",
+      "paragraphs": [
+        "Let each participant select or approve the final frame. If the group cannot agree on one, keep more than one privately or choose no image at all. Ask separately before sending the photo to friends outside the group, uploading it to a shared folder or using it in a public post. People can change their minds later, so know how to remove a copy from places you control.",
+        "A useful next variation is to make a portrait where nobody is centered, or where each person chooses one detail that represents them. Before starting, repeat the same agreement about participation and sharing. The resulting set can tell a richer story because every frame reflects a different person's choices rather than one photographer's idea of how a group should look."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Portrait versus self-portrait",
+      "url": "https://www.mca.com.au/files/documents/Activity-DGCF-portrait-vs-self-portrait.pdf",
+      "publisher": "Museum of Contemporary Art Australia",
+      "purpose": "Supports treating portraiture as a relationship between photographer and subject and letting subjects experiment with pose and representation."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "create-a-photo-book-of-one-year-of-your-life",
+    "write-captions-for-ten-unlabelled-personal-photos",
+    "learn-to-draw-portraits"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

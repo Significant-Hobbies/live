@@ -1,0 +1,64 @@
+{
+  "slug": "sail-somewhere-that-requires-real-navigation",
+  "title": "Build a supervised passage around real navigation",
+  "description": "Plan a coastal sailing passage that requires chartwork, weather and pilotage, with an experienced skipper and a route matched to conditions.",
+  "intent": "Plan a supervised sailing experience that genuinely uses navigation skills; the article distinguishes course examples from local legal requirements.",
+  "sections": [
+    {
+      "heading": "Choose a passage that requires decisions",
+      "paragraphs": [
+        "Look for a route where you will need to make and check a plan, not simply ride as a passenger on a familiar loop. A coastal passage might involve pilotage around a harbor, a tide window, weather decisions and a safe alternative destination. Ask a qualified sailing school or experienced skipper to suggest a route appropriate to your skills, the boat and the season.",
+        "Decide what ‘real navigation’ means for your learning: plotting positions on a paper chart, using electronic navigation while cross-checking, reading tide information, selecting waypoints or identifying a safe harbor. Keep the goal about practicing decisions; do not make distance, darkness or rough weather the proof that the trip is serious."
+      ]
+    },
+    {
+      "heading": "Learn the theory before the departure",
+      "paragraphs": [
+        "The Royal Yachting Association’s UK Day Skipper Theory course describes chartwork, coastal navigation, pilotage, position fixing, weather and tides among its topics. It is a UK training example, not a universal requirement or a substitute for local licensing and rules. Use your country’s recognized sailing body or training provider to identify the right course for the vessel and waters you want to sail.",
+        "Ask the instructor what prior experience is expected, how the course is assessed and what practical skills you should already have. Build a short study plan around charts, publications, weather information, buoyage and collision rules applicable to the intended region. If you will use electronic tools, practice verifying their output against independent information and the conditions outside the cabin."
+      ]
+    },
+    {
+      "heading": "Practice on the water with a qualified skipper",
+      "paragraphs": [
+        "Book a practical course or arrange a trip where a qualified instructor or skipper is responsible for the vessel. The RYA Day Skipper practical example includes pilotage, practical navigation, seamanship and boat handling, and lists prior experience expectations for that course. Requirements vary elsewhere, so check the actual provider and local authority rather than assuming the same certificate applies to your route.",
+        "Ask to take part in the brief, passage plan, position checks and debrief under supervision. A good learning role is active but bounded: the skipper remains responsible for the vessel and decides whether conditions are suitable. Tell the instructor what you have and have not done before so tasks can match your training."
+      ]
+    },
+    {
+      "heading": "Create a passage plan with alternatives",
+      "paragraphs": [
+        "For the chosen route, list the start and arrival points, waypoints, expected time, forecast source, tide or current information, hazards, communications and alternate harbors. Check charts and official local notices for temporary restrictions and known dangers. Write down conditions that would trigger a shorter route, a delay or a return. A plan is a decision aid, not a forecast guarantee.",
+        "Before leaving, review the plan with the skipper and agree who checks updates, who handles radio calls, and what to do if visibility, wind or equipment changes. Confirm safety equipment and emergency procedures for the particular vessel. Do not use this article as a navigation procedure; follow the instructor, charted information, local regulations and the boat’s safety briefing."
+      ]
+    },
+    {
+      "heading": "Keep the learning record",
+      "paragraphs": [
+        "After the trip, sketch the route and mark where you fixed position, changed course or reconsidered the plan. Note which source you used for each decision and what surprised you. Ask the skipper to identify one skill to practice before your next passage. That simple log turns a memorable sail into specific learning you can carry forward.",
+        "If the weather or crew decision cancels the ambitious part of the route, treat the change as a real navigation lesson. Sound judgment includes deciding not to depart or to turn back. You can plan another trip when the instructor says the conditions and your skills fit. The achievement is participating in a passage where navigation matters and learning how to make those decisions responsibly."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "RYA Day Skipper Theory Course",
+      "url": "https://www.rya.org.uk/course-finder/day-skipper-theory-course/",
+      "publisher": "Royal Yachting Association",
+      "purpose": "Supports the UK course example and its listed theory topics such as chartwork, navigation, meteorology, tides and pilotage; it does not set requirements outside that training pathway."
+    },
+    {
+      "title": "RYA Day Skipper Practical Sailing course",
+      "url": "https://www.rya.org.uk/course-finder/day-skipper-practical-sailing/",
+      "publisher": "Royal Yachting Association",
+      "purpose": "Supports the UK practical-course example: supervised practical navigation, pilotage, seamanship and boat handling, plus the experience listed for that course; it is not a universal legal standard."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "work-through-a-celestial-navigation-sight-reduction",
+    "sail-the-greek-islands-for-a-week"
+  ],
+  "experienceSlug": "sail-somewhere-that-requires-real-navigation",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "write-a-letter-to-someone-who-changed-your-life",
+  "slug": "write-a-letter-to-someone-who-changed-your-life",
+  "title": "Write the thank-you that names what changed",
+  "description": "Draft a meaningful letter to someone who changed your life by anchoring gratitude in one memory, a specific effect, and what you carry forward.",
+  "intent": "How do I write an appreciation letter that feels personal and true instead of relying on broad praise or deciding too early whether to send it?",
+  "sections": [
+    {
+      "heading": "Choose one person and one turning point",
+      "paragraphs": [
+        "Think of someone whose influence you can locate in a moment: a teacher who noticed your work, a friend who stayed during a difficult move, a relative who made a skill feel possible, or a colleague who trusted you with a first opportunity. The person does not need to be famous or perfect. Choose one example rather than trying to summarize an entire relationship in one letter.",
+        "The StoryCorps Great Questions collection includes prompts about who influenced you and what lessons they taught. Use a prompt as a memory spark, then search for your own details: the room, the words, what you were trying to do, or the next choice you made. A specific scene makes gratitude credible because it shows what you actually remember."
+      ]
+    },
+    {
+      "heading": "Draft the scene before the compliment",
+      "paragraphs": [
+        "Begin with the moment in plain language. “On the last day of the workshop, you stayed after everyone left and asked to see the sketch I had hidden in my notebook.” Avoid opening with a grand statement such as “You changed my whole life” before the reader knows why. Then explain what the person did, what it meant to you at the time, and what you understand about it now.",
+        "Try a simple sequence: what happened; what you felt or needed; what the other person did; what changed afterward. The effect may be modest but important: you applied for a program, kept making art, asked a question in a meeting, or felt less alone. Do not claim to know the other person’s intention unless they told you. You can say “I took it as encouragement” instead of “You knew exactly what I needed.”"
+      ]
+    },
+    {
+      "heading": "Make the gratitude concrete",
+      "paragraphs": [
+        "Name the specific quality or action you appreciated: patience, honest feedback, a meal delivered without a speech, a recommendation sent at the right moment. Then describe the result you can stand behind. “That conversation helped me realize I could change direction” is more grounded than “You made me successful.” If the impact was complicated, say so. Someone can have helped you in one important way while also being imperfect; the letter need not rewrite the whole relationship.",
+        "Add one example of what you carry forward. Perhaps you now offer the same patient feedback to a new colleague, keep a weekly practice because they encouraged it, or remember their question when you face a similar decision. Keep the focus on the concrete thing you learned, not an obligation to live up to a legacy."
+      ]
+    },
+    {
+      "heading": "Write for the relationship you actually have",
+      "paragraphs": [
+        "Match the tone to the relationship. A warm, direct letter may suit a close friend; a former teacher may appreciate a short account of a specific lesson and how it lasted. If the person is estranged, deceased, or unsafe to contact, writing privately can still help you formulate what you want to say, but this exercise cannot repair a relationship by itself. Do not imply that gratitude erases harm or creates a duty for the other person to respond.",
+        "Keep the letter focused enough to read in one sitting. A page or two is often plenty. Remove repeated adjectives and any sentence that asks the recipient to reassure you. Read the draft aloud once; if it sounds like a speech rather than your voice, replace polished abstractions with details you would naturally use when talking to them."
+      ]
+    },
+    {
+      "heading": "Decide about delivery after the draft",
+      "paragraphs": [
+        "Set the letter aside and reread it later. Then make two separate decisions: whether the words feel accurate and whether sending them would be welcome. A letter can be valuable as a private draft. If you do send it, use the person’s preferred channel and respect any boundary around contact. You do not need a dramatic occasion; a short note can be sent on an ordinary day.",
+        "End with a simple close: thanks for a particular moment, a wish for their well-being, or an invitation to reply only if they want to. The practical first step is to write the scene you remember, then add the specific effect it had on you. The finished letter can remain yours until you are ready to decide what happens next."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Great Questions",
+      "url": "https://storycorps.org/participate/great-questions/",
+      "publisher": "StoryCorps",
+      "purpose": "Provides open-ended prompts about influence, lessons, gratitude and memory that can help a writer choose a concrete scene; it does not prescribe an appreciation-letter format or guarantee a response."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "write-a-letter-to-someone-who-changed-your-life-and-send-it",
+    "write-heartfelt-letters-to-10-people-who-changed-your-life",
+    "write-a-letter-to-your-younger-self"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

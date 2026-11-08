@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "fast-for-24-hours-at-least-once",
+  "slug": "fast-for-24-hours-at-least-once",
+  "title": "Think through a 24-hour fast before you schedule one",
+  "description": "Understand why a 24-hour fast is not a casual challenge, identify questions for your clinician, and avoid turning a personal goal into a prescription.",
+  "intent": "Address the canonical 24-hour fasting goal with careful medical limits, a clinician-first decision route, and a noncompetitive way to reconsider the goal.",
+  "sections": [
+    {
+      "heading": "Treat the duration as a medical question",
+      "paragraphs": [
+        "A day without food may sound like a simple calendar exercise, but a 24-hour fast affects a person differently depending on health, medication, age, pregnancy, and past experiences with food. Do not treat it as a test of willpower or assume that a friend’s routine is appropriate for you. This article cannot determine whether fasting is safe in your case.",
+        "Johns Hopkins Medicine says longer fasts, including 24-hour periods, are not necessarily better and may be dangerous. Its expert page also says intermittent fasting is not for everyone and advises talking with a doctor before starting. That is especially important if you have a condition affected by eating patterns or take medication whose timing or dose relates to meals. Do not skip or change medication to fit a challenge."
+      ]
+    },
+    {
+      "heading": "Ask a clinician before making a plan",
+      "paragraphs": [
+        "If you are considering the goal, bring the exact plan to a clinician who knows your health history. Ask whether a 24-hour interval without food is appropriate, whether medication instructions would change, what symptoms should end the attempt, and whether a different activity would meet the personal reason behind the goal. Ask before setting a date, not after symptoms begin.",
+        "Mention any history of disordered eating or a difficult relationship with food, and ask about pregnancy, breastfeeding, diabetes, fainting, or other relevant circumstances. This is not a complete screening list; a clinician can identify personal risks. If the clinician recommends against fasting, accept that answer and choose a different one-day challenge, such as a shared meal or a day focused on preparing food for others."
+      ]
+    },
+    {
+      "heading": "Separate curiosity from claims about benefits",
+      "paragraphs": [
+        "Fasting is often presented online as a shortcut to weight change, better concentration, or disease prevention. Those claims do not establish that a single 24-hour fast will help a particular reader. Johns Hopkins’ page describes intermittent-fasting research and several schedules, but its general discussion does not amount to a personalized recommendation or evidence that one isolated day provides a promised benefit.",
+        "Write down what you actually want to learn: how you feel about the experience, how a religious or cultural practice is observed, or what a clinician says about your own health. If the reason is a health outcome, ask for individualized medical guidance rather than using a challenge as treatment. Avoid social media plans that encourage pushing through symptoms or discourage contact with a professional."
+      ]
+    },
+    {
+      "heading": "If a clinician says it is appropriate",
+      "paragraphs": [
+        "Follow the clinician’s individualized instructions and any relevant religious or cultural guidance. Confirm what the fast means in your case rather than inventing rules about water, caffeine, exercise, or medication. A plan that may be discussed as a medical question should not be turned into a rigid online protocol. Arrange a normal, low-demand day and do not combine the experiment with strenuous training, driving while unwell, or other activities where impaired concentration could create risk.",
+        "Agree on how to stop and whom to contact if you feel unwell. You are free to end the attempt; completion is not more important than health. Avoid documenting or sharing the fast in a way that pressures someone else to copy it. The relevant source is general educational guidance, not emergency care or a substitute for the clinician who knows you."
+      ]
+    },
+    {
+      "heading": "Choose another way to mark the goal",
+      "paragraphs": [
+        "A thoughtful outcome may be deciding not to fast. If your aim is to observe a tradition, speak with a knowledgeable leader in that community about its practice and exemptions; customs and expectations vary. If your aim is a personal experiment, try a safer alternative agreed with your clinician, such as recording ordinary meal routines or learning about hunger and satiety without deliberately skipping food.",
+        "Before taking action, read the Johns Hopkins guidance and write down the questions you will bring to your healthcare professional. The page warns that 24-hour and longer fasting is not necessarily better and may be dangerous. It does not tell you that fasting is safe for you, so do not use it as clearance to proceed."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Intermittent Fasting: What Is It, And How Does It Work?",
+      "url": "https://www.hopkinsmedicine.org/health/expert-qa/intermittent-fasting-what-is-it-and-how-does-it-work",
+      "publisher": "Johns Hopkins Medicine",
+      "purpose": "Supports the caution that 24-hour and longer fasting may be dangerous and that intermittent fasting is not for everyone; it advises discussing the choice with a doctor."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "get-a-full-health-checkup-including-bloodwork",
+    "understand-your-own-health-at-a-deep-level",
+    "sleep-8-hours-a-night-for-30-days"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

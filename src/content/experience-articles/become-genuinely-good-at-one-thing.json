@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "become-genuinely-good-at-one-thing",
+  "slug": "become-genuinely-good-at-one-thing",
+  "title": "Turn “get good” into a skill someone can actually see",
+  "description": "Choose one skill, define a visible standard, and practice the weak part with feedback so progress means more than time spent trying.",
+  "intent": "How can I become noticeably competent at one skill when “get good” is too vague to guide practice?",
+  "sections": [
+    {
+      "heading": "Choose a skill with a visible result",
+      "paragraphs": [
+        "Pick something specific enough that you can tell what a better attempt looks like: tune a guitar song without stopping, draw a face with believable proportions, hold a basic conversation about familiar topics, or prepare a dish consistently. “Become creative” and “get fit” are too broad for one practice plan. Choose a skill you want for its own sake, not only because it sounds impressive to other people.",
+        "Write a first observable standard. It might be finishing a two-minute piece from memory, explaining a familiar idea in the language you are learning, or producing a portrait where the eyes, nose, and mouth sit in plausible relation. This is a starting marker, not a universal test. If your field has a recognized beginner assessment or safety requirement, use the standard set by its qualified instructor or governing organization."
+      ]
+    },
+    {
+      "heading": "Find the part that breaks down",
+      "paragraphs": [
+        "Make one baseline attempt and record it if that is appropriate. Do not make the first attempt a performance for an audience. Afterward, name one specific bottleneck. A guitarist might keep losing time during chord changes; a language learner might understand written sentences but freeze when replying; a runner’s form or health questions should be taken to a qualified coach or clinician rather than diagnosed from a video. A narrow problem makes the next practice session easier to plan.",
+        "The American Psychological Association’s practice overview notes that effective learning practice is designed around the skill, spread over time, and paired with feedback. A 1994 review by K. Anders Ericsson and colleagues describes deliberate practice as focused improvement that needs accurate feedback and chances to correct an attempt. Those sources discuss research contexts; they do not promise that any person will become an expert through a set number of hours."
+      ]
+    },
+    {
+      "heading": "Make each session a small experiment",
+      "paragraphs": [
+        "Choose one drill that targets the bottleneck and keep the goal just beyond what you can already do comfortably. For drawing, spend a session comparing head angles and measuring the placement of features before shading. For music, isolate a difficult transition and slow it down enough to notice where timing slips. For conversation, practice retrieving phrases for one real scenario, then use them with a tutor or exchange partner. Each example is a starting point; a good teacher can adjust the exercise to your level.",
+        "Work in short, focused blocks with a specific question: Did I keep the beat? Did the listener understand? Does the sketch preserve the angle? Stop when attention or technique is deteriorating. Repeating an error without noticing it can make the wrong pattern familiar, so pause and change the drill when the same mistake recurs."
+      ]
+    },
+    {
+      "heading": "Seek feedback that points to a next attempt",
+      "paragraphs": [
+        "Choose someone or a tool that can comment on the actual skill, not merely encourage you. Ask for one thing that worked and one adjustment to try. If you do not have a teacher, compare your work to a clear beginner rubric or a trusted reference, while recognizing that a video or app may miss important context. In a physical activity or any practice with injury risk, use a qualified instructor and appropriate safety guidance.",
+        "Keep a small practice log with date, task, one observation, and one next adjustment. Example: “Tuesday: recorded the passage; tempo stayed steady until the last chord change; next time I’ll isolate that transition.” This is more useful than writing “practiced for an hour” because it preserves what you learned and helps you decide what to do next."
+      ]
+    },
+    {
+      "heading": "Check for transfer, not just a good drill",
+      "paragraphs": [
+        "Every few sessions, try the skill in the setting where you want to use it. Play the whole song after drilling transitions; sketch from a new reference; hold a short conversation about an unfamiliar but manageable topic. A drill can improve one component without making you ready for the full task. If the whole performance falls apart, treat that as information about which components need practice rather than proof you lack ability.",
+        "After a month, compare your baseline with a fresh attempt and ask a knowledgeable person what they notice. You may be more accurate, more consistent, or simply more aware of what remains difficult. Good is not a permanent finish line: define the next standard if the work still matters, or stop when the skill serves the life you want. The immediate next step is to choose one visible result and schedule the first focused session."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Practice for knowledge acquisition (not drill and kill)",
+      "url": "https://www.apa.org/education-career/k12/practice-acquisition",
+      "publisher": "American Psychological Association",
+      "purpose": "Supports the limited claim that practice design, spacing and feedback matter in educational contexts; its audience and evidence do not establish a guaranteed path to expertise for every adult skill."
+    },
+    {
+      "title": "The Role of Deliberate Practice in the Acquisition of Expert Performance",
+      "url": "https://web.mit.edu/2.038J/www/readings/ericsson-charness-am-psychologist.pdf",
+      "publisher": "American Psychological Association / American Psychologist",
+      "purpose": "Supports the narrower point that focused practice benefits from accurate feedback and opportunities to correct attempts; this 1994 review concerns expert performance research and does not support a universal hours-to-mastery promise."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "make-a-skills-history-from-things-you-can-now-do",
+    "learn-something-completely-outside-your-field",
+    "learn-to-play-a-musical-instrument"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

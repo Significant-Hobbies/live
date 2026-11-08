@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "host-a-clothing-swap-with-clear-boundaries",
+  "slug": "host-a-clothing-swap-with-clear-boundaries",
+  "title": "How do you host a clothing swap with clear boundaries?",
+  "description": "Host a low-pressure clothing swap by setting item limits, condition rules, exchange expectations, a respectful try-on space, and a leftover plan in advance.",
+  "intent": "How can I run a clothing swap that feels fair and manageable? This guide focuses on clear invitations, consent around garments, practical sorting and a plan for what remains afterward.",
+  "sections": [
+    {
+      "heading": "Agree on the size and purpose first",
+      "paragraphs": [
+        "A clothing swap can be a living-room gathering for a few friends or a community event, but the format affects everything else. Decide how many people the space can hold, whether the event is free or has a stated contribution, and what its purpose is: exchanging clothes, sharing resources, fundraising or simply spending time together. Dublin City Council describes a clothes swap as an event where people bring items they no longer wear and exchange them for items they will use. Use that as a starting definition, not a promise that every event must use tokens or donations.",
+        "Choose a venue with room to browse and a clear entry and exit. If you are hosting at home, tell guests what parts of the home are open and whether anyone may bring a companion. If you use a community venue, confirm its capacity, accessibility and waste rules. Ask one or two helpers to greet people and sort items so the host is not managing every decision alone."
+      ]
+    },
+    {
+      "heading": "Write the boundaries into the invitation",
+      "paragraphs": [
+        "Specify what you will accept: clothing only, or also shoes and accessories; adult sizes, children's items or both; clean and wearable pieces only; and any exclusions such as underwear, damaged goods or bulky items. State how many items each person can bring and whether items must be dropped off before the event. Clear rules prevent one host from unexpectedly inheriting bags of unwanted clothes.",
+        "Explain how people receive items. A one-for-one token system, a set browsing window followed by open choosing, or a no-tokens community closet are different formats. State the plan plainly so people know what to expect. Make participation possible for someone who cannot bring clothes if that fits your purpose; if the event is a strict exchange, say so before anyone arrives rather than enforcing it at the door."
+      ]
+    },
+    {
+      "heading": "Sort without judging bodies or style",
+      "paragraphs": [
+        "Set up labeled areas by category or size, and keep the racks low enough for people to browse comfortably. Check garments for cleanliness and condition in a neutral way; do not make comments about a person's size, taste or reasons for bringing something. If a piece needs repair, place it in a clearly marked mending area only if attendees want that category. Display clothes so people can see them without rummaging through piles that quickly become hard to manage.",
+        "If guests want to try things on, provide a private, accessible area or invite people to wear close-fitting layers over which they can check fit. Do not photograph anyone trying on clothing. Ask before helping someone with a garment, and respect a “no” without asking for a reason. A swap should let people make their own choices without pressure to take anything home."
+      ]
+    },
+    {
+      "heading": "Plan the leftover route before the swap",
+      "paragraphs": [
+        "Before event day, decide what happens to items that are not claimed. The municipal guide suggests arranging a charity pickup in advance for larger events; for a smaller gathering, you might ask guests to take home their own leftovers or identify a local organization that accepts the specific items. Confirm acceptance and collection details instead of assuming every charity can use every garment. Label storage bags and assign a person to handle them so leftover clothing does not become an unplanned obligation for the host.",
+        "Keep a simple check-in count if it helps you understand the event, but avoid collecting personal data that is not needed. If people are donating or paying, say where the funds or clothing will go. For children, ask caregivers before accepting items that carry names or personal labels, and avoid sharing pictures that identify a child without permission."
+      ]
+    },
+    {
+      "heading": "Host a small first swap",
+      "paragraphs": [
+        "A first event works well with a small group that can help define the rules together. Ask each guest to bring a few pieces that are clean and ready to wear, sort them before browsing, and close the exchange at a clear time. Afterward, ask what felt easy, whether the item limits were fair and whether the leftover plan worked. Use that feedback to adjust the next invitation rather than promising a large public event immediately.",
+        "Your next action is to send a short invitation naming the venue, accepted items, condition standard, exchange method and leftover plan. With those boundaries clear, guests can decide whether the swap suits them before they arrive."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Organise your own clothes swap event",
+      "url": "https://www.towerhamlets.gov.uk/lgnl/environment_and_waste/recycling_and_waste/Recycling-tips-and-ideas/Organise-your-own-clothes-swap-event.aspx",
+      "publisher": "London Borough of Tower Hamlets",
+      "purpose": "Supports planning a venue, display, token system, checking garments for condition, advance sorting and arranging leftover clothing routes."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "exchange-handwritten-recipes-through-the-post",
+    "host-a-blind-apple-tasting",
+    "arrange-an-accessible-outing-with-a-friend"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

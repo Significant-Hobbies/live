@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "reconnect-with-someone-you-ve-lost-touch-with",
+  "slug": "reconnect-with-someone-you-ve-lost-touch-with",
+  "title": "Send a First Message That Makes Room for Any Answer",
+  "description": "Reconnect with someone you miss through one low-pressure message, a shared memory, and an invitation that respects the life they have now.",
+  "intent": "Shows how to reopen contact with someone you have lost touch with without pretending time has not passed or expecting the old relationship to resume unchanged.",
+  "sections": [
+    {
+      "heading": "Decide what you hope to reopen",
+      "paragraphs": [
+        "Before writing, ask yourself what you want: to say hello, hear how they are, offer an apology, or explore whether you might meet again. Being clear helps you avoid sending a vague note that hides a request. You are opening a door, not asking the other person to restore the friendship on your schedule.",
+        "If the distance followed a hurtful event, consider whether contact would be welcome and whether you are ready to hear a different account. A simple hello may be appropriate; a message demanding closure or forgiveness can place emotional work on the recipient. If there is a clear boundary or request for no contact, respect it."
+      ]
+    },
+    {
+      "heading": "Use a real shared detail",
+      "paragraphs": [
+        "A message is easier to receive when it explains why you thought of the person. Mention the book you both argued about, a neighborhood café that came up in conversation, or a small moment that still makes you laugh. Avoid writing a long nostalgia essay; one grounded detail signals that you remember them as a person, not a role in your past.",
+        "A recent study of old-friend reconnection found that people often hesitate to send the first message even when they care about the person. The authors identified worries about awkwardness, not knowing what to say, and bothering the other person. A short, honest opener can answer those concerns without pretending you know how the recipient feels."
+      ]
+    },
+    {
+      "heading": "Make the invitation easy to decline",
+      "paragraphs": [
+        "Try a note like: “I passed the old library and remembered our after-school debates. I hope life has been treating you well. If you’d like, I’d enjoy catching up by phone sometime; no pressure if now isn’t a good time.” It offers context, warmth, and a specific next step while making refusal possible.",
+        "Keep the first request small. A quick call or coffee is easier to assess than a weekend trip or a demand to explain years of silence. If meeting is impractical, offer a few messages or a short video call. Give them room to choose another format or no format at all."
+      ]
+    },
+    {
+      "heading": "Follow their pace after sending",
+      "paragraphs": [
+        "Send the message at a reasonable hour and then let it rest. A reply may arrive quickly, much later, or not at all. Do not follow up across multiple channels or ask mutual friends to apply pressure. If the person answers warmly but briefly, respond in kind and see whether conversation grows naturally.",
+        "The study found that initiating contact can feel daunting and that practice reaching out to current acquaintances helped participants approach an old friend. You can rehearse the message with a trusted person or send a low-stakes hello to someone you already see. The research does not promise that the old friend will reply; its value is in reminding you that the first step can feel harder than it needs to."
+      ]
+    },
+    {
+      "heading": "Meet the person they are now",
+      "paragraphs": [
+        "If the exchange continues, ask open questions about the life they have now and share an update of your own. Do not assume you can pick up exactly where you left off. The friendship may become close again, remain occasional, or simply make room for a kind conversation. Any of those outcomes can be real without being a failure.",
+        "Your next action is to write a three-sentence message: why you thought of them, one genuine wish for their wellbeing, and a low-pressure invitation. Read it once for hidden expectations, then send it if it still feels respectful."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "People are surprisingly hesitant to reach out to old friends",
+      "url": "https://d-nb.info/1334577161/34",
+      "publisher": "Communications Psychology",
+      "purpose": "Original seven-study research on barriers and actual outreach to old friends, including initiating contact and practice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "have-one-real-conversation-with-a-grandparent",
+    "keep-a-short-distance-friendship-walking-appointment",
+    "make-a-friendship-map-together"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

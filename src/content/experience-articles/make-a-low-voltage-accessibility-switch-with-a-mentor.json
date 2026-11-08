@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "make-a-low-voltage-accessibility-switch-with-a-mentor",
+  "slug": "make-a-low-voltage-accessibility-switch-with-a-mentor",
+  "title": "Build a button that is easier for someone to use",
+  "description": "Work with a mentor to create a low-voltage switch interface around a real user’s preferred reach, pressure, shape, and placement, then test it with consent.",
+  "intent": "How do you make an accessible switch that suits one person’s needs? This guide adds a user-led design process, a bounded low-voltage prototype, and a careful test loop.",
+  "sections": [
+    {
+      "heading": "Start with the person and the task",
+      "paragraphs": [
+        "Ask the person what they want the switch to do and how they prefer to activate it. A large palm pad, a light-touch button, a foot switch, or a different placement may help one person and be awkward for another. Do not infer needs from a diagnosis or build before the intended user has a chance to describe the task.",
+        "Agree on a simple success condition, such as “the switch can be reached from the seated position without moving the device” or “the control can be activated with the person’s chosen movement.” Invite an occupational therapist or assistive-technology professional when the use has clinical or mobility implications. This is a prototype conversation, not a substitute for professional assessment."
+      ]
+    },
+    {
+      "heading": "Keep the electrical boundary clear",
+      "paragraphs": [
+        "Choose a mentor who can explain the circuit and check the materials. For a first model, use a known battery-powered or USB low-voltage board and its matching inputs, not wall power, mains adapters of unknown origin, or exposed household wiring. The mentor should confirm voltage and current limits from the exact board’s documentation before connecting anything.",
+        "A button sends a simple change in signal that a device can read. Adafruit’s example shows a microcontroller input changing between low and 3.3 volts when a button is pressed. That is an illustration of a digital input, not a universal specification; each board has its own permitted range and wiring method."
+      ]
+    },
+    {
+      "heading": "Prototype the physical control before coding",
+      "paragraphs": [
+        "Make a cardboard or foam mock-up of the switch housing first. Test different button sizes, textures, hinge directions, and placement without connecting electronics. Keep the control stable on the surface and make it easy to identify by touch. Ask whether the user wants a raised edge, a visual label, or a distinct texture; preferences differ.",
+        "When the shape feels promising, the mentor can connect a suitable button to a compatible low-voltage input. Label wires and keep the circuit on a clear table. Do not solder or use sharp tools without supervision and appropriate skill. If a wire becomes warm, insulation is damaged, or the board behaves unexpectedly, disconnect power and ask the mentor to inspect it."
+      ]
+    },
+    {
+      "heading": "Test with consent and adjust one thing",
+      "paragraphs": [
+        "Ask the user if they want to try the control. Explain what will happen, let them stop at any time, and avoid positioning their hand or foot without permission. Observe whether the activation is comfortable, repeatable, and clearly recognized by the connected device. A switch that works electrically may still be inconvenient to reach or hold.",
+        "Keep a short log of the user’s own comments, the setup, and one change at a time. For example, moving the switch closer is a different test from reducing button resistance. Do not describe someone’s experience publicly without consent. If the switch affects communication, mobility, or care, have the relevant professional review it before relying on the prototype."
+      ]
+    },
+    {
+      "heading": "Make a version that can be repaired",
+      "paragraphs": [
+        "Use screws, clips, or modular connectors where appropriate so the mentor can inspect or replace the switch without destroying the housing. Label the board, battery, and input, and keep the component information with the prototype. A reversible build is easier to adapt when the user’s preferences change.",
+        "Your next action is to schedule a short design conversation with the intended user and an experienced mentor. Agree on one task and one low-voltage test. Build a non-electrical mock-up first, get feedback, then let the mentor approve the specific circuit before connecting a board."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Fisher-Price USB Foot Pedal | Adafruit Learning System",
+      "url": "https://learn.adafruit.com/fisher-price-usb-foot-pedal?view=all",
+      "publisher": "Adafruit Learning System",
+      "purpose": "The tutorial shows a button signal changing from 0 to 3.3 volts on a particular microcontroller example; the target board documentation must govern any new circuit."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-and-troubleshoot-a-battery-powered-switch-circuit",
+    "review-basic-website-accessibility-for-a-community-organization"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

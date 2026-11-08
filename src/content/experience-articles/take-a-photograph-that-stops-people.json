@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "take-a-photograph-that-stops-people",
+  "slug": "take-a-photograph-that-stops-people",
+  "title": "Edit a contact sheet until one frame earns the final crop",
+  "description": "Select and edit one compelling photograph from a contact sheet using sequence, visual hierarchy, and focused critique questions instead of preset-driven polishing.",
+  "intent": "How do I choose and edit one strong photograph from a set of frames, using a repeatable critique process rather than just composing a striking scene?",
+  "sections": [
+    {
+      "heading": "Start with a set, not a single favorite",
+      "paragraphs": [
+        "This is an editing exercise: the decisive work happens after you have photographed a subject. Make a small sequence around one idea—a person waiting for a bus, the last light crossing a room, or a reflection broken by footsteps. Keep the camera position or subject relationship mostly consistent while changing one choice at a time: timing, distance, gesture, or background. A sequence helps you compare near-misses instead of trusting the first image that feels exciting on the camera screen.",
+        "Vivian Maier’s archive presents contact sheets as groups of frames with dates and places, including photographs made in New York, Chicago, Egypt, and India. Seeing a photographer’s work in sequence is a useful reminder that a finished image exists among alternatives. The archive page documents her contact sheets; it does not prescribe a universal method for selecting a photograph."
+      ]
+    },
+    {
+      "heading": "Make a simple contact sheet",
+      "paragraphs": [
+        "Bring the images into a grid with filenames visible. If you work digitally, use a contact-sheet export in your photo software; if you have prints, lay them out in sequence. Make the thumbnails large enough to judge gesture and arrangement but small enough that the whole set fits on one screen or table. Keep the order you shot them in for the first review. A sequence can reveal how a person’s expression changes or how a distracting object enters and leaves the frame.",
+        "First pass: remove technical failures that cannot be used, but do not reject a frame only because it is not your usual style. Second pass: mark three candidates without editing. Third pass: compare those candidates side by side at the same size. Ask what each one makes the eye see first, what details compete, and whether the subject’s gesture or expression is actually clear. If two frames are nearly identical, choose the one with the cleaner relationship between subject and background."
+      ]
+    },
+    {
+      "heading": "Use critique questions, not a vague “wow”",
+      "paragraphs": [
+        "Choose a photograph because it has a legible visual idea. Perhaps a red umbrella is isolated in a gray station; perhaps a face appears in a window reflection while the room remains visible; perhaps a hand in the foreground echoes a shape in the distance. Name the connection in one sentence. If you cannot describe what connects the parts, the image may rely on a dramatic subject without a clear composition.",
+        "Use three critique questions: What do I notice first? What do I notice second? What would I remove if I could simplify the frame? Then try a second set: Is the edge clean? Does the brightest area pull attention away? Does the crop preserve the relationship that made the moment interesting? These questions do not produce one right answer; they help reveal whether the photograph’s visual priorities match your intention."
+      ]
+    },
+    {
+      "heading": "Edit gently and keep the comparison",
+      "paragraphs": [
+        "Make a virtual copy or duplicate before editing. Correct exposure and white balance only enough to show the scene as you remember it; then adjust contrast or color to support the subject rather than manufacture a mood that was not there. Crop after checking the full frame, because an edge detail you initially disliked may provide useful balance. If you use a black-and-white conversion, ask whether it clarifies shape and light or simply adds drama.",
+        "Toggle between the original and edit. If the first thing you notice is the processing, pull it back. View the image at the size it will be seen, not only magnified. Keep a version with no destructive edits and preserve the original file. If the photograph includes people, consider privacy and permission before sharing it, especially in a vulnerable or sensitive setting."
+      ]
+    },
+    {
+      "heading": "Select one frame and write its reason",
+      "paragraphs": [
+        "Put the final image next to the two strongest alternatives. Write one sentence explaining why it wins: “The reflection and the person’s gaze meet in this frame, while the others separate them.” If the reason is only “it looks coolest,” go back to the contact sheet and compare the subject’s gesture, the background, and the direction of light. A short written rationale can help you learn what to look for on your next shoot.",
+        "Export one full-resolution image and one smaller shareable copy, keeping the original and edit clearly named. Show it to a trusted viewer without explaining it first and ask what they noticed. Their response is feedback, not a vote. The next step is to make a contact sheet from a recent shoot and identify three candidates before opening the editing controls."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Contact Sheets",
+      "url": "https://www.vivianmaier.com/gallery/contact-sheets/",
+      "publisher": "Vivian Maier Photographer archive",
+      "purpose": "Provides primary examples of Maier contact sheets presented as sequences with image identifiers and some dates/places; the selection and critique workflow in the article is original guidance, not an asserted Maier technique."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "take-a-photograph-that-stops-people-in-their-tracks",
+    "make-a-pinhole-camera-and-develop-a-photograph",
+    "build-a-private-archive-of-your-creative-versions"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

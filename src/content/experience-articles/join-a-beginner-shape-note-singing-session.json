@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "join-a-beginner-shape-note-singing-session",
+  "slug": "join-a-beginner-shape-note-singing-session",
+  "title": "Find your footing in a shape-note singing circle",
+  "description": "Prepare for a first shape-note singing session by listening, learning the room’s conventions, and joining at a comfortable level.",
+  "intent": "What happens at a first shape-note singing session, and how can a newcomer participate without already reading the music? This guide adds a low-pressure plan for listening, learning shapes and finding a part.",
+  "sections": [
+    {
+      "heading": "Know what you are walking into",
+      "paragraphs": [
+        "Shape-note singing is communal singing from books where noteheads use shapes to help singers connect written notes with pitches. Groups vary in repertoire, sound, and how much they explain to newcomers. Some sing from the Sacred Harp; others use another tunebook or local tradition. Ask the organizer which book will be used, whether loan copies are available, and whether beginners can arrive early for an introduction.",
+        "The Smithsonian Folkways lesson describes a traditional practice in which singers rehearse a tune using shape syllables before singing its words. That is a useful clue for listening, not a test you must pass. You can watch one round, follow the notes, and join when the leader invites the group to sing."
+      ]
+    },
+    {
+      "heading": "Let the room teach you",
+      "paragraphs": [
+        "Many Sacred Harp gatherings arrange singers in a square with the four parts facing inward. This arrangement sends sound toward the center and makes the music feel unlike a conventional audience-and-stage performance. If you are unsure where to sit, ask the host. A friendly singer can point out the part rows and show you how to borrow a book.",
+        "Do not worry if the sound feels startling at first. The singing may be full-voiced and direct, with several independent parts sounding at once. Choose a place where you can hear the part you want to follow. If the group invites everyone to sing, a quiet voice is fine; you do not need to project or lead."
+      ]
+    },
+    {
+      "heading": "Use a small listening goal",
+      "paragraphs": [
+        "Pick one thing to track during the first tune: the rise and fall of a melody, the start of the shape syllables, or how the leader gives a downbeat. Follow the line with a finger if that helps. A beginner can learn more by staying with one part through a song than by trying to understand every harmony immediately.",
+        "Shape names and syllables vary by system. Let the local group explain the book it uses instead of mixing advice from different tunebooks. If a note or verse is confusing, mark it mentally and keep listening. This is shared music-making, not an audition. It is normal for a new singer’s attention to move between the book, leader, and surrounding voices."
+      ]
+    },
+    {
+      "heading": "Join in without making yourself the lesson",
+      "paragraphs": [
+        "When you are ready, sing the shape syllables with the group, or hum along softly. Follow the group’s pace and page turns. If you lose your place, stop and listen until you can rejoin. You can step outside for a break or simply listen to a full song. The aim of the first visit is to experience the sound and learn whether you want to return.",
+        "Ask before recording or photographing anyone. Sacred Harp singing carries religious and regional histories, even when a gathering welcomes people with varied beliefs. Listen with respect, use the group’s preferred terminology, and avoid treating a tradition as a quirky spectacle. If you want to understand the history, ask for a reading or listening recommendation after the singing."
+      ]
+    },
+    {
+      "heading": "Make the next visit easier",
+      "paragraphs": [
+        "After the session, write down the book name, one tune or moment you remember, and one question for a future visit. If the group has a published calendar, check with its organizer before relying on a date or venue. Bring the same borrowed book or ask whether there is a beginner handout next time.",
+        "A practical first step is to find a local shape-note group and ask whether you may observe or join a beginner session. Tell them you are new, ask which book to bring, and arrive with enough time to find a seat. The best preparation is curiosity and a willingness to sing a little, listen a lot, and learn from the people in the room."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Shape Note Singing Lesson",
+      "url": "https://folkways.si.edu/shape-note-singing-lesson/music/tools-for-teaching/smithsonian",
+      "publisher": "Smithsonian Folkways Recordings",
+      "purpose": "Smithsonian Folkways describes shape syllable rehearsal and the inward-facing singing square."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "run-a-household-listening-circle",
+    "hold-a-playlist-listening-exchange"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

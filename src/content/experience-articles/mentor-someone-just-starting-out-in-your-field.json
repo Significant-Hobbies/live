@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "mentor-someone-just-starting-out-in-your-field",
+  "slug": "mentor-someone-just-starting-out-in-your-field",
+  "title": "Make the First Mentoring Conversation Useful and Clear",
+  "description": "Start a mentoring relationship with one focused goal, agreed boundaries, active listening, and a check-in that helps a beginner take a next step.",
+  "intent": "Offers a practical first-meeting structure for an informal mentor and mentee to agree on goals, limits, and useful feedback.",
+  "sections": [
+    {
+      "heading": "Offer a specific kind of help",
+      "paragraphs": [
+        "A mentoring offer is easier to accept when it names what you can provide. You might review a portfolio, explain how your field handles a particular problem, or help someone prepare questions for a first professional meeting. Avoid promising to “open doors” or supervise work you do not control. Say how often you can meet and for how long before the relationship starts.",
+        "Ask what the mentee wants from the conversation instead of assuming. They may need a practical answer, feedback, encouragement, or help evaluating choices. It is fine to say when you are not qualified to advise. Referring someone to a subject expert or formal support can be a valuable part of mentoring."
+      ]
+    },
+    {
+      "heading": "Agree on a first goal together",
+      "paragraphs": [
+        "Use the first meeting to learn about the person’s current work, interests, and constraints. Ask what they hope to be able to do after a few conversations. Turn a broad aim like “get better at design” into a next step such as choosing one case study and making its decision process clearer. Let the mentee define what success would look like.",
+        "The National Academies’ Committee on the Science of Effective Mentoring in STEMM describes support for goal-setting, active listening, problem-solving, and subject knowledge among mentoring domains. This is a useful framework for STEMM contexts, not a mandatory script for every profession. In any field, clarify whether your advice is experience-based opinion, an organizational rule, or a fact the mentee should verify elsewhere."
+      ]
+    },
+    {
+      "heading": "Set boundaries that protect trust",
+      "paragraphs": [
+        "Clarify confidentiality: what can stay between you, what you might share, and any legal or workplace responsibilities you cannot promise to keep private. Do not request sensitive information the mentee does not need to share. If you work at the same organization, check whether your role creates a conflict, reporting obligation, or power imbalance that should be discussed openly.",
+        "Agree on communication hours, channels, and expected response time. A mentor can be supportive without being on call. If you are discussing career opportunities, do not imply you can guarantee a job, promotion, or reference. Tell the mentee when you can make an introduction and when you cannot."
+      ]
+    },
+    {
+      "heading": "Give feedback the person can use",
+      "paragraphs": [
+        "Ask permission before critiquing. Name the specific work or decision, describe what is effective, and identify one change that could improve it. Instead of “You’re not strategic,” try “The proposal explains the implementation but not which user problem it solves; can we add that before the timeline?” This keeps feedback about the work rather than the person’s worth.",
+        "Leave room for disagreement. Ask what the mentee thinks and whether the feedback fits their goals. A mentor’s job is not to make a junior copy the mentor’s path. Sometimes the most useful question is, “What options have you considered?” because it helps them practice judgment rather than wait for the right answer."
+      ]
+    },
+    {
+      "heading": "Close with a small next step",
+      "paragraphs": [
+        "End each meeting by writing down one action for the mentee and one, if any, for you. For example, they will revise the project summary and you will send a public reference on the field’s standard. Set a date to check in, and let the mentee tell you if the cadence is too much. If the relationship is no longer useful, discuss a respectful pause or conclusion.",
+        "Your next action is to invite a beginner to a short first conversation with a clear topic and an end time. Ask what they want to leave with, listen, and agree on one achievable next step. A good start is a working agreement, not an implied lifelong commitment."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Participatory Workshop on Metrics, Models, and Identities in STEMM Mentoring Relationships: What Works & Why?",
+      "url": "https://sites.nationalacademies.org/cs/groups/pgasite/documents/webpage/pga_189656.pdf",
+      "publisher": "National Academies of Sciences, Engineering, and Medicine",
+      "purpose": "Mentoring domains include active listening, problem-solving, goal-setting, subject support, and role modeling in STEMM."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "teach-a-skill-you-re-good-at-to-a-group-of-strangers",
+    "mentor-10-people-meaningfully",
+    "make-a-low-voltage-accessibility-switch-with-a-mentor"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

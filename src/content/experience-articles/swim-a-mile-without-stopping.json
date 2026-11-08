@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "swim-a-mile-without-stopping",
+  "slug": "swim-a-mile-without-stopping",
+  "title": "First decide what your swimming mile means",
+  "description": "Turn a mile swim into a clear pool-distance goal, then build consistency with adult swim instruction and a safe setting suited to your experience.",
+  "intent": "How do I define and approach a continuous mile swim when pool lengths and the word “mile” can mean different distances?",
+  "sections": [
+    {
+      "heading": "Choose a definition before counting lengths",
+      "paragraphs": [
+        "A swimming “mile” is not always a true statute mile. U.S. Masters Swimming explains that the commonly referenced 1,650-yard pool event is 110 yards short of a true mile. If your goal is exactly 1,609.344 metres, say so; if it is to complete a familiar pool event, name that distance instead. Both are valid, but they are not identical.",
+        "The pool length changes the count. In a 25-yard pool, a true mile is just over 70 lengths; in a 50-metre pool it is just over 32. Ask the facility how its pool is measured and whether it counts a length as one direction or uses “lap” for an out-and-back. Writing down the target prevents a satisfying finish from becoming a distance dispute."
+      ]
+    },
+    {
+      "heading": "Make the pool your first measuring room",
+      "paragraphs": [
+        "A supervised pool gives you lane markings, a known environment and help nearby. If you are new to swimming or have only swum short distances, start with an adult beginner lesson or an instructor who can observe your breathing, body position and comfort. This is about learning safely, not proving that you can already maintain a perfect stroke.",
+        "Ask the instructor to help you find a repeatable short distance you can swim comfortably, with rests as needed. Over sessions, note how far you swim before stopping and what makes the next length harder: holding your breath, rushing the first lengths, crowded lanes or uncertainty about counting. A coach can tailor the progression; this article cannot prescribe training volume."
+      ]
+    },
+    {
+      "heading": "Use a count you can trust",
+      "paragraphs": [
+        "For a long continuous swim, choose a counting method before entering the water. You might use a lap counter at the wall, a reliable digital tally, or a simple set of length marks on a card outside the lane if facility rules allow. If you use a watch, check whether it records lengths accurately in that pool; small errors can accumulate.",
+        "A planned target can be broken into landmarks without adding rest. In a 25-yard pool, for example, watch for each 10-length block and separately record the final remainder. Keep the tally simple enough that you are not turning your head or interrupting other swimmers to check it. Follow lane etiquette and ask staff about any permitted equipment."
+      ]
+    },
+    {
+      "heading": "Separate pool endurance from open water",
+      "paragraphs": [
+        "A pool mile and an open-water mile are different experiences. USA Swimming notes that open water introduces changing water quality, temperature, tides, currents and venue conditions that a controlled pool does not. Reaching a pool distance does not automatically prepare you for a lake or ocean event.",
+        "If an open-water swim is your eventual goal, progress through an organized, supervised setting and follow local safety guidance. Do not try a solo open-water distance as a test. Conditions can change independently of pool fitness, and the right safety plan is specific to the venue and event."
+      ]
+    },
+    {
+      "heading": "Finish with a useful record",
+      "paragraphs": [
+        "Write down the target distance, pool length, number of lengths, whether you stopped, and how the swim felt. If the goal is a continuous mile, record the honest result rather than adding a pause and calling it uninterrupted. You can still celebrate completing the distance with rests; it is simply a different milestone.",
+        "For a first attempt, choose a quiet lane time, tell pool staff that you are working on a long swim, and understand how they want lap counters or equipment used. If the swim feels uncomfortable or you have a health concern, stop and speak with the appropriate professional. Your next step is to confirm the distance with the facility and book an adult lesson or coached session if useful."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How Many Laps Make a Mile in Swimming?",
+      "url": "https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-many-laps-make-a-mile-in-swimming",
+      "publisher": "U.S. Masters Swimming",
+      "purpose": "Distinguishes the 1,650-yard swim from a true mile and gives pool-length calculations."
+    },
+    {
+      "title": "Open Water Officials",
+      "url": "https://www.usaswimming.org/officials/popular-resources/open-water-officials",
+      "publisher": "USA Swimming",
+      "purpose": "Identifies environmental variables unique to open-water swimming; no training prescription."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "take-an-adult-beginner-swimming-lesson",
+    "complete-a-triathlon",
+    "swim-with-humpback-whales"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "learn-a-second-discipline-deeply",
+  "slug": "learn-a-second-discipline-deeply",
+  "title": "A deep-learning project for entering a second field",
+  "description": "Choose a second discipline by its methods, find a mentor or learning community and build a project that tests whether you can use its ideas.",
+  "intent": "How can I learn a second discipline deeply rather than skim its vocabulary? This focuses on method, sustained practice and a bounded project across fields.",
+  "sections": [
+    {
+      "heading": "Choose a discipline by the questions it asks",
+      "paragraphs": [
+        "Pick a field whose way of asking questions could challenge your existing habits. A designer might study ecology to understand systems and feedback; a software engineer might study history to learn how evidence and interpretation work; a clinician might study music theory to think in patterns and time. These are prompts, not promised transfers. Choose a discipline because its actual methods interest you, not because an online list calls it a high-value pairing.",
+        "Write down what you want to be able to do after a year: read a primary text, conduct a small analysis, solve a standard problem, explain a central debate or make a work that uses the field’s methods. “Know more” is hard to test. A concrete outcome makes it easier to choose courses, books or practice."
+      ]
+    },
+    {
+      "heading": "Find the field’s core methods",
+      "paragraphs": [
+        "Every discipline contains more than a set of terms. Ask how practitioners decide what counts as evidence, what tools they use, which mistakes are common and where expert disagreement remains. For example, learning statistics involves checking assumptions and interpreting uncertainty, not only memorizing formulas; learning a history involves source comparison and context, not only dates. Consult an instructor or credible syllabus to identify the beginning sequence rather than assembling random material.",
+        "Choose one introductory course, workshop or well-structured text, then complete the exercises. A broad reading list can create the feeling of progress while leaving methods unused. Keep a notebook with three columns: a concept in your own words, a worked example, and a question you could not answer. Bring the unanswered question to a teacher, study group or office hour."
+      ]
+    },
+    {
+      "heading": "Build a small project with feedback",
+      "paragraphs": [
+        "A project helps test whether you can use the discipline’s methods. Keep the scope small enough to finish: analyze a public dataset with a stated question, translate one short piece with commentary, document a local architectural detail, or compose a study using a form you have learned. Avoid projects that need advanced access or specialized supervision before you understand the safety and ethics involved.",
+        "University of San Diego’s undergraduate research guidance describes interdisciplinary projects as work guided by a faculty mentor and evaluated in an appropriate disciplinary area. That structure is not a general requirement for personal study, but it illustrates why a mentor can help keep an interdisciplinary project rigorous. Ask someone with expertise to critique the method, not merely the presentation."
+      ]
+    },
+    {
+      "heading": "Keep the first field and second field distinct",
+      "paragraphs": [
+        "It is tempting to rename a familiar skill with new vocabulary and call it interdisciplinary. Write which methods came from the second field and what you changed in your process because of them. A music student who uses a graph is not automatically doing mathematics; the question, method and standards matter. Ask a practitioner whether the method is being used accurately, and be willing to revise if the answer is no.",
+        "Keep the goal reciprocal but modest: learn one way of seeing that can inform your existing work without claiming that two fields are interchangeable. Record examples where the method was useful and where it did not fit. This makes the transfer visible and stops metaphor from pretending to be evidence."
+      ]
+    },
+    {
+      "heading": "Set a review point and continue deliberately",
+      "paragraphs": [
+        "After a few months, return to your original outcome. Can you read a more difficult source, explain a core method and complete a project with fewer hints? If not, identify what is missing: foundational concepts, practice time, feedback or access to materials. Add one next step rather than expanding into five new fields. Deep learning is usually a sequence of repaired misunderstandings, not a steady feeling of mastery.",
+        "At the end of the first project, save the question, sources, method, draft and feedback together. Write a brief note about what you can now do and what remains beyond your current level. Your next action is to find a course syllabus or mentor in the chosen discipline and ask what one beginner project would demonstrate real use of its methods."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Interdisciplinary and Group Projects",
+      "url": "https://www.sandiego.edu/ugresearch/students/interdisciplinary-and-group-projects.php",
+      "publisher": "University of San Diego Undergraduate Research",
+      "purpose": "Supports the example that interdisciplinary student projects can be mentored and evaluated through a relevant disciplinary area; does not prescribe a universal approach to self-study."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "earn-a-postgraduate-degree",
+    "learn-to-code-and-ship-an-app",
+    "compose-an-original-piece-of-music"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

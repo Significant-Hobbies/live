@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "zanzibar-tanzania",
+  "slug": "zanzibar-tanzania",
+  "title": "Read Zanzibar through a single walk in Stone Town",
+  "description": "Choose a short Stone Town walk that connects carved doors, coral-stone buildings and the seafront, while remembering this is a living town.",
+  "intent": "How can I make a first Zanzibar visit feel grounded in Stone Town’s urban history instead of treating the island as a beach stop?",
+  "sections": [
+    {
+      "heading": "Let the street plan set your pace",
+      "paragraphs": [
+        "Begin with a small loop rather than trying to collect every landmark. Stone Town sits on Unguja’s western promontory, and its compact lanes repeatedly draw you toward the seafront, then back into shaded alleys. Walk slowly enough to notice how a narrow street opens into a market or a bright waterfront edge. The physical pattern is part of the subject: UNESCO describes the winding streets, seafront mansions and open spaces as parts of a historic trading town, not as a set of isolated monuments.",
+        "A useful first route is to pick one inland lane, one public square or market edge, and one waterfront stretch. Keep the map simple and allow for detours; the lanes are not laid out as a modern grid, and a straight-line distance can mislead. Ask before photographing people or entering courtyards."
+      ]
+    },
+    {
+      "heading": "Look at the doors and walls as evidence",
+      "paragraphs": [
+        "Choose two or three doorways and compare them instead of trying to label every carving. Look at the frame, the lintel, the scale of the entrance and how a heavy door meets a narrow street. UNESCO notes that Stone Town’s buildings use coralline ragstone and mangrove timber, with lime mortar and lime-washed surfaces. Those materials help explain the texture you see: softened pale walls, deep openings and timber details that cast strong shade.",
+        "Avoid turning every visual feature into a simple ethnic label. UNESCO describes the town’s architecture as a fusion of Swahili, Indian, Arab and European influences shaped by centuries of trade. A doorway can prompt a question about craft, household life or commerce, but it does not by itself prove who built or owned a particular house. Use a local guide or museum interpretation for specific histories."
+      ]
+    },
+    {
+      "heading": "Connect the waterfront to the town’s trade",
+      "paragraphs": [
+        "At the seafront, notice the relationship between large houses, open space and the harbor-facing edge. Then walk back toward the market streets and observe how food shops, workshops, homes and visitor businesses share the same small footprint. The heritage site remains a commercial and social center, so activity is part of what makes it legible. It is not an empty museum after closing time.",
+        "The history is layered and includes the violence of the slave trade as well as exchange and cultural creativity. UNESCO specifically notes Zanzibar’s symbolic importance in the suppression of slavery and its past as a major East African slave-trading port. Treat that history with care: do not reduce it to a dramatic stop on a sightseeing checklist. If you visit a museum or memorial, leave time to read its interpretation rather than rushing through for a photograph."
+      ]
+    },
+    {
+      "heading": "Choose a visit length that leaves room for living life",
+      "paragraphs": [
+        "For a few hours, focus on the lanes, building details and a seafront pause. With a fuller day, add one museum or guided walk and a return visit to a street that looked different in the afternoon light. The second pass often reveals practical details that a first pass misses: where people sit, where deliveries move, and how shops open onto narrow streets.",
+        "Because Stone Town is inhabited and busy, keep doorways clear, lower your voice near homes and ask permission before photographing residents. Do not climb onto walls or step into a building because an entrance looks picturesque. Conservation is not only the job of heritage officials; visitor behavior affects the everyday town that the heritage is meant to protect."
+      ]
+    },
+    {
+      "heading": "Make the next step specific",
+      "paragraphs": [
+        "Before going, decide whether you most want architecture, local food, maritime history or a guided account of the town’s past. That choice gives a local guide a useful starting point and helps you avoid an exhausting, unfocused circuit. Confirm access, opening arrangements and any conservation guidance through current local authorities or the site you plan to visit; online descriptions cannot promise that a particular interior is open.",
+        "After the walk, write down one doorway, one street turn and one historical question you want to follow up. That small record turns a brief visit into a more accurate memory and keeps the island from collapsing into a generic image of beaches and spice."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Stone Town of Zanzibar",
+      "url": "https://whc.unesco.org/en/list/173/",
+      "publisher": "UNESCO World Heritage Centre",
+      "purpose": "Supports the town’s location, Swahili trading-town context, street pattern, architectural materials and cultural fusion; used as a narrow interpretive anchor."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "marrakech-s-medina-morocco",
+    "havana-cuba",
+    "the-silk-road-uzbekistan"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

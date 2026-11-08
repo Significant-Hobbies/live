@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "mount-fuji-japan",
+  "slug": "mount-fuji-japan",
+  "title": "Decide whether Fuji is a climb, a view or both",
+  "description": "Choose a safe Fuji experience by season and route: the official site currently says the 2026 season has ended and winter trails are closed.",
+  "intent": "Help a visitor distinguish an in-season summit attempt from an off-season landscape visit, with current official seasonal status and a practical preparation framework.",
+  "relatedExperienceSlugs": [
+    "hike-a-mountain-that-scares-you",
+    "spend-a-month-in-japan",
+    "see-the-cherry-blossoms-in-kyoto-japan"
+  ],
+  "sections": [
+    {
+      "heading": "Start with the calendar, not the summit fantasy",
+      "paragraphs": [
+        "Mount Fuji can be a climb, a day of viewpoints or a longer stay around the surrounding lakes. Decide which experience you actually want before booking transport. The official climbing site currently states that the 2026 climbing season has ended and lists the Yoshida, Subashiri, Gotemba and Fujinomiya upper trails as closed during winter. It also warns that climbing outside the official season is dangerous. Do not interpret a trail visible on a map as permission or a safe route.",
+        "If your visit falls outside the authorized season, plan a landscape day instead: choose a public viewpoint, museum or lakeside walk whose current access you can verify. Weather can hide the mountain entirely, so give the day another worthwhile purpose rather than treating a clear summit view as guaranteed."
+      ]
+    },
+    {
+      "heading": "If you plan an in-season climb",
+      "paragraphs": [
+        "Recheck the official site when the season and your date are known. It provides route details, facility operating periods, warnings and required safety information. Route conditions and arrangements can differ, so choose a trail only after reading its current official guidance. Do not assume last year’s opening or transport pattern repeats.",
+        "Build a conservative plan around your own pace. Consider how you will handle altitude, cold, darkness, fatigue and the descent, not only the upward walk. If you have a health condition or uncertainty about strenuous activity at altitude, speak with a clinician before deciding whether to climb. A summit is optional; turning around early is a valid outcome."
+      ]
+    },
+    {
+      "heading": "Make a route choice with real trade-offs",
+      "paragraphs": [
+        "Compare the official descriptions of each route for length, facilities, access and crowd-management rules. Choose the route that best matches your experience and the time you can safely commit, rather than selecting solely for a sunrise photograph. If an itinerary proposes an overnight stay, confirm that the hut is open and that you have an actual reservation; do not rely on finding shelter spontaneously.",
+        "Leave a margin in your schedule for transport changes and for the possibility that weather or an official warning changes the plan. Keep your group’s decision rules simple before starting: everyone can call for a pause, and the group turns around together if someone is unwell or conditions exceed the plan. Follow the official route and current instructions from staff."
+      ]
+    },
+    {
+      "heading": "Experience Fuji without summiting",
+      "paragraphs": [
+        "A non-climbing visit can still be specific. Pick one viewpoint and watch how clouds gather around the cone; compare the mountain’s scale from a lakeshore with the view from a town or transport corridor. Notice how Fuji appears in local art, signage or architecture, but do not treat a single postcard angle as the whole region.",
+        "Use a local visitor center or museum to learn about volcanic history and the surrounding communities. The official climbing site links to volcano information and safety resources; consult the Japan Meteorological Agency for current volcano alerts rather than inferring safety from a calm-looking day."
+      ]
+    },
+    {
+      "heading": "Turn the plan into a decision checklist",
+      "paragraphs": [
+        "Write down your date, chosen experience, official route or viewpoint, transport plan, weather check and fallback. For a climb, include your turnaround time and the conditions that will make you cancel. For a view-only day, select a second nearby activity in case of cloud or rain. Pack according to the actual activity and forecast, and follow current local guidance on waste and trail use.",
+        "Before making a booking, open the official climbing site’s latest news and facility pages. On the date checked for this guide it says the 2026 season is over; future dates need a fresh check. The next action is to decide which season you will visit and whether your goal is the mountain itself or a safely planned view of it."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Official Website for Mt. Fuji Climbing",
+      "url": "https://www.fujisan-climb.jp/en/",
+      "publisher": "Mt. Fuji Climbing official information site",
+      "purpose": "Opened current status page; as checked on 2026-11-08 it states the 2026 season has ended, lists winter closures for the four trails and warns against off-season climbing. Also links to route, facility-period and volcano safety information."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "community-c18cb715-267e-53ac-9690-ef2b845914e4",
+  "slug": "act-as-a-spy-for-a-few-days",
+  "title": "Build a spy story with everyone in on the game",
+  "description": "Make a few days of spy-themed play feel convincing through consent, a shared fictional mission, and a clear line between roleplay and real life.",
+  "intent": "How to create a short, consent-based spy experience through roleplay or a legitimate interactive venue without targeting real people or spaces.",
+  "sections": [
+    {
+      "heading": "Keep the mission explicitly fictional",
+      "paragraphs": [
+        "A good spy-themed experience is a story everyone has agreed to enter. Pick a fictional goal such as recovering a made-up museum artifact from a cardboard “vault” in a living room, decoding a message written by the host, or identifying a planted clue during a scripted dinner. Tell every participant that it is a game, what spaces are included, and when play begins and ends. Do not watch strangers, enter restricted areas, impersonate a real official, record people secretly, or access someone’s account or device.",
+        "Let the group choose the tone together. A light puzzle game may suit a mixed-age family; a staged noir story may work for consenting adult performers. Agree on a stop word or clear way to pause, especially if someone feels uncomfortable. “Stay in character” never overrides a person’s safety, privacy, consent, or request to stop."
+      ]
+    },
+    {
+      "heading": "Use a venue built for make-believe",
+      "paragraphs": [
+        "A supervised venue can give the idea atmosphere without requiring you to turn public space into a set. The International Spy Museum in Washington, D.C., for example, describes an optional Undercover Mission that gives visitors a fictional cover identity, interactive stations, and a debrief. That is a designed museum experience, not instruction to practice surveillance outside it. Check current age guidance, ticket times, accessibility and exhibit details with the museum before planning; its FAQ says visitors under eighteen need an adult.",
+        "If you create a home version, stay in rooms the host has approved and use props that cannot damage property. A paper badge, envelope, map of an invented building, or color-coded clue can suggest a world without resembling an actual credential. Never leave “evidence” in a neighbor’s yard, workplace, school, transit station, or public facility. Ask the venue before staging anything beyond its own offered activity."
+      ]
+    },
+    {
+      "heading": "Write the story before the clues",
+      "paragraphs": [
+        "Give the players a simple premise, not a real-world target: a fictional archivist needs help finding a missing page before the exhibit opens. Decide what counts as success, what locations are in bounds, and what information each player may know. A host can prepare three clues that lead from one to the next, with a hint available if a team gets stuck. Use invented names and places so the narrative cannot be mistaken for a threat or actual investigation.",
+        "Build one meaningful choice into the story. Perhaps the team must decide which of two fictional documents is authentic, or whether to reveal the clue publicly to protect an invented source. Choices create suspense without requiring deception against unwilling people. Keep puzzles fair: each clue should connect to information players already have, and the solution should make sense once revealed."
+      ]
+    },
+    {
+      "heading": "Give players distinct roles",
+      "paragraphs": [
+        "A few people can take roles such as briefing officer, analyst, archivist, or skeptical witness. Write one sentence about what each person knows and one thing they can contribute. Rotate the roles if the experience lasts more than one session so nobody becomes the permanent target or villain. Let participants opt out of a role or change their name. Avoid drawing on someone’s real secrets, identity, job, or immigration status as a plot device.",
+        "For a multi-day story, make each session a complete chapter with a recap and a scheduled end. Use a shared notebook or group chat only if everyone agrees; keep it clearly labelled as play. Do not send alarming messages from unknown numbers, plant objects where someone could mistake them for danger, or create pressure to respond at night. The suspense should come from the puzzle, not from making a player fear for their real safety."
+      ]
+    },
+    {
+      "heading": "Debrief and close the fiction",
+      "paragraphs": [
+        "At the end, tell everyone explicitly that the game is over. Ask what felt fun, what was confusing, and whether any part crossed a boundary. A museum-style debrief can help people distinguish the character’s choices from their own. Thank the host and return props, delete any photographs or recordings a participant asks you to remove, and do not share a player’s private reactions without permission.",
+        "A first attempt can be a one-hour fictional briefing with three paper clues in a private room. Make the boundaries as vivid as the story: named participants, named space, set start and finish, no real-world observation. If the group enjoys it, expand the narrative into a short film or staged scene. The next good step is to invite collaborators to shape the fiction before you make any props."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Frequently Asked Questions: Exhibition and Undercover Mission",
+      "url": "https://www.spymuseum.org/visit/know-before-you-go/faq/",
+      "publisher": "International Spy Museum",
+      "purpose": "Describes the museum’s own optional fictional cover-identity interactive and its debrief, and notes under-18 visitor accompaniment; used as a bounded example of consensual, venue-designed play."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "make-a-short-film",
+    "perform-on-a-stage-in-front-of-a-crowd"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

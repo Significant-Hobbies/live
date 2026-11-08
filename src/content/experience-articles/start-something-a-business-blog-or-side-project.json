@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "start-something-a-business-blog-or-side-project",
+  "slug": "start-something-a-business-blog-or-side-project",
+  "title": "Make a first version small enough to meet a real reader",
+  "description": "Choose a small business, blog, or side project experiment, test it with real people, and decide what evidence would justify another month of work.",
+  "intent": "How do I start a business, blog, or side project without spending months building an idea nobody has asked for?",
+  "sections": [
+    {
+      "heading": "Choose one person and one recurring problem",
+      "paragraphs": [
+        "Do not begin with a logo, a long feature list, or a mission statement broad enough to include everyone. Write a sentence naming one person you can reach and a task that repeatedly frustrates them: “Independent tutors spend too long rearranging lesson notes after class,” or “New homeowners cannot tell which local repair questions need a specialist.” These are hypotheses, not proven needs. If your idea is a blog, name the reader and the question they might search for or discuss with a friend.",
+        "Then choose a form that fits the problem. A service might start with a manual appointment; a blog might start with three tightly scoped posts; a software idea might begin as a clickable mockup or spreadsheet. The smallest useful version should let a person experience the main value without needing a polished brand or a complete operation."
+      ]
+    },
+    {
+      "heading": "Use conversations to learn about behavior",
+      "paragraphs": [
+        "The U.S. Small Business Administration’s market-research guide distinguishes broad existing data from direct research with potential customers and lists surveys, questionnaires, focus groups, and in-depth interviews as methods. For an early idea, a short conversation can uncover context that a thumbs-up cannot. Ask about the last time the person faced the problem, what they tried, what it cost in time or money, and what happened next. Ask permission before taking notes and avoid leading questions such as “Wouldn’t you love an app that fixes this?”",
+        "Look for specific recent examples, repeated workarounds, and existing alternatives. A compliment is not demand; a person who has already made a spreadsheet, paid a service, or built a repeated workaround may reveal more. Keep a simple table: observation, exact problem, current solution, unresolved friction, and a question to investigate. Do not record sensitive information you do not need."
+      ]
+    },
+    {
+      "heading": "Set a test that can disconfirm the idea",
+      "paragraphs": [
+        "Choose a small test and write down what result would change your mind. For a newsletter, send one issue to a few people who opted in and ask what they used. For a neighborhood service, offer a limited number of appointments with a clear description of scope and price. For a digital product, let someone complete one representative task in a prototype while you watch where they hesitate. The purpose is not to persuade yourself the idea works; it is to learn what people actually do.",
+        "Keep early tests low-cost and reversible. Do not take on debt, make promises you cannot meet, or collect personal data casually. Before charging, hiring, selling regulated products, or using another person’s work, check the laws and professional obligations that apply in your location. A side project can still create tax, privacy, consumer-protection, licensing, or intellectual-property questions; the SBA guide is U.S.-specific and does not answer them for every business."
+      ]
+    },
+    {
+      "heading": "Decide what to build next",
+      "paragraphs": [
+        "After the test, sort the evidence into three piles: what people did, what they said, and what remains uncertain. If users misunderstand the offer, revise the explanation before expanding features. If they like the idea but do not return or follow through, ask what competing priority is more urgent. If several people independently describe the same problem and use a workaround, consider a second small test aimed at that one problem.",
+        "A useful next version could be a single page, one service package, a narrow product sample, or the next article in a consistent series. Limit the work to a week or two of effort if you can, and define the next decision date. “I will build forever until it feels finished” is not a test plan. Nor is a viral response a reliable forecast of a durable business."
+      ]
+    },
+    {
+      "heading": "Choose a stopping or continuing rule",
+      "paragraphs": [
+        "Write a short checkpoint before the excitement fades: what did the test teach, what would need to be true for you to continue, and how much time or money are you willing to risk before checking again? A stop can be a good result if the evidence is weak or the project no longer fits your life. You may preserve the strongest idea and use it elsewhere rather than treating the experiment as wasted effort.",
+        "If the project is becoming a business, speak with a qualified local accountant, attorney, or small-business adviser about the specific formation, tax, insurance, and regulatory choices before committing. The immediate next action is simpler: write the one-person, one-problem sentence, then schedule two conversations with people who can describe the problem from experience."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Market research and competitive analysis",
+      "url": "https://legacy.sba.gov/es/guia-de-negocios/planifique-su-empresa/investigacion-de-mercado-y-analisis-competitivo",
+      "publisher": "U.S. Small Business Administration",
+      "purpose": "Supports distinguishing existing market data from direct consumer research, and identifies demand, market size, competition and interview/survey methods; page is a U.S. small-business resource and does not establish local legal or tax requirements elsewhere."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "start-and-grow-a-business",
+    "conduct-an-after-action-review-of-a-personal-project",
+    "learn-to-code-and-ship-an-app"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

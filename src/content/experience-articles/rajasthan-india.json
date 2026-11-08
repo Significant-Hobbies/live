@@ -1,0 +1,83 @@
+{
+  "experienceSlug": "rajasthan-india",
+  "slug": "rajasthan-india",
+  "title": "Choose a Rajasthan circuit by contrast, not distance",
+  "description": "Compare Jaipur’s observatory and walled city, Jodhpur’s ridge-top fort and Udaipur’s lakes before choosing a manageable Rajasthan route.",
+  "intent": "How can a traveler choose a compact Rajasthan itinerary that pairs distinct city experiences without treating an old package schedule as current transport advice?",
+  "sections": [
+    {
+      "heading": "Pick two or three cities with different textures",
+      "paragraphs": [
+        "Rajasthan is large enough that a list of famous forts can become a string of long transfers. Start with the kind of contrast you want. Jaipur offers a planned city and a dense cluster of historic sites; Jodhpur centers the view around Mehrangarh above the Blue City; Udaipur shifts the experience toward Lake Pichola, City Palace and the surrounding hills. The state tourism department and its official corporation publish these as distinct destination options, not one single attraction zone.",
+        "For a first route, compare Jaipur–Jodhpur–Udaipur with a longer desert extension through Jaisalmer. The first gives you city planning, a ridge-top fort and lakeside architecture. The second adds the desert edge and a longer journey. The Rajasthan Tourism Development Corporation has published an example circuit connecting Jaipur, Ajmer, Pushkar, Jaisalmer, Jodhpur and Udaipur; treat that as evidence of a possible sequence, not a current timetable, price or endorsement of squeezing every stop into one trip."
+      ]
+    },
+    {
+      "heading": "Jaipur: read the city as a plan",
+      "paragraphs": [
+        "The official tourism page traces Jaipur’s founding to 1727 and identifies Hawa Mahal, City Palace, Jantar Mantar and the hill forts as notable features. Pick one question to follow: how does the street-facing Hawa Mahal relate to the old city, or how do the instruments at Jantar Mantar turn observation of the sky into architecture? Amber Fort lies outside the central city, so count the transfer and walking time before adding a second distant stop.",
+        "Rather than trying to see every fort in one day, pair the walled city with one hilltop destination. That gives you time to look closely at the observatory’s instruments or the Hawa Mahal’s façade and courtyards. Verify each site’s current entry, hours and access with its managing authority; tourism pages can lag behind operational changes."
+      ]
+    },
+    {
+      "heading": "Jodhpur: look from the ridge and back into the city",
+      "paragraphs": [
+        "Rajasthan Tourism describes Mehrangarh on a rocky ridge, with the newer city outside the fortress, and identifies Jodhpur with the Blue City. Use that geography to structure the visit: first learn what the fort’s position reveals, then look back at how the city gathers below it. Rao Jodha Desert Rock Park offers a separate landscape perspective, while Jaswant Thada and the markets create different stops at ground level.",
+        "If a day includes a fort visit, leave time for its interior and the surrounding paths rather than adding another major city transfer. The official tourism listing names flying-fox activities and trekking in the park, but these are optional operator-run experiences; check current availability and suitability directly. A simple walk and a view from a public area can be enough to connect the ridge and the city."
+      ]
+    },
+    {
+      "heading": "Udaipur: slow down around the water",
+      "paragraphs": [
+        "Rajasthan Tourism describes Lake Pichola with the City Palace along its eastern bank and the islands of Jagniwas and Jagmandir. This makes Udaipur a good place to slow the itinerary: spend one part of the day in the palace complex, then see how the skyline changes from a lake-side viewpoint or a boat route if one is operating and appropriate on your date. Saheliyon-ki-Bari or Fateh Sagar can add another layer without turning the visit into a race between distant forts.",
+        "Do not assume that every palace or island site is open for the same kind of visit. The Lake Palace operates as a hotel, and access to an island property is different from seeing its exterior. Check site-specific entry and boat arrangements with the current operator before planning around them."
+      ]
+    },
+    {
+      "heading": "Keep travel days honest",
+      "paragraphs": [
+        "Use current rail, bus or hired-car information to build the route. Rajasthan Tourism identifies Jaipur and Kota as major rail hubs, and its travel page lists Jaipur, Jodhpur and Udaipur airports; actual service varies by date and origin. Ask how long the transfer takes with stops and traffic, and avoid scheduling a major timed visit immediately after arrival. The old RTDC package is useful as a regional sequence of places, not as current operating data.",
+        "For a shorter trip, choose Jaipur plus one of Jodhpur or Udaipur. For more time, add the third city or a desert stop only after checking connections and lodging. Pick one reason for each stop, reserve an unscheduled hour, and confirm current visitor conditions before leaving. That structure lets the forts, streets and lakes feel different instead of blurring into a checklist."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Jaipur",
+      "url": "https://www.tourism.rajasthan.gov.in/jaipur.html",
+      "publisher": "Department of Tourism, Government of Rajasthan",
+      "purpose": "Supports Jaipur's founding context and named city landmarks including City Palace, Jantar Mantar and Hawa Mahal."
+    },
+    {
+      "title": "Jodhpur",
+      "url": "https://www.tourism.rajasthan.gov.in/jodhpur.html",
+      "publisher": "Department of Tourism, Government of Rajasthan",
+      "purpose": "Supports the Blue City description, Mehrangarh's ridge setting and named surrounding visitor options."
+    },
+    {
+      "title": "Udaipur",
+      "url": "https://www.tourism.rajasthan.gov.in/udaipur.html",
+      "publisher": "Department of Tourism, Government of Rajasthan",
+      "purpose": "Supports Lake Pichola geography, City Palace and named lake/city landmarks."
+    },
+    {
+      "title": "Desert Package",
+      "url": "https://www.rtdc.tourism.rajasthan.gov.in/Client/PackageTourDetail.aspx?PackageTourid=Desert+Package",
+      "publisher": "Rajasthan Tourism Development Corporation, Government of Rajasthan undertaking",
+      "purpose": "Used only as an example of a published multi-city circuit sequence, not as current availability, price or transport schedule."
+    },
+    {
+      "title": "Reaching Rajasthan by air, train and road",
+      "url": "https://www.tourism.rajasthan.gov.in/how-to-get-there.html",
+      "publisher": "Department of Tourism, Government of Rajasthan",
+      "purpose": "Supports the broad rail-hub, airport and road-transport context; article directs readers to current operator information for actual services."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "the-taj-mahal-india",
+    "visit-the-taj-mahal-at-dawn",
+    "the-silk-road-uzbekistan"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "carve-a-reusable-rubber-stamp",
+  "slug": "carve-a-reusable-rubber-stamp",
+  "title": "Design your stamp around what stays raised",
+  "description": "Plan a reusable rubber stamp by simplifying its image into raised and cut-away shapes, testing a small block, and printing a proof before making an edition.",
+  "intent": "How to plan and proof a small stamp that prints clearly, focusing on positive and negative space, line width, safe tool handling and corrections.",
+  "relatedExperienceSlugs": [
+    "make-a-cyanotype-print-from-everyday-objects",
+    "make-a-small-mosaic-panel",
+    "weave-a-miniature-tapestry-on-cardboard"
+  ],
+  "sources": [
+    {
+      "title": "Block Printing Lesson Plan, Grades 6–8",
+      "url": "https://www.speedballart.com/wp-content/uploads/2017/12/Block-Printing_LessonPlan_Grade6-8_2017.pdf",
+      "publisher": "Speedball Art Products",
+      "purpose": "Supports the raised-area printing principle, shallow carving, rotating the block for curves and testing on scrap."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Draw a silhouette that survives reduction",
+      "paragraphs": [
+        "A stamp is a relief image: raised surfaces receive ink and touch the paper, while carved-away areas stay unprinted. Draw the design at the actual block size and mark the parts meant to print. A small stamp that depends on hairline detail may become a dark patch when ink spreads or pressure varies.",
+        "Choose one bold shape and one supporting detail, such as a leaf with a central vein or a house with a dark doorway. Avoid tiny enclosed dots and narrow gaps in the first design. The goal is a clear image at a glance, even when the transfer is imperfect, rather than a miniature illustration with detail the block cannot hold."
+      ]
+    },
+    {
+      "heading": "Reverse the image before carving",
+      "paragraphs": [
+        "Most lettering and asymmetric designs need to be reversed on the block so they print in the intended direction. Draw the image on paper, transfer it using a method recommended for your block, and check any letters in a mirror before carving. With a symmetrical leaf or emblem, orientation may not matter, but decide deliberately.",
+        "Divide the drawing into three areas: raised printed shape, channels that will be cut away, and small islands that must remain connected to the main image. Colour the parts that should print with a marker. If the dark shape reads clearly in reverse, you have a workable carving plan."
+      ]
+    },
+    {
+      "heading": "Practise shallow cuts on a scrap",
+      "paragraphs": [
+        "Use a soft block made for printmaking and a tool designed for that material. Stabilize the work, keep hands out of the tool’s path, and follow the maker’s safety directions; beginners should ask for a demonstration instead of improvising with a sharp knife. Speedball’s lesson plan suggests practising on a smaller block and stabilizing it with a bench hook.",
+        "The same guide explains why shallow cuts produce narrow lines while deeper cuts widen them. Rotate the block around a curve instead of twisting the tool through the turn. Remove thin ribbons of material, then pause to clear crumbs and inspect the channel. A deep trench is hard to undo and can weaken a small raised feature."
+      ]
+    },
+    {
+      "heading": "Treat the first print as a test",
+      "paragraphs": [
+        "Roll a modest amount of suitable ink on a flat plate, ink the raised block, and press it onto scrap paper with even pressure. Speedball advises testing on scrap before printing the final surface. The proof shows whether the image is crowded, the block edge is picking up ink, or raised sections are failing to make contact.",
+        "If a narrow gap fills in, clean the block and widen only that channel. If a patch is pale, check for a warped block, uneven ink or missed pressure before rolling on more. Correct the cause rather than over-inking the whole image. Keep the first proof beside the block as a record of what the design can do."
+      ]
+    },
+    {
+      "heading": "Print a small edition with consistent placement",
+      "paragraphs": [
+        "Once the proof reads clearly, choose a paper size and repeat the same placement and pressure across a few sheets. Keep a scrap beside the edition to test ink between impressions. For two colours, treat each colour as a separate block or layer and mark the paper’s position; adding colour before a single-colour print works is a common source of frustration.",
+        "Clean the stamp and tools according to the material and ink instructions. Label your test prints with the block’s date and ink type. A reusable stamp succeeds when you can recognize its image repeatedly, not when every impression is identical. Your next design can explore finer detail after you know which line widths your block and tool handle well."
+      ]
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

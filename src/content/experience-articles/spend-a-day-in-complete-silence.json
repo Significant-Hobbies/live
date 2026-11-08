@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "spend-a-day-in-complete-silence",
+  "slug": "spend-a-day-in-complete-silence",
+  "title": "How to make a silent day work in an ordinary household",
+  "description": "Plan one voluntary quiet day around work, care, accessibility, and emergency needs, with agreed ways to communicate and an easy exit.",
+  "intent": "How can I try a day without speaking while keeping ordinary responsibilities, consent and essential communication intact?",
+  "sections": [
+    {
+      "heading": "Define silence before the day begins",
+      "paragraphs": [
+        "Decide what you mean by “complete silence.” Does it mean no spoken conversation, or no calls, music and media too? Do you intend to avoid writing messages, or is written communication the backup for practical needs? A day at home is not automatically equivalent to a retreat, and setting a private definition prevents other people from guessing what you expect.",
+        "Make the day voluntary and specific. Tell household members, coworkers or anyone who depends on you what you plan to do, when it starts and ends, and how they can reach you. Do not surprise a partner, child, colleague or care recipient with a communication blackout. If your job requires spoken contact, arrange leave or choose a different date."
+      ]
+    },
+    {
+      "heading": "Keep essential communication available",
+      "paragraphs": [
+        "Set up an agreed written or visual method for urgent needs, accessibility or basic coordination. A note on the table can cover ordinary questions; an open phone or a designated contact channel can remain available for emergencies. Silence is a personal activity, not a reason to make help unreachable.",
+        "The Dhamma Saketa Vipassana FAQ offers one specific retreat example: participants refrain from communicating with fellow meditators, while still being able to contact management about material needs and speak with the instructor. A self-planned silent day need not copy that format, but the example makes clear that silence agreements can include explicit paths for necessary help."
+      ]
+    },
+    {
+      "heading": "Choose a day with fewer collisions",
+      "paragraphs": [
+        "Look at the calendar for meetings, caregiving, appointments, deliveries and tasks that depend on quick conversation. Pick a low-obligation day or block only a few hours. If a responsibility changes, end the experiment and communicate normally. The success condition is a considered attempt, not preserving the silence at someone else’s expense.",
+        "Tell people how they can distinguish an urgent interruption from a routine question. You might agree that a knock or a written note is fine, while emergencies override the plan. If you share a home, ask whether the arrangement works for everyone and make space where they can continue their ordinary day without feeling watched or required to participate."
+      ]
+    },
+    {
+      "heading": "Give the quiet time a shape",
+      "paragraphs": [
+        "Silence does not require a formal meditation schedule. You could cook, walk somewhere safe, read, garden, draw or do household tasks. Choose a few activities beforehand so you are not spending the morning deciding whether you are allowed to use a kettle, speak to a shopkeeper or answer a visitor.",
+        "If the goal is no spoken communication, plan around situations that ordinarily need it: ordering food, answering a door or attending a class. You can choose home-based activities, tell a host in advance, or exempt a practical interaction. Be honest about the boundary instead of silently imposing it on strangers."
+      ]
+    },
+    {
+      "heading": "End deliberately and take a note",
+      "paragraphs": [
+        "Decide an end time and return to normal communication without treating the transition as a dramatic reveal. Check whether anyone needed something while you were quiet, and thank them for accommodating the plan. A short debrief can ask what felt easy, what created friction and whether the communication method was sufficient.",
+        "You might choose another quiet period, a retreat with an established support structure, or simply return to ordinary conversation. Those are different goals. Your next step is to make a short agreement with the people affected: date, boundary, emergency contact method and clear end time."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Questions & Answers About the Technique of Vipassana Meditation – Dhamma Saketa",
+      "url": "https://saketa.dhamma.org/en/qanda/",
+      "publisher": "Dhamma Saketa Vipassana center",
+      "purpose": "Specific example of silence between participants with permission to contact management about material needs and speak to the instructor; not a general silent-day rule."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "do-a-10-day-silent-meditation-retreat",
+    "spend-a-full-day-with-no-screens",
+    "do-a-walking-meditation-every-morning-for-a-month"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

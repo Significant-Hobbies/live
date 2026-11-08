@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "mill-grain-into-flour-for-a-small-bake",
+  "slug": "mill-grain-into-flour-for-a-small-bake",
+  "title": "Choose a bake that lets freshly milled flour show its character",
+  "description": "Mill a small measured batch for one forgiving bake, follow the mill maker’s setup instructions, and compare it with a familiar flour blend.",
+  "intent": "What should I bake first after milling grain at home? This adds a practical flour-to-recipe choice and comparison method beyond the short activity.",
+  "sections": [
+    {
+      "heading": "Pick the grain and bake together",
+      "paragraphs": [
+        "Choose a bake whose texture you can judge easily, such as a simple loaf or flatbread, and confirm that your mill is designed for that grain. Start with one small quantity rather than milling a large store of flour before you know how fine your machine grinds. Follow the mill manufacturer’s instructions for cleaning, adjustment, and safe operation.",
+        "King Arthur Baking’s milling introduction emphasizes that home mills have their own learning curve and begins with a fresh-milled bread that blends freshly milled flour with familiar all-purpose flour. That is a useful first-bake idea: a blend can make it easier to see what the new flour contributes without forcing every recipe variable to change at once."
+      ]
+    },
+    {
+      "heading": "Record the grain before milling",
+      "paragraphs": [
+        "Write down the grain’s name and source, the mill setting, and roughly how much you plan to use. Keep the work area clean and dry, and inspect the grain for material that does not belong before feeding it into the machine. Do not run a mill with a damaged cord, open guard, or a problem described in its safety instructions.",
+        "Collect the flour in a labeled container and note how it feels compared with a familiar flour: coarse, warm, or visibly flecked. These are observations rather than quality grades. Avoid claims that milling improves health; this session is about texture and process, not nutrition promises."
+      ]
+    },
+    {
+      "heading": "Use a recipe designed for the change",
+      "paragraphs": [
+        "Fresh-milled flour may behave differently from standardized store flour, and King Arthur notes that its bakers blend it with commercial flour in some breads. Choose a recipe that names the flour blend and follow its ingredient weights. If adapting a favorite recipe, change only the flour proportion and take notes; adding water, changing fermentation, and changing the grain at once will obscure what happened.",
+        "Weighing ingredients makes comparisons easier because flour volume can vary with how it is milled and collected. Keep the recipe’s mixing and resting steps intact for the first attempt. If the dough looks different, record the stage where that happens rather than improvising multiple fixes."
+      ]
+    },
+    {
+      "heading": "Compare two small bakes fairly",
+      "paragraphs": [
+        "If you have enough flour, make two small versions of the same dough: one with the recipe’s recommended blend and one with a modestly higher fresh-milled proportion. Keep the grain, batch size, and other ingredients constant. Label the bowls so no one mistakes the trial loaf for the control.",
+        "Compare dough feel, ease of shaping, crumb, and flavor after the bakes cool. Do not decide from oven spring alone; a small loaf can vary for many reasons. Note whether the mill produced flour fine enough for the recipe or whether a different mill setting is worth testing next time."
+      ]
+    },
+    {
+      "heading": "Store the flour and make a next choice",
+      "paragraphs": [
+        "Mill only the quantity you can use soon and follow the flour or grain supplier’s storage guidance. Clean the mill as its manufacturer directs, not by pushing wet material through it. Save the grain packaging or record its origin so you can repeat the trial.",
+        "Your next action is to select one recipe and mill only the amount it needs, then photograph the flour and dough at the same two stages in a second attempt. With those notes, decide whether you want to adjust the mill setting or choose a different bake rather than changing both at once."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Mill your own flour",
+      "url": "https://www.kingarthurbaking.com/blog/2017/04/24/mill-your-own-flour",
+      "publisher": "King Arthur Baking",
+      "purpose": "Supports the mill learning curve and use of freshly milled flour blended with familiar flour in a first bake; mill safety follows the manufacturer."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "roll-couscous-grains-by-hand-with-a-knowledgeable-cook",
+    "bake-hollow-choux-pastry-and-fill-it",
+    "test-how-salt-changes-a-simple-dish"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

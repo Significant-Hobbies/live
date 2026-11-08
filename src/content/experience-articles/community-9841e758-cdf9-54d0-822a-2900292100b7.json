@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "community-9841e758-cdf9-54d0-822a-2900292100b7",
+  "slug": "be-a-part-of-the-american-high-school-college-home-party",
+  "title": "Join a home party without losing sight of the host",
+  "description": "A good home party depends on a real invitation, clear boundaries and a simple way to get home, especially in a school or college setting.",
+  "intent": "How to take part in an American high-school or college home party as a welcome, considerate guest while respecting consent, age and safety.",
+  "sections": [
+    {
+      "heading": "Know whose invitation it is",
+      "paragraphs": [
+        "A home party is a private gathering, not an open event just because someone shared an address. Confirm that the host expects you, whether you may bring a guest, and what time the gathering ends. If you are a minor, follow your family’s rules and the laws where you live. High-school and college settings are not interchangeable: guests may be different ages, campus rules may apply, and the adult responsible for the home may have set boundaries.",
+        "Bring only what the host asked for. Do not forward the address or post people’s photos without permission. If the home feels crowded or the host asks you to leave, respond calmly. Being invited does not mean you can enter bedrooms, take food or belongings, or decide who else is welcome. A considerate guest helps the host keep the event within the limits they agreed to."
+      ]
+    },
+    {
+      "heading": "Choose your own boundaries before arriving",
+      "paragraphs": [
+        "Decide ahead of time what you are comfortable with around alcohol, substances, dancing, photos, flirting, and staying late. You can say no without a speech. If someone is pressuring you, move toward a trusted friend or the host, and leave if the situation feels wrong. Do not assume a person’s clothes, dancing, relationship, or earlier yes means consent to anything else. Ask clearly, accept a no, and do not use a party as cover to ignore someone’s boundaries.",
+        "Make a way home before the evening starts: know the transit or ride plan, keep your phone charged, and have enough money or a trusted adult to call if plans change. Do not ride with an impaired driver. Keep your keys and essential belongings with you. A plan is not a promise to stay; leave whenever you choose."
+      ]
+    },
+    {
+      "heading": "Handle alcohol and emergencies plainly",
+      "paragraphs": [
+        "If you are below the legal drinking age where you are, do not drink. Even where adults may legally drink, pressure is not a reason to do so. Alcohol and other substances can make judgment, balance, and consent harder. NIAAA’s U.S. college-drinking guidance lists risks including injury, assault, violence, and death. If someone appears seriously unwell, unconscious, difficult to wake, or is breathing abnormally, get emergency help immediately; do not leave them alone or rely on a cold shower or coffee.",
+        "The details of emergency numbers and alcohol law vary by location. Know the local emergency number and follow dispatcher guidance. If you are a student, learn the school’s event, residence, and good-samaritan policies from official sources before an emergency occurs; do not assume a policy at one campus applies to another. When in doubt about immediate danger, call for professional help."
+      ]
+    },
+    {
+      "heading": "Be easy to host",
+      "paragraphs": [
+        "Arrive when invited, greet the host, and ask where to put your coat or food. Keep drinks away from electronics and respect spaces marked private. If you spill something, tell the host and help clean it rather than hiding it. Introduce yourself without demanding anyone’s attention. Make room for people who are standing alone, but do not treat them as a project; a friendly “Want to join us?” leaves them free to decline.",
+        "If the gathering includes music or games, match the room’s energy instead of taking over. Do not pressure people to perform, disclose personal stories, or appear in a video. Avoid jokes that target someone’s body, identity, or vulnerability. A memorable party is not measured by how wild it gets; often it is the conversation, playlist, or easy welcome people remember."
+      ]
+    },
+    {
+      "heading": "Leave the relationship in good shape",
+      "paragraphs": [
+        "When you leave, say goodbye to the host and thank them. Do not wake the whole house if a quiet exit is requested. Later, send a brief message thanking them and, if needed, acknowledge a specific moment you could have handled better. If you borrowed something, return it promptly. Respect any photos or stories the host asks you not to share.",
+        "For a first party, go with a friend you trust, decide a departure time, and make transport independent of anyone pressuring you to stay. If your plans change, tell someone reliable. You can enjoy the music and conversation without drinking, staying late, or proving anything. The best guest is someone the host feels comfortable inviting again."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Harmful and Underage College Drinking",
+      "url": "https://www.niaaa.nih.gov/publications/brochures-and-fact-sheets/college-drinking",
+      "publisher": "National Institute on Alcohol Abuse and Alcoholism",
+      "purpose": "Supports the narrowly stated U.S. public-health risks of alcohol misuse among college students; party etiquette, consent and guest planning are original guidance."
+    },
+    {
+      "title": "Understanding the Dangers of Alcohol Overdose",
+      "url": "https://www.niaaa.nih.gov/publications/brochures-and-fact-sheets/understanding-dangers-of-alcohol-overdose",
+      "publisher": "National Institute on Alcohol Abuse and Alcoholism",
+      "purpose": "Supports calling emergency services for suspected alcohol overdose and not leaving an intoxicated person alone; U.S. emergency number context."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "throw-a-party-worth-remembering",
+    "host-a-dinner-party-for-20-people",
+    "pull-an-all-nighter-with-people-you-love"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

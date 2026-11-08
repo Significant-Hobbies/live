@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "compete-in-an-obstacle-course-race",
+  "slug": "compete-in-an-obstacle-course-race",
+  "title": "Train for the obstacles on your actual race",
+  "description": "Prepare for a first obstacle-course race by checking its rules, building a balanced run-and-movement base and practicing skills with qualified supervision.",
+  "intent": "Prepare for a first obstacle-course race through event-specific rule checks and supervised movement practice, distinct from choosing a particular race brand.",
+  "relatedExperienceSlugs": [
+    "complete-a-tough-mudder",
+    "run-a-race-you-had-to-train-for",
+    "climb-a-mountain-over-4-000-metres"
+  ],
+  "sections": [
+    {
+      "heading": "Find out what your race actually asks",
+      "paragraphs": [
+        "“Obstacle-course race” covers many event styles. One course might emphasize trail running and walls; another may add carries, balance features, water, or technical climbing. Before training, open the organizer’s course map and current rulebook for your exact date. Spartan’s 2026 rules, for example, say that obstacle penalties depend on the obstacle and race type. That is a reminder to read the event’s own rules instead of assuming all races work the same way.",
+        "Write down the distance, terrain, obstacles, mandatory tasks, penalty or bypass rules, and any water sections. If the organizer has not released a map, ask what is confirmed and what may change. Do not plan training around a video from another venue or season."
+      ]
+    },
+    {
+      "heading": "Build a base that covers more than running",
+      "paragraphs": [
+        "A useful preparation session includes comfortable movement over the kind of ground you expect, basic strength for getting over low barriers, and the ability to pick up and set down an object with good control. The exact balance depends on your course. If the event uses a climbing wall or hanging apparatus, practice those skills at a climbing gym or obstacle facility with an instructor who can explain safe technique and equipment.",
+        "Do not learn a rope climb, high wall, or water obstacle by improvising on public playground equipment. Ask the event organizer about official practice sessions or a qualified training venue. If you have an injury, health concern, or are returning after a long break, consult an appropriate clinician or coach before building intensity."
+      ]
+    },
+    {
+      "heading": "Practice transitions while you are fresh",
+      "paragraphs": [
+        "Races alternate movement tasks. A simple rehearsal can be a comfortable walk or jog followed by a low step-over, a controlled carry with an appropriate load, and another easy walk. Keep the practice terrain predictable and finish before form deteriorates. This helps you notice whether you rush the transition or hold your breath, without attempting event obstacles that require instruction.",
+        "Practice communicating with a partner: agree on when to wait, when to continue, and how to help only where race rules permit. In competitive categories, assistance may be restricted; the Spartan rule page specifically bars outside assistance for Elite and Age Group participants. Read the specific category you entered."
+      ]
+    },
+    {
+      "heading": "Rehearse decisions as well as movement",
+      "paragraphs": [
+        "If an obstacle looks unsafe, unfamiliar, or beyond your current skill, know the event’s official process for stopping, bypassing, or taking a penalty. You are allowed to protect yourself from pressure to complete every feature. Read how to ask for staff help and where medical or course staff will be stationed.",
+        "Try your race-day kit on a short local walk or run and check that nothing rubs or shifts. Do not wait until race morning to test new shoes or clothing. Look at the event’s equipment restrictions before packing, especially for hydration or personal devices."
+      ]
+    },
+    {
+      "heading": "Make the first race a useful test",
+      "paragraphs": [
+        "Choose an event whose distance and obstacles match your current preparation, not the most demanding option on the poster. If you can, attend an official skills session or take a coach-led class for the movement you find least familiar. Leave enough time to train and recover, and keep the possibility of changing events if your circumstances shift.",
+        "Afterward, note which obstacles asked for a skill you had not practiced and which parts of the route felt comfortable. Use those observations to shape the next cycle. Your immediate next step is to download the current course information for one local event and circle the two obstacles you need qualified help to practice."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "2026 Race Rules",
+      "url": "https://sites.google.com/spartan.com/athlete-guide/race-rules/2026-race-rules",
+      "publisher": "Spartan Race athlete guide",
+      "purpose": "Opened current example of event- and category-specific obstacle penalties, assistance rules and requirement to consult the 2026 rulebook; not generalized to other organizers."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

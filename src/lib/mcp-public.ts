@@ -7,6 +7,7 @@ import {
   type PublicCatalog,
 } from './catalog-model';
 import { EXPERIENCE_GUIDES } from './experience-guides';
+import { experienceArticle, experienceArticlePath } from './experience-articles';
 
 const MCP_PAGE_MAX = 50;
 const EPOCH_MILLISECONDS_THRESHOLD = 10_000_000_000;
@@ -80,10 +81,20 @@ export function getPublicExperience(slug: string, catalog: PublicCatalog = BUNDL
   if (!experience) return null;
   const { curated, editorialSlug, ...entry } = experience;
   const guide = editorialSlug ? EXPERIENCE_GUIDES[editorialSlug] : undefined;
+  const article = experienceArticle(entry.slug) ?? experienceArticle(editorialSlug ?? '');
   return {
     ...entry,
     firstSteps: guide?.steps ?? (curated ? firstSteps(entry) : []),
     ...(guide ? { guide } : {}),
+    ...(article
+      ? {
+          article: {
+            title: article.title,
+            description: article.description,
+            canonicalUrl: `https://significanthobbies.com${experienceArticlePath(article)}`,
+          },
+        }
+      : {}),
     related: relatedPublicExperiences(catalog, entry).map((item) => ({
       slug: item.slug,
       title: item.title,

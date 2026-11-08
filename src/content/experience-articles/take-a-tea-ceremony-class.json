@@ -1,0 +1,57 @@
+{
+  "experienceSlug": "take-a-tea-ceremony-class",
+  "slug": "take-a-tea-ceremony-class",
+  "title": "Choose a tea class that teaches more than a pose",
+  "description": "Choose a tea ceremony class by its tradition, teaching style, guest role, and time for questions, then arrive ready to observe respectfully.",
+  "intent": "Help a reader distinguish a short demonstration from an instructional class and prepare to learn about a specific tea practice without treating one school as universal.",
+  "sections": [
+    {
+      "heading": "Ask what kind of class it is",
+      "paragraphs": [
+        "‘Tea ceremony’ can describe different formats. A short visitor demonstration may show the host preparing and serving tea, while a class may give participants time to learn a particular movement or guest role. In Japan, the Japan National Tourism Organization describes chanoyu or sadō as the Way of Tea and otemae as the preparation and presentation of powdered matcha; it also notes that schools vary in their procedures and that some gatherings are informal while others are more formal. Those distinctions make the first booking question simple: will you mostly watch, practice, or take part as a guest?",
+        "Ask the organizer which school or tradition they teach, how long the session lasts, whether instructions are in a language you understand, and whether you will handle utensils or prepare tea. A class outside Japan may adapt the format for its venue and audience. That can still be a valuable introduction, but it should be described accurately rather than presented as a complete or universal version of Japanese tea practice."
+      ]
+    },
+    {
+      "heading": "Match the format to what you want to learn",
+      "paragraphs": [
+        "If you are curious about the sequence and setting, choose a demonstration that leaves time for questions. If you want to practice, look for a beginner lesson that explains how to hold and receive the bowl, use the whisk, and observe the host’s movements. If the appeal is hospitality and seasonal objects, ask whether the teacher discusses the room, bowl, sweets, or flower arrangement as part of the session. You do not need to master every detail in one visit; a clear introduction to one aspect is a better outcome than a rushed list of gestures.",
+        "A formal gathering and a short cultural workshop can differ greatly in duration, etiquette, and how much each guest participates. Check the exact format rather than assuming every class includes a full meal or a long ceremony. Ask about seating if kneeling may be uncomfortable, and whether the host can offer an alternative position. A respectful teacher can explain what is expected and how to adapt without embarrassment."
+      ]
+    },
+    {
+      "heading": "Arrive as a learner, not a performer",
+      "paragraphs": [
+        "Follow the host’s instructions and watch what other guests do before acting. In the JNTO’s overview, guests may acknowledge the bowl and turn it slightly before drinking; the details vary across schools. Let the instructor explain the local sequence rather than trying to memorize a rule from a travel article. If you are unsure when to bow, where to place a utensil, or whether conversation is welcome, wait for a cue or ask quietly at an appropriate moment.",
+        "Wear clothing that lets you sit comfortably and move without brushing or knocking objects. Ask whether shoes are removed and whether there are clothing or scent considerations. Put your phone away unless the teacher invites photographs; hands-on practice is easier when attention stays on the shared space. If a movement is uncomfortable or inaccessible, tell the instructor discreetly and ask for an alternative rather than forcing the posture."
+      ]
+    },
+    {
+      "heading": "Notice the decisions behind the ritual",
+      "paragraphs": [
+        "During the class, notice how the host prepares the bowl, how tools are cleaned or placed, and how the guest receives the tea. The point is not to collect a checklist of supposedly perfect gestures. Look for how a sequence expresses care for the guest: the pace, the arrangement of objects, and the attention given to a bowl or seasonal detail. The JNTO describes harmony, respect, purity, and tranquility among principles associated with tea practice, and notes that becoming proficient takes many years. One class can introduce the discipline without pretending to compress that learning.",
+        "Ask one focused question at the end: perhaps how the school handles a particular utensil, why a seasonal choice was made, or what a beginner should practice next. Questions about lineage and context are more useful than asking which tradition is the ‘real’ one. Multiple schools have their own procedures, and a short session represents the teacher’s chosen approach, not every tea practice."
+      ]
+    },
+    {
+      "heading": "Carry one lesson home",
+      "paragraphs": [
+        "After the session, write down the name of the tradition or school, one movement you learned, one object you noticed, and a question you still have. If you want to continue, ask the teacher about a beginner course or a next gathering, and confirm its format and expectations directly. If you only wanted an introduction, practice the attentiveness you observed in an ordinary cup of tea: prepare it without rushing, notice the vessel, and offer it to someone with care. Keep the next step grounded in what this class actually taught."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Japanese Tea Ceremony",
+      "url": "https://www.japan.travel/en/guide/tea-ceremony/",
+      "publisher": "Japan National Tourism Organization",
+      "purpose": "Supports Japanese terms for tea practice, the matcha preparation context, variation among schools, differences between gathering formats, and introductory class expectations; it is an overview, not an authority for every school’s etiquette."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "eat-at-the-source-coffee-in-ethiopia-tea-in-japan-chocolate-in-ecuador",
+    "practice-ichigo-ichie-treat-one-ordinary-day-as-unrepeatable"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

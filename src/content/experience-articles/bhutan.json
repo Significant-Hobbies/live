@@ -1,0 +1,77 @@
+{
+  "experienceSlug": "bhutan",
+  "slug": "bhutan",
+  "title": "Build a Bhutan visit around a region, not a checklist",
+  "description": "Compare a western Bhutan visit around Paro and Punakha with a longer journey to central valleys, while planning with certified local support.",
+  "intent": "How can a visitor choose a realistic Bhutan route and distinguish a focused western trip from a longer central or eastern journey under current travel requirements?",
+  "sections": [
+    {
+      "heading": "Choose the scale before choosing the sights",
+      "paragraphs": [
+        "Bhutan rewards a route built around time on the ground. A first visit can center on the western valleys around Paro, Thimphu and Punakha, rather than trying to reach every region in one pass. The official tourism site identifies Paro as the international airport and describes vehicle-and-driver transport as the practical way to travel between places. It also notes that self-drive rental is not available to visitors.",
+        "A longer itinerary might add Bumthang or another central region, but distance across mountain roads changes the rhythm. The official site lists domestic airports in Bumthang and other regions while warning that weather can disrupt some flights. Choose a longer route only if you have time for transfer slack and a local operator’s current advice. A map line is not a reliable estimate of a day’s pace."
+      ]
+    },
+    {
+      "heading": "Make Paro more than an arrival point",
+      "paragraphs": [
+        "Paro is a place to give its own time. The official Bhutan travel guide describes sacred sites and asks visitors to move quietly, dress respectfully and avoid photography inside temples. That guidance matters when you visit a dzong, monastery or shrine: learn the rules at the entrance, keep a respectful distance from worshippers and ask before photographing people.",
+        "If a hike to Taktsang (Tiger’s Nest) is part of your plan, make it the main activity for that day and discuss the route, weather, footwear and pace with your certified guide. Bhutan’s official adventure page lists the Paro Taktsang hike as a substantial outing; do not treat that listing as a promise about current access or suitability. Keep another day less demanding so the trip does not depend on forcing the hike into a tight schedule."
+      ]
+    },
+    {
+      "heading": "Compare a Punakha day with a central-valley extension",
+      "paragraphs": [
+        "A western loop can pair the urban and cultural texture of Thimphu with Punakha’s river valley and dzong. Bhutan’s official tourism journal describes Punakha Dzong beside the Mo Chhu and Po Chhu rivers and names the covered Bazam Bridge and pedestrian suspension bridge as nearby features. That gives a visitor a distinct day centered on architecture and landscape rather than another mountain hike.",
+        "A central extension changes the purpose of the trip. Bumthang can introduce a different valley and cultural hike, but the tourism authority lists domestic flights as one possible connection and recommends speaking with a local operator before planning them. Check actual transport and lodging arrangements first; do not assume a domestic flight exists on the day you prefer or that weather will cooperate."
+      ]
+    },
+    {
+      "heading": "Plan with the local rules in view",
+      "paragraphs": [
+        "Bhutan’s official FAQs state that visitors must travel with a Department of Tourism-certified guide, and that trekking must be arranged through an accredited tour operator or guide. The same FAQ says route permits are no longer required for travel around the country when accompanied by a certified guide, while restricted areas remain subject to restrictions. Those are current statements on the official travel site as checked here, but entry rules can change; confirm your own passport, visa and route requirements directly with Bhutan’s Department of Tourism before booking.",
+        "The FAQ also says tourist accommodation or campsites must be approved by the Department of Tourism, and notes that monsoon conditions can disrupt transport and services. Ask the operator to confirm lodging status, transfers, weather contingencies and who to contact if a connection changes. A locally arranged plan is part of responsible travel in a mountainous country, not an obstacle to independent curiosity."
+      ]
+    },
+    {
+      "heading": "Leave room for the visit itself",
+      "paragraphs": [
+        "Choose one cultural site and one landscape experience for each region, then leave time for an ordinary meal, market or conversation. Bhutan’s tourism guidance explicitly asks visitors to respect privacy and seek permission before taking someone’s photo. Be a guest: avoid turning a prayer, festival or village routine into a staged encounter, and follow instructions at sacred places.",
+        "Write a route with a clear start and finish: arrive in Paro, spend time in the western valleys, and add a central destination only if transport and time support it. Then ask an approved local operator to check the sequence against current road, accommodation and entry conditions. The result is a smaller list of places, but a better chance to notice where each valley differs."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Visit Bhutan",
+      "url": "https://bhutan.travel/visit",
+      "publisher": "Department of Tourism, Bhutan",
+      "purpose": "Supports Paro international entry, regional domestic airports, vehicle-and-driver travel, no self-drive rental and visitor etiquette at sacred sites."
+    },
+    {
+      "title": "Bhutan Travel FAQs",
+      "url": "https://bhutan.travel/faqs",
+      "publisher": "Department of Tourism, Bhutan",
+      "purpose": "Supports current guide/trek requirements, route-permit statement, approved accommodation and general weather-disruption planning."
+    },
+    {
+      "title": "Bhutan's adventure experiences",
+      "url": "https://bhutan.travel/adventure-experiences",
+      "publisher": "Department of Tourism, Bhutan",
+      "purpose": "Names the Paro Taktsang and Bumthang Cultural hikes as examples; does not establish individual suitability or current access."
+    },
+    {
+      "title": "Bhutan is family friendly",
+      "url": "https://bhutan.travel/journal/editorial/bhutan-is-family-friendly",
+      "publisher": "Department of Tourism, Bhutan",
+      "purpose": "Supports the Punakha Dzong, river and bridge landmarks used as a named western-route example."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "trek-to-everest-base-camp",
+    "spend-a-week-in-a-monastery-or-retreat-centre",
+    "community-d511273f-b104-5228-b141-f343c01a5e5e"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

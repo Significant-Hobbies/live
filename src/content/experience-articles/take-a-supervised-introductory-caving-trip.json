@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "take-a-supervised-introductory-caving-trip",
+  "slug": "take-a-supervised-introductory-caving-trip",
+  "title": "Plan a supervised first caving trip with the right questions",
+  "description": "Approach a first caving trip through a reputable club or qualified provider, checking the route, equipment, group support and conditions before you go underground.",
+  "intent": "What should a beginner ask before joining a supervised caving trip, and when should they turn back?",
+  "relatedExperienceSlugs": [
+    "find-a-permitted-geocache-near-home",
+    "take-a-sheltered-water-paddleboard-starter-lesson",
+    "navigate-a-beginner-orienteering-course-with-a-paper-map"
+  ],
+  "sections": [
+    {
+      "heading": "Choose a guided route built for newcomers",
+      "paragraphs": [
+        "Caving is an environment where ordinary outdoor improvisation can become serious quickly. For a first visit, use a recognized caving club or qualified provider that explicitly welcomes beginners and can explain the route, supervision and equipment. The British Caving Association’s “New to Caving?” page is a starting point for finding out how to get involved, but it does not replace a direct briefing from the group responsible for your trip.",
+        "Ask how long the trip lasts, what the route involves, how many leaders accompany the group, and what happens if someone wants to stop. Be candid about mobility, claustrophobia, medical concerns or previous experience. A trustworthy organizer will use that information to match you to a suitable outing or recommend waiting."
+      ]
+    },
+    {
+      "heading": "Check equipment and access before the day",
+      "paragraphs": [
+        "Ask who supplies helmet, light, protective clothing and footwear, and whether each item will be fitted before entering the cave. Do not assume a phone torch, fashion headlamp or ordinary trainers are substitutes for trip equipment. Ask what layers are appropriate, where personal items are stored and whether the group needs a change of clothes for after the trip.",
+        "Caves are not all open to visitors. Access can depend on landowner permission, conservation needs, seasonal closures or local rules. Confirm that the trip has permission to use the route and follow the leader’s instructions about gates, surfaces and fragile features. Leave no marks, take nothing from the cave and avoid touching formations unless the leader says a specific surface is safe to handle."
+      ]
+    },
+    {
+      "heading": "Agree on communication and a turnaround plan",
+      "paragraphs": [
+        "Before entering, listen for the group’s signals, spacing and what to do if you cannot hear the leader. Ask how the group will stay together and how a leader will respond if someone feels unwell or anxious. Know where the planned turnaround point is and what conditions would make the leader shorten the trip.",
+        "You can stop or decline a section at any time. Do not let embarrassment push you into squeezing through a space that feels wrong or continuing after you have lost confidence. If a route narrows, floods, or seems different from the briefing, wait for the leader rather than exploring ahead."
+      ]
+    },
+    {
+      "heading": "Use the first trip to learn the environment",
+      "paragraphs": [
+        "A beginner outing is successful if you learn how the group moves, how your light works, and what the cave feels like at a manageable pace. You do not need to reach a dramatic chamber or complete every passage. Notice how sounds, temperature and footing differ from outdoors, and keep your attention on the leader and route rather than trying to make a photograph at every stop.",
+        "A first attempt should be with a supervised group that provides equipment and a clear exit plan. If any part of the briefing is vague, ask before the trip; if the answer remains unclear, choose a different provider."
+      ]
+    },
+    {
+      "heading": "Debrief before planning more",
+      "paragraphs": [
+        "After leaving the cave, check that everyone has returned, changed or warmed up as planned, and tell the leader about equipment or route issues. Make a note of what felt comfortable and what you would ask for next time. A second trip should build on that information, not escalate the challenge for its own sake.",
+        "The British Caving Association offers a newcomer route and information about clubs and training. Use those official resources to identify a local group, then verify current access and trip details with its organizer."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "New to Caving?",
+      "url": "https://british-caving.org.uk/new-to-caving/",
+      "publisher": "British Caving Association",
+      "purpose": "Primary newcomer guidance and route into caving clubs; current route, equipment and access must be confirmed with the trip leader."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

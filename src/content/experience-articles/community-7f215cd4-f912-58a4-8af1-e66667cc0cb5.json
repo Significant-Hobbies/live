@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "community-7f215cd4-f912-58a4-8af1-e66667cc0cb5",
+  "slug": "live-a-day-literally-like-a-king",
+  "title": "Spend a day inside a king’s working palace, not a fantasy",
+  "description": "Build a historically grounded “day as a king” around Hampton Court’s Great Hall, kitchens and gardens, while distinguishing royal life from modern luxury.",
+  "intent": "How can I create a vivid day imagining royal life while learning from the public spaces and limits of a real palace?",
+  "sections": [
+    {
+      "heading": "Choose a palace that lets you follow a sequence",
+      "paragraphs": [
+        "A meaningful “day like a king” is more than expensive food or a rented costume. Choose a historic palace with public rooms that show how status, work and ceremony were organized. Hampton Court Palace is a concrete option: the Historic Royal Palaces itinerary recommends seeing Henry VIII’s apartments, the Great Hall, kitchens, chapel and gardens, with different routes depending on how much time a visitor has. Confirm current admission and access before traveling.",
+        "Keep the premise honest. You are a visitor studying royal life, not a king with private access to a historic home. Stay in public visitor areas, follow photography and accessibility guidance, and avoid costumes or behavior that might disrupt staff and other visitors. The point of the day is to understand the labor and hierarchy behind royal display."
+      ]
+    },
+    {
+      "heading": "Start in the kitchens to see the work behind the feast",
+      "paragraphs": [
+        "Henry VIII’s Kitchens make a better first stop than beginning with a grand banquet fantasy. Historic Royal Palaces describes the kitchens as a large, busy complex with separate departments and a route from inspection and preparation through cooking and service. Food moved from the kitchens toward the Great Hall and other chambers. As you walk through, look for the practical layout: where goods were received, where meat was cooked, how corridors moved food, and how the serving space connected the kitchen to court.",
+        "This makes “live like a king” more interesting because a royal household was a system of many workers. The palace’s source says cooks, sergeants, grooms and pages worked in the kitchen complex. Notice the difference between the king’s visible status and the invisible organization that fed the court. Avoid assuming every chamber or daily ritual is represented exactly as it was in Henry’s time; palace spaces accumulated changes across centuries."
+      ]
+    },
+    {
+      "heading": "Read the Great Hall as a place of access",
+      "paragraphs": [
+        "Move from the kitchens toward the Great Hall and ask who would have been permitted to enter which room. The palace’s official material describes the hall as a dining space for household members and servants, and as a place for plays and special events. It was not simply a glamorous dining room. Its size and position helped make rank visible and shaped how people moved through the court.",
+        "Choose one detail to examine closely: a threshold, a table arrangement, a tapestry or a doorway into the next chamber. Imagine the sequence of service and ceremony without inventing a personal encounter or a reconstructed schedule. A guide or audio tour can distinguish what is documented from what is only plausible."
+      ]
+    },
+    {
+      "heading": "Use gardens and games to change the pace",
+      "paragraphs": [
+        "After the indoor rooms, leave time for the gardens. The Historic Royal Palaces visitor itinerary treats the outdoor grounds as part of a full visit rather than a brief backdrop. A garden walk gives your day a pause and invites a different question: how did the landscape frame the palace, host visitors or separate public and private space? Check current access, weather and any seasonal closures before relying on a specific route.",
+        "If the palace offers an interpretation of court games or entertainment, use that rather than trying to stage an imitation for other visitors. You might make a personal “royal table” at a restaurant afterward by choosing a meal thoughtfully, but do not claim it recreates Tudor food unless a qualified source or venue does. Keep the playful part grounded in what you learn."
+      ]
+    },
+    {
+      "heading": "Finish by comparing ceremony with ordinary life",
+      "paragraphs": [
+        "At the end of the visit, write two short lists: what looked luxurious, and what looked like work, rules or responsibility. The contrast keeps the exercise from becoming a shopping checklist. Royal status was connected to public ceremony and court hierarchy as well as privilege. A modern visitor can experience the architecture and interpretation, but not the authority or private routines that came with being a monarch.",
+        "Before going, check the palace’s current visitor map, hours, access information and what rooms are open. The next step is to choose one palace route by the time you have, then use a guide or audio tour to connect kitchens, hall and gardens into a day that teaches you how the royal household actually functioned."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Itinerary for Hampton Court Palace",
+      "url": "https://www.hrp.org.uk/hampton-court-palace/visit/itineraries/",
+      "publisher": "Historic Royal Palaces",
+      "purpose": "Supports a visitor sequence through Henry VIII’s apartments, kitchens, chapel, hall and gardens with time-dependent options."
+    },
+    {
+      "title": "Henry VIII’s Kitchens",
+      "url": "https://www.hrp.org.uk/hampton-court-palace/whats-on/henry-viiis-kitchens/",
+      "publisher": "Historic Royal Palaces",
+      "purpose": "Supports the kitchen complex’s organization and route of food preparation and service; used as historical interpretation, not a claim to recreate a royal day."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "visit-the-taj-mahal-at-dawn",
+    "explore-a-historic-stepwell-s-water-architecture",
+    "look-at-one-museum-object-for-twenty-minutes"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

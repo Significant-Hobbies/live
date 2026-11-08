@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "join-a-supervised-invasive-plant-removal-workday",
+  "slug": "join-a-supervised-invasive-plant-removal-workday",
+  "title": "What to expect at a supervised invasive-plant workday",
+  "description": "Join an authorized plant-removal workday, learn the target species and handling plan, and leave identification, tools and disposal to trained local leaders.",
+  "intent": "How to take part responsibly in an invasive-plant workday, with attention to identification, permits, tools, disposal and why a plant should never be pulled from a guess.",
+  "relatedExperienceSlugs": [
+    "install-a-locally-appropriate-wildlife-shelter-with-expert-advice",
+    "take-part-in-a-seasonal-butterfly-count",
+    "document-a-wild-species-for-inaturalist"
+  ],
+  "sources": [
+    {
+      "title": "Weed Warriors",
+      "url": "https://www.nps.gov/rocr/getinvolved/weed-warriors.htm",
+      "publisher": "U.S. National Park Service, Rock Creek Park",
+      "purpose": "Supports the local program model of training, staff-selected sites, a control plan, species-identification checks and permits."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Find the group that owns the work",
+      "paragraphs": [
+        "Start with a land manager, park, conservation organization or organized volunteer event. Ask which landowner has authorized the work, what species are being targeted, and whether registration or training is required. Do not decide on your own that a plant is invasive and remove it from a public path, private garden or natural area; the same species can have different status by region, and mistaken removal can harm native plants.",
+        "Rock Creek Park’s Weed Warrior program shows one supervised model: volunteers receive park training, work with staff to choose a site, help make a control plan, and demonstrate identification knowledge. Details differ by place, but the sequence matters: the land manager sets the target and method before a volunteer picks up a tool."
+      ]
+    },
+    {
+      "heading": "Learn the target before touching plants",
+      "paragraphs": [
+        "At the workday, ask the leader to show the target species in several stages if possible: young leaves, mature growth, flowers or seed heads. Then ask what look-alikes to leave alone. A confident plant name is not enough if you cannot distinguish it from a similar native plant in the actual patch.",
+        "Keep a field note with the local name, any scientific name the leader provides, the parts used for identification, and the boundary of the work area. If you are unsure, point and ask. Photographing first can help you compare later, but a phone identification app should not authorize removal. The leader’s marked target and local plan govern what gets handled."
+      ]
+    },
+    {
+      "heading": "Follow the assigned method and equipment",
+      "paragraphs": [
+        "Different plants need different controls. A work leader may assign hand removal, cutting seed heads, bagging, surveying or another approved task. Do only the job you have been trained and equipped to do. Do not bring herbicide or use a pruning saw, lopper or powered tool unless the organizer assigned it and showed you the required protective steps.",
+        "Ask where removed material goes. Seed-bearing stems, roots and invasive fragments may need different handling, and leaving a pile at the trail edge can spread material or create a disposal problem. Follow instructions on footwear, gloves, handwashing and cleaning tools before leaving the site. If a thorn, rash, cut or other problem appears, stop and tell the leader rather than pushing through."
+      ]
+    },
+    {
+      "heading": "Keep the work within its boundary",
+      "paragraphs": [
+        "A removal site can be marked with flags, paint or a map. Stay inside the work zone and keep a clear buffer around plants that are not identified as targets. If the patch ends abruptly, check rather than extending the job into a neighboring area. The point is ecological stewardship under a plan, not making the ground look tidier.",
+        "Ask whether the team wants observations recorded, such as the location of a patch or the number of bags removed. Use the format the organizer gives you. A personal estimate or social post should not imply a measured restoration result unless the work team collected that evidence. Leave signage, survey markers and habitat structures in place."
+      ]
+    },
+    {
+      "heading": "Finish with a useful handoff",
+      "paragraphs": [
+        "Before leaving, ask where tools should be cleaned, whether bags go to a collection point, and what clothing or body checks are recommended after the task. Follow the organizer’s procedure for reporting an injury, a misidentified plant or an area the team could not finish. These details can prevent material from spreading beyond the site and help staff plan follow-up.",
+        "Write down the name of the group and the target you actually worked on, then ask when another session is appropriate. In the Rock Creek Park example, the program uses training, park-selected areas and staff-designed control plans; your local route may differ. The next useful step is to register for the next authorized workday, not to start clearing plants on your own."
+      ]
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "build-a-fruit-battery-and-measure-its-output",
+  "slug": "build-a-fruit-battery-and-measure-its-output",
+  "title": "Measure what a fruit cell can and cannot power",
+  "description": "Build a low-voltage fruit battery with an adult or teacher, measure the voltage, and compare cells without treating a reading as useful power.",
+  "intent": "How do you test a fruit battery fairly and understand its limits? This guide adds a controlled comparison, meter-reading notes, and safe boundaries for a small classroom experiment.",
+  "sections": [
+    {
+      "heading": "Set a modest experiment question",
+      "paragraphs": [
+        "Ask one question, such as whether two kinds of citrus produce different meter readings with the same electrodes. Gather fruit, a copper strip, a zinc-coated nail, insulated clip leads, and a multimeter. Follow an established classroom procedure. Australian National University’s experiment uses separate metal electrodes in citrus and explicitly says not to eat fruit after metal has been inserted.",
+        "Work on a tray, keep the fruit away from food, and do not connect the setup to household electronics, a wall outlet, or a rechargeable battery. A fruit cell is a demonstration for measurement, not a power source for devices. If you are a child, have an adult handle sharp metal and supervise the meter."
+      ]
+    },
+    {
+      "heading": "Keep the electrodes apart",
+      "paragraphs": [
+        "For each cell, place one copper electrode and one zinc-coated electrode into opposite sides of the fruit so they do not touch inside it. Attach clip leads only as shown in your supervised procedure. If the metals touch, the measurement may no longer represent the fruit cell. Keep wire ends from contacting each other, too.",
+        "A lemon battery works because the acidic juice acts as an electrolyte while the two different metals participate in a chemical reaction. ANU describes zinc as the electrode that releases electrons into the circuit and copper as the other terminal. The fruit provides the medium; it is not storing electricity like a charged household battery."
+      ]
+    },
+    {
+      "heading": "Measure before trying to light anything",
+      "paragraphs": [
+        "Set the multimeter to the correct voltage range by following its manual or your instructor’s instructions. Touch the probes to the free terminals and record the display with the electrode materials, fruit type, and meter setting. Do not guess which mode is active. If readings are negative, reverse probe orientation rather than changing wires blindly.",
+        "Repeat the same setup several times before comparing fruits. Use the same electrode spacing, insertion depth, contact, and measurement method. A result that changes from trial to trial may come from contact quality or setup differences. Write every reading rather than selecting the one that best supports your guess."
+      ]
+    },
+    {
+      "heading": "Compare one change at a time",
+      "paragraphs": [
+        "If you want to compare lemons and limes, keep the electrodes and procedure consistent. If you want to compare series connection with a single cell, build the series circuit only under instruction and confirm polarity before connecting an LED. ANU’s activity links multiple lemon cells in series to higher voltage; do not extrapolate that into a claim about running ordinary electronics.",
+        "A meter measures a voltage difference, not how long the setup can deliver useful current. An LED may fail to light even when the meter shows voltage. That is a useful result: the experiment can demonstrate electrochemistry without powering a practical device."
+      ]
+    },
+    {
+      "heading": "Close the experiment cleanly",
+      "paragraphs": [
+        "Keep all tested fruit out of the kitchen and dispose of it rather than eating it. Wash hands and wipe the tray after disconnecting the leads. Remove metal pieces carefully with adult help, and follow your class’s disposal instructions. Do not leave exposed clips or nails within reach of younger children.",
+        "Your next action is to record one baseline measurement and repeat it before changing the fruit. Make a small table with fruit, electrode pair, reading, and notes about contact. A fair test is more interesting than a dramatic LED; it shows what the setup can actually tell you."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How to make a lemon battery",
+      "url": "https://science.anu.edu.au/engagement/science-lab-experiments-home-school/how-make-lemon-battery",
+      "publisher": "Australian National University",
+      "purpose": "ANU supplies a citrus-cell experiment, electrode pairing, voltage measurement and a warning not to consume fruit after inserting metal."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-and-troubleshoot-a-battery-powered-switch-circuit",
+    "light-up-a-paper-circuit-card"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

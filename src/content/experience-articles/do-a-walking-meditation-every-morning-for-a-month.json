@@ -1,0 +1,57 @@
+{
+  "experienceSlug": "do-a-walking-meditation-every-morning-for-a-month",
+  "slug": "do-a-walking-meditation-every-morning-for-a-month",
+  "title": "Keep a morning walking practice small enough to repeat",
+  "description": "Build a month of morning walking meditation with a simple route, a comfortable pace, and a fallback for weather or interrupted mornings.",
+  "intent": "Show how to practice walking meditation as a specific attention exercise, distinct from a daily step-count or fitness challenge.",
+  "sections": [
+    {
+      "heading": "Make the practice different from a walk for exercise",
+      "paragraphs": [
+        "A walking meditation is not mainly about distance, speed, or steps. Plum Village describes the practice as knowing that you are walking, noticing contact with the ground and the flow of breathing, and moving at a leisurely pace. That makes this month-long goal different from a step-count challenge or a fitness plan. You can do it on a short path, in a quiet courtyard, or along a familiar sidewalk, as long as the setting lets you walk attentively and safely.",
+        "Choose a modest duration you can fit before the day gets complicated. You might start with a few minutes, then use the same approximate window each morning. There is no universal minimum that makes the practice count. If your goal is to complete a month, decide whether a short practice on a busy morning qualifies and write that down before the first day. A clear, flexible rule is more useful than restarting the calendar over one disrupted morning."
+      ]
+    },
+    {
+      "heading": "Choose a route that does not compete for attention",
+      "paragraphs": [
+        "Pick a familiar loop with an even surface, low traffic, and enough space to pause without blocking anyone. If you walk outdoors before sunrise, account for visibility, weather, and local access rules; use a safe, well-lit route rather than closing your eyes or looking down for long stretches. Indoors, a hallway or open room can work if there is room to turn without colliding with furniture. Keep your phone available for emergencies, but silence or set aside non-urgent alerts if that is safe for you.",
+        "Decide what you will do if the planned route is unavailable: walk a shorter indoor path, use a level public corridor, or practice the same sequence while moving slowly in a safe open space. This fallback protects the habit from weather and schedule changes without asking you to take unnecessary risks. If walking is painful or inaccessible, choose an adapted form with a qualified teacher or clinician rather than forcing the movement."
+      ]
+    },
+    {
+      "heading": "Use a simple attention sequence",
+      "paragraphs": [
+        "Begin by standing still for a moment and noticing your posture. As you walk, feel one or two steps at a time: heel or foot making contact, weight shifting, then the next step. Let breathing find its natural rhythm. In Plum Village’s guidance, steps can be coordinated with breaths in a way that suits the walker; there is no need to stretch or hold your breath to match a count. If counting becomes distracting, return to the feeling of walking.",
+        "Keep your eyes open and take in the surrounding scene. You may notice the temperature, light, birds, traffic, or the feel of your clothes moving. When thoughts arrive, there is no need to push them away; notice them and return to the next step. This is a practice taught within the Plum Village tradition, and the article is a brief introduction rather than a substitute for instruction in that tradition or a promise of a particular mental-health result."
+      ]
+    },
+    {
+      "heading": "Make the month forgiving",
+      "paragraphs": [
+        "Track each morning with a short mark and one detail you noticed, not with a score for how calm or focused you felt. Some days your mind may be busy; some days the weather or a family need may interrupt the plan. A shorter practice can still preserve the ritual if you chose that rule in advance. If you miss a day, return the next morning instead of doubling the session or treating the lapse as failure.",
+        "If this kind of attention brings up distress, stop and choose another way to care for yourself. Meditation practices vary, and public health guidance does not establish that a practice suits everyone. Do not use a walking exercise instead of seeking professional care for a health problem. You can also practice with a teacher or community if solitary walking feels difficult or if you want to learn more about the tradition."
+      ]
+    },
+    {
+      "heading": "Close the practice before checking your day",
+      "paragraphs": [
+        "At the end of the route, stop in a safe place and notice that the walk is complete. Write one sentence about an ordinary detail from the morning, then transition to breakfast, work, or family responsibilities. At the end of the month, review what helped you return: a familiar path, shorter sessions, or a weather fallback. The next step is to choose tomorrow’s route and remove one small obstacle before going to bed."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Art of Mindful Living",
+      "url": "https://plumvillage.org/mindfulness/mindfulness-practice",
+      "publisher": "Plum Village",
+      "purpose": "Describes walking meditation as leisurely, attentive walking that notices ground contact and breathing, and gives one example of coordinating steps with breaths; this represents Plum Village instruction rather than every meditation tradition."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "meditate-every-day-for-365-days",
+    "take-a-forest-bathing-walk"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

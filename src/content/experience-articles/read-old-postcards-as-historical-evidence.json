@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "read-old-postcards-as-historical-evidence",
+  "slug": "read-old-postcards-as-historical-evidence",
+  "title": "How can an old postcard serve as historical evidence?",
+  "description": "Read an old postcard as both an image and a message, separating visible clues from guesses and checking its date, place, publisher, and context.",
+  "intent": "How do I learn from an old postcard without overreading it? This guide offers a close-looking method that treats the picture, handwriting, stamp and gaps as separate evidence.",
+  "sections": [
+    {
+      "heading": "Treat the postcard as an object with several voices",
+      "paragraphs": [
+        "An old postcard can carry an image, a short message, an address, a postmark and signs of how it was handled. Each element answers a different question. The image may be a carefully selected view of a street; the note may record one person's impression; the stamp and postmark may help place the card in time. The Library of Congress describes postcards as travel mementos, correspondence, art reproductions, jokes and visual souvenirs, so do not assume that every card was meant to be a neutral picture of everyday life.",
+        "If the card belongs to someone else, ask before scanning, handling or sharing it. Use clean, dry hands and support a fragile card on a flat surface. Photograph both sides in even light rather than pressing it under a heavy book. Note stains, folds, fading or missing corners because those are part of its history, but do not treat damage as proof of a particular event."
+      ]
+    },
+    {
+      "heading": "Look first, then write down questions",
+      "paragraphs": [
+        "Before reading the message, describe what you can actually see. List the people, buildings, signs, vehicles, clothing, weather and printed caption. Note where the publisher placed the title and whether the picture appears to be a photograph, illustration or retouched view. Then turn the card over and transcribe the writing as faithfully as possible, keeping uncertain words marked with a question mark rather than silently correcting them.",
+        "The Library of Congress's primary-source guidance encourages viewers to observe first, notice surprises and questions, then think about what the object suggests. Use that sequence here. A useful table has three columns: “visible clue,” “possible meaning,” and “what would confirm it.” For example, a shop sign may suggest a location, but a matching street directory or another image would confirm the identification. That distinction keeps a plausible story from becoming an asserted fact."
+      ]
+    },
+    {
+      "heading": "Date the card with several clues",
+      "paragraphs": [
+        "Start with the clearest date you have, such as a legible postmark or a written year. Then check the card's format, stamp and publisher information. The Library of Congress notes that postcards in the United States developed through distinct periods: private cards appeared earlier, a 1898 law permitted privately printed cards at a one-cent rate, and divided backs allowing both address and message were in use by 1907. These are clues, not a shortcut to an exact date; printing styles and postal rules varied by country, and older cards could be sent much later than they were made.",
+        "If the postmark is faint, compare the postmark, stamp design and message rather than choosing the date that feels right. Search the publisher's name, caption wording or visible landmark in a library catalog or archive. The Library of Congress postcard guide points to collections in different divisions and eras, which can help you find similar examples. Record the source for each identification so another reader can follow your reasoning."
+      ]
+    },
+    {
+      "heading": "Read the message without making it speak for everyone",
+      "paragraphs": [
+        "A short note is a personal record, not a complete survey of the town or period. Ask who wrote it, to whom, from where and for what likely purpose. A greeting sent to reassure family may omit hardship; a tourist card may show the view the sender wanted to share. Look for ordinary details—weather, travel delays, a planned visit—but avoid inferring a person's inner life from one phrase. If the handwriting is hard to read, keep a photograph and mark uncertain transcription rather than guessing.",
+        "The image can be just as selective as the message. A postcard showing a new hotel tells you that someone chose to publish that view; it does not establish how local residents experienced the place. Compare the card with a map, newspaper, census record or another photograph from a trustworthy archive. Keep context near the image and distinguish period evidence from later captions added by collectors or sellers."
+      ]
+    },
+    {
+      "heading": "Write a short evidence note",
+      "paragraphs": [
+        "A useful record can be only a few sentences: what the postcard shows, what its message says, the strongest date or location clue, one interpretation and one open question. Keep a literal description separate from your inference. If you share a scan, include the archive or owner, catalog number if available, and any use restrictions. Private correspondence can contain living people's personal details, so think carefully before posting names and addresses in public.",
+        "Your next action is to select one postcard, photograph both sides, transcribe the message and build the three-column clue table. Then search one distinctive landmark or publisher name in a library catalog before writing a final caption."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Postcards: Greetings from the Prints & Photographs Division",
+      "url": "https://guides.loc.gov/postcards",
+      "publisher": "Library of Congress",
+      "purpose": "Supports postcard uses, collection scope and the historical distinction between early cards, the 1898 law and divided backs by 1907."
+    },
+    {
+      "title": "Getting Started with Primary Sources",
+      "url": "https://www.loc.gov/programs/teachers/getting-started-with-primary-sources/",
+      "publisher": "Library of Congress",
+      "purpose": "Supports observing the object first, asking questions, and treating primary sources as incomplete evidence that needs context."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "trace-the-journey-of-one-inherited-object",
+    "curate-a-five-object-museum-of-your-life",
+    "look-at-one-museum-object-for-twenty-minutes"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

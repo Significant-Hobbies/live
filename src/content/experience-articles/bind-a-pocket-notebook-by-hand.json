@@ -1,0 +1,51 @@
+{
+  "experienceSlug": "bind-a-pocket-notebook-by-hand",
+  "slug": "bind-a-pocket-notebook-by-hand",
+  "title": "How do you sew a small notebook that opens flat enough to use?",
+  "description": "Make a simple stitched pocket notebook by choosing a compact page count, aligning a folded signature, and adjusting thread tension for a clean opening.",
+  "intent": "Help a beginner choose a one-signature binding, prepare a tidy hole pattern, and troubleshoot the balance between secure stitching and a notebook that opens comfortably.",
+  "sections": [
+    {
+      "heading": "Keep the first notebook small",
+      "paragraphs": [
+        "A pocket notebook is a good first book because it asks you to solve only a few problems: paper alignment, a folded spine, and a thread path. Choose a paper size that folds into a comfortable pocket format, then use a handful of sheets rather than a thick stack. One folded set of pages is called a signature. If you add too many sheets at once, the inner pages can bulge past the cover and the spine may resist closing. A small booklet also gives you a chance to practise a stitch without investing in special tools.",
+        "The University of Utah Book Arts Program describes a basic pamphlet stitch using a folded signature, three holes, and a single length of thread. That is a useful structure for a notebook, zine, or short collection of notes. Decide how the book will be used before choosing paper: a soft cover and light pages suit a pocket memo book, while heavier drawing paper may need fewer sheets. Reuse clean scrap paper for a prototype before cutting your final materials."
+      ]
+    },
+    {
+      "heading": "Fold and align before piercing",
+      "paragraphs": [
+        "Stack the paper neatly, fold it in half, and press the crease with a bone folder or the side of a spoon. Fold the cover around the pages and check that the spine edges line up. If the inner pages protrude, use fewer sheets or make the cover slightly larger; trimming later is possible but can produce uneven edges. Open the booklet to the center fold and mark three sewing positions: one in the middle and one near each end, with enough space to keep the paper from tearing.",
+        "Use an awl or push pin only on a protected work surface and direct the point away from your hand. If you are making the notebook with a child, an adult should handle piercing or prepare the holes in advance. Keep all holes on the fold so the thread will sit in the spine rather than pull the pages out of alignment. A folded paper template with matching marks makes it easier to repeat the pattern on the cover and signature."
+      ]
+    },
+    {
+      "heading": "Sew the pamphlet stitch without crushing the spine",
+      "paragraphs": [
+        "Cut a length of thread long enough to travel through the three holes and leave tails to tie. Thread a blunt bookbinding needle if you have one. Start at the center hole, leaving a tail on the outside, then sew through one end hole, across the spine to the other end, and back through the center. Keep the thread path tidy and make sure the final ends sit on opposite sides of the long center stitch. Tie a simple knot around that stitch to secure it, as shown in the Utah lesson plan.",
+        "The important adjustment is tension. Pull enough to hold the pages together, but not so tightly that the paper wrinkles or the fold bows. If you cannot open the notebook comfortably, loosen and retie before trimming the ends. If one hole tears, do not keep yanking at it; make a fresh prototype with holes set farther from the edge and a smaller paper stack. These small corrections are easier while the thread is still accessible."
+      ]
+    },
+    {
+      "heading": "Use the prototype to choose your next version",
+      "paragraphs": [
+        "Open the notebook from front to back and check that the cover stays aligned, the pages turn without snagging, and the center knot is secure. Write a few lines near the middle and at the page edges. That quick test reveals whether the paper is pleasant to write on and whether the notebook opens enough for its intended use. You may find that a shorter page count, wider cover, or a different thread thickness improves the next version.",
+        "Leave the first notebook imperfect and usable rather than endlessly reworking it. Label the inside cover with the paper and stitch choices, then put it to work for grocery notes, walk observations, or small sketches. If you want to continue bookbinding, make a second copy with one controlled change—perhaps a two-hole version for comparison or a more flexible cover. The next useful step is to keep the template and mark what you would change while the process is still fresh."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Pamphlet Stitch",
+      "url": "https://lib.utah.edu/collections/book-arts/community/Pamphlet%20Stitch%20Lesson%20Plan.pdf",
+      "publisher": "University of Utah Marriott Library Book Arts Program",
+      "purpose": "Supports the one-signature, three-hole pamphlet stitch pattern and basic material choices."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "weave-a-miniature-tapestry-on-cardboard",
+    "fold-an-interlocking-origami-sculpture"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

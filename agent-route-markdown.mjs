@@ -71,13 +71,13 @@ export async function handlePublicRouteMarkdown(request, loadMarkdown) {
   const direct =
     requestedUrl.pathname === '/api/md' || requestedUrl.pathname.startsWith('/api/md/');
   const explicitMarkdown = direct || isMarkdownAlternatePath(requestedUrl.pathname);
-  const sourcePath = direct
+  const documentPath = direct
     ? normalizePath(`/${requestedUrl.pathname.replace(/^\/api\/md\/?/, '')}`)
     : explicitMarkdown
       ? htmlPathFromMarkdown(requestedUrl.pathname)
       : normalizePath(requestedUrl.pathname);
 
-  if (explicitMarkdown && !isPublicAgentDocumentPath(sourcePath)) {
+  if (explicitMarkdown && !isPublicAgentDocumentPath(documentPath)) {
     return markdownError(404, 'Not found', requestedUrl.pathname, request.method);
   }
   // Non-.md requests: only negotiate markdown for known public documents.
@@ -87,10 +87,22 @@ export async function handlePublicRouteMarkdown(request, loadMarkdown) {
   // A markdown request (via Accept negotiation) for a path that has no
   // public document surface: return a real 404 with a markdown body so
   // agents don't receive the 200 HTML app shell for unknown routes.
-  if (!explicitMarkdown && !isPublicAgentDocumentPath(sourcePath)) {
+  if (!explicitMarkdown && !isPublicAgentDocumentPath(documentPath)) {
     return markdownError(404, 'Not found', requestedUrl.pathname, request.method);
   }
 
+  const filters = new URLSearchParams();
+  if (documentPath === '/blog') {
+    for (const [key, limit] of [
+      ['category', 80],
+      ['q', 100],
+      ['page', 20],
+    ]) {
+      const value = requestedUrl.searchParams.get(key)?.trim().slice(0, limit);
+      if (value) filters.set(key, value);
+    }
+  }
+  const sourcePath = `${documentPath}${filters.size ? `?${filters}` : ''}`;
   const markdown = await loadMarkdown(sourcePath, request);
   if (!markdown) {
     return markdownError(404, 'Public document unavailable', sourcePath, request.method);

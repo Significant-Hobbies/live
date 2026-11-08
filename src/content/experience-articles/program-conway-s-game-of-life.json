@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "program-conway-s-game-of-life",
+  "slug": "program-conway-s-game-of-life",
+  "title": "How can you code Conway’s Game of Life and check each generation?",
+  "description": "Represent cells on a grid, apply the four neighbour-count rules to a copy of the board, and test recognizable patterns before adding controls.",
+  "intent": "A clear implementation and debugging plan for Conway’s Game of Life, focused on update order, boundaries and small test patterns.",
+  "sections": [
+    {
+      "heading": "Model the grid before writing the loop",
+      "paragraphs": [
+        "Conway’s Game of Life is a cellular automaton: each cell is alive or dead, and its next state depends on its eight neighbours. The University of Auckland lecture notes describe the grid and rules, including survival with two or three neighbours, death outside that range and birth at exactly three. Start with a small rectangular board so you can inspect each generation by eye.",
+        "Choose a clear representation: a two-dimensional array of booleans, numbers or simple symbols. Keep the data for the current generation separate from the data you are calculating for the next one. If you overwrite cells immediately, later cells may count some new values and some old values, producing a result that is not one synchronous generation."
+      ]
+    },
+    {
+      "heading": "Write the four cases in ordinary language",
+      "paragraphs": [
+        "For a live cell, count neighbours: it stays alive with two or three; otherwise it becomes dead. For a dead cell, it becomes alive with exactly three neighbours; otherwise it remains dead. Keep these rules close to the update function so you can compare each branch with the source.",
+        "Decide how to handle the board’s edges. The lecture notes introduce an infinite grid, but a first program usually has a finite board. You can treat everything outside the edges as dead, wrap cells from one side to the other, or use a larger board with enough empty margin. State that choice because it affects what a pattern does near the boundary."
+      ]
+    },
+    {
+      "heading": "Calculate the next board from the old one",
+      "paragraphs": [
+        "For each cell, inspect the eight surrounding positions and count which are alive. Then set that cell’s next state according to the rules. Once every cell has been calculated, replace the current board with the complete next board. This separation is the most important implementation detail: all cells update at the same time.",
+        "If a neighbour coordinate falls outside a finite board, apply your chosen boundary rule consistently. Test a corner and an edge by drawing the neighbours on paper. Off-by-one errors often appear when a loop includes one coordinate too many or skips the last row. Keep a tiny board you can verify manually."
+      ]
+    },
+    {
+      "heading": "Use known patterns as checks",
+      "paragraphs": [
+        "Start with a block of four live cells, which should stay fixed under the usual rules. Then try a three-cell line: it should alternate between horizontal and vertical forms. The University of Auckland notes include steady, periodic and moving patterns as behaviours to observe. Compare your program’s display with a known example and check a few generations manually.",
+        "After those tests, try a glider in a larger empty region. If it changes shape or travels differently than expected, inspect neighbour counts for one cell at a time. A pattern disappearing at the board edge may reflect your boundary choice rather than a broken rule. Record that behavior instead of silently enlarging the board."
+      ]
+    },
+    {
+      "heading": "Add controls only after the rules are right",
+      "paragraphs": [
+        "Once the generation update works, add a step button, pause, reset or random starting pattern. Keep the visual layer separate from the rule calculation so a display change does not alter the simulation. If you add a speed control, allow stepping one generation at a time for debugging.",
+        "A useful next experiment is to create a starting pattern and predict whether it will remain steady, oscillate or move. Then compare the prediction with the program. Save the pattern and the boundary rule with your notes. The interesting part is how simple local rules generate behavior you could not see from one cell alone."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Maths 190 Lecture 17: The Game of Life",
+      "url": "https://www.math.auckland.ac.nz/mathwiki/images/1/11/190_Lecture_17_Slides.pdf",
+      "publisher": "University of Auckland",
+      "purpose": "Supports the finite-cell neighbour rules, live/dead states and examples of steady, periodic and moving behavior."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "program-a-small-digital-weather-station",
+    "train-a-small-image-classifier-on-your-own-objects"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

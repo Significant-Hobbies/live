@@ -1,0 +1,54 @@
+{
+  "experienceSlug": "play-a-short-adapted-disc-golf-round",
+  "title": "How to shape a short adapted disc golf round",
+  "description": "Plan a short adapted disc golf round by choosing a safe open area, agreeing on throws and pacing, and adapting the route to each player.",
+  "intent": "A flexible first-round guide focused on shared decision-making, simple scoring, safe throws, and route choices for players with different mobility needs.",
+  "sections": [
+    {
+      "heading": "Choose a place for the players you have",
+      "paragraphs": [
+        "A beginner round does not need an official course. Look for a broad, level, low-traffic field where the group can see one another and throw away from people, paths, roads, windows, and animals. Check park rules before using a public space, and avoid crowded times. Walk or roll the proposed route before playing; a line that looks short on a map may cross soft ground, steep edges, or a narrow gate. Ask every player what distance, surface, target height, and rest options make the activity workable. A few close targets can make a satisfying round without asking anyone to prove range or speed."
+      ]
+    },
+    {
+      "heading": "Agree the adaptation before the first throw",
+      "paragraphs": [
+        "Adapted disc golf can refer to formal event rules or a casual round shaped around a player’s needs; those are not interchangeable. The Professional Disc Golf Association’s Appendix F applies when a tournament director designates an event or division for adaptive disc golf and addresses specific rule adjustments for propelled mobility devices. For a friendly outing, agree on local choices together: tee position, whether a player may throw from a seated or standing position, how to mark a lie, what counts as finishing the target, and whether a helper retrieves discs. Say the agreement aloud before the first throw so the group does not negotiate while someone is waiting."
+      ]
+    },
+    {
+      "heading": "Keep throws safe and easy to retrieve",
+      "paragraphs": [
+        "Use lightweight discs suitable for the activity and throw only when the landing area is clear. Everyone should have a visible turn order; no one walks or rolls ahead of the active thrower. Choose broad targets, such as a basket designed for disc golf or a clearly marked ground spot, instead of throwing at trees, signs, or fragile park features. If retrieval crosses rough ground or a slope, move the target closer or have a consenting companion retrieve the disc. The point is to practice a short sequence of controlled throws, not to force a risky reach. Stop if the space becomes busy or conditions make the route hard to manage."
+      ]
+    },
+    {
+      "heading": "Play for decisions, not distance",
+      "paragraphs": [
+        "A five-hole format is plenty for a first try. Give each person a similar number of throws, or use a simple “closest to the target” challenge that does not require keeping a full scorecard. Players can choose a line or distance that suits them, then notice how the disc travels and what they would adjust. A short round can include a rest between holes and a clear exit back to the starting point. Keep score only if everyone wants it; the group may prefer to count accurate passes, try a different disc, or compare routes. Ask what felt comfortable and what made access harder before setting up another round."
+      ]
+    },
+    {
+      "heading": "Use official rules when the setting calls for them",
+      "paragraphs": [
+        "If you want to enter a tournament, practice the current rules published by the PDGA and ask the tournament director what adaptive provisions apply to that event. The organization specifies that its Appendix F adjustments are used only where an event offers a designated adaptive component. A casual group can borrow the spirit of clear agreed rules, but should not imply that its home adaptations are official competition rules. For a second outing, repeat the same small course with one adjustment—closer targets, firmer surfaces, or a different throwing order—and ask each player which change helped."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Official Rules of Disc Golf, Appendix F: Adaptive Rules",
+      "url": "https://www.pdga.com/book/export/html/236656/",
+      "publisher": "Professional Disc Golf Association",
+      "purpose": "Supports the scope and event-designation context for the formal adaptive rules and their mobility-device provisions."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "try-polybat-on-an-adapted-table",
+    "play-an-introductory-game-of-boccia",
+    "try-goalball-at-an-inclusive-sports-session"
+  ],
+  "slug": "play-a-short-adapted-disc-golf-round",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

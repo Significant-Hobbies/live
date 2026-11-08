@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "listen-to-a-whole-album-without-multitasking",
+  "slug": "listen-to-a-whole-album-without-multitasking",
+  "title": "A simple ritual for listening to a whole album",
+  "description": "Choose an album, set up a comfortable listening space, and follow its sequence without multitasking so you can notice how the record develops.",
+  "intent": "How do I listen to a full album attentively when I am used to skipping tracks? This guide offers a practical listening ritual and prompts for hearing structure without needing music theory.",
+  "sections": [
+    {
+      "heading": "Choose an album that invites a full listen",
+      "paragraphs": [
+        "Pick a record you already enjoy, one recommended by someone whose taste you trust, or an album you have always meant to hear in order. A first attempt does not need to be a famous classic. Choose a length and mood that fit the time you actually have; stopping halfway because you planned an overly long session can make the exercise feel like homework.",
+        "If you are exploring an album that includes explicit, distressing or emotionally difficult material, check its content first and choose a different record if needed. Listening attentively means giving the music room while still taking care of yourself. Decide whether you prefer speakers, headphones or a physical format, and keep volume comfortable."
+      ]
+    },
+    {
+      "heading": "Make one small boundary around attention",
+      "paragraphs": [
+        "Choose a time when you can sit or do one quiet activity such as sketching. Put the phone out of reach, close unrelated tabs, and let other people know you are taking a listening break if that will help. You do not need a perfectly silent room; the goal is to reduce the interruptions you can control, not to create a studio.",
+        "Classic Album Sundays describes its listening events as contextual and uninterrupted, with time and space for engaging with an album as a whole. You can adapt that idea at home without special equipment. A short note page, a comfortable seat and a decision not to skip around may be enough."
+      ]
+    },
+    {
+      "heading": "Follow the sequence before judging individual tracks",
+      "paragraphs": [
+        "Listen from the first track through the last in order. Notice how the opening establishes an atmosphere and whether the next track changes it. Listen for recurring sounds, a lyric or rhythm that returns, a change in energy, or a quiet moment placed beside a louder one. You do not need to identify the key, chord progression or production technique to notice that one song makes another feel different.",
+        "If your attention wanders, simply return to the sound. Do not rewind every time you miss a detail; that can turn a relaxed session into a performance. Let one track pass without deciding whether it is a favourite. A song that feels ordinary alone may make more sense as a bridge or contrast within the album."
+      ]
+    },
+    {
+      "heading": "Use notes as invitations, not a review score",
+      "paragraphs": [
+        "After each side or a few tracks, write a word or short phrase: tense, spacious, funny, restless, warm. Add one observation about the sound that led you there. For example, ‘the percussion drops out in the last minute’ is more grounded than ‘this track is profound.’ If a lyric stands out, note the idea rather than copying long passages from it.",
+        "Keep personal memories separate from claims about the artist’s intention. A track may bring back a person or season for you, even if that was not what the musician had in mind. If you want context, read an interview or album note after listening. That order helps you notice your own response before another person’s explanation shapes it."
+      ]
+    },
+    {
+      "heading": "Decide what the album became as a whole",
+      "paragraphs": [
+        "At the end, ask whether your view of any track changed because of its neighbours. Did an opening return later? Did the final song resolve something or leave it open? Which track would you revisit, and which one worked better in sequence than by itself? You can answer in a few sentences; the point is to remember the experience rather than produce a polished critique.",
+        "If you repeat the ritual, choose a record from a different period, genre or language and compare how it uses sequence."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "About Classic Album Sundays",
+      "url": "https://classicalbumsundays.com/about/",
+      "publisher": "Classic Album Sundays",
+      "purpose": "Supports the idea of listening to albums contextually, communally and without interruption; personal prompts are original."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "hold-a-playlist-listening-exchange",
+    "look-at-one-museum-object-for-twenty-minutes",
+    "explore-a-garden-through-scent"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

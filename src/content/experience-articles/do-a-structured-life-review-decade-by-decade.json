@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "do-a-structured-life-review-decade-by-decade",
+  "slug": "do-a-structured-life-review-decade-by-decade",
+  "title": "Build a life timeline from scenes, not scorecards",
+  "description": "Review your life decade by decade with a flexible timeline of places, relationships, work, and turning points, leaving room for gaps and change.",
+  "intent": "Offer a structured private writing exercise for seeing different periods of life without scoring success, forcing disclosure, or claiming therapeutic benefit.",
+  "sections": [
+    {
+      "heading": "Set a purpose and a stopping point",
+      "paragraphs": [
+        "A life review can become an endless archive project unless you decide what you want from it. Choose a purpose for this pass: remember the places you have lived, notice how your work changed, identify recurring interests, or gather material for a conversation with family. You do not need to explain your whole life or reach a final judgment about it. Set a stopping point, such as one page per decade or one sitting for the first few periods.",
+        "Make a timeline with the decades as headings, but do not assume each decade deserves equal space. A childhood period you barely remember can remain a few notes, while a later move or relationship may need more room. Include approximate years when exact dates are unclear. Leaving a blank or writing ‘I don’t remember much about this time’ is more honest than filling a gap to make the page look complete."
+      ]
+    },
+    {
+      "heading": "Use the same prompts, then follow the interesting thread",
+      "paragraphs": [
+        "For each period, jot down a few anchors: where you lived, who was important, what ordinary days looked like, what you were learning, what work or care you did, and what you looked forward to. Add one specific scene, such as a meal, a commute, a room, or a conversation. Repeating a small set of prompts makes the timeline easy to scan, while a scene gives it texture beyond a list of milestones.",
+        "As an original prompt for your own review, ask: ‘What did an ordinary Sunday look like?’ or ‘What changed after I moved?’ These questions invite details instead of a yes-or-no verdict. Do not interpret every memory as evidence for one personality trait. A timeline can show contradictions and unfinished chapters without resolving them."
+      ]
+    },
+    {
+      "heading": "Separate memory from interpretation",
+      "paragraphs": [
+        "Mark what you know and what you are inferring. You might note a dated job change from a document, then write a separate sentence about how you remember feeling at the time. If family stories differ from your memory, label them as another account rather than trying to settle everything. Old calendars, letters, photographs, or public records may help with dates, but they cannot determine what an experience meant to you. If you handle original family papers or photographs, the U.S. National Archives’ Family Archives page links to guidance on handling, storing, and digitizing them; it does not validate a memory or provide a life-review method.",
+        "Avoid scoring each decade as a success or failure. The same period may include relief, loss, ordinary routine, and unexpected joy. If the review feels emotionally intense, pause or choose a less demanding period; you are not required to process painful memories alone. This is a personal writing exercise, not a clinical method or diagnosis. A qualified counselor can help if you want support with difficult material."
+      ]
+    },
+    {
+      "heading": "Look for transitions without forcing a lesson",
+      "paragraphs": [
+        "After drafting several periods, draw a line between events that changed what came next: a move, a new responsibility, a relationship ending, a course of study, or a decision you made slowly. For each, ask what you remember wanting then and what you wanted later. The purpose is to notice sequence and context, not to claim every event had a hidden reason. Some things simply happened, and some outcomes remain unresolved.",
+        "If a pattern appears, write it as a tentative observation: ‘I tend to seek quiet after a crowded period’ rather than ‘I always avoid people.’ A narrow sentence leaves room for exceptions. You can revisit the timeline in a month and see whether the pattern still feels true."
+      ]
+    },
+    {
+      "heading": "Keep the review private or share with care",
+      "paragraphs": [
+        "Store the notes somewhere you control and mark any pages you do not want others to read. If you plan to share excerpts, review names and sensitive details that involve other people. You can turn one decade into a story for a family conversation later, but this exercise is not the same as interviewing an elder or recording a family member. Those projects need the other person’s consent and a plan for use and access.",
+        "Begin with one decade and one concrete scene. Put down a place, an ordinary routine, and one change you remember. Stop at the boundary you chose. The result need not be a polished memoir; it is a private map that you can add to or leave as it is."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How to Preserve Family Archives",
+      "url": "https://www.archives.gov/preservation/family-archives",
+      "publisher": "National Archives and Records Administration",
+      "purpose": "Links to U.S. guidance for handling, storing, displaying, digitizing, and caring for family papers and photographs; it does not validate recollections or provide a life-review method."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "spend-a-day-reviewing-every-job-relationship-and-home-you-have-had",
+    "make-a-timeline-of-the-five-most-important-moments-of-your-life",
+    "write-the-story-of-how-you-became-who-you-are"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

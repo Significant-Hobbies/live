@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "repair-a-relationship-you-damaged",
+  "slug": "repair-a-relationship-you-damaged",
+  "title": "What relationship repair looks like after the apology",
+  "description": "Turn an apology into responsible follow-through: correct concrete harm, accept boundaries and rebuild trust through observable changes over time.",
+  "intent": "A guide to sustained repair after admitting harm, distinct from asking for forgiveness or assuming the relationship will return to how it was.",
+  "sections": [
+    {
+      "heading": "Separate repair from getting the old relationship back",
+      "paragraphs": [
+        "It is understandable to hope that one honest conversation will restore things. But repair is not a deal in which you apologize and the other person owes you closeness. They may decide to forgive while keeping distance, or they may not be ready to discuss the harm. University of California, Berkeley’s Greater Good resource notes that forgiveness does not require reconciliation or renewed contact. Treat the other person’s choice as part of the situation you are repairing.",
+        "Start by naming the outcome you can control: return what you borrowed, correct a false statement, stop repeating a boundary violation, or use a different way of handling conflict. You cannot control how quickly trust returns. You can make your behavior easier to evaluate by being consistent and specific."
+      ]
+    },
+    {
+      "heading": "Map the harm before choosing a fix",
+      "paragraphs": [
+        "Write down the action, who was affected, what practical or relational consequence followed, and what part remains yours to address. If you told one person a damaging untruth, correcting only your private beliefs does not undo what the listener heard. If you missed a commitment, an apology without a new reliable arrangement may leave the same burden on the other person.",
+        "Do not assume you know what repair would feel meaningful. When contact is welcome, ask one open question: “Is there a concrete step that would help, or would you prefer space?” They may not have an answer. If contact is not welcome, do not send a proxy to ask. A repair plan can still include steps that do not require their participation, such as changing your own behavior or correcting a public record."
+      ]
+    },
+    {
+      "heading": "Make the apology about their experience",
+      "paragraphs": [
+        "The U.S. Department of Veterans Affairs facilitator handbook, written for mistakes in care settings, advises acknowledging and correcting harm, validating the impact, and not using good intentions to minimize it. The setting is specific, but the distinction is useful: “I didn’t mean it” can coexist with “I caused harm,” and intent does not erase impact. You do not need to agree with every interpretation to take responsibility for what you know you did.",
+        "A grounded apology might say: “I joked about your work in front of the team after you asked me not to. That was disrespectful. I’m sorry. I’ve told the people who heard it that the joke was out of line, and I won’t use your work as a punchline again.” Leave out the sentence that asks them to tell you it is okay."
+      ]
+    },
+    {
+      "heading": "Choose changes that can be seen",
+      "paragraphs": [
+        "Replace a dramatic promise with a small practice that fits the actual harm. If you often break plans, confirm details earlier and tell the person promptly when plans change. If you interrupted, pause and make space before responding. If you disclosed something private, ask permission before sharing details and stop repeating the story. A change is more credible when it continues even after the apology is no longer the focus.",
+        "When a mistake repeats, name it plainly rather than resetting the clock: “I did this again. I understand that makes my earlier promise harder to trust. I’m taking this additional step.” The other person does not have to coach you through the change or monitor your progress. Seek a counselor, supervisor or other appropriate professional when the pattern is bigger than a two-person conversation."
+      ]
+    },
+    {
+      "heading": "Let time and boundaries do their work",
+      "paragraphs": [
+        "Trust is built from many ordinary interactions: you follow through, keep confidence, and accept a no without sulking or retaliating. Do not demand a status report on forgiveness. A person may want friendship but not the former level of access; they may choose no contact. In a relationship involving coercion, violence or a significant power imbalance, prioritize safety and qualified professional support instead of attempting private repair alone.",
+        "For your next step, choose one repair that is concrete, proportionate and under your control. Write down when you will do it, then do it without asking for praise. If the person has invited a conversation, listen without preparing a rebuttal. If they have not, let respectful distance be part of your accountability."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "DAR Facilitator Handbook",
+      "url": "https://www.va.gov/files/2023-05/DAR%20Facilitator%20Handbook.pdf",
+      "publisher": "U.S. Department of Veterans Affairs",
+      "purpose": "Supports acknowledging and correcting harm, validating impact, avoiding intent as a minimizer, and not making feedback the harmed person’s burden."
+    },
+    {
+      "title": "How Therapists Can Help Clients Move Toward Forgiveness",
+      "url": "https://greatergood.berkeley.edu/article/item/how_therapists_can_help_clients_move_toward_forgiveness",
+      "publisher": "Greater Good Science Center, University of California, Berkeley",
+      "purpose": "Supports distinction between forgiveness and reconciliation, and maintaining boundaries."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "ask-forgiveness-from-someone-you-hurt",
+    "write-a-forgiveness-letter-to-yourself",
+    "write-a-letter-to-someone-you-have-not-forgiven-and-then-decide-whether-to-send-"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

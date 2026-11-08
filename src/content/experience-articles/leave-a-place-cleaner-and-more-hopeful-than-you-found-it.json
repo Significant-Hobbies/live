@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "leave-a-place-cleaner-and-more-hopeful-than-you-found-it",
+  "slug": "leave-a-place-cleaner-and-more-hopeful-than-you-found-it",
+  "title": "Help a place without taking it over",
+  "description": "Plan a respectful cleanup with permission, a clear waste route and a useful handoff so the site and its community benefit after volunteers leave.",
+  "intent": "A stewardship approach to improving one place through requested work, safe cleanup practices and a follow-up that stays accountable to local needs.",
+  "sections": [
+    {
+      "heading": "Ask what the place actually needs",
+      "paragraphs": [
+        "A clean-up can be unwanted if it removes items people use, disturbs habitat or takes over a site the organizer does not manage. Begin with the landowner, park staff, neighborhood group or local organization responsible for the place. Ask what should be left alone, which areas are safe to enter, and how collected material should be sorted and removed. If the site is a community space, ask residents what would make it more welcoming rather than assuming that a fresh coat of paint is the answer.",
+        "The goal is not to make a dramatic before-and-after image. It is to leave the site more usable without shifting costs or cleanup onto someone else. A small repair requested by the people who use a courtyard may matter more than a large unapproved project."
+      ]
+    },
+    {
+      "heading": "Choose one bounded task",
+      "paragraphs": [
+        "Pick a task you can finish in a set session: litter along one approved path, weeding a supervised garden bed, sorting donated supplies, or recording a maintenance issue for the manager. Write the boundary in plain terms: where you will work, how long, what tools are allowed and what you will do if the task becomes unsafe. Ask before trimming plants, moving furniture, handling needles or opening containers.",
+        "If there is a group, name a coordinator who can reach site staff and make a stop decision. Bring only equipment the host requests. Use appropriate gloves and bags, and avoid touching sharps, chemicals, dead animals, unknown liquids or heavy objects. Mark their location and tell the responsible authority."
+      ]
+    },
+    {
+      "heading": "Plan disposal before collecting anything",
+      "paragraphs": [
+        "Ask where the waste will go, who will transport it and which items require a separate route. Do not fill bags that will be left for a site worker to discover. The U.S. Forest Service guidance for public lands says to pack out trash and, when material cannot be carried out, record the location and notify local staff. That guidance is for U.S. public-land contexts, but the broader step is the same: find out the site’s own disposal route before you begin.",
+        "Leave natural and cultural features in place unless the manager has approved a specific intervention. A cleanup is not permission to move rocks, collect plants or remove objects that might be historical or useful to someone. Photograph only where appropriate and avoid identifying private residents or sensitive locations."
+      ]
+    },
+    {
+      "heading": "Make the space more welcoming with consent",
+      "paragraphs": [
+        "“More hopeful” might mean a repaired sign, a bench made usable, a clear path to a community noticeboard, or simply a place where people can gather without stepping around rubbish. Ask users which change would help and who is willing to maintain it. If the answer is better lighting or a structural fix, refer it to the authority rather than attempting electrical or construction work outside your competence.",
+        "Before adding art, messages or plants, confirm permission and maintenance. A mural needs consent and a plan for upkeep; a native planting needs local site guidance; an accessibility improvement should be checked with the people who use the route. Ask how the host wants to acknowledge volunteers, if at all."
+      ]
+    },
+    {
+      "heading": "Close with a handoff, not a claim",
+      "paragraphs": [
+        "At the end, report the boundary you worked, what you completed, what you could not safely handle and any maintenance issue you noticed. Share the note with the site contact. If you took a photo, use it only with permission and do not use it to imply that a larger problem is solved. A single session can improve one corner without repairing the systems that created the need.",
+        "For a first attempt, choose a hosted local cleanup with a named coordinator and a specific endpoint. Ask the host for its safety briefing, disposal plan and preferred follow-up. If no group is available, contact the responsible site manager and request a small task they would actually welcome."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Discuss Leave No Trace Principles with Your Party",
+      "url": "https://www.fs.usda.gov/Internet/FSE_DOCUMENTS/fsbdev2_038035.pdf",
+      "publisher": "U.S. Forest Service, Alaska Region",
+      "purpose": "Recommends packing out trash, including biodegradable scraps, and notifying local Forest Service staff when debris cannot be carried out; source is tied to public-land settings."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "clean-up-a-beach-or-river-in-your-community",
+    "volunteer-for-something-you-believe-in",
+    "own-something-that-matters-to-your-community"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,61 @@
+{
+  "experienceSlug": "mend-a-favourite-garment-with-visible-stitches",
+  "slug": "mend-a-favourite-garment-with-visible-stitches",
+  "title": "How do you darn a worn garment so the repair stays comfortable?",
+  "description": "Choose between patching and darning, test thread and tension on scrap fabric, then make a visible repair that supports the worn area without stiffening it.",
+  "intent": "A practical first-repair decision guide: how to tell whether a small worn patch needs darning or support fabric, and how to judge comfort after sewing.",
+  "sections": [
+    {
+      "heading": "Read the cloth before choosing a stitch",
+      "paragraphs": [
+        "Turn the garment inside out and look at the whole area, not only the hole. A neat-looking opening surrounded by thin cloth needs a wider repair than a single gap: stitches can only hold if they catch sound fabric. Gently spread the area in good light and note whether the knit or weave has lost strength around the edge. Avoid pulling until it grows.",
+        "Darning suits a small hole or thinning patch when the surrounding threads still give you something stable to work with. A patch is more useful when the cloth is missing or the weak area is too broad to bridge. For stretchy knitwear, a rigid patch can feel like a board, so ask an experienced mender to demonstrate a flexible approach if the garment is valuable or delicate."
+      ],
+      "bullets": [
+        "Use a scrap with similar thickness and stretch to test your needle, thread and stitch spacing."
+      ]
+    },
+    {
+      "heading": "Make the test carry the risk",
+      "paragraphs": [
+        "Before working on the favourite item, make a small sample: mark an area about the size of the worn patch and practise the motion you plan to use. The Victoria and Albert Museum’s visible-mending workshop presents darning as a way to create a patch that extends a knitted garment’s wear, and it explicitly offers a practice patch as an alternative to bringing clothing. That is a sound first-session principle: learn the rhythm before the cloth you care about is under the needle.",
+        "Choose thread that will pass through the material without dragging it into puckers. Contrast can make the repair legible, but it is not a requirement; a close colour can still show a considered line through texture or placement. After a few stitches, turn the sample over. The reverse should not have a stiff bundle of knots or long loops that could catch on skin or another layer."
+      ]
+    },
+    {
+      "heading": "Support the damaged area, not just the hole",
+      "paragraphs": [
+        "Lay the garment flat without stretching it. Keep enough ease in the fabric that it can return to its natural shape when you let go. Work from firm cloth toward the weakened area, anchoring beyond the edge rather than sewing directly into loose fibres. If you are darning, build a small woven surface across the opening in even passes, then interlace the crossing direction. Short, controlled stitches are easier to adjust than a long tight pull.",
+        "If you are using a patch, trim or shape it so it covers the thinning margin as well as the visible gap. Pinning or basting can help keep the layers aligned while you test a few stitches. Avoid making the repair larger than needed: excess fabric can rub, fold or distort the garment. When a seam is under strain, consider reinforcing the seam itself rather than placing a decorative patch over a structural failure."
+      ]
+    },
+    {
+      "heading": "Check comfort before calling it finished",
+      "paragraphs": [
+        "Secure the thread ends in a way that will not form a hard lump against the body. Snip loose tails only after checking that the final stitches hold. Compare the repaired section with the surrounding cloth: it should lie reasonably flat, bend with the garment and leave the rest of the fabric free to move. A first repair can look uneven; the useful question is whether it supports the material without making a new irritation.",
+        "Photograph the repair and note what thread and method you used; that small record can guide a later mend."
+      ]
+    },
+    {
+      "heading": "A modest next repair",
+      "paragraphs": [
+        "Wash the garment only as its care label allows, then check the repair after it has dried. A hand-finished mend may need a small adjustment after wear; that is information, not proof that the attempt failed. If you are uncertain about the fibre, the garment’s construction or the size of the damage, take it to a repair café or textile specialist and ask them to explain the choice they make.",
+        "For a first session, stop after one supported area. You do not need to turn every flaw into a design statement. Keep the sample alongside the finished piece, record the date and the repair method, and decide after wearing it whether the contrast, placement and flexibility feel right. The next time, you can choose a repair from evidence rather than guessing at the cloth."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Visible Mending Workshop - Darning",
+      "url": "https://www.vam.ac.uk/event/JRxbwlOxJ5/p22045-visible-mending-workshop-spring-23-session-2",
+      "publisher": "Victoria and Albert Museum",
+      "purpose": "Supports darning as a way to repair holes in knitted garments and the value of practising on a patch before working on a loved garment."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "visit-a-repair-cafe-with-a-friend",
+    "stitch-a-patchwork-cushion-cover-from-scraps"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

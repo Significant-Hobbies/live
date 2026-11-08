@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "coil-a-basket-from-recycled-paper",
+  "slug": "coil-a-basket-from-recycled-paper",
+  "title": "How do you turn recycled paper into a sturdy coiled basket?",
+  "description": "Make a paper coil basket by wrapping a firm core, building an even spiral base, and adding side rows with glue and steady shaping.",
+  "intent": "A beginner-friendly method for forming a paper-coil basket, with practical guidance for a level base, consistent tension and a neat rim.",
+  "sections": [
+    {
+      "heading": "Choose paper and make a dependable core",
+      "paragraphs": [
+        "Gather clean scrap paper, a smooth pencil or dowel, scissors, glue and clips. Newspaper, magazine pages and used wrapping paper each behave differently: thin sheets roll easily, while glossy pages may resist glue. Sort by paper weight and test a short strip before committing to a whole basket. Keep colors and printed areas visible if you want them to form part of the pattern.",
+        "Cut strips to a consistent width, then roll each one diagonally around a pencil to create a long paper tube. Glue the final corner and slide the pencil out. A tight tube makes a firmer coil; a looser one bends more easily around curves. Make extra lengths now, because joining short tubes during the first rows can interrupt the rhythm. The paper-coil lesson from Blick Art Materials uses wrapped paper coils layered and glued, much like a coil-built clay form."
+      ]
+    },
+    {
+      "heading": "Build a flat spiral base",
+      "paragraphs": [
+        "Flatten the first tube gently with your fingers so neighboring turns can sit close together. Curl one end into a small center and apply a thin line of glue where the next turn meets it. Continue around the spiral, holding the shape against a flat surface. Clips help secure sections while the adhesive sets, but avoid squeezing so hard that the tubes buckle.",
+        "Check the base from above and from the side every few turns. If it begins to cup, loosen the outer row and flatten it before the glue dries. A round basket needs consistent spacing around its center; an oval base can be shaped by lengthening two opposite sides gradually. Small adjustments are easier than trying to correct a lopsided base after the walls are high."
+      ]
+    },
+    {
+      "heading": "Raise the walls gradually",
+      "paragraphs": [
+        "When the base is wide enough, angle the new coil slightly upward at its outer edge. Keep the basket supported on the work surface and guide the coil around the perimeter, adding glue at contact points. Change the wall angle slowly: a sudden steep turn can create a narrow neck or a weak crease. Turn the basket as you work so you can see the whole circumference.",
+        "Use the same hand pressure through each row. Pulling the coil too tightly can draw the walls inward; pushing it outward can make the rim flare. Pause after a few rows to check the basket from several directions. A small container placed inside can act as a temporary form, but do not let it trap wet glue or become permanently attached."
+      ]
+    },
+    {
+      "heading": "Shape joins, color and the rim",
+      "paragraphs": [
+        "To add a new tube, flatten its end and overlap it with the previous one along a short section. Glue the overlap and hold it until it stays in place. Conceal joins on the inside or underside where practical. If you want a color pattern, switch papers at a row boundary and keep the joint away from the most visible front. Simple alternating bands suit a first attempt because they make uneven rows easy to spot.",
+        "Finish the last coil with a smooth inward fold or a short folded-over rim. Tuck the end against the previous row, add a little glue and hold it with a clip. Let the basket dry completely before removing any temporary form or testing its shape. The paper-coil activity is suited to decorative and lightweight objects; do not assume a scrap-paper basket is food-safe, waterproof or load-bearing."
+      ]
+    },
+    {
+      "heading": "Let it dry and review the structure",
+      "paragraphs": [
+        "After drying, inspect for loose sections, sharp paper corners and gaps where glue did not catch. Reinforce a weak join with a small amount of adhesive and allow it to set. If the base rocks, press it gently on a flat surface while the material is still slightly flexible; avoid soaking it, since moisture can distort paper.",
+        "For the next basket, change one variable at a time: strip width, coil tightness, base shape or wall angle. Note which combination made the form stable and which caused it to buckle. A useful next project is a small oval tray, where the long sides and rounded ends make tension visible without requiring a tall wall."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Paper Coil Baskets",
+      "url": "https://www.dickblick.com/lesson-plans/paper-coil-baskets/",
+      "publisher": "Blick Art Materials",
+      "purpose": "Supports the paper-coil construction method, with coils layered and glued into basket forms."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-a-folding-paper-peepshow",
+    "bind-a-pocket-notebook-by-hand"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

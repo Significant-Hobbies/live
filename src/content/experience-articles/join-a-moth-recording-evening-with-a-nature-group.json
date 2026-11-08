@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "join-a-moth-recording-evening-with-a-nature-group",
+  "slug": "join-a-moth-recording-evening-with-a-nature-group",
+  "title": "How do you take part in a staffed moth-recording evening?",
+  "description": "Choose a guided nature-group session, watch how moths are observed and recorded, and help document visitors without handling them or disturbing their habitat.",
+  "intent": "A practical guide to joining a staffed moth event and contributing observations while keeping wildlife and light equipment under the group’s care.",
+  "sections": [
+    {
+      "heading": "Look for a real group event",
+      "paragraphs": [
+        "A moth-recording evening can be a public nature walk, a light-sheet demonstration or a session around a trap operated by an experienced group. National Moth Week invites people to join existing events or host one, and its event map is a useful place to start looking. Check the current listing and confirm with the organizer that the event is staffed, open to newcomers and suitable for your access needs.",
+        "Do not set up a light trap in a park or reserve without permission. Bright lights can affect wildlife and people nearby, and a trap must be managed by someone who knows how to release insects safely. If a group cannot explain where to meet, what the session involves or how it handles moths, choose a different event."
+      ]
+    },
+    {
+      "heading": "Know what you will do when you arrive",
+      "paragraphs": [
+        "Ask whether participants will observe, photograph, help log species or assist with a supervised trap. Bring clothing suited to an outdoor evening and a small light for the path if the organizer recommends it. Keep your flashlight pointed toward the ground when walking and follow instructions about where the observation area begins.",
+        "A staffed session has a clear lead who can answer questions about equipment and safe access. Introduce yourself and tell them whether you would rather watch first. You do not need to know moth names to take part: a careful description, time and location may be useful when the group records sightings."
+      ]
+    },
+    {
+      "heading": "Observe before trying to identify",
+      "paragraphs": [
+        "Look at a moth’s size, shape, colour and wing markings from the position the leader recommends. Notice whether it is resting near the light or on nearby foliage. Do not touch, catch, pin, brush or move it to get a better view unless the trained leader explicitly asks you to help and explains the method. Many observations can be made without handling the animal.",
+        "If the group uses a field guide or app, compare a few visible features before deciding on a name. Similar species can be difficult to distinguish, and a photograph may not show all the details. Use the group’s “uncertain” or broader label rather than forcing a species-level identification. Accurate uncertainty is better than a confident guess."
+      ]
+    },
+    {
+      "heading": "Help the record stay useful",
+      "paragraphs": [
+        "Ask the recorder what information they need: a time, location, weather note, host plant or photograph. Follow their format and avoid making up details you did not observe. If you take a photograph, do not use flash or move the moth for a better angle. Check whether the group will upload observations to a project such as iNaturalist or keep a local record.",
+        "Keep your own notes short and legible. A useful entry might say “small pale moth on the sheet, observed at the east end of the site around 9 pm; identification uncertain.” The exact fields depend on the recording project. Let the organizer decide how to handle data that do not meet its standards."
+      ]
+    },
+    {
+      "heading": "Leave the site calm",
+      "paragraphs": [
+        "When the group closes the session, follow its instructions for dimming lights, packing equipment and checking that moths have left safely. Do not remove insects or plant material from the site. Stay with the group on the way back and use a path light without shining it into habitat or at other visitors.",
+        "A useful next step is to look through the group’s verified list or visit another staffed session at a different time of year. Record what you learned about observation rather than claiming that one evening represents all local moths. National Moth Week’s resources and event listings can help you find another legitimate opportunity, but always check current details with the local organizer."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "National Moth Week 2026 News Release",
+      "url": "https://nationalmothweek.org/about/nmw-in-the-news/nmw-2026-news-release/",
+      "publisher": "National Moth Week",
+      "purpose": "Supports that participants may join existing events or host observations and that event registration/map resources exist; no current event availability or dates are promised."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "spend-an-hour-watching-a-single-tree",
+    "document-a-wild-species-for-inaturalist"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

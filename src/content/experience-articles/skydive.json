@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "skydive",
+  "slug": "skydive",
+  "title": "Choose a first tandem skydive by the briefing and the people",
+  "description": "Compare a first tandem skydive through instructor credentials, ground briefing, accessibility questions, weather plans, and clear expectations for the day.",
+  "intent": "Answers how to choose and prepare for a first tandem skydiving provider; focuses on the briefing and operator questions, not a high-altitude jump or training toward a license.",
+  "sections": [
+    {
+      "heading": "Know what a tandem jump involves",
+      "paragraphs": [
+        "A tandem jump is a first experience in which you are harnessed to an instructor who operates the shared parachute system. It differs from a student training jump where you learn to use your own parachute, and from a high-altitude goal that emphasizes the jump’s altitude. Decide whether you want a brief introduction with an instructor or are exploring the longer route toward learning to skydive; ask the drop zone what each option actually involves before you book.",
+        "The United States Parachute Association describes tandem as one of several entry routes in its student program and says USPA-affiliated U.S. drop zones follow its Basic Safety Requirements and use USPA-rated instructors. This is a U.S. association’s program, not a global licensing authority. If you are elsewhere, identify the national parachuting association and regulator responsible for the local operation and ask what credentials they require."
+      ]
+    },
+    {
+      "heading": "Ask who will brief and take responsibility",
+      "paragraphs": [
+        "Before choosing, ask how the ground briefing works, who will answer questions, what instructions you need to remember, and how the operator handles a change in weather or operations. A good conversation should leave you knowing the sequence of the day, what clothing and equipment are supplied or expected, where you will wait, and whom to contact if you need an accommodation. Do not treat a polished video as a substitute for a briefing with the people running your jump.",
+        "USPA notes that drop zones are independently run and recommends contacting the local operation about the specifics of a skydive. Compare how clearly each provider answers questions, rather than ranking locations from promotional photos or making a safety judgment from a single review. Ask what the provider means by its instructor qualifications and how those qualifications are recognized locally."
+      ]
+    },
+    {
+      "heading": "Share relevant needs before arrival",
+      "paragraphs": [
+        "Tell the operator about mobility, hearing, communication or other access needs before booking so they can explain the actual setup. Ask about age, size, fitness, medical disclosure and other participation requirements directly; requirements can depend on the provider, equipment and governing rules. If you have a health concern that could affect participation, consult an appropriately qualified clinician and follow the operator’s rules. This is not a place to hide a condition because you fear losing a booking.",
+        "Ask what happens if you are unsure on the day. You should be able to pause and ask another question before proceeding. A friend may want to film, but first confirm whether recording is allowed and whether the instructor or operation has a specific process. Do not make a camera the main purpose of a first jump."
+      ]
+    },
+    {
+      "heading": "Plan for waiting and changing conditions",
+      "paragraphs": [
+        "A skydive depends on an outdoor operation and conditions can change. Leave enough time in the day that a delay does not put you under pressure to hurry through instructions or rush to another commitment. Confirm the local check-in time, cancellation and rescheduling terms, and what communication the provider will use if plans change. Those are provider-specific details; this article does not promise a time, price or availability.",
+        "Bring only what the operator permits and wear clothing that lets you move comfortably within its requirements. Arrange ground transport with a buffer. If a friend is coming, decide whether they are an observer or a participant in the day, and do not assume the drop zone can host spectators without checking."
+      ]
+    },
+    {
+      "heading": "Decide after the briefing",
+      "paragraphs": [
+        "Listen for a clear explanation of your role, the instructor’s role and how to communicate during the jump. Ask for a simpler explanation if an instruction is unclear. You are allowed to decide that the day is not right for you after learning more. A deposit or the excitement of the group does not mean you must continue.",
+        "Afterward, record what the experience felt like and whether you want to learn more or leave it as a one-time experience. For your first step, contact a locally recognized drop zone and ask for its current tandem briefing, participation requirements and weather-change process in writing."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Your First Skydive",
+      "url": "https://www.uspa.org/students/your-first-skydive/tandem",
+      "publisher": "United States Parachute Association",
+      "purpose": "Supports the distinction between tandem and student-training methods, and says USPA-affiliated U.S. drop zones use USPA-rated instructors and follow USPA Basic Safety Requirements; it does not establish rules outside the United States."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "skydive-from-15-000-feet",
+    "try-a-sport-that-terrifies-you",
+    "community-38e6f335-b5f1-5ec0-a7c2-28cd02e9b0d2"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

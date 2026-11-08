@@ -1,0 +1,59 @@
+{
+  "slug": "the-amalfi-coast-italy",
+  "title": "Plan an Amalfi Coast visit around one base",
+  "description": "Choose a base and a small set of coastal stops, then match each day to the season’s local bus or ferry timetable and your walking pace.",
+  "intent": "Make an actionable Amalfi Coast itinerary by selecting a base and checking seasonal transport through official local information.",
+  "sections": [
+    {
+      "heading": "Choose one base before choosing excursions",
+      "paragraphs": [
+        "The Amalfi Coast is a stretch of towns connected by a narrow coastal area, so begin by deciding what you want from the stay: beach time, historic centers, walking, food or day trips. Pick one base that makes those priorities practical, then compare the cost of moving hotels with the time needed to reach your planned stops. One well-chosen base can reduce packing and missed connections; a second base may make sense for a longer visit or a distinct inland day.",
+        "Write your arrival and departure points first. List the towns you most want to see and mark which are day trips versus places where you might sleep. Keep one open afternoon for weather, fatigue or a transport change. The point is not to collect every town name but to spend enough time in the places that fit your reason for coming."
+      ]
+    },
+    {
+      "heading": "Build days around actual transport",
+      "paragraphs": [
+        "The Praiano Tourist Information Office posts SITA Sud regional bus schedules and local mobility links. Its current page labels the coastal bus timetables as effective from 2 November 2026, including routes connecting Amalfi with Maiori and Salerno, and Amalfi with Scala and Ravello. These details are date-specific: open the official local page again for your travel date and check the operator’s notice for disruptions before locking in a day trip.",
+        "For each day, note the outbound service, return service, stop names and a backup plan. Do not plan the last connection as if it were guaranteed or assume a summer frequency in winter. If the journey crosses a town you want to explore, add the time for getting to and from the stop and consider whether luggage or steep streets make a transfer difficult."
+      ]
+    },
+    {
+      "heading": "Keep the itinerary geographically sensible",
+      "paragraphs": [
+        "Group nearby stops rather than zigzagging. For example, a day might focus on Amalfi and a nearby inland or hillside destination; another could center on Positano and Praiano if the current transport suits. Check the actual route and travel time rather than inferring distance from a map. A viewpoint, church or beach may require a steep walk, so compare the access details with your footwear and mobility needs.",
+        "Mark one priority for each day and two optional stops. This lets you skip a queue, change a meal or return early without feeling the trip has failed. If you plan a longer coastal walk, check its current opening, weather and official trail information. Avoid treating a route name as proof that a path is open, easy or appropriate for your condition."
+      ]
+    },
+    {
+      "heading": "Plan meals and reservations with care",
+      "paragraphs": [
+        "Pick a meal close to the day’s last reliable transport or your base. Confirm restaurant opening days and reservation terms directly, especially outside peak season. If a particular meal or local producer is central to the trip, make that reservation before filling the day with unrelated stops. Keep a simple food plan for a late arrival or a missed connection rather than assuming every shop will be open.",
+        "For a memorable stay, choose one local experience that rewards time rather than speed: a guided walk, a quiet beach visit, a small museum or a meal at a family-run place. Ask before photographing people or entering private spaces. Respect signs and local access restrictions; scenic viewpoints and old paths can be working or residential areas, not an invitation to trespass."
+      ]
+    },
+    {
+      "heading": "Recheck the plan shortly before leaving",
+      "paragraphs": [
+        "One week before travel, confirm your hotel, transfer, transport timetables and any reservations. The local tourism office updates schedules by season, so refresh the official source instead of relying on an old screenshot. On the morning of each trip, check service updates and weather, carry the address of your accommodation and agree on a meeting point if your group separates.",
+        "If an outing becomes impractical, return to your base or choose a nearby alternative rather than compressing the whole coast into a rushed day. The best Amalfi plan leaves space for the geography, transfers and ordinary pauses. A smaller itinerary that fits real transport is more likely to give you time to notice the coast you came to see."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Getting around the Amalfi Coast by public transport",
+      "url": "https://distrettocostadamalfi.it/praiano-tourist-information-office/",
+      "publisher": "Distretto Turistico Costa d’Amalfi / Praiano Tourist Information Office",
+      "purpose": "Supports the availability of SITA Sud regional and local mobility timetable links and shows the coastal bus schedules effective from 2 November 2026. Schedules are seasonal and may change; check the official page for the actual travel date."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "tuscany-italy",
+    "live-somewhere-for-more-than-a-tourist",
+    "visit-a-country-you-know-nothing-about"
+  ],
+  "experienceSlug": "the-amalfi-coast-italy",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

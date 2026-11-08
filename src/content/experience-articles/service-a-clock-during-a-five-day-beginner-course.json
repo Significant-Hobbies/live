@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "service-a-clock-during-a-five-day-beginner-course",
+  "slug": "service-a-clock-during-a-five-day-beginner-course",
+  "title": "Learn clock servicing through a structured beginner course",
+  "description": "Prepare for a beginner clock-servicing course with a practice movement, observation notes and instructor-led work on faults and tools.",
+  "intent": "How should a first-time learner approach a multi-day clock-servicing course? This guide adds a practical way to prepare, observe, and take useful notes without turning a class into unsupervised repair advice.",
+  "sections": [
+    {
+      "heading": "Choose the right level and object",
+      "paragraphs": [
+        "Ask the provider what experience and tools are expected and whether the course supplies a practice movement. A five-day class gives time to learn vocabulary and follow a sequence, but not every clock is suitable for a first project. The British Horological Institute lists beginner routes and practical workshop-skills courses; check the current description before booking.",
+        "If the class permits you to bring an object, describe it to the instructor first. Do not bring an heirloom or valuable clock for a first exercise unless the tutor approves it. A practice movement lets you learn without risking a sentimental or historical object."
+      ]
+    },
+    {
+      "heading": "Observe before reaching for tools",
+      "paragraphs": [
+        "Bring a notebook and any specified eye protection or tools. Learn the parts the instructor names and sketch their arrangement before anything is removed. Label parts only as the tutor demonstrates. Small components may look alike but belong in a specific sequence, so keep the bench organized and ask where each belongs.",
+        "Watch how the instructor supports a movement, chooses tools, and checks for a fault. Note questions while it is still assembled. The goal of a beginner course is a reliable method, not taking apart as much as possible."
+      ]
+    },
+    {
+      "heading": "Describe a fault as evidence",
+      "paragraphs": [
+        "If a clock behaves unexpectedly, describe what you observe: the pendulum stops, a wheel does not turn, or a sound repeats at one point in the cycle. Ask the tutor what evidence separates likely causes. Avoid forcing a wheel or bending a part to see whether the clock starts.",
+        "If the course shows a cleaning or adjustment, note the conditions and tools. Do not turn a demonstration into a universal repair rule. Mechanisms, wear, and materials differ. Your notes should help you remember the lesson, not substitute for instruction."
+      ]
+    },
+    {
+      "heading": "Make the five days cumulative",
+      "paragraphs": [
+        "At the end of each day, list three new terms, one process you can now describe, and one unresolved question. Review those notes before the next session. If the course gives a practice exercise, repeat it on the training movement under the tutor’s supervision and ask for a check before moving on.",
+        "Leave time for setup, identifying the movement, cleaning the bench, and returning components to the right place. These habits may feel less dramatic than hearing a clock tick again, but they make learning safer and more repeatable."
+      ]
+    },
+    {
+      "heading": "Take a next step that matches your skill",
+      "paragraphs": [
+        "Before leaving, ask what a sensible practice project would be and what topics need more instruction. The BHI lists continuing study options, but courses and prerequisites can change. Read its current pages and ask the provider instead of relying on an old schedule.",
+        "Your next action is to book a beginner course that states its level, tools, and supervision. Take careful notes and practice only on a movement the instructor approves. A valuable clock can wait until someone qualified has assessed your skills."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Horology Courses & Materials",
+      "url": "https://bhi.co.uk/courses",
+      "publisher": "British Horological Institute",
+      "purpose": "BHI lists beginner distance and practical workshop courses, supporting a structured supervised route into clock servicing."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "earn-an-amateur-radio-license-in-your-country",
+    "complete-an-in-person-first-aid-and-cpr-course",
+    "analyze-an-exoplanet-transit-with-real-telescope-data"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

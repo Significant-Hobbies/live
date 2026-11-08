@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "change-your-mind-publicly-on-something-important",
+  "slug": "change-your-mind-publicly-on-something-important",
+  "title": "Make a public change of mind clear and accountable",
+  "description": "Explain what you used to believe, what evidence changed your view, and what you will do differently without overstating the reversal.",
+  "intent": "Offer a concrete way to communicate a meaningful public correction that is precise, visible, and accountable, rather than framing changing your mind as a performance.",
+  "sections": [
+    {
+      "heading": "Choose a claim that can be stated plainly",
+      "paragraphs": [
+        "Write the old claim in one sentence using the words you actually used. Identify where and when you made it and who may still rely on it. Then write the new claim just as plainly. If the change concerns a complicated subject, name the exact part that changed rather than implying that you now reject everything you once thought.",
+        "Separate what you know from what you are still investigating. You might have changed your view on a policy’s effect, a product recommendation, or a personal decision without reaching certainty on every related question. A precise correction helps readers understand the scope and avoids replacing one oversimplification with another."
+      ]
+    },
+    {
+      "heading": "Trace what changed your view",
+      "paragraphs": [
+        "List the evidence, experience, or conversation that led you to reconsider. Check the original source and date before repeating a claim about what it says. If someone else’s work changed your view, credit it accurately. If you cannot verify a detail, leave it out or say that you do not remember it clearly.",
+        "A useful explanation distinguishes the trigger from the reasoning: what new information did you encounter, and why did it matter? Avoid claiming that one article, one person, or one anecdote proves a broad conclusion unless it actually does. You may say that a person helped you notice a gap without assigning them responsibility for your whole change."
+      ]
+    },
+    {
+      "heading": "Correct the places where people saw the old view",
+      "paragraphs": [
+        "Post the change where the earlier claim appeared, if you control that space, and add a visible note that states the correction. If the original was shared in several places, decide where readers are most likely to encounter it and link the fuller explanation there. Do not quietly edit an important statement while assuming everyone who saw it will discover the new version.",
+        "The Associated Press’s newsroom standards provide a useful example: it labels corrections clearly and makes them visible to readers. Those rules govern AP journalism, not personal statements, but the principle of making an important correction discoverable is practical for a public post, talk, or newsletter."
+      ]
+    },
+    {
+      "heading": "State what responsibility remains",
+      "paragraphs": [
+        "If the old view affected someone, acknowledge the effect without making the person reassure you. Correct a practical error where possible: update a guide, retract a recommendation, or send the new information to people who acted on the earlier claim. Be specific about what you can repair and what you cannot undo.",
+        "Avoid turning the correction into a request for praise for your honesty. A brief explanation can include an apology if harm occurred, but keep the focus on the information and the next action. If a public disagreement is ongoing, you can change your position without insulting people who still hold your former view."
+      ]
+    },
+    {
+      "heading": "Keep the record open to future learning",
+      "paragraphs": [
+        "Allow people to ask reasonable questions, and answer the ones that help clarify your reasoning. You do not have to share private conversations, medical details, or someone else’s confidential information to prove that a change is genuine. Set a boundary if a discussion becomes abusive, but do not use that boundary to avoid correcting a concrete mistake.",
+        "For your next step, draft three sentences: “I previously said…”, “I now think… because…”, and “I will…”. Check each sentence for scope, evidence, and a practical repair. Then publish it in the place where it can reach people who may still be relying on the earlier version."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Telling the Story: Corrections/Correctives",
+      "url": "https://www.ap.org/about/news-values-and-principles/telling-the-story/",
+      "publisher": "The Associated Press",
+      "purpose": "Supports AP's newsroom practice of promptly labeling and visibly surfacing corrections; the article treats this as an example, not as a rule governing personal speech."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "write-the-story-of-how-you-became-who-you-are",
+    "make-a-timeline-of-the-five-most-important-moments-of-your-life",
+    "create-a-personal-annual-report"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

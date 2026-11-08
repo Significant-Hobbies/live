@@ -1,0 +1,51 @@
+{
+  "experienceSlug": "light-up-a-paper-circuit-card",
+  "slug": "light-up-a-paper-circuit-card",
+  "title": "How do you make a paper circuit that lights only when the card closes?",
+  "description": "Design a greeting card with copper tape, an LED, and a fold-activated switch, then troubleshoot the circuit by checking polarity and contact points.",
+  "intent": "Answer how to plan and debug a paper circuit card, using the fold as a simple switch and keeping the electronics separate from decorative design.",
+  "sections": [
+    {
+      "heading": "Sketch the circuit before decorating",
+      "paragraphs": [
+        "A paper circuit is an electrical path built on a flat surface. Before adding color or illustrations, decide where the battery will sit, where the LED will glow, and how the fold will act as a switch. The Exploratorium’s tinkering project uses copper tape and small LEDs to create light-up cards and describes a simple circuit that can be expanded with a switch. Draw the path in pencil on the inside of the card so you can see where the conductive tape must connect and where the paper fold will break or complete the circuit.",
+        "Choose one LED and a battery type from a reliable project guide or educator. Check its polarity marks before taping anything down. Use only a low-voltage battery intended for the activity, and keep small batteries away from young children and pets. If you are working with a class, follow the teacher’s equipment and safety instructions. Your design can be simple: a star that lights when the flap closes, or a window that glows when a paper door moves."
+      ]
+    },
+    {
+      "heading": "Build the path with clean, continuous connections",
+      "paragraphs": [
+        "Lay copper tape along the drawn route, keeping it flat and avoiding gaps at corners. If the tape must turn, make a neat fold rather than cutting and leaving two pieces that barely touch. The LED legs need to meet the correct sides of the circuit; a misplaced leg is one of the most common reasons a card stays dark. Press the connections carefully, but avoid covering the LED or battery with decorative material before testing.",
+        "Put the battery in its planned position and test the circuit before adding the switch. If the LED does not light, check the battery orientation, the LED direction, and whether each leg actually contacts the tape. Inspect corners and overlaps where adhesive may separate conducting surfaces. Change one connection at a time. The aim is to understand the path, not to keep adding tape until the light happens to turn on."
+      ]
+    },
+    {
+      "heading": "Turn the fold into a simple switch",
+      "paragraphs": [
+        "Once the base circuit works, plan where the card closes. The fold or a small flap can bring two conductive surfaces together when closed and separate them when open. You can make a switch with a small copper tape contact, or follow the Exploratorium’s example of a foil flap used to make a dynamic paper circuit. Keep the moving part easy to align and reinforce the fold so repeated opening does not tear the paper.",
+        "Test the card several times before decorating. Does the light turn off when the flap opens? Does the battery stay in contact when the card is held upright? If the switch works only when you press hard, move the contacts or shorten the flap. A greeting card should not need force to operate. Keep conductive tape away from loose metallic decorations that could bridge the two sides of the circuit unintentionally."
+      ]
+    },
+    {
+      "heading": "Decorate around the working circuit",
+      "paragraphs": [
+        "After the electronics work reliably, add the illustration around them. Draw a night sky around a star LED, a house around a window light, or a flower around a small colored point. Keep glue, glitter, and paper scraps out of the contact area. Mark where the battery sits so the recipient can replace it safely if the activity design allows, or keep the battery compartment closed for a one-time demonstration.",
+        "Add a small note inside the card explaining how the fold controls the light and what powers the LED. That turns the craft into something the recipient can understand and reuse. If the circuit stops working later, open the card and inspect the same three areas: battery, LED polarity, and tape contact. The next useful step is to make a second design using the same circuit but a different fold, so you can compare how the switch changes the card’s interaction."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Paper Circuits",
+      "url": "https://www.exploratorium.edu/tinkering/projects/paper-circuits",
+      "publisher": "Exploratorium",
+      "purpose": "Supports the use of copper tape, LEDs, greeting cards, and foil or other simple switches in paper circuits."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-logic-gates-in-a-circuit-simulator",
+    "make-a-pinhole-camera-and-develop-a-photograph"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

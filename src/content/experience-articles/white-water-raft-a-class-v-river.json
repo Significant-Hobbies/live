@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "white-water-raft-a-class-v-river",
+  "slug": "white-water-raft-a-class-v-river",
+  "title": "What a Class V rafting day should answer before launch",
+  "description": "Understand why Class V means expert-level river conditions, then vet the specific river, commercial guide team, current water level and rescue plan.",
+  "intent": "How should a prospective guest think about a Class V rafting trip? This guide explains the rating and questions to ask an outfitter without teaching river-running techniques.",
+  "sections": [
+    {
+      "heading": "Read Class V as a serious classification",
+      "paragraphs": [
+        "American Whitewater’s International Scale describes Class V as expert: very difficult, with long rapids, strong turbulence and obstacles requiring expert manoeuvring. It calls for highly skilled groups and whitewater-specific craft and equipment. A commercial trip may include guests who are not expert paddlers, but the river remains expert-level water. The classification does not promise that every outfitter can make every rapid suitable for every visitor.",
+        "Ask the outfitter which river section and current rating the trip uses, and whether the rating changes with water level. The same stretch can behave differently as flows rise or fall. Ask for the current source used by the operator and how it decides whether to run, change route or cancel. A confident marketing description is not a substitute for a go/no-go policy."
+      ]
+    },
+    {
+      "heading": "Vet the guide team",
+      "paragraphs": [
+        "Ask about the lead guide’s experience on this specific section, the company’s guide qualifications, group size, safety briefing and rescue support. Ask who decides if the river rises, a participant opts out or equipment fails. A reputable operator should explain these details in plain language before payment and welcome questions about the day’s plan.",
+        "Do not use an article to learn paddle strokes, rescue procedures or how to judge a rapid from shore. Those require hands-on instruction, appropriate equipment and an experienced team. If an operator suggests that a first-time visitor can simply follow shouted commands on Class V water without discussing experience and risk, do not proceed."
+      ]
+    },
+    {
+      "heading": "Match the booking to the person",
+      "paragraphs": [
+        "Be candid about swimming ability, physical condition, prior rafting, shoulder or back problems, mobility, medication and fear. Ask for written suitability requirements and age limits, and whether clinician advice is needed for a condition. Rules depend on the outfitter, raft, river and water level; another company’s policy may not apply.",
+        "Ask what the trip involves before deciding: time on water, access to and from the river, expected exertion, temperature exposure and whether there is a way to leave early. The waiver is not evidence that the activity is right for you. A clear description lets you compare the outing with what the day asks of your body."
+      ]
+    },
+    {
+      "heading": "Treat equipment and rescue as part of the trip",
+      "paragraphs": [
+        "Confirm what protective gear is provided and what must fit you. Ask how helmets and personal flotation devices are selected and adjusted and whether you can review the fit before launch. American Whitewater safety material emphasizes life-jacket messaging and notes equipment needs depend on craft and river difficulty. The outfitter—not a generic checklist—should specify the gear for its trip.",
+        "Ask how the crew communicates on the water, how an emergency is escalated and what rescue resources are immediately available. You are not checking the whole technical plan; you are finding out whether the briefing is coherent and staff appear prepared. If they minimize your concern or cannot answer, do not get in the raft."
+      ]
+    },
+    {
+      "heading": "Decide after the day’s briefing",
+      "paragraphs": [
+        "On the day, listen for a fresh conditions update and ask whether the plan is still the one you booked. Weather, flows, access and the group’s readiness can change. You may decline before launch if conditions or information differ from what you understood. Refund or reschedule terms should be clear before travel.",
+        "Request the trip description, current rating and flow decision, guide credentials, suitability rules, gear list, rescue overview and cancellation terms in writing. If a qualified guide accepts the group after those questions are answered, make an informed choice. If not, choose a lower-difficulty outing with instruction."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "International Scale of River Difficulty",
+      "url": "https://site-media.americanwhitewater.org/Scale-of-River-Difficulty-Safety-Code-2024.pdf",
+      "publisher": "American Whitewater",
+      "purpose": "Defines Class V as expert conditions requiring expert manoeuvring and highly skilled groups."
+    },
+    {
+      "title": "River Rapid Classification: signage guidance",
+      "url": "https://site-media.americanwhitewater.org/Document_4542.pdf",
+      "publisher": "American Whitewater and U.S. Coast Guard",
+      "purpose": "Provides Class V classification wording and says information is variable and not a substitute for careful assessment."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "take-a-sheltered-water-paddleboard-starter-lesson",
+    "swim-in-all-five-oceans",
+    "surf-a-real-wave"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

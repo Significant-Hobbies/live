@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "laminate-pastry-and-bake-a-first-batch-of-croissants",
+  "slug": "laminate-pastry-and-bake-a-first-batch-of-croissants",
+  "title": "A calm first plan for laminated croissants",
+  "description": "Approach croissants as a temperature and timing exercise: plan the rests, keep notes on the dough, and judge progress by feel as well as appearance.",
+  "intent": "What should a beginner watch for while laminating croissant dough? This guide adds a process plan for managing butter, folds and setbacks without treating one recipe as universal.",
+  "sections": [
+    {
+      "heading": "Choose a recipe and calendar",
+      "paragraphs": [
+        "Use a tested croissant recipe whose measurements, temperatures and proofing cues you can follow. Read it fully before mixing; laminated dough spans several stages and rests. Mark the chilling steps and choose a day when your refrigerator and oven are available. Do not compress a long schedule into an improvised afternoon.",
+        "Set out a ruler, rolling pin, parchment, scraper, scale if needed, and a tray that fits your refrigerator. Follow one recipe’s targets rather than combining instructions from several sources. Croissant recipes vary in dough, fold count and timing, so switching approaches mid-batch makes troubleshooting harder."
+      ]
+    },
+    {
+      "heading": "Learn what the butter is telling you",
+      "paragraphs": [
+        "Lamination encloses butter in dough, then rolling and folding creates layers. Butter should bend with the dough instead of shattering or smearing. If it cracks, pause and let it soften according to the recipe; if it looks greasy, chill before continuing. A clean, even packet matters more than working quickly.",
+        "King Arthur Baking’s comparison illustrates that adding folds does not automatically improve the interior: a pastry with fewer folds had more distinct layers in that test. Follow the recipe’s fold count rather than adding folds to chase an imagined ideal."
+      ]
+    },
+    {
+      "heading": "Roll evenly and rest when needed",
+      "paragraphs": [
+        "Use gentle, steady pressure and turn the dough as directed. If it springs back, feels elastic or resists the pin, stop and rest it in the refrigerator. Forcing it can squeeze butter out or distort the layers. Brush away excess flour before folding and keep a note of each completed turn.",
+        "Work on a cool surface and return the dough to the refrigerator when the recipe says. If your kitchen is warm, shorten counter time. A perfect rectangle is not the goal; a reasonably even packet with sealed edges is enough for a first attempt."
+      ]
+    },
+    {
+      "heading": "Shape and bake by cues",
+      "paragraphs": [
+        "Cut triangles with a sharp wheel or knife and shape them gently without flattening the layers. Leave expansion room on the tray. Follow the recipe’s proof cues: pieces should look aerated, not simply larger because the kitchen is warm. If butter leaks before baking, note the stage and review handling on your next try.",
+        "Use the recipe’s temperature and color cues. Cool before cutting one open; the interior shows whether layers separated and the center baked through. A compact crumb can have several causes, so adjust one thing next time rather than changing every step."
+      ]
+    },
+    {
+      "heading": "Keep notes instead of scores",
+      "paragraphs": [
+        "Photograph the dough after each fold and note room temperature, rest times, and when the butter felt firm or soft. This record helps identify where the process drifted. If the batch tastes good but looks uneven, you still have a successful first bake and a clear next experiment.",
+        "Your next action is to choose one reliable recipe, set aside its full schedule, and follow its fold count exactly. Scale down only if the recipe allows it. The aim is to learn how dough and butter behave together, not to make café-perfect pastries on the first try."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "When less is more: Why fewer folds make a better croissant",
+      "url": "https://www.kingarthurbaking.com/blog/2021/10/19/fewer-folds-makes-better-croissants",
+      "publisher": "King Arthur Baking",
+      "purpose": "King Arthur describes dough-butter layers and a comparison where fewer folds produced more distinct pastry layers."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "bake-hollow-choux-pastry-and-fill-it",
+    "fold-three-dumpling-shapes-from-one-filling"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

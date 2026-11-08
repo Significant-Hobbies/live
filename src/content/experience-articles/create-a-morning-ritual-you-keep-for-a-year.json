@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "create-a-morning-ritual-you-keep-for-a-year",
+  "slug": "create-a-morning-ritual-you-keep-for-a-year",
+  "title": "Build a morning ritual around one small reliable cue",
+  "description": "Design a morning sequence that fits your actual wake-up, caregiving and work constraints, with a small version for disrupted days.",
+  "intent": "How can I create a morning ritual that remains useful across changing seasons and schedules instead of depending on an ideal day?",
+  "sections": [
+    {
+      "heading": "Choose a ritual for a real morning",
+      "paragraphs": [
+        "Start by describing your ordinary first hour, including work shifts, school runs, medication routines, caregiving and commute time. A ritual built for a blank morning will disappear as soon as life returns. Choose one activity you want more often—tea without a screen, a short stretch, a few pages of reading, or a few lines in a notebook—and fit it into a moment that already exists.",
+        "Keep the activity distinct from a long checklist. A ritual can be one action plus a clear cue: after the kettle clicks, write one sentence; after opening the curtains, water a plant; after breakfast, step outside for fresh air. The point is a recognizable transition, not an elaborate sequence or a claim that mornings have to look the same for everyone."
+      ]
+    },
+    {
+      "heading": "Use a small anchor and a short version",
+      "paragraphs": [
+        "Pick an anchor you can usually control: when you first enter the kitchen, sit down, or put on shoes. Then define the regular version and a smaller version for rushed or low-energy days. If the full ritual is ten minutes of reading, the small version might be one page. Write both down so the day is not an all-or-nothing choice.",
+        "The U.S. NIDDK’s activity-planning guidance suggests choosing days and times, checking a calendar and writing down specific plans. It is aimed at physical activity, but the planning idea can help you make a time-bound routine. Use your judgment for a non-exercise ritual; the page does not establish that any particular morning activity is a health intervention."
+      ]
+    },
+    {
+      "heading": "Remove one source of friction",
+      "paragraphs": [
+        "Set out the book, shoes or mug the night before, but keep the setup modest. Put the item where the cue happens. If your phone pulls you into messages, charge it elsewhere or decide when you will check it, while preserving access you need for care or safety. Do not let preparation become a second project with supplies you must buy.",
+        "Choose an alternate location or time for travel, visitors or a shared household. A ritual that can happen on a chair, by a window or on a walk is more flexible than one that requires a special room. If someone else depends on your morning, invite them into the planning rather than treating their needs as interruptions to your personal routine."
+      ]
+    },
+    {
+      "heading": "Review the ritual without grading yourself",
+      "paragraphs": [
+        "Once a week, note what made it happen and what blocked it. Was the cue too late? Did the work calendar change? Did a housemate need the room? Adjust the anchor or shorten the sequence rather than blaming yourself. A year-long goal is a chance to design a practice that can change with seasons, work and family life.",
+        "If you like tracking, use a plain calendar with a mark for the full version and another for the small version. Do not add a punishment for missed days. When you are away or ill, skip the ritual and resume when ordinary life permits. The purpose is a dependable pause in the day, not perfect adherence."
+      ]
+    },
+    {
+      "heading": "Let the ritual grow only when it has room",
+      "paragraphs": [
+        "After a month, ask whether the ritual still fits and whether you want to add anything. You may keep the same small practice all year. You may also decide that a different cue works better in winter, during a new job or while traveling. A ritual can stay recognizable while its length or place changes.",
+        "Write a one-sentence description of the version you want to try next week and put the materials at the cue location tonight. That is enough to begin. If your ritual includes exercise or affects a health condition, seek qualified guidance appropriate to your circumstances; a general routine article cannot prescribe what is safe or suitable for you."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tips for Starting Physical Activity",
+      "url": "https://www.niddk.nih.gov/health-information/weight-management/tips-get-active/tips-starting-physical-activity",
+      "publisher": "National Institute of Diabetes and Digestive and Kidney Diseases, NIH",
+      "purpose": "Supports using a calendar and written time plans for an activity routine; cited narrowly as a planning example, not evidence for non-exercise health benefits."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "do-a-walking-meditation-every-morning-for-a-month",
+    "spend-an-afternoon-doing-one-thing-at-a-time",
+    "sleep-8-hours-a-night-for-30-days"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

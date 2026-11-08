@@ -1,3 +1,9 @@
+import { editorialCategoryStyle } from '~/lib/editorial-category-style';
+import {
+  ArticleFiltersForm,
+  ArticleCategoryLinks,
+  ArticlePagination,
+} from '~/components/article-discovery-controls';
 import { withPublicMetadata } from '~/lib/public-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -13,10 +19,11 @@ import {
 import type { BlogPost } from '~/lib/blog-posts';
 import { editorialArticles } from '~/lib/editorial-content';
 import { DEFAULT_SOCIAL_IMAGE, SITE_URL } from '~/lib/site-metadata';
+import { articleIndexPath, articlePage, type ArticleFilters } from '~/lib/article-discovery';
 
 const description =
-  'Thoughts on hobbies, identity, and living curiously. Articles on the psychology of leisure, rekindled passions, and finding what matters.';
-export const metadata: Metadata = withPublicMetadata({
+  'Practical guides to experiences and hobbies, alongside thoughtful writing about curiosity, identity, and making time for what matters.';
+const baseMetadata: Metadata = withPublicMetadata({
   title: { absolute: 'Hobby psychology, identity, and practical guides' },
   description,
   alternates: { canonical: `${SITE_URL}/blog` },
@@ -34,34 +41,22 @@ export const metadata: Metadata = withPublicMetadata({
   },
 });
 
-const CATEGORY_COLORS: Record<string, { bg: string; text: string; border: string }> = {
-  Wellbeing: { bg: 'bg-foreground/10', text: 'text-foreground', border: 'border-foreground/20' },
-  'Getting Started': {
-    bg: 'bg-primary/10',
-    text: 'text-foreground',
-    border: 'border-primary/30',
-  },
-  Psychology: {
-    bg: 'bg-field-lilac',
-    text: 'text-field-lilac-ink',
-    border: 'border-field-lilac-ink',
-  },
-  Reflection: { bg: 'bg-field-sky', text: 'text-field-sky-ink', border: 'border-field-sky-ink' },
-  Inspiration: {
-    bg: 'bg-field-coral',
-    text: 'text-field-coral-ink',
-    border: 'border-field-coral-ink',
-  },
-};
-
-function categoryStyle(category: string) {
-  return (
-    CATEGORY_COLORS[category] ?? {
-      bg: 'bg-card/40',
-      text: 'text-muted-foreground',
-      border: 'border-border',
-    }
-  );
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<ArticleFilters>;
+}): Promise<Metadata> {
+  const page = articlePage(editorialArticles, await searchParams);
+  const canonical = `${SITE_URL}${articleIndexPath(page)}`;
+  const title = `${page.category ? `${page.category} articles` : 'Hobby and experience articles'}${page.page > 1 ? `, page ${page.page}` : ''}`;
+  return withPublicMetadata({
+    ...baseMetadata,
+    title: { absolute: title },
+    alternates: { canonical },
+    openGraph: { ...baseMetadata.openGraph, title, url: canonical },
+    twitter: { ...baseMetadata.twitter, title },
+    ...(page.query ? { robots: { index: false, follow: true } } : {}),
+  });
 }
 
 export function PostCardContent({
@@ -71,7 +66,7 @@ export function PostCardContent({
   post: BlogPost;
   featured?: boolean;
 }) {
-  const style = categoryStyle(post.category);
+  const style = editorialCategoryStyle(post.category);
 
   return (
     <div className="group relative h-full">
@@ -166,8 +161,18 @@ export function PostCard({ post, featured = false }: { post: BlogPost; featured?
   );
 }
 
-export default function BlogPage() {
-  const [featured, ...rest] = editorialArticles;
+export default async function BlogPage({
+  searchParams,
+}: {
+  searchParams?: Promise<ArticleFilters>;
+} = {}) {
+  return BlogIndexView(searchParams ? await searchParams : {});
+}
+
+export function BlogIndexView(filters: ArticleFilters = {}) {
+  const page = articlePage(editorialArticles, filters);
+  const featured = page.page === 1 && !page.query && !page.category ? page.items[0] : undefined;
+  const rest = featured ? page.items.slice(1) : page.items;
 
   return (
     <div className="min-h-screen bg-background">
@@ -188,7 +193,8 @@ export default function BlogPage() {
 
           <FadeIn delay={0.16}>
             <p className="mx-auto max-w-xl text-lg text-muted-foreground sm:text-xl">
-              Thoughts on hobbies, identity, and living curiously.
+              Practical guides to experiences worth making room for, and reflections on living
+              curiously.
             </p>
           </FadeIn>
 
@@ -208,6 +214,13 @@ export default function BlogPage() {
       {/* Content */}
       <section className="px-4 py-14">
         <div className="mx-auto max-w-5xl">
+          <ArticleFiltersForm page={page} />
+          <ArticleCategoryLinks page={page} />
+          <p className="mb-6 text-sm text-muted-foreground">
+            {page.matches} {page.matches === 1 ? 'article' : 'articles'}
+            {page.query ? ` matching “${page.query}”` : ''}
+            {page.category ? ` in ${page.category}` : ''}
+          </p>
           {/* Featured post */}
           {featured && (
             <FadeIn className="mb-10">
@@ -233,18 +246,29 @@ export default function BlogPage() {
               ))}
             </StaggerContainer>
           )}
+          {page.matches === 0 ? (
+            <div className="rounded-2xl border border-border p-8 text-center">
+              <p className="text-foreground">No articles match this search.</p>
+              <Link href="/blog" className="mt-4 inline-block text-sm underline underline-offset-4">
+                Browse all articles
+              </Link>
+            </div>
+          ) : null}
+          <ArticlePagination page={page} />
         </div>
       </section>
 
       {/* Back to site */}
       <section className="border-t border-border px-4 py-10">
         <FadeIn className="mx-auto max-w-5xl text-center">
-          <p className="mb-3 text-sm text-muted-foreground">Ready to map your own hobby story?</p>
+          <p className="mb-3 text-sm text-muted-foreground">
+            Find something you want to make time for.
+          </p>
           <Link
-            href="/timeline/new"
+            href="/experiences"
             className="inline-flex items-center gap-1.5 rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-md"
           >
-            Build your timeline
+            Explore experiences
             <span>→</span>
           </Link>
           <div className="mt-5">

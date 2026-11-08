@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "eat-one-ordinary-snack-with-full-attention",
+  "slug": "eat-one-ordinary-snack-with-full-attention",
+  "title": "How do you practise mindful attention with an everyday snack?",
+  "description": "Take a few unhurried minutes to notice a familiar snack’s appearance, smell, texture and taste without turning the exercise into a food rule.",
+  "intent": "A gentle, adaptable sensory exercise for paying attention to an ordinary snack while respecting hunger, comfort, culture and personal boundaries.",
+  "sections": [
+    {
+      "heading": "Choose a snack that feels ordinary and comfortable",
+      "paragraphs": [
+        "Pick something you already enjoy or are neutral about, in a portion that feels comfortable to you. The point is attention, not restriction, appetite control or proving that you can tolerate a disliked food. If focusing on food feels uncomfortable, skip the exercise or choose a non-food object to explore through the senses.",
+        "The Greater Good Science Center’s Raisin Meditation is a structured sensory eating practice. You can adapt its careful observation to a familiar snack without treating its example food or timing as a requirement. Choose a quiet moment, but you do not need a special ritual, an empty stomach or a perfect setting."
+      ]
+    },
+    {
+      "heading": "Notice before tasting",
+      "paragraphs": [
+        "Set the snack down and look at it as it is. Notice its shape, colour, surface and any parts that differ. If it is packaged, you can put the wrapper aside and avoid turning the moment into label-reading unless that information is useful to you. Describe what you observe in plain terms rather than looking for a profound meaning.",
+        "Bring it near enough to notice its smell, if that is comfortable. Is the aroma obvious or faint? Does it change as you wait? You can skip any sensory step that does not suit you. The practice is an invitation to notice, not a checklist you have to complete correctly."
+      ]
+    },
+    {
+      "heading": "Take a bite at your own pace",
+      "paragraphs": [
+        "When you are ready, take a normal bite. Notice the first texture, the temperature and how the flavour develops. There is no need to chew a prescribed number of times or hold food in your mouth longer than feels natural. Eat in the way that is safe and comfortable for you. If the snack is crunchy, the sound may be part of what you notice; if it is soft, texture may be subtler.",
+        "Try putting down the next bite for a moment and checking whether your attention has wandered. It will, because attention wanders. Gently return to one sensory detail. Avoid judging the snack as good or bad, virtuous or indulgent. You are observing your present experience, not scoring your choices."
+      ]
+    },
+    {
+      "heading": "Notice context without forcing a conclusion",
+      "paragraphs": [
+        "A familiar snack may bring up a memory, a routine or a person who shared it with you. If that happens, note it lightly and return to the present if you wish. You do not have to explain why the memory appeared. Sometimes the useful observation is simply that the food tastes different when you are hurried, distracted or sharing it.",
+        "Mindful eating is not a substitute for medical, nutritional or mental-health guidance. If a sensory exercise conflicts with your needs or brings up distress, stop. You can take care of yourself by eating normally, choosing a different activity or seeking support from a qualified professional when needed."
+      ]
+    },
+    {
+      "heading": "Close without grading yourself",
+      "paragraphs": [
+        "Finish the snack when you feel ready, whether that means eating all of it or leaving some for later. Notice one detail you might otherwise have missed: a toasted edge, a cooling temperature or the sound of the wrapper. Then return to your day. There is no need to repeat the exercise for every meal.",
+        "A useful follow-up is to choose another ordinary object and give it the same unhurried attention, or to try the snack again in a different setting and see what changes. Keep the question gentle: what did I notice when I paused? The answer can be brief, practical or “not much today.”"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Raisin Meditation",
+      "url": "https://ggia.berkeley.edu/practice/raisin_meditation",
+      "publisher": "UC Berkeley Greater Good Science Center",
+      "purpose": "Supports a sensory eating practice that notices an example food through attention before and during tasting."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "explore-an-everyday-object-through-touch",
+    "listen-to-a-whole-album-without-multitasking"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

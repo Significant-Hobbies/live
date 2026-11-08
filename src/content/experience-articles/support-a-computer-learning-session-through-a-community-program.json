@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "support-a-computer-learning-session-through-a-community-program",
+  "slug": "support-a-computer-learning-session-through-a-community-program",
+  "title": "What makes a good first community computer lesson?",
+  "description": "Support a community computer class by starting with one learner-chosen task, using patient practice, and protecting privacy and learner control.",
+  "intent": "How can I help during a community computer-learning session without taking over? This guide centers the learner's immediate goal and the program's training and safeguarding boundaries.",
+  "sections": [
+    {
+      "heading": "Join a program with clear roles",
+      "paragraphs": [
+        "Begin with a library, adult-learning provider, community center or digital-equity program that has a named coordinator. Ask what volunteers may teach, whether the program provides materials and how it handles safeguarding, devices, passwords and personal information. A city-run example, Philadelphia's Power Up Tech Corps, places volunteers as lab monitors, classroom aides or digital-skills instructors and provides orientation and training. Its requirements are local, so use your own program's rules rather than copying another city's time commitment or background-check process.",
+        "Choose the role that matches your experience. You do not need to be an expert at every device to help someone practice a task you understand, but you should say when you do not know an answer. Ask whether the session is one-to-one or group-based, whether learners bring their own devices, and who should be contacted if a technical problem becomes a privacy or safety issue."
+      ]
+    },
+    {
+      "heading": "Ask what the learner wants to do",
+      "paragraphs": [
+        "At the start, ask the learner what would make this time useful. The goal might be opening an email attachment, joining a video call, typing a short document or finding the right bus information. Use their words and let them choose where to begin. A broad question such as “What do you want to do on the computer today?” often works better than starting with a lecture about every button on the screen.",
+        "Break the goal into visible steps and ask before changing settings or moving a device. Demonstrate only the first step, then give the learner the mouse or keyboard. If you take over to make the screen move faster, they lose the chance to practice and you lose information about which step was confusing. Let silence happen while they think; a short pause can be more helpful than another instruction."
+      ]
+    },
+    {
+      "heading": "Teach a repeatable task, not a memorized click path",
+      "paragraphs": [
+        "Explain what a control does and why it matters: “This menu opens your saved files” is more transferable than “click the fourth icon.” Devices and websites change, so describe the idea behind a step. Have the learner try it again from the beginning, using a short checklist they can keep. If reading is difficult, ask whether a simple diagram, larger text or spoken reminder would be more useful.",
+        "Keep a comfortable pace. Ask the learner to show you what they understood rather than asking “Does that make sense?” which can invite a polite yes. When something goes wrong, describe what you see without blame: “The page is asking for a password” rather than “You did it wrong.” Follow the program's referral route when the task crosses into benefits, banking, healthcare or legal forms that require specialist advice."
+      ]
+    },
+    {
+      "heading": "Protect the learner's privacy",
+      "paragraphs": [
+        "Never ask someone to disclose a password, verification code, bank details or private message to you. If a lesson requires signing in, have the learner enter their own credentials and follow the program's device-handling rules. Avoid saving their personal information to a shared computer. If the person asks you to click a suspicious link or bypass a security warning, pause and consult the coordinator instead of improvising.",
+        "Be culturally respectful and do not assume what a learner can or cannot do based on age, language, disability or access to technology. Ask what device and language they prefer. Offer options such as a larger display, headphones or a printed reminder, but let the learner decide. If the session involves a child or a vulnerable adult, follow the program's supervision policy and never move communication into personal channels without explicit program approval."
+      ]
+    },
+    {
+      "heading": "Close with a small independent win",
+      "paragraphs": [
+        "Before the session ends, invite the learner to repeat the task without your hands on the controls. Ask what they would do first next time and what still feels uncertain. Celebrate a specific skill they used—finding the browser tab, recognizing a download or correcting a typo—without making the lesson feel like a test. Note follow-up needs for the coordinator, not sensitive personal details in an informal notebook.",
+        "Your next action is to contact one local library or community technology program and ask about its volunteer orientation, role boundaries and training. Bring one simple task you are comfortable teaching, then let the learner choose whether it is useful to them."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Volunteer for the Power Up Tech Corps",
+      "url": "https://www.phila.gov/services/education-learning/get-help-with-technology/volunteer-for-the-power-up-tech-corps/",
+      "publisher": "City of Philadelphia, Office of Innovation and Technology",
+      "purpose": "Supports an example of community digital-skills volunteering roles, program-provided orientation and training, and qualities such as patience, empathy and cultural sensitivity."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "control-a-scratch-project-with-a-physical-object",
+    "document-access-details-for-public-places-on-wheelmap",
+    "help-classify-research-images-with-stall-catchers"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

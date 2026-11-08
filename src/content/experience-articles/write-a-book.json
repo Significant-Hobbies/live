@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "write-a-book",
+  "slug": "write-a-book",
+  "title": "Turn the book idea into a project you can actually finish",
+  "description": "Choose the kind of book you mean to write, test its central promise, and build a working plan that fits the form before drafting chapters.",
+  "intent": "Answers how to shape a broad wish to write a book into a bounded project, while distinguishing nonfiction planning from fiction manuscript expectations.",
+  "sections": [
+    {
+      "heading": "Name the book’s job",
+      "paragraphs": [
+        "“A book” can mean a novel, a memoir, a practical guide, a researched narrative, or a collection. Before choosing a word count or schedule, write one sentence about the reader and the experience you want to offer them. “A guide for first-time community gardeners who need to plan a small shared plot” gives you a different test than “a story about siblings rebuilding their relationship.” The first promises useful decisions; the second promises a dramatic journey.",
+        "Make a short list of what belongs and what does not. If the topic is a career change, perhaps the book follows one person through three turning points rather than cataloguing every job they ever had. Boundaries are not a way to shrink your ambition; they give the reader a thread to follow."
+      ]
+    },
+    {
+      "heading": "Choose the right kind of preparation",
+      "paragraphs": [
+        "For researched nonfiction, begin with a question the book can answer and an evidence map: people to interview, records to consult, and places where you still lack support. Write a sample chapter to test whether the voice can carry both explanation and scene. The Authors Guild notes that publishers considering nonfiction proposals may ask for a sample chapter and detailed outline, while fiction submissions often require a completed manuscript; individual publisher guidelines vary. That difference is a useful planning distinction, not a universal publishing rule.",
+        "For fiction, a premise is not yet a plot. Give the protagonist a want, a pressure that complicates it, and a consequence if they fail. Sketch a beginning, a major change in the middle, and an ending that answers the story’s central question. Then draft a scene before building a huge world bible: a voice on the page reveals more than a folder of background notes."
+      ]
+    },
+    {
+      "heading": "Make a map you can revise",
+      "paragraphs": [
+        "Try a one-page outline with three columns: chapter or scene, what changes, and what the reader knows afterward. A nonfiction chapter on choosing a first bicycle might compare fit, terrain and repair access; a novel chapter might force two characters to make a choice they cannot undo. If a proposed chapter changes nothing, combine it with another or leave it out.",
+        "Keep a separate “later” list for research rabbit holes, beautiful side scenes and questions that are real but not central. When an outline stops matching the draft, revise the outline. It is a navigation aid, not a contract with your past self."
+      ]
+    },
+    {
+      "heading": "Set up a repeatable writing session",
+      "paragraphs": [
+        "Choose a small unit you can return to: one scene, one example, a rough section, or a 30-minute session. Start each session by writing a note to your next self: the next action, the missing fact, or the sentence you are trying to earn. That removes the cost of reopening a blank page. Keep research notes separate from draft prose and label uncertain facts so they cannot quietly harden into claims.",
+        "Do not revise every paragraph into polish before you know the book’s shape. A useful first pass can contain placeholders such as “[verify date]” or “[find one counterexample].” The goal of the draft is to expose the work still needed, not to impersonate a finished book."
+      ]
+    },
+    {
+      "heading": "Finish with a reader in mind",
+      "paragraphs": [
+        "When a full draft exists, check it at two scales. At the chapter level, ask whether each part moves the reader toward the promise in your opening. At the paragraph level, look for unsupported facts, repeated explanations, missing transitions and scenes that arrive too late. Ask a few thoughtful readers where they became curious, confused or unconvinced; do not ask them to rewrite the book for you.",
+        "If you hope to publish, research presses or routes that fit this exact kind of book and follow their current submission instructions. If publication is not the point, make a deliberate edition for the people who will read it: a clean file, a title page and a note about what the book is for. Start by writing the one-sentence promise and a rough list of the chapters or scenes that could fulfill it."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How to Submit a Book Without an Agent",
+      "url": "https://authorsguild.org/resource/how-to-submit-a-book-without-an-agent/",
+      "publisher": "The Authors Guild",
+      "purpose": "Supports the narrow publishing distinction that some nonfiction proposals include a sample chapter and detailed outline, while fiction submissions often require a completed manuscript; specific publisher requirements vary."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "write-and-finish-a-novel",
+    "write-your-memoir",
+    "publish-an-article-in-a-magazine"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,65 @@
+{
+  "slug": "lisbon-portugal",
+  "title": "Build a Lisbon day around its hills and tram routes",
+  "description": "Choose a compact neighborhood route, use the official tram and metro information, and leave room for hills, viewpoints and a slower meal.",
+  "intent": "Plan a practical Lisbon visit using official route and transit information, accounting for hills and date-specific schedules.",
+  "sections": [
+    {
+      "heading": "Choose a neighborhood route, not a city checklist",
+      "paragraphs": [
+        "Lisbon’s historic center is steep and its neighborhoods reward walking, so choose a compact route around one or two districts. Turismo de Portugal describes Tram 28’s route from Martim Moniz through Graça and Alfama toward Campo de Ourique, passing viewpoints and historic streets. Use that as a spine for a day, not as a promise that the tram is the best option at every hour or for every traveler.",
+        "Mark the hills, stairs and likely walking distances between stops. If you want to visit a viewpoint, decide whether you will climb, use a lift or take a vehicle, and check current access information. Leave time for a rest and meal. A route that alternates one uphill section with an easy descent can be more enjoyable than crossing the same slopes repeatedly."
+      ]
+    },
+    {
+      "heading": "Use transit for the part that helps",
+      "paragraphs": [
+        "Before you go, decide whether the tram is part of the experience or simply transport. The official tourism description also notes other tram routes and historic lifts, and points readers to Carris for current routes and fares. Check the operator’s live service information for changes, queues and accessibility; tourist descriptions may not reflect a disruption on your date.",
+        "Lisbon Metro’s English timetable page says that under normal conditions the system opens at 6:30 a.m. and closes at 1 a.m. Treat those as general operating hours, not a guarantee about a specific station, disruption or early dawn connection. If you want to start before the first trains, choose an area within walking distance or use a verified alternative."
+      ]
+    },
+    {
+      "heading": "Pair landmarks with a reason to stop",
+      "paragraphs": [
+        "Select one major interior or viewpoint and one ordinary neighborhood detail you want to notice. You might spend time around Alfama’s lanes, a church exterior, a public square or a market, depending on current access and opening hours. Check the official site for ticketed monuments and reserve in advance where needed. Avoid stacking several timed entries on the same side of town if transit and hills will make them rushed.",
+        "For Tram 28, check the current route and boarding point before traveling. If the car is crowded or the service is disrupted, walk a shorter section or choose another line from the operator’s current map. Keep your belongings secure in crowded transit and give local residents room on narrow streets; this is a working city, not only a sightseeing route."
+      ]
+    },
+    {
+      "heading": "Plan around the day’s heat and pace",
+      "paragraphs": [
+        "Check the forecast and adjust your walking loop to the temperature, shade and your own stamina. Carry water and comfortable shoes for uneven paving. Plan a place to sit and a route back to your accommodation before you need it. If you have mobility needs, look up lift, tram and station accessibility directly with the operator, since steep streets may make a route difficult even when the distance looks short.",
+        "Book one meal or activity that matters to you, then leave the rest flexible. Ask restaurants about reservations and opening times directly. If a viewpoint is busy, find another public place to pause rather than blocking a narrow path for a photograph. A slower route can show more of the city’s architecture and daily life than a rush from one famous landmark to another."
+      ]
+    },
+    {
+      "heading": "Finish with a simple return plan",
+      "paragraphs": [
+        "Save your accommodation address, nearest stop and the last practical connection for the day. Check live Metro or Carris service before leaving a neighborhood, especially if you have an evening reservation. Lisbon Metro’s timetable is explicitly under normal operating conditions; public holidays, works and service notices can change the trip.",
+        "Keep one optional stop for another visit. The goal is to build a route that fits the real contours of the city and your energy, not to ride every tram or see every viewpoint in one day. A useful plan has a clear starting area, a handful of stops, a way to adjust and enough time to sit down and notice Lisbon around you."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Lisbon by Tram",
+      "url": "https://www.visitportugal.com/en/destinos/lisboa-regiao/320317",
+      "publisher": "Turismo de Portugal",
+      "purpose": "Supports the Tram 28 route description through Martim Moniz, Graça and Alfama, the listed historic lifts and the operator link for routes/fares; not a live service timetable."
+    },
+    {
+      "title": "Timetables and frequency",
+      "url": "https://www.metrolisboa.pt/en/travel/timetables-and-frequency/",
+      "publisher": "Metropolitano de Lisboa",
+      "purpose": "Supports the normal Metro opening and closing hours as published by the operator; those are general hours and the page advises that frequencies are approximate and disruptions can occur."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "live-abroad-for-at-least-one-full-year",
+    "spend-a-month-in-japan",
+    "the-amalfi-coast-italy"
+  ],
+  "experienceSlug": "lisbon-portugal",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

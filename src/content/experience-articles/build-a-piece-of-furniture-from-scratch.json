@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "build-a-piece-of-furniture-from-scratch",
+  "slug": "build-a-piece-of-furniture-from-scratch",
+  "title": "Start Furniture Making With a Small, Square Project",
+  "description": "Choose a first furniture build that teaches stable joinery, careful layout, and wood movement without turning a simple project into a tool maze.",
+  "intent": "Shows how to choose and sequence a beginner furniture build, with special attention to fit, joinery, and a tabletop’s seasonal movement.",
+  "sections": [
+    {
+      "heading": "Pick a useful shape with few parts",
+      "paragraphs": [
+        "Choose one small object with a clear job: a low stool, a simple bedside table, or a wall shelf. A first project should teach one or two new skills, not every joint in the workshop. Sketch front, side, and top views, then label each part. If the drawing cannot show where each board attaches, simplify it before buying timber.",
+        "Think through how the piece will meet the floor, wall, or load it carries. A stool needs a stable footprint; a shelf needs a secure mounting plan for its wall and expected use. A drawer, curved leg, or cabinet door can wait until you have made a square structure that sits flat and does not rack when gently pushed."
+      ]
+    },
+    {
+      "heading": "Choose joinery that fits the job",
+      "paragraphs": [
+        "A butt joint with screws may be appropriate for a straightforward beginner project when the design and load allow it; rabbets and dadoes provide more mechanical location for shelf or box parts. Woodcraft’s joinery guide describes rabbets, dadoes, and grooves as building-block joints used in furniture and cabinets. Choose a method you can cut accurately with instruction and tools available at your shop.",
+        "Do a dry fit before applying glue. Check that the shoulders meet, parts align, and the assembly sits square. Mark reference faces and edges so you measure each part from a consistent side. A small error repeated across a frame can become a twisting table, so stop and diagnose a gap rather than forcing a clamp to conceal it."
+      ]
+    },
+    {
+      "heading": "Plan for solid wood to move",
+      "paragraphs": [
+        "A solid wood panel changes width with seasonal humidity. A tabletop glued rigidly across its width to an apron can crack or bow as it expands and contracts. Woodcraft’s tabletop article explains ways to fasten a top so that it can move, including clips or shop-made buttons. If you are building a table, learn this before attaching the top, not after the frame is complete.",
+        "Plywood behaves differently from a wide solid panel, so the material choice changes the design. Ask a teacher or experienced woodworker how the panel, grain direction, and attachment method work together. Don’t copy a tabletop detail from a photo without knowing whether it was designed for solid lumber or sheet goods."
+      ]
+    },
+    {
+      "heading": "Make a full-size layout and test",
+      "paragraphs": [
+        "Before cutting, measure twice from one chosen reference edge and mark the part names on the wood. A full-size drawing on paper or a shop floor helps reveal whether a stool is too tall, a shelf too deep, or a table base too narrow. Then make a test cut in scrap using the actual setup. It is cheaper to learn that a fence or blade needs adjustment on waste stock than on the final piece.",
+        "Use the tools you have been taught to operate, with the shop’s required guards and safety practices. A beginner guide is not a substitute for supervised tool instruction. Ask for help setting up unfamiliar saws, routers, or clamps, and keep hands and loose clothing out of the tool path."
+      ]
+    },
+    {
+      "heading": "Finish for use, not just photographs",
+      "paragraphs": [
+        "Sand edges so they are comfortable to touch, but keep corners square where a joint depends on them. Apply a finish that suits the object’s location and expected wear, following the finish manufacturer’s directions for ventilation, curing, and cleanup. Test the color on a scrap from the same board; wood can take stain unevenly, and a test prevents surprises on the visible face.",
+        "The next action is to sketch one small piece and make a cut list before shopping. Ask a community workshop or experienced woodworker to review your joint choices and machine plan. A useful first piece will teach you how layout, fit, movement, and finish work together—and it will be sturdy enough to use after the novelty of making it wears off."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Joinery Made Simple: Rabbets, Dadoes, and Grooves",
+      "url": "https://www.woodcraft.com/blogs/shop-knowledge-guides/joinery-made-simple-rabbets-dadoes-and-grooves",
+      "publisher": "Woodcraft",
+      "purpose": "Explains common furniture joints used in cabinets and furniture making."
+    },
+    {
+      "title": "How to Attach a Tabletop and Allow for Wood Movement",
+      "url": "https://www.woodcraft.com/blogs/cabinetry-furniture-making/joinery-class-attaching-tabletops",
+      "publisher": "Woodcraft",
+      "purpose": "Explains why solid tabletops need attachment methods that permit seasonal movement."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "make-something-with-your-hands-you-re-proud-of",
+    "build-something-that-outlasts-you",
+    "build-a-hand-cranked-cardboard-automaton"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

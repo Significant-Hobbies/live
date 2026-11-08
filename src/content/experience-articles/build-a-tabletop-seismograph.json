@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "build-a-tabletop-seismograph",
+  "slug": "build-a-tabletop-seismograph",
+  "title": "How can you build and read a tabletop seismograph?",
+  "description": "Build a simple tabletop seismograph from a flexible ruler and marker, then compare how different gentle shakes change the trace it leaves on paper.",
+  "intent": "How can a homemade seismograph make motion visible? This guide explains a small demonstration, how to compare traces fairly, and why it is not a device for predicting earthquakes.",
+  "sections": [
+    {
+      "heading": "Set expectations for the model",
+      "paragraphs": [
+        "A tabletop seismograph is a demonstration of relative motion, not a scientific instrument for measuring a real earthquake. The California Academy of Sciences shows a simple model using a flexible ruler, a heavy can, a marker, tape and paper. As the table moves, the weighted ruler and marker respond differently, leaving a line. The model makes a useful idea visible, but it cannot detect or predict earthquakes in the world outside the table.",
+        "Choose a stable table and a place where the paper can move freely. Clear drinks, sharp tools and breakable objects from the work area. An adult should supervise cutting or fastening if your version uses scissors or heavier items. Keep the weight low and securely taped so it cannot fall onto a foot or roll off the edge. Do not shake furniture hard enough to tip it or damage anything."
+      ]
+    },
+    {
+      "heading": "Build a simple recording arm",
+      "paragraphs": [
+        "Tape a marker to one end of a flexible ruler so it forms an L-shaped arm, following the California Academy's lesson. Position the ruler over a heavy can and tape the ruler to the side so the marker tip just touches the paper. The can and ruler form a hanging mass that resists some movement as the table shifts. Use paper wide enough to capture the line and leave space to move it steadily under the marker.",
+        "Check that the marker can touch the page without pressing so hard that the ruler bends sharply. If it tears the paper or barely leaves a trace, change the marker position or weight slightly. Make one adjustment at a time. Keep fingers clear of the marker tip and tape edges, and ask someone to hold the paper only at a safe distance from the arm."
+      ]
+    },
+    {
+      "heading": "Run a controlled shake test",
+      "paragraphs": [
+        "First leave the table still and move the paper underneath the marker at a steady pace. This gives you a baseline line. Then ask a partner to make a small side-to-side movement, followed by a slightly larger one, while you keep the paper moving at about the same speed. Label each section with the type of movement and the time. Avoid dramatic shaking; the aim is to compare how the trace responds, not to make the room feel like an earthquake.",
+        "Try a different direction only after you have a readable first trace. A vertical movement may affect the arm differently from a lateral one. If the line goes off the page or becomes tangled, stop and reset. Keep the recorder in the same spot for each test, since moving it changes the relationship between the table and the suspended weight."
+      ]
+    },
+    {
+      "heading": "Read the trace as evidence of motion",
+      "paragraphs": [
+        "Compare the baseline with the gentle and larger shakes. Which line widened, changed shape or became more irregular? That shows how your model responds to different table movement, not the exact strength of a real earthquake. The Academy explains that real instruments record ground vibrations and use information from multiple stations to locate an earthquake. Your tabletop device has only one very simplified sensor and no calibrated scale, so do not convert a taller mark into a magnitude number.",
+        "If the trace is unclear, check whether the paper moved smoothly, the marker stayed in contact, or the ruler touched the table. Make another run after correcting one issue. The most useful graph might be a simple label—still, small lateral shake, larger lateral shake—rather than a numerical claim you cannot support."
+      ]
+    },
+    {
+      "heading": "Improve one part of the design",
+      "paragraphs": [
+        "After a few tests, decide what you want the model to show better: motion direction, the length of a shake or a clearer line. Change only one feature, such as the marker position or the paper width, then repeat the same sequence. Keep both the original and revised traces so you can compare the result. A model becomes more informative when the test is repeatable, not when the apparatus has the most parts.",
+        "Your next action is to make one baseline trace and two gentle side-to-side traces on the same sheet, labeling each one. Then write one sentence about what changed and one limitation of your model. Keep the apparatus for a later comparison rather than using it to claim an earthquake forecast."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Measuring Earthquakes",
+      "url": "https://www.calacademy.org/educators/lesson-plans/measuring-earthquakes",
+      "publisher": "California Academy of Sciences",
+      "purpose": "Supports the flexible-ruler, heavy-can, marker and paper seismograph model, gentle shake test, and the distinction between a model and real seismographs."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-a-spectroscope-and-compare-household-lights",
+    "build-a-radio-jove-receiver-with-a-radio-club",
+    "match-cloud-observations-to-satellite-science"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

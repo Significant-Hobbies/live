@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "dive-the-blue-hole-in-belize",
+  "slug": "dive-the-blue-hole-in-belize",
+  "title": "Is Belize’s Blue Hole the right dive for you?",
+  "description": "Decide whether the Great Blue Hole belongs on your dive itinerary by matching your training and goals to the site and asking the operator clear questions.",
+  "intent": "Help a diver evaluate whether the Blue Hole fits their current experience and expectations, instead of treating a famous site as an automatic must-do.",
+  "relatedExperienceSlugs": [
+    "become-a-certified-scuba-diver",
+    "scuba-dive-somewhere-extraordinary",
+    "maldives-above-and-below-water"
+  ],
+  "sections": [
+    {
+      "heading": "Separate the name from the dive you will actually do",
+      "paragraphs": [
+        "The Great Blue Hole is a marine sinkhole in Lighthouse Reef Atoll. The name evokes a plunge into a deep vertical shaft, but a recreational trip is a guided dive within the limits set by the operator, your certification, and your comfort. PADI’s site listing describes it as a boat-entry wall or cavern dive and suggests advanced or deep-diving training as useful preparation. Its page also says to consult a dive professional familiar with present conditions.",
+        "That is a useful starting point, not an individual clearance. PADI’s listing carries a disclaimer that some site information may come from third parties and is not guaranteed. Ask the Belize operator what the actual profile will be, how the group is divided by experience, and what alternatives are offered if the conditions or your readiness do not fit."
+      ]
+    },
+    {
+      "heading": "Name your reason for going",
+      "paragraphs": [
+        "Write down the part that appeals: seeing a distinctive geological formation, making a trip to an offshore atoll, or adding a notable dive to a Belize itinerary. Then decide what would make the day worthwhile even if the famous feature is less dramatic than photos suggest. A site’s reputation can inflate expectations; you may see a limited range of life or spend much of the dive attending to the guide and your own buoyancy.",
+        "If this is your first trip, you are newly certified, or you have not dived recently, a shallower reef with a patient guide may be a better use of the day. That is not a lesser accomplishment. It gives you space to get comfortable with entries, current, buoyancy, and communication before considering a more demanding excursion."
+      ]
+    },
+    {
+      "heading": "Check the operator and the briefing",
+      "paragraphs": [
+        "Before paying, ask whether the shop is currently operating the trip, which certification and recent experience they expect, how they assess a diver’s skills, and whether a check dive is available. Confirm the planned maximum depth, group size, guide-to-diver arrangements, equipment expectations, and how a diver can decline or end a dive. Ask what happens if sea state, visibility, or another condition leads the crew to change or cancel the plan.",
+        "A responsible answer should be specific and should leave you room to say no. Be wary of sales language that treats a certification card as proof that every dive is appropriate or promises a particular animal encounter. A guide who knows the site can explain its present conditions; your own dive professional can help you judge whether your experience matches the plan."
+      ]
+    },
+    {
+      "heading": "Make your personal go/no-go call",
+      "paragraphs": [
+        "Do not use an online article to decide whether you are medically fit to dive. If health, medication, pressure equalization, anxiety, or a long break raises a question, discuss it with a qualified diving clinician or instructor before booking. You can also choose the reef alternative without explaining yourself to the group.",
+        "On the day, listen to the full briefing, use only equipment you know how to operate, and follow the professional’s instructions. If the plan changes in a way that makes you uncomfortable, tell the guide and stay aboard or choose the alternative. PADI’s listing reminds divers to follow its standard safe-diving practices and consult a professional familiar with present conditions; take that advice seriously."
+      ]
+    },
+    {
+      "heading": "Plan the day around a flexible itinerary",
+      "paragraphs": [
+        "An offshore site can take a substantial part of a Belize day. Ask the operator about departure location, transfer time, what is included, surface intervals, and whether other dives are planned; details vary by trip. Keep the remainder of the schedule loose, especially if your transport back to the mainland or onward travel is fixed.",
+        "The most useful first action is to send a local dive professional your certification level, recent dive history, and what you hope to experience. Ask for an honest comparison between the Blue Hole and a reef day. Make the decision after that conversation, not from the dramatic blue circle in a photograph."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Great Blue Hole dive site",
+      "url": "https://www.padi.com/dive-site/belize/the-great-blue-hole/",
+      "publisher": "PADI",
+      "purpose": "Site location/type, suggested training, stated maximum depth, and recommendation to consult a local dive professional; page disclaims guarantees about third-party content."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

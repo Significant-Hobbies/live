@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "record-a-conversation-with-an-elder-and-preserve-it",
+  "slug": "record-a-conversation-with-an-elder-and-preserve-it",
+  "title": "Record one conversation with consent and care",
+  "description": "Plan a recorded conversation with an elder by agreeing on topics, access, and privacy before testing your equipment and asking open questions.",
+  "intent": "Help a reader preserve one elder’s story as a collaborative conversation, with clear consent, a narrator-led topic choice, and an honest storage plan.",
+  "sections": [
+    {
+      "heading": "Invite the person, not just their story",
+      "paragraphs": [
+        "Start with a direct invitation that explains why you would like to talk and what you hope to do with the recording. Ask whether they want to participate, what topics they would enjoy discussing, and whether they would prefer an unrecorded conversation. An elder is not a source you are entitled to collect. If they decline, change the subject, or ask to stop, accept that without persuasion. Do not begin recording while they are unaware or assume a family member can consent on their behalf.",
+        "The Oral History Association’s current principles recommend informed consent, explaining the process and possible uses, and clarifying the narrator’s expectations before recording. Those are professional best practices for oral history; for a family conversation, they offer a thoughtful model rather than a statement of local law. If the recording might be published, deposited in an archive, or shared widely, discuss those uses separately and check applicable permissions and laws before doing so."
+      ]
+    },
+    {
+      "heading": "Agree on the boundaries before pressing record",
+      "paragraphs": [
+        "Have a short pre-conversation about length, device, topics, who may hear the file, whether you will make a transcript, and whether the person can review it before sharing. Explain where it will be stored and how someone could ask you to delete or restrict it. The OHA guide advises discussing preservation, access, potential uses, and review before an oral history interview; it also notes that material already made public may be difficult to remove later. A private family recording may have a smaller audience, but it can still be copied or forwarded, so be specific.",
+        "Write down a simple agreement in plain language, even if it is just a note for the two of you: ‘Audio for family use; not for posting; you may ask me to pause or stop.’ This is not a substitute for a formal legal release when one is needed. If public use, institutional archiving, or commercial use is contemplated, use appropriate release paperwork and get qualified advice for the relevant jurisdiction."
+      ]
+    },
+    {
+      "heading": "Prepare a conversation, not an interrogation",
+      "paragraphs": [
+        "Choose a quiet, comfortable place and test the microphone before the guest arrives. The Oral History Association recommends preparing an open-ended guide or outline of topics and questions. For a family conversation, you might begin with an ordinary memory, such as how a familiar meal was prepared or what a typical day looked like; those are practical examples, not questions prescribed by OHA. Follow the person’s answer instead of rushing through a prepared list.",
+        "Give the person room to choose the direction. Do not demand exact dates, challenge a memory in the moment, or press for painful subjects because they would make the recording more dramatic. A person can decline a question, take a break, or end the conversation. Ask before bringing another family member into the room; a group can change what someone feels comfortable saying."
+      ]
+    },
+    {
+      "heading": "Make the recording easy to revisit",
+      "paragraphs": [
+        "At the start, state the date, the participant’s preferred name, and a broad description of the setting only if they agree. Avoid naming a private home address or sensitive details. Speak clearly, place the device where it will capture both voices, and silence nonessential notifications. If the recording is important, make a backup after the conversation and store it in a private location with a descriptive filename and date. Keep any transcript or notes linked to the audio so future listeners understand what it contains.",
+        "The OHA guidance recommends discussing preservation, access, and intended use with the narrator, then planning storage around those expectations. Its material addresses oral history projects, which can be more formal than a family recording; adapt it to your scale, keep a secure copy only as agreed, and do not promise permanent preservation unless you can actually maintain it."
+      ]
+    },
+    {
+      "heading": "Return the recording to the narrator",
+      "paragraphs": [
+        "Afterward, thank the person and ask how they felt about the conversation. Offer a copy if they want one, and follow the sharing limits you agreed on. If a sensitive detail emerged, discuss whether it should be removed or kept private before anyone else hears the file. Preserve the person’s wording and context if you make notes; do not edit a sentence into a meaning they did not intend.",
+        "Choose one topic and send the invitation before planning a large family archive. A respectful recording begins with the other person’s choice, continues at their pace, and ends with a clear understanding of where the story will live and who may hear it."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "OHA Principles and Best Practices",
+      "url": "https://oralhistory.org/wp-content/uploads/2025/10/2025-OHA-Principles-and-Best-Practices-Complete.pdf",
+      "publisher": "Oral History Association",
+      "purpose": "Supports informed consent, pre-interview discussion of purpose/topics/use/access, narrator ability to pause or decline, review/withdrawal considerations, open-ended question planning, and preservation; formal oral history guidance is not a substitute for local law."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "record-your-parents-life-stories",
+    "write-down-everything-you-know-about-your-family-history"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "make-pasta-from-scratch",
+  "slug": "make-pasta-from-scratch",
+  "title": "A first fresh-pasta afternoon with flour, eggs and one shape",
+  "description": "Make a small egg-pasta batch by following one recipe, resting the dough, rolling it evenly and testing a strand before serving.",
+  "intent": "A practical first session for hand-rolled or machine-rolled ribbon pasta, with troubleshooting cues and a modest sauce plan.",
+  "sections": [
+    {
+      "heading": "Choose the dough and meal before you start",
+      "paragraphs": [
+        "For a first attempt, choose a fresh egg-pasta recipe that gives weights, resting time and cooking instructions. King Arthur Baking’s fresh-pasta recipe uses flour, salt and eggs, and offers both machine and rolling-pin routes. Read the whole method once and decide on one shape: tagliatelle is easier to manage than filled ravioli because you do not need to seal dozens of edges.",
+        "Plan for the pasta to be the meal’s main activity. Make a simple sauce before cutting the dough—olive oil and herbs, butter and cheese, or a tomato sauce you already know how to cook. Clear a floured work surface, set out a knife or pasta machine, a tray dusted with semolina and a large pot. Keep the recipe visible instead of estimating ratios."
+      ]
+    },
+    {
+      "heading": "Bring the dough together without panic",
+      "paragraphs": [
+        "Measure the ingredients as written and form the dough according to the recipe. Fresh pasta dough can look dry and crumbly at first; King Arthur’s instructions say to keep folding and pressing until the egg moistens the flour and a firm dough comes together. If it remains dry after you have followed that method, check your measurements and recipe before adding liquid. Changing amounts too early can leave the dough sticky or tough.",
+        "Knead until the dough is cohesive and smooth as directed, then wrap it tightly and let it rest for the specified time. Resting gives the dough a chance to relax, so it is easier to roll. If you try to roll it immediately and it springs back, stop and give it more rest rather than forcing it thinner."
+      ]
+    },
+    {
+      "heading": "Roll one portion at a time",
+      "paragraphs": [
+        "Divide the rested dough and keep the unused piece covered so it does not dry out. With a machine, begin at its widest setting and reduce the thickness gradually, lightly dusting with flour if it sticks. By hand, use a rolling pin and rotate the sheet so the center and edges stay close to the same thickness. A rough rectangle is fine; you are looking for a sheet that can be cut into even ribbons.",
+        "If the sheet tears, patch it gently and continue at a thicker setting. If it is too sticky to lift, dust the work surface and sheet lightly; a heavy coating of flour can make the finished pasta dry. If it shrinks back, let it rest briefly and return to it."
+      ]
+    },
+    {
+      "heading": "Cut, separate and cook a test piece",
+      "paragraphs": [
+        "Dust the sheet lightly, fold or roll it loosely, then cut ribbons with a sharp knife. Unroll the strands and place them in loose nests on a semolina-dusted tray. Keep the nests separated so they do not fuse. The King Arthur recipe describes cooking fresh ribbons for only a few minutes, but the exact time depends on thickness; put one test strand into gently boiling salted water and taste it before cooking the whole batch.",
+        "Fresh pasta cooks much faster than dried pasta. Keep the sauce warm and the table ready before the pot is crowded. Use tongs to transfer the noodles to the sauce with a little cooking water, then taste for salt and texture. The first batch does not need a perfect restaurant shape to be successful."
+      ]
+    },
+    {
+      "heading": "Make the next batch easier, not fancier",
+      "paragraphs": [
+        "After eating, note where the dough was hard to handle: dry at the start, springy when rolling, sticky after cutting, or uneven in the pot. Change only one thing next time, such as resting longer, rolling more gradually or cutting fewer strands at once. Do not change flour ratios and rolling thickness together or you will not know what helped.",
+        "A useful first afternoon ends with one shape and one meal. If you enjoyed the handwork, try a different flour or a hand-shaped pasta in a later session, following a separate recipe. For now, save the recipe you used and write down what the dough felt like at each stage."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Fresh Pasta Recipe",
+      "url": "https://www.kingarthurbaking.com/recipes/fresh-pasta-recipe",
+      "publisher": "King Arthur Baking",
+      "purpose": "Supports a flour-and-egg dough method, resting, dividing, rolling by machine or hand, cutting and brief cooking of fresh pasta."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "roll-couscous-grains-by-hand-with-a-knowledgeable-cook",
+    "press-corn-tortillas-and-serve-them-warm",
+    "practice-three-vegetable-knife-cuts-for-one-meal"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

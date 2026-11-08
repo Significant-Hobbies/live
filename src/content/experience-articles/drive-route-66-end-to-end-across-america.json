@@ -1,0 +1,47 @@
+{
+  "experienceSlug": "drive-route-66-end-to-end-across-america",
+  "slug": "drive-route-66-end-to-end-across-america",
+  "title": "Give Route 66 room for towns, not just miles",
+  "description": "Plan Route 66 as a sequence of historic places with room for detours and local discoveries. Use an official itinerary, then check access and roads.",
+  "intent": "How can a driver build an end-to-end Route 66 trip around historic places without racing the mileage?",
+  "sections": [
+    {
+      "heading": "Give the road a theme",
+      "paragraphs": [
+        "Route 66 makes a poor race. Its interest comes from a changing scale: a city edge, a roadside building, a main street, then a stretch that feels wide open. Choose a few anchors for each part and leave room between them. The National Park Service itinerary highlights more than 100 places, while noting that over 250 buildings, bridges, road alignments, and other sites along the route are listed on the National Register. Use the itinerary to choose varied stops rather than collect every marker. Start with a question that can guide your version of the drive. Do you want to notice how automobile travel reshaped towns? Are you following diners and motels, or examining how the highway alignment changed? A theme gives the trip coherence without dictating every hour. Pick a place that opens early, a site where you can walk, and one flexible stop for each day."
+      ]
+    },
+    {
+      "heading": "Build a flexible route",
+      "paragraphs": [
+        "Build the map in layers. Mark the cities you intend to use as endpoints, then add historic sites and small-town stops. Check current roads, closures, fuel, lodging, and detours through official local sources. Historic segments can be fragmented or rerouted, so do not assume an uninterrupted road follows the old alignment. A navigation app helps with routing but will not explain why a place matters; keep an offline map with the historic stops you want to understand. Plan each day around one or two meaningful visits, not a string of pins. A museum or restored site may deserve more time than a quick photograph. Put an optional stop after the anchor rather than making every stop a commitment. If construction removes a segment, a nearby heritage site can still carry the day’s theme. Confirm each site’s public hours before making it the reason for an early start."
+      ]
+    },
+    {
+      "heading": "Treat stops as real places",
+      "paragraphs": [
+        "One mistake is setting a mileage target and skipping the places that make the road distinctive. Another is treating a restored business like a stage set. Ask staff about its history, buy something if you use the space, and follow photography rules. Some historic buildings are private businesses or fragile sites, not open-air exhibits. Read the information, stay in public areas, and leave objects where they are. Route 66 crosses many jurisdictions, so allow the road to surprise you without driving tired to keep a self-imposed timetable. Rotate driving only when the other driver is licensed and comfortable with the vehicle, and stop if weather or fatigue changes the plan. A day with fewer miles and a conversation with a local curator can be a better day. Save the location and opening hours of the next stop before leaving a town with limited mobile coverage."
+      ]
+    },
+    {
+      "heading": "Make a useful first itinerary",
+      "paragraphs": [
+        "For a first attempt, choose three stops of different kinds—a building, a road feature, and a town museum—and write one question for each before setting out. At each place, note what you expected and what the site actually tells you. Take one wide photo for context and one detail that catches your eye, then put the phone away long enough to read a plaque or speak with a volunteer. At night, compare your notes with the NPS itinerary and choose tomorrow’s anchor. Keep a buffer for roadwork, meals, and an unexpected stop; you do not need to drive every mile of daylight. The route becomes personal when you can tell someone why a small place mattered to you. Your next step is to build a shortlist from the NPS historic itinerary, then confirm access and road conditions with each site or local authority."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Travel Route 66",
+      "url": "https://www.nps.gov/subjects/travelroute66/index.htm",
+      "publisher": "U.S. National Park Service",
+      "purpose": "Supports using its historic itinerary as a shortlist and describes more than 250 listed sites and an itinerary highlighting over 100."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "route-66-usa",
+    "road-trip-across-new-zealand"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

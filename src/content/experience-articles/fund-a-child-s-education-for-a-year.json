@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "fund-a-child-s-education-for-a-year",
+  "slug": "fund-a-child-s-education-for-a-year",
+  "title": "Check what an education sponsorship actually funds",
+  "description": "Compare a one-year education sponsorship with pooled education giving, checking the organization’s funding model, renewal terms and privacy protections.",
+  "intent": "How can I direct a year of support toward a child’s education without assuming a donation is assigned to one named student?",
+  "sections": [
+    {
+      "heading": "Define what “fund a child” means to you",
+      "paragraphs": [
+        "You might mean paying a named student’s school costs, supporting a school or learning program, or contributing to an organization’s broader education work. Those are different arrangements. Decide whether you need a direct one-child connection or whether a pooled fund that helps multiple children meet your goal.",
+        "Do not assume a recurring donation is transferred dollar for dollar to one student. Organizations may pool gifts, pay program costs, or direct funds where needs are greatest. UNICEF’s global education page, for example, invites one-time and monthly gifts for education support across children’s needs; it does not promise that a particular gift covers a named child’s full year."
+      ]
+    },
+    {
+      "heading": "Read the program’s terms, not just the story",
+      "paragraphs": [
+        "Before donating, identify the legal organization that receives the funds, how it reports spending, what a year of participation means, whether renewal is automatic, and how you can cancel. Look for the organization’s annual report, audited financial statements where available, child safeguarding policy, privacy policy and a contact for donor questions.",
+        "Ask the program directly: Is the contribution restricted to tuition or pooled across education services? What happens if the sponsored student changes schools, leaves the program or no longer needs the support? Are updates written by the child, staff or the organization? Can you opt out of letters or photos? Clear answers matter more than a glossy profile."
+      ]
+    },
+    {
+      "heading": "Protect the child’s privacy and dignity",
+      "paragraphs": [
+        "A program should not require you to seek private contact with a child or ask for personal documents, school location or account access. Use only the organization’s approved communication route. Do not publish a child’s name, photograph, school or story on social media unless the organization and guardian have explicitly permitted that specific use.",
+        "Treat the child as a person, not as proof that your gift has worked. Avoid promising a relationship, special access or a particular educational outcome. If the program offers updates, let them be optional and mediated through safeguarding rules. A responsible arrangement protects the child’s choices and family context as well as the donor’s expectations."
+      ]
+    },
+    {
+      "heading": "Plan one year without overpromising",
+      "paragraphs": [
+        "Set a budget you can sustain for the full year without borrowing or sacrificing essential obligations. Confirm the currency, payment schedule, fees, exchange-rate handling and what happens if a payment fails. If the program’s terms are unclear about automatic renewal, ask before entering payment information.",
+        "If a one-year commitment is not available, you can make a single contribution to an education fund and define your own period of support. Keep confirmation and cancellation instructions. Tax rules differ by jurisdiction; do not treat a donation as deductible unless your local tax authority and the receiving organization confirm eligibility."
+      ]
+    },
+    {
+      "heading": "Review the arrangement at the end",
+      "paragraphs": [
+        "At the end of the year, check what the organization reported, whether the program still fits your values and whether you want to renew, switch to a pooled fund or stop. Ask for a clear account of what the organization can and cannot attribute to your contribution; a child’s progress is shaped by many factors and cannot be promised by one donor.",
+        "A useful next step is to compare two organizations with the same questions: funding model, renewal/cancellation, safeguarding, privacy and reporting. Choose the one whose answers you can explain in your own words. That is a stronger basis for a year of support than assuming an individual donation buys a year of school for a specific child."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Support Education",
+      "url": "https://help.unicef.org/support-education-need?language=en",
+      "publisher": "UNICEF",
+      "purpose": "Example of one-time/monthly global education giving and an organization-level funding model; page describes UNICEF’s education work rather than a named-child sponsorship."
+    },
+    {
+      "title": "Funding to UNICEF",
+      "url": "https://www.unicef.org/partnerships/funding",
+      "publisher": "UNICEF",
+      "purpose": "Describes unrestricted and thematic pooled contributions, including education; not a guarantee of a particular child’s tuition."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "fund-a-child-s-education-from-start-to-finish",
+    "start-a-scholarship-fund",
+    "sponsor-a-refugee-family"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

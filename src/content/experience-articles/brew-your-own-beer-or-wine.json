@@ -1,0 +1,71 @@
+{
+  "experienceSlug": "brew-your-own-beer-or-wine",
+  "slug": "brew-your-own-beer-or-wine",
+  "title": "Choose a first homebrew project you can follow exactly",
+  "description": "Start with one small beer kit, clean and sanitize as instructed, track fermentation patiently and check local alcohol rules before brewing or sharing.",
+  "intent": "An entry plan focused on a small extract beer batch, separating the brewing lesson from wine methods and verifying current rules in your location.",
+  "sections": [
+    {
+      "heading": "Pick one drink and one tested recipe",
+      "paragraphs": [
+        "Beer and wine use different ingredients, equipment and timing, so choose one for your first project instead of learning both at once. A small extract beer kit keeps the first variable set manageable: the American Homebrewers Association describes a basic method built around malt, hops, yeast and water, with fermentation taking longer than the brew session. Read the entire kit recipe and equipment list before buying supplies. Do not substitute ingredients or scale the batch unless its instructions explain how.",
+        "If you prefer wine, use a wine-specific kit and its tested instructions rather than adapting beer directions. Fermentation behavior, equipment and finishing are not interchangeable. Ask a local homebrew shop or brewing club to help you select a beginner recipe for the space and temperature you actually have."
+      ]
+    },
+    {
+      "heading": "Check what is allowed where you live",
+      "paragraphs": [
+        "Alcohol rules depend on jurisdiction, and the rules for making beer or wine can differ from those for selling it or serving it at an event. In the United States, the federal Alcohol and Tobacco Tax and Trade Bureau describes a limited personal or family use provision for beer and directs people to state and local law as well; rules elsewhere may be entirely different. Before brewing, consult the current official alcohol regulator for your location. Do not sell, distribute or serve your batch publicly based on a personal-use rule.",
+        "This article concerns beer or wine fermentation. It does not cover distilling spirits, which the U.S. TTB treats under separate rules. Keep your project to the licensed kit’s intended method and ask the relevant authority before organizing a shared brew or public tasting."
+      ]
+    },
+    {
+      "heading": "Set up a clean, calm brew day",
+      "paragraphs": [
+        "Put the full kit, recipe, a timer and a notebook within reach. The Association’s equipment guide lists basics such as a fermenter, airlock, brew pot, tubing, cleaner, sanitizer and a thermometer. You may need less or different equipment for a particular recipe; follow that recipe’s list. Clear a heat-safe workspace and set out a container for used packaging so you do not have to improvise while the pot is hot.",
+        "Clean equipment first, then sanitize food-contact parts according to the product label and the kit instructions. These steps are not interchangeable. Avoid using an unlabelled cleaner or mixing chemicals. Keep the work area away from children and pets, and have a safe way to move hot liquid before starting."
+      ]
+    },
+    {
+      "heading": "Follow the recipe through cooling and fermentation",
+      "paragraphs": [
+        "Work through each step in order and make a note when you start fermentation. Beer brewing commonly combines malt extract or grains with water and hops to create wort, then adds yeast after cooling; the AHA beginner guide outlines that progression. Use the temperature range and timing printed in your own recipe rather than a generic number. An airlock’s bubbling is not a reliable clock by itself; follow the recipe’s checks before moving to packaging.",
+        "Avoid opening the fermenter to inspect it repeatedly or adding an ingredient because activity appears slow. Temperature, yeast and recipe details affect the process. If something seems wrong, ask a knowledgeable local brewer or the kit maker before bottling. Do not taste an ingredient or batch that may be contaminated."
+      ]
+    },
+    {
+      "heading": "Keep the first batch as a learning record",
+      "paragraphs": [
+        "Write down the kit name, recipe version, date, room conditions if provided by the recipe, and anything you changed. When the batch is ready according to its instructions, label it clearly and follow safe storage directions. Share only within the rules that apply where you live, and do not pressure anyone to drink alcohol. A successful first batch is a careful process you can explain, not a particular flavor or strength.",
+        "Your next step is to locate a reputable homebrew shop or club and ask which small, beginner kit it supports. Read the full instructions and local rules first. If you are not of legal drinking age where you are, do not brew or handle alcohol; choose a nonalcoholic fermentation activity led by a responsible adult instead."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Easy Guide to Making Beer",
+      "url": "https://homebrewersassociation.org/the-easy-guide-to-making-beer/",
+      "publisher": "American Homebrewers Association",
+      "purpose": "Provides a beginner beer method and describes the main ingredients and a fermentation stage."
+    },
+    {
+      "title": "Homebrew Equipment",
+      "url": "https://homebrewersassociation.org/how-to-brew/homebrew-equipment/",
+      "publisher": "American Homebrewers Association",
+      "purpose": "Lists homebrewing equipment categories including fermenter, airlock, kettle, tubing, cleaning and sanitizing supplies."
+    },
+    {
+      "title": "Beer FAQs",
+      "url": "https://www.ttb.gov/regulated-commodities/beverage-alcohol/beer/beer-faqs",
+      "publisher": "Alcohol and Tobacco Tax and Trade Bureau",
+      "purpose": "Explains U.S. federal personal-use beer provisions and explicitly says state and local law may apply."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "community-95b4b914-db8a-5d49-94d9-669d56fc7a9a",
+    "preserve-a-season-jam-pickle-ferment",
+    "create-a-family-cookbook-with-old-recipes"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

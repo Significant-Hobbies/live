@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "break-a-personal-athletic-record",
+  "slug": "break-a-personal-athletic-record",
+  "title": "Make a personal best measurable before you chase it",
+  "description": "Choose one clear athletic benchmark, make the comparison fair, and build a record attempt around coaching, conditions, and recovery.",
+  "intent": "Show how to define and document a personal record attempt so a future result is comparable and responsibly planned, beyond simply trying harder.",
+  "sections": [
+    {
+      "heading": "Name the record precisely",
+      "paragraphs": [
+        "“Get faster” is difficult to verify. Choose one result you can write in a sentence: finish a 5K in a time, lift a specified load under a named set of rules, hold a balance for a measured duration, or swim a distance in a pool rather than open water. Pick an event that matches your current activity and interests. Avoid combining several targets into one attempt; you will not know which one you are evaluating.",
+        "Write down how the result is measured. For a run, that could include the official distance, course, timing method, and whether the route is measured or certified. For strength work, record the movement standard, equipment, range of motion, and whether a qualified spotter or judge is present. An ambitious number without a consistent method invites accidental comparisons."
+      ]
+    },
+    {
+      "heading": "Build a baseline you can trust",
+      "paragraphs": [
+        "Before changing your training, record one ordinary, repeatable performance using the same equipment and conditions you expect to use later. Include the date, venue, weather if it matters, warm-up, rest beforehand, and how you felt. Use the measurement method your event or coach considers valid. A GPS watch can estimate distance, but it is not equivalent to a measured race course; a video can help review technique, but it does not replace official judging when a formal record is at stake.",
+        "If you want a ratified track-and-field record in the United States, USA Track & Field explains that sanctioned competition, certified officials, timing records, and event-specific rules may be required. That standard is different from a personal milestone in your training log. Decide which meaning you intend before planning the day."
+      ]
+    },
+    {
+      "heading": "Ask for the right kind of help",
+      "paragraphs": [
+        "A coach can help turn a target into a training plan that accounts for your experience, schedule, and event demands. Ask how progress will be measured, which sessions are key, and what signs would mean backing off. For health conditions, medication questions, persistent pain, or a long break from exercise, talk with a clinician before increasing effort. This article cannot decide whether a particular test or load is safe for you.",
+        "Choose a coach or instructor familiar with your sport and the exact benchmark. A running PR, a powerlifting total, and a climbing grade each rely on different skills and standards. Do not let a generic online plan set your pace or weight. The right support is someone who can observe your technique and adjust the attempt when the real conditions differ from the plan."
+      ]
+    },
+    {
+      "heading": "Make the attempt comparable",
+      "paragraphs": [
+        "Schedule the test in a setting that resembles the baseline. If the goal is a road-race time, an unfamiliar hilly course in hot weather is a poor comparison. If it is a strength record, use the same equipment and movement criteria. If you need an official mark, confirm the event’s eligibility, measurement, timing, and documentation rules directly with its governing body before competition day.",
+        "Prepare a short checklist: registration or access to the venue, equipment inspection, warm-up space, a person who can record the result, and any required officials. Have a backup date if weather, illness, or facility access changes. This protects the quality of the comparison while making it easier to abandon an attempt that no longer fits the conditions."
+      ]
+    },
+    {
+      "heading": "Treat the result as information",
+      "paragraphs": [
+        "Record the result whether or not it is a best. Note what helped, what disrupted the attempt, and how you recovered in the days afterward. A slower result can identify an unreliable measurement or an unrealistic timeline rather than a lack of commitment. A new best still does not automatically mean that the next goal should be harder; it may be more useful to repeat the performance under the same standard.",
+        "If you are aiming at a formal record, retain the paperwork and ask the organizer how ratification works. USATF cautions that record rules change, so check the current rulebook rather than relying on a saved form or a friend’s past experience. Your practical next step is to write a one-line definition of the record and list the conditions that must match for the result to count."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Record Applications",
+      "url": "https://www.usatf.org/resources/statistics/record-applications",
+      "publisher": "USA Track & Field",
+      "purpose": "Shows that formal U.S. track-and-field record ratification depends on current event, timing, certification, and documentation rules; it is not a general standard for informal personal records."
+    },
+    {
+      "title": "Adult Activity: An Overview",
+      "url": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html",
+      "publisher": "Centers for Disease Control and Prevention",
+      "purpose": "Provides U.S. adult weekly physical activity guidance as context; it does not prescribe training or set a record-attempt target."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "run-a-marathon",
+    "do-100-push-ups-in-a-row",
+    "do-your-first-pull-up"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

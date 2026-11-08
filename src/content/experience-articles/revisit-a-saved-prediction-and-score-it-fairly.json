@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "revisit-a-saved-prediction-and-score-it-fairly",
+  "slug": "revisit-a-saved-prediction-and-score-it-fairly",
+  "title": "How to review a prediction without rewriting your past confidence",
+  "description": "Resolve a saved prediction against its original wording, record what evidence settled it, and learn from calibration instead of judging yourself by one outcome.",
+  "intent": "How do I score an old prediction fairly? This article shows how to preserve the question and probability, handle ambiguous outcomes, and review reasoning without hindsight bias.",
+  "sections": [
+    {
+      "heading": "Recover the question exactly as you asked it",
+      "paragraphs": [
+        "Find the original prediction, including its wording, time horizon and any resolution conditions. Small wording changes can alter what counts as true. ‘Will the bill pass this year?’ differs from ‘Will the bill become law?’ If your saved note does not say what evidence would settle the question, do not quietly add a condition after the outcome is known. Record the ambiguity and decide whether the forecast can be scored at all.",
+        "Good Judgment Open describes forecasting questions as events with defined outcomes that are scored once they resolve. Its FAQ also distinguishes making probabilistic forecasts from prediction markets. That is a useful reminder that a forecast is a statement about uncertainty, not a wager and not an identity test."
+      ]
+    },
+    {
+      "heading": "Write down the evidence before looking at your old reasoning",
+      "paragraphs": [
+        "First establish what happened from reliable sources. Prefer the institution or event owner that controls the outcome: a published election result, official court disposition, company filing or project announcement. Record the relevant date and a short citation or link. If sources disagree, note why and use the resolution rule you originally specified. A headline or social post can help you find evidence, but it may not establish the event itself.",
+        "Then reveal your old probability and reasoning. Keeping these steps in order reduces the pull of hindsight—the sense that the outcome was obvious all along. If you remember your earlier thinking, note what you recall separately from what the saved record actually says. Do not improve the old forecast with explanations added after the fact."
+      ]
+    },
+    {
+      "heading": "Score only what the outcome can support",
+      "paragraphs": [
+        "If the event clearly occurred, mark it resolved as true; if it clearly did not occur by the deadline, mark it false. If the question stayed unsettled or the wording cannot be interpreted consistently, label it ambiguous or unresolved and leave it out of a simple accuracy comparison. A forced binary answer may create a tidy number while hiding a bad question.",
+        "For a probability forecast, a scoring rule such as the Brier score compares the stated probability with the eventual binary outcome. Good Judgment Open explains that its scores are calculated after a question resolves and that lower reported Brier-based values are better on its scale. If you keep your own score, write down the exact convention you used; different score summaries are not interchangeable."
+      ]
+    },
+    {
+      "heading": "Review calibration across a set, not one memorable miss",
+      "paragraphs": [
+        "One 80% forecast that fails does not prove the probability was unreasonable. A probability describes a class of comparable cases: among many events given 80%, roughly four out of five should happen if the forecasts are well calibrated. Review a collection grouped into probability ranges rather than drawing a conclusion from the most surprising result. Small samples are noisy, and a streak can happen without revealing a stable flaw.",
+        "Look for patterns in your wording and evidence. Did you repeatedly overestimate announcements that depend on several approvals? Did you assign probabilities before checking the base rate? Did you treat a vivid possibility as more likely than the ordinary outcome? These are prompts for a better process, not reasons to shame yourself for getting one uncertain event wrong."
+      ]
+    },
+    {
+      "heading": "Make one improvement to the next forecast",
+      "paragraphs": [
+        "Write a short postmortem with four parts: original probability, resolution evidence, what your reasoning got right, and one change to try next time. Keep the initial forecast visible. A useful change might be to define the deadline more clearly, check a comparison class or record what evidence would move your probability up or down.",
+        "Do not edit the historical probability to match your memory. The value of saved predictions is that they let you compare your expectations with outcomes over time."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Good Judgment Open FAQ",
+      "url": "https://www.gjopen.com/faq",
+      "publisher": "Good Judgment Inc.",
+      "purpose": "Supports that forecasts are probabilistic, questions have outcomes, resolution precedes scoring, and Brier-based accuracy measures compare forecasts with outcomes."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "write-your-ethical-will",
+    "trace-the-journey-of-one-inherited-object",
+    "curate-a-five-object-museum-of-your-life"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

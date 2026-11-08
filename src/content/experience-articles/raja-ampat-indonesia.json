@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "raja-ampat-indonesia",
+  "slug": "raja-ampat-indonesia",
+  "title": "Choose a Raja Ampat visit by island group and time in the water",
+  "description": "Compare Wayag, Piaynemo and Misool by boat time, viewpoint effort and underwater interests before arranging a locally guided Raja Ampat trip.",
+  "intent": "How should I choose among Raja Ampat’s famous island areas without assuming that every lagoon or dive is interchangeable?",
+  "sections": [
+    {
+      "heading": "Treat Raja Ampat as a group of separate destinations",
+      "paragraphs": [
+        "Raja Ampat is not a single day-trip stop. The Indonesian Ministry of Foreign Affairs travel guide describes several distinct islands and island groups, including Wayag, Piaynemo in the Fam Islands and Misool. For the north–south distinction, the Raja Ampat UNESCO Global Geopark places the Wayag Islands at the regency’s northernmost end and Misool in its southern part. Boat distances and operating conditions matter, so ask an operator to name the islands on the itinerary and estimate travel time rather than relying on a list of famous names.",
+        "Start with what you want the day to be about. Wayag is associated with a broad karst panorama and a climb to a viewpoint. Piaynemo offers a similar karst-and-lagoon view with a staircase route described in the guide. Misool is presented as a destination for dramatic karst scenery above water and underwater sites. These are useful distinctions for choosing a trip, not guarantees of visibility, wildlife or access."
+      ]
+    },
+    {
+      "heading": "Compare Wayag and Piaynemo on the land portion",
+      "paragraphs": [
+        "If the viewpoint is the priority, ask how much time the boat ride takes and what the climb involves. The ministry guide describes a steep hill climb at Wayag for a bird’s-eye view. For Piaynemo it describes hundreds of wooden steps to the summit above a star-shaped lagoon. The latter may be a clearer fit if you want a defined stair route, while the former is a more remote-feeling landscape option; confirm current path condition and any access limits locally.",
+        "Bring footwear that works for wet landings and steps, and do not turn a viewpoint into an unsupervised scramble. Ask whether guides stay with the group during the climb and how long they allow at the top. If anyone in your party has mobility or balance constraints, decide before departure whether the viewpoint is essential or whether a boat-and-water day is the better shared experience."
+      ]
+    },
+    {
+      "heading": "Choose the underwater part by skill and conditions",
+      "paragraphs": [
+        "The guide describes snorkeling opportunities around Piaynemo and Misool’s reputation for diving. This does not mean every visitor should enter the water at every site. Ask the operator what currents, depth, entry style and support apply on the actual day. If you are new to snorkeling, choose a supervised site and check whether flotation gear and an in-water guide are available. Certified divers should describe their logged experience accurately so the operator can choose an appropriate site.",
+        "Do not enter a sensitive reef area without the operator’s briefing. Keep hands and fins away from coral, do not feed or chase wildlife and avoid standing on reef. The Ministry guide says Wayag is part of a marine conservation area where tourist activities are regulated. Ask your operator what local conservation rules apply and how visitor fees or permits are handled under current arrangements."
+      ]
+    },
+    {
+      "heading": "Balance the iconic view with local involvement",
+      "paragraphs": [
+        "A photograph of a karst lagoon can make Raja Ampat look empty, but the region is inhabited and local communities are part of its care and visitor economy. Ask who operates the boat, who guides the visit and how local residents participate. Prefer a clear explanation of conservation and community contributions over broad promises that a trip is “sustainable.”",
+        "If you have several days, avoid trying to cover northern and southern areas in one compressed itinerary. Choose one base and a nearby island group, then reserve a separate day for any distant destination. The time saved by fewer transfers can make room for slower stops, local meals and weather flexibility."
+      ]
+    },
+    {
+      "heading": "Confirm logistics before you commit",
+      "paragraphs": [
+        "Ask for the meeting point, transfer duration, boat type, maximum group size, meal and drinking-water plan, and weather cancellation policy. Confirm what permits, park fees or local tickets are currently required, and whether the operator arranges them. A 2025 government travel guide can help you compare places, but it cannot confirm that today’s route, access or fee is available.",
+        "Choose an itinerary by the exact day you want: stairway and lagoon views, remote karst and a summit, or time in the water near a guided dive area. Then verify the local rules and conditions shortly before travel. That specific match is more useful than chasing a checklist of islands across a huge archipelago."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Raja Ampat and Southwest Papua Travel Guide Book",
+      "url": "https://kemlu.go.id/files/publikasi/additional_file/1762932701691437dde2429__EN__Raja_Ampat___Southwest_Papua___Travel_Guide_Book__2025_.pdf",
+      "publisher": "Ministry of Foreign Affairs of the Republic of Indonesia",
+      "purpose": "Supports comparison of Wayag, Piaynemo and Misool landscape and activity descriptions, and identifies Wayag as a regulated marine conservation area; current access and fees are not inferred."
+    },
+    {
+      "title": "Geological Heritage",
+      "url": "https://rajaampatgeopark.com/our-heritage/geoheritage/",
+      "publisher": "Raja Ampat UNESCO Global Geopark Management Body",
+      "purpose": "Supports the geographic distinction that the Wayag Islands lie at the regency's northern end and Misool occupies its southern part; it does not establish visitor routes, permits, or current access."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "komodo-island-indonesia",
+    "maldives-above-and-below-water",
+    "galapagos-islands-ecuador"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

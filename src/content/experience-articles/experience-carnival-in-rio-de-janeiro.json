@@ -1,0 +1,70 @@
+{
+  "experienceSlug": "experience-carnival-in-rio-de-janeiro",
+  "slug": "experience-carnival-in-rio-de-janeiro",
+  "title": "Choose the Rio Carnival experience that fits your night",
+  "description": "Decide whether you want a ticketed samba-school parade or a street bloco, then check current city and organizer updates before building your plans.",
+  "intent": "How do I choose between a Sambadrome parade and a Rio street celebration without assuming schedules or access stay the same each year? This adds a decision guide.",
+  "sections": [
+    {
+      "heading": "Pick the experience before the date",
+      "paragraphs": [
+        "Rio Carnival offers distinct ways to participate. A Sambadrome parade centers on samba-school performances in a dedicated venue; a street bloco is a moving or neighborhood celebration in public space. The city tourism guide presents both the parade and street events as parts of the Carnival experience. Decide which atmosphere you want before comparing dates or ticket options.",
+        "If you want costumes, music, and a planned seated view, research the parade organizer and ticket conditions. If you want to follow a neighborhood celebration, look at the city’s current bloco listings and route notices. These are different experiences with different crowd movement and time commitments; neither is a substitute for the other."
+      ]
+    },
+    {
+      "heading": "Check the current edition through official channels",
+      "paragraphs": [
+        "Riotur’s 2026 street Carnival operations page directs visitors to the city’s current program channels for dates, times, and routes. Use the relevant official city pages for the year you intend to travel, because event authorization and street operations can change between editions. Avoid planning from an old PDF or an unofficial schedule that may reflect a previous year.",
+        "For Sambadrome questions, check LIESA or the actual ticket channel it identifies. Verify the specific day, seating or standing arrangement, entry requirements, and ticket terms before making other commitments. Do not assume a seat is available or that a parade’s start time will fit with a separate event."
+      ]
+    },
+    {
+      "heading": "Match the night to your energy",
+      "paragraphs": [
+        "A parade may keep you at the venue for a long evening; a bloco can involve outdoor walking, waiting, and following a crowd in a neighborhood. Decide whether you want one main event or a more flexible day with a slower meal and rest. Leave enough time to return to your lodging without rushing through unfamiliar transport connections.",
+        "If you want to do both, separate them across days. One intense night can make the next morning’s street event less enjoyable, and the city’s program may change. Build a simple daily plan with one primary event and a low-key fallback rather than trying to attend everything."
+      ]
+    },
+    {
+      "heading": "Make a small local plan",
+      "paragraphs": [
+        "Save the official event information, the place you need to reach, and an alternate route to meet your group if phones stop working. Agree on a meeting point outside the densest part of the crowd. Keep personal documents secure and carry only what current venue rules permit. Follow local instructions about barriers, traffic closures, and safe movement.",
+        "For a bloco, learn where it starts and where it finishes from the official listing, not just the neighborhood name. For a Sambadrome event, use the organizer’s venue guidance and check entry rules. Do not enter the parade route or block performers to take a photograph."
+      ]
+    },
+    {
+      "heading": "Let Carnival belong to the people who make it",
+      "paragraphs": [
+        "Samba schools, local musicians, street organizers, and neighborhoods create the event over a long period of work. Learn the name of the escola or bloco you plan to see and listen to its own description. Ask before photographing performers close up, and give people room to dance, work, or pass through.",
+        "Your next action is to choose which experience you want—organized parade or street bloco—then revisit Riotur and the event organizer’s current edition pages before choosing dates or spending money."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Discover Rio: Official Tourism Guide",
+      "url": "https://riotur.rio/wp-content/uploads/2024/08/Riotur_LivretoPublico_Visit_2023_200x200mm_ING.pdf",
+      "publisher": "Riotur, City of Rio de Janeiro",
+      "purpose": "Supports the distinction between Sambadrome samba-school parades and street Carnival celebrations in the city."
+    },
+    {
+      "title": "Street Carnival 2026 operational plan",
+      "url": "https://riotur.rio/editorial/prefeitura-do-rio-apresenta-plano-operacional-para-carnaval-de-rua-2026/",
+      "publisher": "Riotur, City of Rio de Janeiro",
+      "purpose": "Shows the city’s official edition-specific source for street program dates, times, and routes; article tells readers to verify the edition they plan to attend."
+    },
+    {
+      "title": "Carnival FAQ",
+      "url": "https://liesa.org.br/carnaval/faq.html",
+      "publisher": "LIESA, Rio de Janeiro Samba Schools League",
+      "purpose": "Directs Sambadrome parade questions to the parade organizer; current edition rules must be rechecked."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "rio-de-janeiro-during-carnival",
+    "attend-a-multi-day-music-festival"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

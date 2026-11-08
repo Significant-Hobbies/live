@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "perform-on-a-stage-in-front-of-a-crowd",
+  "slug": "perform-on-a-stage-in-front-of-a-crowd",
+  "title": "Prepare one piece for your first live audience",
+  "description": "Prepare a first public performance by choosing a manageable piece, rehearsing aloud for a few listeners, and planning how you will begin and finish.",
+  "intent": "Answer how to prepare for a first stage appearance with a focused rehearsal ladder, small piece and realistic expectations about nerves.",
+  "relatedExperienceSlugs": [
+    "join-a-community-choir-or-theatre-group",
+    "choreograph-and-perform-a-dance",
+    "read-a-play-aloud-around-a-table"
+  ],
+  "sections": [
+    {
+      "heading": "Choose a piece with a clear beginning and end",
+      "paragraphs": [
+        "Your first appearance does not need to demonstrate everything you can do. Choose a short song, monologue, reading, dance, or instrumental piece that you can complete reliably and that you still want to share after several rehearsals. A piece with an obvious opening and ending is easier to prepare than one that depends on complicated cues or long transitions.",
+        "If you have several options, choose the one you can practice in the room and time available. Ask the host about the stage layout, microphone, accompanist or playback setup, time limit, and whether you can use notes. Those details let you prepare the actual performance rather than imagine an idealized stage."
+      ]
+    },
+    {
+      "heading": "Turn practice into a simple run sheet",
+      "paragraphs": [
+        "Write the opening action, the sequence of sections, and the final action on one page. Mark any cue that could surprise you, such as a music entrance, a page turn, or a pause for audience response. Practice starting from the beginning, but also rehearse the transition where you are most likely to lose your place.",
+        "Finish each run by holding still for a beat, acknowledging the room, and leaving the stage in the direction the host indicates. If you are speaking, choose the first sentence in advance. If there is a technical problem, ask the organizer what signal to use instead of trying to troubleshoot while performing."
+      ]
+    },
+    {
+      "heading": "Rehearse in front of gradually larger audiences",
+      "paragraphs": [
+        "Begin alone, then perform once for a supportive person, then for a small group or at a low-pressure open mic if that suits you. Ask listeners for one useful observation rather than general praise: could they hear the words, follow the story, or tell when the piece ended? Practice in the shoes, clothing, instrument setup, or microphone position you expect to use.",
+        "The University of Michigan School of Music, Theatre & Dance recommends practicing in situations that bring some nerves and building toward more stressful settings over time. That is a useful rehearsal idea: expose yourself to a small audience before the event, without trying to force your body to become perfectly calm."
+      ]
+    },
+    {
+      "heading": "Make room for stage nerves",
+      "paragraphs": [
+        "Charité’s music medicine center describes some pre-performance nervousness as normal and potentially helpful for concentration. It also distinguishes more severe ongoing distress as performance anxiety. You do not need to interpret every flutter as a signal to cancel. At the same time, if performing becomes persistently distressing, consider speaking with a qualified clinician or music-health professional.",
+        "On the day, use a short warm-up that you have already tried, arrive early enough to understand the room, and take a few quiet moments before your cue. Avoid testing new relaxation techniques, medication, food, or caffeine routines on performance day. If you need an accommodation, ask the organizer in advance."
+      ]
+    },
+    {
+      "heading": "Define success beyond applause",
+      "paragraphs": [
+        "A first performance can succeed if you show up, communicate the piece, recover after a small mistake, and finish. The audience may not notice a missed note or altered line that felt enormous to you. Do not stop to apologize mid-piece unless a genuine problem makes continuing impossible; return to the next cue you practiced.",
+        "Afterward, write down what worked and one thing you would change next time. Ask a trusted listener about audibility and pacing. Then choose a next step while the memory is fresh: repeat the piece for a different audience, take a lesson, or try another format. The next action is to select a manageable piece and schedule one rehearsal for a real listener."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Performance Anxiety",
+      "url": "https://musikermedizin.charite.de/en/patients/performance_anxiety",
+      "publisher": "Berliner Centrum für Musikermedizin, Charité – Universitätsmedizin Berlin",
+      "purpose": "Opened clinical music-medicine page describing normal performance nerves and distinguishing severe performance anxiety."
+    },
+    {
+      "title": "Wellness Guides: Tips for Performance Anxiety",
+      "url": "https://smtd.umich.edu/backstage/wellness/education/wellness-guides/",
+      "publisher": "University of Michigan School of Music, Theatre & Dance",
+      "purpose": "Opened university guidance supporting rehearsal under gradually increasing performance pressure."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

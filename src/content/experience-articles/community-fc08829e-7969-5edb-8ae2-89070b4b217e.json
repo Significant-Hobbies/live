@@ -1,0 +1,70 @@
+{
+  "experienceSlug": "community-fc08829e-7969-5edb-8ae2-89070b4b217e",
+  "slug": "be-a-part-of-shooting-a-movie-tv-series",
+  "title": "Find a legitimate first day on a film or television set",
+  "description": "Explore a first background-acting opportunity through a legitimate casting route, prepare for the booking and understand basic set-safety boundaries.",
+  "intent": "Give a beginner a U.S.-bounded route to background work on a film or television set, emphasizing legitimate casting, booking details and safety awareness.",
+  "sections": [
+    {
+      "heading": "Choose a realistic first role",
+      "paragraphs": [
+        "A first set experience can mean background work, a speaking role, student production, crew volunteering or a supervised tour. Decide which one you mean. Background actors appear in a scene without being the focus; they are cast for the production’s needs and may spend more time waiting than performing. A speaking part follows a different audition and hiring process. A set tour or student film may have separate access and safety rules. None guarantees that a production will be filming nearby or that you will be selected.",
+        "This guide uses the United States and Central Casting as one example for background acting, not as a universal route into film. Central Casting says applicants must be legally authorized to work in the United States and describes an online application with appearance information, sizes and current photographs. It casts only for its own clients and productions; other regions and casting companies use different processes."
+      ]
+    },
+    {
+      "heading": "Use an official casting channel",
+      "paragraphs": [
+        "For Central Casting, its current signup page requests a headshot and full-body photo, appearance details and measurements, and notes that requirements vary by location. It says that in California and New York, required training applies before eligibility to work; other jurisdiction rules may differ. Read the casting company’s own instructions and submit only through its official website. A profile is not a booking or a promise of work.",
+        "Treat any request for money, identity documents or private material carefully. Verify the sender against the casting company’s official site and do not rely on an unsolicited message alone. The official Central Casting page describes its own steps; it does not establish that every legitimate casting company is free, or that every third-party service is fraudulent. Ask the named company directly if a process or payment is unclear."
+      ]
+    },
+    {
+      "heading": "Read the booking before you travel",
+      "paragraphs": [
+        "If selected, Central Casting says the booking message includes information such as arrival time, wardrobe and expectations for the day. Read it fully and confirm the date, location, transportation plan, clothing, meals, parking and whether you need to bring anything. Production days can begin early and can change, so leave enough time to get to the exact entrance. Keep the casting contact information and booking instructions accessible without sharing them publicly.",
+        "Ask the casting contact about work authorization paperwork, required training, pay documentation and how cancellations are communicated. Do not assume that a role includes transportation, meals or a particular number of hours unless the booking says so. If you are a minor, a parent or guardian must handle the relevant permissions and work permits under local rules; Central Casting states requirements vary by state."
+      ]
+    },
+    {
+      "heading": "Follow set directions and speak up about hazards",
+      "paragraphs": [
+        "A film set is a workplace with vehicles, cables, lighting, equipment, moving platforms and changing locations. OSHA’s performing-arts and motion-picture safety sheet identifies hazards such as falls, vehicles, flammable materials, electrical equipment and long or irregular shifts. It is an older industry hazard document, not a current set-specific safety manual, but it makes one practical point clear: follow the production’s safety instructions and do not wander into restricted areas.",
+        "Listen to the assistant director or designated crew member and remain in the assigned holding or work area. Do not touch props, weapons, equipment or vehicles without authorization, and do not cross a cable path unless instructed. If you see a trip hazard, an unsafe vehicle movement or a setup you do not understand, alert the crew contact immediately. You can decline an activity that feels unsafe and ask who is responsible for explaining the procedure."
+      ]
+    },
+    {
+      "heading": "Make the day professional and low-pressure",
+      "paragraphs": [
+        "Arrive prepared, stay available, keep your phone silent when requested and follow the production’s rules about photos or social media. Do not photograph actors, scripts, call sheets, set pieces or private locations without explicit permission. Background work may ask for simple repeated movement; follow the direction and avoid drawing focus from the scene. If you need a break, restroom, food or an accommodation, ask the designated contact rather than disappearing from the assigned area.",
+        "After the day, record the production and date for your own work history, and keep pay or voucher records as directed. If the experience suits you, update the official casting profile and monitor verified opportunities. The concrete next step is to identify one casting company or film office for your location, read its current eligibility and signup requirements, and apply only through its official channel."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Signing Up Support",
+      "url": "https://www.centralcasting.com/support/signing-up",
+      "publisher": "Central Casting",
+      "purpose": "Supports requirements and process for signing up with this specific U.S. background casting company, including work authorization, profile details, photos and location-dependent training."
+    },
+    {
+      "title": "How to Get Work",
+      "url": "https://www-prod.centralcasting.com/get-cast/how-to-get-work/",
+      "publisher": "Central Casting",
+      "purpose": "Supports its booking-message process, Open Roles and preparation information for its own productions; does not guarantee bookings or represent all casting agencies."
+    },
+    {
+      "title": "Performing Arts and Motion Picture Hazard Information",
+      "url": "https://www.osha.gov/sites/default/files/IATSE_2018.pdf",
+      "publisher": "U.S. Occupational Safety and Health Administration",
+      "purpose": "Supports general film/motion-picture workplace hazard examples; dated 2018 guidance is not a current site-specific safety procedure."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "create-a-short-film",
+    "make-a-short-film"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

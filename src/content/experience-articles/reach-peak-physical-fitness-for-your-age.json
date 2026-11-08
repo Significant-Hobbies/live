@@ -1,0 +1,65 @@
+{
+  "slug": "reach-peak-physical-fitness-for-your-age",
+  "title": "Define a personal fitness benchmark for this decade",
+  "description": "Set a realistic, age-aware fitness benchmark with measures you can track, then build a training and recovery plan with qualified support.",
+  "intent": "Discuss age-appropriate performance goals and recovery with a qualified coach or clinician as appropriate; there is no universal peak-fitness standard or body promise.",
+  "sections": [
+    {
+      "heading": "Decide what ‘peak’ means for you",
+      "paragraphs": [
+        "There is no single score that defines peak fitness for every person of the same age. A trail runner, a new parent, someone returning after illness and a wheelchair athlete can have different goals and starting points. Replace the vague phrase with one or two abilities you value: carrying groceries comfortably, climbing a local hill, improving balance, swimming a set distance or completing a recreational event.",
+        "Choose a benchmark that can be observed without turning your body into a public contest. It might be a timed walk on the same route, a set of strength movements chosen with a coach, or a sport skill you want to practice. Write down why the goal matters and what would count as useful progress even if the final number changes."
+      ]
+    },
+    {
+      "heading": "Establish a safe baseline",
+      "paragraphs": [
+        "Record what you currently do, how often, what feels manageable and what tends to interrupt the routine. Include rest, sleep, pain or recovery concerns in the conversation with a qualified coach or clinician. If you have a chronic condition, symptoms, a recent injury, or you have not been active for a long time, ask an appropriate healthcare professional what kind of activity and progression fit your situation.",
+        "The CDC’s adult activity overview presents general U.S. guidelines, including aerobic activity and muscle strengthening. For adults 65 and older, CDC also describes balance activities as part of the weekly mix. These population recommendations are not a personal fitness test, an age-specific ‘peak’ standard or a prescription for an individual. Use them as background and ask a qualified professional to help translate your goal into movements and training you can do safely."
+      ]
+    },
+    {
+      "heading": "Pick measures that match the skill",
+      "paragraphs": [
+        "Choose no more than three measures. One can capture the goal itself, one can track supporting capacity, and one can track whether recovery is sustainable. For a long hike, for example, note a familiar route’s time, how your legs feel the next day and how consistently you complete planned sessions. For balance, a physical therapist or trainer can choose an appropriate assessment rather than relying on an internet challenge.",
+        "Keep the testing conditions similar: same route, equipment, warm-up and approximate time of day. Record context such as weather, sleep or a changed medication because a result is only useful when you can interpret it. Do not compare your number with a stranger’s chart unless that measure is validated for your age, sex, health status and testing method."
+      ]
+    },
+    {
+      "heading": "Build the plan with recovery included",
+      "paragraphs": [
+        "Ask a qualified coach to turn your chosen skill into small training blocks, technique practice and rest. Schedule recovery before you start: mark days when you will take a break, how you will adjust if sleep or soreness changes, and when you will review the plan. If you work with a clinician or physical therapist, share the goal and ask what symptoms should prompt you to stop or seek help.",
+        "Increase one challenge at a time rather than adding duration, intensity and frequency together. If a session feels different from what you agreed with your coach, slow down and ask before pushing through. This is a planning principle, not a universal loading formula. Health status and prior training alter what is reasonable, so do not copy another person’s program as if age alone made it suitable."
+      ]
+    },
+    {
+      "heading": "Review progress without moving the finish line",
+      "paragraphs": [
+        "Set a review date several weeks away and repeat the same measures. Ask: what improved, what stayed stable, what became painful or tiring, and which parts of the plan fitted ordinary life? If a measure worsened, pause to understand sleep, stress, equipment, illness or training load before deciding that you failed. A useful benchmark can change as your needs and interests change.",
+        "Save your baseline and the reason for the goal. At the end of the block, choose whether to continue, adapt or celebrate an ability you have gained. ‘Peak’ can mean strong for your own circumstances at this time, not reaching a universal body shape or proving that aging can be outrun. The achievement is a measurable practice you can maintain with appropriate support."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Adult Activity: An Overview",
+      "url": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html",
+      "publisher": "U.S. Centers for Disease Control and Prevention",
+      "purpose": "Supports the narrow statement that CDC presents general activity guidance for adults; the article explicitly does not treat population guidelines as an individual prescription or universal peak-fitness test."
+    },
+    {
+      "title": "Older Adults: Adding Activity Recommendations",
+      "url": "https://www.cdc.gov/physical-activity-basics/adding-older-adults/index.html",
+      "publisher": "U.S. Centers for Disease Control and Prevention",
+      "purpose": "Supports the age-specific statement that CDC recommends aerobic, muscle-strengthening and balance activity categories for adults 65 and older; the article does not treat this as a personal fitness score or guarantee."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "get-into-the-best-shape-of-your-life",
+    "run-a-marathon",
+    "climb-your-first-mountain"
+  ],
+  "experienceSlug": "reach-peak-physical-fitness-for-your-age",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,67 @@
+{
+  "experienceSlug": "make-a-pinhole-camera-and-develop-a-photograph",
+  "slug": "make-a-pinhole-camera-and-develop-a-photograph",
+  "title": "How do you turn a tiny hole into a one-of-a-kind photograph?",
+  "description": "Build a simple pinhole camera, choose a workable subject, and plan a supervised darkroom session to expose and process a paper photograph safely.",
+  "intent": "Answer how to plan the full pinhole experience, from a light-tight camera and first test exposure to safely developing a photograph with trained support.",
+  "sections": [
+    {
+      "heading": "Choose the image before building the camera",
+      "paragraphs": [
+        "A pinhole camera is a dark enclosure with a very small opening. Light from a scene passes through that opening and forms an inverted image on the opposite surface. For a first photograph, choose a still subject with clear shapes and bright outdoor light: a doorway, a tree against sky, or a familiar building. A moving crowd or a dim interior makes it harder to tell whether a soft result came from motion, exposure, or a leak in the camera.",
+        "The Exploratorium’s pinhole activity explains the image-forming idea and uses a can and screen as a viewer. A photographic camera uses the same light path but holds light-sensitive paper in place of the viewing screen. Before you make anything, decide whether your goal is to see an image on a screen or to make a recordable print. That choice affects the materials, handling, and need for a darkroom. Never use a pinhole viewer or camera to look directly at the Sun; point it at ordinary scenes instead."
+      ],
+      "bullets": [
+        "Pick a stationary subject with a bright background and a simple silhouette.",
+        "Choose a camera design with a secure lid and a stable way to set it down."
+      ]
+    },
+    {
+      "heading": "Make a dark box with a controlled opening",
+      "paragraphs": [
+        "Use a sturdy, opaque cardboard container or a purpose-built pinhole camera, then check that seams and the lid do not leak light. A small pinhole in a separate thin metal or foil piece can be fitted over an opening in the box; the exact size and camera distance affect sharpness and brightness, so follow a plan from a workshop or camera maker rather than enlarging the hole by guesswork. Cover the opening with a removable flap that can act as a shutter. Tape around the edges and test the empty camera in bright daylight for leaks before loading paper.",
+        "Keep the design simple. A camera that wobbles, opens accidentally, or has sharp edges makes a poor first project. The Exploratorium’s activity recommends adult help for cutting its can design; choose blunt scissors and pre-cut materials if you are working with children. Use a piece of ordinary white paper at the back as a focus test. Make a quick drawing of the camera, pinhole, and paper position so you can reload it the same way after an exposure."
+      ]
+    },
+    {
+      "heading": "Load and expose paper in a darkroom",
+      "paragraphs": [
+        "Photographic paper is light-sensitive before it is processed. Do not unwrap it in a lit room or try to improvise a darkroom with a blanket over your head. Arrange a session with a photography teacher, community darkroom, or knowledgeable adult who can provide the correct safelight, materials, protective equipment, and disposal process. Ilford’s direct-positive paper guide says the paper must be handled under a specified deep-red safelight and that pinhole exposures vary with lighting; its sample times are starting references for that paper and setup, not universal settings.",
+        "For the first attempt, use a scene that will stay still while the camera is open, set the camera on a stable surface, and note the weather and exposure duration chosen by your instructor. Close the shutter before moving the camera. A log of subject, light, camera position, paper, and exposure makes later comparisons meaningful. Avoid mixing or handling photochemicals alone. University safety guidance emphasizes training, ventilation, suitable protective equipment, and proper waste handling for photographic processing."
+      ]
+    },
+    {
+      "heading": "Develop, learn from the negative, and try again",
+      "paragraphs": [
+        "Let the trained darkroom supervisor lead the chemical processing and explain each tray and handling rule. When the image appears, resist the urge to decide immediately that it has failed. A high-contrast paper negative may show the composition even when highlights or shadows are lost. Ask what the tones suggest about exposure and whether the paper is a negative or direct-positive type. Keep hands away from wet chemistry and use only the lab’s labelled tools.",
+        "After processing and drying according to the instructor’s method, label the print with the subject, date, paper type, and camera notes. Compare it with your expected image: Did the box stay light-tight? Did the subject move? Was the image centered or tilted? Change one variable on the next exposure so you can learn what caused the result. Your second picture need not be technically perfect; a slightly mysterious image is often a good prompt to adjust the shutter, framing, or camera stability. The useful next step is to arrange a supervised print session and bring your camera sketch and exposure log."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Pringles Pinhole: Make a Camera From a Potato Chip Can",
+      "url": "https://annex.exploratorium.edu/science-explorer/pringles_pinhole.html",
+      "publisher": "Exploratorium",
+      "purpose": "Supports the pinhole image principle and safe, adult-supported construction example."
+    },
+    {
+      "title": "HARMAN Direct Positive FB Paper technical information",
+      "url": "https://www.ilfordphoto.com/amfile/file/download/file/1739/product/719/",
+      "publisher": "ILFORD Photo",
+      "purpose": "Supports paper safelight handling and the dependence of pinhole exposure on the specific paper and lighting."
+    },
+    {
+      "title": "Photographic Processing Hazards",
+      "url": "https://blink.ucsd.edu/safety/research-lab/chemical/specific/photographic.html",
+      "publisher": "University of California San Diego Environmental Health and Safety",
+      "purpose": "Supports the recommendation for training, ventilation, protective equipment, and proper chemical handling and disposal."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "fold-an-interlocking-origami-sculpture",
+    "weave-a-miniature-tapestry-on-cardboard"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

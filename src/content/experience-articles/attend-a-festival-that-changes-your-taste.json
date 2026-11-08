@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "attend-a-festival-that-changes-your-taste",
+  "slug": "attend-a-festival-that-changes-your-taste",
+  "title": "Use a festival schedule to try a form you would not choose alone",
+  "description": "Choose a festival day that pairs one familiar event with a deliberately different form, then notice what you respond to beyond the headline act.",
+  "intent": "Answers how to attend a festival in a way that may widen personal taste; adds a specific programming method for balancing familiarity, contrast and reflection.",
+  "sections": [
+    {
+      "heading": "Pick the festival for what it makes possible",
+      "paragraphs": [
+        "Start by asking what kind of unfamiliar experience you want: live music outside your usual genre, a dance form you have never watched, spoken word, theatre, a food tradition, or a visual art you usually pass by. Choose a festival whose actual program includes those forms and whose setting you can manage. A festival changes taste only if it gives you a chance to encounter something you might not otherwise choose; no event can guarantee that you will like it.",
+        "Use the program as a map rather than a popularity list. At Edinburgh Festival Fringe, for example, its official show-registration categories include comedy, dance and physical theatre, music, spoken word, theatre and exhibitions. That is one festival’s way of organizing its own listings, not a universal definition of festivals. Other events use their own categories, curation and venue layouts."
+      ]
+    },
+    {
+      "heading": "Build a day with a deliberate contrast",
+      "paragraphs": [
+        "Choose one familiar anchor and one event whose form feels less predictable. If you love acoustic music, try pairing it with a spoken-word set or a physical-theatre performance. If you usually attend gallery exhibitions, choose a live performance with a different pace. Read descriptions for the form, duration and content rather than guessing from a title. If the schedule is dense, keep one open block for wandering, food or rest.",
+        "A useful test is to ask what you hope to notice. You might listen for how a performer uses silence, watch how a room changes when an audience participates, or compare how two artists tell stories. That gives your attention a job without requiring a favorable review. You can leave if a performance is not working for you."
+      ]
+    },
+    {
+      "heading": "Make the logistics part of the choice",
+      "paragraphs": [
+        "Check the festival’s own current program, venue access information, age guidance, arrival instructions and any content notices. Several venues may mean several routes, queues and time buffers; fewer events can lead to a better day than racing across town. If you need seating, step-free access, a quiet space or a companion arrangement, contact the organizer or venue before relying on a listing summary. Availability and access arrangements can change by event.",
+        "Choose a meeting place with friends in case you split up. Decide how you will find each other after a performance and what you will do if one person wants to leave. If you attend alone, share a broad plan with someone you trust and keep your route home clear. Festival evenings are easier to enjoy when you have not made your safety depend on the final show ending exactly on time."
+      ]
+    },
+    {
+      "heading": "Stay curious without turning art into homework",
+      "paragraphs": [
+        "Before a new form, read a short description of its context or speak with an artist or guide if the festival offers that option. Avoid asking one performer to explain an entire culture or genre. Notice what the work asks you to do as an audience member: listen closely, follow a story, move through an installation or participate. If a reference is unfamiliar, write it down and look it up later instead of interrupting the performance.",
+        "After each event, record three things: one image or sound you remember, one moment you resisted, and one question you have. You may find a new preference, or simply learn what does not fit you. Taste expands through attention, not obligation."
+      ]
+    },
+    {
+      "heading": "Leave with one next choice",
+      "paragraphs": [
+        "At the end of the day, compare your reactions to the familiar and unfamiliar events. Did the setting change your response? Did you like a performance’s technique even if the subject was not for you? Did you need more context or a smaller venue? These observations help you choose the next festival day based on your actual experience rather than a generic claim that a festival was life-changing.",
+        "Choose a festival schedule with two contrasting forms and reserve only the events you can reach comfortably. Keep the rest of the day open enough to follow a recommendation or decide you are done."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Show information",
+      "url": "https://help.registration.edfringe.com/create-or-edit-a-show/show-information.aspx",
+      "publisher": "Edinburgh Festival Fringe Society",
+      "purpose": "Supports that Edinburgh Fringe's own listings classify shows by forms including comedy, music, spoken word, theatre, dance/physical theatre/circus and exhibitions; this is a registration page for that specific festival, not a universal program guide."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "attend-a-multi-day-music-festival",
+    "explore-a-building-during-an-open-house-festival",
+    "community-01fde0a3-3684-5c7a-b97f-1aa9174144f1"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "visit-the-temples-of-angkor-wat-cambodia",
+  "slug": "visit-the-temples-of-angkor-wat-cambodia",
+  "title": "Make a first Angkor day a small, respectful circuit",
+  "description": "Choose a manageable first Angkor circuit by grouping nearby temples, planning shade and rest, and following the official visitor code across the park.",
+  "intent": "How can a first visit to Angkor feel focused instead of becoming a hot, rushed temple checklist? Combine a deliberately small route with the site’s official conduct rules.",
+  "sections": [
+    {
+      "heading": "Set a limit before the first temple",
+      "paragraphs": [
+        "Angkor is an archaeological park with more than one temple, so a first day needs a deliberate limit. Official Angkor Enterprise information offers different pass durations and describes a one-day Small Circuit option; confirm the current route and ticket details on its official site before you go. Use a circuit as a geographic frame, not an order to visit every place at speed. Choose a few stops that interest you and leave the rest optional.",
+        "Pick a question for the day: how a temple’s layout directs movement, how carved surfaces differ or how water and vegetation relate to the built setting. A question gives the visit continuity without requiring you to memorize every date. If you hire a guide, tell them the pace you want and ask which stops make that question easiest to explore."
+      ]
+    },
+    {
+      "heading": "Pair one major monument with quieter attention",
+      "paragraphs": [
+        "Angkor Wat can occupy a large part of the day without being the only thing you notice. Look at the approach, galleries and the way the temple’s image changes as you move through spaces, staying within open areas and local directions. Give a second stop enough time for a slower look instead of racing to collect another photograph.",
+        "Build a midday break into the plan. Find out where your driver or guide will meet you and whether the route returns to shade. In warm conditions, a pause for water and food is part of the itinerary, not time wasted. If anyone feels unwell or exhausted, shorten the loop; the remaining temples will still be there another day."
+      ]
+    },
+    {
+      "heading": "Follow the code as part of seeing the place",
+      "paragraphs": [
+        "Angkor Enterprise’s Visitor Code of Conduct says Angkor is a sacred site. It asks visitors to respect monks, ask before photographing them, keep calm, obey restricted-area signs and avoid climbing loose stones. It prohibits touching carvings, sitting on fragile structures, leaning on temples, removing objects and graffiti. These rules protect the place and the people who use it.",
+        "Choose clothing that follows the code for sacred areas. The official page says revealing clothes such as shorts or skirts above the knees and bare shoulders are prohibited in sacred places. Bring a practical layer and check current signs at each site. Do not give money or candy to children at monuments; the code explains this can encourage begging and school absence, and suggests recognized charities if you want to help."
+      ]
+    },
+    {
+      "heading": "Make the transport plan part of the route",
+      "paragraphs": [
+        "Confirm your ticket is valid for the date and save a digital copy offline. Angkor Enterprise’s ticket help page explains the official online process and asks visitors to save their tickets for entry. Verify current ticket rules and use the official purchase links; the ticket office warns that unofficial tickets are invalid. Keep the QR or printed ticket available without handing your phone to strangers.",
+        "Agree on a clear pickup point and return time with your driver or guide. Do not assume it is easy to regroup at every temple entrance; the park is spread out and your phone may not cooperate. Carry only what you need and remember restrictions can differ by site. Follow on-site staff if a route closes."
+      ]
+    },
+    {
+      "heading": "End with a note rather than another stop",
+      "paragraphs": [
+        "After the visit, write down one spatial detail and one carved or architectural detail you noticed. Label photographs while you remember which temple or gallery they show. This small record makes a shorter circuit feel substantial and helps you decide whether a second day should explore a style, another area or a quieter pace.",
+        "Your next step is to open the official park map and ticket information, choose one circuit-sized area and mark an honest midday pause. Read the visitor code before packing. A thoughtful day leaves room for the sacred character of the site, conservation work and the people who live and worship there."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Angkor Visitor Code of Conduct",
+      "url": "https://www.angkorenterprise.gov.kh/en/visitor-code-of-conduct",
+      "publisher": "Angkor Enterprise, Government of Cambodia",
+      "purpose": "Official visitor rules covering sacred sites, monks, restricted areas, monuments, clothing and respectful behavior."
+    },
+    {
+      "title": "Official Website: Angkor Pass",
+      "url": "https://www.angkorenterprise.gov.kh/en/group-help-center/6837c62019ea3a8905440140/help-center?id=682d4cc694e04eb3eb8fc946",
+      "publisher": "Angkor Enterprise, Government of Cambodia",
+      "purpose": "Official digital ticket process and pass options; used to advise current verification and ticket handling."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "see-conservation-work-at-a-heritage-open-day",
+    "angkor-wat-cambodia",
+    "the-temples-of-bagan-myanmar"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

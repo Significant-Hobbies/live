@@ -1,0 +1,60 @@
+{
+  "experienceSlug": "take-a-volunteer-call-through-be-my-eyes",
+  "title": "What makes a useful first Be My Eyes volunteer call?",
+  "description": "Prepare for a Be My Eyes volunteer call with calm, specific descriptions, clear uncertainty, and a simple way to keep the help focused.",
+  "intent": "A realistic first-call guide for new volunteers, explaining what a request looks like, how to clarify the view, and when to say a task is beyond your certainty.",
+  "sections": [
+    {
+      "heading": "Expect a small practical request",
+      "paragraphs": [
+        "Be My Eyes connects a blind or low-vision caller with a sighted volunteer through live video and two-way audio. The request may be to identify an object, read a label, check a screen, or describe something in the caller’s view. You may receive a notification at a time when you are busy; the service explains that you have a short window to answer and that an unanswered call moves to another volunteer. There is no need to prepare a script or keep your phone in hand. Turn on notifications only if that level of availability works for your day, and accept when you can give the caller attention."
+      ]
+    },
+    {
+      "heading": "Ask what the caller needs before describing",
+      "paragraphs": [
+        "Start with a simple greeting, then let the caller tell you what they want to know. Avoid narrating every detail in the camera frame before you understand the task. A caller checking two shirts may want their colors; someone reading a document may need a heading or a specific line. Keep the user in control of the goal and avoid taking over the device or speaking as though they cannot make decisions. Be My Eyes’ volunteer guidance recommends clear, specific descriptions and asking the caller to adjust the camera if the view is unclear. A short question—“Would you like me to read the label or describe the package?”—can prevent an unhelpful flood of detail."
+      ]
+    },
+    {
+      "heading": "Describe what is visible, not what you infer",
+      "paragraphs": [
+        "Use concrete language: name the object, color, position, visible text, and any relevant condition. If a photograph is blurry or the label is partly hidden, say which part you can read and which part you cannot. Ask the caller to move or angle the camera if a detail matters. Do not guess a brand, ingredient, medication direction, or safety condition from a partial view. The service specifically advises volunteers to say when they are unsure rather than bluffing. This matters most when the information could affect a decision; the person should be able to judge what to do with a clear account of your limits."
+      ]
+    },
+    {
+      "heading": "Keep the call bounded and respectful",
+      "paragraphs": [
+        "Stay with the task the caller requested, and do not ask for unnecessary personal details or capture screenshots. Remember that the live image may include private spaces, papers, or screens. Treat what you see as confidential, and do not share details elsewhere. The caller can end the call at any time, and you can also stop politely if the task falls outside your ability or availability. If you need more context, ask. If you cannot help, say so plainly and let the caller decide whether to reconnect or try another route. A calm, honest limit is more useful than offering certainty you do not have."
+      ]
+    },
+    {
+      "heading": "Review the first call and adjust",
+      "paragraphs": [
+        "After a call, consider whether your descriptions were specific, whether you asked before adding detail, and whether you stated uncertainty when needed. You do not need a dramatic story or a perfect performance to be useful. Calls can be short and varied, and another volunteer can receive a request if you are unavailable. If the app settings or notification permissions change, review them from the official help material rather than an unfamiliar message. Your next action is to install or update the official service, read its first-call guidance once, and decide what hours you are comfortable leaving volunteer notifications enabled."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "What to expect on your first call",
+      "url": "https://support.bemyeyes.com/hc/en-us/articles/46666288308881-What-to-expect-on-your-first-call",
+      "publisher": "Be My Eyes Help Center",
+      "purpose": "Supports what volunteers see during a call, focused help, camera clarification, ending a call and openly stating uncertainty."
+    },
+    {
+      "title": "Be My Eyes Volunteer Hub",
+      "url": "https://www.bemyeyes.com/be-my-eyes-volunteer-hub/",
+      "publisher": "Be My Eyes",
+      "purpose": "Supports the live one-way video and two-way audio connection and examples of everyday volunteer requests."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "support-a-computer-learning-session-through-a-community-program",
+    "arrange-an-accessible-outing-with-a-friend",
+    "document-access-details-for-public-places-on-wheelmap"
+  ],
+  "slug": "take-a-volunteer-call-through-be-my-eyes",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "make-a-close-friend-in-another-country",
+  "slug": "make-a-close-friend-in-another-country",
+  "title": "Let friendship grow through shared ordinary days",
+  "description": "Meet people abroad through a recurring activity, show interest without pressure and keep the connection alive through considerate follow-up after you leave.",
+  "intent": "Answer how to build a genuine friendship while abroad through repeated, reciprocal activities and follow-up, without promising an instant bond.",
+  "relatedExperienceSlugs": [
+    "make-a-friendship-map-together",
+    "exchange-handwritten-recipes-through-the-post",
+    "go-on-a-friend-led-neighbourhood-tour"
+  ],
+  "sections": [
+    {
+      "heading": "Choose a place where you will return",
+      "paragraphs": [
+        "A single conversation at a landmark can be warm and memorable, but it does not give two people much room to learn each other’s rhythms. If you are in a country for a few weeks, choose a recurring activity that already interests you: a language exchange, a community class, a volunteer shift with a clear role, a sports club, or a neighborhood group. Return because you enjoy the activity, not because someone owes you a friendship.",
+        "Prefer settings where local people have chosen to gather for themselves. Ask a host or organizer what visitors are welcome to join and what etiquette to follow. Do not turn a service worker, guide, or someone at their job into an unexpected personal invitation; their friendliness may be part of the work."
+      ]
+    },
+    {
+      "heading": "Begin with curiosity you can reciprocate",
+      "paragraphs": [
+        "Ask about something connected to the activity: how people learned a local game, what dish the group is making, or which part of the class they enjoy. Share a little about your own life too. A conversation feels more mutual when it is not a string of questions about someone’s country as if they represent everyone.",
+        "If language is a barrier, agree on a comfortable mix of languages, gestures, or translation. Speak clearly, allow pauses, and do not correct someone’s English unless they ask. Offer a small practical exchange—a recipe, music recommendation, or invitation to a public group event—rather than a promise of instant closeness."
+      ]
+    },
+    {
+      "heading": "Notice whether the interest goes both ways",
+      "paragraphs": [
+        "Friendship needs room for both people to choose. Offer a low-pressure invitation tied to a specific activity, such as joining the next class or having tea near the venue. Make it easy to decline without explanation. If the person does not respond or stays polite but distant, respect that signal and keep enjoying the group.",
+        "Powell River School District’s student homestay guidelines ask international students to take part in family routines, meals, conversations and activities. That is one school program’s expectation, not a pattern across homestays or a guarantee of friendship. The useful question for any exchange is whether a particular host and student both want repeated, welcoming interaction."
+      ]
+    },
+    {
+      "heading": "Keep plans safe and clear",
+      "paragraphs": [
+        "Meet in public places while you are getting to know someone, tell a trusted person where you are going, and use your own transport when possible. Do not share financial information, passwords, or documents to prove trust. If you are staying through a school, exchange, or host-family program, use its coordinator when a boundary or safety concern comes up.",
+        "Be clear about your own boundaries too: how much time you have, whether you are comfortable sharing photos, and what contact details you want to exchange. A respectful new friend will not demand access to private information or pressure you into travel plans."
+      ]
+    },
+    {
+      "heading": "Let the relationship continue at a human pace",
+      "paragraphs": [
+        "Before leaving, exchange the contact method both people prefer and ask whether occasional messages would be welcome. Send one note that refers to a real shared moment rather than a generic “let’s stay in touch.” A photo of the recipe you tried or a question about the next class gives the message a natural reason to exist.",
+        "After you return home, consider time zones, response gaps, and different habits around messaging. Do not treat a slow reply as rejection or make daily contact the test of closeness. Your next action is to choose one recurring, open activity for the next week of your stay and show up again."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Student Guidelines: Homestay Life Expectations",
+      "url": "https://www.sd47.bc.ca/internationalprograms/student-guidelines",
+      "publisher": "Powell River School District International Programs",
+      "purpose": "Supports one specific example: Powell River School District asks its international students to take part in family routines, meals, conversations and activities; no claim is made about how homestays generally operate."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

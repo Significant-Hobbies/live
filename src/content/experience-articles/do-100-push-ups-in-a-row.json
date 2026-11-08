@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "do-100-push-ups-in-a-row",
+  "slug": "do-100-push-ups-in-a-row",
+  "title": "Build a push-up practice that stays honest",
+  "description": "Turn a 100 push-up goal into a gradual practice: choose a consistent rep standard, track clean sets, and make recovery part of the plan.",
+  "intent": "Help a reader make the 100-repetition target measurable and approachable by clarifying form, starting point, progression, and when to reset the goal.",
+  "sections": [
+    {
+      "heading": "Define what counts before counting",
+      "paragraphs": [
+        "A hundred repetitions only means something if you use the same movement each time. Decide what a full repetition looks like for you: hands planted in a stable position, torso controlled, and a comfortable depth you can repeat without collapsing or bouncing. If you want the classic floor version, write down the standard you intend to use, such as lowering until the chest approaches the floor and returning to straight arms. A coach may help you make the standard fit your mobility and training history. The point is not to win an argument about form; it is to know whether your practice is moving toward the same target.",
+        "Do a calm baseline set while fresh, stopping when your next repetition would require a change in range or body position. Record the number and how it felt. A baseline of five is useful information, not a verdict. It tells you that the next training step should be smaller than someone who can already do several clean sets. The 100-rep goal is a long-range capacity target; it does not require testing your maximum every day."
+      ]
+    },
+    {
+      "heading": "Choose a version that lets you practice",
+      "paragraphs": [
+        "If floor push-ups are currently too demanding to repeat cleanly, use an incline version with hands on a stable bench, counter, or wall. Raising the hands changes the leverage and lets you practice the same general press pattern at a manageable effort. Pick one height and track it. When that level feels controlled across sessions, lower the hand support a little. Switching among a wall, a low bench, knee repetitions, and floor repetitions without recording the change can make progress hard to interpret.",
+        "The CDC includes body-weight push-ups among examples of muscle-strengthening activity. Its general guidance discusses sets of repetitions and working major muscle groups, but it is not a personalized prescription for getting to one hundred. Include other movements over time so the challenge does not become your entire idea of strength: pulling, legs, trunk, and ordinary aerobic activity serve different purposes. If you have a health condition, persistent pain, or a recent injury, get advice from a qualified professional before changing exercise demands."
+      ]
+    },
+    {
+      "heading": "Break the target into repeatable work",
+      "paragraphs": [
+        "For training, several modest sets usually let you keep better control than one all-out attempt. For example, someone whose baseline is eight might practice a few sets of three or four, leaving a pause between sets; a stronger beginner could use larger sets while still stopping before form deteriorates. Treat those as illustrations, not a universal program. Track the version, repetitions, and how much effort the last clean rep required. Add a small amount only when the current amount remains comfortable and repeatable.",
+        "Do not turn every session into a test. A frequent maximum attempt can leave the elbows, wrists, or shoulders irritated and offers little useful information after you have established your baseline. Use a consistent weekly rhythm with rest between demanding sessions, and let sleep, soreness, work, and other training affect the day’s plan. If a repetition causes sharp pain or an unfamiliar symptom, stop and reassess instead of trying to push through it."
+      ]
+    },
+    {
+      "heading": "Make the 100-rep test a separate event",
+      "paragraphs": [
+        "The phrase ‘in a row’ means one continuous set with no planned rest, so practicing clusters with pauses does not itself meet the final target. Clusters still build familiarity and let you accumulate clean work without making every practice attempt a maximal one. When you can do larger clean sets and recover well, choose a day when you are rested, warm up gently, and try the continuous set. If you need to stop, record the number and the reason. A test tells you where you are; it does not erase the training that came before it.",
+        "Keep the test standard identical to your baseline. If the target is floor push-ups, do not count an easier incline version as the same result. If the target is a comfortable personal standard rather than a formal challenge, write that down instead and keep it consistent. This removes the temptation to shorten each repetition as fatigue rises just to reach the headline number."
+      ]
+    },
+    {
+      "heading": "Take a useful first action",
+      "paragraphs": [
+        "Choose one version today, record a clean baseline, and note how it felt. Then set a modest practice amount that leaves room to repeat the movement with control, and include a rest day before testing it again. If the plan begins to feel like a contest against pain or exhaustion, change the target or ask a qualified coach for help. A hundred is a memorable number; the better measure of progress is a repeatable movement standard that your body tolerates over time."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "What Counts as Physical Activity for Adults",
+      "url": "https://www.cdc.gov/physical-activity-basics/adding-adults/what-counts.html",
+      "publisher": "U.S. Centers for Disease Control and Prevention",
+      "purpose": "Recognizes body-weight push-ups as muscle-strengthening activity and describes general sets/repetitions and muscle groups; not a personalized push-up program."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "do-your-first-pull-up",
+    "spend-a-year-strength-training",
+    "do-a-30-day-yoga-challenge"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

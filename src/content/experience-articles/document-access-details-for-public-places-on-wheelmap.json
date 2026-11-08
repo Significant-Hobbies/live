@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "document-access-details-for-public-places-on-wheelmap",
+  "slug": "document-access-details-for-public-places-on-wheelmap",
+  "title": "Add useful wheelchair-access notes to a public place listing",
+  "description": "Observe a venue’s entrance and key facilities, record what you can verify, and add precise access details without labelling a place beyond your evidence.",
+  "intent": "What makes a wheelchair-accessibility map contribution useful? This guide shows how to gather concrete details and avoid assuming that one access rating answers every person’s needs.",
+  "sections": [
+    {
+      "heading": "Start with the questions someone may need answered",
+      "paragraphs": [
+        "A single colour or rating can help someone scan a map, but it cannot describe every route or access need. Before visiting, think about the specific information a person may want: Is there a step-free entrance? Is the doorway narrow? Is there a lift? Can a wheelchair user reach the toilet or service counter? These are separate details, and a place may be accessible in one respect but not another.",
+        "Wheelmap describes itself as a public map where people can mark places according to wheelchair accessibility, and it invites contributors to add ratings, photos and new places. Its simplified rating is useful, but concrete notes add context. The OpenStreetMap accessibility mapping guidance also includes descriptive tags for conditions such as ramps and wheelchair access; follow the current Wheelmap interface and documentation when entering data."
+      ]
+    },
+    {
+      "heading": "Observe the route before entering the venue",
+      "paragraphs": [
+        "If you are already visiting the place, begin at the route a visitor would actually use from the pavement or car park. Note level changes, slopes, door operation, surface condition and whether the accessible entrance is obvious. Do not measure or estimate details you cannot verify. If staff explain that a temporary ramp is available, record it as an observed or confirmed detail rather than as a permanent feature.",
+        "A single visit is a snapshot. Construction, furniture and entrance arrangements can change, so include only what you saw or what a responsible venue representative confirmed. Never block an entrance or photograph a person without their consent. A wide photo of an empty threshold may help explain a layout, but check the map’s photo rules and avoid images that expose private information."
+      ]
+    },
+    {
+      "heading": "Describe facilities separately",
+      "paragraphs": [
+        "Check the aspects you can reach without intruding: entrance, interior route, lift, counter, seating and toilet. A step-free door does not prove that every room or facility is usable. If you cannot check the toilet, say nothing about it. If the venue has an accessible toilet that is locked or staff-operated, explain the access condition only if the current mapping form supports that level of detail.",
+        "Use specific, neutral wording. ‘There is one step at the street entrance; a ramp was not visible during this visit’ gives more useful context than ‘not accessible.’ Avoid promises such as ‘wheelchair friendly’ when people’s chairs, transfer needs and routes differ. The aim is to share evidence so each person can decide whether the place meets their own requirements."
+      ]
+    },
+    {
+      "heading": "Submit carefully and correct errors when needed",
+      "paragraphs": [
+        "Check the venue’s name and map location before adding information. Duplicate listings can split reports and confuse visitors. Use the official app or website workflow, read any status definitions, and keep notes on what your chosen rating means. If another contributor has already added recent, specific details, do not overwrite them just to add a second opinion; look for a gap that your observation can fill.",
+        "When your observation conflicts with the existing listing, check whether there is a date or a temporary condition. You can add a measured update or ask a venue contact for clarification. If you later discover an error, correct it and explain the basis for the correction through the platform’s normal tools. Accessibility data is useful when maintained as a living record rather than treated as a permanent verdict."
+      ]
+    },
+    {
+      "heading": "Map with humility and a clear next action",
+      "paragraphs": [
+        "After adding a place or access note, review the entry as if you were planning a trip: Does the description answer a practical question? Can another person tell whether you observed it or heard it from staff? Is there a missing part of the route that should remain unknown? Clear uncertainty is more honest than filling every field.",
+        "If you want to help beyond one venue, compare a nearby place and practise the same careful observation. You can also ask disabled users or local access groups what information is most useful, without assuming they should do unpaid validation for you."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wheelmap mapper handout",
+      "url": "https://news.wheelmap.org/en/wp-content/uploads/sites/2/2019/10/Wheelmap_Mapper_Handout_EN.pdf",
+      "publisher": "Wheelmap.org / Sozialhelden",
+      "purpose": "Explains the accessibility rating model and contributions of comments, photographs and new-place information. Follow the current map interface for entry steps."
+    },
+    {
+      "title": "How to map for the needs of people with disabilities",
+      "url": "https://wiki.openstreetmap.org/wiki/How_to_map_for_the_needs_of_people_with_disabilities",
+      "publisher": "OpenStreetMap Wiki",
+      "purpose": "Provides mapping tags for wheelchair access, ramps and descriptive accessibility information."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "arrange-an-accessible-outing-with-a-friend",
+    "play-an-introductory-game-of-boccia",
+    "try-polybat-on-an-adapted-table"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "trace-the-journey-of-one-inherited-object",
+  "slug": "trace-the-journey-of-one-inherited-object",
+  "title": "How can you trace the story of an inherited object?",
+  "description": "Trace an inherited object's story by documenting what is known, asking relatives open questions, and distinguishing family memory from confirmed provenance.",
+  "intent": "How can I learn the history of one inherited object without filling gaps with guesses? This guide uses careful observation, consent and family interviews to create a reliable record.",
+  "sections": [
+    {
+      "heading": "Choose an object and record its present condition",
+      "paragraphs": [
+        "Pick one object that someone in the family is willing to discuss: a recipe tin, photograph, tool, garment, letter or piece of furniture. Begin with what you can observe now. Note its material, dimensions, marks, labels, repairs and any visible damage. Photograph it from several angles with a ruler nearby for scale, but do not clean, polish, unfold or disassemble anything fragile just to make it look better.",
+        "The National Museum of African American History and Culture's Family Treasures Toolkit calls the history of who owned an object, how it was acquired and why it mattered its provenance. It recommends talking with people who remember the object and recording their stories in their own words. That distinction matters: “Grandmother said her brother made it” is a valuable family account even if the maker is not yet independently confirmed."
+      ]
+    },
+    {
+      "heading": "Ask open questions before searching for answers",
+      "paragraphs": [
+        "Invite a relative to talk about the object at a time that works for them. Start with questions that do not suggest the answer: “What do you remember about this?” “Where was it kept?” “Who used it?” “When did you first see it?” Let pauses happen. Someone may recall a detail only after looking at an old photo or hearing another family member's story. Ask permission before recording audio, and explain who will be able to hear or read it.",
+        "Follow up on a specific memory without turning it into a quiz. If the person says the object was used at a celebration, ask what else they remember about that day. Keep a transcript or notes faithful to their language, including uncertainty. If two people remember the same event differently, record both accounts with names and dates rather than deciding which one is correct from memory alone."
+      ]
+    },
+    {
+      "heading": "Build a timeline with confidence labels",
+      "paragraphs": [
+        "Make a simple timeline with a row for each known owner, move or change. Mark every entry as documented, recalled or inferred. A label or dated photograph may support a date; a memory may place an event within a decade; a guess based on style is still only a guess. Search family papers, inscriptions, public directories or archive catalogs only after you have the basic clues. Record where each clue came from so you can return to it later.",
+        "Separate the object's visible evidence from the family's interpretation. A repair may show that someone fixed it, but it cannot tell you who made the repair without another source. A business stamp may identify a shop, but not necessarily the object’s maker. This careful language protects the story from getting more certain every time it is repeated."
+      ]
+    },
+    {
+      "heading": "Preserve both the object and the conversation",
+      "paragraphs": [
+        "Store fragile items away from direct sun, dampness, extreme heat and busy handling. If you are unsure how to care for a textile, photograph or letter, consult a local museum or professional conservator before applying tape, cleaners or polish. Keep digital photographs and notes in more than one safe place, and label copies with the date and who made them. Do not write directly on the object.",
+        "Some family history can be painful or private. Ask whether a story may be shared beyond the conversation, and respect a request to keep names or details within the family. You can preserve an account without publishing it. If an heirloom includes a sensitive letter or a living person's information, avoid posting a full scan publicly without consent."
+      ]
+    },
+    {
+      "heading": "Create a small provenance note",
+      "paragraphs": [
+        "Write a one-page record with the object's description, known chain of ownership, stories in the speaker's words, sources checked and remaining questions. Use phrases such as “according to…” and “possibly…” when you are not sure. Attach copies of photographs or documents rather than writing on originals. Invite a family member to review the note for accuracy before sharing it with other relatives.",
+        "Your next action is to select one object and ask its oldest available witness what they remember about how it entered the family. Record the answer with permission, note what remains uncertain, and preserve the object safely while you look for one independent clue."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Hometown Treasures Toolkit for Individuals",
+      "url": "https://nmaahc.si.edu/sites/default/files/2022-05/family_treasures_toolkit_individuals_20220520.pdf",
+      "publisher": "National Museum of African American History and Culture, Smithsonian Institution",
+      "purpose": "Supports documenting object history and significance, asking people who remember it, recording provenance, and preserving family objects."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "read-old-postcards-as-historical-evidence",
+    "curate-a-five-object-museum-of-your-life",
+    "record-your-parents-life-stories"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

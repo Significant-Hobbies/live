@@ -1,0 +1,51 @@
+{
+  "experienceSlug": "make-a-family-emergency-contact-plan-together",
+  "slug": "make-a-family-emergency-contact-plan-together",
+  "title": "What belongs on a family emergency contact plan?",
+  "description": "Build a household contact plan that covers who to reach, where to meet, how to leave home, and how to practise without relying on one phone.",
+  "intent": "Answer how a household can make an emergency contact plan that is understandable to every member, kept current, and practised before disruption.",
+  "sections": [
+    {
+      "heading": "Start with a conversation about likely separation",
+      "paragraphs": [
+        "An emergency plan is easier to use when the people who will rely on it have helped make it. Pick a calm time, not the middle of a warning, and ask where household members might be during an ordinary weekday: home, work, school, care, sport, or travel. Then discuss how you would reconnect if a local incident made your usual route or phone call difficult. The National Weather Service’s family communications plan asks families to identify contacts, keep information somewhere accessible, choose meeting places, and know routes out of home.",
+        "Make the discussion fit the household: include children in age-appropriate choices, check how visitors or caregivers would receive instructions, and account for people who need medication, mobility devices, translation, or animal care. Avoid turning the conversation into a frightening exercise. The aim is a short, clear set of decisions people can recall under stress, not a prediction of every possible event."
+      ]
+    },
+    {
+      "heading": "Choose contacts and meeting points",
+      "paragraphs": [
+        "Select one trusted out-of-area contact who can relay messages if local household members cannot reach one another. Make sure everyone knows the person’s full name and at least one reliable way to contact them. Do not assume every family member has a charged phone or remembers a number from memory; create a paper contact card and place copies where people can find them, such as a wallet, backpack, or household kit.",
+        "Pick a meeting place close to home and another outside the neighborhood, and name them precisely. “The library entrance on Oak Street” is more actionable than “downtown.” Draw a simple map and mark how to exit your home. If people often go to school, work, or a faith or community organization, find out how those places communicate and where their own meeting areas are. A family plan should coordinate with those procedures rather than send someone into a locked or unsafe location."
+      ]
+    },
+    {
+      "heading": "Write it so tired people can use it",
+      "paragraphs": [
+        "Put essential actions on one page: names, contact details, meeting locations, routes, and who is responsible for what. Keep sensitive information private; do not post phone numbers or home layouts publicly. Keep a paper version because a plan that exists only in a phone may be unreachable if the battery dies, the device is lost, or a network is down. Make sure a person who is not the family organizer can find the document and explain it.",
+        "Agree on a fallback if the first plan cannot work. For example, the household may use the out-of-area contact as a message relay and then go to the second meeting place only when it is safe to travel. Do not rely on a single communication method or assume a text will always get through. Follow current guidance from local emergency authorities, who can recommend communication practices for your region and event type. Keep instructions simple enough to remember without rehearsing a script."
+      ]
+    },
+    {
+      "heading": "Practise, then update the plan",
+      "paragraphs": [
+        "Run a low-pressure drill: each person locates their card, identifies the nearest exit, and points out the meeting place on the map. You can test a short check-in with the chosen contact, but tell them in advance so the exercise does not cause alarm. Make the practice accessible: walk routes at a comfortable pace, have someone describe the map aloud if needed, and adjust the plan if a route has steps or a locked gate.",
+        "After the drill, ask what was unclear. Maybe a child could not remember the contact, a building exit was blocked, or the meeting point was too vague. Fix the page and store it where people can find it. The National Weather Service suggests that plans be practised and that contact cards remain handy; make a recurring reminder to review them as phone numbers, school routines, and living arrangements change. The next useful step is to put the family together for ten minutes and agree on just the first contact and two meeting places."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Communications Plan",
+      "url": "https://www.weather.gov/owlie/communicationsplan",
+      "publisher": "National Weather Service",
+      "purpose": "Supports choosing contacts, meeting points, home exit routes, accessible contact cards, and household practice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "host-a-bring-one-object-story-circle",
+    "keep-a-short-distance-friendship-walking-appointment"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

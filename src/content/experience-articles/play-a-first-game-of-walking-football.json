@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "play-a-first-game-of-walking-football",
+  "slug": "play-a-first-game-of-walking-football",
+  "title": "What should you learn before your first walking-football match?",
+  "description": "Ask the club which laws it uses, practise walking and controlled passing, then join a short match at a pace that suits the group.",
+  "intent": "A newcomer’s guide to understanding local walking-football rules, joining a practice and playing without pretending every club uses an identical format.",
+  "sections": [
+    {
+      "heading": "Find out what “walking” means at this club",
+      "paragraphs": [
+        "Walking football has a named set of laws, but organizers may use different local variations, especially in recreational sessions. Ask whether the club follows The FA Laws of the Game or has an agreed beginner version. England Football explains that its laws are recommended for organizers and provides a course on recognizing not walking and managing physical contact. That is useful preparation, but your referee or organizer explains the rules in play.",
+        "Ask about running, contact, ball height, restarts and what happens when a player loses balance. These rules shape the pace and safety of the game. If the session welcomes different abilities, ask what adjustments are possible and whether you should bring a particular type of footwear. Do not assume the name alone tells you how the game is enforced."
+      ]
+    },
+    {
+      "heading": "Arrive ready to learn the space",
+      "paragraphs": [
+        "Introduce yourself to the coach or organizer and mention that this is your first match. Find out where to warm up, where spare balls go, and how players signal that they need a pause. If you have not played football recently, a short passing practice can make the session feel less rushed. There is no need to arrive fit for a full competitive match to try a beginner session.",
+        "Learn the boundaries and where substitutes wait. Keep a little space when turning or approaching a loose ball, and avoid stepping into another player’s route. If you need a water break or a slower start, ask before the match begins so the organizer can plan teams and substitutions without guessing."
+      ]
+    },
+    {
+      "heading": "Practise a pass that helps the next player",
+      "paragraphs": [
+        "Start with a short pass to a teammate who can receive it comfortably. Use enough pace for the ball to reach them, but not so much that it becomes hard to control. Say a name or make a clear call before passing. A well-placed ball can bring more play into the game than a difficult shot, especially while everyone is learning the pace.",
+        "Try receiving with your body facing the next likely pass, then take a touch that leaves the ball within reach. You do not have to master every technique in one evening. England Football’s introductory course includes how the laws apply to movement and contact; use a coach’s demonstrations to understand how those rules work in the actual session."
+      ]
+    },
+    {
+      "heading": "Play the short game at your pace",
+      "paragraphs": [
+        "Join a small-sided or shortened game if the organizer offers one. Focus on spacing, movement and the agreed walking rule. If you are unsure whether a run or contact was allowed, ask the referee during a pause rather than arguing through play. The aim of a first session is to experience the game and learn its local rhythm, not to settle every law question.",
+        "Check in with yourself during substitutions and breaks. If a movement, surface or pace feels uncomfortable, tell the coach and follow their advice. Stop if you feel unwell. A well-run game should leave room for people to adapt their participation. If the session is too intense, ask whether a slower practice or different group is available."
+      ]
+    },
+    {
+      "heading": "Leave with one specific next step",
+      "paragraphs": [
+        "Afterwards, name one thing you want to repeat: calling for a pass, keeping the ball close, or learning how a restart works. Ask which rule surprised newcomers most and whether the club has a beginner practice before the next match. A short note helps you remember the answer instead of trying to learn the entire rulebook at once.",
+        "You might return to the same session, watch a game to learn its movement, or practise passing with a friend. Check the organizer’s current schedule and the rules it uses before you go. A first match can be worthwhile even if you spend more time learning substitutions and boundaries than scoring."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Walking Football: Laws of the Game",
+      "url": "https://www.englandfootball.com/play/ways-to-play/walking-football/Rules-and-Refereeing",
+      "publisher": "The Football Association / England Football",
+      "purpose": "Supports the existence of FA laws, organizer guidance and a course covering walking and physical-contact rules."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "play-sitting-volleyball-with-an-inclusive-club",
+    "build-a-cooperative-table-tennis-rally"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,60 @@
+{
+  "experienceSlug": "explore-a-nature-trail-using-an-all-terrain-wheelchair",
+  "title": "How to plan an all-terrain wheelchair trail outing",
+  "description": "Plan an all-terrain wheelchair outing by checking surface, width, grade, device limits, current conditions, transport, and the details that matter to you.",
+  "intent": "A careful trail-planning method for someone considering an all-terrain wheelchair, emphasizing individualized access questions, current information, and a realistic turnaround plan.",
+  "sections": [
+    {
+      "heading": "Choose a trail from its details, not its label",
+      "paragraphs": [
+        "Trail names such as “easy,” “family friendly,” or even “accessible” do not tell you whether a specific route works for a particular person and chair. The National Park Service recommends reviewing surface, width, grade, cross slope, distance, maps, photos, and an individual’s abilities and equipment. Start by deciding which details matter most: sustained incline, loose gravel, a narrow gate, roots, turning space, distance to a rest point, or the availability of help. Read the specific park’s trail page and look for a date on the assessment. Treat a description as a useful snapshot, not a guarantee that conditions remain unchanged."
+      ]
+    },
+    {
+      "heading": "Ask focused questions before traveling",
+      "paragraphs": [
+        "Contact the land manager with a short list of concrete questions that published details leave open. Ask whether recent rain, construction, flooding, or fallen trees changed the route; whether a mobility device can be borrowed or must be reserved; where the route becomes difficult; and where a vehicle can be parked or unloaded. If you are considering a loaner all-terrain chair, ask about its dimensions, weight limit, transfer requirements, controls, operator rules, and charging or return arrangements. Do not rely on a trail label to establish that a particular chair will work. The Smokies’ program, for example, lists device-specific trails and explains that the chair is suitable only for select routes."
+      ]
+    },
+    {
+      "heading": "Make a plan that can change",
+      "paragraphs": [
+        "Build the outing around a first segment with a clear stopping point rather than promising to complete a full loop. Identify a nearby accessible restroom, a sheltered place to pause, and the route back if the surface becomes tiring or conditions worsen. Bring the supplies you normally need for the chair and trip, plus water, weather layers, and a way to contact your companion or park staff. Agree on how you will communicate if you want to stop, need a push, or want to try a different route. Assistance should follow the chair user’s direction; it should not be assumed. A short enjoyable visit can be the complete outing."
+      ]
+    },
+    {
+      "heading": "Separate equipment access from trail access",
+      "paragraphs": [
+        "A park may lend an all-terrain wheelchair while a particular route remains unsuitable for that device or user. Conversely, someone bringing their own chair may have different constraints. Confirm the reservation process and eligibility directly with the park, and ask whether a companion must accompany the user. The Smokies’ own access page notes that off-road chairs are intended for uneven terrain but also lists core-strength and head-control requirements for its device. These details are specific to that program, not universal criteria. If the support or trail information is unclear, choose a route with the land manager and the chair user together rather than improvising at a trailhead."
+      ]
+    },
+    {
+      "heading": "Use the first visit to improve the next one",
+      "paragraphs": [
+        "Afterward, record what the route actually felt like: surface changes, slope sections, crossing points, rest locations, signage, and any access details that were missing online. Note what changed the experience—weather, crowding, time of day, companion support, or chair setup—without turning one visit into a universal rating. Share observations with the park through its access contact or an agreed mapping project if you can do so accurately. Then choose the next outing from evidence you gathered, not just from distance. Your next action is simple: pick one candidate trail and send the land manager the two access questions that would determine whether you go."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Trail Accessibility Information",
+      "url": "https://www.nps.gov/grsm/planyourvisit/trail-access-information.htm",
+      "publisher": "National Park Service, Great Smoky Mountains National Park",
+      "purpose": "Supports checking route-specific access attributes, individualized equipment fit, and park-provided all-terrain chair and trail information."
+    },
+    {
+      "title": "Physical/Mobility Accessibility",
+      "url": "https://home.nps.gov/subjects/accessibility/physical-mobility.htm",
+      "publisher": "National Park Service",
+      "purpose": "Supports planning questions about trail characteristics, safety, transportation, and current condition alerts."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "arrange-an-accessible-outing-with-a-friend",
+    "document-access-details-for-public-places-on-wheelmap",
+    "try-polybat-on-an-adapted-table"
+  ],
+  "slug": "explore-a-nature-trail-using-an-all-terrain-wheelchair",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

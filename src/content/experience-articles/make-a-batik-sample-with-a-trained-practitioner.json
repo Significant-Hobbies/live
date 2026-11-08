@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "make-a-batik-sample-with-a-trained-practitioner",
+  "slug": "make-a-batik-sample-with-a-trained-practitioner",
+  "title": "Choose a batik workshop that teaches the cloth, not only the motif",
+  "description": "Meet a batik practitioner, learn the wax-resist steps they choose to teach, and make a small sample while keeping the cultural context visible.",
+  "intent": "What should I look for in a beginner batik session so I understand the process and the practitioner’s approach? This adds workshop-selection and observation advice.",
+  "sections": [
+    {
+      "heading": "Ask what kind of batik you will learn",
+      "paragraphs": [
+        "Batik is not one generic pattern activity. Indonesia’s Ministry of Industry describes specialist competency training across motif design, hand-drawn batik, stamped batik, dyeing methods, and wax preparation. Ask your workshop host which technique the sample uses and whether the instructor practices that method. The session may focus on one stage; knowing its scope makes expectations realistic.",
+        "Ask what is prepared in advance, which materials the instructor provides, and what will be safe for learners to handle. Wax and dye processes may involve heat and specialist equipment. Let the practitioner demonstrate and supervise them; do not bring a home heating setup or substitute chemicals."
+      ]
+    },
+    {
+      "heading": "Notice how the resist shapes the design",
+      "paragraphs": [
+        "Indonesia’s Ministry of Foreign Affairs describes a process in which a design is sketched on cloth, wax is applied, and dye colors exposed areas while the wax resists it. The practitioner may use a canting tool or a stamp, and different approaches produce different marks. Observe the tool’s movement before trying it, and ask what details the instructor wants you to notice.",
+        "Choose a small motif with a limited number of lines and enough space between them. Fine crowded detail is difficult to manage in a first sample, especially if you are learning how wax flows through a tool. Ask the teacher which marks suit the fabric and tool they have prepared."
+      ]
+    },
+    {
+      "heading": "Follow the maker’s demonstration",
+      "paragraphs": [
+        "Practice on the sample cloth the practitioner provides. Keep your hand position and movement slow enough to watch the line, and stop if the teacher asks you to reset or wait. Do not treat a small wobble as a reason to press harder; extra force can produce a mark the instructor did not intend.",
+        "Ask how the practitioner checks wax coverage before dyeing. A missed area may color differently, but that can be part of the design rather than a flaw. Use the instructor’s names for tools and process stages, and make notes after the demonstration rather than interrupting a delicate step."
+      ]
+    },
+    {
+      "heading": "Keep dye and removal steps supervised",
+      "paragraphs": [
+        "If the workshop includes applying color or removing wax, follow the practitioner’s exact process and safety directions. Let trained staff handle any hot liquids, work surfaces, and disposal of dye materials; this guide does not prescribe a home wax-removal method. Ask which finishing steps are included and what learners may safely observe or do.",
+        "Ask the practitioner what their sample will and will not show. Some workshops use prepared cloth or simplified color steps so a learner can focus on one skill. That is a legitimate lesson if the scope is explained; do not assume the class represents every stage or regional style of batik."
+      ]
+    },
+    {
+      "heading": "Record the person and process accurately",
+      "paragraphs": [
+        "With permission, record the practitioner’s name, technique, tool, and part of the process you tried. Ask before photographing patterns or sharing a close view of someone else’s work. If the instructor has a preferred description or attribution, use it. A sample is your learning record, not a claim that you have mastered the craft.",
+        "Your next action is to contact a workshop and ask which batik method it teaches, which steps learners perform, and how it credits the practitioner. Bring curiosity about one technique rather than assuming all batik traditions can be summarized by a single motif."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Competency training for batik makers",
+      "url": "https://bbkb.kemenperin.go.id/index.php/post/read/membangun_kompetensi_pembatik_untuk_meningkatkan_daya_saing_industri_kreatif_batik_0",
+      "publisher": "Indonesia Ministry of Industry, Center for Handicrafts and Batik",
+      "purpose": "Supports the distinction between motif design, hand-drawn and stamped batik, dyeing, and wax making as distinct competency areas."
+    },
+    {
+      "title": "Indonesia Invites III: Batik",
+      "url": "https://kemlu.go.id/files/repositori/56577/Indoinvites%20III%20Compressed.pdf",
+      "publisher": "Ministry of Foreign Affairs of Indonesia",
+      "purpose": "Supports the general Indonesian wax-resist sequence and named tools; the previous wax-removal attribution was removed because the source did not support it."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "try-kalamkari-drawing-on-cloth-with-an-artisan",
+    "learn-madhubani-linework-from-a-practicing-artist",
+    "make-a-sheet-of-washi-with-a-papermaker"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

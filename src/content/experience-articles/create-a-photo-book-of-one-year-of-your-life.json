@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "create-a-photo-book-of-one-year-of-your-life",
+  "slug": "create-a-photo-book-of-one-year-of-your-life",
+  "title": "Edit a year into a photo book, not a camera roll",
+  "description": "Choose a clear story for a year of photographs, add dates and captions, and protect original prints or files while preparing the book.",
+  "intent": "How do I select and organize photographs from one year into a readable book without trying to include every image?",
+  "sections": [
+    {
+      "heading": "Pick the story before the photographs",
+      "paragraphs": [
+        "A year is too large to tell one image at a time. Choose a simple frame: one home, one project, a changing season, a year with a particular person, or the ordinary routines that held the months together. The frame helps you choose, and it lets the book show more than holidays and posed portraits.",
+        "Start with a folder or contact sheet of candidates. Include different kinds of images: people, places, meals, objects, weather, a familiar route and small changes in a room. Keep photos that make you remember a moment, not only the technically sharp ones. If other people appear, think about their privacy before printing or sharing the book."
+      ]
+    },
+    {
+      "heading": "Build a sequence with breathing room",
+      "paragraphs": [
+        "Sort the images into months or chapters, then look for an opening and ending that make sense. You might begin with the first week, a place you returned to, or an object that appears across the year. Alternate busy spreads with quieter pages. A book that contains every good photograph can become harder to read than a tighter selection.",
+        "Limit each spread to a small number of images and give some photographs room to stand alone. If several pictures show nearly the same moment, choose the one that tells the story best. Keep a separate archive folder for the images you do not print; editing the book does not mean deleting the rest."
+      ]
+    },
+    {
+      "heading": "Add captions that recover context",
+      "paragraphs": [
+        "A short caption can record who, where, when and why a photograph matters. Avoid describing only what is visible. “Three cups on the table” may be obvious; “first breakfast after the move, before the boxes were unpacked” gives future readers context. If a date or name is uncertain, mark it as an estimate rather than filling the gap with a guess.",
+        "Ask someone in the image how they would like to be identified, and consider leaving out private or painful details. A caption can protect dignity as well as preserve memory. You do not need to explain every photograph; leave some space for a person looking at the book to bring their own memory."
+      ]
+    },
+    {
+      "heading": "Handle originals with care",
+      "paragraphs": [
+        "If you are including old prints, do not glue, tape or write directly on the image. The Library of Congress advises handling photographs by their edges, avoiding adhesives and choosing photo-safe albums rather than sticky or magnetic pages. For a new photo book, use scans or duplicate prints when you can, and keep fragile originals in suitable protective storage.",
+        "Digital images need their own simple organization. Keep the original files and a backup, and use copies for cropping or color adjustments. If you order a printed book, check the proof for captions, sequence and page edges before approving it. Product-specific print requirements vary, so follow the provider’s current specifications rather than relying on a generic template."
+      ]
+    },
+    {
+      "heading": "Make the first edition finishable",
+      "paragraphs": [
+        "Set a practical cap for the project: a fixed number of pages, a maximum number of images per month, or one selection session each weekend. You can make a smaller first book and leave a note about what you excluded. The goal is a readable record of the year, not a complete archive in one volume.",
+        "After printing, write the year and the book’s frame on the inside cover. Store it away from direct sunlight, damp and high-traffic handling. Keep the digital source folder organized so you can revisit it later. Your next step is to choose the story in one sentence and make a first shortlist of photographs from three different months."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Care, Handling, and Storage of Photographs",
+      "url": "https://www.loc.gov/preservation/care/photo.html",
+      "publisher": "Library of Congress Preservation",
+      "purpose": "Supports edge handling, avoiding adhesives on prints, photo-safe albums and protective storage; digital files require separate guidance."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "write-captions-for-ten-unlabelled-personal-photos",
+    "take-a-photograph-that-stops-people-in-their-tracks",
+    "trace-the-journey-of-one-inherited-object"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

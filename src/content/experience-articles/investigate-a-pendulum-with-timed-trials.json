@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "investigate-a-pendulum-with-timed-trials",
+  "slug": "investigate-a-pendulum-with-timed-trials",
+  "title": "How can you test whether pendulum length changes its swing time?",
+  "description": "Change one pendulum variable at a time, use repeated timed trials and a consistent release, then report the pattern with the limits of your timing.",
+  "intent": "A small experiment plan for comparing pendulum lengths fairly and avoiding common timing and measurement errors.",
+  "sections": [
+    {
+      "heading": "Write a question you can actually test",
+      "paragraphs": [
+        "A useful starting question is: if I change the pendulum’s length, what happens to the time for a set number of swings? Science Buddies’ pendulum project explores motion with a controlled comparison and recommends making repeated measurements. Keep the first experiment narrow: use the same bob, release method, location and timing procedure while changing only the length.",
+        "Gather a light string, a safe small weight, a secure support, a ruler and a stopwatch. Make sure the support cannot tip or fall, and keep the swing path clear of faces, lamps and breakable objects. If you are working with a child, supervise the setup and avoid heavy weights or ceiling fixtures."
+      ]
+    },
+    {
+      "heading": "Define length and release consistently",
+      "paragraphs": [
+        "Measure from the pivot point to the centre of the bob, not just the visible string. Mark two or three lengths that are easy to set again and record them in the same units. Tie the string securely and check that the bob can swing without rubbing the support. A small change in the pivot point or knot can matter more than it seems.",
+        "Use a small, similar starting angle each time and release the bob without pushing it. If possible, have one person release while another times, then switch roles to see whether timing differences appear. Keep bystanders outside the swing path. Do not increase the angle or mass as extra variables in the same comparison."
+      ]
+    },
+    {
+      "heading": "Time a group of swings, not one",
+      "paragraphs": [
+        "One swing is difficult to time accurately by hand. Choose a fixed number of complete back-and-forth cycles, start timing at a clear crossing point and stop at the same point after the chosen count. Divide the total time by the number of cycles to estimate one period. Science Buddies’ project offers the idea of using timed trials; the repeated-cycle approach helps reduce the effect of a slow start or stop reaction.",
+        "Repeat each length several times and write each raw time before calculating an average. If one run is far from the others, check whether the release was pushed or the count was lost; repeat it and keep the original note rather than silently deleting it. A simple table with length, trial number and time makes the comparison easy to follow."
+      ]
+    },
+    {
+      "heading": "Look for a pattern and name uncertainty",
+      "paragraphs": [
+        "Compare the average period for each length. Does the longer setup tend to take more time per cycle? Describe the pattern before explaining it. If your measurements are close together, say so; the experiment may need more repeats, a clearer start signal or longer timing intervals. Avoid claiming that a small difference is meaningful when it is within your measurement uncertainty.",
+        "Keep the support position fixed and check that the string does not twist or catch. A swinging pendulum gradually loses energy, so use a consistent number of cycles and do not compare a run measured at the beginning with one stopped much later. If you want to investigate another factor, start a new set of trials after you have documented the length comparison."
+      ]
+    },
+    {
+      "heading": "Make the result reproducible",
+      "paragraphs": [
+        "Write down the setup in enough detail that someone else could repeat it: support, bob, measured length, release method, number of cycles and timing convention. Include the raw results and calculation. A result that does not match your expectation is still useful if your method is clear. It may reflect timing limits, an inconsistent release or a measurement choice that needs improving.",
+        "For a next experiment, ask whether changing the bob’s mass while keeping length fixed makes an observable difference. Change only one factor and use the same procedure. Keep hands out of the moving path, secure the support and stop if any part of the setup becomes unstable."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Investigate the Motion of a Pendulum",
+      "url": "https://www.sciencebuddies.org/science-fair-projects/project-ideas/Phys_p016/physics/pendulum-motion?id=427",
+      "publisher": "Science Buddies",
+      "purpose": "Supports a controlled pendulum investigation and repeated timed trials while varying a test factor."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "measure-the-speed-of-sound-with-a-repeatable-experiment",
+    "test-a-paper-glider-with-controlled-design-changes"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

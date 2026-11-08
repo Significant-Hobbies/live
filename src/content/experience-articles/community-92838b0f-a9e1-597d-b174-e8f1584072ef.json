@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "community-92838b0f-a9e1-597d-b174-e8f1584072ef",
+  "slug": "visit-a-comic-con-in-a-costume",
+  "title": "Build a convention costume that works in a crowded hall",
+  "description": "Plan a comic convention costume around comfort, movement and the event’s prop rules, so you can enjoy the panels and photos as well as the reveal.",
+  "intent": "How do I wear a costume to a comic convention without letting the outfit make the day uncomfortable or violate venue policy?",
+  "sections": [
+    {
+      "heading": "Start from the event rules, not the prop",
+      "paragraphs": [
+        "Every convention has its own costume, prop, bag and photography rules. Read the current policy for the event you will attend before choosing materials or bringing a prop. San Diego Comic-Con, for example, requires daily prop inspection and bars functional or sharp-edged props; its rules can change. That policy is an example, not a substitute for checking your own convention.",
+        "If a character’s look depends on a sword, blaster or oversized accessory, design a compliant version rather than assuming the prop desk will approve it. Foam, cardboard or a soft fabric substitute may still need inspection. Leave anything that can fire, cut or swing heavily at home. When the rules are unclear, ask the organizer in writing and plan to attend without the prop if permission is not explicit."
+      ]
+    },
+    {
+      "heading": "Build the costume around a full day of movement",
+      "paragraphs": [
+        "A costume can look excellent in a mirror and become tiring after an hour of walking. Test the outfit at home for sitting, climbing a stair, reaching overhead, using a restroom and putting on a light jacket. Check whether shoes can handle long concrete corridors. If a wig, mask or helmet blocks hearing or peripheral vision, plan breaks and remove it whenever you need to navigate safely.",
+        "For a first outing, choose one recognizable design element and one comfortable base layer. You do not need a screen-accurate build to participate. A color palette, distinctive cape or handmade emblem can make the reference clear while keeping the costume light. Check seams, closures and pockets; a small repair kit with safety pins, tape and spare fasteners can solve common wardrobe issues."
+      ]
+    },
+    {
+      "heading": "Plan for heat, queues and changing conditions",
+      "paragraphs": [
+        "Conventions can mean long lines, warm rooms and sudden changes in air conditioning. Add breathable layers, water access and a place to store a small item if the venue permits it. A long cloak may be beautiful for photos but awkward in a packed aisle; consider a detachable version. If your costume uses face paint or adhesive, test it beforehand and check how you will remove it.",
+        "Choose a meeting point with friends that does not depend on cell service. Large halls can make texts slow, and a full costume may make you harder to spot. Agree on a quiet break location and an exit plan if the crowd or sensory load becomes too much. These details help keep the day enjoyable for both you and other attendees."
+      ]
+    },
+    {
+      "heading": "Ask before taking or sharing photos",
+      "paragraphs": [
+        "Costume gatherings are social, but not everyone wants a photo. Ask permission before taking a close-up, touching a costume or posting someone’s image. Leave room for mobility devices and do not block a corridor to stage a shot. If another attendee declines, move on without trying to persuade them. Respectful interaction is part of making cosplay welcoming.",
+        "At San Diego Comic-Con, the official code of conduct requires respectful behavior and the prop policy can restrict oversized costumes in exhibit or program rooms during crowd conditions. Other conventions may have different rules. Check the event guide for photo areas, changing spaces, accessibility services and policies about personal recording equipment."
+      ]
+    },
+    {
+      "heading": "Choose a schedule that leaves room for discovery",
+      "paragraphs": [
+        "Pick one panel, signing or exhibit as an anchor, then allow time to eat, rest and enjoy unplanned conversations. Build the costume plan around what you actually want to do: if panels are the priority, keep props compact and comfortable for seated rooms; if portraits are the priority, check whether the venue has a designated photo area and when it is least crowded.",
+        "Before leaving home, put your badge, route information, phone charger, water and any permitted costume repair items together. Check the organizer’s latest rules again because event policies can change. The next step is to try on the complete outfit for a short walk and identify the one piece you would remove first if the day gets hot."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Convention Policies",
+      "url": "https://www.comic-con.org/cc/plan-your-visit/convention-policies/",
+      "publisher": "San Diego Comic Convention",
+      "purpose": "Supports this named convention’s prop inspection, prohibited functional/sharp props and respect rules; article explicitly treats rules as event-specific and changeable."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "perform-on-a-stage-in-front-of-a-crowd",
+    "draw-a-wordless-six-panel-comic",
+    "community-a3939ea7-9932-5169-ba32-934e1c2b5aa0"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

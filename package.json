@@ -5,7 +5,7 @@
   "homepage": "https://significanthobbies.com",
   "scripts": {
     "dev": "next dev",
-    "build": "next build --webpack && node scripts/run-inline-critical-css.mjs",
+    "build": "node scripts/check-experience-articles.mjs && next build --webpack && node scripts/run-inline-critical-css.mjs",
     "cf:build": "node scripts/cf-build.mjs && opennextjs-cloudflare populateCache local",
     "validate:env:deploy": "node scripts/validate-env.mjs deploy",
     "start": "next start",
@@ -40,7 +40,8 @@
     "quality:dependencies": "node scripts/check-code-health.mjs dependencies",
     "quality:suppressions": "node scripts/check-code-health.mjs suppressions",
     "quality:hygiene": "node scripts/check-code-health.mjs hygiene",
-    "quality:web": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm quality:astro && pnpm test:coverage && pnpm quality:unused && pnpm quality:complexity && pnpm quality:duplication && pnpm quality:cycles && pnpm quality:dependencies && pnpm quality:suppressions && pnpm docs:check && pnpm quality:hygiene",
+    "quality:web": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm quality:astro && pnpm test:coverage && pnpm quality:unused && pnpm quality:complexity && pnpm quality:duplication && pnpm quality:cycles && pnpm quality:dependencies && pnpm quality:suppressions && pnpm docs:check && pnpm quality:hygiene && pnpm quality:articles",
+    "quality:articles": "node scripts/check-experience-articles.mjs",
     "quality": "pnpm quality:web",
     "quality:all": "pnpm quality:web",
     "prepare": "husky"

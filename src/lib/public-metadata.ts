@@ -10,16 +10,18 @@ export function withPublicMetadata(metadata: Metadata): Metadata {
       : canonical instanceof URL
         ? canonical
         : null;
+  const markdownUrl = url ? new URL(markdownPathFor(url.pathname), home.url) : null;
+  if (markdownUrl && url) markdownUrl.search = url.search;
   return {
     ...metadata,
     other: { ...metadata.other, 'ai-summary': metadata.description || home.page.description },
-    ...(url
+    ...(markdownUrl
       ? {
           alternates: {
             ...metadata.alternates,
             types: {
               ...metadata.alternates?.types,
-              'text/markdown': new URL(markdownPathFor(url.pathname), home.url).href,
+              'text/markdown': markdownUrl.href,
             },
           },
         }

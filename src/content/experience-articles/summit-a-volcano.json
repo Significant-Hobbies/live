@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "summit-a-volcano",
+  "slug": "summit-a-volcano",
+  "title": "A Volcano Summit Begins With the Official Route",
+  "description": "Plan a volcano summit around current observatory notices, open trails, air quality, and local guides instead of chasing an eruption or vent.",
+  "intent": "Offers a safety-first way to choose a legitimate volcanic summit route and understand why official alerts and closures outrank summit ambition.",
+  "sections": [
+    {
+      "heading": "Define what “summit” means here",
+      "paragraphs": [
+        "A volcano can be a mountain trail, a regulated park visit, a guided high-altitude climb, or an active volcanic area where access changes quickly. Before choosing a peak, find out whether the public route reaches the summit at all. Some volcanoes have closed summit zones, sacred or protected areas, or no safe visitor route. Treat a summit as a goal only if the local authority or qualified guide identifies an open, permitted route.",
+        "Separate the experience you want from a picture of glowing lava. A quiet summit hike can still teach you about crater shape, old lava flows, vegetation boundaries, and how people live with volcanic landscapes. If a site is erupting, a safe viewpoint or guided visit to an authorized area may be the appropriate experience; walking toward a vent is not a route plan."
+      ]
+    },
+    {
+      "heading": "Read alerts as ground instructions",
+      "paragraphs": [
+        "In the United States, the USGS volcano alert system uses ground hazard terms such as Normal, Advisory, Watch, and Warning; those words describe different levels of volcanic activity. The separate aviation color code concerns airborne ash hazards. Do not confuse the two or use an alert label by itself to decide that a hiking route is safe. Read the observatory notice and the park or local authority’s access instructions together.",
+        "Conditions can change faster than a saved map or an old trip report. Check the local volcano observatory and park alerts close to departure, and again before entering the area. A current closure, air-quality notice, or guide instruction overrides the summit plan. Choose a different open trail or postpone rather than trying to find an informal way around a barrier."
+      ]
+    },
+    {
+      "heading": "Choose expertise that matches the terrain",
+      "paragraphs": [
+        "Ask a local guide or park authority what the route involves: elevation, loose volcanic rock, exposure, weather, gas, and whether a permit or group format is required. Hawaiʻi Volcanoes National Park, for example, warns visitors about unstable ground, sharp rock, hidden lava tubes, hazardous gases, and rapidly changing weather. The specifics differ among volcanoes, so do not transplant one park’s safety advice to another country or mountain.",
+        "On a guided outing, ask who decides to turn back, how the group handles a weather or activity change, and what the emergency communication plan is. A guide should be willing to abandon the summit if conditions demand it. This is a sound expedition decision, not a failed attempt."
+      ]
+    },
+    {
+      "heading": "Notice volcanic features from a safe distance",
+      "paragraphs": [
+        "Volcanic terrain offers vivid details without stepping into hazards. From an open trail, compare rough, broken lava with smoother flows, look for vegetation returning at different stages, or sketch a crater rim from the designated overlook. At a park such as Hawaiʻi Volcanoes, official guidance says to remain on marked trails and overlooks and keep away from earth cracks, vents, fumaroles, cliff edges, and lava flows. Follow the destination’s own directions.",
+        "Never collect volcanic material or touch delicate formations. Volcanic glass and ash can be sharp or irritating, and apparently solid ground may not be stable. A photograph taken from the right place is a better record than a close-up that required crossing a boundary."
+      ]
+    },
+    {
+      "heading": "Prepare a summit plan with a retreat point",
+      "paragraphs": [
+        "Write down the route name, the authority that maintains it, the latest notice you checked, and the turn-around point suggested by your guide or park information. Tell someone where you expect to be, and follow local instructions about water, footwear, weather, and communication. Avoid repeating gear quantities from unrelated peaks; hot shadeless lava fields, cold high summits, and rainy tropical slopes need different preparation.",
+        "Your next step is to choose a specific volcano and look up its official park page or observatory before selecting a date. If no approved summit route is clearly described, choose a guided lower-elevation visit instead. The landscape will still tell its story without asking you to take an avoidable risk."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Safety",
+      "url": "https://www.nps.gov/havo/planyourvisit/safety.htm",
+      "publisher": "National Park Service, Hawaiʻi Volcanoes National Park",
+      "purpose": "Official volcanic viewing and hiking advice including closures, unstable lava terrain, gases, and marked trails."
+    },
+    {
+      "title": "Alert Level System",
+      "url": "https://www.usgs.gov/programs/VHP/alert-level-system",
+      "publisher": "U.S. Geological Survey Volcano Hazards Program",
+      "purpose": "Explains ground alert terms and distinguishes the aviation color code."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "hike-a-mountain-that-scares-you",
+    "climb-your-first-mountain",
+    "vanuatu-s-volcanoes"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

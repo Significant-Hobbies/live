@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "join-a-community-choir-or-theatre-group",
+  "slug": "join-a-community-choir-or-theatre-group",
+  "title": "Find a community choir that fits your voice and week",
+  "description": "Compare rehearsal rhythm, audition style and repertoire before joining a choir, then prepare one low-pressure way to try singing with the group.",
+  "intent": "How do I choose a community choir or theatre group when groups vary in skill level, rehearsal commitment and performance style? This guide explains what to ask before trying one.",
+  "sections": [
+    {
+      "heading": "Choose the kind of group you actually want",
+      "paragraphs": [
+        "A choir and a theatre group can both be welcoming ways into local performance, but the weekly experience differs. A choir centers on shared singing and voice parts; theatre may involve acting, movement, backstage roles and a production calendar. Decide whether you most want to sing, act, learn a particular repertoire, meet people through regular rehearsals, or explore a stage role. This prevents a striking concert or poster from making the choice for you.",
+        "Look for the group’s own description of who can join, what it performs and what members are expected to do. The Philharmonia Choir of Cape Town is one example of a community choir that auditions prospective singers, checks range and asks people to sight-read if they can. It describes a substantial annual programme. That is useful as a comparison point, not a rule for every amateur choir."
+      ]
+    },
+    {
+      "heading": "Ask what “beginner-friendly” means in practice",
+      "paragraphs": [
+        "Before you attend, ask whether a first visit can be an observation, a trial rehearsal or a short audition. Find out whether you need to read notation, bring a prepared song, or simply follow a warm-up. If you are interested in theatre, ask whether new participants can help backstage or join a reading before auditioning for a role. The words “all levels welcome” can mean different things across groups; a concrete question is more helpful.",
+        "Clarify the practical commitment: rehearsal nights, expected attendance near performances, fees, music, costumes or travel. The Cape Town choir, for instance, says members are asked to commit to its major concerts. Another local group may ask less or more. Put the schedule beside work, care and transport commitments before promising a full season."
+      ]
+    },
+    {
+      "heading": "Try the room before judging your voice",
+      "paragraphs": [
+        "At the first meeting, notice how the leader teaches a new passage. Do they demonstrate, play parts, use recordings, or stop to explain rhythm and pronunciation? Notice whether singers can ask for a section again without embarrassment. A useful first session is not one where you never feel lost; it is one where you can understand how the group helps you recover when you lose your place.",
+        "If you are nervous, tell the organizer you are new and ask where to sit or stand. In a choir, the director may suggest a voice part after hearing your comfortable range. Do not force your voice into a part because it seems impressive or because a friend sings there. For theatre, ask whether the role calls for singing, speech, movement or other preparation and whether alternatives exist."
+      ]
+    },
+    {
+      "heading": "Prepare a small, realistic first attempt",
+      "paragraphs": [
+        "Bring water, a pencil and any music the organizer requests. If an audition is expected, choose a short song you can sing comfortably rather than a difficult piece meant to impress. Practice the opening and ending so you can begin and finish clearly; if you read music, review rhythm and rests, but do not pretend to be a sight-reader if you are not. For a theatre reading, ask whether you should prepare a monologue or read from a script provided on the day.",
+        "Arrive early enough to greet the coordinator and ask how the session works. Keep the goal modest: learn one passage, meet the person who welcomes newcomers and decide whether you want to return. Your first evening is information gathering, not a verdict on your talent."
+      ]
+    },
+    {
+      "heading": "Make the decision after the rehearsal",
+      "paragraphs": [
+        "Afterward, write down what felt energizing, confusing and inconvenient. Did the music, plays or people interest you? Could you meet the schedule? Was the leader clear about expectations? If you need more information, ask how to observe again or when the next intake happens. Some ensembles have set auditions; others invite people throughout the year. Treat the group’s current instructions as authoritative.",
+        "A good fit can still involve effort: learning notes, taking feedback and showing up consistently are part of a shared performance. A poor fit may simply mean the repertoire, rehearsal pace or calendar does not match your present life. Start by contacting one nearby group with a specific question about its first visit and expected commitment."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Sing With Us",
+      "url": "https://www.philharmoniachoir.capetown/sing-with-us/",
+      "publisher": "Philharmonia Choir of Cape Town",
+      "purpose": "Supports this specific choir’s audition, range/sight-reading process and stated performance commitment; used as an example, not a universal standard."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "join-a-beginner-shape-note-singing-session",
+    "attend-a-multi-day-music-festival",
+    "compose-an-original-piece-of-music"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

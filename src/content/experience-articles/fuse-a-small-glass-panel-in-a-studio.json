@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "fuse-a-small-glass-panel-in-a-studio",
+  "slug": "fuse-a-small-glass-panel-in-a-studio",
+  "title": "Plan your first kiln-glass panel with the studio",
+  "description": "Plan a first fused-glass panel in a supervised studio, from a simple sketch to safe handling, instructor-led firing and patient inspection.",
+  "intent": "What should a beginner know before making a small fused-glass panel? This guide adds a studio-first plan for design, safe preparation, and patience through firing and cooling.",
+  "sections": [
+    {
+      "heading": "Book a class before buying glass",
+      "paragraphs": [
+        "Choose a studio course where an instructor explains the kiln, compatible glass, edge handling, shelf preparation, and firing schedule. Ask what the class includes, what clothing and eye protection are required, and whether you should bring a sketch or use studio supplies. The fired result depends on the glass and the studio process.",
+        "Do not buy mixed glass from random sources and assume it will fuse together. Ask the studio to identify compatible stock and explain what projects fit a beginner. Bullseye Glass’s manufacturer guidance discusses kiln-studio hazards such as airborne powder and heat, and points makers to safety information."
+      ]
+    },
+    {
+      "heading": "Design for the available process",
+      "paragraphs": [
+        "Keep the first composition simple: a few shapes, a clear focal point, and room around the edges. Make a paper mock-up and label the colors or textures you want. Ask whether the class uses pre-cut pieces or teaches scoring and breaking. The firing process and material limits shape which designs are realistic.",
+        "Avoid thin protrusions, delicate details, and tightly packed pieces until you understand how the studio’s glass behaves. A small panel could be a geometric pattern or abstract landscape. The aim is to learn how pieces are arranged and supported, not reproduce a complicated drawing exactly."
+      ]
+    },
+    {
+      "heading": "Let the instructor handle kiln decisions",
+      "paragraphs": [
+        "Follow the instructor’s directions for eye protection, ventilation, cleanup, and tools. Glass edges can cut, while powders and kiln materials need controlled handling. Bullseye’s safety guidance calls for ventilation and dust control, and recommends reading the kiln manufacturer’s instructions. Never open a hot kiln or change a firing schedule on your own.",
+        "Ask which parts you may safely do yourself and which staff will handle. Some studios let learners arrange glass while a technician fires the panel later. That is a normal division: kilns require training, and the piece needs time to heat and cool according to the chosen process."
+      ]
+    },
+    {
+      "heading": "Inspect the finished panel patiently",
+      "paragraphs": [
+        "When the panel is ready, look at how shapes joined, whether the edge is smooth, and what effect firing produced. Ask the teacher to explain an unexpected shift or bubble in terms of materials and schedule. Do not touch a panel until staff says it is cool and safe to handle.",
+        "Take a photo if the studio permits it and note the glass type and arrangement. Your first panel may show what to change next time: a wider gap, simpler layers, or a different color order. Record one observation rather than treating every variation as a defect."
+      ]
+    },
+    {
+      "heading": "Leave the studio ready for the next maker",
+      "paragraphs": [
+        "Clean only as instructed and dispose of scraps or dust using the studio’s process. Return tools and ask where finished work will be stored and when it can be collected. Do not take home studio glass or try firing it in an unapproved kiln.",
+        "Your next action is to choose a beginner class and ask about material compatibility, hot-kiln work, and protective equipment. Bring one simple sketch and let the instructor adapt it to the available process."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Safety in the Kiln-Glass Studio",
+      "url": "https://www.bullseyeglass.com/safety-in-the-kiln-glass-studio/",
+      "publisher": "Bullseye Glass Co.",
+      "purpose": "Bullseye kiln-glass safety guidance emphasizes ventilation, dust control, protective practice and following kiln instructions."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-a-folding-paper-peepshow",
+    "animate-a-strip-in-a-homemade-zoetrope",
+    "stage-a-shadow-puppet-story"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

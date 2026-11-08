@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "explore-the-amazon-rainforest",
+  "slug": "explore-the-amazon-rainforest",
+  "title": "What to ask before a guided walk in the Amazon",
+  "description": "Choose an Amazon forest walk by asking who leads it, what the route protects, and how the group will observe wildlife without disturbing it.",
+  "intent": "How do I choose an introductory rainforest walk and work well with a local guide? Turn the planning conversation into questions about authorization, interpretation and low-impact observation.",
+  "sections": [
+    {
+      "heading": "Choose a specific forest and managed entry",
+      "paragraphs": [
+        "The Amazon is not one park or one trail. A walk near a city, river community or remote protected area can involve different access, seasonality and local rules. Ask which protected area or community you would visit, how you reach the trail and who authorizes entry. Brazil’s ICMBio visitor page for Jaú National Park says entry authorization is required and visitors can reach it through tourism operators or local transport associations. This applies to Jaú, not every Amazon site; verify the chosen place’s own process.",
+        "Ask who guides the walk and whether that person is authorized for the specific protected area. ICMBio describes visitor guiding in federal conservation units as an authorized service. Other countries and community-managed lands have their own rules. The organizer should be able to name the local authority or community relationship, explain the route and describe how local residents benefit."
+      ]
+    },
+    {
+      "heading": "Ask for interpretation, not a wildlife guarantee",
+      "paragraphs": [
+        "A guide can make a forest legible even when no animal appears. Ask what signs they teach visitors to notice: leaf damage, tracks, calls, water marks, canopy gaps or plants used locally. Avoid tours that promise a specific animal encounter or encourage baiting, touching or chasing wildlife. Jaú’s visitor guidance tells visitors not to approach, catch or feed animals and to ensure their guide respects those rules.",
+        "Agree on quiet, distance and photography. Let the guide decide when to stop and continue because they know the route and conditions. Keep voices low, stay with the group and avoid flash near wildlife. If a sound draws attention, listen first and ask what clues the guide is using instead of pushing through vegetation to find the source."
+      ]
+    },
+    {
+      "heading": "Prepare for a walk whose conditions can change",
+      "paragraphs": [
+        "Request the actual route length, surface, elevation changes, shade, water crossings and expected time away from the starting point. Ask what happens if rain or river level makes a section unsuitable. Jaú’s page lists rain protection and trail footwear among its recommendations, but equipment advice should come from the local operator because climate, route and hazards differ across the basin.",
+        "Tell the operator about mobility limitations, allergies, medicines and heat tolerance before the day. Ask whether the guide carries communication equipment and what the group should do if separated. These are questions, not assumptions that every walk has a particular rescue system. Bring what the operator says is appropriate and keep hands free enough to move on the actual trail."
+      ]
+    },
+    {
+      "heading": "Notice the forest in layers",
+      "paragraphs": [
+        "Give the walk a small observation structure. At the start, look above the canopy; in a clearing, notice leaves and vines; near the ground, look for decomposing leaves, seedlings and insect activity without touching them. Let the guide name only what they can identify confidently. If a species is uncertain, record it as a question rather than inventing a name from an app.",
+        "Ask how water changes the route and forest the group sees. Jaú’s visitor page describes river and forest attractions; at a flooded forest, travel may involve a boat or boardwalk rather than a dry path. That example does not promise what your own site offers. Ask which habitat the excursion enters and why the route is open."
+      ]
+    },
+    {
+      "heading": "Leave with a better question",
+      "paragraphs": [
+        "Keep a field note after the walk: one sound, one plant or animal trace, one change in the ground and something the guide explained that you want to verify. Do not collect leaves, seeds or specimens unless local rules explicitly allow it. Jaú’s visitor rules say plants and natural objects should remain in the park and rubbish should be carried back out.",
+        "Before paying a deposit, ask for the route, guide credentials, park or community authorization, group size, language, transport and cancellation plan in writing. A thoughtful walk is not a checklist of sightings; it is a guided introduction to a living place that remains intact after you leave."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Visitation information: Jaú National Park",
+      "url": "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/unidade-de-conservacao/unidades-de-biomas/amazonia/lista-de-ucs/parna-do-jau/informacoes-sobre-visitacao-2013-parna-do-jau",
+      "publisher": "ICMBio, Government of Brazil",
+      "purpose": "Provides one park’s entry authorization and access context, visitor conduct rules, wildlife guidance and field recommendations."
+    },
+    {
+      "title": "Authorization to provide visitor guiding in conservation units",
+      "url": "https://www.gov.br/icmbio/pt-br/acesso-a-informacao/acoes-e-programas/carta-de-servicos/categorias-dos-servicos/autorizacoes",
+      "publisher": "ICMBio, Government of Brazil",
+      "purpose": "Explains authorization for visitor guides in federal conservation units."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "zipline-through-a-rainforest-canopy",
+    "document-a-wild-species-for-inaturalist",
+    "take-part-in-a-seasonal-butterfly-count"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

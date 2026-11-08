@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "maldives-above-and-below-water",
+  "slug": "maldives-above-and-below-water",
+  "title": "Choose a Maldives trip by the water you want to enter",
+  "description": "Compare lagoon snorkeling, guided reef dives and atoll-specific marine trips before choosing a Maldives island stay or liveaboard route.",
+  "intent": "How can a traveler choose between above-water island time, easy snorkeling and more demanding diving without treating marine encounters as guaranteed?",
+  "sections": [
+    {
+      "heading": "Decide whether your anchor is the lagoon or the open reef",
+      "paragraphs": [
+        "‘Above and below water’ can mean an easy swim from shore, guided snorkeling, a first dive course or a liveaboard that moves between atolls. Those are different trips. Start with how you feel in open water, whether you already hold a dive certification, and how much time you want to spend on a boat. A resort island may make it easier to repeat one nearby reef; a liveaboard can cover a broader range but changes the rhythm to life aboard and planned dive days.",
+        "The Maldives’ official tourism site describes environments including coral gardens, reef walls, submerged pinnacles called thilas and current-shaped channels. You do not need to select the most advanced option to have a meaningful underwater day. A calm reef with time to notice small fish and coral structure may suit you better than a drift dive marketed for stronger currents."
+      ]
+    },
+    {
+      "heading": "Match the activity to your experience",
+      "paragraphs": [
+        "If you have never snorkeled, ask the local operator about entry conditions, flotation support, guide-to-guest ratios and what happens if you want to return early. Choose a sheltered location and practice mask fit and breathing before you join a longer excursion. Stay within the guide’s instructions, avoid touching coral and keep enough distance from wildlife to let it move freely.",
+        "Scuba diving brings different prerequisites and risks. Book with a licensed dive operator and trained professionals, share your certification and recent experience honestly, and ask which conditions the planned site may involve. The tourism authority specifically notes that currents, visibility, tides and depth can change a dive’s difficulty. Do not let a group itinerary push you into a site beyond your training or comfort; choose a lower-demand alternative or skip the dive."
+      ]
+    },
+    {
+      "heading": "Choose an atoll for the kind of encounter, not a promise",
+      "paragraphs": [
+        "The official tourism guide associates South Ari Atoll with whale shark encounters, Baa Atoll and Hanifaru Bay with manta activity, and several central atolls with channel and reef-shark diving. Hanifaru is described primarily as a snorkeling experience rather than a scuba site. Treat these as regional possibilities, not a guarantee that an animal will appear on your travel dates. Conditions, season and responsible interaction rules affect what a guide can offer.",
+        "Ask the operator which activity is appropriate for your swimming or diving level, what site-specific guidelines apply, and whether the trip depends on current or visibility. If the answer is vague, choose a provider who can explain the plan plainly. For an encounter, keep the animal’s path open, do not chase or touch it, and follow local conservation instructions even if that means watching from a distance."
+      ]
+    },
+    {
+      "heading": "Think carefully about island stay versus liveaboard",
+      "paragraphs": [
+        "A single-island stay gives you a stable room and a simpler surface routine: breakfast, a guided water outing, rest, then another choice close to shore. A liveaboard is designed for covering more dive environments and can suit certified divers who want multiple sites. That makes it less suitable for someone who dislikes sleeping on boats, is prone to seasickness, or wants a varied land-based holiday. Check the vessel’s actual itinerary, safety equipment, cancellation terms and what is included before paying.",
+        "If you are traveling with companions who do not dive, choose an island whose above-water activities matter to them too. Ask whether non-divers can join snorkeling trips or spend a comfortable day on shore, rather than assuming every outing includes everyone. A shared trip can still have different plans on some days."
+      ]
+    },
+    {
+      "heading": "Build a marine day with a graceful exit",
+      "paragraphs": [
+        "Keep the first outing short enough that you can learn how your body responds to heat, boat motion and time in salt water. Bring sun protection suitable for the activity, drinking water and any medication you normally use, and follow the operator’s instructions. Do not swim beyond the supervised area or use alcohol before water activities. If conditions change, a responsible guide may cancel; build a land-based plan you would enjoy instead.",
+        "Before choosing an island, ask what the nearest accessible reef experience is, how long the boat transfer takes, what qualification is required for each dive and what weather or sea conditions could change it. The best choice is not the one with the most species on a brochure. It is the place and operator whose actual trip fits your skills, expectations and respect for the reef."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Diving in the Maldives: a guide to sharks, mantas, reefs and underwater adventures",
+      "url": "https://visitmaldives.com/en/experience/diving-in-the-maldives-a-guide-to-sharks-mantas-reefs-and-underwater-adventures-1",
+      "publisher": "Visit Maldives",
+      "purpose": "Supports the range of named dive environments, atoll-specific examples, Hanifaru's snorkel focus and the need to follow licensed local dive professionals because conditions vary."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "see-the-great-barrier-reef",
+    "galapagos-islands-ecuador",
+    "komodo-island-indonesia"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

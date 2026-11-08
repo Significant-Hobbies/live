@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "separate-pen-inks-with-paper-chromatography",
+  "slug": "separate-pen-inks-with-paper-chromatography",
+  "title": "Find what hides inside a pen’s black ink",
+  "description": "Compare washable pen inks with a paper chromatography setup, then read the separated marks as evidence about a mixture rather than a color chart.",
+  "intent": "How can paper chromatography reveal that a pen’s ink contains multiple dyes? This guide adds a clean comparison plan, a record of variables, and ways to interpret uneven results.",
+  "sections": [
+    {
+      "heading": "Choose inks and paper carefully",
+      "paragraphs": [
+        "Select a few washable marker inks and coffee-filter or chromatography paper, plus clear cups, water, pencil, tape, and a ruler. Follow a teacher or lab leader’s directions if you are in a classroom. Avoid solvents beyond water unless a qualified instructor provides the required safety controls; this activity does not need improvised chemical substitutes.",
+        "The Royal Society of Chemistry explains paper chromatography as separation using a moving solvent and stationary paper. Some inks may not dissolve in water, while others travel different distances. That makes a black marker a useful question: does it remain one dark spot, or do distinct colors appear as water moves through the paper?"
+      ]
+    },
+    {
+      "heading": "Set a baseline that water cannot wash away",
+      "paragraphs": [
+        "Draw a pencil line near the bottom of the paper and mark several equal starting points. Place a small ink dot on each point, leaving enough space between them. Let the dots dry before lowering the paper into a cup with a shallow amount of water. Keep the water below the starting line; if it covers the ink dots, they can dissolve directly into the cup.",
+        "Hang the paper so it stays upright and does not press against the cup wall. Use separate labeled strips if you want a simpler first run. Write down the marker name, paper type, and solvent before starting. These details help explain why a second attempt may produce a different pattern."
+      ]
+    },
+    {
+      "heading": "Watch the solvent front",
+      "paragraphs": [
+        "Observe the water rise through the paper and note when it has nearly reached the top. Remove the paper and mark the solvent front while it is still visible. Let the strip dry before examining it closely. Compare the number and location of visible bands, but do not assume every black pen uses the same formula; marker inks vary.",
+        "If you compare several inks, keep the paper type, water depth, starting-line height, and run time as similar as possible. RSC notes that the exact colors can vary and the characteristics of separated bands are more useful than matching a particular example. Record what happened, including a strip where nothing visibly separated."
+      ]
+    },
+    {
+      "heading": "Interpret cautiously and improve the next run",
+      "paragraphs": [
+        "A band that travels farther has interacted differently with the paper and water than one that stays near the origin. Your result can suggest a mixture of dyes, but it does not identify each chemical by sight alone. Use plain language: “three visible bands appeared” is stronger than claiming an exact pigment without a reference method.",
+        "If every ink stays put, try a different washable marker or check that the ink dots were small and dry. If the bands smear together, space the start points farther apart or make smaller marks. Change only one condition at a time; otherwise you will not know which adjustment made the separation clearer."
+      ]
+    },
+    {
+      "heading": "Keep the strip and your notes",
+      "paragraphs": [
+        "Label the dry strip with the marker brand, paper, solvent, and date. Keep it flat in a notebook if you want to compare later. Clean spills with ordinary care and dispose of the cups and paper as your instructor directs. Do not taste the materials or use kitchenware that will return to food preparation.",
+        "For a first attempt, test one black washable marker against one colored marker on separate strips. Your next step is to repeat the black ink under the same conditions and check whether the pattern is consistent. A small, repeatable result teaches more than a crowded set of unlabeled samples."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Paper chromatography supporting resources",
+      "url": "https://edu.rsc.org/download?ac=531296",
+      "publisher": "Royal Society of Chemistry",
+      "purpose": "RSC describes the stationary paper and moving solvent, provides a procedure and explains that ink behavior and colors vary."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-a-model-water-filter-and-measure-what-changes",
+    "make-a-cyanotype-print-from-everyday-objects"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

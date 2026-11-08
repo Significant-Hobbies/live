@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "complete-an-earthcache-geology-field-challenge",
+  "slug": "complete-an-earthcache-geology-field-challenge",
+  "title": "Read an EarthCache as a geology field lesson",
+  "description": "Prepare for an EarthCache by reading its site notes, observing the landform without disturbing it, and completing only the listed logging tasks.",
+  "intent": "How do I approach an EarthCache field challenge responsibly? This guide explains how to prepare, observe geological evidence and record a clear answer without treating the site like a specimen hunt.",
+  "sections": [
+    {
+      "heading": "Know what makes an EarthCache different",
+      "paragraphs": [
+        "An EarthCache is a visit to a geological feature paired with an earth-science lesson. It does not use a physical container or logbook. The listing explains the feature and sets the tasks for recording your visit, so read the whole page before travelling. The goal is to understand what the place can teach, not to search for a hidden box or remove a rock as a souvenir.",
+        "Choose a site that fits your route, mobility and conditions. Check access, land manager rules, weather and any local closures using authoritative sources. A geological feature can be fragile, slippery or exposed even when the cache page is easy to read. Stay on public paths and do not cross barriers or enter unstable areas to get a better photograph."
+      ]
+    },
+    {
+      "heading": "Prepare the questions before arriving",
+      "paragraphs": [
+        "Read the EarthCache lesson and logging tasks at home. Look up unfamiliar terms in a reliable geology reference, then write down what evidence to look for: a change in rock layers, a notch carved by water, a fracture pattern or another feature named by the listing. The task should direct your attention, not tell you to collect or scratch the feature. Bring a notebook and pencil if you want to record observations without depending on a phone signal.",
+        "Geocaching HQ and the Geological Society of America recommend that EarthCache lessons explain what visitors will see in nontechnical language and keep the requested logging tasks focused. As a visitor, you can use the same principle: read the instructions carefully and concentrate on the few observations that matter instead of trying to become an expert in one afternoon."
+      ]
+    },
+    {
+      "heading": "Observe the place at more than one scale",
+      "paragraphs": [
+        "At the site, begin with the broader setting. Where is the feature in relation to water, slope, cliffs, a path or surrounding landscape? Then look closely from a safe public viewpoint. Notice colour, layering, grain size, shape and any transitions the listing mentions. Compare what is visible with the EarthCache explanation. If the evidence is unclear, say so in your notes rather than forcing it to match an expected answer.",
+        "Take only photos that are permitted and safe. A scale reference such as your hand may help show size, but never place an object on a sensitive surface or cross a fence to improve the shot. Do not chip, dig, wet or rearrange the feature. EarthCaches are about interpreting geology in place; leaving the site undisturbed is part of doing the activity well."
+      ]
+    },
+    {
+      "heading": "Answer the logging tasks from your own observations",
+      "paragraphs": [
+        "Before leaving, check that you have addressed each task exactly as written. Some ask for a description or comparison; others may ask you to explain a geological process. Use plain language and refer to what you saw. If the listing asks a question you cannot confidently answer, do not guess from a search snippet or invent an observation. Review the explanation and, if needed, contact the cache owner through the normal listing channel for clarification.",
+        "Record your visit honestly. Geocaching’s guidance says visitors should read the specific logging requirements for an EarthCache and visit its coordinates before logging. Keep any required answer private if the listing asks you to message it rather than post it publicly. Your log can explain what stood out without revealing answers that would spoil the learning for the next visitor."
+      ]
+    },
+    {
+      "heading": "Keep the lesson with you after the visit",
+      "paragraphs": [
+        "Once away from the feature, compare your notes with the site explanation or a trusted geology source. What did the landform make easier to understand? What evidence would you look for if you returned? A short field note with the location, observation and remaining question is often more useful than a long unstructured account.",
+        "If the first EarthCache is satisfying, choose a different kind of feature next time so you can compare how water, ice, wind or tectonic forces shape landscapes. Do not treat every listing as equal in difficulty or accessibility; check each one on its own."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Geocaching Help Center: EarthCaches",
+      "url": "https://www.geocaching.com/help/index.php?id=294&pg=kb.page",
+      "publisher": "Geocaching HQ",
+      "purpose": "Supports that EarthCaches teach geology through a field visit, that site-specific tasks must be checked, and that the activity centers on a geological feature."
+    },
+    {
+      "title": "New hiding guidance for EarthCaches",
+      "url": "https://www.geocaching.com/blog/2024/04/new-hiding-guidance-for-earthcaches/",
+      "publisher": "Geocaching HQ and Geological Society of America",
+      "purpose": "Supports plain-language site explanations and keeping EarthCache logging tasks focused."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-a-kite-and-test-it-in-an-open-park",
+    "explore-a-garden-through-scent",
+    "look-at-one-museum-object-for-twenty-minutes"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

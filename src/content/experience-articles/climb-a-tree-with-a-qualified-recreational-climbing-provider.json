@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "climb-a-tree-with-a-qualified-recreational-climbing-provider",
+  "slug": "climb-a-tree-with-a-qualified-recreational-climbing-provider",
+  "title": "What should you ask before booking a guided tree climb?",
+  "description": "Check the provider’s qualifications, supervision, tree assessment and emergency plan before joining a recreational climb; keep the experience entirely instructor-led.",
+  "intent": "A safety-first decision guide for selecting a guided tree-climbing session and understanding the provider’s plan without attempting rope techniques independently.",
+  "sections": [
+    {
+      "heading": "Treat the climb as a provider-led activity",
+      "paragraphs": [
+        "Tree climbing involves height, equipment and a living structure that changes with weather and condition. Choose an established recreational provider who explains the session, instructor experience, participant limits and emergency arrangements before you book. Ask whether beginners are welcome and what support is available if you decide not to continue once you arrive.",
+        "The UK Health and Safety Executive’s guidance covers tree-climbing operations in work settings, not recreational public climbs. It stresses suitable training, supervision, prior planning, team support and emergency rescue provision. Those principles are useful questions to ask a recreation provider, but they do not certify a particular operator or replace local rules."
+      ]
+    },
+    {
+      "heading": "Ask how the tree and conditions are assessed",
+      "paragraphs": [
+        "Find out who checks the tree, its anchor points and the surrounding area, and how weather affects the decision to climb. Ask what happens if the tree or conditions are not suitable on the day. A provider should be willing to postpone or change the session when a safety concern appears. Do not accept a vague assurance that any large tree is safe.",
+        "Ask whether the provider has permission to use the site and how the climb avoids damage to bark, branches and roots. A recreational route should have a plan for group movement and for people waiting on the ground. If you are asked to rig your own rope, select an anchor or make a judgment about a branch, decline and seek a properly supervised activity."
+      ]
+    },
+    {
+      "heading": "Understand the briefing and your own boundaries",
+      "paragraphs": [
+        "Before you begin, expect the instructor to explain the equipment, communications, how to stop and what to do if you feel uncomfortable. Let them know about relevant access needs, fear of heights, medical concerns or clothing that could catch on equipment. Ask what movements are optional and whether you can remain on the ground while others climb.",
+        "Listen to the emergency plan and check that there is trained support on the ground. The HSE guidance notes that a second person must be available and capable of aerial rescue for professional tree work; a recreational provider should explain its own rescue arrangements appropriate to its activity. Do not climb unless you understand the briefing and trust the team’s plan."
+      ]
+    },
+    {
+      "heading": "Go at the pace the instructor sets",
+      "paragraphs": [
+        "Use only equipment fitted and checked by the instructor, and follow their directions throughout. Do not copy another participant’s setup or move beyond the agreed route. If a strap, harness or attachment feels wrong, pause and tell the instructor before you leave the ground.",
+        "You can choose a small goal: understand the system, make one supervised ascent or enjoy the view from a height that feels comfortable. A session is successful even if you decide that climbing is not for you. No photograph or personal challenge is worth overriding a safety instruction or your own boundary."
+      ]
+    },
+    {
+      "heading": "Close with a clear account of the experience",
+      "paragraphs": [
+        "After coming down, ask what the provider noticed about the tree and how the session protected it. If you helped remove or reposition anything, follow the instructor’s process. Report any equipment concern or discomfort before leaving so the team can address it.",
+        "A good next step may be another guided climb, a ground-based canopy walk or simply learning about the tree species from an arborist. Record the provider, the conditions and what made the briefing clear. Do not describe a supervised recreational session as training to climb independently."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tree-climbing operations",
+      "url": "https://www.hse.gov.uk/treework/resources/climbing-operations.htm",
+      "publisher": "UK Health and Safety Executive",
+      "purpose": "Supports general questions about training, supervision, advance planning, ground support and rescue arrangements; its scope is professional tree work, not recreational climb certification."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "observe-a-forest-canopy-from-a-public-treetop-walkway",
+    "zipline-through-a-rainforest-canopy"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "spend-a-night-alone-in-the-wilderness",
+  "slug": "spend-a-night-alone-in-the-wilderness",
+  "title": "Plan one permitted solo night with a conservative exit",
+  "description": "Choose an allowed campsite and a modest route for a first solo wilderness night, with a trusted contact, current park rules, and a clear backup.",
+  "intent": "How do I plan one solo overnight that feels meaningful while respecting permits, conditions, experience and emergency support?",
+  "sections": [
+    {
+      "heading": "Choose a place that permits the plan",
+      "paragraphs": [
+        "“Wilderness” can mean a backcountry campsite, a designated park site or a managed private property. Start with the land manager’s official page and confirm that overnight camping is permitted in the area you are considering. Rules can differ across parks, seasons, land types and specific sites; a map symbol alone may not show whether a permit or reservation is needed.",
+        "For a first night, prefer an established site with a straightforward approach over a remote route chosen for its drama. Check whether the campsite has a defined access route, water source, seasonal restrictions, current closures and a way to contact the managing agency. If the area is beyond your current navigation or camping skills, choose a more supported setting or go with a qualified instructor."
+      ]
+    },
+    {
+      "heading": "Keep the objective deliberately small",
+      "paragraphs": [
+        "A one-night goal does not require a long approach, summit or complicated route. Choose a short distance you have already walked in daylight, with enough margin to arrive before dark and set up without rushing. Check the route’s actual elevation, surface, water crossings and exit points on the land manager’s map, then compare them with your experience.",
+        "The National Park Service trip-planning guide advises choosing an activity that matches ability, sharing a trip plan with someone who is not on the trip, and consulting park requirements. Use it as general U.S. day-or-overnight advice; backcountry rules may call for additional steps. Ask the local ranger or land manager what is required for the exact site."
+      ]
+    },
+    {
+      "heading": "Make someone else part of the safety plan",
+      "paragraphs": [
+        "Give a trusted person your route, campsite, transport details, expected return time and the contact information for the responsible land manager. Agree on when they should raise concern and whom they should call. Tell them how you will update the plan if weather, a closure or a delayed start changes your route.",
+        "Solo does not have to mean unreachable. Decide how you will summon help if you cannot rely on ordinary phone coverage; local authorities or qualified outdoor instructors can explain what communication options make sense in that area. Do not treat disabling your phone as part of this goal. Carry the communications and navigation support appropriate for the location and follow local rules."
+      ]
+    },
+    {
+      "heading": "Check conditions and rehearse the basics",
+      "paragraphs": [
+        "Read the current forecast for the route and the park’s notices before leaving, then recheck on the day. Set a turnaround time that leaves room for a slow hike and camp setup. If conditions worsen, the route is closed, or you feel unsure, use the backup plan and come home. NPS guidance explicitly recommends changing plans when health, weather or site conditions make the original unsafe.",
+        "Pack for the setting rather than copying a generic list: shelter, insulation, water treatment or supply as locally appropriate, food, light, map and emergency items. Practice setting up the tent and using the stove in an appropriate safe location before the trip. Follow the manufacturer and land-manager rules; this article does not give fuel or fire instructions."
+      ]
+    },
+    {
+      "heading": "Make the night the whole achievement",
+      "paragraphs": [
+        "Once at camp, follow site requirements, keep food and waste handled as the local authority directs, and give yourself permission to turn in early. The point is to spend a night in a permitted outdoor setting, not to prove that discomfort is harmless. If you decide to leave, use the exit plan you agreed on and let your contact know when safe.",
+        "Afterward, note what felt manageable, what equipment or information was missing, and whether the route matched your ability. A second overnight can build on what you learned, but it need not become a longer expedition. Your next action is to identify one legal campsite and call its land manager with the unresolved permit, route and communication questions."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Trip Planning Guide",
+      "url": "https://www.nps.gov/subjects/healthandsafety/trip-planning-guide.htm",
+      "publisher": "U.S. National Park Service",
+      "purpose": "General U.S. day/overnight trip preparation, activity fit, sharing a trip plan and park-specific requirements; multi-day backcountry travel requires additional planning."
+    },
+    {
+      "title": "Before the Trip – Camping",
+      "url": "https://www.nps.gov/subjects/camping/before-the-trip.htm",
+      "publisher": "U.S. National Park Service",
+      "purpose": "Trip plan contents, trusted emergency contact and backup planning guidance."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "do-a-solo-camping-trip-with-no-phone",
+    "survive-a-wilderness-expedition",
+    "hike-a-mountain-that-scares-you"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

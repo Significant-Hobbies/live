@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "watch-a-storm-roll-in-from-start-to-finish",
+  "slug": "watch-a-storm-roll-in-from-start-to-finish",
+  "title": "Watch changing weather from a place you can leave",
+  "description": "Choose an indoor or sheltered viewing place, follow local forecasts and lightning guidance, and treat changing weather as a reason to stop watching.",
+  "intent": "How can I observe a storm’s arrival without turning the experience into a risky attempt to get closer to severe weather?",
+  "sections": [
+    {
+      "heading": "Set up a safe place before the sky changes",
+      "paragraphs": [
+        "Choose a building or other genuinely safe viewing point before the forecast turns active. A window with a wide view, a public indoor observation space or a covered area attached to a substantial building can let you notice clouds and light without standing in an exposed field. Do not plan to watch from a beach, hilltop, open water or isolated tree line.",
+        "Check the weather service for the place where you will be, not a general forecast for the region. Look for watches, warnings, expected timing and the nearest substantial shelter. If the forecast suggests severe weather, observe from indoors or make another plan. A dramatic view is not worth staying outside to see the first rain or lightning."
+      ]
+    },
+    {
+      "heading": "Notice stages without inventing a forecast",
+      "paragraphs": [
+        "You can make the observation specific without trying to predict the storm. Note the time, the direction the clouds appear to move, changes in wind, whether the light shifts, when rain begins and what you hear. Compare those notes later with the local radar or forecast if you are curious, but remember that a view from one place does not show the whole weather system.",
+        "Try a simple three-column record: “what I see,” “what I hear,” and “what the official forecast says.” This keeps observation separate from interpretation. A dark horizon may look dramatic without telling you how close lightning is, how fast conditions will change or whether your location is safe. Use official alerts for decisions, not visual guesses."
+      ]
+    },
+    {
+      "heading": "Treat thunder as a stop signal",
+      "paragraphs": [
+        "The U.S. National Weather Service says to go indoors when thunder roars and explains there is no safe place outdoors during a thunderstorm. It recommends a substantial building or hard-topped metal vehicle for shelter and waiting at least 30 minutes after the last thunder before resuming outdoor activity. Follow local weather-service guidance where you live; thresholds and emergency instructions can vary.",
+        "If you are already outside when thunder or lightning threatens, stop observing and get to shelter immediately rather than filming the approach. A porch roof, gazebo, bus shelter or small shed is not the equivalent of a substantial enclosed building. Decide your shelter route in advance so you are not negotiating with yourself while the storm is near."
+      ]
+    },
+    {
+      "heading": "Keep the observation comfortable and accessible",
+      "paragraphs": [
+        "Bring a notebook, a warm layer and a drink if appropriate, but avoid bringing equipment that makes you stay longer than conditions allow. Watch from a seat if you need one. If the window view is limited, an official radar image and a short written observation can be the whole activity; this goal is about noticing change, not maximizing exposure.",
+        "If you are with others, agree that anyone can end the session and that warnings override the plan. Keep children and pets away from doors and windows during severe conditions, and follow emergency directions from local authorities. Do not use a camera, binoculars or tripod in a way that delays getting inside."
+      ]
+    },
+    {
+      "heading": "Record what happened after it passes",
+      "paragraphs": [
+        "When the official all-clear and local guidance make it appropriate, write down the sequence you observed and what you could not tell from the view. Did the wind shift before rain? Did distant thunder arrive before the cloud reached your window? These are observations, not a forecast rule for next time.",
+        "If conditions stayed threatening, there is no need to finish the activity. You can continue from official radar or weather summaries after the fact. Your next step is to pick a safe indoor place, check the local forecast for a calm observation window, and write down a clear stop rule before you begin."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Lightning Safety and Outdoor Sports Activities",
+      "url": "https://www.weather.gov/safety/lightning-sports",
+      "publisher": "National Weather Service",
+      "purpose": "Official U.S. lightning safety guidance for outdoor activities, shelter and resumption timing; the article confines observations to a safe location."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "watch-a-meteor-shower-from-a-dark-sky-location",
+    "learn-how-a-dutch-storm-surge-barrier-works",
+    "program-a-small-digital-weather-station"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

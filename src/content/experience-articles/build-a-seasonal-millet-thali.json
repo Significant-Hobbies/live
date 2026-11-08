@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "build-a-seasonal-millet-thali",
+  "slug": "build-a-seasonal-millet-thali",
+  "title": "Build a seasonal millet thali around one grain",
+  "description": "Choose a millet recipe, pair it with a vegetable and dal, and assemble a balanced-feeling plate that fits the season and your kitchen.",
+  "intent": "Gives a practical way to plan a millet-centred thali while using a tested recipe and treating accompaniments as flexible choices.",
+  "sections": [
+    {
+      "heading": "Pick one millet dish as the anchor",
+      "paragraphs": [
+        "Start with one grain and one recipe rather than trying to cook several unfamiliar dishes at once. The Indian Institute of Millets Research publishes a millet recipe book through its recipes page. Choose a recipe that fits the millet you can actually buy and the equipment and time you have. Read the whole method before shopping; recipes can differ in soaking, grinding, cooking liquid and texture.",
+        "A thali is a way of arranging complementary dishes, not a rigid requirement for a fixed number of bowls. Let the millet dish be the anchor and add a vegetable preparation, dal or another protein and something bright or crisp if it suits the meal. You can keep the plate simple and still explore contrast."
+      ]
+    },
+    {
+      "heading": "Plan the rest of the plate by contrast",
+      "paragraphs": [
+        "Think in terms of texture and flavour. A soft millet porridge or khichdi might pair well with a crisp vegetable or pickle; a drier millet flatbread may suit a saucy dal and cooked greens. Choose seasonal produce available where you live instead of trying to reproduce a distant menu exactly. A small fresh accompaniment can lift a grain dish without requiring another elaborate recipe.",
+        "Check dietary needs and kitchen safety as you would for any meal. If you are cooking a new grain, measure the liquid and cooking time from the selected recipe rather than assuming all millets behave alike. Keep raw and cooked ingredients separate and use clean utensils."
+      ]
+    },
+    {
+      "heading": "Cook one component at a time",
+      "paragraphs": [
+        "Begin with any component that takes longest, such as a dal or a grain that needs soaking. Prepare vegetables while it simmers and keep seasonings measured separately so you can adjust the meal without losing track. If the recipe provides a clear texture cue, use it along with the clock; different grains and equipment can change the result.",
+        "If the millet turns out firmer or softer than expected, note what happened rather than trying to rescue every texture with extra liquid at the end. A next attempt can adjust one variable—soaking time, water or heat—according to the recipe or a reliable cooking guide."
+      ]
+    },
+    {
+      "heading": "Serve a small tasting plate",
+      "paragraphs": [
+        "Arrange a modest portion of the millet dish with the accompaniments, leaving room to taste each combination. Try a bite of grain alone, then with dal, then with the vegetable. Notice which pairing makes the grain more enjoyable and whether the textures feel balanced. You can add more if you are still hungry; the first serving is for tasting, not proving how much you can finish.",
+        "Ask anyone sharing the meal which combination they would repeat. Keep the conversation about preference rather than making health claims about millet. The institute’s recipe collection is a source for preparation ideas, not a reason to label one grain universally better for every person."
+      ]
+    },
+    {
+      "heading": "Keep the recipe you would cook again",
+      "paragraphs": [
+        "Write down the grain, recipe source and any adjustment that worked in your kitchen. If the meal felt too complex, make the millet dish again with a simpler side. If you enjoyed the plate, try a different seasonal vegetable next time rather than changing the whole method.",
+        "Save the experience with one detail about texture or pairing and a next step, such as trying another recipe from the institute’s collection. That makes seasonal cooking a repeatable exploration rather than a one-off shopping challenge."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Millet Recipes",
+      "url": "https://millets.res.in/m_recipes.php",
+      "publisher": "Indian Council of Agricultural Research – Indian Institute of Millets Research",
+      "purpose": "Official institute page for downloadable millet recipe collections, used as a source for selecting a grain method."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "make-tofu-from-soy-milk",
+    "churn-butter-in-a-jar",
+    "turn-vegetable-trimmings-into-stock-and-soup"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

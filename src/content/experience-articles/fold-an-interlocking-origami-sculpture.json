@@ -1,0 +1,51 @@
+{
+  "experienceSlug": "fold-an-interlocking-origami-sculpture",
+  "slug": "fold-an-interlocking-origami-sculpture",
+  "title": "How do repeated paper units lock together into an origami sculpture?",
+  "description": "Plan a modular origami sculpture by testing one unit, tracking tabs and pockets, and joining pieces gently so the finished form holds without glue.",
+  "intent": "Explain how to approach interlocking origami as both a folding and assembly problem, with a manageable prototype and ways to troubleshoot loose connections.",
+  "sections": [
+    {
+      "heading": "Choose a model before folding multiples",
+      "paragraphs": [
+        "An interlocking origami sculpture is made from separate folded units that connect into a larger form. The design determines how many pieces are needed and how they fit, so choose a diagram or model first. Do not begin by folding a large pile of units and hoping they make a sphere or star. The Bridges conference workshop on unit origami describes how folded modules combine into structures and how their geometry can be explored; it also notes that origami experience is not required to enjoy a modular model.",
+        "For a first build, choose a compact form that uses a small number of identical units and has clear pockets or flaps. Read through the whole diagram once and count the units. Set aside square paper in one or two colors, then fold one test unit. If the crease pattern is confusing, try a larger sheet of scrap paper first. A prototype lets you see the connection without committing to a full set of tiny pieces."
+      ]
+    },
+    {
+      "heading": "Make the units consistent",
+      "paragraphs": [
+        "A model is easier to assemble when each unit has matching proportions and crisp folds. Fold on a clean, flat surface, align corners carefully, and run a fingernail or bone folder along each crease. Check the first unit against the diagram: where is the tab, and where is its receiving pocket? Some designs make the folds reversible or use a mirrored pair, so mark the front or orientation lightly on a scrap note rather than writing on the model.",
+        "Use a small stack of squares cut to the same size. If the model asks for different colors, make a simple count list before folding. Fold in short batches and inspect each unit before adding it to the finished pile. A common first-time problem is a flap that is folded in the opposite direction from the diagram; compare the unit with the reference after each major fold instead of waiting until the sculpture is half-built."
+      ]
+    },
+    {
+      "heading": "Build one connection, then expand the structure",
+      "paragraphs": [
+        "Start by connecting two units gently and confirm that the tab slides fully into the pocket without tearing paper. Then make the smallest stable cluster shown in the design. The Bridges paper describes three Sonobe-type units interlocking around a triangular face; other models have different connection patterns, so follow the diagram for your specific sculpture. Keep the model oriented the same way as the illustration and identify which face or corner you are building before inserting the next unit.",
+        "Do not pull the joints tight to hide a mismatch. If a tab resists, stop and check whether the pocket is facing the right way, the crease is sharp enough, or the next unit needs to rotate. A gentle fit should hold through friction and folded geometry. If the paper is too thick or soft for the design, try a fresh unit with a different paper weight rather than forcing the connection. Glue changes the nature of the exercise and is unnecessary when the chosen pattern is designed to interlock."
+      ]
+    },
+    {
+      "heading": "Check the sculpture from more than one side",
+      "paragraphs": [
+        "As the form grows, look at it from the top, side, and underside. Modular structures can appear symmetrical from one angle while a missing unit or reversed fold creates a gap elsewhere. Compare each new section with the diagram and count the connections you have completed. If a joint loosens, support the structure in your hands while you retuck the flap; do not press against a thin point that could buckle.",
+        "When the model is complete, set it down on a stable surface and see whether it holds its shape without extra support. Record the model name, paper size, and any step that caused trouble. Your next useful step is to make one more model with the same diagram and notice whether the assembly feels easier the second time."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Unit Origami: Star-Building on Deltahedra",
+      "url": "https://archive.bridgesmathart.org/2015/bridges2015-585.pdf",
+      "publisher": "Bridges Mathematics, Music, Art, Architecture, Culture Conference",
+      "purpose": "Supports the modular-unit concept, interlocking folded pieces, and use of assembly as a geometry exploration."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "stage-a-shadow-puppet-story",
+    "weave-a-miniature-tapestry-on-cardboard"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

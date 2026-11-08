@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "the-swiss-alps",
+  "slug": "the-swiss-alps",
+  "title": "Choose between Lauterbrunnen and Mürren for an Alps stay",
+  "description": "Compare the waterfall valley of Lauterbrunnen with car-free Mürren, including the rail and cable connections that shape each Swiss Alps day.",
+  "intent": "Which base creates the better trip for a visitor weighing valley walks and transport convenience against a cliff-side village and transfer chain?",
+  "sections": [
+    {
+      "heading": "Pick a base around the landscape you want nearby",
+      "paragraphs": [
+        "‘The Swiss Alps’ cover too much ground for one useful itinerary. Around the Jungfrau region, Lauterbrunnen and Mürren make a clear first comparison. The official Jungfrau destination guide presents Lauterbrunnen as a valley of waterfalls and rock walls, with rail access from Interlaken Ost and onward connections into the area. Its Mürren guide describes a car-free village above the valley, reached by a sequence involving rail and cable transport.",
+        "Choose Lauterbrunnen if you want a valley floor as your everyday reference point and access to several onward routes. Choose Mürren if you want to stay in a compact mountain village and accept that getting there and leaving involves transfers. Neither choice is inherently better; your bags, walking plans, tolerance for changes and preferred atmosphere matter as much as the view."
+      ]
+    },
+    {
+      "heading": "Lauterbrunnen makes waterfalls part of the day",
+      "paragraphs": [
+        "The valley guide names Staubbach Fall and describes the setting through its waterfalls and steep rock walls. That is a useful base for a day built around the valley itself: spend time looking at how water appears at different heights, then choose one onward mountain destination rather than trying to collect every summit. Lauterbrunnen’s rail connections make it a practical point from which to plan the next leg, but confirm current operating routes and schedules before you set a departure time.",
+        "Think about your lodging location relative to the station and the places you want to reach on foot. In a steep-sided valley, a short-looking map distance may still involve a slope or a route that does not suit every traveler. If you have limited mobility, heavy luggage or a tight connection, check the actual path and transfer details with the local transport operator and accommodation."
+      ]
+    },
+    {
+      "heading": "Mürren offers village scale with a transfer tradeoff",
+      "paragraphs": [
+        "Jungfrau describes Mürren as a car-free village and outlines access from Lauterbrunnen through cable transport and the BLM railway. The transfer chain is part of the experience: it can make the arrival feel distinct, while adding steps to every arrival, departure and weather-dependent plan. If you stay there, pack so you can carry what you need between connections and check where your lodging sits within the village.",
+        "Use Mürren for a stay whose pleasures are local: a quiet morning in the village, a nearby walk you have verified, or a view that does not require a different destination every few hours. If your priority is a packed sequence of stops or convenient road access, a valley or rail-linked base may suit the logistics better. Ask the accommodation about luggage handling and exact arrival instructions rather than assuming a service exists."
+      ]
+    },
+    {
+      "heading": "Build one mountain day with a fallback",
+      "paragraphs": [
+        "Start with a single goal: a valley walk, a rail journey toward Kleine Scheidegg, or the transfer toward Mürren and Winteregg. Jungfrau’s Lauterbrunnen guide lists the cogwheel railway toward Kleine Scheidegg and a cableway route toward Mürren; its village guide describes the further rail connection. Treat those as route options, then check the live operator information for dates, service, tickets and weather conditions.",
+        "Choose a second option that asks less of the weather or your group. A waterfall and village day may replace a high-altitude outing; an easier route can still be a full day if you slow down and spend time at the places you pass. Never treat a valley route description as a guarantee that a high trail is open or appropriate for your ability."
+      ]
+    },
+    {
+      "heading": "Make the comparison concrete before booking",
+      "paragraphs": [
+        "Write two sample days on paper. From Lauterbrunnen, what would you do if you stayed in the valley and used one onward train? From Mürren, what would you do if you stayed close to the village and reduced transfers? Add the actual journey from your arrival station, luggage handling and the last connection you are willing to make. Those details often settle the base choice more clearly than comparing panoramic photographs.",
+        "Then check seasonal dates and current timetables with Jungfrau and the relevant transport operators, and confirm accommodation access directly. Choose one place to wake up in, one main outing and one fallback. That simple plan leaves room to notice the Alps instead of spending the trip negotiating a route you never wanted."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Lauterbrunnen",
+      "url": "https://www.jungfrau.ch/en-gb/lauterbrunnen/",
+      "publisher": "Jungfrau Region Tourism / Jungfrau Railways",
+      "purpose": "Supports Lauterbrunnen's waterfall-valley setting and named onward rail/cable route choices toward Kleine Scheidegg and Mürren."
+    },
+    {
+      "title": "Mürren",
+      "url": "https://www.jungfrau.ch/en-gb/muerren/",
+      "publisher": "Jungfrau Region Tourism / Jungfrau Railways",
+      "purpose": "Supports the car-free village description and the rail/cable transfer sequence from Lauterbrunnen."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "paraglide-over-the-swiss-alps",
+    "the-canadian-rockies",
+    "trek-to-everest-base-camp"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "taste-one-dish-from-three-local-traditions",
+  "slug": "taste-one-dish-from-three-local-traditions",
+  "title": "Three couscous traditions, three different grain stories",
+  "description": "Compare named couscous traditions from Constantine, Kerkennah and Gafsa by grain, preparation and setting, without treating one as a standard.",
+  "intent": "How can I compare one dish across local traditions without flattening their differences? This uses three documented couscous examples to make a focused tasting plan.",
+  "sections": [
+    {
+      "heading": "Choose a comparison that is honest about its boundaries",
+      "paragraphs": [
+        "A useful tasting can compare couscous traditions without claiming that every cook makes a dish the same way. For a concrete example, compare Constantine’s m’ziyet in Algeria, Kerkennah’s kosksi ghalla in Tunisia, and barkoukech as documented in Gafsa in southern Tunisia. These are related grain preparations, not interchangeable recipes or a survey of either country. The Slow Food Foundation’s records give each a specific local name and preparation story; that is the basis for the comparison.",
+        "Keep the question small: how do grain choice and shaping change what reaches the spoon? You can also notice whether the serving has a named local context. Avoid ranking authenticity, and do not assume a restaurant version reproduces the documented household practice. Say “these three examples” rather than “couscous is always.”"
+      ]
+    },
+    {
+      "heading": "Notice the starting material before judging texture",
+      "paragraphs": [
+        "The Constantine record describes m’ziyet, or black couscous, made from fermented barley, sometimes wheat. It describes a long chain: fermenting the grain, drying it in the sun, grinding it, and then rolling the couscous. The entry says the finished dish in Constantine is served with lamb, chicken and chickpeas, while recipes vary by wilaya. This is a grain story and a careful process, not merely a darker-colored version of supermarket semolina.",
+        "The Kerkennah example, kosksi ghalla, starts from barley and vetch. Its documented preparation alternates barley flour and vetch flour while water is mixed into the barley semolina by hand. That coating distinguishes it from a wheat-based couscous method. The source describes it as a local product shaped by the island’s limited range of food resources; that context is part of the dish’s story, not a tasting note to invent."
+      ]
+    },
+    {
+      "heading": "Compare a southern Tunisian contrast",
+      "paragraphs": [
+        "The Slow Food Tunisia booklet describes Gafsa barkoukech as very large wheat semolina grains, roughly pea-sized, rolled with semolina and water. Its example called barkoukech aux sept viandes is steamed over a richly seasoned tomato and harissa sauce, then simmered with vegetables, legumes and several meats. This gives your comparison a third contrast: large grain size and a substantial sauce, beside Constantine’s fermented black grain and Kerkennah’s barley-and-vetch coating.",
+        "Use these details as prompts to ask what a cook actually serves today. A documented recipe is evidence for that source’s example; it cannot stand in for every family, season, or restaurant in Gafsa. If a host offers a different form, record their name for it rather than correcting them with a printed description."
+      ]
+    },
+    {
+      "heading": "Plan a small and accessible tasting",
+      "paragraphs": [
+        "Contact a cook, restaurant, food group or teacher who can explain the named dish they serve. Ask whether they can identify the grain and preparation, what portion size is practical, and whether the dish is normally available. Do not request that a kitchen prepare three special versions just for your comparison. If one example is unavailable, a source-supported description is still useful; be clear that you tasted fewer than three.",
+        "Check allergies, dietary needs, price and travel before agreeing. The examples described here include grains and may include meat; ask each provider about ingredients and cross-contact. If tasting portions are not offered, compare menus, photos shared with permission, and written descriptions instead of wasting food."
+      ]
+    },
+    {
+      "heading": "Take notes that preserve what you learned",
+      "paragraphs": [
+        "For each serving, write down the local name as given, region, grain, visible grain size, texture, sauce or accompaniment, and the source of the description. Separate observation from interpretation: “large, firm grains” is your note; “this must be the traditional version” is an unsupported conclusion. You might notice that one sample is distinct because of fermentation, another because of the barley-vetch flour, and another because the grain is rolled unusually large and served with a rich sauce.",
+        "Ask a modest follow-up such as “Is there a part of this version that a visitor might overlook?” Credit the cook or source if you later share notes, and get consent before publishing someone’s story or image. Start by selecting one of these named examples and finding a source or teacher who can speak specifically to it."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Constantine Black Couscous",
+      "url": "https://www.fondazioneslowfood.com/en/ark-of-taste-slow-food/constantine-black-couscous/",
+      "publisher": "Slow Food Foundation for Biodiversity",
+      "purpose": "Supports the locally named Constantine m’ziyet example, its fermented grain preparation, serving ingredients and variation by wilaya."
+    },
+    {
+      "title": "De la terre à la table: Blés anciens et pâtes traditionnelles de Tunisie",
+      "url": "https://www.fondazioneslowfood.com/wp-content/uploads/2023/09/Tunisia_Libretto.pdf",
+      "publisher": "Slow Food Foundation for Biodiversity and named Tunisian contributors",
+      "purpose": "Supports the booklet’s specific Kerkennah kosksi ghalla preparation and Gafsa barkoukech example; it is a focused collection, not an exhaustive account of Tunisian couscous."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "follow-one-ingredient-through-a-market",
+    "plate-a-meal-inspired-by-a-food-history-collection",
+    "test-how-salt-changes-a-simple-dish"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

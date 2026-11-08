@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "pair-nonalcoholic-drinks-with-a-small-snack-menu",
+  "slug": "pair-nonalcoholic-drinks-with-a-small-snack-menu",
+  "title": "Build a small tasting where each drink has a clear job",
+  "description": "Compare a few alcohol-free drinks against salty, rich, crisp, and sweet bites, using contrast and balance to learn what each pairing changes.",
+  "intent": "How can I plan a nonalcoholic pairing that reveals why a snack and drink work together? This adds a simple tasting design beyond the menu idea.",
+  "sections": [
+    {
+      "heading": "Give the tasting one question",
+      "paragraphs": [
+        "A useful pairing is more than a drink list beside snacks. Decide whether you want to test contrast—bright against rich, dry against sweet—or harmony, where a shared aroma or flavor reinforces itself. The UK Tea Academy describes food pairing through balance and contrast and considers astringency, sweetness, umami, and acidity. Use those as prompts, not guarantees.",
+        "Pick three small snacks with different textures or flavors: a salty crisp bite, something rich, and a lightly sweet piece. Choose two or three alcohol-free drinks with distinct profiles, such as a botanical infusion, tea, and sparkling water with citrus. Keep portions modest so the table stays easy to compare."
+      ]
+    },
+    {
+      "heading": "Set a baseline before pairing",
+      "paragraphs": [
+        "Taste each drink on its own and write one or two observations: is it tart, drying, aromatic, sweet, or lightly bitter? Do the same for each snack. Avoid elaborate tasting vocabulary if simple words are clearer. You want a baseline that lets you describe what changes when the two meet.",
+        "Check ingredients and dietary needs before buying or serving. If a packaged drink includes caffeine or allergens, say so. Avoid assuming an alcohol-free label means a product is suitable for everyone; read the actual ingredients and make a clearly labeled alternative available."
+      ]
+    },
+    {
+      "heading": "Try the same order for each combination",
+      "paragraphs": [
+        "Take a bite, pause, sip, then note whether the drink refreshes, intensifies, or dulls a feature of the food. Try one food with several drinks before moving to another snack. This keeps the comparison manageable. If a strong snack overwhelms a delicate tea, reset with water or a neutral bite before continuing.",
+        "For a rich savory bite, a crisp or aromatic drink may feel like a contrast; for a sweet bite, a beverage that is already sweet may make the combination cloying. Treat these as hypotheses to test. Your palate and the exact recipes matter more than a general pairing chart."
+      ]
+    },
+    {
+      "heading": "Make space for preferences and surprises",
+      "paragraphs": [
+        "Let each person record impressions before talking so one confident opinion does not steer the group. Use a small grid with snack names across the top and drinks down the side. Mark a pairing as pleasant, confusing, or worth retrying, then add a word about why. Do not turn the exercise into a contest over who has the most refined palate.",
+        "If a pairing is difficult, separate its components: was the beverage too cold to smell, too sweet, or simply unfamiliar? Was the snack heavily salted? Change one thing at a time. The point is to learn what you enjoy and understand how the parts interact, not to declare universal rules."
+      ]
+    },
+    {
+      "heading": "End with a useful personal menu",
+      "paragraphs": [
+        "Choose one pairing each person would serve again and write the combination clearly, including drink style and snack. Credit a cook or maker if you used their recipe. Save less successful combinations too if you want to design a second tasting around a specific question.",
+        "Your next action is to choose three snacks from different texture groups, select two contrasting alcohol-free drinks, and prepare a simple tasting grid before serving. Start with one pairing and let the notes decide what belongs in a larger menu."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tea & Food Pairing",
+      "url": "https://www.ukteaacademy.co.uk/units/tea-food-pairing/",
+      "publisher": "UK Tea Academy",
+      "purpose": "Supports using balance, contrast, astringency, sweetness, umami, and acidity as tasting dimensions; article applies these as hypotheses for nonalcoholic pairings."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "taste-one-dish-from-three-local-traditions",
+    "test-how-salt-changes-a-simple-dish",
+    "follow-one-ingredient-through-a-market"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

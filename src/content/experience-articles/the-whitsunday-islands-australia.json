@@ -1,0 +1,64 @@
+{
+  "experienceSlug": "the-whitsunday-islands-australia",
+  "slug": "the-whitsunday-islands-australia",
+  "title": "Choose a Whitsundays day by how you want to meet the islands",
+  "description": "Compare a Whitehaven day stop, a short island walk and a multi-day boat trip using Queensland Parks’ routes, access rules and current alerts.",
+  "intent": "How do I choose a Whitsundays visit that balances Whitehaven Beach, island walking and realistic boat or camping logistics?",
+  "sections": [
+    {
+      "heading": "Decide what you want to do between boat rides",
+      "paragraphs": [
+        "The Whitsunday Islands are not only a beach stop. Queensland Parks describes the Ngaro Sea Trail as a boat-and-walk route through Whitsunday, South Molle and Hook Islands, with short, long and challenging tracks. Start by deciding whether you want a single day on Whitehaven, a short viewpoint walk, or a trip that combines several days of boating and walking. Each option asks for a different amount of planning.",
+        "Whitehaven Beach can be a clear one-day anchor within the boating-and-walking park system.  Confirm the landing point, time ashore and return arrangement with your chosen operator before booking."
+      ]
+    },
+    {
+      "heading": "Use Whitehaven as a clear one-day option",
+      "paragraphs": [
+        "If your priority is the iconic beach, build a day around its landscape rather than counting attractions. Queensland Parks lists the Solway Circuit from Whitehaven Beach as a moderate 1.2-kilometre loop taking about forty minutes. The path climbs to a natural rock platform overlooking Solway Passage. That short walk offers a different view from a beach-level stop without requiring a full-day hike.",
+        "The same park page lists Hill Inlet lookouts as a 1.4-kilometre return walk, with multiple platforms; if the first is crowded, it directs visitors onward to another. Treat route length and estimated time as planning context, not a promise about heat, track condition or your pace. Ask your boat operator which landing it uses and how much time ashore is actually included."
+      ]
+    },
+    {
+      "heading": "Choose the multi-day sea trail only if logistics fit",
+      "paragraphs": [
+        "A camping or kayak trip can create more time on the islands, but it requires careful logistics. Queensland Parks says island camping requires advance permits and campsite bookings; visitors should be self-sufficient, carry food and fresh water, use a stove instead of a fire and take rubbish back to the mainland. Commercial transfers operate from named marinas in Airlie Beach and Shute Harbour, and the authority notes that tides, group size and equipment affect the vessel needed.",
+        "Ask whether the itinerary relies on a particular tide, what the operator does if weather forces a change, and how you will return if a kayak leg becomes unsuitable. For a guided sailing or camping trip, clarify included safety equipment, overnight locations and cancellation terms. Do not assume a short day boat schedule is a substitute for a multi-day route or that every island has facilities."
+      ]
+    },
+    {
+      "heading": "Respect the cultural and marine setting",
+      "paragraphs": [
+        "The Queensland Parks guide identifies Hill Inlet as culturally significant to the Ngaro people and describes the islands as rugged, densely vegetated parts of the Great Barrier Reef World Heritage Area. This is a reason to move thoughtfully: use marked tracks, leave plants and shells in place, and keep noise modest near wildlife. If a local cultural interpretation is offered, listen on its terms rather than expecting a performance or private story.",
+        "Follow current safety notices for sharks, crocodiles and marine stingers. Do not treat a beach’s beauty as evidence that swimming is always safe. Follow crew instructions and current marine-safety advice, and ask what flotation or protective equipment is appropriate for your activity. If you are not a confident swimmer, choose a walk or a boat-viewing option instead of entering the water."
+      ]
+    },
+    {
+      "heading": "Make your booking match the day you want",
+      "paragraphs": [
+        "Before booking, compare the exact departure marina, landing site, time ashore, track access, weather policy and return connection. If you have only one day, a single Whitehaven landing with the Solway Circuit may be easier to picture than trying to combine multiple islands. If your aim is to walk the wider Ngaro Sea Trail, choose a camping or sailing arrangement built around that itinerary and check permits directly.",
+        "The cited Queensland Parks pages provide named tracks and camping requirements, but transport, weather and park alerts change. Recheck the current notices and ask the operator what will happen if access is restricted. Your next step is to select one primary experience—beach, lookout walk or multi-day route—and build the rest around its actual vessel schedule."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Things to do",
+      "url": "https://parks.qld.gov.au/parks/whitsunday-islands/things-to-do",
+      "publisher": "Queensland Parks and Forests",
+      "purpose": "Supports the named Solway Circuit, Hill Inlet lookout and other track details, Ngaro Sea Trail framing, and camping provisions."
+    },
+    {
+      "title": "Visiting safely – Whitsunday national park islands",
+      "url": "https://parks.qld.gov.au/parks/parks-whitsundays/visiting-safely",
+      "publisher": "Queensland Parks and Forests",
+      "purpose": "Supports boat access from Airlie Beach/Shute Harbour, commercial transfer locations and tide/vessel considerations, camping permits, park alerts and general safety planning."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "see-the-great-barrier-reef",
+    "the-daintree-rainforest-australia"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

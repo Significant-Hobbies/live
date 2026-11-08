@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "roll-couscous-grains-by-hand-with-a-knowledgeable-cook",
+  "slug": "roll-couscous-grains-by-hand-with-a-knowledgeable-cook",
+  "title": "Learn to read the grain while rolling couscous",
+  "description": "Learn from a cook who makes couscous from its starting grain, notice how moisture and rolling change the texture, and ask whose method you are learning.",
+  "intent": "What should a learner watch for when making couscous by hand with a knowledgeable cook? This adds a respectful observation and practice plan beyond the short experience outline.",
+  "sections": [
+    {
+      "heading": "Find a teacher through the food, not a generic class",
+      "paragraphs": [
+        "Ask a cook, community group, or cultural organization whether they teach hand-rolling from the starting grain rather than simply preparing a packaged product. This guide focuses narrowly on the Slow Food Foundation’s documented Sahrawi Khoumassi example, which describes a five-grain preparation manually agglomerated with water and includes cooking and drying. It is one specific record, not a description of all couscous or of every Sahrawi household. Your session represents the invited cook’s own method.",
+        "Before booking, ask what grain and tools the cook will use, whether learners will roll a portion themselves, and what part of the meal is included. Offer to compensate the teacher fairly and agree on dietary needs. Avoid asking a cook to disclose a family recipe or perform a tradition they do not wish to teach."
+      ]
+    },
+    {
+      "heading": "Watch before reaching for the bowl",
+      "paragraphs": [
+        "Invite the cook to demonstrate a small quantity first. Notice the starting texture, how water is added, how the grains are moved, and what the cook considers a useful size. Do not assume a fixed ratio or hand motion applies everywhere; the teacher’s own cues are more important than a generic recipe.",
+        "In the Khoumassi record, Slow Food describes five grains being agglomerated by hand with water, then cooked and dried as part of the preparation. Your session may cover only one part of that larger chain. Ask what is prepared in advance so you know which transformation you are actually learning. Treat the record as a focused example; do not generalize it to other regions or all couscous traditions."
+      ]
+    },
+    {
+      "heading": "Practice with a small handful",
+      "paragraphs": [
+        "Copy the demonstrated motion slowly and use a small amount so the cook can see what your hands are doing. Ask for feedback about feel and grain size rather than asking whether you are doing it right in the abstract. If the grains clump, stop and let the teacher show how their method separates them. Avoid adding more water or flour based on guesswork.",
+        "Compare your portion beside the teacher’s sample. Look at evenness, loose flour, and whether the grains hold their shape. These are questions for this cook’s method, not a universal grading scale. If the teacher is comfortable, note the local names for tools and stages accurately rather than translating them into rough equivalents."
+      ]
+    },
+    {
+      "heading": "Follow the whole steaming method",
+      "paragraphs": [
+        "If steaming is part of the lesson, let the cook set up and supervise the equipment. Use the teacher’s instructions for the pot, steam path, and timing; this is not the moment to improvise a substitute steamer. Handle hot cookware with ordinary kitchen care, and ask for a safe job such as portioning or observing if you are unfamiliar with the setup.",
+        "The grain and its accompaniment belong to a wider meal context. Ask how this cook serves the version they are teaching and whether they connect it with a particular gathering or occasion. Listen without turning one answer into a claim about a whole region. The point is to understand the practice as this teacher presents it."
+      ]
+    },
+    {
+      "heading": "Record the lesson with permission",
+      "paragraphs": [
+        "After the meal, write down the teacher’s name, the method they chose to share, the grain and tools used, and one tactile cue that helped you. Ask permission before photographing the process, sharing the recipe, or naming the teacher publicly. If the cook prefers not to be identified, respect that choice and keep your notes private.",
+        "A second attempt should use the same teacher’s notes or a recipe they explicitly recommend. Your next action is to contact a cook with a specific question about hand-rolling, and ask what preparation would make the session worthwhile for both of you."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Couscous Khoumassi",
+      "url": "https://www.fondazioneslowfood.com/en/ark-of-taste-slow-food/couscous-khoumassi-2/",
+      "publisher": "Slow Food Foundation for Biodiversity",
+      "purpose": "Supports a specific Sahrawi multigrain couscous example and its hand-agglomerated preparation and social context; the lesson follows the invited cook’s own method."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "taste-one-dish-from-three-local-traditions",
+    "plate-a-meal-inspired-by-a-food-history-collection",
+    "follow-one-ingredient-through-a-market"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "perform-or-exhibit-something-you-made",
+  "slug": "perform-or-exhibit-something-you-made",
+  "title": "Prepare one finished work for a real audience",
+  "description": "Choose a performance or exhibition format, finish a coherent piece, check access and technical needs, and invite people to encounter your work.",
+  "intent": "What does it take to show something I made to strangers? This focuses on finishing and presenting a single body of work, not building a career.",
+  "sections": [
+    {
+      "heading": "Pick a format that fits the work",
+      "paragraphs": [
+        "An exhibition and a performance impose different demands. A small wall show needs finished objects, a clear hanging plan and labels; a reading or music set needs a sequence, rehearsal and a room suited to sound. Choose the format that lets the audience notice what the work is doing instead of forcing it into a prestigious venue.",
+        "Make the invitation concrete: “a ten-minute set of three songs” or “six small prints exploring repeated marks.” A defined scope helps you finish. MoMA’s art-term collection ranges across materials, techniques and movements; use such vocabulary to describe what viewers will encounter, while letting your own work resist labels that do not fit."
+      ]
+    },
+    {
+      "heading": "Set a finish line",
+      "paragraphs": [
+        "Decide which parts are essential and which are optional refinements. For an object, the finish line could be stable mounting, a final proof and a legible title card. For a performance, it could be a start, middle and ending that can be delivered within the available slot. Avoid adding new pieces after the core selection is ready.",
+        "Make a checklist for each work: title, medium, dimensions or duration, year, and any installation requirement. If the piece uses borrowed material, images, music or someone else’s story, resolve the permission and credit before the event. If the work contains sensitive content, warn the host and provide clear context without explaining away the art."
+      ]
+    },
+    {
+      "heading": "Rehearse the visitor experience",
+      "paragraphs": [
+        "Walk the room or play the set in order. Notice where a viewer enters, where sound carries, where a label becomes hard to read and how the sequence concludes. Ask one trusted person to describe what they noticed before you explain your intention. Their description can expose an unclear transition or a piece that needs more breathing space.",
+        "For a performance, rehearse the exact opening and last minute; nerves often make transitions and endings disappear. For a display, make a mock-up at the actual size and mark the positions on paper before installation. Confirm who supplies lights, stands, a microphone, a projector or playback equipment, and who is responsible for setup and removal."
+      ]
+    },
+    {
+      "heading": "Make the event welcoming and feasible",
+      "paragraphs": [
+        "Ask the venue about step-free access, seating, restroom access, sound limits, arrival time and the expected audience size. Share a simple event description and indicate whether photography is welcome. If the room cannot support an accessibility need, say so clearly and consider another format or venue rather than leaving guests to discover the barrier at the door.",
+        "Keep the invitation direct: date, location, duration, access details and whether guests need to RSVP. A modest gathering with time to look or listen can be more meaningful than a crowded opening. If people attend remotely, test the video or audio setup with someone who has not seen it before."
+      ]
+    },
+    {
+      "heading": "Finish with reflection",
+      "paragraphs": [
+        "During the event, leave space for viewers to respond in their own language. You can ask which detail they returned to or what changed as they moved through the piece; you do not need to defend every choice. If you collect comments, ask permission before retaining names or publishing quotations.",
+        "Afterward, note what you learned about presentation: a better lighting angle, shorter spoken introduction, improved label or stronger pacing. Photograph the installation only after checking venue rules and obtain permission before sharing identifiable attendees. The first public showing is a completed milestone and a source of specific information for the next piece."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Art terms",
+      "url": "https://www.moma.org/collection/terms/",
+      "publisher": "The Museum of Modern Art",
+      "purpose": "MoMA’s art terms define media and approaches across modern and contemporary art; use it as a vocabulary reference, not a rulebook for how to make or exhibit work."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "take-a-photograph-that-stops-people-in-their-tracks",
+    "make-a-documentary-about-something-you-care-about"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

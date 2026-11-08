@@ -1,0 +1,64 @@
+{
+  "experienceSlug": "join-a-dusk-bat-walk-with-a-detector",
+  "slug": "join-a-dusk-bat-walk-with-a-detector",
+  "title": "How do you read a bat detector on your first evening walk?",
+  "description": "Learn what a bat detector can reveal, how to choose a guided dusk walk, and how to record observations without disturbing bats or overclaiming a species.",
+  "intent": "Answer how a first-time visitor can interpret a detector alongside habitat and flight observations, adding practical listening and note-taking methods to the guided walk plan.",
+  "sections": [
+    {
+      "heading": "Choose a walk that teaches interpretation",
+      "paragraphs": [
+        "A bat detector makes sounds outside ordinary hearing audible by converting or processing them; it does not provide a simple name label. If you are new, look for a public walk led by a local bat group, reserve naturalist, or other knowledgeable guide. Ask whether equipment is supplied, whether the group walks a loop or stays at a listening point, and how the leader handles accessibility and weather changes. The Bat Conservation Trust describes guided bat walks as a way to see and hear bats in their natural setting, and offers resources for leaders. That makes a guided first session more useful than buying a device before you know what you want to hear.",
+        "Dress for standing quietly outside after sunset and wear shoes suited to the announced route. Check whether there are steps, uneven paths, or water-side sections. Carry only what you can manage without rummaging while the group listens. If you need to leave early, tell the organiser beforehand so you can do so without splitting from the group in darkness. A quiet evening with few calls can still teach you how the guide chooses a listening place and distinguishes evidence from guesses."
+      ],
+      "bullets": [
+        "Ask what type of detector will be used and whether participants will take turns.",
+        "Confirm route length, return lighting, and any access constraints before setting out."
+      ]
+    },
+    {
+      "heading": "Listen for a pattern, not a species name",
+      "paragraphs": [
+        "A detector is one source of evidence among several. Look where the guide suggests, and notice whether the bat flies along a tree line, above open ground, or over water. You are not required to follow it; stay inside the agreed group boundary and keep your torch pointed down unless the leader says otherwise. Roost openings should be left undisturbed. The goal of this visit is to learn in a shared outdoor space, not to get closer to an animal or force a dramatic sighting."
+      ]
+    },
+    {
+      "heading": "Make field notes that preserve uncertainty",
+      "paragraphs": [
+        "Use a tiny note format with time, place, weather impression, habitat, detector setting if the guide shares it, and what you actually heard or saw. Then add the leader’s interpretation in a separate line. For example: “By pond path; two quick passes beside reeds; detector on setting the guide chose; likely pipistrelle per guide.” That record remains useful even if you later learn that the identification was uncertain. Avoid recording exact roost locations publicly unless the group leader says the information is safe to share.",
+        "If your guide lets people handle a shared detector, wait for a clear invitation and use the wrist strap if provided. Keep conversation low while the device is in use so others can hear. If you cannot hear the detector, ask whether another accessible way to experience the activity is available; some detectors produce vibrations, but access depends on the equipment and organiser. A good host will welcome the question without turning anyone into a demonstration."
+      ],
+      "bullets": [
+        "Separate your sensory note from the expert’s identification.",
+        "Keep your light, pace, and position within the leader’s directions."
+      ]
+    },
+    {
+      "heading": "Turn one evening into a next step",
+      "paragraphs": [
+        "After the walk, choose one question for further learning: what the detector’s tuning control changes, why a sheltered path is useful, or how the guide decides whether a call is identifiable. The Bat Conservation Trust recommends trying equipment and learning with more experienced people before choosing a detector. If you want another visit, seek a beginner workshop or a repeat walk with the same local group rather than trying to survey bats on your own.",
+        "A grounded record can be as simple as a sketch of the route and three observations: one sound, one flight pattern, and one uncertainty. The success of the first evening is not a species list. It is leaving able to explain what the detector adds, what it cannot prove by itself, and how careful observation protects the animals you came to appreciate."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Bat walks",
+      "url": "https://www.bats.org.uk/resources/education-outreach-resources/bat-walks",
+      "publisher": "Bat Conservation Trust",
+      "purpose": "Supports the use of knowledgeable guided walks as a first experience and points to bat walk and detector resources."
+    },
+    {
+      "title": "Heterodyne bat detectors",
+      "url": "https://www.bats.org.uk/about-bats/bat-detectors-1/heterodyne",
+      "publisher": "Bat Conservation Trust",
+      "purpose": "Explains how heterodyne detectors render bat calls audible and why identification takes practice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "document-a-wild-species-for-inaturalist",
+    "take-a-forest-bathing-walk"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

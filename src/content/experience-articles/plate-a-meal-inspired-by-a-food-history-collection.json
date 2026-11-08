@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "plate-a-meal-inspired-by-a-food-history-collection",
+  "slug": "plate-a-meal-inspired-by-a-food-history-collection",
+  "title": "Turn a food-history source into a thoughtful meal",
+  "description": "Choose one food-history collection item, investigate its setting, then cook an adaptable meal that makes room for context and personal taste.",
+  "intent": "How can you cook from a food-history collection without treating a recipe as the whole story? This guide adds a source-to-plate method that keeps provenance, adaptation and reflection together.",
+  "sections": [
+    {
+      "heading": "Choose a source before a dish",
+      "paragraphs": [
+        "Find a recipe, menu, photograph, oral history, or object in a museum or public archive. Read the accompanying description, not just the ingredient list. Ask who made or used it, where it circulated, and what the collection can and cannot tell you. A museum food exhibition can connect recipes and objects with migration, technology, labor, health, or changing household habits; those contexts make a better starting point than a novelty ingredient.",
+        "Choose something you can cook safely with your time, kitchen, and budget. If the source is a historical recipe with unclear measures or unfamiliar equipment, look for a tested modern adaptation and mark that distinction. Do not pretend your version reproduces the original exactly. The meal is an interpretation shaped by the evidence and by what is available to you."
+      ]
+    },
+    {
+      "heading": "Read for clues and gaps",
+      "paragraphs": [
+        "Make a short source note with the title, creator if known, date or period, and collection or institution. Then identify one detail that changes how you understand the dish: a regional ingredient, a preservation method, a serving context, or a story about who prepared it. Check whether the source is a contemporary recipe, a later recollection, or a museum’s interpretation. Each offers a different kind of evidence.",
+        "Write down what the source does not tell you. A recipe might omit who did the cooking, how ingredients were sourced, or how the dish varied across households. Treat those gaps with care. Avoid turning one artifact into a claim about an entire culture or period. If a community’s food practice is involved, seek sources from people and organizations connected to that tradition."
+      ]
+    },
+    {
+      "heading": "Plan the plate around one idea",
+      "paragraphs": [
+        "Pick a central dish and one simple accompaniment, then decide what the meal should help you notice. You might compare two grains, use an ingredient discussed in the source, or set out a printed image beside the plate. Keep the menu modest so you can pay attention while cooking. Mention any changes you make: a substitute ingredient, a different cooking tool, or a smaller portion.",
+        "If the collection includes a dish tied to a living tradition, do not frame your meal as an authentic reenactment. Name the source and describe your own version. Use respectful language, credit the cook or community where the record does, and avoid costume or decorative cues that flatten a culture into a theme night."
+      ]
+    },
+    {
+      "heading": "Cook with a record of your choices",
+      "paragraphs": [
+        "Before starting, check the recipe’s temperatures, doneness cues, and allergens. If the source is incomplete, rely on a tested contemporary recipe for safe preparation and explain that you used it as a practical guide. Keep raw and ready-to-eat ingredients separate, and follow ordinary food-safety directions for the ingredients you use.",
+        "During the meal, note one surprise: a texture, a smell, a change in technique, or a contrast with food you already know. Ask a guest what they noticed, but do not quiz them on history or ask them to validate your interpretation. A good conversation can hold both the pleasure of eating and curiosity about how the source reached you."
+      ]
+    },
+    {
+      "heading": "Keep the source attached to the memory",
+      "paragraphs": [
+        "Afterward, save a small card with your dish name, source citation, adaptation, and one question you still have. If you share a photo, add the source credit and describe the meal as your interpretation. You do not need a grand conclusion. The useful outcome is a better question and a meal that gave you a reason to look closely at an archive.",
+        "For a first attempt, choose one recipe or object from a museum food-history collection and keep the cooking simple. Read the full description, cook one dish, then write down what the artifact reveals and what it leaves open. That note can guide the next collection you explore."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "FOOD: About",
+      "url": "https://www.americanhistory.si.edu/explore/exhibitions/food/about",
+      "publisher": "National Museum of American History, Smithsonian",
+      "purpose": "Smithsonian food-history materials connect food objects and stories to changing production, distribution, consumption and migration."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "shape-a-batch-of-pitha-with-a-knowledgeable-cook",
+    "build-a-seasonal-millet-thali"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

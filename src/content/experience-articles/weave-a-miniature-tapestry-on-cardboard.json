@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "weave-a-miniature-tapestry-on-cardboard",
+  "slug": "weave-a-miniature-tapestry-on-cardboard",
+  "title": "Cardboard tapestry weaving: make a small loom and tell a story",
+  "description": "Turn a piece of cardboard into a small loom, weave yarn and fabric over and under, and use colour or texture to express a simple idea.",
+  "intent": "Walks a beginner through building a cardboard loom, controlling tension and finishing a small woven piece with an intentional visual idea.",
+  "sections": [
+    {
+      "heading": "Decide what the small weaving should say",
+      "paragraphs": [
+        "A miniature tapestry is easier to plan when it has a modest idea: a colour you associate with a season, a path of stripes, or a contrast between rough and soft materials. Gather yarn and fabric scraps in a few colours and textures. You do not need new supplies; the Oakland Museum of California suggests using materials from home and treats weaving as a way to express identity and story.",
+        "Sort materials into a small palette before making the loom. Short fabric strips create a different surface from smooth yarn, and a limited set of choices makes it easier to notice how each one changes the pattern."
+      ]
+    },
+    {
+      "heading": "Make a cardboard loom that stays steady",
+      "paragraphs": [
+        "Cut a piece of sturdy cardboard and make small notches at the top and bottom edges. Keep the notches opposite each other so the warp threads stay vertical. The Oakland Museum’s example uses a six-inch square and notches three-quarters of an inch apart; those are example dimensions, not a required size. Use a ruler if you want even spacing, and ask for help with scissors if needed.",
+        "Thread yarn from top to bottom through opposite notches and tape the ends on the back. Keep the threads taut enough to form a working surface but not so tight that the cardboard bends. Set the loom on a table or hold it securely so the frame does not shift while you weave."
+      ]
+    },
+    {
+      "heading": "Weave slowly and watch the edge",
+      "paragraphs": [
+        "Cut yarn or fabric strips a little longer than the width of the loom. Pass each strip over one warp thread and under the next, then reverse that pattern on the next row. Push each row gently upward as you go, without pulling the edge so tightly that the weaving narrows. If you forget where the last row ended, look at the warp threads and continue with the opposite over-under pattern.",
+        "Use a blunt tool or your fingers to move the weft if that feels more comfortable. Keep bulky scraps short so they do not dominate the small surface. Switch colours when you have a reason—perhaps a new stripe, a border or a change in the story—not because every row needs to look different."
+      ]
+    },
+    {
+      "heading": "Solve common first-loom problems",
+      "paragraphs": [
+        "If the loom bows, loosen the warp or tape it to a flatter support. If the sides draw inward, you may be pulling the weft too tightly; leave a little slack before pushing the row into place. If gaps appear, bring the row upward evenly rather than tugging one section. Unevenness is not automatically a flaw: it may become part of the texture. Decide whether it bothers you before undoing several rows.",
+        "A short first piece gives you a chance to test one fabric strip, one yarn and one colour change. You can stop when the weaving fills enough of the cardboard to show the pattern, rather than trying to cover every edge."
+      ]
+    },
+    {
+      "heading": "Finish it in a way you can display",
+      "paragraphs": [
+        "For a simple project, tape the ends to the back and add a hanger. If you want the weaving to come off the loom, follow the museum’s finishing guidance: knot the loose strands, cut the warp from the back carefully and secure the top and bottom threads. Work slowly so the piece does not unravel. Keep scissors away from the finished woven area.",
+        "Save the experience with a photo or a note about the materials and one tension adjustment that helped. If you enjoyed the process, make another loom with wider spacing or a different material; change one feature at a time so you can see what it does to the fabric."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Cardboard Weaving",
+      "url": "https://museumca.org/learn-at-home/cardboard-weaving/",
+      "publisher": "Oakland Museum of California",
+      "purpose": "Museum instructions for cardboard loom, warp and weft, over-under weaving, pushing rows up and finishing options; frames textiles as storytelling."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "bind-a-pocket-notebook-by-hand",
+    "stage-a-shadow-puppet-story",
+    "fold-an-interlocking-origami-sculpture"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

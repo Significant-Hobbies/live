@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "make-edible-juice-pearls-with-a-spherification-kit",
+  "slug": "make-edible-juice-pearls-with-a-spherification-kit",
+  "title": "Why some juice pearls form and others do not",
+  "description": "Use a food-grade spherification kit with a measured test portion, choose a compatible liquid, and troubleshoot texture before making a serving.",
+  "intent": "Why might juice refuse to form neat edible pearls, and how can I make the first attempt easier to interpret? This adds a controlled kitchen test to the kit activity.",
+  "sections": [
+    {
+      "heading": "Treat the kit as a tested food process",
+      "paragraphs": [
+        "Use a kit intended for food and follow its full printed instructions, ingredient labels, and hygiene guidance. Do not use laboratory or craft chemicals as substitutes. The maker’s direct-spherification kit lists sodium alginate, calcium chloride, sodium citrate, and a syringe, and says instructions are on the package. Prepare clean bowls and tools, and keep the experiment away from non-food materials.",
+        "The technique is sensitive to the liquid. Modernist Pantry notes that sodium alginate gels only within a certain pH range and that many commercial juices can be too acidic for the kit’s method. A failed pearl does not necessarily indicate poor hand control; the juice may be incompatible with that recipe."
+      ]
+    },
+    {
+      "heading": "Read the juice before mixing",
+      "paragraphs": [
+        "Choose one juice named as compatible by the kit instructions or test a small amount first. Do not assume clear juice behaves like pulp-rich juice or that two citrus drinks have the same acidity. Write down the product and its ingredients. If the recipe requires a pH check or adjustment, use the kit’s specified tools and quantities rather than estimating by taste.",
+        "If the kit calls for sodium citrate to adjust the mixture, measure precisely and stay within the maker’s instructions. Avoid inventing a correction for a juice whose acidity you have not checked. For the first run, a small batch is better than turning an entire bottle into a troubleshooting problem."
+      ]
+    },
+    {
+      "heading": "Make one controlled trial",
+      "paragraphs": [
+        "Prepare the bath and liquid exactly as the kit directs, including its required measurements and resting periods. Use the provided syringe or spooning method consistently, and space drops so they do not join before setting. Time one sample and inspect its shape before making the rest. The product description and package instructions control the procedure; this article is not a substitute recipe.",
+        "Record what happened: did the drop spread, stay liquid, form a skin, or become too firm? Note the liquid, measured quantities, contact time, and rinsing step. A tidy record helps distinguish technique from formulation and gives you a question you can answer on the next test."
+      ]
+    },
+    {
+      "heading": "Change only the likely cause",
+      "paragraphs": [
+        "If no skin forms, check compatibility and measurement first. If the pearls are misshapen, inspect drop size and distance from the bath. If they turn into firm beads, check how long they remained in the setting bath and follow the recipe’s timing. Change only one factor for the next test so the result has a clear explanation.",
+        "Do not add stronger solutions or extend setting time by guesswork. If the mixture stays unusable after following the kit, stop and contact the kit maker or choose a recipe explicitly designed for that juice. A failed test is a useful boundary, not a reason to consume an uncertain result."
+      ]
+    },
+    {
+      "heading": "Serve only the batch you can identify",
+      "paragraphs": [
+        "Rinse and serve pearls according to the kit’s food instructions, labeling the flavor and date if making them ahead. Keep allergens and dietary needs in view if serving others. Do not present a decorative sphere as containing a different liquid unless you know exactly what went into it.",
+        "Your next action is to read the full kit instructions and run one measured spoonful of a recommended liquid before planning a snack menu. Keep the first trial small enough to inspect its texture and decide calmly whether another attempt is worthwhile."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Direct Spherification Kit",
+      "url": "https://modernistpantry.com/products/direct-spherification-kit.html",
+      "publisher": "Modernist Pantry",
+      "purpose": "Supports the kit contents, directions reference, and stated pH compatibility limitation; exact food preparation must follow kit instructions."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "grow-edible-sugar-crystals",
+    "test-how-salt-changes-a-simple-dish",
+    "pair-nonalcoholic-drinks-with-a-small-snack-menu"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

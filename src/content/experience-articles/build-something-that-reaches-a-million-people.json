@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "build-something-that-reaches-a-million-people",
+  "slug": "build-something-that-reaches-a-million-people",
+  "title": "Make the useful thing work for one person first",
+  "description": "Turn a million-person ambition into a testable project by defining one user need, testing a small version and planning how to support wider use.",
+  "intent": "Answer how to approach a million-person reach goal by treating it as a service-design and distribution problem, not a forecast of popularity.",
+  "relatedExperienceSlugs": [
+    "start-and-grow-a-business",
+    "create-a-short-film",
+    "design-and-3d-print-a-small-functional-bracket"
+  ],
+  "sections": [
+    {
+      "heading": "Define what “reach” means",
+      "paragraphs": [
+        "A million views, downloads, readers, or people helped are different outcomes. Choose the one that matters and say what a person can do after encountering your work. A short film might be watched once; a public tool might solve a recurring task; a book might travel through libraries and classrooms. If you measure only exposure, you can miss whether the thing actually helped anyone.",
+        "The UK Department for Education’s service guidance begins with the user’s need, not a solution, and asks teams to test assumptions early, include people with access needs, and consider how a service may scale. Apply the same discipline to a creative or practical project: write down who needs it and what they need to accomplish."
+      ]
+    },
+    {
+      "heading": "Make a small version that tests the core",
+      "paragraphs": [
+        "Build the smallest version that lets a real person experience the main value. That might be a one-page guide, a single short video, a sample class, or a prototype of one task. Show it to people who match the audience and watch how they use it. Ask where they get stuck, whether it solves the problem they described, and what they do next.",
+        "Do not ask whether people “like the idea” and treat enthusiasm as validation. A useful test observes behavior: can someone understand the instructions, complete the task, and explain what was valuable? Include people who use assistive technology or have different language, device, and access needs when those are part of your audience."
+      ]
+    },
+    {
+      "heading": "Choose a route to people, not just a launch",
+      "paragraphs": [
+        "Map how a person who needs the work might find it: a trusted organization, a school, a library, a community group, a creator with a relevant audience, or word of mouth between users. Each channel has different permissions, trust, effort, and cost. Choose one that fits the project rather than posting everywhere and hoping the audience appears.",
+        "If another organization already reaches the audience, talk to them before duplicating their work. A partnership can reveal what people ask for and what support they expect. Make the offer clear: what the organization would need to share, what the users receive, and who answers questions."
+      ]
+    },
+    {
+      "heading": "Plan for what happens after someone finds it",
+      "paragraphs": [
+        "When use grows, the work around the project grows too: accessible formats, corrections, support requests, updates, moderation, hosting, or distribution. Decide which of those tasks are essential and who will handle them. If the project would be harmful or confusing when used without you present, redesign it before trying to expand its reach.",
+        "Set a measure beyond the headline number: completion, repeat use, an observed improvement, or a concrete outcome chosen by users. Review who is not being reached and why. A project can be valuable at a smaller scale; scale is an option to earn through evidence, not a promise."
+      ]
+    },
+    {
+      "heading": "Name the next milestone",
+      "paragraphs": [
+        "Write a one-page brief with the user, the need, the smallest test, the route to users, the measure of usefulness, and the support you can provide. Then make a version you can show to five people who have the problem. The specific number is a planning choice, not a claim about statistical proof.",
+        "After that conversation, update the work based on what people actually do. The next step toward a million is not a viral launch; it is making one useful encounter repeatable, accessible, and supportable."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Understand users and their needs",
+      "url": "https://apply-the-service-standard.education.gov.uk/guides/apply-the-service-standard/1-understand-users-and-their-needs",
+      "publisher": "UK Department for Education",
+      "purpose": "Opened current service guidance on defining user needs, testing assumptions early, including access needs and considering how work might scale."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

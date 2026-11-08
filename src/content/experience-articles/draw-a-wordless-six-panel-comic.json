@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "draw-a-wordless-six-panel-comic",
+  "slug": "draw-a-wordless-six-panel-comic",
+  "title": "Tell a complete wordless comic story in six panels",
+  "description": "Plan a readable six-panel comic using gesture, framing and visual change so a reader can follow the story without dialogue or captions.",
+  "intent": "How do I tell a small complete story in six comic panels without using words?",
+  "relatedExperienceSlugs": [
+    "engineer-a-pop-up-paper-scene",
+    "draw-a-leaf-without-looking-at-the-page",
+    "record-a-public-domain-audiobook-chapter"
+  ],
+  "sections": [
+    {
+      "heading": "Write the story in one sentence first",
+      "paragraphs": [
+        "A wordless six-panel comic works best when the action is small enough to see. Begin with one sentence: a person tries to carry a cake through a windy doorway; a cat mistakes a shadow for a toy; a seedling reaches a patch of sun. Give the character a clear want and one visible obstacle. The ending should change the situation, even if the change is funny or quiet.",
+        "The V&A’s story-making activity begins with familiar objects and a main character, then invites the maker to invent a story. Borrow the useful part of that method: start with something you can picture and give it an action. You do not need to design a complicated world before drawing the first panel."
+      ]
+    },
+    {
+      "heading": "Give each panel a job",
+      "paragraphs": [
+        "Try this six-beat structure as a starting point: establish the place; show the character’s goal; introduce the obstacle; show an attempt; change the plan; land on the result. If two panels do the same job, combine them and use the space for a clearer reaction. A small story can resolve in panel five and leave panel six for the visual punchline or a quiet after-effect.",
+        "Thumbnail six rectangles and draw stick figures before adding detail. Use arrows only in your planning copy; the final sequence must make direction clear through the character’s movement, gaze or repeated object. Keep the setting consistent by reusing a doorway, table edge or tree shape across panels."
+      ]
+    },
+    {
+      "heading": "Make emotion legible through posture",
+      "paragraphs": [
+        "Without speech balloons, a reader reads the body. Turn a head, raise a shoulder, angle a foot toward the exit, or place a character’s hands around an object. Make the change between two panels visible: a relaxed hand becomes a tight fist, a full basket becomes an empty one, or a character moves from far away to close up.",
+        "Use framing to control what the reader notices. A wide panel can establish the place; a closer view can reveal a tiny clue. Do not make every panel a close-up. If the reader cannot tell where the character is in relation to the obstacle, include a wider view before the important action."
+      ]
+    },
+    {
+      "heading": "Check the sequence without explaining it",
+      "paragraphs": [
+        "Give the thumbnails to someone who has not heard the premise. Ask them to describe what happened panel by panel. If they miss the goal, add a clear object or action early. If they predict the ending too soon, adjust the attempt or reveal. Avoid explaining the intended joke until after they respond; their confusion is useful feedback about the pictures.",
+        "A first attempt might be about a person trying to photograph a bird that keeps landing on the camera. The six panels can show the person preparing, spotting the bird, raising the camera, startling it, changing approach and finally photographing an empty branch with the bird perched on the person’s head. Keep details simple enough to draw consistently."
+      ]
+    },
+    {
+      "heading": "Finish with a readable page",
+      "paragraphs": [
+        "Ink only after the sequence works in rough form. Leave enough white space between panels and keep the panel order obvious. If you use color, reserve one color for the object that carries the story. Lettering is not needed; omit signs or labels that would accidentally become dialogue.",
+        "The useful next step is to redraw one confusing panel and ask for another read."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Design and make your own story",
+      "url": "https://www.vam.ac.uk/articles/design-and-make-your-own-story",
+      "publisher": "Victoria and Albert Museum",
+      "purpose": "Primary storytelling activity that begins with everyday objects and a main character; the six-panel visual structure is original guidance."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

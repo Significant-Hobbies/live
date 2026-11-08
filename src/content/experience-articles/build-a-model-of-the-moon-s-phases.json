@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "build-a-model-of-the-moon-s-phases",
+  "slug": "build-a-model-of-the-moon-s-phases",
+  "title": "Make a model that explains the Moon’s changing shape",
+  "description": "Use a lamp, a ball and your viewpoint to model the Moon’s phases, then compare the model with a real observation and catch the shadow misconception.",
+  "intent": "How can a simple model distinguish Moon phases from Earth’s shadow? This guide adds a hands-on setup and a check against a common misconception.",
+  "sections": [
+    {
+      "heading": "Set up a safe, simple model",
+      "paragraphs": [
+        "Use a lamp with a visible shade, a small ball on a stick, and enough space to move without tripping. The lamp represents the Sun, the ball the Moon, and your head or chair the Earth viewpoint. Dim the room enough to see the lit side, but never stare into a bright bulb.",
+        "Say aloud what the model leaves out: its sizes and distances are not to scale, and the lamp only stands in for sunlight. You are trying to track which half is illuminated and how much of that half is visible from your fixed position."
+      ]
+    },
+    {
+      "heading": "Move around one steady light",
+      "paragraphs": [
+        "Stand in the Earth position and hold the Moon ball at arm’s length. Turn slowly around the stationary lamp, keeping the ball in view. You will see the lamp illuminate half the ball throughout while the visible lit area changes with your angle. NASA explains that lunar phases arise from this changing view of the sunlit half.",
+        "Pause at four positions: near the lamp, a quarter-turn away, opposite the lamp, then another quarter-turn. Compare the shapes you see. Keep the lamp in one place; moving both the light and ball makes it difficult to notice what causes the change."
+      ]
+    },
+    {
+      "heading": "Name the visible pattern",
+      "paragraphs": [
+        "At the position near the lamp, the lit side faces mostly away from you; opposite the lamp, nearly all of the visible face is bright. At the quarter positions, you see a half-lit shape. These roughly match new, full and quarter phases. The Moon’s full cycle has eight named phases, but four anchor points are enough to begin.",
+        "“Half Moon” is an everyday label. At first and third quarter, NASA notes we see half of the Moon’s sunlit half. The Moon has not been switched off or split; the geometry changes what your viewpoint can see."
+      ]
+    },
+    {
+      "heading": "Correct the eclipse misconception",
+      "paragraphs": [
+        "If someone says Earth’s shadow causes every phase, return to the model and observe the light on the ball. Most of the time Earth is not between the Sun and Moon. Ordinary crescents and quarters come from seeing different portions of the Moon’s sunlit side; eclipses need a special alignment.",
+        "Draw an overhead diagram with the lamp at the center, your Earth position marked, and the ball at four points. Shade the sunlit half of each position, then sketch what the observer can see. Compare the paper diagram with the hand-held model; they may reveal different misunderstandings."
+      ]
+    },
+    {
+      "heading": "Take the idea outside",
+      "paragraphs": [
+        "On another evening, note the real Moon’s shape, direction and approximate time. Repeat from the same place a few days later if possible. Weather, buildings and the horizon affect visibility, so a missed observation is not failure. A notebook sketch can make changes easier to notice than memory alone.",
+        "Your next step is to explain one phase without pointing at the model. If you can describe the arrangement of Sun, Moon and observer clearly, add intermediate phases and compare your model with an observation."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Moon Phases - NASA Science",
+      "url": "https://science.nasa.gov/moon/moon-phases/",
+      "publisher": "NASA Science",
+      "purpose": "NASA explains that sunlight illuminates half the Moon and phases reflect how much of that side is visible from Earth."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "analyze-an-exoplanet-transit-with-real-telescope-data",
+    "build-a-sundial-and-compare-it-with-clock-time"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

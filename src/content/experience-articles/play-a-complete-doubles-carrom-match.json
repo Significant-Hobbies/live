@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "play-a-complete-doubles-carrom-match",
+  "slug": "play-a-complete-doubles-carrom-match",
+  "title": "Four players, one queen: a friendly guide to doubles carrom",
+  "description": "Set up a doubles carrom match with partners opposite each other, agree on one ruleset, and understand queen coverage and striker fouls before the break.",
+  "intent": "How four people can complete a first doubles carrom match without confusion over seating, the queen, scoring and house rules.",
+  "relatedExperienceSlugs": [
+    "build-a-cooperative-table-tennis-rally",
+    "learn-a-mahjong-ruleset-and-finish-a-game"
+  ],
+  "sources": [
+    {
+      "title": "Carrom Rules & Regulations of 2024",
+      "url": "https://www.fof.co.ke/rules/CARROM%20RULES%20%26%20REGULATIONS%20-%20FOF%202024.pdf",
+      "publisher": "Federation of Friends (rules attributed to International Carrom Federation)",
+      "purpose": "Supports doubles seating, striker flicks, queen coverage and an example of scoring; players should use one agreed version."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Seat partners across the board",
+      "paragraphs": [
+        "In doubles, partners sit opposite one another, with opponents on the other two sides. Every player sees a different line, but each team shares a colour and an aim. Before anyone breaks, name the teams and decide whether this match will use the rules printed for it or the house rules that everyone already knows.",
+        "Check that the board is level and the striker slides. Use only the board’s usual powder and keep hands clear of the playing area when another person is shooting. Each player should take a comfortable seated position where the striker can be flicked from the baseline. The cited rules require a flick rather than a push and ask players to stay in their position."
+      ]
+    },
+    {
+      "heading": "Agree what counts before the break",
+      "paragraphs": [
+        "Carrom rules are easy to mix across households and tournaments, especially the number of points or boards in a match. Pick one published ruleset or write down three house decisions: how a foul is returned, how long a team continues after pocketing, and when the match ends. The 2024 handout says it draws on International Carrom Federation rules, but also says its rules can change without notice.",
+        "For a relaxed match, keep the essential sequence consistent: a team that pots a coin continues under the selected rule; the queen has to be covered by one of that team’s coins; and a striker foul is handled the same way each time. A neutral scorekeeper can read a disputed clause instead of stopping to invent a fresh ruling."
+      ]
+    },
+    {
+      "heading": "Treat the queen as a two-part play",
+      "paragraphs": [
+        "The red queen is not simply another coin to pocket and forget. In the cited rules, a player must first pocket one of their own coins, may then pocket the queen, and must cover it by sinking one of their own coins on the next shot. If that cover does not happen, the queen returns to the centre. Read the rules your group chose because informal play may phrase the sequence differently.",
+        "For a first match, have a teammate announce “queen” and “cover” when those moments arrive. It makes the sequence visible and helps the other team follow. Do not celebrate the pocket until the cover is complete. The tactical question is whether your team can leave its next coin in a position that makes covering possible."
+      ]
+    },
+    {
+      "heading": "Aim for control, not a lucky shot",
+      "paragraphs": [
+        "Choose a finger flick that feels comfortable, but do not push the striker across the board. Start with a gentle straight line toward a nearby coin, then try a cushion shot where the striker rebounds from a side rail. You are learning how angle and force affect a shot, not trying to imitate a tournament player’s power.",
+        "Doubles makes shot selection conversational. Before your turn, your partner can point out a useful target or mention that a direct pocket might expose the queen. Keep the advice brief so it does not become pressure. A miss can still change the board by moving a coin away from an opponent’s easy line."
+      ]
+    },
+    {
+      "heading": "Finish the board with a shared score",
+      "paragraphs": [
+        "Track which colour cleared first, whether the queen was covered, any returned coins, and the calculation required by your chosen rules. The 2024 handout describes points based on the opponent’s coins left, plus a queen bonus in some circumstances, and a match limit. Do not combine those details with another rules version.",
+        "After the last shot, each player should be able to explain the result in one sentence. If the group disagrees, pause and check the rules before resetting the board. Then swap sides or partners for another round. A board that felt simple from one seat can look completely different when you have to plan with a teammate opposite you."
+      ]
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

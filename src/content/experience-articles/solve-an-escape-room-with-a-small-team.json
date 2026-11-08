@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "solve-an-escape-room-with-a-small-team",
+  "slug": "solve-an-escape-room-with-a-small-team",
+  "title": "How can a small team solve an escape room without talking over each other?",
+  "description": "Give an escape-room team clear roles, a shared clue area and a steady hint policy so discoveries turn into useful progress.",
+  "intent": "A cooperative approach to clue sharing, communication and pacing for a first escape-room visit with a small group.",
+  "sections": [
+    {
+      "heading": "Agree on the rules and the room boundaries",
+      "paragraphs": [
+        "Before the timer starts, listen to the game guide’s explanation of the room, hint system and boundaries. The Escape Game’s overview describes the guide as the person who introduces the mission, rules and hints, and notes that the opening moments can feel overwhelming. Ask about anything unclear before entering, especially what may be touched or moved and which objects are scenery.",
+        "Treat props as puzzle materials only when the room’s instructions indicate they are. Never force a lock, climb furniture, reach into unsafe spaces or dismantle fixtures. If a mechanism seems broken or an object is genuinely stuck, pause and tell the guide. A good team follows the operator’s safety rules and uses the hint channel rather than trying to overpower a puzzle."
+      ]
+    },
+    {
+      "heading": "Make every discovery visible to the group",
+      "paragraphs": [
+        "Create a shared place for found objects, notes and solved clues, following the room’s directions. When someone discovers a code, key or symbol, say where it came from and what has already been tried. This prevents teammates from repeating the same search and helps connect clues that were found in different corners. Keep solved items separate from items still in use.",
+        "If the room permits writing, record short facts: a number sequence, a color order, a symbol pairing or a lock type. State your reasoning briefly, then invite another person to test it. Avoid announcing every speculative connection as a conclusion; mark guesses as guesses so the team can revisit them without confusion."
+      ]
+    },
+    {
+      "heading": "Split searching while keeping puzzle work cooperative",
+      "paragraphs": [
+        "At the start, two people can scan different areas while one person organizes objects and watches for relationships. Keep groups small enough that everyone can hear discoveries. If one person finds a puzzle, they can ask a partner to help rather than silently working through it alone. A room designed for collaboration rewards sharing; isolated parallel solving may leave useful clues unseen by the people who need them.",
+        "Once a cluster of related clues appears, bring people together around it. Try each possibility methodically and name the result: what changed, what did not, and what remains to test. Do not let the fastest solver become the only person allowed to touch a lock or explain the story. Rotate who tries a mechanism so different teammates can contribute."
+      ]
+    },
+    {
+      "heading": "Use hints as information, not as a score",
+      "paragraphs": [
+        "Decide in advance when the team will ask for a hint. For example, ask when everyone has inspected the relevant materials and the same question has stalled. The room guide’s hint can point attention toward a missed connection without taking away the team’s chance to reason. If the group has different preferences about hints, a quick agreement prevents a later argument.",
+        "Ask for a focused clue: “Which items should we compare?” may be more useful than “What is the answer?” Listen together, then repeat the hint in your own words and decide what to test. A hint is not evidence that someone failed; it is another piece of information in a timed puzzle environment."
+      ]
+    },
+    {
+      "heading": "Keep time and finish with a short debrief",
+      "paragraphs": [
+        "Every few minutes, check whether the team is making progress or repeating the same attempt. If a code does not work, verify the order and the lock before trying many combinations. Communicate when you change areas, so no one assumes a clue is being handled. If the timer is close, ask the guide for help according to the room’s system rather than rushing unsafely.",
+        "After the game, compare what clues were easy to miss and which handoffs helped. Talk about the shared experience rather than judging who solved the most. A good follow-up is to ask the operator which puzzle depended on information the team overlooked, then use that lesson to plan a more balanced role split next time."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "What Is an Escape Room?",
+      "url": "https://theescapegame.com/blog/what-is-an-escape-room/",
+      "publisher": "The Escape Game",
+      "purpose": "Supports the mission, game-guide briefing and hint system, and notes that first-time players can find the opening moments overwhelming."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "find-a-permitted-geocache-near-home",
+    "build-a-tabletop-seismograph"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

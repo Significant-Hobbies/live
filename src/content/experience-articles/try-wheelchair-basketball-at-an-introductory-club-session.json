@@ -1,0 +1,57 @@
+{
+  "experienceSlug": "try-wheelchair-basketball-at-an-introductory-club-session",
+  "slug": "try-wheelchair-basketball-at-an-introductory-club-session",
+  "title": "What should you ask before your first wheelchair basketball session?",
+  "description": "Prepare for a wheelchair basketball taster by asking about the sports chair, transfer support, access, chair skills, and a pace that suits your experience.",
+  "intent": "Answer how a newcomer can join a wheelchair basketball club session with informed chair support and a beginner progression, without assuming prior chair use or ability.",
+  "sections": [
+    {
+      "heading": "Find a club that can orient a newcomer",
+      "paragraphs": [
+        "Wheelchair basketball has its own rules and movement skills, so a first session should be led by a club coach or experienced organiser. British Wheelchair Basketball’s Hoops for All programme describes introductory activity cards for chair skills, ball handling, passing, shooting, and game play, with adaptations for different ages and abilities. Ask a club whether it offers a beginner taster, what parts of the session are included, and whether there are different ways to take part if you are new to sports wheelchairs.",
+        "Explain what you need to know about access before you arrive: step-free entry, changing facilities, space for a support person, and how the venue handles equipment transfers. You do not need to share personal medical details to ask practical questions. If you use a wheelchair in daily life, ask whether you will use your own chair or a sports chair and how the coach wants to handle transfers. If you do not use a chair regularly, ask what support and orientation the club provides before you try moving at speed."
+      ]
+    },
+    {
+      "heading": "Learn the chair before adding the ball",
+      "paragraphs": [
+        "Start with the coach’s explanation of the sports chair: how it turns, how to stop, how to move backwards safely, and where the footplate and straps are. Do not assume that the chair operates like a daily-use chair; the setup and handling may be different. Let the coach check that the equipment is suited to you and adjusted properly. If it feels unstable, too large, or uncomfortable, stop and ask for an adjustment before moving into play. The club can explain whether its loan equipment suits your body and how a drill can be adapted.",
+        "Practise a few slow movements in open space before adding a ball. Keep fingers away from moving spokes and ask how the coach wants players to space themselves. If you need help with a transfer, follow the club’s safe process and use your usual support person where appropriate. No one should move or lift you or your chair without permission. A careful first five minutes can make the rest of the session more enjoyable and more predictable."
+      ]
+    },
+    {
+      "heading": "Build toward passing and a short game",
+      "paragraphs": [
+        "Once comfortable with basic movement, try stationary ball handling, passing with a partner, or shooting at a close distance. The coach can demonstrate how the chair and ball work together and introduce the rules that matter for a beginner. Wheelchair basketball has its own rules and fouls adapted for wheelchair use; you do not need to memorize them all before your taster. Ask for one cue at a time, such as where to look before a pass or how to slow down before a turn.",
+        "A short modified game can give you a feel for spacing and teamwork. Agree on a clear stop signal and speak up if the pace, contact, or chair movement becomes uncomfortable. The coach may change the number of players, court area, or drill. Adaptation is normal coaching, not a sign that someone has failed to keep up. You can take a break, observe a drill, or choose a role that does not involve active movement whenever you need to."
+      ]
+    },
+    {
+      "heading": "Review the fit of the session",
+      "paragraphs": [
+        "Afterward, think about which part felt accessible and which question remains: chair fit, transfer arrangements, coaching pace, or ball control. Share that feedback with the organiser before your next visit so they can prepare. If you enjoyed the session, ask about regular practice and what equipment you should bring; do not buy a sports chair before trying a club’s setup and getting informed advice.",
+        "A good first session may simply leave you more comfortable moving a sports chair and aware of what you want to practise next. British Wheelchair Basketball provides a club finder and introductory resources; your next action is to contact a local club and ask for a low-pressure taster where you can discuss chair fit and access before play begins."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Hoops for All",
+      "url": "https://learning.britishwheelchairbasketball.co.uk/mod/page/view.php?id=674",
+      "publisher": "British Wheelchair Basketball",
+      "purpose": "Supports the beginner progression across chair skills, ball handling, passing, shooting, and adaptable game play."
+    },
+    {
+      "title": "Rules",
+      "url": "https://www.iwbf.org/our-sport/rules",
+      "publisher": "International Wheelchair Basketball Federation",
+      "purpose": "Supports that wheelchair basketball has sport-specific rules and fouls adapted for wheelchair use."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "join-an-adapted-tee-ball-session",
+    "try-goalball-at-an-inclusive-sports-session"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

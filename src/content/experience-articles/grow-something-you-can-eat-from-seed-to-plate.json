@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "grow-something-you-can-eat-from-seed-to-plate",
+  "slug": "grow-something-you-can-eat-from-seed-to-plate",
+  "title": "Follow one edible crop all the way from seed",
+  "description": "Choose one locally suitable edible crop, start it from seed, keep a simple growing log and harvest and prepare it safely.",
+  "intent": "How can I complete one full edible growing cycle from sowing a seed to eating the harvest, even in a small garden or container?",
+  "sections": [
+    {
+      "heading": "Pick a crop for your climate and calendar",
+      "paragraphs": [
+        "Choose one crop that can finish before your weather, space or schedule changes. Look at seed packets and local extension advice for planting time, spacing and days to maturity; a date printed on a packet is an estimate for the conditions described, not a promise for every garden. Leaf lettuce, radishes and herbs can suit smaller spaces, while a fruiting crop such as tomatoes usually needs more sun and a longer season.",
+        "Oregon State Extension’s educator guide lists radishes among easy crops and gives roughly four weeks from seed to harvest in its regional material. It also notes that leaf lettuce and radish timing depends on cool-season conditions. Use that as an example, then check your own local climate guidance. If your season is too short for the seed-to-harvest window, select a faster crop or use a protected container where conditions allow."
+      ]
+    },
+    {
+      "heading": "Set up one clear growing place",
+      "paragraphs": [
+        "Use a pot, planter or patch with drainage and enough depth for the crop. Confirm that it receives the light the seed packet calls for and that you can reach water without a daily struggle. If soil history is uncertain or the site may be contaminated, resolve that before growing food; a container with suitable clean growing medium may be an option, but do not assume every container fixes a known hazard.",
+        "Write the crop name and sowing date on a label. Keep the packet so you can check how deep to plant, how far apart to space seeds and whether thinning is needed. For small seeds such as radishes, the OSU guide says to plant shallowly; its general rule is around twice the seed’s width. Follow the packet if it gives a more specific depth."
+      ]
+    },
+    {
+      "heading": "Record the seedling stage",
+      "paragraphs": [
+        "After sowing, note the date and check the soil regularly. Keep it consistently moist according to the seed directions without leaving the container waterlogged. When seedlings emerge, count how many appeared and compare spacing with the packet. If too many are crowded, thin them as directed rather than pulling at random and disturbing the roots you intend to keep.",
+        "A simple log makes the process visible: weather, watering, germination, leaf changes, pests and any adjustment. A photograph from the same angle each week helps you compare growth without pretending every plant should follow the same schedule. If nothing emerges, check seed age, depth, temperature and moisture before repeating the same setup."
+      ]
+    },
+    {
+      "heading": "Care for the crop until the harvest window",
+      "paragraphs": [
+        "Keep the project small enough to tend. Check moisture, remove weeds that compete for space and look for damage without applying a treatment you have not identified as appropriate for the crop and place. For a radish, compare the seed packet’s maturity window with the plant’s growth and sample one root when it seems ready. OSU’s regional guide describes radishes as a short-cycle spring or fall crop, but heat, soil and cultivar can change timing.",
+        "Do not leave the harvest until the plant is far past the eating stage just because the calendar says “four weeks.” Record the first date you notice an edible result and whether the texture is what you wanted. If the crop fails, the completion can be the careful diagnosis and a second sowing in a suitable season; do not present an unsuccessful plant as food."
+      ]
+    },
+    {
+      "heading": "Harvest, wash and close the loop",
+      "paragraphs": [
+        "Harvest with clean hands and a clean tool if one is needed. The FDA’s U.S. food-safety handout advises rinsing fresh produce under running tap water and scrubbing firm produce with a clean brush; it says not to rely on appearance alone for food safety. Follow local water advice if your tap water is not safe to drink. Keep damaged or questionable produce out of the meal.",
+        "Prepare the crop simply so you can notice its flavor and texture. For radishes, that might mean tasting a washed one plain and then adding slices to a meal; for lettuce, use clean leaves in a salad. Record how much you harvested and what you would change next time. This is one complete seed-to-plate cycle, not a guarantee of yield or a substitute for checking local garden safety."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "An Educator’s Guide to Vegetable Gardening",
+      "url": "https://extension.oregonstate.edu/catalog/em-9032-educators-guide-vegetable-gardening",
+      "publisher": "Oregon State University Extension Service",
+      "purpose": "Regional educational-garden resource supports crop selection, seed timing and radish/lettuce examples; not a planting calendar for every climate."
+    },
+    {
+      "title": "The Dangers of Raw Milk: Safe Food Handling, Four Simple Steps",
+      "url": "https://www.fda.gov/media/119383/download",
+      "publisher": "U.S. Food and Drug Administration",
+      "purpose": "May 2024 U.S. food handling guidance says rinse fresh produce under running water and scrub firm produce; follow local water-safety guidance."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "start-a-community-garden",
+    "grow-something-you-can-eat",
+    "explore-a-garden-through-scent"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

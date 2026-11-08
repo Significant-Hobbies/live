@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "give-a-ted-talk",
+  "slug": "give-a-ted-talk",
+  "title": "Shape one idea into a talk worth nominating",
+  "description": "Develop a clear talk by testing one original idea, building a tight example and choosing the right TED or local TEDx route without assuming selection.",
+  "intent": "How can I prepare to give a TED talk? This builds the idea and nomination case while distinguishing TED’s speaker process from locally curated TEDx events.",
+  "sections": [
+    {
+      "heading": "Decide whether you mean TED or TEDx",
+      "paragraphs": [
+        "The names refer to different speaking routes. TED’s own page invites speaker nominations through a central form and says nominations are reviewed by its selection team. TEDx events are independently curated by local volunteer teams; TED says there is no central TED application for a TEDx slot. A local team may publish a form, but many do not accept unsolicited pitches. Start by deciding which stage you mean and check its official current process.",
+        "A talk on a large stage is not guaranteed by wanting one. TED’s guidance says selection centers on an idea the speaker is actively working on, not merely a personal profile or a polished résumé. For TEDx, the team makes its own selection. Approach a nomination as a clear case for why this specific idea could matter to an audience, not as a request for a career reward."
+      ]
+    },
+    {
+      "heading": "Write the idea in one sentence",
+      "paragraphs": [
+        "Try a sentence that states what you believe and why it changes how a listener might understand something. “I am passionate about education” is a subject; “a city library’s quietest room taught us how to redesign a noisy classroom” points toward an argument and evidence. Ask a listener who knows nothing about your work to repeat the idea in their own words. If they return only the topic, make the claim more specific.",
+        "Find the evidence behind the idea: a project you have done, a question you have investigated, a practice you can demonstrate or a perspective you can defend responsibly. Separate what you have observed from what you infer. If a claim depends on data, verify its source and date. A personal anecdote can open the door, but it should not carry a claim beyond what it can support."
+      ]
+    },
+    {
+      "heading": "Build a talk around one turn",
+      "paragraphs": [
+        "Map the talk in a few beats: the question, the usual assumption, the example that complicates it, the insight, and the consequence. A good structure need not follow a formula, but a listener should know why each beat follows the last. Remove examples that merely repeat the point. If a story is vivid but does not help the audience understand the idea, keep it for another talk.",
+        "Use a physical object, chart or demonstration only if it makes the idea clearer. Rehearse without slides first; this reveals whether the argument works in speech. Then add a slide only when it carries information that would be difficult to say or remember. Avoid slides that duplicate your spoken sentence word for word."
+      ]
+    },
+    {
+      "heading": "Make the case to the right team",
+      "paragraphs": [
+        "For a TED nomination, follow the official nomination form and give a precise explanation of why the speaker and idea fit. For TEDx, identify a particular local event whose community and published themes fit the idea; use its own submission route only if it publicly invites nominations. TED’s guidance says some TEDx events accept applications and some do not. Do not pay a purported coach or intermediary for a guaranteed slot; TED says speakers never pay to speak at a TEDx event.",
+        "Keep a short pitch focused on the claim, evidence, intended audience and why you can speak responsibly about it. A long biography can obscure the idea. If the event requests a form, follow its format exactly. One carefully matched nomination is more useful than sending the same generic pitch to many events."
+      ]
+    },
+    {
+      "heading": "Rehearse for clarity and control",
+      "paragraphs": [
+        "Time the talk aloud, not just by estimating word count. Record a run and mark where you rush, repeat the same idea or lose the audience in a technical term. Ask a listener to note the sentence that stayed with them and the place they became confused. Revise around that feedback while preserving your natural speaking voice. TED says its speaker team works with selected speakers well in advance; a TEDx team’s preparation varies by event.",
+        "The next step is to write the one-sentence idea and give a five-minute version to a small audience. Ask what they think the idea is, what evidence they remember and what question remains. Then decide whether to develop the full talk, nominate yourself for TED, or check whether a nearby TEDx team is inviting pitches. Selection is uncertain; the practice of making the idea clear is within your control."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Speaking at TED",
+      "url": "https://www.ted.com/about/conferences/speaking-at-ted",
+      "publisher": "TED",
+      "purpose": "Supports TED’s speaker nomination process, TEDx distinction and explanation of talk development."
+    },
+    {
+      "title": "Speaking at a TEDx event",
+      "url": "https://www.ted.com/tedx/speaking-at-tedx",
+      "publisher": "TED",
+      "purpose": "Supports independent local TEDx curation, variation in application policies, idea-centered selection and no speaker fees."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "get-featured-in-a-major-publication",
+    "start-a-podcast",
+    "compose-an-original-piece-of-music"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

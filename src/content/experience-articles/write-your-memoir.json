@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "write-your-memoir",
+  "slug": "write-your-memoir",
+  "title": "Shape a Memoir Around One Question You Can Answer",
+  "description": "Turn a life story into a focused memoir by choosing a theme, building scenes, checking memory against records, and protecting other people.",
+  "intent": "Gives a memoir writer a bounded structure for turning recollections into scenes while marking uncertainty and respecting other people’s privacy.",
+  "sections": [
+    {
+      "heading": "Choose the thread, not the whole life",
+      "paragraphs": [
+        "A memoir is not a complete inventory of every year. Begin with a question that has tension and change: What did leaving home teach me about belonging? How did a family recipe change as people moved? What did caring for someone reveal about work and love? A focused question gives you permission to omit years that do not deepen the answer.",
+        "Make a two-page timeline with turning points, then circle the few moments where your understanding changed. Those moments can become the backbone of the book. For each, jot down what you wanted then, what stood in the way, and what you know now. That gap between the earlier self and the narrating self is often where a memoir gains shape."
+      ]
+    },
+    {
+      "heading": "Draft scenes with sensory anchors",
+      "paragraphs": [
+        "A scene lets a reader inhabit a specific moment. Start with a concrete place, an action, and a choice: the wet bus stop where you decide not to call, the kitchen table where a story is finally told. Include only details you remember clearly or can verify. A small physical anchor—the chipped cup or the sound of a lift door—can help a scene feel specific without invented drama.",
+        "Try drafting one scene in present-tense action, then add a short reflection afterward. What did you believe in that moment? What does the adult narrator understand now? If you explain the meaning before the scene happens, the reader has little room to discover it with you. Let the action carry some weight."
+      ]
+    },
+    {
+      "heading": "Separate recollection from documentation",
+      "paragraphs": [
+        "Memory is meaningful, but it can be incomplete or change over time. Mark uncertain dates and details in the draft rather than quietly filling gaps with what seems plausible. Then check available evidence: calendars, letters, photographs, public records, or a conversation with someone who was there. A document can confirm a date while leaving a feeling or motive uncertain; say so plainly.",
+        "If you interview relatives for your memoir, begin with a practical open question such as “What do you remember about that move?” and leave room for the answer. Keep notes about who said what and when; an interview is another perspective, not an automatic correction to your own memory. The Library of Congress family-history guide advises asking permission before recording and notes that a recording may later be transcribed or shared. It does not prescribe detailed questioning or listening methods, so treat the sample prompt here as your own starting point and adapt it to the person and conversation."
+      ]
+    },
+    {
+      "heading": "Give other people agency and privacy",
+      "paragraphs": [
+        "A memoir can include people who did not choose to publish their stories. Decide what is necessary to your account and what is merely exposing. Change or omit identifying details only with care; do not present a composite or altered scene as literal fact. If someone shares an account privately, ask what use they agree to and whether they want to review how their words appear.",
+        "Before recording, explain what you hope to do with the conversation and ask what the person is comfortable with. Make it easy to pause, skip a subject or stop. Permission to record is separate from permission to publish sensitive material, so revisit the conversation if your use changes. If someone asks for a boundary around a story, consider whether the book truly needs that material."
+      ]
+    },
+    {
+      "heading": "Revise for meaning, not chronology",
+      "paragraphs": [
+        "After drafting a few scenes, arrange them by emotional logic. A later scene may belong earlier if it gives context; a childhood memory may be most powerful after the reader sees its adult consequence. Keep a margin note for each scene: what does this change, reveal, or complicate? If the answer is “nothing,” the scene may be useful elsewhere or not belong in this book.",
+        "Choose one theme and write a one-sentence description of the memoir for yourself. Then draft three scenes that test it, including one memory you are uncertain about and one involving another person’s privacy. Your next action is to mark which details are recalled, sourced, or still unclear before you polish sentences."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Oral Histories - Family History for Kids",
+      "url": "https://guides.loc.gov/family-history-for-kids/interviews",
+      "publisher": "Library of Congress",
+      "purpose": "The brief page advises asking an older relative before recording and notes that recordings may be transcribed and shared; it does not support a detailed interview method."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "keep-a-journal-for-a-full-year",
+    "record-a-conversation-with-an-elder-and-preserve-it",
+    "write-a-book"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

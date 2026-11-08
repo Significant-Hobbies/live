@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "start-a-podcast",
+  "slug": "start-a-podcast",
+  "title": "Plan a podcast pilot that can become a repeatable show",
+  "description": "Shape a first podcast episode around one clear listener question, record a short pilot and check its sound before choosing a release schedule.",
+  "intent": "How do I find a sustainable shape for a new podcast? This focuses on the pilot episode and repeatable editorial format rather than equipment shopping.",
+  "sections": [
+    {
+      "heading": "Write the listener question first",
+      "paragraphs": [
+        "A show idea such as “conversations about design” is a subject area, not yet an episode. Narrow it to a question a listener might ask: how does a small café decide what to put on its menu, or what makes a neighborhood street comfortable to walk? A strong premise lets you explain why this episode belongs in the show and what a listener will leave knowing. Write the question in one sentence and use it to decide whether a guest, a reported segment or a solo explanation fits.",
+        "Make a list of five possible episode questions. If the list quickly turns into the same conversation with different guests, add a recurring point of view or format. For example, each episode could compare an expert explanation with a concrete object or decision. This editorial choice matters more at the start than a polished logo."
+      ]
+    },
+    {
+      "heading": "Pilot the smallest complete version",
+      "paragraphs": [
+        "Record one short episode with an opening, a main section and a clear ending. The opening should orient a new listener without a long biography; the main section should answer the question; the close can name one next step or source. Apple Podcasts for Creators describes a trailer as a short preview of the show and a full episode as its complete content. A trailer can introduce the idea, but it does not replace testing whether you can make a satisfying full episode.",
+        "Draft beats rather than a script if you want a conversational sound: opening premise, three examples, one complication, summary. If the subject needs exact numbers or wording, script those passages and mark them for verification. Keep a clean copy of the recording and write down the date, guest names, titles and any permission agreements."
+      ]
+    },
+    {
+      "heading": "Listen for the room, not just the microphone",
+      "paragraphs": [
+        "A quiet room with soft furnishings often matters more than a complicated setup. Record a minute while speaking at the distance you expect to keep, then listen on headphones. Check whether the voice is clear, whether traffic or a refrigerator competes, and whether the room echoes. A small dynamic microphone may help reject some room sound, but microphone type cannot repair a noisy space or inconsistent distance. Try the same passage from two positions before buying gear.",
+        "If a guest joins remotely, record a separate local track if the setup allows it, and agree beforehand on how the recording will be used. Ask them to state their name and preferred description at the beginning. Keep a backup and mark the time whenever you hear a strong interruption, a factual uncertainty or a passage you may need to edit."
+      ]
+    },
+    {
+      "heading": "Edit for comprehension",
+      "paragraphs": [
+        "Remove repeated starts and distractions that interrupt meaning, but do not cut every pause until the conversation sounds mechanical. A short silence can help a listener absorb a point. Use a transcript or rough time-coded notes to find sections that repeat the same information. If the episode depends on music, use audio you have rights to use and check the terms for the specific use; a song heard in a podcast has separate permissions questions from an original spoken recording.",
+        "Listen once on headphones and again on ordinary speakers or a phone. Those are different checks: headphones reveal clicks and room noise, while a small speaker reveals whether speech remains intelligible. Ask one person who is not invested in the project to tell you the episode’s central point after listening. If they cannot, simplify the structure before polishing."
+      ]
+    },
+    {
+      "heading": "Decide whether the format is repeatable",
+      "paragraphs": [
+        "After the pilot, note how long research, booking, recording and editing actually took. The test is whether you can repeat the process with available time, not whether you can publish a burst of episodes in a week. A solo format may be sustainable but demand careful fact checking; interviews can bring fresh perspectives but require outreach, scheduling and consent; a narrative format may need more reporting and editing. Choose the trade-off you can maintain.",
+        "Apple’s creator guidance says a show using an RSS feed needs at least one episode to be available in its directory, and it recommends clear episode metadata. Treat that as a distribution detail, not a reason to rush the pilot. Before publishing, write a one-paragraph description and make a list of the next three episode questions. Your next action is to record a rough pilot and ask a listener what they understood."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Create an episode",
+      "url": "https://podcasters.apple.com/support/825-how-to-create-an-episode",
+      "publisher": "Apple Podcasts for Creators",
+      "purpose": "Supports the distinctions among full, bonus and trailer episodes and the basic RSS episode metadata guidance; not a universal platform policy."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "record-a-public-domain-audiobook-chapter",
+    "record-a-place-as-a-sound-portrait"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

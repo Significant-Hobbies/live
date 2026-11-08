@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "visit-a-country-you-know-nothing-about",
+  "slug": "visit-a-country-you-know-nothing-about",
+  "title": "Go somewhere unfamiliar with a plan for learning, not collecting",
+  "description": "Turn a first visit to an unfamiliar country into a respectful learning project: prepare the essentials, follow one local thread, and stay curious.",
+  "intent": "How can I visit a country I know little about with enough preparation to travel responsibly, while avoiding the assumption that one trip will explain a whole culture?",
+  "sections": [
+    {
+      "heading": "Begin with one honest question",
+      "paragraphs": [
+        "“I know nothing” is a useful admission, but do not make the country into a blank canvas for your imagination. Choose one question that can be explored through ordinary encounters: How do people get around this city? What foods are associated with this region? How does a public museum tell the history of a place? What languages will I hear in the neighborhoods I visit? A narrow question gives the trip a shape without pretending that a short visit can summarize a nation.",
+        "Start with sources created by people and institutions in the destination: a national or municipal tourism office, public museum, transit authority, local newspaper, library, or cultural organization. Read more than one perspective. A tourism page can help with visitor logistics but may emphasize attractions; a museum can offer historical context but cannot stand in for contemporary life. Write down what you still do not know so that curiosity stays open rather than turning into a checklist of stereotypes."
+      ]
+    },
+    {
+      "heading": "Do the practical homework first",
+      "paragraphs": [
+        "Before booking, check destination-specific travel advice from your own government and official information from the destination. Requirements for passports, visas, medication, health precautions, and local law depend on your citizenship, route, and circumstances. The UK Foreign, Commonwealth & Development Office checklist, for example, tells British travelers to research destination advice, entry rules, health guidance, insurance, and a backup plan. Those instructions are not a substitute for the rules that apply to travelers of other nationalities.",
+        "Make a simple offline note with your lodging address, arrival route, emergency contacts, insurance details, and a way to access money if a phone or payment card fails. Save a copy without putting sensitive identity information somewhere public. Confirm how you will get from the airport or station to your first night’s lodging before arrival; being tired in an unfamiliar place is a poor moment to improvise every detail."
+      ]
+    },
+    {
+      "heading": "Build a small, varied first itinerary",
+      "paragraphs": [
+        "Choose one neighborhood walk, one public cultural site, one ordinary errand, and one period with no plan. A public market, library, bus route, or waterfront can teach you about a place’s daily rhythms, but observe quietly and respect signs about photography or access. Pay for what you use, ask before photographing people, and avoid treating someone’s home, worship, or work as a performance for visitors.",
+        "For a three-day example, use the first day to settle in and learn your nearest transit connection, the second for one museum or historical site plus a meal nearby, and the third for a different district or a day trip chosen from an official source. The exact places depend on your destination. Resist adding a second country merely to make a map look more ambitious; time to revisit a street or speak with a guide can yield a more thoughtful experience than another border crossing."
+      ]
+    },
+    {
+      "heading": "Travel in a way that respects the host place",
+      "paragraphs": [
+        "UNESCO’s World Heritage Centre glossary describes sustainable tourism in terms of social, environmental, and economic impacts, including host communities. Translate that broad principle into choices you can observe: follow local access rules, avoid buying souvenirs made from protected wildlife or cultural objects, choose businesses whose practices you can understand, and listen when a guide or community organization explains limits on visits. Do not assume that a purchase or a photo automatically benefits local people.",
+        "If you visit a sacred or culturally important site, read its posted guidance, dress and behave accordingly, and do not interrupt a ceremony for a better view. Learn a few polite phrases where possible, while recognizing that language varies across regions and communities. If someone does not want to talk or be photographed, accept that immediately. Travel is an invitation to learn, not an entitlement to access."
+      ]
+    },
+    {
+      "heading": "Bring home questions, not a verdict",
+      "paragraphs": [
+        "Keep a short field note each evening: one thing you observed, one interpretation you are unsure about, and one question to check later. Distinguish what an official sign or guide said from what you inferred. A single conversation is one person’s view; a brief trip is only a sample of a much larger place. If you want to tell friends about the journey, use specific descriptions—what you ate, saw, or learned—rather than statements about what an entire country is “like.”",
+        "At the end, write one thing you would read or learn before returning and one assumption you had to revise. That follow-up could be a book by a local author, a museum collection, or a deeper visit to one region. The practical next step is to select your question and identify the official destination and home-government sources you will check once you choose a country."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Foreign travel checklist",
+      "url": "https://www.gov.uk/guidance/foreign-travel-checklist",
+      "publisher": "Foreign, Commonwealth & Development Office, UK Government",
+      "purpose": "Supports destination-specific checks for travel advice, entry requirements, health, insurance and backup plans for British travelers; it is explicitly not universal advice for other nationalities."
+    },
+    {
+      "title": "Sustainable Tourism",
+      "url": "https://whc.unesco.org/en/glossary/376/",
+      "publisher": "UNESCO World Heritage Centre",
+      "purpose": "Supports the framing of tourism as having social, environmental and economic impacts that include host communities; it does not certify particular businesses or destinations."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "visit-all-50-us-states",
+    "live-somewhere-for-more-than-a-tourist",
+    "make-a-best-friend-in-a-foreign-country"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

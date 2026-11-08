@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "cage-dive-with-great-white-sharks",
+  "slug": "cage-dive-with-great-white-sharks",
+  "title": "How to choose a responsible shark-cage trip",
+  "description": "Compare shark-cage operators by permit status, animal policy, cancellations and safety questions, while keeping sighting expectations realistic.",
+  "intent": "Answer how to evaluate a shark-cage operator, focusing on current South African permit checks and non-guaranteed wildlife viewing.",
+  "relatedExperienceSlugs": [
+    "dive-the-blue-hole-in-belize",
+    "scuba-dive-somewhere-extraordinary",
+    "see-the-northern-lights-in-iceland-or-norway"
+  ],
+  "sections": [
+    {
+      "heading": "Treat it as wildlife viewing with a regulated operator",
+      "paragraphs": [
+        "A cage does not make the sea predictable or remove every risk. It is one part of an organized vessel trip in which weather, wildlife, crew decisions, equipment, and passenger behavior all matter. Your goal is to observe an animal on its terms, not to force a close encounter or demand a photograph.",
+        "If you are considering a trip in South Africa, use the Department of Forestry, Fisheries and the Environment (DFFE) cage-diving permit page as the starting point for checking the exact operating company and location. The DFFE page publishes permit-holder information and points to the Threatened or Protected Marine Species Regulations published in 2017. Those regulations repealed earlier rules; do not treat a 2008 text or this summary as a statement of every requirement currently in force. Ask the operator which authority-issued permit covers the trip, the designated area and vessel, and confirm those details with DFFE if anything is unclear."
+      ]
+    },
+    {
+      "heading": "Verify the company you will board with",
+      "paragraphs": [
+        "Match the exact company name and departure location to the DFFE permit-holder information, and ask whether the company itself operates the boat or sells on behalf of another operator. Confirm which vessel and designated area the permit covers. A permit listing is a prompt for a current check, not a guarantee about a particular booking or a substitute for confirming the document’s validity with the department.",
+        "Ask what training and supervision the crew provides, whether passengers enter the cage or observe from the boat, how the cage is attached and checked, and what the crew expects from guests in the water. You do not need to inspect equipment yourself; the point is to understand the briefing, supervision, and your choice to remain on board."
+      ]
+    },
+    {
+      "heading": "Ask about animal policy and sighting expectations",
+      "paragraphs": [
+        "Ask the operator to explain the animal-interaction approach in terms of the permit conditions that apply to its trip. The 2017 South African Gazette contains specific provisions for white-shark cage-diving permits and restricts activities such as leaving the cage to interact with sharks; rules or permit conditions may have changed since publication, so verify current instructions with DFFE and the operator. Do not rely on a travel blog’s summary of baiting or chumming rules.",
+        "No operator can promise a wild animal will appear on a particular day. Ask what happens if there are no sightings, whether a reschedule or refund policy applies, and how weather cancellations work. Read the written terms before booking. A guarantee that sounds too absolute deserves scrutiny, especially if it implies control over wildlife."
+      ]
+    },
+    {
+      "heading": "Decide what participation means for you",
+      "paragraphs": [
+        "If your main aim is to see a shark, viewing from the boat may be enough. If entering a cage is part of the appeal, ask what physical movements are required, how long people typically wait, and what happens if you feel uncomfortable once underway. If you have a health concern, mobility need, or anxiety about cold water or confinement, speak directly with the operator before paying and consult an appropriate professional where needed.",
+        "Do not assume a scuba certification is required or that a cage trip is the same as a scuba dive; the format depends on the specific operator and destination. Describe your comfort level accurately. A good company will explain the difference and let you choose without pressure."
+      ]
+    },
+    {
+      "heading": "Make a plan that leaves wildlife in charge",
+      "paragraphs": [
+        "Read the operator’s safety and cancellation information, bring only what the crew allows, listen to the briefing, and follow directions about when to enter, exit, or remain in the cage. Do not touch or feed an animal or interfere with the crew’s work. Make sure anyone in your group agrees on the plan, including what to do if one person decides to stay on the boat.",
+        "Your first step is to compare two currently permitted local operators using the same questions: permit, trip format, welfare policy, weather decisions, and no-sighting terms. Choose the one that answers plainly and accepts that a shark encounter is never something a guest can order."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "BBWW + WSCD permits",
+      "url": "https://www.dffe.gov.za/oc_permits_bbww.wscd",
+      "publisher": "South African Department of Forestry, Fisheries and the Environment",
+      "purpose": "Department source for permit-holder information and current verification questions; article does not infer present legal requirements from older regulations."
+    },
+    {
+      "title": "Threatened or Protected Marine Species Regulations, 2017 (Government Gazette No. 40876)",
+      "url": "https://www.dffe.gov.za/sites/default/files/legislations/nemba10of2004_threatenedoprotectedmarinespecieregulations_gg40876_0_0.pdf",
+      "publisher": "South African Department of Forestry, Fisheries and the Environment / Government Gazette",
+      "purpose": "Historical primary legal text opened for the article correction; supports the 2017 cage-diving permit chapter and repeal of previous regulations, not a claim of unamended law in 2026."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

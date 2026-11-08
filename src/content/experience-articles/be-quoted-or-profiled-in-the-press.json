@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "be-quoted-or-profiled-in-the-press",
+  "slug": "be-quoted-or-profiled-in-the-press",
+  "title": "Become a useful source before a reporter needs one",
+  "description": "Prepare a clear, verifiable point of view and make it easy for a journalist to assess your expertise without chasing publicity or paying for coverage.",
+  "intent": "How can a person with real expertise become a credible potential source for journalists and handle an interview responsibly, without turning it into a PR stunt?",
+  "sections": [
+    {
+      "heading": "Start with the story you can actually support",
+      "paragraphs": [
+        "A press mention begins with relevance, not a polished biography. Write down the question you can answer from direct knowledge, the people it affects, and what you can verify. A local organizer might explain how a service works on the ground; a researcher might clarify the limits of a finding; an independent craftsperson might describe a change in materials. The strongest point is usually narrower than ‘I am an expert in everything about this field.’",
+        "Separate what you observed from what you inferred. Keep one recent example and one source or document that can substantiate a factual statement. If the story needs legal, medical or financial advice, stay within your actual qualifications and point the reporter toward an appropriate specialist. Do not make a claim about a community or client that you cannot responsibly represent."
+      ]
+    },
+    {
+      "heading": "Make a concise source note",
+      "paragraphs": [
+        "Prepare a short note with your name, role, location or relevant scope, the topic you can address, and a reliable way to reach you. Add two or three specific questions you can answer and a plain sentence about what falls outside your expertise. A reporter sorting a crowded inbox can quickly tell whether you fit a story from this information.",
+        "Keep the note factual. Use the credential or experience that supports the point, not a string of adjectives. If you have a conflict of interest, financial stake or organizational role, disclose it plainly. Update the note when your role changes. A short, accurate note is more useful than an elaborate press kit that makes a small project sound like a national institution."
+      ]
+    },
+    {
+      "heading": "Find the right route to a reporter",
+      "paragraphs": [
+        "Read the publication or program before reaching out. A regional outlet may want a nearby example; a trade publication may want technical detail; a podcast host may need a conversational guest who can explain a process. Look for the reporter’s recent work and use the contact route they publish. Send a compact pitch that names the timely question, why your experience fits, and when you can respond.",
+        "If a journalist asks for a quote, answer the question directly before adding background. Offer a short, accurate sentence and a source for any number or claim. Ask about the deadline and clarify which parts are on the record before sharing sensitive information. Do not assume you can approve the whole story or retract a statement later; if the ground rules are unclear, pause and ask before speaking."
+      ]
+    },
+    {
+      "heading": "Handle the interview with care",
+      "paragraphs": [
+        "Before an interview, identify the one point you hope the audience understands and the evidence behind it. Practice explaining it in everyday language, then prepare for the obvious follow-up: who benefits, what could go wrong, and what is not known. If you do not know, say so. Correct a factual mistake clearly rather than filling the silence with speculation.",
+        "The Public Relations Society of America’s ethics code is written for PRSA members, not a universal journalism rulebook. It emphasizes accuracy and disclosure in communications, and the organization advises against pay-for-play arrangements in its ethics guidance. Treat that as a professional standard for your own outreach: do not offer money in exchange for earned editorial coverage, and do not present sponsored placement as independent reporting."
+      ]
+    },
+    {
+      "heading": "Build credibility whether or not you are quoted",
+      "paragraphs": [
+        "A pitch may receive no answer, or a story may change direction. That does not tell you whether your work matters. Keep the source note current, follow up once if the timing warrants it, and respect a clear no. If the reporter uses your material, check the published piece for factual errors and send a concise correction request when something material is wrong. Do not harass a journalist over an editorial choice.",
+        "Afterward, save the link and note what kind of question you were useful on. The next invitation may come through a colleague, a local association, a public event or an existing publication. Choose one publication or program whose audience matches your real knowledge, read a recent piece, and prepare a truthful two-paragraph note before you send anything."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "PRSA Code of Ethics",
+      "url": "https://www.prsa.org/professional-development/prsa-resources/ethics",
+      "publisher": "Public Relations Society of America",
+      "purpose": "Supports the article’s narrow statements about accuracy and disclosure in PRSA’s professional ethics code and the organization’s advice against pay-for-play; not described as a journalism code."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "publish-an-article-in-a-magazine",
+    "start-a-podcast",
+    "become-a-recognized-expert-in-your-field"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

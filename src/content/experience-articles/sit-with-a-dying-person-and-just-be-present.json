@@ -1,0 +1,57 @@
+{
+  "experienceSlug": "sit-with-a-dying-person-and-just-be-present",
+  "slug": "sit-with-a-dying-person-and-just-be-present",
+  "title": "Offer company without taking over the room",
+  "description": "Learn how to offer quiet, respectful company to someone near the end of life, follow their lead, and make space for privacy and rest.",
+  "intent": "A gentle guide to being present with a dying person by asking permission, staying with their pace, and supporting their choices rather than trying to fix the moment.",
+  "sections": [
+    {
+      "heading": "Ask what kind of visit would help",
+      "paragraphs": [
+        "Being present starts before you enter the room. Ask the person, or the person coordinating their care if they cannot answer, whether a visit is welcome, when it would work, and how long to stay. The invitation may be to sit quietly, talk, read aloud, listen to music, or help with one practical task. A visit should not become an obligation for someone who is tired, receiving care, or wanting privacy.",
+        "The National Cancer Institute’s end-of-life guidance, written for people living with and dying of cancer and their caregivers, notes that people may value company, conversation, reminiscence, or simply someone nearby, and it advises respecting privacy. That is a useful reminder, not a rule about what every person wants. Let the person choose the kind of company and accept ‘not today’ without taking it personally."
+      ]
+    },
+    {
+      "heading": "Let silence count as company",
+      "paragraphs": [
+        "You do not need to arrive with a speech. Sit where the person can see or hear you comfortably, introduce yourself if needed, and leave a pause. If they want to talk, listen without steering every sentence toward reassurance or a lesson. If they do not speak, ordinary quiet can be enough. You can offer a simple choice—‘Would you like me to stay a little, or would you rather rest?’—and follow the answer.",
+        "Avoid promises that you cannot control, such as telling someone that everything will be fine or that they will not be afraid. You can express care plainly: ‘I’m glad to be here with you,’ or ‘Would you like me to listen?’ If the person shares a fear or sadness, resist immediately correcting it. You are not responsible for changing the emotion; being willing to hear it may matter more than finding polished words."
+      ]
+    },
+    {
+      "heading": "Follow the person’s energy and boundaries",
+      "paragraphs": [
+        "Energy and attention may vary from one visit to another. A short visit that ends while the person is still comfortable can be kinder than waiting until everyone is exhausted. Watch for signs that the person wants to rest, and ask directly when you are unsure. Do not touch, adjust bedding, bring food, or move personal objects without permission or guidance from the care team. Medical needs belong with the person’s clinicians and caregivers.",
+        "If the person wants to reminisce, invite a story rather than prompting a performance. ‘What did you enjoy about that neighborhood?’ leaves room for their answer. NCI suggests shared memories and questions about defining moments as possible topics in its cancer-specific guide. The person may instead prefer current, everyday conversation or no conversation at all. Let their choice outrank your own wish to make the visit feel profound."
+      ]
+    },
+    {
+      "heading": "Protect privacy and care relationships",
+      "paragraphs": [
+        "Keep the visit private unless the person has clearly asked you to share something. Do not take photos, make a recording, post an update, or tell other people what you saw without consent. Ask the person or their designated contact before bringing another visitor. If you notice a care concern, tell the appropriate caregiver or clinical staff rather than trying to change medication or provide medical advice yourself.",
+        "The visit is also not a chance to resolve old family disagreements or ask for legal, financial, or spiritual decisions. If a practical request comes up, write it down only with permission and pass it to the right person. The patient’s own decisions and existing care plan should guide what happens. When you do not know whether an action is appropriate, pause and ask the person or responsible caregiver."
+      ]
+    },
+    {
+      "heading": "Leave with one concrete act of care",
+      "paragraphs": [
+        "Before you go, ask whether the person wants anything simple—water brought by a caregiver, a window adjusted if allowed, another visit, or quiet. Thank them for the time without asking them to comfort you. If the visit brings up grief or uncertainty for you, talk about your feelings with another trusted person, counselor, or support group rather than placing that burden on the person you visited. The next step can be a message to the caregiver asking whether another visit would be welcome, and then following through only if the answer is yes."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "End-of-Life Care",
+      "url": "https://www.cancer.gov/about-cancer/advanced-cancer/care-choices/care-fact-sheet",
+      "publisher": "U.S. National Cancer Institute",
+      "purpose": "Cancer-specific caregiver guidance supports companionship, listening, reminiscence, asking what would help, realistic encouragement, and respect for privacy; it does not prescribe how every dying person wishes to be visited."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "record-your-parents-life-stories",
+    "write-the-story-of-how-you-became-who-you-are"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

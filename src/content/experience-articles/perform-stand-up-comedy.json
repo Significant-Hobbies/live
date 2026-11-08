@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "perform-stand-up-comedy",
+  "slug": "perform-stand-up-comedy",
+  "title": "Build a short stand-up set from one clear point",
+  "description": "Shape a first stand-up set around one clear comic point, then test the writing aloud and learn from a small audience without chasing a perfect room.",
+  "intent": "Answer how to prepare a first stand-up set by structuring, rehearsing and testing material while treating audience response as information.",
+  "relatedExperienceSlugs": [
+    "perform-on-a-stage-in-front-of-a-crowd",
+    "write-and-perform-spoken-word-poetry",
+    "read-a-play-aloud-around-a-table"
+  ],
+  "sections": [
+    {
+      "heading": "Start from a real observation",
+      "paragraphs": [
+        "Write down a small moment that still bothers, surprises, or delights you. Then ask what you believe about it and what an audience might expect you to believe instead. A comic premise usually gains energy from that gap. Keep the target clear: joke about your own assumption, a shared inconvenience, or a system you can describe honestly. Avoid relying on a private person’s identifiable story without permission.",
+        "Do not begin by collecting punchlines from other comics. Make a page of raw observations, then circle the one you can explain in a sentence. If the topic needs extensive context, choose a smaller angle. A first set is a short conversation with the room, not a complete account of your life."
+      ]
+    },
+    {
+      "heading": "Write for the ear and the clock",
+      "paragraphs": [
+        "Say the premise aloud, then cut any phrase that exists only to explain the setup. Put the most important word near the end of the sentence so the audience can follow the turn. Write several possible tags or endings for the idea, then keep the one that feels natural when spoken. Mark pauses and emphasize only where the thought actually changes.",
+        "Time the set with a phone while standing. A page can feel brief and still run long once pauses and audience response enter. Prepare a version that ends cleanly even if a laugh lasts longer than expected. If you are given a strict time slot, plan to finish early rather than trying to squeeze in a final joke after the host signals you."
+      ]
+    },
+    {
+      "heading": "Practice the set as a performance",
+      "paragraphs": [
+        "Read it aloud once from the page, then again with less reliance on the page. Record a rehearsal and listen for places where you stumble, race, or explain the joke after it has landed. You do not have to memorize every syllable; know the sequence of ideas well enough to return if you lose your place.",
+        "Try the material for one trusted listener and ask where they were confused, not whether you are funny. If you have access to a beginner class or coached open mic, use it to test work in front of people. The Second City currently describes a student open mic as a setting for emerging stand-ups to test material with a supportive live crowd; availability and format vary by location and date."
+      ]
+    },
+    {
+      "heading": "Read the room without obeying every reaction",
+      "paragraphs": [
+        "One laugh does not prove a bit is finished, and one quiet room does not prove the idea is worthless. Write down exactly where people responded, where attention drifted, and what you changed in delivery. Separate the writing from the room: the venue’s noise, the audience’s familiarity with the topic, and the order of performers all shape what you hear.",
+        "After the set, choose a single revision. Clarify a confusing setup, cut a slow sentence, or test a different ending. Do not rewrite the whole routine based on one performance. If a joke targets someone else’s private experience or identity, examine whether the surprise depends on making them the cost of the laugh."
+      ]
+    },
+    {
+      "heading": "Choose a sustainable next performance",
+      "paragraphs": [
+        "Find a venue where the format and rules are clear, and read its signup and time-limit instructions before arriving. Bring a version of the set you can complete even if your mind goes blank; a written cue card can help if the venue allows it. Tell a friend where you will perform if that makes the night easier, but do not ask them to guarantee a reaction.",
+        "The next step is to choose one premise, write three possible endings, and rehearse them aloud. Then book a beginner-friendly night or a class that includes performance feedback. You will learn more from a small deliberate test than from waiting until the material feels perfect."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Comedy Classes & Workshops",
+      "url": "https://www.secondcity.com/find-a-class",
+      "publisher": "The Second City",
+      "purpose": "Opened current course/open-stage listing documenting writing and performance labs and a coached student open mic for emerging stand-ups; event availability varies."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

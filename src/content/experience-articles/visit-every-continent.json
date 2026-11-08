@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "visit-every-continent",
+  "slug": "visit-every-continent",
+  "title": "Define what counts before you start a seven-continent journey",
+  "description": "Choose a continent model, decide what counts as a visit, and design a record that includes a deliberate Antarctic expedition rather than a flyover.",
+  "intent": "How do I define and document a personal visit to every continent without letting the checklist choose the whole trip? This adds a clear counting rule and ethical record method.",
+  "sections": [
+    {
+      "heading": "Choose a continent model and write it down",
+      "paragraphs": [
+        "A common seven-continent model names Asia, Africa, North America, South America, Antarctica, Europe, and Australia. National Geographic’s education resource uses that grouping and explains that Europe and Asia are culturally distinguished despite sharing a large landmass. Other teaching traditions group land differently, so state your convention before you build a route.",
+        "Define whether “visit” means stepping onto land, spending a night, or having an intentional day of exploration. Choose a rule you can apply consistently. A flight that passes overhead or an airport connection usually does not feel like the kind of visit most people mean; write your own test rather than counting after the fact."
+      ]
+    },
+    {
+      "heading": "Make Antarctica a distinct project",
+      "paragraphs": [
+        "Antarctica is not a country stop on an ordinary multi-country trip. The Antarctic Treaty Secretariat says most tourism there is vessel-based and concentrated around the Antarctic Peninsula during austral summer. Plan it as a separate expedition with its own operator, environmental briefing, and contingency terms, rather than attaching it to an unrelated itinerary as a quick box to tick.",
+        "Ask how the proposed trip handles site guidance, wildlife rules, and changes to landing plans. Read current expedition documentation before booking and check any national notification requirements that apply to you. If a trip is not realistic in your current circumstances, leave the continent marked as a future goal instead of redefining “visit” silently."
+      ]
+    },
+    {
+      "heading": "Choose a personal reason for each region",
+      "paragraphs": [
+        "For each continent, write a question that makes you curious: how a city fits its coastline, what a local food market reveals, or how a museum tells a regional history. Then choose one place and one source close to that subject. A country list can be a useful index, but it cannot tell you what you want to learn there.",
+        "Try to balance famous landmarks with ordinary experiences and time to rest. Avoid building a schedule that requires constant border crossings to make the map look complete. Slow travel lets you notice local context and gives you more room to adapt when weather, access, or personal energy changes."
+      ]
+    },
+    {
+      "heading": "Keep a proof-of-visit record you will enjoy later",
+      "paragraphs": [
+        "Use a private journal, map, or scrapbook with the date, place, and one observation you want to remember. If you publish photos, ask permission before featuring local residents and do not reveal sensitive locations or personal data. A receipt or boarding pass may corroborate a journey, but the memory and your definition of a visit matter more than a document pile.",
+        "Include the sources you consulted and any limits you met. If you could not reach a place or a planned activity changed, record that honestly. A record that preserves uncertainty is more useful than a map colored in after a layover."
+      ]
+    },
+    {
+      "heading": "Let the checklist stay flexible",
+      "paragraphs": [
+        "An all-continent goal can take many years and change as your interests or the world change. Revisit your definitions if you discover that a category no longer reflects what you value, but keep a note of the change so the record remains transparent. You do not owe the list a rushed itinerary or a particular pace.",
+        "Your next action is to write the seven names in your preferred model, add your rule for what counts as a visit, and choose one question you hope to explore on the first continent."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Continent",
+      "url": "https://education.nationalgeographic.org/resource/Continent/",
+      "publisher": "National Geographic Education",
+      "purpose": "Supports the stated seven-continent model and clarifies the grouping convention used in this article."
+    },
+    {
+      "title": "Tourism and Non-Governmental Activities",
+      "url": "https://www.ats.aq/e/tourism.html",
+      "publisher": "Antarctic Treaty Secretariat",
+      "purpose": "Supports treating Antarctic tourism as a distinct vessel-based expedition with seasonal and visitor-guidance constraints."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "visit-all-seven-wonders-of-the-world",
+    "spend-a-week-in-antarctica",
+    "visit-all-50-us-states"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

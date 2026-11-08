@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "record-and-release-music-you-made",
+  "slug": "record-and-release-music-you-made",
+  "title": "Get the credits and permissions ready before release day",
+  "description": "Prepare a release packet for original music by confirming contributors, artwork and sample permissions, rights records, credits, and final metadata.",
+  "intent": "Answers how to prepare a finished original track for release, focusing on collaborator credits, permission checks and clean release information rather than recording technique.",
+  "sections": [
+    {
+      "heading": "Make one master record of the track",
+      "paragraphs": [
+        "Before choosing a release date, create a single document with the title, version, contributors, contact details and the file you intend to distribute. Use consistent names: “Quiet Harbor (radio edit)” should not quietly appear as “QuietHarbor_final2” on another platform. Store the final audio and artwork in clearly labeled folders, keep a dated copy of what was delivered, and preserve the project files or source recording somewhere backed up.",
+        "Write down who contributed to the composition, lyrics, performance, production, mixing, artwork and any guest appearance. These roles may be different people. Ask everyone how they want to be credited and confirm spelling, pronouns and links before release. If money or ownership is involved, discuss and record the agreement directly; this worksheet is a coordination aid, not a substitute for qualified legal advice."
+      ]
+    },
+    {
+      "heading": "Separate the song from the recording",
+      "paragraphs": [
+        "The U.S. Copyright Office explains that a recorded song may involve two distinct works: the musical composition, including lyrics, and the sound recording. Different people may own or license them. That makes a simple rights check useful: who wrote the underlying song, who controls this recording, and has each collaborator agreed on how the relevant work may be shared?",
+        "The Copyright Office guidance is U.S.-specific, and rights rules vary by jurisdiction. Do not assume that paying for a beat, using a sample pack, or crediting another artist grants every permission you need. If your track includes someone else’s composition or recording, identify the exact material and check the license or get permission from the rightsholder before distribution. Ask a qualified rights professional when the ownership or license is unclear."
+      ]
+    },
+    {
+      "heading": "Check the parts around the audio",
+      "paragraphs": [
+        "Release files include more than a song. Confirm the artwork is yours or licensed for the way it will be used; check names, photographs, fonts and logos. If a guest vocalist or performer appears, make sure the recording and public credit match your agreement. If there is a lyric sheet, video, translation or liner note, review those separately for names and permissions.",
+        "Listen through the delivered file from beginning to end and compare it with the version everyone approved. Check that the title and version are right, the opening and ending are intentional, and there is no accidental private conversation or unfinished take. This is a content check, not a demand for a particular loudness or technical setting. Use the distributor’s current file specifications for delivery."
+      ]
+    },
+    {
+      "heading": "Enter metadata like a future listener will find it",
+      "paragraphs": [
+        "Prepare a consistent title, artist name, contributor credits, release date, language, cover image and brief description. If your distributor requests identifiers or genre labels, follow its current instructions and avoid guessing. Search the artist name and title in the distributor’s catalog before delivery to catch duplicate pages or spelling mismatches. Keep a copy of what you submitted and the confirmation.",
+        "Choose a release date only after confirming what the distributor can support and how long review may take. Platforms, schedules, fees and delivery rules vary; do not promise a date until the distributor shows that release as accepted or scheduled. If the timing is not crucial, allow a buffer to correct an image, credit or rights issue without rushing collaborators."
+      ]
+    },
+    {
+      "heading": "Finish with a release checklist everyone can sign off on",
+      "paragraphs": [
+        "Ask each contributor to review their name, role, link and any agreed description of the track. Confirm that the artwork and audio are final, every borrowed element has a documented permission or license, and everyone knows which version is being released. Keep sensitive personal details out of public credits unless the person has chosen to share them.",
+        "After release, check that the page displays the right version, title and credits. Save a copy of the final listing and note any correction request the distributor requires. The next practical step is to send collaborators a one-page release packet with the track, artwork, draft credits and a deadline for corrections. A clear packet makes it easier to celebrate the music without leaving the important agreements to memory."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "What Musicians Should Know about Copyright",
+      "url": "https://copyright.gov/engage/musicians/",
+      "publisher": "U.S. Copyright Office",
+      "purpose": "Supports the U.S.-specific distinction between musical works and sound recordings and the need to use someone else’s protected work through an applicable permission, license, public-domain status or legal exception; not individualized legal advice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "record-a-song-and-release-it",
+    "compose-an-original-piece-of-music",
+    "learn-an-instrument-to-a-playable-level"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

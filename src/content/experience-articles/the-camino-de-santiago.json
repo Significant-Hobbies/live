@@ -1,0 +1,64 @@
+{
+  "experienceSlug": "the-camino-de-santiago",
+  "slug": "the-camino-de-santiago",
+  "title": "Test the Camino with a short Galician route choice",
+  "description": "Compare the San Xil and Samos variants of the French Way in Galicia, then plan a short first Camino visit around time, terrain and curiosity.",
+  "intent": "How can I choose an initial Camino segment or introductory visit by landscape, access and time? This is a short first experience, not a full-distance itinerary. Choose an initial Camino segment or introductory visit by landscape, access and time; distinct from planning a full-distance walk.",
+  "sections": [
+    {
+      "heading": "Choose a segment by what you want to experience",
+      "paragraphs": [
+        "A first Camino does not need to settle every question about distance or a future pilgrimage. Decide whether you want a day on a marked route, several walking days with an overnight stop, or a visit to Santiago that includes time to understand the pilgrimage. Your available time and access needs should determine the format.",
+        "For a walking segment in Galicia, the Xunta’s French Way page lists a San Xil option and a Samos option. It gives 155 km for the former and 162.2 km for the latter, describing both as medium difficulty. Those are regional route figures; they are not a casual weekend walk. Use the named stages to choose a smaller section and check the current map before booking."
+      ]
+    },
+    {
+      "heading": "Compare the two route options",
+      "paragraphs": [
+        "The San Xil route passes named places including O Cebreiro, Triacastela, Sarria, Portomarín, Melide and Arzúa. The Samos variant includes Samos and Pascais before joining the wider sequence. Compare the landscape and points of interest on the official map, then decide which stage fits the time and transport you actually have.",
+        "Do not assume the two variants differ only by scenery. Stage length, services, lodging and walking conditions can change the day. Use the Xunta route map as a planning start, and verify accommodation, transport and trail status with local providers close to your dates. Leave an arrival buffer so a missed connection does not force an unsafe late walk."
+      ]
+    },
+    {
+      "heading": "Try the rhythm before committing",
+      "paragraphs": [
+        "A short section lets you learn what a walking day asks of you: early departure, breaks, carrying essentials and arriving with energy for dinner. Choose one official stage and plan a conservative distance. If you have concerns about fitness or a health condition, speak with an appropriate professional; no generic guide can assess your personal suitability.",
+        "Wear familiar footwear and test your pack on local walks beforehand. Make a simple list of what you used and what you carried unnecessarily. Choose a stop with a fallback and a way to shorten the day. A first Camino encounter should teach you how the routine feels, not pressure you into completing a particular distance."
+      ]
+    },
+    {
+      "heading": "Keep the certificate question separate",
+      "paragraphs": [
+        "The Compostela is optional and belongs to a different decision than whether a short Camino visit is meaningful. The Cathedral’s Pilgrim Reception Office currently requires 100 continuous kilometres toward Santiago on a single recognized route for walkers or riders, with the final stage included; routes beginning outside Spain have a minimum Spanish distance. Do not infer that a short sample meets those conditions.",
+        "If certificate eligibility matters to your full plan, verify the current rules directly with the Cathedral’s Pilgrim Reception Office and ask about your route and credentials. The Xunta route page is useful for selecting a Galician segment but its credential introduction may use older shorthand. This guide does not promise a Compostela or interpret individual exceptions."
+      ]
+    },
+    {
+      "heading": "Let Santiago or the trail set the pace",
+      "paragraphs": [
+        "If your trip is a visit rather than a multi-day walk, spend time in Santiago’s historic centre and learn how the route arrives there. If you walk a segment, give yourself a final unhurried hour to reflect on the waypoints and what you noticed. The Camino can be approached as a route, a cultural encounter or a personal practice; the first visit need not decide which one it becomes.",
+        "Write down the stage, variant, weather and one moment you would remember. If the experience makes you want to continue, plan the next segment from current official maps and travel information. If you prefer a shorter future visit, that is a complete choice too. Leave room for local communities and other walkers by following signs and respecting shared spaces."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "The French Way",
+      "url": "https://www.caminodesantiago.gal/en/make-plans/the-ways/french-way",
+      "publisher": "Xunta de Galicia, official Way of Saint James in Galicia",
+      "purpose": "The Xunta lists the Galician French Way’s San Xil and Samos options as 155 km and 162.2 km respectively, with named places and stage information; those figures describe the regional route page, not a full Camino from France."
+    },
+    {
+      "title": "La Compostela: acreditación de la peregrinación",
+      "url": "https://oficinadelperegrino.com/peregrinacion/la-compostela/",
+      "publisher": "Pilgrim Reception Office, Cathedral of Santiago",
+      "purpose": "The Cathedral’s Spanish issuer page states current Compostela requirements; article includes a brief reminder to verify with the issuer but does not claim this short route earns the certificate."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "walk-the-camino-de-santiago-800km-across-spain",
+    "walk-a-labyrinth-or-pilgrimage-slowly"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

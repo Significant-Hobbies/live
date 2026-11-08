@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "join-a-facilitated-community-drum-circle",
+  "slug": "join-a-facilitated-community-drum-circle",
+  "title": "Find your place in a facilitated drum circle",
+  "description": "Join a facilitated drum circle by watching the leader’s cues, leaving rhythmic space, asking before borrowing an instrument, and choosing a simple pulse to begin.",
+  "intent": "How a newcomer can participate in a facilitated community drum circle through listening, cue-following, respectful instrument use and gradual rhythmic contribution.",
+  "relatedExperienceSlugs": [
+    "make-a-group-portrait-with-everyone-directing",
+    "share-a-childhood-game-across-generations",
+    "host-a-bring-one-object-story-circle"
+  ],
+  "sources": [
+    {
+      "title": "Explore Music 7: World Drumming, Facilitated Drum Circles",
+      "url": "https://curriculum.novascotia.ca/sites/default/files/documents/resource-files/Explore%20Music%207%20World%20Drumming.pdf",
+      "publisher": "Nova Scotia Department of Education and Early Childhood Development",
+      "purpose": "Supports the facilitator role, visible stop/start and dynamic cues, circle seating and basic group-drumming etiquette."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Choose a facilitated session, not a performance test",
+      "paragraphs": [
+        "A facilitated drum circle is a group activity shaped by a leader who helps the sound change and makes room for participants. It is different from a concert: you are not expected to arrive with a prepared solo. Ask the organizer whether instruments are provided, what kind of session it is, and whether beginners can simply listen for a while before joining.",
+        "The Nova Scotia world-drumming curriculum describes the facilitator as a guide and team-builder who uses clear verbal and nonverbal cues. It also distinguishes facilitated circles from culturally specific forms with prescribed parts. That distinction matters: if a session belongs to a particular cultural or ceremonial practice, follow its host’s protocol instead of assuming every drum circle works the same way."
+      ]
+    },
+    {
+      "heading": "Settle where you can see and hear",
+      "paragraphs": [
+        "A circle lets people see one another’s hands and makes it easier to notice when the group changes. Choose a seat where the facilitator is visible and where you do not block another person. If the drums are already placed, ask before moving or trying one. The curriculum’s etiquette notes say to ask permission before playing someone else’s drum and to remove rings, watches or bracelets for hand drumming.",
+        "If volume or vibration is uncomfortable, tell the host and ask about a quieter instrument, a seat farther from a loud drum, or a break. Some sessions include shakers or other percussion, and some may invite body percussion. You are allowed to participate in a way that feels manageable; taking a listening turn is still being part of the circle."
+      ]
+    },
+    {
+      "heading": "Start with a pulse, then leave space",
+      "paragraphs": [
+        "When the group begins, listen for a steady pulse rather than trying to invent the cleverest rhythm. Tap lightly and notice where the facilitator marks the beat or accents. The Nova Scotia guide describes cues for tempo, dynamics, call-and-response and bringing attention to a change; watch first, then follow the signal that is clear to you.",
+        "Leave gaps in your rhythm so another person’s part can be heard. A beginner often adds more notes when unsure, but a simple repeated pattern gives the group a dependable place to meet. If everyone is playing at once, soften your volume and listen for one other sound. The exchange becomes easier when people are not all competing to be the loudest."
+      ]
+    },
+    {
+      "heading": "Watch for changes and endings",
+      "paragraphs": [
+        "A facilitator may raise or lower their arms to shape loudness, invite one group to play, or show when the whole circle should stop. The exact gestures vary, so check with the leader before the session if you are unsure. A clear stop signal is part of how the group can end together rather than fade into a confused silence.",
+        "Try a call-and-response when the leader offers one. Echo a short phrase, then leave a pause. If the group layers sounds, notice which instrument entered and how the texture changed. You do not need to memorize the pattern; one attentive echo is a better first contribution than forcing a complicated beat into a moment that calls for listening."
+      ]
+    },
+    {
+      "heading": "Borrow carefully and reflect on what worked",
+      "paragraphs": [
+        "Use only the instrument assigned to you and return it where the host asks. Do not hit a drum with sticks or another object unless the facilitator says that is appropriate for that instrument. Ask before switching, and use the volume the room can comfortably hold. These small choices protect the instrument and keep the session welcoming for people nearby.",
+        "Afterward, name one moment when you could hear the circle changing: perhaps a shared pulse settled, a shaker entered, or everyone responded to a cue. The curriculum encourages leaving rhythmic space for others; consider what your own playing did to that space. If you want to go again, ask the facilitator what cue or instrument would be a useful focus next time."
+      ]
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

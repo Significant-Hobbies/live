@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "feed-a-hundred-families",
+  "slug": "feed-a-hundred-families",
+  "title": "Coordinate a food effort with the people distributing it",
+  "description": "Turn a goal of feeding one hundred families into a partner-led plan for the right food, safe handling, distribution and follow-up.",
+  "intent": "How can I organize a food effort intended to reach one hundred families without guessing what a local food bank can use?",
+  "sections": [
+    {
+      "heading": "Define what the number means",
+      "paragraphs": [
+        "Before shopping or fundraising, ask the receiving food bank, pantry, meal program or community organization what it means to serve one hundred families. Household sizes and local distribution formats differ, so do not translate the number into an invented number of meals or boxes. The partner can say whether the need is groceries, prepared meals, cash, delivery, volunteers or a mix.",
+        "Feeding America’s U.S. guidance says every food bank has different needs and directs individuals to contact their local member. Its food-drive instructions also say to partner first, ask what is needed and follow the partner’s drop-off or pickup procedures. Use that as an example of a partner-led approach, not a claim that every local organization operates the same way."
+      ]
+    },
+    {
+      "heading": "Choose food or funds with the partner",
+      "paragraphs": [
+        "A food drive can collect nonperishable items; a virtual drive can collect funds for a food bank to purchase food or support its programs. Ask the partner which option fits current storage, supply and staffing. If collecting food, request a written list of accepted items, packaging requirements and delivery times before publicizing the event. Feeding America advises that food should be unexpired, unopened and in original packaging, while its donation page notes member rules differ.",
+        "Do not assume that a donated item is useful because it is popular in your household. Ask about dietary needs, cooking facilities, culturally familiar staples and what recipients can carry or store. If the organization requests a monetary gift, check the recipient, payment route and receipt policy. Avoid collecting cash informally unless the partner has approved a transparent process."
+      ]
+    },
+    {
+      "heading": "Design a distribution the partner can run",
+      "paragraphs": [
+        "Agree on the date, location, eligibility or referral process, delivery plan and who handles questions from families. The organization serving recipients should set the distribution method and safeguard private information. Do not require people to tell a public volunteer their personal circumstances or photograph them to prove the effort happened. If the partner uses appointments or referrals, help communicate those steps clearly.",
+        "Plan for practical details: unloading, sorting, accessible entry, language support, weather backup, refrigeration if needed and a way to handle surplus. Confirm who has authority to accept food and where it may be stored. Prepared foods introduce different handling requirements than sealed shelf-stable items; do not improvise food-safety rules. Ask the partner to specify them or choose a format it already manages."
+      ]
+    },
+    {
+      "heading": "Recruit and brief a reliable team",
+      "paragraphs": [
+        "Give volunteers short, concrete assignments: receive donations, check packaging against the list, move boxes, set up tables, deliver approved orders or record aggregate counts. Provide the organizer’s contact and the stop-work instruction for unsafe lifting, damaged packaging or a change in venue. Volunteers should not handle recipient records beyond what their role requires.",
+        "Use a sign-up plan that includes enough time for sorting and transport, not only the public event. Build in a final reconciliation with the partner: what arrived, what could be accepted, what was redirected and what remains. If donations exceed capacity, let the partner decide whether to pause collection or refer goods elsewhere rather than storing food without a plan."
+      ]
+    },
+    {
+      "heading": "Report honestly and learn",
+      "paragraphs": [
+        "After distribution, ask the partner what can be shared. A defensible report might state the number of households served only if the organization counted that measure and agrees it is public. Do not equate dollars raised, cans collected or boxes assembled with families helped unless the partner provides that connection. Thank volunteers and donors without displaying recipient stories or faces without informed permission.",
+        "The hundred-family goal is a coordination target, not a guarantee that every family receives a particular amount or type of food. Let the local organization define what need it can meet. Repeating the event successfully may mean a smaller, better matched contribution next month rather than a larger pile that the partner cannot distribute."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Donate Food to a Local Food Bank",
+      "url": "https://www.feedingamerica.org/ways-to-give/food-donations",
+      "publisher": "Feeding America",
+      "purpose": "U.S. guidance says needs and rules vary by member, advises contacting local food banks, and gives packaging/expiry examples; not a universal food-safety manual."
+    },
+    {
+      "title": "Host a food drive with Feeding America",
+      "url": "https://www.feedingamerica.org/ways-to-give/food-drives",
+      "publisher": "Feeding America",
+      "purpose": "U.S. example of partner-first planning, food versus virtual formats, accepted packaged items and following local pickup/drop-off instructions."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "sort-supplies-during-a-food-bank-volunteer-shift",
+    "donate-anonymously-and-tell-no-one",
+    "raise-money-for-a-cause-you-deeply-believe-in"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,54 @@
+{
+  "experienceSlug": "test-a-paper-glider-with-controlled-design-changes",
+  "slug": "test-a-paper-glider-with-controlled-design-changes",
+  "title": "How do you make a fair paper glider flight test?",
+  "description": "Compare paper glider designs fairly by changing one feature at a time, repeating throws from the same line, and recording distance and flight notes.",
+  "intent": "Give a beginner a repeatable way to investigate paper glider performance without confusing design changes with inconsistent throws or room conditions.",
+  "sections": [
+    {
+      "heading": "Turn a guess into a testable question",
+      "paragraphs": [
+        "A paper glider experiment gets interesting when you can tell which change might have affected a flight. Instead of asking which design is best, ask something narrower: does a wider wing produce a longer average flight in this room when the paper, thrower and release point stay the same? The answer will apply only to your test conditions, but it is much more useful than a dramatic single throw.",
+        "Science Buddies' paper-plane project frames this as an investigation of how far designs fly. Use it as a planning model, then choose one feature to compare, such as wing width, nose shape or a small fold adjustment. Do not alter several features at once. If the plane looks different in many ways, the result cannot tell you which difference mattered."
+      ]
+    },
+    {
+      "heading": "Make two designs you can reproduce",
+      "paragraphs": [
+        "Use the same paper size and type for both versions. Label them A and B with a pencil mark on the underside. Write down the folds or draw a simple top view so that you can remake a design if it tears. Change only the feature named in your question. A paperclip or added weight introduces another variable, so leave it out of a first comparison unless weight is the feature being tested.",
+        "Choose a clear indoor area with enough room for the flight path and a safe landing zone. Remove breakable objects and keep people out of the throwing direction. Agree on a fixed starting line and a consistent gentle throw. You do not need maximum force: an uncontrolled launch makes the results harder to compare and can send the glider into someone.",
+        "Pick how you will measure before testing. A tape measure can record the horizontal distance from the line to the first landing point. If the glider hits a wall or furniture, mark that attempt as obstructed rather than treating it as an ordinary flight."
+      ]
+    },
+    {
+      "heading": "Repeat, record and resist the showiest flight",
+      "paragraphs": [
+        "Take turns only if each thrower can use the same release line and approach. Otherwise, one person should throw both designs. Alternate the order, such as A then B, followed by B then A, so practice or fatigue does not always favor one version. Make several attempts with each design and record every distance, including short or awkward flights.",
+        "A compact log can have columns for design, attempt, distance and a short observation: nose dipped, turned left, glided steadily, or struck an obstacle. Do not delete a poor flight simply because it looks unlike the rest. If a throw was clearly interrupted, mark why and repeat according to the rule you decided beforehand. A consistent rule is fairer than choosing exclusions after seeing the outcome.",
+        "Compare the pattern across attempts rather than celebrating the longest distance. If the results are close, your small sample may not show a reliable difference. That is still an honest result. Note whether a design was easier to launch or stayed straight, since stable flight can be more useful than one exceptional distance."
+      ]
+    },
+    {
+      "heading": "Improve the next version carefully",
+      "paragraphs": [
+        "Write a conclusion that includes the room and method: 'With this paper and the same thrower, design B usually flew farther across our trials.' Avoid claiming that it will always outperform A. Air movement, paper stiffness and release angle can change results, so another session could produce a different pattern.",
+        "For a next experiment, choose one fresh variable and start a new table rather than modifying the winning plane repeatedly. You could compare a modest wing adjustment or a different paper weight while keeping everything else fixed. Save the original A and B sketches until the new test is finished. A useful next step is a question you can answer with another fair comparison, not a more complicated glider whose changes are impossible to separate."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Build and Test Paper Planes",
+      "url": "https://www.sciencebuddies.org/science-fair-projects/project-ideas/Aero_p046/aerodynamics-hydrodynamics/how-far-will-paper-planes-fly?id=2025",
+      "publisher": "Science Buddies",
+      "purpose": "Provides a paper-plane flight-distance investigation framework; supports making a testable comparison and recording results."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "measure-the-speed-of-sound-with-a-repeatable-experiment",
+    "watch-a-rocket-launch-from-an-authorized-public-gallery",
+    "take-part-in-a-seasonal-butterfly-count"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

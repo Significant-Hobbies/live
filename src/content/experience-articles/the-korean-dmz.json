@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "the-korean-dmz",
+  "slug": "the-korean-dmz",
+  "title": "Choose a Korean DMZ visit for history, observation or the JSA",
+  "description": "Compare the Korean DMZ’s museums, observatories and controlled tours by what they teach, and check current access before you travel.",
+  "intent": "How do I choose a respectful, realistic DMZ visit that distinguishes ordinary border-area tours from the restricted JSA?",
+  "sections": [
+    {
+      "heading": "Understand what “DMZ tour” means",
+      "paragraphs": [
+        "The Korean DMZ is a militarized border and a historical landscape, not a theme park. Korea Tourism Organization explains that civilian access is limited to selected areas, and the phrase “DMZ tour” can cover quite different places: a memorial or museum, an observation deck, a tunnel site, or the Joint Security Area near Panmunjeom. Decide which part of the history you want to understand before you choose a package.",
+        "The Joint Security Area is not interchangeable with an observatory. It is a distinct, controlled visit associated with the Military Demarcation Line, and the official tourism guide says JSA tours are offered only by United Nations Command-approved agencies. Availability and nationality rules can change, so do not assume a headline photo means that the site is currently open to you."
+      ]
+    },
+    {
+      "heading": "Choose one of three useful angles",
+      "paragraphs": [
+        "For a broad history introduction, look for an itinerary that includes a museum or memorial with time to read its exhibits. For a geography-focused visit, an authorized observatory can help you understand the border’s landscape, but visibility and access depend on conditions. For a human-scale perspective, give time to a place such as Imjingak rather than trying to collect every stop in a half-day schedule.",
+        "The VisitKorea guide groups several attractions around Paju, including Imjingak, the Third Tunnel, Camp Greaves and Dora Observatory. Treat that list as a starting map, not a promise that every stop is open or included in a current excursion. Ask which specific sites are confirmed, how much time is spent at each, and whether interpretation is provided in a language you can follow."
+      ]
+    },
+    {
+      "heading": "Plan around checks and change",
+      "paragraphs": [
+        "Some areas beyond the Civilian Control Line require identification checks, and the tourism authority tells visitors entering a DMZ site beyond that line to carry a passport. It also describes restrictions on clothing, photography and accessible areas. Keep your required travel document with you, follow instructions from site staff, and do not photograph military personnel or restricted facilities unless explicitly allowed.",
+        "Tour departures can be cancelled when political or security issues arise. Build that uncertainty into the day: keep a flexible alternative in Seoul or nearby, avoid connecting the tour to a flight, and confirm changes with the operator. If you plan to travel independently, contact the relevant regional government office about current access; the tourism guide notes that transport to many near-border locations can be difficult without a vehicle."
+      ]
+    },
+    {
+      "heading": "Visit with historical care",
+      "paragraphs": [
+        "A good visit leaves room for the human cost of division and war. Read interpretive material before the trip, then note what the site can show you and what it cannot. A viewpoint across the border offers a partial visual perspective; it cannot make a complicated political history self-explanatory. Avoid treating residents, soldiers or visitors as background for dramatic photographs.",
+        "At a memorial, follow its own customs and let the place set the tone. In a museum, compare maps and testimony rather than reducing the story to a single image or slogan. If an attraction uses language that feels simplistic, notice that and seek additional reputable historical interpretation later. Curiosity and restraint can sit together."
+      ]
+    },
+    {
+      "heading": "Make the booking decision concrete",
+      "paragraphs": [
+        "Before paying, ask the provider: which sites are included, which require identification checks, what happens if a site closes, whether the guide is authorized for controlled areas, what language the interpretation uses, and whether there are clothing or photography rules. Check the cancellation terms in writing. These questions sort a genuine history visit from a package whose headline may depend on an attraction you cannot enter.",
+        "VisitKorea’s page was last updated in February 2025 and explicitly cautions that details may differ. It supports the distinction between ordinary DMZ visits and JSA tours, plus the need to verify schedules; it is not a current live access feed. Recheck official site or tour notices shortly before departure, and choose a plan that remains worthwhile if the most restricted stop is unavailable."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "DMZ 101, a Tourist’s Guide to the DMZ",
+      "url": "https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=201636",
+      "publisher": "Korea Tourism Organization / VISITKOREA",
+      "purpose": "Supports the distinction between DMZ visits and JSA tours, named Paju attractions, identification and conduct rules, cancellation risk, and its own 2025 information limitation."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "visit-a-country-you-know-nothing-about",
+    "the-silk-road-uzbekistan"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

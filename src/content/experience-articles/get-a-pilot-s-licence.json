@@ -1,0 +1,70 @@
+{
+  "experienceSlug": "get-a-pilot-s-licence",
+  "slug": "get-a-pilot-s-licence",
+  "title": "Map the FAA private pilot certificate path before you train",
+  "description": "Understand the U.S. FAA private pilot certificate path across medical eligibility, training, knowledge testing and a practical test before planning lessons.",
+  "intent": "What does it take to qualify for a U.S. FAA private pilot certificate? This maps the authority’s major gates and does not assume that requirements transfer to other countries.",
+  "sections": [
+    {
+      "heading": "Name the certificate and authority",
+      "paragraphs": [
+        "“Pilot’s licence” can refer to different certificates, aircraft categories and privileges. This outline is specifically about the U.S. Federal Aviation Administration private pilot certificate for airplane category. A glider, rotorcraft or balloon path has different requirements; another country’s civil aviation authority sets its own rules. Before paying for a course, write down the exact aircraft category and certificate you mean, then use the regulator’s current rules for that path.",
+        "The FAA describes separate eligibility, training, experience and testing requirements for student, recreational and private pilots. A flight-school conversation can help explain a local training sequence, but the school is not the final source for the regulation. The FAA’s published pages and the applicable current federal regulations should anchor a checklist you verify as you progress."
+      ]
+    },
+    {
+      "heading": "Check medical eligibility early and carefully",
+      "paragraphs": [
+        "Medical certification is a distinct piece of the FAA process. The FAA directs applicants to an Aviation Medical Examiner and says prior or current conditions and medication may require reviewing its Guide for Aviation Medical Examiners and bringing appropriate documentation. Some applications are issued by the examiner; some are deferred for FAA review. That is a reason to ask an AME about your individual situation before making assumptions, not a reason to diagnose yourself from an online checklist.",
+        "The FAA recognizes more than one medical pathway in certain circumstances, including BasicMed with restrictions. Which route applies depends on eligibility and the operation. Do not infer that a single medical certificate is always required or that BasicMed is available to everyone. Confirm the current rules directly with FAA sources and an appropriately qualified medical examiner."
+      ]
+    },
+    {
+      "heading": "Understand instruction and logged experience",
+      "paragraphs": [
+        "For airplane private pilot applicants under the FAA’s Part 61 rules, the agency lists minimum flight-time components that include instruction, solo time and specified areas such as cross-country, night and instrument experience. A regulatory minimum is not a forecast of how long a particular person will need. Proficiency, weather, aircraft availability, lesson spacing and the ability to retain skills all affect the path. Budget and schedule from a realistic conversation with instructors, not only from the minimum number.",
+        "Keep a clear log of training and ask your instructor which endorsements or prerequisites are coming next. Ground knowledge matters alongside aircraft handling: weather, navigation, regulations, aircraft systems and decision-making all appear in the training and evaluation. Build study time into a week so a lesson is not the only contact you have with the material."
+      ]
+    },
+    {
+      "heading": "Prepare for knowledge and practical tests",
+      "paragraphs": [
+        "The FAA says a higher certificate requires a knowledge test and a practical test. The practical test is evaluated against a published standard, includes an oral examination and an examination flight with a Designated Pilot Examiner. The practical standard covers knowledge, risk management and skill. That makes “I can land” an incomplete measure of readiness; the examiner looks across the published tasks and judgments.",
+        "Ask an instructor to show you the current test standard and identify how each training exercise maps to it. Use official FAA handbooks and test materials where applicable, but follow the instructor’s current sequence for the certificate and aircraft. Do not rely on old videos or checklists without checking their date and the current version of FAA material."
+      ]
+    },
+    {
+      "heading": "Make a jurisdiction-specific checklist",
+      "paragraphs": [
+        "Create four headings: eligibility and medical, training and experience, knowledge testing, and practical test/application. Under each, save the FAA page or regulation that states the requirement, the person who can verify it, and the evidence you will need. Add a date last checked so you know what to re-confirm. The FAA’s hour FAQ is a useful summary, but regulations and details can change; use the live official materials before making consequential decisions.",
+        "If you are outside the United States, do not use this checklist as a transfer guide. Name the local authority and certificate, then find its rules for medical, instruction, written or knowledge assessment, practical flight test and application. Your next action is to select the exact certificate and jurisdiction and book a conversation with a qualified instructor and, where relevant, an AME before committing to a course."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "What are the hourly requirements in becoming a pilot?",
+      "url": "https://www.faa.gov/faq/what-are-hourly-requirements-becoming-pilot",
+      "publisher": "Federal Aviation Administration",
+      "purpose": "Supports FAA Part 61 minimum flight-time components for specified private pilot categories and states that regulatory minima are not a prediction of typical completion."
+    },
+    {
+      "title": "Medical Certificate: What to expect during the AME examination",
+      "url": "https://www.faa.gov/pilots/medical_certification/get",
+      "publisher": "Federal Aviation Administration",
+      "purpose": "Supports current FAA guidance to consult an Aviation Medical Examiner and its medical guide, documentation, and possible deferment for FAA review."
+    },
+    {
+      "title": "Are there any tests required to become a student pilot?",
+      "url": "https://www.faa.gov/faq/are-there-any-tests-required-become-student-pilot",
+      "publisher": "Federal Aviation Administration",
+      "purpose": "Supports the FAA distinction between student-pilot solo prerequisites and knowledge plus practical testing for a higher pilot certificate."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "learn-to-fly-a-plane",
+    "community-445e35e6-060a-5b06-83f0-8104abb00796"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

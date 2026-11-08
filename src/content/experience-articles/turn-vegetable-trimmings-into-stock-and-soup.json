@@ -1,0 +1,66 @@
+{
+  "experienceSlug": "turn-vegetable-trimmings-into-stock-and-soup",
+  "slug": "turn-vegetable-trimmings-into-stock-and-soup",
+  "title": "Which vegetable scraps make a balanced homemade stock?",
+  "description": "Choose clean vegetable trimmings for stock, avoid bitter or spoiled scraps, simmer gently, then turn the strained liquid into a simple soup.",
+  "intent": "Help a home cook decide what to save for vegetable stock, how to build a balanced flavor, and how to use it without treating every scrap as suitable.",
+  "sections": [
+    {
+      "heading": "Save deliberately, not indiscriminately",
+      "paragraphs": [
+        "A useful stock starts with vegetables you would still be willing to eat. Save clean carrot ends, onion skins, celery leaves and herb stems while preparing meals, but skip anything moldy, slimy, spoiled or heavily soiled. Love Food Hate Waste New Zealand's home-stock guide presents stock as a way to use vegetable trimmings; it is a recipe idea, not a reason to rescue food that has begun to deteriorate.",
+        "Think about flavor before filling a container. Onion, carrot and celery create a familiar savory base. Parsley stems or a little leek can add a fresh note. Strong quantities of brassica leaves, bitter greens, beetroot, artichoke, or strongly flavored herbs may dominate or tint the pot. This is not a strict blacklist: save a small amount separately if you want to test it, rather than letting one assertive ingredient take over a large batch.",
+        "Rinse produce under running water and remove grit before cutting. Keep raw produce separate from raw meat and seafood, and clean hands, boards and utensils between tasks. The USDA's produce guidance is a useful reminder that washing and separation matter even for a pot that will later be heated."
+      ]
+    },
+    {
+      "heading": "Build a pot around a flavor plan",
+      "paragraphs": [
+        "Choose a pot size that leaves room for the scraps and water to move. Add the vegetables, a modest amount of salt or none, and enough water to cover. Peppercorns, a bay leaf or a few herb stems are optional; keep the first batch restrained so the stock can work in different dishes. If using onion skins, keep them clean and expect a deeper color.",
+        "Bring the pot up to a gentle simmer and cook until the vegetables have given up their flavor. A hard rolling boil can break soft ingredients down and make the liquid cloudy, while a quiet simmer is easier to manage. Taste a small cooled spoonful toward the end. If the liquid is weak, continue briefly; if it tastes harsh or bitter, more time will not necessarily fix the balance.",
+        "Strain the liquid into a clean heat-safe container, leaving gritty sediment behind. Avoid pressing a mass of soft vegetables through the sieve; that can cloud the result and add an unpleasant texture. Let the stock cool promptly and refrigerate it rather than leaving a warm pot on the counter for hours."
+      ]
+    },
+    {
+      "heading": "Turn the stock into a complete soup",
+      "paragraphs": [
+        "Use the strained stock as a base, then add fresh vegetables or beans that you actually want to eat. A simple combination might be diced carrot, onion and potato, finished with lentils or white beans. Add ingredients in an order that lets firmer pieces cook through before delicate greens. Taste again near the end and adjust salt, acidity or herbs gradually.",
+        "Stock can be a supporting ingredient rather than the whole recipe. If its flavor is mild, build the soup with browned onions, spices, tomato or a spoonful of miso, depending on the dish. If it is concentrated, dilute it with water to avoid an overly salty result. Labeling the container with its main ingredients and date helps you remember whether it suits a particular meal."
+      ]
+    },
+    {
+      "heading": "Store leftovers with a clear limit",
+      "paragraphs": [
+        "Refrigerate finished soup in shallow, covered containers so it cools more quickly than a deep stockpot. FoodSafety.gov lists three to four days for refrigerated soups and stews, with the refrigerator at 40°F (4°C) or below. Freeze portions you will not use within that period, and thaw them safely before reheating. Follow local food-safety guidance if your refrigerator temperature or household circumstances differ.",
+        "For the next batch, keep a short note on what went into the pot and how it tasted. If the result was bitter, reduce the strongest scraps; if it was flat, add a deliberate flavor base next time. That small record turns leftovers into a repeatable kitchen method instead of a mystery collection of whatever happened to be in the vegetable drawer."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Easy Choice: Family Kai Hōtoke / Winter Recipes",
+      "url": "https://lovefoodhatewaste.co.nz/wp-content/uploads/2018/06/Winter-Easy-Choice-Mobile.pdf",
+      "publisher": "Love Food Hate Waste New Zealand / WasteMINZ",
+      "purpose": "Includes a home-stock recipe section and supports the idea of making stock from suitable kitchen trimmings."
+    },
+    {
+      "title": "Food Safety During Food Preparation",
+      "url": "https://www.nifa.usda.gov/sites/default/files/resource/Fight%20BAC%20Veggies508.pdf",
+      "publisher": "USDA National Institute of Food and Agriculture",
+      "purpose": "Supports washing produce, cleaning surfaces and separating produce from raw animal foods during preparation."
+    },
+    {
+      "title": "Cold Food Storage Chart",
+      "url": "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts",
+      "publisher": "FoodSafety.gov",
+      "purpose": "Supports the refrigerated storage window for soups and stews and the recommended refrigerator temperature."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "cook-a-meal-entirely-from-your-existing-pantry",
+    "make-tofu-from-soy-milk",
+    "practice-three-vegetable-knife-cuts-for-one-meal"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

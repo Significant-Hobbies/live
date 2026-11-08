@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "learn-someone-s-language-to-have-a-conversation-with-them",
+  "slug": "learn-someone-s-language-to-have-a-conversation-with-them",
+  "title": "Prepare a Small Conversation in Someone’s Language",
+  "description": "Learn a few respectful phrases for a real conversation, then practice listening, repair, and the topics your conversation partner welcomes.",
+  "intent": "Helps a learner prepare for one consensual conversation with someone they know, centered on useful phrases and reciprocal understanding.",
+  "sections": [
+    {
+      "heading": "Ask what kind of conversation they want",
+      "paragraphs": [
+        "Tell the person you would like to learn a little of their language and ask whether they would enjoy having a short conversation that way. They may prefer to speak in a shared language, practice with someone else, or avoid teaching a language they use at home. Let them choose whether the idea sounds fun and what topics feel comfortable.",
+        "Choose a specific situation together: greeting relatives, talking about a shared hobby, making tea, or asking about a favorite place. Avoid assuming that the person represents everyone who speaks that language. Ask which form of address, dialect, or script they use if it matters for the conversation."
+      ]
+    },
+    {
+      "heading": "Build a phrase card around meaning",
+      "paragraphs": [
+        "Make a small list of phrases you will actually use: hello, how have you been, what does that mean, could you say it again, and thank you. Add the person’s preferred name and one or two questions they have said they are comfortable answering. Write pronunciation notes in a way that helps you, but also keep the original script when available.",
+        "Do not translate sensitive or important material by guessing. A phrase that sounds polite in a literal translation can feel awkward or overly familiar in another language. Ask a fluent speaker or teacher to check the few phrases you need. Explain the context rather than asking only “is this correct?” so they can help you find a natural form."
+      ]
+    },
+    {
+      "heading": "Practice listening and repair",
+      "paragraphs": [
+        "A conversation is more than delivering memorized lines. Practice hearing the likely response, asking a follow-up, and letting the other person finish. Keep repair phrases visible: “Could you repeat that more slowly?” “What does that word mean?” and “Did you mean…?” These help you stay present when you do not catch every word.",
+        "The Council of Europe’s CEFR descriptors distinguish simple exchanges supported by repetition and rephrasing from more independent interaction on familiar topics. Use that idea to choose a realistic first conversation: perhaps a short exchange about a shared interest where the other person can slow down or clarify. A practical goal is understanding and being understood, not speaking without any mistakes."
+      ]
+    },
+    {
+      "heading": "Keep correction useful and kind",
+      "paragraphs": [
+        "Before starting, ask how the person would like to help: correct every error, note a few key changes, or simply respond naturally. For a first conversation, a few corrections afterward may let you keep the exchange going. If the other person is not a teacher, do not expect them to explain grammar or repeat lines for an hour.",
+        "Afterward, write down the phrases you needed but did not know and one thing you understood better than before. Ask permission before recording. If you want pronunciation feedback, use a teacher or fluent speaker who has agreed to help rather than secretly capturing someone’s voice."
+      ]
+    },
+    {
+      "heading": "Let the relationship set the pace",
+      "paragraphs": [
+        "Keep the conversation short enough to end while both people still have energy. If the person switches to a shared language, follow their lead instead of insisting they continue for your practice. Thank them for the time and ask whether they would like to do it again. A mutual exchange can include you helping with something you know well.",
+        "Your next action is to ask permission and select one familiar topic together. Prepare five useful phrases, check them with a reliable speaker or teacher, and practice asking for clarification. Then meet for a brief conversation that serves both people, not a language performance."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "CEFR Descriptors",
+      "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/cefr-descriptors",
+      "publisher": "Council of Europe",
+      "purpose": "Can-do descriptors frame conversational interaction across levels and degrees of support, repetition, and rephrasing."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "learn-a-new-language-to-conversational-fluency",
+    "create-a-map-of-languages-in-your-life",
+    "learn-another-language-to-conversation-level"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

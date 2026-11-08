@@ -1,0 +1,54 @@
+{
+  "experienceSlug": "make-a-small-mosaic-panel",
+  "title": "How to plan a small mosaic panel without losing the pattern",
+  "description": "Plan a small mosaic panel with a simple design, paper or tile pieces, controlled spacing, and a deliberate color rhythm before adding permanent adhesive.",
+  "intent": "A beginner-oriented planning approach for a compact mosaic, focused on scale, tile rhythm, dry layout, and a low-risk first attempt rather than historical restoration methods.",
+  "sections": [
+    {
+      "heading": "Keep the first design readable",
+      "paragraphs": [
+        "A mosaic is easiest to finish when the design survives being translated into small separate pieces. Start with a postcard-sized panel and one bold subject: a leaf, sun, fish, doorway, or geometric border. Draw the subject at full size, then simplify thin lines and tiny gaps that would be hard to represent. Choose a small palette with a clear light-dark contrast. Instead of outlining every contour, let the edge of a color area suggest the shape. The pieces do not need to be identical; variation can make a field look lively, but the main silhouette should remain easy to recognize from a few steps away."
+      ]
+    },
+    {
+      "heading": "Choose materials for a safe first panel",
+      "paragraphs": [
+        "For a first attempt, paper squares, craft foam, or pre-cut flat mosaic pieces can teach spacing without requiring glass cutters or sharp tools. If you want ceramic or glass tesserae, use pieces already cut for crafting or ask an experienced adult or workshop instructor to handle cutting and edge treatment. Ancient mosaic traditions use stone, ceramic, or glass pieces set into a surface; this project is a small decorative exercise, not conservation work. Choose a rigid backing and adhesive specifically compatible with both the backing and your chosen pieces. Read the manufacturer’s directions and make a small sample if you are unsure."
+      ]
+    },
+    {
+      "heading": "Dry-fit before anything becomes permanent",
+      "paragraphs": [
+        "Cut or select enough pieces to cover only a section at a time, then arrange them on the drawing without glue. Work from the largest areas toward small accents. Leave a consistent visual gap between pieces unless you deliberately want a tightly packed look. Rotate a few pieces to create movement, but avoid changing every direction at once. Photograph the dry layout from above; the image helps you notice a lopsided border or a focal point that has drifted. If the pattern looks confusing, remove details before adding more. An unfinished clean design is usually stronger than a crowded one."
+      ]
+    },
+    {
+      "heading": "Transfer the layout in manageable zones",
+      "paragraphs": [
+        "Once the composition reads well, mark the panel into loose zones so you can rebuild it without shifting the whole design. Move only a small group of pieces at a time, apply adhesive as directed, and return them to the same positions. Avoid letting adhesive squeeze up through the visible gaps. For paper pieces, glue stick or a thin layer of craft adhesive may be enough; heavier materials may call for a different product and surface. Keep the workspace level and protect it from drips. If you want grout, use only a product intended for your material and follow its complete safety directions; a no-grout paper mosaic is a perfectly useful first project."
+      ]
+    },
+    {
+      "heading": "Check the result as a picture",
+      "paragraphs": [
+        "After the adhesive has cured according to its label, look for missing pieces, muddy color boundaries, and edges that may snag. Photograph the panel both close up and from across the room. At close range, you can appreciate irregular pieces; at a distance, the overall subject should still hold together. You can use cut paper shapes to explore how colors and forms fit across the image before choosing more permanent materials. Keep the offcuts that match your palette for a second, smaller study. Your next panel can repeat one successful feature and change only one variable, such as scale, border, or color contrast."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Technician Training for the Maintenance of In Situ Mosaics",
+      "url": "https://www.getty.edu/conservation/publications_resources/pdf_publications/pdf/technician_training_2014.pdf",
+      "publisher": "Getty Conservation Institute and Institut National du Patrimoine, Tunis",
+      "purpose": "Provides professional context for documenting and maintaining in-situ mosaics; the article explicitly avoids DIY heritage repair."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-a-folding-paper-peepshow",
+    "print-a-set-of-foam-relief-postcards",
+    "marble-a-sheet-of-paper"
+  ],
+  "slug": "make-a-small-mosaic-panel",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

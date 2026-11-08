@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "bolivia-s-salar-de-uyuni",
+  "slug": "bolivia-s-salar-de-uyuni",
+  "title": "Choose between the salt flat and Bolivia’s colored lagoons",
+  "description": "Compare a focused Uyuni salt-flat visit with a longer route through Eduardo Avaroa’s lagoons, using named stops and weather-aware expectations.",
+  "intent": "How can a visitor choose a realistic Salar de Uyuni route, from a short salt-flat day to a longer South Lipez circuit, without assuming the mirror effect or wildlife sightings?",
+  "sections": [
+    {
+      "heading": "Decide what landscape you came to see",
+      "paragraphs": [
+        "The Salar de Uyuni is one part of a much wider highland journey. Bolivia’s Ministry of Tourism destination brochure groups it with the colored lagoons and names stops that feel very different from one another: Colchani’s salt workshops and market, Incahuasi’s cactus-covered island, Tunupa’s viewpoints, and the lagoons and volcanic scenery of Eduardo Avaroa National Reserve. Choose which landscape matters most before choosing the length of your tour.",
+        "A short itinerary centered on the salt flat suits someone who wants the geometric crust, broad horizon and a few nearby cultural stops. A multi-day South Lipez route adds a different kind of day: lagoons, volcanic desert and wildlife habitats. It also means more hours in a vehicle and less flexibility to change plans once you are far from town. Ask the operator for the actual map and daily sequence before booking."
+      ]
+    },
+    {
+      "heading": "Build a focused salt-flat day",
+      "paragraphs": [
+        "The Ministry brochure names Uyuni’s Train Cemetery and Boulevard, then Colchani’s salt museum, craft market and salt structures as local stops. On the salar itself, it lists Incahuasi Island, Tunupa viewpoints, sunset and stargazing packages, and formations such as the salt eyes and hexagons. You do not need to add every stop. Choose one town or community stop and one salt-flat feature so you have time to look closely.",
+        "If the salt surface is wet, ask how the operator will adjust the route. The government brochure says rainy-season water can create a mirror effect, but the calendar does not guarantee that conditions will be safe or photogenic on your date. A responsible driver may choose not to cross a flooded or fragile area. Let local guidance take priority over a picture plan."
+      ]
+    },
+    {
+      "heading": "Choose South Lipez for the longer contrast",
+      "paragraphs": [
+        "For a longer loop, the brochure names Laguna Colorada, Laguna Verde, Laguna Hedionda, the Siloli Desert, the Stone Tree, Sol de Mañana geysers and hot springs. These are not interchangeable versions of the salt flat. A lagoon visit is about water, color and wetland wildlife; the Siloli landscape and Stone Tree are about rock and open desert; geysers and hot springs add geothermal features. Choose the stops you care about and ask which days the route reaches them.",
+        "The source describes the colored lagoons as protected habitat for wetlands, bofedales and Andean wildlife such as flamingos and vicuñas. Respect those habitats: stay with your guide, follow marked access and avoid disturbing animals or vegetation. Do not assume a named stop will be open or reachable on every route; weather and road conditions can change the plan."
+      ]
+    },
+    {
+      "heading": "Ask practical questions before you travel",
+      "paragraphs": [
+        "Request the provider’s exact itinerary, vehicle and group size, overnight locations, food and water plan, and what happens if weather or road conditions make a stop unsuitable. Ask whether the route returns to Uyuni or continues toward another border or destination. Confirm whether any border crossing is included and check your own passport and entry requirements with the relevant authorities; border rules depend on nationality and route.",
+        "Uyuni is a remote travel hub, so allow a buffer before a flight, train or bus. Ask whether the provider can accommodate a slower pace or mobility needs, and whether any walking surfaces or overnight facilities would be difficult for your group. Do not choose only by the number of photo stops or the lowest advertised price; a clear plan and safe driver matter more than a packed itinerary."
+      ]
+    },
+    {
+      "heading": "Plan for conditions rather than a guaranteed image",
+      "paragraphs": [
+        "The salar changes with water, wind and local access. Decide in advance which parts of the trip would still be worthwhile without a mirror reflection or a flamingo sighting. You might spend more time with the hexagonal crust, a community workshop or the landscape around Tunupa. If the water layer is present, follow the driver’s decision about where a vehicle can travel rather than asking for a risky crossing.",
+        "Before departure, check current route and road information, carry what your operator recommends for remote travel, and keep your plans flexible. Choose one route—a focused salt-flat outing or a longer lagoon circuit—then confirm the exact itinerary with a reputable local provider. A good Uyuni visit is defined by the landscape you actually encounter, not a single seasonal photograph."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Bolivia te espera: destinations of the Bicentennial",
+      "url": "https://conocebolivia.turismoyculturas.gob.bo/wp-content/uploads/2025/11/P-BoliviaTeEspera.pdf",
+      "publisher": "CONOCE-BOLIVIA",
+      "purpose": "Supports the named Uyuni, Colchani, Incahuasi, Tunupa, Eduardo Avaroa, Siloli and lagoon destinations; its rainy-season mirror description is presented as a possibility, not a date guarantee."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "the-atacama-desert-chile",
+    "wadi-rum-jordan",
+    "the-sahara-desert"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

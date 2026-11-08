@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "wadi-rum-jordan",
+  "slug": "wadi-rum-jordan",
+  "title": "Choose a Wadi Rum evening by rock, camp and sky",
+  "description": "Compare a guided rock-valley outing with a slower evening under Wadi Rum’s dark sky, and make the local camp and route part of the decision.",
+  "intent": "How can I choose a Wadi Rum visit that feels connected to its sandstone landscape and local hosts?",
+  "sections": [
+    {
+      "heading": "Choose the shape of the landscape first",
+      "paragraphs": [
+        "Wadi Rum can mean a short jeep circuit, a night in the desert, a walk near a rock formation, or a sky-focused visit. Those experiences answer different questions. A daytime route emphasizes the sandstone cliffs, narrow valleys and changes in color across open terrain. An overnight stay makes the evening light and stars part of the experience, with the tradeoff that your comfort depends on the camp, temperature and group schedule.",
+        "Start with what you want to notice. If you are drawn to geology and scale, ask for a route that includes time out of the vehicle and explains the formations rather than racing between photo stops. If you want a quiet night, ask whether the camp’s layout offers an open view of the sky and what activities or lighting happen after dinner. The Jordan tourism authority lists 4x4 tours, stargazing and cultural experiences, but the details vary by provider."
+      ]
+    },
+    {
+      "heading": "Treat the visitor center or camp as your route anchor",
+      "paragraphs": [
+        "The official Jordan tourism page advises arranging a tour with a camp or through the visitor center. Use that as a starting point for verifying the route and the operator, not as a guarantee that a particular experience is available on your dates. Ask who will guide the trip, how the vehicle group is organized and what happens if wind, rain or poor visibility changes the plan.",
+        "Before committing, get a written description of the actual stops. “Visit Wadi Rum” could mean mostly driving, a viewpoint, a short walk or a long excursion. Ask how much time is spent at each stop, whether the walk involves loose sand or scrambling, and what water and shade are available. Keep the comparison concrete: travel time, walking demands, night in camp or return to town, and the amount of interpretation."
+      ]
+    },
+    {
+      "heading": "Choose an evening for the sky without promising stars",
+      "paragraphs": [
+        "A stargazing program can offer structured explanation through a telescope or a guided identification session; a quiet camp evening may be more informal. The Jordan tourism page describes guided astronomy at RumSky and notes the combination of astronomy with local storytelling. If that appeals to you, ask whether the session includes telescope viewing, naked-eye orientation or both, and whether the language and group size will suit you.",
+        "Stars depend on clouds, moonlight and local light. Check a moon calendar and the forecast near your travel date, but treat them only as planning clues. If conditions turn cloudy, a good alternative could be a short conversation about desert navigation or the visible landscape. Do not expect local cultural stories as a performance on demand: ask how a host chooses to share knowledge and follow their lead."
+      ]
+    },
+    {
+      "heading": "Make the overnight experience respectful and comfortable",
+      "paragraphs": [
+        "Ask your host what the camp provides and what you should bring. Useful details include sleeping arrangement, heating or blankets, bathroom setup, drinking water, food allergies and transport after dark. These questions are practical, not fussy; in a remote place, knowing what is included makes it easier to travel with respect for the host’s resources.",
+        "Wadi Rum is a protected landscape and a lived cultural place. Stay on the agreed route, leave stones and artifacts in place, and avoid wandering away from camp after dark without a guide. If you are offered a cultural activity, ask before filming or photographing. A warm welcome does not equal blanket permission to record people or enter private spaces."
+      ]
+    },
+    {
+      "heading": "Pick a version you can actually enjoy",
+      "paragraphs": [
+        "For limited time, choose a shorter guided drive and a single walk or viewpoint rather than stacking unrelated activities. For an overnight, avoid scheduling a long cross-country transfer immediately afterward; leave a margin for the drive back and a restful start. Travelers with mobility constraints should ask about vehicle access and step-free facilities before paying, because a route with steep sand or uneven rock may not be suitable.",
+        "Before booking, ask the operator to name the route, identify which parts are walking, describe the camp arrangement, and explain the weather backup. Then choose the format that fits your attention and comfort: sandstone in daylight, a sky program after dark, or an overnight that joins both. The specific answer makes the visit more meaningful than pursuing the largest number of activities."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wadi Rum",
+      "url": "https://international.visitjordan.com/wheretogo/wadi-rum/",
+      "publisher": "Jordan Tourism Board",
+      "purpose": "Supports that local camps or the visitor center can arrange tours and describes operator examples including 4x4 routes and guided stargazing; article treats availability as something to reconfirm."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "petra-jordan",
+    "the-sahara-desert",
+    "the-dead-sea-jordan-israel"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

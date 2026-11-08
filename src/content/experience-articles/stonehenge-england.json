@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "stonehenge-england",
+  "slug": "stonehenge-england",
+  "title": "Choose your Stonehenge day: shuttle, circle or landscape walk",
+  "description": "Plan a Stonehenge visit around the difference between the visitor centre, the Stone Circle shuttle and a longer walk past burial mounds.",
+  "intent": "Which visit shape suits your time, mobility and interest: the visitor centre plus shuttle, or a longer landscape walk that approaches the stones on foot?",
+  "sections": [
+    {
+      "heading": "Decide what you want the visit to contain",
+      "paragraphs": [
+        "Stonehenge is not only a ring of stones beside a road. English Heritage describes a visitor centre and an open landscape with archaeological features, so the day can be built around interpretation, the monument itself, or the approach through the wider setting. Pick the priority before you arrive: a shorter visit focused on the circle, time for exhibitions, or a walk that makes the landscape part of the experience.",
+        "That choice affects pacing. Someone arriving with limited energy may prefer to begin at the visitor centre and use the shuttle. A walker who wants to notice the terrain can make the approach part of the day. Neither plan is a more authentic test of interest; they are different ways of spending time at a protected place."
+      ]
+    },
+    {
+      "heading": "Use the visitor centre as context, not a box to tick",
+      "paragraphs": [
+        "Leave time to look at the displays before heading to the stones. They give you a way to ask better questions on site: what can be seen from the circle, what is reconstructed or interpreted, and how do the surrounding features change the picture? Instead of trying to absorb every panel, choose one question and carry it with you. For example, compare what the visitor centre explains about the landscape with what you can actually see on the walk.",
+        "If you are with children or someone who tires easily, agree on a return point and a break before joining the shuttle queue. The operator notes that limited seating is available, and capacity can mean waiting. Build slack into your booking day rather than arranging a tight onward connection around a guessed queue time."
+      ]
+    },
+    {
+      "heading": "Compare the shuttle with the landscape walk",
+      "paragraphs": [
+        "English Heritage says the shuttle journey to the Stone Circle takes about ten minutes and can stop at Fargo Plantation on the way. The route around the circle is generally on flat tarmac or grass, though weather affects the surface. The operator also notes that much of the wider landscape is not accessible to standard wheelchairs, while an accessible shuttle is available. Check the current access information against your own needs before choosing a route.",
+        "The walking route from the visitor centre through the National Trust landscape passes Bronze Age burial mounds. English Heritage describes it as about 2.6 miles round trip, with roughly 25 to 40 minutes each way. That is a real additional walk before you spend time at the monument. If the full approach is too much, the shuttle offers a meaningful alternative; do not turn an access decision into a judgment about commitment."
+      ]
+    },
+    {
+      "heading": "Make a small observation plan",
+      "paragraphs": [
+        "At the stones, choose a few features to notice rather than trying to solve every mystery. Look at how the circle reads from different points on the path, the relationship between the monument and the horizon, and how people move through the visitor route. Keep the path open and follow current staff instructions. During ordinary visits, visitors do not walk inside the Stone Circle, so plan your expectations around viewing it from the designated route.",
+        "On the landscape walk, notice how the barrows and open ground shift your sense of scale. Photograph a detail only after taking time to look without a screen. A simple sketch of where the circle sits against the surrounding land can help you remember the setting better than a row of nearly identical pictures."
+      ]
+    },
+    {
+      "heading": "Make the day work in practice",
+      "paragraphs": [
+        "Check your admission details, shuttle arrangements, access notes and any special-event rules with English Heritage close to the visit; dates and operations can change. Leave extra time for the visitor centre and queue, carry water and weather-appropriate layers, and wear shoes suited to grass as well as hard paths. If you are taking the longer route, decide in advance where you can turn back without pressure.",
+        "Before leaving, write one observation and one open question. Perhaps the place felt different after you learned about the burial mounds, or the controlled route made you think about preserving a fragile landscape. That note gives the day a specific ending: you have seen Stonehenge in relation to its setting, not only as an image you recognized."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Stonehenge access information",
+      "url": "https://www.english-heritage.org.uk/visit/places/stonehenge/plan-your-visit/access/",
+      "publisher": "English Heritage",
+      "purpose": "Supports route surface, shuttle, Fargo Plantation stop and access limitations as currently described by the operator."
+    },
+    {
+      "title": "Stonehenge questions and answers",
+      "url": "https://www.english-heritage.org.uk/visit/places/stonehenge/plan-your-visit/questions-and-answers/",
+      "publisher": "English Heritage",
+      "purpose": "Supports the approximate visitor-centre-to-circle landscape walking distance, burial-mound route and ordinary circle-viewing arrangement."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "read-prehistoric-rock-art-at-bhimbetka-with-a-guide",
+    "visit-the-temples-of-angkor-wat-cambodia",
+    "the-alhambra-granada-spain"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

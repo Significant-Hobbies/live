@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "temper-chocolate-and-mould-a-small-batch",
+  "slug": "temper-chocolate-and-mould-a-small-batch",
+  "title": "How do you temper chocolate for a small batch?",
+  "description": "Temper a small batch of chocolate by following its type-specific temperature curve, testing a sample before moulding, and keeping water away from the melt.",
+  "intent": "How can I temper enough chocolate for one small moulding project? This guide explains the melt-cool-warm cycle, a beginner test and how to troubleshoot a batch without discarding it.",
+  "sections": [
+    {
+      "heading": "Choose chocolate that can be tempered",
+      "paragraphs": [
+        "Use couverture or another chocolate whose maker provides tempering guidance. Chocolate chips, compound coating and bars with different fats may not behave the same way, so check the label before choosing a method. Tempering is the controlled pre-crystallization of cocoa butter. Callebaut's Chocolate Academy explains that it helps chocolate set hard and shiny and release from moulds after cooling. The temperatures depend on the type and product, so there is no single curve that fits every batch.",
+        "For a first attempt, weigh a small amount and have your thermometer, bowl, spatula and clean dry mould ready before heating. Keep water and steam away from the chocolate; even a little moisture can change its texture. Use a double boiler with a gentle simmer or a microwave method recommended by the chocolate maker. Warm slowly and stir thoroughly so one hot spot does not exceed the target temperature."
+      ]
+    },
+    {
+      "heading": "Follow the full temperature curve",
+      "paragraphs": [
+        "Tempering has three broad stages: melt the existing crystals, cool the chocolate to build stable crystals, then warm it to the product's working range. The Chocolate Academy gives an overview of melting around 40–45°C, cooling to the lower point on the product's curve and reheating to the proper working range. Its specific charts differ for dark, milk, white and other chocolate. Use the curve for your exact chocolate rather than copying a number from another recipe.",
+        "Stir slowly and scrape the sides and bottom as you move through the cooling stage. A small batch cools quickly, so check the temperature regularly and do not leave the bowl unattended. If the chocolate thickens before reaching its intended range, follow the maker's troubleshooting guidance rather than applying strong heat. Do not let the final working temperature rise above the product's limit or the stable crystals you just formed may melt again."
+      ]
+    },
+    {
+      "heading": "Test before filling the mould",
+      "paragraphs": [
+        "Before pouring, spread a small streak of chocolate on parchment or dip the edge of a spoon. Let it set at a cool room temperature while you keep the bowl within the product's working range. The Chocolate Academy recommends testing a sample before beginning the project to verify crystallization. A properly tempered test should set with a firm surface and consistent appearance for that chocolate; a streaky or soft sample suggests you should pause and correct the process before filling every cavity.",
+        "If the test fails, check your thermometer reading, stirring and whether the bowl or tools were wet. Do not add untempered chocolate to the mould and hope chilling will fix it. Chilling can make chocolate firm temporarily, but it does not substitute for tempering. If you need to remelt, use the chocolate maker's approved method and start the curve again."
+      ]
+    },
+    {
+      "heading": "Fill and release a modest mould",
+      "paragraphs": [
+        "Use a clean, dry mould at room temperature. Pour or spoon chocolate into each cavity, tap the mould lightly to settle it and scrape away excess with a clean scraper. Work at a pace that matches the chocolate's working range. If the surface begins to thicken or lose its shine in the bowl, check the temperature rather than forcing it through a narrow cavity.",
+        "Let the moulded chocolate set according to the manufacturer's directions, away from heat and moisture. If it does not release, give it more time rather than bending a brittle mould or levering with a knife. A cooled, properly tempered piece should come away cleanly from a suitable mould. Store the finished pieces in a cool, dry place and avoid sudden temperature changes that can create condensation."
+      ]
+    },
+    {
+      "heading": "Keep notes for the next batch",
+      "paragraphs": [
+        "Write down the chocolate type, quantity, three temperatures, method and the result of the test sample. If the chocolate went dull or stayed soft, identify where the curve drifted before changing the mould or recipe. Small batches are useful because they make it easier to watch each stage and limit waste while you learn.",
+        "Your next action is to choose one small mould and one chocolate with a published temperature curve, then temper just enough to test one sample before filling. If the sample sets as expected, finish the mould; if not, adjust according to that product's guidance."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Guide to Different Tempering Methods",
+      "url": "https://www.chocolate-academy.com/en-GB/guide-different-tempering-methods",
+      "publisher": "Callebaut Chocolate Academy",
+      "purpose": "Supports tempering as cocoa-butter pre-crystallization, the melt-cool-warm sequence, product-specific curves, and testing a sample before beginning a moulding project."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "host-a-blind-apple-tasting",
+    "press-corn-tortillas-and-serve-them-warm",
+    "roll-vegetarian-maki-for-a-picnic-at-home"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,47 @@
+{
+  "experienceSlug": "see-the-midnight-sun-in-scandinavia",
+  "slug": "see-the-midnight-sun-in-scandinavia",
+  "title": "Choose a midnight-sun base by latitude and sleep plan",
+  "description": "The midnight sun varies by location and date. Choose one northern base, plan for sleep, and leave space for a late outing.",
+  "intent": "How should a visitor choose a northern base and sleep routine for the midnight sun?",
+  "sections": [
+    {
+      "heading": "Check dates by destination",
+      "paragraphs": [
+        "The midnight sun is not one Scandinavian calendar event. Visit Norway lists different windows by place: Tromsø’s period differs from Lofoten, Bodø, and Svalbard, and farther north generally means a longer stretch of sun above the horizon. Choose the destination you actually plan to visit and check exact dates for that location. “June in Scandinavia” is too broad to guarantee visible sun at midnight in your chosen town. Pick a base for more than latitude: consider how easy it is to reach, whether you want a town with late cafés or quieter landscape, and how much travel you want to add after dark. One base gives you time to adjust and explore nearby without moving bags every day. For a first visit, schedule one late activity—a guided walk, boat trip, or viewpoint—then leave the next morning open instead of treating daylight as a challenge to stay awake."
+      ]
+    },
+    {
+      "heading": "Protect your sleep",
+      "paragraphs": [
+        "Your room can make or break sleep. Ask before booking whether the curtains block light, whether the room is quiet, and whether you can control ventilation. Bring a sleep mask if you already use one. Set a deliberate bedtime and keep a familiar wind-down routine even if the sky looks like early evening. The goal is to decide how much night activity you want, not force your body to match the light. Leave room for weather. Cloud can hide the sun and the light changes with the sky. Pick a place where the outing stays worthwhile without visible sun: a harbor walk, sheltered trail, museum event, or warm meal with a view. Ask local guides what is accessible late and whether booking is needed. Do not assume every attraction extends its hours because daylight lasts."
+      ]
+    },
+    {
+      "heading": "Choose an outing that fits",
+      "paragraphs": [
+        "Late light can make familiar routes feel unfamiliar. If you plan to walk or cycle at night, choose a route appropriate to your ability and check local conditions; absence of darkness is not a safety guarantee. A guided activity can reduce planning, especially in remote terrain. Visit Norway specifically recommends a guide for glacier hikes on Svalbard and says visitors venturing into Svalbard’s wild areas should always have an armed guide. Keep that destination-specific guidance in mind rather than applying it to every northern outing. A common mistake is filling every bright hour with an activity, leaving no margin for tiredness. Keep one unplanned evening, bring layers for a cool night, and decide when to stop. If the sky stays luminous after you return, take one brief look from a nearby safe place, then sleep."
+      ]
+    },
+    {
+      "heading": "Make a gentle first night",
+      "paragraphs": [
+        "Before booking, compare the official destination dates with your travel dates. Pick one base, reserve a room with good light control, and select one late outing whose timing is confirmed by the operator. Bring an eye mask, a warm layer, and a camera or notebook if you like recording light. A complicated setup is not needed to notice color near the horizon. For your first evening, take a short walk, return before you are exhausted, and note how late light changes your sense of time. If cloud covers the sun, enjoy the other reasons you chose the place. Your next action is to check official dates for one candidate town and ask your lodging about blackout curtains before booking."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "The midnight sun in Norway",
+      "url": "https://www.visitnorway.com/things-to-do/nature-attractions/midnight-sun/?lang=usa",
+      "publisher": "Visit Norway",
+      "purpose": "Supports location-specific date windows, longer periods farther north, and Svalbard-specific guided-access notes."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "the-norwegian-fjords",
+    "see-the-northern-lights-in-iceland-or-norway"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

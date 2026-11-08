@@ -1,0 +1,51 @@
+{
+  "experienceSlug": "try-a-beginner-body-scan-with-a-guided-recording",
+  "slug": "try-a-beginner-body-scan-with-a-guided-recording",
+  "title": "What should you notice during a first guided body scan?",
+  "description": "Try a short guided body scan with a comfortable posture, permission to pause, and a gentle focus on sensation rather than trying to relax perfectly.",
+  "intent": "Answer how a beginner can make a body scan feel manageable and what to do when attention wanders, a body area is numb, or a sensation feels uncomfortable.",
+  "sections": [
+    {
+      "heading": "Choose a recording and a posture that suit you",
+      "paragraphs": [
+        "A body scan is a guided attention exercise: you move your focus through parts of the body and notice what is present. For a first attempt, choose a short recording from a reputable health service or mindfulness program rather than an unstructured audio with promises about what you will feel. Settle somewhere you can pause without being interrupted. You can lie down or sit upright; if you are likely to fall asleep lying down, a chair may be more useful. Keep your eyes open or closed according to what feels comfortable.",
+        "Guy’s and St Thomas’ NHS Foundation Trust describes body scanning as noticing sensations in different parts of the body and offers both sitting and lying options. It also says to stop if an exercise is painful or uncomfortable and speak with a doctor or trainer. This is not a test of discipline. You can shorten the session, return to the breath, open your eyes, or stop. If focusing inward tends to feel distressing for you, skip this practice and choose another gentle attention exercise instead."
+      ]
+    },
+    {
+      "heading": "Notice rather than manufacture a feeling",
+      "paragraphs": [
+        "When the recording invites attention to the feet, hands, or shoulders, use plain sensory words: warm, cool, pressure, tingling, contact, movement, or no clear sensation. You do not need to relax each muscle or create a special state. A neutral observation is still an observation. If you feel nothing in one area, let that be the answer for now rather than inspecting harder or deciding you have failed.",
+        "As attention moves, the mind will probably follow a thought, sound, or plan for later. When you notice that, name it simply—“planning,” “remembering,” or “hearing a car”—and return to the area the recording is guiding you toward, if that still feels okay. Wandering attention is part of the exercise. Each return is the practice itself, not a mistake to punish."
+      ]
+    },
+    {
+      "heading": "Use an anchor when a sensation feels too much",
+      "paragraphs": [
+        "A scan can bring attention to pain, strong emotion, numbness, or an area you would rather not focus on. You are allowed to skip that part and return to something more neutral, such as the feeling of your feet on the floor or the breath moving in and out. NHS guidance describes using the breath as an anchor when sensations or emotions become too uncomfortable. You can also sit up, open your eyes, adjust your posture, or end the recording. Do not force yourself to stay with distress in order to complete the exercise.",
+        "A guided recording may use language that does not fit your body or experience. Adapt it in your mind: focus on the area that is available to you, change the posture, or leave out the cue. You are listening for what is true in the moment, not following a script perfectly. If any exercise causes ongoing concern, ask a qualified health professional or the provider who recommended it for a better fit."
+      ]
+    },
+    {
+      "heading": "Finish with a small check-in",
+      "paragraphs": [
+        "When the recording ends, give yourself a moment before standing or switching tasks. Notice the chair or floor, orient to the room, and move in a way that feels comfortable. You might jot down one line: what was easy to notice, what was hard, and whether you would choose the same recording again. Avoid grading the session as successful only if it produced calm; the goal here is to practise noticing, and sometimes the honest result is restlessness or boredom.",
+        "For a first attempt, try a short audio once, then decide whether to repeat it another day. If sitting felt easier than lying down, keep that. If one body area felt uncomfortable, choose a recording that offers options or use a different anchor next time. A useful next action is to save the name of a recording that respected your pace, so you can return to it only if it remains suitable for you."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Mindfulness-based stress reduction (MBSR) exercises",
+      "url": "https://www.guysandstthomas.nhs.uk/health-information/mindfulness-based-stress-reduction-mbsr/mbsr-exercises",
+      "publisher": "Guy’s and St Thomas’ NHS Foundation Trust",
+      "purpose": "Supports body scan posture options, nonjudgmental noticing, returning attention to the breath, and stopping if painful or uncomfortable."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "try-a-short-seated-movement-session",
+    "take-a-forest-bathing-walk"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

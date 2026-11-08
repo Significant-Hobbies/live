@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "surf-a-real-wave",
+  "slug": "surf-a-real-wave",
+  "title": "Let a surf instructor choose the first wave with you",
+  "description": "Make your first real wave about reading conditions and learning under supervision, with clear questions for a surf school before you enter the water.",
+  "intent": "How can a beginner experience catching a real wave without mistaking a lesson for permission to surf independently in unfamiliar conditions?",
+  "sections": [
+    {
+      "heading": "Define what a first wave means",
+      "paragraphs": [
+        "A real wave does not need to be large or dramatic. For a beginner, the meaningful moment may be catching whitewater on a soft board, keeping balance for a few seconds, and understanding what happened before you stood up. Leave the image of surfing a powerful open-ocean break to experienced surfers. Your first session should fit your swimming ability, comfort in moving water, and the conditions on that particular beach.",
+        "Choose a reputable local surf school or qualified instructor who can explain the plan before anyone enters the water. Ask what beginner skill the session will teach, how the instructor checks conditions, what happens if conditions change, and what signal means everyone returns to shore. A school that welcomes these questions gives you useful information; a few minutes of instruction cannot make every sea state safe."
+      ]
+    },
+    {
+      "heading": "Check the school and the day’s plan",
+      "paragraphs": [
+        "The International Surfing Association’s surf-school guidance describes procedures such as checking conditions with a lifeguard, providing a safety talk about that day’s hazards, using suitable beginner equipment, keeping participants in view, and demonstrating skills before practice. The document is older and not a substitute for current local rules, so use it as a list of questions rather than a certification guarantee. Ask what current qualifications, emergency arrangements, and local approvals apply at the beach you chose.",
+        "Tell the instructor honestly if you are not a confident swimmer, have a health concern, or feel uneasy about the planned water. Ask about a quieter or shallower lesson format if available, and accept a postponement if the instructor says conditions are unsuitable. Do not copy another group’s behavior or enter the water because other surfers seem relaxed; their experience and equipment may be different."
+      ]
+    },
+    {
+      "heading": "Learn the sequence before the excitement",
+      "paragraphs": [
+        "A good beginner lesson will usually include an explanation on shore before practice. Learn how to carry and control the board, where to wait, how to watch for the instructor’s signal, and what to do if you fall or lose the board. The exact steps should come from your instructor, who can adapt them to the beach and equipment. Keep enough space from other learners and follow the one-person-per-wave direction if the instructor gives it.",
+        "Practice the land-based movement first: place your hands where shown, rise only when cued, and look where the instructor directs. The ISA guidance emphasizes demonstrating, participating, and receiving feedback, then repeating the cycle. You do not need to rush from paddling to standing. Catching a foam wave while prone can be a genuine first milestone, and the coach decides when a progression is appropriate."
+      ]
+    },
+    {
+      "heading": "Treat the water as changing, not as a stage",
+      "paragraphs": [
+        "Pay attention to the conditions briefing and the instructor’s location throughout the session. If you feel tired, disoriented, anxious, or unable to follow the instructions, signal the instructor and return to shore with the group. Never go farther out to chase a better ride. Do not surf alone as a beginner, rely on a phone app instead of local supervision, or assume that a beach familiar from a photograph has the same conditions on your visit.",
+        "Wear only the equipment and clothing your instructor recommends for that water and weather. Ask where to place personal items and what the school’s emergency plan is. If the beach uses flags, signs, or lifeguard instructions, follow the local system; meanings vary by location, so ask rather than infer. This article cannot assess a particular beach, tide, current, or forecast."
+      ]
+    },
+    {
+      "heading": "Finish by reviewing the moment",
+      "paragraphs": [
+        "After the session, write down what you learned about the wave rather than only whether you stood. Did you notice the board speed up? Could you hear the cue? What felt different from the demonstration? Share that observation with the coach and ask for one skill to practice next time. If you want another lesson, choose one planned progression with the same local school or another qualified provider who knows the break.",
+        "The next step is to book a supervised beginner session at a beach appropriate for your ability, then ask about that day’s conditions before you commit. A calm, controlled first wave is a stronger start than a risky attempt made for a photograph."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Obligations of a Registered Surfschool",
+      "url": "https://isasurf.org/wp-content/uploads/2021/04/ISAOBLIGATIONSOFaregisteredsurfschool010308.pdf",
+      "publisher": "International Surfing Association",
+      "purpose": "Supports the article’s questions about checking conditions with lifeguards, day-specific safety talks, suitable beginner gear, supervision and staged demonstration/practice/feedback; this older document is not current local certification or beach-condition advice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "take-an-adult-beginner-swimming-lesson",
+    "surf-a-wave-over-10-feet",
+    "swim-a-mile-without-stopping"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "sleep-under-the-stars-in-the-sahara",
+  "slug": "sleep-under-the-stars-in-the-sahara",
+  "title": "Plan a Sahara night around the operator and the sky",
+  "description": "Choose a Sahara overnight by verifying the exact desert region, local guide, transfer, sleeping setup and weather plan before treating a camp photo as a promise.",
+  "intent": "How do I plan an overnight desert trip around its actual location and operator? Confirm logistics, set realistic expectations, and respect the local community.",
+  "sections": [
+    {
+      "heading": "Confirm which desert landscape you booked",
+      "paragraphs": [
+        "Ask the operator for the exact starting town, overnight location and route. Morocco’s official tourism site distinguishes Merzouga and Zagora from Agafay; those places are not interchangeable, and a marketed desert escape does not automatically mean an overnight among Sahara dunes. Verify the geography before choosing transport or treating the experience title as a literal itinerary.",
+        "Ask whether the trip is a camp stay, guided walk, camel transfer or 4×4 excursion. The tourism office lists different ways to experience the region, including a Merzouga camel ride and a Zagora night beneath the stars. That is destination inspiration, not proof of what a package includes. Get the itinerary, meeting point and return plan in writing."
+      ]
+    },
+    {
+      "heading": "Ask practical questions before payment",
+      "paragraphs": [
+        "Confirm how you reach the camp and who is responsible for each transfer. Ask what happens if a vehicle, route or weather condition changes the plan, and how you can contact the operator during the trip. Check cancellation terms and what happens to a deposit if the company cancels. Do not assume a remote camp has hotel facilities or that a booking includes meals, drinking water, bedding or a bathroom.",
+        "Ask about sleeping arrangements and what to bring. Clarify whether bedding, blankets, a sleeping bag, a mat, private or shared tent and washroom are included. Ask what nighttime temperatures and wind conditions to expect for your date; no single layer list fits every season or camp. Raise accessibility, dietary, medication and mobility needs before booking."
+      ]
+    },
+    {
+      "heading": "Look for a guide who can explain the place",
+      "paragraphs": [
+        "A good overnight is more than a transfer to a photogenic dune. Ask who leads the trip, how they know the area, what local communities or businesses are involved and how the visit avoids disturbing wildlife or archaeological sites. The Moroccan tourism office describes Merzouga through dunes, fennec tracks and regional landscapes; let a qualified local guide explain what you are actually seeing rather than assuming every dune has the same story.",
+        "Do not collect plants, disturb tracks or leave rubbish. Keep voices and lights low when others are resting. If you visit a village, ask before photographing residents or homes and let your host explain local customs. A respectful itinerary makes room for the guide and residents to set boundaries."
+      ]
+    },
+    {
+      "heading": "Let the sky be a possibility, not a promise",
+      "paragraphs": [
+        "Cloud, dust, moonlight and weather can change what the sky looks like. Ask the operator what nighttime conditions are typical for the date and whether the camp has a sheltered place to sit if wind rises. Do not expect a particular constellation or Milky Way view just because a promotional photo shows one. The night can still be meaningful as a quiet pause, a landscape walk or a morning change in light.",
+        "After sunset, follow the guide’s route and do not walk alone beyond camp. Darkness makes orientation harder, and dunes can look similar from different angles. If photographing the sky, ask where to set up without shining a bright light into tents or blocking a path."
+      ]
+    },
+    {
+      "heading": "Include the return in the plan",
+      "paragraphs": [
+        "Desert itineraries depend on vehicles, roads and operator arrangements. Confirm pickup time and return location, what happens if the group is delayed, and whether onward transport should stay flexible. Check current travel advisories and local operating guidance close to departure; an old blog report is not a present safety assessment.",
+        "Your next action is to ask for the exact place, route, transfer, guide, sleeping arrangements, included supplies, weather plan and cancellation terms. If answers are vague, choose another provider or a less remote outing. The goal is to wake up with a clear sense of where you are, not to learn that only after the drive."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Sun and sensations in the desert",
+      "url": "https://www.visitmorocco.com/en/see-do/nature/infinite-emotions-great-south",
+      "publisher": "Moroccan National Tourism Office",
+      "purpose": "Differentiates Merzouga, Zagora and Agafay and identifies desert activities; used for place specificity, not current camp operations."
+    },
+    {
+      "title": "Trekking and desert experiences",
+      "url": "https://visitmorocco.com/en/see-do/sports/land-hikers",
+      "publisher": "Moroccan National Tourism Office",
+      "purpose": "Describes Merzouga camel trekking and desert hiking contexts; not used for safety or availability guarantees."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "spend-a-night-stargazing-with-no-agenda",
+    "sleep-on-a-beach-under-the-stars",
+    "trek-across-iceland"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

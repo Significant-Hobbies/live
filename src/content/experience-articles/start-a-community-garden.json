@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "start-a-community-garden",
+  "slug": "start-a-community-garden",
+  "title": "Build the agreements before building the beds",
+  "description": "Start a community garden by securing permission, checking site history and soil, planning access and water, and agreeing who maintains it.",
+  "intent": "What practical and safety decisions should a neighborhood settle before turning a shared site into a community garden?",
+  "sections": [
+    {
+      "heading": "Find a site and someone authorized to say yes",
+      "paragraphs": [
+        "Begin with a small group of people who will use and maintain the garden. Identify possible sites, then contact the landowner or public agency before clearing vegetation, installing beds or inviting volunteers. Ask what uses are allowed, how long access lasts, who controls keys, and whether there are conditions on structures, water use or public entry. A vacant-looking parcel is not automatically available.",
+        "Write down the basics before spending money: the garden’s purpose, expected users, decision process, work days, tool storage, accessibility needs, and how disagreements or abandoned plots will be handled. A short written agreement with the landowner and a simple member agreement prevent one enthusiastic organizer from carrying every responsibility. Check local rules for water connections, fencing, composting and public events."
+      ]
+    },
+    {
+      "heading": "Learn the site history before growing food",
+      "paragraphs": [
+        "A former lot may have had uses that left contaminants, and visual inspection alone cannot show whether soil is safe. EPA’s brownfields garden guidance recommends looking into site history and nearby uses, talking with local officials, and testing soil. It cautions that a conventional fertility test may not include lead, arsenic or other contaminants unless you request the specific environmental tests.",
+        "Contact the landowner, local health or environmental agency, and a university extension soil-testing service to learn which lab and sampling instructions fit the site. EPA notes that testing requirements and what a lab covers can differ. Do not plant food crops while you are waiting for results if a relevant hazard is unresolved. Raised beds or containers with suitable clean soil may be options, but ask local experts whether they address the concern at your particular site."
+      ]
+    },
+    {
+      "heading": "Design for water, sunlight and people",
+      "paragraphs": [
+        "Once you understand the site, map the sunlight, water access, slopes, shade, storage and routes people will use. EPA’s guidance names sunlight, water, security, gardener access and visitor accessibility among design considerations. Include paths wide and stable enough for the people you expect to welcome, and make at least some tasks possible without kneeling or lifting heavy materials.",
+        "Choose a garden scale the group can maintain through a full season. A few beds, clear paths and a labeled shared tool area are easier to care for than a large, unfinished plan. Decide who pays for water and how to manage a broken hose, unattended tools or a missed watering shift. If the site has no dependable water source, resolve that before purchasing plants."
+      ]
+    },
+    {
+      "heading": "Make maintenance an explicit agreement",
+      "paragraphs": [
+        "Assign recurring tasks and backups: watering, weeding, compost management, access to tools, litter removal and end-of-season cleanup. Set a process for plot assignment and harvest sharing. If children, older adults or neighbors with limited mobility will participate, define safe tasks and routes rather than making access an afterthought.",
+        "Compost and amendments should follow local guidance. Keep unknown soil, treated lumber, discarded building materials or unverified fill out of food-growing areas. EPA specifically warns that “clean fill” in construction can mean free of chunks, not safe for gardening. Buy only materials appropriate for food production and keep receipts or labels so future stewards know what was added."
+      ]
+    },
+    {
+      "heading": "Start with a season you can learn from",
+      "paragraphs": [
+        "Choose a manageable first season and record what the group plants, how often the beds need care, and what obstacles appear. Keep the record practical: planting dates, water schedule, volunteer coverage, issues and harvests. Use the results to revise next year’s layout and expectations, not to promise a certain yield.",
+        "If the site is a former industrial or commercial property, EPA’s brownfields guidance says more environmental review may be needed and suggests working with local, state or tribal experts. This is a U.S. federal resource with site-specific guidance, not clearance for any parcel. Let qualified local officials and labs answer safety questions before a community grows food there."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Steps to Creating a Community Garden or Expand Urban Agriculture at a Brownfields Site",
+      "url": "https://www.epa.gov/brownfields/steps-creating-community-garden-or-expand-urban-agriculture-brownfields-site",
+      "publisher": "U.S. Environmental Protection Agency",
+      "purpose": "U.S. brownfields guidance for site history, contaminant testing, clean soil and design; not a site-specific safety determination."
+    },
+    {
+      "title": "Lead in Soil",
+      "url": "https://www.epa.gov/lead/lead-soil",
+      "publisher": "U.S. Environmental Protection Agency",
+      "purpose": "U.S. lead soil testing and exposure pathways, including garden soil; supports testing and cautious site selection, not clearance for an individual garden."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "grow-something-you-can-eat-from-seed-to-plate",
+    "grow-something-you-can-eat",
+    "clean-up-a-beach-or-river-in-your-community"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

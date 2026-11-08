@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "make-something-with-your-hands-you-re-proud-of",
+  "slug": "make-something-with-your-hands-you-re-proud-of",
+  "title": "Make a small sampler that shows your decisions as well as your stitches",
+  "description": "Finish a small handmade sampler by testing thread and fabric together, choosing a clear visual idea, and giving the edges a considered finish.",
+  "intent": "Answers how to make a small craft object worth keeping; focuses on material, surface, layout and workmanship rather than engineering a functional prototype.",
+  "sections": [
+    {
+      "heading": "Choose a bounded object",
+      "paragraphs": [
+        "A small embroidery sampler is a satisfying craft object because the surface is the point: it can record a few marks, colors or stitches without needing to function as a bag, tool or machine. Choose a postcard-sized cloth panel, a stitched bookmark or a square to frame. Set a boundary before you begin, such as three colors, one motif and one border. A limit creates room to make a few details well instead of starting a project that needs weeks of finishing.",
+        "The Victoria and Albert Museum documents historic samplers as both pattern references and practice pieces; its collection includes English examples arranged as scattered motifs and as repeated bands. These are particular historical examples, not a universal account of embroidery traditions. Borrow the idea of a small surface that records choices, then decide what your own sampler is for: a place, a plant, a phrase, or a sequence of marks that shows what you learned."
+      ]
+    },
+    {
+      "heading": "Test the materials on a scrap",
+      "paragraphs": [
+        "Before drawing on the final piece, pair the fabric and thread on an offcut. A tightly woven cotton supports a different look from a coarse linen or an open weave. Try a short line of running stitch, a small filled shape and a few chain stitches, then turn the cloth over. If the reverse becomes bulky or the fabric puckers, use fewer strands, loosen your tension or simplify the design. The goal is not technical perfection; it is choosing a combination you can control.",
+        "Use a hoop or another method of holding the material steady if that helps, but avoid pulling the cloth drum-tight. Mark the design lightly with a method that suits the fabric and test whether the mark can be removed. If you are using a pattern, understand its source and terms rather than assuming a museum object is a free pattern. You can make an original arrangement from simple geometric shapes or leaves you observe yourself."
+      ]
+    },
+    {
+      "heading": "Give the surface a clear composition",
+      "paragraphs": [
+        "Choose one focal point and leave space around it. A tiny fern at the lower corner can work better than a dense picture of every plant you like. Place the strongest color where you want the eye to land, then use quieter lines to lead toward it. If you prefer an orderly band, repeat a small leaf or dash with slight variations. If you prefer scattered motifs, vary the spacing so the cloth feels intentional rather than crowded.",
+        "Work a small sample of each stitch before committing to the whole surface. Use a running stitch for a simple line, backstitch for a firmer outline or satin stitch for a compact filled shape. These are practical starter choices, not rules about what makes embroidery authentic. If you are exploring a specific regional or cultural tradition, learn with a knowledgeable practitioner and use their terminology and context rather than treating a generic sampler as a substitute."
+      ]
+    },
+    {
+      "heading": "Finish what the viewer can see",
+      "paragraphs": [
+        "When the main motif is done, pause and look at the piece from arm’s length. Trim loose threads on the reverse, secure ends without making hard knots that show through and check for puckering. Decide whether the edge should be hemmed, wrapped around a card, placed in a simple frame or left as a raw sample with a clear reason. A tidy finish makes the object feel considered, but it does not need store-bought framing.",
+        "Add a small label on the back with the date, materials and what you were trying to learn. That note turns the object into a record of one set of choices. If you plan to wash the cloth or display it in strong light, check what care the materials need rather than assuming every thread and fabric behave alike."
+      ]
+    },
+    {
+      "heading": "Make the next attempt more deliberate",
+      "paragraphs": [
+        "Write down the one thing you would change: a larger margin, fewer thread colors, a denser outline or a sturdier backing. If the first sample is uneven, it may still be the best record of how your hand learned the material. Choose a second, very small study that isolates one change rather than restarting with a more ambitious design.",
+        "For a first finish, gather one fabric scrap, three thread colors and a design that fits within a palm. Test the materials, stitch the motif, then take the time to secure and mount it before buying a larger project kit."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Embroidery – a history of needlework samplers",
+      "url": "https://www.vam.ac.uk/articles/embroidery-a-history-of-needlework-samplers",
+      "publisher": "Victoria and Albert Museum",
+      "purpose": "Supports the narrow historical examples of samplers as reference or practice pieces, including spot motifs and repeated bands; the practical project advice is original and does not claim to represent all embroidery traditions."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "mend-a-favourite-garment-with-visible-stitches",
+    "set-and-print-a-line-of-letterpress-type",
+    "coil-a-basket-from-recycled-paper"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

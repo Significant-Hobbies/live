@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "start-a-scholarship-fund",
+  "slug": "start-a-scholarship-fund",
+  "title": "Begin with a scholarship purpose, not a bank account",
+  "description": "Define who a scholarship should help, compare an existing fund with a new program, and check applicable charity rules before collecting money.",
+  "intent": "What decisions should come before starting a scholarship fund? This maps an initial design conversation and flags U.S.-specific private-foundation rules for expert review.",
+  "sections": [
+    {
+      "heading": "Write the purpose in one clear sentence",
+      "paragraphs": [
+        "Describe the learners you hope to support and what the award would make possible. “Students from this district entering an accredited nursing program who need help with required materials” is more workable than “people who deserve help.” A clear purpose helps partners decide whether the idea fits their existing work and gives applicants a fair explanation of what is eligible.",
+        "Keep the purpose narrow enough to evaluate, but avoid criteria that favor a single named person or family. If you have a connection to the intended recipients, disclose it early and ask an independent organization to help design a process that treats applicants fairly. A scholarship can be generous in intent and still create conflicts if the rules are written around one expected recipient."
+      ]
+    },
+    {
+      "heading": "Ask whether a new fund is necessary",
+      "paragraphs": [
+        "Before setting up a separate fund, speak with a school foundation, community foundation, established charity, or scholarship administrator that already handles applications and payments. Ask whether they can host a named award, what costs they charge, who makes decisions, what records they maintain and what happens if the award is not given in a particular year. Compare the total administration with the amount likely to reach students.",
+        "A new legal entity is not the only route. An existing organization may already know how to protect applicant privacy, check eligibility and issue awards. If you still want an independent fund, get advice from qualified nonprofit counsel and an accountant in your jurisdiction before accepting donations or promising tax treatment."
+      ]
+    },
+    {
+      "heading": "Design fair criteria and a readable application",
+      "paragraphs": [
+        "Write down the eligibility rules, selection criteria, award amount or range, timeline and who decides. Use criteria you can actually assess: course enrollment, a defined project plan or a short explanation of how the award would be used. Avoid collecting sensitive information unless it is necessary and the organization can protect it. An application should tell people what is requested, how the information will be used and when they can expect a decision.",
+        "Test the form with someone unfamiliar with your plan. Ask them to apply using only the instructions. If they do not understand what counts as eligible study or how to submit supporting documents, revise it. Offer a reasonable way to ask a question, and create a decision record that records the criteria applied rather than just the winner’s name."
+      ]
+    },
+    {
+      "heading": "Understand U.S. private-foundation rules before fundraising",
+      "paragraphs": [
+        "If the fund would be a U.S. private foundation, the Internal Revenue Service says grants to individuals for study are subject to rules that include an objective, nondiscriminatory basis and a procedure approved in advance by the Service. The IRS page also describes conditions for scholarships or fellowships used at qualifying educational institutions. These rules are specific to a legal structure and jurisdiction; do not assume they apply in the same way to a public charity, school-hosted award or fund in another country.",
+        "Treat this as a reason to get qualified advice before launch, not as a do-it-yourself compliance checklist. Avoid advertising tax-deductible gifts until an eligible organization has confirmed the arrangement. Use written terms for donors and applicants, and do not spend pledged funds on another purpose without reviewing the governing documents and legal advice."
+      ]
+    },
+    {
+      "heading": "Pilot the process and report back",
+      "paragraphs": [
+        "A small first award can test whether the purpose, timeline and application are realistic. Ask an independent reviewer to read the rules; invite feedback from students or advisors without requesting private stories in public. After the decision, report how many eligible applications were reviewed, how the stated criteria were used and what will change next time. Protect the identities and personal information of applicants.",
+        "Plan for continuity: name who will administer the next round, where records are stored and how the fund can be paused or closed responsibly. Your next step is to contact one established scholarship administrator and compare its hosted-award option with a new fund before asking anyone for money."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Grants to Individuals",
+      "url": "https://www.irs.gov/charities-non-profits/private-foundations/grants-to-individuals",
+      "publisher": "Internal Revenue Service",
+      "purpose": "Supports the stated U.S. private-foundation rules for grants to individuals, including objective nondiscriminatory selection procedures and scholarship/fellowship conditions; not generalized to other structures or jurisdictions."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "fund-a-child-s-education-for-a-year",
+    "start-a-foundation-or-fund-something-that-outlasts-you",
+    "do-a-group-charity-challenge-with-friends"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "animate-a-strip-in-a-homemade-zoetrope",
+  "slug": "animate-a-strip-in-a-homemade-zoetrope",
+  "title": "Make a paper animation strip that reads clearly in a zoetrope",
+  "description": "Plan a simple repeating motion, draw frames with even spacing, and adjust a homemade zoetrope when the images appear jumpy or disappear.",
+  "intent": "How do I design a zoetrope strip that looks animated on a first try? This guide focuses on readable motion, frame spacing and diagnosing common viewing problems.",
+  "sections": [
+    {
+      "heading": "Choose one motion with a clear beginning and return",
+      "paragraphs": [
+        "A zoetrope works well with a small action that changes a little at a time and can loop: a ball bouncing, a flower opening and closing, or a figure waving. Avoid beginning with a complicated scene. The cylinder presents the pictures in sequence, so the viewer needs to recognise the same subject in each frame. Decide what stays fixed, such as the centre of a ball’s path, and what changes, such as its height or the bend of an arm.",
+        "Sketch the action as a handful of key poses before drawing the strip. Mark the first pose and last pose to see whether they can meet smoothly. If the final picture is far from the first, the loop may look like a jump. You can make the return part of the action: a bounce rises, falls, and arrives back at the starting position."
+      ]
+    },
+    {
+      "heading": "Measure the strip before drawing details",
+      "paragraphs": [
+        "The strip must fit the drum’s viewing area and sit inside it without buckling. Measure the inside circumference and height of your finished cylinder, then leave a small margin at both ends. Divide the usable length into equal frame boxes; a ruler and light pencil lines are more helpful than guessing. Keep the same subject scale and baseline in each box so the animation does not drift sideways or grow by accident.",
+        "For a simple paper version, the slit pattern matters as much as the drawings. The viewer sees each frame through a narrow opening while the strip spins behind it. Follow a tested template for your drum size, and ask an adult or maker-space instructor to handle cutting tools if the construction involves blades, saws or powered parts. A hand-spun design is enough for learning; you do not need a motor."
+      ]
+    },
+    {
+      "heading": "Draw for change, not for decoration",
+      "paragraphs": [
+        "Use bold, uncomplicated shapes that remain legible at a glance. Draw the fixed parts first in every frame, then adjust only the moving feature. For a bouncing ball, for example, keep its width and colour stable while shifting its vertical position and perhaps flattening it slightly at the moment of impact. Fine detail, tiny lettering and elaborate backgrounds can blur together when viewed through the slits.",
+        "Number the frames lightly on the back or keep a separate sequence sketch, so you can spot an accidental reversal. If a figure moves across the page, watch the edges: a subject that appears in one frame and vanishes in the next can seem to teleport. Repeating an intermediate pose can slow the motion in that part of the loop; removing frames can make it feel quicker, though the result may look less smooth."
+      ]
+    },
+    {
+      "heading": "Test the strip before you rebuild the drum",
+      "paragraphs": [
+        "Place the strip inside the cylinder, align its ends, and spin the drum at a steady pace while looking through one slit. Change one variable at a time. If the image seems static, make the frame changes more distinct. If it flickers or blurs, check that the slits are open and evenly spaced, the strip is secure, and the drum is not wobbling. Try a slower spin before redrawing everything.",
+        "The National Museum of Australia’s zoetrope activity puts a frame-by-frame drawing strip inside a circular wall below the viewing slits. Looking through those slits while the model spins creates the animation illusion. Treat that as the principle, not a requirement to copy a motorized build. Cardboard, a paper strip and a carefully made cylinder can teach the essential relationship between frame sequence and viewing."
+      ]
+    },
+    {
+      "heading": "Keep the next version focused",
+      "paragraphs": [
+        "Write down what you changed and what improved: frame spacing, drawing size, speed or the loop’s ending. Then make one small revision. This is more useful than remaking the entire object after a disappointing first spin. Keep the old strip beside the new one so you can compare how a single adjustment affected the motion.",
+        "A first zoetrope succeeds when you can explain why the sequence reads as movement, even if the illusion is imperfect. Save the strip flat and label the project with its drum size and frame count."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Make your own zoetrope",
+      "url": "https://www.nma.gov.au/learn/diy/zoetrope",
+      "publisher": "National Museum of Australia",
+      "purpose": "A complete paper zoetrope method with a wall template, animation strips, viewing slits and a hand-spun pivot."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "print-a-set-of-foam-relief-postcards",
+    "marble-a-sheet-of-paper",
+    "control-a-scratch-project-with-a-physical-object"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

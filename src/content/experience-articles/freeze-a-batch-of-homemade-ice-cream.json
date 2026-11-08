@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "freeze-a-batch-of-homemade-ice-cream",
+  "slug": "freeze-a-batch-of-homemade-ice-cream",
+  "title": "How do you make a small batch of ice cream without a machine?",
+  "description": "Pick a complete tested recipe, decide whether you are using a freezer or bag method, and compare texture without guessing about food safety.",
+  "intent": "A method for choosing one manageable ice-cream process, keeping recipe variables clear and evaluating texture after freezing.",
+  "sections": [
+    {
+      "heading": "Choose a recipe that matches your equipment",
+      "paragraphs": [
+        "Decide first whether you have an ice-cream machine, a freezer-safe container or a bag-based science activity. Use one complete recipe that names the ingredients, mixing method and freezing instructions. Pacific Science Center offers an educational ice-cream-in-a-bag activity as one machine-free route; it presents the process as a kitchen chemistry demonstration, not as a universal recipe for every base.",
+        "If you want a cooked custard, follow a tested recipe for that style and use its temperature and cooling instructions. If you prefer an egg-free base, choose a recipe written for that method. Do not blend steps from different recipes because ingredient ratios and freezing methods work together. Check allergies and dietary needs before serving anyone."
+      ]
+    },
+    {
+      "heading": "Prepare a small, tidy batch",
+      "paragraphs": [
+        "Read the full recipe before starting and set out the measured ingredients, utensils and freezer container. Chill components only when the recipe calls for it. Label the container with the flavour and date, and make sure it can sit level in the freezer without being disturbed. A smaller batch is easier to manage and makes it possible to compare one change without wasting ingredients.",
+        "For a bag method, follow the science centre’s activity instructions exactly, including its material handling and supervision notes. Keep the sealed inner mixture separate from the ice-and-salt layer and prevent salt from getting into the food. If a bag leaks or the setup becomes uncomfortable to hold, pause and clean up rather than trying to rescue the mixture while it is exposed."
+      ]
+    },
+    {
+      "heading": "Notice how freezing changes texture",
+      "paragraphs": [
+        "Some methods ask you to stir or shake the base at intervals; others rely on a machine. Follow the recipe’s method and do not substitute an arbitrary schedule. The texture can vary with the base and freezing setup. If the batch freezes very hard, let it soften according to the recipe’s serving advice rather than heating it or repeatedly thawing and refreezing it.",
+        "Write down what you changed, if anything: flavour, container, stirring or freeze time. Change one variable on the next batch. A comparison between two differently flavored bases will not isolate whether the texture came from the recipe or the freezing method, so keep the base consistent when you want a useful experiment."
+      ]
+    },
+    {
+      "heading": "Keep food handling straightforward",
+      "paragraphs": [
+        "Use clean utensils and keep the mixture covered while it freezes. Follow the recipe’s handling and storage guidance, especially if it contains eggs or dairy. Do not rely on smell or taste to decide whether food is safe after it has been left at an uncertain temperature. If you are unsure about storage, discard it rather than taking a risk.",
+        "Use the freezer and any hot equipment carefully, and supervise children around bags, ice, salt and kitchen tools. The Pacific Science Center notes its educational activity should be done in an appropriate environment with supervision and safety guidance. Take that reminder seriously even for a simple dessert."
+      ]
+    },
+    {
+      "heading": "Taste, compare and decide what to adjust",
+      "paragraphs": [
+        "Once the ice cream is ready, take a small serving and notice smoothness, iciness, sweetness and how quickly it melts. Write down a specific observation: “grainier at the edges” is more useful than “not perfect.” If serving a group, let people opt in and label ingredients clearly.",
+        "A good next batch might change only the mixing method or try a new flavour while keeping the base constant. Keep the recipe source with your note so you can reproduce a version you liked. If your method was an educational bag activity, treat the result as a short experiment and follow the source’s own instructions for cleanup and storage."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ice Cream in a Bag",
+      "url": "https://pacificsciencecenter.org/resources/ice-cream-bag/",
+      "publisher": "Pacific Science Center",
+      "purpose": "Supports a machine-free educational ice-cream activity and its reminder to follow appropriate environment and supervision guidance."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "churn-butter-in-a-jar",
+    "temper-chocolate-and-mould-a-small-batch"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "control-a-scratch-project-with-a-physical-object",
+  "slug": "control-a-scratch-project-with-a-physical-object",
+  "title": "How can a Scratch project respond to a physical object?",
+  "description": "Turn one ordinary object into a Scratch controller by choosing a supported input, mapping one clear action, and testing the response in small steps.",
+  "intent": "How do I connect an object to a Scratch project so it changes what happens on screen? This guide narrows the idea to one simple interaction and a repeatable test loop.",
+  "sections": [
+    {
+      "heading": "Pick an object with one obvious action",
+      "paragraphs": [
+        "Begin with an action that is easy to repeat: touch a foil pad, tilt a small board, press a button or move a hand near a sensor. The object is only the physical part of an input system; it does not automatically send information to Scratch. You need a compatible board or interface and a Scratch extension that can read it. Scratch's help center describes extensions as extra block collections, including options for physical devices such as micro:bit and LEGO robotics kits. Check the current editor and device maker's instructions before buying or wiring anything.",
+        "For a first project, choose one input and one visible response. A paper sign that says “start” is not a sensor, but a button hidden beneath it can be. A homemade controller could use a fruit as a touch pad only if the interface is designed to detect that safely. Avoid connecting household objects directly to mains electricity; use a purpose-built classroom board and follow its instructions, with adult supervision where appropriate."
+      ]
+    },
+    {
+      "heading": "Write the interaction in one sentence",
+      "paragraphs": [
+        "Before opening the editor, write a plain-language rule such as: “When the button is pressed, the cat changes costume and moves ten steps.” Keep the first rule narrow enough that you can test it without explaining the whole game. Decide what should happen when the button is released, held down or pressed twice. This prevents a common beginner problem: adding several sensors, sprites and sound effects before you know whether the input works.",
+        "In Scratch, start with the event or sensing blocks supplied by your device extension. Put the input check next to the action it should trigger. Give the sprite a clear response, like changing color or moving to a marked spot, rather than several effects at once. If your chosen extension is not visible in the editor, check the device manufacturer's Scratch instructions instead of substituting a similarly named third-party add-on without understanding its source."
+      ]
+    },
+    {
+      "heading": "Build a tiny test before the finished scene",
+      "paragraphs": [
+        "Create a temporary test project with a plain background and one sprite. Make the input change one thing that is easy to see. Press the control slowly, release it, and repeat. If nothing happens, check the connection status, the selected device, the extension's permission or browser helper, and whether another program is already using the board. If the response repeats continuously, distinguish a press event from a condition that stays true while the control is held.",
+        "Keep a simple note of each change: what you changed, what you expected and what happened. Test from a neutral starting position each time. On a tilting controller, for example, return it to level before comparing angles. This is not formal lab work; it is a way to avoid changing three things at once and losing the clue that would have fixed the issue."
+      ]
+    },
+    {
+      "heading": "Make the object understandable to another person",
+      "paragraphs": [
+        "A good physical control is easy to identify and comfortable to use. Label the control, make the on-screen response obvious, and leave enough room for a hand or mobility aid to reach it. Invite a tester to try the interaction without a long explanation. Notice whether they find the control, understand the result and can reset the project. If they need you to explain every step, simplify the interface before adding features.",
+        "Add a short instruction on the stage such as “Press the blue pad to ring the bell.” Keep sounds modest and provide a visual change too, so the project does not depend on audio alone. If the controller is shared, ask before anyone else touches it and keep the cable out of walkways. A small, legible interaction is more satisfying than a complicated build that only works when its maker is present."
+      ]
+    },
+    {
+      "heading": "Extend only after the first input is reliable",
+      "paragraphs": [
+        "Once the single control works repeatedly, add one second behavior: perhaps a second button changes scenes, or the same touch starts and pauses an animation. Keep each control distinct. If several inputs produce the same response, a player cannot infer why the project changed. Use Scratch's own project notes or a paper sketch to map control to outcome before changing the code.",
+        "Save a working copy before experimenting, then ask one person to try the project and describe what they think the object does. Your next action is to check Scratch's official extension list for one supported device, then build the smallest possible test around its simplest input."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Scratch Extensions: what they are and how you can use them?",
+      "url": "https://mitscratch.freshdesk.com/en/support/solutions/articles/4000156899-scratch-extensions-what-they-are-and-how-you-can-use-them-",
+      "publisher": "Scratch Help Center",
+      "purpose": "Supports how Scratch extensions add block collections, can interface with physical devices such as micro:bit, and should be checked against device maker support."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "train-a-small-image-classifier-on-your-own-objects",
+    "build-a-tabletop-seismograph",
+    "build-a-radio-jove-receiver-with-a-radio-club"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

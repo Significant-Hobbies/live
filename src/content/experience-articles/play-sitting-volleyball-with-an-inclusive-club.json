@@ -1,0 +1,67 @@
+{
+  "experienceSlug": "play-sitting-volleyball-with-an-inclusive-club",
+  "slug": "play-sitting-volleyball-with-an-inclusive-club",
+  "title": "How does a beginner sitting-volleyball session work?",
+  "description": "Learn the court setup, movement and adapted rules in a coached sitting-volleyball session designed around access and shared play.",
+  "intent": "An orientation to joining an inclusive club session: what to ask about the floor, movement, rules and pace before playing a first rally.",
+  "sections": [
+    {
+      "heading": "Ask how the session is adapted",
+      "paragraphs": [
+        "Sitting volleyball can be played recreationally in many formats, so ask the organizer how the group introduces the game. The Australian Sports Commission’s Sports Ability cards describe how rules, equipment and teaching can be adapted so more children can participate. That is a useful design principle for an adult club too: ask what adjustments the group welcomes rather than assuming one format works for everyone.",
+        "Before you arrive, ask about the playing surface, access to the court, places to rest, and what happens if someone needs to change position or take a break. Explain what would make participation comfortable for you. The club can tell you whether the session is suitable and whether it can adapt the ball, court size, team size or net."
+      ],
+      "bullets": [
+        "Do not hide pain, mobility limits or access needs to seem ready; the coach needs that information to shape a safer session."
+      ]
+    },
+    {
+      "heading": "Get familiar with the floor and court",
+      "paragraphs": [
+        "Start by learning where the boundaries are and how players move around the space. World ParaVolley’s official rules include requirements for the playing surface and contact with the court. Ask the coach to demonstrate movement, explain the rules used in this session, and show how to avoid collisions when two people move toward the same ball.",
+        "If reaching, sliding or turning is uncomfortable, tell the coach before the first rally. A stable seated position and room to shift weight may matter more than speed. You can explore the court from a stationary position and try only movements that the coach has demonstrated and that feel appropriate. A first visit does not require copying an experienced player."
+      ]
+    },
+    {
+      "heading": "Make the first contact easy to return",
+      "paragraphs": [
+        "For a first practice, the point is a shared exchange rather than a hard hit. Ask whether the group can begin close to the net, use a lighter or slower ball, or allow a bounce while learning. An inclusive activity card may suggest ways to alter equipment and rules; your coach can select the version suited to the actual group and space.",
+        "Try to send a ball to a partner at a height and pace they can reach. Let them tell you where it is comfortable to receive it. Speak clearly before moving toward a ball, and agree on simple calls such as “mine” or “yours.” These small habits make the rally easier to read and reduce the urge to lunge at every loose ball."
+      ]
+    },
+    {
+      "heading": "Play a short game that has room to change",
+      "paragraphs": [
+        "When the group moves into a game, ask what counts as a point and which adapted rules are in use. Sitting volleyball has formal competition rules, but a beginner club may modify them for teaching, access or fun. Knowing the local version lets you focus on the play rather than trying to infer whether a bounce, touch or movement is allowed.",
+        "Take a break when you need one and ask for a reset if the pace becomes uncomfortable. If a particular ball, net height or team arrangement is excluding someone, tell the coach; a small change can make the next rally playable. The Australian Sports Commission’s TREE framework considers teaching style, rules, equipment and environment as possible areas to adapt."
+      ]
+    },
+    {
+      "heading": "Review the part you want to repeat",
+      "paragraphs": [
+        "Afterwards, think about what helped you take part: a slower serve, a clear call, more space or a chance to learn one skill before playing. Tell the coach which moment felt most manageable and ask what the next session will involve. The best next step is a repeatable one, not a test of how long you can push through discomfort.",
+        "If you want to bring a friend, ask the club whether visitors can join and what access details they should know. A shared goal such as keeping a gentle rally going gives everyone a way to contribute. Save a brief note of the setup and any adjustments that worked; those details make a return visit easier to plan."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Sports Ability",
+      "url": "https://www.ausport.gov.au/schools/resource-hub/sports_ability",
+      "publisher": "Australian Sports Commission",
+      "purpose": "Supports adapting rules, equipment, teaching and environment to create inclusive sports participation."
+    },
+    {
+      "title": "Official Sitting Volleyball Rules 2025–2028",
+      "url": "https://worldparavolley.org/wp-content/uploads/2025/09/2025-2028-WPV-Official-Sitting-Volleyball-Rules-English-2025-07-25.pdf",
+      "publisher": "World ParaVolley",
+      "purpose": "Rules 1.2 and 9.4 establish playing-surface and court-contact requirements; the game characteristics describe formal team play."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-a-cooperative-table-tennis-rally",
+    "play-a-first-game-of-walking-football"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

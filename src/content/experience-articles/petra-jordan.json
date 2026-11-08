@@ -1,0 +1,64 @@
+{
+  "experienceSlug": "petra-jordan",
+  "slug": "petra-jordan",
+  "title": "Read Petra as a route through rock, water and carved space",
+  "description": "A focused Petra visit that follows the Siq to the Treasury, then slows down to notice how Nabataean design works with the mountain landscape.",
+  "intent": "How can I experience Petra’s architecture and setting through one focused route, while using current official access and site rules?",
+  "sections": [
+    {
+      "heading": "See the approach as part of the design",
+      "paragraphs": [
+        "Petra’s most famous view is not the whole experience. UNESCO describes the site as partly cut into rock and partly constructed among mountains crossed by passages and gorges, with influences from ancient Near Eastern and Hellenistic traditions. The approach through the Siq makes that relationship tangible: the route narrows, turns and changes what you can see before the Treasury appears.",
+        "Give the approach enough time to notice how the rock walls shape light and reveal glimpses of built stone. Resist the urge to sprint to the first open view. Ask yourself what changed between the path outside the gorge and the framed sightline toward the Treasury. A simple sketch of the turns and openings can help you remember the route’s sequence better than one isolated photograph."
+      ]
+    },
+    {
+      "heading": "Let one facade hold your attention",
+      "paragraphs": [
+        "At the Treasury, step back to take in the whole carved front before looking at detail. Notice how the facade sits within the cliff rather than standing independently in a plaza. Then choose one portion—an upper figure, column line or recessed doorway—and compare it with the rock around it. UNESCO supports the broad mixture of carved and built architecture, but detailed identifications should come from an informed guide or authoritative interpretation.",
+        "Use the same method at another accessible monument if your route and energy allow: first read the whole mass, then observe a seam between carved stone and constructed form. Do not climb, enter closed sections or follow unofficial paths toward dramatic viewpoints. Petra’s official ticketing authority lists climbing and entering restricted areas as prohibited."
+      ]
+    },
+    {
+      "heading": "Plan the route around the official visitor center",
+      "paragraphs": [
+        "The Petra ticketing authority states that tickets are issued for immediate access on the date and time shown. Check the official ticket portal for current eligibility, ticket type and price before arrival. It also describes licensed guides as bookable through the visitor center and warns that informal offers for restricted viewpoints or unauthorized transport can lead visitors into prohibited areas. Ask staff for a licensed guide if you want interpretation.",
+        "If walking distance or mobility is a concern, review official transport and accessibility details in advance. The authority describes a legal cart service between the visitor center and Treasury area; it is a paid service whose terms and price should be confirmed directly on the current site. Treat any offer of a private pickup inside the archaeological site with caution and seek official guidance."
+      ]
+    },
+    {
+      "heading": "Move carefully through a living heritage site",
+      "paragraphs": [
+        "Wear practical footwear and carry what you need for a long day, but avoid overpacking; Petra’s official site states that it has no left-luggage facility. Keep passages clear, follow signs and staff instructions, and do not remove pottery, stones or fragments. The ticket authority specifically warns that archaeological material belongs to the site and that buying fragments encourages damage.",
+        "Photography can be part of looking, but it should not disrupt circulation or encourage climbing. If you are photographing another visitor or a local worker, ask first and accept a refusal. Give animals and handlers space and do not assume that a staged offer is included or appropriate. Spend more attention on the setting and less on collecting a dramatic angle from an unauthorized ledge."
+      ]
+    },
+    {
+      "heading": "Choose one next step after the Treasury",
+      "paragraphs": [
+        "Before you start, decide whether your visit is a focused out-and-back or a longer day that includes additional monuments. Build the choice around your fitness, mobility, available daylight and current site conditions. A shorter visit can still be rich if you follow the Siq closely and spend time with the Treasury’s form; a longer route should not depend on racing between sites.",
+        "The official Petra ticket portal is useful for current ticket terms and conduct rules, while UNESCO supplies heritage context rather than a live access plan. Confirm current site openings, transport and any restrictions with the Petra authorities. Your next action is to choose one architectural question for the walk, then leave enough time to answer it slowly."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Petra",
+      "url": "https://whc.unesco.org/en/list/326/",
+      "publisher": "UNESCO World Heritage Centre",
+      "purpose": "Supports Petra’s partly rock-cut and partly constructed setting among mountain passages and gorges, and its mixture of architectural traditions."
+    },
+    {
+      "title": "PDTRA Online Ticketing",
+      "url": "https://petrapass.pdtra.gov.jo/",
+      "publisher": "Petra Development and Tourism Region Authority",
+      "purpose": "Supports ticket validity, official guide route, visitor-center cart service, restricted-area and climbing rules; prices and access conditions are dynamic."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "visit-the-temples-of-angkor-wat-cambodia",
+    "the-temples-of-bagan-myanmar"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

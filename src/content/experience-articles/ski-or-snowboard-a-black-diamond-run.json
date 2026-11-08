@@ -1,0 +1,58 @@
+{
+  "slug": "ski-or-snowboard-a-black-diamond-run",
+  "title": "Work up to a black-diamond run one decision at a time",
+  "description": "Learn the local trail-rating system, take instruction, and choose a black-diamond descent only when the terrain and your skills match.",
+  "intent": "Prepare for a black-diamond run by assessing local trail ratings and skill readiness with resort instruction; no guarantee of safety or ability.",
+  "sections": [
+    {
+      "heading": "Read the rating at the resort you are visiting",
+      "paragraphs": [
+        "A black-diamond symbol signals demanding terrain in the U.S. resort-signage system, but it does not describe one universal pitch or surface. The National Ski Areas Association says ratings are consistent within a resort and relative between resorts; a black run at one mountain can feel different from one elsewhere. Check that resort’s current trail map and ask staff what the specific run is like today.",
+        "Look beyond the symbol: steepness, width, trees, bumps, exposure, snow conditions and visibility all change the experience. A run may also have a narrow entrance or a difficult route back to easier terrain. Ask a ski-school instructor or lift attendant about the easiest way down and whether the route has changed since the map was printed."
+      ]
+    },
+    {
+      "heading": "Build the skills on easier terrain",
+      "paragraphs": [
+        "Work with a qualified instructor on the skills the run demands: controlled speed, turning on the slope, stopping where visible, linking turns under pressure and choosing a line that leaves room for others. A black diamond is not a training drill for learning basic control. NSAA recommends taking a lesson and matching the trails above a lift to your ability rather than moving to difficult terrain to force improvement.",
+        "Ask the instructor to be specific about what would show readiness for this run. A strong day on a familiar groomed trail does not prove comfort on icy, bumped or crowded terrain. Practice the relevant skills on progressively more challenging runs selected with the instructor, and take breaks when fatigue starts changing your control."
+      ]
+    },
+    {
+      "heading": "Check the day, not just your ambition",
+      "paragraphs": [
+        "Before riding the lift, review the trail map, open/closed status, weather, visibility and posted warnings. Conditions can change within a day, and a black run that suited your earlier visit may be icy, wind-affected or crowded now. If the start looks different than you expected, stop at a safe location and ask resort staff before committing.",
+        "Agree with your group on a meeting place and how you will communicate. Ride with people who respect a decision to take another route. Do not let a camera, a challenge list or a friend’s pace push you beyond your comfort. If you are uncertain about an entrance or exit, choose an open trail better matched to your ability and ask an instructor how to prepare for next time."
+      ]
+    },
+    {
+      "heading": "Use equipment and local safety guidance",
+      "paragraphs": [
+        "Have your equipment fitted and checked by a qualified shop or rental technician. Use protective gear suited to the sport and follow the resort’s posted rules. Learn how to merge, stop where you can be seen and yield according to the local code. North American resort symbols are not a guide to the rules or signage in every country, so check the mountain and governing body for the place you visit.",
+        "If you fall, feel pain or cannot control your speed, move to a safe visible spot only if you can do so without increasing danger and contact the resort’s patrol or emergency service. Do not attempt to help with a rescue beyond your training. Know how to identify your location on the map and follow patrol instructions."
+      ]
+    },
+    {
+      "heading": "Make the finish a choice, not a test",
+      "paragraphs": [
+        "On the day, decide whether the run still matches your skills and conditions after seeing its entrance. You can turn around before dropping in or choose a different trail. That decision is evidence that you are reading the mountain rather than treating a symbol as a command.",
+        "Afterward, note the specific conditions, what felt controlled and what should be practiced with an instructor. A successful descent is not proof that every black-diamond run is suitable next time. Rating systems are relative, and terrain changes. Build the goal around sound decisions and continued learning; the mountain will still be there when you are ready for another attempt."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Trail Signage",
+      "url": "https://www.nsaa.org/NSAA/Safety/Trail_Signage/NSAA/Safety/Trail_Signage/Trail_Signage.aspx?hkey=5625dd89-f9ff-4fe5-9417-88259c81e35d",
+      "publisher": "National Ski Areas Association",
+      "purpose": "Supports the North American resort rating symbols, their relative consistency within a ski area and NSAA’s advice to check the map, take lessons and ask resort staff; it does not establish a universal technical standard or guarantee that a trail suits a reader."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "climb-your-first-mountain",
+    "hike-a-mountain-that-scares-you"
+  ],
+  "experienceSlug": "ski-or-snowboard-a-black-diamond-run",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

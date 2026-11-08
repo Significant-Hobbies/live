@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "route-66-usa",
+  "slug": "route-66-usa",
+  "title": "Read two Route 66 alignments in Seligman, Arizona",
+  "description": "Turn a short Route 66 visit into a local history walk by comparing Seligman’s early Railroad Avenue alignment with later Chino Street.",
+  "intent": "How can a visitor experience one meaningful, short Route 66 segment and understand how the road changed a town, without attempting an end-to-end drive?",
+  "sections": [
+    {
+      "heading": "Use one town to understand a long road",
+      "paragraphs": [
+        "Route 66 crossed many states and changed as roads, vehicles and towns changed. A compact visit in Seligman, Arizona lets you focus on that story without treating a full cross-country drive as the only worthwhile version. The National Park Service describes Seligman as a railroad center whose commercial core grew when Route 66 arrived in 1926, then notes that Interstate 40 bypassed it in 1978.",
+        "The useful question is not ‘Did I drive enough miles?’ but ‘What did this road bring to the town, and what changed when traffic moved elsewhere?’ Walk the district before you drive its historic alignment. Look at the streets, building fronts and signs as evidence of changing roadside business, then use the NPS interpretation to compare what you saw with the town’s transportation history."
+      ]
+    },
+    {
+      "heading": "Compare the 1926–1933 route with Chino Street",
+      "paragraphs": [
+        "Seligman preserves a specific early alignment. The NPS identifies a short 1926–1933 segment along two blocks of Railroad Avenue and one block of Main Street between Railroad Avenue and Chino. It describes the earlier road as zigzagging beside the railroad before Route 66 moved to a more direct east-west path along Chino Street after 1933.",
+        "That makes a simple two-part itinerary: follow the older alignment first, then compare it with Chino Street. Notice how the earlier route tracks the railroad grid and how the later line reduces the turns. You do not need to cover miles to see that road design and town layout were tied together. Pull over only where legal and safe; some of the most useful observations are made on foot from public sidewalks."
+      ]
+    },
+    {
+      "heading": "Read the roadside architecture",
+      "paragraphs": [
+        "The district includes early commercial buildings such as Pitts General Merchandise Store, the former post office, Pioneer Hall and Theatre, and Seligman Garage. The NPS says later commercial buildings along the rerouted road became more exuberant examples of roadside architecture, naming places such as Snow Cap Drive-In, Supai Motel and other businesses. Look for the change in scale, signage, windows and how a building advertises itself to a passing driver.",
+        "Treat businesses as working places, not exhibits. If a shop or restaurant is open, buy something if it suits you, ask before photographing staff or customers, and keep a clear path for local traffic. A roadside sign can tell you about the era’s marketing, but a present-day business deserves the same courtesy as any other local business."
+      ]
+    },
+    {
+      "heading": "Choose a short drive or a walking visit",
+      "paragraphs": [
+        "If you have a car, the NPS identifies the early alignment and Chino Street as a short segment to compare. Confirm current road conditions and local traffic signs before driving; historic alignment does not guarantee every section is a through-road or available for parking. If you are traveling without a car, the district can still work as a walking visit: use the official boundaries and focus on the railroad-side streets and commercial core.",
+        "You can add Williams as a separate stop if your itinerary allows. NPS history notes that the final segment of Route 66 to be bypassed in the United States was in Williams in 1984. Do not assume a current tour or service connects the two towns at a convenient time; check road, lodging and transport details for your date."
+      ]
+    },
+    {
+      "heading": "Keep the trip specific",
+      "paragraphs": [
+        "Before you go, pick three things to notice: the railroad relationship, the street alignment, and the difference between early stores and later roadside architecture. Download or save the NPS district page, check current visitor and road conditions, and give yourself time to read the interpretation instead of racing for a photograph.",
+        "At the end, write one sentence about what Route 66 changed in Seligman. Perhaps the town’s commercial core formed around a railroad first and then adapted to motorists; perhaps the interstate altered where traffic stopped. A short, locally grounded visit gives you a real piece of the Mother Road’s history, without a rushed promise to drive every mile."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Arizona: Seligman Historic District",
+      "url": "https://www.nps.gov/places/seligman-historic-district.htm",
+      "publisher": "National Park Service",
+      "purpose": "Supports the named short early Route 66 alignment, the later Chino Street rerouting, railroad/commercial history and examples of roadside architecture."
+    },
+    {
+      "title": "Route 66: Arizona",
+      "url": "https://www.nps.gov/articles/000/route-66-arizona.htm",
+      "publisher": "National Park Service",
+      "purpose": "Supports the 1984 Williams bypass milestone and the broader Arizona route context."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "drive-route-66-end-to-end-across-america",
+    "the-grand-canyon-usa",
+    "visit-all-50-us-states"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

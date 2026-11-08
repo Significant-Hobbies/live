@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "clean-up-a-beach-or-river-in-your-community",
+  "slug": "clean-up-a-beach-or-river-in-your-community",
+  "title": "Organize a cleanup around the site’s real hazards",
+  "description": "Plan a local shoreline or river cleanup with a site partner, clear boundaries, safe waste handling and a useful record of what volunteers collect.",
+  "intent": "How can I take part in a useful local beach or river cleanup while keeping volunteers away from hazards and sensitive areas?",
+  "sections": [
+    {
+      "heading": "Find a partner who knows the site",
+      "paragraphs": [
+        "Begin with a local watershed group, park authority, municipality, land manager or established cleanup organizer. Ask what stretch needs attention, whether permission is required, what waste the site accepts and how collected material will be removed. A cleanup is not automatically helpful if bags have nowhere to go or volunteers enter protected, private or unstable areas.",
+        "Agree on the goal before inviting people. A short cleanup at one accessible stretch may be more manageable than promising to clear an entire riverbank. Ask the organizer what counts as completion: filled bags, mapped debris, a litter count or simply a safe volunteer session. The NOAA Marine Debris Program says common litter may be removed when safe and practical, while unfamiliar or hazardous items should not be touched and should be reported to appropriate authorities."
+      ]
+    },
+    {
+      "heading": "Set a boundary that people can follow",
+      "paragraphs": [
+        "Walk the site with the organizer before the event and identify the check-in point, the cleanup boundary, uneven ground, water edges, access routes and the place for filled bags. State plainly that participants stay on land and within the marked area unless the local authority has specifically organized a supervised activity. Local tides, current, weather, water quality and access rules vary, so do not copy a plan from a different beach or river.",
+        "Give each volunteer a clear instruction: collect only ordinary litter that is safe to handle under the organizer’s plan. NOAA advises people not to touch unknown objects or suspected hazardous material. Its marine-debris guidance specifically says not to move oil or chemical drums, gas cans, propane tanks or large derelict debris; report them to local authorities. For immediate serious hazards, use local emergency procedures. Never make one enthusiastic volunteer the improvised hazardous-materials team."
+      ]
+    },
+    {
+      "heading": "Prepare people and supplies",
+      "paragraphs": [
+        "Ask the site partner what protective equipment they provide and what volunteers should bring. Follow their instructions on gloves, footwear, water, sun or cold protection, bags, grabbers, handwashing and first aid. Keep the group small enough for the number of leaders and the site’s access constraints. Pair participants who want support and make sure everyone knows how to stop, return to check-in or contact the lead.",
+        "Plan for accessibility and age. Choose a route people can navigate safely, offer a non-lifting task such as recording counts or checking people in, and set a clear finish time. Children need supervision appropriate to the setting and organizer’s rules. Do not promise entry into water, dune areas, vegetation or restricted land. A cleanup should never depend on a participant taking a physical risk they did not agree to."
+      ]
+    },
+    {
+      "heading": "Make the collected material useful",
+      "paragraphs": [
+        "If the organizer wants data, agree on a simple method before the day: perhaps tally common item types in one marked section. Keep observations separate from estimates and do not present a volunteer count as a scientific survey unless the method supports that use. NOAA’s shoreline handling page distinguishes ordinary debris removal from hazardous-item reporting, and its cleanup materials have specific educational contexts; your local organizer’s protocol should govern your event.",
+        "Decide where bags go, who transports them and how unusual finds will be reported. Do not leave tied bags beside an overflowing public bin without the site partner’s approval. If a found item could be evidence of a spill, illegal dumping or injury risk, pause the work and let the responsible authority decide what happens."
+      ]
+    },
+    {
+      "heading": "Close the loop after the event",
+      "paragraphs": [
+        "At the end, check that all volunteers have returned, report hazards and confirm waste pickup with the partner. Share a brief factual summary: location, time, number of participants if counted, and the collection method. Photos should avoid identifying members of the public and should respect the site’s rules.",
+        "A useful cleanup is a coordinated act of care, not a contest to collect the most weight. Leave wildlife, plants and unknown objects alone, and keep the local authority’s safety instructions in view. If the site still needs work, agree with the partner on another date or a different kind of help rather than extending the session beyond its plan."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Marine Debris Handling Guidelines",
+      "url": "https://marinedebris.noaa.gov/marine-debris-handling-guidelines",
+      "publisher": "NOAA Marine Debris Program",
+      "purpose": "U.S. shoreline guidance distinguishes ordinary safe litter from unknown, hazardous and large debris that must not be moved; local authority instructions remain essential."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "take-part-in-a-seasonal-butterfly-count",
+    "leave-a-place-cleaner-and-more-hopeful-than-you-found-it",
+    "start-a-community-garden"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

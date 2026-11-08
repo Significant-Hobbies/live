@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "sail-the-greek-islands-for-a-week",
+  "slug": "sail-the-greek-islands-for-a-week",
+  "title": "Make a Greek island sailing week fit the wind",
+  "description": "Plan a Greek island sailing week around a qualified skipper, wind-dependent route choices, a sensible island cluster, and shore time that can move.",
+  "intent": "How do I plan a week among Greek islands without treating an itinerary as a guaranteed checklist? Choose an area, skipper-led weather plan and a few contrasts worth slowing down for.",
+  "sections": [
+    {
+      "heading": "Pick an area before naming every island",
+      "paragraphs": [
+        "A week in the Greek islands is too broad to be a route. The Cyclades alone include islands with different harbours, distances and exposure. Greece’s official tourism guide calls out the strong meltemi winds and describes coves and ports as part of the appeal. Start with the sailing area and the person responsible for the boat, then ask which route fits forecast and crew. A fixed chain copied from a brochure cannot account for conditions.",
+        "Choose one cluster and give it a theme: sheltered harbours and town evenings, or quiet coves with more time under sail. A crewed charter puts a professional in charge of operating decisions. If you do not hold the appropriate qualifications and experience for the boat and jurisdiction, do not treat renting as a learn-as-you-go shortcut. Tell the operator what you have actually sailed and what kind of day feels enjoyable."
+      ]
+    },
+    {
+      "heading": "Let the skipper own the weather call",
+      "paragraphs": [
+        "Ask the skipper how the meltemi may affect the proposed route, which legs could become uncomfortable and what alternatives exist if conditions strengthen. The right answer may be to stay in port, shorten a leg or choose another island group. An itinerary that changes with conditions is evidence of judgment, not a failed holiday.",
+        "Before departure, agree how the skipper will brief the group, where passengers should be during manoeuvres, how to move around the deck and what to do if anyone feels seasick or anxious. Do not improvise sail handling or leave the helm to an unqualified guest. If the briefing feels rushed, ask for a clearer plan before boarding."
+      ]
+    },
+    {
+      "heading": "Choose stops for contrast rather than count",
+      "paragraphs": [
+        "The official Greek tourism guide describes contrasts such as Syros as the Cyclades’ capital, Naousa’s port on Paros, Milos’s lunar landscape and smaller island coves. Use these as a palette, not a required checklist. Choose a town, a landscape and perhaps a quiet anchorage, then let the skipper decide what is practical.",
+        "A shore stop is more than a photo break. Leave time to walk from the quay, eat without watching the clock or visit a local site respectfully. If you travel by tender, follow the skipper’s boarding instructions and do not land where signs prohibit it. Ask where the group can safely go ashore and when everyone needs to return."
+      ]
+    },
+    {
+      "heading": "Give the week a movable middle",
+      "paragraphs": [
+        "Use the first and last days for arrival, safety briefing, provisioning and return logistics; keep the middle flexible. Ask whether the charter begins and ends at the same marina and what happens if weather delays the return. Verify embarkation times, required documents, meals, fuel arrangements and cancellation terms directly with the operator. A destination page does not establish what a particular charter includes.",
+        "Bring soft-sided luggage if requested, sun protection and personal medicines, but ask for the actual boat list. Confirm whether the vessel has shade and how sleeping arrangements work. If mobility, dietary needs or motion sickness matter, raise them before booking so the operator can assess the specific vessel."
+      ]
+    },
+    {
+      "heading": "Decide what makes the trip complete",
+      "paragraphs": [
+        "At the end of each day, notice one thing that could only happen under sail: an island changing shape as you approach, the difference between an exposed coast and a calm harbour, or quiet after the engine stops. That is a better measure of a good week than the number of names on a map.",
+        "Your next action is to choose one island cluster and send a charter operator three specifics: your group’s real sailing experience, the shore time you want and your willingness to change route with the wind. Ask for a preferred itinerary and a weather alternative before committing."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Sailing through the Cyclades",
+      "url": "https://www.visitgreece.gr/en/inspirations/sailing-through-the-cyclades",
+      "publisher": "Greek National Tourism Organisation",
+      "purpose": "Identifies the Cyclades, strong meltemi winds and example island harbours and coves; used for regional context, not live sailing conditions."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "road-trip-with-no-fixed-destination",
+    "take-a-sheltered-water-paddleboard-starter-lesson",
+    "clean-up-a-beach-or-river-in-your-community"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

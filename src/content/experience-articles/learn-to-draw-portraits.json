@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "learn-to-draw-portraits",
+  "slug": "learn-to-draw-portraits",
+  "title": "A portrait drawing exercise for seeing head shapes before features",
+  "description": "Practice portrait drawing by measuring the head’s tilt, broad planes and feature spacing before refining the eyes, nose and mouth.",
+  "intent": "How should a beginner study a face in a portrait? This focuses on measuring the whole head and comparing features, rather than drawing isolated eyes.",
+  "sections": [
+    {
+      "heading": "Start with the head, not the eyes",
+      "paragraphs": [
+        "A portrait can feel inaccurate even when each eye is carefully drawn, because the eyes sit in the wrong relationship to the skull, jaw or tilt. Begin with the outer silhouette and a simple center line showing which way the head turns. Add a horizontal line for the brow and a base line for the nose. These guides should follow the subject’s angle rather than stay flat across the page. The National Gallery of Art’s drawing activities encourage reducing subjects to simple shapes; that is a useful way to make the head manageable before details.",
+        "Use a mirror, a willing model or a reference image you are allowed to use. Keep the image at eye level and choose a pose that will stay still for the study. A straight-on face makes comparisons easy; a three-quarter view teaches how the far side compresses. Do not switch between views midway through a drawing."
+      ]
+    },
+    {
+      "heading": "Measure relationships you can compare",
+      "paragraphs": [
+        "Pick a unit such as the distance between the eyes or the height from brow to chin. Compare other distances against it: how wide is the head relative to its height, how far is the ear from the nose line, how much space sits between the eyes? These are observations, not universal formulas. Faces vary, and an individual portrait becomes recognizable through those differences. Lightly mark the major points before drawing a contour.",
+        "Hold a pencil at arm’s length to compare angles and lengths if that tool helps, but keep your measurements consistent. A tilted head can make the eye line slope; a foreshortened jaw may look shorter than expected. Check the negative spaces beside the nose and between the hairline and brow. Comparing shapes of empty space can reveal distortion sooner than staring at one feature."
+      ]
+    },
+    {
+      "heading": "Place features as a connected system",
+      "paragraphs": [
+        "Block in the nose as a plane or shadow shape before outlining nostrils. Mark the mouth as a band with upper and lower edges rather than a single symbol. Place the ears in relation to the brow and nose lines, then check whether the hairstyle changes the visible outline. Draw the eye sockets as larger forms first; the iris and lashes are small details inside them. If the portrait already reads without eyelashes, the structure is doing its work.",
+        "Avoid making both sides identical. Light, angle and expression make them differ. In a three-quarter view, the far eye usually occupies less visible space, and the far side of the nose may hide part of it. Let the drawing reflect what you see rather than correcting it toward a mental icon of “a face.”"
+      ]
+    },
+    {
+      "heading": "Use value to turn the form",
+      "paragraphs": [
+        "Squint at the reference and identify the largest light and dark areas. Shade one broad shadow shape on the side turned away from light, then leave the brightest area of forehead or cheek mostly open. A soft transition can describe a rounded cheek; a harder edge can mark the cast shadow under a nose. Avoid outlining every feature with equal darkness, since that makes the face look assembled from symbols rather than lit in space.",
+        "Keep the first drawing in a limited range: a light construction line, a middle tone and a few dark accents. A dark pupil may be small but visually strong. Reserve it until the eye sockets and head orientation feel plausible. If the face looks flat, check whether the value pattern follows the planes, not whether you need more eyelashes or texture."
+      ]
+    },
+    {
+      "heading": "Compare, erase lightly and draw again",
+      "paragraphs": [
+        "Step back or photograph the page and view it smaller. The reduced view reveals the silhouette and overall tilt more clearly. Circle one accurate relationship and one relationship that drifted. Do not erase the whole drawing; make a second attempt beside it, correcting only the head width or eye-line angle. The second version will be a more useful lesson than polishing the first into a different pose.",
+        "Finish by drawing the same model from another angle or in a quick blind-contour warm-up. National Gallery educators use blind contour portrait drawing as an experimentation exercise; it trains looking without making a polished likeness the only measure. For a next step, ask a drawing teacher to check the big proportions before you spend time on tiny details."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Mindful Drawing: Activities that Embrace Experimentation",
+      "url": "https://www.nga.gov/stories/articles/mindful-drawing-activities-embrace-experimentation",
+      "publisher": "National Gallery of Art",
+      "purpose": "Supports simple-shape drawing and blind-contour portraits as practical observation exercises, not as proportion rules."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "make-a-group-portrait-with-everyone-directing",
+    "draw-a-wordless-six-panel-comic"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

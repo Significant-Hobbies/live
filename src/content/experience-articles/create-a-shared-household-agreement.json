@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "create-a-shared-household-agreement",
+  "slug": "create-a-shared-household-agreement",
+  "title": "Write a household agreement that works on an ordinary Tuesday",
+  "description": "Turn shared-house expectations about chores, guests, quiet and belongings into a short agreement everyone can revisit when routines change.",
+  "intent": "How do housemates create a useful agreement without making it feel like a contract or a list of complaints?",
+  "relatedExperienceSlugs": [
+    "make-a-friendship-map-together",
+    "help-host-a-neighborhood-repair-cafe-session",
+    "create-a-home-that-feels-like-you"
+  ],
+  "sections": [
+    {
+      "heading": "Choose a calm time and name the purpose",
+      "paragraphs": [
+        "A household agreement is a shared reference for everyday expectations. It works best when housemates talk before a small irritation becomes a large one, not during an argument about a sink full of dishes. Invite everyone who shares the space and set a short time limit. The University of Delaware’s community living guide recommends early conversations about shared expectations, including sleep, guests, cleaning, noise, belongings and conflict preferences.",
+        "Start with a purpose everyone can accept: “Let’s make the kitchen and quiet hours easier to manage.” Do not use the meeting to build a case against one person. If the conversation becomes heated or someone does not feel safe speaking, pause and return later or ask a neutral housing adviser or mediator for support."
+      ]
+    },
+    {
+      "heading": "Talk through the ordinary friction points",
+      "paragraphs": [
+        "Use concrete questions rather than abstract labels such as “be respectful.” What does quiet mean on a weeknight? How much notice should someone give before inviting guests? Which shelves or containers are shared? How will people handle dishes, rubbish, bathroom supplies or a repair request? Specific examples reveal where assumptions differ.",
+        "Each person should say what matters to them and what flexibility they have. One person may need quiet for early sleep; another may work late. Try a trial arrangement that protects both needs, such as headphones after a certain hour and a heads-up for occasional late guests. The agreement should describe a workable routine, not require everyone to live identically."
+      ]
+    },
+    {
+      "heading": "Write observable agreements",
+      "paragraphs": [
+        "Keep each item short enough to check in real life. “Clean the kitchen regularly” is vague. “After cooking, clear the counter and leave the sink usable by bedtime” is observable. “Tell housemates before inviting overnight guests” is clearer than “be considerate.” If a rule depends on someone’s schedule, write the relevant exception or review point.",
+        "Separate household choices from lease, building or campus rules. Your group cannot waive safety, accessibility or landlord requirements. If the home is university housing, check its official policies; the University of Delaware guide explicitly says its summaries do not override official university policies. For other housing, use your own tenancy and local rules as the boundary."
+      ]
+    },
+    {
+      "heading": "Decide what happens when the agreement misses",
+      "paragraphs": [
+        "Even a clear agreement will not prevent every conflict. Agree how to raise an issue: a quick message, a house meeting, or a conversation with a resident adviser or other support person. Pick a neutral opening such as “Can we revisit the kitchen plan?” rather than accusing someone of not caring.",
+        "Do not promise punishment or impose a fine without everyone’s agreement and a lawful basis. The agreement is a tool for communication, not a substitute for formal help when safety, harassment, discrimination or property rights are involved. The University of Delaware guide encourages direct, respectful conversation when appropriate and safe, and points residents toward staff support when needed."
+      ]
+    },
+    {
+      "heading": "Review it after trying it",
+      "paragraphs": [
+        "Add a date to revisit the agreement in a few weeks. Ask what has become easier and what still creates friction. Keep the parts that work, change the parts that do not, and record decisions in a place everyone can access. A short agreement that gets updated is more useful than a long one nobody reads.",
+        "Finish with one immediate action each person can take, such as labeling shared food or setting a quiet-hours reminder."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Guide to Community Living",
+      "url": "https://www.udel.edu/students/reslife/campus-living/housing-policies/guide-to-community-living/",
+      "publisher": "University of Delaware Residence Life & Housing",
+      "purpose": "Primary guidance for early, explicit conversations about quiet, guests, cleaning, belongings and conflict resolution; housing rules vary by institution and home."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

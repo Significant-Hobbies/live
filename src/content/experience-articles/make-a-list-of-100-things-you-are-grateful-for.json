@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "make-a-list-of-100-things-you-are-grateful-for",
+  "slug": "make-a-list-of-100-things-you-are-grateful-for",
+  "title": "How to reach 100 without turning gratitude into homework",
+  "description": "A practical way to build a specific 100-item gratitude list, move past repetitions, and leave room for complicated feelings without forcing positivity.",
+  "intent": "Answers how to make one honest, varied list of 100 appreciations rather than start a daily journal; adds a method for handling repetition and ambivalence.",
+  "sections": [
+    {
+      "heading": "Set a low-pressure frame",
+      "paragraphs": [
+        "Use a page, note or document you can keep private. Write the numbers 1 through 100 down the margin, but treat them as places to notice something, not a score. The list can take an afternoon or several short visits. Put the date at the top and add one sentence: ‘This is what I can appreciate today; it is not a verdict on my whole life.’ That wording matters if you are tired, grieving, angry or simply not in a grateful mood.",
+        "The research people often invoke for gratitude is not a test of a hundred-item list. Emmons and McCullough studied gratitude-focused writing in repeated weekly or daily exercises and reported mixed outcomes across measures. Use that paper as context for a writing prompt, not a promise that a long list will change your health or feelings. Your purpose here can be simpler: gather details you would otherwise overlook."
+      ]
+    },
+    {
+      "heading": "Fill the first page from concrete places",
+      "paragraphs": [
+        "Start with scenes, not abstract labels. ‘My sister’ can become ‘the voice note my sister sent before the interview’; ‘home’ might become ‘the warm patch beside the kitchen window at breakfast.’ Move through senses and routines: a mug that fits your hand, a bus driver who waits, the quiet after rain, a playlist that makes washing dishes less dull. Add people who made something easier, but include objects, animals, places and chance events too.",
+        "A useful entry names what happened and why it stays with you. ‘A friend’ is vague; ‘Mina walked with me after the appointment and did not demand an update’ is specific. You need not send thank-you messages or identify people who would prefer privacy. This is a record for your own attention, not a collection of obligations."
+      ]
+    },
+    {
+      "heading": "Use categories when you stall",
+      "paragraphs": [
+        "After the easy entries, rotate through prompts rather than repeating the same person or meal. Try childhood, school, work, friendship, care, transport, music, tools, weather, places you have left, skills you were taught and mistakes someone helped you repair. Ask what made an ordinary day possible: clean water, a reliable alarm, a translation, a neighbour with a spare key. A small practical kindness can matter as much as a milestone.",
+        "Look at old photographs or messages only if that feels welcome. They can retrieve a particular afternoon or phrase, but they can also surface painful memories. Skip a category or stop for the day if you need to. There is no requirement to make every entry cheerful. You might appreciate that you asked for help, kept a boundary, or made it through a hard stretch without pretending it was good."
+      ]
+    },
+    {
+      "heading": "Keep the last twenty distinct",
+      "paragraphs": [
+        "When the list starts repeating, vary the angle. Instead of naming the same friend again, note a quality of one conversation, a shared joke, a repair they showed you, or the way they respected a no. Instead of listing ‘music’ repeatedly, name a song that helped you focus, a room where you first heard a style, or the instrument you can now recognize. These are not filler if they point to different memories or meanings.",
+        "If a candidate feels like a duplicate, make it more exact or leave the number blank until later. Do not invent appreciation to satisfy a quota. You can finish over several sessions and end with 83 meaningful entries if 100 would require dishonesty; the original challenge is a prompt, not a moral standard."
+      ]
+    },
+    {
+      "heading": "Close with one usable detail",
+      "paragraphs": [
+        "Read the page once and mark three entries you want to keep visible. One might suggest a small action: send a note, revisit a park, cook a dish with the person who taught you, or protect an hour for a habit you value. Another may simply remind you of a past kindness. Neither needs to become a new daily practice.",
+        "If the list is private, store it somewhere you control. If you decide to share a thank-you, share only the entry that concerns that person rather than forwarding the entire document. Start today with ten scene-specific entries, then return when your mind has more room."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Counting Blessings Versus Burdens: An Experimental Investigation of Gratitude and Subjective Well-Being in Daily Life",
+      "url": "https://emmons.faculty.ucdavis.edu/wp-content/uploads/sites/90/2015/08/2003_2-Emmons_McCullough_2003_JPSP.pdf",
+      "publisher": "Journal of Personality and Social Psychology; author copy hosted by UC Davis",
+      "purpose": "Provides a bounded example of weekly and daily gratitude-listing experiments and cautions against promising that this distinct 100-item exercise improves health or mood."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "make-a-skills-history-from-things-you-can-now-do",
+    "reconstruct-one-ordinary-childhood-day",
+    "build-a-personal-reading-family-tree"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "donate-a-kidney-or-be-a-living-donor",
+  "slug": "donate-a-kidney-or-be-a-living-donor",
+  "title": "Understand the living-donation decision before deciding",
+  "description": "Learn how a living-donor evaluation works, what questions to take to a transplant hospital and why the choice must remain voluntary.",
+  "intent": "What should someone understand before exploring living kidney donation, including evaluation, personal costs and the right to decline?",
+  "sections": [
+    {
+      "heading": "Treat this as an exploration, not a promise",
+      "paragraphs": [
+        "Living kidney donation is a major medical decision. Reading about it or asking a transplant center a question does not commit you to donate. In the United States, HRSA’s OPTN patient guidance says no one should pressure you and only you can decide. It describes living donation as a process that requires both the potential donor and transplant hospital staff to decide whether proceeding is appropriate.",
+        "Start by learning through a transplant hospital, not by relying on a recipient’s urgency or a social-media summary. If you are considering donation for someone you know, you can ask the transplant team how to inquire privately. If you are considering a non-directed donation, ask the center what that process entails. The article’s U.S. source is not a substitute for the rules and clinical process where you live."
+      ]
+    },
+    {
+      "heading": "Ask what evaluation includes",
+      "paragraphs": [
+        "HRSA’s guidance says transplant hospital staff may review medical history, conduct a physical examination and tests, assess mental health and social support, discuss financial circumstances and time away from commitments, and explain risks and benefits. These are topics to ask about, not a prediction of your eligibility or a complete list for every center. The center’s team can explain which specialists participate, how long each stage may take and what information stays confidential.",
+        "Make a written question list before calling: What costs might I face? Which costs can be reimbursed, and by whom? What work or caregiving time might be needed? What follow-up does the center expect? What happens if test results suggest donation is not suitable? Ask for answers in plain language and take a trusted person to a meeting if you want help remembering details."
+      ]
+    },
+    {
+      "heading": "Keep the choice genuinely yours",
+      "paragraphs": [
+        "A recipient, relative or friend may have strong feelings about a possible transplant. Those feelings do not make the decision yours to justify. You can ask the transplant center how to pause or end an evaluation, and how it communicates a decision while protecting your privacy. HRSA emphasizes that nobody should make the decision for you. Do not make a promise to donate in order to comfort someone while you are still learning.",
+        "It is reasonable to weigh possible effects on work, dependents, finances, relationships and health. You do not need to resolve every concern in the first conversation. Ask the center which questions should go to its clinicians and which to its financial or social-work staff. No online article can estimate your personal surgical risk, recovery or long-term health."
+      ]
+    },
+    {
+      "heading": "Separate facts from other people’s stories",
+      "paragraphs": [
+        "A donor’s story can help you think of questions, but another person’s recovery, compatibility or outcome cannot tell you what will happen. Avoid comparisons that turn a personal choice into a test of generosity. If an online post makes donation sound simple or guaranteed, bring that claim to the transplant team and ask what evidence and individual factors matter.",
+        "You can also discuss the decision with your own clinician, while recognizing that the transplant hospital is the place HRSA identifies for learning about the donation process. Consider whether you have enough time and emotional space to decide without pressure. Waiting, declining or stopping an evaluation are meaningful choices."
+      ]
+    },
+    {
+      "heading": "Decide what a responsible next step is",
+      "paragraphs": [
+        "A responsible next step might be reading the transplant hospital’s living-donor material, asking for an initial confidential conversation, or deciding this is not a path you want. If you proceed to an evaluation, keep a copy of the center’s instructions and write down questions that arise between appointments. Ask what to do if your circumstances change.",
+        "The accomplishment is not measured by whether you donate. It is measured by making an informed, voluntary decision with the qualified team that would care for you. HRSA’s material covers living kidney and liver donation at a general level; it does not determine eligibility or replace current transplant-center counseling."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Living Donation FAQs",
+      "url": "https://www.hrsa.gov/optn/patients/organ-donation/living-donation/living-donation-faqs",
+      "publisher": "Health Resources and Services Administration / Organ Procurement and Transplantation Network",
+      "purpose": "U.S. patient guidance on voluntary choice and evaluation areas; not individualized medical or financial advice and not a determination of eligibility."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "volunteer-at-a-hospital-for-a-year",
+    "sit-with-a-dying-person-and-just-be-present",
+    "give-blood-50-times-in-your-life"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

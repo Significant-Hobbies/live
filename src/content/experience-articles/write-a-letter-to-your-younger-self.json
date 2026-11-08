@@ -1,0 +1,57 @@
+{
+  "experienceSlug": "write-a-letter-to-your-younger-self",
+  "slug": "write-a-letter-to-your-younger-self",
+  "title": "Write to one past version of yourself",
+  "description": "Write a grounded letter to your younger self by choosing one age, recalling a real scene, and offering the context you wish you had then.",
+  "intent": "Make a younger-self letter concrete and compassionate by addressing one recognizable past moment rather than summarizing an entire life or claiming a therapeutic outcome.",
+  "sections": [
+    {
+      "heading": "Choose a specific age and moment",
+      "paragraphs": [
+        "A letter to your younger self becomes easier to write when the reader is specific. Choose an age, a school year, a move, a first job, or a particular day you still remember. You do not have to choose the hardest chapter of your life. A small scene—waiting for a bus, leaving a familiar home, entering a new classroom—can give the letter a real place to begin.",
+        "Write a few details before addressing that younger version: where you were, what you were looking at, who was nearby, and what you thought might happen next. Keep uncertainty visible. If you cannot remember a detail, leave it open rather than inventing a scene to make the letter more dramatic. This is personal writing, not a test of how accurately you can reconstruct every moment."
+      ]
+    },
+    {
+      "heading": "Speak from the knowledge you have now",
+      "paragraphs": [
+        "Begin with a simple greeting and say why you are writing. You might want to explain something you did not understand then, describe a choice you would make differently, or tell your younger self what remained important as the years passed. Write in the first person you would use in an actual letter. Avoid turning the page into a list of advice from a wiser, flawless future; the adult writing it is still learning too.",
+        "A grounded sentence names both the feeling and the limit of what you know: ‘I remember how uncertain this seemed, and I can’t promise it all works out the way we hoped.’ That is more credible than promising an easy future. You can offer a practical reassurance—‘you do not have to decide tonight’—without claiming that every later outcome was good or inevitable."
+      ]
+    },
+    {
+      "heading": "Choose care over a rewrite of the past",
+      "paragraphs": [
+        "If you write about a mistake, describe what you understand about it now without pretending the younger you had the same information. You can acknowledge harm or consequences and still avoid reducing a person to one decision. If another person appears in the story, protect their privacy and do not use the letter to disclose someone else’s confidential experience. The aim is to speak honestly to yourself, not to make a public verdict about everyone involved.",
+        "If the exercise brings up intense or overwhelming feelings, pause, close the notebook, and do something that helps you feel present and safe. You do not have to finish in one sitting or continue alone. This is an optional creative exercise, not therapy. If you want help with painful memories, consider talking with a qualified mental-health professional or trusted support person."
+      ]
+    },
+    {
+      "heading": "Give the letter a real ending",
+      "paragraphs": [
+        "Close with one thing you want that past version to remember, one question you still carry, or a kind sentence you would have wanted to hear. Add the date and the age you were addressing so the letter has context. If you are not sure what to say, write the ending last. It can be as simple as ‘I’m here now, and I remember you.’ Avoid adding a forced lesson just because a letter seems expected to have one.",
+        "You can keep the letter private, share it with someone you trust, or store it with other writing. The Library of Congress has described how archivists use envelopes, dates, stationery, and contextual clues to understand and order letters in a collection. A personal letter can benefit from a date, a short note about the occasion, and a safe place to keep it. Do not place it in a public archive or share another person’s story without considering privacy and permission."
+      ]
+    },
+    {
+      "heading": "Write the first paragraph today",
+      "paragraphs": [
+        "Pick a younger age and write three sentences: where you are, what is on your mind, and why your present-day self wants to write. Stop there if that is enough for today. If you continue, keep the letter specific to that moment and close it with one honest sentence rather than a summary of your whole life. A different exercise—writing to your future self—asks you to leave a message for someone you have not yet become; this one starts with a version of you who already lived through the scene."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Behind the Scenes: Helping Letters Tell a Story",
+      "url": "https://blogs.loc.gov/manuscripts/2022/05/behind-the-scenes-helping-letters-tell-a-story/",
+      "publisher": "Library of Congress Manuscript Division",
+      "purpose": "Provides an archivist's example of how dates, envelopes, stationery, and context can help preserve and arrange personal correspondence; it is not a psychological writing method."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "write-a-letter-to-your-future-self-and-read-it-in-10-years",
+    "reconstruct-one-ordinary-childhood-day"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

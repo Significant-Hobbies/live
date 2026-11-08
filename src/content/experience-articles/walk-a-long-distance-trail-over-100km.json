@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "walk-a-long-distance-trail-over-100km",
+  "slug": "walk-a-long-distance-trail-over-100km",
+  "title": "Turn a 100-kilometre trail into a chain of real days",
+  "description": "Choose a long trail, divide it by dependable overnight stops, and plan navigation, transport, and alternatives before your first stage.",
+  "intent": "Show how to turn the distance threshold into a route and logistics plan using the Cotswold Way as a verified example, rather than giving a generic packing list.",
+  "sections": [
+    {
+      "heading": "Choose a trail that suits the way you travel",
+      "paragraphs": [
+        "A route just over 100 kilometres can mean a weekend with long days or a slower walk with several overnight stops. Compare more than its headline distance: look at surface, ascent, remoteness, waymarking, water, towns, transport, and whether you prefer carrying a pack or arranging lodging. Decide whether you want a continuous end-to-end route or separate sections connected by public transport.",
+        "The Cotswold Way is a useful concrete example: its association describes a 102-mile route between Chipping Campden and Bath, generally following the Cotswold Escarpment and dropping into villages and towns. That exceeds 100 kilometres by a wide margin. The association points walkers to official route mapping for accommodation, services, points of interest, and GPX data. Those are planning aids; check current route conditions and service availability before fixing your dates."
+      ]
+    },
+    {
+      "heading": "Plan each overnight stop first",
+      "paragraphs": [
+        "Instead of dividing the total into equal distances, mark the actual overnight options and transport links. For the Cotswold Way, villages and towns along the route create possible natural breaks, but their distance apart and available beds vary. Make a stage table: start, finish, distance, ascent, surface, accommodation, food and water, and a shorter exit. Then adjust stages to your own recent walking experience and the advice of a qualified guide if you are new to long walks.",
+        "Contact lodging providers directly about arrival time, luggage, food, and cancellation terms. A map may show a settlement without guaranteeing that a room or meal is available on the day you need it. Leave a spare option in busier or remote sections, and know where you can stop if weather or fatigue changes the day."
+      ]
+    },
+    {
+      "heading": "Use the route notes as a working map",
+      "paragraphs": [
+        "Download or carry the current route data and a map you can read without mobile service. The Cotswold Way Association points walkers to an interactive National Trails map, distance measurer, points of interest, accommodation and services information, and a downloadable GPX track. Treat these tools as planning aids, then check current route notices and mapping before departure.",
+        "On your stage sheet, mark forks, road crossings, water sources, and the next reliable place to check directions. A GPX line is useful, but learn to compare it with signs and the ground. If a path is closed or waymarked differently, follow the current local diversion rather than forcing the device’s line."
+      ]
+    },
+    {
+      "heading": "Pack for your chosen style of walking",
+      "paragraphs": [
+        "A supported inn-to-inn walk and a self-carried camping walk have different loads. For either one, test footwear and pack fit on shorter walks first, and bring clothing appropriate to forecast changes. If you are carrying a tent and sleeping equipment, practice with the full load and check where camping is permitted. If you rely on lodging, verify how meals, water, and luggage transfers work rather than assuming every stage has services.",
+        "Keep first aid, rain protection, navigation, and a way to contact help appropriate to the route. Ask local ranger or trail staff about seasonal hazards, closures, and access restrictions. Your specific equipment depends on terrain, weather, and the support available; no short checklist can substitute for current route information or experience."
+      ]
+    },
+    {
+      "heading": "Build in a decision point for every day",
+      "paragraphs": [
+        "Before setting out, tell a trusted person your itinerary and expected return time. Review weather and route alerts each morning, then decide what condition would make you shorten or stop the stage. A long-distance trail is not a promise to keep walking when a river crossing, storm, injury, or closure makes that day unwise. Have a transport or accommodation contact for the point where you might leave the route.",
+        "For a first planning session, choose one named trail and map three consecutive days from real stopovers. Check the route line, services, and transport for each stage, then compare that plan with a recent walk you have already completed. The Cotswold Way is one example, not a claim that its rolling route or village spacing suits every walker."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Walking the Cotswold Way",
+      "url": "https://cotswoldwayassociation.org.uk/our-other-trails/",
+      "publisher": "Cotswold Way Association",
+      "purpose": "Supports the route's 102-mile distance, endpoints, general escarpment and village character, and the association's description of route-planning resources."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "hike-the-appalachian-trail-end-to-end",
+    "climb-your-first-mountain",
+    "cycle-coast-to-coast"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

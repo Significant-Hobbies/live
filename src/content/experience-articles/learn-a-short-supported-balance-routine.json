@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "learn-a-short-supported-balance-routine",
+  "slug": "learn-a-short-supported-balance-routine",
+  "title": "Build a short balance routine beside a stable support",
+  "description": "Start a supported balance practice with a clear surface, a sturdy chair or wall nearby and small movements that match your confidence and mobility.",
+  "intent": "How can I try a brief balance routine while keeping the exercise appropriately supported?",
+  "relatedExperienceSlugs": [
+    "run-a-marathon",
+    "do-a-30-day-yoga-challenge",
+    "attend-a-beginner-tai-chi-session"
+  ],
+  "sections": [
+    {
+      "heading": "Set the room up before you move",
+      "paragraphs": [
+        "Choose a clear space with a sturdy chair or wall within easy reach. Move loose rugs, cords and clutter out of the way, wear comfortable clothing and keep water nearby. The NHS balance exercises page recommends practising near a wall or stable chair in case you lose balance and building up gradually. Treat that support as part of the exercise, not a sign that you are doing it wrong.",
+        "If you have a recent fall, dizziness, a medical condition affecting balance or a movement restriction, ask a healthcare professional what is appropriate before starting. A short routine should feel manageable. Stop if you feel unwell, dizzy or in pain, and seek advice rather than pushing through."
+      ]
+    },
+    {
+      "heading": "Choose one movement and make it smaller",
+      "paragraphs": [
+        "Do not assemble a long sequence from random online clips. Pick one gentle exercise from a trusted health source, read its instructions fully and understand where the support is. The NHS examples include controlled movements such as sideways walking; its guidance advises building repetitions gradually. Begin with a few careful repetitions and take a rest.",
+        "Stand beside the support and place fingertips or one hand on it as needed. Move slowly enough that you can return to a stable position. If a balance exercise requires you to close your eyes, stand on one foot without support or turn quickly, leave it out unless a qualified professional has specifically recommended it for you. A beginner routine should not create an avoidable fall risk."
+      ]
+    },
+    {
+      "heading": "Use a simple sequence you can repeat",
+      "paragraphs": [
+        "A first practice can be only three parts: check your footing, complete one supported movement on each side, and pause to notice how you feel. You might walk slowly sideways along a counter with both hands near it, then return to the starting point. Keep the surface dry and use the chair only if it is stable and will not slide.",
+        "If the movement feels too easy, make the next practice slightly longer rather than removing support. If it feels unsteady, shorten it or sit and ask for advice. Write down the movement and how much support you used so you can repeat the same version instead of guessing next time."
+      ]
+    },
+    {
+      "heading": "Make progress visible without keeping score",
+      "paragraphs": [
+        "A useful note might read: “Practised sideways steps near the kitchen counter; held the counter lightly; no dizziness; repeat for one short round.” That tells you what you actually did and helps a clinician or instructor understand your starting point if you want guidance. Do not compare your balance with another person’s or use a streak to pressure yourself into unsafe practice.",
+        "The NHS suggests gradual increases over time; it also recommends combining balance exercises with other routines in its series. If you want a broader plan, follow official guidance or speak with a professional rather than making large changes at once."
+      ]
+    },
+    {
+      "heading": "Choose the next safe step",
+      "paragraphs": [
+        "Decide whether to repeat the same short routine, ask a professional to tailor it, or try another supported exercise from the same NHS series. A pause is a valid decision if your body needs rest."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Balance exercises",
+      "url": "https://www.nhs.uk/live-well/exercise/balance-exercises/",
+      "publisher": "NHS",
+      "purpose": "Primary health guidance on supported balance practice, comfortable clothing, water and gradual progression."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

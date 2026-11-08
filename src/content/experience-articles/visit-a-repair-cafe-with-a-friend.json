@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "visit-a-repair-cafe-with-a-friend",
+  "slug": "visit-a-repair-cafe-with-a-friend",
+  "title": "How can you make a first Repair Café visit useful for both friends?",
+  "description": "Choose one repairable item, ask the volunteer before any work begins, and take part at the level that feels safe and useful.",
+  "intent": "A practical plan for visiting a Repair Café with a friend, including choosing an item, setting expectations and learning without taking over the volunteer’s work.",
+  "sections": [
+    {
+      "heading": "Pick one item and explain what is wrong",
+      "paragraphs": [
+        "Choose a small item you own and can carry comfortably. Write a short description of the problem, when it occurs and what you have already tried. Bring any relevant part or accessory if the volunteer asks, but do not take apart the object beforehand unless you know it is safe and the café has requested that.",
+        "Repair Café International describes the events as places where visitors bring broken items and work with skilled volunteers, making the process a learning opportunity. Each local café decides what it accepts, what tools it has and whether it can work on a particular item. Check its current house rules before going, especially for electrical equipment, clothing or bulky objects."
+      ]
+    },
+    {
+      "heading": "Agree with your friend what the visit is for",
+      "paragraphs": [
+        "One person might want to repair a treasured object while the other is curious about learning. Say which matters most before you arrive. You can bring one item each, or choose a single project to observe together. Avoid making the outing a test of who is handy. The volunteer is there to advise, and a repair may not be possible in one visit.",
+        "Check whether the event welcomes guests, whether you need to register, and whether there is room for two people at the worktable. Ask before photographing a repair or another visitor. If your friend would rather watch than handle tools, agree that the volunteer’s instructions and the item owner’s comfort decide who participates."
+      ]
+    },
+    {
+      "heading": "Let the volunteer assess it first",
+      "paragraphs": [
+        "Describe the symptom clearly and let the volunteer inspect the object before anyone reaches for a tool. Ask what they think might be wrong and whether they can safely work on it. If they decline, respect the limit. A broken charger, damaged battery, pressurized item, sharp object or appliance can carry hazards that are not appropriate for an informal repair table. Never bypass a safety feature to get an item working.",
+        "If a repair is within scope, ask the volunteer to narrate a step or show you how to hold a part. Stay out of the way when they need concentration. Take notes on the diagnosis, replacement part or maintenance advice, but do not treat a quick repair as a professional certification or a guarantee that the object is safe for every use."
+      ]
+    },
+    {
+      "heading": "Make room for learning and for a no",
+      "paragraphs": [
+        "The result may be a complete repair, a partial diagnosis or a recommendation to use a specialist service. Each can be useful. Ask what would need to happen next and whether the volunteer can point you toward a manual, shop or repair service. If cost or availability is a concern, say so; do not pressure someone to use an improvised substitute.",
+        "You and your friend can share the attention: one describes the problem, the other notes the explanation, then switch if the volunteer invites you to help. Keep hands clear when someone is using a tool. If you are unsure what is being done, pause and ask rather than trying to imitate the movement."
+      ]
+    },
+    {
+      "heading": "Leave with a practical follow-through",
+      "paragraphs": [
+        "Before leaving, confirm what was repaired, what remains uncertain and whether the item should be checked by a specialist before use. Thank the volunteer and follow the event’s rules for cleanup or donations. A short note of the diagnosis helps you avoid repeating the same troubleshooting later.",
+        "Afterward, talk with your friend about the most useful part: seeing a part opened safely, learning a maintenance habit or finding out the repair was not viable. If you want to return, check the next local event and its accepted-item list. A repair café is a shared learning space; the item does not need to be rescued for the visit to matter."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "What is a Repair Café?",
+      "url": "https://www.repaircafe.org/en/about/",
+      "publisher": "Repair Café International",
+      "purpose": "Supports the model of visitors bringing household items and learning repairs together with skilled volunteer specialists."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "help-host-a-neighborhood-repair-cafe-session",
+    "mend-a-favourite-garment-with-visible-stitches"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

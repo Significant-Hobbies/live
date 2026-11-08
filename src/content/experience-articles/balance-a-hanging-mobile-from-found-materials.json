@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "balance-a-hanging-mobile-from-found-materials",
+  "slug": "balance-a-hanging-mobile-from-found-materials",
+  "title": "Balance a hanging mobile with patient adjustments",
+  "description": "Make a hanging mobile from light found materials by testing one branch at a time, keeping a stable support, and changing a single variable when it tilts.",
+  "intent": "How do you balance a mobile when each new piece shifts the whole sculpture? This guide adds an incremental method for exploring balance and making adjustments without guesswork.",
+  "sections": [
+    {
+      "heading": "Start with a small, light design",
+      "paragraphs": [
+        "Collect lightweight, clean materials that will not shed or crumble: paper shapes, thin card, thread, small twigs, or reused packaging. Avoid anything sharp, heavy, or fragile above people. Sketch a simple plan with one support and two hanging elements. A small first mobile makes the effects of each adjustment easier to see and keeps the structure manageable.",
+        "The activity is a physical way to explore balance: weight on one side can be offset by moving a lighter piece farther from the support. PhET’s Balancing Act simulation is a useful companion for noticing how object weight and distance from a pivot interact. Try the virtual seesaw briefly before building, then test your own design with a real support."
+      ]
+    },
+    {
+      "heading": "Make the top branch stable first",
+      "paragraphs": [
+        "Lay the main branch or rod on a fingertip and find a point where it rests level. Mark that spot lightly; it is your first suspension point. Tie the thread so the branch can hang without slipping, then test it with no decorations. If the branch is curved or lopsided, its natural balance point may not be at the visual center.",
+        "Keep an adult-supervised workspace if cutting or drilling is involved, and use only material you can attach securely. A mobile can be displayed at eye level on a stand while you prototype. You do not need to hang it from a ceiling during the testing stage; a temporary support makes readjustment easier and safer."
+      ]
+    },
+    {
+      "heading": "Add one piece, then observe",
+      "paragraphs": [
+        "Attach one shape to one end and a second shape to the other. If the rod tips, move the lighter shape outward or the heavier shape inward by a small amount. Pause after each change and let the thread settle. Record where each item hangs and whether the branch tilts left or right. This makes adjustment a repeatable experiment rather than a series of random knots.",
+        "Try using visually different shapes with similar weight. If you add color, keep the physical weight in mind: layered card or a large folded piece may weigh more than a small flat shape. If the elements overlap, shorten a string or move the branch point, but make only one change at a time so you can learn what helped."
+      ]
+    },
+    {
+      "heading": "Build a second level only after the first hangs",
+      "paragraphs": [
+        "Once the first branch rests level, attach a second small rod beneath it. Find the lower rod’s balance point with its own pieces before hanging it from the upper structure. When the lower branch is balanced, hang it from the first branch and adjust the upper level again. Each level changes the load above it, so expect a little retuning.",
+        "The common beginner trap is trying to make the whole mobile balance at once. Start at the bottom and work upward, checking each connection for slipping. If a branch keeps rotating, add a small stopper knot or change the tie point. If the mobile spins freely, that can be part of the design; make sure it cannot strike a wall or person."
+      ]
+    },
+    {
+      "heading": "Finish for a calm display",
+      "paragraphs": [
+        "When the sculpture holds its shape on the stand, inspect every string and attachment. Keep the finished mobile well away from heaters, fans, doorways, and curious pets. Do not suspend heavy objects over a bed, desk, or walkway. If you plan to display it in a public room, check the venue’s hanging and fire-safety rules first.",
+        "For a first attempt, stop after one balanced branch with two shapes. Take a photo from the side and note the pivot point, then add a second level only if you want to explore further. Your next step is to test the first pair of pieces and see how moving one farther from the pivot changes the tilt."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Balancing Act",
+      "url": "https://phet.colorado.edu/pt/simulations/balancing-act",
+      "publisher": "PhET Interactive Simulations, University of Colorado Boulder",
+      "purpose": "The interactive Balancing Act simulation is a resource for exploring balance around a pivot with weights and distance."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-a-folding-paper-peepshow",
+    "animate-a-strip-in-a-homemade-zoetrope",
+    "stage-a-shadow-puppet-story"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "namibia",
+  "slug": "namibia",
+  "title": "Choose a Namibia trip by one landscape at a time",
+  "description": "Compare Namibia’s Etosha wildlife country with the Namib dunes and canyon landscapes, then build a route around distance and park conditions.",
+  "intent": "How do I shape a first Namibia trip around the country’s distinct park landscapes without rushing between far-apart highlights?",
+  "sections": [
+    {
+      "heading": "Start with the landscape you want most",
+      "paragraphs": [
+        "Namibia rewards a trip built around a few contrasting places rather than a checklist of national parks. The Ministry of Environment, Forestry and Tourism highlights Etosha’s shallow salt pan and wildlife habitat, while its Namib Naukluft entry names the Namib Sand Sea, Sesriem Canyon, Deadvlei, Sossusvlei and Naukluft hiking trail. These are different kinds of days: wildlife viewing around a pan versus walking and looking across a desert landscape.",
+        "Choose one anchor for your first few nights. If wildlife is the main reason you are going, make Etosha the center of the plan and leave time to watch patiently at a waterhole. If desert forms are what you want to study, orient the trip around Sesriem and the Namib Sand Sea. The Ministry page describes national attractions, not a complete route or a promise that a particular road or activity will be available."
+      ]
+    },
+    {
+      "heading": "Make the Etosha day slow enough to observe",
+      "paragraphs": [
+        "Etosha’s pan is a shallow salt depression, and the Ministry describes the park as habitat for large and small mammals adapted to seasonal climatic variation. Instead of racing from sighting to sighting, choose a short list of official waterholes or a guided wildlife outing after checking current park maps and access rules. Spend time noticing how the open pan, vegetation and water points shape where animals appear.",
+        "A useful field note separates what you saw from what you guessed: “two elephants approached the waterhole after a long wait” is better than assuming where a herd will be at the next stop. Keep appropriate distance, remain in permitted areas and follow park rules. Wildlife is unpredictable, and no trip plan can guarantee a species sighting."
+      ]
+    },
+    {
+      "heading": "Give the Namib its own kind of attention",
+      "paragraphs": [
+        "The Namib Naukluft region offers a different visual question: how do dunes, canyon walls and dry pans hold light and shadow? The Ministry’s key-attractions page places Sossusvlei, Deadvlei and Sesriem Canyon within the Namib Sand Sea landscape. Pick one feature for a focused visit rather than trying to photograph every dune from the vehicle. At Deadvlei, for example, contrast the dark tree forms with pale ground and surrounding dune slopes.",
+        "Use official park information for current access, opening arrangements, roads and any walking restrictions. Do not assume that a famous image marks a simple roadside stop; conditions and approach may matter. For longer walks in the Naukluft area, read current park information and choose only a route within your experience and conditions."
+      ]
+    },
+    {
+      "heading": "Decide how much driving belongs in the trip",
+      "paragraphs": [
+        "For a short holiday, compare two versions on paper: one focused region with time for a dawn and an afternoon outing, or a multi-region journey with long transfers and fewer hours in each place. Namibia’s attractions are widely dispersed, so daily map distances and realistic road time should shape how many bases you book. Leave a buffer before a flight or long connection, especially where a single road interruption could disrupt the day.",
+        "If you rent a vehicle, confirm suitability, insurance, fuel arrangements and what the rental company allows on the roads you plan to use. For a first remote park visit, a guided transfer can remove navigation decisions and provide local context. A self-drive plan offers flexibility but asks you to handle route-finding, breakdown contingency and changing road conditions yourself."
+      ]
+    },
+    {
+      "heading": "Build a two-base outline",
+      "paragraphs": [
+        "A practical starter outline is either “Etosha plus a nearby base” or “Sesriem and Namib Naukluft,” then one additional region only if travel time and trip length allow it. Put the long transfer between bases on a day with no timed excursion. Before each park day, check the Ministry or park authority’s latest visitor information and alerts, and download any maps you need before entering areas with weak connectivity.",
+        "The official Ministry page supports the landscape contrast and named attractions here; it does not provide live gate hours, camp availability, road status or wildlife forecasts. Your next step is to choose whether your first Namibia memory should be a patient wildlife watch or a close reading of desert landforms, then map only the bases that serve that choice."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Namibia's Key Attractions",
+      "url": "https://meft.gov.na/visit-namibia/namibias-key-attractions/100/",
+      "publisher": "Ministry of Environment, Forestry and Tourism, Namibia",
+      "purpose": "Supports the specific Etosha Pan and wildlife context and the named features of Namib Naukluft: Namib Sand Sea, Sesriem Canyon, Deadvlei, Sossusvlei and Naukluft trail."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "safari-in-the-serengeti-at-sunrise",
+    "the-sahara-desert"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

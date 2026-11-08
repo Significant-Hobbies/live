@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "help-classify-research-images-with-stall-catchers",
+  "slug": "help-classify-research-images-with-stall-catchers",
+  "title": "How do you make a careful first contribution to Stall Catchers?",
+  "description": "Complete the project’s tutorial, classify a small set of microscope videos, and use the shared labels without treating each uncertain image as obvious.",
+  "intent": "A focused introduction to Stall Catchers that explains what volunteers classify, why training matters and how to handle ambiguous images.",
+  "sections": [
+    {
+      "heading": "Understand the research task first",
+      "paragraphs": [
+        "Stall Catchers is an online citizen-science game developed by the Human Computation Institute with research collaborators including Cornell University. Its About page explains that volunteers view movies of blood vessels in mouse brains and classify vessels as flowing or stalled, helping speed Alzheimer’s research. The scientific task is narrower than “diagnosing” anything: you are applying labels to research images under the project’s instructions.",
+        "Read the project’s explanation and complete its current tutorial before contributing. Check what the images represent, what counts as flowing or stalled and what to do when a view is unclear. Do not assume the labels correspond to a person’s medical condition or make claims about a treatment."
+      ]
+    },
+    {
+      "heading": "Learn from examples before guessing",
+      "paragraphs": [
+        "Use the training examples to see the visual distinction the project asks you to make. Compare the image with its example labels and note the feature that helped you decide. A vessel may be hard to assess because the clip is brief, the view is noisy or the movement is subtle. The project’s onboarding and help pages exist to guide those judgments; return to them when the categories blur together.",
+        "If an image remains uncertain, use the platform’s skip or unsure option if offered. Do not invent a rule to force a choice. A cautious volunteer contributes more reliably by recognizing limits than by treating every image as obvious."
+      ]
+    },
+    {
+      "heading": "Work in a short, attentive session",
+      "paragraphs": [
+        "Classify a small batch and take a pause. Repeatedly looking at similar clips can make you less attentive, especially if you begin clicking by rhythm rather than inspecting the image. Keep your screen comfortable and stop if your eyes feel strained. The goal is thoughtful participation, not a high personal count.",
+        "The Stall Catchers About page says each vessel is analyzed by multiple catchers and that the project combines crowd answers to generate reliable results. That shared design means your individual label is one contribution within a larger process, not a final scientific conclusion. Follow the site’s instructions for how your answers are combined."
+      ]
+    },
+    {
+      "heading": "Use feedback to refine the distinction",
+      "paragraphs": [
+        "If the platform shows feedback or a reference answer, compare it with what you saw. Ask which visual cue you missed and revisit the relevant tutorial. Do not quietly change a label to match a guess; use the project’s correction mechanism if the interface provides one.",
+        "Keep a private note of a useful distinction in your own words, such as how the project defines a visible flow pattern. Avoid saving or reposting research images unless the project explicitly allows it. If the images are unsettling or the task is tiring, stop; a short session is enough for a first contribution."
+      ]
+    },
+    {
+      "heading": "Finish with one question for next time",
+      "paragraphs": [
+        "After your batch, write down what became easier and what still looked ambiguous. If you want to return, open the current project guide first so you are using the latest instructions. Project tasks and training examples can be updated; do not rely on an old description of the classification rules.",
+        "A useful next step is to compare your understanding with the project’s explanation of why crowd classifications help researchers. Keep the contribution modest and precise: you classified a set of images according to a project protocol. That is meaningful volunteer work without overstating what a single session proves."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "About Stall Catchers",
+      "url": "https://stallcatchers.com/about",
+      "publisher": "Human Computation Institute / Stall Catchers",
+      "purpose": "Supports the citizen-science task of classifying mouse-brain vessel videos as flowing or stalled, the onboarding guidance and aggregation across multiple catchers."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "document-a-wild-species-for-inaturalist",
+    "submit-a-complete-bird-checklist-to-ebird"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

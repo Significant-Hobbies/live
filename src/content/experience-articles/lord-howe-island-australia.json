@@ -1,0 +1,66 @@
+{
+  "experienceSlug": "lord-howe-island-australia",
+  "slug": "lord-howe-island-australia",
+  "title": "Book Lord Howe in the right order and explore slowly",
+  "description": "Lord Howe limits visitor numbers and rewards a low-key walking or cycling stay; confirm accommodation before flights and plan for weather.",
+  "intent": "Plan a realistic Lord Howe stay around its visitor cap, limited air access and island-scale transport, with concrete advice on booking sequence and daily movement.",
+  "relatedExperienceSlugs": [
+    "sleep-on-a-beach-under-the-stars",
+    "the-great-barrier-reef-australia",
+    "the-scottish-highlands"
+  ],
+  "sections": [
+    {
+      "heading": "Secure a place to stay before buying flights",
+      "paragraphs": [
+        "Lord Howe Island limits visitor numbers. Its official tourism association says no more than 400 visitors are welcomed at a time and advises booking flights and accommodation together because tourist spaces are limited. The island’s travel page also notes that weather can vary and recommends confirming accommodation before purchasing airfares. This is the opposite of a spontaneous “find a room after landing” trip: choose dates, secure lodging and then coordinate flights.",
+        "Scheduled air travel is the practical route for most visitors. The island travel page lists flights from Sydney and some regional services, but operators and schedules can change. Confirm the route, baggage allowance and current flight times directly with the airline before paying. Keep a buffer if you have a separate international connection."
+      ]
+    },
+    {
+      "heading": "Treat the island’s size as a feature",
+      "paragraphs": [
+        "The tourism page describes Lord Howe as about 11 kilometres long and 2 kilometres wide and says walking or cycling are common ways to get around. That scale invites a slower rhythm: choose one beach, walk or viewpoint for the morning, then leave time to stop for a meal or an unplanned conversation. Bikes are available through local operators, while rental cars are limited. Confirm what your accommodation provides.",
+        "If you cycle, follow local road rules, use a helmet and ride at a pace that works for you. On foot, ask about current track access and weather before starting, especially for uphill routes. Avoid assuming every track is an easy stroll simply because the island looks small on a map."
+      ]
+    },
+    {
+      "heading": "Plan around weather and limited connectivity",
+      "paragraphs": [
+        "The island tourism page warns that conditions can be changeable, recommends a raincoat and sturdy covered shoes, and says there is no mobile coverage. Keep an offline map, save accommodation and operator numbers, and agree on a meeting place if your group separates. Tell someone where you plan to walk and check the forecast with local sources before heading out.",
+        "Because the island is remote, a wet day can reshape a plan. Keep a list of lower-exposure alternatives such as the museum, visitor centre, a sheltered walk or a rest day. Do not push onto a steep or exposed trail just to preserve a photo schedule."
+      ]
+    },
+    {
+      "heading": "Respect the island’s communities and protected landscape",
+      "paragraphs": [
+        "Ask before entering private property, photographing residents or joining a community activity. Treat beaches, reef and forest as living environments: follow signs, avoid disturbing wildlife and carry out what you bring in. If you plan a water activity, use a local operator, confirm conditions and check whether the activity fits your ability.",
+        "The island’s tourism site directs visitors to local businesses and describes an offline town-center guide with historical and walking information. That can help structure the day, but current closures and conditions should come from the relevant local authority or operator. Use local advice when it updates the printed plan."
+      ]
+    },
+    {
+      "heading": "Make a gentle three-day shape",
+      "paragraphs": [
+        "For a short stay, make day one an arrival and orientation day, day two your main outdoor outing and day three a weather-dependent option before departure. This gives you room to enjoy a walk rather than racing between beaches. Confirm meal availability and transfer needs with your accommodation, since island services may differ from a large mainland town.",
+        "Your next action is to choose dates, contact accommodation first, and confirm flight baggage and connections with the carrier. Once those anchors are set, plan one walk and one low-key alternative for each day."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Travel Essentials",
+      "url": "https://lordhoweisland.info/visit-lord-howe/travel-essentials/",
+      "publisher": "Lord Howe Island Tourism Association",
+      "purpose": "Supports the 400-visitor cap, advice to book flights and accommodation together, island dimensions, common walking/cycling transport, variable weather and lack of mobile coverage."
+    },
+    {
+      "title": "Getting There",
+      "url": "https://lordhoweisland.info/visit-lord-howe/getting-there/",
+      "publisher": "Lord Howe Island Tourism Association",
+      "purpose": "Opened current arrival page listing air as the practical route and recommending confirmed accommodation before purchasing flights.",
+      "accessLimit": "Tourism pages are guidance, not airline schedules or availability guarantees; verify current routes, baggage and conditions with carriers and accommodation."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

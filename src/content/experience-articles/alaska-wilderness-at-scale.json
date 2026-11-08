@@ -1,0 +1,71 @@
+{
+  "experienceSlug": "alaska-wilderness-at-scale",
+  "slug": "alaska-wilderness-at-scale",
+  "title": "Feel Denali’s scale from the park road before going off trail",
+  "description": "Compare a Denali park-road bus day with a backcountry trip, and learn why wilderness access, road limits and self-reliance are different plans.",
+  "intent": "How can a visitor experience Alaska’s scale through a manageable Denali itinerary, while distinguishing a bus-accessible day from trail-less backcountry travel?",
+  "sections": [
+    {
+      "heading": "Choose which kind of scale you mean",
+      "paragraphs": [
+        "Denali’s size is not best measured by the number of miles you cover. You can notice scale from the park road, where the Alaska Range, valleys and open terrain change over a long bus ride, or from the backcountry, where travel leaves the road and requires navigation across trail-less country. Those are different levels of responsibility. For many visitors, a long bus day plus a short walk near a designated stop gives a memorable wilderness encounter without pretending they are ready for an off-trail expedition.",
+        "The National Park Service describes the park road as the primary corridor for summer visitor buses and recommends using time in the visitor center, shuttle stops and ranger programs to build context. Decide whether you want a narrated tour with interpretation, a non-narrated transit bus that allows more flexibility, or a short entrance-area shuttle. Your time and curiosity—not a wildlife checklist—should determine the scale of the day."
+      ]
+    },
+    {
+      "heading": "Start with an entrance-area day",
+      "paragraphs": [
+        "If you have only a few hours, the NPS suggests the visitor center, short trails and a short ride on the Savage River Shuttle toward Mountain Vista or Savage River. This gives you a first sense of the park without committing to a full-length road trip. Check current service and schedule details, then choose a walk whose distance and surface suit the group.",
+        "Bring food and water for a longer bus outing; the Park Service notes that food and drink are not available after departing the bus depot. Download or print the latest schedule before leaving reliable cell service, and build in extra time for wildlife stops or weather. A wildlife stop may be memorable, but no animal sighting is guaranteed."
+      ]
+    },
+    {
+      "heading": "Understand the 2026 road limit before booking",
+      "paragraphs": [
+        "As of November 2026, the National Park Service says an ongoing landslide at Pretty Rocks limits transit buses to Mile 43 of Denali’s 92-mile road. It directs visitors to get the most recent schedule at the Bus Depot or Visitor Center. This is a dated operational condition, not a permanent description of the park; check current NPS updates before travel because repairs and road access can change.",
+        "If the long ride is your priority, compare the transit bus with a narrated tour and read what each includes. A transit bus lets riders disembark for a day hike and later board another bus, while a tour bus follows its own format. Confirm the actual route end for your date, how reservations work, and what happens if service changes. Do not book your onward transport around a guess about return time."
+      ]
+    },
+    {
+      "heading": "Treat the backcountry as a different undertaking",
+      "paragraphs": [
+        "Denali’s backcountry has no trails, designated routes or established campsites to guide overnight travel. The NPS requires a free backcountry permit for overnight trips and an in-person orientation; the permit assigns a unit for each night. Hikers must navigate cross-country through remote terrain and prepare to handle problems themselves. The park is divided into units with nightly limits, so unit availability can constrain the route.",
+        "If you have never navigated off trail, crossed glacial rivers or camped in severe weather, begin with the frontcountry bus and ranger-led activities. For an overnight trip, read the park’s backcountry material, assess your group honestly, and speak with a ranger about unit options and conditions. A guide or ranger conversation helps with planning but does not replace the skills, equipment or self-rescue ability required for remote travel."
+      ]
+    },
+    {
+      "heading": "Leave space for a changing park",
+      "paragraphs": [
+        "Denali is a place where a clear day and a low-cloud day can feel like different visits. The NPS recommends leaving time for alternatives such as visitor-center exhibits, a ranger program or short trails if weather limits a bus or hike. Do not promise yourself a particular view of Denali or wildlife; decide what you will learn from the place even if the mountain stays hidden.",
+        "Before you go, make two plans: a bus route that fits your actual visit, and a nearby alternative if it is delayed or unavailable. Check current road, weather, permit and wildlife-closure information with the National Park Service. Alaska’s scale becomes real when you plan for distance and uncertainty, then let the landscape set the day’s pace."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Transit Buses",
+      "url": "https://home.nps.gov/dena/planyourvisit/shuttles.htm",
+      "publisher": "National Park Service",
+      "purpose": "Supports the current 2026 Pretty Rocks road restriction, bus choices, schedule checks, reservations and food availability after bus departure."
+    },
+    {
+      "title": "How to Explore Denali",
+      "url": "https://home.nps.gov/dena/planyourvisit/visiting-denali.htm",
+      "publisher": "National Park Service",
+      "purpose": "Supports choosing visitor-center, entrance-shuttle and full-day bus plans by available time."
+    },
+    {
+      "title": "Backpacking",
+      "url": "https://home.nps.gov/dena/planyourvisit/backcountry.htm",
+      "publisher": "National Park Service",
+      "purpose": "Supports the permit/orientation requirement and distinction between trail-less backcountry, unit-based camping and frontcountry access."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "trek-to-everest-base-camp",
+    "hike-through-patagonia",
+    "trek-across-iceland"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

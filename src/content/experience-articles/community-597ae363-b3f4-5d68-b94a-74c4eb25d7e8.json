@@ -1,0 +1,64 @@
+{
+  "experienceSlug": "community-597ae363-b3f4-5d68-b94a-74c4eb25d7e8",
+  "slug": "act-like-a-painter-in-a-public-place-resort-beach",
+  "title": "Paint in public without taking over the view",
+  "description": "Plan a small, respectful painting session on a public beach or resort, with permission, a light kit and a clear boundary around other visitors.",
+  "intent": "Help a beginner arrange a relaxed public painting session with consent, practical materials and honest interaction, not a performance of professional status.",
+  "sections": [
+    {
+      "heading": "Choose the right place and ask first",
+      "paragraphs": [
+        "A public shoreline may feel open, but the land can be managed by a city, park service, resort or private operator. Before bringing a stool, easel or wet materials, ask the site manager whether a small personal painting session is allowed and whether you need to reserve a space. If the answer is unclear, describe the exact setup: one person, a compact sketchbook or easel, no sales, no group and no equipment left behind. A “public place” does not automatically mean every activity is permitted in every area.",
+        "California State Parks says special events in its parks require permits even for small groups and directs visitors to the specific park or region for details. That rule is about events, not a claim that a solo painter always needs a permit. It illustrates why the land manager’s own guidance matters. If you are at a resort beach, ask the resort and the public authority responsible for that stretch; if you are in a state park, contact the park before planning a group or equipment-heavy session."
+      ]
+    },
+    {
+      "heading": "Make the first setup deliberately small",
+      "paragraphs": [
+        "For a first attempt, choose a sketchbook or small board, a limited palette and only the tools you know how to pack away. A postcard-sized study of the horizon, the edge of a dune or a patch of reflected light gives you a finished exercise without requiring a large footprint. Place your kit away from paths, lifeguard access, beach entrances and other people’s towels. Keep a bag for waste and a cloth to secure light materials if a breeze comes up.",
+        "Pick media that suit the site and your experience. Watercolour pencils or a dry drawing medium can simplify transport and cleanup; if you bring paint, make sure every container is closed when not in use and ask the site whether rinsing or disposal is allowed. Do not pour paint water or solvents into sand, storm drains or the ocean. Pack out all materials and leave the area as you found it."
+      ]
+    },
+    {
+      "heading": "Paint the scene without blocking it",
+      "paragraphs": [
+        "Spend a few minutes looking before you start. Notice which edge is moving—the tide line, a cloud bank or a line of umbrellas—and decide what you want the picture to hold still. Place the horizon intentionally rather than halfway by habit. Use one dark shape, such as a distant headland or a shaded beach umbrella, to compare against the bright water. A small study can focus on three large colour areas before you try to capture details.",
+        "If people enter the view, treat them as visitors, not props. Shift your angle, wait until the space clears or leave them out. Do not photograph, sketch recognisable strangers at close range or invite them into the work without asking. If someone asks what you are doing, answer plainly: you are practising a painting. You do not need to claim credentials or pretend to be working for the resort."
+      ]
+    },
+    {
+      "heading": "Be clear about attention and conversation",
+      "paragraphs": [
+        "A public session can attract questions, but you are not obliged to turn it into a demonstration. If you are happy to chat, offer a simple explanation of what you are studying. If you want quiet, a small note such as “painting, please excuse me” may be enough where the site allows signs; do not attach anything to public fixtures. Ask permission before photographing another person’s painting, equipment or private property.",
+        "Avoid setting up where you could obstruct a walkway, view, beach access or emergency route. California’s rules for ordinary personal photography also emphasize following park rules and not interfering with other visitors; painting is different from photography, so use that as a reminder about shared space, not as a permit exemption for art. A courteous setup leaves people room to enjoy the shore without needing to navigate around your materials."
+      ]
+    },
+    {
+      "heading": "Finish with a complete small study",
+      "paragraphs": [
+        "Set a short stopping point: one page, one light change or one painting session before the tide shifts. When the page is done, write a quick note on what changed in the scene and what you would simplify next time. Let paint dry safely before stacking or carrying the work. Clean your tools only where the site permits, and take every container and scrap away with you.",
+        "If you want to repeat the outing, ask the site manager whether there is a quieter or more suitable location and whether any seasonal restrictions apply. Bring the same compact kit and change just one variable, such as the time of day or subject. The practical next step is to contact the beach or resort, describe the small setup you plan to bring, and choose a place where both your painting and other people’s visit can fit comfortably."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "FAQs: Permits for Special Events and Photography/Film",
+      "url": "https://www.parks.ca.gov/?page_id=937",
+      "publisher": "California State Parks",
+      "purpose": "Supports that special events in California state parks require permits even for small groups, that rules are park-specific, and that professional filming/photography requires checking with park staff; it does not define rules for solo painting."
+    },
+    {
+      "title": "Filming/Photography Permits",
+      "url": "https://www.parks.ca.gov/?page_id=30305",
+      "publisher": "California State Parks",
+      "purpose": "Supports limits on personal photography in state parks, including obeying park rules and not interfering with other visitors; cited only as shared-space context, not painting law."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "learn-watercolour-painting",
+    "paint-something-you-re-proud-to-hang-on-a-wall"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

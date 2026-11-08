@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "hold-a-playlist-listening-exchange",
+  "slug": "hold-a-playlist-listening-exchange",
+  "title": "Host a playlist listening exchange that leaves room for stories",
+  "description": "Invite each person to bring one meaningful song, listen without interruption, and trade the context behind it with care for different reactions.",
+  "intent": "How do I run a small playlist listening exchange where everyone feels heard? This guide covers choosing a simple format, sharing context and handling songs that bring up difficult feelings.",
+  "sections": [
+    {
+      "heading": "Set an invitation that makes sharing optional",
+      "paragraphs": [
+        "A listening exchange can be as simple as two friends taking turns choosing one song. Tell people the shape of the gathering in advance: how many songs, whether you will listen to full tracks or short sections, and whether you will use speakers or headphones. Ask each person to choose a song they are comfortable sharing. They can pass, choose an instrumental piece or tell the story without playing the track.",
+        "Offer a theme if people want a starting point: a song tied to a place, a first concert, a person, or a particular season. Playlist for Life’s group activity guidance uses themes to help participants find a song and memory to share, and suggests giving people the prompt ahead of time. Keep the invitation broad enough for different ages and music tastes; avoid assuming everyone shares the same cultural references."
+      ]
+    },
+    {
+      "heading": "Make listening the main activity",
+      "paragraphs": [
+        "Before pressing play, agree on the volume and any practical limits. Let the chooser introduce the track with as much or as little context as they like. During the song, try not to talk over it or rush to interpret the lyrics. Notice one musical detail—the change in rhythm, a voice, an instrument, or a shift in energy—and one feeling or memory it brings up for you.",
+        "Afterward, ask the chooser what they wanted to share about it. A gentle question such as ‘What made you pick this one?’ leaves the person free to describe a memory, a sound they love or no story at all. Do not treat one song as a complete biography. The listener can share their response too, as long as the chooser’s reason remains central."
+      ]
+    },
+    {
+      "heading": "Trade turns without ranking anyone’s taste",
+      "paragraphs": [
+        "Use a clear order so one person does not become the default host. In a group, write names on slips or go around the circle. Keep each turn generous but bounded; one track and a few minutes of conversation can make a short gathering feel complete. If someone brings a long piece, ask whether they would like to play all of it or a section they chose.",
+        "Avoid asking people to defend a song’s quality or explain why it is meaningful. There is no need to score selections, build a ‘best of’ list or find consensus. A playlist exchange is more interesting when very different songs can sit beside each other. If you collect links, check that participants want them shared and keep the playlist private when a song or story feels personal."
+      ]
+    },
+    {
+      "heading": "Respond carefully when music lands hard",
+      "paragraphs": [
+        "Music can bring up difficult memories or reactions. Agree that anyone can pause or stop a track without explanation. Playlist for Life advises watching for distress in group settings and stopping music when someone reacts negatively; make that practical by checking in quietly and offering a change of song or a break. Do not press someone to tell the group what happened.",
+        "Pay attention to sound levels and the room. A song that feels comfortable to one person may be too loud or tiring for someone else. Leave quiet between tracks and let people step away. The aim is shared listening, not keeping audio running continuously. If participants have hearing needs, ask what arrangement would be comfortable instead of guessing."
+      ]
+    },
+    {
+      "heading": "End with a next listen, not a verdict",
+      "paragraphs": [
+        "At the end, invite each person to name one track they may listen to again or one new artist they want to explore. You can write down the songs and their owners, but ask before sharing the list beyond the room. A playlist gains meaning from the people and stories around it, so preserve that context instead of reducing it to a generic mood label.",
+        "If the exchange was enjoyable, repeat it with a different theme or invite another person to choose the first track. Keep the format light enough that preparation does not become a project."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Using Playlist for Life in group settings",
+      "url": "https://www.playlistforlife.org.uk/wp-content/uploads/2022/04/Group-Activities-for-Help-Points-April-2022.pdf",
+      "publisher": "Playlist for Life",
+      "purpose": "Supports using an advance theme to prompt song-and-memory sharing and watching for negative reactions during group listening."
+    },
+    {
+      "title": "Use music safely",
+      "url": "https://www.playlistforlife.org.uk/use-music-safely/",
+      "publisher": "Playlist for Life",
+      "purpose": "Supports checking volume, leaving silence and stopping a session if a listener is distressed."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "listen-to-a-whole-album-without-multitasking",
+    "exchange-handwritten-recipes-through-the-post",
+    "write-a-letter-to-someone-who-changed-your-life"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

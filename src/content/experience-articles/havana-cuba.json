@@ -1,0 +1,64 @@
+{
+  "experienceSlug": "havana-cuba",
+  "slug": "havana-cuba",
+  "title": "Plan a Havana stay around one neighborhood and a flexible day",
+  "description": "Build a thoughtful Havana visit around architecture, public spaces and local life, after checking the travel rules and practical conditions for your nationality.",
+  "intent": "How can I experience Havana with curiosity and care while checking legal, safety, power and transport realities before travel?",
+  "sections": [
+    {
+      "heading": "Settle the legal question first",
+      "paragraphs": [
+        "Before choosing hotels or excursions, check whether you may lawfully travel to Cuba under the rules that apply to you. The U.S. State Department says OFAC regulations govern travel transactions for people under U.S. jurisdiction, including U.S. citizens or residents anywhere and anyone within the United States. It describes twelve categories covered by general licenses; it does not make a vague cultural interest automatically qualify.",
+        "If you are subject to U.S. jurisdiction, read the current Treasury guidance and the State Department page carefully, and ask a qualified professional if your circumstances are unclear. The page’s “Travel guidance for Cuba” section was dated 15 October 2026 when checked; its separate Level 2 advisory section shows a May 7, 2025 issue date. Both can change, so reopen the relevant sections before travel. Travelers with another nationality should check their own government’s advice and Cuba’s current entry requirements. Do not book first and try to fit your plans to a category later."
+      ]
+    },
+    {
+      "heading": "Make one part of the city your anchor",
+      "paragraphs": [
+        "A first Havana visit becomes easier to absorb when you give it a home base and a clear daily radius. For a self-chosen Old Havana walk, use Plaza de Armas, Plaza de la Catedral and Plaza Vieja as three named anchors, then compare how each public space meets the surrounding streets and buildings. UNESCO lists these among Old Havana’s five historic plazas and describes their distinct architectural character; it does not prescribe this route. Check current access and local advice before setting out, and leave time to notice shade, arcades and the street pattern between stops.",
+        "Build a day around one question: how do public spaces connect to daily life, or how do different building periods meet on one street? Carry a small notebook and record a doorway, shade pattern, courtyard or conversation you were invited into. Ask before photographing residents or entering private courtyards. A respectful request can be declined; do not frame someone’s home or hardship as scenery."
+      ]
+    },
+    {
+      "heading": "Plan for practical interruptions",
+      "paragraphs": [
+        "The State Department’s current page warns of prolonged power outages and advises U.S. citizens to prepare for them, including their medical needs. It also reports unreliable communications, water-supply concerns and transportation limitations. These are meaningful planning constraints: keep essential medicines and charging needs in your own control, agree on a check-in plan, and make sure accommodation can explain its backup arrangements. This is general preparation, not medical advice.",
+        "For transport, the advisory distinguishes regulated tourist coaches from other options and warns about unregulated taxis and vehicle condition. Verify transport with current official guidance and your accommodation, keep plans simple after dark, and avoid relying on one app or a continuous mobile connection. If your health depends on powered equipment or refrigeration, consult your clinician and insurer before travel rather than assuming local supplies will solve a problem."
+      ]
+    },
+    {
+      "heading": "Choose experiences that support local expertise",
+      "paragraphs": [
+        "Prioritize cultural experiences where the person leading them can explain their relationship to the place: a locally guided walk, a music performance, a museum visit or a food experience with a clear host. Ask what the visit includes, whether photography is welcome and how payment works before you arrive. Pay attention to the answer rather than pressuring a person to discuss politics, private life or a difficult economic situation.",
+        "Leave enough time for ordinary errands and rest. Fuel, power and transport can affect schedules; an open afternoon gives you choices if a booked activity changes. Keep cash and valuables discreet, and know how you would contact your accommodation if your phone service fails. The current advisory reports unreliable cell service, so share your broad plans with someone in advance and agree how you will reconnect."
+      ]
+    },
+    {
+      "heading": "Review the plan before you commit",
+      "paragraphs": [
+        "Write down your legal basis for travel if U.S. rules apply, the current entry documents you need, your accommodation’s power and water plan, a realistic transport option, and a backup activity near your base. Verify each item from an official current source. Your goal might be to see a particular museum or music venue, but its hours and availability need fresh confirmation directly with the venue.",
+        "The State Department advisory is countrywide, U.S.-specific, and time-sensitive; it is not a complete Havana itinerary or guarantee about any particular neighborhood. It currently describes serious infrastructure pressures. If those conditions create a risk you cannot plan around, postpone. Otherwise, begin with a modest, locally informed day and leave room for the city to be more than the itinerary you arrived with."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Cuba Travel Advisory",
+      "url": "https://travel.state.gov/en/international-travel/travel-advisories/cuba.html",
+      "publisher": "U.S. Department of State",
+      "purpose": "Supports the U.S.-jurisdiction OFAC framework and current advisory topics including outages, communications and transport. The page displays a May 7, 2025 Level 2 advisory date and a separate “Travel guidance for Cuba” issue date of October 15, 2026; these dates are distinguished in the article."
+    },
+    {
+      "title": "Old Havana and its Fortification System",
+      "url": "https://whc.unesco.org/en/list/204/",
+      "publisher": "UNESCO World Heritage Centre",
+      "purpose": "Names Old Havana’s five historic plazas and describes the urban layout, mix of architectural periods and relationship between plazas, monuments and residential buildings; does not provide operating hours or a visitor itinerary."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "visit-a-country-you-know-nothing-about",
+    "live-abroad-for-at-least-one-full-year"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

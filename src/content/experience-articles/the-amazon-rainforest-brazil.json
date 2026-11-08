@@ -1,0 +1,60 @@
+{
+  "experienceSlug": "the-amazon-rainforest-brazil",
+  "slug": "the-amazon-rainforest-brazil",
+  "title": "Questions to ask before choosing an Amazon lodge",
+  "description": "Compare Amazon stays by local participation, guide practice, transport, seasonal rhythm and what a multi-day itinerary actually includes.",
+  "intent": "Evaluate an Amazon lodge or community-led stay with concrete questions about local involvement, guide practices and the shape of a multi-day stay.",
+  "relatedExperienceSlugs": [
+    "explore-the-amazon-rainforest",
+    "backpack-through-southeast-asia",
+    "observe-a-forest-canopy-from-a-public-treetop-walkway"
+  ],
+  "sections": [
+    {
+      "heading": "Begin with the place, not the promise",
+      "paragraphs": [
+        "“The Amazon” describes an enormous region, not a single uniform forest or visitor experience. Narrow your search to a particular river, protected area or community and learn how guests reach it. Anavilhanas National Park near Novo Airão is one example of a named protected landscape along the Rio Negro; Brazil’s ICMBio lists it as a conservation unit and publishes park information. That context helps you ask whether a lodge is inside, near or simply marketing itself around a protected area.",
+        "Treat phrases such as “untouched,” “secret” or “eco” as claims to investigate. A credible operator should be able to name its location, explain who owns and runs the accommodation, identify guides and describe how visits interact with local rules. If the answers stay vague, compare another stay."
+      ]
+    },
+    {
+      "heading": "Ask what local participation means in practice",
+      "paragraphs": [
+        "Do not stop at “locally owned.” Ask who makes decisions, who leads walks or boat trips, and whether local residents are paid for specific work. Ask whether food, transport or craft purchases are sourced nearby, and whether the stay can explain its arrangements without putting a guest in the role of auditor. You are looking for clear, modest answers rather than a grand promise that tourism solves every local problem.",
+        "If a stay is described as community-led, ask how the community defines participation and whether visitors are welcome to enter the relevant places. Respect a “no” or an activity boundary. A village is not an exhibit, and guests should not expect access to homes, schools, ceremonies or photographs of people just because they booked a nature trip."
+      ]
+    },
+    {
+      "heading": "Evaluate the guide and the activities",
+      "paragraphs": [
+        "Ask who guides each activity, what training or local knowledge they bring, how group size is managed, and what happens if weather changes the plan. For a forest walk, ask whether the route stays on an authorized path and how the guide handles wildlife sightings. For a boat excursion, ask about life jackets, boat capacity and the plan for a mechanical or weather delay. These questions help you compare practice rather than adjectives.",
+        "Avoid operators that promise guaranteed sightings, encourage handling wildlife or make close animal interaction sound harmless. Do not request a guide to feed an animal or take a group off a permitted route for a photograph. A guide who explains limits and sometimes changes the plan is demonstrating care, not delivering a lesser experience."
+      ]
+    },
+    {
+      "heading": "Read the multi-day itinerary as a sequence",
+      "paragraphs": [
+        "A useful itinerary tells you how travel days work. Ask where you sleep each night, whether transfers are by road or river, how much time is spent moving, and which meals and equipment are included. A first and last day may be dominated by transfers; count them honestly rather than assuming every listed day is a full forest day. Ask how the schedule adapts to rain, river level or a delayed arrival.",
+        "Look for varied but coherent activities: a guided walk, time on the water, a chance to learn about the local environment, and enough rest to handle heat and early starts. Ask what the plan substitutes when an activity is unavailable. A flexible itinerary is often more credible than one that promises a fixed daily spectacle."
+      ]
+    },
+    {
+      "heading": "Make a decision with clear limits",
+      "paragraphs": [
+        "ICMBio’s official Anavilhanas page can orient you to the specific protected area and its management authority, but it is not a lodge endorsement or a live booking source. Verify park access, current rules and any required local authorization with the relevant authority and operator. Check travel advisories and health guidance for your route and dates, and consult a travel-medicine clinician about personal preparation; conditions and advice depend on your itinerary and health.",
+        "Before paying a deposit, save the operator’s written itinerary, inclusion list, cancellation terms and emergency contact. Compare two candidates on the same questions about local decision-making, guide practice and travel time. Your next step is to choose the river or protected area you want to understand, then request a day-by-day outline from a named operator."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Parna de Anavilhanas",
+      "url": "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/unidade-de-conservacao/unidades-de-biomas/amazonia/lista-de-ucs/parna-de-anavilhanas/parna-de-anavilhanas",
+      "publisher": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio), Brazil",
+      "purpose": "Official protected-area page opened for the named Anavilhanas National Park and its managing authority; used as a concrete example of how to identify an Amazon protected-area context, not to endorse lodges or certify community benefit.",
+      "accessLimit": "The page is in Portuguese and parts timed out on follow-up; a related visitor-map PDF returned 403 and is not cited. No lodge, route or access claim is based on that inaccessible PDF."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

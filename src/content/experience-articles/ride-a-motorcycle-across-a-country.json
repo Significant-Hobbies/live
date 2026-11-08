@@ -1,0 +1,47 @@
+{
+  "experienceSlug": "ride-a-motorcycle-across-a-country",
+  "slug": "ride-a-motorcycle-across-a-country",
+  "title": "Plan a motorcycle crossing as a chain of short days",
+  "description": "Plan a motorcycle crossing around local licensing, road conditions, rest, weather, and a short shakedown trip before a long route.",
+  "intent": "How can a rider plan a country crossing that respects skill, legal requirements, and the demands of consecutive days?",
+  "sections": [
+    {
+      "heading": "Choose roads that fit your skill",
+      "paragraphs": [
+        "A motorcycle crossing is a chain of days, not one epic distance. Shape it around roads that suit your experience, with a flexible endpoint each day and planned places to stop. Before choosing a route, decide whether you want scenery, small towns, or the satisfaction of crossing a particular border. Then check local licensing, insurance, border, and rental requirements through the relevant authorities and provider; rules are different from country to country. NHTSA’s motorcycle guidance says riders need the correct license and recommends rider education, becoming familiar with an unfamiliar motorcycle in a controlled setting, and checking road hazards before riding. Those are U.S.-specific recommendations, but the broader planning lesson is to be trained and legally qualified for the machine and roads you choose. Do not let a tourist itinerary pressure you into riding beyond your competence."
+      ]
+    },
+    {
+      "heading": "Build in a daily margin",
+      "paragraphs": [
+        "Build each day with a margin for weather, rest, and mechanical delays. A day that looks manageable in a car can feel long on a motorcycle, especially when wind, rain, heat, or rough surfaces demand attention. Choose lodging with a secure place for the bike if possible, and identify a town where you can stop early without breaking the whole plan. Check road conditions and closures with official transport sources each morning. If you are renting, ask the provider how roadside support works and what equipment the bike includes. NHTSA recommends checking tires, brakes, lights, and fluids before a ride; follow the motorcycle maker’s manual and rental provider guidance for the particular model. Pack cargo so it cannot shift, and avoid adding a passenger or luggage configuration you have not practiced with."
+      ]
+    },
+    {
+      "heading": "Plan for weather and visibility",
+      "paragraphs": [
+        "Comfort and visibility are part of the daily plan. NHTSA recommends a DOT-compliant helmet in the United States, visible clothing, and protective gear; helmet and equipment rules differ elsewhere, so check the local standard and use correctly rated gear. Carry layers for temperature changes, rain protection, water, and a simple plan for keeping documents dry. Stop before you are tired rather than trying to push through to a pre-booked destination. Do not ride after drinking or taking anything that impairs alertness; NHTSA notes that alcohol and drugs affect judgment, coordination, and reaction. If weather gets worse, choose a safe place to wait or stop for the day. The trip is complete when you arrive safely, not when the map line is finished."
+      ]
+    },
+    {
+      "heading": "Test the routine first",
+      "paragraphs": [
+        "For a first attempt, plan a two- or three-day route close enough to home that you can shorten it, and use the motorcycle you expect to ride on the longer trip. Record how long each leg takes, where you needed breaks, and what gear you actually used. On day two, adjust the distance down if fatigue or weather was greater than expected. If you are unfamiliar with the bike, get instruction and practice in a controlled area before taking it into traffic. Keep emergency contacts and roadside assistance information accessible. When the short trip feels manageable, use those notes to plan a longer crossing with deliberate rest days. Your next step is to check your route’s licensing and road requirements and arrange a brief shakedown ride before committing to the full itinerary."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Motorcycle Safety",
+      "url": "https://www.nhtsa.gov/road-safety/motorcycles",
+      "publisher": "National Highway Traffic Safety Administration",
+      "purpose": "Supports U.S.-specific guidance on licensing, rider training, becoming familiar with a motorcycle, protective gear, and pre-ride checks."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "route-66-usa",
+    "road-trip-across-new-zealand"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

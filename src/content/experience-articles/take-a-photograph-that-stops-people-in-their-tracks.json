@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "take-a-photograph-that-stops-people-in-their-tracks",
+  "slug": "take-a-photograph-that-stops-people-in-their-tracks",
+  "title": "Make one photograph with a clear visual idea",
+  "description": "Create a striking photograph by choosing one subject, one useful light direction and one visual relationship, then refine the frame before shooting.",
+  "intent": "Answer how to compose one compelling image through the relationship between subject, light, angle and surrounding elements instead of chasing many frames.",
+  "relatedExperienceSlugs": [
+    "make-a-pinhole-camera-and-develop-a-photograph",
+    "take-a-photograph-that-stops-people",
+    "curate-a-five-object-museum-of-your-life"
+  ],
+  "sections": [
+    {
+      "heading": "Begin with a sentence about what you see",
+      "paragraphs": [
+        "Before reaching for the camera, describe the image in one plain sentence: “the red umbrella is small beneath the dark arch,” or “the window light catches the steam above a cup.” This sentence identifies a subject and a relationship. If you cannot name what should draw the eye, move closer, wait for a moment to change, or choose a simpler scene.",
+        "A compelling photograph does not require an exotic location or expensive camera. It needs a reason for the viewer to look. The National Gallery of Art’s photography learning resource asks viewers to consider the photographer’s position, perspective, scale, lighting, angle, environment, and framing. Use those questions as a practical checklist rather than a rulebook."
+      ]
+    },
+    {
+      "heading": "Find the relationship before the settings",
+      "paragraphs": [
+        "Look for how the main subject connects to something else: a person framed by a doorway, a shadow pointing toward an object, a reflection that echoes a face, or a small figure against a large wall. Move your feet before changing lenses. A step left may separate two shapes; lowering the camera may make the foreground lead into the scene. The goal is not to apply a fixed composition formula but to decide what matters.",
+        "Ask what can be removed. If a bright sign, branch, or passerby competes with the subject, shift position or wait. If the frame feels empty, include a foreground edge or background detail that explains where the subject is. Make one change at a time so you can tell what improved the picture."
+      ]
+    },
+    {
+      "heading": "Use light to make the idea legible",
+      "paragraphs": [
+        "Look at the direction and quality of the available light. Side light can reveal texture; backlight can turn a person or object into a silhouette; a broad patch of shade may make color easier to read. These are starting points, not guarantees. Check the actual screen or viewfinder to see whether the light supports your sentence or hides the important detail.",
+        "If the subject is a person, ask permission before making a close portrait, and explain how you plan to use the photograph. If someone declines, respect it and find another subject. When you are photographing in a museum, private venue, or event, check its photography policy first; access to a place does not automatically mean every image is permitted."
+      ]
+    },
+    {
+      "heading": "Make a focused set, not a thousand guesses",
+      "paragraphs": [
+        "Choose one place or subject and make a small sequence of deliberate variations: one frame from farther away, one closer, one from a lower or higher angle, and one after the light or gesture changes. Hold the camera steady and check focus. Then pause to review the images at full size. Pick the frame that communicates the idea most clearly, even if another frame looks more dramatic at first glance.",
+        "For a moving subject, watch for a gesture that completes the relationship—a hand reaching toward the light, a cyclist passing the bright wall, a bird turning its head. Anticipate where the action will enter the frame. A brief wait often matters more than firing continuously."
+      ]
+    },
+    {
+      "heading": "Edit for attention and make the next attempt",
+      "paragraphs": [
+        "When selecting, ask: where did my eye land first? Is that where I intended it to land? Does every edge contribute? A crop can remove distraction, but do not use editing to invent a moment that did not happen or misrepresent a person. Keep the original and compare the edit against it.",
+        "The next step is to revisit one photograph you like and write down its subject, light direction, camera position, and one relationship that makes it work. Then go outside and make a new image using just one of those observations. Repeating a specific visual decision builds stronger seeing than chasing a vague “perfect shot.”"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Process and Product: Photography",
+      "url": "https://www.nga.gov/educational-resources/process-and-product/process-and-product-photography",
+      "publisher": "National Gallery of Art",
+      "purpose": "Opened museum teaching resource on how photographer position, perspective, scale, lighting, angle, environment and framing shape how a subject is seen."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

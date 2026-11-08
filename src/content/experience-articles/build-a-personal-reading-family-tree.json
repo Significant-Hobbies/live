@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "build-a-personal-reading-family-tree",
+  "slug": "build-a-personal-reading-family-tree",
+  "title": "Build a reading family tree from the books that led you onward",
+  "description": "Trace books, recommendations and reading phases into a personal tree that shows how one story, person or question led you to the next.",
+  "intent": "How can I map the books that shaped my reading life when I cannot remember exact dates or every title?",
+  "relatedExperienceSlugs": [
+    "draw-a-wordless-six-panel-comic",
+    "make-a-skills-history-from-things-you-can-now-do",
+    "make-a-friendship-map-together"
+  ],
+  "sections": [
+    {
+      "heading": "Pick a small starting branch",
+      "paragraphs": [
+        "A reading family tree is not a complete bibliography. It shows the connections between books and the people, questions or moments that sent you toward the next one. Start with a single book you still remember clearly. Draw it as a trunk or first node, then ask what led you to it: a teacher, relative, library shelf, film, school assignment or a friend’s recommendation.",
+        "The Scouts activity “Put together a reading tree” invites readers to share thoughts and feelings about stories they have read. You can adapt the tree image for adult reading too, but keep the purpose personal: describe what the book did in your reading life, not whether it deserves a place on a universal canon list."
+      ]
+    },
+    {
+      "heading": "Let the branches follow influence",
+      "paragraphs": [
+        "Draw a branch from your first book to another title only when there is a real connection. Maybe you followed an author, searched for another book about the same place, or wanted a story with a different kind of character. Label the line with the reason: “same mystery,” “friend passed it along,” “made me want to learn about birds,” or “read this to my child.” Those notes make the tree meaningful even if the branch is not chronological.",
+        "Use color or line style for different kinds of influence, but keep a simple legend. A book can have more than one parent: a relative introduced the author, while a library display helped you find a particular title. Draw crossing lines instead of forcing the books into a tidy sequence."
+      ]
+    },
+    {
+      "heading": "Make room for unfinished reading",
+      "paragraphs": [
+        "A personal reading history includes books you abandoned, books you loved for a season, and books you mean to return to. Mark those with a symbol rather than treating them as missing data. You might use an open circle for unfinished, a star for a book you gave away, or a dotted branch for a recommendation you never followed.",
+        "If a title escapes you, write what you remember: a blue cover, a character who lived on an island, or a story you read in a particular classroom. Do not invent a title just to make the map complete. You can add the details later if you find a catalog or ask the person who recommended it."
+      ]
+    },
+    {
+      "heading": "Build a readable tree in one sitting",
+      "paragraphs": [
+        "Set a timer for twenty minutes and make a rough first tree with five to ten books. A large sheet or whiteboard gives branches room. Start with words, not decorative leaves. After you have the connections, add a short memory beside each node: where you found the book, who was with you, or what it made you curious about.",
+        "If you are doing the activity with someone else, ask which branch surprised them. Do not compare the size of your trees; one person may read widely while another has a few books attached to deep memories. The map is a portrait of influence, not a measure of literacy or taste."
+      ]
+    },
+    {
+      "heading": "Choose a next book from the tree",
+      "paragraphs": [
+        "Look for an unfinished branch: a topic you wanted to explore, an author you followed once, or a friend whose recommendation you never tried. Choose one next book and add it in a different color so future-you can see how the tree grew. If you are not ready to read more, write one question the map helped you notice.",
+        "You can photograph the tree or keep the paper near your books."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Put together a reading tree",
+      "url": "https://www.scouts.org.uk/activities/put-together-a-reading-tree/",
+      "publisher": "The Scout Association",
+      "purpose": "Primary activity that uses a tree to share thoughts and feelings about stories; the personal influence mapping is an original adaptation."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

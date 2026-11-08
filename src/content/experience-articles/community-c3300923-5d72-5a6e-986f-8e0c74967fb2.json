@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "community-c3300923-5d72-5a6e-986f-8e0c74967fb2",
+  "slug": "travel-at-least-70-of-the-countries",
+  "title": "Make a 70% travel goal countable before booking",
+  "description": "Define what counts as a country, choose one public list and set a reproducible 70% threshold before planning a long-term travel goal.",
+  "intent": "How can I make a goal to travel to 70% of countries measurable without claiming there is one universally accepted country count?",
+  "sections": [
+    {
+      "heading": "Choose a list before calculating a target",
+      "paragraphs": [
+        "There is no single universally accepted number of “countries” for a personal travel challenge. Governments, international bodies and travel lists draw their boundaries differently, especially for territories and areas with disputed status. Instead of arguing about one total, choose a public dataset and make its scope part of the goal. The United Nations Statistics Division’s M49 standard is one possible reference, but it explicitly labels entries “Country or Area.”",
+        "That label matters: if you use M49, your target is a share of the list’s country-or-area entries, not a pure count of sovereign states. Save the exact version or date you use. Write the rule in one sentence, such as: “I count each M49 country or area once when I complete an overnight visit.” This makes the number auditable and prevents changing the denominator halfway through."
+      ]
+    },
+    {
+      "heading": "Set a threshold with simple arithmetic",
+      "paragraphs": [
+        "Let N be the number of entries in your chosen list, after you apply any exclusions you stated in advance. Multiply N by 0.70 and round up to the next whole entry. For example, your target is ceil(0.70 × N). You do not need to publish an unverified global total; count the selected list yourself and record N beside the rule. If you later choose a different list, calculate a separate target rather than blending them.",
+        "Choose what “travel to” means. Does an overnight count while a transit stop does not? Do you require leaving an airport, staying on land, or completing a planned activity? Pick a test you can apply consistently and that reflects why you want to travel. Keep transit and border-crossing entries in a separate notes field if they matter to your story but do not satisfy the chosen rule."
+      ]
+    },
+    {
+      "heading": "Plan by clusters, not by flags",
+      "paragraphs": [
+        "A long travel goal becomes more humane when built around regions and interests. Choose a cluster of neighboring places that share a practical route, then leave time to return or stay longer where you connect. A route through two or three countries by rail or bus can be more satisfying than a string of airport layovers that meet a spreadsheet threshold but leave no real memory.",
+        "For each cluster, make a short list of entry rules, transport links and local seasons to verify. Passport validity, visas, health requirements, safety advice and border access depend on your citizenship and can change. Use official foreign-ministry or consular sources for your nationality and the destination’s immigration authority for entry details. The M49 list is for statistical coding; it does not establish entry permission or political recognition."
+      ]
+    },
+    {
+      "heading": "Balance reach with time and cost",
+      "paragraphs": [
+        "Estimate the true cost of a country cluster: long-distance transport, local transfers, lodging, meals, insurance, connectivity and a reserve for disruptions. Look at the cost of moving every few days compared with using one base for longer. If the goal is a percentage, there is no need to hurry through a region to raise the count; you can choose a slower pace that fits work, family, health and finances.",
+        "Use a spreadsheet with columns for list entry, visit rule met, date, evidence, entry checks, and notes on whether you would return. Separate “visited” from “want to revisit.” This makes the challenge less about collecting stamps and more about planning a real life around travel. Keep personal documents private and do not store passport scans in a public spreadsheet."
+      ]
+    },
+    {
+      "heading": "Keep the goal open to new information",
+      "paragraphs": [
+        "Public lists can change, and destinations can become inaccessible or unsafe. Keep a dated copy of your chosen list and note how you treat additions or renamings. You can either freeze the denominator for the challenge or adopt an updated edition and recalculate; state which method you chose. Do not count a destination merely because a flight connected through it.",
+        "Start by choosing the list and visit test, then calculate N and ceil(0.70 × N). After that, plan one realistic regional trip and review whether its pace felt worthwhile. If the rule encourages rushed or expensive travel, revise it transparently. A reproducible goal should serve a life of curiosity, not dictate unsafe or financially strained decisions."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Standard country or area codes for statistical use (M49)",
+      "url": "https://unstats.un.org/unsd/methodology/m49/overview",
+      "publisher": "United Nations Statistics Division",
+      "purpose": "Supports a reproducible list choice and the exact “Country or Area” terminology; article does not infer a universal country count or travel-entry status from it."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "community-2f917272-a593-5978-b653-7b5b702eacea",
+    "community-3040d8d6-b237-5f83-b423-28ef6bfd9e94",
+    "community-3ac454c5-a98e-5154-b557-87a2c61777d8"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

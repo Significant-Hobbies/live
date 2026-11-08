@@ -1,3 +1,4 @@
+import { editorialCategoryStyle } from '~/lib/editorial-category-style';
 import { withPublicMetadata } from '~/lib/public-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -14,6 +15,13 @@ import { JsonLd } from '~/components/json-ld';
 import type { BlogPost, ContentBlock } from '~/lib/blog-posts';
 import { editorialArticles, getEditorialArticle } from '~/lib/editorial-content';
 import { buildArticleJsonLd, buildArticleMetadata, buildVideoJsonLd } from '~/lib/editorial-seo';
+import {
+  ExperienceArticleAction,
+  ExperienceArticleReferences,
+} from '~/components/experience-article-context';
+import { ExperiencePhoto } from '~/components/experience-photo';
+import { experienceArticle, experienceArticleTarget } from '~/lib/experience-articles';
+import { experienceImage } from '~/lib/experience-images';
 
 /* ─── Static generation ──────────────────────────────────────────────────────── */
 
@@ -31,38 +39,6 @@ export async function generateMetadata({
   if (!post) return withPublicMetadata({ title: 'Not Found' });
 
   return withPublicMetadata(buildArticleMetadata(post));
-}
-
-/* ─── Category color helper ──────────────────────────────────────────────────── */
-
-const CATEGORY_COLORS: Record<string, { bg: string; text: string; border: string }> = {
-  Wellbeing: { bg: 'bg-foreground/10', text: 'text-foreground', border: 'border-foreground/20' },
-  'Getting Started': {
-    bg: 'bg-primary/10',
-    text: 'text-foreground',
-    border: 'border-primary/30',
-  },
-  Psychology: {
-    bg: 'bg-field-lilac',
-    text: 'text-field-lilac-ink',
-    border: 'border-field-lilac-ink',
-  },
-  Reflection: { bg: 'bg-field-sky', text: 'text-field-sky-ink', border: 'border-field-sky-ink' },
-  Inspiration: {
-    bg: 'bg-field-coral',
-    text: 'text-field-coral-ink',
-    border: 'border-field-coral-ink',
-  },
-};
-
-function categoryStyle(category: string) {
-  return (
-    CATEGORY_COLORS[category] ?? {
-      bg: 'bg-card/40',
-      text: 'text-muted-foreground',
-      border: 'border-border',
-    }
-  );
 }
 
 /* ─── Content renderer ───────────────────────────────────────────────────────── */
@@ -84,6 +60,7 @@ export function BlogContent({ blocks }: { blocks: ContentBlock[] }) {
               return (
                 <h2
                   key={idx}
+                  id={`section-${idx}`}
                   className="scroll-reveal-left mb-4 mt-10 text-2xl font-bold text-foreground"
                 >
                   {block.text}
@@ -187,7 +164,7 @@ export function BlogContent({ blocks }: { blocks: ContentBlock[] }) {
 /* ─── Related post card ──────────────────────────────────────────────────────── */
 
 export function RelatedCard({ post }: { post: BlogPost }) {
-  const style = categoryStyle(post.category);
+  const style = editorialCategoryStyle(post.category);
 
   return (
     <Link href={`/blog/${post.slug}`} className="group block" prefetch={false}>
@@ -225,9 +202,20 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   if (!post) notFound();
 
-  const relatedPosts = editorialArticles.filter((p) => p.slug !== slug).slice(0, 2);
+  const relatedPosts = post.experience
+    ? post.experience.relatedExperienceSlugs
+        .flatMap((experienceSlug) => {
+          const article = experienceArticle(experienceSlug);
+          const related = article ? getEditorialArticle(article.slug) : undefined;
+          return related ? [related] : [];
+        })
+        .slice(0, 2)
+    : editorialArticles.filter((p) => p.slug !== slug && p.category === post.category).slice(0, 2);
+  const target = post.experience
+    ? experienceArticleTarget(post.experience.experienceSlug)
+    : undefined;
 
-  const style = categoryStyle(post.category);
+  const style = editorialCategoryStyle(post.category);
   const videoJsonLd = buildVideoJsonLd(post);
 
   return (
@@ -270,10 +258,19 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               {post.readTime} min read
             </span>
             <span className="text-xs text-muted-foreground">{post.publishedAt}</span>
+            {post.experience ? (
+              <span className="text-xs text-muted-foreground">
+                Updated{' '}
+                <time dateTime={post.experience.updatedAt}>{post.experience.updatedAt}</time>
+              </span>
+            ) : null}
           </div>
 
           {/* Emoji */}
-          <div className="scroll-reveal scroll-reveal-d1 mb-6 text-6xl sm:text-7xl">
+          <div
+            className="scroll-reveal scroll-reveal-d1 mb-6 text-6xl sm:text-7xl"
+            aria-hidden="true"
+          >
             {post.emoji}
           </div>
 
@@ -286,12 +283,42 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <p className="scroll-reveal scroll-reveal-d3 text-lg leading-relaxed text-muted-foreground sm:text-xl">
             {post.excerpt}
           </p>
+          {target && experienceImage(target.title) ? (
+            <ExperiencePhoto
+              title={target.title}
+              category={target.category}
+              eager
+              className="mt-8 aspect-[3/2] w-full rounded-2xl"
+              sizes="(min-width: 768px) 768px, 100vw"
+            />
+          ) : null}
         </div>
       </header>
 
       {/* Article body */}
       <article className="px-4 py-14">
         <div className="mx-auto max-w-3xl">
+          {post.experience ? (
+            <>
+              <ExperienceArticleAction article={post.experience} />
+              <nav aria-label="In this article" className="mb-10 border-y border-border py-5">
+                <p className="mb-3 text-sm font-medium text-foreground">In this article</p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  {post.content.flatMap((block, index) =>
+                    block.type === 'heading' && block.level === 2
+                      ? [
+                          <li key={index}>
+                            <a href={`#section-${index}`} className="underline underline-offset-4">
+                              {block.text}
+                            </a>
+                          </li>,
+                        ]
+                      : []
+                  )}
+                </ul>
+              </nav>
+            </>
+          ) : null}
           {post.package?.youtube && (
             <div className="mb-10 overflow-hidden rounded-2xl border border-border shadow-sm">
               <div className="relative aspect-video">
@@ -306,6 +333,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </div>
           )}
           <BlogContent blocks={post.content} />
+          {post.experience ? <ExperienceArticleReferences article={post.experience} /> : null}
           {post.package && (
             <div className="mt-12 space-y-10">
               {post.package.takeaways.length > 0 && (
@@ -403,17 +431,18 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <div className="scroll-reveal-scale mx-auto max-w-3xl text-center">
           <div className="mb-3 text-3xl">🗺️</div>
           <h2 className="mb-3 text-2xl font-bold text-foreground">
-            Ready to map your own hobby journey?
+            {target ? 'Make room for this experience' : 'Ready to map your own hobby journey?'}
           </h2>
           <p className="mb-6 text-muted-foreground">
-            Track your hobbies across life phases. Discover what rekindled, what persisted, and what
-            to explore next.
+            {target
+              ? 'Start with a version that fits your time, budget, and curiosity. Keep your own plan in My list.'
+              : 'Track your hobbies across life phases. Discover what rekindled, what persisted, and what to explore next.'}
           </p>
           <Link
-            href="/timeline/new"
+            href={target ? `/experiences/${target.experienceSlug}` : '/timeline/new'}
             className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3 text-sm font-semibold text-primary-foreground shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-md"
           >
-            Build your timeline →
+            {target ? 'Plan the experience' : 'Build your timeline'} →
           </Link>
           <div className="mt-5">
             <Link

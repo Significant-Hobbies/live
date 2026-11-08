@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "spend-a-month-in-japan",
+  "slug": "spend-a-month-in-japan",
+  "title": "Build a month in Japan around fewer, longer stays",
+  "description": "Shape a month in Japan around regional contrasts, comfortable base stays, and a few deliberate travel days instead of racing through a checklist.",
+  "intent": "How should I shape a month in Japan so it includes regional variety without spending the trip constantly changing hotels?",
+  "sections": [
+    {
+      "heading": "Pick the rhythm before the places",
+      "paragraphs": [
+        "A month sounds spacious until every few days become a suitcase day. Start by choosing the rhythm you want: two or three longer bases with day trips, a rail journey that moves steadily in one direction, or one main region explored in depth. Then choose a seasonal interest—gardens, food, contemporary art, coastal walks, ceramics, or mountain landscapes—that gives the route a thread without requiring every stop to be famous.",
+        "The Japan National Tourism Organization’s itinerary directory spans very different possibilities: Hokkaido, the Fuji-Hakone-Izu area, Okinawa, Shiretoko, Koyasan, the Shimanami Kaido, Hiroshima, and Hakone. Treat that range as a menu of regional directions, not as a promise that all destinations fit comfortably into one month. A route from Tokyo through Kansai and Hiroshima has a different texture from a month focused on Kyushu or the north."
+      ]
+    },
+    {
+      "heading": "Make a map with three kinds of days",
+      "paragraphs": [
+        "Mark each planned day as a base day, a travel day, or an outing day. Keep transfers visible: the time spent checking out, navigating a station, storing luggage, and finding a new room is part of the day. A useful draft has enough base days to settle in and revisit a neighborhood, plus outings that can be dropped if weather, energy, or transport changes. If your itinerary looks like a new hotel every night, remove a stop before adding another.",
+        "For example, a first outline might devote the opening stretch to Tokyo and nearby Kanto, a middle stretch to Kyoto and the Kansai area, and a final stretch to Hiroshima or a selected region beyond the classic route. This is a planning example, not a fixed itinerary. If you prefer quieter landscapes, give one regional base more time; JNTO’s directory lists options from northern Shiretoko to central Kyushu and Okinawa, so compare journey shape rather than choosing names for their novelty."
+      ]
+    },
+    {
+      "heading": "Give each base one lived-in question",
+      "paragraphs": [
+        "A month becomes memorable when you notice what makes each place distinct. In Tokyo, you might compare how a neighborhood changes between its station-facing streets and a residential lane. Around Kyoto, you could choose one temple garden or craft district and spend time observing material, sound, and daily use rather than attempting every landmark. In Hiroshima, a visit to the Peace Memorial can be paired with a slower walk along the water, with space to reflect rather than turning a solemn site into a photo stop. Check each place’s current access guidance and visitor expectations before going.",
+        "If you include the Shimanami Kaido, decide whether cycling belongs in this trip and check current route, rental, weather, and safety information from official local providers before committing. JNTO lists it as a one-to-two-day cycling route, a useful reminder that some experiences need their own time rather than being squeezed between distant cities. You do not need to undertake every activity advertised on the national itinerary pages."
+      ]
+    },
+    {
+      "heading": "Budget for friction and flexibility",
+      "paragraphs": [
+        "Build a working budget by categories rather than leaning on a single daily estimate: lodging, intercity transport, local transit, meals, admissions, laundry, data, and a reserve for changes. Verify current fares, passes, opening days, and booking rules from the official operators and venues when your dates are known. Prices and service patterns can change, and the best ticket depends on the route you actually take. Check luggage-transfer options and station access if moving bags would make a transfer difficult.",
+        "Leave open blocks in the calendar. A rainy day can shift a garden visit; a neighborhood you enjoy may deserve a second morning. Keep one low-effort option near each base, such as a museum, covered shopping street, or café where you can rest. Reserve time-sensitive experiences only after checking the official venue’s current rules, and avoid planning two major sights that require fixed timed entries on opposite sides of a city."
+      ]
+    },
+    {
+      "heading": "Finish with a route you can revise",
+      "paragraphs": [
+        "Before booking nonrefundable stays, draw the route on a map and mark the longest transfer days. Check entry documents, health needs, travel advisories, and insurance with official sources appropriate to your nationality and itinerary; this article does not establish current entry rules. If a stop adds a detour but no distinct reason for being there, replace it with another night at a place you already chose.",
+        "Write a one-sentence purpose for each base: “This is where I want to learn how the city’s food markets work,” or “I want a few quiet days among coastal scenery.” That sentence gives the trip continuity while leaving room for surprise. When you finish the month’s outline, keep one day unassigned and choose the first place where you will slow down after arrival."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Itineraries",
+      "url": "https://www.japan.travel/en/itineraries/",
+      "publisher": "Japan National Tourism Organization",
+      "purpose": "Supports the range of regional itinerary options named in the article, including Hokkaido, Fuji-Hakone-Izu, Okinawa, Shiretoko, Koyasan, Shimanami Kaido, Hiroshima and Hakone; it does not validate current schedules or a one-month itinerary."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "kyoto-japan-in-cherry-blossom-season",
+    "mount-fuji-japan",
+    "live-abroad-for-at-least-one-full-year"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

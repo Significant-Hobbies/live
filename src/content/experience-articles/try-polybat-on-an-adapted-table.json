@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "try-polybat-on-an-adapted-table",
+  "slug": "try-polybat-on-an-adapted-table",
+  "title": "How do you play a first game of polybat?",
+  "description": "Learn polybat's low-impact table game with a slow warm-up, clear ball-return rules, adaptable equipment, and player-led changes to the setup.",
+  "intent": "How can a newcomer play polybat in a way that feels welcoming and playable? This guide explains a short first session, basic rally rhythm and useful adaptations without assuming one ideal body or setup.",
+  "sections": [
+    {
+      "heading": "Set up a playable table together",
+      "paragraphs": [
+        "Polybat is a table-top bat-and-ball activity played with side barriers that help keep the ball on the surface. The Australian Sports Commission's Sports Ability activity card presents it as an alternative for people for whom table tennis may not be appropriate, and notes that it can also introduce younger players to table tennis. The activity can use purpose-made bats and balls, but its manual describes alternatives and ways to modify the game. Ask the players what equipment and position work for them rather than deciding on their behalf.",
+        "Choose a stable table with room for wheelchairs, chairs or standing players to approach comfortably. Check that there is enough space underneath and beside the table, that the edges are secure and that cables or bags are out of the way. If commercial side panels or bats are unavailable, use only smooth, safe alternatives that will not splinter, roll off or have sharp edges. A club, adaptive-sport instructor or occupational therapist can help assess equipment when a player's needs are specific."
+      ]
+    },
+    {
+      "heading": "Agree on a simple set of rules",
+      "paragraphs": [
+        "Before the first rally, agree on where the ball should go, how to serve and how to score. The Sports Ability card describes five serves per player, then alternating service, and a game to eleven points. It also says the ball must stay on the table and allows more than one bat touch before returning it. Treat those as a starting format, not a requirement for every group; you can use short cooperative rallies without keeping score.",
+        "Explain any adaptations aloud. Players may choose a larger or slower ball, a wider table, a lower barrier, extra space between rallies or permission to rest the bat on the surface for stability. The Australian manual encourages modifying teaching style, rules, equipment and environment through its TREE model. Ask before changing an individual's equipment and keep the player involved in decisions about the game."
+      ]
+    },
+    {
+      "heading": "Warm up by tracking a slow ball",
+      "paragraphs": [
+        "Begin seated or positioned comfortably, with the bat resting where each player can reach it. Roll the ball slowly from different angles and ask players to notice its direction before returning it. This makes the first challenge about anticipation rather than speed. Try a few exchanges without scoring; pause whenever someone needs more time to reset their hands, chair or position.",
+        "For the first rally, serve gently from one end and aim for a broad target on the other half. Use the side walls if they are part of your setup. Encourage steady contact and a clear return rather than a hard strike. If a player can only use one side of the table comfortably, adjust the starting position or target so the rally remains shared instead of repeatedly asking them to compensate."
+      ]
+    },
+    {
+      "heading": "Keep the game inclusive as it changes",
+      "paragraphs": [
+        "A useful adaptation lets each player stay involved in the same activity. If the ball moves too quickly, choose a slower ball. If reaching is tiring, shorten the distance or allow more time. If keeping score adds pressure, agree that the pair will count successful exchanges together instead. None of these changes makes the session less real; they make the rules fit the people who are playing.",
+        "Avoid grabbing a player's bat or moving their body to demonstrate a technique. Ask before offering physical help and follow the instructions of any coach or support person. If the table shifts, a barrier comes loose or equipment causes discomfort, stop and fix the setup before continuing. A comfortable short session is better than pushing through pain or fatigue."
+      ]
+    },
+    {
+      "heading": "Finish with one choice for next time",
+      "paragraphs": [
+        "After several rallies, ask each person which part they enjoyed and what they would change. Record the ball type, table arrangement, serving distance and any chosen adaptations so the next game can start smoothly. If you kept score, treat it as one way to structure play rather than a measure of ability. The most useful result may be that the players found a rhythm they would like to repeat.",
+        "Your next action is to gather one or two players, a stable table and a safe ball, then agree on whether the first session will be cooperative or scored before serving. Begin with slow rolls, adapt the setup with the players, and stop while everyone still has energy for another round."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Sports Ability Activity Card: Polybat",
+      "url": "https://esctta.com.au/wp-content/uploads/Playing_for_life_Table_Tennis_manual_v2.0_-_26_2_14.pdf",
+      "publisher": "Australian Sports Commission, Sports Ability",
+      "purpose": "Supports the basic aim, scoring, service rotation, multi-touch ball rule, table alternatives, player suitability and adaptations using the TREE model."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "play-a-short-adapted-disc-golf-round",
+    "play-an-introductory-game-of-boccia",
+    "try-goalball-at-an-inclusive-sports-session"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

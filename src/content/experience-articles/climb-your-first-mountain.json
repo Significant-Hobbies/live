@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "climb-your-first-mountain",
+  "slug": "climb-your-first-mountain",
+  "title": "Choose a first mountain walk that matches your experience",
+  "description": "Pick a modest, locally guided mountain route, check terrain and weather, and know when a summit plan should become a shorter walk.",
+  "intent": "Help a first-time mountain walker select a modest route with a qualified local guide and prepare for the terrain, conditions, and decision points.",
+  "sections": [
+    {
+      "heading": "Start with a mountain walk, not a summit label",
+      "paragraphs": [
+        "For a first day in the mountains, choose a route that is described as moderate by a local park or walking organization and that fits your current experience. Look at distance, ascent, steepness, surface, exposure, navigation, and expected time, not just the height of the peak. A qualified local guide can help match the route to the slowest or least experienced person in the group, explain local weather patterns, and show how to make decisions when the terrain changes.",
+        "The phrase “easiest route” can hide a demanding day. Eryri National Park classifies the Llanberis Path up Yr Wyddfa as hard and strenuous, despite its gradual ascent. The authority lists it as 14.5 kilometres round trip with about 975 metres of ascent and says it is for experienced walkers with good fitness and navigation skills. Treat it as a cautionary example, not a recommended first mountain for everyone."
+      ]
+    },
+    {
+      "heading": "Ask the guide specific questions",
+      "paragraphs": [
+        "Before booking, describe your actual walking experience rather than saying only that you are fit. Tell the guide about recent distance and elevation, footwear, any relevant health concern, and whether you are comfortable on uneven ground. Ask whether the proposed route includes scrambling, narrow ridges, exposed slopes, or terrain that might be unsuitable if you are afraid of heights. Confirm what equipment is needed and who supplies it.",
+        "A local guide should be able to explain the route’s decision points and alternatives. Ask what happens if weather deteriorates, someone needs a slower pace, or the group turns around before the summit. Agree on meeting place, transport, group size, and whether the guide’s qualifications and insurance cover the activity. If the answers are vague, keep looking for a qualified provider or a less demanding objective."
+      ]
+    },
+    {
+      "heading": "Prepare for the actual ground",
+      "paragraphs": [
+        "Study the route map and public conditions report before the day. A path may be rocky, muddy, steep, or hard to follow; snow and ice can transform a familiar summer walk. Eryri’s Llanberis page says the terrain can include steep hills, rough country, and some scrambling, with specialist equipment potentially required in winter. Current conditions come from its linked live reporting service, so recheck near departure rather than relying on an old trip account.",
+        "Wear footwear and layers appropriate to the route and forecast, and carry water, food, navigation, and emergency items recommended by the guide. Practice with your packed kit on a local hill or rough path first. Ask the guide what you should carry personally and what is shared; do not assume that summit cafes, phone service, or transport will be available when needed."
+      ]
+    },
+    {
+      "heading": "Keep the summit optional",
+      "paragraphs": [
+        "Agree on a turnaround time or conditions with the guide before setting out. The summit is only one point on a route; high winds, poor visibility, a late start, tiredness, or changing ground can turn reaching it into the wrong choice. Eryri cautions that every route to Yr Wyddfa’s summit is challenging and says walkers should not attempt it if they doubt they can complete it. That is a local authority’s statement about this mountain, not a universal rule for all peaks, but it illustrates why honest route selection matters.",
+        "If the plan changes, let your trusted contact know when possible and follow the guide’s decision process. A shorter ridge walk, a valley route, or returning to the trailhead can still be a worthwhile first day in mountain terrain. Do not follow a crowd onto a path or railway line that is not part of your route."
+      ]
+    },
+    {
+      "heading": "Review what you learned",
+      "paragraphs": [
+        "Afterward, note what the day actually involved: time moving and resting, terrain that felt unfamiliar, how your kit worked, and which decisions the guide made. Use that record to choose a next step: perhaps another moderate walk, a navigation class, or a more demanding guided objective after you gain experience. The best progression depends on your ability and the mountain’s current conditions; a step up should not be based on a photograph or a summit count.",
+        "For a practical next action, contact a qualified local guide or park visitor service with your recent walking history and ask for a moderate first route. If considering Yr Wyddfa, read the official route descriptions and conditions reports carefully: the Llanberis example is not graded as easy by the National Park Authority."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Llanberis Path",
+      "url": "https://eryri.gov.wales/walk/llanberis-path/",
+      "publisher": "Eryri National Park",
+      "purpose": "Supports the route's round-trip distance, ascent, grading, terrain character, experience expectations, and where current conditions are reported."
+    },
+    {
+      "title": "Yr Wyddfa: Choosing the right path",
+      "url": "https://eryri.gov.wales/visit/plan-your-visit/guides/yr-wyddfa-choosing-the-right-path/",
+      "publisher": "Eryri National Park",
+      "purpose": "Supports the caution that all Yr Wyddfa summit routes are challenging and the distinctions among routes; it is used as an example, not general advice for every mountain."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "climb-a-mountain-over-4-000-metres",
+    "hike-a-mountain-that-scares-you",
+    "walk-a-long-distance-trail-over-100km"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

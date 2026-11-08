@@ -1,0 +1,71 @@
+{
+  "experienceSlug": "eat-your-way-through-a-country-one-market-at-a-time",
+  "slug": "eat-your-way-through-a-country-one-market-at-a-time",
+  "title": "Build a Japan market itinerary around one curious question",
+  "description": "Use Kyoto, Kanazawa and Takayama as a Japan market-study route, checking current hours and choosing distinct foods rather than racing for a checklist.",
+  "intent": "A country-wide food journey made concrete through three Japanese market types, with a repeatable tasting and observation method rather than a vendor-count challenge.",
+  "sections": [
+    {
+      "heading": "Choose a thread before choosing cities",
+      "paragraphs": [
+        "A market journey is richer when you follow a question. For a first Japan route, try “how do preserved, fresh and everyday foods show a region?” Keep one notebook page for each market: what you saw, what you tasted, what you could not identify and what local context the vendor or official source offered. The question helps you compare places without expecting every market to be a miniature restaurant.",
+        "Treat the route as a study, not a race. Kyoto, Kanazawa and Takayama make a useful trio because official Japan National Tourism Organization pages describe distinct market settings: a covered food arcade, a large seafood and produce market, and a morning market. Confirm current transportation, market days and stall operations through local official sources before booking; official destination pages can become outdated."
+      ]
+    },
+    {
+      "heading": "Start in Kyoto with preserved foods and tofu craft",
+      "paragraphs": [
+        "At Kyoto’s Nishiki Market, look beyond the most photographed snack. The Japan National Tourism Organization describes fresh and preserved foods, pickles made from Kyoto-grown vegetables, Uji green tea, mackerel sushi and yuba, the delicate film formed on heated soy milk. Choose one prepared bite and one ingredient to take away if you can store it safely. Ask a seller what they recommend for a first taste, then move on rather than blocking a busy stall.",
+        "Nishiki is a covered arcade, so take a slow walk through the full stretch before buying. The official page says it can become crowded and suggests visiting outside the very early morning rush; check the current market website for hours, crowd guidance and eating rules. Keep your bag small and avoid eating in places where the market asks visitors not to."
+      ]
+    },
+    {
+      "heading": "Compare Kanazawa’s seafood market with care",
+      "paragraphs": [
+        "Omicho Market in Kanazawa is known for seafood and shellfish from the Sea of Japan, alongside produce, pickles, sweets and other foods, according to the official destination page. A bowl of kaisen donburi—rice topped with sashimi—is one way to turn the visit into a meal. If you do not eat raw seafood, choose another dish and ask the restaurant or vendor about ingredients and preparation rather than assuming every stall offers the same menu.",
+        "The official page notes that many shops close on Wednesdays and Sundays, but individual schedules can vary. Verify dates before making a long trip for one meal. Go with one sensory question—how does the smell or sound of a fish market differ from Nishiki’s preserved-food arcade?—and then eat at a seated counter or restaurant so you are not carrying an open dish through crowded aisles."
+      ]
+    },
+    {
+      "heading": "Use Takayama’s morning market for everyday goods",
+      "paragraphs": [
+        "A morning market offers a different pace and mix. JNTO describes the Hida Takayama Miyagawa Morning Market as a place with produce, flowers and daily goods, with stalls along the river and near the Takayama Jinya. Look for a seasonal ingredient or locally made item, then ask what people use it for at home. If no one is free to talk, simply observe how the stalls are arranged and who seems to be shopping.",
+        "Do not rely on an old schedule for a specific day. Market formats can shift with season, weather and local events, so confirm the current details with official Takayama information before you travel. Bring cash only if the official visitor information recommends it or a vendor requires it; do not assume that every seller accepts the same payment methods."
+      ]
+    },
+    {
+      "heading": "End each stop with a useful record",
+      "paragraphs": [
+        "After each market, record three things: one food you tasted, one ingredient or technique you learned, and one question to carry to the next region. You might compare Kyoto’s pickles with the preserved foods elsewhere, or ask whether a common ingredient changes with local climate or season. Avoid claiming a dish represents an entire country because you found it at one stall.",
+        "Choose only as many stops as you can visit without rushing meals or ignoring local rules. The next action is to check official city sources for market days and transit, then reserve one market morning and one seated meal. Let the market teach you a pattern, not just supply a photo."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Nishiki Market",
+      "url": "https://www.japan.travel/en/spot/1174/",
+      "publisher": "Japan National Tourism Organization",
+      "purpose": "Describes Nishiki’s fresh and preserved foods, Kyoto-grown pickles, Uji tea, yuba and market context."
+    },
+    {
+      "title": "Omicho Market",
+      "url": "https://www.japan.travel/en/spot/1398/",
+      "publisher": "Japan National Tourism Organization",
+      "purpose": "Describes Kanazawa’s seafood and shellfish, local market contents and market schedule caveat."
+    },
+    {
+      "title": "Morning Markets in Japan",
+      "url": "https://www.japan.travel/en/story/exploring-japans-morning-markets/",
+      "publisher": "Japan National Tourism Organization",
+      "purpose": "Provides examples of Japanese morning markets, including Takayama’s produce, flowers and daily goods; schedules need current verification."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "follow-one-ingredient-through-a-market",
+    "taste-one-dish-from-three-local-traditions",
+    "eat-a-meal-cooked-by-a-grandmother-in-her-home"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

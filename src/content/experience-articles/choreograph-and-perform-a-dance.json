@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "choreograph-and-perform-a-dance",
+  "slug": "choreograph-and-perform-a-dance",
+  "title": "Build a Short Dance From One Clear Movement Idea",
+  "description": "Create a dance with a readable beginning, development, and ending by shaping one movement motif through rhythm, direction, level, and rehearsal.",
+  "intent": "Explains a practical composition process for making a short dance that communicates a chosen idea, rather than merely stringing together favorite steps.",
+  "sections": [
+    {
+      "heading": "Write a brief you can dance",
+      "paragraphs": [
+        "Start with a one-sentence prompt: a room filling with rain, a person deciding to leave, or a repeated pattern becoming unruly. Keep the idea specific enough to make choices, but open enough that movement can interpret it. Decide whether the work is a solo, duet, or group piece and whether you want music, sound, or silence.",
+        "The New Zealand Ministry of Education’s dance standard describes a brief as setting scope, theme, length, and purpose, and frames choreography as intentional movement choices that communicate an idea. Use that as a helpful constraint. If you do not know what a movement is meant to express, either give it a reason or remove it."
+      ]
+    },
+    {
+      "heading": "Create a motif from ordinary movement",
+      "paragraphs": [
+        "Make a small phrase from an action connected to the prompt: reach, fold, turn away, pause. Repeat the phrase exactly once, then change one variable. You might make the reach travel sideways, slow down the fold, or shift the pause from standing to a crouch. The repetition lets a viewer recognize the idea; the variation gives it development.",
+        "New Zealand’s choreography guidance calls out repetition, facings, formations, energy qualities, body shapes, and levels as ways to vary and develop a sequence. Choose only a few. If you change rhythm, level, direction, and shape all at once, you may lose the one detail the audience should notice."
+      ]
+    },
+    {
+      "heading": "Give the phrase an arc",
+      "paragraphs": [
+        "Arrange your material so something changes. A simple structure could open with a still shape, introduce the motif close to the body, expand it across the room, interrupt it with a contrasting movement, and return to the opening shape with one alteration. The return creates recognition; the alteration answers the question of how the scene has changed.",
+        "Set the space deliberately. Mark a beginning point, an area where the movement grows, and an ending place. In a group, experiment with unison, echo, or a formation shift instead of having everyone perform every step together. A change in who leads can make the same phrase feel like a relationship rather than a repeated exercise."
+      ]
+    },
+    {
+      "heading": "Rehearse to find what reads",
+      "paragraphs": [
+        "Record a rough run from a fixed viewpoint, then watch it without judging facial expression or costume. Ask: can I identify the motif? Is the transition into the middle clear? Does the ending look intentional? The education standard emphasizes that the composition is the focus, while clear rehearsal helps an observer see the choices. Keep a note of one change to test rather than rewriting everything after each watch.",
+        "If a movement feels awkward or painful, adapt it. A choreographic idea can survive a different range of motion, seated pathway, or slower tempo. For collaborative work, agree on how partners can offer suggestions and check in before adding physical contact. A clear dance does not require everyone to perform identical movements or take risks outside their comfort."
+      ]
+    },
+    {
+      "heading": "Perform the composition, then make a clean ending",
+      "paragraphs": [
+        "Choose an ending that resolves or deliberately leaves a question: a final held shape, a breath that marks silence, or a formation that opens toward the audience. Rehearse the first count and the last count as carefully as the middle. Check that the room offers safe floor space and that clothing allows the range of movement you have chosen.",
+        "Your next action is to write a brief and improvise three versions of a single motif. Keep the variation that best communicates your idea, then build a beginning and ending around it. A short, specific dance can feel complete because every movement belongs to the same question."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Compose a dance sequence in response to a brief",
+      "url": "https://ncea.education.govt.nz/arts/dance/1/1",
+      "publisher": "New Zealand Ministry of Education, NCEA Education",
+      "purpose": "Defines brief, choreographic development, dance elements, variation, and rehearsal as part of composing a sequence."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "perform-on-a-stage-in-front-of-a-crowd",
+    "write-and-perform-spoken-word-poetry",
+    "perform-or-exhibit-something-you-made"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

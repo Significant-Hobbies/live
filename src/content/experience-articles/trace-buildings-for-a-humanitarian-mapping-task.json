@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "trace-buildings-for-a-humanitarian-mapping-task",
+  "slug": "trace-buildings-for-a-humanitarian-mapping-task",
+  "title": "Trace buildings for a humanitarian map without guessing",
+  "description": "Choose an appropriate HOT mapping task, learn its local rules, trace visible buildings carefully, and leave validation time for your edits.",
+  "intent": "How do I make a useful first contribution to a humanitarian building-mapping task? This guide explains how to select a project, trace conservatively, and avoid adding uncertain map data.",
+  "sections": [
+    {
+      "heading": "Understand what the task is for",
+      "paragraphs": [
+        "Humanitarian mapping projects ask volunteers to add geographic features that a response team or local organisation needs. A project may focus on buildings, roads or another specific feature in a particular area. Read the task description before opening the map: it explains the purpose, the features requested, the imagery and any experience level expected. A task that needs experienced mappers is a poor first choice even if its map looks interesting.",
+        "The HOT Tasking Manager is a collaborative system for dividing work into tiles and coordinating mapping. The project page gives task-specific instructions and identifies the features to map. The overall goal does not mean every visible mark should be traced. Your task is to add the requested information that you can interpret reliably, and leave ambiguous areas for someone with more context."
+      ]
+    },
+    {
+      "heading": "Learn the editor and imagery on an easy tile",
+      "paragraphs": [
+        "Before contributing to a high-priority project, use a beginner lesson or a low-complexity practice task. Learn how to zoom, draw a building outline, save changes and undo a mistake. Check how the project wants features shaped and tagged. A roof may hide the ground footprint, and shadows, trees or image seams can make a structure hard to identify. Do not turn uncertain pixels into confident map data.",
+        "HOT’s introductory materials describe the Tasking Manager as part of collaborative OpenStreetMap work and recommend learning the tool before mapping. The project instructions should control how you trace in that specific area. If the imagery is blurry, outdated or misaligned, mark uncertainty or ask for guidance rather than inventing a footprint. Use the task’s supported workflow to report unusable imagery."
+      ]
+    },
+    {
+      "heading": "Trace one building at a time",
+      "paragraphs": [
+        "Start with a clear, isolated building. Follow the visible outer footprint as closely as the imagery allows, keeping the outline simple and avoiding decorative roof details that do not belong in the map. Check that the shape closes, sits on the building rather than a shadow, and does not overlap a neighbouring structure. Then use the tags and editor guidance required by the project. A neat outline is less useful than a correctly interpreted one.",
+        "Look for shared walls and attached structures carefully. Two roofs that touch in the image may be separate buildings, a single complex or an unclear case. Follow the local mapping instructions; do not guess based on how buildings are usually arranged in your own city. Pause if the area has changed since the imagery was captured or if the feature might be a temporary shelter, industrial structure or covered courtyard that the task defines differently."
+      ]
+    },
+    {
+      "heading": "Check the tile before you submit it",
+      "paragraphs": [
+        "Zoom out once to see the whole tile and compare the mapped area against surrounding context. Did you miss an obvious building? Did you accidentally trace a tree canopy or place two outlines on top of one another? Confirm that every feature follows the task’s tagging rules, save your work, and add a clear note if the imagery or local interpretation needs another mapper’s attention.",
+        "Tasking Manager tiles can move through mapping and validation states. That process is part of the quality check, not a judgement of your worth as a volunteer. If a validator returns a tile with comments, read each comment and correct the specific issue. Do not repeat a disputed mapping pattern elsewhere until you understand the project guidance."
+      ]
+    },
+    {
+      "heading": "Contribute at a sustainable pace",
+      "paragraphs": [
+        "A useful first session can be one carefully completed tile. Take a break when the imagery becomes hard to read; fatigue makes it easier to overlook a shadow or duplicate outline. If you join a mapathon, ask the organiser how participants can raise questions and whether someone is available to validate beginner work. Local knowledge and public mapping instructions are both valuable, but keep private or sensitive information out of comments unless the project explicitly requests it.",
+        "After your edit, note what you learned and what you want to practise next, such as building outlines or imagery alignment. The HOT Tasking Manager provides a free, self-paced introduction for new contributors."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Introduction to HOT Tasking Manager",
+      "url": "https://learn.hotosm.org/course/intro-to-hot-tm",
+      "publisher": "Humanitarian OpenStreetMap Team",
+      "purpose": "Confirms the Tasking Manager is a collaborative OpenStreetMap mapping tool and offers a self-paced introductory course."
+    },
+    {
+      "title": "Working with Tasking Manager",
+      "url": "https://toolbox.hotosm.org/pages/3_participatory_osm/3_4_working_with_tasking_manager/",
+      "publisher": "Humanitarian OpenStreetMap Team",
+      "purpose": "Describes project pages, task-specific feature instructions, experience levels, and tile mapping and validation states."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "document-access-details-for-public-places-on-wheelmap",
+    "support-a-computer-learning-session-through-a-community-program",
+    "build-a-spectroscope-and-compare-household-lights"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

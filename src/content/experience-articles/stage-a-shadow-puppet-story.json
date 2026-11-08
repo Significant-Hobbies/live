@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "stage-a-shadow-puppet-story",
+  "slug": "stage-a-shadow-puppet-story",
+  "title": "Make a shadow puppet story with a simple paper theatre",
+  "description": "Build a small shadow screen, design clear silhouettes, and stage a short story with light, distance and movement doing part of the storytelling.",
+  "intent": "Explains how to turn a basic shadow theatre into a short performance with readable characters, simple staging and safe setup.",
+  "sections": [
+    {
+      "heading": "Choose a tiny story before making props",
+      "paragraphs": [
+        "A shadow puppet show can be made from a single change: a visitor arrives, an object goes missing, or two characters decide where to go. Choose a story with a beginning, a change and an ending that can be understood in a few minutes. A small plot helps you decide which silhouettes you actually need. Start with two characters or one character and one prop; elaborate scenery can wait.",
+        "Artist Vera McEvoy’s shadow-theatre instructions demonstrate a small cardboard-box screen and list a lamp and lightweight fabric or parchment paper as basic materials. That structure is enough for a first performance. Gather scrap card, paper, tape, markers and safe cutting tools. If children are helping, an adult should handle blades and any difficult cutting."
+      ]
+    },
+    {
+      "heading": "Make a screen and test the light",
+      "paragraphs": [
+        "Use a box with a front opening covered by tissue or tracing paper and an opening at the back for light and puppets. Set it on a stable table where the audience can see the screen. Position a lamp behind the screen and test it before decorating. Keep the light source far enough from paper and fabric to avoid heat or fire risk; use a cool LED torch when possible and follow its safety instructions. Do not leave a light unattended.",
+        "Turn down other lights if useful, then place a test shape between the lamp and screen. When the silhouette is too faint, adjust the room or screen; when it is blurred, move the puppet closer to the screen. Move a test puppet between the lamp and screen and compare how clearly its outline reads at each position. Test with the actual setup instead of assuming the brightest lamp is best."
+      ]
+    },
+    {
+      "heading": "Cut characters that read in silhouette",
+      "paragraphs": [
+        "Draw characters in profile or with distinctive outlines: a long beak, a broad hat, a curled tail. Remove small interior details that disappear when held against the screen. Attach a stick or folded paper handle where your hand can control it without covering the important shape. For a jointed arm, use a paper fastener only if the material and age group make that appropriate; one solid figure is easier to perform.",
+        "Make a quick test: hold each puppet at the screen and ask someone what they see. If the answer is unclear, simplify the outline or make the character larger. A character does not need a realistic face; a recognisable motion or prop can communicate its purpose."
+      ]
+    },
+    {
+      "heading": "Rehearse entrances, exits and voice",
+      "paragraphs": [
+        "Assign each person one job: move a puppet, narrate, operate the screen or manage sound. In a solo show, set the order of props and rehearse the handoffs. Mark where each character waits before entering and how it leaves. A narrator can bridge the movement when a puppet is being changed. Rehearse once without dialogue to see whether the action makes sense, then add only the lines needed to clarify it.",
+        "Keep the screen clear by moving puppets just behind it, and keep your hands low or out of the lit area where possible. Use a simple sound cue—a knock, a short rhythm or a change of voice—to make a scene feel distinct without needing a soundtrack or elaborate equipment."
+      ]
+    },
+    {
+      "heading": "Perform, notice and make one adjustment",
+      "paragraphs": [
+        "Before inviting an audience, check that the table is stable, cords are out of walking paths and the lamp cannot be knocked into the screen. Tell viewers how long the piece will be and whether you want feedback afterward. A first performance can be for one willing person. If a shadow unexpectedly vanishes, pause and bring it closer to the screen rather than starting over.",
+        "Afterward, ask what moment was easiest to follow and where someone lost track of the story. Change one thing—shape size, timing or a line—and keep the rest. Save the experience with a note about which puppet or lighting change made the clearest improvement."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How to make a shadow puppet theatre",
+      "url": "https://veramcevoy.com/how-to-make-a-shadow-puppet-theatre/",
+      "publisher": "Vera McEvoy",
+      "purpose": "The artist documents cardboard-box and fabric screen setups, light testing and simple card puppet construction."
+    },
+    {
+      "title": "Shadow Puppets",
+      "url": "https://www.questacon.edu.au/learn-and-play/activities/shadow-puppets",
+      "publisher": "Questacon",
+      "purpose": "Provides a lamp-and-screen shadow activity and cautions that lamps can become hot and must not touch materials."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "weave-a-miniature-tapestry-on-cardboard",
+    "fold-an-interlocking-origami-sculpture",
+    "make-a-pinhole-camera-and-develop-a-photograph"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "community-dc650875-3ef1-5e87-b87b-c62da34a4ce0",
+  "slug": "play-golf-with-caddy",
+  "title": "Make your first round with a caddie feel collaborative",
+  "description": "Prepare for a caddied golf round by agreeing on the help you want, learning simple course etiquette and checking the club’s arrangements.",
+  "intent": "Help a golfer coordinate with a caddie on a first round so the relationship feels respectful and useful, even if the player is still learning golf.",
+  "sections": [
+    {
+      "heading": "Ask what the course expects",
+      "paragraphs": [
+        "A caddie can be required, optional or unavailable depending on the course and the day. Ask the golf shop when you book: whether the round is walking or cart-based, whether the caddie carries the bag, how caddies are assigned, what clothing is expected, how payment works and whether the club has any local etiquette rules. The price, gratuity expectations and service can vary widely by course, so confirm them directly rather than relying on a general golf guide.",
+        "Tell the shop honestly that it is your first time with a caddie and, if relevant, that you are a beginner golfer. This lets them pair you with an appropriate service level and explain whether the caddie is expected to advise on club choice or mainly carry and help navigate the course. Do not pretend to have experience you lack; a simple heads-up makes the round easier for both people."
+      ]
+    },
+    {
+      "heading": "Agree on the kind of help you want",
+      "paragraphs": [
+        "Before the first tee, introduce yourself and ask the caddie’s name. Say what help would be useful: carrying clubs, keeping track of the ball, pointing out the next tee, sharing local course knowledge or offering club advice. You can also say that you prefer to make your own decisions and would like quiet while putting. A caddie cannot read your preferences unless you communicate them.",
+        "The Western Golf Association’s introductory caddie manual describes a caddie’s work as more than carrying a bag: it includes tracking the ball, caring for the course, staying in position, handling clubs carefully and asking when unsure. The manual is written for caddies, not a complete guide for golfers, but it shows why brief communication and respect matter. Ask before touching a club or changing the way the caddie organizes your bag."
+      ]
+    },
+    {
+      "heading": "Make the walk easier to follow",
+      "paragraphs": [
+        "At each tee, let the caddie finish the practical information before you decide: where the safe landing area lies, what part of the hole is out of bounds and which way to reach the next tee. If you are choosing a club, ask one focused question—“what would you suggest here?”—then make your own choice. If you want no advice on a shot, say so plainly. Do not request help and then blame the caddie for a result that was your decision.",
+        "Keep your routine simple. Walk when the caddie walks, avoid standing in another player’s line of putt, and let the caddie know if you are looking for a ball. If you lose sight of it, point to the last place you saw it rather than sending the caddie searching an entire hole. Stay aware of the group behind you and follow the starter’s or marshal’s instructions about pace."
+      ]
+    },
+    {
+      "heading": "Be thoughtful around clubs and the green",
+      "paragraphs": [
+        "A caddie may be handling equipment that is valuable and personally important to its owner. Let them carry the bag as arranged; do not swing their clubs or drop a club into the bag without checking. If you want a club set down, ask where it should go. Near the green, avoid stepping across a putt line, and ask the caddie or player before moving a flagstick or ball. These ordinary courtesies help protect the course and keep play orderly.",
+        "If a rule question comes up, do not ask the caddie to invent an answer. In casual play, agree how your group will resolve it; in a competition, ask a rules official or the committee. The player remains responsible for the score and choices. For a first social round, you can decide to keep score loosely or focus on learning the course, as long as the group agrees."
+      ]
+    },
+    {
+      "heading": "Close the loop after the round",
+      "paragraphs": [
+        "At the end, thank the caddie and return any borrowed equipment or course items as directed. Follow the course’s published payment and tipping custom, which you should ask about before teeing off. If anything about the service was especially helpful or confusing, mention it privately to the caddie manager rather than making the caddie defend themselves in front of the group.",
+        "A good first caddie round is a conversation with a shared purpose: keep the group moving, care for the course and make the player’s experience more comfortable. Call the golf shop, explain that it is your first time, confirm the arrangement and ask how to prepare. Then meet the caddie with a clear preference about the help you want."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Introduction to Caddying",
+      "url": "https://wgaesf.org/images/downloads/Caddies/Caddie_Manual_-_Feb_2022.pdf",
+      "publisher": "Western Golf Association Evans Scholars Foundation",
+      "purpose": "Supports examples of caddie duties and course etiquette such as tracking the player’s ball, caring for the course, handling clubs carefully and asking when uncertain; not a current course service or payment policy."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "play-a-short-adapted-disc-golf-round",
+    "try-a-sport-that-terrifies-you"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

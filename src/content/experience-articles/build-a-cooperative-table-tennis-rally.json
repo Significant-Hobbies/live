@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "build-a-cooperative-table-tennis-rally",
+  "slug": "build-a-cooperative-table-tennis-rally",
+  "title": "How can two beginners keep a table-tennis rally going?",
+  "description": "Choose a forgiving distance and pace, send each return into your partner’s reach, and change one variable at a time as the rally grows.",
+  "intent": "A partner-focused practice plan for building a shared table-tennis rally rather than competing for points during a first session.",
+  "sections": [
+    {
+      "heading": "Make the first setup generous",
+      "paragraphs": [
+        "Stand close enough to the table that a soft return can travel between you without much force. Use a table-tennis ball and paddles that feel comfortable in your hands. Matrix Table Tennis Club’s newcomer page describes a first visit that includes borrowed bats and balls, a friendly partner and the option to play at your own pace. Ask your local club what equipment and beginner support it provides.",
+        "Agree that the goal is to keep the ball in play, not to score. Start with one bounce on each side and allow a serve that begins the rally without pressure. If one person has more experience, ask them to return gently to a consistent area rather than showing off fast shots."
+      ]
+    },
+    {
+      "heading": "Send a ball your partner can reach",
+      "paragraphs": [
+        "Use a relaxed swing and send the ball toward the middle of your partner’s side. A playable return is more useful than a clever angle when you are building rhythm. Watch the ball leave your paddle and track its bounce before moving into the next position. If it consistently lands too long, soften the swing; if it falls short, adjust the contact point slightly.",
+        "Give your partner time to set up. A brief “ready?” before the next serve can prevent surprise, and an occasional pause keeps the session comfortable. If the ball goes under the table, retrieve it only after both players stop moving. Keep the surrounding space clear of bags and loose equipment."
+      ]
+    },
+    {
+      "heading": "Use a shared reset when the ball falls",
+      "paragraphs": [
+        "When the rally ends, pick up the ball and say one neutral thing that might help: “Let’s aim a little more central,” or “That pace worked.” Avoid telling your partner every technical correction they could make. Ask if they want a suggestion before offering one. A cooperative session works best when both people remain comfortable.",
+        "Restart from the same side for several exchanges, then switch positions so the task does not depend on one person’s preferred angle. You can count the rally aloud together, but treat the count as a record of shared rhythm rather than a score to beat."
+      ]
+    },
+    {
+      "heading": "Change one challenge at a time",
+      "paragraphs": [
+        "Once you can keep a gentle rally going, move a half-step farther from the table or aim toward a different area. Do not add more speed, distance and spin all at once. If the rally collapses, return to the previous setup and notice which change made it harder. A short rally that repeats is useful practice.",
+        "A club coach can show how grip, contact and stance affect the ball. The Matrix newcomer guide presents a beginner visit as a chance to try, get matched and play at a personal pace, not as a formal lesson. If you want a technique correction, ask an instructor or experienced player to demonstrate one change at a time."
+      ]
+    },
+    {
+      "heading": "Finish with a round both players enjoyed",
+      "paragraphs": [
+        "Stop while you still have energy to notice what worked. Name one adjustment that helped you both and one thing you want to try next time. If someone becomes tired, slow down or end the rally; there is no need to complete a target count.",
+        "A useful next session could keep the same gentle pace but add a serve, a backhand return or a wider target. Ask your partner which challenge sounds fun. The point of cooperative practice is to make the next ball playable for both people, not to disguise a match as a drill."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "New to Table Tennis?",
+      "url": "https://www.matrixtt.co.uk/new-to-table-tennis",
+      "publisher": "Matrix Table Tennis Club",
+      "purpose": "Supports beginner-friendly first visits, borrowed equipment, matching by level and playing at a comfortable pace."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "learn-pickleball-and-play-a-short-game",
+    "take-a-beginner-badminton-lesson"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

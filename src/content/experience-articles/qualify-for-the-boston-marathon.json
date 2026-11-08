@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "qualify-for-the-boston-marathon",
+  "slug": "qualify-for-the-boston-marathon",
+  "title": "What a Boston qualifying time actually gets you",
+  "description": "Understand Boston Marathon age standards, certified-course rules, registration cutoffs, and the planning decisions to make before chasing a qualifying time.",
+  "intent": "A practical guide to turning the Boston goal into a valid, verifiable race result and understanding why meeting the published standard may still not secure entry.",
+  "sections": [
+    {
+      "heading": "Start with the standard for the race year",
+      "paragraphs": [
+        "Boston qualification is tied to a particular race edition, age group, and the B.A.A.’s current rules. Before building a training calendar, open the Boston Athletic Association’s Qualify page and select the edition you are targeting. The relevant age is determined on race day, so someone whose birthday falls between the qualifying race and Boston may belong to a different standard than they expect. Use the official table rather than an old blog post, a friend’s qualifying time, or a calculator that may still show a prior year.",
+        "A useful first step is to compare your recent marathon result with the applicable standard and then decide whether your goal is to meet it or to beat it by a margin. Those are different ambitions. The published standard establishes who may submit an application; limited field size can lead to an additional cutoff based on how fast applicants ran beyond that standard. There is no stable buffer that guarantees acceptance, because the cutoff depends on the applicant pool and the race’s capacity."
+      ]
+    },
+    {
+      "heading": "A fast time must also be an eligible result",
+      "paragraphs": [
+        "The result has to come from a full marathon on a course the B.A.A. recognizes as certified. A fast half marathon, treadmill effort, indoor event, or virtual run does not qualify simply because the pace converts to a marathon estimate. Before paying for travel, ask the race organizer whether the exact course and edition have current certification, and keep the event page and official result link. Certification can change if a route is altered, so verify the actual course you will run rather than relying on a race’s historic reputation.",
+        "For the 2027 entry cycle, the B.A.A. also applies an index to qualifying results from courses with a net drop of at least 1,500 feet, with larger drops receiving a greater adjustment; courses at a net drop of 6,000 feet or more are not allowed. The rule affects which result is submitted, so a downhill course that appears to provide an easy path may not yield the time you expect. Recheck the official policy for the year you intend to apply, since future procedures can change."
+      ]
+    },
+    {
+      "heading": "Plan the race around a legitimate attempt",
+      "paragraphs": [
+        "Pick a certified event that suits the kind of marathon you can train for: local roads may simplify logistics, while a destination course can add travel fatigue and unfamiliar weather. Compare start time, elevation profile, likely conditions, travel and recovery days, and how easily you can get to the start. A course selected solely for its advertised fast profile may be a poor choice if travel, hills, or heat make it hard to race well.",
+        "A Boston attempt is still a marathon project. If this is your first, build toward finishing comfortably before treating the qualification clock as the central measure. If you have a marathon history, use prior training logs and race results to decide whether a time goal is realistic enough to plan around. A qualified running coach or clinician can help adapt training to your background, especially when increasing mileage or returning after injury. This guide does not prescribe a training plan."
+      ]
+    },
+    {
+      "heading": "Treat the qualifying race as an evidence trail",
+      "paragraphs": [
+        "Save the race name, date, official result, course certification evidence, and the age group you expect to use. Check the B.A.A. registration window and submission instructions for the target edition rather than assuming a result automatically creates an entry. The association reviews results, and its own guidance says acceptance is not guaranteed even when a runner has met the time standard. Registration periods can close, and a result outside the qualifying window will not help for that edition.",
+        "After the race, wait for an official result and review it for timing or identity errors while there is still a way to contact the organizer. Keep an eye on announcements from the B.A.A. about cutoffs and acceptance notices. Do not book nonrefundable travel on the assumption that the qualifying time itself confirms a bib; use the event’s official status and your own risk tolerance to decide when to make plans."
+      ]
+    },
+    {
+      "heading": "Make the next step concrete",
+      "paragraphs": [
+        "Write down the race edition, your race-day age, the current standard, and the earliest qualifying race you can realistically target. Then verify one candidate marathon directly with its organizer and the B.A.A.’s course criteria. If the gap from your latest result is substantial, let that gap shape a longer training horizon rather than compressing preparation to fit a registration date. The useful milestone is a valid, well-executed marathon first; the Boston application is a later decision based on the rules and selection process in force at that time."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Qualify for the Boston Marathon",
+      "url": "https://www.baa.org/races/boston-marathon/qualify/",
+      "publisher": "Boston Athletic Association",
+      "purpose": "Current standards, age basis, certified-course eligibility, selection caveat, registration window, and net-downhill adjustments."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "run-a-marathon",
+    "break-a-personal-athletic-record",
+    "complete-a-100-mile-ultramarathon"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

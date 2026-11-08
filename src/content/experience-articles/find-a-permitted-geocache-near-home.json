@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "find-a-permitted-geocache-near-home",
+  "slug": "find-a-permitted-geocache-near-home",
+  "title": "How to choose your first permitted geocache",
+  "description": "Use a cache listing, access rules and a careful search plan to try geocaching near home while protecting trails, nature and the cache for others.",
+  "intent": "How do I choose a first geocache and know where I may search without trespassing or disturbing a place?",
+  "relatedExperienceSlugs": [
+    "navigate-a-beginner-orienteering-course-with-a-paper-map",
+    "take-a-sheltered-water-paddleboard-starter-lesson",
+    "go-on-a-friend-led-neighbourhood-tour"
+  ],
+  "sections": [
+    {
+      "heading": "Read the listing as part of the adventure",
+      "paragraphs": [
+        "A cache listing is a plan and a permission check. Read the description, coordinates, terrain and difficulty notes before leaving home. Look for the stated container size, access route and any owner instructions. For a first outing, choose a straightforward listing along a public path you already know, with a short approach and a clear way to turn back. A nearby cache is only a good first cache if the route is allowed and comfortable for you.",
+        "Parks Canada describes its geocaches as accessible from trails or public areas and installed to protect wildlife, plants and cultural resources. That is a useful standard wherever you search: the coordinates do not grant entry to private land or permission to leave a path. Check local park rules, closures and landowner guidance. If an entry point or hiding place appears to require climbing a fence, digging, or stepping into a sensitive area, stop and choose another cache."
+      ]
+    },
+    {
+      "heading": "Make the coordinates a starting point",
+      "paragraphs": [
+        "Download or note the listing details before setting out if phone reception may be unreliable. Coordinates lead to an area; they do not tell you exactly which leaf, post or stone conceals the container. Walk to the location using the permitted route, then slow down. Pause where the map says you are close and scan likely hiding places without moving rocks, pulling plants or opening infrastructure.",
+        "Look for the owner’s hint only after you have searched gently. A hint can narrow the search without turning it into a destructive one. If the container is not visible after a reasonable try, check the coordinates again and compare the map to your surroundings. Do not widen the search by trampling vegetation or checking places that are clearly off-limits."
+      ]
+    },
+    {
+      "heading": "Bring only what the listing calls for",
+      "paragraphs": [
+        "For a simple walk, a charged phone with the cache listing, water appropriate to the outing, and weather-appropriate clothing may be enough. Tell someone your route if you are going alone or into a remote area. Take a small bag for your own litter, but do not bring objects to trade unless the specific cache rules permit it. Parks Canada explicitly says that exchanging objects in its caches is forbidden; rules differ by site, so check the local instructions rather than assuming.",
+        "Keep the search ordinary and low-impact. You are not expected to prove that you found a cache by posting a photo of its hiding place. Avoid sharing exact coordinates or spoiler images publicly when the listing asks visitors to preserve the surprise for others."
+      ]
+    },
+    {
+      "heading": "Leave the cache ready for the next person",
+      "paragraphs": [
+        "When you find a container, handle it gently and return it to the exact location and orientation described by the owner. Check that it is closed and protected from rain as intended. If it is damaged, missing its logbook or clearly displaced, report the condition through the cache’s official listing system rather than improvising a repair. Do not leave food, waste or a personal note in the container.",
+        "If you do not find it, log a respectful “did not find” or contact the owner according to the platform’s process. That is useful information, not a failed outing. Make a note about the route, the clue that helped, and whether the location felt appropriate. A first attempt could be a short cache hunt on a familiar public trail, followed by a return walk without the phone."
+      ]
+    },
+    {
+      "heading": "Choose a second cache with intention",
+      "paragraphs": [
+        "After your first search, decide what you want to change: try a different cache type, bring a friend, or select a longer route. Keep the next step close to your comfort level. The satisfying part is learning to read an outdoor listing carefully and moving through a place with attention; the container is only one part of that."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Geocaching at Parks Canada",
+      "url": "https://parks.canada.ca/voyage-travel/experiences/sports/geocachette-geocaching",
+      "publisher": "Parks Canada",
+      "purpose": "Primary guidance for permitted routes, environmental care and cache-specific restrictions including no object exchange at Parks Canada caches."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

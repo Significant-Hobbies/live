@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "learn-watercolour-painting",
+  "slug": "learn-watercolour-painting",
+  "title": "How to make a small watercolour study without muddying it",
+  "description": "Use a simple subject to test water, pigment and drying time, then build a small watercolour study while protecting its lightest areas.",
+  "intent": "How do I learn watercolour by making a first study? The guide explains wet-on-wet versus dry detail through one compact landscape exercise.",
+  "sections": [
+    {
+      "heading": "Choose a subject with a few big shapes",
+      "paragraphs": [
+        "A first watercolour is easier to read when the subject has a large light area, one middle tone and a few dark accents. A window view, a mug beside a plant, or a shoreline reduced to sky, land and water gives you those relationships without requiring exact detail. Decide what will stay white before opening the paint. Watercolour often lets the paper provide the brightest light; adding more white paint later changes the transparent effect.",
+        "Keep the page small and use watercolour paper, a brush, clean water and a scrap sheet for tests. The National Gallery of Art’s teaching activity uses a sponge to wet paper, adds short light strokes and lets them spread, then waits for the paper to dry before adding details. That is a useful demonstration of one technique, not a rule that every passage must be wet."
+      ]
+    },
+    {
+      "heading": "Separate wet washes from dry edges",
+      "paragraphs": [
+        "Wet-on-wet means putting colour onto damp paper. It is useful for broad, soft passages such as a clouded sky or distant tree line. Wet-on-dry produces a more controlled edge, helpful for the silhouette of a cup or a window frame. Try both on a test strip before the painting: brush a pale wash, touch one colour into it while glossy, then make a second mark after the first area has dried. The difference is easier to understand when it is visible side by side.",
+        "Use less water than your first impulse suggests, but do not scrub a nearly dry brush across the page. If the wash blooms into a cauliflower edge, the neighbouring area was wetter than the wash; if it stays sharply bounded, the paper was likely dry. These effects are not failures by themselves. Decide whether you want a soft transition, then control the timing toward it."
+      ]
+    },
+    {
+      "heading": "Lay in light before small details",
+      "paragraphs": [
+        "Sketch only the main boundaries lightly. Place a pale wash in the broadest areas, leaving the chosen highlight untouched. Let the first layer dry before placing a more saturated layer where a form turns away from light. A brush that is too wet will carry pigment across the shape; blot it on a cloth before touching the page. For a tree, one connected loose mass may read better than a hundred tiny leaf marks.",
+        "Do not keep stirring a passage that is beginning to dry. The brush can lift pigment and disturb the surface, turning clear colour cloudy. If you need to correct an edge, wait until it is dry and soften the edge with a clean damp brush. Protect the untouched light patch while the page is wet; a careless wash can run back into it."
+      ]
+    },
+    {
+      "heading": "Mix a limited palette",
+      "paragraphs": [
+        "Choose two or three colours and make a few test mixtures on the palette. A yellow and blue can make several greens; vary their proportions rather than adding every tube colour to the paper. If a mixture becomes dull, rinse the brush and palette well, then remake it with a fresh puddle. Keep a written swatch beside the study so you know which mixture made the distant hill and which created the foreground.",
+        "When two colours meet, let them mingle only where you want a soft transition. A sharply divided roof and sky can be painted separately after the first wash dries. A shadow beneath a bowl might be allowed to feather at its edge. Thinking in terms of edges—soft, hard, or lost—gives you more control than trying to name every hue exactly."
+      ]
+    },
+    {
+      "heading": "Review the page after it dries",
+      "paragraphs": [
+        "Set the study aside until it is fully dry, then compare the large light and dark shapes from a few steps away. Ask whether the focal area is clearer than the background. One or two dark marks can create contrast; adding more dark everywhere removes that hierarchy. Write down where the paper stayed clean, where water ran unexpectedly, and which edge you wanted but did not get.",
+        "For your next study, repeat the same subject and change just one thing, such as wetness or the order of washes. Keep the first version beside it. That comparison teaches more than a completely new painting because you can see how timing changed the result. Take both studies to a class or compare them with an artist’s demonstration, and ask about one specific wash."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Watercolor Sketch activity in An Eye for Art",
+      "url": "https://www.nga.gov/sites/default/files/2025-09/an_eye_for_art_opt.pdf",
+      "publisher": "National Gallery of Art",
+      "purpose": "Supports the materials and wet-paper sequence: dampen paper, add light strokes, layer colour, and wait to dry before details."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "draw-a-leaf-without-looking-at-the-page",
+    "draw-a-wordless-six-panel-comic"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

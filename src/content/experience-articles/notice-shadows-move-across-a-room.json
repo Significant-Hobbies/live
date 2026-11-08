@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "notice-shadows-move-across-a-room",
+  "slug": "notice-shadows-move-across-a-room",
+  "title": "What can a changing window shadow tell you about a room?",
+  "description": "Track one safe, ordinary shadow at intervals and separate movement from cloud changes, changing light, and shifts in your own viewpoint.",
+  "intent": "A low-pressure observation method for noticing how a shadow shifts and deciding which changes came from light, object position, weather or viewpoint.",
+  "sections": [
+    {
+      "heading": "Choose a shadow you can revisit safely",
+      "paragraphs": [
+        "Look for daylight falling across a floor, wall or table, where an ordinary object makes an edge you can see. A plant pot, chair leg or window frame gives you a fixed reference. Keep the object and the viewing spot in place so the comparison has meaning. Do not look toward the Sun itself; the activity is about the shadow on a surface, not direct solar observation.",
+        "If nothing is casting a clear outline, wait for a different patch of light or use the softer edge of a curtain or furniture. A cloudy day can blur or weaken the shape, which changes what you can observe. NASA’s Changing Shadows activity recommends returning to a shadow and tracing it later; you can borrow that repeat-visit idea without needing to watch the whole day continuously."
+      ]
+    },
+    {
+      "heading": "Make a first observation with a reference",
+      "paragraphs": [
+        "Choose a small section of the shadow’s edge. On paper placed beside the scene, sketch the object and mark the shadow’s direction, or draw a simple room plan and note where the edge crosses it. Write the time and whether the sky is clear, hazy or overcast. A rough note is enough; your purpose is comparison, not a precise measurement.",
+        "Keep your head and viewing angle in roughly the same place on the next visit. If you take a photograph, include the fixed object and part of the surrounding surface so you can tell whether the camera itself moved. Avoid putting tape, ink or anything that could stain furniture on a surface you do not own or have permission to mark."
+      ]
+    },
+    {
+      "heading": "Return and compare what actually changed",
+      "paragraphs": [
+        "After a pause, return to the same spot and look again. Did the edge move? Did it become softer? Did the bright patch shift while the object stayed still? Draw the new outline in another colour or make a second note beside the first. It is fine if the change is subtle; a patient comparison often reveals more than staring continuously and hoping for a dramatic shift.",
+        "Separate your observation from your explanation. “The shadow edge is farther from the pot” is a note; “the Sun moved” is an interpretation that may be broadly right but can omit clouds, reflections or a changed object position. A pair of sketches, each with a time and sky condition, lets you revisit that reasoning later."
+      ]
+    },
+    {
+      "heading": "Try a second variable only after the first comparison",
+      "paragraphs": [
+        "For another round, keep the object fixed and observe at a different time, or keep the time similar on another day and note different weather. Do not alter several things at once. You might notice that a sharper shadow appears when the light source is less diffuse, while a cloud-softened outline is harder to locate. These are descriptive observations, not a test that needs a correct score.",
+        "If you want to make a more structured record, draw a simple grid on paper and use the same edge as a landmark at each visit. Write “uncertain” when you cannot identify it confidently. A partner can observe from a second position, then compare notes; differences in viewpoint become part of the conversation rather than a mistake to hide."
+      ]
+    },
+    {
+      "heading": "Close the observation gently",
+      "paragraphs": [
+        "Finish when the comparison has given you something to notice. Put the object back if you moved it, remove temporary paper and leave the space as you found it. Save the two sketches or a short description of the conditions and the change.",
+        "A useful follow-up is to compare shadows from two objects in the same light, or revisit the same object at a similar clock time on another day. Keep the question small: does the edge remain in the same place, and what else in the scene changed? The answer may be incomplete, but a careful record makes the uncertainty visible instead of turning it into a claim."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Changing Shadows",
+      "url": "https://sunearthday.nasa.gov/2007/materials/changing_shadows.pdf",
+      "publisher": "NASA Sun-Earth Day",
+      "purpose": "Supports the repeat-observation and trace-the-shadow activity; used as an observation method rather than a claim about precise shadow geometry."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "stage-a-shadow-puppet-story",
+    "make-a-cyanotype-print-from-everyday-objects"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

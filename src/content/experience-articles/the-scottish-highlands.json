@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "the-scottish-highlands",
+  "slug": "the-scottish-highlands",
+  "title": "Choose one Highlands base and explore its own landscape",
+  "description": "Compare Fort William, Glencoe and Inverness as bases, then shape a Highlands visit around one walk, loch or heritage site at a time.",
+  "intent": "How do I make a first Scottish Highlands trip feel grounded rather than like a checklist? Focus on selecting a base and comparing regional landscapes.",
+  "sections": [
+    {
+      "heading": "Decide what landscape you want nearby",
+      "paragraphs": [
+        "The Highlands is a large region, so choose a base around the days you want rather than trying to cover every famous name. Fort William is a useful starting point for thinking about Ben Nevis and the western mountain landscape. Glencoe makes sense if your attention is on glens and walks. Inverness offers a different anchor for Loch Ness, city services and northern routes. VisitScotland lists these places and attractions, but does not promise transport connections or trail suitability.",
+        "Pick one or two priorities: a mountain day, a loch visit, a heritage site or a quieter coastal stretch. Then check how each place connects to your chosen base using current operator timetables. A map may make two destinations look close while the actual journey takes longer than expected. Resist adding a second base until you understand the first."
+      ]
+    },
+    {
+      "heading": "Build a day around one named outing",
+      "paragraphs": [
+        "If you stay near Glencoe, make the glen the day’s focus. VisitScotland highlights walks in this landscape; choose a route from a current local trail authority and check grade, weather, daylight and access before setting out. Do not assume a dramatic viewpoint is a short or safe walk simply because it appears beside a road.",
+        "From Fort William, you might frame a day around Ben Nevis, but a summit attempt is a serious mountain outing, not a casual add-on. Use current mountain forecasts, an authoritative route description and your own experience to decide whether a lower-level walk is more appropriate. No article can tell an individual whether a mountain route is safe for them."
+      ]
+    },
+    {
+      "heading": "Compare the west with Inverness",
+      "paragraphs": [
+        "An Inverness base shifts the emphasis toward the city and nearby Loch Ness. VisitScotland specifically mentions boat trips on the loch, which offers a different kind of day from a hill walk. Before booking a cruise, check the operator’s current departure point and seasonal operation; the broad regional guide does not provide a timetable.",
+        "If you prefer a historic stop, compare the day’s travel time with time on site. The Highlands also includes castles such as Urquhart and Eilean Donan, but each changes the shape of a route. Select one heritage visit and leave time to read and look rather than combining several sites in a rushed transfer chain."
+      ]
+    },
+    {
+      "heading": "Respect distance and local conditions",
+      "paragraphs": [
+        "A road or trail across this region may have few alternatives. Use current mapping and official road or park notices, and be prepared to change the plan for weather or closures. If you are relying on public transport, verify the return journey before setting off and check whether a final connection requires a walk in darkness. Keep a backup day close to your base.",
+        "On narrow roads, follow local passing-place etiquette and do not stop in the carriageway for photographs. On foot, remain on marked routes where requested and close gates behind you. The Highlands is a lived-in landscape as well as a visitor destination; farms, crofts and community roads have practical uses that take priority over a perfect view."
+      ]
+    },
+    {
+      "heading": "Make the trip specific to you",
+      "paragraphs": [
+        "Pick one detail to seek at each stop: Gaelic place names, the shape of a glen, a particular castle’s location or the changing light over a loch. A small notebook can help you remember which landscapes felt different instead of flattening the Highlands into generic scenery. Consider a local museum or visitor center for context when conditions make outdoor plans unappealing.",
+        "A rewarding first visit can be based around one area for several days rather than a long drive through every region. Choose between Fort William, Glencoe and Inverness by the activity you most want, verify access with local sources, and leave room for the unplanned moment that makes a place feel like yours."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Scottish Highlands",
+      "url": "https://www.visitscotland.com/places-to-go/highlands",
+      "publisher": "VisitScotland",
+      "purpose": "VisitScotland names Fort William, Glencoe and Inverness; it highlights Glencoe walking, Loch Ness boat trips, Ben Nevis and long-distance routes including the West Highland Way. It does not confirm schedules or trail conditions."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "walk-the-camino-de-santiago-800km-across-spain",
+    "the-canadian-rockies"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

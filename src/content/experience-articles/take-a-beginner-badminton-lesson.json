@@ -1,0 +1,55 @@
+{
+  "experienceSlug": "take-a-beginner-badminton-lesson",
+  "slug": "take-a-beginner-badminton-lesson",
+  "title": "What should a beginner learn in a first badminton lesson?",
+  "description": "A first badminton lesson is easier when you focus on grip, ready position, movement and a comfortable rally before worrying about match tactics.",
+  "intent": "Explain what a useful beginner badminton lesson can cover, how to prepare for it and how to judge progress without expecting a polished game immediately.",
+  "sections": [
+    {
+      "heading": "Choose an introduction that matches your starting point",
+      "paragraphs": [
+        "Beginner badminton is not just a matter of hitting the shuttle hard. A good introduction builds a few linked habits: holding the racket comfortably, getting balanced before the next shot, moving into position and recovering afterward. Badminton England's No Strings Develop course description lists grip, movement, serving, and forehand and backhand play as skills taught to newcomers. Use that as a guide when asking what a local taster includes, rather than assuming every club's session follows the same plan.",
+        "Tell the coach whether you have played before and whether anything about movement, hearing instructions or reaching overhead changes how you want to participate. Ask what clothing and indoor shoes the venue expects, whether a racket is available to borrow and whether the class is genuinely suitable for a first-timer. The cited course page is one example of an introductory programme, not a current guarantee that a particular date or place is available.",
+        "If you are joining with a friend, agree that the aim is to learn together. Competitive scoring can wait until both people know where to stand and how to make a gentle rally possible."
+      ]
+    },
+    {
+      "heading": "Start with grip and a ready position",
+      "paragraphs": [
+        "Ask the coach to check your grip before you spend a whole lesson practicing the wrong hand position. The racket should feel controllable, not clenched so tightly that your forearm becomes tense. A coach can show how the grip changes for different shots. Do not treat a picture or a written description as a substitute for seeing how your own hand is positioned.",
+        "Learn a simple ready position: feet balanced, knees comfortable, racket where you can reach it and eyes on the shuttle. The exact stance varies with the drill and your body. Your useful question is, 'Where should I return to after that shot?' This connects one hit to the next instead of leaving you stranded at the side of the court.",
+        "Use short, low-pressure feeds at first. If the shuttle keeps falling behind you, slow the exercise and ask the coach to adjust the feed or your starting place. Repeating a movement you cannot yet coordinate at full speed is usually less useful than reducing the challenge."
+      ]
+    },
+    {
+      "heading": "Make the first rally achievable",
+      "paragraphs": [
+        "A rally can begin with underhand taps at a comfortable height, close enough that neither player has to chase. Aim for a gentle arc and give your partner time to reset. If the shuttle lands, stop and begin again rather than rushing to hit it awkwardly from the floor. A small rally lets you notice contact point, balance and where the shuttle travels.",
+        "When the coach introduces a serve, ask about the version and rules used in that club. Practice the motion without aiming for speed. Then add a simple return and recover to your ready position. Beginners often focus so hard on the shuttle that they forget to move back into a useful place after a shot; the coach can cue one movement at a time.",
+        "Take a pause if the space is crowded or another court is too close. Keep rackets low while listening, and follow the venue's instruction about when to begin and stop play."
+      ]
+    },
+    {
+      "heading": "Measure progress by what feels repeatable",
+      "paragraphs": [
+        "After the lesson, choose one skill you can explain and one you want to practice next. Perhaps you found a relaxed grip, returned to position after a forehand, or managed a short exchange with a partner. A single lucky hit is less informative than a movement you can repeat with growing control.",
+        "If you want another session, ask whether the coach recommends repeating the same beginner exercises or joining a progression. You do not need to buy equipment after one taster; learn what racket weight and grip size the coach suggests, then try a club loan racket again if possible. A useful first milestone is a calm rally in which both players can move safely and send the shuttle back with intention."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "No Strings Develop",
+      "url": "https://play.badmintonengland.co.uk/NoStringsDevelop/Badminton/Course/ce035430-105e-4d4c-a832-c734f085fd47",
+      "publisher": "Badminton England / Clubspark",
+      "purpose": "Provides an example beginner course description and its listed skill areas: grip, movement, serving, forehand and backhand play."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "play-a-first-game-of-walking-football",
+    "try-fencing-in-a-supervised-beginner-class",
+    "try-goalball-at-an-inclusive-sports-session"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

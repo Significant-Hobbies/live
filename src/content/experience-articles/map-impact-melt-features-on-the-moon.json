@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "map-impact-melt-features-on-the-moon",
+  "slug": "map-impact-melt-features-on-the-moon",
+  "title": "NASA Lunar Melt: make your first Moon image markings",
+  "description": "Use NASA’s Lunar Melt citizen science project to mark craters and boulders in lunar images, following the tutorial and treating each mark as evidence.",
+  "intent": "Explains how to begin a Lunar Melt classification session and make careful, consistent image markings without needing prior lunar geology.",
+  "sections": [
+    {
+      "heading": "Know what the task is asking you to mark",
+      "paragraphs": [
+        "NASA’s Lunar Melt project asks volunteers to examine images from the Lunar Reconnaissance Orbiter and mark the sizes and locations of impact craters and boulders around them. Scientists use these marks to study fragments in flows of melted rock around impact craters. You are contributing observations to a guided image task; you are not expected to diagnose the Moon or invent a geological explanation.",
+        "NASA describes impact melt as rock melted when a large asteroid strikes, flowing away from a new crater and carrying rock fragments. The project looks at the size and placement of those flows and boulders. Keep that question in mind, but let the project’s tutorial define what counts as a mark."
+      ]
+    },
+    {
+      "heading": "Complete the tutorial before classifying",
+      "paragraphs": [
+        "Set aside a short session and open the project through NASA’s Lunar Melt page. NASA says the tutorial takes about ten minutes and that no prior knowledge is required. Follow it all the way through before you begin contributing. The tutorial teaches which marking tool to choose and how to indicate craters and boulders; applying those conventions matters more than moving quickly.",
+        "If the page appears different from the instructions, pause and use the project’s current tutorial or help links. The NASA page routes participants to the project website, where a short registration form and tutorial are part of the stated process. Do not assume a screenshot or old walkthrough shows the current interface."
+      ]
+    },
+    {
+      "heading": "Make each mark from visible evidence",
+      "paragraphs": [
+        "Look closely at one image feature at a time. Decide whether the visible shape meets the project’s definition before placing a mark. If the edge is incomplete, shadowed or partly outside the image, use the project’s guidance for uncertain cases rather than guessing. Zoom or reposition the image if the tool allows it, and avoid marking the same object twice.",
+        "A careful pace helps separate a bright patch, crater rim or boulder from nearby texture. You may not know whether an object formed through one geological process or another; that inference belongs to the research question, not to your annotation. Your useful contribution is a consistent record of what the image shows."
+      ]
+    },
+    {
+      "heading": "Keep attention steady in a short work block",
+      "paragraphs": [
+        "Start with a modest number of images and take a break when you notice that your marks are becoming automatic. A simple personal check can help: after several classifications, revisit one image and see whether you would mark it the same way. If not, reread the tutorial and adjust your approach before continuing. There is no value in a large batch of inconsistent markings.",
+        "Write down what confused you: crater edge, boulder size, shadow or tool control. That gives you a specific question to check in project instructions. Do not share unreviewed conclusions as if they were established scientific findings."
+      ]
+    },
+    {
+      "heading": "Contribute, then learn what the data can answer",
+      "paragraphs": [
+        "NASA explains that the locations and sizes marked by participants may help researchers understand the fragments, flow direction and timing. One annotation does not settle any of those questions. Citizen science works through many observations interpreted in a larger research context, so report your work as a contribution rather than a personal discovery.",
+        "Save the experience with the project name, one marking rule you learned and a question to revisit. The next action could be another short session or reading the project’s own description of the science after you have practised the interface."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Lunar Melt",
+      "url": "https://science.nasa.gov/citizen-science/lunar-melt/",
+      "publisher": "NASA Science",
+      "purpose": "Explains Lunar Melt’s image-marking task, impact-melt context, tutorial, tools and participant requirements."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "document-a-wild-species-for-inaturalist",
+    "transcribe-a-historical-manuscript-for-the-smithsonian",
+    "witness-a-geological-or-astronomical-event"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

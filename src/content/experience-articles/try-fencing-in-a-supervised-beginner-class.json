@@ -1,0 +1,62 @@
+{
+  "experienceSlug": "try-fencing-in-a-supervised-beginner-class",
+  "slug": "try-fencing-in-a-supervised-beginner-class",
+  "title": "What should a fencing beginner expect before partner drills?",
+  "description": "A beginner fencing class should introduce its stop signal, protective equipment and controlled footwork before a coach assigns any partner exercise.",
+  "intent": "Explain the sequence and questions that help a newcomer approach a supervised fencing taster with clarity about protective kit, movement and drills.",
+  "sections": [
+    {
+      "heading": "Check the class before you arrive",
+      "paragraphs": [
+        "Ask the club what kind of beginner session it runs, whether loan equipment is provided and what clothing it expects. Fencing uses protective equipment, and the details depend on the activity and the club's current rules. British Fencing publishes separate equipment guidance for lessons and supervised beginner pairwork; that is a reason to ask the coach what applies to your session rather than assembling your own kit from a generic list.",
+        "Tell the organiser if you need an adjustment to movement, instruction or equipment fit. You can ask about seated fencing or another adapted format without needing to explain private medical details. Confirm the session is supervised by an appropriate coach and that all participants will be shown how to stop the activity before a weapon is used in a drill.",
+        "Wear the clothing the club specifies and arrive with enough time to be fitted. Do not borrow a weapon or begin sparring on your own before the briefing."
+      ]
+    },
+    {
+      "heading": "Learn the stop routine and kit check",
+      "paragraphs": [
+        "At the start, identify the stop command or signal, where to stand while a coach demonstrates and how to carry equipment when not fencing. Repeat the stop signal back if you are unsure. Everyone should be able to hear or see when an exercise pauses; if the room is noisy, ask how the coach handles it.",
+        "Have the instructor fit and check the protective equipment that is required for the activity. British Fencing's equipment guidance lists protective kit for different kinds of lesson and beginner pairwork, including fencing masks and jackets. The exact requirements depend on the activity and the current guidance, so follow the coach's briefing and the club's applicable safety policy.",
+        "Check for loose straps, damaged kit or anything that restricts your vision or movement, and tell the coach before participating. Do not adjust a mask or protective item in a way that leaves it unsecured. If it does not fit properly, stop and ask the instructor to help."
+      ]
+    },
+    {
+      "heading": "Practice distance before speed",
+      "paragraphs": [
+        "A taster usually begins with stance, balance and simple footwork before a partner exercise. Move at the coach's pace and keep a predictable distance from other people. A fencing strip or marked practice area has boundaries; learn where they are and stop when the coach asks, even if you are mid-step.",
+        "When a practice weapon is introduced, focus on controlled movement and keeping its point directed as taught. Do not lunge toward someone or test a move you saw online. A beginner drill has a specific purpose, and the coach can explain how participants take turns and reset safely.",
+        "If you cannot hear the command, feel uncertain about spacing or lose track of the exercise, lower your weapon as instructed and pause. A clear question is more helpful than pretending you understood."
+      ]
+    },
+    {
+      "heading": "Join only the drill you were assigned",
+      "paragraphs": [
+        "Partner work should follow the coach's instructions, the required protective equipment and the boundaries explained in class. Treat the other beginner as a practice partner, not an opponent to overpower. Agree on the exercise, take turns and stop immediately when directed.",
+        "At the end, ask what skill the coach recommends next and whether another beginner class repeats the same foundations. Notice how the room handled equipment, spacing and the stop routine. If the session felt rushed or the protective kit did not fit, tell the organiser before returning.",
+        "A useful first result may be recognizing the commands, moving along the practice area and understanding when a partner drill can begin. Your next step is to choose a club whose coach can explain the exact beginner safety routine and equipment requirements before you book."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Equipment by Activity – Safety Guidelines",
+      "url": "https://www.britishfencing.com/safety-by-activity/",
+      "publisher": "British Fencing",
+      "purpose": "Provides current sport-body equipment guidance for lessons and beginner classes/taster sessions; supports directing beginners to the coach's applicable requirements."
+    },
+    {
+      "title": "Fencing 101",
+      "url": "https://www.britishfencing.com/fencing-101/",
+      "publisher": "British Fencing",
+      "purpose": "Provides a federation introduction to fencing and links to its rules, terms and disability-fencing information."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "try-wheelchair-basketball-at-an-introductory-club-session",
+    "try-goalball-at-an-inclusive-sports-session",
+    "play-a-first-game-of-walking-football"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

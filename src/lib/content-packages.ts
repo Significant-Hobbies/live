@@ -345,13 +345,6 @@ export function getPublishedPackages(
   return document.packages.filter((pkg) => pkg.state === 'published');
 }
 
-export function getPackageBySlug(
-  slug: string,
-  document: ContentDocument = contentDocument
-): ContentPackage | undefined {
-  return getPublishedPackages(document).find((pkg) => pkg.slug === slug);
-}
-
 export function getPackagesForHobby(
   hobby: string,
   document: ContentDocument = contentDocument

@@ -1,0 +1,95 @@
+{
+  "slug": "tuscany-italy",
+  "title": "Choose a Tuscan base that matches your trip",
+  "description": "Pick one Tuscan area around your interests and transport, then build a small itinerary with enough time for towns, countryside and practical transfers.",
+  "intent": "Make a workable Tuscany trip by choosing an area and transport approach rather than trying to cover the entire region in a few days.",
+  "sections": [
+    {
+      "heading": "Decide which Tuscany you want",
+      "paragraphs": [
+        "Choose the trip by base, not by a list of famous town names. Florence is a strong first base if you want urban art and architecture with rail day trips: Visit Tuscany identifies Santa Maria Novella as the central station and says direct regional connections run from Florence to Siena, Pisa, Lucca, Arezzo and other cities. A single room base can work well when your chosen stops are rail-served and your days have a clear return point.",
+        "A countryside stay around Pienza, San Quirico d’Orcia or Montalcino is a different proposition. Visit Tuscany describes the Val d’Orcia park as a protected cultural landscape spanning five municipalities and built from farmed land, vineyards, dirt tracks and hill towns. Choose this base when that rural setting is the main experience, and confirm how you will reach each village or viewpoint before booking a car-free stay."
+      ]
+    },
+    {
+      "heading": "Choose transport before lodging",
+      "paragraphs": [
+        "For a city-focused trip, pair a Florence base with one rail day such as Siena: you can spend the morning in the historic centre, follow a single theme—civic architecture, church interiors or neighborhood markets—and return to the same accommodation. Trenitalia publishes its regional timetable by region and says the PDFs carry their update date, so check Toscana’s live schedule for your dates rather than relying on a remembered departure.",
+        "For a landscape-focused trip, base yourself within the Val d’Orcia rather than making every visit a long excursion from Florence. Pienza and San Quirico d’Orcia are named municipalities in the protected park, while Visit Tuscany notes that places beyond rail access are generally reached by bus from nearby stations and points travellers to the official Muoversi in Toscana planner and Autolinee Toscane schedules. Verify the last return as carefully as the outward route; rural service may not fit a spontaneous late evening."
+      ]
+    },
+    {
+      "heading": "Build a small, place-based itinerary",
+      "paragraphs": [
+        "A third option is to use Siena as a middle ground: it is a rail-connected city with its own bus network, and Autolinee Toscane publishes local ticket zones and line information. From there you can spend city time and plan a specific bus or guided excursion outward. This is a more deliberate arrangement than assuming that a station near a Tuscan village means the village centre, lodging and countryside walks are all within easy walking distance.",
+        "Keep an optional nearby stop in reserve instead of booking every hour. This allows for weather, a longer meal or an unexpected closure. Note the exact address and booking conditions for any small producer or workshop, and ask before photographing people or private property. Choose experiences that respect local communities and landscapes rather than treating villages as scenery to consume quickly."
+      ]
+    },
+    {
+      "heading": "Plan meals and overnight logistics",
+      "paragraphs": [
+        "Decide whether you want breakfast and dinner near your lodging or are happy to travel for meals. Confirm restaurant opening days and reservation needs directly, especially for places outside the larger towns. If staying in an agriturismo or remote property, ask about arrival time, transport, included meals, accessibility and what is open nearby. Do not assume a countryside property has a shop or bus stop within easy walking distance.",
+        "Save booking confirmations and directions offline, including the host’s check-in instructions. If you will arrive after dark, confirm the route and address before departure and ask whether local signage is clear. Let your host know if a train or road delay affects your arrival. These small details make a rural stay easier without turning the whole trip into logistics."
+      ]
+    },
+    {
+      "heading": "Leave space to change your mind",
+      "paragraphs": [
+        "Draw two sample days before you book. Version A: sleep in Florence, take a regional train to Siena, explore one central neighborhood and return by train. Version B: sleep in the Val d’Orcia, choose Pienza and one nearby countryside stop, then confirm transport between them using the regional travel planner or a planned car. If you want a walking journey between Florence and Siena, Visit Tuscany’s Via Romea Sanese gives a specific route through San Casciano, Badia a Passignano and Castellina in Chianti; it is a multi-leg walk, not a casual day trip.",
+        "The decision is simple: choose Florence for city life and rail-linked day trips; choose a Val d’Orcia base for a rural landscape where transport needs more advance planning. The sources support places and planning channels, not a promise of current timetables or service frequency. Check the official regional timetable, live bus planner and accommodation access for your dates before paying, then reserve enough time to experience one place well."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Visit Tuscany: Official Tourism Website",
+      "url": "https://www.visittuscany.com/en/",
+      "publisher": "Tuscany Region tourism portal",
+      "purpose": "Supports the region’s distinct area and town groupings and its area-based thematic itinerary resources; it does not guarantee current transport, opening hours, accommodation or individual operator availability."
+    },
+    {
+      "title": "Val d’Orcia Artistic, Natural and Cultural Park",
+      "url": "https://www.visittuscany.com/en/attractions/val-dorcia-artistic-natural-and-cultural-park/",
+      "publisher": "Visit Tuscany / Tuscany Region",
+      "purpose": "Supports the five municipalities and landscape character of Val d’Orcia, including Pienza, San Quirico d’Orcia and Montalcino."
+    },
+    {
+      "title": "Tuscany by train",
+      "url": "https://www.visittuscany.com/en/ideas/tuscany-by-train/",
+      "publisher": "Visit Tuscany / Tuscany Region",
+      "purpose": "Supports Florence Santa Maria Novella as regional rail hub and direct lines to Siena and other named cities."
+    },
+    {
+      "title": "Getting around",
+      "url": "https://www.visittuscany.com/en/getting-around",
+      "publisher": "Visit Tuscany / Tuscany Region",
+      "purpose": "Supports that buses link many places without rail access from nearby stations and directs readers to live regional and bus planners."
+    },
+    {
+      "title": "Orari regionali digitali",
+      "url": "https://www.trenitalia.com/it/informazioni/orari-regionali-digitali.html",
+      "publisher": "Trenitalia",
+      "purpose": "Supports checking the region-specific digital regional timetable; schedules are updated and must be checked for travel dates."
+    },
+    {
+      "title": "Siena",
+      "url": "https://www.at-bus.it/en/siena",
+      "publisher": "Autolinee Toscane",
+      "purpose": "Supports availability of a local Siena bus network, fare-zone notes and route-specific ticket conditions; not a particular departure schedule."
+    },
+    {
+      "title": "Via Romea Sanese",
+      "url": "https://www.visittuscany.com/en/itineraries/via-romea-sanese/",
+      "publisher": "Visit Tuscany / Tuscany Region",
+      "purpose": "Supports the named multi-leg Florence-to-Siena walking corridor through San Casciano in Val di Pesa, Badia a Passignano and Castellina in Chianti; current route conditions should be checked before walking."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "the-amalfi-coast-italy",
+    "live-somewhere-for-more-than-a-tourist",
+    "visit-a-country-you-know-nothing-about"
+  ],
+  "experienceSlug": "tuscany-italy",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

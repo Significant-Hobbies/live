@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "taste-chocolate-from-three-origins",
+  "slug": "taste-chocolate-from-three-origins",
+  "title": "How to compare chocolate from three cacao origins",
+  "description": "Taste three origin-labelled chocolates side by side, separate sweetness from aroma and texture, and describe what you notice without guessing.",
+  "intent": "Gives a practical method for a three-origin chocolate tasting while explaining why origin is a clue, not a guarantee of flavour.",
+  "sections": [
+    {
+      "heading": "Choose bars that make a fair comparison possible",
+      "paragraphs": [
+        "Look for three plain chocolates whose packaging names a cacao origin or growing region. If possible, choose bars with similar cocoa percentages and ingredient lists so that milk, added inclusions or a large sweetness difference do not dominate the comparison. Avoid choosing by price or prestige alone. The point is to notice what you can actually taste, not to identify a “best” origin.",
+        "The International Cocoa Organization cautions that a flavour profile reflects several interacting factors, including genetics, growing conditions, management, harvest and post-harvest handling. Country of origin alone cannot tell you exactly what a bar will taste like. Use the label as a question to explore, not a promise that every chocolate from one place will share a single note."
+      ]
+    },
+    {
+      "heading": "Set up a small, quiet tasting",
+      "paragraphs": [
+        "Use small pieces and water between samples. Check ingredients and avoid anything that conflicts with an allergy or dietary need; do not assume a plain-looking bar is free from allergens or cross-contact. Lay out the pieces in a neutral order and hide the wrappers if you want to reduce brand cues. Keep the labels nearby for the reveal.",
+        "Take one bite of each and let it soften rather than chewing quickly. Notice aroma before tasting, then texture, sweetness, bitterness, acidity and how long the flavour remains. Use ordinary comparisons—“dried fruit,” “roasted,” “nutty,” “floral,” or “more cocoa-forward”—only when they genuinely fit your impression. A blank or “not sure” is a perfectly good observation."
+      ]
+    },
+    {
+      "heading": "Use a repeatable note card",
+      "paragraphs": [
+        "For each sample, write four short notes: what you smelled, what arrived first, what changed as it melted, and what lingered. Add a texture word such as smooth, dry, waxy or grainy if you notice one. Avoid assigning a region before you have described the taste. That separation makes it easier to see whether the origin label changed your expectation.",
+        "For example, sample A might smell mild, start bittersweet, and finish with a bright tang; sample B might have a stronger roast aroma but a shorter finish. Those descriptions are more useful than calling one “better.” If you are tasting with someone else, write first and compare notes afterward. Disagreement is interesting evidence about perception, not a mistake to resolve."
+      ]
+    },
+    {
+      "heading": "Reveal origin without turning it into a quiz",
+      "paragraphs": [
+        "After you have recorded your first impressions, look at the labels. Notice whether the origin information includes a country, region, farm or cooperative, and whether the maker explains processing or sourcing. The ICCO describes fruit, floral, herbal, woody, nut and caramel notes among possible fine-flavour cocoa notes, but it also explains that the category has no universally accepted single criterion. That is a reason to stay curious rather than memorise a country-to-flavour chart.",
+        "If a sample tastes different from what you expected, record the surprise. Processing and recipe choices can shape the finished chocolate too. You are tasting a bar made from cacao, not sampling a whole country or speaking for the people who grew it."
+      ]
+    },
+    {
+      "heading": "Choose your next tasting question",
+      "paragraphs": [
+        "For a second round, keep two bars similar in cocoa percentage and compare one with a different roast or maker. Or choose three bars from the same origin but different producers, if their labels make that comparison possible. Change one variable at a time so you can tell what you are investigating. Keep the portion modest; a tasting is about attention, not finishing a large amount of chocolate.",
+        "Save the experience and note the origins, your own words and one question—perhaps whether fermentation or the recipe could explain a difference. That record becomes a useful guide to what you enjoy without treating origin as a guaranteed flavour or quality score."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Fine Flavour Cocoa",
+      "url": "https://www.icco.org/fine-or-flavor-cocoa/",
+      "publisher": "International Cocoa Organization",
+      "purpose": "Explains the interacting contributors to fine-flavour cocoa and the limits of origin or a single universal classification."
+    },
+    {
+      "title": "FAQ",
+      "url": "https://www.icco.org/faq/",
+      "publisher": "International Cocoa Organization",
+      "purpose": "Explains that cocoa flavour develops through farm fermentation and factory roasting, among other context for tasting."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-a-seasonal-millet-thali",
+    "make-tofu-from-soy-milk",
+    "churn-butter-in-a-jar"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

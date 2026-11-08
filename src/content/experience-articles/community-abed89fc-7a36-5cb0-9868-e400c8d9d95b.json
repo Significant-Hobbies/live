@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "community-abed89fc-7a36-5cb0-9868-e400c8d9d95b",
+  "slug": "ride-a-sports-dirt-bike",
+  "title": "Choose a first dirt-bike lesson by fit and supervision",
+  "description": "Compare beginner dirt-bike lessons by instructor, machine fit, protective gear and venue rules before riding on a controlled off-road range.",
+  "intent": "How do I choose a supervised first dirt-bike experience that fits my size, experience and local rules?",
+  "sections": [
+    {
+      "heading": "Pick a lesson designed for beginners",
+      "paragraphs": [
+        "Choose a provider that identifies the course level, instructor qualifications, site type and supervision clearly. In the United States, the Motorcycle Safety Foundation’s DirtBike School describes a hands-on closed-range class taught by certified coaches at selected off-highway training sites. It is a useful example of a supervised route; it is not a global licensing standard. In other countries, check the local motorcycling body and training provider.",
+        "Ask whether the class is intended for complete beginners or assumes earlier experience. Confirm whether the motorcycle is supplied, how the provider fits a learner to a machine, what group size and instructor coverage look like, and what happens if weather or a mechanical issue interrupts the session. Avoid informal “try my bike” offers without training or protective equipment."
+      ]
+    },
+    {
+      "heading": "Fit the bike and course to the rider",
+      "paragraphs": [
+        "A beginner course should let you ask questions about the motorcycle’s size, weight and controls before riding. Tell the instructor your height, age if relevant, experience and any mobility or balance concerns. The coach should be able to explain what machine options exist and what the course covers. A bike that is too tall or powerful for a new rider can make learning unnecessarily difficult; do not let a friend’s preference set your starting machine.",
+        "Ask how the session is divided between briefing, basic familiarization and supervised practice. A controlled range is a better first setting than a public road or an unmarked trail. The goal is to learn the course’s safety expectations with an instructor present, not to perform jumps, race or imitate online stunts."
+      ]
+    },
+    {
+      "heading": "Check protective gear before paying",
+      "paragraphs": [
+        "The MSF recommends a helmet, eye protection, long sleeves and pants, gloves and over-the-ankle boots for dirt-bike riding. Requirements and standards vary by country and venue, so confirm the exact gear list with your course provider. Ask whether helmets or other equipment can be borrowed, how it is cleaned and fitted, and whether your footwear meets the venue’s requirements.",
+        "Try on any borrowed gear before the session if possible. A helmet should be the right size and secure as directed by staff; loose clothing or laces should not interfere with the controls. If you cannot obtain equipment that fits comfortably, postpone the lesson instead of riding without it. Do not treat a bicycle helmet or casual footwear as a substitute for motorcycle gear."
+      ]
+    },
+    {
+      "heading": "Separate off-road learning from road licensing",
+      "paragraphs": [
+        "A dirt-bike class does not automatically qualify you to ride a motorcycle on public roads. The MSF itself points learners seeking a street license toward a separate Basic RiderCourse. Local licensing, age limits, registration, land access and helmet laws differ by jurisdiction. Verify the rules with your national or state authority and the facility before booking.",
+        "Ask whether the training ground is private, permitted or otherwise authorized for the activity and what environmental or noise rules apply. Ride only where the owner or land manager allows it, stay on designated routes, and do not bring a dirt bike onto pavement unless local law and the vehicle’s design permit it."
+      ]
+    },
+    {
+      "heading": "End the session with a useful debrief",
+      "paragraphs": [
+        "After the lesson, ask the coach what you handled well, what you should practice next and whether another beginner session is appropriate. The MSF describes risk management and environmental awareness as part of its training. That broader framing matters: a good first ride includes judgment about when to slow down, stop or choose an easier setting.",
+        "You do not have to decide that dirt biking is a long-term hobby after one class. Notice whether you felt comfortable with the equipment, instructor and terrain. The next step is to compare two supervised providers using the same questions—course level, machine fit, gear, site rules and cancellation terms—then pick the one that explains its safety process clearly."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "DirtBike School",
+      "url": "https://msf-usa.org/start-your-ride/dirtbike-school/",
+      "publisher": "Motorcycle Safety Foundation",
+      "purpose": "Supports a U.S.-specific supervised closed-range beginner course, certified coaches and basic gear recommendations; it does not establish rules outside its context."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "ride-a-motorcycle-across-a-country",
+    "community-065ff51d-0609-555b-9a4b-a38fcecd3e69",
+    "community-38e6f335-b5f1-5ec0-a7c2-28cd02e9b0d2"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,77 @@
+{
+  "experienceSlug": "kyoto-japan-in-cherry-blossom-season",
+  "slug": "kyoto-japan-in-cherry-blossom-season",
+  "title": "Choose a Kyoto base and keep each spring day local",
+  "description": "Choose a Kyoto base around your arrival and plan spring days by neighborhood, using trains where they help and avoiding bus-heavy cross-city loops.",
+  "intent": "How should a visitor choose a Kyoto base and arrange a manageable cherry-season itinerary around transit crowding, without repeating bloom-timing advice?",
+  "sections": [
+    {
+      "heading": "Choose convenience you will use every day",
+      "paragraphs": [
+        "A Kyoto base works best when it supports the trip you actually have. Staying around Kyoto Station can make arrival, luggage and rail connections straightforward; the official city guide also points out nearby places such as Higashi Hongan-ji, Nishi Hongwan-ji and Umekoji. A central base around Shijo-Kawaramachi puts you near downtown routes. Compare the door-to-station walk, late arrival plan, luggage storage and your first two days, not just the hotel name on a map.",
+        "If you are arriving with heavy bags or transferring from another city, the station area can reduce the number of early-day decisions. If most of your evenings will be downtown, a central base may reduce end-of-day backtracking. The better choice depends on current lodging availability and exact address; check the walk and transit route before booking."
+      ]
+    },
+    {
+      "heading": "Plan spring transportation with more than one mode",
+      "paragraphs": [
+        "Kyoto’s official guide recommends combining trains and buses. Its bus guidance says buses tend to be especially crowded in cherry blossom season, and suggests researching available means of transport for each destination. A train may get you close enough to walk the last stretch, while a bus can still be useful where it fills a real gap. Avoid designing a day that depends on crossing the city by bus repeatedly at peak hours.",
+        "The city guide explains that the Karasuma subway line runs north–south through central Kyoto and the Tozai line east–west, with a transfer at Karasuma-Oike. It also notes the Randen connection between central Kyoto and Arashiyama. These are planning anchors, not one perfect ticket recommendation; fares, lines and passes change, so verify the current operator information for your dates."
+      ]
+    },
+    {
+      "heading": "Build one eastern Kyoto day",
+      "paragraphs": [
+        "Keep an east-side day compact. Choose a small cluster—perhaps Gion and Yasaka-jinja, then one place in Higashiyama—or pair a visit near Tofuku-ji with nearby streets instead of adding a distant western attraction. The city’s transit guide lists Higashiyama among the eastern areas and identifies multiple rail options around Kyoto. Decide which station or bus stop is practical for your specific first destination, then check the last leg on foot.",
+        "Cherry-season paths can feel slow when people stop for photographs. Leave room between the main visit and dinner, and make the return route simple enough to use when tired. A modest walk with time to look can be more enjoyable than squeezing several temples into a timetable that assumes every transfer will be immediate."
+      ]
+    },
+    {
+      "heading": "Keep Arashiyama on its own side of the day",
+      "paragraphs": [
+        "Arashiyama sits in western Kyoto, and the city guide lists train access alongside bus options. Treat it as its own morning or afternoon rather than combining it with a long eastern circuit. If your base is near Kyoto Station, compare the actual rail route from your lodging; from a downtown base, check whether the Randen connection or another line fits. The official guide says train fares may be separate across operators, so look at the actual route and fare structure rather than assuming one ride covers everything.",
+        "Choose one main attraction or landscape walk and one nearby addition. If the main route is crowded, step away to a second planned stop rather than joining an unresearched bus queue. Keep your itinerary flexible enough to take a break or return to your base without feeling that the day has failed."
+      ]
+    },
+    {
+      "heading": "Make a three-day outline, then verify it",
+      "paragraphs": [
+        "A practical outline might be: arrival and nearby central sights; one eastern Kyoto day; one western Arashiyama day. Add Fushimi Inari or a northern destination only if you have another day and the current transport plan supports it. This is a map-based structure, not a promise that every site is open or quiet. Check each destination’s current visitor information, and confirm transit routes, fares, last services and any reservation requirements shortly before travel.",
+        "Pack only what you need for the day and use luggage storage or delivery if that helps you avoid boarding crowded buses with large bags; the city guide lists hands-free luggage services. Before leaving your base, write down one backup route and one nearby place you would be happy to visit instead. That small plan keeps a blossom-season day from becoming a chase across town."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Getting Around Kyoto",
+      "url": "https://kyoto.travel/en/getting-around/",
+      "publisher": "Kyoto City Official Guide",
+      "purpose": "Supports use of trains and buses, named city areas and station-area access context."
+    },
+    {
+      "title": "Getting Around Kyoto by Bus",
+      "url": "https://kyoto.travel/en/getting-around/getting-around-kyoto-by-bus/",
+      "publisher": "Kyoto City Official Guide",
+      "purpose": "Supports spring bus crowding, multimodal planning and advice to research transport to each destination."
+    },
+    {
+      "title": "Getting Around Kyoto by Subway & Train",
+      "url": "https://kyoto.travel/en/getting-around/getting-around-kyoto-by-subway-train/",
+      "publisher": "Kyoto City Official Guide",
+      "purpose": "Supports named subway line directions, Karasuma-Oike transfer, Randen-to-Arashiyama connection and note that rail fares vary by line/operator."
+    },
+    {
+      "title": "Around Kyoto Station",
+      "url": "https://kyoto.travel/en/areas/around-kyoto-station/",
+      "publisher": "Kyoto City Official Guide",
+      "purpose": "Supports Kyoto Station's gateway role and nearby Higashi/Nishi Hongan-ji and Umekoji area context."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "see-the-cherry-blossoms-in-kyoto-japan",
+    "spend-a-month-in-japan",
+    "mount-fuji-japan"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

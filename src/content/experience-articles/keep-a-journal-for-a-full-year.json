@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "keep-a-journal-for-a-full-year",
+  "slug": "keep-a-journal-for-a-full-year",
+  "title": "A year of journal entries that does not become homework",
+  "description": "Choose an entry format small enough to repeat, build in missed-day recovery, and keep your year of notes private and easy to revisit.",
+  "intent": "How do I keep a journal across a full year without needing a long daily essay or treating every missed entry as failure?",
+  "sections": [
+    {
+      "heading": "Choose a form you will actually use",
+      "paragraphs": [
+        "A journal can be a paper notebook, a private digital document, short voice notes or a mix. The Library of Congress defines diaries as records of personal experiences, observations, thoughts or feelings kept daily or often, commonly for memory or reflection. You do not have to write a polished narrative each evening for the project to count.",
+        "Choose one default format. It might be three lines: what happened, what held your attention, and what you want to remember. Or make a dated page with a few prompts. Keep the opening move obvious: one notebook beside a chair, a document pinned in a private folder, or a voice recorder ready after a walk."
+      ]
+    },
+    {
+      "heading": "Make the entry small and specific",
+      "paragraphs": [
+        "Write about something that happened, not a summary of your entire life. A meal that surprised you, a phrase someone used, a task you avoided, a change in weather or a detail from a commute can anchor the entry. Concrete details make later reading easier than vague judgments such as “good day” or “bad week.”",
+        "If the day is difficult or private, you can write less, skip a subject or record only a neutral observation. The journal is yours. It does not have to be shared, and you can decide in advance how to protect sensitive entries, especially if you use a device or a shared home."
+      ]
+    },
+    {
+      "heading": "Decide what happens when you miss a day",
+      "paragraphs": [
+        "Use a recovery rule that removes guilt: return at the next opportunity and leave the missing date blank. Do not invent an entry or try to backfill seven days from memory just to make the notebook look complete. If you want, add one sentence about why the gap occurred, but do not require an explanation.",
+        "You can write daily, or interpret the goal as maintaining a frequent record throughout the year. Make the frequency explicit to yourself. A tiny entry on a busy day and a longer entry on a quiet weekend can live in the same journal. The point is continuity of attention across twelve months, not equal word counts."
+      ]
+    },
+    {
+      "heading": "Keep your material findable",
+      "paragraphs": [
+        "Date entries consistently. If the journal is digital, make a backup that you can access and understand later; if it is paper, choose one stable place to keep it. Avoid including private details about other people that you would not want exposed if the journal were lost or shared. Privacy is part of the design, not an afterthought.",
+        "At the end of each month, skim only if that feels useful. Mark recurring events, questions or small changes with a tag or index rather than rewriting the month. You might notice that certain seasons are busy or that one project occupies your attention. Those are observations, not diagnoses or instructions about what your life should become."
+      ]
+    },
+    {
+      "heading": "Finish the year with a short reflection",
+      "paragraphs": [
+        "When the year ends, select a few entries to reread and write a page about what you remember now that you did not notice at the time. Keep the gaps and ordinary days in view; the most useful record may be a detail that did not seem important when you first wrote it.",
+        "Then decide what form you want next: another year, a break, or a different record such as photographs or letters. Your next step is to choose the notebook or file, write one dated entry today and set a realistic reminder for the next time you want to return."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Diaries (Subject Headings Manual H 1538)",
+      "url": "https://www.loc.gov/aba/publications/FreeSHM/H1538.pdf",
+      "publisher": "Library of Congress",
+      "purpose": "Defines diaries as records of personal experiences, observations, thoughts or feelings kept daily or frequently; a cataloging instruction sheet, not a journaling prescription."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "keep-a-journal-for-a-decade",
+    "write-a-letter-to-your-future-self-and-read-it-in-10-years",
+    "create-a-photo-book-of-one-year-of-your-life"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

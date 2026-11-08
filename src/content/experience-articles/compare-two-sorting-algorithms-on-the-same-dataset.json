@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "compare-two-sorting-algorithms-on-the-same-dataset",
+  "slug": "compare-two-sorting-algorithms-on-the-same-dataset",
+  "title": "Compare sorting methods with a fair little dataset",
+  "description": "Compare two sorting algorithms on the same small list, track their comparisons and movements, and notice how input order changes the story.",
+  "intent": "How can you compare two sorting algorithms fairly without running a benchmark you cannot interpret? This guide adds a paper-and-screen experiment that holds the input constant.",
+  "sections": [
+    {
+      "heading": "Pick a list small enough to follow",
+      "paragraphs": [
+        "Write down eight to twelve numbers, including one repeated value, then make three copies. Use the same starting list for both algorithms. A small list lets you follow each comparison by hand and check the final result. Decide what “work” means for your comparison: number comparisons, swaps, writes, or steps. Different measures answer different questions.",
+        "The EntCS sorting visualizer lets you step through several methods on the same numbers and displays comparisons, swaps, and writes. Use it after you have tried a short hand simulation. That makes the visualizer a way to check your reasoning rather than a race whose animation you watch without knowing what is happening."
+      ]
+    },
+    {
+      "heading": "Choose two distinct strategies",
+      "paragraphs": [
+        "A useful first pair is insertion sort and selection sort. Insertion sort grows an ordered section and moves the next value into its place; selection sort searches the remaining section for the smallest value and swaps it forward. Their traces make different kinds of work visible. Read the pseudocode once before timing or counting.",
+        "Use cards or sticky notes as the list. For each step, say what is being compared and where a value moves. Keep a tally mark for each comparison and another for each write or swap. If you change the method halfway through because you remember a shortcut, note that; otherwise the comparison is not between the named algorithms."
+      ]
+    },
+    {
+      "heading": "Repeat with different input orders",
+      "paragraphs": [
+        "Try the same values in random order, then already sorted, reversed, and nearly sorted order. Use identical patterns for both methods. You may see that a method that looks slow on a reversed list behaves differently when only one value is out of place. The aim is to notice patterns in this tiny sample, not to claim it predicts all inputs.",
+        "Keep the values and number of items fixed while changing their order. If you also change list length, dataset, computer, and algorithm version, you cannot tell which change affected the result. A paper tally will not measure elapsed-time performance accurately, so keep algorithm steps separate from computer runtime."
+      ]
+    },
+    {
+      "heading": "Read the counters, not only the animation",
+      "paragraphs": [
+        "After each run, write down the counts and the input arrangement. Check that both algorithms produced the same ordered result and preserved the repeated value. If a counter differs from your hand tally, step through slowly and find the first disagreement. The error often reveals a hidden assumption about whether a comparison or write was counted.",
+        "The comparison table can help you explain the result in plain language: “insertion sort moved fewer items on this nearly sorted list” is precise about what you saw. Avoid saying one method is universally faster from one small example. Different algorithms trade comparisons, writes, memory, and behavior across inputs."
+      ]
+    },
+    {
+      "heading": "Turn the result into a better question",
+      "paragraphs": [
+        "Make a small table with columns for method, input order, comparisons, swaps or writes, and one observation. Circle a result that surprised you and design a follow-up run that isolates it. You might try a list twice as long or repeat each pattern several times in a program, but keep a clear record of what you changed.",
+        "Your next step is to compare two methods on a list you can still inspect manually. Use the same data, keep counts separate, and explain what the counters measure. Once the experiment is clear, try a larger input and ask whether the pattern still holds."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Sorting algorithms, animated and compared",
+      "url": "https://entcs.org/algorithms/sorting",
+      "publisher": "EntCS educational algorithms visualizer",
+      "purpose": "The opened visualizer compares sorting methods on the same data and reports comparisons, swaps and writes while showing pseudocode."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "program-conway-s-game-of-life",
+    "reproduce-one-chart-from-an-open-dataset"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

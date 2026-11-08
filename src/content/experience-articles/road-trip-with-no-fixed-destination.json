@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "road-trip-with-no-fixed-destination",
+  "slug": "road-trip-with-no-fixed-destination",
+  "title": "Leave the Destination Open, Keep the Driving Plan Clear",
+  "description": "Design a flexible road trip with a loose direction, safe stopping points, vehicle checks, and a simple way to decide when to change course.",
+  "intent": "How can I keep a road trip spontaneous without making unsafe decisions about fatigue, weather, vehicle readiness, or where to sleep?",
+  "sections": [
+    {
+      "heading": "Choose a direction and a boundary",
+      "paragraphs": [
+        "Spontaneity works better with a frame. Pick a general direction, a start and end window, and a boundary such as “stay within this region” or “turn around before the weekend.” Mark a few possible towns on a paper map, but do not make each one a must-see. That leaves room to follow a roadside sign or local recommendation without drifting into a trip you cannot afford or finish.",
+        "Decide your non-negotiables before you leave: a daily spending limit, a latest arrival time, and whether you will drive alone. If you need reservations for a particular night, make those the trip's anchor and let the middle stay flexible. Do not rely on sleeping in a vehicle wherever you stop; verify overnight parking and lodging rules for the actual jurisdiction."
+      ]
+    },
+    {
+      "heading": "Make the car part of the plan",
+      "paragraphs": [
+        "Before a long drive, check your owner's manual and the vehicle itself. NHTSA recommends checking tire condition and pressure against the vehicle placard or manual, inspecting the spare, and planning for weather, road conditions, traffic, and enough time to get there safely. These are practical pre-trip checks, not a substitute for a mechanic if you see damage or warning lights.",
+        "Carry a charged phone, basic supplies appropriate to the climate, and offline directions for areas with weak signal. Share your broad route and expected check-in with someone you trust. If the road becomes unpaved, remote, or weather-exposed, do not treat curiosity as a reason to continue beyond the vehicle's capability or your preparation."
+      ]
+    },
+    {
+      "heading": "Use a simple turn-by-turn decision",
+      "paragraphs": [
+        "At each stop, ask three questions: Is the next stretch safe in current conditions? Do I have enough daylight and energy? Is there a place to stay if I stop early? If any answer is no, make the next stop close and known. NHTSA advises drivers not to rush, to review maps as well as navigation, and to rest or change drivers when drowsy. A flexible trip includes permission to call the day early.",
+        "Keep the interesting detours small: a local museum, scenic overlook, public market, or short walk on a marked trail. Ask whether the detour adds a meaningful experience or only another hour of driving. The best spontaneous stop may be a longer lunch in a town you had not planned to visit."
+      ]
+    },
+    {
+      "heading": "Protect time for unplanned discoveries",
+      "paragraphs": [
+        "Leave one half-day without a destination. Instead of searching endlessly for attractions, ask a librarian, visitor center, or local resident what is worth seeing nearby and whether access is public. Check opening hours and closures before setting out. A historic bridge, public garden, or neighborhood diner can make a stronger memory than a far-off landmark squeezed between drives.",
+        "Keep a short note of what made you choose each turn. That turns the road into a story instead of a list of mileage: the rain that sent you to a museum, the wrong turn that led to a good meal, or the morning you stayed put because the view was enough."
+      ]
+    },
+    {
+      "heading": "Know when to stop",
+      "paragraphs": [
+        "Fatigue, poor weather, a mechanical warning, or a route that no longer feels comfortable are good reasons to stop or change plans. NHTSA warns against driving drowsy and recommends resting if you feel sleepy. Pull over only somewhere safe and legal; do not try to defeat fatigue with an energetic playlist or a caffeine gamble.",
+        "For your first version, plan one overnight and two flexible stops. Check the tires and weather, tell someone your route, and choose the next leg only after you have rested."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Summer Driving & Road Trip Tips",
+      "url": "https://www.nhtsa.gov/summer-driving-tips",
+      "publisher": "National Highway Traffic Safety Administration",
+      "purpose": "Supports U.S. road-trip vehicle/tire checks, planning for weather, traffic and time, map review, and sharing route/ETA."
+    },
+    {
+      "title": "Drowsy Driving: Avoid Falling Asleep Behind the Wheel",
+      "url": "https://www.nhtsa.gov/risky-driving/drowsy-driving",
+      "publisher": "National Highway Traffic Safety Administration",
+      "purpose": "Supports treating drowsiness as a driving-safety risk and prioritizing adequate rest; U.S. federal road-safety information."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "take-a-trip-completely-alone",
+    "backpack-through-southeast-asia",
+    "do-a-spontaneous-eurotrip"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "galapagos-islands-ecuador",
+  "slug": "galapagos-islands-ecuador",
+  "title": "Choose a Galápagos visit that keeps wildlife wild",
+  "description": "Plan a Galápagos trip around island pace and responsible wildlife viewing, using current official park rules and authorized local operators.",
+  "intent": "How should I choose an island or boat-based Galápagos visit while following protected-area rules and avoiding wildlife disturbance?",
+  "sections": [
+    {
+      "heading": "Choose a land base or a boat itinerary",
+      "paragraphs": [
+        "The Galápagos experience is shaped by how you move between islands. A land-based stay gives you a town base and day trips; a liveaboard or multi-day boat itinerary puts more of the transit and overnights on the water. Neither format is automatically better. Compare the exact islands and visitor sites, time ashore, transfer schedule, and what happens if weather or park operations change the route.",
+        "Before paying, ask the operator which sites are confirmed, whether the vessel and guides are authorized for protected areas, what meals and transfers are included, and what cancellation policy applies to route changes. Don’t choose only by the number of islands listed; a rushed series of landings may leave little time to notice one place. Pick a pace that leaves room to observe without approaching or handling wildlife."
+      ]
+    },
+    {
+      "heading": "Let the rules shape the encounter",
+      "paragraphs": [
+        "Ecuador’s Environment Ministry visitor-rules document says visits to protected areas require an authorized naturalist guide, recommends authorized tourism operators and vessels, and instructs visitors to remain on trails and keep at least two metres from animals. It also says not to feed wildlife or use flash photography. The document is a 2019 government PDF, so verify current guidance with the Galápagos National Park Directorate before travel.",
+        "Those rules change how you photograph and watch animals. If a sea lion rests near a path, stop at the required distance and let it choose whether to move. Do not lure a bird closer with food, block a trail for a portrait or use playback to draw an animal out. A long lens, patience and a guide’s instructions are better tools than proximity."
+      ]
+    },
+    {
+      "heading": "Observe patterns rather than collect species",
+      "paragraphs": [
+        "Choose one simple field question each day: how does an animal use shade, how do birds move between shore and water, or what changes between a dry upland and a coastal landing? Write down the setting as well as the animal. That keeps the trip from turning into a checklist detached from habitat and helps you notice the relationships that make an island visit memorable.",
+        "Follow the marked route and pause only where it does not block others. Keep food and rubbish secured, carry waste back to a populated area where the rules direct, and resist picking up shells, rocks or plant material. Ecuador’s rules also caution against products made from coral, shells, volcanic stone, wildlife parts or endemic wood. Souvenirs can be photographs, notes and locally made objects that do not remove nature."
+      ]
+    },
+    {
+      "heading": "Plan for biosecurity and fragile places",
+      "paragraphs": [
+        "The government rules ask visitors to check which products may be brought into the islands and cooperate with inspection and quarantine at airports and docks. This is part of protecting a highly sensitive ecosystem, not an inconvenience to work around. Read the current entry list before packing food, plants, seeds or animal products, and declare items when required. If uncertain, ask the official inspection staff instead of guessing.",
+        "Use only legal landing sites and operators. The same document says camping requires permitted areas and authorization, and restricts activities such as motorized water sports in protected areas. Avoid assuming that an activity offered informally is allowed. An operator should be able to explain its permissions and the applicable site rules clearly; if it cannot, choose another provider."
+      ]
+    },
+    {
+      "heading": "Make the trip worthwhile at a gentle pace",
+      "paragraphs": [
+        "On your first day, settle in and learn the local rules before planning an ambitious excursion. Carry the day’s essentials, but keep the itinerary light enough to account for transfers and official instructions. A good visit might mean one guided trail, a careful time at a shoreline, and an evening reviewing what you observed—not squeezing every possible activity into a single day.",
+        "The government PDF provides concrete rules, but it dates from 2019 and does not establish current ticket prices, entry procedures, site availability or vessel authorizations. Use the live Ecuadorian park and Galápagos authorities for those decisions. Your next step is to shortlist two itinerary formats, verify each operator and site against current official information, and pick the one that gives you both compliance and time to watch."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Reglas para los sitios de visita en las áreas protegidas de Galápagos",
+      "url": "https://www.ambiente.gob.ec/wp-content/uploads/downloads/2019/03/Normas-para-la-visita-a-las-Islas-Gala%CC%81pagos.pdf",
+      "publisher": "Ministerio del Ambiente, Agua y Transición Ecológica, Ecuador",
+      "purpose": "Supports the published visitor rules on authorized guides/operators, marked trails, distance from wildlife, flash, biosecurity and prohibited/controlled activities; document is from 2019 and current details must be rechecked."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "see-the-great-barrier-reef",
+    "komodo-island-indonesia"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

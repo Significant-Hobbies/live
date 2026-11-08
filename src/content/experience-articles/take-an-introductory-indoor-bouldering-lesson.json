@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "take-an-introductory-indoor-bouldering-lesson",
+  "slug": "take-an-introductory-indoor-bouldering-lesson",
+  "title": "What happens at your first indoor bouldering lesson?",
+  "description": "Prepare for an indoor bouldering lesson by checking the gym's orientation rules, starting on easy routes, sharing fall zones, and resting between attempts.",
+  "intent": "What should a beginner expect in an indoor bouldering lesson? This guide focuses on preparation, gym orientation, route choice and leaving enough room to learn safely.",
+  "sections": [
+    {
+      "heading": "Choose a gym that teaches beginners",
+      "paragraphs": [
+        "Look for a climbing gym that offers a beginner lesson, introductory session or orientation before you climb. Ask whether the session is taught by staff, what it covers, what shoes are required and how the gym marks easier routes. Policies differ, so read the chosen facility's own waiver and rules. For example, Bluestem Boulders requires a short orientation video for climbers and requires climbing shoes, which can be rented there; that is one gym's procedure, not a universal rule.",
+        "Tell the instructor that this is your first session and share any concern about heights, balance, mobility or crowded spaces. You can ask to watch first or begin with a low traverse rather than climbing high. If the class pushes you to keep going after you say you need a break, pause and talk to staff. A good first session gives you room to learn how the gym works before chasing a grade."
+      ]
+    },
+    {
+      "heading": "Learn the room before touching the wall",
+      "paragraphs": [
+        "At check-in, find the orientation area, shoe rentals, water, restrooms and the gym's rules for waiting. Bouldering problems are routes on walls without ropes, so the padded floor is part of the activity but it does not remove the chance of a hard landing. Ask staff where the active fall zones are and how the facility expects climbers to move around them. Do not walk under someone who is climbing or stand on mats beneath a route.",
+        "Wear comfortable clothes that let you move and secure jewelry, phone, keys and other loose items. Follow the gym's shoe policy and keep outdoor footwear away from climbing surfaces if required. Do not bring chalk or gear into a route area until staff show you where it belongs. Knowing the room layout reduces uncertainty and helps you pay attention to the instructor rather than scanning for basic information during a climb."
+      ]
+    },
+    {
+      "heading": "Start with low, easy movement",
+      "paragraphs": [
+        "Begin with a route the instructor recommends for your starting ability. Ask how the gym's colors or grades work; grading systems vary, so a color that is easy in one gym may mean something else elsewhere. Climb only as high as feels manageable and use the lesson's guidance for stepping down or stopping. You can practice moving your feet on low holds before attempting a move that feels powerful or awkward.",
+        "Rest between attempts. Your hands and forearms may feel tired sooner than expected because the grip is unfamiliar. Take water, watch how experienced climbers share turns, and ask for one small technique cue at a time. A useful first goal might be using quiet feet or keeping your hips close to the wall rather than reaching the top of a problem."
+      ]
+    },
+    {
+      "heading": "Treat falling and sharing as part of the lesson",
+      "paragraphs": [
+        "Ask the instructor to show you how the gym teaches controlled dismounts and what to do if you lose a hold. Do not copy an advanced climber's jump or dynamic move before learning the local technique. Keep the floor clear of bags and bottles, wait until the landing zone is open and let other climbers know if you are taking a turn. If you feel unstable, come down the way the instructor demonstrated or ask for help before continuing.",
+        "Offer other people space and avoid crossing routes that intersect with someone else's climb. Give a climber time to finish rather than starting underneath them. The gym is shared, and courtesy improves safety as well as the experience. If a route looks too crowded, choose a different wall or wait for the space to clear."
+      ]
+    },
+    {
+      "heading": "Leave with one skill to practice next",
+      "paragraphs": [
+        "After the session, note which route felt approachable, which movement surprised you and what the instructor wants you to practice before returning. You do not need to buy gear immediately; many gyms rent shoes and provide the introductory instruction. If you enjoyed the session, ask about a second beginner class or how staff recommend progressing at that facility. Stop if you experience pain and get appropriate advice before resuming.",
+        "Your next action is to choose one nearby bouldering gym, read its first-visit rules and book an orientation or beginner lesson. Start with the instructor's easiest suggested route, keep the landing area clear and take a break whenever you need one."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "First Visit",
+      "url": "https://www.bluestemboulders.com/firstvisit",
+      "publisher": "Bluestem Boulders",
+      "purpose": "Supports one climbing gym's orientation, footwear and visitor expectations as a concrete example; the article tells readers to follow the rules of their own facility."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "try-target-archery-at-a-supervised-range",
+    "try-curling-at-a-supervised-ice-rink-taster",
+    "explore-a-nature-trail-using-an-all-terrain-wheelchair"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

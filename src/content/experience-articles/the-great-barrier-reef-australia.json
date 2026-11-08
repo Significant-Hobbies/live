@@ -1,0 +1,71 @@
+{
+  "experienceSlug": "the-great-barrier-reef-australia",
+  "slug": "the-great-barrier-reef-australia",
+  "title": "Choose a reef visit by departure point and time on water",
+  "description": "Compare Cairns and Port Douglas reef boats with island stays by transfer time, daily pace and park stewardship before choosing a Great Barrier Reef trip.",
+  "intent": "Should I visit the Great Barrier Reef on a mainland day boat or from an island base, and what should I compare?",
+  "sections": [
+    {
+      "heading": "Choose the departure region before the vessel",
+      "paragraphs": [
+        "“The Reef” covers a very large marine park, so your first decision is the coast you will start from. The Reef Authority identifies Cairns, Port Douglas and the Whitsundays as the highest-use tourism areas, while the Cairns planning region includes offshore Cairns and Port Douglas, the Ribbon Reefs and Lizard Island. Your travel base affects transfer time, possible destinations and how much of the day is spent underway.",
+        "For a short stay based near Cairns, compare mainland-operated day trips by departure time, hours at the reef and how many stops they promise. For a longer trip, an island stay can make the sea and shore part of daily life, but it does not necessarily put every outer-reef location within easy reach. Check the actual transfer rather than assuming that an island is automatically closer to the reef habitat you most want to see."
+      ]
+    },
+    {
+      "heading": "Understand what a mainland day trip buys",
+      "paragraphs": [
+        "A day boat can be a practical way to reach reef sites without changing accommodation. Its strengths are a defined return time and the ability to choose among operators. Ask how many hours are spent on the water, whether the vessel makes one reef stop or several, what happens in rough conditions and whether a seasickness plan is available. Ask which reef locations are planned; an advertised departure town does not identify the actual destination.",
+        "The Great Barrier Reef Marine Park Authority says tourism is concentrated in a small portion of the total park, with most visits in the Cairns, Port Douglas and Whitsundays areas. That concentration is a reason to choose an operator that takes its stewardship responsibilities seriously. The Authority suggests looking for a high-standard operation that prioritizes reef care. Ask what its staff explain about not touching coral, wildlife interactions and waste rather than relying on a vague “eco” label."
+      ]
+    },
+    {
+      "heading": "Understand an island-based stay",
+      "paragraphs": [
+        "Queensland lists multiple national-park islands in the Reef region, including Green Island, Fitzroy Island and the Frankland Group. These names are useful starting points, but facilities, transport and activities vary. Check which island is a day-trip destination, which has accommodation and what reef access is possible from shore. An island visit may give you more time on land and a slower rhythm; it may offer a different underwater experience from a boat trip to an outer reef.",
+        "Some islands are protected national parks and visitor rules can include biosecurity and access considerations. Confirm how to reach the island, whether transfers run on your dates and what is included in any stay. If snorkeling is your goal, ask about site conditions, flotation support, lifeguard or guide availability and options for a non-swimmer. Do not infer that easy beach access means the reef is safe for unsupervised swimming."
+      ]
+    },
+    {
+      "heading": "Compare the actual stewardship practices",
+      "paragraphs": [
+        "For an operator, ask whether staff brief guests on reef-safe behavior, how anchoring is avoided, what wildlife viewing distances are expected and whether the trip visits a managed or sensitive location. The Reef Authority’s Cairns plan sets site-specific requirements for vessel use, group size, anchoring and sensitive locations. These rules demonstrate why “reef tour” is not one uniform activity.",
+        "If a proposal promises close wildlife encounters or unrestricted access, ask what permits and site rules apply. Avoid touching coral, chasing animals or standing on reef structures. Choose a trip where the crew makes these boundaries clear before anyone enters the water. Stewardship is visible in the briefing, group management and the way staff respond when guests drift toward wildlife."
+      ]
+    },
+    {
+      "heading": "Make the decision with a simple comparison",
+      "paragraphs": [
+        "Write down four details for each option: starting point, total transfer time, time spent at the reef or island, and the level of supervision in the water. Add the real weather backup and cancellation terms. This turns a glossy photo comparison into something you can use against your own travel window and comfort level.",
+        "A mainland boat is often easiest when you want a set day trip from a coastal base. An island stay can make sense when you value a slower island rhythm and the transfer fits your itinerary. Neither format guarantees clear visibility or wildlife. Select the one whose route and stewardship answers are specific, then recheck local marine conditions close to travel."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tourism on the Great Barrier Reef",
+      "url": "https://www.gbrmpa.gov.au/our-work/managing-activities-and-use/tourism/tourism-great-barrier-reef",
+      "publisher": "Great Barrier Reef Marine Park Authority",
+      "purpose": "Supports regional tourism concentration and its stewardship context, without treating visits as ecologically uniform."
+    },
+    {
+      "title": "Cairns Area Plan of Management",
+      "url": "https://www.gbrmpa.gov.au/access/locations/cairns-area-plan-management",
+      "publisher": "Great Barrier Reef Marine Park Authority",
+      "purpose": "Supports named Cairns-region reef areas, site-specific conditions, sensitive-location and operator requirements, and advice to select high-standard operators."
+    },
+    {
+      "title": "Great Barrier Reef islands",
+      "url": "https://www.qld.gov.au/environment/coasts-waterways/reef/islands-biosecurity/visiting-islands",
+      "publisher": "Queensland Government",
+      "purpose": "Supports examples of named national-park islands in the reef region."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "see-the-great-barrier-reef",
+    "the-whitsunday-islands-australia",
+    "lord-howe-island-australia"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

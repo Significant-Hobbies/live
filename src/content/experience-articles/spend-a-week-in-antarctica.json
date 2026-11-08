@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "spend-a-week-in-antarctica",
+  "slug": "spend-a-week-in-antarctica",
+  "title": "Set expectations for a short Antarctic expedition",
+  "description": "Treat an Antarctic week as an expedition shaped by vessel time, weather, and visitor rules, and decide what kind of learning matters most to you.",
+  "intent": "What should I expect from a week-long Antarctic visit when shore time and conditions are not entirely mine to control? This adds operator and conservation questions to the experience goal.",
+  "sections": [
+    {
+      "heading": "Clarify what “a week in Antarctica” means",
+      "paragraphs": [
+        "A short Antarctic trip is an expedition, not a fixed city itinerary. The Antarctic Treaty Secretariat says most tourism is vessel-based and that the Antarctic Peninsula is reached from South American ports within a few days. It also places most tourism voyages in the austral summer. That means a week may include substantial travel time as well as opportunities to go ashore, depending on the voyage.",
+        "Ask an operator to show the full itinerary and explain which days are at sea, which involve a landing attempt, and what weather or site conditions can change. Do not assume every planned landing will happen. Before paying, read current cancellation, medical, and evacuation terms and understand what the expedition does if a planned shore visit is not possible."
+      ]
+    },
+    {
+      "heading": "Choose the kind of encounter you want",
+      "paragraphs": [
+        "Decide whether you most want to learn about wildlife, geology, research, photography, or shipboard interpretation. That answer can help you compare expedition leaders and briefings rather than choosing only by a dramatic image. Ask who leads shore activities, how they explain environmental rules, and what happens when a site has special restrictions.",
+        "The Treaty system and IAATO visitor guidance frame tourism around avoiding harm to Antarctica’s environmental and scientific values. A responsible trip should make those rules part of the experience, not a nuisance at the edge of it. Look for clear pre-trip preparation about biosecurity, landing behavior, and wildlife viewing."
+      ]
+    },
+    {
+      "heading": "Pack for the rules as well as the weather",
+      "paragraphs": [
+        "Follow the operator’s current clothing list and the specific advice it gives for layers, waterproofing, footwear, and luggage. IAATO provides visitor briefings and guidance documents to help travelers prepare. Ask how the ship handles cleaning or inspection of clothing and equipment so you do not carry seeds or soil into a sensitive environment.",
+        "Keep camera equipment, spare batteries, and dry bags within the operator’s limits. Do not pack food or gear for wildlife encounters, and do not take natural material home. The Antarctic Treaty visitor guidance says not to feed, touch, or handle birds or seals and not to take biological or geological specimens as souvenirs."
+      ]
+    },
+    {
+      "heading": "Make a landing useful even when it is brief",
+      "paragraphs": [
+        "Before going ashore, listen for the day’s site-specific instructions and keep with the leader’s group. Give wildlife the distance the guide specifies and do not approach an animal for a better photograph. If a route or landing area changes, follow the leader rather than trying to reach an earlier planned viewpoint independently.",
+        "Take a small notebook for observations that are not dependent on the camera: wind, terrain, ice texture, or a question from the briefing. Avoid standing on fragile plant communities or entering marked protected areas. Your experience can be substantial without touching, collecting, or getting unusually close to anything."
+      ]
+    },
+    {
+      "heading": "Use the return voyage to reflect",
+      "paragraphs": [
+        "After each landing, record what happened and which details came from the guide rather than your own observation. A few careful notes are better than a long caption that overstates what you saw. Ask the naturalist or expedition team one precise question during the next briefing, especially if it connects the site to climate, history, or research.",
+        "A week will not make anyone an authority on the continent. It can give you a firsthand sense of the limits that shape travel there. Your next action is to compare two expedition itineraries by shore-time assumptions, environmental briefing, and cancellation conditions—not by the most spectacular promise in a brochure."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tourism and Non-Governmental Activities",
+      "url": "https://www.ats.aq/e/tourism.html",
+      "publisher": "Antarctic Treaty Secretariat",
+      "purpose": "Supports the vessel-based character of most tourism, seasonality and common Antarctic Peninsula approach, and tourism guidance framework."
+    },
+    {
+      "title": "During Your Visit",
+      "url": "https://iaato.org/visiting-antarctica/during-your-visit",
+      "publisher": "International Association of Antarctica Tour Operators",
+      "purpose": "Supports wildlife distance and no-touch guidance, respect for protected sites, no collection, and waste rules."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "visit-every-continent",
+    "trek-to-everest-base-camp",
+    "see-the-northern-lights-in-iceland-or-norway"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

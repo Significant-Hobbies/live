@@ -1,0 +1,72 @@
+{
+  "experienceSlug": "do-a-spontaneous-eurotrip",
+  "slug": "do-a-spontaneous-eurotrip",
+  "title": "Keep the freedom in a Eurotrip without improvising your border entry",
+  "description": "Plan a flexible Europe trip with open days and a few firm anchors, while checking entry rules, transport connections, and nationality-specific requirements first.",
+  "intent": "Answers how to leave room for spontaneous choices on a Europe trip without confusing itinerary freedom with border, transport or booking assumptions.",
+  "sections": [
+    {
+      "heading": "Decide what ‘spontaneous’ means",
+      "paragraphs": [
+        "Spontaneous can mean choosing tomorrow’s museum after breakfast, taking an unplanned detour, or deciding each night where to sleep. Those are different levels of uncertainty. Pick one or two flexible parts and anchor the rest: a first arrival city, a departure date, an essential family visit or a booked event. This lets a trip feel open without making every connection a deadline you have to improvise around.",
+        "Choose a rough travel shape before booking. A loop from one airport may reduce backtracking; an open-jaw flight can save a return journey but may cost more or add complexity. A rail corridor can make slower town-to-town days possible; a short stay in one base can leave room for day trips. None is automatically the most spontaneous. The better choice depends on your dates, budget, mobility and appetite for uncertainty."
+      ]
+    },
+    {
+      "heading": "Check entry rules before buying nonrefundable travel",
+      "paragraphs": [
+        "Europe is not one border policy. The European Union’s Your Europe page explains travel documents for non-EU nationals entering EU countries and notes country-specific conditions; the rules for EU citizens, residents, visa holders and other nationalities differ. Check the official page for your own status, then verify any visa or passport validity question with the relevant government or consulate before locking in costly bookings. Do not infer your eligibility from a friend’s passport or a route map.",
+        "If you are a U.S. citizen, the U.S. Department of State recommends reviewing the destination’s current travel advisory, entry and exit rules, local laws, travel documents and personal needs. That guidance is for U.S. travelers; citizens of other countries should use their own government’s official travel service. Cross-border requirements can change, so recheck close to departure."
+      ]
+    },
+    {
+      "heading": "Keep one decision window open",
+      "paragraphs": [
+        "Instead of booking every night, reserve the first arrival and the parts that would be hard to replace, then choose a clear point for the next decision. For example, spend two nights in a city, decide whether to continue by rail or stay longer, then book the next leg once you know how you feel. Carry a shortlist of two plausible next stops so a sold-out train or bad weather does not force a rushed choice.",
+        "A route can be flexible and still have an end date. Mark the latest day you must reach your final city, plus a buffer for the return flight or onward connection. Keep the names and addresses of booked stays offline as well as on your phone. If a connection fails, having the next obligation visible helps you decide whether to wait, change towns or pay for another route."
+      ]
+    },
+    {
+      "heading": "Choose the corridor for the day you want",
+      "paragraphs": [
+        "A useful first comparison is Paris to Strasbourg. SNCF Connect’s timetable page currently shows direct high-speed services in roughly 1 hour 45 minutes, while its listed slower regional service takes about five hours and passes through places including Épernay, Nancy and Saverne. Those are different kinds of day: the direct train buys you a long afternoon in Strasbourg; the slower service turns the journey into a sequence of possible stops. The page is a snapshot for its displayed date, not a promise for yours.",
+        "If you want a stop, decide whether you mean a short pause or an overnight. A timetable stop is not automatically a convenient visit: check the operator’s current departure times, whether the same service continues, luggage arrangements, and the station’s connection to the place you want to see. If you want the fast version, book the Paris–Strasbourg leg that fits your dates. If the slower corridor appeals, make one town—perhaps Épernay or Nancy—the actual destination for the night rather than gambling on a tight onward connection.",
+        "Use that comparison as a model for the rest of the trip: contrast a direct leg with a deliberate intermediate base, then choose based on time in the place versus time in transit. Recheck the operating carrier, timetable, ticket conditions and any required reservation for your exact date. Services, fares and connections change; this example does not establish availability for another day or for a rail pass."
+      ]
+    },
+    {
+      "heading": "Make the first day forgiving",
+      "paragraphs": [
+        "After an overnight flight or a long arrival, avoid planning a timed tour across town. Choose lodging you can reach without several delicate transfers, identify a place to eat near it, and keep the first afternoon open. A spontaneous trip is easier when you are rested enough to notice what you want to do. Share the broad itinerary with someone you trust and agree when you will check in, especially if your plans change often.",
+        "Before departure, write down the one rule that will protect the trip from becoming a sprint: perhaps two nights minimum per stop or no new city on the final day. Then leave the first unplanned morning genuinely unplanned."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Travel documents for non-EU nationals",
+      "url": "https://europa.eu/youreurope/citizens/travel/entry-exit/non-eu-nationals/",
+      "publisher": "European Union, Your Europe",
+      "purpose": "Supports checking entry-document requirements for non-EU nationals traveling to EU countries; does not resolve an individual traveler’s visa eligibility or all European countries’ rules."
+    },
+    {
+      "title": "Planning Your Travel",
+      "url": "https://travel.state.gov/en/international-travel/planning.html",
+      "publisher": "U.S. Department of State",
+      "purpose": "Supports the checklist for U.S. travelers to check destination advisories, entry rules, travel documents and personal needs; applies to U.S. travelers, not all nationalities."
+    },
+    {
+      "title": "Train timetables Paris–Strasbourg",
+      "url": "https://www.sncf-connect.com/en-en/train/timetables/paris/strasbourg",
+      "publisher": "SNCF Connect",
+      "purpose": "Provides an example timetable comparison for Paris–Strasbourg, including direct high-speed journeys and a slower service with listed intermediate stops; the displayed date is a changing schedule snapshot and does not establish future availability, fares or pass-reservation terms."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "take-a-trip-completely-alone",
+    "drive-route-66-end-to-end-across-america",
+    "cycle-coast-to-coast"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

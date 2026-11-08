@@ -1,0 +1,66 @@
+{
+  "experienceSlug": "complete-an-ironman-triathlon",
+  "slug": "complete-an-ironman-triathlon",
+  "title": "Is a full-distance IRONMAN the right next race?",
+  "description": "Compare the full-distance IRONMAN commitment with shorter triathlons, then check one event’s current entry rules, schedule, cutoffs, and athlete guide.",
+  "intent": "How do I judge whether a branded full-distance race fits my goals, and what should I verify in its current official materials?",
+  "sections": [
+    {
+      "heading": "Name the event before you name the goal",
+      "paragraphs": [
+        "“IRONMAN” can describe a brand and event series, while an individual race has its own course, calendar, registration and athlete guide. Start with a specific event page and season. The familiar full-distance format is commonly described as a 2.4-mile swim, 112-mile bike and 26.2-mile run, but confirm the actual event’s current details instead of treating a general description as a contract.",
+        "An official Leeds athlete guide, for example, identifies those distances and then supplies local course and competition details. It illustrates the gap between the broad format and a specific race. A future edition may change course, transition setup, rules or logistics; read the guide for the year you intend to enter."
+      ]
+    },
+    {
+      "heading": "Compare the commitment with a shorter triathlon",
+      "paragraphs": [
+        "A sprint or standard-distance triathlon can answer different questions: do you enjoy switching sports under pressure, can you manage transitions, and do open-water conditions suit you? A full-distance event adds many hours of moving, pacing and logistics. It is not simply the same first race with a larger medal.",
+        "If your experience is mostly running, a shorter race can reveal how cycling setup and swim-start dynamics affect you. If you already have long-course experience, compare the event’s bike terrain, swim venue, weather window and cutoff schedule with races you know. Let the format inform the decision; do not let the word “full” become a test of character."
+      ]
+    },
+    {
+      "heading": "Read the current rules as an athlete",
+      "paragraphs": [
+        "Download the current season’s competition rules and event-specific athlete guide from the organizer. Look for registration and transfer terms, required check-in, swim conduct, bike equipment restrictions, transition procedures, cutoff times, withdrawal instructions and medical support information. The 2026 IRONMAN rules are an authoritative rules document, but a 2025 Leeds guide shows why local event details need their own check.",
+        "Make a short list of unresolved questions for the organizer: Is the course final? Where are athletes expected to check in? Which equipment rules apply to your division? How are late course changes communicated? Do not assume a previous edition’s penalties, schedule or course maps will carry forward."
+      ]
+    },
+    {
+      "heading": "Make a readiness conversation concrete",
+      "paragraphs": [
+        "A qualified coach can help compare your current training history with the time, recovery and support a long-course build may require. Discuss ordinary life constraints too: shift work, caregiving, travel to the race, access to a safe swim environment and the ability to train consistently without neglecting work or relationships.",
+        "If you have a health condition or are returning after a significant break, take those questions to an appropriate clinician before committing to a demanding endurance program. This article cannot tell you whether your body is ready. Make the decision with people who can assess your situation, not an internet checklist or a dramatic training anecdote."
+      ]
+    },
+    {
+      "heading": "Build the first step around evidence",
+      "paragraphs": [
+        "Before paying an entry fee, choose one event and read its own materials end to end. Then compare its demands with a shorter local triathlon and write down what skills are missing: comfortable continuous swimming, bike handling, fueling practice under qualified coaching, transitions, or simply time. These are categories to investigate, not a personal prescription.",
+        "If the full distance still looks meaningful, ask a qualified triathlon coach to help map a sustainable next phase and set a review point before registration. If the shorter event looks more appropriate, that is still a precise answer: you can test the sport in a format that lets you learn its moving parts first."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "2026 IRONMAN Competition Rules",
+      "url": "https://www.ironman.com/competition-rules",
+      "publisher": "IRONMAN",
+      "purpose": "Current season rules framework; exact event guides still govern local logistics."
+    },
+    {
+      "title": "IRONMAN Leeds 2025 Athlete Guide",
+      "url": "https://www.ironman.com/sites/default/files/2025-07/IM%20Leeds%20Athlete%20Guide%202025_8.pdf",
+      "publisher": "IRONMAN",
+      "purpose": "Specific example of full-distance labels and event instructions; not evidence of 2026 arrangements."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "complete-a-triathlon",
+    "run-a-marathon",
+    "complete-a-100-mile-ultramarathon",
+    "cycle-coast-to-coast"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

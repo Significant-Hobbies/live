@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "have-one-real-conversation-with-a-grandparent-before-it-is-too-late",
+  "slug": "have-one-real-conversation-with-a-grandparent-before-it-is-too-late",
+  "title": "Plan a conversation your grandparent can lead",
+  "description": "Prepare a gentle grandparent conversation with one open question, room for uncertainty and a clear choice about recording or sharing their stories.",
+  "intent": "How can I preserve one meaningful conversation with a grandparent without turning it into an interview they did not agree to?",
+  "sections": [
+    {
+      "heading": "Let the person set the boundaries",
+      "paragraphs": [
+        "Ask first whether they would enjoy a longer conversation and what they are comfortable discussing. “Would you like to talk about the neighborhood where you grew up sometime?” is easier to decline than an unexpected list of questions. If the answer is no, choose another way to spend time together. This goal is a conversation, not an extraction of a family archive.",
+        "Ask whether they want to be recorded, and explain what you would do with the recording. A voice memo stored only for family differs from a public podcast or social post. Agree on who can hear it, where a copy would live, whether they can ask you to stop, and whether you may share any excerpt. If these terms feel too formal for the moment, simply keep the conversation unrecorded."
+      ]
+    },
+    {
+      "heading": "Choose a door into one story",
+      "paragraphs": [
+        "The Library of Congress family-history guide suggests asking an older relative questions about their life. The examples here are prompts you can adapt, not a required interview list: “What did an ordinary weekend feel like when you were young?” or “Is there a song you remember hearing at home?” Let your grandparent choose which subject feels welcome.",
+        "Bring a photograph, recipe card or place name only if it is welcome. A single object can prompt a story about who used it, how it was made, or what memory it brings up. It can also lead somewhere unexpected. Follow their interest rather than steering every answer back to a prepared theme."
+      ]
+    },
+    {
+      "heading": "Listen for texture, not a perfect timeline",
+      "paragraphs": [
+        "People may remember the same event differently, or place details in a different order than you expect. Avoid correcting them in the middle of a personal story. If the date matters to you, ask gently what makes them place it around that time, and mark your notes as an estimate when neither of you knows. A sincere memory does not need to pass a fact-check to be meaningful.",
+        "Use follow-ups that invite elaboration rather than imply a right answer: “What happened next?” “Who was with you?” “What do you remember noticing?” A pause is not a failure. Give your grandparent time to think, and accept a short answer without repeating the question until they comply."
+      ]
+    },
+    {
+      "heading": "Keep it mutual and comfortable",
+      "paragraphs": [
+        "Plan for the person’s preferred pace, hearing, language, comfort and time of day. Sit somewhere familiar and reduce distractions if they like that; if talking is tiring, make it a shorter visit. You can share a memory of your own or ask what they would like you to understand about the present. That keeps the exchange from feeling like a one-way family assignment.",
+        "If grief, conflict, migration, illness or another difficult subject comes up, let them decide whether to continue. Say that you can change the topic or stop. Do not press for painful details because they would make a dramatic story. If a subject feels too heavy for either person, pause and return to ordinary shared activities."
+      ]
+    },
+    {
+      "heading": "Preserve only what you were invited to keep",
+      "paragraphs": [
+        "If you took notes, show them to your grandparent or read back a detail to make sure you heard it correctly. The Library of Congress says to ask before recording and notes that a recording may later be transcribed or shared. Decide together whether that is wanted and who may see it; the guide does not prescribe a detailed interview method or permission framework.",
+        "End by asking what they enjoyed talking about or whether they would like to continue another time. A good first conversation can last ten minutes or an afternoon; there is no required length. Start by choosing one topic your grandparent has already shown interest in and ask whether they feel like talking about it."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Oral Histories - Family History for Kids",
+      "url": "https://guides.loc.gov/family-history-for-kids/interviews",
+      "publisher": "Library of Congress",
+      "purpose": "Supports asking an older relative before recording and notes that a recording may later be transcribed or shared; the specific conversation prompts in the article are original suggestions."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "spend-a-week-with-your-grandparents-or-elders",
+    "reconstruct-one-ordinary-childhood-day",
+    "host-a-family-reunion"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

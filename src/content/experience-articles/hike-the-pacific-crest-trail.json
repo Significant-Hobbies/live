@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "hike-the-pacific-crest-trail",
+  "slug": "hike-the-pacific-crest-trail",
+  "title": "Choose a Pacific Crest Trail journey you can finish",
+  "description": "Compare a PCT section hike with a long-distance trip, then build a route and permit plan around your actual time, experience and recovery needs.",
+  "intent": "Help a prospective PCT hiker choose among a section hike, a 500-mile-plus permit trip, or a thru-hike and make route planning the first milestone.",
+  "relatedExperienceSlugs": [
+    "trek-across-iceland",
+    "climb-a-mountain-over-4-000-metres",
+    "community-d511273f-b104-5228-b141-f343c01a5e5e"
+  ],
+  "sections": [
+    {
+      "heading": "Start with the size of journey, not the badge",
+      "paragraphs": [
+        "The Pacific Crest Trail is often pictured as one continuous walk, but your first decision can be much smaller: a weekend section, a week between two trailheads, a long section, or an end-to-end attempt. Pick the trip that fits the time you can genuinely reserve, the transport you can arrange, and the days you can recover afterward. A shorter route that you complete with attention may teach you more than a dramatic itinerary built around an idealized pace.",
+        "The Pacific Crest Trail Association (PCTA) says its interagency long-distance permit is for hiking or riding at least 500 miles in one continuous trip. Permits are required in some, but not all, areas. If you are planning a shorter section, do not assume the long-distance permit covers it; map every permit area crossed and identify its local issuing agency."
+      ]
+    },
+    {
+      "heading": "Choose a route by season and terrain",
+      "paragraphs": [
+        "The PCT crosses a wide range of landscapes and elevation, so “the trail” is not one uniform outing. Compare candidate sections by distance between reliable exits, remoteness, water planning, seasonal snow, fire closures, and how difficult it would be to change plans. The PCTA’s own application guidance warns that the route is snow-covered for much of the year and asks hikers to check whether their chosen dates are feasible.",
+        "A practical shortlist has two routes: the one you most want and a lower-commitment alternative. For each, write down start and finish transport, overnight areas, expected daily effort, resupply or food plan, and the decision point where you would turn around. Use current land-manager notices for each area; a route description from last season cannot tell you whether a closure or local permit rule has changed."
+      ]
+    },
+    {
+      "heading": "Understand the permit boundary",
+      "paragraphs": [
+        "For trips of 500 or more continuous miles, the PCTA can issue an interagency long-distance permit that covers many places along the PCT where permits are otherwise required. The PCTA explains that limits apply at some popular start points and that applicants need a feasible itinerary with locations and dates. It also warns that popular dates may fill quickly. These details are useful for planning, not a promise that your preferred date will be available.",
+        "For a section trip under that threshold, consult the PCTA’s local-permit map and the responsible land agencies. Read the permit terms before you apply, and follow current fire and camping restrictions. Avoid inventing a longer itinerary just to fit a permit category; plan honestly around the trip you intend to take."
+      ]
+    },
+    {
+      "heading": "Build capacity through a rehearsal trip",
+      "paragraphs": [
+        "Before committing to a remote section, take a few overnight walks that test the actual systems you will rely on: carrying your pack, sleeping outdoors, preparing food, managing water, and continuing after an ordinary bad night. Keep notes on what caused friction. If the problem is a heavy bag, simplify. If the problem is navigation, learn with an experienced hiker or take a course. If your body is not recovering between days, shorten the plan and consult a clinician about persistent symptoms.",
+        "Treat training as a way to discover which plan is workable, not as proof that you must pursue the longest version. No fitness level replaces current trail information, suitable judgment, or a willingness to stop when conditions change."
+      ]
+    },
+    {
+      "heading": "Make the first commitment concrete",
+      "paragraphs": [
+        "Choose one section that is open and permitted for the season you can travel. Check current agency notices, transport, water and camping rules; then test a small piece of the plan on a local overnight. If you want 500 miles or more, read the PCTA application instructions and make a realistic itinerary before entering the permit process.",
+        "A useful next action is to mark one start and finish on an official map and name the exact permit authority for every restricted segment. That turns the PCT from an abstract thru-hike image into a real trip you can evaluate and revise."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "PCT Long-distance Permits: overview",
+      "url": "https://permit.pcta.org/",
+      "publisher": "Pacific Crest Trail Association",
+      "purpose": "Opened primary permit rules: 500 continuous miles, local permit areas, scarcity limits, and permit purpose."
+    },
+    {
+      "title": "How to apply for a Long-distance Permit",
+      "url": "https://permit.pcta.org/docs/how-to-apply-for-a-long-distance-permit/",
+      "publisher": "Pacific Crest Trail Association",
+      "purpose": "Current application instructions and warning to check feasibility, snow, trailheads, dates, and permit limits."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

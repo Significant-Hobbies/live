@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "community-95b4b914-db8a-5d49-94d9-669d56fc7a9a",
+  "slug": "make-wine-at-home",
+  "title": "Plan a small home wine batch with an extension method",
+  "description": "Plan a first home wine batch by choosing a fruit-specific extension method, listing compatible equipment and keeping fermentation records.",
+  "intent": "Help a first-time home winemaker choose an extension method, organize a small batch and understand where technical and legal advice is needed.",
+  "sections": [
+    {
+      "heading": "Choose a method for one fruit base",
+      "paragraphs": [
+        "Pick the fruit or juice first, then find a complete extension or university method written for that base and batch size. A grape method may not fit berries, plums or garden produce: acidity, sugar, pulp and extraction differ. Virginia Cooperative Extension’s home-gardener guide lays out a sequence from fruit preparation and primary fermentation through secondary fermentation, clearing and bottling, and includes a plum example. Treat that guide as an outline, not a universal recipe. It does not display a publication date on the page, so avoid carrying over old product amounts or fixed thresholds without checking current specialist guidance.",
+        "Before buying supplies, read the chosen method from start to finish. Mark every ingredient, measurement, vessel, transfer and condition it assumes. If you cannot obtain a listed instrument or do not understand a step, ask a local extension enology specialist or qualified winemaking instructor before starting. Do not combine directions from different recipes or make up additions to compensate for taste."
+      ]
+    },
+    {
+      "heading": "Build the equipment list from the method",
+      "paragraphs": [
+        "The Virginia Cooperative Extension guide’s one-gallon overview names a primary fermenter, a secondary fermenter, a bung and airlock, a hydrometer, siphon tubing and a straining bag. Use the method you selected to confirm sizes and materials; a one-gallon illustration is not a fit for every batch. Choose food-grade equipment intended for fermentation, with enough headroom for the active stage and a compatible airlock that lets gas escape. Never seal an actively fermenting liquid in a rigid, pressure-tight vessel.",
+        "Make one checklist with the vessel names, sizes, measuring tools and consumables, then compare it with what you already own. Inspect containers, seals and tubing for cracks, residue or an unknown prior use. Clean first, then sanitize with a product specifically intended for food-contact equipment, following its current label for dilution, contact time and rinse directions. The extension guide emphasizes equipment sanitation, but its page includes different product examples; rely on the product label and your selected method for exact use."
+      ]
+    },
+    {
+      "heading": "Plan the batch as a sequence",
+      "paragraphs": [
+        "Write a short stage card before beginning: prepare the fruit; fill and cover the primary fermenter as the method says; add only the listed ingredients; record the start date; then follow the method’s checks for moving to the airlocked secondary vessel. The Virginia extension guide describes removing the fruit bag, transferring liquid and sediment, and using an airlock during continuing fermentation. Follow one selected method’s timing and measurement criteria rather than treating this outline as permission to improvise.",
+        "Put each planned check on a calendar with space for the actual observation and measurement. Do not judge completion from bubbles, smell or a fixed number of days alone. If the source method requires a measurement you cannot interpret, ask a qualified instructor before transferring or bottling. Bottling a batch that is still fermenting can build pressure; do not guess that it is finished."
+      ]
+    },
+    {
+      "heading": "Keep records that can improve the next batch",
+      "paragraphs": [
+        "Use one notebook page for the fruit variety and condition, source, batch volume, method and version, ingredients actually added, start date, readings, transfers, and cleaning or sanitation products. Virginia Cooperative Extension recommends recording fruit amounts and ripeness, ingredients and amounts, dates and specific-gravity readings, and notes on the finished wine. Record observations without changing this batch’s directions midway. Those notes make it possible to ask an instructor a specific question and compare outcomes next time.",
+        "Keep the batch clearly labeled and out of reach of children. Before beginning, check current alcohol-production rules for your country, state or locality, especially if anyone else will receive it, transport it or pay for it. Do not sell or distribute it based on a general home recipe. This guide does not cover distillation, which has separate legal and safety issues."
+      ]
+    },
+    {
+      "heading": "Make the first attempt deliberately small",
+      "paragraphs": [
+        "Choose a batch size you can monitor and store using the method’s equipment requirements. Ask an extension office whether it offers enology advice, workshops or a tested beginner method for the exact fruit base you have chosen. Confirm the document is complete and that its tools, ingredient labels and directions match what you can obtain now. Set a stop point before starting: if instructions conflict, the vessel is damaged, or a measurement falls outside the method’s guidance, pause and seek qualified help.",
+        "After the batch is complete, compare the finished notes with the method and write down one question for an experienced instructor. Change only one variable in a later batch, and keep its own record. A small, carefully documented first attempt teaches more than an improvised recipe assembled from disconnected posts."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wine Making for the Home Gardener",
+      "url": "https://www.pubs.ext.vt.edu/HORT/HORT-213/HORT-213.html",
+      "publisher": "Virginia Cooperative Extension, Virginia Tech",
+      "purpose": "Supports the high-level home-winemaking sequence, example equipment list, sanitation emphasis and recommended recordkeeping. The article page does not show a publication date; no numeric recipe doses, fixed fermentation thresholds, or legal limits are repeated."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "brew-your-own-beer-or-wine",
+    "ferment-something-for-the-first-time"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

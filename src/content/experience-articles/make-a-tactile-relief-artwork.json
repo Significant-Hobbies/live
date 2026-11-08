@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "make-a-tactile-relief-artwork",
+  "slug": "make-a-tactile-relief-artwork",
+  "title": "Design a tactile artwork that reads by touch",
+  "description": "Create a tactile relief artwork with a clear idea, distinct textures and enough open space for hands to explore it. Learn how to test and revise the piece with a reader.",
+  "intent": "How do you make a tactile relief artwork that communicates instead of becoming a busy surface? This guide adds a design and feedback process beyond simply choosing textured materials.",
+  "sections": [
+    {
+      "heading": "Start with one thing you want someone to notice",
+      "paragraphs": [
+        "A tactile artwork is not a raised copy of a picture. Begin with a simple experience or relationship: a path that curves toward a sheltered shape, a cluster of rough marks beside a smooth field, or a familiar object with one surprising texture. Keep a short sentence beside your sketch describing what the viewer might discover. If the sentence contains several ideas joined by “and,” the composition may be asking too much at once.",
+        "Plan for hands, not a distant glance. Give the main form room around it, and make neighboring textures clearly different in height or feel. Small, crowded ridges can merge under a fingertip; a bold contour and a quiet area can be more expressive than a page full of detail. The American Printing House for the Blind’s tactile design guide stresses simplicity, distinct textures, and uncluttered spacing."
+      ]
+    },
+    {
+      "heading": "Choose materials for contrast and comfort",
+      "paragraphs": [
+        "Gather a few safe, stable materials: heavy paper or thin board, yarn, fabric, corrugated card, smooth string, textured paper, and a suitable non-toxic adhesive. Consider how each surface feels when touched repeatedly. Avoid sharp edges, loose grit, wet finishes, or elements that shed. A piece intended for public handling needs durable attachment and an easy way to clean it; ask the venue or collaborator about material restrictions before building.",
+        "Make a small sample strip before committing to the final base. Put two textures beside each other, then add the line or shape you expect to be most important. Check whether the difference is obvious with eyes open and closed. If every material feels similarly rough, change one for a smoother or more raised option instead of adding more pieces."
+      ]
+    },
+    {
+      "heading": "Build in layers, leaving room to read",
+      "paragraphs": [
+        "Work from the broadest areas toward the details. Mark the composition lightly, attach the largest shapes, and leave gaps where fingers need to move between features. If the artwork represents a route, use a consistent raised line for the route and a contrasting texture for landmarks. If it is abstract, a brief title can invite interpretation without forcing one correct answer.",
+        "Keep orientation easy to find: choose a top edge, make a small tactile marker if it helps, and preserve a clear border. For a first relief, one central form plus one contrasting surrounding field is enough. Photograph or sketch each stage for your own revision notes, but do not assume a photograph shows what the texture feels like."
+      ]
+    },
+    {
+      "heading": "Ask someone to try it without coaching",
+      "paragraphs": [
+        "Invite a blind or low-vision person, tactile-art practitioner, or other intended reader to explore the work if they are interested and available. Ask first how they prefer to engage; do not cover someone’s eyes or direct their hands. Give a neutral prompt such as “Tell me what you notice,” then leave space for the person to trace a path and describe their interpretation.",
+        "If the tester cannot find the central form, do not immediately explain it. Ask which texture seemed clearest and where their hand lost the trail. Their reading is valuable feedback, not a test they can fail. If no tester is available, check whether an accessible image description or a different format would communicate the idea better; a tactile version is not automatically useful just because it can be touched."
+      ]
+    },
+    {
+      "heading": "Revise one feature and make the next version",
+      "paragraphs": [
+        "A first attempt might be a raised outline of a leaf with a smooth center and a single ribbed vein. If the vein overwhelms the outline, remove or simplify it. If the leaf is hard to orient, strengthen its stem end or add a consistent page marker. Work in small revisions so you can tell which change improved the experience.",
+        "Finish by noting the title, materials, and one question you still have about the piece. If you plan to share it publicly, describe its purpose and invite feedback without claiming it represents every blind or low-vision reader. Your next action is to make a palm-sized sample, then let someone explore it before scaling up."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Guide to Designing Tactile Illustrations for Children’s Books",
+      "url": "https://sites.aph.org/files/research/illustrations/",
+      "publisher": "American Printing House for the Blind",
+      "purpose": "APH guidance recommends simplified tactile designs with distinct textures, open spacing and evaluation with readers."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "print-a-set-of-foam-relief-postcards",
+    "weave-a-miniature-tapestry-on-cardboard"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

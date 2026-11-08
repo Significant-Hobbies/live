@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "donate-anonymously-and-tell-no-one",
+  "slug": "donate-anonymously-and-tell-no-one",
+  "title": "Give quietly while keeping the donation documented",
+  "description": "Choose a private way to support a cause, check what the charity and payment provider can see, and keep records without making the gift public.",
+  "intent": "How can I make a donation without seeking credit while staying realistic about privacy, receipts and tax records?",
+  "sections": [
+    {
+      "heading": "Decide who you mean by “no one”",
+      "paragraphs": [
+        "An anonymous gift can mean that friends and the public do not know who gave, that the charity does not acknowledge you by name, or that nobody involved in the transaction can identify you. Those are not the same. A bank, payment processor or recipient organization may still process identifying information even when your name is not published.",
+        "Choose the level of privacy you want before donating. If you mainly want to avoid public recognition, ask the charity whether you can opt out of donor lists, event programs, social posts and thank-you announcements. If you do not want the organization to know your name, check whether it can accept a gift through a permitted channel without compromising its compliance or accounting procedures."
+      ]
+    },
+    {
+      "heading": "Choose the cause before the anonymity tool",
+      "paragraphs": [
+        "Select an organization whose work you understand and whose donation route you can verify from its official website. Check the legal recipient, how the contribution will be used, recurring-payment terms, fees and the method for contacting donor support. Avoid unsolicited links or payment instructions sent through private messages.",
+        "Decide whether you want a restricted gift for a named program or an unrestricted contribution the organization can use where needed. Ask what happens if a program closes or its funding priorities change. “Anonymous” should not mean “unchecked”; the charity still needs to be accountable for how it receives and reports money."
+      ]
+    },
+    {
+      "heading": "Understand the recordkeeping tradeoff",
+      "paragraphs": [
+        "If you want a receipt, donor recognition or a tax deduction, the organization may need information about the donor. U.S. IRS guidance, for example, says a written acknowledgment for a charitable contribution of $250 or more must include the organization’s name, contribution amount and certain other details. This is a narrow U.S. tax-substantiation rule, not a universal privacy law or a personal tax determination.",
+        "You can keep your own private confirmation without telling friends or posting about the gift. Save the date, recipient, amount, payment confirmation and any terms that matter. If you plan to claim a deduction, check current rules with your jurisdiction’s tax authority or a qualified tax professional; do not sacrifice required documentation on the assumption that anonymity and tax treatment always align."
+      ]
+    },
+    {
+      "heading": "Set a boundary around recognition",
+      "paragraphs": [
+        "If a charity offers a public thank-you, reply with a short preference: “Please do not list or publicly identify me.” Ask whether the organization can honor that request and whether the donor’s name will still appear in any required internal or regulatory records. Get the answer before paying if public listing would violate your privacy needs.",
+        "Do not use a donation to create a private obligation for the recipient. Avoid conditions that demand personal access, a message from a beneficiary or proof through a child’s photograph. Give within your means, and keep the purpose separate from a desire to be praised, forgiven or publicly associated with the cause."
+      ]
+    },
+    {
+      "heading": "Complete the gift and move on",
+      "paragraphs": [
+        "Use the charity’s verified payment channel, review the amount and frequency, and save the confirmation in a private place. If you selected a recurring gift, note how to cancel and the next charge date. Keep the act quiet if that is your intention; you do not need to announce it as a gesture of humility.",
+        "A small private note can help you remember why you chose the organization and whether you want to review the gift later. Your next step is to check the organization’s donor privacy page and decide whether your goal is anonymity from the public, from the charity, or simply from your social circle."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Charitable contributions: Written acknowledgments",
+      "url": "https://www.irs.gov/charities-non-profits/charitable-organizations/charitable-contributions-written-acknowledgments",
+      "publisher": "Internal Revenue Service",
+      "purpose": "States U.S. documentation requirements for written acknowledgments of contributions of $250 or more; cited narrowly to distinguish tax records from public recognition."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "start-a-scholarship-fund",
+    "leave-a-legacy-gift-to-a-charity-in-your-will",
+    "start-a-foundation-or-fund-something-that-outlasts-you"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

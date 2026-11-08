@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "raise-money-for-a-cause-you-deeply-believe-in",
+  "slug": "raise-money-for-a-cause-you-deeply-believe-in",
+  "title": "Build a fundraiser people can understand and trust",
+  "description": "Choose a defined need, verify who receives donations, explain the money flow clearly and invite support without pressure or inflated promises.",
+  "intent": "A practical, transparent fundraiser plan that helps supporters assess the beneficiary and understand exactly how collected money will be handled.",
+  "sections": [
+    {
+      "heading": "Turn a broad cause into one answerable need",
+      "paragraphs": [
+        "“Help the environment” is a value, not a fundraising plan. Choose a specific use that the beneficiary has confirmed: replacing damaged equipment, paying for a named service, or supporting an existing program’s next delivery cycle. Ask the organization what it needs and whether it can receive funds through the channel you are considering. A fundraiser for a group should not promise a project the group has not agreed to run.",
+        "Set a target only after getting a realistic estimate from the beneficiary or supplier. Explain whether the target is a ceiling, a first milestone or an estimate. If costs change or the fundraiser exceeds its goal, state in advance who will decide what happens to extra money. A small, clear request is easier to trust than a large number attached to a moving description."
+      ]
+    },
+    {
+      "heading": "Trace the donation from giver to recipient",
+      "paragraphs": [
+        "Write down the path money will take: supporter to platform, platform fees, organizer, then beneficiary. The Federal Trade Commission warns that a crowdfunding donation may go to the campaign organizer rather than the named charity, and a donation made to an individual is not necessarily tax deductible. If supporters expect to give to a registered charity, the cleanest route is usually the charity’s own donation channel, after confirming the exact organization and how it will use funds.",
+        "In the United States, the FTC recommends checking an organization’s details and tax-exempt status when deductibility matters. These rules and registries are jurisdiction-specific; do not tell international donors that their gift qualifies for a tax benefit. Avoid handling funds in a personal account if a direct transfer can be arranged. Keep a copy of platform terms and fee disclosures before you publish."
+      ]
+    },
+    {
+      "heading": "Write a factual page without emotional pressure",
+      "paragraphs": [
+        "A strong page answers: what is needed, who will receive the money, what evidence supports the need, how funds will be transferred, what expenses come first, and when you will report back. Use a photograph or story only with permission. Do not imply that a particular person will receive help unless the organization has approved that claim. Remove private medical or financial details that are not necessary to explain the project.",
+        "Skip artificial urgency, guilt and claims that a gift will “save” a person or guarantee an outcome. If there is a deadline, identify the real reason: a matching commitment, a scheduled purchase or a campaign window. If you do not know whether a contribution is tax deductible, say so and point readers to the charity or relevant tax authority rather than guessing."
+      ]
+    },
+    {
+      "heading": "Invite participation with room to decline",
+      "paragraphs": [
+        "Make an invitation people can ignore without losing face. For example: “If this project fits your priorities, here is the organization’s direct page and the purpose it confirmed. Sharing the link also helps; please pass only if useful.” Do not keep privately messaging people who declined or use a friendship as proof they should contribute. A fundraiser is a request, not a test of loyalty.",
+        "A useful first audience may be people already connected to the cause, but ask the organization before claiming to represent it. If you are raising money as an individual for another person, explain who controls the funds and what happens if the recipient’s needs change. Never publish bank details or sensitive identity documents to prove legitimacy."
+      ]
+    },
+    {
+      "heading": "Close the loop after the campaign",
+      "paragraphs": [
+        "Keep records of donations, fees, refunds and transfers. Share an update on the schedule you promised, even if the campaign misses its target. Say what was collected, what amount reached the beneficiary, and any approved change in use. The FTC recommends checking account statements and keeping donation records; those are sensible habits for the organizer as well as the giver.",
+        "Before launch, ask the beneficiary to review the page and confirm the route for funds. Then read the page aloud and check that someone who has never met you can answer three questions: who gets the money, what it will fund and how you will report what happened. Publish only after those answers are clear."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Before Giving to a Charity",
+      "url": "https://consumer.ftc.gov/articles/giving-charity",
+      "publisher": "Federal Trade Commission",
+      "purpose": "Supports checking the charity’s identity, program use, tax status and donation channel, and keeping donation records."
+    },
+    {
+      "title": "Donating Through Crowdfunding and Fundraising Platforms",
+      "url": "https://consumer.ftc.gov/articles/donating-through-crowdfunding-and-fundraising-platforms",
+      "publisher": "Federal Trade Commission",
+      "purpose": "Explains crowdfunding donations may go to an organizer and donations to individuals are not tax deductible under U.S. federal rules."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "do-a-group-charity-challenge-with-friends",
+    "volunteer-for-something-you-believe-in",
+    "start-a-foundation-or-fund-something-that-outlasts-you"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

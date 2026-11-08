@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "pull-an-all-nighter-with-people-you-love",
+  "slug": "pull-an-all-nighter-with-people-you-love",
+  "title": "Make the night memorable without making exhaustion the point",
+  "description": "Plan a one-night gathering with a shared reason to stay up, comfortable ways to pause, and a safe plan for getting home and resting afterward.",
+  "intent": "Answers how to plan one late night with people you care about while keeping it voluntary and safe; adds a sequence of shared activities and a clear exit plan.",
+  "sections": [
+    {
+      "heading": "Give the night a reason",
+      "paragraphs": [
+        "An all-nighter is more satisfying when it has a center beyond proving you can stay awake. Choose a theme the group genuinely shares: make breakfast foods from childhood, watch a trilogy you have argued about for years, build a playlist of songs attached to particular memories, or set out old photographs and let people add captions. Keep it simple enough that the activity can survive someone getting tired or changing their mind.",
+        "Agree on the tone before people arrive. Is the plan quiet conversation, games, music or a sunrise walk? A late night can feel very different for a person who wants to tell stories than for someone who wants a loud party. Let each guest contribute one activity and one thing they would rather avoid. No one should be pressured to drink, disclose a private story or keep going to prove loyalty."
+      ]
+    },
+    {
+      "heading": "Build a loose sequence, not an endurance contest",
+      "paragraphs": [
+        "Plan a few anchors with long gaps between them: eat together, play a game, take a break, share a story or put on a film. Have a quiet room, blankets, water and comfortable seating available. Make it normal to nap, leave early or sit out. If a guest needs sleep, that is not a betrayal of the plan.",
+        "For a shared activity, choose something that gets easier when people are tired rather than harder. A cooperative puzzle, low-stakes cooking, listening exchange or story prompt can work better than competitive games that reward quick reactions. Keep cooking safe and supervised; do not use a late hour as a reason to handle knives or hot equipment carelessly. You can make the food earlier and assemble it together later."
+      ]
+    },
+    {
+      "heading": "Protect the way home",
+      "paragraphs": [
+        "Decide before the evening how guests will get home. Arrange a designated rested driver, a taxi or rideshare plan, public transport where available, or a place to sleep. Do not let someone drive because they insist they feel fine. The U.S. National Heart, Lung, and Blood Institute explains that sleep deficiency can interfere with attention, decisions and reaction time, including driving. Its page discusses sleep deficiency generally and does not quantify the effect of this particular one-night plan; the practical choice is to arrange a rested way home rather than gamble on alertness.",
+        "If you plan to see sunrise, choose a location you can reach without a sleepy late-night drive, check local access rules in advance and skip the outing if weather or fatigue makes it unwise. A sunrise is optional. The people and the conversation are the gathering; nobody has to earn the view by staying awake."
+      ]
+    },
+    {
+      "heading": "Leave room for different needs",
+      "paragraphs": [
+        "Ask whether anyone has a schedule, care responsibility or health need that makes staying late difficult. Agree on the actual end time, even if some people leave sooner. Share the location and what guests should bring, and let people know whether there is a comfortable place to rest. If you are hosting, set a quiet boundary for neighbors and avoid surprise noise outdoors.",
+        "If someone becomes confused, unwell, distressed or too tired to participate safely, stop the plan and help them get appropriate support. Do not use energy drinks, alcohol or dares to force the group to stay awake; the activity should remain a choice, not a challenge with escalating risks."
+      ]
+    },
+    {
+      "heading": "Close the night well",
+      "paragraphs": [
+        "End with one small ritual: make toast, write down the funniest shared detail, take a group photo only with permission, or exchange a song that should be part of the playlist. Check that everyone has a safe ride or sleeping arrangement, then let the event finish when people are ready.",
+        "Afterward, note what people want to repeat and which parts were too much. A late-night gathering does not need to become a habit. Choose a date when everyone can keep the next day light, and send the plan with an easy way to opt out of the sunrise or any other activity."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Sleep Deprivation and Deficiency: How Sleep Affects Your Health",
+      "url": "https://www.nhlbi.nih.gov/health/sleep-deprivation/health-effects?trk=public_post_comment-text",
+      "publisher": "National Heart, Lung, and Blood Institute, National Institutes of Health",
+      "purpose": "Supports the narrow safety point that sleep deficiency can impair attention, decisions and reaction time, including driving; the page does not quantify risk from this particular one-night plan or provide individual medical advice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "stay-up-all-night-to-watch-a-sunrise",
+    "have-one-real-conversation-with-a-grandparent",
+    "host-a-dinner-party-for-20-people"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

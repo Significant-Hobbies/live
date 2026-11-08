@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "start-and-grow-a-business",
+  "slug": "start-and-grow-a-business",
+  "title": "Test who will pay before you build the full offer",
+  "description": "Test a business idea with real customer conversations, a clear offer and a small paid trial before investing heavily in branding or expansion.",
+  "intent": "Answer what to validate first when starting a business: the buyer, specific problem, offer and evidence of willingness to pay.",
+  "relatedExperienceSlugs": [
+    "start-something-a-business-blog-or-side-project",
+    "community-8016e36a-5dfc-516f-a448-fdd50b154365"
+  ],
+  "sections": [
+    {
+      "heading": "Describe one buyer and one problem",
+      "paragraphs": [
+        "Write a one-sentence description of who you want to serve and what task or problem you help with. “People who like food” is too broad to guide a first test; “parents who need a ready-to-heat weekday dinner near this neighborhood” gives you something concrete to investigate. Treat it as a hypothesis, not a market fact.",
+        "The U.S. Small Business Administration’s market-research guide recommends investigating demand, market size, location, saturation, and the prices people pay for alternatives. You do not need a large report to begin. Start with the questions that would change whether you pursue the idea."
+      ]
+    },
+    {
+      "heading": "Talk to people about what they already do",
+      "paragraphs": [
+        "Find several people who resemble the buyer and ask about the last time they faced the problem. What did they use? What did they pay? What was frustrating? Where did they search for help? Ask them to tell the story rather than asking whether your idea sounds good. A polite “that sounds great” is not proof of demand.",
+        "Do not pressure friends or family to become customers. If you have a sensitive or regulated product, be careful about collecting personal information and seek appropriate professional advice before testing. Keep notes on what people actually did, not just what they say they might do in a hypothetical future."
+      ]
+    },
+    {
+      "heading": "Make the offer visible and specific",
+      "paragraphs": [
+        "Write a plain offer that says what is included, who it is for, what the buyer receives, and what it costs. A one-page description, sample, or small service trial can expose confusing parts before you build a full site or inventory. Keep the scope small enough that you can deliver it yourself and learn from the result.",
+        "Set a clear boundary for the test: how many customers, how long it runs, what would count as a successful result, and what you will do if the result is weak. Do not treat unpaid interest, survey clicks, or social media reactions as equivalent to a paid transaction. Each type of response answers a different question."
+      ]
+    },
+    {
+      "heading": "Track evidence that changes the decision",
+      "paragraphs": [
+        "Create a simple table with the person’s customer type, problem, current alternative, response to your specific offer, and next step. If people say the problem is real but reject the offer, ask whether the issue is timing, format, trust, or price. If no one recognizes the problem, revise the audience or stop before sinking more time into production.",
+        "Keep early costs and obligations small while you learn. This article is not financial, tax, legal, or regulatory advice; before making binding commitments or entering a regulated industry, consult the appropriate qualified adviser in your jurisdiction. Be candid with test customers that you are evaluating an early idea."
+      ]
+    },
+    {
+      "heading": "Make the next investment conditional",
+      "paragraphs": [
+        "After the trial, write down what you learned, what remains uncertain, and the smallest next experiment. It might be a second version of the offer, a different customer group, or a conversation with a local small-business counselor. The SBA suggests using direct research such as interviews and focus groups for questions specific to a business, while recognizing that this research takes time and effort.",
+        "Do not build expansion into the plan just because the idea is exciting. Define one condition you need to meet before buying inventory, hiring, or committing to a lease. Your first action is to write the offer in plain language and invite a potential buyer to respond to a concrete trial."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Market research and competitive analysis",
+      "url": "https://legacy.sba.gov/es/guia-de-negocios/planifique-su-empresa/investigacion-de-mercado-y-analisis-competitivo",
+      "publisher": "U.S. Small Business Administration",
+      "purpose": "Opened SBA guide for demand, market size, location, saturation, pricing and direct customer research methods."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

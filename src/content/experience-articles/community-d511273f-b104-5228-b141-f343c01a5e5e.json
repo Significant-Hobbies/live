@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "community-d511273f-b104-5228-b141-f343c01a5e5e",
+  "slug": "climb-a-mountain-in-the-himalayas",
+  "title": "Choose a Himalayan climb by route, altitude and support",
+  "description": "Plan a Himalayan ascent around a named route, qualified local support, current permits and medical advice tailored to your own health.",
+  "intent": "How to begin planning a guided Himalayan climb by comparing route demands, altitude exposure, local rules, and the operator’s safety plan.",
+  "sections": [
+    {
+      "heading": "Choose a mountain and route before choosing a date",
+      "paragraphs": [
+        "“The Himalayas” includes many countries, ranges, elevations and types of climb. A high trekking peak, a technical summit and a multi-week approach are different undertakings. Start by naming a specific mountain or route, then learn what it demands: walking days, terrain, technical skills, overnight elevations, remoteness, and the season the local authority or guide recommends. Do not use a summit photo or an operator’s short itinerary as a substitute for understanding the route.",
+        "A first decision can be between a supported trek such as the Everest Base Camp route and a technical climbing objective that involves specialist equipment and training. These are not interchangeable goals. If you have not climbed before, speak with an established local guiding organization about preparatory experience and a progression appropriate to you. Be willing to choose a lower or non-summit objective if your skills, time, or health do not match the route."
+      ]
+    },
+    {
+      "heading": "Treat altitude as a medical planning question",
+      "paragraphs": [
+        "High altitude can cause serious illness, and acclimatization varies by person and itinerary. CDC’s 2026 Yellow Book chapter identifies Everest Base Camp at roughly 5,400 metres as a high-altitude destination and emphasizes gradual acclimatization. It is written for healthcare providers, not as a self-prescription. Before committing, discuss the actual route and your medical history with a clinician experienced in travel or altitude medicine. Ask what symptoms require stopping or descending and what emergency care is available.",
+        "Do not borrow another climber’s medication plan or treat fitness as protection from altitude illness. Make sure the operator has a conservative plan for changes in how a participant feels, a way to communicate with local staff, and a clear descent and evacuation process. Ask who makes the decision if conditions worsen. Those are questions for the medical professional and guide to answer together; this article cannot determine whether a particular climb is safe for you."
+      ]
+    },
+    {
+      "heading": "Check local rules for the exact route",
+      "paragraphs": [
+        "Permits and guide rules depend on the country, protected area and route. Nepal Tourism Board’s current TIMS page lists Everest Base Camp among the routes covered by Nepal’s revised rule requiring a licensed trekking guide and agency-issued TIMS card in specified protected areas. That is a Nepal-specific rule and may change; other Himalayan countries have different systems. Check the relevant government or park authority for your exact route, then ask the operator to explain which permits it will arrange and provide the official confirmation.",
+        "Do not rely on an old blog’s list of fees or a reseller’s claim that all paperwork is included. Ask whether the quote covers guide services, porter arrangements, lodging, meals, park or climbing permits, insurance requirements, emergency communication, and a weather-related change. These details affect both the budget and the practical risk. Read the cancellation and evacuation terms before paying."
+      ]
+    },
+    {
+      "heading": "Interview the operator like a partner",
+      "paragraphs": [
+        "Ask who will lead the climb and what experience they have on that exact route and season. Ask how many clients each guide supervises, what happens if a participant needs to descend, where the nearest medical support is, and how the team checks weather and route conditions. Request written answers and confirm that the business is registered or licensed where the local rules require it. A polished summit photograph is not evidence of an emergency plan.",
+        "Be cautious of promises that every client will reach the summit or that an itinerary is “safe for anyone.” Weather, health, snow and route conditions can change. A sound operator explains what can force a turnaround and treats that decision as part of the expedition, not a failure. Verify guide arrangements and permits directly when possible with the responsible tourism authority."
+      ]
+    },
+    {
+      "heading": "Build a progression instead of a leap",
+      "paragraphs": [
+        "A sensible first move may be a local guided hill walk, then a multi-day trek, then a climbing course or lower technical objective. Keep a log of terrain, pack weight, weather, sleep and how you recovered, and use it to ask a qualified guide what experience is missing. This is general preparation, not an individualized training plan. If you have a chronic condition, recent illness or medication questions, consult a clinician before increasing effort or altitude.",
+        "Before booking, write down the mountain, country, route, highest overnight point, guide, permit authority, medical consultation and evacuation plan. If any of those remain vague, keep researching. The goal is to come home with a sound decision, whether that means a climb, a lower route or a later season. Contact a reputable local operator and the relevant government or park office with the named route in hand."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "High-Altitude Travel and Altitude Illness",
+      "url": "https://www.cdc.gov/yellow-book/hcp/environmental-hazards-risks/high-altitude-travel-and-altitude-illness.html",
+      "publisher": "CDC Yellow Book, 2026 edition",
+      "purpose": "Provides clinician-oriented high-altitude risk context, identifies Everest Base Camp as a high-altitude destination and emphasizes gradual acclimatization; supports clinician-first framing."
+    },
+    {
+      "title": "TIMS Card",
+      "url": "https://ntb.gov.np/plan-your-trip/before-you-come/tims-card",
+      "publisher": "Nepal Tourism Board",
+      "purpose": "Lists the Nepal Everest Base Camp route in a set requiring licensed guides and agency-issued TIMS under the listed provision; supports Nepal-specific route-rule example."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "trek-to-everest-base-camp",
+    "climb-a-mountain-over-4-000-metres",
+    "hike-a-mountain-that-scares-you"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

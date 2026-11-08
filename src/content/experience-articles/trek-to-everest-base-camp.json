@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "trek-to-everest-base-camp",
+  "slug": "trek-to-everest-base-camp",
+  "title": "Plan an Everest Base Camp trek around acclimatization, not pace",
+  "description": "Compare trekking itineraries by sleeping altitude, rest days, and support plans, and talk with a travel-medicine professional before choosing a high-altitude route.",
+  "intent": "How should I judge whether an Everest Base Camp itinerary gives altitude enough attention? This adds a provider-question and decision framework to the trek goal.",
+  "sections": [
+    {
+      "heading": "Treat the altitude as the main planning constraint",
+      "paragraphs": [
+        "The CDC Yellow Book lists Everest Base Camp at roughly 5,400 metres and says Nepal trekking itineraries can push the limits of many travelers’ acclimatization. This is not just a strenuous walk where fitness automatically solves the hard part. The CDC also states that training and physical fitness do not predict altitude-illness susceptibility.",
+        "Before choosing dates or flights, discuss the planned sleeping elevations with a clinician familiar with travel medicine. Ask whether your health history, prior altitude response, medication, and emergency plan need individual review. Do not use a social-media itinerary as medical guidance or remove rest days to make the trip shorter."
+      ]
+    },
+    {
+      "heading": "Compare itineraries by sleep altitude",
+      "paragraphs": [
+        "A trekking company’s day-by-day table should show where you sleep each night, not just the walking distance or destination name. Mark every increase in sleeping altitude and every planned rest day. Ask the operator how it changes the plan if a traveler develops symptoms, the group moves more slowly, or weather delays the route.",
+        "The CDC describes gradual ascent and staged acclimatization as important, while emphasizing that individual response varies. Use its current guidance with a qualified medical professional and an experienced operator. A printed itinerary is not proof that you personally will acclimatize on schedule."
+      ]
+    },
+    {
+      "heading": "Ask what support is actually available",
+      "paragraphs": [
+        "Ask who leads the trek, what altitude-related training the team has, how the group communicates, and what happens if someone cannot continue. Clarify whether the operator has a plan for stopping ascent, reaching lower elevation, and obtaining medical help. Get answers in writing before committing.",
+        "Do not mistake a guide’s presence for a guarantee against illness. The CDC notes that itinerary risk depends on starting altitude and ascent rate and that there are no simple screening tests to predict susceptibility. A reputable plan should give travelers room to report symptoms without pressure to keep pace."
+      ]
+    },
+    {
+      "heading": "Prepare for a long walk and a variable response",
+      "paragraphs": [
+        "Training for uphill walking and carrying a light pack can help with the physical demands of trekking, but it does not substitute for acclimatization. Build conditioning gradually, test boots and layers on ordinary local walks, and practice the daily routine you expect to use. Ask the operator what gear and porter arrangements are appropriate for its exact route.",
+        "Keep a simple daily note of sleep, appetite, exertion, and how you feel, and share concerns promptly with the guide. Do not diagnose yourself from a checklist or take medication because another trekker recommends it. Your clinician should help decide what advice or medication is suitable for you."
+      ]
+    },
+    {
+      "heading": "Decide in advance when to turn around",
+      "paragraphs": [
+        "Agree with your travel partner and operator that reaching a lower altitude or ending the trek is a legitimate outcome. Summit or base-camp completion should never outweigh worsening symptoms. The CDC emphasizes not ascending to sleep higher when altitude-illness symptoms are present and descending if symptoms worsen despite rest or treatment.",
+        "Your next action is to compare two itineraries by sleeping elevation, acclimatization days, and emergency response plan, then discuss the better fit with a travel-medicine clinician before booking."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "High-Altitude Travel and Altitude Illness",
+      "url": "https://www.cdc.gov/yellow-book/hcp/environmental-hazards-risks/high-altitude-travel-and-altitude-illness.html",
+      "publisher": "CDC Yellow Book",
+      "purpose": "Supports Everest Base Camp elevation context, variable susceptibility, limits of fitness as a risk predictor, and the importance of gradual acclimatization and not ascending with symptoms."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "climb-a-mountain-over-4-000-metres",
+    "spend-a-week-in-antarctica",
+    "trek-across-iceland"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

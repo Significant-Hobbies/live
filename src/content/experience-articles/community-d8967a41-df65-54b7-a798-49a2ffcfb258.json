@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "community-d8967a41-df65-54b7-a798-49a2ffcfb258",
+  "slug": "look-after-a-plant",
+  "title": "Learn one plant’s signals before changing its care",
+  "description": "Care for one houseplant by matching light and watering to its needs, then use a simple observation log to spot trouble before adding more interventions.",
+  "intent": "How can I learn what one plant needs and respond to its visible condition instead of watering or moving it by habit?",
+  "sections": [
+    {
+      "heading": "Choose a plant you can observe",
+      "paragraphs": [
+        "Start with a plant you can identify by name, or choose a hardy houseplant from a reputable garden center and keep its care label. The goal is to learn one living thing’s pattern rather than buy several plants and repeat the same routine for all of them. Ask about the species, light preference, watering pattern, pot and any known pest issues before taking it home.",
+        "The Royal Horticultural Society advises researching the light each houseplant needs and notes that strong summer sun through glass can scorch susceptible plants. A bright window is not automatically ideal. Look at where sunlight falls at different times of day and choose a spot based on the plant’s needs, not only where it looks good in a room."
+      ]
+    },
+    {
+      "heading": "Make the first week a baseline",
+      "paragraphs": [
+        "On the first day, note the plant’s position, the direction of the window, whether it gets direct sun and what the compost feels like. Take a photograph from the same angle each week. Record only a few observations: new growth, leaf color, soil surface, temperature changes and whether the pot feels light or heavy. A baseline helps you notice a real trend instead of reacting to every small change.",
+        "Avoid repotting immediately unless the seller or plant condition makes it necessary. A recent move already changes light, temperature and watering conditions. Let the plant acclimate, read a reliable guide for its exact species and change one variable at a time so you can tell what helped."
+      ]
+    },
+    {
+      "heading": "Water by checking, not by calendar",
+      "paragraphs": [
+        "A fixed weekly watering day is easy to remember but can be wrong for the room, season and plant. RHS advises checking whether the surface of the compost is dry and notes that a drier pot feels lighter. It also recommends thorough watering through a drainage hole and letting the pot drain. The practical lesson is to check the plant before reaching for the watering can.",
+        "Look for a pot with drainage and empty standing water from its saucer after watering. Roots need air as well as moisture; a pot left sitting in water can lose air spaces in its soil. If leaves yellow and drop, that may be a sign of overwatering, but symptoms can have several causes. Check the soil and light before adding more water or fertilizer."
+      ]
+    },
+    {
+      "heading": "Match the room to the plant",
+      "paragraphs": [
+        "Notice the plant’s location in relation to sun, radiators, cold drafts and room temperature. RHS warns that some plants can wilt near excessive heat, while cold conditions can harm plants that prefer warmth. If a plant is leaning toward a window, do not rotate or move it repeatedly without recording the change. You can turn a pot gradually if its species tolerates it, but avoid treating every lean as a crisis.",
+        "If leaves become pale or scorched, compare their position with the hours of direct light. If stems stretch, check whether the plant is getting enough light. These are clues, not a diagnosis. Find species-specific information or ask a knowledgeable nursery before changing several conditions at once."
+      ]
+    },
+    {
+      "heading": "Use a small care review, not a rescue spiral",
+      "paragraphs": [
+        "Once a week, compare the plant with your first photograph and note one change. If it looks stable, keep the same routine. If it changes, consider whether the soil is too wet or dry, whether light has shifted with the season, whether a draft or heater is nearby, or whether pests are visible under leaves. RHS lists browning edges as a possible under-watering sign and yellowing, dropping leaves as possible overwatering; treat these as indicators to investigate, not proof.",
+        "After you have observed a stable pattern, decide whether the plant has room to grow or needs repotting. RHS notes that repotting is generally seasonal and depends on growth and container conditions. The next step is to make one observation log for a month and adjust only when the plant and its growing guide give you a reason."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How to grow houseplants",
+      "url": "https://www.rhs.org.uk/plants/types/houseplants/growing-guide",
+      "publisher": "Royal Horticultural Society",
+      "purpose": "Supports species-specific light, watering, drainage and common symptom guidance; the article treats symptom descriptions as clues rather than diagnoses."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "join-a-supervised-invasive-plant-removal-workday",
+    "plant-something-that-will-outlive-you",
+    "draw-a-leaf-without-looking-at-the-page"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

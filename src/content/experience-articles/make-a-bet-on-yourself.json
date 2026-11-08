@@ -1,0 +1,59 @@
+{
+  "slug": "make-a-bet-on-yourself",
+  "title": "Make one calculated bet on your own ability",
+  "description": "Turn a personal ambition into a bounded experiment with a clear deliverable, a budget cap, evidence and a date to decide what comes next.",
+  "intent": "Translate confidence into a bounded personal experiment rather than a speculative financial wager or a promise of success.",
+  "sections": [
+    {
+      "heading": "Choose a bet you can describe",
+      "paragraphs": [
+        "Pick one ability, project or change you keep postponing. Make the bet a testable action: publish a prototype, apply for a role, teach a workshop, record a demo or ask ten potential customers about a service. Avoid framing it as ‘quit everything and trust the universe.’ A useful bet gives you new evidence even if the first attempt does not work.",
+        "Write a sentence with a result you control: ‘By [date], I will complete and show [specific work] to [specific audience].’ Separate that from the outcome you cannot control, such as earning a particular amount or being selected. Confidence can justify taking a deliberate step; it cannot guarantee how other people will respond."
+      ]
+    },
+    {
+      "heading": "Set a boundary around the downside",
+      "paragraphs": [
+        "Choose a time window and a maximum amount of money, hours or other resources you can afford to commit without putting essentials at risk. Write down what you will not borrow, sell or give up for this experiment. If the idea involves a business, include one-time expenses and recurring costs, not just the attractive purchase. Keep rent, food, care, insurance and existing obligations outside the experiment’s budget.",
+        "The U.S. Small Business Administration’s planning guide recommends market research and estimating startup expenses before launch; it distinguishes one-time from monthly costs and suggests building a full picture of expenses. This is a U.S. small-business planning resource, not personal financial advice or a promise that a business will succeed. For a major financial decision, consult an appropriately qualified adviser."
+      ]
+    },
+    {
+      "heading": "Ask reality-testing questions",
+      "paragraphs": [
+        "Before spending, talk to people who could use the thing or understand the field. Ask what they currently do, what frustrates them and whether they would try your proposed version. Do not ask only ‘Do you like my idea?’ which invites encouragement without evidence. Look at existing options and record what your test will make easier, cheaper, clearer or more useful.",
+        "Make a small prototype or rehearsal before buying the large version: one paid pilot before leasing a studio, one sample before printing hundreds, one practice class before renting a venue. If you need permission, a license or a safety qualification, price the compliant path before you commit. Treat legal, tax and licensing questions as professional research, not a wager."
+      ]
+    },
+    {
+      "heading": "Write the rules before emotions rise",
+      "paragraphs": [
+        "Make a one-page experiment card: hypothesis, deliverable, audience, time window, spending limit, success signal, stop signal and review date. A success signal might be completing the portfolio and receiving three concrete critiques; a stop signal might be reaching the agreed budget cap or discovering that the work depends on an unavailable permission. Set the rules when you are calm so sunk costs do not silently expand the bet.",
+        "Ask one trusted person to check whether your cap is meaningful and whether your evidence actually tests the idea. They are an accountability partner, not a guarantor. Keep a separate note of why you began so you can distinguish a goal you still care about from a plan you are continuing only because you already invested in it."
+      ]
+    },
+    {
+      "heading": "Review what the bet taught you",
+      "paragraphs": [
+        "At the review date, compare the evidence with your original hypothesis. Did you finish the work? Did the intended audience understand it? What was harder, more costly or more rewarding than expected? Decide to stop, adjust or run a second small test. If the project is working, design the next step with a fresh cap and updated information instead of assuming the first experiment proves unlimited demand.",
+        "Write down one skill you gained and one question still open. A bet on yourself is not a promise that success is inevitable or a reason to ignore risk. It is a deliberate commitment to learn through action while preserving the ability to change course. That combination—courage, evidence and a limit—is more useful than either endless planning or an all-or-nothing leap."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Plan your business",
+      "url": "https://www.sba.gov/counseling/plan-your-business/",
+      "publisher": "U.S. Small Business Administration",
+      "purpose": "Supports the U.S.-specific example of testing market demand and estimating one-time and recurring startup costs before a business launch; it does not give personal financial advice or predict success."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "start-something-a-business-blog-or-side-project",
+    "invest-your-first-serious-money",
+    "become-genuinely-good-at-one-thing"
+  ],
+  "experienceSlug": "make-a-bet-on-yourself",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

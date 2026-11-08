@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "see-the-tulip-fields-in-the-netherlands",
+  "slug": "see-the-tulip-fields-in-the-netherlands",
+  "title": "See Dutch tulips without stepping into a working field",
+  "description": "Plan a Dutch tulip outing around changing bloom conditions, a lawful viewing route, and the difference between a display garden and a working bulb field.",
+  "intent": "How can I see tulip fields while respecting growers? This guide separates a public garden, a field-edge route and a designated picking setting.",
+  "sections": [
+    {
+      "heading": "Choose the kind of flower visit",
+      "paragraphs": [
+        "Seeing tulips can mean several different things. Keukenhof is a designed walking garden; production fields are working farmland; a picking garden or show garden may explicitly allow visitors among the flowers. The official Amsterdam tourism guide lists regional walking, cycling and driving routes as well as dedicated attractions. Decide whether you want cultivated displays, a landscape ride or a hands-on activity before choosing transport.",
+        "Timing is seasonal and weather-dependent. Visitor sources describe a broad spring season, but no date range guarantees that a particular field is in bloom. Check the current garden calendar or regional flower map close to travel and keep a backup such as a museum or show garden. A production field may change according to the grower’s crop needs."
+      ]
+    },
+    {
+      "heading": "Stay on the public side of the boundary",
+      "paragraphs": [
+        "Production fields are private property, and stepping among rows can damage flowers or bulbs. Holland.com, the official Netherlands tourism site, says to admire the fields from a distance and not enter them; an unmarked field is not an invitation. Stay on public roads or paths and respect ropes, signs and farm access. Do not walk in for a photo even if somebody else has.",
+        "If you want a photograph among tulips, choose a designated photo spot, show garden or picking garden whose rules explicitly allow it. IAmsterdam describes a picking garden and a separate tulip attraction with a show garden. Check that venue’s current ticket, opening and photo policy. The right backdrop is one where visitors are invited, not a crop you have to trespass into."
+      ]
+    },
+    {
+      "heading": "Make the ride an observation route",
+      "paragraphs": [
+        "A bike ride or drive can make the fields feel less like one oversized photo stop. Choose a mapped route, note its length and surface, and select a couple of stops where visitors are welcome. The Amsterdam guide points to routes through Flevoland, while regional flower maps distinguish production fields from attractions. A pretty line of tulips may still be private land, so follow the map’s categories.",
+        "At a legal viewpoint, look for variation: color blocks, the gaps between rows, direction of light and the difference between a distant field and a nearby flower. At a garden, compare forms or colors rather than photographing every bed. This gives you a better sense of the cultivated landscape without compressing the visit into one crowded selfie."
+      ]
+    },
+    {
+      "heading": "Build a weather and transport fallback",
+      "paragraphs": [
+        "Check the forecast and regional transport close to the day. Rain can change the comfort of a cycle route, and sunny weather cannot guarantee bloom. If you rent a bicycle, confirm return location and hours, then leave time to return without rushing. If driving, check local parking instructions; do not stop on a narrow road or field entrance for an improvised photo.",
+        "Split the day into a garden or museum plus a field-edge route. IAmsterdam describes Museum De Zwarte Tulp as a place to see tulip art, botanical illustrations and information about bulb cultivation. A cultural stop gives the outing another layer if fields are early, past bloom or closed to visitors."
+      ]
+    },
+    {
+      "heading": "Take one careful picture, leave the crop intact",
+      "paragraphs": [
+        "Use the public edge to compose a wide view: a path can lead the eye into color without placing a person among plants. For detail, photograph a flower only where access is explicitly allowed. If a grower marked a boundary, do not cross it or move a sign. Respecting the field is part of seeing how a working landscape functions.",
+        "Your next step is to choose one public garden or attraction and one mapped viewing route, then confirm current bloom and access information. If weather or crop work changes the view, use the backup and leave the field undisturbed."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tulips and flowers in and around Amsterdam",
+      "url": "https://www.iamsterdam.com/en/see-and-do/attractions-and-sights/tulips-and-flowers",
+      "publisher": "I amsterdam, Amsterdam & Partners",
+      "purpose": "Lists regional flower routes, garden and museum options and field visitor boundaries."
+    },
+    {
+      "title": "Enjoy the flowers, respect our pride",
+      "url": "https://www.holland.com/global/tourism/getting-around/interests/flowers/selfie-amid-the-tulips-these-are-the-dos-and-donts",
+      "publisher": "Netherlands Board of Tourism & Conventions",
+      "purpose": "States visitors should stay out of privately owned production fields and explains risk of crop damage."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "explore-a-garden-through-scent",
+    "follow-a-colour-through-your-neighbourhood",
+    "start-a-community-garden"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

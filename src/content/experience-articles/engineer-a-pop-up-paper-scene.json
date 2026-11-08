@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "engineer-a-pop-up-paper-scene",
+  "slug": "engineer-a-pop-up-paper-scene",
+  "title": "Make a pop-up card that closes cleanly",
+  "description": "Plan a small paper scene around a working fold, test its movement in scrap card, and add scenery only after the mechanism opens and closes cleanly.",
+  "intent": "How can I design a simple pop-up card without discovering too late that the scene catches or folds the wrong way? This adds a practical mechanism-first design process to the short project brief.",
+  "sections": [
+    {
+      "heading": "Start with the movement, not the picture",
+      "paragraphs": [
+        "Choose one action the card should perform: a step rises, a doorway opens, or a small figure appears as the card spreads. Sketch the card closed and open as two separate views. Mark the centre crease and the space the moving piece will occupy; this keeps the drawing from promising a shape the folded paper cannot support.",
+        "The Museum of Craft and Design’s beginner activity uses paired cuts across a card fold to form a step. Make that plain structure first in inexpensive paper. The test is not whether it looks finished; it is whether the pop-up rises when opened and returns flat without forcing the crease."
+      ]
+    },
+    {
+      "heading": "Build a paper model you can adjust",
+      "paragraphs": [
+        "Fold the blank card accurately, then mark one pair of parallel cuts crossing the crease. The strip between them becomes a tab: press it inward so it forms a step when the card opens. Change only one measurement at a time. If the tab stands too far forward, shorten the cuts or move the pair farther from the centre crease; if it barely appears, widen the cut length modestly.",
+        "Close the card slowly while watching the tab from the side. Any edge that snags is telling you where the design needs clearance. Do not tape extra parts onto this model yet. A moving fold is easier to diagnose when it is the only thing on the page."
+      ]
+    },
+    {
+      "heading": "Compose for the folded view",
+      "paragraphs": [
+        "Once the movement works, decide what the step means in your scene. It could be a stage, a hill, a shop counter, or a low wall. Draw the background on the card first, leaving the pop-up’s travel area clear. Then cut a simple silhouette that can attach to the tab without hanging far beyond it. Check that attached shapes are not too tall to fit inside the card.",
+        "Try the silhouette in several positions with removable tape or a tiny folded paper hinge. Look at it from the reader’s viewpoint as well as from above. A narrow shape may disappear behind the background; a wide one may hide the scene when the card closes."
+      ]
+    },
+    {
+      "heading": "Attach layers without trapping the fold",
+      "paragraphs": [
+        "Glue only the surfaces that are meant to stay still. Keep adhesive away from the tab’s moving sides and from the card’s centre crease. Press the paper in place, then let it dry before testing; wet glue can make a card feel as if the geometry is wrong. Add decoration in light layers, especially near the mechanism.",
+        "If a scene uses two steps, test each one separately and then together. One tab can pull the other out of alignment. When that happens, reposition rather than adding more glue. A folded backing layer can cover gaps behind pop-ups after the main structure is complete."
+      ]
+    },
+    {
+      "heading": "Finish with a repeatable check",
+      "paragraphs": [
+        "Open and close the card several times, using the same slow motion each time. Check that the scene rises, sits upright, and lies flat when shut. Look for whitening at sharp creases, loose corners, or a silhouette that rubs against another layer. If a small fault remains, trim a little clearance rather than forcing the card closed.",
+        "Write a short message only after the mechanism passes its test. If you make another card, note the tab measurements and paper type on the back of the prototype. Your next action is to take one plain working model, photograph it both open and closed, and only then begin the decorated version."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "MCD at Home: Pop-Up Background Card",
+      "url": "https://sfmcd.org/wp-content/uploads/2020/09/MCD@HomePopUp.pdf",
+      "publisher": "Museum of Craft and Design",
+      "purpose": "Supports the beginner step mechanism, scale checks, parallel cuts, and drying before final assembly."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-a-hand-cranked-cardboard-automaton",
+    "make-a-tactile-relief-artwork",
+    "carve-a-reusable-rubber-stamp"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

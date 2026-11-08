@@ -1,0 +1,54 @@
+{
+  "experienceSlug": "play-an-exquisite-corpse-drawing-game",
+  "title": "How to run an exquisite-corpse drawing round that stays playful",
+  "description": "Set up an exquisite-corpse drawing game with hidden contributions, clear fold lines, a light prompt, and a reveal that welcomes surprising results.",
+  "intent": "A practical facilitation guide for a small collaborative drawing round, explaining how to hide contributions, choose prompts, and keep the game welcoming.",
+  "sections": [
+    {
+      "heading": "Make the paper do the coordinating",
+      "paragraphs": [
+        "The classic exquisite-corpse game depends on players contributing in turns without seeing the earlier drawing. The Museum of Modern Art describes the game as a collaborative drawing practice in which participants hide their contribution before passing the sheet along. For a first round, fold one sheet into three equal horizontal panels and crease the divisions firmly. If you have more players, use more panels; if the group is large, make two sheets and combine the results at the end. Agree whether the drawing is a creature, person, machine, landscape, or abstract shape before anyone begins. A shared prompt gives the drawing a thread without dictating what it must become."
+      ]
+    },
+    {
+      "heading": "Give everyone a fair starting point",
+      "paragraphs": [
+        "The first person draws in the top panel and leaves a small set of guide marks—perhaps two short lines—at the fold so the next person can connect a neck, stem, cloud, or other transition. Hide the rest of the page by folding the completed panel backward before passing it on. Keep the shared marks visible and the subject hidden. Players can use pencils, colored pencils, or markers, but agree on tools first so no one has to wait for supplies. A timer can help when people tend to overwork a panel; it should set a relaxed limit, not turn drawing into a race."
+      ]
+    },
+    {
+      "heading": "Choose prompts that leave room for odd ideas",
+      "paragraphs": [
+        "A useful prompt opens several interpretations: “a visitor from another planet,” “an animal built for a strange climate,” or “a vehicle for an underwater town.” Avoid making the goal a perfect body or a recognizable celebrity. People who dislike drawing can contribute shapes, patterns, labels, textures, or collage scraps. They can also pass for a round without explaining why. If children or newcomers are in the group, demonstrate one simple abstract mark and let the folded paper do the rest. The point is the collective surprise of the full image, not judging who can draw most realistically."
+      ]
+    },
+    {
+      "heading": "Reveal with curiosity, not critique",
+      "paragraphs": [
+        "When the last panel is complete, unfold the page together. Give everyone a moment to notice the connections: a line that becomes a tail, a color that repeats, or two unrelated shapes that look intentional side by side. Let the artist for each panel explain only if they want to. Do not ask the group to rank the drawings or identify a “bad” section. The game’s odd joins are a result of the rules, and they can be the most memorable part. The Surrealist artists used the process to make collaborative, chance-based compositions; a home version can stay much smaller and still explore how chance changes an image."
+      ]
+    },
+    {
+      "heading": "Try a new constraint for the next sheet",
+      "paragraphs": [
+        "Once the group understands the basic pass-and-fold rhythm, change one element at a time. Use only three colors, switch from figures to imaginary plants, or add a word in each panel and draw around it. A collage round can replace some drawing, but make sure the paper still folds without covering the earlier sections. Keep a photo if participants agree, then decide whether the next round should use a different prompt or a new group. Your concrete next step is to fold a sheet before inviting anyone: the creases, visible handoff marks, and first prompt are enough to begin."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Mondays with MoMA: Exquisite Corpse Activity",
+      "url": "https://www.moma.org/momaorg/shared/pdfs/docs/learn/mondays/Jake-and-Dinos-Chapman-exquisite-corpse.pdf",
+      "publisher": "The Museum of Modern Art",
+      "purpose": "Supports folding paper into sections, hiding each player’s drawing, passing the sheet and using changing themes."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-a-folding-paper-peepshow",
+    "print-a-set-of-foam-relief-postcards",
+    "make-a-friendship-map-together"
+  ],
+  "slug": "play-an-exquisite-corpse-drawing-game",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

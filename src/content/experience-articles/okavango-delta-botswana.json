@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "okavango-delta-botswana",
+  "slug": "okavango-delta-botswana",
+  "title": "Choose an Okavango Delta visit by water and season",
+  "description": "Understand how the Okavango’s dry-season flood reshapes a wetland in the Kalahari, then choose a land or water-based way to observe it.",
+  "intent": "How should I choose an Okavango Delta stay or excursion around the floodplain’s changing water, habitat and wildlife?",
+  "sections": [
+    {
+      "heading": "Understand why the calendar feels unusual",
+      "paragraphs": [
+        "The Okavango Delta is an inland wetland in north-west Botswana, set within the wider Kalahari landscape. UNESCO explains that annual floodwater arrives during Botswana’s dry winter season, transforming sandy depressions and sustaining flooded grasslands. That means “wet season” and “best wildlife season” do not map neatly onto the same visitor calendar. Think about whether you want to watch water move through channels or experience the broader dry-country setting around it.",
+        "Do not expect a fixed water level or identical animal sightings from year to year. UNESCO describes the flood as an ecological process that shapes breeding, migration, plant growth and channels. Ask a reputable local operator what that means for its specific concession and dates. A national-level description cannot tell you exactly which waterway will be navigable during a particular week."
+      ]
+    },
+    {
+      "heading": "Choose a land-based or water-focused stay",
+      "paragraphs": [
+        "A land-based camp can make walking or vehicle-based observation the center of your days; a water-oriented stay can make channels and floodplain edges more prominent when local conditions permit. The right choice depends on the exact area, operator, mobility needs and season, not on a general claim that one format is always better. Ask which activities are included and how the operator adapts if water levels or wildlife movement change.",
+        "For a water excursion, ask whether the activity is appropriate for the current channels, how wildlife is approached, what safety briefing is provided and whether the boat is operated by a trained local guide. Do not enter water or approach wildlife independently. For a land outing, ask about distance, vehicle access, walking conditions and what happens if heat or weather changes."
+      ]
+    },
+    {
+      "heading": "Watch the system, not only large animals",
+      "paragraphs": [
+        "The delta’s special interest lies in interactions: flood channels split and reform, islands and lagoons change, and habitats shift between wet and dry. Choose one question for each outing. Do different plants occupy the wetter edge and higher ground? What happens where a channel narrows? Which birds use shallow water while mammals gather near deeper pools? Let a guide explain what you are seeing rather than guessing from a single encounter.",
+        "UNESCO lists the delta as habitat for threatened mammals including cheetah, rhino, wild dog and lion, but no visit can promise a sighting. Keep your expectations open and your behavior conservative around animals. Use binoculars, stay inside vehicle or marked walking rules, and do not call, feed or approach wildlife for a photograph."
+      ]
+    },
+    {
+      "heading": "Make a realistic transfer plan",
+      "paragraphs": [
+        "The Okavango’s scale and difficult access are part of its character. Before booking, ask what transfers connect your arrival point to the camp, whether a light aircraft or road vehicle is involved, and what baggage, timing and contingency rules apply. Confirm how weather disruptions are handled and whether a missed connection requires an overnight. Avoid building an international flight schedule around an unverified transfer promise.",
+        "If you have limited time, choose one area and stay long enough to experience more than one kind of outing. Moving camps may create variety, but every transfer reduces time for observation. Ask your operator to explain the specific landscape of its area—permanent channels, seasonal floodplain or drier edge—so you can choose with a clear picture instead of a generic “delta safari” label."
+      ]
+    },
+    {
+      "heading": "Let conservation shape the visit",
+      "paragraphs": [
+        "UNESCO notes that the delta’s waters originate in Angola and Namibia and that three riparian states work through a basin commission to manage the river system. This wider geography is a reminder that a wetland experience depends on processes beyond the lodge boundary. Choose operators who can explain local stewardship and follow rules around waste, water use, wildlife and community access.",
+        "The UNESCO page is a source on the delta’s hydrology and habitat, not current camp openings, water levels, prices or permit rules. Verify those operational details directly with your camp, park authority and current Botswana information. Your next step is to decide whether you care most about a water-based view or a land-based wildlife day, then ask a local operator how that option fits the exact dates."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Okavango Delta",
+      "url": "https://whc.unesco.org/en/list/1432/",
+      "publisher": "UNESCO World Heritage Centre",
+      "purpose": "Supports the inland delta setting, dry-season arrival of annual floodwaters, changing channels and floodplain ecology, and the habitat context."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "safari-in-the-serengeti-at-sunrise",
+    "see-the-great-barrier-reef"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

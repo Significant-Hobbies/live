@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "surf-a-wave-over-10-feet",
+  "slug": "surf-a-wave-over-10-feet",
+  "title": "A big-wave goal starts with the days you do not paddle out",
+  "description": "Treat a ten-foot surf goal as an advanced, location-specific objective: wave measurements vary, and readiness depends on coaching, conditions and rescue support.",
+  "intent": "What does preparing for a large-wave surf goal involve? This guide treats the wave-size label as uncertain and focuses on experience, local assessment and choosing not to enter.",
+  "sections": [
+    {
+      "heading": "Treat ten feet as a description, not a safety boundary",
+      "paragraphs": [
+        "Wave height is not a universal promise about what you will meet. Reports, visual estimates and measurement conventions differ, and a break changes with tide, swell direction, wind and underwater shape. A forecast number is not a beginner threshold or a guarantee that the spot will be manageable. Ask a local surf coach or experienced professional how size is described at the actual break.",
+        "Surfing England explains that wave types differ by break and tide: a gentle spilling wave is unlike a hollow or dumping wave, and rocky point breaks can add hazards. So ten feet alone says little about landing zones, currents or consequences. The question is not whether the number sounds exciting; it is whether an experienced local team judges the conditions appropriate."
+      ]
+    },
+    {
+      "heading": "Build readiness through progressive sessions",
+      "paragraphs": [
+        "A large-wave attempt belongs at the end of a long progression, not at the start of a bucket-list trip. Work with a qualified coach who knows the local break and can assess your paddling, positioning, fitness, composure and recovery in progressively more challenging conditions. This is a planning guide, not a training plan or substitute for in-water coaching.",
+        "Ask what skills the coach has actually observed and what would make them call the session off. A useful answer includes conditions and behaviors, not just confidence or enthusiasm. If you have surfed only smaller, predictable beach breaks, a steep reef or powerful point break is a different problem. The next step can simply be a coached session below your limit."
+      ]
+    },
+    {
+      "heading": "Check the support around the session",
+      "paragraphs": [
+        "RNLI advises surfers to use lifeguarded beaches and marked zones, surf with another person—especially in big swell—and check local weather, swell and tide. For an advanced session, ask what rescue and communication support the coach or event provides, where medical help is and how the group will respond if conditions change. The right answer depends on the location and format.",
+        "Confirm that the board and safety equipment fit the location and session, and ask the coach to explain how the lineup is assessed before anyone enters. Equipment can vary by specialized discipline and location; follow the qualified team’s instructions. Do not paddle out alone, imitate a video or assume another surfer’s successful session makes the same conditions safe for you."
+      ]
+    },
+    {
+      "heading": "Set no-go conditions before you arrive",
+      "paragraphs": [
+        "Agree in advance that red flags, prohibited zones, a coach’s cancellation, unsuitable wind or a change in swell can end the session. At a beach with RNLI lifeguards, follow their flags and instructions; Surfing England explains that conditions and hazards shift with tide and that local professionals can identify rips and rocks. Elsewhere, use that location’s official safety system rather than copying UK flag conventions.",
+        "Tell someone where you plan to surf and when you expect to return, and ensure the supervising team knows the plan. If anyone feels uncomfortable, cold, exhausted or out of control, exit with the coach’s direction. Avoid alcohol or impairing substances. A no-go day can become an observation day: watch the break and ask the local coach what changed."
+      ]
+    },
+    {
+      "heading": "Make observation part of the goal",
+      "paragraphs": [
+        "Watch from a safe, permitted viewpoint before thinking about the water. Notice how waves arrive, where they break, where water returns, and how surfers enter and leave. Ask the coach to describe a feature you cannot infer from a forecast. Do not trespass for a viewpoint or stand in a rescue route.",
+        "Your next step is to book a progression assessment with a local qualified coach and describe your actual experience, not just the biggest wave you have seen. Let that person define the next appropriate session. Reaching a big-wave goal depends as much on recognizing the day to stay out as on learning to ride."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Surfing",
+      "url": "https://rnli.org/water-safety/choose-your-activity/surfing",
+      "publisher": "Royal National Lifeboat Institution",
+      "purpose": "Provides surfing guidance on flags, surfing with a mate, weather and tides, local lifeguard advice and personal limits."
+    },
+    {
+      "title": "Beach Safety",
+      "url": "https://www.surfingengland.org/surf-and-sup-safety/beach-safety/",
+      "publisher": "Surfing England",
+      "purpose": "Explains how tide and wave shape affect hazards and identifies local lifeguards and surf schools as site-specific resources."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "surf-a-real-wave",
+    "white-water-raft-a-class-v-river",
+    "take-a-sheltered-water-paddleboard-starter-lesson"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

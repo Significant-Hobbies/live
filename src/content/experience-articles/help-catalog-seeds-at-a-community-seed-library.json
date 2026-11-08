@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "help-catalog-seeds-at-a-community-seed-library",
+  "slug": "help-catalog-seeds-at-a-community-seed-library",
+  "title": "Make seed packets easier to trust and borrow",
+  "description": "Help a community seed library by following its record system, keeping batches separate, and checking every label against its source.",
+  "intent": "What makes volunteer seed cataloguing useful to future borrowers? This adds a quality-control routine and questions for a coordinator to the brief.",
+  "sections": [
+    {
+      "heading": "Ask for a specific batch and workflow",
+      "paragraphs": [
+        "Seed libraries differ in what they accept and how they record varieties. Contact the coordinator and ask which task is currently needed: processing donated packets, organizing the catalog, or preparing a workshop. Hayward Public Library lists seed processing and catalog organization among volunteer needs; use that as an example of a library’s own workflow, not a universal format.",
+        "Before taking seeds home or opening donated packets, confirm where the work should happen and what materials the library supplies. Ask how it distinguishes unknown or mixed seed, how to handle incomplete donor records, and who approves a finished batch. Do not bring seeds from your own stash unless the library has accepted them."
+      ]
+    },
+    {
+      "heading": "Keep identity and uncertainty together",
+      "paragraphs": [
+        "A seed packet is only useful when its label can be trusted. Record what the source actually supplied, such as common name, scientific name, named variety, year, and source. Hayward’s donation guidance asks for those identifying fields and other pertinent information. A missing field should remain blank or be marked unknown according to the library’s convention; do not infer a cultivar from seed color or a familiar nickname.",
+        "If handwriting or an old label is unclear, pause and ask the coordinator. Make a temporary note rather than choosing the most plausible interpretation. Keep the original packet or donor record associated with the new packet until the record is checked."
+      ]
+    },
+    {
+      "heading": "Separate batches before portioning",
+      "paragraphs": [
+        "Work with one identified batch at a time. Clear the table, label a tray or envelope before pouring, and keep the original source in view. Use the library’s approved packet size and tools. A clean, dry surface helps prevent mixing small seeds, but follow the site’s instructions if it uses a different process. Do not improvise treatments, repackaging claims, or planting advice.",
+        "If several volunteers are working together, assign clear roles: one person reads the source record, another fills packets, and a third checks labels. For a solo shift, place the completed packet beside its source and move it to a separate review area only after comparing both."
+      ]
+    },
+    {
+      "heading": "Check the catalog like a reader would",
+      "paragraphs": [
+        "Pick up a finished packet as if you were borrowing it. Can you tell what the seed is, where the information came from, and whether the record is complete? Compare its label with the catalog entry and correct mismatches through the system the coordinator approves. A tidy catalog is more useful than a visually consistent one if it preserves uncertainty and source details.",
+        "Hayward describes its library as a community exchange for vegetable and flower seed and points volunteers to its own application and event channels. Local rules may differ, so do not promise that your work makes a seed legally shareable or suitable for any climate. Leave regional planting guidance to the library’s resources."
+      ]
+    },
+    {
+      "heading": "Hand off without losing provenance",
+      "paragraphs": [
+        "Ask a coordinator to review a sample before the full batch enters circulation. Tell them which records were incomplete, which labels were hard to read, and what you left unresolved. Return leftover material to its named container; never combine remnants just to make the table look finished.",
+        "A useful contribution is traceable work another person can continue. Your next action is to ask a nearby library which batch needs help and request its label checklist before volunteering for a shift."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Seed Lending Library",
+      "url": "https://hayward-ca.gov/public-library/using-library/seed-lending",
+      "publisher": "City of Hayward Public Library",
+      "purpose": "Supports the example library’s volunteer tasks and its requested seed identification fields; local coordinator instructions govern actual work."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "join-a-supervised-invasive-plant-removal-workday",
+    "help-repair-library-books-under-staff-supervision",
+    "sort-supplies-during-a-food-bank-volunteer-shift"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

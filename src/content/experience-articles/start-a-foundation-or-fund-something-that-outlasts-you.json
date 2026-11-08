@@ -1,0 +1,59 @@
+{
+  "slug": "start-a-foundation-or-fund-something-that-outlasts-you",
+  "title": "Decide whether your cause needs a foundation",
+  "description": "Compare giving through an existing charity with creating a lasting fund, then map the local legal, governance, and administrative questions before acting.",
+  "intent": "Evaluate whether an existing organization or a new foundation fits a charitable goal; use authoritative jurisdiction-specific guidance and no legal or financial promises.",
+  "sections": [
+    {
+      "heading": "Write the purpose before choosing the structure",
+      "paragraphs": [
+        "Begin with one sentence naming the problem, who should benefit, and what you hope the money or work will make possible. Then add a time horizon: a single grant, an annual contribution, or support intended to continue after you are gone. A clear purpose lets you compare options without confusing the emotional appeal of starting an institution with the result you actually want.",
+        "List the practical constraints too: who will make decisions, how much time you can give, who could serve after you, and what records you can keep. These are planning questions, not legal tests. If the purpose is still changing, a small first grant or a conversation with an established nonprofit may teach you more than immediately creating a new entity."
+      ]
+    },
+    {
+      "heading": "Compare an existing organization with a new fund",
+      "paragraphs": [
+        "Ask two or three established charities how they already address the issue. Review their public mission, programs, finances and governance, then ask whether a restricted gift, named fund, recurring donation or volunteer role could meet your goal. Confirm in writing how a restricted contribution is handled if a program changes. A recipient may have its own gift-acceptance terms, so do not assume your preferred label creates control over how money is used.",
+        "A separate foundation can offer a defined board and grantmaking process, but it also brings formation, accounting, recordkeeping, filings and ongoing decisions. Put these recurring duties beside the expected charitable activity. If most of your energy would go to administration, partnering with a capable organization may keep more attention on the intended work. Neither route is automatically more effective; compare the actual mission, capacity and cost."
+      ]
+    },
+    {
+      "heading": "Treat jurisdiction as an early research task",
+      "paragraphs": [
+        "The IRS explains one U.S.-specific path: organizations seeking federal recognition under section 501(c)(3) use Form 1023 or, if eligible, Form 1023-EZ and submit the appropriate application through Pay.gov. That page describes an application route, not a guarantee of approval, a complete guide to every state requirement, or advice for someone outside the United States. Other countries have their own charity regulators and organizational forms.",
+        "Before paying to form anything, make a jurisdiction checklist: entity registration, charitable solicitation rules, tax recognition, annual reporting, board duties, conflict-of-interest practice, financial controls and fundraising limits. Confirm each item with the relevant regulator and a qualified local lawyer or accountant. Rules depend on location and facts; this checklist is a prompt for questions, not a substitute for professional advice."
+      ]
+    },
+    {
+      "heading": "Design a governance plan people can actually run",
+      "paragraphs": [
+        "Write down who can approve grants, how conflicts are disclosed, how spending is reviewed, and what happens when a board member leaves. Decide where records will live and who has access. Ask a prospective independent board member to read the plan and point out what is vague. A durable purpose needs continuity: name a successor process and a way to amend the plan if the original approach no longer serves beneficiaries.",
+        "Separate fundraising promises from what you can verify. Do not promise a tax deduction, grant approval, growth rate or perpetual operation. If you discuss a planned gift, donor-advised fund or endowment, have a qualified adviser explain the jurisdiction-specific instrument and its costs before accepting money or publishing terms."
+      ]
+    },
+    {
+      "heading": "Run a small decision test",
+      "paragraphs": [
+        "Make a one-page comparison with three columns: give through an existing organization, create a fund within one, or establish a separate organization. For each, record the first-year and recurring administrative tasks, decision rights, expected giving and what could happen if your capacity changes. Then request a conversation with a charity leader and a local nonprofit lawyer or accountant.",
+        "Choose the smallest route that can carry the purpose responsibly. If an existing group can do the work with clear reporting, start there and review after a year. If no suitable organization can serve the need and you can sustain governance and compliance, ask local professionals to help evaluate formation. The win is a clear, accountable way to support the cause, not the existence of a particular legal structure."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How to apply for 501(c)(3) status",
+      "url": "https://www.irs.gov/charities-non-profits/how-to-apply-for-501c3-status",
+      "publisher": "Internal Revenue Service",
+      "purpose": "Supports the narrow U.S. federal statement that an organization seeking recognition under section 501(c)(3) applies on Form 1023 or eligible Form 1023-EZ through Pay.gov; it does not guarantee approval or cover other jurisdictions."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "do-a-group-charity-challenge-with-friends",
+    "leave-a-legacy-gift-to-a-charity-in-your-will",
+    "donate-anonymously-and-tell-no-one"
+  ],
+  "experienceSlug": "start-a-foundation-or-fund-something-that-outlasts-you",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

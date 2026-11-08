@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "write-a-forgiveness-letter-to-yourself",
+  "slug": "write-a-forgiveness-letter-to-yourself",
+  "title": "Write to yourself about a mistake without excusing it",
+  "description": "Use a private letter to face a mistake with honesty and self-kindness, distinguish regret from repair, and choose one responsible next step.",
+  "intent": "How do I write a self-forgiveness letter that acknowledges harm and responsibility without collapsing into self-punishment or using compassion as an excuse?",
+  "sections": [
+    {
+      "heading": "Choose a subject that is safe to approach",
+      "paragraphs": [
+        "Begin with a specific, bounded situation rather than “everything I have done wrong.” A missed commitment, a harsh comment, or a choice you now regret is easier to examine than a sweeping judgment about your character. If the memory involves trauma, abuse, legal exposure, or distress you cannot manage alone, consider working with a qualified counselor or relevant professional instead of handling it only on paper. You can also choose not to write today.",
+        "Set a modest time limit and keep the letter private. This is not a message to send to the person affected, and it does not replace an apology, restitution, or other accountability. Its purpose is to help you tell the truth about what happened and decide how you want to respond now."
+      ]
+    },
+    {
+      "heading": "Separate the event from the verdict",
+      "paragraphs": [
+        "Write three short parts. First, name what you did as concretely as you can: “I canceled the visit without telling you until the last minute.” Avoid turning the sentence into an identity claim such as “I am selfish and unreliable.” Second, note the impact you know about and what you do not know. “You had already made plans around it” may be observable; “you must hate me now” is a guess.",
+        "Third, acknowledge your reasons without presenting them as a defense. You might have been overwhelmed or afraid of a conversation, but those facts do not erase the effect. The Greater Good in Action self-compassionate-letter exercise recommends choosing a manageable difficulty, writing honestly from a caring perspective, considering context, and identifying a possible way forward. Adapt that sequence carefully: understanding context can explain a choice, but it does not cancel its consequences."
+      ]
+    },
+    {
+      "heading": "Borrow the voice you would use with a friend",
+      "paragraphs": [
+        "Imagine a friend you respect told you the same story. You would probably not say, “Nothing matters; forget it.” You might say, “That choice hurt someone, and you can take responsibility without deciding that this is all you are.” Try writing that balance to yourself. Avoid both extremes: an easy absolution that rushes past the harm and an endless sentence that makes improvement impossible.",
+        "A useful paragraph might say: “I regret that I avoided the conversation. I can see how that left you carrying the uncertainty. Fear explains why I delayed, but it did not make the delay fair. I want to practice speaking sooner when I cannot meet an expectation.” Keep it in your own words; it need not sound polished or therapeutic. The letter can include anger or sadness as well as care."
+      ]
+    },
+    {
+      "heading": "Distinguish inner forgiveness from repair",
+      "paragraphs": [
+        "Ask whether anyone else was affected and whether a repair is appropriate. A repair could mean a direct apology that does not demand forgiveness, replacing something damaged, correcting misinformation, or changing a pattern. Sometimes contacting the other person would intrude, create risk, or reopen harm; in that case ask a counselor, mediator, or other qualified professional about a safer route. Do not use a letter to yourself as permission to bypass the other person’s boundaries.",
+        "If you do apologize, keep it specific: name the action, recognize its impact, take responsibility, and say what you will do differently. Do not make the other person reassure you or manage your guilt. The exact next step depends on context, and a private exercise cannot tell you whether contact is wise."
+      ]
+    },
+    {
+      "heading": "End with a promise small enough to keep",
+      "paragraphs": [
+        "Close the letter with one observable commitment for the next occasion: send an update before a deadline, ask for clarification rather than assuming, or pause before replying in anger. Write down how you will notice the moment when the old pattern starts. A practical signal might be “I am drafting a third excuse instead of sending the simple update.” The change should be within your control and should not depend on someone else forgiving you.",
+        "Put the letter away and reread it later only if that feels useful. You can revise it as you learn more. Self-forgiveness is not a certificate that declares the matter settled; it is a way to carry responsibility without making shame the only available response. The next step is the one you can take honestly today."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Self-Compassionate Letter",
+      "url": "https://ggia.berkeley.edu/practice/practice_as_pdf/self_compassionate_letter?printPractice=Y",
+      "publisher": "Greater Good in Action, UC Berkeley",
+      "purpose": "Supports the letter sequence of naming a manageable struggle, writing honestly with compassion, considering context and a possible change, then setting the letter aside; it does not establish that a letter resolves harm or replaces professional care."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "repair-a-relationship-you-ve-damaged",
+    "write-a-letter-to-someone-who-changed-your-life",
+    "revisit-a-saved-prediction-and-score-it-fairly"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

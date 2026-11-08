@@ -1,0 +1,60 @@
+{
+  "experienceSlug": "host-a-bring-one-object-story-circle",
+  "slug": "host-a-bring-one-object-story-circle",
+  "title": "How can one ordinary object help a group tell better stories?",
+  "description": "Plan a welcoming object-story circle with a clear invitation, consent around keepsakes, gentle prompts, and room for people who prefer to pass.",
+  "intent": "Answer how to host a small object-based storytelling gathering that feels personal without pressuring guests into disclosure or performance.",
+  "sections": [
+    {
+      "heading": "Set the invitation before anyone arrives",
+      "paragraphs": [
+        "An object gives a story a place to begin: a chipped mug, bus ticket, button, recipe card, or a photograph on a phone. The object does not need to be valuable or unusual. In the invitation, explain that each person may bring one nonprecious item, describe an object from memory, or pass. Say that nobody has to tell a private family story and that an object will not be handled or photographed without its owner’s permission. Those small details let people decide what feels comfortable before the circle starts.",
+        "Keep the group small enough that everyone who wants a turn has space. Arrange chairs so people can see one another, with a table or tray for items only if guests choose to place them there. Avoid making a strict timer the center of the gathering; a loose expectation such as a few minutes per person helps the event fit an evening while still leaving room for a natural ending. If children are present, make passing and touching rules especially plain."
+      ],
+      "bullets": [
+        "Offer a no-object option, such as a verbal description or phone image.",
+        "Tell guests whether stories will stay in the room and whether photos are planned."
+      ]
+    },
+    {
+      "heading": "Model a story with a beginning, a turn, and an ending",
+      "paragraphs": [
+        "Open by sharing a simple story of your own. Pick an object you can talk about without explaining its whole history: a spoon you reach for every morning, a paper map with a fold that never lies flat, or a repaired toy. Start in a specific moment rather than giving a long biography of the object. What were you doing? What surprised you? What changed, even slightly? The Moth’s public storytelling guidance emphasizes a true story, a clear stake or dilemma, concrete observations, and an ending. Use those as prompts, not as rules guests must satisfy.",
+        "A useful host model is about two minutes: name the object, place it in one scene, say what mattered in that moment, then finish with what you notice about it now. You are showing a shape for a story, not demonstrating literary skill. A rough, funny, or unfinished memory can be more inviting than a polished speech because it gives others permission to sound like themselves.",
+        "After your opening, offer a prompt that leaves control with the speaker: “What’s one moment this object reminds you of?” or “When did it become useful?” Avoid “What is your most painful memory?” or “Who gave it to you?” unless the person has chosen to go there. Curiosity should open a door, not push someone through it."
+      ]
+    },
+    {
+      "heading": "Listen without turning the object into a prop",
+      "paragraphs": [
+        "Let a person finish before asking a question. A short pause is often enough; the next speaker may be ready, or the storyteller may want to add one detail. If you do ask, make the question specific and optional: “Would you say more about the repair?” is easier to decline than a demand to explain a relationship. Do not guess what an item means based on its appearance. Ask before touching it, and return it directly to its owner rather than passing it around by default.",
+        "Photographs deserve the same care. A phone image can let someone participate without carrying a valuable object, but it can also contain other people or private settings. Ask the owner before taking a picture of the display, and ask each person before sharing any image beyond the gathering. The Moth guidance is for public performance rather than intimate circles, but its emphasis on telling one’s own true story and avoiding stereotypes is a useful boundary here too. Nobody else’s identity or experience should become a decorative detail in someone’s tale."
+      ],
+      "bullets": [
+        "Accept “I’ll pass” without asking why.",
+        "Let storytellers correct any misunderstanding before moving on."
+      ]
+    },
+    {
+      "heading": "Close by noticing, not ranking",
+      "paragraphs": [
+        "When everyone has had a chance to speak—or pass—invite one small closing observation: a surprising material, a repeated theme, or an object you now see differently. Do not vote for the best story. The point is to make a few people’s everyday histories audible, not to reward the most dramatic disclosure. Give guests time to reclaim their items, check the floor and table, and leave with their belongings.",
+        "For a first attempt, invite three or four people and keep the format light. If the conversation takes a thoughtful turn, you can let it breathe; if it stays playful, that is fine too. Afterward, write down one hosting choice you would repeat and one you would change, such as a quieter room or a shorter introduction. A successful circle ends with people still owning their stories and their objects."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Storytelling Tips & Tricks",
+      "url": "https://www.themoth.org/tell-your-story/storytelling-tips-tricks",
+      "publisher": "The Moth",
+      "purpose": "Supports guidance on true, personally owned stories, concrete scenes, stakes, and respectful storytelling boundaries."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "curate-a-five-object-museum-of-your-life",
+    "write-the-story-of-how-you-became-who-you-are"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "record-a-public-domain-audiobook-chapter",
+  "slug": "record-a-public-domain-audiobook-chapter",
+  "title": "Prepare and record one LibriVox audiobook chapter",
+  "description": "Choose a suitable public-domain chapter, read for clarity, test your recording setup and follow the project coordinator’s instructions before submitting audio.",
+  "intent": "How do I prepare one LibriVox chapter so it is clear, properly sourced and ready for project review?",
+  "relatedExperienceSlugs": [
+    "draw-a-wordless-six-panel-comic",
+    "contribute-speech-recordings-to-common-voice",
+    "write-a-book"
+  ],
+  "sections": [
+    {
+      "heading": "Choose a text the project can accept",
+      "paragraphs": [
+        "Start with a chapter in an active LibriVox project or ask in the project forum before recording. LibriVox says volunteers read books in the public domain in the United States and that its recordings are also donated to the public domain. The project’s recording and text policies matter: an old work may have a newer edition or transcription with separate restrictions, so check the source and edition the coordinator approves.",
+        "Do not record a book simply because you found it on a website. The selection process and project instructions identify which text and chapter are being used, along with any required file naming or introduction. If a passage makes you uncomfortable, choose a different chapter rather than silently changing the author’s words."
+      ]
+    },
+    {
+      "heading": "Read before the microphone is on",
+      "paragraphs": [
+        "Read the whole chapter once for meaning, then mark names, unfamiliar words and long sentences. Look up pronunciation only when the text or project material supports it; do not invent a reading of an obscure name and present it as certain. Add pencil marks for pauses at sentence and paragraph boundaries. LibriVox recommends reading the text before recording so the reader is less likely to sound confused by what comes next.",
+        "Set up in the quietest practical room. Turn off nearby alerts and fans if you can do so comfortably. Put the microphone a consistent distance from your mouth and slightly off-axis so breath does not hit it directly. The LibriVox recording page recommends a short test, a steady volume and recording in shorter sessions when that helps avoid vocal fatigue."
+      ]
+    },
+    {
+      "heading": "Record a test before the chapter",
+      "paragraphs": [
+        "Record two sentences and listen with headphones. Check whether the words are clear, the volume is steady and the room noise is distracting. Move the microphone or adjust the space before making a long take. If you make a mistake, pause and restart at the beginning of the sentence or paragraph; a clean restart is easier to edit than repeating one isolated word.",
+        "Take breaks when your voice feels tired. Keep a simple note of the filename and section recorded so a later session begins in the right place. Do not add music, sound effects or an unrequested introduction: follow the specific project post, which LibriVox says holds each book’s intro, outro and file requirements."
+      ]
+    },
+    {
+      "heading": "Review for listening, not perfection",
+      "paragraphs": [
+        "After recording, listen through once while following the text. Mark omitted lines, repeated words, clipping, long silences or a sudden change in volume. Correct only what you can fix cleanly; a natural reading does not need theatrical acting. LibriVox advises readers to give sentences and paragraphs breathing room and keep a relaxed, steady pace.",
+        "Before you submit, confirm that the file name, format and chapter match the current project instructions. If you are unsure about the sound or a pronunciation, ask the coordinator or forum instead of quietly substituting a different text. A checked chapter that needs another pass is normal."
+      ]
+    },
+    {
+      "heading": "Submit and leave a clear handover",
+      "paragraphs": [
+        "Upload the file through the project’s established process and tell the coordinator what chapter it covers. Keep a copy until the project confirms receipt. The next useful step might be a short test recording for feedback before you claim a longer section.",
+        "LibriVox welcomes volunteers without prior recording experience, but participation requires contributing your voice under its public-domain model. Read its current volunteer and recording pages before joining."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Volunteer for LibriVox",
+      "url": "https://librivox.org/pages/volunteer-for-librivox/",
+      "publisher": "LibriVox",
+      "purpose": "Primary overview of volunteer eligibility, public-domain scope and project forum workflow."
+    },
+    {
+      "title": "About Recording for LibriVox",
+      "url": "https://librivox.org/pages/about-recording/",
+      "publisher": "LibriVox",
+      "purpose": "Primary recording advice and project-specific requirements for setup, reading, file format and submission."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

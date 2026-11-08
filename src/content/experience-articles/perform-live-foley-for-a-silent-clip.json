@@ -1,0 +1,61 @@
+{
+  "experienceSlug": "perform-live-foley-for-a-silent-clip",
+  "slug": "perform-live-foley-for-a-silent-clip",
+  "title": "How do you sync Foley sounds to a silent clip?",
+  "description": "Build a short cue list, test safe household objects for their sound, and perform each effect at the moment the picture needs it.",
+  "intent": "A repeatable way to perform Foley live: how to choose a few cues, match sound character and timing, and keep the first take manageable.",
+  "sections": [
+    {
+      "heading": "Watch once before touching the props",
+      "paragraphs": [
+        "Choose a short clip with no essential dialogue or existing sound. Watch it all the way through without making anything. Note the moments where an action needs a sound: a foot landing, a latch closing, a bag being set down, or wind moving a branch. Scitech’s Foley challenge explains that many movie sounds are created later because recording on set captures other unwanted noise as well; its activity asks learners to find household objects and perform sounds in time with animation.",
+        "Use a cue sheet with three columns: moment, image action, and sound idea. Keep the first pass to a handful of cues. If you write down every small movement, you will have no time to test objects or pay attention to the clip. Mark an approximate visual landmark, such as “hand reaches handle,” instead of guessing an exact timecode."
+      ],
+      "bullets": [
+        "Use only objects you can handle safely; avoid glass, sharp tools, flame, chemicals or anything that could damage a room."
+      ]
+    },
+    {
+      "heading": "Choose props by sound, not by resemblance",
+      "paragraphs": [
+        "A sound prop does not need to look like the thing on screen. Try paper or cloth for rustling, soft shoes on a safe floor for a step, or a small container for a light tap. Scitech gives examples such as coconut halves for hoofbeats and rustling cellophane for fire. Treat those as possibilities, not rules: the same object can make different sounds depending on speed, surface and pressure.",
+        "Record or listen to each candidate before deciding. A sound that is convincing in the room may be too loud or too sharp next to the clip. Check whether it has a clear beginning and end, and whether you can repeat it consistently. If a prop is borrowed or the floor is delicate, get permission and use a protective surface."
+      ]
+    },
+    {
+      "heading": "Practise the cue before the run",
+      "paragraphs": [
+        "Play the clip and rehearse one sound at a time. Start the motion just before the visible contact, not after it. A soft landing may need a cushioned shoe and a tiny cloth movement; a heavier step may be a shoe sole on a board. Watch the action’s rhythm rather than trying to imitate every frame. For a short clip, a clean cue at the right moment is more useful than a crowded soundtrack.",
+        "If you are performing with a partner, decide who watches the clip and who handles each prop. Keep the cue sheet visible and agree on a simple signal to restart. Give the sound performer room to move without crossing wires or reaching over another person. If a cue is easy to miss, choose a stronger visual marker or simplify the sound."
+      ]
+    },
+    {
+      "heading": "Perform with room for mistakes",
+      "paragraphs": [
+        "Do one full run and let it finish even if a cue is late. Stopping repeatedly breaks the relationship between image and sound and can make the task feel harder than it is. Afterward, review just three things: which cue matched well, which one arrived early or late, and which prop needs a different motion. Adjust one variable at a time.",
+        "A live performance can be more playful than a polished recording. Let small accidents teach you something: paper may sound too crisp, footsteps may blend into a door thud, or a repeated motion may become tiring. If you record the take, use your own clip or one you have permission to use and follow the source’s reuse terms."
+      ]
+    },
+    {
+      "heading": "Make a second take with one improvement",
+      "paragraphs": [
+        "Pick one change based on what you heard and perform again. You might move the prop closer to the microphone, change the landing surface, or reduce the number of cues. Keep the first take so you can compare the result rather than relying on memory. If the clip has an effect you cannot safely recreate, represent its rhythm or texture with a safe substitute instead of attempting a hazardous stunt.",
+        "A useful next exercise is to mute one visual action and invent a sound that helps a listener infer what happened. Then show the clip and see whether the chosen cue supports the action without merely describing it. Save the cue sheet and one note about the prop-motion pairing that worked; that becomes a practical starting point for another scene."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Foley Sound Effects Challenge",
+      "url": "https://www.scitech.org.au/challenge/foley-sound-effects-challenge/",
+      "publisher": "Scitech",
+      "purpose": "Supports Foley as later-created film sound, identifying visual cues, testing household objects and performing sounds in sync with animation."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "make-a-sound-map-from-a-single-seat",
+    "record-a-public-domain-audiobook-chapter"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

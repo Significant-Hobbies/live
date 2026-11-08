@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "explore-a-tidepool-with-a-naturalist",
+  "slug": "explore-a-tidepool-with-a-naturalist",
+  "title": "Tidepooling with a naturalist: plan for the tide and tread lightly",
+  "description": "Prepare for a naturalist-led tidepool visit by checking local conditions, wearing grippy footwear and observing intertidal life without disturbing it.",
+  "intent": "Helps a visitor prepare useful questions and a safe, respectful plan for a guided tidepool visit, beyond simply finding a low tide.",
+  "sections": [
+    {
+      "heading": "Choose the guide and place before the tide",
+      "paragraphs": [
+        "Look for a naturalist-led outing run by a park, museum, conservation group or qualified local guide. Ask what shoreline the group will visit, how long the walk lasts, what the ground is like, whether the route can be adapted, and how large the group will be. Tidepools are not interchangeable: access and rules vary between sites, especially in protected areas. The California Academy of Sciences tells visitors to check the local park guidelines, including rules about group size and handling organisms.",
+        "Ask the guide how they will decide whether conditions are appropriate and what the group should do if weather or surf changes. Do not plan the visit around a low tide alone. A guided outing can be cancelled or rerouted for safety, and current local instructions take precedence over a general article."
+      ]
+    },
+    {
+      "heading": "Prepare for a rocky, changing shoreline",
+      "paragraphs": [
+        "Tidepools are exposed at low tide, but rocks may still be uneven, slippery or crossed by sudden waves. The California Academy of Sciences recommends sturdy footwear with good tread and warns against flip-flops. Dress in layers, keep hands free where possible and bring water. Use mobility supports that work for your body and terrain; ask the guide before the day about the route and options.",
+        "Arrive with enough time to hear the safety briefing. Keep your attention on the ocean and where you place your feet. The Academy advises never turning your back on the ocean because smaller waves can be followed by a larger one. Stay with the naturalist and follow their boundaries about where the group can walk."
+      ]
+    },
+    {
+      "heading": "Watch closely without rearranging the habitat",
+      "paragraphs": [
+        "A naturalist can help you find patterns: where an animal is exposed or submerged, how it holds to rock, or what shade and texture help you distinguish one organism from another. Ask before touching anything. The Academy advises observing organisms where they are, not removing animals, rocks, shells, seaweed or plants, and not turning over rocks because animals beneath them depend on that shelter. Walk gently, avoid living beds where possible and use a camera or sketchbook instead of collecting souvenirs.",
+        "A good first question is “What detail should I look for before I try to name it?” This gives you a way to observe even if you never learn the species label. You can ask how tides shape what is visible or what the animal does when the pool is covered again. Let the guide correct your guesses without feeling that identification is a test."
+      ]
+    },
+    {
+      "heading": "Learn one identification clue at a time",
+      "paragraphs": [
+        "Choose one organism or feature to follow. Notice its shape, colour, movement and the surface it is attached to; then compare with the guide’s explanation or an approved field resource. The Academy suggests documenting observations and points to community science tools such as iNaturalist, but a photograph is only useful if it does not require stepping into a risky spot or disturbing wildlife. Ask the naturalist before sharing a location if the site has sensitive habitats.",
+        "Descriptions like “small striped shell beside the green algae” are a useful start even when the exact species remains uncertain. Record what you actually saw and mark a name as tentative if you are not sure."
+      ]
+    },
+    {
+      "heading": "Finish with the place intact",
+      "paragraphs": [
+        "Before leaving, check that everyone has followed the guide’s route and that no items have been taken from the shore. Ask the naturalist what seasonal change or local stewardship issue you should learn about next. Tidepools can be important cultural and harvesting places for Indigenous communities; the Academy explicitly asks visitors to respect Indigenous stewardship and co-management. Follow local rules about access, photography, groups and collection.",
+        "Save the experience with the site, guide and one observation you want to remember. If you want a next step, look for an aquarium or accessible shoreline interpretation programme, or return with the guide’s recommended conditions and rules."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tidepooling 101",
+      "url": "https://www.calacademy.org/community-science/californias-tidepools/tidepooling-101",
+      "publisher": "California Academy of Sciences",
+      "purpose": "Low-tide planning, local access rules, appropriate footwear, wave awareness, respectful observation, and Indigenous stewardship."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "document-a-wild-species-for-inaturalist",
+    "join-a-fossil-walk-led-by-a-local-geologist",
+    "take-part-in-a-seasonal-butterfly-count"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

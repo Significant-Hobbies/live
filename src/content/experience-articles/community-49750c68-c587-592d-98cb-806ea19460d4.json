@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "community-49750c68-c587-592d-98cb-806ea19460d4",
+  "slug": "play-snow-sports",
+  "title": "Choose a first ski or snowboard day that fits your level",
+  "description": "Plan a first snow-sports day around a beginner lesson, suitable terrain, lift confidence and the resort’s posted rules and conditions.",
+  "intent": "Help a beginner choose between ski and snowboard instruction and shape a first resort day around controlled progression and current local conditions.",
+  "sections": [
+    {
+      "heading": "Choose one sport for the first lesson",
+      "paragraphs": [
+        "Skiing and snowboarding both use marked slopes, lifts and changing weather, but their beginner lessons teach different equipment and movement. Pick one for the day rather than trying to master both in a single session. Ask the resort whether its beginner class is for first-timers, what equipment and lift access are included, how long the lesson runs and where the group meets. A lesson that starts on a designated beginner area gives you a clearer first day than buying an all-mountain pass and guessing where to begin.",
+        "If you are choosing between them, think about what kind of instruction will keep you engaged: skis use two separate boards and poles in many beginner programs; a snowboard binds both feet to one board. Those basic differences can help frame questions, but neither is inherently easier for everyone. Ask whether the resort has rental staff who can help you fit equipment and whether the instructor can explain how to stop, move and use the lift before leaving the teaching area."
+      ]
+    },
+    {
+      "heading": "Reserve the pieces that shape the day",
+      "paragraphs": [
+        "Book the lesson, rental and lift access as one plan, checking what is included and whether a beginner lift ticket differs from the general pass. Confirm opening conditions close to the date through the resort’s official page; snow coverage, weather and lift operations can change. Leave extra time for rental fitting, boots and check-in. If your boots cause pain, tell the fitter before going out—poor fit can distract from learning and may affect control.",
+        "Dress for the resort’s current conditions with layers that allow movement, gloves, eye protection and a helmet that fits correctly. Ask the resort for its equipment guidance rather than assuming borrowed gear is suitable. Bring water and a snack for breaks. No single clothing list works in every mountain climate, and the ski area’s current weather notice should guide your final choices."
+      ]
+    },
+    {
+      "heading": "Learn the slope code before riding",
+      "paragraphs": [
+        "The National Ski Areas Association’s Your Responsibility Code says to stay in control, yield to people downhill, stop only where visible from above, look uphill before entering a trail, prevent runaway equipment and obey signs and closures. It also says to avoid lifts or terrain while impaired and to exchange contact details with an employee after a collision. Read the complete code before your visit, then ask a resort employee to explain anything unclear. Local signs and resort directions govern the terrain available that day.",
+        "A useful beginner habit is to stop at the edge of a run only where other riders can see you, and never pause just after a roll or near a lift unloading zone. Keep to the area your instructor assigns, even when a nearby trail looks tempting. Closed trails remain off limits even if tracks suggest that someone has entered them. The resort can close terrain for conditions, maintenance or other reasons you cannot judge from the top."
+      ]
+    },
+    {
+      "heading": "Let the lesson set the pace",
+      "paragraphs": [
+        "Tell your instructor plainly that you are new and mention any access need or concern before the group starts. Listen for the meeting point, hand signals, route boundary and how to regroup. If you cannot hear an instruction or are unsure where to stop, ask for a repeat while stationary in a safe place. A class with mixed abilities can be useful if the instructor can keep the group together; ask how they handle different paces and whether a private or smaller lesson is available if that matters to you.",
+        "A satisfying first session could be as small as learning to control speed on an easy area and riding one lift with help. Do not compare your progress with videos or friends. Take breaks before fatigue makes it hard to follow instructions. If weather, visibility or your energy changes, tell the instructor or patrol and follow their guidance about ending the session."
+      ]
+    },
+    {
+      "heading": "Finish with a useful next decision",
+      "paragraphs": [
+        "After the lesson, note what felt understandable and what still needs instruction: fitting boots, lift loading, stopping, turning or reading trail signs. Ask the instructor which specific class or terrain level is appropriate to consider next, then verify with the resort before booking. One day does not qualify you to enter advanced or closed terrain.",
+        "The goal is to enjoy snow sports in a way you can repeat comfortably. Reserve a beginner lesson, check the resort’s current conditions and trail map, and learn the responsibility code before you arrive. On the day, keep your route within the instructor’s plan and ask a ski-area employee whenever a sign or lift procedure is unclear."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Your Responsibility Code",
+      "url": "https://www.nsaa.org/nsaa/safety/",
+      "publisher": "National Ski Areas Association",
+      "purpose": "Supports resort slope conduct guidance for skiers and snowboarders, including right-of-way, visible stopping, closures, lift safety and incident response; local resort rules and signs remain controlling."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "ski-or-snowboard-a-black-diamond-run",
+    "climb-your-first-mountain"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

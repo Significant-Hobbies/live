@@ -1,0 +1,61 @@
+{
+  "experienceSlug": "take-a-sheltered-water-paddleboard-starter-lesson",
+  "slug": "take-a-sheltered-water-paddleboard-starter-lesson",
+  "title": "What should a beginner ask before a paddleboard lesson?",
+  "description": "Choose a coached introduction by discussing water conditions, safety equipment, rescue plans and access needs before you reach the launch point.",
+  "intent": "A pre-lesson decision guide for assessing whether a supervised paddleboard session fits your confidence, questions and local conditions.",
+  "sections": [
+    {
+      "heading": "Choose instruction before choosing scenery",
+      "paragraphs": [
+        "A beginner lesson is a chance to learn how the provider assesses the water, fits equipment and sets a boundary for the group. Ask whether the instructor is qualified for the location and activity, what rescue support is present, how weather changes the plan, and where beginners remain. A sheltered site can still have wind, current, cold water, boat traffic or a difficult exit.",
+        "The Canal & River Trust advises new paddlers to begin with a club or centre that can provide equipment and arrange lessons, rather than simply buying gear and going alone. Use that as a starting question, not a universal guarantee: local rules and risks vary. Ask the provider to explain why the chosen site and forecast suit beginners on that particular day."
+      ],
+      "bullets": [
+        "Share your water confidence, swimming ability and access needs in advance so the provider can advise whether the session is appropriate."
+      ]
+    },
+    {
+      "heading": "Clarify the equipment and rescue plan",
+      "paragraphs": [
+        "Ask what is included and how the instructor will check fit. The provider should tell you what flotation equipment to wear and what leash arrangement is appropriate for that environment; do not select a leash type from a generic online tip. A leash choice that is suitable in open water may be unsuitable around moving water or obstacles. Let the instructor explain the local setup and check it before launch.",
+        "Find out how the group communicates, what happens if someone falls, where the session turns back, and who stays with a participant who wants to stop. Ask about changing facilities, footwear, sun or cold protection, and whether you should bring anything. You are not being difficult by asking; these are part of deciding whether the session is well planned."
+      ]
+    },
+    {
+      "heading": "Set a useful first-session goal",
+      "paragraphs": [
+        "A first session does not need to end with standing confidently or travelling a long distance. A realistic goal might be to understand the safety briefing, balance in a kneeling position, make a controlled stop, and return to the launch area with help. Tell the instructor what would make the experience worthwhile for you. If you prefer to remain seated or kneeling, say so.",
+        "Listen for a progression that begins close to shore and gives time to practise before moving farther. Ask the instructor to demonstrate how to get back on the board only if conditions and the lesson plan allow it. A fall or a pause is not a failure; it is a moment to follow the taught procedure and check whether you still feel comfortable continuing."
+      ]
+    },
+    {
+      "heading": "Use the briefing as a real boundary",
+      "paragraphs": [
+        "At the water, learn the launch and return signals, the route, where the group may go and what to do if you become separated. Confirm that the board, paddle and flotation equipment fit. If the conditions differ from the earlier conversation, raise that before setting off. The instructor should be able to explain any change and choose to cancel or adapt if the plan is no longer suitable.",
+        "During practice, focus on one control at a time: a stable position, a gentle paddle stroke, a turn and a stop. Stay where the instructor directs you. Do not copy a more experienced participant who has wandered beyond the class boundary. If cold, fatigue or anxiety becomes distracting, say so early and follow the agreed return plan."
+      ]
+    },
+    {
+      "heading": "Leave with a clear next step",
+      "paragraphs": [
+        "After the session, ask which skills you practised and what training would come before an independent trip. Write down the conditions and equipment used, but do not describe a supervised taster as independent competence. The next useful step may be another coached session, a club introduction or simply waiting for a day when the water and weather are suitable.",
+        "Use your notes to remember what helped: a calm launch, a clear demonstration, a shorter distance or time to ask questions. Before another session, recheck the provider’s current guidance and local requirements, since access, water conditions and operating arrangements can change."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Getting started with your canoe, kayak or paddleboard",
+      "url": "https://canalrivertrust.org.uk/things-to-do/canoeing-and-kayaking-near-me/starting-canoeing-kayaking-or-paddleboarding",
+      "publisher": "Canal & River Trust",
+      "purpose": "Supports beginning with a club or centre for equipment and lessons, and checking water safety before paddling."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "take-an-adult-beginner-swimming-lesson",
+    "try-a-supervised-water-aerobics-class"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "victoria-falls-zambia-zimbabwe",
+  "slug": "victoria-falls-zambia-zimbabwe",
+  "title": "Choose a Victoria Falls view by water, mist and scale",
+  "description": "Compare the close spray of Livingstone’s Knife-Edge Bridge with a wide river view, and plan around season, borders and changing conditions.",
+  "intent": "Which Victoria Falls viewpoint should I choose, and how do the close-up and wide-angle experiences differ?",
+  "sections": [
+    {
+      "heading": "Decide whether you want detail or scale",
+      "paragraphs": [
+        "Victoria Falls is not one single viewing platform. From the Zambia side near Livingstone, the Knife-Edge Bridge gives a close view toward the Eastern Cataract and the gorge, while higher or aerial viewpoints reveal more of the river’s approach and the broad curtain of falling water. Zambia’s official tourism description names the Knife-Edge Bridge and describes an aerial perspective of the river before it drops into the gorge. Decide which visual question matters more to you: what the water feels like nearby, or how the whole river landscape fits together.",
+        "The answer changes with water level. The Zambia tourism authority describes March through June as a prime flood season and notes that spray can be intense enough to feel like fog at close viewpoints. That can make an immersive visit dramatic but obscure the far wall and soak cameras. In lower-water periods, individual channels and rock forms may be easier to distinguish. Neither condition is a guaranteed better visit; rainfall and flow vary, and the landscape is not a stage set to order."
+      ]
+    },
+    {
+      "heading": "Treat the mist as part of the route",
+      "paragraphs": [
+        "For a close visit, bring a light waterproof layer for yourself and a way to protect a phone or camera. Keep hands free on wet paths and slow down on exposed bridges. The visual reward is proximity: spray, sound and fragmented glimpses between curtains of water. If you are hoping for a clean panoramic photograph, this may be the wrong time or vantage point.",
+        "The authority mentions the Eastern Cataract and Knife-Edge Bridge, but actual pathways and visibility can change. Follow current signs and staff instructions, and do not cross barriers to reach a more dramatic angle. Be careful with lenses near spray; wipe them only with a clean cloth so grit does not scratch the glass. Decide in advance whether the visit is mainly for experience or photography, because trying to do both at once can make a wet, crowded walk stressful."
+      ]
+    },
+    {
+      "heading": "Separate the Zambia visit from the cross-border plan",
+      "paragraphs": [
+        "The falls span the Zambia–Zimbabwe border, and a visitor can plan from either country or ask about a cross-border visit. Do not assume that one ticket covers both national parks, that walking between viewpoints is always possible, or that your visa allows a border crossing. Entry rules depend on nationality and can change. Verify immigration requirements and park access with the relevant government and park authorities before building a same-day itinerary.",
+        "A practical plan is to pick one side as the main visit and treat the other as an optional second perspective. Add the border crossing only after checking your passport, visa and transport arrangements. This matters especially if your flight leaves the same day: border queues, road transfers and changing operating hours make a tight schedule fragile."
+      ]
+    },
+    {
+      "heading": "Choose an activity that fits your comfort",
+      "paragraphs": [
+        "Official Zambia tourism pages list several experiences around the falls, including boat trips, river activities and aerial viewing. These are distinct products with different exposure, movement and safety demands. A quiet riverside cruise gives you a horizontal view and more time to watch the current; a helicopter or other flight can reveal the long river approach; an adventure activity brings you into a more tightly managed setting with operator-specific restrictions.",
+        "Ask the operator what conditions cancel the activity, what equipment is supplied, how the group is supervised and whether the activity has a minimum age or health restriction. Do not infer suitability from an attractive photograph. For water or edge activities, use licensed, authorized providers and follow their briefing rather than recreating a stunt at an unstaffed viewpoint."
+      ]
+    },
+    {
+      "heading": "Build a visit around one clear question",
+      "paragraphs": [
+        "A compact plan could pair a close walk with a slower break at a dry viewpoint, leaving enough time to dry gear and look at the river from a different angle. If you have more time, visit a local museum or cultural site in Livingstone rather than filling every hour with adrenaline activities. Zambia tourism specifically lists Livingstone museums and Mukuni Market as alternatives near the falls.",
+        "Before departure, check official notices for access, weather and local conditions, then choose footwear and a camera setup for the actual route. Your final decision can be simple: close mist and sound, broad river scale, or both with a generous time buffer. That is a more useful promise to yourself than expecting a particular rainbow, flow level or unobstructed view."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Victoria Falls",
+      "url": "https://www.zambia.travel/victoriafalls.html",
+      "publisher": "Zambia Tourism Agency",
+      "purpose": "Supports named Zambia-side viewpoints, broad seasonal-flow context, spray conditions and examples of nearby activities; no access guarantee inferred."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "niagara-falls-canada",
+    "okavango-delta-botswana"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

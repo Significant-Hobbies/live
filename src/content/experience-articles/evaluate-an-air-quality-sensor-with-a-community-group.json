@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "evaluate-an-air-quality-sensor-with-a-community-group",
+  "slug": "evaluate-an-air-quality-sensor-with-a-community-group",
+  "title": "Plan a community air-sensor check that answers one question",
+  "description": "Work with a community group to compare an air sensor with a clear question, consistent placement, good notes, and careful limits on what the readings can prove.",
+  "intent": "How can a community evaluate a low-cost air sensor without treating its readings as official measurements? This guide adds a study plan, a repeatable check, and cautious interpretation.",
+  "sections": [
+    {
+      "heading": "Agree on the question first",
+      "paragraphs": [
+        "Choose a question the group can answer with its time and sensor: how readings vary across two nearby locations, whether a device produces consistent readings in one place, or how conditions change over a short observation period. Write down what you want to learn and what you cannot conclude from this exercise. Keep the question about the measurement process, not diagnosing someone’s health.",
+        "The U.S. Environmental Protection Agency’s Enhanced Air Sensor Guidebook organizes monitoring around a question, plan, setup, collection, and evaluation. Use that sequence as a shared checklist. Decide who will care for the instrument, who will keep the notebook, and how results will be explained to neighbors before the first reading."
+      ]
+    },
+    {
+      "heading": "Choose a location and comparison carefully",
+      "paragraphs": [
+        "Read the sensor manual and the EPA siting guidance before choosing a mount. Pick an accessible place where the device can operate as intended and where the group can record relevant conditions, such as nearby activity or weather. Avoid placing the sensor in a spot that only one person can reach or that makes safe setup difficult.",
+        "If you compare two locations, keep device model, height, orientation, recording interval, and time window as similar as possible. If only one sensor is available, move it using a written schedule and record the changeover. Do not imply that two devices are equivalent until you have checked their behavior together."
+      ]
+    },
+    {
+      "heading": "Check the instrument before the study",
+      "paragraphs": [
+        "Inspect the sensor, power source, inlet, clock, and data storage. Review calibration or performance information from the manufacturer or an evaluation program if available. Do not assume that a display reading is accurate because it has decimal places. The EPA describes air sensors as tools that need planning and performance evaluation, and it distinguishes them from the broader approaches used for regulatory monitoring.",
+        "Record the model, serial number if appropriate, firmware or settings, start time, and any maintenance. If the readings are missing, flat, or implausible, document the issue and pause interpretation. A broken or poorly placed instrument can still produce a tidy graph."
+      ]
+    },
+    {
+      "heading": "Make records that keep context attached",
+      "paragraphs": [
+        "Keep a shared log with date and time, location description, sensor setting, weather or visible conditions, and any interruptions. Note if a door opened, a vehicle idled nearby, or a power cycle occurred. Those notes help the group understand what a reading may reflect. Use a map with public landmarks rather than publishing anyone’s home address.",
+        "When you graph the results, label units and show the time period. Mark missing data honestly rather than drawing a continuous line through it. A short caption should explain the question, device, placement, and limits. Do not use one sensor’s reading to claim legal compliance or make an individual medical decision."
+      ]
+    },
+    {
+      "heading": "Share the learning, including uncertainty",
+      "paragraphs": [
+        "Invite the group to review the method before looking at the chart. Ask whether the placements and timing were fair and whether a second run is needed. If a result is surprising, check it against another source or repeat the measurement instead of presenting the most dramatic moment as typical.",
+        "The useful outcome may be a more careful monitoring plan, a sensor problem that needs fixing, or a clearer public question. Your next step is to read the EPA guidebook’s monitoring-study section together and agree on one question, one location protocol, and one way to communicate uncertainty."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How to Use Air Sensors: Air Sensor Guidebook",
+      "url": "https://www.epa.gov/air-sensor-toolbox/how-use-air-sensors-air-sensor-guidebook",
+      "publisher": "U.S. Environmental Protection Agency",
+      "purpose": "EPA’s guide structures sensor studies around question, plan, setup, collection and evaluation and covers sensor performance and data interpretation."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "submit-a-month-of-rain-gauge-observations-to-a-science-network",
+    "plot-a-week-of-public-earthquake-records"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

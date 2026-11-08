@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "write-a-letter-to-your-future-self-and-read-it-in-10-years",
+  "slug": "write-a-letter-to-your-future-self-and-read-it-in-10-years",
+  "title": "Write a letter that can surprise you ten years later",
+  "description": "Write to your future self with enough present-day detail to make the letter vivid, then choose a reliable and private way to reopen it in a decade.",
+  "intent": "What can I put in a ten-year letter so it records the person I am now without pretending I can predict who I will become?",
+  "sections": [
+    {
+      "heading": "Begin with a date and a scene",
+      "paragraphs": [
+        "Write the date, where you are, and a few ordinary details from the day. What is on your desk? What has the weather been doing? What are you looking forward to this month? These anchors make the letter more than a list of predictions. You are giving your future reader a way to locate the present you.",
+        "The Library of Congress describes personal letters as records that can convey what a time felt like, alongside the dates and events that mark it. You are not writing a historical document for an archive, but the idea is useful: include the texture of life that a future calendar would not capture."
+      ]
+    },
+    {
+      "heading": "Write about open questions",
+      "paragraphs": [
+        "Tell your future self what currently occupies your attention: a decision you are weighing, a skill you are trying to learn, a relationship you hope to care for, or a question you cannot answer. Separate what you know from what you hope. “I hope I still make time for music” leaves room for change; “I will be a touring musician” turns a letter into a prediction.",
+        "Include a few questions you would genuinely like to answer later. What did you stop worrying about? What stayed important? Which ordinary habit changed? Avoid questions that demand a particular achievement or life stage. The future reader may have taken an unexpected route, and the letter should remain welcoming if plans changed."
+      ]
+    },
+    {
+      "heading": "Choose what to leave out",
+      "paragraphs": [
+        "A private letter can hold vulnerable details, but think about who might handle it if the envelope is misplaced or the storage service closes. You can write sensitive thoughts in a separate place or keep the letter in a secure location. If another person is mentioned, avoid sharing their private information without consent.",
+        "Do not use the letter as a contract that your future self must obey. It is a dated portrait. You can acknowledge uncertainty directly: “I cannot know what this will look like in ten years.” That sentence may be more useful than a list of bold forecasts because it leaves space for a changed body, job, family or set of priorities."
+      ]
+    },
+    {
+      "heading": "Make the opening date dependable",
+      "paragraphs": [
+        "If using paper, address the envelope to yourself and write the open date clearly. Store it somewhere stable, away from damp, heat and accidental recycling. If you want someone else to mail it later, ask permission and agree on the exact date; do not assume a friend will remember a decade-long favor.",
+        "If you use a digital reminder or scheduled-message service, read its privacy, account and long-term storage terms before uploading intimate writing. Keep a separate copy if appropriate and record where it lives. No service can promise availability ten years from now. A physical letter and a calendar reminder may be a simpler combination."
+      ]
+    },
+    {
+      "heading": "Write for a kind reunion",
+      "paragraphs": [
+        "Close with a note that does not depend on success: what you hope your future self remembers about the present, what you are grateful to have tried, or what you would tell a friend who lived the same year. You do not need to solve your life in one sitting. One page of concrete details can be enough.",
+        "Seal the letter or save it with its date and choose a reminder route today. Then return to the present without checking whether the future has turned out as expected. Your next step is to write the scene, one open question and one hope that can survive a different outcome."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Letters Straight to Your Heart: The Library’s Centuries of Correspondence",
+      "url": "https://blogs.loc.gov/loc/2022/05/letters-straight-to-your-heart-the-librarys-centuries-of-correspondence/",
+      "publisher": "Library of Congress",
+      "purpose": "Provides archival examples and the observation that personal letters capture feelings of their time; article uses this as inspiration, not a prediction or writing rule."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "write-a-letter-to-your-younger-self",
+    "write-heartfelt-letters-to-10-people-who-changed-your-life",
+    "keep-a-journal-for-a-full-year"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

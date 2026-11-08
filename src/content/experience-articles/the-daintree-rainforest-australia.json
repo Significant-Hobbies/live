@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "the-daintree-rainforest-australia",
+  "slug": "the-daintree-rainforest-australia",
+  "title": "Choose between Mossman Gorge and Cape Tribulation",
+  "description": "Plan a Daintree visit by its two separated park sections, named rainforest boardwalks, ferry crossing and current wildlife safety guidance.",
+  "intent": "How do I choose a Daintree rainforest visit that fits my time, access needs and safety constraints across Mossman Gorge and Cape Tribulation?",
+  "sections": [
+    {
+      "heading": "Know that the park has two separate sections",
+      "paragraphs": [
+        "The Daintree National Park has a Mossman Gorge section and a Cape Tribulation section, with a river crossing and a long drive between them. Queensland Parks places the wider park between eighty and one hundred fifty kilometres north of Cairns. A one-day visit from Cairns should therefore be designed around one side or a small number of stops, not an assumption that every rainforest landmark is close together.",
+        "Choose Mossman Gorge if you want a visitor center, shuttle access and an elevated boardwalk through rainforest to a river lookout. Choose Cape Tribulation if you want the northern section’s coastal boardwalks and forest near the sea, and have time for the ferry and road journey. These are different bases for a visit, not two attractions you can casually walk between."
+      ]
+    },
+    {
+      "heading": "Use a named walk to set the pace",
+      "paragraphs": [
+        "At Mossman Gorge, Queensland Parks identifies the Baral Marrjanga elevated boardwalk as wheelchair accessible from the visitor centre shuttle area to a Mossman River lookout. The department says the shuttle runs daily between 8 a.m. and 5:45 p.m. at intervals shown on its current page; check the live notice before travel. This is a more predictable first rainforest outing for visitors who want a surfaced, elevated route.",
+        "At Cape Tribulation, the authority names the Madja, Dubuji and Kulki boardwalks as wheelchair accessible, with specific access details that vary by track. Dubuji has an accessible section with a beach view; at Jindalba, access to the creek is available from the exit end. Check the official map and conditions to choose a walk suited to your mobility and time."
+      ]
+    },
+    {
+      "heading": "Plan the river crossing and road honestly",
+      "paragraphs": [
+        "To reach Cape Tribulation, vehicles cross the Daintree River by ferry, which Parks says operates from 5 a.m. to midnight daily, with reduced service on Christmas Day and occasional interruptions for repairs or flooding. After the crossing, the road is narrow and winding. A conventional two-wheel-drive vehicle can reach Cape Tribulation, while the mostly unsealed continuation north to Bloomfield requires four-wheel drive because of steep grades and creek crossings.",
+        "Do not extend a Cape Tribulation plan north of the park boundary unless your vehicle and driver meet the current requirements. Check Queensland Traffic, park alerts and the ferry operator’s latest conditions before setting out. The road can deteriorate quickly in wet conditions, and mobile reception is limited in parts of the northern section. Build in a return-time buffer rather than relying on a tight same-day connection."
+      ]
+    },
+    {
+      "heading": "Follow water and wildlife warnings",
+      "paragraphs": [
+        "Queensland Parks states that swimming at Mossman Gorge can be dangerous because water conditions are unpredictable, levels can rise quickly and currents, deep water and submerged boulders create hazards. Its advice is not to enter the water. Treat the lookout as the water experience and enjoy it from a safe place rather than choosing a swimming spot based on an old photo.",
+        "In the Cape Tribulation section, the authority advises visitors to watch for cassowaries on roads, stay well away and never feed them. It also warns that marine stingers may be present in coastal waters and that phone reception is limited in some areas. Follow posted guidance, check current weather and alerts, and do not assume a calm-looking beach or river is safe to enter."
+      ]
+    },
+    {
+      "heading": "Pick one section and leave room to look",
+      "paragraphs": [
+        "For a first visit, select one section and one signature walk. A Mossman Gorge day can center on the shuttle, Baral Marrjanga boardwalk and a visit to the cultural center; a Cape Tribulation day can focus on one coastal boardwalk such as Dubuji or Kulki after the ferry crossing. Confirm current opening conditions, accessibility details and transport before committing, especially if traveling with someone who needs an accessible route.",
+        "The Queensland Parks page is a strong source for routes, access and hazards, but conditions, shuttle fees, ferry service and closures may change. It does not guarantee a day’s road or weather conditions. Your next action is to choose Mossman Gorge or Cape Tribulation as the anchor, check live alerts, and build your day around the specific boardwalk that suits you."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Visiting safely – Daintree National Park (CYPAL)",
+      "url": "https://parks.qld.gov.au/parks/daintree/visiting-safely",
+      "publisher": "Queensland Parks and Forests",
+      "purpose": "Supports the park’s two sections, named access routes and boardwalks, shuttle/ferry logistics, accessibility and current safety warnings including swimming, cassowaries and road conditions."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "explore-the-amazon-rainforest",
+    "zipline-through-a-rainforest-canopy"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,51 @@
+{
+  "experienceSlug": "build-and-dismantle-a-small-outdoor-den",
+  "slug": "build-and-dismantle-a-small-outdoor-den",
+  "title": "How do you build a woodland den without damaging the place?",
+  "description": "Plan a temporary den in an approved outdoor area, choose found materials carefully, keep people safe, and leave the site ready for its next visitors.",
+  "intent": "Answer how to make a small outdoor den that is stable enough for imaginative play but temporary, permitted, and gentle on the habitat.",
+  "sections": [
+    {
+      "heading": "Choose the place before collecting anything",
+      "paragraphs": [
+        "Build only where the land manager or owner permits it. A woodland, park, school garden, and nature reserve can have very different rules; some places ask visitors to leave branches and leaves where they are. The National Trust’s den-building activity offers a family example using natural materials, but you should follow the instructions of the place you are in. Avoid sensitive vegetation, animal burrows, nesting areas, water edges, steep slopes, and routes other people need to use.",
+        "For a first den, choose a small area of level ground that is visible to the supervising adult and away from roads, fire pits, and falling branches. Check overhead for dead limbs and around the base for sharp objects or uneven roots. Decide at the outset how you will dismantle the den and return materials. A temporary play structure should not become a hidden trap or an obstacle for the next person who uses the site."
+      ]
+    },
+    {
+      "heading": "Use a simple structure and safe materials",
+      "paragraphs": [
+        "A lean-to against a sturdy low branch or a small frame resting on the ground can be enough. The National Trust suggests leaning gathered sticks against a tree, but do not break living branches or strip bark. Use only loose material you have permission to move, and leave anything that is attached, hollow, or providing shelter for insects. Avoid heavy logs that can roll, brittle branches over head height, wire, plastic cord, and anything that could catch around a neck or limb.",
+        "Begin with a few light poles or fallen sticks and test each one gently before building on it. Keep the entrance wide and the roof low enough that no one needs to climb. Do not make an enclosed space that could collapse or block a child’s exit. If the group includes young children, assign an adult to oversee carrying and placement, and make it clear that nobody crawls beneath a section while it is being adjusted. A den is a play boundary, not a load-bearing shelter for weather."
+      ]
+    },
+    {
+      "heading": "Build for the activity, not for permanence",
+      "paragraphs": [
+        "Ask what the den is for: a story hideaway, a quiet observation spot, or a place to sit with a book. That choice helps you decide its size and opening. A storytelling den can be two walls and a roof edge; it does not need to be sealed. Use the surroundings as part of the design: a patch of dappled light, a safe view across the clearing, or a dry seat made from your own mat. Leave plants rooted and do not rearrange stones that may shelter small animals.",
+        "Before anyone enters, check that the structure is stable with a light hand push and that the route in and out stays clear. Keep people from standing on the frame or hanging from a branch. If it shifts or creaks, take it down and start with a smaller span. Short, clear rules—walk rather than run nearby, no climbing, stop if something moves—make the experience easier to supervise than a long list of cautions."
+      ]
+    },
+    {
+      "heading": "Dismantle and check the ground",
+      "paragraphs": [
+        "When the play is over, remove the roof and frame in the reverse order you built them. Return movable materials to where they came from if the land manager allows it, and do not leave a pile of sticks that could invite others to build in a sensitive place. Pick up any personal items, litter, string, or packaging. Check the ground for disturbed plants, trampled patches, and sharp pieces. If you find a hazard or damage, tell the site staff rather than hiding it.",
+        "Take one final look from the path. Would another visitor know that people had built there? If the answer is yes because the site is marked or plants are flattened, restore what you can without causing more disturbance. For a repeat visit, choose an approved play area or a garden where the same small corner can be used responsibly. The next step is to ask the land manager what materials and areas are suitable before you build again."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "No. 4 Build a den",
+      "url": "https://www.nationaltrust.org.uk/visit/50-things/no.-4-build-a-den",
+      "publisher": "National Trust",
+      "purpose": "Provides a primary example of a family den-building activity using natural materials and a simple frame."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "install-a-locally-appropriate-wildlife-shelter-with-expert-advice",
+    "take-a-forest-bathing-walk"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "match-cloud-observations-to-satellite-science",
+  "slug": "match-cloud-observations-to-satellite-science",
+  "title": "How do you match a cloud observation to a satellite?",
+  "description": "Compare a ground-level cloud observation with a satellite pass by recording time, location, sky cover, cloud layers, and surface conditions carefully.",
+  "intent": "How can a ground observer make a useful cloud comparison with satellite data? This guide explains the timing, observation notes and limits of matching two different views of the same atmosphere.",
+  "sections": [
+    {
+      "heading": "Understand what a match can and cannot show",
+      "paragraphs": [
+        "A ground observer looks upward through a limited view; a satellite sees clouds from above and measures different properties. The GLOBE Clouds protocol was designed to compare cloud type, cover and opacity observed from the ground with a satellite view. Its guidance explains that these measurements complement one another. A mismatch does not automatically mean that someone made an error: a lower cloud layer may hide higher clouds from the ground, while satellite data may report height or phase that a person cannot directly measure.",
+        "Treat a satellite match as a comparison exercise, not a contest between your eyes and a sensor. The GLOBE satellite-match FAQ says observations can be matched when they fall within about 15 minutes of a satellite overpass, and it notes that the ground and satellite have different perspectives. Check the current app or official overpass schedule because specific flyover times depend on your location and the satellite's orbit."
+      ]
+    },
+    {
+      "heading": "Choose a safe observation point",
+      "paragraphs": [
+        "Find an open place with a broad sky view where you can stop without standing in traffic, blocking a path or looking up while crossing a road. The GLOBE protocol advises selecting a site and never looking directly at the Sun. Do not use binoculars or a telescope to inspect clouds near the Sun. If outside conditions are unsafe, observe from a window and keep a journal instead of forcing a field visit.",
+        "Use the same location for a more comparable set of observations. Write down the date, time, coordinates if the tool collects them, and the direction you faced. Note the surface—such as pavement, grass, snow or standing water—because bright ground can affect what a satellite interprets below its clouds. Your location and time are part of the comparison, not administrative extras."
+      ]
+    },
+    {
+      "heading": "Describe the sky before checking the satellite",
+      "paragraphs": [
+        "Record what you can see first: approximate total cloud cover, low, middle or high layers, cloud forms, opacity and any obscuring fog, smoke or haze. Use the GLOBE cloud chart or app wizard if you are unsure; classification takes practice, and you can submit your best supported estimate. Take the required photos only if you can do so safely, following the app's orientation instructions. Do not look directly at the Sun to frame a photograph.",
+        "Keep your observations specific and modest. “Cloud cover about half the visible sky, with a low gray layer” is more useful than “bad weather clouds.” If a feature is unclear, mark uncertainty or use the protocol's available category rather than naming a cloud from memory. Be consistent about whether you are describing the sky above you, the horizon or the entire site."
+      ]
+    },
+    {
+      "heading": "Compare matched data with care",
+      "paragraphs": [
+        "When the matched report arrives, line up the date, time, location and satellite before comparing values. Check which cloud height categories overlap and which surface conditions may affect the view. Satellite reports can include altitude, phase, opacity and cover, while an observer may enter cloud type, cover, opacity and ground details. The categories are related but not identical, so compare only the fields the report actually has in common.",
+        "If your observation and the satellite differ, write down two possible reasons before deciding one is wrong. A high cloud may have been hidden behind a thick lower layer; the satellite may be sampling a slightly different footprint; or the time gap may matter. The official FAQ states that different perspectives are complementary and that discrepancies do not necessarily mean the user was wrong. Keep your note open to other explanations."
+      ]
+    },
+    {
+      "heading": "Keep a short comparison record",
+      "paragraphs": [
+        "Save your field notes with the satellite match, including the location, observation time, pass time and the specific difference you noticed. A short series from the same safe site can reveal repeat patterns, but a single match does not establish a climate trend. If the satellite match is unavailable, keep your ground observation; it remains useful for practicing identification and may match data from another source or pass.",
+        "Your next action is to check one official overpass time, visit a safe open location, and make a cloud observation within the recommended matching window. Record surface conditions and your own view before opening the satellite comparison."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Clouds Protocol",
+      "url": "https://www.globe.gov/documents/348614/348678/Clouds%2BProtocol/7b79ee82-ebd6-4384-bc44-c2a4d3092740",
+      "publisher": "The GLOBE Program",
+      "purpose": "Supports the purpose of comparing ground cloud observations with satellite views, core observed properties, site selection and solar safety."
+    },
+    {
+      "title": "Understanding the NASA Cloud Observation Satellite Match",
+      "url": "https://www.globe.gov/documents/16792331/0/Satellite%2BMatch%2BComparison%2BFAQ.pdf/bf041c97-315d-4184-bc44-c2a4d3092740?version=1.0",
+      "publisher": "NASA GLOBE Clouds team / The GLOBE Program",
+      "purpose": "Supports the approximate 15-minute match window, complementary ground-up and space-down views, data category differences and reasons for discrepancies."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "pause-at-the-same-window-for-a-week",
+    "submit-a-complete-bird-checklist-to-ebird",
+    "explore-a-garden-through-scent"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

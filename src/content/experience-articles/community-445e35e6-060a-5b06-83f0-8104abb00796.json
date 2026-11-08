@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "community-445e35e6-060a-5b06-83f0-8104abb00796",
+  "slug": "fly-a-plane",
+  "title": "Make an introductory flight lesson about the instructor fit",
+  "description": "Prepare for a supervised first flight lesson by asking about instructor, aircraft, briefing and weather plans, while keeping licensing rules jurisdiction-specific.",
+  "intent": "What should I ask before booking one supervised introductory flight lesson, and what should I expect from a first session?",
+  "sections": [
+    {
+      "heading": "Know what kind of flight you are booking",
+      "paragraphs": [
+        "A sightseeing flight and an introductory flight lesson are not necessarily the same thing. For a U.S. example, the FAA says a student pilot certificate is required before flying solo but is not required just to take flying lessons. That is not a global rule. Ask the school whether your booking is instruction with an authorized instructor, an orientation flight, or a passenger experience, and what the local rules call it.",
+        "A useful first session is mostly about learning whether aviation training and the instructor suit you. You may have a ground briefing, a supervised flight and a debrief. The instructor handles the aircraft and decides what is appropriate; do not expect independent control or a promised route, duration or maneuver. Weather, aircraft availability and airspace can change the plan."
+      ]
+    },
+    {
+      "heading": "Choose the school by teaching and communication",
+      "paragraphs": [
+        "Ask who will teach you, what qualifications and local authorization the instructor holds, and whether the aircraft and school are approved for the lesson you are buying. A friendly answer should include a clear schedule, cancellation policy, safety briefing and realistic explanation of what a beginner might do. If you have a language, hearing, mobility or motion-sickness concern, mention it before booking so the school can tell you what accommodations are possible.",
+        "Compare the school’s response, not only a headline price. Does the instructor explain the difference between an introductory lesson and a license program? Can they say what happens if the weather is unsuitable? Do they give you time to ask questions without pressuring you to purchase a training package? Those details matter more than a promise that you will “fly the plane.”"
+      ]
+    },
+    {
+      "heading": "Prepare for a calm preflight conversation",
+      "paragraphs": [
+        "Bring identification and any paperwork the school requests, arrive early and wear comfortable clothes that do not restrict movement. Tell the instructor about relevant health or comfort concerns and follow any medical guidance from the school or a qualified professional. Eat and hydrate in a way that suits you; avoid alcohol or recreational drugs before flying. The instructor should explain where to sit, how to use the headset and how to communicate.",
+        "Ask what you should do if you feel unwell or anxious, and agree that you can tell the instructor to pause or end the session. Do not feel obligated to continue a lesson because you have paid for it. A professional instructor should take comfort and safety seriously and will determine what actions are appropriate in the aircraft."
+      ]
+    },
+    {
+      "heading": "Know what the briefing and debrief are for",
+      "paragraphs": [
+        "In the briefing, listen for the day’s objective, weather considerations, aircraft limitations, communication plan and emergency procedures appropriate to your role as a student. Your first visit is a chance to learn the vocabulary and the sequence, not to memorize a cockpit checklist from an article. Ask the instructor to explain anything unclear.",
+        "After the flight, set aside time to review what you noticed: how the aircraft responded to bumps, what the instructor explained clearly, whether you enjoyed the workload, and what you would like to understand next. If you may pursue training, ask what the next step is in your jurisdiction and whether a separate medical certificate, student certificate or knowledge requirement applies. The FAA page covers U.S. requirements; elsewhere, use the national civil aviation authority."
+      ]
+    },
+    {
+      "heading": "Make a decision after the lesson",
+      "paragraphs": [
+        "You do not have to decide on a pilot career or license program on the day of your first flight. Compare how the instructor communicated, whether the school explained costs and requirements clearly, and whether you felt comfortable speaking up. If you enjoyed it, book a second conversation about a training plan and total commitment before paying for a package.",
+        "If you did not enjoy the lesson, you still learned something concrete about your preferences. You may prefer aviation museums, gliding with a qualified operator or flight simulation. Choose the next step based on what appealed to you: learning the controls under supervision, seeing landscapes from the air, or understanding aviation as a subject."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Become a Pilot",
+      "url": "https://www.faa.gov/pilots/become/student_cert",
+      "publisher": "Federal Aviation Administration",
+      "purpose": "Directly supports the U.S.-specific distinction that a student pilot certificate is required before solo flight but is not required simply to take flying lessons; not treated as a worldwide rule."
+    },
+    {
+      "title": "Are there any tests required to become a student pilot?",
+      "url": "https://www.faa.gov/faq/are-there-any-tests-required-become-student-pilot",
+      "publisher": "Federal Aviation Administration",
+      "purpose": "Supports U.S.-specific student-pilot and later certification exam sequence; used only to prompt readers to confirm knowledge requirements in their jurisdiction."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "learn-to-fly-a-plane",
+    "community-f29de36c-a221-59d0-8947-1efec2a2887d",
+    "community-38e6f335-b5f1-5ec0-a7c2-28cd02e9b0d2"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "play-an-antakshari-song-relay-with-friends",
+  "slug": "play-an-antakshari-song-relay-with-friends",
+  "title": "Set up an antakshari round everyone can enter",
+  "description": "Choose a shared song pool, agree how ending sounds count, and run a relaxed first round with passes so new and shy singers can join.",
+  "intent": "How do I make an antakshari relay feel clear and welcoming when friends know different songs? This adds practical rule choices to the short game plan.",
+  "sections": [
+    {
+      "heading": "Choose a pool that matches the people",
+      "paragraphs": [
+        "Before dividing into teams, ask which languages, film eras, or song traditions everyone would enjoy. The shared pool matters more than a clever rule: a player cannot join a relay if every prompt comes from music they have never heard. You can choose one language, invite any language, or agree on a few categories, but say the choice out loud.",
+        "One college cultural-event rule sheet describes the familiar relay idea: a team sings a song beginning with the letter at which the previous team ended. That is an organizer’s competition format, not a universal standard. For a home game, settle what counts as the end—last sung syllable, last word, or a group-agreed sound—before the first turn."
+      ]
+    },
+    {
+      "heading": "Demonstrate with an unscored example",
+      "paragraphs": [
+        "Start with one song everyone knows and show how the ending connects to a next beginning. Keep the demo short; the game is about recognition and links, not testing who can perform an entire song from memory. Decide whether a spoken title is enough or whether the team sings a brief recognizable line.",
+        "Try one round without points. Let players ask whether a word or sound counts and agree on a ruling once, then use it consistently. If pronunciation crosses languages, let the group decide whether to use the original ending sound or a commonly sung version. A gentle, explicit rule prevents a game from turning into an argument about accents."
+      ]
+    },
+    {
+      "heading": "Keep turns short and generous",
+      "paragraphs": [
+        "Use a small thinking window if the group likes pace, but allow a pass or a team whisper before a turn expires. A player can hum, speak the title, or ask someone else to lead if singing alone feels uncomfortable. Set a comfortable volume and choose a location where a lively game will not disturb other people.",
+        "Agree how to handle repeats, partial lyrics, and songs that share an ending sound. The event sheet requires a full refrain in its competition; you can choose a lighter home rule, such as one recognizable phrase. Explain the difference at the start instead of surprising players with stricter requirements after a turn."
+      ]
+    },
+    {
+      "heading": "Make the relay fit the room",
+      "paragraphs": [
+        "For a small gathering, pass a soft object to mark whose team is up, or use a simple written turn order. Avoid adding so many side rounds that the main linking game becomes hard to follow. If the group wants variety, add a single theme round—songs from one decade or films—and return to the basic relay afterward.",
+        "Let teams choose songs together. A player who does not know the next link can ask for a pass, and the group can decide whether the next team picks up from the last valid song or restarts. No one needs to justify a pass. That rule makes the game more comfortable without removing its musical challenge."
+      ]
+    },
+    {
+      "heading": "End by sharing what surfaced",
+      "paragraphs": [
+        "Pick an ending in advance: a set number of turns, a time limit, or one final round where teams cooperate. Close with a song someone had forgotten rather than announcing that one person has the best repertoire. If you want a follow-up playlist, list titles and artists; do not upload recordings of participants without their permission.",
+        "A good next round can use the group’s discoveries. Your next action is to send one message asking each friend for a language or era they want included, then choose the linking rule and pass policy before game night."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Rules for the events: Antakshari",
+      "url": "https://www.agdc.ac.in/pdf/rules_of_the_events.pdf",
+      "publisher": "Aurora’s Degree and PG College",
+      "purpose": "Supports one organizer’s example of linking a team’s next song to the previous song’s ending; home rules are labeled as adaptations."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "join-a-beginner-shape-note-singing-session",
+    "host-a-shared-silent-reading-hour",
+    "make-and-exchange-friendship-bracelets"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

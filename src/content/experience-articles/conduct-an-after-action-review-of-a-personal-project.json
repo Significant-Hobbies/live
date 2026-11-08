@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "conduct-an-after-action-review-of-a-personal-project",
+  "slug": "conduct-an-after-action-review-of-a-personal-project",
+  "title": "After-action review for a personal project: learn without blame",
+  "description": "Review a personal project by comparing what you intended with what happened, what helped or hindered, and one change for next time.",
+  "intent": "Adapts the after-action review idea into a bounded personal reflection that produces learning and one practical follow-up rather than blame.",
+  "sections": [
+    {
+      "heading": "Choose a project with a clear end point",
+      "paragraphs": [
+        "Pick something that has finished or reached a meaningful milestone: a move, a course, a creative piece, a trip or a community event. Avoid trying to review your whole year in one sitting. Set aside time when you can think without being interrupted, and decide whether the notes are private or will be shared with collaborators.",
+        "The World Health Organization presents after-action review as a way to examine response to public health events and also as a routine management tool for continuous learning. A personal review can borrow the spirit of learning from what happened, but it is an informal adaptation, not the WHO method or a formal evaluation."
+      ]
+    },
+    {
+      "heading": "Write down what you expected first",
+      "paragraphs": [
+        "Before retelling the project, record what you thought would happen: the goal, the constraints, what “finished” meant and what you expected to be difficult. Be concrete. “I wanted to make a short film by the end of the month, with two afternoons available each week” gives you something to compare with events. If the goal changed, note when and why.",
+        "Then describe what happened in sequence using evidence you can recall or check: a calendar, draft, budget, messages or finished work. Separate facts from interpretations. “We changed locations twice” is an observation; “I am bad at planning” is a conclusion that may not follow from it."
+      ]
+    },
+    {
+      "heading": "Ask what helped and what got in the way",
+      "paragraphs": [
+        "Look for enabling conditions as well as friction. Did a clear first step make it easier to begin? Did an unclear decision, missing information or competing commitment slow the work? Which parts went better than expected, and what made that possible? Try to name a condition you could recreate rather than taking credit or blame for everything.",
+        "If other people were involved, invite their perspective only with consent and a clear purpose. A review should not become a hidden performance assessment of someone else. Ask what they noticed about the work, and listen for differences in experience rather than forcing a single version of events."
+      ]
+    },
+    {
+      "heading": "Turn observations into one next experiment",
+      "paragraphs": [
+        "Choose one change small enough to try in a future project: set a decision date, ask for feedback earlier, reserve a buffer day, or define a smaller first deliverable. State what you expect the change to improve and what evidence would tell you whether it helped. Avoid a list of ten resolutions that will be hard to remember.",
+        "If you cannot identify a change, record the question you still have. Perhaps the outcome depended on timing or luck more than your choices. Uncertainty is a valid review finding; it is better than inventing a confident lesson from one example."
+      ]
+    },
+    {
+      "heading": "Close the review before it becomes rumination",
+      "paragraphs": [
+        "Summarise the review in a few lines: intended result, what happened, one thing to repeat, one adjustment and when you will revisit it. Stop when you have a usable next action. If the reflection turns into self-criticism, return to observable events or take a break. The purpose is to improve future work, not to judge the worth of the person who did it.",
+        "Save the experience with the project name and the date of your follow-up. When you try the change, compare the result with your expectation. A review becomes useful through that next attempt, not through writing a perfect account of the past."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Guidance for after action review (AAR)",
+      "url": "https://www.who.int/publications/i/item/WHO-WHE-CPI-2019.4",
+      "publisher": "World Health Organization",
+      "purpose": "Frames after-action review as a method for learning and improvement, including its use as a routine management tool; the personal adaptation is explicitly informal."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "write-down-your-core-values-and-check-them-against-how-you-actually-spend-your-t",
+    "write-a-letter-to-your-younger-self"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}
