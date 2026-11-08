@@ -12,8 +12,9 @@ export async function POST(request: Request) {
   }
   const session = await getServerAuthSession();
   if (!session?.user) return new NextResponse(null, { status: 401 });
-  const { username } = z
+  const { username, profileVisibility } = z
     .object({
+      profileVisibility: z.enum(['private', 'public']).optional(),
       username: z
         .string()
         .regex(/^[a-z0-9-]{3,30}$/)
@@ -23,7 +24,11 @@ export async function POST(request: Request) {
 
   await db
     .update(users)
-    .set({ onboardingCompletedAt: new Date(), ...(username ? { username } : {}) })
+    .set({
+      onboardingCompletedAt: new Date(),
+      ...(username ? { username } : {}),
+      ...(profileVisibility ? { profileVisibility } : {}),
+    })
     .where(eq(users.id, session.user.id));
   return NextResponse.json({ success: true });
 }

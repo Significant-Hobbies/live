@@ -102,6 +102,9 @@ export const users = sqliteTable('User', {
   emailVerified: integer('emailVerified', { mode: 'timestamp' }),
   image: text('image'),
   username: text('username').unique(),
+  profileVisibility: text('profileVisibility', { enum: ['private', 'public'] })
+    .notNull()
+    .default('private'),
   // IANA zone (e.g. "Asia/Dubai") reported by the browser, used to resolve the
   // user-local dayDate keys and the AM/PM ritual split. Null = fall back to UTC.
   timezone: text('timezone'),

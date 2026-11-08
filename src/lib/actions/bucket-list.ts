@@ -396,10 +396,14 @@ export async function updateBucketListItemVisibility(
 ): Promise<{ success: boolean }> {
   const session = await getServerAuthSession();
   if (!session?.user?.id) throw new Error('Not authenticated');
-  await db
+  const parsed = z.enum(['public', 'private']).parse(visibility);
+  const changed = await db
     .update(bucketListItems)
-    .set({ visibility, updatedAt: new Date() })
-    .where(and(eq(bucketListItems.id, id), eq(bucketListItems.userId, session.user.id)));
+    .set({ visibility: parsed, updatedAt: new Date() })
+    .where(and(eq(bucketListItems.id, id), eq(bucketListItems.userId, session.user.id)))
+    .returning({ id: bucketListItems.id });
+  if (!changed.length) throw new Error('Item not found');
   await revalidateItemSurfaces(session.user.id);
+  revalidatePath('/sitemap.xml');
   return { success: true };
 }

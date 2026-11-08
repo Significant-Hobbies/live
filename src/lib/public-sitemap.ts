@@ -1,7 +1,7 @@
-import { and, eq, isNotNull, max, sql } from 'drizzle-orm';
+import { and, eq, isNotNull, or, sql } from 'drizzle-orm';
 import type { MetadataRoute } from 'next';
 
-import { timelines, users } from '~/db/schema';
+import { bucketListItems, timelines, users } from '~/db/schema';
 import { editorialArticles } from '~/lib/editorial-content';
 import { FAMOUS_BUCKET_LISTS } from '~/lib/famous-bucket-lists';
 import { FAMOUS_JOURNEYS } from '~/lib/famous-journeys';
@@ -20,7 +20,7 @@ import { publicExperienceCatalog } from '~/server/experience-catalog';
 /**
  * Public profiles that have something to show.
  *
- * Only users with a username and at least one PUBLIC timeline are listed —
+ * Only public profiles with a username and public timeline or list item are listed —
  * an empty profile is a thin page, and PRIVATE/UNLISTED content must never be
  * advertised to crawlers. `lastModified` is the newest public timeline update,
  * so a profile's freshness tracks the work behind it.
@@ -36,13 +36,25 @@ async function publicProfileEntries(
     const rows = await db
       .select({
         username: users.username,
-        lastUpdated: max(timelines.updatedAt),
+        lastUpdated: sql<number>`max(max(coalesce(${timelines.updatedAt}, 0), coalesce(${bucketListItems.updatedAt}, 0)))`,
       })
       .from(users)
-      .innerJoin(timelines, eq(timelines.userId, users.id))
-      .where(and(isNotNull(users.username), eq(timelines.visibility, 'PUBLIC')))
+      .leftJoin(timelines, and(eq(timelines.userId, users.id), eq(timelines.visibility, 'PUBLIC')))
+      .leftJoin(
+        bucketListItems,
+        and(eq(bucketListItems.userId, users.id), eq(bucketListItems.visibility, 'public'))
+      )
+      .where(
+        and(
+          isNotNull(users.username),
+          eq(users.profileVisibility, 'public'),
+          or(isNotNull(timelines.id), isNotNull(bucketListItems.id))
+        )
+      )
       .groupBy(users.username)
-      .orderBy(sql`max(${timelines.updatedAt}) desc`)
+      .orderBy(
+        sql`max(max(coalesce(${timelines.updatedAt}, 0), coalesce(${bucketListItems.updatedAt}, 0))) desc`
+      )
       .limit(5000);
 
     return rows.flatMap((row) =>

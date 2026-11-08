@@ -18,6 +18,7 @@ import { timelines, users } from '~/db/schema';
 import { parseJSONColumn } from '~/lib/utils';
 import { db } from '~/server/db';
 import type { Phase } from '~/lib/types';
+import { getVisibleProfile, getPublicProfileItems } from '~/server/profiles';
 
 const SITE_URL = 'https://significanthobbies.com';
 
@@ -72,17 +73,14 @@ export async function renderPublicRouteMarkdown(pathname: string): Promise<strin
 async function renderPublicProfile(rawUsername: string, source: string) {
   try {
     const username = decodeURIComponent(rawUsername);
-    const user = await db.query.users.findFirst({
-      where: eq(users.username, username),
-      columns: { id: true, name: true, username: true, bio: true, website: true, creed: true },
-    });
+    const user = await getVisibleProfile(username);
     if (!user?.username) return null;
     const rows = await db
       .select({ title: timelines.title, slug: timelines.slug, phases: timelines.phases })
       .from(timelines)
       .where(and(eq(timelines.userId, user.id), eq(timelines.visibility, 'PUBLIC')))
       .orderBy(desc(timelines.updatedAt));
-    if (rows.length === 0) return null;
+    const publicItems = await getPublicProfileItems(user.id);
     const sections = rows.map((row) => {
       const phases = parseJSONColumn<Phase[]>(row.phases, [], `agent-profile:${user.id}`);
       return `## ${plain(row.title ?? 'Untitled timeline')}\n\n${phases
@@ -92,6 +90,10 @@ async function renderPublicProfile(rawUsername: string, source: string) {
         )
         .join('\n\n')}`;
     });
+    if (publicItems.length)
+      sections.push(
+        `## Public list items\n\n${publicItems.map((item) => `- ${plain(item.title)}`).join('\n')}`
+      );
     const summary = [user.bio, user.creed]
       .filter((value): value is string => Boolean(value))
       .map(plain)
