@@ -98,7 +98,7 @@ test('account updates survive reload and are absent from another account', async
   test.skip(signupOwner.status() === 404, 'Test auth disabled');
   expect(signupOwner.ok()).toBeTruthy();
   const prepareProfile = await page.request.post('/api/test/complete-onboarding', {
-    data: { username },
+    data: { username, profileVisibility: 'public' },
   });
   expect(prepareProfile.ok()).toBeTruthy();
   let panel = await addItem(page, title);
