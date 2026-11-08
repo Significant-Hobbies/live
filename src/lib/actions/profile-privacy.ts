@@ -19,11 +19,17 @@ function profileHandle(current: string | null, raw: unknown, visibility: 'privat
 }
 
 export async function setProfileVisibility(
+  expectedUserId: string,
   next: 'private' | 'public',
   newUsername?: string
 ): Promise<{ success: true; username: string } | { success: false; error: string }> {
   const session = await getServerAuthSession();
   if (!session?.user?.id) return { success: false, error: 'Sign in to change profile visibility.' };
+  if (session.user.id !== expectedUserId)
+    return {
+      success: false,
+      error: 'Your signed-in account changed. Reload Settings and try again.',
+    };
   const parsed = Visibility.safeParse(next);
   if (!parsed.success) return { success: false, error: 'Choose Private or Public.' };
   const current = await db.query.users.findFirst({

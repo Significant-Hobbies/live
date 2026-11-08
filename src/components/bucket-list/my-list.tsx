@@ -762,7 +762,7 @@ function ItemPanel({
             htmlFor={`visibility-${item.id}`}
             className="mt-4 block text-sm text-muted-foreground"
           >
-            Visibility
+            Who can see this item?
           </label>
           <select
             id={`visibility-${item.id}`}
@@ -774,9 +774,12 @@ function ItemPanel({
             }}
             className="mt-2 min-h-11 w-full rounded-xl border border-border bg-surface px-3 text-sm"
           >
-            <option value="private">Private</option>
-            <option value="public">Public</option>
+            <option value="private">Private — only you</option>
+            <option value="public">Public — on your public profile</option>
           </select>
+          <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+            A public profile does not change this choice. Notes, steps and updates stay private.
+          </p>
         </>
       )}
       <label htmlFor={`notes-${item.id}`} className="mt-6 block text-sm text-muted-foreground">

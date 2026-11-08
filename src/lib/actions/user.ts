@@ -39,13 +39,25 @@ const UpdateProfileSchema = z.object({
     .optional(),
 });
 
-export async function updateProfile(data: {
-  bio?: string;
-  website?: string;
-  name?: string;
-}): Promise<void> {
+async function profileEditorOwner(
+  expectedUserId: string | null
+): Promise<{ success: true; userId: string } | { success: false; error: string }> {
   const session = await getServerAuthSession();
-  if (!session?.user?.id) throw new Error('Not authenticated');
+  if (!session?.user?.id) return { success: false, error: 'Not authenticated' };
+  if (session.user.id !== expectedUserId)
+    return {
+      success: false,
+      error: 'Your signed-in account changed. Reload Settings and try again.',
+    };
+  return { success: true, userId: session.user.id };
+}
+
+export async function updateProfile(
+  expectedUserId: string | null,
+  data: { bio?: string; website?: string; name?: string }
+): Promise<{ success: boolean; error?: string }> {
+  const owner = await profileEditorOwner(expectedUserId);
+  if (!owner.success) return owner;
 
   const parsed = UpdateProfileSchema.parse(data);
   const website = parsed.website?.trim() ?? undefined;
@@ -57,16 +69,17 @@ export async function updateProfile(data: {
       ...(parsed.bio !== undefined ? { bio: parsed.bio } : {}),
       ...(website !== undefined ? { website: website || null } : {}),
     })
-    .where(eq(users.id, session.user.id));
+    .where(eq(users.id, owner.userId));
 
   const user = await db.query.users.findFirst({
-    where: eq(users.id, session.user.id),
+    where: eq(users.id, owner.userId),
     columns: { username: true },
   });
   if (user?.username) {
     revalidatePath(`/u/${user.username}`);
   }
   revalidatePath('/settings');
+  return { success: true };
 }
 
 // ─── Timezone ───────────────────────────────────────────────────────────────
@@ -104,19 +117,22 @@ export async function saveTimezone(timeZone: string): Promise<{ success: boolean
 // This is the emotional anchor of the product. It sits at the top of the
 // dashboard and on the public profile. It's the user's stamp.
 
-export async function updateCreed(creed: string): Promise<{ success: boolean; error?: string }> {
-  const session = await getServerAuthSession();
-  if (!session?.user?.id) return { success: false, error: 'Not authenticated' };
+export async function updateCreed(
+  expectedUserId: string | null,
+  creed: string
+): Promise<{ success: boolean; error?: string }> {
+  const owner = await profileEditorOwner(expectedUserId);
+  if (!owner.success) return owner;
 
   const trimmed = creed.trim().slice(0, 500); // Max 500 chars
 
   await db
     .update(users)
     .set({ creed: trimmed || null })
-    .where(eq(users.id, session.user.id));
+    .where(eq(users.id, owner.userId));
 
   const user = await db.query.users.findFirst({
-    where: eq(users.id, session.user.id),
+    where: eq(users.id, owner.userId),
     columns: { username: true },
   });
   if (user?.username) {
