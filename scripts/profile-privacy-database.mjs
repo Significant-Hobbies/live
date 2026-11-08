@@ -22,13 +22,25 @@ const applied = new Set(query('SELECT name FROM d1_migrations ORDER BY id').map(
 const pending = readdirSync('migrations/d1')
   .filter((name) => name.endsWith('.sql') && !applied.has(name))
   .sort();
-const columns = query('PRAGMA table_info("User")').map((row) => row.name);
+function verifyColumn(rows) {
+  const column = rows.find((row) => row.name === 'profileVisibility');
+  if (
+    column?.type?.toLowerCase() !== 'text' ||
+    column.notnull !== 1 ||
+    column.dflt_value !== "'private'"
+  )
+    throw new Error('Profile privacy column failed schema verification.');
+}
+
+const inspectedColumns = query('PRAGMA table_info("User")');
+const columns = inspectedColumns.map((row) => row.name);
 console.log(
   JSON.stringify({ pending, profileVisibilityColumn: columns.includes('profileVisibility') })
 );
 
 if (apply) {
   if (pending.length === 0 && columns.includes('profileVisibility')) {
+    verifyColumn(inspectedColumns);
     console.log('Profile privacy migration is already applied.');
   } else {
     if (pending.length !== 1 || pending[0] !== migration || columns.includes('profileVisibility'))
@@ -38,9 +50,7 @@ if (apply) {
     console.log(wrangler(['d1', 'time-travel', 'info', 'DB', '--json']));
     console.log(wrangler(['d1', 'migrations', 'apply', 'DB', '--remote']));
     const after = query('PRAGMA table_info("User")');
-    const visibility = after.find((column) => column.name === 'profileVisibility');
-    if (!visibility || visibility.notnull !== 1 || visibility.dflt_value !== "'private'")
-      throw new Error('Profile privacy column failed post-migration verification.');
+    verifyColumn(after);
     if (!query('SELECT name FROM d1_migrations ORDER BY id').some((row) => row.name === migration))
       throw new Error('Profile privacy migration is absent from the applied ledger.');
     console.log('Profile privacy migration verified.');

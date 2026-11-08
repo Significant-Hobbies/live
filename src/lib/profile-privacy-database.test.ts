@@ -8,12 +8,18 @@ import { describe, expect, it } from 'vitest';
 const runner = resolve('scripts/profile-privacy-database.mjs');
 const migration = '0009_noisy_dorian_gray.sql';
 
-function fixture({ applied = ['0000.sql'], column = false, extra = false, failed = false } = {}) {
+function fixture({
+  applied = ['0000.sql'],
+  column = false,
+  extra = false,
+  failed = false,
+  drift = '',
+} = {}) {
   const cwd = mkdtempSync(join(tmpdir(), 'live-privacy-db-test-'));
   mkdirSync(join(cwd, 'migrations/d1'), { recursive: true });
   for (const name of ['0000.sql', migration, ...(extra ? ['0008.sql'] : [])])
     writeFileSync(join(cwd, 'migrations/d1', name), '');
-  writeFileSync(join(cwd, 'state.json'), JSON.stringify({ applied, column, failed }));
+  writeFileSync(join(cwd, 'state.json'), JSON.stringify({ applied, column, failed, drift }));
   writeFileSync(
     join(cwd, 'pnpm'),
     `#!/usr/bin/env node
@@ -24,7 +30,7 @@ const state = JSON.parse(fs.readFileSync('state.json', 'utf8'));
 if (args.includes('execute')) {
   const sql = args[args.indexOf('--command') + 1];
   const results = sql.startsWith('SELECT') ? state.applied.map(name => ({ name })) :
-    (state.column ? [{ name: 'profileVisibility', notnull: 1, dflt_value: "'private'" }] : []);
+    (state.column ? [{ name: 'profileVisibility', type: state.drift === 'type' ? 'INTEGER' : 'TEXT', notnull: state.drift === 'nullable' ? 0 : 1, dflt_value: state.drift === 'default' ? "'public'" : "'private'" }] : []);
   process.stdout.write(JSON.stringify([{ success: !state.failed, results }]));
 } else if (args.includes('apply')) {
   state.applied.push('${migration}'); state.column = true;
@@ -91,5 +97,12 @@ describe('bounded profile privacy database operation', () => {
     expect(f.run(['--remote', '--apply']).status).toBe(0);
     expect(f.calls()).toHaveLength(2);
     expect(f.calls().some((args) => args.includes('apply'))).toBe(false);
+  });
+  it('rejects drifted already-applied schemas without repeating the migration', () => {
+    for (const drift of ['type', 'nullable', 'default']) {
+      const f = fixture({ applied: ['0000.sql', migration], column: true, drift });
+      expect(f.run(['--remote', '--apply']).status).not.toBe(0);
+      expect(f.calls().some((args) => args.includes('apply'))).toBe(false);
+    }
   });
 });
