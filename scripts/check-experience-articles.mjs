@@ -97,6 +97,12 @@ for (const file of files) {
         continue;
       }
       words += paragraph.trim().split(/\s+/).length;
+      if (
+        /\b(?:assignment brief|this assignment|topic-intents\.json|writer-contract\.md|source-checks\.jsonl|articleSlug|experienceSlug|staged catalog|canonical seed)\b/i.test(
+          paragraph
+        )
+      )
+        add(slug, 'Internal authoring instructions leaked into article prose');
       const normalized = normalize(paragraph);
       const previous = paragraphs.get(normalized);
       if (normalized.split(' ').length >= 25 && previous)
