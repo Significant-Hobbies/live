@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "uluru-ayers-rock-australia",
+  "slug": "uluru-ayers-rock-australia",
+  "title": "Meet Uluṟu and Kata Tjuṯa as a living cultural landscape",
+  "description": "Plan a respectful visit to Uluṟu and Kata Tjuṯa by making room for Aṉangu interpretation, marked routes and current park guidance.",
+  "intent": "How can I visit Uluṟu in a way that understands the place as more than a dramatic rock formation?",
+  "sections": [
+    {
+      "heading": "Start with the relationship between the two formations",
+      "paragraphs": [
+        "Uluṟu and Kata Tjuṯa are distinct landforms within one park, not two versions of the same stop. UNESCO describes Uluṟu as a huge sandstone monolith and Kata Tjuṯa as a group of domes about 32 kilometres to its west. Against the surrounding plains, they create different silhouettes and different kinds of scale. Give each its own time rather than squeezing both into one rushed photo circuit.",
+        "The geological contrast is compelling, but it is only one part of the place. UNESCO also describes the park as a living Aṉangu cultural landscape shaped by Tjukurpa, the foundation of Aṉangu law and relationships with land. The most respectful starting point is to learn how the park asks visitors to move through and understand it, rather than treating cultural information as an optional caption."
+      ]
+    },
+    {
+      "heading": "Use the Cultural Centre and guided interpretation",
+      "paragraphs": [
+        "Plan to spend time with interpretive materials at the Uluṟu-Kata Tjuṯa Cultural Centre and look for ranger-led opportunities listed by Parks Australia. A short guided walk can explain a particular section of the base, while independent time on marked tracks lets you observe the scale and weather on your own. These approaches work together: listening to local interpretation first can make an otherwise silent walk much more legible.",
+        "Do not expect every story or sacred site to be available for public explanation. UNESCO notes that some cultural sites are protected from unauthorized entry and viewing, and that joint management with Aṉangu Traditional Owners guides the park. Follow signs about restricted access, and resist the urge to locate unmarked viewpoints from photographs."
+      ]
+    },
+    {
+      "heading": "Choose a route around your time and conditions",
+      "paragraphs": [
+        "If you have a short visit, pick one guided walk or one marked section rather than attempting a full circuit and a second destination. With more time, divide the day: a calmer look at Uluṟu, a break at the Cultural Centre, and a separate visit to Kata Tjuṯa if the park’s current conditions and your energy allow. The two places reward different kinds of attention; one may invite close observation of a wall or watercourse, the other a longer view across clustered domes.",
+        "Route access and opening conditions can change with weather, cultural business and maintenance. Check the Parks Australia visitor page and notices before you set out, and keep an alternative plan. Do not build a tight schedule around a sunrise or sunset viewpoint unless the current park guidance confirms access at that time. Even when open, light, cloud and heat affect what you see."
+      ]
+    },
+    {
+      "heading": "Keep your camera within the park’s guidance",
+      "paragraphs": [
+        "Photography is not an automatic right to capture every view. The park identifies no-photography sites through signs, maps and official guidance, and some cultural areas should not be photographed. Read signs at each location, put the camera away where requested and do not photograph restricted sites from another angle. These limits protect Aṉangu cultural values and help visitors understand that the landscape contains places with different permissions.",
+        "Use the park’s names and spellings where possible, and avoid describing Uluṟu as an object detached from Aṉangu connection to Country. A good photograph can show scale, shadow or a changing sky without exposing a sensitive detail. If you are uncertain whether an image is appropriate, ask a ranger before taking it."
+      ]
+    },
+    {
+      "heading": "Make a small, thoughtful visit plan",
+      "paragraphs": [
+        "Before travel, choose one question to guide your visit: how do the two formations differ, how does a marked walk bring you close to the landscape, or what can a ranger explain about looking after Country? Then check the official map, route conditions, weather and any temporary closures. The park is remote, and conditions can affect transport and walking plans.",
+        "A meaningful day need not cover every viewpoint. Give time to listen, walk at a measured pace, take shade and water breaks, and leave the marked route as you found it. The final action is to check current official visitor guidance before leaving accommodation and follow local instructions throughout the visit."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Uluru-Kata Tjuta National Park",
+      "url": "https://whc.unesco.org/en/list/447",
+      "publisher": "UNESCO World Heritage Centre",
+      "purpose": "Supports the distinct geology and scale of Uluṟu and Kata Tjuṯa, Aṉangu cultural landscape framing, joint management and protected-site context."
+    },
+    {
+      "title": "Information about film and photography at Uluṟu-Kata Tjuṯa National Park",
+      "url": "https://parksaustralia.gov.au/news/information-about-film-and-photography-uluru-kata-tjuta-national-park/",
+      "publisher": "Parks Australia",
+      "purpose": "Supports that no-photography sites are identified in signs, visitor maps and park guidance; advice is to follow current site directions."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "the-kimberley-australia",
+    "the-grand-canyon-usa",
+    "the-sahara-desert"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

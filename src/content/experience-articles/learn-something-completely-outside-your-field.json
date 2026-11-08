@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "learn-something-completely-outside-your-field",
+  "slug": "learn-something-completely-outside-your-field",
+  "title": "Build a small learning project in a field you do not know",
+  "description": "Choose an unfamiliar subject, follow its questions with a short research log, and make one small artifact that helps you see what you understand.",
+  "intent": "How can I learn something completely outside my usual field in a way that moves beyond collecting links and produces a clear beginner-level result?",
+  "sections": [
+    {
+      "heading": "Pick a field by the questions it raises",
+      "paragraphs": [
+        "Choose a subject that sits outside your work or usual hobbies and still makes you curious: urban planning, mycology, textile history, astronomy, music theory, or how a public bridge is maintained. Notice the specific question that caught your attention. “I want to know how a city decides where a bus route goes” is easier to investigate than “I want to learn transportation.” A good beginner question has enough detail to guide a search and enough room for you to discover what you did not know.",
+        "Set a boundary around the learning project. Choose one question, a time window, and one small output: a one-page explainer, annotated diagram, short audio note, or model. This is not a plan to become a professional in someone else’s field. It is a structured way to build first-hand understanding and notice whether you want to continue."
+      ]
+    },
+    {
+      "heading": "Find sources that fit the subject",
+      "paragraphs": [
+        "Start with a public library guide, university course page, museum or scientific institution, professional association, or a practitioner explaining their own method. Use an overview to learn vocabulary, then look for a primary or official source that answers one part of your question. If the subject is technical, check whether the source is current and whether it is intended for beginners, professionals, or a local jurisdiction.",
+        "MIT OpenCourseWare’s Information Exploration course gives an example of a research-led learning structure: it combines assignments with research logs and teaches students to evaluate sources and distinguish publication types. You can adapt that idea without copying its course: keep a log of what you searched, what each source can support, and which question remains unanswered. A research log helps separate confidence from familiarity with a term."
+      ]
+    },
+    {
+      "heading": "Build a map of the field before going deep",
+      "paragraphs": [
+        "Make a page with three columns: words I need to understand, questions I have, and sources or people who might answer them. For the bus-route example, terms might include frequency, transfer, service area, and rider demand. Then trace how one decision affects another: a route serves particular stops, those stops connect to other lines, and the trade-offs affect riders differently. Avoid making claims about a real city unless you can find local data or an official explanation.",
+        "Choose three sources with different jobs: an introductory guide, an institution or dataset, and a practitioner’s account. Note who created each and what perspective it offers. If they disagree, do not smooth over the conflict; write what evidence each uses and whether the disagreement may come from different locations, time periods, or definitions."
+      ]
+    },
+    {
+      "heading": "Make something that exposes your gaps",
+      "paragraphs": [
+        "Use the output to explain one small idea to a curious beginner. Draw a process with labeled steps, narrate a two-minute explanation, or build a simple comparison table. Add citations for factual claims and label your own interpretation as such. If you cannot explain a term without repeating its jargon, go back to the source and restate it in plain language.",
+        "Ask someone knowledgeable to point out one important omission, not to certify you as an expert. If no expert is available, compare your artifact against an official glossary or course outcomes. The goal is to expose where your mental model breaks, so your next reading choice is based on an actual gap rather than whichever link is most exciting."
+      ]
+    },
+    {
+      "heading": "Decide whether to continue",
+      "paragraphs": [
+        "Review the research log and name what changed in your understanding. Did one explanation make a concept click? Did the subject become more interesting when you encountered its real constraints? Is there a course, practitioner-led class, or local public event that would be a better next step? For skills with safety, certification, or legal consequences, use qualified instruction and do not substitute a self-guided introduction for required training.",
+        "Choose a follow-up that fits your curiosity: correct one part of your diagram, talk with someone in the field, or learn a related concept. You can also stop with the one artifact. The next step is to write your question at the top of a page, then collect three sources that answer different parts of it."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Syllabus: Information Exploration: Becoming a Savvy Scholar",
+      "url": "https://ocw.mit.edu/courses/3-093-information-exploration-becoming-a-savvy-scholar-fall-2006/pages/syllabus/",
+      "publisher": "MIT OpenCourseWare",
+      "purpose": "Supports the example of assignments paired with research logs and learning to critically evaluate sources; it is a 2006 undergraduate research-literacy course and does not establish a universal adult-learning method."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "learn-a-beginner-kolam-from-a-practitioner",
+    "learn-how-a-dutch-storm-surge-barrier-works",
+    "complete-an-earthcache-geology-field-challenge"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

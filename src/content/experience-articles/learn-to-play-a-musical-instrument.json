@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "learn-to-play-a-musical-instrument",
+  "slug": "learn-to-play-a-musical-instrument",
+  "title": "Choose an instrument you can keep returning to",
+  "description": "Choose a first instrument by testing sound, practice access and teacher fit, then set up a small learning route you can sustain week to week.",
+  "intent": "Help the reader choose an instrument and first learning route through trials, practice access, and teacher feedback rather than relying on abstract preferences.",
+  "relatedExperienceSlugs": [
+    "learn-an-instrument-to-a-playable-level",
+    "join-a-facilitated-community-drum-circle",
+    "join-a-beginner-shape-note-singing-session"
+  ],
+  "sections": [
+    {
+      "heading": "Pick a sound you want to hear often",
+      "paragraphs": [
+        "Start with the music you return to willingly. If you replay vocal harmonies, voice or choir may be a more natural doorway than buying a keyboard. If you like melody and accompaniment, try a keyboard or guitar. If you are drawn to a particular ensemble, ask which instruments it needs and what beginner access looks like. Interest is not the only factor, but it helps you come back on an ordinary day.",
+        "Make a shortlist of two or three options and try each one in a lesson, community class, music shop demonstration, or instrument-lending program. Pay attention to the sound, hand position, carrying or setup, practice volume, and whether you enjoy producing the first rough notes. A trial is more informative than a long debate about which instrument is theoretically easiest."
+      ]
+    },
+    {
+      "heading": "Check whether practice fits your home life",
+      "paragraphs": [
+        "Before committing, find out where and when you can practice. A drum kit in a shared apartment creates different constraints from a headphone-capable digital keyboard or a quiet wind instrument. Ask a teacher or local music organization about rentals, loan schemes, and instrument maintenance before buying. If the instrument needs regular tuning, setup, or special storage, include that in the decision.",
+        "The Royal Conservatory of Music’s adult programs demonstrate several viable entry routes: private one-to-one lessons, ensembles, choir, and courses at different levels. Your own area may offer different formats, but the choice is useful: learning does not have to mean isolated daily practice with a private teacher."
+      ]
+    },
+    {
+      "heading": "Choose the first teacher or learning setting",
+      "paragraphs": [
+        "A good beginner teacher explains how lessons work, what materials you need, what you can realistically practice between meetings, and how they respond when something is difficult. Ask whether they teach adults or beginners, whether you can book a single trial lesson, and whether a group class or ensemble is available. If you learn well with a friend, ask about paired lessons or community workshops.",
+        "During a trial, notice whether the teacher listens to the music you enjoy and gives you a concrete first task. You should leave knowing what to repeat and how to tell whether it is improving. A teacher does not need to promise rapid progress; they should make the path understandable and create room for your questions."
+      ]
+    },
+    {
+      "heading": "Set a small practice loop",
+      "paragraphs": [
+        "For the first month, choose a short piece, riff, or musical phrase you actually care about. At each practice, repeat one small passage slowly enough to hear where it changes, then connect it to the next phrase. Keep the instrument ready to use, and choose a time cue that fits your life, such as after dinner or before another regular activity.",
+        "Record one short sample each week for your own comparison. Listen for a single thing: steadier timing, clearer tone, smoother changes, or a phrase you can now play without stopping. Do not make a daily streak the measure of success. A missed day is information about the schedule; adjust the practice window rather than deciding you have failed."
+      ]
+    },
+    {
+      "heading": "Review the choice after a real trial",
+      "paragraphs": [
+        "After several lessons or group sessions, ask whether you enjoy the process, whether the instrument fits your space, and whether feedback is helping. Change teachers or instruments if the fit is poor. A trial period is useful precisely because it allows a decision based on lived experience, not obligation.",
+        "Your next step is to contact a local teacher or music program with your shortlist and ask for one beginner trial in each available option. Bring one song you love and explain your practice constraints. You will learn more from that first conversation than from buying gear before you know what kind of music-making you want."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Adult Programs",
+      "url": "https://www.rcmusic.com/learning/oscar-peterson-school-of-music/adult-programs",
+      "publisher": "The Royal Conservatory of Music",
+      "purpose": "Opened institutional adult music program page verifying multiple entry formats, skill levels, teacher-led private lessons, ensembles and choirs."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

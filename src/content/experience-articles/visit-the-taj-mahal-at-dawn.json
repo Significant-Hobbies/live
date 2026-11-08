@@ -1,0 +1,64 @@
+{
+  "experienceSlug": "visit-the-taj-mahal-at-dawn",
+  "slug": "visit-the-taj-mahal-at-dawn",
+  "title": "Plan a dawn Taj Mahal visit around access, not a color promise",
+  "description": "Use current government timings and security rules to plan an early Taj Mahal visit, while treating sunrise color as weather-dependent rather than guaranteed.",
+  "intent": "What should I check before arriving at the Taj Mahal near sunrise, and what can I realistically expect from the light? This adds current access guidance and practical timing.",
+  "sections": [
+    {
+      "heading": "Check the entry window for your actual date",
+      "paragraphs": [
+        "The District Agra government visitor page says the Taj Mahal opens 30 minutes before sunrise and closes 30 minutes before sunset; it also lists Friday as the weekly closure except for prayer at the mosque. Recheck the official page and ticket portal close to your visit, especially if you are planning around a holiday or a change in access rules.",
+        "Build your morning around the official entry window, not a social post that promises a particular minute for an empty courtyard. Decide how you will reach the gate and how much time you need for the security check. Aiming to arrive early gives you more breathing room if a queue or transport delay changes your ideal timing."
+      ]
+    },
+    {
+      "heading": "Pack for the security check",
+      "paragraphs": [
+        "The official Taj visitor guidance says large bags can increase security-check time and lists prohibited items. Check the current list before leaving your accommodation; do not rely on memory. A small carry bag makes it easier to move through screening and avoids having to negotiate an item at the gate.",
+        "If you want photographs, check the current photography rules and be prepared to put the camera away where it is prohibited. The Taj’s surfaces are historic fabric, so stay on permitted paths and do not touch or mark the marble. An early arrival is not permission to cross barriers for an unobstructed angle."
+      ]
+    },
+    {
+      "heading": "Let the light be part of the visit, not its test",
+      "paragraphs": [
+        "The marble can appear different as daylight changes, but cloud, haze, season, and the direction of light affect what you see. No official timetable can guarantee a pink-to-white transformation on a chosen morning. Treat dawn as a quieter way to experience the gardens and changing light, not as a promise that the monument will match one photograph.",
+        "Choose a place from which you can look at the building without blocking other visitors. Take one wide photograph, then put the phone away long enough to notice the reflecting pools, symmetry, inlay, and the relationship between the main tomb and the garden. A camera’s exposure may make a pale sky or marble look unlike your own eyes."
+      ]
+    },
+    {
+      "heading": "Keep a second plan for delays",
+      "paragraphs": [
+        "If you arrive after sunrise or a queue moves slowly, you can still walk the permitted grounds and take time with details. Avoid treating one perfect empty-frame image as the definition of success. The official guidance asks visitors to keep the monument clean and quiet inside the mausoleum; follow staff directions and make space for others.",
+        "Check current weather and local travel time the evening before, then confirm the official opening and closure guidance again in the morning if updates are possible. Keep your ticket and any identity details required by the current portal ready, but do not share them publicly."
+      ]
+    },
+    {
+      "heading": "End with one detail worth remembering",
+      "paragraphs": [
+        "After the visit, note one thing you saw that a photograph flattened: scale, texture, sound, or the way the building sits beside the Yamuna. If you want deeper context, choose an approved guide whose identity can be checked according to the monument’s own visitor advice.",
+        "Your next action is to check the government opening page, Friday status, and current prohibited-items list for your exact date, then set one realistic arrival plan and one light-independent intention for the visit."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Taj Mahal visitor information",
+      "url": "https://agra.nic.in/tourist-place/tajmahal/",
+      "publisher": "District Agra, Government of Uttar Pradesh",
+      "purpose": "Supports the current opening window, Friday closure, and official ticket portal guidance."
+    },
+    {
+      "title": "Information for Tourists Visiting Taj Mahal",
+      "url": "https://tajmahal.gov.in/dos-and-donts.aspx",
+      "publisher": "Archaeological Survey of India",
+      "purpose": "Supports current visitor conduct and security reminders about bag size, prohibited items, photography, and protecting surfaces."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "the-taj-mahal-india",
+    "rajasthan-india"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "visit-all-seven-wonders-of-the-world",
+  "slug": "visit-all-seven-wonders-of-the-world",
+  "title": "Turn a seven-wonder wish list into a humane travel sequence",
+  "description": "Choose a clearly named seven-wonder list, group sites by region, and leave enough space for local context instead of racing between checkmarks.",
+  "intent": "How do I plan a multi-continent visit to the New7Wonders without pretending one rushed tour is the only way to do it? This adds scope and sequence choices.",
+  "sections": [
+    {
+      "heading": "Name the list you mean",
+      "paragraphs": [
+        "There is no single universal list called the Seven Wonders. New7Wonders publishes a modern set of seven places elected through its campaign: Chichén Itzá, Colosseum, Petra, Taj Mahal, Cristo Redentor, Great Wall of China, and Machu Picchu. Decide whether that is your target before making a map; an ancient list, a natural-wonders list, and other public lists lead to different itineraries.",
+        "Write each site’s country and your reason for wanting to see it. A list of seven monuments can look like one travel task, but it spans distinct regions and visit conditions. Your notes should show which places matter most, which need additional planning, and whether one site is currently inaccessible or inappropriate for your situation."
+      ]
+    },
+    {
+      "heading": "Cluster by geography rather than by rank",
+      "paragraphs": [
+        "The New7Wonders organization presents the sites as a list, not a ranking. Use a world map to sketch regional clusters instead of treating first place as the “best” starting point. For example, put sites on the same broad travel circuit together only after checking what ground travel and border transitions are practical at the time you plan.",
+        "Keep an open slot for rest or an unplanned local day in each cluster. Consecutive long transfers can leave no energy for the place you travelled to see. A slower sequence also lets you learn the local history from guides and interpreters rather than reducing a visit to a photograph."
+      ]
+    },
+    {
+      "heading": "Research each site from its own authority",
+      "paragraphs": [
+        "A global list is only a starting index. Find the official site operator, heritage authority, or government visitor information for each monument. Check opening rules, access limits, photography guidance, and any reservation systems close to travel time. Do not copy details from a travel blog for one place and assume they apply at another.",
+        "For sacred places, archaeological sites, and active communities, learn what respectful visitor behavior looks like before arrival. An iconic location can still be a working or sacred place, not simply a backdrop. Plan your visit around permitted routes and local guidance, and ask before photographing people or ceremonies."
+      ]
+    },
+    {
+      "heading": "Make the order resilient",
+      "paragraphs": [
+        "Choose a first cluster around timing, energy, and your own constraints rather than a calendar of ideal weather claims. Leave some flexibility in the sequence so a delay does not force you to rush every later site. Before paying for nonrefundable elements, check current entry conditions and the advice issued by your government for each destination.",
+        "Keep a simple tracker with four fields per site: what you want to learn, which official source controls access, which current details must be rechecked, and how long you want to stay. It turns a vague ambition into a series of informed decisions without inventing a universal trip length."
+      ]
+    },
+    {
+      "heading": "Treat completion as a record, not a race",
+      "paragraphs": [
+        "After a site, write one detail that changed your understanding and one local voice or source you want to learn from next. This is more durable than counting how quickly you crossed the set. If a route is no longer sensible, keep the destination on your long-term list and document why you paused.",
+        "Your next action is to print the official New7Wonders list, mark the two places you most want to experience slowly, and identify their own visitor authorities before comparing routes."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "New7Wonders of the World",
+      "url": "https://world.new7wonders.com/wonders/",
+      "publisher": "New7Wonders",
+      "purpose": "Defines the specific modern seven-site list and shows that its sites are presented equally rather than as ranked stops."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "visit-every-continent",
+    "visit-the-taj-mahal-at-dawn",
+    "visit-all-50-us-states"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

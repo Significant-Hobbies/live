@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "have-one-real-conversation-with-a-grandparent",
+  "slug": "have-one-real-conversation-with-a-grandparent",
+  "title": "Ask One Question That Lets a Grandparent Tell the Story Their Way",
+  "description": "Make a meaningful conversation feel natural: begin with one open question, follow the detail that matters to them, and leave recording aside.",
+  "intent": "How can I have one substantive conversation with a grandparent that feels like time together, not a formal oral-history interview or a rushed checklist?",
+  "sections": [
+    {
+      "heading": "Start from the relationship you already have",
+      "paragraphs": [
+        "You do not need an elaborate plan or a microphone. Choose a moment when neither of you is rushing: a walk, a shared meal, a drive where someone else is driving, or a quiet visit. Ask whether they feel like talking about a particular chapter. They might prefer the present, a hobby, a funny family story, or no serious topic at all. Their interest matters more than completing a prompt list.",
+        "Arizona State University's family-story conversation material offers prompts about daily life, extraordinary experiences, favorite stories, and the stories relatives like to retell. Borrow the open invitation, not the idea that there is one correct family history. Let your grandparent choose the memory and the level of detail they want to share."
+      ]
+    },
+    {
+      "heading": "Ask a question that leaves room",
+      "paragraphs": [
+        "A useful opener is “What did an ordinary day look like when you were my age?” It invites a scene. More focused alternatives include “What did you look forward to after work?” or “Who taught you how to do that?” Avoid stacking several questions together. Ask one, listen, and allow a pause. Quiet does not mean you need to rescue the conversation.",
+        "Follow a detail instead of steering toward your own conclusion: “You said the shop was noisy—what could you hear?” A follow-up lets the speaker decide which part mattered. You can also share a memory of your own, but return the floor rather than turning the visit into a debate over whose recollection is right."
+      ]
+    },
+    {
+      "heading": "Make room for differences and boundaries",
+      "paragraphs": [
+        "A family story may conflict with something you heard elsewhere. You can say “I remember hearing a different version; what do you remember?” without demanding a confession or verdict. The goal is to understand their perspective, not to adjudicate every detail in one sitting. If a subject feels painful or private, accept a change of topic.",
+        "If they ask why you want to know, be honest. Maybe you are curious about how the neighborhood changed, how they learned a skill, or what they enjoyed as a young adult. Avoid promising that the conversation will fix a relationship or preserve a legacy. It can simply be a good exchange between two people."
+      ]
+    },
+    {
+      "heading": "Keep the conversation in the moment",
+      "paragraphs": [
+        "Put away distractions if that feels comfortable to both of you. If they have difficulty hearing, choose a quieter room, face them while speaking, and check whether the pace is working. If you are visiting in a care setting, follow staff guidance and the person's energy. A shorter conversation can be more considerate than pressing for one more story.",
+        "Do not record or share sensitive details without asking first. You can jot down a note afterward about what you learned, keeping private family details private. Recording brings additional questions about consent, file storage, and who may hear it; that is a separate decision from having a conversation."
+      ]
+    },
+    {
+      "heading": "Close with gratitude, not an assignment",
+      "paragraphs": [
+        "As the visit winds down, ask whether there is anything else they would like to tell you or whether they would rather leave it there. Thank them for the time. You might mention one detail you will remember, such as a song, a first job, or a small ritual. Do not promise to call next week unless you mean to.",
+        "For a first conversation, ask one question about an ordinary day and let the answer set the direction. Your next step is to choose a time when both of you can be present."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Stories Our Parents and Grandparents Told Us",
+      "url": "https://midlife.learning.asu.edu/stories-our-parents-and-grandparents-told-us",
+      "publisher": "Arizona State University",
+      "purpose": "Provides family-story discussion prompts about everyday life, memorable experiences, and stories relatives enjoy retelling; used as a source of question themes, not as evidence of a psychological benefit."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "spend-a-week-with-your-grandparents-or-elders",
+    "have-one-real-conversation-with-a-grandparent-before-it-is-too-late",
+    "record-a-conversation-with-an-elder-and-preserve-it"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

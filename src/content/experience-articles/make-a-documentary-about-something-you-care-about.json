@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "make-a-documentary-about-something-you-care-about",
+  "slug": "make-a-documentary-about-something-you-care-about",
+  "title": "Build a short documentary around a question you can answer",
+  "description": "Make a focused documentary by gathering verifiable material, asking informed consent, shaping a clear story and checking what you can fairly claim.",
+  "intent": "How do I make a short documentary about a subject I care about while treating sources and participants responsibly? Focus on scope and ethical storytelling.",
+  "sections": [
+    {
+      "heading": "Find one question the film can answer",
+      "paragraphs": [
+        "“Climate change,” “my town,” or “music” is a subject, not yet a documentary question. Narrow it to something you can investigate in a short film: how a neighborhood library keeps a repair clinic running, what a river looks like at three public access points, or why one family recipe changes between generations. A bounded question gives your footage a purpose.",
+        "Write a two-sentence premise and a list of what you need to learn before filming. Separate what you already know from what you are trying to find out. Identify at least two kinds of evidence, such as observation, public records, an expert explanation or a participant’s account. A documentary should let the evidence complicate your first assumption."
+      ]
+    },
+    {
+      "heading": "Plan access, consent and safety",
+      "paragraphs": [
+        "Make a contact list with the person’s role, why you want to speak with them, how you will use the footage and whether they can review factual details. WITNESS describes informed consent as a legal and ethical obligation to protect interviewees’ safety, security and dignity. Ask clearly before recording, and explain the intended audience and any foreseeable risks.",
+        "Consent is ongoing: a person may decline a question, stop an interview or ask you not to use a sensitive segment. Avoid pressuring someone with a camera already running. If filming in a workplace, private home, school, clinic or culturally significant site, obtain permission from the appropriate people and follow applicable rules. Do not film children without guardian consent and the child’s assent."
+      ]
+    },
+    {
+      "heading": "Capture evidence that helps viewers understand",
+      "paragraphs": [
+        "Record establishing shots, specific actions and quiet detail that relate to your question. If the film is about a local garden, a wide shot of the beds, a close shot of a work task and the sound of the space may establish different kinds of context. Note where and when each clip was made; memory will not reliably restore that later.",
+        "Use an interview outline, not a script that forces a conclusion. Begin with open questions about what happened, then ask for a concrete example or clarification. Avoid leading people toward a dramatic line. Record room tone and a few seconds before and after action. Before using a statistic, trace it to an original report or data source and keep the citation in your project notes."
+      ]
+    },
+    {
+      "heading": "Edit for clarity and fair representation",
+      "paragraphs": [
+        "Build a rough sequence around a question: what the viewer needs to know, what evidence appears, what complicates it and what remains unresolved. Put the strongest relevant scenes before decorative footage. If an interview answer is shortened, make sure the edit does not reverse its meaning. Keep a transcript or timecode notes so you can locate the original context.",
+        "Check rights for music, archival clips, photographs and maps before publication. A friend’s permission to send a song is not automatically a license to include it in a public film. Use materials you made, licensed, or confirmed are available for the use and territory you intend. Credit participants and archival sources in a way that does not expose someone who requested anonymity."
+      ]
+    },
+    {
+      "heading": "Fact-check before sharing",
+      "paragraphs": [
+        "Show the near-final film to a trusted editor who can ask what is unsupported, confusing or unfair. Verify names, dates, captions and quoted claims against primary records. Give interviewees a way to flag factual mistakes, while retaining editorial responsibility for the film. If a detail could identify or endanger someone, remove it or change the plan rather than relying on a disclaimer.",
+        "Export a private review copy first and watch it on a phone and a larger screen with headphones. Check subtitles, speech levels, credits and whether the ending makes a claim you can support. Archive consent records and project files securely. A small accurate film with transparent limits is stronger than a sweeping story that the available evidence cannot carry."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Obtaining Informed Consent",
+      "url": "https://library.witness.org/product/obtaining-informed-consent/",
+      "publisher": "WITNESS",
+      "purpose": "WITNESS says informed consent protects interviewees’ safety, security and dignity and its resource covers consent on paper and on camera; the page describes but does not reproduce the full downloadable tip sheet."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "record-a-public-domain-audiobook-chapter",
+    "write-a-book-that-changes-someone-s-life"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

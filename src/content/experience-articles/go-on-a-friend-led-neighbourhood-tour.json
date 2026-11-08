@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "go-on-a-friend-led-neighbourhood-tour",
+  "slug": "go-on-a-friend-led-neighbourhood-tour",
+  "title": "How can a friend-led neighbourhood walk feel personal and easy?",
+  "description": "Plan a short neighbourhood walk around places your friend chooses, leave room for stories, and make the route comfortable for both of you.",
+  "intent": "A practical format for turning a familiar walk into a generous exchange about place, memory and everyday life without making a friend perform as a tour guide.",
+  "sections": [
+    {
+      "heading": "Invite a walk, not a performance",
+      "paragraphs": [
+        "Ask a friend whether they would enjoy showing you a few places that matter to them. Make it clear that an ordinary street, favourite bench or route to a shop is enough; they do not need researched facts or a polished story. Offer a loose time window and let them choose a day that feels comfortable. If they would rather just walk together, take that answer warmly.",
+        "The Jane’s Walk approach to community walks centres local knowledge and conversation. You can bring that spirit into a private outing by letting the person who knows the place decide what is worth noticing. Tell them whether you have mobility, weather or time constraints, and ask if there are places they would prefer not to include."
+      ]
+    },
+    {
+      "heading": "Agree on a light structure",
+      "paragraphs": [
+        "A useful route has a beginning, a few possible pauses and a clear way home. You might suggest one hour and invite your friend to choose two or three stops, but keep the plan flexible. Check transit or meeting details in advance so logistics do not take over the conversation. If you are visiting a private building, business or quiet community space, follow its ordinary rules and do not assume photography is welcome.",
+        "Ask whether your friend wants you to read anything beforehand or simply arrive curious. A helpful prompt is “What would you want me to notice here?” rather than “What is the history of this place?” The first makes room for a personal detail; the second can feel like a quiz. Ask before inviting another person or posting photographs."
+      ]
+    },
+    {
+      "heading": "Walk at the pace of noticing",
+      "paragraphs": [
+        "Let the route pause where your friend wants to pause. They might point out a changed storefront, a tree they pass daily or a place tied to a family routine. Listen without trying to turn every stop into a major story. Follow up with open questions such as “What do you remember about it?” and accept a short answer. A quiet stretch between stops is part of the walk, not a gap to fill.",
+        "Notice the present-day neighbourhood too: the slope of a street, a shortcut, a public garden, a bus stop, the sound of a busy corner. Avoid treating people who live or work there as scenery. If someone is visible in a photo, get permission before sharing it. Keep the camera away when a moment feels private or your friend asks for that."
+      ]
+    },
+    {
+      "heading": "Make the exchange mutual",
+      "paragraphs": [
+        "You can share a small observation of your own without taking over. Perhaps a detail reminds you of another place or makes you curious about how the neighbourhood has changed. Let your friend correct your assumptions. This is their lived route, not an opportunity to compare which neighbourhood is more interesting or to debate a personal memory into submission.",
+        "If the walk is enjoyable, offer to return the favour another time by showing a route from your own daily life. Do not make reciprocity a debt: a simple thank-you is enough. If they have shared something sensitive, ask whether it should stay between you. Relationship-building is often in that care as much as in the walk itself."
+      ]
+    },
+    {
+      "heading": "Keep one detail, then follow through",
+      "paragraphs": [
+        "At the end, ask which stop they most wanted you to remember. You could send a brief thank-you and mention one detail that stayed with you. If you took photos, share them privately first and let your friend decide whether any are okay to post. A small note of the route and its stories can help you remember the day without turning the walk into content.",
+        "A good next step might be revisiting one public place together, looking up a local history source your friend mentioned, or inviting them to lead another route in a different season."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Get involved: How to lead a Jane’s Walk",
+      "url": "https://janeswalk.org/get-involved/",
+      "publisher": "Jane’s Walk",
+      "purpose": "Supports community-led, conversational walks shaped by local knowledge; used as a format reference, not as a claim about any particular neighbourhood."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "follow-a-colour-through-your-neighbourhood",
+    "make-a-friendship-map-together"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

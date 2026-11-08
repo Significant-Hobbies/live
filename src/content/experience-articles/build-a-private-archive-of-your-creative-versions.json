@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "build-a-private-archive-of-your-creative-versions",
+  "slug": "build-a-private-archive-of-your-creative-versions",
+  "title": "How do you preserve the versions behind a finished creative project?",
+  "description": "Collect drafts without overwriting them, label each version with context, and keep a second copy so the project’s development remains retrievable.",
+  "intent": "A light digital preservation plan for arranging one creative project’s drafts and documenting what changed over time.",
+  "sections": [
+    {
+      "heading": "Collect first and sort later",
+      "paragraphs": [
+        "Choose one project: a song, illustration, essay, design or small craft. Gather the files you already have without renaming or deleting anything yet. Copy them into a temporary folder or make a backup before you reorganize. The Library of Congress personal archiving guidance separates types of digital material and offers advice on preserving photographs, audio, video, email and personal records; use the category closest to your work.",
+        "Look for drafts, exports, source files, scans and notes that show a change in the project. Do not assume the newest filename is the final version. If multiple files are identical, compare dates or file details before deciding whether they are duplicates. Keep the originals until you are certain a copy opens and contains what you expect."
+      ]
+    },
+    {
+      "heading": "Make the order understandable to someone later",
+      "paragraphs": [
+        "Give each version a readable name with a date or sequence and a short description, such as “2026-04-12 first layout” or “02 darker chorus.” Avoid names like “final-final-new” that depend on today’s memory. A small index file can explain what the project is, which program created it and what changed between versions.",
+        "Keep descriptions factual and brief. “Changed the opening rhythm” is more useful than “fixed it.” Note whether a file is an editable source, an exported copy or a preview. If a format requires a particular application, include that detail. Do not flatten all work into screenshots if the editable original is important to future use."
+      ]
+    },
+    {
+      "heading": "Keep the archive private and purposeful",
+      "paragraphs": [
+        "A creative archive can contain personal, unpublished or collaborative work. Store it somewhere you control and check the sharing settings before uploading or sending files. If someone else contributed, ask before including their work or notes in a shared archive. Do not expose private drafts through a public link just to make them easy to retrieve.",
+        "Decide which versions have lasting value and which are temporary exports or render caches. Keep the history that explains how the project developed, but avoid collecting unrelated personal data. If the project includes licensed samples, commissioned material or other people’s images, keep the relevant permission and attribution information with the archive."
+      ]
+    },
+    {
+      "heading": "Make one backup you can actually find",
+      "paragraphs": [
+        "The Library of Congress recommends adding descriptions to personal digital materials and offers guidance on preserving different file types. Apply that by keeping a second copy in a separate location, such as another drive or a trusted backup service, and naming the archive so you can find it. A second copy on the same device is not much help if that device fails.",
+        "Open a file from the backup to confirm it works. Check that the folder structure and index survived the copy. For work that matters, repeat the check occasionally and move files to current storage before old media becomes unreadable. Do not delete your working copies until you know the backup is complete."
+      ]
+    },
+    {
+      "heading": "Write a short version history",
+      "paragraphs": [
+        "Pick three to five versions that show meaningful changes and write one sentence about each. Include what question you were trying to answer or what feedback influenced the next revision. This turns a folder into a story of decisions without requiring a long reflective essay. If the work was collaborative, name contributions only with permission.",
+        "A useful next step is to add one version you almost discarded and explain why you kept it. The archive can show a side path, not just a straight march toward polish. Keep the note private unless you want others to see it, and make sure every included file is one you have a right to retain."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Personal Archiving",
+      "url": "https://www.digitalpreservation.gov/personalarchiving/",
+      "publisher": "Library of Congress, Digital Preservation",
+      "purpose": "Supports organizing and describing personal digital materials and provides preservation guidance by format."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "write-captions-for-ten-unlabelled-personal-photos",
+    "inspect-an-original-record-in-an-archive-reading-room"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

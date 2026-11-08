@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "build-a-kite-and-test-it-in-an-open-park",
+  "slug": "build-a-kite-and-test-it-in-an-open-park",
+  "title": "How do you build and test a simple park kite?",
+  "description": "Build a lightweight first kite, choose an open legal flying area, and use a calm test flight to learn what the frame and wind are doing.",
+  "intent": "How can a beginner build a kite and learn from its first flight? This guide helps choose a simple design, test it in a safe open space, and make measured adjustments.",
+  "sections": [
+    {
+      "heading": "Start with a light, simple design",
+      "paragraphs": [
+        "Choose a basic single-line diamond or delta design from a reputable kite club or maker's guide. Use lightweight materials, a straight frame and a sail that will not tear easily. For a first build, cardboard, paper or a light plastic sheet can work at small scale; the important part is symmetry, balanced support and a secure bridle. A kite that looks elaborate is not necessarily easier to fly, so save multiple tails, long streamers and decorations for a later version.",
+        "Lay out the frame and sail on a flat surface before attaching anything. Check that the frame sits centered and the left and right sides match. Tie or tape the bridle according to the design, and use nonmetallic flying line. Do not attach hard objects to the line or make a kite large enough to pull you off balance. If a child is helping, an adult should handle scissors and supervise the flight area."
+      ]
+    },
+    {
+      "heading": "Choose the field before the wind",
+      "paragraphs": [
+        "A good park field is broad, open and clear of roads, buildings, trees, other fliers and overhead power lines. Ask the park authority whether kite flying is allowed there and look for posted rules. The American Kitefliers Association recommends an open area because wind is disturbed by obstacles, and it warns against flying near power lines, roads, people or in stormy weather. Check local aviation guidance for your country and stay well away from airports; legal limits differ by place.",
+        "Look at the weather rather than relying on the feeling at ground level alone. Skip a day with thunderstorms, gusts that yank the line, or rain that leaves the line wet. Bring water, sun protection and gloves if the kite pulls strongly. Keep a safe buffer from other park users, never fly over them, and do not walk backward while looking up. If the kite snags a power line, leave it alone and contact the utility; never try to retrieve it."
+      ]
+    },
+    {
+      "heading": "Make a short first flight",
+      "paragraphs": [
+        "Inspect the joints, bridle and line before launching. Stand with your back to a steady breeze and let a helper hold the kite downwind only if there is plenty of clear space and the helper understands when to release it. Otherwise, use the method in your kite's instructions. Let out line gradually while watching how the sail responds. Keep the line controlled in your hands and do not wrap it around fingers, wrists or your body.",
+        "Treat the first flight as a test, not a competition. Notice whether the kite climbs, stalls, dives, pulls to one side or oscillates. If the kite does not lift, do not run blindly or pull harder; stop and inspect the setup. The AKA notes that different kites suit different wind ranges and that an uneven line or poor bridle position can contribute to spinning. Make only the adjustments allowed by your design's instructions."
+      ]
+    },
+    {
+      "heading": "Change one thing at a time",
+      "paragraphs": [
+        "If the kite leans consistently, check whether the frame is centered and the sail is symmetrical before altering the bridle. If it dives nose-first or twists, bring it down and inspect the structure rather than trying to correct it while it is unstable. If the wind is too weak or strong for that model, pack it away and choose another day. This saves the kite and makes the test easier to understand.",
+        "Keep each flight short enough that you can maintain control and leave room for other park users. When landing, reel the line in gradually while walking toward the kite if needed; do not tug it toward a crowd. Pack up the line so no one trips over it, take home scraps and leave the park as you found it."
+      ]
+    },
+    {
+      "heading": "Use a simple flight log",
+      "paragraphs": [
+        "After the test, note the kite shape, materials, wind feel, bridle setting and what happened. A rough sketch showing the side that dipped can be more useful than a photo. If you change the tail or bridle, record that as a separate test. You will quickly see whether a small adjustment improves stability or whether the design is better suited to different conditions.",
+        "Your next action is to check your local park's rules, assemble a small single-line kite from one tested design, and make one brief flight only when the field is empty and the wind is manageable. Bring the instructions and a pencil so the first test ends with a clear next step."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Kite Safety",
+      "url": "https://www.kite.org/about-kites/kite-safety/",
+      "publisher": "American Kitefliers Association",
+      "purpose": "Supports kite-flying safety around overhead power lines, weather, airports, bystanders, line material and skill limits."
+    },
+    {
+      "title": "How To Fly A Kite",
+      "url": "https://www.kite.org/about-kites/how-to-fly-a-kite/",
+      "publisher": "American Kitefliers Association",
+      "purpose": "Supports choosing an open field, wind-related adjustments and basic single-line launch and troubleshooting guidance."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "try-target-archery-at-a-supervised-range",
+    "try-curling-at-a-supervised-ice-rink-taster",
+    "explore-a-nature-trail-using-an-all-terrain-wheelchair"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

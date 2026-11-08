@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "complete-a-100-mile-ultramarathon",
+  "slug": "complete-a-100-mile-ultramarathon",
+  "title": "How to choose a first 100-mile race you can prepare for",
+  "description": "A practical way to compare 100-mile races, understand cutoffs and support, and decide whether the distance belongs in your running calendar.",
+  "intent": "Help a prospective first-time hundred-miler choose a suitable event and organize the questions that must be answered before committing, rather than offering a training prescription.",
+  "sections": [
+    {
+      "heading": "Choose the event before choosing the date",
+      "paragraphs": [
+        "A hundred miles is a fixed distance, but the day around it varies dramatically. A looped course with frequent aid stations creates different decisions from a remote point-to-point route. Before paying an entry fee, read the current runner handbook from start to finish and record the course surface, total climbing, expected weather range, start time, course closures, and every cutoff. A cutoff is an event rule, not a prediction of what your pace should be.",
+        "Compare one flat or gently rolling event with a mountain course and ask which terrain you already know how to move through for hours. If your longest events have been road races, technical descents, darkness, mud, or long stretches between aid may be the real challenge. A 100-mile label alone does not tell you the difficulty."
+      ]
+    },
+    {
+      "heading": "Turn the handbook into a decision sheet",
+      "paragraphs": [
+        "Make a simple course table with each aid station, its distance from the previous stop, crew access, drop-bag rules, and cutoff time. Then mark the sections where you will meet darkness, likely temperature changes, or a long unsupported gap. This turns a daunting distance into a sequence of logistics to investigate. The American College of Sports Medicine notes that ultra-endurance events span varied terrain and environments and that emergency plans and communication among organizers and medical teams matter; treat an event’s medical and evacuation information as part of your selection, not fine print.",
+        "Rules can be highly specific. One race may allow a pacer after a certain checkpoint; another may be cupless or require particular equipment. Never borrow last year’s checklist as if it were current. Ask the race director for clarification in writing when the handbook is unclear."
+      ]
+    },
+    {
+      "heading": "Use a shorter event as a rehearsal",
+      "paragraphs": [
+        "Before committing, try an event that tests the skills this course demands: a trail race with similar footing, an overnight event if night running is new, or a supported long hike if you have not spent a full day moving outdoors. The goal is to learn what questions you need answered, not to prove that you can cover a particular fraction of the hundred. A smaller event can reveal whether your shoes rub after many hours, whether you can navigate when tired, and how you respond to changing weather.",
+        "Volunteer at a hundred or crew for a friend if the organizer allows it. Watching aid-station flow and late-race decisions can make the written rules concrete. Do not treat someone else’s pace, fueling, or equipment as a plan to copy; those choices belong with your own qualified coach and medical team."
+      ]
+    },
+    {
+      "heading": "Plan support as a system",
+      "paragraphs": [
+        "If the race permits a crew, name one person to be the point of contact and give them the event handbook, your itinerary, and the organizer’s emergency procedure. Clarify where crew may park, what they may hand to you, how you will communicate changes, and what they should do if you withdraw. A pacer is not a substitute for race medical staff or a guarantee that you will finish.",
+        "If the race is remote or the rules require self-sufficiency between stations, check that you understand the mandatory gear list and can use every item. The ACSM article emphasizes that emergency response can be complicated across large, varied courses. Look for clear medical coverage, a way to report an emergency, and a withdrawal process you can follow even when tired."
+      ]
+    },
+    {
+      "heading": "Make the commitment with an exit plan",
+      "paragraphs": [
+        "A 100-mile race deserves a long runway with an individualized progression from a coach who understands your background. Ask about a realistic build, recovery, strength and mobility work, and how to respond to injury or illness. Bring medical concerns, medication questions, and any history that may affect exertion to a clinician. Do not infer readiness from a single long run or a finish-time calculator.",
+        "Write down what would make you defer: a health concern, a training disruption, an unsafe forecast, or an event rule you cannot meet. Deferring is a sound decision when conditions change. For your next action, choose two candidate races and compare their current course handbooks line by line before setting a goal date."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Safety in Ultra-Endurance Racing",
+      "url": "https://acsm.org/ultra-endurance-safety/",
+      "publisher": "American College of Sports Medicine",
+      "purpose": "Supports the importance of event-specific medical planning, emergency action plans, environmental monitoring, and communication; it does not prescribe an individual's training or establish a universal 100-mile readiness standard."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "run-a-marathon",
+    "complete-a-triathlon",
+    "walk-a-long-distance-trail-over-100km"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

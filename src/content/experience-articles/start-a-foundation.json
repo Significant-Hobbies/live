@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "start-a-foundation",
+  "slug": "start-a-foundation",
+  "title": "Before forming a foundation, define the work it must do",
+  "description": "Compare a new U.S. private foundation with simpler giving structures, then map governance, startup costs and recurring compliance with qualified advice.",
+  "intent": "A jurisdiction-limited planning guide to deciding whether a U.S. private foundation is suitable and understanding that registration creates ongoing duties.",
+  "sections": [
+    {
+      "heading": "Test the need for a new entity",
+      "paragraphs": [
+        "A foundation is a legal and administrative structure, not the charitable purpose itself. Begin by describing the work in one sentence, the people it should benefit, how decisions will be made, and how money will reach programs. Then compare direct giving, volunteering, a donor-advised fund, an existing charity’s hosted project, and forming a new organization. A new entity makes more sense when you need durable governance or a distinct grantmaking program that simpler options cannot meet.",
+        "Estimate the annual work, not only the formation paperwork: recordkeeping, financial statements, board meetings, grant review, donor questions, professional fees and required filings. A small organization may spend disproportionate energy maintaining an entity. Ask a nonprofit lawyer and tax professional to compare structures for your jurisdiction and circumstances before transferring assets."
+      ]
+    },
+    {
+      "heading": "Write a purpose and governance plan",
+      "paragraphs": [
+        "Identify who will serve as the initial directors or trustees, how they will handle conflicts of interest, and who can approve a grant or payment. Write down how successors will be selected and what happens if the organization’s purpose becomes impossible to carry out. A family foundation can be meaningful, but family members should know whether they are governing, advising or simply expressing preferences.",
+        "Draft practical policies before accepting money: a grantmaking process, record retention, financial controls, conflict disclosure and a way to document decisions. Separate the person who proposes a grant from the person who approves and pays it when feasible. Ask professional counsel to review what governing documents and disclosures are required. These are design questions, not universal legal forms."
+      ]
+    },
+    {
+      "heading": "Understand the U.S. private-foundation route",
+      "paragraphs": [
+        "This article uses the United States as an example because legal forms and charity regulators differ by country. The Internal Revenue Service describes an application process for recognition of tax-exempt status and ongoing reporting for private foundations. It states that a private foundation files Form 990-PF annually even if it has no taxable income or activity, and the ordinary due date is the fifteenth day of the fifth month after its accounting period closes. Confirm current forms, rules and your classification directly with the IRS and a qualified tax professional.",
+        "Federal recognition is not the only question. The IRS also notes that states may require charitable organizations soliciting public contributions to register and report. Which rules apply can depend on where the organization solicits or operates. If your donors or activities cross state or national borders, ask counsel to map those obligations before launching a campaign."
+      ]
+    },
+    {
+      "heading": "Budget for operations and accountability",
+      "paragraphs": [
+        "Prepare a two-year budget with conservative assumptions. Include registration and professional advice, accounting, insurance, payment systems, annual filings, staff or contractor time, grant administration and public reporting. Include the grants themselves, but do not make the operating line disappear to create an impressive percentage. A responsible funder should be able to explain how it supervises grants and learns whether recipients received the promised funds.",
+        "Decide how you will communicate results without overstating impact. A grant receipt proves money moved; it does not by itself prove that a social problem was solved. Use a short annual account of amounts received, expenses, recipients and what the board learned. A clear record supports donor trust and also helps trustees see whether the foundation remains useful."
+      ]
+    },
+    {
+      "heading": "Get a professional review before moving assets",
+      "paragraphs": [
+        "Bring a one-page purpose statement, proposed governance, draft budget and list of possible grants to a nonprofit lawyer and tax adviser. Ask them to compare an independent foundation against alternatives, identify required applications and filings, and estimate annual administration. If the answer is that a simpler vehicle fits, that is a successful planning outcome rather than a failed ambition.",
+        "For a U.S. private foundation, read the IRS lifecycle information and annual-return page, then verify every current requirement with a qualified professional. Do not solicit donations or promise tax deductibility before the legal structure and status are clear. Your next step is a consultation and a written comparison, not a name, logo or public launch."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Private foundation – Annual return",
+      "url": "https://www.irs.gov/charities-non-profits/private-foundations/private-foundation-annual-return",
+      "publisher": "Internal Revenue Service",
+      "purpose": "States that U.S. private foundations generally file Form 990-PF annually and gives the ordinary filing deadline."
+    },
+    {
+      "title": "Private foundation – Charitable solicitation – Periodic state reporting",
+      "url": "https://www.irs.gov/charities-non-profits/private-foundations/private-foundation-charitable-solicitation-periodic-state-reporting",
+      "publisher": "Internal Revenue Service",
+      "purpose": "Explains that state charitable solicitation registration and periodic reporting may apply and directs organizations to relevant state officials."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "leave-a-legacy-gift-to-a-charity-in-your-will",
+    "start-a-foundation-or-fund-something-that-outlasts-you",
+    "start-a-scholarship-fund"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

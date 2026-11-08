@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "eat-at-a-3-star-michelin-restaurant",
+  "slug": "eat-at-a-3-star-michelin-restaurant",
+  "title": "Choose a three-star meal for the cooking you care about",
+  "description": "Use the MICHELIN Guide’s current restaurant listing to plan a three-star meal around cooking style, practical needs and a realistic visit.",
+  "intent": "What should I consider before eating at a three-star MICHELIN restaurant? This distinguishes the guide’s cooking award from the rest of the dining experience.",
+  "sections": [
+    {
+      "heading": "Understand what the stars describe",
+      "paragraphs": [
+        "The MICHELIN Guide describes three stars as “exceptional cuisine” worth a special journey. Its FAQ says stars are awarded for the quality of the cooking itself, not service, tableware or atmosphere. That distinction helps set expectations: a three-star restaurant may have a dining room you love, but the star is not a guarantee that every part of the evening matches your taste.",
+        "The Guide says its inspectors consider ingredient quality, technique, harmony of flavors, the personality of the cuisine and consistency. Treat the rating as a way to identify cooking the Guide values, not as a universal ranking of every restaurant or a reason to skip a place whose style you would not enjoy."
+      ]
+    },
+    {
+      "heading": "Read the current listing as a menu clue",
+      "paragraphs": [
+        "Start with the restaurant’s own current menu and the current MICHELIN Guide page. Notice the cooking style, ingredients, format and any menu choices that sound unfamiliar. A guide listing can help orient you, but only the restaurant can confirm what is served on the date you plan to visit, how dietary needs are handled and what reservation terms apply. Do not rely on an old review for current menu or price details.",
+        "Ask yourself what you are hoping to notice: a sauce you have never tasted, careful use of seasonal ingredients, a sequence of small courses, or a technique you can recognize. A specific curiosity gives the meal shape without expecting the kitchen to provide a life-changing experience."
+      ]
+    },
+    {
+      "heading": "Plan the practical parts before reserving",
+      "paragraphs": [
+        "Check the restaurant’s official booking instructions, location, opening dates, cancellation rules, dress guidance if stated and current menu price. Do not assume a lunch and dinner menu are alike or that a table is available. If the trip depends on a reservation, wait for confirmation before buying nonrefundable travel. Decide how much of the budget belongs to the meal, transport, lodging and any companion’s needs.",
+        "Contact the restaurant directly about allergies, dietary restrictions, accessibility, timing and whether a particular menu can accommodate you. If the answer is uncertain, make a choice that protects your health and comfort. Never hide an allergy to preserve the booking; the restaurant needs accurate information to decide what it can safely serve."
+      ]
+    },
+    {
+      "heading": "Be present for the meal without studying it",
+      "paragraphs": [
+        "You can taste with curiosity without trying to decode every technique. Pause after a course and notice a few concrete things: temperature, texture, acidity, aroma, how one ingredient changes another. If a server or chef explains the dish, listen and ask a short question when the moment allows. Do not take notes or photographs if they make the meal less enjoyable or conflict with the restaurant’s policy.",
+        "Try not to compare each course with a social-media ranking. The point is to experience the restaurant’s own menu and decide what you personally found memorable. If something surprises you, note the detail rather than turning it into an absolute claim about what fine dining should be."
+      ]
+    },
+    {
+      "heading": "Decide what made the journey worthwhile",
+      "paragraphs": [
+        "Afterward, write down one dish or decision you still remember, and one thing you would change about the planning. You might have loved an ingredient pairing, learned that a long tasting menu is not your preferred format, or found a comfortable lunch option that fit your budget. These are useful outcomes even if the restaurant did not match every expectation.",
+        "If you share a review, separate your own experience from facts about the restaurant and check that your description is current. Your next step is to pick a restaurant from the current Guide, read its own menu and booking terms, and make the trip only if the cooking itself is what you want to explore."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Frequently Asked Questions: MICHELIN Stars",
+      "url": "https://guide.michelin.com/gb/en/uri/en/faq-frequently-asked-questions-gb",
+      "publisher": "The MICHELIN Guide",
+      "purpose": "Supports the Guide’s three-star definition, its annual reassessment and that stars evaluate cooking rather than service, tableware or atmosphere."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "eat-a-12-course-tasting-menu",
+    "eat-street-food-in-bangkok",
+    "eat-your-way-through-a-country-one-market-at-a-time"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

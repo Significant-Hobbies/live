@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "build-a-hand-cranked-cardboard-automaton",
+  "slug": "build-a-hand-cranked-cardboard-automaton",
+  "title": "Make a cardboard motion you can explain",
+  "description": "Design a small hand-cranked automaton by testing one motion first, then building a sturdy frame and tuning the moving parts.",
+  "intent": "How do you troubleshoot a cardboard automaton when a crank turns but the figure does not move smoothly? This guide adds a prototype-first method for diagnosing friction and alignment.",
+  "sections": [
+    {
+      "heading": "Describe a motion in one sentence",
+      "paragraphs": [
+        "Before cutting the box, choose a movement a viewer can notice: a bird nods, a paper boat rises and falls, or a small figure turns toward a window. Sketch the start, middle, and end position. That simple sequence becomes your design question: what part must rotate, slide, or pivot to make the movement happen? Avoid decorating the character before you know the mechanism can do the job.",
+        "Exploratorium’s cardboard automata guide treats the project as a back-and-forth between mechanical construction and narrative. That is good advice for a solo build too. Build a rough mechanism, watch its motion, then adjust the story or character to fit what the cardboard actually does. A modest motion that works is more satisfying than an elaborate idea trapped by the frame."
+      ]
+    },
+    {
+      "heading": "Make a stable frame before adding detail",
+      "paragraphs": [
+        "Use clean corrugated cardboard, a ruler, a pencil, a craft knife only with careful adult supervision where appropriate, and a skewer or dowel for the crank. Choose materials suited to the maker’s age and skill; pre-cut pieces or blunt tools can make the build accessible. Fold a box or support frame and reinforce corners so it stays square while the axle turns.",
+        "Mark where the axle will pass through opposite walls and check that the holes line up. A crooked axle rubs against the frame and makes a hand crank feel stiff. Keep the mechanism visible while testing, and do not force the crank through resistance. If something binds, remove the moving part and identify the contact point instead of twisting harder."
+      ]
+    },
+    {
+      "heading": "Prototype one cam and follower",
+      "paragraphs": [
+        "A cam is a rotating shape that can push a follower up or down. Start with a simple off-center circle or oval on the axle and a vertical follower that rests against it. Turn the crank slowly and watch whether the follower rises, falls, or slips off the cam. Add a guide such as a short straw sleeve if the follower wobbles, leaving enough space for its full travel.",
+        "If the follower fails to drop, check whether it can move freely and whether gravity or a small, safely attached weight can return it. Exploratorium notes that a weight can help a cam follower move smoothly, and that axles need to be centered and square. Secure the crank and cam only after repeated dry runs show the motion is reliable."
+      ]
+    },
+    {
+      "heading": "Tune motion before finishing the character",
+      "paragraphs": [
+        "Test the mechanism with a strip of scrap card before attaching the final figure. Turn the crank slowly and identify the point where motion catches, jumps, or gets lost. Is the axle rubbing? Is the follower too loose? Is the cam too small to produce a visible lift? Change one variable at a time and run the same test again.",
+        "The most common beginner trap is treating glue as a troubleshooting tool. Glue can lock a misaligned part in place. Use a removable tape tab or friction fit while experimenting; glue only after the mechanism works through several rotations. Add a visual character that is light enough for the mechanism to lift and clear enough to understand from across the table."
+      ]
+    },
+    {
+      "heading": "Finish with a mechanism you can show",
+      "paragraphs": [
+        "Cover rough or sharp edges, keep the crank accessible, and check that parts stay attached during normal hand turning. If you share the automaton, explain which piece creates the movement and invite someone to turn it gently. A short label can name the motion without explaining every detail. Leave children’s cutting and hot-glue steps to a capable adult or maker-space supervisor.",
+        "For a first build, make a single up-and-down motion and test it before decorating. When it works, choose one detail that strengthens the story and leave the rest out. Then draw a quick diagram of the axle, cam, and follower; if you can explain the mechanism, you are ready to design a more surprising second motion."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Cardboard Automata Guide",
+      "url": "https://www.exploratorium.edu/sites/default/files/tinkering/files/Instructions/cardboard_automata_guide_final_screen.pdf",
+      "publisher": "Exploratorium Tinkering Studio",
+      "purpose": "Exploratorium guidance supports sturdy aligned frames, smooth cam-follower movement and iterative prototyping."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-a-folding-paper-peepshow",
+    "build-a-motorised-scribbling-machine"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

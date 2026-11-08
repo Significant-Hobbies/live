@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "make-a-requested-item-for-a-hospital-craft-program",
+  "slug": "make-a-requested-item-for-a-hospital-craft-program",
+  "title": "Make a craft item a hospital team actually requested",
+  "description": "Support a hospital craft program by asking its staff what is currently useful, following its materials policy, and making only the item or batch it has approved.",
+  "intent": "What should you make for a hospital craft program? This guide adds a request-first process that respects infection-control policies, storage limits, patient needs, and staff time.",
+  "sections": [
+    {
+      "heading": "Ask the team before you start",
+      "paragraphs": [
+        "Contact the receiving hospital’s Child Life or volunteer office and ask whether it accepts handmade items at all. Policies can vary by hospital, unit, patient population and time. A Boston Children’s Hospital Child Life Services donation PDF available on its site says unapproved items, including handmade or homemade items, cannot be accepted. Treat that as an example of one facility’s policy, not guidance for your hospital or a guarantee that the document is current. Ask the actual receiving team for its current rules before making anything.",
+        "Ask about the exact item, materials, quantity, packaging, delivery method, and deadline. Do not assume a cheerful handmade card or knitted toy is welcome just because it seems kind. A team may need new, sealed supplies from a wish list, not one-off crafts. A clear request saves the staff from sorting items they cannot distribute."
+      ]
+    },
+    {
+      "heading": "Design for the stated need",
+      "paragraphs": [
+        "If staff request a particular item, follow the dimensions, colors, materials, and packaging they specify. Ask whether the item is for a particular age range or activity, and whether it needs to be washable, single-use, or easy to sanitize. Do not include small detachable parts, scents, glitter, or food unless the coordinator specifically approves them.",
+        "Make one sample before producing a batch. Send a photo or bring it for approval using the process the team gives you. Keep the design simple and sturdy; a project that looks polished but cannot be used safely or stored easily is not helpful. Remember that families and patients may have varied access needs and preferences."
+      ]
+    },
+    {
+      "heading": "Keep the workspace separate and clean",
+      "paragraphs": [
+        "Set up a clean work surface at home, wash your hands, and keep pets, food, smoke, and household chemicals away from the materials. Use new supplies from the approved list rather than repurposing materials that have been stored loosely. Package the finished item only after it is fully dry and free of loose threads, flakes, or parts.",
+        "These steps do not replace a hospital’s infection-control rules. The staff member who receives the donation decides whether an item is suitable. If the material becomes damp, damaged, or contaminated during making, set it aside and ask before delivering it. Never take an item directly to a patient or clinical area without authorization."
+      ]
+    },
+    {
+      "heading": "Make the handoff easy for staff",
+      "paragraphs": [
+        "Label the package as requested and include only the information the coordinator needs, such as item count or materials used. Avoid attaching personal messages that assume what a patient is experiencing. If staff want cards, ask whether they should be blank, addressed to a named recipient, or written with a particular tone. Keep private patient information out of your own notes or photos.",
+        "Confirm the drop-off appointment and entrance. Hospitals may restrict delivery windows, locations and visitor access. The Boston Children’s PDF provides one example of why donation policies can include limits on handmade items and delivery arrangements; the PDF itself does not establish the current rules at another facility, and its publication date is not stated in the document. Follow the receiving hospital’s latest written guidance and confirm directly with the coordinator if anything is unclear."
+      ]
+    },
+    {
+      "heading": "If the request changes, adapt",
+      "paragraphs": [
+        "If the team says it cannot accept your item, thank them and ask whether an approved alternative would help. Do not pressure staff to make an exception or leave a box at reception. Supplies, storage space, and patient needs are managed by the care team, whose constraints may not be visible to a visitor.",
+        "Your next step is to send one short message asking what the program accepts now. Wait for an answer before buying or making anything. If handmade items are not useful, ask whether there is a public wishlist or another approved way to contribute. The best craft donation is the one the staff can confidently put to use."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Child Life Services: Main Campus Donation Guidelines",
+      "url": "https://www.childrenshospital.org/sites/default/files/2022-07/in-kind-donations-main-campus.pdf",
+      "publisher": "Boston Children’s Hospital",
+      "purpose": "A hospital-specific donation PDF states that unapproved items, including handmade or homemade donations, cannot be accepted; used only as an example of facility-specific restrictions, not as current policy for another hospital."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "help-host-a-neighborhood-repair-cafe-session",
+    "trace-buildings-for-a-humanitarian-mapping-task",
+    "transcribe-a-historical-manuscript-for-the-smithsonian"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

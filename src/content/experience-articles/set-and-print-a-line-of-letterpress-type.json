@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "set-and-print-a-line-of-letterpress-type",
+  "slug": "set-and-print-a-line-of-letterpress-type",
+  "title": "How do you set one line of movable type and pull a proof?",
+  "description": "Choose a short phrase, compose it with studio guidance, inspect a proof for spacing and reversed letters, and make a modest print safely.",
+  "intent": "A beginner’s view of the typesetting-to-proof process in a supervised letterpress studio, with practical checks for a first line of type.",
+  "sections": [
+    {
+      "heading": "Choose a phrase that fits the type",
+      "paragraphs": [
+        "A short phrase gives you room to learn the material rather than spending the session setting a paragraph. Pick something that will still make sense in a small format and check the studio’s available type, language and character set. The South Street Seaport Museum describes its letterpress workshops as hands-on experiences grounded in printing history and the museum’s Bowne & Co. printing office. A studio or museum instructor can show the specific equipment you will use.",
+        "Decide whether you want to print a name, a line of poetry you have permission to use, or an original sentence. Ask how long the line can be and whether spaces, punctuation or special characters are available. Avoid choosing a phrase whose meaning depends on a particular font or size until you have seen the type."
+      ]
+    },
+    {
+      "heading": "Learn the type case and reading direction",
+      "paragraphs": [
+        "Movable type is arranged in a composing stick, and each sort must be found and oriented correctly. Follow the instructor’s demonstration for identifying the case, setting the line and using spacing material. Do not reach into an unfamiliar case or lift type from a press without permission; small pieces can be difficult to replace and the equipment belongs to the studio.",
+        "Because the printing surface transfers a reversed image, the type appears backward when you look at it from the face. A proof is how you check what the printed line will read. Take your time with letters that can be confused in reverse, and ask the instructor to check your line before it goes to the press."
+      ]
+    },
+    {
+      "heading": "Make a proof before adjusting the spacing",
+      "paragraphs": [
+        "Once the line is composed and locked according to the studio method, ink and print a proof with the instructor. Check spelling, orientation, punctuation and whether the line sits on the page as expected. A proof is a working diagnostic, not a failed final print. Mark one issue at a time so you can tell whether the correction helped.",
+        "Look at the spaces between letters and words. A word may seem cramped because the type is not evenly spaced, or because a narrow letter makes its neighbours appear closer. Ask the instructor which spacing material is suitable and how the line should be tightened. Never force a type line or reach near moving press parts without instruction."
+      ]
+    },
+    {
+      "heading": "Use the press under the studio’s direction",
+      "paragraphs": [
+        "A letterpress can pinch or trap fingers, and the correct procedure depends on the equipment. Keep hands and clothing clear of moving parts and follow the instructor’s directions for inking, feeding paper and operating the press. Do not try to adjust rollers, lockups or pressure on your own. If the instructor asks you to step back, do so immediately.",
+        "Use the paper and ink supplied or approved by the studio. Ask how to handle an imperfect sheet or where wet prints should dry. A small edition lets you focus on consistent placement and pressure without turning the activity into a production quota."
+      ]
+    },
+    {
+      "heading": "Keep one proof and describe what changed",
+      "paragraphs": [
+        "Compare your first proof with the final impression. Note what you adjusted: a reversed letter, a word space, a line break or ink coverage. Keep a proof if the workshop allows it and credit the studio if you share a photograph. Ask before photographing the type collection or other participants.",
+        "A useful next step is to set another short line using one new type size or a different paper, with the instructor’s approval. Save the phrase, the type choices and the proof together. The process teaches you how a printed line is built from separate pieces and why careful setup matters more than speed."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Letterpress Workshops",
+      "url": "https://southstreetseaportmuseum.org/letterpress-printing-workshops/",
+      "publisher": "South Street Seaport Museum",
+      "purpose": "Supports the museum’s hands-on introduction to historic printing and letterpress; specific equipment operation is deferred to studio instructors."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "print-a-set-of-foam-relief-postcards",
+    "make-a-cyanotype-print-from-everyday-objects"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,64 @@
+{
+  "experienceSlug": "community-8016e36a-5dfc-516f-a448-fdd50b154365",
+  "slug": "start-a-food-truck",
+  "title": "Test a food-truck idea before buying a vehicle",
+  "description": "Map a food-truck concept from a narrow menu to local health review, vehicle planning and real operating costs before you commit capital.",
+  "intent": "Help a prospective operator test a food-truck concept and identify the local approvals and operating constraints that must be confirmed before buying or building.",
+  "sections": [
+    {
+      "heading": "Start with a menu that fits the service",
+      "paragraphs": [
+        "Choose a small menu you can prepare consistently in the space you expect to use. A truck selling three composed bowls has different refrigeration, prep and cleaning needs from one serving packaged pastries or making espresso. Write each item as a process: where ingredients arrive, where they are stored, what is assembled or cooked, how it is served and what is discarded. This is a planning exercise, not a food-safety approval. Have the relevant local health department review the proposed menu and workflow before you select equipment.",
+        "In Los Angeles County, the Department of Public Health describes a mobile food facility plan-check process for new or remodeled units and says the program reviews construction, materials, equipment, installation and ventilation for compliance with state law and local ordinances. That is a county example, not a rule for every city or county. The department excludes Long Beach, Pasadena and Vernon from its services, which is a useful reminder to identify the exact permitting authority for the intended operating area."
+      ]
+    },
+    {
+      "heading": "Treat the truck as a regulated food workspace",
+      "paragraphs": [
+        "Sketch the workflow before contacting builders: receiving and storage, handwashing, preparation, cooking, service, cleaning and waste. Bring this sketch, your draft menu and a proposed equipment list to the local plan-check team. Ask what must be approved before construction, whether a commissary is required for your operation, what review and inspection steps apply, and whether the menu changes the equipment needed. Never assume a used truck’s previous approval transfers to a new owner, menu or location.",
+        "California’s Retail Food Code defines a mobile food facility as a vehicle used with a commissary or other permanent food facility for retail food sales. The code and local implementation can change, so confirm current requirements with the county or city enforcement agency. Los Angeles County’s public pages separately describe local plan review and public health permitting. Use them as a California example only; a different jurisdiction may have a different path."
+      ]
+    },
+    {
+      "heading": "Check where you are allowed to trade",
+      "paragraphs": [
+        "A health permit does not necessarily grant permission to park or vend wherever you find foot traffic. List the places you hope to serve—private event, workplace, street, market or festival—and ask each property owner and local authority which approvals apply. Los Angeles County’s mobile-food guidance tells operators to contact local city or county planning departments about additional permits or licences. It also describes route-location records for county operators. Those requirements are location-specific and must be checked for current validity.",
+        "Before committing to a route, learn whether there are restrictions on vending at a curb, time windows, distance from another business, fire access or event participation. Ask organizers about electrical supply, parking, waste handling, arrival and departure, and cancellation terms. Get permission in writing. A popular location is not a viable sales plan if you cannot lawfully set up there or cannot reach it with a large vehicle."
+      ]
+    },
+    {
+      "heading": "Build a conservative operating budget",
+      "paragraphs": [
+        "Price the entire operation, not just the vehicle: conversion or inspection, permits, insurance, food and packaging, commissary or storage, fuel, maintenance, payment processing, staff, event fees and slow days. Estimate sales for a realistic service window and test whether the menu remains profitable after ingredient waste and labor. These are business-planning categories, not a promise that a truck will earn a particular return. Ask an accountant or small-business adviser about tax registration, entity choice and local obligations for your circumstances.",
+        "A useful low-cost test is a lawful pop-up, catering event or rented-kitchen trial that uses the same menu and customer flow, if local rules permit it. Record which items sell, where the line slows, and what requires more prep than expected. A trial can reveal that a menu needs simplification before any major vehicle purchase."
+      ]
+    },
+    {
+      "heading": "Make the purchase conditional on approvals",
+      "paragraphs": [
+        "Before paying a deposit on a vehicle, share its drawings, equipment and menu with the relevant plan-check authority. Ask which changes would trigger another review. Obtain written estimates and clarify who pays for corrections if an inspection finds a problem. Confirm insurance, financing, title and business paperwork with the relevant professionals. Keep a written list of approvals still outstanding and do not treat a vendor’s assurance as a regulator’s decision.",
+        "The first concrete step is to contact the health department for the exact county or city where you plan to operate and request its mobile-food plan-check checklist. Add planning, parking, fire and business licensing questions to the same map, then price a compliant vehicle only after the intended menu and route have been discussed."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Mobile Food Facility Plan Check",
+      "url": "https://admin.publichealth.lacounty.gov/eh/inspection/mobile-food-facility-plan-check.htm",
+      "publisher": "Los Angeles County Department of Public Health",
+      "purpose": "Supports that new/remodeled mobile units undergo local plan-check review for construction and equipment, and identifies locations outside county service; not statewide permit advice."
+    },
+    {
+      "title": "California Retail Food Code",
+      "url": "https://www.cdph.ca.gov/Programs/CEH/DFDCS/CDPH%20Document%20Library/FDB/FoodSafetyProgram/MEHKO/CALIFORNIA%20RETAIL%20FOOD%20CODE%202019.pdf",
+      "publisher": "California Department of Public Health",
+      "purpose": "Provides statutory definition of a mobile food facility and related food-service framework; 2019 version is used only as a baseline, with current applicability to be verified locally."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-a-seasonal-millet-thali",
+    "pair-nonalcoholic-drinks-with-a-small-snack-menu"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

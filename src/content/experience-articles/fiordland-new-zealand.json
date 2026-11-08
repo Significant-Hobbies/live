@@ -1,0 +1,66 @@
+{
+  "experienceSlug": "fiordland-new-zealand",
+  "slug": "fiordland-new-zealand",
+  "title": "Choose a Fiordland route around weather and distance",
+  "description": "Choose one Fiordland experience—Milford Track, a day walk or the Milford road—and plan around DOC’s seasonal booking and weather limits.",
+  "intent": "Help a visitor choose a suitable Fiordland experience and avoid treating a multi-day Great Walk, a road trip and a short scenic stop as interchangeable.",
+  "relatedExperienceSlugs": [
+    "milford-sound-new-zealand",
+    "the-norwegian-fjords",
+    "hike-a-mountain-that-scares-you"
+  ],
+  "sections": [
+    {
+      "heading": "Choose your scale before choosing a trail",
+      "paragraphs": [
+        "Fiordland can mean a day drive to Piopiotahi Milford Sound, a short walk near Te Anau or a multi-day route such as the Milford Track. These are different commitments. The Department of Conservation describes the Milford Track as a one-way, four-day walk over three nights, with huts that must be booked well in advance during the Great Walks season. You cannot treat it as a flexible day hike or drive to a midway point.",
+        "If you have limited time, pick one day experience and give the weather room to change it. If the draw is a multi-day tramp, plan transport and hut bookings before buying flights or locking other connections. The Milford Track has no cellphone coverage, and DOC says transport to the start and from the finish must be booked in advance."
+      ]
+    },
+    {
+      "heading": "Understand why Milford Track is a fixed sequence",
+      "paragraphs": [
+        "DOC’s published stages show how the track builds across the landscape: a short first day from Glade Wharf to Clinton Hut, a longer valley walk to Mintaro Hut, a climb over Omanui/McKinnon Pass and descent to Dumpling Hut, then a final 18-kilometre walk to Sandfly Point. A boat connects both ends. That sequence helps you judge the effort more accurately than the name “Great Walk” does.",
+        "The route is only walked in one direction during the Great Walks season. The huts have bunks and basic facilities; you must bring food, and camping is not permitted on the track. Use the official route page to confirm what is supplied and what you need to carry. Do not assume a hut has a shop, shower or backup meal."
+      ]
+    },
+    {
+      "heading": "Treat weather as a route decision",
+      "paragraphs": [
+        "DOC warns that Fiordland receives very high rainfall and that cold temperatures, snow, strong winds and heavy rain can occur in any season. The Milford Track can flood, and closures can affect onward travel. Check the weather forecast and DOC track notices shortly before departure, then decide in advance what conditions will make you delay or cancel.",
+        "Outside the Great Walks season, the track is unmanaged with reduced facilities and greater hazards; DOC says the winter route is for fit, experienced and well-equipped people. This is not a reasonable time to improvise a first multi-day tramp. For a trip that depends on a booked hut or boat, include an extra buffer day and avoid a same-day flight connection at the finish."
+      ]
+    },
+    {
+      "heading": "Compare a road day with a walking day",
+      "paragraphs": [
+        "A Milford Sound road excursion follows SH94 from Te Anau through mountain and forest scenery to the fiord; the DOC journey guide calls the road a challenging alpine drive and advises checking current status. That day can be a better fit if you want scenery without committing to backcountry walking. A multi-day tramp gives a slower, more immersive route but demands fitness, gear, permits or bookings and weather flexibility.",
+        "Choose based on what your group can safely sustain, not on which experience sounds more impressive. A person recovering from illness, an inexperienced hiker or a traveler with fixed departure plans may prefer a guided day excursion or a shorter marked walk. Discuss medical questions with a clinician and access questions with DOC or the operator."
+      ]
+    },
+    {
+      "heading": "Build a flexible base plan",
+      "paragraphs": [
+        "Te Anau is a practical planning anchor for the Milford road and track logistics, but the actual trip depends on transport and current accommodation. Keep one primary outing and one alternate day. Check the DOC route information, the road status and any operator schedule close to travel. If the forecast turns poor, use an open local walk or a rest day instead of forcing the original plan.",
+        "Before booking, write down your preferred scale—road, short walk or multi-day track—and list its non-negotiable constraints: shuttle or hut reservation, equipment, return transport, and weather fallback. Then choose dates that leave room for those constraints."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Milford Track",
+      "url": "https://www.doc.govt.nz/milfordtrack?activitypageid=50578&region=Fiordland",
+      "publisher": "Department of Conservation Te Papa Atawhai, New Zealand",
+      "purpose": "Supports four-day/three-night one-way structure, stage sequence, huts and booking rules, transport requirements, no phone coverage, seasonal status and listed weather/terrain hazards."
+    },
+    {
+      "title": "Journey tips for Piopiotahi Milford Sound",
+      "url": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/fiordland/places/fiordland-national-park/places-to-go/milford-road-milford-sound-area/journey-tips-for-piopiotahi-milford-sound",
+      "publisher": "Department of Conservation Te Papa Atawhai, New Zealand",
+      "purpose": "Supports the alternative Milford road day and current road/weather check advice.",
+      "accessLimit": "DOC information is specific to stated track and road routes; conditions change and current notices must be checked. The article does not recommend unmanaged winter track travel for beginners."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

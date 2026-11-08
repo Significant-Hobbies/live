@@ -1,0 +1,79 @@
+{
+  "experienceSlug": "scott-base-antarctica",
+  "slug": "scott-base-antarctica",
+  "title": "What it really takes to reach Scott Base",
+  "description": "Scott Base is an Antarctic research station, not a standard visitor attraction; learn the authorized routes and limits before planning a trip.",
+  "intent": "Explain Scott Base as an operating research station and investigate truthful authorized access, avoiding the impression that it is an ordinary bookable attraction.",
+  "relatedExperienceSlugs": [
+    "spend-a-week-in-antarctica",
+    "antarctica",
+    "go-on-a-polar-expedition"
+  ],
+  "sections": [
+    {
+      "heading": "Understand what Scott Base is",
+      "paragraphs": [
+        "Scott Base is New Zealand’s only Antarctic research station, at Pram Point on Ross Island. Antarctica New Zealand describes it as a working hub for scientists and staff, with people supported there seasonally and a much smaller winter-over team. The site’s role is science and logistics; it is not comparable to a museum with regular public opening hours.",
+        "That distinction changes how to approach a visit. A scenic voyage or Antarctic cruise does not automatically include entry to Scott Base. Ask the operator specifically whether a landing or station visit is authorized for the itinerary and what restrictions apply. If the answer is vague, assume the station itself is not included."
+      ]
+    },
+    {
+      "heading": "Know the narrow official pathways",
+      "paragraphs": [
+        "Antarctica New Zealand’s current Community Engagement Programme page says the program has historically hosted artists, educators, writers and media, but applications for 2026/27 and beyond are temporarily paused while the organization supports science and redevelopment. It says selected participants receive logistical support and that all activities may change due to weather or operations. This is a limited engagement program, not a visitor ticket scheme.",
+        "The organization’s travel page says people going onto the ice must complete medical and legal requirements and obtain permits for field activities. If you believe you qualify for an official program or work opportunity, contact Antarctica New Zealand directly and read its current criteria. Do not assume eligibility, a place, or a scheduled journey."
+      ]
+    },
+    {
+      "heading": "Separate an Antarctic trip from a base visit",
+      "paragraphs": [
+        "You can plan an authorized Antarctic tourism itinerary without entering Scott Base. Antarctica New Zealand publishes visitor site guidelines for some Ross Sea sites and explains that certain locations are managed under Antarctic Treaty Party guidelines. A tour operator should explain which sites are included, what landing permissions apply and what environmental rules visitors must follow. Do not treat nearby historic huts or protected areas as freely accessible.",
+        "If your primary goal is to see Scott Base specifically, ask the operator or Antarctic New Zealand whether station access is actually part of the proposed trip. Public virtual tours and station information can offer a meaningful alternative when physical access is unavailable. A truthful plan should specify the exact authorized site visit rather than saying “tour Scott Base” when only the surrounding region is on the itinerary."
+      ]
+    },
+    {
+      "heading": "Prepare for operational uncertainty",
+      "paragraphs": [
+        "Antarctica New Zealand warns that weather and operations can change plans, that travel can be delayed or cancelled and that people traveling on its operations must meet medical and permit requirements. A commercial operator will have its own requirements and terms. Read them before paying, check insurance coverage and understand what happens if a landing or station visit is cancelled. No one can promise a particular landing from a general destination description.",
+        "This is a high-consequence, remote environment. Follow the operator’s clothing, fitness and medical instructions, and ask a clinician about personal health questions well before departure. Do not arrange independent travel, approach station infrastructure or cross protected-area boundaries."
+      ]
+    },
+    {
+      "heading": "Make the next step concrete",
+      "paragraphs": [
+        "Start by deciding whether your goal is to see Antarctica, a Ross Sea historic site or Scott Base itself. Then contact a reputable operator about its actual itinerary and read Antarctica New Zealand’s official access and environmental material. If a special engagement program is your route, check whether applications are open; as of the page checked for this guide, the 2026/27-and-beyond applications are paused.",
+        "Your next action is to ask for written confirmation of the exact site and authorization included in any proposed trip. If the answer does not name Scott Base access, plan for an Antarctic journey without assuming you will enter the research station."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Scott Base",
+      "url": "https://www.antarcticanz.govt.nz/scott-base",
+      "publisher": "Antarctica New Zealand",
+      "purpose": "Supports Scott Base’s identity and location as New Zealand’s Antarctic research station, and seasonal research/operations context.",
+      "accessLimit": "Station information is not an invitation or public access schedule; page’s embedded virtual tour is separate from physical access."
+    },
+    {
+      "title": "Community Engagement Programme",
+      "url": "https://www.antarcticanz.govt.nz/media/community-engagement",
+      "publisher": "Antarctica New Zealand",
+      "purpose": "Supports narrow official pathway for artists/educators/writers/media and current temporary pause on applications for 2026/27 and beyond; explains operational variability and no guarantee of travel."
+    },
+    {
+      "title": "Travelling to Antarctica",
+      "url": "https://www.antarcticanz.govt.nz/education/travelling-to-antarctica",
+      "publisher": "Antarctica New Zealand",
+      "purpose": "Supports medical/legal requirements and permits for people going onto the ice."
+    },
+    {
+      "title": "Protecting Special Areas",
+      "url": "https://www.antarcticanz.govt.nz/environment/protecting-special-areas",
+      "publisher": "Antarctica New Zealand",
+      "purpose": "Supports that Ross Sea sites have visitor-site guidelines and that certain protected areas have conditions and permit requirements.",
+      "accessLimit": "Access authority and operator itinerary are trip-specific; no general public Scott Base tour availability is established."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

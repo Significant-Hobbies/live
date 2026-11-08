@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "bake-hollow-choux-pastry-and-fill-it",
+  "slug": "bake-hollow-choux-pastry-and-fill-it",
+  "title": "Troubleshoot choux shells before you fill them",
+  "description": "Follow one tested choux formula, watch paste consistency and baking stages, and diagnose collapsed or damp shells before adding a filling.",
+  "intent": "Why might my cream puffs fail to hold a hollow center, and which parts of the method should I inspect first? This adds a troubleshooting sequence beyond the recipe-shaped experience.",
+  "sections": [
+    {
+      "heading": "Choose a single tested formula",
+      "paragraphs": [
+        "Choux pastry depends on a sequence of cooking liquid and fat, stirring in flour, drying the paste, and incorporating eggs. Pick one reliable recipe and follow its measures and oven directions for the first batch. King Arthur Baking’s cream puff recipe provides a complete method and notes that the same paste can be shaped as cream puffs or éclairs. Avoid mixing one recipe’s ratios with another recipe’s timing.",
+        "Before starting, weigh ingredients if the recipe offers weights and prepare the tray, piping bag or scoop, and cooling rack. Have the filling plan ready, but keep the filling out of the shells until they are fully cooled. Cream puffs that are filled too early can soften while you are still diagnosing the bake."
+      ]
+    },
+    {
+      "heading": "Look for a smooth paste at each transition",
+      "paragraphs": [
+        "After the flour goes into the boiling liquid, stir until the mass smooths and follows the spoon, as the King Arthur recipe describes. Let it cool as the recipe instructs before adding eggs. Add the eggs according to that method rather than pouring them all in at once; the texture may look separated at first and then come together.",
+        "The finished paste should hold shape well enough to mound or pipe, but its exact feel depends on the formula. If it seems unusually slack, check that the measured amounts and steps were followed before adding extra flour. A changed ratio will alter the bake and make the next batch harder to troubleshoot."
+      ]
+    },
+    {
+      "heading": "Space the shapes for expansion",
+      "paragraphs": [
+        "Use one size for the entire sheet so the shells bake at a similar rate. King Arthur recommends spacing cream puff mounds apart for expansion and gives a specific bake sequence for its recipe. Use the source’s exact oven settings and avoid opening the door during the early bake when the shells are setting.",
+        "If you want a neat look, use a template under the parchment and remove it before baking. Smooth pointed tops with a lightly damp finger only if your recipe permits. A scraped-off peak is preferable to adding decorations that alter the shape before you know whether the structure works."
+      ]
+    },
+    {
+      "heading": "Diagnose the shell before changing the filling",
+      "paragraphs": [
+        "A well-baked shell should feel light and hold its form after cooling. If the center looks wet or collapses, check that the oven reached its set temperature, shapes were consistent, and the shells had enough drying time. The King Arthur recipe includes a small slit and return-to-oven step to let steam escape; use the recipe’s method rather than guessing a new drying temperature.",
+        "Write down what the interior looked like before filling. A damp shell may be a bake issue; a shell that is dry and hollow but loses crispness later may point to storage or filling timing. Keep these possibilities separate so you change the right step in a second batch."
+      ]
+    },
+    {
+      "heading": "Fill close to serving and keep food safe",
+      "paragraphs": [
+        "Cool the shells completely, then fill with a recipe-tested cream or pastry cream and refrigerate according to that filling’s food-safety directions. King Arthur presents whipped cream and pastry cream as filling options. If you will serve the pastries later, store the shells separately and fill near serving time for a crisper result.",
+        "For your next bake, keep the formula, tray position, and size constant and change only the suspected issue. Your next action is to compare one unfilled shell’s interior with the written recipe notes before deciding whether to adjust shaping, bake, or storage."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Cream Puffs and Éclairs",
+      "url": "https://www.kingarthurbaking.com/recipes/cream-puffs-and-eclairs-recipe",
+      "publisher": "King Arthur Baking",
+      "purpose": "Supports one tested choux sequence, consistent shaping, spacing, baking stages, steam release and filling options."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "laminate-pastry-and-bake-a-first-batch-of-croissants",
+    "stretch-strudel-dough-by-hand",
+    "mill-grain-into-flour-for-a-small-bake"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

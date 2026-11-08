@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "build-something-in-a-cooperative-video-game",
+  "slug": "build-something-in-a-cooperative-video-game",
+  "title": "How can a group build something together in a co-op video game?",
+  "description": "Plan a cooperative video-game build with one shared goal, clear roles, short check-ins, and a design that leaves room for everyone to shape it.",
+  "intent": "How can friends make a cooperative video-game building session feel like a shared project? This guide helps set a manageable brief and coordinate without turning play into one person's assignment.",
+  "sections": [
+    {
+      "heading": "Choose a game that lets the group share space",
+      "paragraphs": [
+        "Pick a cooperative game in which players can contribute to the same world, room or construction goal. Agree on the platform and edition before inviting everyone; different versions may not connect. Minecraft Education, for example, supports shared multiplayer worlds for players in a compatible organization and uses a join code, but the setup and access rules differ from consumer editions and other games. Use the chosen game's official setup instructions and check the group can actually join before planning a long session.",
+        "For a first project, choose a clear, contained goal: a library with a reading room, a bridge with a path, or a small park that includes one feature from each player. Keep the scale small enough to finish or leave a visible foundation. “Let's make something cool” sounds freeing but can leave one person setting the direction while others wait for jobs."
+      ]
+    },
+    {
+      "heading": "Agree on a brief before gathering materials",
+      "paragraphs": [
+        "Spend a few minutes describing the build together. Decide who it is for, what it needs to do and what style or constraint makes it interesting. For example: “Build a shelter near the river that fits everyone and uses two types of material.” Let each person add one requirement, then choose which ideas fit the available time. A short shared brief gives disagreements somewhere to land without dictating every block or decision.",
+        "If the game allows world settings or permissions, have the host explain them before people join. Minecraft Education lets a host set player permissions and change join codes; those are useful classroom controls, but consumer games use their own safety tools. Share invite codes only with the people you want in the session and close the world when the group is done."
+      ]
+    },
+    {
+      "heading": "Give everyone a useful role",
+      "paragraphs": [
+        "Roles make cooperation easier when they are flexible. One player might sketch the layout, another gathers materials, someone else builds a doorway or tests how the space works. Rotate roles after a short interval so one person is not stuck collecting resources while someone else makes every design choice. If a player would rather observe before taking a job, let them suggest ideas or test the build instead.",
+        "Use check-ins instead of constant instructions. Agree to pause after a few minutes and ask whether the plan still works. Give specific feedback—“the doorway is too narrow for the cart”—rather than “that looks bad.” If someone changes an area without asking, explain what problem they were solving and decide together whether to keep it. A shared game should have room for repair and revision, not just compliance."
+      ]
+    },
+    {
+      "heading": "Build in stages and test the result",
+      "paragraphs": [
+        "Mark the footprint first, then add the structure, paths and details. Take a quick screenshot of the first layout before the group decorates it. Walk through the build in the game: can every player reach the entrance? Does the bridge connect both sides? Is there a clear place for the feature the group wanted? A simple test can reveal a design issue while it is still easy to fix.",
+        "If the game has hazards or survival pressure, decide whether those are part of the fun or a distraction. You can choose a creative or peaceful setting where available, or set up a small protected area for the building phase. Do not let one player's higher skill or faster controls set the pace for everyone else. Offer a quiet task, shared tool or slower turn-taking option if the group needs it."
+      ]
+    },
+    {
+      "heading": "End with a build the group can recognize",
+      "paragraphs": [
+        "Before logging off, take a screenshot and let each person name one choice they contributed. Leave a sign, label or shared note if you might return later. Ask what should be built next, but do not turn that question into a commitment. A satisfying first session can be a half-finished structure with a clear next step, not a giant project completed in one sitting.",
+        "Your next action is to invite two or three people, agree on a small build brief, and test the multiplayer connection before the planned session. Give everyone a role they can change, then end by saving one screenshot and choosing one optional next feature together."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How To Set Up A Multiplayer Game",
+      "url": "https://edusupport.minecraft.net/hc/en-us/articles/360047555531-How-To-Set-Up-A-Multiplayer-Game",
+      "publisher": "Minecraft Education Support",
+      "purpose": "Supports the use of a shared multiplayer world, compatible accounts, join codes and host permissions in Minecraft Education; cited as a specific setup example."
+    },
+    {
+      "title": "Multiplayer Game Guide",
+      "url": "https://education.minecraft.net/en-us/lessons/multiplayer-game-guide-2",
+      "publisher": "Minecraft Education",
+      "purpose": "Supports shared multiplayer play as a context for collaboration, communication and problem-solving."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "play-an-exquisite-corpse-drawing-game",
+    "build-a-cooperative-table-tennis-rally",
+    "community-a3939ea7-9932-5169-ba32-934e1c2b5aa0"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

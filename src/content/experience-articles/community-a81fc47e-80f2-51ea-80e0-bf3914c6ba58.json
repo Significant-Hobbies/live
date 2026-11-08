@@ -1,0 +1,64 @@
+{
+  "experienceSlug": "community-a81fc47e-80f2-51ea-80e0-bf3914c6ba58",
+  "slug": "visit-ces-event",
+  "title": "Plan a CES visit around one useful question",
+  "description": "Make a CES trip more than a crowded floor walk: confirm trade-only registration, choose a focused route, and protect time for follow-up.",
+  "intent": "How to assess whether CES is the right technology event for you and build a focused visit around the current registration rules and your goals.",
+  "sections": [
+    {
+      "heading": "Check whether you can attend first",
+      "paragraphs": [
+        "CES is a trade event, not a public consumer fair. The Consumer Technology Association sets registration conditions, and its current attendee guidance asks for evidence of consumer-technology industry or media affiliation. Check the live registration page before buying travel; criteria, pass types, dates and proof requirements can change. Do not assume that owning gadgets, working in any technology job, or being a student automatically qualifies. If your eligibility is unclear, ask CES registration directly before making nonrefundable plans.",
+        "Separate admission from travel readiness. Confirm the event dates and locations from the official CES site, then check visa rules, hotel cancellation terms and transit independently. A registration badge does not guarantee a particular keynote, demo or meeting. Event schedules and exhibitor listings can change, so save the pages you need and recheck them near departure."
+      ]
+    },
+    {
+      "heading": "Choose a question that narrows the floor",
+      "paragraphs": [
+        "The CES show floor spans categories and venues, so a vague goal like “see the future” becomes exhausting. Pick one question tied to your work or curiosity: what is changing in home energy management, how are vehicle interfaces evolving, or what accessibility features are visible in consumer devices? Then choose a few exhibitors or sessions from the official schedule that can help answer it. Treat the list as a starting route, not a promise that every product is available to test.",
+        "Use the map and venue information to group stops by building or area. Do not book meetings back-to-back across distant sites without transit time. Mark a quiet break and a flexible slot for an unexpected conversation. If you are attending with colleagues, agree on whether you will stay together or split up, how you will regroup, and which findings must be shared afterward."
+      ]
+    },
+    {
+      "heading": "Make each conversation concrete",
+      "paragraphs": [
+        "Prepare a short introduction and two questions. For a product, ask what problem it addresses, who it is designed for, and what evidence or constraints the team can share. For a business meeting, clarify whether the other person wants a sales conversation, a press inquiry or a partnership discussion. Do not record someone or photograph a prototype without permission; exhibitor and venue rules may limit photography. Exchange contact details only when both people want to continue.",
+        "Take notes in a consistent format: company or session, claim made, evidence offered, limitation, and follow-up. A demo can be persuasive while showing only a controlled scenario. Record what you actually observed separately from what a representative told you. This makes the visit useful later and reduces the chance that a striking display becomes an unsupported conclusion."
+      ]
+    },
+    {
+      "heading": "Protect energy and logistics",
+      "paragraphs": [
+        "Large trade shows involve more walking, noise and decision-making than a short appointment. Wear comfortable shoes, carry only what you need, keep water and a phone battery in mind, and identify accessible entrances or services if relevant. The current official attendee guide explains badges, registration and event logistics; check venue-specific updates rather than relying on a past attendee’s screenshot.",
+        "If you need an accommodation, ask CES through its official attendee-support channel in advance and confirm the process. A schedule can be enjoyable without covering every hall. Leave space for meals, rest and the journey between venues. If you start missing details or rushing conversations, stop and reset instead of adding one more crowded hall to the day."
+      ]
+    },
+    {
+      "heading": "Turn impressions into a result",
+      "paragraphs": [
+        "At the end of each day, spend ten minutes sorting notes into “worth exploring,” “interesting but unverified,” and “not for us.” Pick one follow-up per valuable conversation and send it while names are still fresh. Share the source of each product or claim with your team, including any caveats. If you are exploring personally, write a short comparison of what surprised you and what questions remain rather than posting a list of supposed trends from a handful of demos.",
+        "A first CES visit is successful if you learn something specific and leave with a few real next steps. Before booking, verify that you meet the present registration requirements and decide what question would make the trip worthwhile. Once you have a badge, build a small route, then let the event add discoveries around it."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Registration Information",
+      "url": "https://www.ces.tech/attendee-guides/registration-information/",
+      "publisher": "Consumer Technology Association / CES",
+      "purpose": "Current official attendee registration instructions, eligibility and badge guidance; supports trade-only and changing-requirements caveat."
+    },
+    {
+      "title": "CES 2027 Attendee Registration Guide",
+      "url": "https://www.ces.tech/attendee-guides/attendee-registration-guide/",
+      "publisher": "Consumer Technology Association / CES",
+      "purpose": "Explains current CES attendee badge access and industry credential requirements."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "learn-to-code-and-ship-an-app",
+    "watch-a-rocket-launch-from-an-authorized-public-gallery"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

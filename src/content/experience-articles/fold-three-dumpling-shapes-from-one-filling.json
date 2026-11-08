@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "fold-three-dumpling-shapes-from-one-filling",
+  "slug": "fold-three-dumpling-shapes-from-one-filling",
+  "title": "Which dumpling folds are easiest to compare in one kitchen session?",
+  "description": "Keep one filling and wrapper constant while you practise three closures, then compare seal, handling and cooked shape using a tested recipe.",
+  "intent": "A hands-on practice plan for learning three dumpling closures without confusing a folding experiment with different fillings or cooking methods.",
+  "sections": [
+    {
+      "heading": "Choose a recipe before choosing the folds",
+      "paragraphs": [
+        "Start with a complete recipe that suits the wrappers and cooking method you have. Purchased wrappers reduce the number of new variables, and one filling lets you focus on sealing rather than seasoning several batches. Check allergens with anyone who will eat the dumplings, and follow a tested recipe for safe preparation and cooking. If the filling is cooked ahead, keep it refrigerated and work in manageable portions.",
+        "The Woks of Life folding guide demonstrates several techniques with dumpling wrappers and filling. It also notes that wrappers dry out quickly and should be kept covered. Read the full instructions before you begin, since wrapper size, thickness and moisture affect which folds are practical. A wonton wrapper or a different regional dumpling may need another method."
+      ]
+    },
+    {
+      "heading": "Set up for repeatable practice",
+      "paragraphs": [
+        "Clear a clean work surface and place a small bowl of water, covered wrappers, filling and a tray within reach. Put parchment or another suitable liner on the tray so shaped dumplings can be moved without tearing. Start with a modest amount of filling and use the same spoon or measure for every fold. Too much filling makes almost any closure difficult and makes your comparison unfair.",
+        "Lay out three labels for the shapes you plan to try: a simple half-moon seal, a pleated edge, and a gathered or pinched closure if your recipe and wrapper allow it. The names are less important than being able to tell the samples apart. Make a few of each rather than shaping a large batch before you know whether the seals hold."
+      ]
+    },
+    {
+      "heading": "Learn one dependable seal first",
+      "paragraphs": [
+        "Place filling near the centre, leaving a clean rim. Moisten only the edge the recipe calls for, bring the wrapper sides together and press from one end to the other, pushing out trapped air as you go. Check that the seam is continuous. If the wrapper feels dry, use a little water; if it becomes slippery, stop and blot the surface rather than adding more.",
+        "Now make the second closure by holding the same amount of filling and wrapper position constant. A few pleats gathered toward one side can look different, but the important comparison is whether the seam stays shut and is comfortable to form. Keep unused wrappers covered while you work. If the filling or dough is escaping, reduce the amount before adding complexity."
+      ]
+    },
+    {
+      "heading": "Treat the third shape as a small test",
+      "paragraphs": [
+        "Try a third closure from the guide or your chosen recipe, then place the samples seam-side up with a note of which is which. If a shape keeps opening, record where it failed rather than secretly repairing it into another design. A useful practice session includes the imperfect sample; it shows which motion or amount of filling needs attention.",
+        "Cook a small mixed test batch according to the full recipe, using the same pan, water or steam method for all three. Do not guess cooking times from appearance alone, especially when a filling contains raw ingredients. Use the recipe’s doneness instructions and keep hot equipment and boiling water away from the shaping area."
+      ]
+    },
+    {
+      "heading": "Compare shape and plan the next batch",
+      "paragraphs": [
+        "Once cooked, compare whether each dumpling remained sealed, how it felt to lift and how easy it was to eat. Note differences without treating one closure as universally superior. A pleat may suit one wrapper and filling, while a simple fold may be more reliable for a quick family batch. The Woks of Life guide is one cook’s demonstration; other food traditions have their own shapes and methods.",
+        "For the next session, repeat the closure you liked best or teach one to a friend. Change only one variable—wrapper type, filling amount or fold—so you can tell what made the difference. Keep leftovers handled and stored according to your recipe’s food-safety advice, and enjoy the fact that a small mixed batch has already taught you something concrete."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How to Fold a Chinese Dumpling (4 Techniques!)",
+      "url": "https://thewoksoflife.com/how-to-fold-a-chinese-dumpling/",
+      "publisher": "The Woks of Life",
+      "purpose": "Supports the demonstrated range of dumpling folds and the practical advice to keep wrappers covered while shaping."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "shape-a-batch-of-pitha-with-a-knowledgeable-cook",
+    "roll-couscous-grains-by-hand-with-a-knowledgeable-cook"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

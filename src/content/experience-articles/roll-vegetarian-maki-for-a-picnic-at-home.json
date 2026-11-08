@@ -1,0 +1,71 @@
+{
+  "experienceSlug": "roll-vegetarian-maki-for-a-picnic-at-home",
+  "slug": "roll-vegetarian-maki-for-a-picnic-at-home",
+  "title": "How do you roll vegetarian maki that stays together?",
+  "description": "Make a vegetarian maki roll with manageable fillings, evenly spread sushi rice, a steady bamboo-mat motion, and picnic-safe handling.",
+  "intent": "How can I make a first vegetarian maki roll that cuts cleanly and travels well? This guide focuses on choosing fillings, controlling the rice layer and keeping the picnic portion safe.",
+  "sections": [
+    {
+      "heading": "Choose fillings that behave in a roll",
+      "paragraphs": [
+        "For a first roll, use two or three fillings with different textures: cucumber for crispness, avocado for softness, or cooked carrot, omelet or seasoned dried gourd for a more substantial center. Cut them into long, even strips that fit inside the nori without forming a bulky mound. The Japanese Ministry of Agriculture, Forestry and Fisheries describes kanpyo-maki, a vegetarian-style roll built around cooked dried bottle gourd, seasoned rice and roasted seaweed. That is one regional example, not a rule that every maki must use the same filling.",
+        "Check the ingredients on anything packaged, including sauces, pickles and imitation seafood, if you need to avoid fish, egg, sesame, soy or gluten. Vegetarian preferences vary, and a roll can be meat-free while still containing fish-based stock or other animal-derived ingredients. If you are sharing the food, label the fillings and ask about allergies instead of relying on the word “vegetarian” to answer every dietary question."
+      ]
+    },
+    {
+      "heading": "Prepare rice and workspace before rolling",
+      "paragraphs": [
+        "Cook short-grain rice according to its package and season it with a sushi-vinegar mixture or prepared sushi seasoning. The MAFF recipe describes seasoning cooked rice and keeping it covered with a damp cloth until use. Let the rice cool enough to handle comfortably; hot rice can soften the nori and make rolling awkward. Set out a bamboo mat, a bowl of water for dampening your fingers, a clean knife and a tray before assembling.",
+        "Place one nori sheet shiny side down if that matches the package or recipe guidance. Spread a thin, even layer of rice, leaving a small strip bare at the far edge so the roll can seal. Wet your fingers lightly so the rice releases, but avoid soaking the sheet. The first goal is not a restaurant-perfect rectangle; it is a filling that stays centered and a seam that closes without squeezing everything out."
+      ]
+    },
+    {
+      "heading": "Roll with steady pressure",
+      "paragraphs": [
+        "Arrange the fillings in a narrow line just below the center. Lift the edge of the mat nearest you and fold it over the ingredients, using your fingers to keep the filling from escaping. Roll forward in one continuous motion, applying gentle, even pressure through the mat. Pause to shape the roll, then continue until the bare strip of nori reaches the underside. A loose roll falls apart; too much force crushes the rice and makes the center dense.",
+        "Let the roll rest seam-side down for a short moment, then use a clean, sharp knife to cut it. Dampen the blade between cuts and wipe away sticky rice if needed. If the roll squashes, use lighter pressure or reduce the filling on the next one. If the seam opens, dampen the bare edge slightly and set the roll seam-side down while it settles."
+      ]
+    },
+    {
+      "heading": "Make the picnic plan food-safe",
+      "paragraphs": [
+        "Cooked rice and cut produce are perishable foods. FoodSafety.gov says cooked rice and other perishables should not remain at room temperature for more than two hours, or one hour if the temperature is above 90°F (32°C). For a picnic, keep the rolls chilled in a cooler with ice packs until serving, or choose a short indoor tasting instead. If you cannot keep them cold, prepare a smaller amount and eat it promptly rather than leaving a tray out through a long event.",
+        "Wash your hands and clean the mat, knife and prep surface before starting. Use separate clean utensils for anything that may contain allergens. Pack the rolls in a shallow covered container, keep them out of direct sun and return leftovers to refrigeration promptly. Do not treat vinegar in the rice as a substitute for safe temperature control."
+      ]
+    },
+    {
+      "heading": "Make the next roll easier",
+      "paragraphs": [
+        "After the first one, note which filling was too wet, too thick or too slippery to hold in place. Cooked and cooled vegetables can be easier to manage than watery raw ingredients. Change one filling or the rice amount at a time and keep the rest the same so you can see what improved the cut. A small trial roll is a better picnic rehearsal than making a large batch on the day.",
+        "Your next action is to make one roll with a single familiar vegetable and one cooked or seasoned filling, then cut it in half to inspect the seam. If it travels well, prepare the rest in a chilled container and check your picnic weather and food-storage plan before leaving home."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Kanpyo-maki: Our Regional Cuisines",
+      "url": "https://www.maff.go.jp/e/policies/market/k_ryouri/search_menu/3544/index.html",
+      "publisher": "Japan Ministry of Agriculture, Forestry and Fisheries",
+      "purpose": "Supports kanpyo-maki as a roll made with seasoned dried gourd, vinegared rice and nori, with a bamboo mat used for rolling."
+    },
+    {
+      "title": "Ehomaki / Makizushi (Sushi rolls): Our Regional Cuisines",
+      "url": "https://www.maff.go.jp/e/policies/market/k_ryouri/search_menu/3655/index.html",
+      "publisher": "Japan Ministry of Agriculture, Forestry and Fisheries",
+      "purpose": "Supports preparation of sushi rice and using nori and fillings in makizushi; cited as a technique reference, not as a vegetarian recipe."
+    },
+    {
+      "title": "Game Day Food Safety Tips",
+      "url": "https://www.foodsafety.gov/blog/game-day-food-safety-tips",
+      "publisher": "FoodSafety.gov",
+      "purpose": "Supports refrigeration guidance for cooked rice and cut fruit or other perishable picnic foods, including the two-hour rule and hotter-weather limit."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "press-corn-tortillas-and-serve-them-warm",
+    "host-a-blind-apple-tasting",
+    "create-a-family-cookbook-with-old-recipes"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "record-your-parents-life-stories",
+  "slug": "record-your-parents-life-stories",
+  "title": "Record a family story by following one good question",
+  "description": "Prepare a relaxed recording with your parents, agree on its use, ask open questions, and preserve the files with enough context to find later.",
+  "intent": "Make a parent interview manageable and respectful through preparation, consent, a clear recording setup, open follow-ups, and a basic preservation plan.",
+  "sections": [
+    {
+      "heading": "Agree on the purpose before recording",
+      "paragraphs": [
+        "Ask your parent what they would enjoy remembering or explaining. You might focus on one period, place, relationship, job, migration, or family object rather than trying to capture an entire life in one sitting. Explain who will hear the recording, whether it might be shared outside the family, where you plan to store it, and whether your parent can ask to pause or stop.",
+        "The Oral History Association’s best practices recommend discussing the purpose, recording process, preservation, access, and potential uses before an interview, and securing informed consent. For a family conversation, the same courtesy helps avoid misunderstandings: a private recording for relatives is different from a public post or archival deposit. Agree on what is okay to share before you press record."
+      ]
+    },
+    {
+      "heading": "Prepare a few open questions",
+      "paragraphs": [
+        "Write five or six open prompts and keep them nearby rather than following a rigid script. Questions such as “What did a usual day look like then?”, “Who taught you that?”, or “What did you think would happen next?” invite a story. Avoid questions that assume a memory is accurate or that a person should feel grateful, proud, or hurt.",
+        "Bring a photograph, recipe, letter, tool, or place name if it might help your parent choose a story. Ask them to describe what they remember about it, and let the conversation move somewhere unexpected. Prepare a gentle way to change topics and make it clear that they can pass on any question."
+      ]
+    },
+    {
+      "heading": "Make a comfortable recording setup",
+      "paragraphs": [
+        "Choose a quiet room where your parent can sit comfortably and take breaks. Put the recorder or phone close enough to capture voices without sitting between the speakers. Test it with a short sample, play the file back, and check that both voices are understandable. Silence nearby notifications if doing so will not interfere with an agreed emergency contact or assistive device.",
+        "At the beginning, state the date, the participants’ names, and the topic, with your parent’s permission. The Oral History Association recommends a clear lead-in and a quiet setting; those details can help a future listener understand who is speaking and when. Avoid recording an address or private detail that does not need to be part of the file."
+      ]
+    },
+    {
+      "heading": "Listen more than you talk",
+      "paragraphs": [
+        "Ask one question, then wait. Follow an interesting detail with a simple prompt: “What happened after that?”, “How did you learn it?”, or “What do you remember about the room?” Do not rush to fill pauses or correct a family chronology while the person is speaking. If you hear a date or name you want to verify later, note it separately rather than interrupting the story.",
+        "The Oral History Association emphasizes that a narrator shapes what is meaningful and may refuse a subject or set access limits. Respect that choice. If a memory involves someone else’s private life, ask before including identifying details in a version meant to circulate. A recording can be meaningful to your family while remaining private."
+      ]
+    },
+    {
+      "heading": "Save the file with context",
+      "paragraphs": [
+        "Afterward, ask your parent whether they want to hear the recording and whether anything should be removed or restricted before anyone else hears it. Name the file with the date and topic, and keep a short note describing who is present. Make more than one copy in separate places and check that each copy opens; the National Archives’ digital-memory guide advises descriptive context, copies in different locations, and periodic checks for personal digital files.",
+        "Choose one manageable next step rather than scheduling a marathon interview. You might record a second conversation about a different decade, or invite a sibling to ask one question your parent has not heard before. For your first session, agree on a short time window, choose one topic, and let your parent decide which story feels right to begin with."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Oral History Best Practices",
+      "url": "https://oralhistory.org/best-practices/",
+      "publisher": "Oral History Association",
+      "purpose": "Supports planning purpose, consent, uses and access, open-ended questions, a quiet setting, lead-in context, breaks, and narrator control over topics."
+    },
+    {
+      "title": "Preserving Your Digital Memories",
+      "url": "https://www.archives.gov/files/preservation/formats/pdf/preserving-your-digital-memories.pdf",
+      "publisher": "National Digital Information Infrastructure and Preservation Program, Library of Congress",
+      "purpose": "Supports descriptive filenames and context, multiple copies in different locations, and checking that saved digital audio remains readable; the guide is older and its media examples may be dated."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "record-a-conversation-with-an-elder-and-preserve-it",
+    "spend-a-week-with-each-of-your-parents-while-they-are-well-enough-to-travel",
+    "write-down-everything-you-know-about-your-family-history"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

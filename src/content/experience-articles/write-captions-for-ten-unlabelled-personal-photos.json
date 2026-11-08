@@ -1,0 +1,57 @@
+{
+  "experienceSlug": "write-captions-for-ten-unlabelled-personal-photos",
+  "slug": "write-captions-for-ten-unlabelled-personal-photos",
+  "title": "How can you caption family photos without turning a guess into a fact?",
+  "description": "Add useful context to ten personal photos by recording what you know, checking clues, preserving uncertainty, and keeping captions separate from originals.",
+  "intent": "Answer how to write accurate, durable captions for unlabeled photos while separating verified details from family memory or visual inference.",
+  "sections": [
+    {
+      "heading": "Begin with what the photo shows",
+      "paragraphs": [
+        "Choose ten photos that are safe to handle and that you are allowed to caption. Start by describing visible details: people, clothing, objects, setting, activity, and any writing on the back or enclosure. The National Archives’ photograph-analysis worksheet asks viewers to list people, objects, and activities before interpreting who, where, when, and why. That sequence helps slow down a common mistake: naming a person or event because a picture resembles another one in the collection.",
+        "Use a working list or a separate paper sheet first. Give each photograph an identifier such as a temporary number, then make one caption per item. If you are working with scans, keep the original file unchanged and write captions in a separate document or metadata field that can be revised. A clear filename can help you match the note to the image, but avoid placing sensitive names in a public folder if the photos include people who have not agreed to share them."
+      ]
+    },
+    {
+      "heading": "Separate confirmed details from clues",
+      "paragraphs": [
+        "Write down details you know from a source: “Mina and Arjun, identified by their daughter; in the garden, probably 1988.” Mark the uncertain year as approximate rather than polishing it into certainty. A visible sign, dated invitation, handwritten note, or family calendar can help verify a detail, but the image alone may not. Ask the oldest available family member an open question such as “What do you remember about this day?” rather than suggesting a name or date that could influence the answer.",
+        "Keep evidence and interpretation in separate clauses. For example: “Three people stand beside a red bicycle; family notes identify the two adults as Leela and Farid; location uncertain.” If nobody can identify a person, use “unidentified” rather than inventing a likely relative. Avoid assigning a relationship, place, or occasion solely from clothing, facial resemblance, or the style of a building. A future reader will benefit from knowing which facts are documented and which remain open."
+      ]
+    },
+    {
+      "heading": "Write a compact caption with enough retrieval clues",
+      "paragraphs": [
+        "A practical caption can include names, event or activity, place, date or date range, photographer if known, and the source of the information. You do not need every field for every image. For personal photos, a short caption can be: “Mina and Arjun planting tomatoes behind their first apartment, probably spring 1988; date recalled by Mina; photographer unknown.” That is detailed enough to find later and honest about uncertainty.",
+        "If the photo is fragile, do not write on it during this exercise. National Archives preservation guidance recommends writing identifying information on an enclosure when the photograph cannot safely accept pencil. Handle originals by their edges and use copies or scans for a captioning session. If an image is cracked, peeling, or valuable, ask a photograph conservator before attempting to clean or mark it."
+      ]
+    },
+    {
+      "heading": "Review the ten captions with another person",
+      "paragraphs": [
+        "After drafting, read each caption beside its image and ask: Could someone distinguish this person from another? Is the date precise only when evidence supports precision? Is my source clear? Have I included anything private that should not travel with the photo? Invite a relative to correct a memory, but record the correction and who supplied it rather than overwriting an earlier account without explanation. Some family histories differ; a caption can note that accounts vary.",
+        "Keep a copy of the caption list with the collection and make sure the numbering still maps to the images after sorting. If the photos will be shared, check permissions and remove details that could expose someone’s sensitive information. For a first session, choose ten images that span different years or events, then stop before the task becomes overwhelming. A good caption need not solve the whole history of a photograph; it should make the next conversation easier and preserve what you know today."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Analyze a Photograph",
+      "url": "https://www.archives.gov/education/lessons/worksheets/analyze-a-photograph-intermediate",
+      "publisher": "National Archives and Records Administration",
+      "purpose": "Supports describing visible details before interpretation and checking who, where, when, and why against evidence."
+    },
+    {
+      "title": "Preserving Family Photos",
+      "url": "https://www.archives.gov/publications/prologue/2015/fall/handling-photos.html",
+      "publisher": "National Archives and Records Administration",
+      "purpose": "Supports safe handling and writing captions on enclosures when marking a photograph is not appropriate."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "make-a-map-of-places-you-call-home",
+    "curate-a-five-object-museum-of-your-life"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

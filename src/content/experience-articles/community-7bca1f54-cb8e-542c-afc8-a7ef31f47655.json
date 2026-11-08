@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "community-7bca1f54-cb8e-542c-afc8-a7ef31f47655",
+  "slug": "write-a-song-and-or-poem",
+  "title": "Turn one small observation into a finished poem or song",
+  "description": "Choose whether your idea wants a poem or lyric, shape one vivid draft, then revise its sound and structure without waiting for inspiration.",
+  "intent": "A practical way to decide between a poem and a song lyric, then finish a short original piece through deliberate revision.",
+  "sections": [
+    {
+      "heading": "Start with a moment, not a grand subject",
+      "paragraphs": [
+        "Pick something you can point to: a cup left on a windowsill, the bus arriving in rain, the sentence someone always says before leaving. Write down three details you could actually see, hear, or touch. “Loneliness” is a subject; the second place setting still on the table is material. Small particulars give the reader somewhere to stand, and they keep a first draft from collapsing into general statements about love, time, or hope.",
+        "Set a modest finish line: eight to twelve lines, or a verse and a short refrain. A small piece lets you test the whole process—choosing, arranging, cutting, and reading aloud—without needing to solve your entire life in one sitting. Keep the first version private if that makes it easier to be specific."
+      ]
+    },
+    {
+      "heading": "Choose a poem or a lyric by its job",
+      "paragraphs": [
+        "If the language needs to be understood on the page, begin as a poem. You can vary line lengths, pause where the thought turns, and let an image remain unresolved. If you want a listener to remember and return to a central phrase, try a lyric: a refrain can carry the idea while verses add new scenes. Neither form requires rhyme. A line that ends on a concrete noun may sound stronger than a predictable rhyme chosen just to close it.",
+        "Try the same first image both ways. In a poem, let the image change what the speaker understands. In a lyric, make a short phrase that could be sung after one hearing, then make each verse earn its return. If melody is not available yet, tap a steady pulse and speak the words; awkward clusters often reveal themselves before you set notes."
+      ]
+    },
+    {
+      "heading": "Draft in layers",
+      "paragraphs": [
+        "First write plain sentences describing what happened. Circle the detail with the most energy, then build lines around it. Ask what changes between the opening and ending: does the room grow quieter, does a remembered voice interrupt, does the speaker decide to stay? A compact piece still benefits from movement. It can shift in time, attention, or emotional temperature rather than deliver a moral.",
+        "On a second pass, replace abstract labels with images or actions. Instead of “I felt anxious,” what did the person do with the key, the message, or the unfinished cup of tea? Do not decorate every line. One surprising image surrounded by clear language is easier to follow than a string of metaphors competing for attention."
+      ]
+    },
+    {
+      "heading": "Revise for sound and sense",
+      "paragraphs": [
+        "Read the draft aloud at speaking speed. Mark where you run out of breath, stumble, or naturally pause. For a lyric, test whether the refrain is distinct enough to return and whether the syllables sit comfortably in the rhythm you imagine. For a poem, notice whether line breaks create emphasis or merely split a sentence arbitrarily. Read a second time without performing; keep a line only if it still makes sense on the page.",
+        "Cut repeated explanations. If the image already shows the feeling, a sentence naming that feeling may weaken the ending. Conversely, if a beautiful line is obscure, add one grounding detail instead of explaining everything. Put the piece away overnight, then circle the lines you still care about and remove one line you like but do not need."
+      ]
+    },
+    {
+      "heading": "Make a small finished version",
+      "paragraphs": [
+        "Give the draft a working title that points toward its central object or turn. Ask one trusted reader a narrow question—“Which image stayed with you?” is more useful than “Is it good?” If you plan to share it, choose a setting that fits the piece: read it privately, set a lyric to a simple melody, or submit a poem under the publication’s actual rules. You can also keep it as a dated record of how you saw this moment.",
+        "For a first attempt, write about one ordinary object, choose poem or lyric based on whether page or return phrase matters more, and finish by cutting the least necessary line. Save the before-and-after drafts. The next piece can use the same object from another person’s point of view, or turn one spoken sentence into a refrain."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Teaching Poetry: The Reading-Conversation-Writing Cycle",
+      "url": "https://poets.org/lesson-plan/teaching-poetry-reading-conversation-writing-cycle",
+      "publisher": "Academy of American Poets",
+      "purpose": "Describes close reading, reading aloud and attention to word choice and line breaks as ways to engage with poetry; cited narrowly alongside original drafting advice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "learn-an-instrument-to-a-playable-level",
+    "record-a-song-and-release-it",
+    "write-something-and-publish-it"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "take-a-trip-with-your-parents-before-it-s-too-late",
+  "slug": "take-a-trip-with-your-parents-before-it-s-too-late",
+  "title": "Design the trip around the travelers you have now",
+  "description": "Plan a shared trip with your parents around their priorities, pace, access needs and energy, with flexible days and a comfortable way to adapt.",
+  "intent": "How can I make a memorable trip with my parents while respecting the pace and access they want? This is a collaborative trip plan, not a rushed bucket-list route. Plan a shared trip with parents around their preferences, access and pace; distinct from staying together for a week.",
+  "sections": [
+    {
+      "heading": "Begin with their version of the trip",
+      "paragraphs": [
+        "Ask each parent what would make the trip feel worthwhile before choosing a destination. It might be returning to a familiar place, seeing a landscape, sharing a meal with relatives or simply having time together without a packed itinerary. Write down a few priorities and let them rank them. This avoids substituting your own “must see” list for their wishes.",
+        "Talk openly about what kind of travel feels comfortable now: early starts or slow mornings, stairs or flat routes, busy transit or a hired car, one base or multiple stops. Do not assume age tells you what they can do. Ask about preferences and constraints directly, and let each traveler decide what they are comfortable attempting."
+      ]
+    },
+    {
+      "heading": "Build a trip that can breathe",
+      "paragraphs": [
+        "Pick one anchor activity per day, then leave open time around it. A museum visit followed by a long lunch may be a complete day; three transfers and two timed entries can turn the same outing into a test of endurance. Check whether the anchor requires advance booking and identify a nearby place to sit, eat or return to the hotel.",
+        "If the trip includes an outdoor site, review the destination’s own access information rather than relying on a generic description. The National Park Service asks visitors with disability-related questions to contact the park ahead of time; its examples include accessible transportation and reserving accessible campsites. That advice is specific to U.S. parks, but the useful habit is to ask the actual operator early."
+      ]
+    },
+    {
+      "heading": "Budget for comfort and changes",
+      "paragraphs": [
+        "Compare the full cost of each option: door-to-door transfers, lodging location, meals, admission and cancellation terms. A cheaper room far from transit can cost more in time and energy. Share the budget honestly and decide together what convenience is worth paying for. Keep a small reserve for a taxi, room change or missed connection.",
+        "Choose cancellable bookings where practical, and make sure everyone understands who has paid for what. Avoid making the trip depend on a surprise schedule that the parents cannot influence. If insurance or health arrangements matter, each traveler should consult their own qualified provider and policy documents; this guide cannot assess individual coverage or medical fitness to travel."
+      ]
+    },
+    {
+      "heading": "Make logistics visible to everyone",
+      "paragraphs": [
+        "Share the itinerary in an accessible format each person can consult offline. Include lodging address, meeting points, tickets, emergency contacts and a simple plan if someone wants to rest while others continue. Carry essential contact details on paper as well as a phone, especially where battery life or reception may be uncertain.",
+        "Agree on a low-pressure way to pause. For example, anyone can say “let’s take the next hour slowly” without needing to justify it. A short daily check-in can surface problems with walking distance, room temperature, noise or timing before they accumulate. Keep medication, mobility equipment and personal documents with the person who needs them."
+      ]
+    },
+    {
+      "heading": "Save the memory without staging it",
+      "paragraphs": [
+        "Photographs can be lovely, but ask before directing someone into a pose or posting a picture. Notice ordinary shared moments: a conversation over breakfast, a familiar song in the car or a view you sat with together. Let some of the trip happen without a camera.",
+        "After returning, ask each parent which part they would repeat and what they would change. Write down a small memory in their own words if they want to share it. The success of the trip is not the number of landmarks checked off; it is whether the plan gave the people traveling together room to enjoy one another."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Plan Your Visit: Accessibility",
+      "url": "https://www.nps.gov/subjects/accessibility/plan-your-visit.htm",
+      "publisher": "National Park Service",
+      "purpose": "NPS recommends contacting the specific park ahead about accessibility questions and possible modifications; the guidance applies to U.S. national parks, not every destination."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "spend-a-week-with-each-of-your-parents-while-they-are-well-enough-to-travel",
+    "record-your-parents-life-stories"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

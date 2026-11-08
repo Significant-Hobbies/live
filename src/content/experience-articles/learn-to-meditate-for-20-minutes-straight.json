@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "learn-to-meditate-for-20-minutes-straight",
+  "slug": "learn-to-meditate-for-20-minutes-straight",
+  "title": "A supported way to sit with attention for twenty minutes",
+  "description": "Try a simple attention practice with a comfortable posture and an anchor, treating twenty minutes as a flexible learning goal rather than a test.",
+  "intent": "How do I begin a twenty-minute sitting practice without expecting a blank mind or treating the duration as a health test?",
+  "sections": [
+    {
+      "heading": "Pick one practice and one anchor",
+      "paragraphs": [
+        "NCCIH describes meditation as a range of practices; for this attempt, choose one anchor, such as the breath or a steady sound.",
+        "Set up a quiet place and a posture you can maintain comfortably: chair, cushion or lying down if that is what your body needs. The goal is to be awake and supported, not to reproduce a photograph of a cross-legged meditator. If sitting creates pain, change position rather than treating discomfort as a requirement."
+      ]
+    },
+    {
+      "heading": "Let twenty minutes be a destination",
+      "paragraphs": [
+        "If twenty minutes feels too long, start with a shorter interval and make the transition gradual. The goal is to learn how attention behaves, not to prove discipline in one sitting. A timer can help you avoid checking the clock; choose a gentle sound and keep the device out of reach once the practice begins.",
+        "At the start, name the basic sequence in plain language: settle, notice the chosen anchor, recognize when attention has wandered, and return. Thoughts, plans and sounds may continue. Returning is the practice; the session does not need to feel empty or serene to count as time spent practicing."
+      ]
+    },
+    {
+      "heading": "Use a small reset when attention wanders",
+      "paragraphs": [
+        "When you notice you have been planning dinner or replaying a conversation, label it softly—“planning,” “remembering,” or just “thinking”—and return to the anchor. You do not need to push the thought away, solve it, or punish yourself for noticing late. A wandering mind is information about attention, not a score.",
+        "If focusing on breath is uncomfortable, choose another anchor such as feet touching the floor, hands resting, or ordinary sounds in the room. You can open your eyes, stretch or stop. NCCIH says safety evidence is limited, so this is a general practice example rather than a treatment."
+      ]
+    },
+    {
+      "heading": "Make the room and timing work",
+      "paragraphs": [
+        "Try the session at a time when you are less likely to be interrupted. Let people at home know when you expect to be unavailable, while keeping a reasonable way to respond to urgent needs. Silence notifications if it helps, but there is no special equipment or app required to practice the sequence.",
+        "Afterward, write one factual note: duration, chosen anchor and whether anything made the posture or focus difficult. Avoid grading the session as “good” or “bad.” If the twenty-minute target produces strain, scale it back; if the session feels manageable, repeat it on another day before increasing the duration."
+      ]
+    },
+    {
+      "heading": "Know when to ask for support",
+      "paragraphs": [
+        "If the exercise becomes distressing, stop and choose a different activity or contact a qualified professional.",
+        "A useful first milestone is knowing how to begin, where to place attention and how to finish gently. Keep twenty minutes as a flexible goal, not proof of willpower or wellness. Your next step can be a short supported sitting today; if it suits you, build toward the full interval at a pace you can repeat."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Meditation and Mindfulness: Effectiveness and Safety",
+      "url": "https://www.nccih.nih.gov/health/meditation-and-mindfulness-effectiveness-and-safety",
+      "publisher": "National Center for Complementary and Integrative Health, NIH",
+      "purpose": "Defines varied attention anchors and mindfulness, notes limits of safety evidence, and advises not replacing conventional care or checking instructor experience."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "do-a-walking-meditation-every-morning-for-a-month",
+    "attend-a-beginner-tai-chi-session",
+    "do-a-10-day-silent-meditation-retreat"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,60 @@
+{
+  "experienceSlug": "help-repair-library-books-under-staff-supervision",
+  "slug": "help-repair-library-books-under-staff-supervision",
+  "title": "Support book repair without risking the collection",
+  "description": "Learn how to help in a library book-repair session by preparing a clean work area, handling items gently, and letting staff choose the repair.",
+  "intent": "What can a volunteer safely do during a supervised book-repair session? This guide explains how to support the workflow without attempting conservation treatment on your own.",
+  "sections": [
+    {
+      "heading": "Ask what “repair” means at this library",
+      "paragraphs": [
+        "Libraries use different workflows for circulating books, local history materials, and archival objects. Before signing up, ask what tasks volunteers may do, which materials are excluded, and who decides whether an item is repaired, replaced, or referred to a conservator. A session might involve labeling, checking a queue, sorting supplies, or helping with simple approved repairs. The scope belongs to the library staff.",
+        "Bring only what the coordinator requests and plan to follow the demonstrated method. Do not bring household tape, glue, cleaning products, or a personal repair kit. A well-meant repair can make future professional treatment harder, and an item’s paper, binding, or ink may react badly to materials chosen by guesswork."
+      ]
+    },
+    {
+      "heading": "Set up for careful work",
+      "paragraphs": [
+        "Wash and dry your hands, clear the surface, and wait for the staff member to tell you where each book belongs. The Library of Congress advises clean, dry hands for handling paper-based books and cautions against pulling a book from a shelf by the top of its spine. These collection-care practices are a useful reminder that slow handling matters even when a book looks ordinary.",
+        "If staff place an item on a cradle or support, keep it there and avoid pressing the covers flat. Turn pages only as instructed. If you encounter a loose page, brittle edge, handwriting, or unusual material, stop and ask before touching it further. Your task may be to flag that detail, not to fix it."
+      ]
+    },
+    {
+      "heading": "Follow the repair station’s sequence",
+      "paragraphs": [
+        "A supervised station may demonstrate a specific repair with scrap material first. Watch the full demonstration, repeat the steps on practice paper if offered, then handle a real item only when invited. Keep tools in their marked places and use only the adhesive, brush, or support assigned by staff. If you are unsure which side of a tear to support, pause instead of improvising.",
+        "Work at a pace that leaves time to inspect the result. Check whether the repair lies flat, whether a page can turn without snagging, and whether any excess material is visible. The supervisor may ask you to redo or set aside a repair; that is part of quality control, not a judgment of your care."
+      ]
+    },
+    {
+      "heading": "Know when not to mend",
+      "paragraphs": [
+        "A missing page, mold-like residue, water damage, a brittle spine, or a valuable inscription can require a different response from a small tear in a popular paperback. Never brush away suspected mold, press a damp book, or attempt to flatten a warped cover unless staff explicitly trains you to do so. Report what you notice and let the library decide the next step.",
+        "Do not photograph or post collection material unless the library permits it. A name, donor note, or marginalia may be private or restricted. Ask whether the library needs a record of the repair and how it wants the item returned to circulation. This keeps the work useful and respects local collection policies."
+      ]
+    },
+    {
+      "heading": "End with a tidy handoff",
+      "paragraphs": [
+        "Return every item to the correct tray or cart and label any unfinished work as staff directs. Clean the station using the approved method, return tools, and ask whether any steps need a second check. Share one issue you noticed in the workflow, especially if a tool or instruction was confusing. Small observations can help staff improve the next volunteer session.",
+        "Your next action is to contact a library and ask whether supervised repair work is open to volunteers. If not, ask about another collection-care task the library has approved. A successful first session means the books are safer, staff retain control of treatment decisions, and you understand the boundary between helping and conserving."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Handling Your Books",
+      "url": "https://guides.loc.gov/preserving-your-books/handling",
+      "publisher": "Library of Congress",
+      "purpose": "Library of Congress handling guidance recommends clean hands, careful shelf removal and supported opening."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "help-catalog-seeds-at-a-community-seed-library",
+    "help-host-a-neighborhood-repair-cafe-session",
+    "make-a-requested-item-for-a-hospital-craft-program",
+    "prepare-enrichment-materials-for-an-animal-shelter"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

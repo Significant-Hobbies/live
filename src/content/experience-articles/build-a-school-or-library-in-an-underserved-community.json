@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "build-a-school-or-library-in-an-underserved-community",
+  "slug": "build-a-school-or-library-in-an-underserved-community",
+  "title": "What must keep a community school or library open?",
+  "description": "Plan a community learning space around local priorities, teaching or library staff, safe construction, operating costs and long-term ownership.",
+  "intent": "A due-diligence guide for deciding whether a school or library building project is locally requested, staffed and maintainable after construction.",
+  "sections": [
+    {
+      "heading": "Begin with the people who will use it",
+      "paragraphs": [
+        "A building can be completed while the service it was meant to provide remains inaccessible. Start with students, families, teachers, librarians and local education authorities, and ask what gap they have identified. Is the barrier distance, a lack of books, inaccessible hours, unsafe classrooms, or too few trained staff? Let people who live with the problem define what a useful response would look like before anyone draws a floor plan.",
+        "UNICEF’s account of community-built schools in Kasai describes local participation in construction alongside continued support for teacher training, hygiene and violence prevention. It is a case from one region, not a model that automatically transfers everywhere. Its practical lesson is to treat construction and the learning service as connected plans."
+      ]
+    },
+    {
+      "heading": "Check whether a new building is the right intervention",
+      "paragraphs": [
+        "Ask the local authority or established education organization what facilities already exist and what they need. A school may need repaired sanitation, books, transport, teacher housing or staff salaries more urgently than a new structure. A library may be better served by extending an existing room, lending program or mobile service. Request a written explanation of why the proposed building is the best fit and who approved it.",
+        "When community members describe priorities, record whose voices were heard and who was missing. Make room for girls, disabled learners, minority-language families and people who cannot attend daytime meetings. A plan that makes attendance easy for the most visible participants can still overlook the children with the greatest access barriers."
+      ]
+    },
+    {
+      "heading": "Make the operating plan as concrete as the building plan",
+      "paragraphs": [
+        "Identify who will employ and supervise teachers or library staff, where operating money will come from, who buys learning materials, who pays utilities, and who handles repairs. A construction budget that leaves no room for staffing or maintenance is incomplete. Ask what happens if a grant ends, a roof leaks, or enrollment grows beyond the planned room count.",
+        "Use a simple responsibility table: task, named organization, funding source, and the person who will report progress. Confirm that the responsible institution has agreed to take ownership after the project closes. Avoid promises about student outcomes or enrollment gains unless the organization has evidence for them and approves the wording."
+      ]
+    },
+    {
+      "heading": "Verify land, design and safety before raising funds",
+      "paragraphs": [
+        "Ask who owns or controls the proposed site and what permission is needed before work begins. Seek an independent review of local construction standards, drainage, climate risks, accessibility, sanitation and safe routes to the building. Do not rely on informal assurances when the project involves land rights, procurement or child safety; use qualified local professionals and the relevant public authority.",
+        "UNICEF’s example includes a local community’s contribution to construction and a broader education support plan. That does not mean communities should be asked to donate labor or materials without consent, fair treatment and a clear choice. Participation is most meaningful when residents can question the design, see the budget and decline unsafe or unpaid expectations."
+      ]
+    },
+    {
+      "heading": "Choose a first step smaller than construction",
+      "paragraphs": [
+        "A responsible first milestone might be a listening session led by a local organization, a needs assessment, or a visit to an existing school or library. Ask the host what would make the visit useful, and do not photograph children without appropriate permission. Compare what residents say with the project proposal before fundraising.",
+        "If the need is confirmed, ask the local education authority and a trusted community partner to identify the accountable operator, maintenance plan and funding gap. If those pieces are not ready, support a local learning program that already has them. The next action is a written agreement about roles and long-term costs, not a public announcement that a building is coming."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Building schools together with communities",
+      "url": "https://www.unicef.org/drcongo/en/recits/building-schools-together-with-communities",
+      "publisher": "UNICEF Democratic Republic of the Congo",
+      "purpose": "Documents one Kasai community-based school construction program and describes local ownership alongside continuing teacher training and other support; it is a case example, not a universal outcome claim."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "fund-a-child-s-education-for-a-year",
+    "volunteer-abroad-for-at-least-a-month",
+    "support-a-computer-learning-session-through-a-community-program"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "eat-a-12-course-tasting-menu",
+  "slug": "eat-a-12-course-tasting-menu",
+  "title": "How to enjoy a long tasting menu at your own pace",
+  "description": "Choose a menu that fits your appetite and access needs, ask about ingredients and pacing in advance, and notice how small courses build a meal.",
+  "intent": "A grounded plan for approaching a twelve-course dinner with curiosity and comfort, including how to ask about menu length, supplements, allergies and timing.",
+  "sections": [
+    {
+      "heading": "Check whether twelve courses suit tonight",
+      "paragraphs": [
+        "A twelve-course menu can mean a long evening with many small plates, but course size, pacing and dining-room style vary by restaurant. Look at the current menu before booking and ask how long the meal usually takes, whether there is a shorter option, and whether the kitchen can handle your dietary requirements. Do not assume a tasting menu can be modified; some kitchens need advance notice or may not be able to accommodate a particular allergy.",
+        "The MICHELIN Guide’s inspectors recommend comparing a tasting menu with à la carte options, looking at overlap and deciding whether the longer menu suits your appetite and mood. That is a useful decision rule: choose the full progression when you want to follow the chef’s arc, not because twelve sounds like a challenge."
+      ]
+    },
+    {
+      "heading": "Ask about the practical details up front",
+      "paragraphs": [
+        "When booking, mention allergies or accessibility needs clearly and ask for confirmation from the restaurant. Tell them if you avoid alcohol before discussing a pairing. Ask whether supplements, premium ingredients or optional pairings add charges, and whether a nonalcoholic pairing is available. Prices and menus change, so verify the current information directly rather than relying on a review from another year.",
+        "If you are celebrating, tell the restaurant whether you want the occasion acknowledged or prefer a quiet meal. Ask about start time and late arrival policies. A long menu works better when your evening has room for it; do not schedule a timed performance or tight train connection immediately afterward."
+      ]
+    },
+    {
+      "heading": "Follow the progression without trying to decode everything",
+      "paragraphs": [
+        "At the table, give each plate a first look before reaching for a fork. Notice the temperature, aroma, texture and portion size, then taste in the order that feels natural unless the server explains a particular sequence. A twelve-course meal might move from a small salty bite to a vegetable dish, a warm broth, seafood, a richer main and a dessert; the actual order belongs to the kitchen. You do not need to guess the technique to enjoy the food.",
+        "If the server introduces an unfamiliar ingredient, ask one focused question, such as “Is this the herb in the sauce or the garnish?” That can help you notice the dish without turning the table into an interview. Michelin’s guide says diners and inspectors consider how flavor and flow develop across the courses; think of each plate as part of a sequence rather than twelve unrelated rankings."
+      ]
+    },
+    {
+      "heading": "Use your own pace and comfort cues",
+      "paragraphs": [
+        "Take pauses between courses. If you feel full, tell the server early and ask whether portions can be adjusted or a course can be skipped. You do not need to clear every plate to prove appreciation. If the pace feels too fast or slow, a polite request is better than silently trying to catch up. Keep water nearby and choose alcohol only if you want it; a pairing is optional, not a required part of the experience.",
+        "If a dish contains something you cannot eat, repeat the restriction clearly and ask what the restaurant can do. Do not taste an item you suspect contains an allergen to be polite. If a dietary need is not accommodated, decline the plate and tell the server why so the kitchen can respond."
+      ]
+    },
+    {
+      "heading": "Keep one note from the evening",
+      "paragraphs": [
+        "After dinner, write down the course that surprised you and the reason: a familiar ingredient prepared differently, a texture you had not noticed before, or a sequence that made a rich dish feel lighter. Note the restaurant and date because menus change. If you post about the experience, describe your own meal rather than claiming that a seasonal dish is always served.",
+        "For your first twelve-course menu, ask the restaurant three things before booking: current course count, expected pacing and what it can do for your dietary needs. Then decide whether the evening sounds inviting. The point is to leave curious and comfortable, not to finish a set number of plates."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Our MICHELIN Guide Inspectors Share Their Best Fine Dining Tips",
+      "url": "https://guide.michelin.com/en/article/features/michelin-guide-inspectors-guide-to-fine-dining",
+      "publisher": "MICHELIN Guide",
+      "purpose": "Supports comparing tasting and à la carte menus, considering menu length in relation to appetite, and noticing flow across courses."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "taste-one-dish-from-three-local-traditions",
+    "eat-a-meal-cooked-by-a-grandmother-in-her-home",
+    "eat-your-way-through-a-country-one-market-at-a-time"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

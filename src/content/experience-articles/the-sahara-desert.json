@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "the-sahara-desert",
+  "slug": "the-sahara-desert",
+  "title": "Choose a Sahara journey by landscape and local access",
+  "description": "Plan a Sahara trip around a named region, its landscape and the guides required there, rather than treating the desert as one uniform dune field.",
+  "intent": "How do I choose a grounded Sahara experience when the desert spans different countries, landscapes and access rules?",
+  "sections": [
+    {
+      "heading": "Start by choosing a country and landscape",
+      "paragraphs": [
+        "The Sahara is a vast region, not one destination with a single entrance or standard itinerary. A trip to Algeria’s Tassili n’Ajjer plateau is a different choice from a dune camp in another Sahara country. UNESCO describes Tassili as a plateau in southeastern Algeria with eroded sandstone formations and an exceptional concentration of rock art. If that combination of geology and ancient imagery interests you, it is a useful specific question to carry into planning; it is not a stand-in for the whole desert.",
+        "Pick the landscape you actually want to see: wind-shaped dunes, stone plateaus, mountain edges, oasis settlements or archaeological traces. Then identify the country, nearest access town and protected area. This order prevents a common planning error: finding a striking image online and assuming it belongs to the tour route, country or season you have in mind."
+      ]
+    },
+    {
+      "heading": "Understand what Tassili offers",
+      "paragraphs": [
+        "Tassili n’Ajjer is especially notable for more than its scenery. UNESCO records over 15,000 drawings and engravings that document changing climates, wildlife migrations and human life across long periods. The dramatic sandstone formations and the rock-art landscape belong together: a route should leave time for observation and interpretation, not just a quick photo stop.",
+        "If visiting rock art, treat it as fragile cultural material. Do not touch, chalk, wet, trace or use flash on images unless a site authority explicitly permits it. A guide can explain which places are accessible and how to read the setting without turning an archaeological site into a scavenger hunt. Ask how the group supports local residents and the park’s conservation work, and how guides manage visitor behavior around sensitive sites."
+      ]
+    },
+    {
+      "heading": "Build the trip around authorized guiding",
+      "paragraphs": [
+        "UNESCO states that tourism at Tassili n’Ajjer is strictly controlled and visitor groups are accompanied by an official guide. Plan through an authorized route and confirm the current permission process with the relevant Algerian park or heritage authority and a qualified local operator. Do not assume a self-drive plan or an independent hike is allowed because a map shows a trail.",
+        "Ask for a clear itinerary that explains transport, walking time, overnight arrangements, water and how the group handles weather or vehicle delays. A good answer should name the actual region and access point, not promise a generic “Sahara crossing.” For remote travel, the ability to turn back safely matters more than maximizing the number of stops."
+      ]
+    },
+    {
+      "heading": "Compare an overnight camp with a walking-focused visit",
+      "paragraphs": [
+        "A camp-based trip can make sunset and night-sky observation the center of the experience. A walking-focused itinerary can give more time to rock formations, archaeological sites or a single valley. These are not interchangeable: one emphasizes the transition from day to night, the other gives more daylight for close looking and explanation. Ask whether the camp is an existing community-run place or a temporary setup and what facilities are actually available.",
+        "For a first visit, do not equate remoteness with quality. Consider whether a short, supervised outing can answer your main question before signing up for a long expedition. If your interest is dark skies, check moon phase and cloud forecast close to departure, but treat both as variable. If your interest is geology or rock art, prioritize a local guide’s interpretation and enough time on foot."
+      ]
+    },
+    {
+      "heading": "Make a safe, respectful final plan",
+      "paragraphs": [
+        "Use country-specific travel advisories, entry rules and protected-area guidance, because legal and security conditions vary across the Sahara’s countries and can change. Keep a copy of the operator contact, meeting point and emergency plan with someone outside the trip. Ask what happens if weather or access restrictions require a route change. No article can certify current safety or availability for a remote area.",
+        "Choose one named region, verify the authorized guide route and ask three practical questions: what will I see on foot, what is the backup plan, and how are local rules and archaeological sites protected? That conversation turns “go to the Sahara” into a real trip decision while respecting the fact that the desert is both a living environment and a place of human history."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tassili n'Ajjer",
+      "url": "https://whc.unesco.org/en/list/179",
+      "publisher": "UNESCO World Heritage Centre",
+      "purpose": "Supports the Algerian plateau context, rock art and landscape description, and the requirement that visitor groups be accompanied by an official guide at this property."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "sleep-under-the-stars-in-the-sahara",
+    "the-atacama-desert-chile",
+    "wadi-rum-jordan"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

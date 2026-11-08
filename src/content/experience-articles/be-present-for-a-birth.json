@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "be-present-for-a-birth",
+  "slug": "be-present-for-a-birth",
+  "title": "Prepare to be a steady, consent-led birth companion",
+  "description": "Coordinate with the parent and care team, learn the facility rules, offer practical support and follow the birthing person’s choices throughout labor.",
+  "intent": "How can I show up helpfully for someone giving birth? This is companion preparation, not medical or obstetric instruction.",
+  "sections": [
+    {
+      "heading": "Ask what support is wanted",
+      "paragraphs": [
+        "Being present is an invitation, not a role you claim automatically. Ask the parent privately whether they want you there, what kinds of help feel welcome and who else will be present. Their answer can change. Confirm whether they want a quiet companion, a practical helper, a photographer, or no additional person once labor begins.",
+        "The World Health Organization frames labor companionship around the woman’s choice and respectful care. Use that principle in everyday decisions: ask before touching, offering a technique, sharing information or taking a photograph. Do not treat an earlier yes as permission for every later action."
+      ]
+    },
+    {
+      "heading": "Learn the setting’s boundaries",
+      "paragraphs": [
+        "Ask the parent or their care team what visitor limits, identification rules and infection-control procedures apply at the planned birth setting. Policies can vary by facility and change. Check again close to the date, and be prepared to wait outside if the care team or parent requests it. Your presence should support care, not interfere with it.",
+        "Agree on a backup contact and transport plan. Keep your phone charged, know where to meet and bring only what the facility permits. If the parent prefers privacy, a designated relative can update others so they do not have to manage messages during labor. Do not post that labor has started without the parent’s explicit permission."
+      ]
+    },
+    {
+      "heading": "Offer practical help, not instructions",
+      "paragraphs": [
+        "Ask in advance what calming support is welcome: a hand to hold, a glass of water if allowed, a reminder to call someone, or simply sitting nearby. Use the parent’s own words for comfort. Avoid suggesting medical actions, interpreting symptoms or making promises about how labor will proceed. Direct clinical questions to the care team.",
+        "Keep your attention on the person rather than your own nerves. If they are concentrating, reduce conversation. If they ask for space, step out without taking it personally. If you are asked to help communicate, repeat their preferences accurately and let clinicians explain options and risks. You do not make decisions on their behalf."
+      ]
+    },
+    {
+      "heading": "Protect privacy and dignity",
+      "paragraphs": [
+        "Birth is intimate and may include other patients or family members. Treat everything you see and hear as private. Do not livestream, record audio or take images unless the parent and facility explicitly allow it. If you do photograph, obtain permission for each intended use, including sharing privately with relatives.",
+        "The care team manages clinical needs and the parent’s choices guide your support. You are not expected to mediate disagreements, investigate a concern or provide medical interpretation. If someone says they feel unsafe or unheard, listen and help them contact the appropriate clinician or advocate they choose, without speaking over them."
+      ]
+    },
+    {
+      "heading": "Support the transition after birth",
+      "paragraphs": [
+        "After the baby arrives, ask what the parent needs now: a call, quiet, food when permitted, help locating a bag or time with the baby. A birth can unfold in ways nobody planned; avoid narrating it as a success or failure based on a particular route of delivery. The parent’s health, privacy and preferences remain central.",
+        "Before leaving, confirm who is allowed to receive updates and whether visitors are welcome. Offer a specific follow-up task, such as bringing a requested item later, rather than a vague “let me know.” Once the family is settled, share no story or image without consent. The strongest companion often helps the new parent reclaim time and space."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Every woman’s right to a companion of choice during childbirth",
+      "url": "https://www.who.int/news-room/detail/09-09-2020-every-woman-s-right-to-a-companion-of-choice-during-childbirth",
+      "publisher": "World Health Organization",
+      "purpose": "WHO describes companionship as a choice of the person giving birth and identifies emotional and practical support while emphasizing respectful, person-centered maternity care."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "adopt-or-foster-a-child",
+    "record-your-parents-life-stories"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

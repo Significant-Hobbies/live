@@ -1,0 +1,71 @@
+{
+  "slug": "paris-at-dawn",
+  "title": "Make a quiet Paris dawn into a planned walk",
+  "description": "Choose a short public route, check sunrise and transit for the exact date, and leave enough time to enjoy the city before your day fills up.",
+  "intent": "Plan a date-specific dawn walk in Paris with realistic transport and public-access checks, without claiming fixed sunrise or opening hours.",
+  "sections": [
+    {
+      "heading": "Choose a route that works on foot",
+      "paragraphs": [
+        "For a clearly bounded first walk, follow the pedestrianized Parc Rives de Seine on the right bank from the Bastille end toward the Eiffel Tower, then choose a bridge crossing that gives you the view you want. The City of Paris describes this seven-kilometre riverbank stretch as pedestrian space with room for bicycles. You can make a shorter outing by starting near Pont Neuf and turning back whenever the light changes; it is a public river-edge route, not entry into a monument or gated garden.",
+        "Pick one visual question before you start: how do reflections change between the open river and a bridge arch, or how does the city’s outline shift as you move west? If the date’s sunrise falls before your chosen park or garden opens, stay on the public river route instead. Paris parks have different seasonal hours; check the City’s live listing and signs before routing through a gate."
+      ]
+    },
+    {
+      "heading": "Check the sky and the first connection",
+      "paragraphs": [
+        "A date-specific sunrise time helps you decide whether an outdoor space will be open when you want to arrive. The City of Paris lists the main Parc Monceau entrances as opening at 7 a.m. throughout the year, so it can work for a morning loop when that opening aligns with your planned light. For an earlier start, use a public route such as the riverbanks rather than assuming the park gate will be open.",
+        "RATP says metro lines generally begin around 5:30 a.m. and that exact service varies by line; it also lists Noctilien buses for the period when metros are closed. Compare your sunrise time with the specific route in the live planner. A 7 a.m. park opening and the general first-metro window are useful constraints, not guarantees about a particular entrance, station or service disruption."
+      ]
+    },
+    {
+      "heading": "Keep the early morning comfortable",
+      "paragraphs": [
+        "Bring a warm layer suited to the actual forecast, comfortable shoes and water. Keep the bag light and your phone charged. If you carry a camera, decide in advance where you can stop without blocking other people. Photograph public architecture respectfully and ask permission before making a stranger the subject of a close portrait.",
+        "Choose a route with clear alternatives: a café, a busier street, a station or a place where you can turn back. Tell someone where you plan to walk if you are going alone, and follow local advice about which places to avoid. These are practical precautions, not a guarantee of safety; adapt to current conditions and your own comfort."
+      ]
+    },
+    {
+      "heading": "Let the city wake up at its own pace",
+      "paragraphs": [
+        "Plan only one anchor stop, such as a bridge or a public square, and leave the rest open. Notice deliveries, shutters, commuters and changing light without trying to turn every moment into a photograph. If the spot is crowded or closed, move to the next public street on your route. A quiet morning can still be meaningful when clouds cover the sunrise.",
+        "If you want to include a museum or monument, check its official opening hours separately and treat it as a later part of the day. Dawn is for the walk, not a promise that every attraction will admit visitors early. Save a note about what looked different in the morning; it can become a useful memory of the city beyond its busiest hours."
+      ]
+    },
+    {
+      "heading": "End near a simple next step",
+      "paragraphs": [
+        "Choose a finish point near breakfast or your accommodation so you can warm up, rest and begin the day without a complicated transfer. Check the café’s current opening time before relying on it, and carry a backup snack if needed. If you want to visit a second neighborhood, pause and assess your energy before adding the trip.",
+        "A good dawn plan has a start time, one route, one fallback and a return. Recheck sunrise, weather, transport and any gates the evening before. Then let the walk be slower than a sightseeing checklist. You can come back to Paris’s famous interiors later; the achievement is seeing one part of the city change from night into day at a pace that leaves room to notice it."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Prepare your stay in Paris: transport operating hours and airport links",
+      "url": "https://www.ratp.fr/en/visiting-paris/transport-operating-hours-airport-links",
+      "publisher": "RATP",
+      "purpose": "Supports approximate metro/RER service windows and Noctilien night-bus role; exact times vary by line and must be checked live."
+    },
+    {
+      "title": "The history of swimming in the Seine",
+      "url": "https://www.paris.fr/en/pages/the-history-of-swimming-in-the-seine-27195",
+      "publisher": "City of Paris",
+      "purpose": "Supports the named pedestrianized Parc Rives de Seine route, described as seven kilometres from Bastille to the Eiffel Tower with space for pedestrians and bicycles."
+    },
+    {
+      "title": "Parc Monceau",
+      "url": "https://www.paris.fr/lieux/parc-monceau-1804",
+      "publisher": "City of Paris",
+      "purpose": "Supports the current City page’s seasonal opening information and access locations for a named 7 a.m. park option; check live hours for the intended date."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "watch-the-sunrise-from-a-place-that-moved-you",
+    "visit-the-taj-mahal-at-dawn",
+    "watch-a-sunrise-and-a-sunset-in-the-same-day"
+  ],
+  "experienceSlug": "paris-at-dawn",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

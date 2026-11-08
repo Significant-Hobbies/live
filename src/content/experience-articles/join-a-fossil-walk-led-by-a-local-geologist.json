@@ -1,0 +1,51 @@
+{
+  "experienceSlug": "join-a-fossil-walk-led-by-a-local-geologist",
+  "slug": "join-a-fossil-walk-led-by-a-local-geologist",
+  "title": "How do you learn to recognize a fossil on a guided coastal walk?",
+  "description": "Prepare for a fossil walk by reading the landscape, asking a geologist about clues, and staying within tide, access, and collecting guidance.",
+  "intent": "Answer how a beginner can learn fossil recognition on a guided walk while avoiding unsafe cliff access, unpermitted collecting, and overconfident identification.",
+  "sections": [
+    {
+      "heading": "Treat the walk as field observation",
+      "paragraphs": [
+        "A fossil walk is partly about looking at rocks, but also about learning why a guide chooses one surface over another. Before the visit, check who is leading, what footwear is suitable, how long the route is, and whether the walk stays on a beach, path, or private site. Natural History Museum guidance recommends a guided walk for beginners and explains that what you may find depends on the rocks in a location. A local geologist can connect the exposed layers and loose fragments to that setting in a way a generic fossil list cannot.",
+        "Check the beach’s access and tide information on the day, and follow the guide’s route. Coastal conditions can change, so do not assume that a beach is safe because a map labels it as accessible. Stay away from cliff bases and edges, do not climb unstable slopes, and never dig into a cliff to retrieve a specimen. If the leader cancels or changes the plan because of weather, tide, or rockfall risk, accept the change; the geology can still be discussed from a safer viewpoint."
+      ]
+    },
+    {
+      "heading": "Learn to look for clues before picking anything up",
+      "paragraphs": [
+        "Ask the guide what features they look for: repeating shell shapes, symmetry, a different texture within the rock, or a fossil outline exposed by erosion. Compare a suspected fossil with nearby stones rather than deciding from one surface mark. A pattern can resemble a fossil without being one. The NHM’s advice notes that beginners often pick up objects that are not fossils and that identification improves with experience. That makes “I’m not sure” a useful field note, not a failure.",
+        "Use your eyes and a notebook or phone camera before reaching down. Sketch the object next to a simple size reference and record the beach section, rock type if the guide names it, and what clue caught your attention. Avoid scraping, breaking, or hammering rocks unless an expert has specifically authorized a safe method and collection is permitted there. The NHM advises beginners to leave tools to professionals and says many finds are loose on the beach; the guide’s instructions and local rules still govern what you may collect."
+      ]
+    },
+    {
+      "heading": "Ask about permission and the value of leaving a find",
+      "paragraphs": [
+        "A visible fossil is not automatically yours to take. Ask the geologist whether collecting is allowed on that stretch of coast and whether there are protected features or site-specific limits. The Natural History Museum notes that permission and access rights depend on the area and that some places allow looking but not collecting. It also describes fossil footprints and other trace fossils that are protected. When rules are uncertain, take a photograph and leave the object where it is while the guide checks.",
+        "If collecting is permitted, ask what should be recorded and what is worth reporting to a museum or local collection. A small, common piece may be more useful for future visitors if it remains on the beach. The guide can explain how a specimen’s location and rock context contribute to its value. Do not post a precise location for an important or vulnerable find if the guide advises against it; the walk should protect the site as well as satisfy curiosity."
+      ]
+    },
+    {
+      "heading": "Leave with a question you can keep investigating",
+      "paragraphs": [
+        "After the walk, choose one fossil or rock feature you want to identify more confidently. Use the guide’s suggested museum or local geological society resource, and compare descriptions from a trusted source. Keep a photograph and a note of where it was observed, but distinguish that record from an identification. If you did take a specimen with permission, label it with the date, place, and guide’s name or field context, and ask how it should be stored.",
+        "A first walk is successful when you can explain one clue that changed how you looked at the beach and one limit on what you know. You do not need to bring home a fossil. The next step is to choose another guided walk in a landscape with a different rock history and compare how the guide’s search changes with the geology."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Fossil hunting: How to find fossils on the beach",
+      "url": "https://www.nhm.ac.uk/discover/how-to-find-fossils-on-the-beach.html",
+      "publisher": "Natural History Museum",
+      "purpose": "Supports guided beginner fossil walks, observing loose finds, access and permission checks, cliff/tide hazards, and responsible collection."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "explore-a-tidepool-with-a-naturalist",
+    "observe-a-forest-canopy-from-a-public-treetop-walkway"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

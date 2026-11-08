@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "create-a-personal-annual-report",
+  "slug": "create-a-personal-annual-report",
+  "title": "A personal annual report that tells more than a productivity story",
+  "description": "Make a balanced year-end report from events, relationships, unfinished work, and surprises, with a simple structure that avoids turning life into a scorecard.",
+  "intent": "Answers what belongs in a personal annual report and how to assemble it; adds a narrative method that separates observations, interpretations and next-year choices.",
+  "sections": [
+    {
+      "heading": "Borrow the shape, not the business purpose",
+      "paragraphs": [
+        "A company annual report is designed for a particular audience and purpose. Borrow only its helpful structure: a note from the author, a review of the year, obstacles, resources and priorities ahead. The U.S. Securities and Exchange Commission explains that public-company Form 10-Ks include audited financial statements, material risk factors and management’s discussion. That is a regulatory filing, not a model for measuring a person. Your report can be candid without pretending to be audited or complete.",
+        "Choose a reader before you open a blank page. It might be only you, a partner, a family member or a future version of yourself. A private report can include unpolished details; a shared one should leave out other people’s private information unless they have agreed. Give it a date range and a title that names the year or season you are reviewing."
+      ]
+    },
+    {
+      "heading": "Gather artifacts before drawing conclusions",
+      "paragraphs": [
+        "Collect a few reminders: calendar entries, photos, finished work, notes, travel records, a list of books or a household budget if that is appropriate to your privacy. Do not export everything. Choose items that help you remember a change, a person, a decision or an interruption. A screenshot of a project board may show what stayed unfinished; a calendar can reveal stretches of care work you forgot to count.",
+        "Make two columns: ‘what happened’ and ‘what I make of it now.’ ‘Moved twice’ belongs in the first. ‘I learned to ask for help sooner’ belongs in the second. Keeping them separate helps prevent a difficult event from becoming a simplistic lesson. If you do not know what a period meant yet, write that uncertainty plainly."
+      ]
+    },
+    {
+      "heading": "Review the year in several kinds of evidence",
+      "paragraphs": [
+        "Use a handful of headings rather than a single success tally. Consider work and learning, care and relationships, health and energy, place and home, creative life, rest, and things you did not choose. Under each, name one concrete scene. ‘Our family changed’ is a summary; ‘we started calling every Sunday after Dad’s move’ is an event you can picture. Include quiet maintenance, such as repairing a relationship or keeping a commitment during a complicated month.",
+        "Add a page called ‘What did not happen.’ Record a project you postponed, a plan that was no longer right, or a possibility you declined. This is not a list of failures; it is evidence about capacity and priorities. Avoid assigning a fake metric to something that is meaningful precisely because it cannot be counted."
+      ]
+    },
+    {
+      "heading": "Include risk without blaming yourself",
+      "paragraphs": [
+        "Business filings discuss risks because readers need to understand uncertainty. A personal version can name conditions that shaped your year: a schedule that left little margin, an unreliable commute, a caregiving duty, a change in income, or a friendship that required repair. Describe the condition and its effects rather than converting it into a personal defect. ‘I had less time because I was caring for someone’ is more accurate than ‘I lacked discipline.’",
+        "Then note what helped and what did not. Maybe a shared calendar reduced confusion but did not create extra hours. That distinction keeps the next-year plan grounded. If the report includes details about another person’s health, work or finances, anonymize or omit them before sharing."
+      ]
+    },
+    {
+      "heading": "Choose a few next-year commitments",
+      "paragraphs": [
+        "End with three priorities at most. For each, write why it matters, the first small action, what support or time it needs, and what you will pause if the calendar fills up. ‘Write more’ is vague; ‘reserve two Sunday mornings to revise the draft and decide whether it is ready for readers’ can be checked without a public performance target.",
+        "Finish with a short letter to yourself that keeps one unresolved question open. Save the report somewhere you can find it and decide who, if anyone, may read it. Start by collecting five artifacts from this year and writing one factual sentence about each before you explain what they mean."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Using EDGAR to Research Investments",
+      "url": "https://www.sec.gov/search-filings/edgar-search-assistance/using-edgar-research-investments",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "purpose": "Supports the limited analogy that public-company 10-K reports cover audited statements, material risks and management discussion; personal reflection has no equivalent filing requirement."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "make-a-list-of-100-things-you-are-grateful-for",
+    "make-a-skills-history-from-things-you-can-now-do",
+    "build-a-private-archive-of-your-creative-versions"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

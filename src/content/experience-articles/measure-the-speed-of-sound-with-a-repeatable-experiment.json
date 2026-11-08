@@ -1,0 +1,51 @@
+{
+  "experienceSlug": "measure-the-speed-of-sound-with-a-repeatable-experiment",
+  "slug": "measure-the-speed-of-sound-with-a-repeatable-experiment",
+  "title": "How can repeated trials make a speed-of-sound estimate more believable?",
+  "description": "Design a supervised sound-speed measurement with a defined distance, timing method, repeated trials, and a clear account of uncertainty.",
+  "intent": "Answer how to turn a speed-of-sound experiment into a repeatable measurement and explain why the method's limitations matter as much as its result.",
+  "sections": [
+    {
+      "heading": "Choose a method you can actually measure",
+      "paragraphs": [
+        "A good experiment begins with a measurable question: how long does a sound take to travel a known distance through air? The speed estimate comes from distance divided by travel time. The challenge is timing a very short interval accurately. Vernier’s educational experiment frames this as a design problem and suggests using a microphone or sound sensor with a measured distance. If you are in a class or makerspace, ask the educator which equipment is available and how it records the signal. Do not assume a handheld stopwatch can resolve a tiny delay between nearby sounds.",
+        "Agree on the method before collecting data. You might use two microphones at known positions and compare when the same sound reaches each, or use an educator-approved setup that times an echo over a measured path. Avoid measuring near traffic or using fireworks, firearms, or other hazardous sound sources. A hand clap or simple classroom sound can be sufficient if the instruments can detect it. The distance should be long enough for your timing method to distinguish the signal, but only within a safe, controlled space."
+      ]
+    },
+    {
+      "heading": "Measure the path and keep the setup fixed",
+      "paragraphs": [
+        "Mark the measurement points clearly and measure the distance between the relevant sensor positions, not between convenient furniture edges. Record the units and where each microphone faces. Keep the sensors, sound source, and room conditions as constant as the method allows. If people move or speak near the sensors, those sounds can create extra peaks that confuse the record. Give each trial a label and note any setup change rather than quietly discarding an inconvenient result.",
+        "Before the first official trial, make one practice recording. Look at how the signal appears on the device and decide what feature counts as the arrival time. A waveform peak, threshold crossing, or sound onset can each be used, but the choice should be consistent. Ask the instructor to confirm the procedure; do not pick whichever visible point makes the answer look closest to an expected textbook number. Your measurement is an observation, not a contest against a reference value."
+      ]
+    },
+    {
+      "heading": "Repeat, compare, and report the spread",
+      "paragraphs": [
+        "Run several trials without shifting the equipment. For each, write down the measured distance, elapsed time, calculated speed, and any note about noise or a missed trigger. Calculate each result using the same units; if distance is in metres and time in seconds, the ratio is metres per second. Then look at the spread. A single result can be affected by timing resolution, room echoes, background noise, or a slightly different sound onset. Repetition does not erase those effects, but it shows whether the setup gives similar readings.",
+        "If one trial differs greatly, check the recording and your notes before removing it. A missed trigger or an obvious setup change may justify repeating that trial, while an inconvenient value alone does not. Report the method, number of trials, mean or median if your teacher requests one, and range of observed values. Add a short sentence explaining the biggest likely source of uncertainty. That account helps another person judge how much confidence to place in your result."
+      ]
+    },
+    {
+      "heading": "Improve one part of the method",
+      "paragraphs": [
+        "After the first set, choose one improvement. You could increase the sensor spacing within the safe area, reduce background noise, use a more precise sensor, or make the timing rule clearer. Change one thing and run another set; otherwise you will not know which adjustment mattered. Compare the two sets, including how wide the spread is, not just which average is nearer a reference value. Vernier’s experiment emphasizes designing an investigation and drawing conclusions from evidence, which is exactly the point of repeating rather than relying on one dramatic reading.",
+        "Write a short conclusion in this order: what you measured, how you measured it, what your results looked like across trials, and what limited precision. If the data are messy, say so and name the next test you would make. The useful next action is to take the plan to a teacher or lab educator, confirm the timing setup, and make a small pilot recording before collecting the full data set."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Speed of Sound: Experiment 28",
+      "url": "https://www.vernier.com/experiment/pep-28_speed-of-sound/",
+      "publisher": "Vernier Science Education",
+      "purpose": "Supports framing the activity as a designed investigation, use of sound sensors and a meter stick, and inference from repeated evidence."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-logic-gates-in-a-circuit-simulator",
+    "test-a-paper-glider-with-controlled-design-changes"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,64 @@
+{
+  "experienceSlug": "antarctica",
+  "slug": "antarctica",
+  "title": "Compare Antarctic journeys by what happens off the ship",
+  "description": "Compare Antarctic ship voyages with deep-field or air-based trips by landing expectations, environmental rules and the kind of day you want.",
+  "intent": "How do I compare legitimate Antarctic visitor formats and understand how ship size, landing opportunities and environmental obligations change the trip?",
+  "sections": [
+    {
+      "heading": "Choose the kind of Antarctic experience",
+      "paragraphs": [
+        "Most Antarctic tourism voyages visit the Antarctic Peninsula during the austral summer, according to the Antarctic Treaty Secretariat. Commercial deep-field and air-based tourism is a smaller, newer segment. These formats create different experiences: a ship voyage gives you days at sea and possible shore excursions, while an air or inland trip is organized around a specific overland or camp-based objective. Compare the format before comparing cabins or photographs.",
+        "Ask what “landing opportunities” actually means in the operator’s itinerary. Weather, ice, site rules, permits and expedition decisions can change where visitors go ashore. A brochure image of a penguin colony does not guarantee that you will land at that exact site. Request realistic examples of a typical day and the conditions that would cancel or alter it."
+      ]
+    },
+    {
+      "heading": "Read the ship plan carefully",
+      "paragraphs": [
+        "For a ship-based trip, compare time at sea with time planned ashore, the size of the vessel, the excursion craft and the operator’s explanation of how visitor groups are managed. Ask whether shore landings are included, optional or dependent on weather and site permissions. Also ask what happens on days when conditions prevent a landing. A shipboard lecture or wildlife watch may still be valuable, but it is different from walking on the continent.",
+        "Use the Antarctic Treaty Secretariat’s tourism pages to understand the system of regulations and visitor guidelines. The Secretariat notes that most operators are members of IAATO, but membership should not be confused with the only legal route. Check the requirements that apply through your national competent authority and verify the operator’s current permissions and environmental assessment."
+      ]
+    },
+    {
+      "heading": "Understand deep-field and air-based trade-offs",
+      "paragraphs": [
+        "A deep-field or air-based experience may offer a specific inland objective rather than a sequence of coastal landings. It can also involve more demanding logistics and a narrower operating window. Ask the operator to describe the exact site, transport mode, emergency plan, insurance and national-authority approvals. Do not assume that an expensive itinerary has a greater chance of access or that weather can be worked around safely.",
+        "The Antarctic Treaty Secretariat’s current visitor guidance aims to prevent harm to environmental and scientific values. The IAATO guidance explains that visitors must not disturb wildlife or plants, enter restricted protected areas without appropriate permission, or interfere with research equipment. These duties apply even when an activity is marketed as a private or specialized expedition."
+      ]
+    },
+    {
+      "heading": "Treat visitor obligations as part of the ticket",
+      "paragraphs": [
+        "You will need to follow instructions on cleaning clothing and equipment, keeping distance from wildlife, staying within approved areas and carrying all waste back out. Do not feed, touch or handle birds or seals, collect rocks or biological material, or walk across sensitive moss and lichen. If staff ask your group to change route or skip a site, comply. The conservation rules are not optional add-ons to the experience.",
+        "If your itinerary includes a research station, the visitor guidance says to obtain permission and reconfirm arrangements shortly before arrival. Never assume that a station is a public attraction. Likewise, check site-specific visitor guidelines for any named landing location. A general operator brochure cannot replace the rules for a particular protected area."
+      ]
+    },
+    {
+      "heading": "Make a comparison table before booking",
+      "paragraphs": [
+        "List each option’s exact format, expected number of shore excursions, what environmental or access permissions the operator manages, the emergency and insurance arrangements, and the cancellation terms. Then add your own priorities: want to observe coastal wildlife, spend time ashore, see a particular scientific or geographic feature, or travel inland? This makes the trade-offs visible without treating one expedition as universally superior.",
+        "The Treaty Secretariat says the General Guidelines were updated through Resolution 4 in 2025 and that tourism guidelines include post-visit reporting. Its site is the primary place to check current visitor and site rules; it does not guarantee a specific landing schedule. Your next step is to ask an operator for written answers about actual permissions, landing contingencies and insurance before comparing cabins or dates."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tourism and non Governmental Activities",
+      "url": "https://www.ats.aq/e/tourism.html",
+      "publisher": "Antarctic Treaty Secretariat",
+      "purpose": "Supports the common Antarctic Peninsula season and voyage pattern, the existence of a smaller deep-field/air segment, and updated general visitor guidelines through Resolution 4 (2025)."
+    },
+    {
+      "title": "During Your Visit",
+      "url": "https://iaato.org/visiting-antarctica/during-your-visit",
+      "publisher": "International Association of Antarctica Tour Operators",
+      "purpose": "Supports practical environmental conduct rules for wildlife, plants, protected areas, science facilities and waste during visits."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "go-on-a-polar-expedition",
+    "see-the-northern-lights-in-iceland-or-norway"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

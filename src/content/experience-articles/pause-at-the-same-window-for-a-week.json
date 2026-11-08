@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "pause-at-the-same-window-for-a-week",
+  "slug": "pause-at-the-same-window-for-a-week",
+  "title": "What changes when you watch the same window for a week?",
+  "description": "Spend a few minutes at the same window each day for a week, noticing one changing detail in the light, weather, movement, or view.",
+  "intent": "How can I turn a familiar window into a one-week observation practice? This guide offers a small repeatable pause, a simple record and room for days when the view or mood feels ordinary.",
+  "sections": [
+    {
+      "heading": "Choose a window you can return to",
+      "paragraphs": [
+        "Pick a window you can reach safely and comfortably at roughly the same point in your day. It might look onto a street, courtyard, garden, construction site or patch of sky. You do not need a scenic view. Choose a position where you will not block another person, lean out, climb furniture or compromise privacy. If the window faces a neighbor's home, keep your attention on the shared outdoor scene rather than observing people inside their private space.",
+        "A repeatable time makes small changes easier to notice, but it does not need to be exact. The NHS suggests using an ordinary regular moment to notice surroundings and points to shape, color, texture, air and other sensory details as possible anchors. Treat that as a way to direct attention, not a promise that you will feel calmer. Some days may be busy or uncomfortable; you can shorten the pause or skip it without turning the week into a test."
+      ]
+    },
+    {
+      "heading": "Use the same three prompts each day",
+      "paragraphs": [
+        "Set a brief timer or simply watch until you have noticed one detail. Ask: What changed in the light? What is moving? What sound or weather detail can I notice? Keep the prompts stable so the record can reveal differences. On Monday you might notice a shadow reaching the wall; on Tuesday, a delivery van; on Wednesday, rain on the sill. Ordinary observations count because the exercise is about attention, not collecting dramatic events.",
+        "Write one or two sentences immediately afterward. Include the date and a plain description before adding interpretation. “The pale wall looked warmer after the sun reached it” is an observation; “the whole neighborhood felt hopeful” is an interpretation. You can include both if you label them. If writing is a barrier, make a quick sketch or voice note for your own use without recording private conversations outside."
+      ]
+    },
+    {
+      "heading": "Stay with what is visible and yours to observe",
+      "paragraphs": [
+        "A window frames a portion of a shared world, but it also faces other people's homes, workplaces and routines. Avoid zooming in on individuals, photographing neighbors or identifying residents in a public post. If a bird, tree or building detail catches your attention, note that without turning another person's day into the subject. Keep the window closed if there is noise, smoke, pollen or weather that makes opening it uncomfortable.",
+        "You do not have to focus on every sense. If the view is visually tiring, notice the temperature of the light on the room, a distant sound, or the feeling of your feet on the floor. The NHS guidance encourages attention to the present environment and recognizes that thoughts may wander. When they do, notice that and return to one chosen detail; there is no need to empty your mind."
+      ]
+    },
+    {
+      "heading": "Compare the seven notes gently",
+      "paragraphs": [
+        "At the end of the week, read the entries in order. What repeated? What changed because of weather, season, work outside or your own schedule? Which detail did you miss until the final day? Look for patterns without inventing a cause. A single week is too short to establish a climate trend or explain why a person appeared on the street; keep the conclusion local to what you observed.",
+        "If a day is missing, leave it blank rather than backfilling from memory. If you want to continue, choose a new question for the next week—perhaps how the color of a tree shifts or when sunlight reaches one corner. Keep the original record so you can compare seasons later, but avoid treating the practice as a streak that must be preserved at any cost."
+      ]
+    },
+    {
+      "heading": "Make the next pause easy to begin",
+      "paragraphs": [
+        "A small cue can help: sit by the window after making tea, or pause before starting work. Keep a notebook nearby and make the entry short enough that it does not become another task to manage. If the view changes suddenly because of construction, a move or a safety concern, choose a different window and mark the change in your notes.",
+        "Your next action is to choose one window today, write the date, and record one thing about light, movement or sound. Return tomorrow for the same brief pause, and let the view be ordinary if that is what it offers."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "What is mindfulness?",
+      "url": "https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/what-is-mindfulness/",
+      "publisher": "NHS Every Mind Matters",
+      "purpose": "Supports a practical approach of noticing the present surroundings, sensory details and ordinary objects; the article avoids making a clinical promise about this activity."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "explore-a-garden-through-scent",
+    "look-at-one-museum-object-for-twenty-minutes",
+    "listen-to-a-whole-album-without-multitasking"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

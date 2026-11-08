@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "write-a-letter-to-someone-who-changed-your-life-and-send-it",
+  "slug": "write-a-letter-to-someone-who-changed-your-life-and-send-it",
+  "title": "Write thanks that names the moment and asks for nothing",
+  "description": "Write and send an appreciation letter with one specific memory, a clear explanation of its effect, and no demand for a reply.",
+  "intent": "How can I tell someone their influence mattered in a way that feels personal, respectful and easy to receive?",
+  "sections": [
+    {
+      "heading": "Choose the person and the moment",
+      "paragraphs": [
+        "Pick one person and one event rather than trying to summarize the whole relationship. Maybe a teacher stayed after class, a neighbor helped during a move, a friend made an introduction, or a relative quietly modeled a value you still use. The details make the letter unmistakably yours.",
+        "Before writing, ask whether a letter is welcome and whether the person can receive it safely. If you are unsure, a short email or card may be easier. If the relationship is strained or the person has requested no contact, respect that boundary. Appreciation is meaningful when it honors the recipient’s comfort as well as your own need to speak."
+      ]
+    },
+    {
+      "heading": "Describe what happened before you describe what it meant",
+      "paragraphs": [
+        "Start with the scene: where you were, what the person did or said, and what you noticed. Then explain the effect in your own words. “You introduced me to the archive volunteer when I had no idea where to begin; that conversation helped me take the first step” is more specific than “You changed my life.”",
+        "The Library of Congress’s collection shows how personal letters can preserve a feeling alongside dates and events. You do not need to write formally or imitate historical correspondence. Plain language, a real detail and one honest sentence about the effect are enough. Avoid claiming the other person intended an outcome you cannot know."
+      ]
+    },
+    {
+      "heading": "Keep the letter proportionate",
+      "paragraphs": [
+        "A thank-you letter can be one page or a few short paragraphs. Include the moment, what it meant to you and why you wanted to say so now. If you want to mention how your life changed later, keep it concrete: a choice you made, a skill you tried, or a way you treated someone else.",
+        "Leave out a list of everything the recipient has done for you, especially if it makes the letter feel like an obligation to respond. Avoid turning gratitude into a request for a favor, explanation or renewed relationship. You can write a separate message for those needs. This letter has one job: to share appreciation clearly."
+      ]
+    },
+    {
+      "heading": "Check privacy and delivery",
+      "paragraphs": [
+        "Read the draft as if a third person might see it. Remove details about someone else’s private life, health or family that are not yours to share. If the letter names a sensitive event, decide whether it is appropriate to put that detail in writing. A sealed envelope is not a guarantee of privacy.",
+        "Confirm the current mailing or email address from a reliable source. For handwritten mail, write a clear return address and keep a copy or photo of the final text for yourself. If the person lives in an institution or workplace, check the organization’s current mail rules. Do not publish the letter or post a photo of it without permission."
+      ]
+    },
+    {
+      "heading": "Send it without setting a deadline",
+      "paragraphs": [
+        "Read the letter once for tone, correct the name and address, and send it. Do not add “please tell me how you feel” or follow up immediately to ask whether it arrived. Postal and email delivery can be uncertain, and the recipient may need time or may not respond.",
+        "Let the act of sending be the completion. The recipient can appreciate it privately, answer later or not answer. Your next step is to write the one memory you want them to know and one sentence about what it meant to you. If those two lines feel true, you already have the center of the letter."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Letters Straight to Your Heart: The Library’s Centuries of Correspondence",
+      "url": "https://blogs.loc.gov/loc/2022/05/letters-straight-to-your-heart-the-librarys-centuries-of-correspondence/",
+      "publisher": "Library of Congress",
+      "purpose": "Archival examples of personal letters and the value of letters in conveying what a moment felt like; does not prescribe a format."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "write-heartfelt-letters-to-10-people-who-changed-your-life",
+    "write-a-letter-to-your-younger-self",
+    "write-a-letter-to-your-future-self-and-read-it-in-10-years"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

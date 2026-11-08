@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "exchange-handwritten-recipes-through-the-post",
+  "slug": "exchange-handwritten-recipes-through-the-post",
+  "title": "How can you send a handwritten recipe by post?",
+  "description": "Exchange a handwritten recipe by choosing one reliable dish, explaining its context, making the copy easy to follow, and checking postal address rules.",
+  "intent": "How do I make a mailed recipe useful and personal to the recipient? This guide covers choosing a dependable dish, writing clear instructions and preparing the envelope.",
+  "sections": [
+    {
+      "heading": "Pick a recipe you can explain",
+      "paragraphs": [
+        "Choose a dish you have prepared enough times to describe in plain language. A family favorite, weeknight soup or simple bake can make a better exchange than an ambitious recipe with many steps you cannot clarify. Decide what matters most to the recipient: a comforting meal, a quick lunch, a seasonal ingredient or a recipe connected to a family memory. Ask about allergies or dietary needs before choosing; do not assume the other person eats a particular ingredient.",
+        "Write down the recipe once as if a careful stranger will use it. Include yield, equipment, ingredient amounts in a consistent unit system, oven temperature when relevant, and cues such as “until the onions are translucent.” If you have adapted it from a published source, note the source and describe your own changes; do not copy a long copyrighted introduction or headnote. A short note about why you like the dish gives context without pretending it is an heirloom if it is not."
+      ]
+    },
+    {
+      "heading": "Make the handwriting easy to cook from",
+      "paragraphs": [
+        "Use a card or sturdy paper that can lie flat on a kitchen counter. Write the ingredients in the order they are used, then number the method steps. Leave space around fractions and temperatures so they cannot be misread. If you tend to revise as you cook, make a clean final copy rather than sending a page with crossed-out quantities. Add a date and your name so the recipient knows which version they received.",
+        "Try reading the instructions from the bottom of a pretend cooking session: do they say when to preheat, how to tell the dish is done and whether it needs cooling before serving? If the recipe relies on a special pan or ingredient, mention a practical substitute only when you know it works. Otherwise, say that you are unsure. The goal is to give the reader an honest path to a meal, not an impressive-looking card."
+      ]
+    },
+    {
+      "heading": "Add a note that invites a reply",
+      "paragraphs": [
+        "A few handwritten lines make the exchange feel reciprocal. Explain when you first made the recipe, what you serve alongside it or which step you are still trying to improve. Ask the recipient what they might change. Keep the note warm and specific without asking for private information. If you want to continue exchanging recipes, suggest one simple prompt for the next round, such as “something you cook when the weather turns cold.”",
+        "Take a clear photograph or make a copy for yourself before mailing. That gives you a backup if the envelope is delayed and lets you compare the returned version if the recipient annotates it. If you are sending an original family card, consider a protective sleeve or a copy inside a plain envelope so the paper does not get damaged in transit."
+      ]
+    },
+    {
+      "heading": "Address and mail the envelope carefully",
+      "paragraphs": [
+        "Check the postal service for the country where you are mailing from. For United States mail, USPS says delivery and return addresses belong on the same side of the envelope or card, parallel to the longest edge, and should be printed legibly. Other countries may use different formats, and international mail has its own requirements. Weigh or measure anything larger than a standard letter and check postage with the local postal authority; rates and limits change, so do not rely on an old stamp chart.",
+        "Put the recipe inside an envelope so it can be opened without damaging the card. Keep the return address visible and confirm the recipient's current mailing address privately before sending. Avoid writing sensitive details on the outside. If the recipient is abroad, follow the destination country's addressing format and ask the postal service about any restrictions on enclosed items; an ordinary recipe card is correspondence, but contents and envelope formats can affect service."
+      ]
+    },
+    {
+      "heading": "Choose a first exchange and close the loop",
+      "paragraphs": [
+        "Start with one recipient who has agreed to exchange a recipe. Send one dish you can stand behind, then give the other person time to cook it without asking for a review on a deadline. When they reply, ask what was clear, what they changed and whether they would like a second card. Their notes can help you make the recipe more usable, but treat each cook's preference as personal rather than as a universal verdict.",
+        "Your next action is to choose one dependable recipe, cook or check it once, and write a clean card with the yield, ingredients, steps and a short personal note. Before sealing it, verify the recipient's address and your postal service's current letter rules."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Addressing Your Mail",
+      "url": "https://pe.usps.com/text/dmm100/addressing-mail.htm",
+      "publisher": "United States Postal Service, Postal Explorer",
+      "purpose": "Supports USPS guidance for placing delivery and return addresses on envelopes or cards and printing them legibly; used only for U.S. mailing advice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "create-a-family-cookbook-with-old-recipes",
+    "cook-a-meal-entirely-from-your-existing-pantry",
+    "host-a-blind-apple-tasting"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

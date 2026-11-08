@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "live-somewhere-for-more-than-a-tourist",
+  "slug": "live-somewhere-for-more-than-a-tourist",
+  "title": "Build an ordinary week into a longer stay",
+  "description": "Make a longer stay in one place feel more connected by joining ordinary public routines, supporting local businesses, and respecting residents’ space.",
+  "intent": "How do I spend enough time in one place to participate in ordinary community routines, without treating residents’ lives as a tourist attraction or planning legal relocation?",
+  "sections": [
+    {
+      "heading": "Choose a stay long enough to repeat something",
+      "paragraphs": [
+        "The difference between a longer stay and a string of short visits is repetition. Choose a place where you can imagine returning to the same market, public park, café, library, class, or walking route more than once. A quieter base may make ordinary routines easier, but do not assume that a residential neighborhood is yours to explore without regard for the people who live there. Read the local visitor expectations and choose lodging with clear permission to host guests.",
+        "Give yourself one practical reason to settle in: learn a transit line, cook a few meals with ingredients from nearby shops, attend a public class, or find a regular exercise route. You are not trying to pretend you live there permanently. You are making enough space in the visit to notice how the place works on a weekday as well as during its highlights."
+      ]
+    },
+    {
+      "heading": "Make a small weekly rhythm",
+      "paragraphs": [
+        "Plan a week with one repeated anchor and room around it. For example, visit the same produce market on two different days, take a neighborhood walk in the morning and again at dusk, or attend a recurring public event if visitors are welcome. Notice what changes: which stalls are open, how the light shifts, how people use a public square, or what a guide explains about the district’s history.",
+        "Add an ordinary task that connects you to the place without requiring access to private life: buy bread, use a public reading room, take a community class open to visitors, or learn the bus route to a museum. If you return to a business, be a considerate customer rather than expecting staff to become your hosts. Repeated encounters can create familiarity, but friendliness does not entitle you to someone’s time or personal story."
+      ]
+    },
+    {
+      "heading": "Learn from local voices without asking one person to represent everyone",
+      "paragraphs": [
+        "Use local museums, libraries, neighborhood associations, public tours, newspapers, or cultural organizations to learn how people describe their own history and present-day concerns. UNESCO’s World Heritage Centre guidance says visitor experiences should be built around learning from and respecting the knowledge, values, stories, culture, and activities of host communities. That guidance is written for heritage destinations, but it is a useful reminder that residents are participants in a place, not scenery for a visitor’s story.",
+        "When you meet someone, ask questions that fit the setting and accept a brief answer. A shopkeeper may be busy; a person in a park may want quiet. Do not ask strangers to explain an entire culture, photograph them without consent, or publish identifying details from a personal conversation. If a public guide or organization offers a structured way to learn, it can provide more context and clearer boundaries than an impromptu interview."
+      ]
+    },
+    {
+      "heading": "Spend in ways you can explain",
+      "paragraphs": [
+        "Where choices are available, buy from locally run businesses and choose services that are transparent about who provides them. The UNESCO guide emphasizes that community benefit does not happen automatically and encourages destinations to create economic opportunities for local people and businesses. A single visitor cannot evaluate an entire supply chain, so ask simple questions: Is the provider locally based? Are working conditions and prices clear? Does the activity respect access and community rules?",
+        "Do not assume that every small business is automatically responsible or that one purchase has a measurable impact. Avoid offers that rely on access to sacred spaces, private homes, wildlife, or cultural practices without a clear invitation. Be especially cautious with experiences that advertise “authentic locals” as entertainment. If you are unsure, choose a public institution or community-led program with explicit visitor guidance."
+      ]
+    },
+    {
+      "heading": "Leave room for the place to change you",
+      "paragraphs": [
+        "Keep a short note after each week: one routine you learned, one assumption you revised, and one thing you still do not understand. The point is not to produce a flattering story about your own openness. It is to remember that your view is limited and that daily life can look different across streets, incomes, languages, and seasons.",
+        "Before you leave, thank people whose work made the stay easier without asking them to promise future contact. If you want to return, choose one specific reason and check current access, lodging, and local rules through official sources. This article is about participating in a longer visit, not immigration, residency, rental law, or work authorization. Your next step is to choose one weekly public routine you would be glad to repeat and check whether visitors are welcome."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Guide 4: Engaging local communities and businesses",
+      "url": "https://whc.unesco.org/en/sustainabletourismtoolkit/guide4/",
+      "publisher": "UNESCO World Heritage Centre",
+      "purpose": "Supports the visitor-respect framing and the point that community benefit and local business participation require deliberate attention; this toolkit addresses World Heritage destinations and does not validate a particular business or ordinary residential visit."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "live-abroad-for-at-least-one-full-year",
+    "make-a-map-of-places-you-call-home",
+    "go-on-a-friend-led-neighbourhood-tour"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

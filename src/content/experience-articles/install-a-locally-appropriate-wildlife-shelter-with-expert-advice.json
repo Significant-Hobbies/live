@@ -1,0 +1,57 @@
+{
+  "experienceSlug": "install-a-locally-appropriate-wildlife-shelter-with-expert-advice",
+  "slug": "install-a-locally-appropriate-wildlife-shelter-with-expert-advice",
+  "title": "How do you choose a wildlife shelter that will help the right species?",
+  "description": "Start with local expert advice before installing a wildlife shelter; match design, habitat, placement, and maintenance to the species in your area.",
+  "intent": "Answer how to make a wildlife shelter installation locally appropriate and responsible, avoiding the assumption that one generic box suits every animal.",
+  "sections": [
+    {
+      "heading": "Ask what local wildlife actually needs",
+      "paragraphs": [
+        "A shelter is useful only when its design and location fit the animal and the place. Before buying timber or a ready-made box, contact a local wildlife rehabilitator, conservation group, naturalist, or extension service. Ask which species in your area use human-made shelters, what habitat supports them, and whether there are local rules or seasonal concerns. You may learn that the best help is native planting, a safe deadwood area, a water feature, or no structure at all. The first task is listening to people who know the local ecology.",
+        "The Cornell Lab of Ornithology’s NestWatch resource makes this principle concrete for bird nest boxes: it lets users sort by region and habitat, and offers species-specific plans and placement information. Its own species tool focuses primarily on North America, so readers elsewhere should use a local authority instead of treating its dimensions as universal. A bat roost, bee hotel, bird box, and mammal den each have different needs; do not transfer instructions from one to another."
+      ]
+    },
+    {
+      "heading": "Match the structure to the habitat",
+      "paragraphs": [
+        "Once an expert has identified a suitable species and structure, check whether your site has the habitat that species already uses. A box cannot replace food, cover, or a safe route through the landscape. For birds, surrounding vegetation can affect which species use a box, and NestWatch notes that even bird species that use nest structures differ in habitat preference. For another animal, ask about shade, moisture, wind exposure, predators, and nearby human activity. Use a placement recommendation from a relevant local source rather than a generic “face it south” rule.",
+        "Choose a location where you can install and maintain the shelter without stepping into sensitive areas or repeatedly disturbing wildlife. Get permission from the landowner or manager, and check whether a bracket or support could damage a tree or building. If the site is public land, ask the manager before attaching anything. A shelter should never block a path, create a hazard for people, or draw attention to vulnerable animals through an unnecessary public marker."
+      ]
+    },
+    {
+      "heading": "Install only when you can maintain it",
+      "paragraphs": [
+        "Read the exact construction or installation plan before beginning. Use materials and fasteners recommended for the target structure, and ensure the opening, drainage, access panel, and predator protection match the source instructions. Work from stable ground with suitable tools; if the location requires a ladder, electrical work, or roof access, bring a qualified installer rather than improvising. Avoid materials that could snag or entangle animals. Do not add food, bedding, or nesting material unless a local expert recommends it for that species.",
+        "Maintenance can be as important as installation. Ask how often the structure may be checked, whether checks are permitted during active nesting, how to clean it between seasons, and what signs mean it needs repair or removal. The right practice varies by species and law. Do not open an occupied shelter to satisfy curiosity. If you discover an animal or nest in a position that seems unsafe, contact a qualified local wildlife service before intervening."
+      ]
+    },
+    {
+      "heading": "Record what happened without promising occupancy",
+      "paragraphs": [
+        "A newly installed shelter may remain empty. That does not prove the project failed: animals have their own needs and may not discover or choose a structure. Record the date, site type, expert or plan consulted, materials, and any changes made. If monitoring is permitted, follow the local instructions and keep observations brief. A simple status such as “installed, no sign observed on check” is more useful than claiming an animal has adopted it based on one passing visit.",
+        "After the first appropriate season, ask the local expert whether the placement should remain, be adjusted, or be removed. Share observations only in a way that does not expose sensitive wildlife locations. If the project is not suitable for your site, a native planting or habitat-care activity may be a better contribution. The next step is a short conversation with a knowledgeable local group before purchasing or installing anything; that can prevent a well-meant structure from becoming an ecological mismatch."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Where can I find construction plans to build nest boxes?",
+      "url": "https://nestwatch.org/learn/how-to-nestwatch/faqs/where-can-i-find-construction-plans-to-build-nest-boxes/",
+      "publisher": "Cornell Lab of Ornithology NestWatch",
+      "purpose": "Supports the need to choose region- and species-specific plans and notes the tool's primarily North American scope."
+    },
+    {
+      "title": "Nest Box Placement",
+      "url": "https://nestwatch.org/learn/all-about-birdhouses/nest-box-placement/",
+      "publisher": "Cornell Lab of Ornithology NestWatch",
+      "purpose": "Supports that different bird species prefer different nesting habitats and placement requirements."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "document-a-wild-species-for-inaturalist",
+    "observe-a-forest-canopy-from-a-public-treetop-walkway"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

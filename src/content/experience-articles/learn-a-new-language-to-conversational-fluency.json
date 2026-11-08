@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "learn-a-new-language-to-conversational-fluency",
+  "slug": "learn-a-new-language-to-conversational-fluency",
+  "title": "Build Conversation Skill Around Real Can-Do Goals",
+  "description": "Set a realistic conversational-language goal with CEFR can-do descriptors, repeated speaking practice, listening, and useful feedback.",
+  "intent": "Offers a sustainable way to define conversational fluency through recognizable tasks and build a practice loop instead of relying on vague hour estimates.",
+  "sections": [
+    {
+      "heading": "Replace “fluent” with situations",
+      "paragraphs": [
+        "Fluency can mean ordering food, handling a travel problem, talking with a colleague, or discussing a book without rehearsing. Pick two or three situations that matter to you and describe what success sounds like. For example: explain a hobby, ask a follow-up question, and recover when you do not understand. Those are clearer goals than a promise to “be fluent” by a certain date.",
+        "The Council of Europe’s CEFR framework defines reference levels through illustrative can-do descriptors. Its spoken interaction examples distinguish simple routine exchanges from taking part in unprepared conversations on familiar topics. Use the descriptors as a planning aid, not a badge: choose the task you can nearly do, then decide what support you need to do it more independently."
+      ]
+    },
+    {
+      "heading": "Train the conversation loop",
+      "paragraphs": [
+        "A real conversation includes listening, turn-taking, clarification, and repair. Practice a loop: listen to a short piece, summarize its point in your own words, ask one question, then answer a follow-up. This keeps speaking connected to what another person actually said. Prepare useful repair phrases too, such as asking someone to repeat or say a word another way.",
+        "Use a tutor, class partner, or willing conversation partner who understands your goal. Tell them whether you want correction during the exchange or notes afterward. Beginners often benefit from one or two corrections after finishing a thought; constant interruption can make a simple conversation feel like an exam."
+      ]
+    },
+    {
+      "heading": "Keep the practice specific and repeatable",
+      "paragraphs": [
+        "Create a weekly routine that fits an ordinary week: a short listening session, a few minutes reviewing useful phrases, and a spoken exchange about a familiar topic. Reuse material so you can notice progress. In one session describe your neighborhood; later, retell the same story with more detail or answer a spontaneous question about it. A familiar topic frees attention for grammar, vocabulary, and confidence.",
+        "Write down phrases you needed but could not find. Avoid collecting long lists detached from use. Group vocabulary by a task—introducing yourself, explaining a recipe, making an appointment—and build two sample sentences with each phrase. Then speak them aloud in a changing order rather than merely rereading the list."
+      ]
+    },
+    {
+      "heading": "Measure all four skills honestly",
+      "paragraphs": [
+        "Conversation depends on more than speaking. You may be comfortable talking slowly with a supportive partner yet struggle to follow fast audio; reading menus may be easier than understanding a phone call. The CEFR companion materials separate interaction, production, listening and other communication tasks, giving you a way to see uneven strengths. Keep separate notes for listening, speaking, reading, and writing rather than assigning yourself one all-purpose level.",
+        "At the end of each month, record a short answer to the same open prompt, then compare it with an older sample. Look for concrete changes: fewer pauses, longer connected ideas, better clarification, or a more accurate retelling. Ask a teacher or partner to name one strength and one next target. That feedback is more actionable than asking whether you sound native."
+      ]
+    },
+    {
+      "heading": "Protect motivation by choosing a useful horizon",
+      "paragraphs": [
+        "Language learning rarely follows a neat universal hours formula. Prior knowledge, the language pair, exposure, practice quality, and the situations you care about all affect the path. Instead of setting a deadline for a broad label, set a small public commitment: join a weekly conversation group, prepare to host a guest, or discuss one familiar subject without a script.",
+        "Your next step is to open the CEFR self-assessment grid and pick one conversational descriptor just beyond your current comfort. Plan the next four weeks around practicing that exact task and collecting feedback. When you can do it reliably, choose a slightly harder one."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "CEFR Descriptors",
+      "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/cefr-descriptors",
+      "publisher": "Council of Europe",
+      "purpose": "Defines common reference levels through illustrative can-do descriptors across communication categories."
+    },
+    {
+      "title": "Common European Framework of Reference for Languages: Companion Volume",
+      "url": "https://rm.coe.int/cefr-companion-volume-withnew-descriptors-2018/1680787989",
+      "publisher": "Council of Europe",
+      "purpose": "Self-assessment and spoken interaction descriptors illustrate task-based, staged goals."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "become-fluent-in-a-second-language",
+    "learn-someone-s-language-to-have-a-conversation-with-them",
+    "learn-another-language-to-conversation-level"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

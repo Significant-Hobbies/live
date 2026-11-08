@@ -1,0 +1,61 @@
+{
+  "experienceSlug": "build-a-sundial-and-compare-it-with-clock-time",
+  "slug": "build-a-sundial-and-compare-it-with-clock-time",
+  "title": "Why does a handmade sundial disagree with your clock?",
+  "description": "Keep a simple sundial fixed, label repeated shadow readings, and investigate orientation and time conventions before adjusting the build.",
+  "intent": "A measurement-focused guide to comparing a simple sundial with civil time and diagnosing setup or convention differences without claiming precision.",
+  "sections": [
+    {
+      "heading": "Build for observation, not precision",
+      "paragraphs": [
+        "A first sundial is an experiment in shadow and reference, not a replacement for a clock. Use a design from a trusted astronomy education source and set it on a stable surface where sunlight reaches it safely. The NASA sundial activity gives a hands-on starting point for marking shadows and comparing them with recorded times. Follow its directions for your design rather than improvising the angle of the shadow-casting piece.",
+        "Before setting it down, note your location, date and how you determined north or the intended direction. Some dials need a particular orientation, and a sloping or moving base can shift the result. Keep your hand away from looking at the Sun; you only need to observe the shadow on the dial."
+      ],
+      "bullets": [
+        "Do not stare at the Sun or use optical devices to look at it."
+      ]
+    },
+    {
+      "heading": "Take consistent readings",
+      "paragraphs": [
+        "Mark the shadow at several planned clock times across one clear day. Write the clock time beside each mark, along with whether the sky was clear or clouded. Keep the dial in the same position and do not rotate it between observations. If you need to move it, note that clearly and restart the comparison rather than treating the new marks as one continuous series.",
+        "A pencil mark, photo or simple table can capture the direction and length of the shadow. Use the same point on the gnomon or pointer each time. If the edge is fuzzy, record a small range or write “unclear” instead of choosing a precise point. This matters because apparent measurement precision can exceed what a cardboard dial or changing light can support."
+      ]
+    },
+    {
+      "heading": "Compare like with like",
+      "paragraphs": [
+        "Check whether the clock is using standard time or a seasonal clock change. Record the exact convention so you do not mistake it for a sundial error. Also check the dial’s orientation and whether its design is intended for your latitude. A sundial reading relates to local solar time, while the civil clock follows an agreed time zone; those are different references.",
+        "Compare one observation at a time. Is the error roughly similar across the day, or does it change? A nearly consistent offset might point toward orientation or time convention. A changing difference may require a more careful explanation, including the way a simple dial is constructed. Do not tune the dial at every observation; that erases the evidence you need to diagnose it."
+      ]
+    },
+    {
+      "heading": "Use a second day as a check",
+      "paragraphs": [
+        "Repeat the reading on another clear day with the same placement and note the date. If the results shift, that is a clue about the method or conditions, not an invitation to invent a correction. NASA’s activity provides a structured starting point; use its explanation and diagrams to check your setup before making a claim about accuracy.",
+        "You can compare observations with another person, but agree on where each person reads the shadow. Different choices of the shadow’s edge can create different times. Photograph the entire dial and surroundings when possible, then include the clock time in the image note rather than relying on memory later."
+      ]
+    },
+    {
+      "heading": "Describe what your dial can and cannot say",
+      "paragraphs": [
+        "At the end, report what you observed: the date, setup, time convention, readings and any uncertainty. Avoid saying the sundial “keeps exact time” after one brief trial. A handmade model can make a useful relationship visible while still being affected by its design, orientation, location and observation method.",
+        "A good next experiment changes one condition at a time. You might test whether carefully rechecking the orientation reduces a consistent offset, or compare the same setup on another day. Keep the original marks and write a revised explanation beside them. That way the project shows how evidence changed your understanding, rather than hiding the first result."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Create a Sundial Activity",
+      "url": "https://science.nasa.gov/learn/heat/resource/create-a-sundial-activity/",
+      "publisher": "NASA Science",
+      "purpose": "Supports a guided sundial build and recording/comparison of shadow readings with clock times."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "analyze-an-exoplanet-transit-with-real-telescope-data",
+    "notice-shadows-move-across-a-room"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

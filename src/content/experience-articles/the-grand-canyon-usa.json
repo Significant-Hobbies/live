@@ -1,0 +1,71 @@
+{
+  "experienceSlug": "the-grand-canyon-usa",
+  "slug": "the-grand-canyon-usa",
+  "title": "Choose a South Rim day: Mather Point or Desert View",
+  "description": "Compare a short South Rim walk from Mather Point with the longer Desert View Drive, using current National Park Service maps and conditions.",
+  "intent": "How can a visitor build a specific, manageable Grand Canyon South Rim day around rim walking or a drive to eastern viewpoints?",
+  "sections": [
+    {
+      "heading": "Choose your first view and your pace",
+      "paragraphs": [
+        "This guide focuses on the South Rim, where a first-time visitor can make a satisfying day without attempting a descent into the canyon. The National Park Service identifies Mather Point as a short walk from the South Rim Visitor Center and the nearby start of the Canyon Rim Trail. That makes it a practical first view if you want orientation, exhibits and transport in one area.",
+        "If you prefer to move between overlooks by car, compare the eastern Desert View Drive. The NPS describes it as a 23-mile road with viewpoints and pullouts, including the developed Desert View area. That is a different outing from a short village walk: it needs more driving time and a plan for where you will stop. Choose one main shape and give it enough time."
+      ]
+    },
+    {
+      "heading": "Option one: walk from Mather Point toward Yavapai",
+      "paragraphs": [
+        "The visitor-center guide suggests walking from Mather Point east along the rim to Yavapai Observation Station, about 0.7 miles, then continuing toward the Historic District or returning by shuttle. It also describes a 1.3-mile paved stretch from Pipe Creek Vista toward Mather Point. These named points let you build a shorter walk with a clear turnaround rather than guessing how much canyon trail you can manage.",
+        "The broader Rim Trail follows the canyon for much longer, but you do not need to cover it end to end. Use the pocket map to choose your own distance and shuttle stop, and check which sections are paved. If you are with someone who tires quickly, agree on a turnaround and a place to sit before starting. The rim is still exposed to weather and sun, so carry water and layers even for an easy-distance walk."
+      ]
+    },
+    {
+      "heading": "Option two: make Desert View the destination",
+      "paragraphs": [
+        "Desert View Drive gives you a more dispersed day. The NPS says private vehicles can use this road year-round and access viewpoints and pullouts, but road and facility status can change. Pick two stops that answer different questions: one broad view of the canyon, and the Watchtower area if it is open and fits your plan. The official site’s current conditions page should decide what is available on your dates.",
+        "Do not assume a scenic drive means you can stop wherever you like. Use marked pullouts, stay behind barriers and follow signs. If the road conditions or your energy make a longer outing unwise, return to the Village area and use the shuttle network instead. The National Park Service lists the Village, Kaibab and Hermits Rest routes as ways to get around the South Rim; check current service information before depending on a bus connection."
+      ]
+    },
+    {
+      "heading": "Keep the canyon edge separate from the inner canyon",
+      "paragraphs": [
+        "A rim walk is not the same effort as a hike down. The NPS warns that there are no easy trails into or out of the canyon and says not to attempt a rim-to-river-and-back hike in one day. If your goal is to descend below the rim, read the current hiking guidance and choose a route for your actual experience, season and preparation. Do not make an unplanned descent simply because the view makes the trail look close.",
+        "The South Rim’s visitor and trail information can help you scale the outing. Some Rim Trail sections are paved and accessible; the park notes that trail surface and shuttle access vary. For specific mobility needs, check route details with the park rather than assuming every overlook or stop has the same surface, distance or facilities."
+      ]
+    },
+    {
+      "heading": "Add context without trying to see everything",
+      "paragraphs": [
+        "At the visitor center, the NPS offers a park orientation film and the film ‘We Are Grand Canyon,’ created with the Intertribal Working Group and other partners. That is a useful way to place the landscape alongside the human communities connected to it. Give those voices time before you rush to the next viewpoint, and remember that the Grand Canyon Skywalk and Havasupai Falls are on tribal lands outside the national park, with their own authorities and arrangements.",
+        "Before leaving your lodging, decide between the Mather Point walk and the Desert View drive, then check the NPS open-and-closed list, shuttle status and weather. Write down one nearby backup stop. The canyon is too large to finish in one visit; a good day is one route chosen with care, not every overlook collected."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Directions and Transportation",
+      "url": "https://www.nps.gov/grca/planyourvisit/directions.htm?fullweb=1",
+      "publisher": "National Park Service",
+      "purpose": "Supports the South Rim/Desert View distinction, road length, rim separation and need to check daily current openings and closures."
+    },
+    {
+      "title": "Grand Canyon Visitor Center",
+      "url": "https://www.nps.gov/grca/planyourvisit/grand-canyon-visitor-center.htm",
+      "publisher": "National Park Service",
+      "purpose": "Supports Mather Point access, named rim-walk options, paved segments, shuttle routes and Desert View Drive context."
+    },
+    {
+      "title": "Day Hiking",
+      "url": "https://home.nps.gov/grca/planyourvisit/day-hiking.htm",
+      "publisher": "National Park Service",
+      "purpose": "Supports the distinction between rim walks and inner-canyon hikes and the park's heat and safety warnings."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "watch-the-sunrise-from-machu-picchu-peru",
+    "hike-through-patagonia",
+    "the-canadian-rockies"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

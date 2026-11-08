@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "make-and-exchange-friendship-bracelets",
+  "slug": "make-and-exchange-friendship-bracelets",
+  "title": "How can beginners make friendship bracelets to exchange with friends?",
+  "description": "Start a friendship bracelet with a few colors, a simple plait or twist, and a comfortable fit; finish it so the exchange feels personal.",
+  "intent": "A low-pressure guide to making and exchanging simple string bracelets, with practical fit, safety and consent considerations.",
+  "sections": [
+    {
+      "heading": "Choose a simple design and materials",
+      "paragraphs": [
+        "For a first bracelet, use a few lengths of soft embroidery thread, cotton string or another craft cord that is easy to handle. Pick two or three colors and decide on a plait or twist rather than beginning with a complex knot pattern. Scouts’ activity guidance describes plaiting or twisting colored string to make a friendship bracelet, so this simple construction is a useful starting point.",
+        "Cut strands longer than the finished band so you have room to tie and trim the ends. The exact amount depends on cord thickness and how tight you work; make a short test before cutting a set for several people. Tape the starting knot to a smooth table or clip it to a board. Keep scissors nearby, and let a responsible adult handle cutting if a young maker needs support."
+      ]
+    },
+    {
+      "heading": "Keep tension even and the band comfortable",
+      "paragraphs": [
+        "Tie the strands together at one end, leaving a short tail. Separate them in your chosen order, then cross the outside strands toward the center for a basic plait. For a twist, turn the strands in one direction and let them wrap around one another in the opposite direction. Work a few centimeters at a time and compare the width as you go.",
+        "Pull firmly enough to close gaps but not so hard that the bracelet curls into a stiff cord. If it narrows or twists unexpectedly, undo a few crossings and reset the tension. A wearable bracelet should sit comfortably and be easy to remove; avoid tying it so tight that it presses uncomfortably into the skin."
+      ]
+    },
+    {
+      "heading": "Add a detail that belongs to the recipient",
+      "paragraphs": [
+        "Personalize the bracelet with a color choice, a repeating stripe or a small bead if the wearer likes it and the material is suitable. A detail can refer to a shared memory or favorite color, but check before using symbols or words that carry cultural or personal meaning. The exchange should invite connection rather than assume that everyone interprets a color the same way.",
+        "Keep the design manageable. Too many beads or attachments can make a narrow band uncomfortable or snag on clothing. If a recipient has sensory preferences, allergies or accessibility needs, ask what materials feel comfortable. A no-bead option and a softer cord can make the activity easier to enjoy."
+      ]
+    },
+    {
+      "heading": "Finish and exchange with care",
+      "paragraphs": [
+        "When the woven section reaches the desired length, tie a secure knot and leave enough cord for fastening. Try a simple adjustable loop or two ties only if the wearer can manage them comfortably. Trim the ends after checking the fit, leaving enough tail that the finish will not unravel. Do not burn synthetic fibers to seal them; heat can cause burns and fumes.",
+        "Offer the bracelet without pressure. Some people do not wear jewelry, so a small paper tag, bookmark or keepsake can be an equally thoughtful alternative. If making bracelets as a group, let people choose whether they want to give, receive or simply make one for themselves."
+      ]
+    },
+    {
+      "heading": "Make a small exchange into a shared activity",
+      "paragraphs": [
+        "A group can make one bracelet each, then write the maker’s name and a short note on a card. Keep notes kind and specific: a shared moment, a quality you appreciate or a wish for the next time you meet. Do not ask participants to reveal personal information or publicly explain why they chose someone.",
+        "For the next round, trade roles: one person teaches the plait while another selects colors or prepares the card. The Scouts activity pairs craft with reflection on friendship, but the exchange can stay light and optional. A good next step is to invite the recipient to suggest a new color combination if you make a second bracelet together."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Learn what makes a good friend",
+      "url": "https://www.scouts.org.uk/activities/learn-what-makes-a-good-friend/",
+      "publisher": "The Scout Association",
+      "purpose": "Supports the simple plaited or twisted colored-string bracelet activity and its safety and inclusion context."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "make-a-friendship-map-together",
+    "exchange-handwritten-recipes-through-the-post"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

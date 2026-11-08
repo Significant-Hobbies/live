@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "community-9202817e-a5ac-54a2-ab23-9ba20834d4a7",
+  "slug": "dramatically-swipe-everything-off-a-table-to-display-a-huge-piece-of-paper-describing-the-plan",
+  "title": "Make a plan big enough for everyone to see",
+  "description": "Turn a shared goal into a clear wall-sized plan by defining the outcome, mapping work and risks, and choosing a safe, accessible setup.",
+  "intent": "A practical facilitation guide for turning a group plan into a large visible working map without confusing dramatic presentation with useful agreement.",
+  "sections": [
+    {
+      "heading": "Decide what the paper needs to do",
+      "paragraphs": [
+        "A giant sheet works when people need to see relationships at once: a project timeline, event plan, community proposal, or decision tree. It is less helpful for sensitive personal information or details that should not be visible to every passerby. Before setting up, write one sentence naming the decision the group needs to make. If the answer is “understand our plan,” make it more precise: choose a date, assign owners, or find the missing step.",
+        "Bring a limited palette of thick markers, sticky notes, painter’s tape, and a timer. Draw the sheet on the floor or a clean wall; do not clear a table by sweeping fragile objects onto the ground. The dramatic reveal can come from unfolding the paper together, not from a risky shove. Protect drinks, devices, dishes, and anything breakable before gathering people around."
+      ]
+    },
+    {
+      "heading": "Lay out the map before filling it",
+      "paragraphs": [
+        "Use a simple left-to-right line for sequence, columns for people or workstreams, or a center-and-branches map for causes and options. Label the destination first, then mark the current position and the next decision. Leave generous blank areas for questions. If the sheet is so crowded that nobody can read it from a few steps away, split it into a main map plus a detail page.",
+        "Write each task as a visible verb and deliverable—“confirm room booking,” not “venue.” Give a task one accountable owner and an approximate timing. Keep unresolved assumptions in a different color or with a question mark. This separates what the group knows from what it hopes is true. If participants disagree about a fact, capture both views and assign a way to check rather than erasing the disagreement."
+      ]
+    },
+    {
+      "heading": "Make the reveal accessible",
+      "paragraphs": [
+        "Choose a place with enough room to stand or sit without blocking a doorway. Tape the sheet securely if it goes on a wall; put no one on a chair or unstable surface to reach the top. If spreading it on a table, clear the surface deliberately and set fragile items aside first. Tell people where the edges are and leave a clear route for anyone using a mobility aid. A plan is only shared if everyone can approach and read it.",
+        "Use large lettering, strong contrast, and a small number of colors. Do not encode meaning by color alone; write “owner,” “risk,” or “decision” as a label too. Take a photo only after checking that private details and faces are not captured without permission. If the page will be shared beyond the room, remove contact details and sensitive notes or create a clean copy."
+      ]
+    },
+    {
+      "heading": "Turn ideas into a usable plan",
+      "paragraphs": [
+        "Give the group a quiet minute to scan before discussion. Ask each person for one missing dependency or one risk, then cluster duplicates. A project charter is useful because it makes objectives, scope, stakeholders, and risks explicit; the large paper can serve as a visible draft, not as a substitute for actual approval or a detailed project plan. When a conversation drifts, point back to the decision sentence and ask what information is still needed.",
+        "End by circling only the next few actions the group has truly accepted. For each one, record a name and a check-in date. Mark parking-lot items clearly so they do not masquerade as promises. Photograph the agreed map, transcribe it into the tool the team uses, and send the resulting decisions to participants for correction. Paper is excellent for exploring; it is easy to lose or misread later."
+      ]
+    },
+    {
+      "heading": "Try it on a small plan first",
+      "paragraphs": [
+        "A low-stakes first attempt could be planning a shared dinner: one section for menu, another for dietary needs, another for shopping and timing. Put the serving time at the far right and work backward to reveal dependencies. Or map a volunteer event with arrival, setup, welcome, activity, cleanup, and who covers each part. These examples make missing work visible without requiring a complex diagram.",
+        "Before the next meeting, prepare a blank sheet with only the decision, columns, and legend. Let participants add notes rather than presenting a finished answer for them to accept. The useful drama is the moment an abstract plan becomes something the group can inspect, challenge, and improve together."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Strategy-Focused Project Charter",
+      "url": "https://www.projectmanagement.com/deliverables/226104/Strategy-Focused-Project-Charter",
+      "publisher": "Project Management Institute / ProjectManagement.com",
+      "purpose": "Provides a project-charter example to ground the distinction between visible planning and formal objectives, scope, stakeholder, and risk documentation."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "create-a-personal-annual-report",
+    "conduct-an-after-action-review-of-a-personal-project"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,64 @@
+{
+  "experienceSlug": "give-up-something-that-s-running-your-life",
+  "slug": "give-up-something-that-s-running-your-life",
+  "title": "Change One Repeating Pattern With a Plan for Its Hardest Moment",
+  "description": "Choose one costly habit, map when it happens, and plan a safer replacement and support before attempting a meaningful change.",
+  "intent": "How can I change a recurring behavior that feels bigger than my intentions without turning an all-or-nothing vow into the only plan?",
+  "sections": [
+    {
+      "heading": "Name the pattern without insulting yourself",
+      "paragraphs": [
+        "Describe the behavior and the cost plainly: “I scroll after midnight and miss the first hour of sleep,” or “I agree to extra work and then cancel plans.” Avoid calling yourself lazy or broken. A clear description gives you something to change; a character judgment does not.",
+        "Choose one pattern at a time. Write when it tends to happen, what comes just before it, and what you get from it in the moment. The immediate payoff may be relief, stimulation, belonging, or a way to avoid a difficult task. Understanding that function helps you look for another route to the same need."
+      ]
+    },
+    {
+      "heading": "Separate a habit from a health risk",
+      "paragraphs": [
+        "Some behaviors are ordinary routines; others involve dependence, medication, self-harm, gambling, or risks that need professional support. Do not use a personal challenge as a substitute for care. If alcohol is involved and you have withdrawal symptoms or are a regular or heavy drinker, seek medical guidance before stopping or reducing. Australian health guidance warns that reducing or quitting alcohol alone can be dangerous for regular or heavy drinkers; the NHS also says it can be dangerous to stop suddenly if alcohol-dependent.",
+        "Those sources are about alcohol in Australia and the UK, respectively; they do not establish an individual's diagnosis or what another country requires. For medicines or other substances, contact a qualified clinician or local treatment service before changing use. If you may be at immediate risk of harming yourself or someone else, contact local emergency or crisis support now."
+      ]
+    },
+    {
+      "heading": "Design a replacement for the trigger",
+      "paragraphs": [
+        "Use a simple map: situation, urge, action, immediate result. For example, if the pattern starts when you sit down after work, move the phone charger outside the bedroom and put a book or music player where the phone used to land. If the trigger is loneliness, plan a message or a regular activity with another person rather than relying on willpower at the hardest hour.",
+        "Australian government alcohol guidance suggests identifying goals, triggers, strategies, and support when planning a change in drinking. The article adapts that structure to other everyday habits as a planning prompt; it does not claim one strategy treats every behavior. For high-risk patterns, make the change with qualified help."
+      ]
+    },
+    {
+      "heading": "Make the first experiment smaller",
+      "paragraphs": [
+        "A dramatic vow can feel powerful and leave you with no workable next step. Choose a defined experiment: move one app off the home screen for seven days, set one work boundary for a week, or make a no-phone breakfast routine. Write what you will do when the trigger appears, who can support you, and what you will do after a lapse. If complete abstinence is not appropriate or safe, do not invent a target; consult a qualified professional.",
+        "Tell a trusted person what kind of support would help: a check-in, an activity together, or simply not offering the behavior. Avoid asking them to police or shame you. Notice whether the replacement meets the need, and change it if it creates a different cost."
+      ]
+    },
+    {
+      "heading": "Review without resetting your identity",
+      "paragraphs": [
+        "At the end of the week, record when the plan worked, what got in the way, and what you learned about the trigger. A lapse is information about the plan, not proof that change is impossible. You can make the next experiment easier, seek additional support, or decide that the issue deserves specialist care.",
+        "Your next step is to write one honest sentence about the pattern and one practical action that makes its usual trigger harder to reach today."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How can you reduce or quit alcohol?",
+      "url": "https://www.health.gov.au/topics/alcohol/about-alcohol/how-can-you-reduce-or-quit-alcohol",
+      "publisher": "Australian Government Department of Health, Disability and Ageing",
+      "purpose": "Supports a plan identifying goals, triggers, strategies, and support for alcohol change and warns regular/heavy drinkers that quitting without a doctor can be dangerous; used only for alcohol-specific guidance."
+    },
+    {
+      "title": "Alcohol-use disorder",
+      "url": "https://www.nhs.uk/conditions/alcohol-use-disorder/",
+      "publisher": "National Health Service",
+      "purpose": "Supports prompt medical help when alcohol withdrawal symptoms occur and the warning that sudden cessation can be dangerous for alcohol-dependent people; UK-specific guidance, not an individual assessment."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "learn-to-sit-with-discomfort-without-reaching-for-your-phone",
+    "do-a-digital-detox-for-a-full-week"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

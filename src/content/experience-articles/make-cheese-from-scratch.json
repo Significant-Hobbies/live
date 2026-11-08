@@ -1,0 +1,71 @@
+{
+  "experienceSlug": "make-cheese-from-scratch",
+  "slug": "make-cheese-from-scratch",
+  "title": "Choose one fresh cheese and follow its whole process",
+  "description": "Make a first cheese by choosing a tested fresh-cheese recipe, preparing sanitized equipment and tracking each stage from milk to curd.",
+  "intent": "How can a beginner make a first cheese from milk while learning the difference between fresh and aged styles and following safe instructions?",
+  "sections": [
+    {
+      "heading": "Choose a style that fits the project",
+      "paragraphs": [
+        "Cheesemaking ranges from a fresh, crumbly cheese you can make in a home kitchen to an aged wheel that needs a longer, controlled process. For a first project, choose one fresh cheese with a complete, tested recipe and make its exact batch. Pacific Northwest Extension’s guide specifically describes making queso fresco at home with a step-by-step safety process. Oregon State Extension’s cheesemaking overview also gives feta as a more involved example with culture, rennet, curd handling, pressing and brining.",
+        "That difference changes the goal: a fresh cheese is a near-term cooking project; an aged style adds time, storage conditions and more process control. Do not treat a recipe for one cheese as interchangeable with another. The milk, culture, coagulant, temperature and handling determine what happens to the curd."
+      ]
+    },
+    {
+      "heading": "Read the recipe before buying ingredients",
+      "paragraphs": [
+        "Read the entire recipe once, then check the equipment and ingredients list. You may need a large nonreactive pot, thermometer, measuring tools, clean cloth, strainer and culture or coagulant named by the instructions. Buy the specific culture and rennet the recipe calls for, and check the supplier’s storage and measurement directions. A substitute can change how the milk sets, so ask an extension educator or qualified cheesemaking source before changing a key ingredient.",
+        "Use pasteurized milk. The FDA’s U.S. food-safety material explains that raw milk can carry harmful germs and identifies pasteurized milk as the safer choice; Oregon State Extension’s home cheesemaking advice also says to start with pasteurized milk. Keep milk refrigerated and check the label. If the recipe warns against ultra-pasteurized milk for curd formation, follow that distinction rather than assuming every carton behaves alike."
+      ]
+    },
+    {
+      "heading": "Set up a clean work area",
+      "paragraphs": [
+        "Before heating milk, clear the counter, wash your hands and clean the pot, strainer, spoon, thermometer and cloth according to the recipe. Oregon State Extension emphasizes sanitizing equipment and removing sanitizer residue that could interfere with cultures or rennet. Keep pets and unrelated cooking away from the active work area. Set out a timer and write the recipe’s temperature and rest periods where you can see them.",
+        "This is a process where tidy preparation is more useful than improvisation. Use a thermometer rather than estimating warmth by touch. Measure the culture, acid or rennet exactly as the recipe states. If the milk does not set as expected, note what happened; do not add extra ingredients at random and assume the product is safe."
+      ]
+    },
+    {
+      "heading": "Watch the transformation and take notes",
+      "paragraphs": [
+        "Follow the sequence in order: heat, add the specified culture or acid, allow the recipe’s rest, then separate curds from whey if called for. Record the milk label, date, room conditions if relevant, temperatures and timing. Notice how the curd changes from liquid to a set mass and then to a texture the recipe describes. Those observations help you understand why a future batch behaved differently.",
+        "Do not borrow a dramatic step from another style. A queso fresco recipe, feta method and aged cheddar process have different endpoints. The source recipes are useful models, not permission to blend steps between styles. If a written direction is unclear, pause and consult the publisher or an instructor before continuing."
+      ]
+    },
+    {
+      "heading": "Finish, chill and decide what to repeat",
+      "paragraphs": [
+        "Complete the recipe’s draining, salting, shaping and storage directions as written. Fresh cheese remains perishable; store it as instructed and do not leave it out while you photograph or clean. If the result differs from what you expected, record the texture and flavor without assuming a fault or declaring it shelf-stable. Ask a qualified food-safety source about a process question you cannot resolve from the recipe.",
+        "For the next batch, change only one controllable variable at a time, such as milk type or draining duration, and make sure the recipe supports that change. That turns the experience into a repeatable kitchen skill. Home cheesemaking is a satisfying craft, but a recipe’s safe process matters more than achieving a particular look on the first try."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Fresh Cheese Made Safely",
+      "url": "https://extension.oregonstate.edu/catalog/pub/pnw539-s",
+      "publisher": "Pacific Northwest Extension / Oregon State University Extension Service",
+      "purpose": "Identifies queso fresco as a home-makeable fresh cheese with a step-by-step safety guide; the linked publication contains the actual recipe and method."
+    },
+    {
+      "title": "The Basics of Cheesemaking",
+      "url": "https://extension.oregonstate.edu/catalog/basics-cheesemaking",
+      "publisher": "Oregon State University Extension Service",
+      "purpose": "Overview of equipment sanitation, pasteurized milk and a feta method as a more involved comparison; use a complete recipe rather than combining techniques."
+    },
+    {
+      "title": "The Dangers of Raw Milk",
+      "url": "https://www.fda.gov/media/119383/download",
+      "publisher": "U.S. Food and Drug Administration",
+      "purpose": "May 2024 U.S. food-safety guidance on pathogens in raw milk and pasteurization; not a cheesemaking recipe or jurisdiction-wide dairy law guide."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "churn-butter-in-a-jar",
+    "preserve-a-season-jam-pickle-ferment",
+    "ferment-something-for-the-first-time"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

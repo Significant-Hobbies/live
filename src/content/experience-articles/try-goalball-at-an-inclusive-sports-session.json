@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "try-goalball-at-an-inclusive-sports-session",
+  "slug": "try-goalball-at-an-inclusive-sports-session",
+  "title": "What should a beginner expect at a goalball taster?",
+  "description": "Prepare for a coached goalball introduction with court orientation, sound-based play, clear stop signals, and questions about access and safe participation.",
+  "intent": "Answer how a beginner can approach a coached goalball taster with respect for the sport, learn its listening demands, and take part safely without treating it as a disability simulation.",
+  "sections": [
+    {
+      "heading": "Find a coach-led introduction",
+      "paragraphs": [
+        "Goalball is a sport with its own athletes, tactics, and history. A first session should be run by a coach or an established inclusive sports group that can explain the space and adapt the activity. Ask what the taster includes, what clothing and mobility support are useful, whether the floor has tactile markings, and what adjustments can be made for hearing, movement, or balance needs. The Australian Sports Commission’s Sports Ability material treats goalball as a sport activity and builds in skill focus, equipment, modification, and safety prompts. That is a better model for a taster than improvising blindfolded play in a living room.",
+        "The Paralympic Movement’s overview describes goalball as played by athletes who are blind or vision impaired, with tactile court markings and a ball containing bells. If you are sighted and invited to participate in a beginner activity, follow the coach’s structure. Do not assume that wearing an eyeshade for a few minutes reproduces anyone’s lived experience. Ask what skills the coach wants the group to practise and how the exercise connects to the sport itself."
+      ],
+      "bullets": [
+        "Ask whether the taster is designed for newcomers and what equipment is supplied.",
+        "Share access needs privately with the organiser before the session."
+      ]
+    },
+    {
+      "heading": "Learn the room before concentrating on the ball",
+      "paragraphs": [
+        "Before a ball moves, take time to learn the court boundaries, team positions, and stop word. The coach can show how tactile lines help a player orient on the floor and where participants should wait between turns. Agree on a clear way to pause the activity; never continue moving when a player or coach calls stop. Keep the playing area free of loose bags and bottles, and place equipment where the coach says it belongs. Quiet is functional in goalball because players listen for the bells, so save questions for the designated pauses.",
+        "If the coach offers eyeshades, first understand how they fit and how the activity will start and end. A safe progression might begin with a stationary sound-location exercise or a gentle roll from a short, agreed distance. Do not rush into defending, diving, or fast throws. The point of a beginner session is to learn the court and a few repeatable actions, not to prove courage or athleticism."
+      ]
+    },
+    {
+      "heading": "Use listening as a team skill",
+      "paragraphs": [
+        "A bell ball gives sound information, but sound alone is only useful when the group creates room to hear it. A useful early drill is to take turns rolling the ball and naming where it came from, with the coach controlling speed and distance. Notice whether a quiet room, a clear release, or the ball’s path changes what you can perceive. Ask the coach to describe the relevant sound cues in their own words; do not invent a technique from a video or copy an advanced athlete’s movement without guidance.",
+        "When you are waiting, keep still and give the active player a clear listening environment. At a pause, say what helped: a steady launch point, a verbal orientation cue, or more time to settle. This feedback can help the coach adjust the activity for the group. If a sensory or movement element feels uncomfortable, stop and tell the coach; choosing a different role or modified version still lets you learn the game."
+      ],
+      "bullets": [
+        "Listen for the agreed cue and keep the playing space quiet during movement.",
+        "Let the coach set the ball’s speed and distance for each drill."
+      ]
+    },
+    {
+      "heading": "Finish with one observation about play",
+      "paragraphs": [
+        "A short coached game can make the skills visible: one team attacks by rolling, the other listens and defends, then the teams switch. Let the coach explain any simplified rules; official match rules are more detailed than a taster needs. Afterward, name one thing you learned about communication or court awareness, and one question for next time. That is a richer reflection than judging the session by goals scored.",
+        "If you want to continue, ask the coach about a regular beginner practice, how the club welcomes new players, and what to practise between sessions. Do not run a casual blindfold challenge with friends as a substitute. A club environment has agreed rules, accessible equipment, informed instruction, and consent. Your next step can simply be finding a local para-sport or inclusive sports organisation and asking how newcomers can observe or join a session."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Goalball",
+      "url": "https://www.paralympic.org/goalball",
+      "publisher": "International Paralympic Committee",
+      "purpose": "Supports the description of goalball as a sport for blind and vision impaired athletes, including tactile court markings and a bell ball."
+    },
+    {
+      "title": "How to use the cards",
+      "url": "https://www.ausport.gov.au/schools/resource-hub/sports_ability/how-to-use-the-cards",
+      "publisher": "Australian Sports Commission",
+      "purpose": "Supports adapting inclusive sport activities with skill focus, equipment, modifications, and safety considerations."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "join-an-adapted-tee-ball-session",
+    "try-wheelchair-basketball-at-an-introductory-club-session"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

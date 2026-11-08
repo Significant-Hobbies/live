@@ -1,0 +1,71 @@
+{
+  "experienceSlug": "eat-something-you-foraged-or-caught-yourself",
+  "slug": "eat-something-you-foraged-or-caught-yourself",
+  "title": "Make the permission and identification checks first",
+  "description": "Choose one legal, locally identified wild food or catch, learn with a qualified guide and confirm the site’s current rules before tasting it.",
+  "intent": "How can I safely and legally eat one food I foraged or caught myself without guessing at species, access rights or harvest rules?",
+  "sections": [
+    {
+      "heading": "Choose one route and one place",
+      "paragraphs": [
+        "Decide whether your project is guided plant or mushroom foraging, or a permitted fishing trip. Those are different activities with different hazards and rules. Start by naming the exact public site, species or catch, and the person or agency responsible for access. Never assume that land that looks public allows collecting, or that a species can be harvested because it appears plentiful.",
+        "Rules can differ sharply by park, state, waterbody, season and species. For a U.S. example, Shenandoah National Park says most plants may not be collected there, but describes limited exceptions for certain small amounts of fruit and some edible mushrooms; it directs visitors to the park compendium for detail. That is a local rule example only, not permission to forage in another park."
+      ]
+    },
+    {
+      "heading": "Get identification from a qualified source",
+      "paragraphs": [
+        "Do not identify an unfamiliar edible plant or mushroom from a photograph, app or one online description. Arrange a guided session with an experienced local forager, naturalist or other qualified expert who can show the complete organism and explain lookalikes, habitat and which parts are edible. The National Park Service warns that many mushrooms are poisonous and says they should not be eaten unless you can correctly identify the species and know it is edible.",
+        "For fishing, ask a licensed local guide or fisheries authority how to identify the species and check the current rules for the water where you will fish. NOAA Fisheries explains that U.S. state waters generally require checking with the state fish and wildlife agency, while federal permits and species-specific regulations vary by region and target. Those sources do not cover every local freshwater or shoreline rule; use the responsible local authority."
+      ]
+    },
+    {
+      "heading": "Confirm access, quantity and conditions",
+      "paragraphs": [
+        "Before collecting, verify whether you need a permit, what amount is allowed, which parts may be taken and whether the area is closed for conservation, contamination or safety. Check current advisories for water or site conditions. If a guide cannot give a clear answer, postpone the harvest and ask the land manager or agency. Leave protected, uncertain or damaged specimens untouched.",
+        "Set a hard stop condition before the activity: uncertain identification, an unexpected lookalike, a closed area, bad weather or a rule you cannot verify means no harvest. Do not collect more than you can use. A single correctly identified specimen from a permitted area can meet the goal; a full basket is not evidence of skill."
+      ]
+    },
+    {
+      "heading": "Handle and prepare the food deliberately",
+      "paragraphs": [
+        "Ask the qualified guide how to transport and prepare the particular species. Wild foods can have hazards that depend on species, location, season and preparation; generic cooking advice cannot make every unidentified specimen safe. For caught fish, use a clean cooler and keep the catch cold, then separate raw seafood from ready-to-eat food. FoodSafety.gov gives U.S. handling and cooking guidance for seafood, but local advisories may add restrictions for fish from particular waters.",
+        "Do not taste a plant or mushroom to test its identity. Do not eat a fish from a waterbody under an advisory without checking the current advice for the exact species and who may be affected. If you have a medical or dietary concern, consult an appropriate professional rather than using a foraging guide as personal health advice."
+      ]
+    },
+    {
+      "heading": "Record the learning, not just the meal",
+      "paragraphs": [
+        "Write down the location, date, weather, guide or authority consulted, identification features and rule you checked. Note whether the food was a plant, mushroom or catch and how it was prepared. Keep enough detail to distinguish what you saw from what your guide told you.",
+        "If you want to repeat the experience, check the rules again; seasons, closures and local conditions change. This goal is complete when you can explain how you verified permission and identification and share a carefully prepared taste—not when you demonstrate how much you can take from the landscape."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Collecting Plants and Mushrooms",
+      "url": "https://www.nps.gov/shen/learn/management/collecting-plants.htm",
+      "publisher": "U.S. National Park Service, Shenandoah National Park",
+      "purpose": "Site-specific U.S. collection rules and warning about poisonous mushrooms; not a general permission or species guide for other lands."
+    },
+    {
+      "title": "Resources for Fishing: Recreational Fishing",
+      "url": "https://www.fisheries.noaa.gov/topic/resources-fishing/recreational-fishing",
+      "publisher": "NOAA Fisheries",
+      "purpose": "U.S. source for state-license, permit and federal-region regulatory pathways; users must check current rules for the precise waterbody and species."
+    },
+    {
+      "title": "Safe Selection and Handling of Fish and Shellfish",
+      "url": "https://www.foodsafety.gov/blog/safe-selection-and-handling-fish-and-shellfish",
+      "publisher": "FoodSafety.gov",
+      "purpose": "U.S. handling/cooking guidance for seafood; does not establish whether a particular wild catch is legal or safe under local advisories."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "forage-for-wild-mushrooms",
+    "learn-to-butcher-a-whole-fish",
+    "follow-one-ingredient-through-a-market"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,55 @@
+{
+  "experienceSlug": "build-a-model-water-filter-and-measure-what-changes",
+  "slug": "build-a-model-water-filter-and-measure-what-changes",
+  "title": "What can a homemade water filter show you, and what can it not show?",
+  "description": "Use a small model water filter to compare visible changes in a dirty sample, while keeping every filtered sample clearly labelled and undrinkable.",
+  "intent": "Explain a safe, observable filtration experiment and prevent the common mistake of treating clearer-looking water as potable water.",
+  "sections": [
+    {
+      "heading": "Decide what the experiment can answer",
+      "paragraphs": [
+        "A model filter can show how different materials change the visible appearance of a sample. It cannot establish that the water is safe to drink. NASA Jet Propulsion Laboratory's classroom activity states plainly that its filtered water may still contain pollutants that cannot be seen and must not be consumed. Keep that warning with the setup and mark every sample container 'not for drinking.'",
+        "Choose one question, such as whether a layer of sand and gravel changes visible cloudiness more than a layer of cloth and gravel. Your result concerns appearance under your method. It does not tell you whether microbes, dissolved chemicals or other invisible hazards remain. Avoid calling the result purified or safe, even if the water looks clearer than before.",
+        "Set up a tray on a washable surface and use a small amount of tap water mixed with clean soil or another safe, known solid for the test sample. Do not collect water from a drain, pond or unknown source. Keep the activity away from food preparation and supervise children using scissors or cutting plastic containers."
+      ]
+    },
+    {
+      "heading": "Keep the comparisons fair",
+      "paragraphs": [
+        "Use identical containers and equal sample volumes. Make one filter design, run the sample through it, and record what you see. Then change one feature, such as the order or thickness of the filter layers, and repeat with a fresh equal amount of the same mixture. If the sample settles for several minutes before filtering one version but not the other, that difference may matter as much as the filter itself.",
+        "NASA JPL's project uses an iterative design process: build a filter, test it and record findings to improve the next version. Treat each version as a model for a question. Label it clearly and do not return filtered liquid to the original batch, because that would mix results from different tests.",
+        "A basic observation table might include design, layer order, sample volume, time taken and appearance before and after. A photograph against the same white background can make visual differences easier to compare, but it is still a visual measure. Do not claim that a photograph detects contaminants."
+      ]
+    },
+    {
+      "heading": "Notice more than clarity",
+      "paragraphs": [
+        "Look for changes in visible particles, color, flow rate and whether the filter clogs. A design that makes water look clearer may also take longer or pass some particles through. Record surprising results rather than quietly adjusting the setup mid-run. If you suspect a spill or the sample contacts skin, wash the area and clean the work surface; use only the known materials you selected for this demonstration.",
+        "The model also invites a useful engineering question: what tradeoff did a layer introduce? Fine material can catch more visible solids but may slow the flow; larger gaps may allow liquid through quickly while retaining less. Keep these as observations about your small setup, not universal claims about real treatment systems.",
+        "Keep waste contained, pour solids into the rubbish rather than a sink, and wash reusable equipment separately from dishes. Follow any local disposal guidance for the material used."
+      ]
+    },
+    {
+      "heading": "Report the limit in your conclusion",
+      "paragraphs": [
+        "A clear conclusion states what changed and what remains unknown: 'Our second design produced a clearer-looking sample, but we did not test for invisible contaminants and did not make the water drinkable.' This makes the experiment more scientifically honest, not less successful. The purpose was to compare a small model, not to create an emergency treatment device.",
+        "For a next test, change just one variable and use the same observation method. You might compare the flow through two arrangements of materials or ask someone else to judge coded samples without knowing which design produced them. Preserve the no-drinking rule every time, including when you photograph or demonstrate the result."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Make a Water Filter",
+      "url": "https://www.jpl.nasa.gov/edu/resources/project/make-a-water-filter/",
+      "publisher": "NASA Jet Propulsion Laboratory Education",
+      "purpose": "Provides the model-filter design/test method and explicit warning that filtered water may contain invisible pollutants and must not be drunk."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "measure-the-speed-of-sound-with-a-repeatable-experiment",
+    "submit-a-month-of-rain-gauge-observations-to-a-science-network",
+    "light-up-a-paper-circuit-card"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

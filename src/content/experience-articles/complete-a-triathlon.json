@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "complete-a-triathlon",
+  "slug": "complete-a-triathlon",
+  "title": "Choose a first triathlon by transitions and setting",
+  "description": "Select an introductory triathlon format by checking each leg, course setting and transition rules, then build a supervised plan around your current skills.",
+  "intent": "What should a first-time triathlete compare before choosing a race? This focuses on format, transitions and event-specific planning rather than an extreme-distance goal.",
+  "sections": [
+    {
+      "heading": "Pick a distance that leaves room to learn",
+      "paragraphs": [
+        "A triathlon combines swimming, cycling and running, but events differ in distance, course setting, start format and rules. World Triathlon’s elite championship page lists standard racing at a 1.5-kilometer swim, 40-kilometer bike and 10-kilometer run, with sprint racing at about half those distances. Those are elite championship examples, not a promise that every community race uses the same course or format.",
+        "For a first event, read the organizer’s current athlete guide and compare the actual swim, bike and run distances, elevation, surface, cutoff policies and whether the swim is in a pool or open water. If the guide does not answer a safety question, contact the organizer. Choose a course that fits your current ability and training access, not one selected to impress someone else."
+      ]
+    },
+    {
+      "heading": "Treat transitions as part of the event",
+      "paragraphs": [
+        "The change from swim to bike and bike to run is called a transition. Practice the sequence with a coach or experienced club: where to find your gear, how to remove swim equipment, when to put on a helmet, and how to leave the transition area. Race rules can specify where equipment is placed, how the bike is mounted and when a helmet must be fastened. Follow the event’s rulebook rather than a generic video.",
+        "Keep the setup simple. Put only the allowed items in your transition space and arrange them in the order you will use them. Practice walking through the sequence without rushing. If you forget something during a practice, change one layout detail and repeat. The goal is to reduce confusion, not to shave seconds."
+      ]
+    },
+    {
+      "heading": "Train the legs separately and together",
+      "paragraphs": [
+        "Build comfortable familiarity with each discipline before combining them. A qualified coach, club or clinician can help you choose a progression that fits your background and any constraints. This article is not a personal training plan. If you are not a confident swimmer, get instruction in a supervised pool before considering an open-water event. Do not treat a race as the place to learn basic water safety.",
+        "A short, supervised “brick” session—an easy bike followed by a brief run—can help you notice how your legs feel after changing activities. Keep it within guidance from your coach and event plan. Use well-fitted equipment and practice with the helmet, shoes and clothing you expect to use. Replace or adjust anything that pinches, slips or causes pain rather than ignoring it."
+      ]
+    },
+    {
+      "heading": "Learn the course and event support",
+      "paragraphs": [
+        "Ask whether the swim uses a mass start, waves or a rolling start; what flotation or wetsuit rules apply; where aid stations sit; and what the organizer does if weather changes. Rules vary by event and governing body. In the days before the race, review the briefing, map, transition flow and emergency instructions. Do not infer that an elite championship rule automatically applies to a local age-group event.",
+        "Plan how to arrive, check in, rack the bike if required and get home after the finish. Bring only items on the organizer’s list. Agree with a supporter where they can watch and when you will contact them. If a leg is cancelled or conditions change, follow the event officials’ decision rather than improvising a different course."
+      ]
+    },
+    {
+      "heading": "Define success beyond the finish time",
+      "paragraphs": [
+        "Your first triathlon can be about completing the course, staying within the rules, using the transitions you practiced and learning what to change next. Write down one decision you handled well and one part that surprised you. The result can guide a future choice about pool versus open-water events, the race distance or a club that fits your schedule.",
+        "If you decide not to race yet, keep building skills with separate lessons or a supervised training group. A later start is still progress toward a well-chosen event. Your next action is to compare two local event guides and ask a qualified coach which format matches your current swim, bike and run experience."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Elite Triathlon",
+      "url": "https://triathlon.org/elite",
+      "publisher": "World Triathlon",
+      "purpose": "Supports World Triathlon elite championship examples of standard (1.5km/40km/10km) and sprint (750m/20km/5km) distances; article explicitly warns these do not define every introductory or local race."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "run-your-first-5k",
+    "cycle-coast-to-coast",
+    "swim-a-mile-without-stopping"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "memorise-a-long-poem-or-speech",
+  "slug": "memorise-a-long-poem-or-speech",
+  "title": "Memorise a Poem by Learning Its Turns, Not Just Its Lines",
+  "description": "Learn a long poem or speech in manageable sections by mapping its images, retrieving lines from memory, and rehearsing transitions aloud.",
+  "intent": "Offers a structured method for memorizing a complete poem or speech while preserving meaning, not just reciting a string of words.",
+  "sections": [
+    {
+      "heading": "Choose a text with a shape you can hear",
+      "paragraphs": [
+        "Pick a poem or speech you genuinely want to carry. Read it aloud once without stopping to memorize, and mark where the thought changes, where an image returns, and where the voice shifts. A long text becomes easier to hold when you understand its movement: question, answer, image, turn, and close. Use a public-domain text if you plan to share the full words publicly.",
+        "Break the poem into sense units rather than equal line counts. A stanza may form one scene, while a long sentence may run across several lines. Give each unit a short private label such as “the empty room” or “the argument turns.” These labels are retrieval cues, not replacement summaries; the exact language still has to be learned."
+      ]
+    },
+    {
+      "heading": "Make the page memorable before hiding it",
+      "paragraphs": [
+        "Notice sound and structure. Mark repeated words, rhyme, alliteration, rhythm, and the point where a line enjambs into the next. Draw a small map of images in order. For a speech, note the sequence of claims and examples. These features give your memory several paths into the text rather than requiring one fragile chain of isolated words.",
+        "Read a few lines aloud, then look away and try to say them. Check the text, mark the exact phrase you missed, and try again after a short pause. A study by Roediger and Karpicke found that retrieval testing can support delayed retention better than repeated study in their experiments. In practical terms, closing the page and recalling is more informative than rereading until the words feel familiar."
+      ]
+    },
+    {
+      "heading": "Join pieces from both directions",
+      "paragraphs": [
+        "Learn a short unit, then add the next one. Once both are stable, practice the transition without a pause; many slips happen at the join rather than inside a stanza. Also rehearse the first phrase of each unit from its label. Starting at several points helps you recover if you lose your place during a recitation.",
+        "For a long speech, alternate a full passage with a scrambled prompt: say the section after the anecdote, then return to the start. For poetry, occasionally begin at the last line of a stanza and work backward through its images. The purpose is not to perform the poem backward, but to loosen the dependence on one memorized opening cue."
+      ]
+    },
+    {
+      "heading": "Space retrieval across sessions",
+      "paragraphs": [
+        "Use several short sessions spread across days rather than one marathon. At each session, first recite what you remember without looking. Then check the page, correct words, and practice the weakest transition. Return after some forgetting has occurred; the struggle tells you what is not yet reliable. Research on retrieval practice supports testing yourself as a learning act, though it does not prescribe one perfect schedule for every poem or person.",
+        "Keep a small error list: dropped articles, swapped words, line order, and uncertain names. Learn each phrase exactly before polishing delivery. When the text is stable, practice it standing or seated as you expect to perform, with breaths placed where the syntax and sense allow—not simply at every line break."
+      ]
+    },
+    {
+      "heading": "Rehearse the meaning and recovery",
+      "paragraphs": [
+        "Record one run and listen for whether the sense is clear, not merely fast. If it sounds flat, identify where the thought changes and let your delivery respond. Avoid adding dramatic gestures to every line; one still moment can give a strong image room. If you lose a word, pause, return to the unit label, and continue rather than restarting in frustration.",
+        "Your next action is to choose a text and write a one-line map for each stanza or section. Memorize the first unit, close the page, retrieve it, and review tomorrow. By learning meaning, sound, and transitions together, you can carry the whole work with more confidence and keep the speaker’s thought alive."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Test-enhanced learning: taking memory tests improves long-term retention",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16507066/",
+      "publisher": "Psychological Science / PubMed",
+      "purpose": "Original study record describing two experiments comparing repeated testing and restudy for delayed retention."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "community-7bca1f54-cb8e-542c-afc8-a7ef31f47655",
+    "write-the-speech-you-would-give-at-your-own-retirement",
+    "perform-on-a-stage-in-front-of-a-crowd"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

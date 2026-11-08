@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "press-corn-tortillas-and-serve-them-warm",
+  "slug": "press-corn-tortillas-and-serve-them-warm",
+  "title": "How do you press corn tortillas that stay soft?",
+  "description": "Make a small batch of corn tortillas with masa harina, learning how dough texture, even pressing, a hot cooking surface, and covered resting work together.",
+  "intent": "How do I get a first batch of corn tortillas from crumbly dough to pliable rounds? This guide focuses on reading the dough and adjusting one variable at a time.",
+  "sections": [
+    {
+      "heading": "Start with the right kind of masa",
+      "paragraphs": [
+        "Corn tortillas depend on masa, a dough made from nixtamalized corn or from masa harina, the dried flour version. Read the package: a bag of masa harina usually needs water, while ordinary cornmeal does not behave the same way. A USDA food-assistance specification gives a simple example using masa flour and water, then shaping and cooking the rounds; follow the proportions on your own product because grind and formulation differ. This is a short ingredient list, so the feel of the dough matters more than chasing a universal ratio.",
+        "For a first attempt, make only enough for a few tortillas. Put the masa harina in a bowl and add warm water gradually, mixing with your hand or a spoon until the dry patches disappear. Let the mixture stand briefly so the flour can absorb moisture, then knead just until it holds together. The target is soft and smooth, not sticky enough to cling heavily to your palms and not dry enough to crack when rolled into a ball."
+      ]
+    },
+    {
+      "heading": "Read the dough before you press",
+      "paragraphs": [
+        "Pinch off one small portion and roll it between your hands. If its edges split as you flatten it, work in a little water and let the dough rest again. If it sticks to your fingers or the pressing surface, knead in a small amount of masa harina. Make one adjustment at a time. Adding a large splash or a handful of flour can swing the texture too far in the other direction.",
+        "A tortilla press makes repeatable rounds, but two flat plates or a heavy pan can work if you use a piece of food-safe plastic or parchment on each side. The plastic should lie smooth so it does not crease the tortilla. Press evenly rather than leaning hard on one side. Peel the plastic away carefully; if the round tears, patch the dough and try again rather than treating the first one as a verdict on the batch."
+      ]
+    },
+    {
+      "heading": "Cook on a preheated surface",
+      "paragraphs": [
+        "Warm a dry or lightly greased skillet or griddle over medium to medium-high heat, adjusting for your stove and cookware. The USDA preparation example uses a heated, greased pan or griddle and cooks both sides. A properly heated surface sets the outside while allowing the inside to finish; if the surface is too cool, the tortilla may dry before it cooks, while excessive heat can darken it before the center is ready. Use a spatula or fingers only if you can do so safely around the hot pan.",
+        "Place one tortilla on the surface and watch for small bubbles or a slight change in color before turning it. Cook the second side, then flip once more briefly if the center still seems damp. Exact times vary with thickness and heat, so use the tortilla itself as your guide. Stack finished pieces in a clean towel or covered dish to hold warmth and a little steam. That rest helps keep the batch pliable while you finish the remaining rounds."
+      ]
+    },
+    {
+      "heading": "Troubleshoot one tortilla at a time",
+      "paragraphs": [
+        "If tortillas crack, first ask whether the dough is too dry or the rounds too thick. If they stick to the press, check whether the dough is overly wet or the plastic is wrinkled. If they turn brittle, reduce the cooking time or heat slightly and cover the cooked pieces promptly. Keep scraps from an overcooked first tortilla as a reminder of what to adjust; do not change the whole batch based on one miss.",
+        "Serve the tortillas while warm with a filling that does not overwhelm their flavor. Beans, roasted vegetables, eggs or a simple salsa let you notice the corn itself. If you are serving others, mention that the batch contains corn and check any dietary needs; masa products may also have cross-contact warnings on the package. Keep raw dough and cooked food separate and use clean utensils."
+      ]
+    },
+    {
+      "heading": "Make the next batch more consistent",
+      "paragraphs": [
+        "After eating, write down the masa brand or type, approximate water amount, dough feel, skillet setting and what happened on the first tortilla. A small note is more useful than trying to remember whether “a little extra water” meant a teaspoon or a whole pour. On the next attempt, change only one factor, such as dough hydration or heat, so you can see what helped.",
+        "Your next action is to make three tortillas from the package directions, adjusting the dough by feel and keeping the first one as a heat test. Once the texture is dependable, try pressing them slightly thinner or pairing them with a filling that suits the meal."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "CP8 Corn Products Commodity Requirements",
+      "url": "https://www.fsa.usda.gov/Internet/FSA_File/cp8.pdf",
+      "publisher": "U.S. Department of Agriculture, Farm Service Agency",
+      "purpose": "Supports a basic masa-flour and water preparation example, shaping tortillas by hand, cooking both sides on a heated pan or griddle, and storing flour in a covered container in a cool, dry place."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "roll-vegetarian-maki-for-a-picnic-at-home",
+    "practice-three-vegetable-knife-cuts-for-one-meal",
+    "cook-a-meal-entirely-from-your-existing-pantry"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

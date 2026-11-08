@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "learn-another-language-to-conversation-level",
+  "slug": "learn-another-language-to-conversation-level",
+  "title": "Practise holding a short real conversation in another language",
+  "description": "Prepare for a short real conversation in another language with a familiar topic, active listening, useful repair phrases, and a partner who welcomes practice.",
+  "intent": "Answers how to practise sustaining a short real conversation in another language using topic preparation, listening and repair phrases; distinct from assessing fluency or reaching a proficiency level.",
+  "sections": [
+    {
+      "heading": "Pick a conversation that can actually happen",
+      "paragraphs": [
+        "Choose one familiar subject and one real person or setting where a brief exchange is welcome: asking a language partner about a local meal, describing a hobby to a tutor, or planning a walk with someone who speaks the language. Do not surprise a stranger with a practice exercise or assume a worker has time to teach you while serving customers. Ask first: ‘Would you be comfortable speaking with me in [language] for a few minutes?’ A willing partner changes the exchange from a test into a conversation.",
+        "Set a narrow aim. For example, tell a short story about a weekend, ask three follow-up questions or explain a simple preference. ‘Be conversational’ is too large to practise in one sitting. You are training the rhythm of taking turns and repairing misunderstandings, not proving that you can discuss every topic."
+      ]
+    },
+    {
+      "heading": "Prepare ideas, not a memorized script",
+      "paragraphs": [
+        "Write five words or phrases you may need and one question that invites more than yes or no. If the topic is food, you might prepare words for ingredients, texture and preference, then ask what the other person likes to cook. If it is a hobby, prepare how to explain what you do, when you began and what you enjoy. Do not write the entire conversation in advance; leave space for the other person’s actual answer.",
+        "The Council of Europe’s CEFR Companion Volume describes conversational interaction at different proficiency bands, including simple exchanges about familiar topics and asking for clarification. Those descriptors are reference points for language education, not a test you need to pass before speaking. Use them to choose a manageable task, not to label your worth or compare yourself with another learner."
+      ]
+    },
+    {
+      "heading": "Listen for meaning before translating every word",
+      "paragraphs": [
+        "During the exchange, listen for the topic and the key information rather than trying to translate each sentence in real time. If you catch ‘Saturday,’ ‘train’ and a place name, you can ask which station or what time. Let the conversation slow down when needed. It is acceptable to use a gesture, a sketch or a simple phrase to keep meaning clear.",
+        "Give yourself permission to pause. A prepared phrase such as ‘Could you say that more slowly?’ or ‘Do you mean…?’ helps you ask for a repeat without abandoning the conversation. The CEFR descriptors explicitly include clarification and turn-taking at different levels; practising those moves is part of interaction, not evidence that you have failed."
+      ]
+    },
+    {
+      "heading": "Use repair phrases instead of apologizing endlessly",
+      "paragraphs": [
+        "Choose two repair phrases before you begin: one for a word you do not know and one for checking your understanding. You can say, ‘I do not know that word—can you explain it another way?’ or repeat what you understood as a question. Keep the vocabulary plain and use the words you do know. If you switch languages briefly, say so and return to the target language when you can.",
+        "If your partner corrects you, decide whether to repeat the improved phrase now or note it for later. Not every sentence needs interruption for grammar. You can ask the partner what kind of correction they prefer before you start: immediate correction, a few notes at the end, or only clarification when meaning is unclear."
+      ]
+    },
+    {
+      "heading": "End with one thing to practise",
+      "paragraphs": [
+        "Close by thanking your partner and asking what part was easiest to understand. Write down one useful phrase, one moment you repaired a misunderstanding and one thing you would like to say next time. Do not treat a single exchange as a fluency assessment. Speaking comfortably across unfamiliar topics, following fast group conversation and speaking precisely in professional contexts are different skills that require more than one short practice.",
+        "Arrange another brief conversation with a different familiar topic, or revisit the same topic with one new question. For your first attempt, contact a willing language partner and agree on a short exchange that fits both of your comfort levels."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "CEFR Companion Volume with New Descriptors (2020)",
+      "url": "https://rm.coe.int/cefr-companion-volume-with-new-descriptors-2020/16809ea0d4",
+      "publisher": "Council of Europe",
+      "purpose": "Supports the distinction between simple familiar-topic conversation, clarification and more advanced interaction descriptors; CEFR is a language reference framework, not an assessment of a particular learner or a recipe for this practice session."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "learn-someone-s-language-to-have-a-conversation-with-them",
+    "learn-a-new-language-to-conversational-fluency",
+    "create-a-map-of-languages-in-your-life"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

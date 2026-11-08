@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "community-a3939ea7-9932-5169-ba32-934e1c2b5aa0",
+  "slug": "play-a-big-game-of-dungeons-and-dragons",
+  "title": "Run a big D&D session where every player gets a turn",
+  "description": "Plan a large Dungeons & Dragons session with a simple shared objective, clear turn-taking and a small amount of preparation for the Dungeon Master.",
+  "intent": "Help a group organize a one-session, large-table D&D game with an approachable premise and enough structure for quieter players to participate.",
+  "sections": [
+    {
+      "heading": "Define “big” before inviting everyone",
+      "paragraphs": [
+        "A big game might mean many players at one table, a one-shot with several groups, or a longer session with a large shared cast. Decide which version you mean before sending invitations. Ask each person whether they have played before, whether they prefer roleplay, puzzles or tactical scenes, and how much time they can give. A large group can be fun, but adding players makes turn-taking and rules explanations more important. Set a start and finish time that gives the game a clear container.",
+        "Dungeons & Dragons is a cooperative storytelling game with a Dungeon Master who describes the situation and adjudicates what happens. That makes a simple common objective useful: deliver a sealed letter before a bridge closes, find a missing lantern keeper, or negotiate safe passage through a flooded market. Those are original prompts, not published adventures. Keep the objective visible so a player who misses part of the conversation can rejoin the story."
+      ]
+    },
+    {
+      "heading": "Use one clear premise and a short route",
+      "paragraphs": [
+        "Plan three scenes rather than a full campaign: an opening problem, a choice that changes the approach, and a conclusion. For instance, a group could discover that a mountain pass is blocked, then choose between persuading a quarry crew to clear a route or taking an old footpath to recover a lost supply cart. Put one clue in each scene and make sure the story does not stop if the party misses a single hint.",
+        "For a large table, avoid splitting the party into long separate adventures. If a character goes to speak with a shopkeeper, keep the exchange brief and invite another player to ask a related question, guard the door or notice a detail. Rotate who receives the next prompt. If one confident participant takes over, address a concrete question to someone else rather than scolding the group."
+      ]
+    },
+    {
+      "heading": "Share the Dungeon Master workload",
+      "paragraphs": [
+        "Before the session, agree who will be Dungeon Master and what they are responsible for. The DM describes locations and obstacles, plays supporting characters and handles the rules questions that affect the scene. Ask a second person to track initiative, a third to help newcomers find their character-sheet information, and a volunteer to watch the time. These jobs keep the DM from having to remember every logistical detail while also running the story.",
+        "Use pre-generated characters for a one-off session if players do not want to learn character creation first. Provide a few distinct options—a talkative negotiator, a curious scout, a sturdy defender and a practical healer—without requiring anyone to choose an archetype. Give each player one sentence about what the character wants and one connection to another character. Make clear that players can revise the idea if it does not feel comfortable."
+      ]
+    },
+    {
+      "heading": "Make the table easy to follow",
+      "paragraphs": [
+        "Put a simple map or scene sketch where everyone can see it, but do not spend hours drawing a detailed world. Mark only the important things: exits, a hazard, the objective and where characters are standing. Use a visible turn order during a combat scene and ask players to prepare an action while the previous turn is happening. Summarize the situation before each round: what danger is active, who is nearby and what changes if the group waits.",
+        "Agree on a few table norms before the story starts: no mocking another player’s idea, no taking someone else’s dice or character sheet without asking, and no pressure to perform a voice. Ask whether anyone has themes they want to avoid, and provide a private way to raise a concern. A participant can pass on a scene or step away; the DM can adjust the fiction without demanding an explanation."
+      ]
+    },
+    {
+      "heading": "Keep the rules light and end cleanly",
+      "paragraphs": [
+        "D&D Beyond’s official introduction describes the game as cooperative and points new players to its Basic Rules and beginner resources. Use the rules that matter for the current scene rather than teaching the whole book up front. When a question will not change an important decision, make a temporary ruling, note it and check the rule after the session. For a more consequential question, pause briefly and look it up together.",
+        "Set a final time and give the group a short epilogue: one sentence from each player about what their character remembers from the adventure. Then ask which part they would keep or change for a future game. The useful next step is to pick a date, invite the group with a clear time commitment and ask one person to DM a three-scene story."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "What Is Dungeons & Dragons?",
+      "url": "https://www.dndbeyond.com/posts/1480-what-is-dungeons-dragons",
+      "publisher": "D&D Beyond / Wizards of the Coast",
+      "purpose": "Supports the cooperative roleplaying format, typical DM and player roles, and current introductory links to the Basic Rules; session planning suggestions are original advice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-something-in-a-cooperative-video-game",
+    "co-write-something-with-a-friend"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

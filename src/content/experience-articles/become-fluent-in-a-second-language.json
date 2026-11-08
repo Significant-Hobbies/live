@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "become-fluent-in-a-second-language",
+  "slug": "become-fluent-in-a-second-language",
+  "title": "A practical way to assess language fluency across four skills",
+  "description": "Assess second-language fluency through real listening, reading, spoken interaction, spoken production and writing tasks with useful feedback.",
+  "intent": "How can I tell whether my language ability is becoming fluent? This uses a recognized can-do framework to assess distinct communication modes rather than conversation practice.",
+  "sections": [
+    {
+      "heading": "Replace the single fluency question with tasks",
+      "paragraphs": [
+        "“Fluent” can mean speaking comfortably, following a film, reading a contract, writing an email, or moving among all of those without constant translation. Before choosing a level, decide what you need the language to let you do. A person may discuss familiar topics easily yet struggle to follow a fast group conversation or write a formal request. Naming the task makes progress visible and keeps a broad label from hiding uneven skills.",
+        "The Council of Europe’s CEFR self-assessment grid separates listening, reading, spoken interaction, spoken production and writing into scales. That is a useful reminder that ability is a profile, not one score. The framework was designed for European language education; its can-do descriptions can help organize reflection elsewhere, but they are not a universal test or a substitute for an assessment required by an institution."
+      ]
+    },
+    {
+      "heading": "Choose observable evidence for each mode",
+      "paragraphs": [
+        "For listening, use a short authentic recording and note whether you can follow the main point, distinguish a change of opinion, and identify details. For reading, choose a text close to your real purpose: a news explainer, a transit notice or a short story. For spoken interaction, have a conversation where you need to ask follow-up questions and repair a misunderstanding. For spoken production, explain a familiar process without a partner filling gaps. For writing, draft a message with a clear audience and purpose.",
+        "Repeat a task after a few weeks with a different but comparable example. Do not use a memorized script as proof of general ability. Save the recording or writing sample with the date, topic and conditions. Note whether a dictionary, subtitles or preparation were allowed. This small record makes progress more honest than judging yourself by how confident you felt at the end of a lesson."
+      ]
+    },
+    {
+      "heading": "Use feedback that points to the next practice",
+      "paragraphs": [
+        "Ask a teacher or proficient speaker to respond to a specific feature: did the listener understand the sequence, were key details missing, did you repair a word search, or did the writing sound appropriate to its recipient? “Good job” is encouraging but not diagnostic. One or two observable notes are easier to act on than a vague correction of every accent or grammar choice.",
+        "If you use CEFR descriptors, pick one scale and a real-world task rather than trying to assign yourself a global level from memory. The grid includes spoken interaction separately from spoken production: talking with another person involves turn-taking, while a prepared explanation can be coherent without handling interruptions. That distinction matters if a goal is work meetings, where both skills are tested."
+      ]
+    },
+    {
+      "heading": "Build a balanced assessment week",
+      "paragraphs": [
+        "Choose a manageable sample: listen to one short interview, read one page on a familiar topic, explain a process to a partner, then write a brief summary. Keep each item connected to the same theme so vocabulary familiarity does not vary wildly. Add one unfamiliar but level-appropriate prompt to see how you cope when the exact words are new. Record which support you needed, such as replaying audio or asking for repetition.",
+        "A conversation exchange can be valuable practice, but it should not be the only measurement. A friendly partner may infer missing words, change the topic or speak slowly; a real appointment may not. For a more realistic check, tell the partner to stay with the task and ask for clarification when an answer is unclear. Then ask what they understood before offering your intended meaning."
+      ]
+    },
+    {
+      "heading": "Turn the profile into a learning choice",
+      "paragraphs": [
+        "If listening lags, use short audio with a transcript only after a first unaided attempt. If spoken interaction is weakest, practice asking follow-up questions and rephrasing when you are not understood. If writing trails, keep a small set of real messages and revise them after receiving feedback. These are practical responses to your own evidence, not a prescribed curriculum.",
+        "Reassess the same kinds of tasks later and note what changed, including whether you can communicate without preparing every sentence. If a job, immigration process, school or licensing body requires a formal level, check that body’s accepted examination and current requirements; self-assessment is not proof for official purposes. Your next action is to select one sample task for each of the five CEFR modes and save the first attempt."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Self-assessment Grids (CEFR)",
+      "url": "https://www.coe.int/en/web/portfolio/self%20-assessment-grid",
+      "publisher": "Council of Europe",
+      "purpose": "Supports the five-mode division into listening, reading, spoken interaction, spoken production and writing; framework scope and self-assessment purpose."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "learn-a-new-language-to-conversational-fluency",
+    "speak-a-second-language-fluently",
+    "create-a-map-of-languages-in-your-life"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

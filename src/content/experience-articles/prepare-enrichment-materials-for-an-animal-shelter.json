@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "prepare-enrichment-materials-for-an-animal-shelter",
+  "slug": "prepare-enrichment-materials-for-an-animal-shelter",
+  "title": "Make shelter enrichment the way staff can use it",
+  "description": "Coordinate with an animal shelter before making enrichment items, matching materials, animal groups, quantities and cleaning rules to staff guidance.",
+  "intent": "How to prepare a useful enrichment contribution for one shelter by getting approval, matching materials to animal group, and arranging a clear handoff.",
+  "relatedExperienceSlugs": [
+    "install-a-locally-appropriate-wildlife-shelter-with-expert-advice",
+    "document-a-wild-species-for-inaturalist",
+    "help-catalog-seeds-at-a-community-seed-library"
+  ],
+  "sources": [
+    {
+      "title": "5 Ways You Can Help Local Animal Shelters This Holiday Season",
+      "url": "https://www.aspca.org/news/5-ways-you-can-help-local-animal-shelters-holiday-season",
+      "publisher": "ASPCA",
+      "purpose": "Supports contacting the specific shelter about items it currently accepts and needs rather than assuming any donated item is useful."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Ask for an exact request first",
+      "paragraphs": [
+        "Start with the shelter’s volunteer or donation contact, not with a pile of finished toys. Ask which animals the activity is for, what items are approved, whether staff want finished objects or help assembling them on site, and when they can receive the contribution. A shelter may need a particular size or material, or may be unable to use homemade items at all.",
+        "The ASPCA recommends calling ahead or checking the shelter’s own updates to learn what is currently needed. Treat the answer as the specification. Record exact wording such as “washable fleece squares” or “paper treat puzzles for supervised cat sessions”; do not substitute a similar object because you already have it."
+      ]
+    },
+    {
+      "heading": "Design for a particular animal and use",
+      "paragraphs": [
+        "Enrichment is not one universal toy category. An item suitable for a large dog may be inappropriate for a kitten, bird, rabbit or small mammal. Ask whether the item will be used in an enclosure, during a supervised session, or as a take-home resource, and whether it must be washable, disposable or single-use.",
+        "If the shelter requests a food activity, clarify the ingredients with staff before using treats, herbs or household scraps. Animals have different needs, and volunteers should not invent a food formula. If the request is a no-contact craft such as preparing fleece strips, keep animals out of the workspace and follow the stated measurements."
+      ]
+    },
+    {
+      "heading": "Get materials approved before cutting",
+      "paragraphs": [
+        "Send a short materials list for approval before starting. Include fabric type, thread, adhesives, dyes, fasteners, fillers and packaging. Staff may reject an otherwise charming object because a seam can unravel, an ingredient is unapproved, or the result cannot be cleaned between uses. Ask whether they would rather receive an unopened commercial item from a current wish list.",
+        "Work on a clean surface, wash hands and keep tools, small parts and loose fibres contained. Do not include string, ribbons, staples, buttons or scented substances unless staff explicitly request them for controlled use. A material being sold for crafts or considered safe for people does not tell you whether it meets this shelter’s animal-safety and cleaning rules."
+      ]
+    },
+    {
+      "heading": "Make one sample before a batch",
+      "paragraphs": [
+        "If staff approve a homemade pattern, assemble one example first. Photograph the front, back and joins, then ask whether it meets the request before repeating the work. This catches a problem early: seams that open, knots that loosen or a shape that does not fit the intended space.",
+        "Label the sample with its materials and cleaning method. Do not claim it is washable or durable unless you know how it responds to the shelter’s process. For a group project, ask who will demonstrate the task, what participants may handle, and how staff will check finished items. The useful contribution may be supervised assembly rather than a home-made object."
+      ]
+    },
+    {
+      "heading": "Hand it over with limits clear",
+      "paragraphs": [
+        "Package items in the way staff request, include only the approved quantity, and attach the materials note. Ask where to leave them and whether the shelter needs an appointment. The ASPCA notes that shelter needs can be specific and seasonal, so a current handoff plan is more useful than assuming an old wish list still applies.",
+        "If your object cannot be accepted, ask about another approved task: sorting towels, assembling a specified kit, donating from a current wish list, or joining an orientation. The goal is practical support, not persuading staff to take your project. Before making another batch, get a clear yes and the current instructions in writing."
+      ]
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

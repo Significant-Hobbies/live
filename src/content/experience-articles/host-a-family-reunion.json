@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "host-a-family-reunion",
+  "slug": "host-a-family-reunion",
+  "title": "Build a family reunion around the people coming",
+  "description": "Host a family reunion with a clear invitation, shared planning roles, accessible activities and room for stories without making the day feel like a program.",
+  "intent": "Help the organizer turn the first invitation into a realistic family event, with roles, attendance needs and a purposeful but flexible day.",
+  "relatedExperienceSlugs": [
+    "spend-a-week-with-your-grandparents-or-elders",
+    "create-a-family-cookbook-with-old-recipes",
+    "record-a-conversation-with-an-elder-and-preserve-it"
+  ],
+  "sections": [
+    {
+      "heading": "Send the first message with a clear ask",
+      "paragraphs": [
+        "Start with a short note naming who the reunion is for, the rough time of year, and what kind of gathering you are imagining. Ask people to respond with date conflicts, travel constraints, and a rough sense of how many might come. You do not need to solve every detail before reaching out. The first message is a way to find the group’s real shape.",
+        "Create a small organizer group and give each person one clear task: venue options, food coordination, invitations, transportation, or activities. Avoid relying on one relative to manage every call and purchase. If the event includes a cost, state the estimated contribution and what it covers before people commit."
+      ]
+    },
+    {
+      "heading": "Choose a format that includes the family",
+      "paragraphs": [
+        "A one-afternoon gathering at a park or accessible community room may be easier than a weekend at a distant venue. Ask about mobility, food, hearing, language, and caregiving needs in the invitation. Give people a private way to share requirements. Check restrooms, seating, shade, parking or transit, and a quieter place to take a break.",
+        "Offer an arrival window instead of requiring everyone to be present for a single opening activity. Some relatives may travel far or need to leave early. A flexible format lets people join for the parts they can manage."
+      ]
+    },
+    {
+      "heading": "Give the day one shared center",
+      "paragraphs": [
+        "Choose one simple activity that connects people without forcing a performance: bring a family recipe, share a photograph, teach a childhood game, or display an object with a story. The Smithsonian’s oral-history guidance suggests using open, adaptable questions to prompt stories about family, traditions, and everyday life. You can borrow the spirit without turning the reunion into a formal interview.",
+        "If you want to record a relative, ask privately and explain where the recording may be shared. Let people decline. Offer a no-recording conversation area too. Family stories can include painful or private topics; do not surprise someone with a microphone or insist they tell a story for the group."
+      ]
+    },
+    {
+      "heading": "Use a loose schedule and clear logistics",
+      "paragraphs": [
+        "Write down arrival, food, the shared activity, unstructured time, and a close. Share the schedule and address in advance, along with parking or transit information and a contact person for the day. Ask someone to greet people while another handles food or setup. Keep supplies and a small weather backup in one place.",
+        "Make food choices legible, label common allergens where possible, and provide a way for guests to raise dietary needs in advance. Ask the venue or local health authority about any requirements if you are preparing food for a large event."
+      ]
+    },
+    {
+      "heading": "Leave a way to continue",
+      "paragraphs": [
+        "At the end, thank the helpers and say where photos or shared recipes will live if everyone agrees. Collect a few reflections about what people would like next time, but do not ask one person to commit to hosting the next event on the spot. Keep the attendee list private and use contact details only for the purpose people agreed to.",
+        "Your next action is to send the invitation draft to two relatives from different parts of the family and ask what is missing. Once you hear their constraints, choose a date window and a format the group can actually reach."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How to Do a Family Oral History",
+      "url": "https://nmaahc.si.edu/sites/default/files/files/blog/familyoralhistoryguidelines_2.2.21.pdf",
+      "publisher": "National Museum of African American History & Culture, Smithsonian",
+      "purpose": "Opened Smithsonian guide supporting optional family story collection through open questions, mutual respect and consent for recording."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

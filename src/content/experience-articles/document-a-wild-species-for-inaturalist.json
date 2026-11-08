@@ -1,0 +1,57 @@
+{
+  "experienceSlug": "document-a-wild-species-for-inaturalist",
+  "slug": "document-a-wild-species-for-inaturalist",
+  "title": "What makes a useful first iNaturalist observation?",
+  "description": "Record one wild encounter with clear evidence, an honest identification, and the right privacy setting so other observers can help responsibly.",
+  "intent": "Answer how to make a useful first iNaturalist observation while protecting wildlife, avoiding invented identifications, and understanding location privacy.",
+  "sections": [
+    {
+      "heading": "Choose an encounter you can observe without disturbing",
+      "paragraphs": [
+        "Pick one organism you can document where you already have lawful access: a plant in a public garden, an insect on a path, a bird at a distance, or a fungus visible without moving leaf litter. Do not touch, capture, feed, or relocate wildlife for a better image. A record of an encounter is more useful when it reflects what you actually saw rather than a staged or disturbed scene. If a park or land manager has rules about photography or sensitive habitat, follow them.",
+        "Before uploading, ask whether the place and species make the location sensitive. iNaturalist observations are shared with the community, and its guidance explains that coordinates can be open, obscured, or private. Some threatened species locations are automatically obscured. Check the setting for your observation and do not publish precise locations of a rare or vulnerable organism elsewhere. If you are uncomfortable sharing a location, learn the platform’s privacy options before posting or keep the note private in your own field journal."
+      ]
+    },
+    {
+      "heading": "Capture evidence that helps someone identify it",
+      "paragraphs": [
+        "Take a clear photo or sound recording without sacrificing distance or safety. For a plant, one image of the whole form and another of a useful feature may help. For a bird, a distant image is enough if it shows a shape or marking; do not approach a nest. Include the place and time you observed it, and note the habitat in plain language. iNaturalist’s help guide says an observation records an encounter with an individual organism at a particular time and location, and invites contributors to add evidence such as photos or sounds.",
+        "If you cannot identify the organism, choose a broad group such as plant, insect, or fungus—or leave the identification open if you are not sure. A coarse identification is more helpful than a confident but incorrect species name. Keep the observation to one organism or encounter as the platform recommends, rather than combining several unrelated organisms into one record. If a picture includes more than one species, you can make separate observations with the same evidence where that is appropriate."
+      ]
+    },
+    {
+      "heading": "Write notes that separate seeing from guessing",
+      "paragraphs": [
+        "Describe what you noticed: approximate size, color, behavior, sound, nearby plants, weather, or substrate. Keep interpretation separate: “small brown bird on fence, two-note call” is a direct observation; “juvenile sparrow” is an identification that needs support. Include a note about uncertainty when it matters. Community identifiers may ask a follow-up question or suggest a different name; treat that as part of collaborative observation rather than a correction to be embarrassed by.",
+        "Review the date and map marker before saving. A phone may fill these details automatically, but check that it reflects the place you actually observed the organism, especially if the photo was taken earlier or uploaded later. Do not fabricate a location from memory to make a record appear complete. If you only remember the general park, set an appropriate uncertainty area if the tool allows it."
+      ]
+    },
+    {
+      "heading": "Learn from feedback and close the loop",
+      "paragraphs": [
+        "After posting, check for comments or identifications. Read the reasoning and ask for clarification when a feature is unfamiliar. A first observation can remain unidentified and still document a real encounter; not every upload needs to reach a species-level conclusion. If you discover a mistake in the date, location, or identification, edit it and preserve the original observation context where possible.",
+        "For your first record, choose one nearby organism and complete a short note before leaving the site: what you saw, when, where, and what remains uncertain. Then check the privacy setting and upload only if the sharing terms suit you. The next step is to revisit the same public habitat another day and compare a new observation, while taking care not to expose or disturb sensitive wildlife."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How to Make an Observation",
+      "url": "https://help.inaturalist.org/en/support/solutions/articles/151000192921-how-to-make-an-observation",
+      "publisher": "iNaturalist Help",
+      "purpose": "Supports recording one organism encounter with date, location, evidence, and an appropriately broad identification when uncertain."
+    },
+    {
+      "title": "How does iNaturalist protect the locations of sensitive species?",
+      "url": "https://help.inaturalist.org/en/support/solutions/articles/151000233080-how-does-inaturalist-protect-the-locations-of-sensitive-species-",
+      "publisher": "iNaturalist Help",
+      "purpose": "Supports open, obscured, and private location settings and automatic obscuring for sensitive species."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "install-a-locally-appropriate-wildlife-shelter-with-expert-advice",
+    "join-a-dusk-bat-walk-with-a-detector"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

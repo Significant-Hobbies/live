@@ -1,0 +1,60 @@
+{
+  "experienceSlug": "community-0bf243ad-4d43-51c9-8a94-16fdeb88d54d",
+  "slug": "learn-another-language",
+  "title": "Choose a language and build one small study project",
+  "description": "Pick a language for a real reason, use a CEFR self-check to set a first target, and build a daily routine around listening, reading and recall.",
+  "intent": "Choose a language-learning route and a manageable first study project, distinct from the neighboring goal about practicing one conversation.",
+  "relatedExperienceSlugs": [
+    "learn-another-language-to-conversation-level",
+    "learn-a-new-language-to-conversational-fluency",
+    "become-fluent-in-a-second-language"
+  ],
+  "sections": [
+    {
+      "heading": "Choose a language for a reason you can revisit",
+      "paragraphs": [
+        "A useful reason is more durable than a list of “easy” or “useful” languages. Choose one tied to a person, place, book, family history, work interest or future trip. Write a sentence about why it matters; when study gets tedious, that reason can help you decide what to practice next. If you already know multiple languages, choose whether you want to deepen one you can partly use or start a new one. Both are legitimate projects.",
+        "The Council of Europe’s CEFR framework describes language activity through listening, reading, speaking, writing and mediation, and its self-assessment grid can help you name a starting level. It is a planning tool, not an official test or a certificate. Use “I can understand a short message about a familiar topic” rather than a vague label like “beginner.”"
+      ]
+    },
+    {
+      "heading": "Set a small, observable first target",
+      "paragraphs": [
+        "Make the first project last four weeks and fit ordinary life. For example: learn enough to understand a short weather forecast, read a menu, follow a song’s repeated chorus or write a brief introduction. This is not full fluency. It is a defined result you can check.",
+        "Use one beginner course or textbook as your spine, then add one source of audio and a small vocabulary review. Avoid gathering five apps and three grammar books before you have finished the first lesson. A simple weekly rhythm might be four short study sessions, one longer review and one day off. Choose a pace you can repeat during a busy week, not only on a perfect one."
+      ]
+    },
+    {
+      "heading": "Train several skills without scattering your attention",
+      "paragraphs": [
+        "The CEFR separates reception, production, interaction and mediation. You can use those categories to notice gaps: perhaps you recognize written words but cannot follow speech, or you can speak in short phrases but cannot read a sign. That is useful diagnosis. It does not mean every session must train all skills equally.",
+        "Pair a small amount of understandable input with active recall. Read a short dialogue, cover the translation, then try to reconstruct the main idea. Listen to it again while reading, then write three words you want to remember. On another day, write a short note using those words. If a sentence is too hard to decode, step down to easier material rather than turning every session into dictionary work."
+      ]
+    },
+    {
+      "heading": "Choose feedback that matches the project",
+      "paragraphs": [
+        "A self-study project can use answer keys and a simple progress log. For speaking or writing, ask a teacher, exchange partner or tutor for focused feedback on one thing at a time, such as pronunciation of a sound or whether a short introduction is understandable. Make the request specific and agree on a comfortable correction style.",
+        "Do not measure progress by streaks alone. At the end of a week, save one sentence, voice note or reading passage that shows what you can now do. Compare it with an earlier attempt and identify one next step. If you miss several sessions, restart with a five-minute review rather than “catching up” on everything."
+      ]
+    },
+    {
+      "heading": "Finish the first month with evidence",
+      "paragraphs": [
+        "Keep a small folder with the chosen target, materials, weekly notes and one final example. Revisit the CEFR self-assessment descriptions and mark what you can do in familiar situations. Be honest about confidence: a rehearsed phrase is not the same as spontaneous conversation. The goal is to understand what your next project should be.",
+        "Your next action is to choose a language, write one concrete four-week target and select a single beginner resource. Then schedule the first three sessions on your calendar."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Common European Framework of Reference for Languages (CEFR)",
+      "url": "https://www.coe.int/en/web/portfolio/the-common-european-framework-of-reference-for-languages-learning-teaching-assessment-cefr-",
+      "publisher": "Council of Europe",
+      "purpose": "Supports the CEFR’s action-oriented descriptions and its language activity dimensions: reception, production, interaction and mediation. The ELP section links to a self-assessment grid.",
+      "accessLimit": "CEFR self-assessment is a planning aid, not an official examination, certification or promise of proficiency."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

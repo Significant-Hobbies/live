@@ -1,0 +1,66 @@
+{
+  "experienceSlug": "rio-de-janeiro-during-carnival",
+  "slug": "rio-de-janeiro-during-carnival",
+  "title": "Plan Carnival days around one anchor and one recovery block",
+  "description": "Build a Rio Carnival stay around your parade or street-party anchor, then check current transport, venue and event guidance before each day.",
+  "intent": "Plan a Rio Carnival stay around a base, transport choices and rest windows, adding a day-level schedule instead of repeating the parade-versus-street comparison.",
+  "relatedExperienceSlugs": [
+    "experience-carnival-in-rio-de-janeiro",
+    "attend-a-multi-day-music-festival"
+  ],
+  "sections": [
+    {
+      "heading": "Pick your anchor before choosing a neighborhood",
+      "paragraphs": [
+        "Start by deciding which event matters most: a Sambódromo parade, a particular street celebration or a smaller cultural program. Rio’s official Carnival site describes the Sambódromo as the purpose-built parade avenue on Avenida Marquês de Sapucaí, about 700 metres long, ending at Praça da Apoteose. That gives you a concrete map anchor. The street program is spread across the city and should be planned from its current official schedule, not a remembered list from another year.",
+        "For lodging, compare the actual route back from your chosen event with the places you want to visit during the day. A central base can shorten some transfers but may be busy; a beach-area base may better fit beach time but can mean a longer return from the parade. Confirm your exact accommodation address against transport options rather than selecting a district by reputation alone."
+      ]
+    },
+    {
+      "heading": "Plan the Sambódromo journey precisely",
+      "paragraphs": [
+        "The official event page says the even sectors use Praça Onze and odd sectors use Central do Brasil as nearby metro references, with different access points; it also notes the distance from Central. Before event night, check the current ticket sector, official entry gate and transit plan. Do not choose a station solely from a screenshot or a friend’s ticket, since the correct approach depends on your assigned sector and current operations.",
+        "Agree on a meeting point outside the busiest entrance area, keep your ticket and identification secure, and decide how the group will reconnect if phones lose signal. For the return, know whether you will use metro, an authorized taxi or another official transport option, and avoid relying on an unverified driver who approaches you in a crowd."
+      ]
+    },
+    {
+      "heading": "Give street events a flexible framework",
+      "paragraphs": [
+        "For a bloco or street event, confirm the date, location and any route changes with the official city or event source close to the day. Plan to arrive with enough time to find the group and choose a place where you can leave without pushing through a dense crowd. Carry only what you need, keep valuables discreet and agree on a separation plan before entering a busy area.",
+        "Use a simple “one event, one meal, one exit” structure. Choose one event as the day’s anchor, identify where you can get food and water, and know two ways to leave. Do not assume a street party will follow last year’s exact route or end time. If crowd density feels uncomfortable, move out early with your group."
+      ]
+    },
+    {
+      "heading": "Schedule rest as part of Carnival",
+      "paragraphs": [
+        "Late nights and heat can stack up. Put a quiet morning, hydration, food and sleep between major events, especially if you plan several consecutive nights. A trip that includes one parade and one carefully chosen street celebration can feel fuller than trying to attend events every day. Keep some plans movable, so a tired day does not become a forced march across town.",
+        "If you are traveling with someone who has different stamina, agree on an optional split plan: one person can return to the accommodation while the other stays, with a precise reunion point and transport arrangement. Keep medical needs and accessibility in mind when selecting the venue and route; contact organizers with specific questions before relying on an assumption."
+      ]
+    },
+    {
+      "heading": "Check current details before you leave",
+      "paragraphs": [
+        "MetrôRio’s official site lists the stations including Central do Brasil and Praça Onze and provides journey planning and service information. It does not by itself confirm special Carnival hours or access for a particular ticket, so check current event announcements and operator updates. The city’s Carnaval site is in Portuguese; use its current program and venue pages rather than old blog calendars.",
+        "Your next step is to choose one anchor event, check the official current date and location, then map the outbound and return trip for your accommodation. Build a recovery window into the schedule before adding another late night."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "O Sambódromo",
+      "url": "https://carnaval.rio/o-sambodromo/",
+      "publisher": "Riotur / Rio de Janeiro official Carnival portal",
+      "purpose": "Supports the named parade venue on Avenida Marquês de Sapucaí, its length and terminal Praça da Apoteose. Venue-specific access language in article is kept to general orientation and directs readers to current event/ticket instructions.",
+      "accessLimit": "Page is in Portuguese and does not establish this year’s schedule, transit operations or ticket access details."
+    },
+    {
+      "title": "MetrôRio official site",
+      "url": "https://www.metrorio.com.br/",
+      "publisher": "MetrôRio",
+      "purpose": "Opened current route-planning page listing Central do Brasil and Praça Onze stations and journey-planning/service tools.",
+      "accessLimit": "Homepage does not confirm special Carnival hours, venue access, or a traveler’s ticket-sector route; those must be checked close to event date."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

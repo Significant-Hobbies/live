@@ -1,0 +1,64 @@
+{
+  "experienceSlug": "become-completely-debt-free",
+  "slug": "become-completely-debt-free",
+  "title": "Make a Debt-Free Plan You Can Keep Paying Toward",
+  "description": "Build a clear debt payoff plan by verifying balances, protecting essential bills, comparing options, and avoiding promises of instant debt relief.",
+  "intent": "Gives a grounded first step for reducing debt while identifying when professional nonprofit or legal help is appropriate.",
+  "sections": [
+    {
+      "heading": "Make a complete, current debt list",
+      "paragraphs": [
+        "Collect recent statements and list each account’s balance, interest rate, minimum payment, due date, and whether it is current or in collection. Include secured loans, student borrowing, medical bills, and informal debts if they affect your plan. Check the figures against the latest statements; an old spreadsheet can miss fees, interest, or a disputed account.",
+        "Add monthly take-home income and essential costs such as housing, food, utilities, transport, and required insurance. The point is not to shame yourself or cut every pleasure. It is to see what money is truly available after essentials and minimum obligations. If the numbers do not leave room for a workable payment, seek help before promising creditors an amount you cannot sustain."
+      ]
+    },
+    {
+      "heading": "Choose a repayment order deliberately",
+      "paragraphs": [
+        "Two common approaches are to pay extra toward the highest-rate balance while making minimums elsewhere, or to clear a smaller balance first for a visible milestone. The right order depends on the rates, fees, account status, and what keeps you consistent. Compare the total interest and the emotional practicality rather than assuming one method is best for everyone.",
+        "Before making extra payments, understand how your creditor applies them and whether any early-payment conditions exist. Avoid taking on a new loan just because the monthly amount appears smaller. The Consumer Financial Protection Bureau notes that consolidation may extend repayment or add fees, and warns that introductory interest rates can rise. Compare total cost, term, and fees before signing."
+      ]
+    },
+    {
+      "heading": "Talk directly before distress deepens",
+      "paragraphs": [
+        "If you cannot meet a payment, contact the lender or servicer using a number on its official statement and explain what you can afford. Ask whether hardship options are available, what fees or interest continue, and how any arrangement will be reported. Keep written notes of dates, names, and commitments. If the debt or collector is unfamiliar, verify the account before paying or sharing information.",
+        "A nonprofit credit counselor may help you review a budget and options. The CFPB distinguishes credit counseling from for-profit debt settlement, consolidation, and credit repair, which can have different costs and risks. A counselor cannot erase debts. Be cautious of companies that guarantee a large reduction, tell you to stop communicating with creditors, or demand fees before achieving a result."
+      ]
+    },
+    {
+      "heading": "Protect the essentials and the paper trail",
+      "paragraphs": [
+        "A plan that pays unsecured debt by letting rent, utilities, taxes, or insurance lapse can create a more urgent problem. Preserve room for necessary expenses and unexpected costs when calculating payments. If a proposed settlement or plan requires giving up money you need for basics, pause and ask a qualified nonprofit counselor or attorney to review the options.",
+        "Save statements, letters, payment confirmations, and agreements together. For debts in collection, check the legal rules where you live before acknowledging or paying old debts; time limits and consequences vary by jurisdiction. The CFPB’s resources are U.S.-specific, so readers elsewhere should use their national consumer-protection authority or a locally qualified adviser."
+      ]
+    },
+    {
+      "heading": "Review progress without inventing a finish date",
+      "paragraphs": [
+        "Update balances monthly and record what changed: payment made, new interest, corrected balance, or agreed hardship terms. If income or essential costs change, recalculate before falling behind. A debt-free plan may need revision after illness, job loss, family care, or a change in interest rates. Revising a plan is responsible; hiding from the numbers makes it harder to act.",
+        "Your next step is to get the current statements, build the list, and decide what a realistic monthly amount leaves for essentials and a small buffer. If that amount is zero or negative, contact a reputable nonprofit counselor before choosing a payoff strategy. If it is positive, compare payoff orders and confirm the terms with each lender."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "What is the difference between credit counseling and debt settlement, debt consolidation, or credit repair?",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-credit-counseling-or-debt-settlement-debt-consolidation-or-credit-repair-en-1449/",
+      "publisher": "Consumer Financial Protection Bureau",
+      "purpose": "Explains the differences and risks among counseling, settlement, consolidation, and credit-repair services."
+    },
+    {
+      "title": "What do I need to know about consolidating my credit card debt?",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-do-i-need-to-know-if-im-thinking-about-consolidating-my-credit-card-debt-en-1861/",
+      "publisher": "Consumer Financial Protection Bureau",
+      "purpose": "Discusses comparing consolidation costs, budgeting, creditor contact, and nonprofit counseling."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "invest-your-first-serious-money",
+    "fund-a-child-s-education-for-a-year"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

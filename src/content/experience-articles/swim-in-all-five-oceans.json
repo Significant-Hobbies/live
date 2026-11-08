@@ -1,0 +1,71 @@
+{
+  "slug": "swim-in-all-five-oceans",
+  "title": "Plan five bounded swims across named ocean regions",
+  "description": "Define a coastal swim in each of five named ocean regions, then use qualified local guides, beach conditions and a conservative record of the experience.",
+  "intent": "Plan supervised coastal swims in five named ocean regions; avoid implying an ocean crossing, one disputed global boundary, or a safe temperature or distance.",
+  "sections": [
+    {
+      "heading": "Define the goal before booking travel",
+      "paragraphs": [
+        "Treat this as five separate, bounded coastal swims, not an attempt to swim across whole oceans. NOAA explains that there is one global ocean divided into named regions; most countries, including the United States, recognize the Pacific, Atlantic, Indian, Arctic and Southern Oceans. It also notes that the Southern Ocean boundary is not accepted identically by every country. Write down which official geographic convention you are using before choosing your locations.",
+        "Choose one authorized swimming site in each region where open-water swimming is permitted and local supervision is available. Save the location, date, official beach or event name and the organizer’s description. A swim can be short and still meet your personal definition if it is completed in the intended region under safe local conditions; do not invent a distance standard that the goal does not specify."
+      ]
+    },
+    {
+      "heading": "Build experience before the remote locations",
+      "paragraphs": [
+        "If you are new to open water, begin with coached sessions at a supervised local venue. Pool endurance alone does not teach waves, currents, temperature changes, entries and exits or sighting landmarks. Ask an open-water instructor or lifeguard service what skill level, equipment and conditions fit the site. Do not try to prove readiness by swimming alone or by choosing a difficult location first.",
+        "Plan the route with a local operator or beach authority, including where to enter and exit, how long the group expects to be in the water, what support is present and how the swim will be cancelled. For a remote coast, confirm whether the site is actually open to swimming and whether permit, guide or conservation rules apply. If the answer is unclear, pick another place."
+      ]
+    },
+    {
+      "heading": "Read the water conditions each time",
+      "paragraphs": [
+        "Check the local forecast, water temperature, tides or currents, surf and official warnings on the day. NOAA warns that rip currents can form at surf beaches, pull strong swimmers away from shore and be hard to identify; it advises swimming near lifeguards, never swimming alone and checking the local forecast. The U.S. National Weather Service also warns that cold water can impair muscle control and that water may remain cold even when the air feels warm.",
+        "Those U.S. pages describe hazards, not a personalized clearance or a universal safe temperature. Follow the beach authority and qualified local guide. Cancel when they advise against swimming, when the area is unguarded if you need supervision, or when you are not confident in the conditions. Do not substitute a wetsuit, float or confident pool pace for an expert assessment."
+      ]
+    },
+    {
+      "heading": "Make each swim a supported outing",
+      "paragraphs": [
+        "Tell a trusted person the site, expected time and return plan. Use a supervised event or go with a qualified local group, and agree who is watching the swimmers and who can call for help. Ask about local emergency contacts and communication limits. Follow instructions about flags, designated zones and equipment; rules and recommended gear differ by beach and country.",
+        "If a swimmer becomes distressed, alert the lifeguard or emergency service rather than entering the water yourself. NOAA’s rip-current guidance emphasizes getting help and avoiding an untrained rescue that could create another person in danger. The organizer’s safety briefing takes precedence over this general planning outline."
+      ]
+    },
+    {
+      "heading": "Keep a simple record and accept a missed day",
+      "paragraphs": [
+        "After each swim, record the ocean region, the authority or organizer’s site name, date, approximate time in the water and conditions. Add a photograph only if it does not distract from safety or violate local rules. Keep the record private if location or health details are sensitive. The list can track progress without turning five swims into a claim that you crossed a basin or mastered every ocean condition.",
+        "If weather, water temperature, illness or local guidance cancels a planned swim, log the cancellation and reschedule. A skipped day is good judgment, not a failure of the goal. Some destinations may be too remote, cold or restricted for your experience; choose a safer site within that named region rather than forcing a hazardous route. There is no universal prize for doing the longest version."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How many oceans are there?",
+      "url": "https://oceanservice.noaa.gov/facts/howmanyoceans.html",
+      "publisher": "NOAA National Ocean Service",
+      "purpose": "Supports the geographic framing of one global ocean divided into named regions, the common five-ocean convention in the U.S. and the caveat that Southern Ocean boundaries are not universally agreed."
+    },
+    {
+      "title": "Break the Grip of the Rip",
+      "url": "https://www.noaa.gov/break-grip-of-rip",
+      "publisher": "National Oceanic and Atmospheric Administration",
+      "purpose": "Supports the hazard of rip currents at surf beaches, the need to check local forecasts and NOAA’s advice to avoid swimming alone and stay near lifeguards; this does not make a location safe on a given day."
+    },
+    {
+      "title": "Cold Water Hazards and Safety",
+      "url": "https://www.weather.gov/safety/coldwater",
+      "publisher": "U.S. National Weather Service",
+      "purpose": "Supports the warning that cold-water immersion can impair muscular control and that air warmth may not reflect water conditions; the page is not individualized swim clearance or a safe-temperature standard."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "swim-a-mile-without-stopping",
+    "take-an-adult-beginner-swimming-lesson",
+    "complete-a-triathlon"
+  ],
+  "experienceSlug": "swim-in-all-five-oceans",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "learn-to-fly-a-plane",
+  "slug": "learn-to-fly-a-plane",
+  "title": "How to compare first flight schools before booking lessons",
+  "description": "Compare an introductory flight school by instructor continuity, lesson access, aircraft fit and local oversight before paying for a training package.",
+  "intent": "How should a beginner choose a flight school or training format? This compares instructional fit and access, while leaving licence requirements to the separate credential path.",
+  "sections": [
+    {
+      "heading": "Decide what you want from the first flight",
+      "paragraphs": [
+        "A first lesson can be a one-off experience, a sample of ongoing instruction, or the beginning of a formal training path. Those are different purchases. Before calling schools, write down which question you are trying to answer: do I enjoy being in a small aircraft, can I reach lessons consistently, or do I want structured progress toward a certificate? An introductory flight is not a licence and is not a substitute for checking the authority’s rules.",
+        "Ask what the lesson includes: a ground briefing, time in the aircraft, a chance to handle controls under instruction, and a debrief. Clarify whether the quoted duration means aircraft time or the entire appointment. If you are nervous about motion, accessibility, or a particular medical concern, raise it with the instructor before booking rather than waiting until the aircraft is ready."
+      ]
+    },
+    {
+      "heading": "Compare the teaching structure, not the brochure",
+      "paragraphs": [
+        "In the United States, the FAA distinguishes Part 61 instruction from Part 141 certificated pilot schools. Part 141 schools use an FAA-approved structured syllabus and have specified facilities and oversight; Part 61 instruction is organized under its own rules and can be arranged differently. Neither label alone tells you whether the teaching style, schedule or instructor suits you. Other countries use different authorities and categories, so treat these terms as U.S.-specific.",
+        "Ask who is likely to teach you over the first few lessons and what happens if that instructor is unavailable. A school with continuity can help you build on the last lesson; a schedule with more aircraft or instructor options may make it easier to fly often. The useful comparison is your real weekly access, not the number of aircraft in a photo."
+      ]
+    },
+    {
+      "heading": "Check the full cost and cancellation terms",
+      "paragraphs": [
+        "Request a written estimate that separates aircraft time, instructor time, ground instruction, equipment, taxes and any membership or booking fees. Ask how weather cancellations are handled and whether a prepaid block expires. A low introductory rate may not represent the cost of a regular lesson, and an advertised package may assume a particular aircraft or training tempo. Avoid committing to a large block until you understand how rescheduling and refunds work.",
+        "Ask whether the aircraft used for the sample lesson is the one commonly available for continuing instruction. Different aircraft can have different handling and cockpit arrangements; switching is possible, but a beginner may value consistency. Note the aircraft type and ask what maintenance or weather contingencies could change the plan."
+      ]
+    },
+    {
+      "heading": "Meet the instructor and learning environment",
+      "paragraphs": [
+        "A good first conversation leaves room for questions. Ask how the instructor explains a maneuver, how a lesson is planned, and how feedback is recorded. You should be able to say when something is unclear without feeling rushed. If there is an opportunity to observe a briefing or speak with current students, ask what a normal lesson week feels like. Their experience is informative but does not guarantee yours.",
+        "Notice how the school handles safety explanations, preflight walkarounds and weather decisions. A calm, specific explanation is more useful than bravado. Ask who to contact with a concern and whether the school has a process for reporting maintenance or operational issues. The aim is not to inspect aircraft yourself; it is to understand whether the organization welcomes careful questions."
+      ]
+    },
+    {
+      "heading": "Make the first session a measured trial",
+      "paragraphs": [
+        "Bring identification or documents the school requests, wear comfortable clothing and arrive early enough to hear the briefing. Follow the instructor’s directions and let them manage the aircraft. After landing, write down what you enjoyed, what felt confusing, and one explanation you want to revisit. Do not treat one lesson as a verdict on your aptitude; it is a sample of the instructor, conditions and format on that day.",
+        "Before paying for ongoing lessons, ask for the next two steps and the local regulatory source that governs them. If your longer aim is a certificate, separately verify the current medical, knowledge, flight and application requirements with the aviation authority in your jurisdiction. For now, call two nearby schools with the same questions and compare the answers in writing."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Part 141 Pilot Schools",
+      "url": "https://www.faa.gov/licenses_certificates/airline_certification/pilotschools",
+      "publisher": "Federal Aviation Administration",
+      "purpose": "Supports the U.S.-specific distinction that Part 141 schools use structured FAA-approved syllabi and specified oversight; article’s comparison criteria are decision advice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "get-a-pilot-s-licence",
+    "community-445e35e6-060a-5b06-83f0-8104abb00796"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "record-frog-calls-for-frogid-in-australia",
+  "slug": "record-frog-calls-for-frogid-in-australia",
+  "title": "How do you make a useful FrogID recording without disturbing frogs?",
+  "description": "Record calling frogs from a safe, permitted place, submit through the Australian Museum’s project, and keep wildlife and habitat undisturbed.",
+  "intent": "A field-aware guide to making a FrogID contribution that prioritizes safe access, clean audio and minimal disturbance over approaching or handling wildlife.",
+  "sections": [
+    {
+      "heading": "Learn the project before heading out",
+      "paragraphs": [
+        "FrogID is the Australian Museum’s citizen-science project for recording frog calls. The Museum says its app attaches date, time and location information, and FrogID validators identify calls submitted by participants. Read the current project directions before you go so you know how to record, submit and review the result. The portal FAQ supplied with the experience seed blocked access during this check; the Australian Museum’s own recording guidance was accessible and used instead.",
+        "Choose a public or otherwise permitted place where you can stay on established paths. A pond, creek or garden may have calling frogs, but do not enter private land or a restricted reserve. Check local rules and weather, tell someone where you are going if you are out after dark, and bring a light you can use without shining it into habitat or at other visitors."
+      ]
+    },
+    {
+      "heading": "Listen first, then choose where to stand",
+      "paragraphs": [
+        "Pause and listen before opening the app. Try to identify the loudest call and whether more than one sound is present. The Australian Museum suggests recording calls with the FrogID app and says a clear recording of an individual may be useful when it can be made safely without disturbing the animal or habitat. Do not move toward a frog if the path is slippery, dark, flooded or beyond a permitted area.",
+        "Hold the phone steadily and record from where you are allowed to stand. Keep your own speech and movement quiet, but do not attempt to silence other people by approaching them. If the call is faint, a distant recording may still be worth submitting; a noisy clip is not a reason to chase the animal. Your safety and the frog’s habitat take priority."
+      ]
+    },
+    {
+      "heading": "Use the app and submit an honest record",
+      "paragraphs": [
+        "Follow the app’s current prompts for starting and submitting a recording. The Australian Museum says recordings can be made without reception and uploaded later when the app reconnects. Check whether the entry is actually submitted before assuming it reached the project. Add notes or a habitat image only if the app supports them and you can do so without disturbing wildlife or including people without consent.",
+        "Do not guess a species from one sound and present it as certain. FrogID validators assess submissions, which is one reason to send the recording through the project rather than posting a confident identification elsewhere. If you are unsure whether a sound is a frog, follow the app’s guidance or leave that clip unsubmitted."
+      ]
+    },
+    {
+      "heading": "Protect the animals and the next site",
+      "paragraphs": [
+        "The Australian Museum’s safe-frogging guidance asks people not to touch frogs or disturb habitat, to watch where they tread and to clean and disinfect footwear between frog habitats. Follow that protocol and any local biosecurity rules. Do not lift logs, move vegetation, collect eggs or catch a frog to improve the recording.",
+        "Stay on paths and leave the area as you found it. Avoid walking between wetland sites in contaminated footwear. If other people are present, give them space and avoid recording identifiable conversations. A recording is most useful when it documents a call without changing the conditions you were trying to observe."
+      ]
+    },
+    {
+      "heading": "Review what the sound taught you",
+      "paragraphs": [
+        "After you leave, note where you stood in general terms, the conditions and whether one call or several were audible. Wait for the project’s identification rather than filling the gap with a guess. The Australian Museum describes these recordings as both biodiversity records and audio files, so clear notes about the context can help you remember what you heard.",
+        "A good next step is to return to the same permitted listening spot on another evening or after rain, if access remains appropriate. Repeated observations can reveal that the soundscape varies with conditions. Follow the project’s current guidance and let the validators determine the species when a call is uncertain."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tips for taking your FrogID submissions to the next level",
+      "url": "https://australian.museum/blog/amri-news/tips_for_frogid/",
+      "publisher": "Australian Museum",
+      "purpose": "Supports how FrogID submissions are recorded and validated, and the safe-frogging instructions not to touch frogs or disturb habitat and to clean footwear between sites."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "document-a-wild-species-for-inaturalist",
+    "submit-a-complete-bird-checklist-to-ebird"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,71 @@
+{
+  "experienceSlug": "submit-a-complete-bird-checklist-to-ebird",
+  "slug": "submit-a-complete-bird-checklist-to-ebird",
+  "title": "What belongs on a complete eBird checklist?",
+  "description": "Build a useful eBird checklist from one birding session by recording every species you could identify, including heard-only birds and honest uncertainty.",
+  "intent": "How can I submit an eBird checklist that is complete without pretending to identify every bird? This guide explains the observation boundaries, effort details and common omissions that matter.",
+  "sections": [
+    {
+      "heading": "Decide whether the outing was birding",
+      "paragraphs": [
+        "Before entering sightings, ask whether birding was the main purpose of the outing. eBird defines primary-purpose birding as making an effort to find and report all birds around you to the best of your ability. A walk taken mainly to watch birds can support a complete checklist; a bird noticed while gardening or driving is better recorded as an incidental observation. Choosing the honest protocol is more useful than trying to label every list complete.",
+        "Set one checklist to a single date and a single location. If you move to a different site, change habitat, or switch from stationary watching to a walk, eBird's best-practice guidance suggests starting a new checklist when that gives more precise location and effort information. Record the start time, duration, number of observers and distance or area as required by the protocol. Those details tell a reader what the list represents."
+      ]
+    },
+    {
+      "heading": "Include what you identified by sight or sound",
+      "paragraphs": [
+        "A complete checklist includes every wild bird species you detected and could identify during that session, whether you saw it or confidently recognized its call. Do not include only the highlights or omit a common species because it feels uninteresting. eBird says that leaving out a heard-only bird you could identify makes a checklist incomplete. On the other hand, you do not need to identify every bird present or force an uncertain sound into a species name.",
+        "If you can identify only a broader group, use the general group or slash options available in the app rather than guessing. If you know that a bird was present but cannot identify it, write a note for yourself and use the most accurate category the system allows. Honest uncertainty protects the record and gives you a clear question to investigate later."
+      ]
+    },
+    {
+      "heading": "Count carefully without inventing precision",
+      "paragraphs": [
+        "Count individuals when you can, but do not let counting distract you from watching safely. For birds moving through a flock, make a reasonable estimate and describe the method in a note if the number is unusual. If you recognized a species but did not count it, eBird's guidance allows an “X” for that species rather than a zero. Do not enter zero as a count; the absence of a species from a complete checklist already communicates that you did not identify it.",
+        "Use only your own in-person observations for the checklist. eBird does not accept captive birds, dead birds, remote-camera sightings or someone else's observations as your own record. If you were birding with a group that stayed together and observed the same birds, eBird allows a shared checklist workflow; each participant can later adjust their copy to reflect what they personally observed."
+      ]
+    },
+    {
+      "heading": "Add notes when a sighting needs context",
+      "paragraphs": [
+        "For a rare or surprising species, write field notes while the details are fresh. Describe the size, shape, plumage, behavior, call, distance and what helped you distinguish it from similar birds. A photo or sound recording made during the same outing can support the report, but media from another day or another person does not document your observation. Do not approach a bird or disturb a nest to get a better record.",
+        "For routine species, a short note about habitat, weather or behavior can still help you remember the visit. Keep the writing factual: “two birds perched on the outer branch, one called repeatedly” is clearer than “a rare pair arrived.” If you are unsure whether a species identification is correct, use the system's comments and review resources after the outing rather than overstating certainty."
+      ]
+    },
+    {
+      "heading": "Submit and learn from the checklist",
+      "paragraphs": [
+        "Before pressing submit, review the map pin, date, protocol, effort fields and species list. Ask yourself whether you intentionally left out any bird you identified, whether the location matches where you watched and whether the checklist is complete or incidental. A five-minute focused stationary list can be meaningful if the effort is recorded accurately; a long list over several sites may be harder to interpret.",
+        "Your next action is to choose one familiar patch, spend a short period with birding as your main purpose, and enter one checklist that covers that date and location. Include every species you identify by sight or sound, mark uncertainty honestly, and add a field note for any observation you want to check later."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Birding as your Primary Purpose and Complete Checklists",
+      "url": "https://support.ebird.org/en/support/solutions/articles/48000967748-birding-as-your-primary-purpose-and-complete-checklists",
+      "publisher": "eBird Help Center, Cornell Lab of Ornithology",
+      "purpose": "Supports when to use complete versus incidental checklists, including all identifiable species by sight or sound and acceptable uncertainty."
+    },
+    {
+      "title": "eBird Best Practices",
+      "url": "https://support.ebird.org/en/support/solutions/articles/48000795623",
+      "publisher": "eBird Help Center, Cornell Lab of Ornithology",
+      "purpose": "Supports one date/location per checklist, including seen and heard species, count handling, personal observations and effort detail."
+    },
+    {
+      "title": "How to Document Your Sightings in eBird",
+      "url": "https://support.ebird.org/en/support/solutions/articles/48000803130",
+      "publisher": "eBird Help Center, Cornell Lab of Ornithology",
+      "purpose": "Supports field notes, acceptable documentation and use of photos or recordings from the same outing."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "learn-to-identify-10-bird-species-by-song",
+    "explore-a-nature-trail-using-an-all-terrain-wheelchair",
+    "pause-at-the-same-window-for-a-week"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

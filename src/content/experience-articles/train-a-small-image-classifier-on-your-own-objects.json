@@ -1,0 +1,54 @@
+{
+  "experienceSlug": "train-a-small-image-classifier-on-your-own-objects",
+  "title": "How to teach a small image classifier to tell two objects apart",
+  "description": "Train a small image classifier on two familiar objects, then test it with new views to see whether it learned useful visual differences.",
+  "intent": "A bounded hands-on experiment that explains how to build image classes, gather varied examples, test unseen photos, and interpret a simple model cautiously.",
+  "sections": [
+    {
+      "heading": "Choose categories with visible differences",
+      "paragraphs": [
+        "A small classifier is easier to interpret when the categories are concrete and visually distinct. Try two household objects, such as a mug and a spoon, or two types of packaged item that are safe to photograph. Avoid categories that differ only by a tiny label or by the place where they are photographed. Keep the project to objects rather than people, documents, or anything private. Google’s Teachable Machine describes image classification as gathering examples into classes, training, and testing new examples. That sequence is useful for a first experiment because each stage gives you a specific decision to inspect rather than a mysterious final score."
+      ]
+    },
+    {
+      "heading": "Gather examples without teaching the background",
+      "paragraphs": [
+        "Place the objects on a plain surface and collect photos from several angles, distances, and lighting conditions. Keep the classes reasonably balanced; if one object has many examples and the other only a few, the model may favor the larger set. Change the scene as well as the viewpoint, but do not let the backgrounds become clues. For example, if every mug photo is taken near a window and every spoon photo against a dark desk, the classifier could learn the window or desk instead of object shape. A few dozen deliberately varied examples are a manageable start. Label each class consistently and remove blurry pictures that do not show the object."
+      ]
+    },
+    {
+      "heading": "Train, then test on pictures you held back",
+      "paragraphs": [
+        "Use the tool’s training action only after the class examples are ready. Before looking at its preview, reserve a small set of new photos that were never used during training. Test those from a different angle or in a new location. If the model recognizes the same image it was shown but fails on a held-back photo, it has memorized a narrow visual pattern rather than learning a robust distinction. That is not a personal failure; it is the most useful result of the exercise. Record which photos it mislabels and look for a common feature, such as glare or a patterned surface."
+      ]
+    },
+    {
+      "heading": "Change one thing at a time",
+      "paragraphs": [
+        "When the classifier struggles, add examples that address the specific failure instead of capturing hundreds more at random. If glare hides one object, photograph both categories under softer light. If a background is acting as a clue, add images of each object against several surfaces. Then train again and repeat the same held-back test. Keep an untouched test set for comparison; if you continually add every failed test image to the training set, the result stops measuring generalization. Treat confidence values as signals to investigate, not as proof that the model understands what the objects are."
+      ]
+    },
+    {
+      "heading": "Decide what the experiment can show",
+      "paragraphs": [
+        "A two-class model is a learning activity, not a reliable detector for safety, security, or important decisions. It has only seen the limited examples you provided and may fail on a new camera, room, lighting condition, or object. Teachable Machine says the examples are grouped into categories, trained, and immediately tested; the work remains dependent on those examples. If you want to share the demo, explain the categories and the failure cases alongside it. Your next step is to make one model that distinguishes two objects on a desk, then write down one surprising misclassification and what you will change in the next trial."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Teachable Machine v1",
+      "url": "https://teachablemachine.withgoogle.com/v1/",
+      "publisher": "Google Creative Lab",
+      "purpose": "Supports local browser training, varied camera angles and the experimental classifier’s limits in recognizing higher-level concepts."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "control-a-scratch-project-with-a-physical-object",
+    "donate-spare-computing-time-to-a-distributed-research-project",
+    "help-classify-research-images-with-stall-catchers"
+  ],
+  "slug": "train-a-small-image-classifier-on-your-own-objects",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

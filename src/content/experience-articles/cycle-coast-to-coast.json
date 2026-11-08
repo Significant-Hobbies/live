@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "cycle-coast-to-coast",
+  "slug": "cycle-coast-to-coast",
+  "title": "Plan a coast-to-coast ride one stage at a time",
+  "description": "Use a verified route, daily-stage choices, repair plans, and realistic stopovers to make a cross-country cycling journey manageable.",
+  "intent": "Give a practical framework for choosing and sequencing a coast-to-coast bicycle route, with one verified U.S. example and no assumed daily mileage.",
+  "sections": [
+    {
+      "heading": "Decide which coast-to-coast means yours",
+      "paragraphs": [
+        "Start with a map and a definition: which two coasts, what direction, and whether the trip is a continuous ride or a series of linked sections. A named cross-country route can provide a starting spine, but it may not match your available time, riding experience, or preferred road conditions. Compare surface, climbing, traffic exposure, remoteness, resupply, and ways to leave the route early if necessary.",
+        "For a U.S. example, Adventure Cycling Association describes its TransAmerica Bicycle Trail as a paved, point-to-point route across ten states, 4,228 miles from Pacific to Atlantic, with a typical ride-time category of two months or more. Those are route facts, not a promise about an individual’s pace. Treat the total distance as a planning scale; consult the current route maps for the actual roads and services."
+      ]
+    },
+    {
+      "heading": "Divide distance around places, not arithmetic",
+      "paragraphs": [
+        "Mark towns, campgrounds, lodging, groceries, water, repair shops, and transit access on the route before splitting it into days. A flat mileage target can look simple on paper but ignore a mountain pass, a long exposed stretch, limited services, or a closure. Build stages between verified stopping options, then adjust the distance to match your own recent loaded rides and a qualified coach’s advice.",
+        "For each stage, note the planned start and finish, climbing, surface, expected time, and a shorter alternative. If a day relies on one small shop or seasonal campground, verify its current opening directly and identify the next option. Avoid booking every night so tightly that a mechanical problem forces you to ride tired into darkness."
+      ]
+    },
+    {
+      "heading": "Make the bicycle and luggage part of the plan",
+      "paragraphs": [
+        "Test the bicycle in the configuration you will tour: bags, lights, racks, water-carrying setup, and the load you expect to ride with. A test ride around the neighborhood can reveal loose straps; a longer familiar ride can expose handling issues or rubbing. Ask a qualified mechanic to inspect the bike and teach you basic repairs appropriate to its components. Carry the tools and spares your mechanic and route conditions call for, and practice using them before departure.",
+        "Pack only what you can manage on the actual terrain, but do not omit safety-critical or weather-appropriate equipment to save weight. Check whether your chosen route includes long stretches without shops or reliable reception. The Adventure Cycling route page links to official maps intended for navigation and planning; download or carry the route information in a form you can use when your device battery or signal fails."
+      ]
+    },
+    {
+      "heading": "Build a support and communication plan",
+      "paragraphs": [
+        "Choose how you will handle lodging, meals, emergencies, and changes in plan. A self-supported tour, a trip with a companion, and a ride backed by a vehicle involve different responsibilities. Tell a trusted person your general itinerary and agree how you will check in. Save local emergency and transport information for the regions you cross. Do not assume cellular coverage will be continuous in rural areas.",
+        "Before each stage, review weather, road restrictions, wildfire or storm alerts where relevant, and route updates. Have a decision point for turning back, taking transit, or stopping early. A coast-to-coast goal is not a reason to ride through unsafe conditions or ignore a mechanical problem that could compromise control."
+      ]
+    },
+    {
+      "heading": "Let the ride stay adaptable",
+      "paragraphs": [
+        "The first week is a chance to notice whether the route plan matches reality. Compare actual stop duration, fatigue, sleep, repairs, and resupply with your estimates. Adjust future stages instead of treating the original itinerary as a performance test. If you are crossing a large country, the strongest plan includes room for a rest day, an unexpected closure, and a town where you can pause without losing the whole trip.",
+        "For your first planning session, choose a route and mark three consecutive candidate stages. Verify their surfaces, elevation, and services on the current map, then see whether each stage ends somewhere you can actually stay. Do not convert the route publisher’s ride-time category into a personal training target; use your own experience and qualified guidance."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "TransAmerica Bicycle Trail",
+      "url": "https://www.adventurecycling.org/routes/transamerica-bicycle-trail/",
+      "publisher": "Adventure Cycling Association",
+      "purpose": "Supports the route's stated distance, paved surface, ten-state point-to-point character, broad ride-time category, and availability of route maps. Route services and conditions must be checked directly before travel."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "complete-a-major-cycling-challenge",
+    "walk-a-long-distance-trail-over-100km",
+    "complete-a-triathlon"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

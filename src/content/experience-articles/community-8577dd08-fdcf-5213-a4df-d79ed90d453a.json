@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "community-8577dd08-fdcf-5213-a4df-d79ed90d453a",
+  "slug": "start-my-band",
+  "title": "Find bandmates by agreeing on what the first rehearsal is for",
+  "description": "Start a band with one shared musical goal, clear rehearsal roles and a short set of songs before spending money on gear, recording or promotion.",
+  "intent": "How do I find compatible bandmates and make a first rehearsal useful without turning a casual idea into a premature business?",
+  "sections": [
+    {
+      "heading": "Invite people around a concrete musical purpose",
+      "paragraphs": [
+        "A band starts more easily when the invitation describes a sound or activity, not a vague demand for commitment. Say whether you want to play covers, write original songs, improvise, rehearse for a small local show or simply find out whether the group works together. Name the instruments or roles you still need, the rehearsal frequency you can realistically manage and the experience level that would make the session welcoming.",
+        "Ask prospective members what they want from the project, how much time they can offer and whether they prefer arrangement, improvisation or learning songs by ear. Berklee’s band-planning resource emphasizes shared goals, time lines and responsibilities as ways to align a group. You do not need a career plan for your first rehearsal, but it is helpful to know whether everyone is trying to build a weekend hobby or a serious performance project."
+      ]
+    },
+    {
+      "heading": "Design a first rehearsal with a finish line",
+      "paragraphs": [
+        "Pick a manageable session length and prepare two or three songs or sketches that are within reach for the group. Send keys, tempo references, lyrics or chord charts in advance if you have them. Ask everyone to bring one piece they enjoy playing. Avoid opening with an hour of unstructured debate about the band name, logo or future tour; decide first whether the group enjoys making sound together.",
+        "A useful rehearsal has a small target, such as playing one song from start to finish, testing a shared groove or trying an original verse and chorus. Record a rough phone memo only if everyone agrees. Take notes on what needs work and end by asking each person what they would like to try next. The recording is a reference for the group, not a release-ready demo."
+      ]
+    },
+    {
+      "heading": "Share roles before the logistics become heavy",
+      "paragraphs": [
+        "Even a casual band benefits from clear responsibilities. One person can book the room; another can maintain the song list; someone else can manage a group calendar or bring a cable. Rotate these tasks if the group is not ready to assign permanent roles. Decide how much notice you need to reschedule and whether people should learn parts before the next session. This prevents one organizer from silently carrying all the work.",
+        "Berklee’s resource lists decisions bands should discuss, including responsibilities, how to make decisions, who controls the band name and what happens if a member leaves. Those questions become important once money, gear, gigs or recordings are involved. For a first jam, note the topics but do not make a casual gathering sign a complicated contract. When the group starts earning, spending or releasing work, get suitable local professional advice about agreements."
+      ]
+    },
+    {
+      "heading": "Keep equipment and money proportional",
+      "paragraphs": [
+        "Use what the members already own where practical and choose a rehearsal room suited to your sound and volume. Before booking, ask about backline, setup time, noise rules, accessibility, cancellation and what is included. A simple acoustic session or shared practice space can answer whether the band has chemistry without a large equipment purchase.",
+        "Agree in advance how any shared cost is split and how the group records it. If somebody buys strings, snacks, transport or studio time, make the arrangement explicit rather than assuming reimbursement. Avoid spending on artwork, merch or a professional recording before you know the group can meet reliably and the song choices suit everybody."
+      ]
+    },
+    {
+      "heading": "Review after three rehearsals",
+      "paragraphs": [
+        "After a few sessions, talk about what is working: song choice, communication, attendance, volume, creative control and how feedback feels. If the group has different ambitions, name the difference without blame. One member may want to perform publicly while another only wants a monthly jam. You can change the format, reduce the schedule or decide not to continue. That is useful information, not failure.",
+        "If the band is aligned, set a short next goal such as learning a three-song set or writing one complete original. Berklee notes that timelines and shared strategies help clarify what members are committing to. Make the first next step small enough to happen on a calendar: propose two rehearsal dates, send the song list and decide who handles the room."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Team Players",
+      "url": "https://college.berklee.edu/bt/201/team_players.html",
+      "publisher": "Berklee College of Music",
+      "purpose": "Supports advice on aligning goals, timelines, responsibilities, decision-making and rights discussions; first-rehearsal ideas are original suggestions."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "compose-an-original-piece-of-music",
+    "listen-to-a-whole-album-without-multitasking",
+    "community-7bca1f54-cb8e-542c-afc8-a7ef31f47655"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

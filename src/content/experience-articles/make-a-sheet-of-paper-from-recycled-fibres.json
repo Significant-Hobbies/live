@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "make-a-sheet-of-paper-from-recycled-fibres",
+  "slug": "make-a-sheet-of-paper-from-recycled-fibres",
+  "title": "How do you make one good sheet from recycled paper?",
+  "description": "Turn scrap paper into a handmade sheet by pulping small pieces, lifting fibres on a screen, pressing out water, and drying the sheet without tearing it.",
+  "intent": "How can I make a usable sheet from recycled paper at home or in a classroom? This guide covers fibre preparation, moulding, drainage and troubleshooting a lumpy first sheet.",
+  "sections": [
+    {
+      "heading": "Choose scrap paper and prepare the workspace",
+      "paragraphs": [
+        "Use clean, uncoated scrap paper such as writing paper or plain envelopes with plastic windows removed. Avoid anything with heavy plastic lamination, food residue or unknown coatings. Tear it into small pieces and soak them until they soften. The Institution of Engineering and Technology's activity uses scrap paper, water, a blender, a sieve, a bowl and tea towels, and allows an overnight soak before pulping. That is a classroom method; you can adapt the size of the batch while keeping the basic fiber-and-water process.",
+        "Set up near a sink with towels underneath and a bowl large enough for the pulp. A mesh screen or small sieve acts as a mould. If using a blender, have an adult operate it, keep hands away from the blades and never run it dry. Do not put paper pulp into a food blender that will later be used for food unless it can be cleaned according to the manufacturer's instructions; using a dedicated container is simpler."
+      ]
+    },
+    {
+      "heading": "Make a smooth, pourable pulp",
+      "paragraphs": [
+        "Drain the softened paper if there is excessive water, then blend it with fresh water in short bursts until the fibers separate. Aim for a loose slurry with visible flecks rather than a completely smooth paste. Add water if the blender stalls, and stop to scrape down only after the machine is unplugged. A pulp that is too thick will form clumps; one that is too thin may leave a weak, sparse layer on the screen.",
+        "Pour the pulp into the bowl and stir it so the fibers are suspended. Any paper colors will blend into the new sheet, so keep colored scraps in separate batches if you want a distinct palette. You can add a few small leaves or threads for decoration, but test one sheet first because large inclusions can weaken it or snag on the screen."
+      ]
+    },
+    {
+      "heading": "Lift the sheet evenly",
+      "paragraphs": [
+        "Slide the screen under the pulp, keeping it level, and lift slowly so a thin mat of fibers settles across the mesh. Let water drain into the bowl before moving the screen. If the coverage is patchy, lower it back into the slurry and adjust the angle; do not smear the fibers with your fingers. A consistent lift often gives a thinner and more even sheet than scooping a thick pile onto one corner.",
+        "Lay a tea towel on a flat surface and turn the screen over so the wet sheet rests on the fabric. Pat the back with another towel to absorb excess water. Peel the screen away slowly; if fibers lift with it, lay the screen back down and press more gently before removing it. The IET activity recommends slow peeling and drying the sheet between towels, which reduces tearing at this delicate stage."
+      ]
+    },
+    {
+      "heading": "Press, dry and assess the result",
+      "paragraphs": [
+        "Cover the wet sheet with another towel and press it evenly with your hands or a flat board. You can add gentle weight after blotting, but avoid a heavy object that squeezes fibers out at the edges. Change damp towels if they become saturated. Let the sheet dry flat, or hang it only when it is strong enough to hold its own weight. Drying time depends on thickness, humidity and airflow; do not peel it up while it still feels soft.",
+        "A handmade recycled sheet may be thicker, rougher or more irregular than store-bought paper. Check whether it is strong enough for its planned use: drawing, a small card or a note. If it tears, use more pulp, a finer screen or gentler transfer next time. If it is lumpy, spread the pulp more evenly and add water to the slurry before lifting."
+      ]
+    },
+    {
+      "heading": "Adjust one variable in the next sheet",
+      "paragraphs": [
+        "Keep one sample as a record and note which scraps, pulp consistency and screen produced it. Change one variable—such as paper color, amount of pulp or pressing pressure—on the next attempt. Save the leftover pulp in a covered container for a short period if you plan to use it again, and clean the screen before fibers dry into its mesh.",
+        "Your next action is to make one small test sheet using clean scrap, a bowl of pulp and a level screen. Let it dry fully before deciding whether the next sheet needs more fiber, less water or a gentler transfer."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How to make recycled paper",
+      "url": "https://education.theiet.org/primary/teaching-resources/how-to-make-recycled-paper",
+      "publisher": "Institution of Engineering and Technology",
+      "purpose": "Supports using scrap paper, soaking and blending it into pulp, lifting fibers on a sieve and pressing/drying between towels."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "marble-a-sheet-of-paper",
+    "print-a-set-of-foam-relief-postcards",
+    "stencil-a-reusable-fabric-bag"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

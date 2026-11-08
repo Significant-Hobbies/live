@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "queenstown-new-zealand",
+  "slug": "queenstown-new-zealand",
+  "title": "Pick a Queenstown walk by lake edge, climb or river",
+  "description": "Choose a Queenstown day around the flat Frankton Arm, lake-hugging Sunshine Bay or a steeper Arrowtown loop, then check current track notices.",
+  "intent": "Which Queenstown outdoor experience fits my time and energy: a lakeside walk, a climb or an Arrowtown river loop?",
+  "sections": [
+    {
+      "heading": "Choose a view before choosing a distance",
+      "paragraphs": [
+        "Queenstown’s landscapes change quickly with the route. A shoreline path gives a close view of Lake Whakatipu and the settlement; a hill climb opens a wider view over the basin; an Arrowtown trail follows a river and old water-race features. Before picking by a distance label, decide whether you want an easy conversation walk, a sustained uphill effort or a day with a historic village at each end.",
+        "The official Queenstown destination site describes the Frankton Arm Walkway as a relatively flat lakeside route between Queenstown Gardens and Frankton, while the Sunshine Bay Track follows the edge of Lake Whakatipu through native bush. They fit different rhythms even though both are near town. A simple out-and-back on the shoreline is easy to shorten if weather or energy changes; a hill route has a more committed climb and descent."
+      ]
+    },
+    {
+      "heading": "Use the Frankton Arm for an easy shoreline day",
+      "paragraphs": [
+        "For a low-key outing, consider the Frankton Arm Walkway from Queenstown Gardens toward Frankton. It gives you a long, mostly flat line beside the lake, with beaches and marina stops that make natural rest points. You can turn around when you have had enough rather than treating the full one-way distance as a target. If you plan to walk only part of it, check the current route map and transport options so you know whether your finish point has a convenient return.",
+        "The lake path is a good choice for a group with mixed pace because people can pause, sit by the water or return early. It is still an outdoor route: rain, wind, traffic crossings and temporary works can affect comfort. Bring a layer and check the local track update, especially if you have a timed activity later."
+      ]
+    },
+    {
+      "heading": "Choose a climb for a defined payoff",
+      "paragraphs": [
+        "Queenstown Hill Time Walk and the Tiki Trail are both uphill choices, but they have different character. The destination guide describes the Queenstown Hill route rising under pine cover toward the Basket of Dreams sculpture and panoramic views over the Whakatipu basin. It describes the Tiki Trail as a steep forested climb toward the Skyline building, with the option to walk back or use the gondola if that is operating and available.",
+        "A climb is a poor fit if you are trying to squeeze in a demanding hike between travel connections. Allow time to descend, carry water and check how the weather affects the track. The gondola should be treated as a separate, current transport decision rather than an assumed rescue route. Choose one climb and enjoy the changing view as a sequence; the summit photograph is only one part of the outing."
+      ]
+    },
+    {
+      "heading": "Make Arrowtown the focus when you want a different texture",
+      "paragraphs": [
+        "Arrowtown gives a more historic settlement and river setting than the town-center lakefront. The Arrow River Trail follows the river and an irrigation pipeline, passing a turnoff toward Sawpit Gully and reaching the Norman Smith footbridge. Queenstown’s tourism guide notes river crossings on one return option. The Sawpit Gully Trail adds a steady climb and several creek crossings, so it is a different commitment from the easier river stroll.",
+        "Pair a short river walk with time in Arrowtown rather than adding it to a full Queenstown climb on the same day. Wear shoes suitable for damp ground if you choose a creek-crossing loop, and follow current signage. The trail description is a planning aid, not a guarantee that every crossing or track segment is open after rain."
+      ]
+    },
+    {
+      "heading": "Build a plan that can adapt",
+      "paragraphs": [
+        "Write down your start point, intended turn-around, return plan and a shorter alternative. Check weather and current trail status before leaving. Queenstown’s official trail guide explicitly recommends checking the forecast and New Zealand Land Safety Code before heading into the outdoors. A track that is pleasant in settled weather may feel very different in wind, rain or low visibility.",
+        "For a first day, a useful combination is one track plus an unhurried meal or time by the lake. Pick Frankton Arm for an easy shoreline, a hill route for a short but steeper effort, or Arrowtown for a river-and-settlement pairing. Confirm transport and operating details directly, then let the landscape decide whether the planned distance makes sense."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "10 Beautiful Walks in Queenstown",
+      "url": "https://www.queenstownnz.co.nz/stories/post/10-beautiful-walks-in-queenstown/",
+      "publisher": "Queenstown Official Website",
+      "purpose": "Supports comparisons among named routes including Frankton Arm, Sunshine Bay, Queenstown Hill, Tiki Trail and Arrowtown river/Sawpit tracks, and advises checking weather and outdoor readiness."
+    },
+    {
+      "title": "Arrowtown, New Zealand",
+      "url": "https://www.queenstownnz.co.nz/plan/surrounding-region/arrowtown/",
+      "publisher": "Queenstown Official Website",
+      "purpose": "Supports Arrowtown’s connection to regional cycle trails and local outdoor options."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "climb-your-first-mountain",
+    "fiordland-new-zealand",
+    "milford-sound-new-zealand"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

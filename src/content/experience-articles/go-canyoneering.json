@@ -1,0 +1,47 @@
+{
+  "experienceSlug": "go-canyoneering",
+  "slug": "go-canyoneering",
+  "title": "Choose a first canyon trip by its technical demands",
+  "description": "Choose a guided canyoneering route by current park conditions, permit rules, and the skills it actually requires before you book.",
+  "intent": "How can a beginner select a permitted, appropriately guided canyon outing without mistaking a technical route for an introductory walk?",
+  "sections": [
+    {
+      "heading": "Choose the kind of canyon trip",
+      "paragraphs": [
+        "Canyoneering can mean anything from a walk through a river corridor to a technical descent involving ropes and route finding. For a first outing, be precise about which kind you mean. Zion National Park’s official guide distinguishes a short lower Narrows walk, which it describes as an introduction not requiring ropes or special equipment, from technical routes such as the Subway and top-down Narrows. Zion requires a wilderness permit for technical canyoneering. Those examples are specific to Zion, but the distinction is useful everywhere: do not book a technical route because a listing calls it “beginner-friendly.” Ask the local park authority what experience and permits the specific route requires, and whether a guide is required or available. A supervised introductory route can provide a real sense of the landscape without pretending the skills are interchangeable."
+      ]
+    },
+    {
+      "heading": "Check conditions and permits",
+      "paragraphs": [
+        "The canyon controls the plan. Water levels, weather, closures, and access rules can change quickly, so ask the land manager about current conditions close to your date. A storm far from the canyon may affect a route downstream; do not rely on a general forecast or an old trip report as a go-ahead. Select a permitted commercial guide where you need instruction, and ask how they assess the route, what equipment the operator supplies, and what would make them cancel. Avoid copying technical setup instructions from video or trying to rappel without formal training and suitable supervision. The useful beginner job is to make informed choices, carry what your guide requests, and follow their limits. If a group suggests leaving an official route or continuing after a closure notice, stop and contact the authority."
+      ]
+    },
+    {
+      "heading": "Ask what the day involves",
+      "paragraphs": [
+        "Ask about the full day rather than only the canyon segment: approach hike, water exposure, route length, transport, temperature, group size, and a clear turnaround plan. Be honest about your comfort in water, mobility, fitness, and experience. A guide should help match the outing to participants; if you are unsure, choose a nontechnical walk or another activity. Pack according to the current provider instructions, not a generic shopping list, and keep critical items easy to reach. Stay with the group and do not split off for a photograph. Canyons can be visually absorbing, and a narrow view makes it easy to lose track of time or companions. Follow the guide’s instructions for where to pause and when to move. A shorter first trip can leave you with energy to notice geology and light."
+      ]
+    },
+    {
+      "heading": "Keep the first route appropriate",
+      "paragraphs": [
+        "For a first attempt, choose a guided nontechnical route with a published description and confirm it with the park. Read the permit and closure page yourself, then ask the guide what conditions they will recheck on the morning of the trip. Tell the operator plainly that you are new and ask what part of the outing involves water, climbing, or exposure. If the answer depends on a technical skill you do not have, select a different route. Bring a notebook for observations rather than trying to photograph every pool and wall. After the walk, record what surprised you and what you want to learn before a more advanced trip. Your next action is to identify one local park, check its official canyoneering guidance and permits, and book only a route that matches your experience."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Canyoneering – Zion National Park",
+      "url": "https://www.nps.gov/zion/planyourvisit/canyoneering.htm",
+      "publisher": "U.S. National Park Service",
+      "purpose": "Distinguishes a lower Narrows introduction from technical routes, explains permit requirements, and notes water conditions can be fast, cold, and deep."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "take-a-supervised-introductory-caving-trip",
+    "hike-a-mountain-that-scares-you"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

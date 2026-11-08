@@ -1,0 +1,47 @@
+{
+  "experienceSlug": "write-and-finish-a-novel",
+  "slug": "write-and-finish-a-novel",
+  "title": "Finish a draft by narrowing the story you are telling",
+  "description": "Finish a novel draft with a bounded premise, a flexible scene sequence, and a writing routine that fits your ordinary week.",
+  "intent": "How can a writer finish a novel draft by bounding the story, sequencing scenes, and sustaining a realistic routine?",
+  "sections": [
+    {
+      "heading": "Bound the story",
+      "paragraphs": [
+        "A novel becomes finishable when its story can be held in mind. Choose one protagonist, one central want, and one difficulty that keeps changing the plan. You do not need a perfect outline, but write a one-sentence promise to yourself about what will be different by the final chapter. Then sketch a sequence of scenes that make that change possible: an opening disturbance, a few attempts that complicate matters, a decision point, and a consequence. Keep this list flexible. Writing NSW notes that a structural revision can examine how a novel’s characters and plot develop, whether the narrative progresses, and whether issues are resolved. That is useful even before a draft: your scene list is a way to see the shape you intend to test. If your premise requires too many separate books of ideas, pick one thread and leave the rest for later."
+      ]
+    },
+    {
+      "heading": "Make a routine you can keep",
+      "paragraphs": [
+        "Set a drafting routine you can keep through an ordinary week. Pick a small number of sessions and a starting ritual—open the scene list, reread the previous paragraph, and write the next beat. A modest daily or weekly target is useful only if it fits your actual schedule; do not borrow someone else’s word count. If you miss a session, resume at the next one without trying to repay every missed page in a single sitting. At the end of a session, leave a note about the next scene’s purpose or a question to solve. That gives you a place to begin when you return. Keep research bounded: note what fact the scene needs, then return to drafting once you have enough to write it credibly. A novel is finished by continuing through imperfect passages, not polishing the opening forever."
+      ]
+    },
+    {
+      "heading": "Solve scenes locally",
+      "paragraphs": [
+        "When you get stuck, diagnose the scene instead of declaring the whole book broken. Ask what the character wants here, what makes the goal difficult, what choice they make, and what changes afterward. If the scene has no answer, it may be a bridge that can be shortened or a moment that belongs elsewhere. Keep a separate list of unresolved details instead of stopping to fix every inconsistency while drafting. You may discover that the story’s direction changes; update the scene sequence and continue. The first version is a working structure, not a contract. Resist editing every sentence as soon as you write it. Give the draft room to reveal its larger shape before deciding whether the voice, pace, or order needs a deeper revision."
+      ]
+    },
+    {
+      "heading": "Finish first, then revise",
+      "paragraphs": [
+        "Finishing the draft and revising it are different tasks. When you reach the final scene, save a copy and step away for a little while if your schedule allows. Writing NSW recommends a pause between drafting and revision so the writer can return with fresh eyes, and suggests examining structure before detailed copy edits. On the first revision, follow the plot and character change; on a later pass, focus on clarity and language. Ask one trusted reader a concrete question, such as where they lost the thread, rather than requesting a verdict on the whole book. For your first attempt, set a bounded project—one protagonist and one story problem—and draft to its ending before beginning a second idea. Your next step is to write a one-paragraph premise and list the next five scenes, then schedule the first writing session."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Revising and Editing",
+      "url": "https://writingnsw.org.au/getsupport/information-for-writers/revising/",
+      "publisher": "Writing NSW",
+      "purpose": "Supports structural revision of plot and characters, looking at progression and unresolved issues, and allowing time between drafting and revision."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "write-a-book",
+    "community-991b141b-c36b-527d-9558-1372317b9d93"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

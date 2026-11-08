@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "ha-long-bay-vietnam",
+  "slug": "ha-long-bay-vietnam",
+  "title": "Choose a Ha Long Bay stay by the landscape you want to notice",
+  "description": "Compare a Ha Long Bay day cruise, overnight boat and Cat Ba stay by the time and landscape each gives you, then verify current operators.",
+  "intent": "Which kind of Ha Long Bay visit gives me time to notice the karst seascape, and how should I compare a cruise with a Cat Ba base?",
+  "sections": [
+    {
+      "heading": "First decide what you want the water to show",
+      "paragraphs": [
+        "The defining experience here is not simply “being on a boat.” UNESCO describes Ha Long Bay–Cat Ba Archipelago as an extensive marine-invaded tower-karst landscape: limestone forms rise from the sea, with caves, shore notches and, in places, lakes within drowned depressions. Decide which scale you want to observe. A short cruise gives a changing view of towers and channels; time ashore on Cat Ba can make the island’s forested slopes and bays part of the day.",
+        "This is a useful distinction when comparing itineraries. Ask whether the boat keeps moving through the landscape or gives you a longer stop to walk, swim where permitted, or visit a cave. If your main interest is geology, an itinerary that leaves time to look at shore profiles may suit you better than one with many quick photo stops. Confirm what the operator actually includes."
+      ]
+    },
+    {
+      "heading": "Use one overnight or one day well",
+      "paragraphs": [
+        "A day cruise can be the right choice if your schedule is tight or you prefer to sleep on land. Its trade-off is that transfers take a share of the day, so compare the departure point and total time in transit as carefully as the listed activities. An overnight boat can make the bay itself part of the evening and morning, but cabin quality, vessel standards, route and weather policy become important.",
+        "Do not assume every overnight follows the same route or that an advertised “private bay” means isolation. Ask for the named embarkation point, approximate time on the water, stop lengths, what is optional, and how the operator handles cancellations or route changes. For Cat Ba, compare a stay on the island with a boat-based visit: the former offers a land base and the latter may cover more water in a shorter planning window."
+      ]
+    },
+    {
+      "heading": "Read the limestone instead of chasing landmarks",
+      "paragraphs": [
+        "Once underway, choose a few repeated observations. Notice how steep towers meet the water, whether a shoreline has a notch or cave opening, and how clustered peaks differ from isolated towers. UNESCO uses the terms fengcong for clusters of conical peaks and fenglin for isolated tower features. You do not need to memorize them; try sketching each shape and mark where water appears to have entered the rock.",
+        "If a boat enters a cave or sheltered inlet, use the stop to compare the enclosed view with the open bay. Look at the waterline, the ceiling and the transition from steep rock to vegetation. Avoid climbing on unstable limestone or leaving a marked route to make a photograph. The landscape is both a protected geological feature and a working environment for local residents, transport and fisheries."
+      ]
+    },
+    {
+      "heading": "Compare conservation practices, not just extras",
+      "paragraphs": [
+        "UNESCO notes that tourism, marine transport, fisheries and daily livelihoods share this high-use area, and that managers regulate activities to reduce pressure. When comparing operators, ask concrete questions: how do they handle waste and wastewater, what group size is planned, are wildlife encounters approached without feeding or chasing, and what happens if weather makes a stop unsuitable? A clear answer tells you more than a long amenities list.",
+        "Check whether the boat is authorized for its route and verify the current rules through Vietnamese authorities or the relevant port before paying. UNESCO is a heritage source, not a live list of licensed vessels, departure times or sea conditions. Do not rely on a search result or old review for route availability, safety notices or access restrictions."
+      ]
+    },
+    {
+      "heading": "Choose a base that leaves room for weather",
+      "paragraphs": [
+        "Build the trip around one anchor: a day cruise from a mainland port, a night aboard, or a Cat Ba stay with a water excursion. Add slack around transfers rather than stacking a tight flight or long connection immediately after the boat. If a route changes, a flexible day leaves you able to enjoy the altered view rather than trying to force the advertised schedule.",
+        "Before booking, write down the exact question you want answered—“What does the tower landscape look like at dawn?” or “Can I compare a cave stop with a forested island walk?”—and use it to choose. Then check current port, operator and weather information close to travel. The worthwhile result is a slower, more attentive encounter with one of the world’s distinctive limestone seascapes."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ha Long Bay – Cat Ba Archipelago",
+      "url": "https://whc.unesco.org/en/list/672/",
+      "publisher": "UNESCO World Heritage Centre",
+      "purpose": "Supports the marine-invaded tower karst, caves and shore features, and the shared tourism, transport, fisheries and conservation-management context."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "see-the-great-barrier-reef",
+    "the-whitsunday-islands-australia"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

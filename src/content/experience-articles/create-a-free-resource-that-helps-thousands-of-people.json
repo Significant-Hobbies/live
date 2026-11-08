@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "create-a-free-resource-that-helps-thousands-of-people",
+  "slug": "create-a-free-resource-that-helps-thousands-of-people",
+  "title": "Build a free guide people can actually use",
+  "description": "Choose one recurring problem, test a small free guide with real users, and set a clear reuse license and maintenance plan before sharing widely.",
+  "intent": "How do I make a free resource useful beyond its launch? This guide focuses on solving one repeat problem, permitting reuse and planning upkeep.",
+  "sections": [
+    {
+      "heading": "Name the exact task the resource will help with",
+      "paragraphs": [
+        "“Help people learn” is too wide to design around. Choose one task: explain a confusing form, teach a first repair, help a volunteer run a shift, or show a learner how to prepare for a conversation. Describe who needs it, what they are trying to do and what a successful next step looks like. A focused guide, printable checklist or simple diagram is easier to test than a large portal filled with unfinished features.",
+        "Talk with a few intended users before you write. Ask them to walk through the problem and show you where they get stuck. Do not assume the person who requested the resource speaks for every future user. If the topic involves law, health, finances, safety or immigration, ask a qualified professional to review any instructions and state the jurisdiction and limits."
+      ]
+    },
+    {
+      "heading": "Make a small version and watch someone use it",
+      "paragraphs": [
+        "Draft the shortest version that can answer the question without forcing readers to guess. Use one example, label any specialist terms and show what to do if the first path does not fit. Give the draft to someone who did not help create it. Ask them to find a particular answer or complete a task while you watch. Notice where they backtrack, miss a link or misunderstand the scope.",
+        "Ask what information is missing, but do not treat a request for every possible feature as a requirement. Keep a “later” list for ideas that do not help the chosen task. A resource used by a small, well-defined community may be more valuable than a tool with a large audience and no clear next action. Reach is not a promise you can make in advance."
+      ]
+    },
+    {
+      "heading": "Make access part of the design",
+      "paragraphs": [
+        "Use readable headings, clear contrast, descriptive link text and language that does not assume expert knowledge. Offer a printable or low-bandwidth version if users may not have reliable internet. If the resource contains tables, diagrams or media, provide equivalent text where possible. Ask users who rely on assistive technology to review the actual file or page rather than treating a checklist as proof of accessibility.",
+        "Explain whether the resource is complete, who maintains it and when it was last reviewed. Give readers one place to report an error. If you cannot answer or maintain the material indefinitely, say so plainly and identify an official source readers can check. That is especially important when a form, policy, deadline or law can change."
+      ]
+    },
+    {
+      "heading": "Choose reuse permissions deliberately",
+      "paragraphs": [
+        "If the resource is a text, image, worksheet or other copyrightable work, decide whether others may copy it, adapt it or use it commercially, and what credit you want. Creative Commons’ license chooser walks creators through permissions such as attribution, commercial use, adaptations and sharing adaptations under the same terms. It asks you to confirm that you hold the rights and understand the license before applying it.",
+        "Creative Commons cautions that its licenses are not recommended for computer software or hardware; software needs an appropriate software license. Check rights for photographs, icons, quotes, fonts and contributed work before applying a license to the whole resource. Once a CC license is applied, it cannot be revoked for people who already received the work under it. When in doubt, seek legal advice rather than guessing."
+      ]
+    },
+    {
+      "heading": "Plan a maintenance handoff",
+      "paragraphs": [
+        "Give the resource a named maintainer or a clear retirement plan. Keep source files, version notes and the original materials you have permission to store. Ask another person to update one section using your notes. If they cannot find the source or tell what changed, improve the handoff before promoting the resource.",
+        "Measure a useful signal: whether people complete the task, which question still causes trouble, or how often corrections are needed. Do not collect personal information you do not need. Start by sharing a small draft with three people who face the problem, then revise the one part that most often blocks them."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Choose a License for Your Work",
+      "url": "https://creativecommons.org/chooser/",
+      "publisher": "Creative Commons",
+      "purpose": "Supports the choices a creator makes about attribution, commercial use, adaptations, compatibility and whether they hold rights; also notes CC licenses are not for software and are not revocable."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "learn-to-code-and-ship-an-app",
+    "build-something-that-outlasts-you",
+    "translate-a-free-software-resource-into-a-language-you-know"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

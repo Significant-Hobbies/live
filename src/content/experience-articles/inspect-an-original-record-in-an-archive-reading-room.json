@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "inspect-an-original-record-in-an-archive-reading-room",
+  "slug": "inspect-an-original-record-in-an-archive-reading-room",
+  "title": "How do you prepare to consult one original archive record?",
+  "description": "Start with a catalog reference and one research question, check access rules, and leave the reading room with notes you can trace back to the source.",
+  "intent": "A focused visit plan for locating and carefully examining one archival record, while knowing when a digital copy or archive staff guidance is preferable.",
+  "sections": [
+    {
+      "heading": "Make a question small enough to answer",
+      "paragraphs": [
+        "A good first archive visit begins with a question rather than a wish to see something old. Ask what one record might tell you: who signed a document, how a place was described, or what detail appears in a dated register. Search the archive catalogue and copy the full identifier, collection name and any restrictions. If you cannot identify a record yet, ask the archive’s reference staff how to narrow the search.",
+        "The National Archives of the United States recommends using microfilm or digital alternatives when available, with exceptions requiring approval. An original visit is most useful when its material features, sequence or context matter to your question. A legible digital copy may answer a text question more efficiently and preserve the original from unnecessary handling."
+      ]
+    },
+    {
+      "heading": "Check that the record can be consulted",
+      "paragraphs": [
+        "Do not assume that every catalogued item is open, onsite or ready for same-day use. Check whether the archive requires registration, advance ordering, an appointment or identity documentation. Read the specific reading-room rules for the institution you plan to visit; the U.S. National Archives’ rules are an example, not a replacement for another archive’s policy. Some material is restricted, fragile, undergoing conservation or stored at another location.",
+        "Write down the call number exactly and note the catalog description around it. If a reference has multiple parts, identify the series, box, folder or page you need. Ask whether the material is an original, a copy or a digital surrogate. Confirm which personal items and note-taking tools are allowed so you do not arrive with materials that must be stored outside."
+      ]
+    },
+    {
+      "heading": "Read with care and preserve context",
+      "paragraphs": [
+        "Follow staff instructions for supports, page turning and photography. Keep the record fully supported on the table, do not force a binding open, and ask for help when something is awkward or fragile. At NARA, rules prohibit placing notes or equipment on the records and require researchers to keep original order. Other repositories may have their own specific procedure; staff instructions take precedence.",
+        "Record the catalog reference before copying a phrase into your notes. Include the item’s title, date if present, page or folio, and the collection or creator. Mark your own transcription as a transcription and use a question mark or bracket for uncertain words. Leave space for a second interpretation; old handwriting and catalog descriptions can be ambiguous."
+      ]
+    },
+    {
+      "heading": "Separate what the record says from what you infer",
+      "paragraphs": [
+        "Take one minute to describe the physical item: paper, format, annotations, signs of later filing or a missing attachment. Then separate those observations from a historical conclusion. “The document has a stamp in the margin” is direct evidence; “the stamp proves the sender approved it” may be an inference that needs other records. Write down what evidence would settle the question.",
+        "Do not reorder items to make a story easier to follow. If something appears misplaced or a description seems wrong, tell a staff member rather than correcting it yourself. If photography is allowed, follow permission and copyright rules; no image is worth mishandling a record or capturing other researchers."
+      ]
+    },
+    {
+      "heading": "Leave with a useful trail",
+      "paragraphs": [
+        "Before returning the item, check that your reference details are complete and that you have noted how to find the record again. The U.S. National Archives requires researchers to keep records in their original order and to use staff guidance for handling or imaging concerns. Return the item as directed and ask whether any follow-up record might answer the remaining question.",
+        "A strong first visit can end with one finding and one next question, not a finished historical argument. Keep the archive citation, a short neutral description and the limits of what you observed together. If you plan to share the result, distinguish transcription from interpretation and check the repository’s reproduction or copyright rules first."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Research Room Rules",
+      "url": "https://www.archives.gov/research/research-room-rules",
+      "publisher": "U.S. National Archives and Records Administration",
+      "purpose": "Supports example procedures for researcher access, using digital alternatives where available, record support, order, handling and imaging."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "read-old-postcards-as-historical-evidence",
+    "transcribe-a-historical-manuscript-for-the-smithsonian"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

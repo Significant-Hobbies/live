@@ -1,0 +1,67 @@
+{
+  "experienceSlug": "cape-town-and-the-cape-peninsula",
+  "slug": "cape-town-and-the-cape-peninsula",
+  "title": "Make the Cape a city day and a peninsula day",
+  "description": "Split a Cape Town visit between an urban base and a Cape Point day, using SANParks guidance to plan safe walks and coastal stops.",
+  "intent": "Design a coherent Cape Town and peninsula stay by comparing city and coastal days and choosing one official protected-area route rather than collecting distant viewpoints.",
+  "relatedExperienceSlugs": [
+    "the-scottish-highlands",
+    "the-swiss-alps",
+    "hike-a-mountain-that-scares-you"
+  ],
+  "sections": [
+    {
+      "heading": "Separate city time from peninsula time",
+      "paragraphs": [
+        "Cape Town and the peninsula reward different rhythms. Keep one day for the city’s museums, neighborhoods or waterfront and another for the Table Mountain National Park peninsula. SANParks describes the park as stretching from Signal Hill and Table Mountain to Cape Point, including a marine protected area and several beaches. That is a broad protected landscape, not one compact attraction; allow realistic travel time between stops and check park updates before leaving.",
+        "On a peninsula day, choose one main area—Cape Point and the Cape of Good Hope, for example—and one optional stop on the route. Do not try to combine every beach, lighthouse, garden and mountain trail in a single day. The road, weather and park conditions may change the plan."
+      ]
+    },
+    {
+      "heading": "Use Cape Point as a focused anchor",
+      "paragraphs": [
+        "SANParks identifies the Cape of Good Hope and Cape Point as a place for hiking, cycling, picnicking and viewing coastal scenery. It notes the Buffelsfontein Visitor Centre as a source of seasonal plant and animal information, and the two lighthouses as viewing points. Start at the visitor centre if it is open, then choose a short public walk or viewpoint that matches your time and ability. Confirm current hours, fees and any closures through SANParks.",
+        "If you want a more demanding walk, check the official route and weather rather than improvising on the day. Some activities are regulated and require permits, according to SANParks. The park also warns that swimming is not allowed at Diaz Beach because of strong rip currents and that there are no lifeguards at Cape Point beaches. Respect these specific limits instead of assuming a sheltered-looking cove is safe."
+      ]
+    },
+    {
+      "heading": "Compare mountain and ocean perspectives",
+      "paragraphs": [
+        "A day on Table Mountain and a day at Cape Point show different scales of the region. From a mountain route, the city and bay sit together beneath the ridges; at the peninsula, wind and ocean exposure shape the experience. SANParks lists popular hikes such as Platteklip Gorge as strenuous and describes easier options elsewhere in the park. Choose a route that fits your experience, and check current closures and trail notices.",
+        "Do not judge a trail only by the view at the top. Consider sun exposure, wind, steepness, return distance and whether your group can finish before conditions or daylight change. Tell someone your plan, carry water and a warm layer, and turn around when weather or energy makes the descent uncertain."
+      ]
+    },
+    {
+      "heading": "Leave space for neighborhoods and food",
+      "paragraphs": [
+        "A city stay becomes richer when you do not drive between all the famous views. Choose one neighborhood to walk, one museum or cultural site to understand, and a meal that gives you time to sit. Ask a local guide how the area’s history is represented, and listen for what a short tour leaves out. Avoid describing communities as a backdrop for scenic travel.",
+        "If you want to visit a market or music venue, check its official schedule and local transport late in the day. Build in a return plan and avoid assuming that a map’s straight-line distance equals a quick trip."
+      ]
+    },
+    {
+      "heading": "Check the route again close to departure",
+      "paragraphs": [
+        "Cape weather and park operations are not fixed. Use SANParks notices for closures, permits and current visitor information; use official transport sources for the city portion. The Cape Point attraction page establishes named places and general activities, but it does not promise that a particular path, funicular or facility is operating on your date.",
+        "Your next action is to mark one city day and one peninsula day, then choose an official park route for the latter. Keep a second city activity ready in case wind, rain or a closure changes the coastal plan."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Cape of Good Hope & Cape Point",
+      "url": "https://www.sanparks.org/parks/table-mountain/what-to-do/attractions/cape-of-good-hope-cape-point",
+      "publisher": "South African National Parks (SANParks)",
+      "purpose": "Supports the Cape Point/Cape of Good Hope anchor, Buffelsfontein Visitor Centre, lighthouse viewpoints, regulated activities and specific safety limits including no swimming at Diaz Beach and no lifeguards at Cape Point beaches.",
+      "accessLimit": "Current access, weather, closure and facility status may change; confirm through SANParks shortly before travel."
+    },
+    {
+      "title": "Table Mountain National Park",
+      "url": "https://www.sanparks.org/parks/table-mountain",
+      "publisher": "SANParks",
+      "purpose": "Supports the protected-area span from Signal Hill/Table Mountain to Cape Point and that it includes the marine protected area and beaches.",
+      "accessLimit": "The page’s dated notices are dynamic and should be rechecked."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

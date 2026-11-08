@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "sleep-8-hours-a-night-for-30-days",
+  "slug": "sleep-8-hours-a-night-for-30-days",
+  "title": "A month of sleep notes without turning bedtime into a score",
+  "description": "Use a simple sleep diary to see patterns across a month, while treating eight hours as a goal rather than a universal medical requirement.",
+  "intent": "How can I try a month-long sleep target without confusing a number on a clock with sleep quality or an individual health recommendation?",
+  "sections": [
+    {
+      "heading": "Treat eight hours as an experiment",
+      "paragraphs": [
+        "A fixed target can be a useful prompt to protect time for rest, but it is not a universal instruction. The U.S. CDC says recommended sleep duration varies by age; its guidance for adults aged 18–60 is seven or more hours, while older and younger groups have different ranges. Eight hours may suit your experiment, but this article cannot determine your personal need.",
+        "Decide what you are measuring before day one. Record when you got into bed, when you estimate sleep began, wake-ups you remember, final wake time, naps and how rested you feel. Avoid making the nightly number a moral grade. A record is useful because it can show patterns, not because every night must match an exact target."
+      ]
+    },
+    {
+      "heading": "Track quality beside duration",
+      "paragraphs": [
+        "The CDC notes that sleep quality involves more than hours; trouble falling asleep, waking repeatedly or feeling tired despite time in bed are signs worth noticing. Add one brief morning note such as “rested,” “interrupted” or “sleepy,” plus context that may matter to you: travel, illness, late work, a noisy room or a changed schedule.",
+        "Keep the record small enough to maintain. A paper grid on the nightstand or a basic note works. If a wearable gives estimates, label them as estimates rather than measurements of sleep stages or diagnoses. The purpose is to help you recall what happened when speaking with a clinician, not to let a device decide whether your sleep was good."
+      ]
+    },
+    {
+      "heading": "Make the plan fit real nights",
+      "paragraphs": [
+        "Choose a wake time that works for your life, then reserve an opportunity for sleep that could accommodate the target. A routine can include ordinary cues: dimming lights, putting work materials away, setting out tomorrow’s essentials or reading a few pages. The CDC lists regular bed and wake times among habits that may help, but your schedule, health and household obligations still matter.",
+        "Build a recovery rule for disrupted nights. If a child wakes, a shift changes or a train arrives late, record the interruption and continue the next evening. Do not impose an extreme schedule or change medication on your own. This is a month of observation and reasonable routine, not perfect adherence."
+      ]
+    },
+    {
+      "heading": "Notice a pattern, not a diagnosis",
+      "paragraphs": [
+        "At the end of each week, look for simple contrasts. Did an earlier bedtime create enough time in bed? Did weekends shift your wake time? Were there recurring interruptions or persistent daytime tiredness? Keep observations neutral and specific. “Awake for a long time after a late shift” is more useful than “failed again.”",
+        "Patterns do not identify causes by themselves. The CDC advises talking with a healthcare provider if you have problems sleeping. Bring your notes if sleep remains difficult or you are concerned. A thirty-day goal cannot diagnose insomnia, apnea or another condition."
+      ]
+    },
+    {
+      "heading": "Close the month with a practical next step",
+      "paragraphs": [
+        "Review the calendar and ask: Did the target fit my actual needs and obligations? What one change made it easier to protect a regular sleep opportunity? You may decide to keep the routine, adjust the target with clinical guidance, or stop tracking if it creates more stress than insight.",
+        "If you speak with a clinician, share your notes and ask what deserves attention, what evaluation is appropriate, and when to follow up. Keep the win modest: you learned more about your nights. Eight hours can remain an aspiration for this month without becoming a promise, diagnosis or reason to ignore ongoing symptoms."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "About Sleep",
+      "url": "https://www.cdc.gov/sleep/about/",
+      "publisher": "Centers for Disease Control and Prevention",
+      "purpose": "Age-specific sleep duration guidance, quality signs, sleep diary topics, and advice to speak with a provider."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "create-a-morning-ritual-you-keep-for-a-year",
+    "keep-a-journal-for-a-full-year",
+    "do-a-30-day-yoga-challenge"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

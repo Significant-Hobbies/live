@@ -1,0 +1,64 @@
+{
+  "experienceSlug": "build-an-investment-portfolio",
+  "slug": "build-an-investment-portfolio",
+  "title": "A portfolio worksheet for matching investments to a goal",
+  "description": "Map a portfolio to a named goal, time horizon and risk capacity, then compare diversification, costs and rebalancing before making decisions.",
+  "intent": "How do I think through a portfolio structure without copying someone else’s allocation? This is an educational framework, not an individualized recommendation.",
+  "sections": [
+    {
+      "heading": "Name the goal and when the money is needed",
+      "paragraphs": [
+        "A portfolio is easier to evaluate when it has a job. “Invest for the future” is broad; “fund a home deposit I may need in four years” and “save for retirement decades away” imply different time horizons and consequences if values fall. The SEC’s investor guide says allocation depends in part on time horizon and risk tolerance, and it notes that all investments carry risk. Write down the date or range when you may need the money and what happens if markets are down then.",
+        "Separate money needed soon from money intended for a long-term goal in your planning. This is not a personal allocation formula; it is a way to make the trade-off explicit. Also consider whether you have high-interest debt, emergency needs, tax-advantaged accounts or legal restrictions that affect your choices. Those depend on your circumstances and jurisdiction, so consult a qualified professional where appropriate."
+      ]
+    },
+    {
+      "heading": "Understand diversification at two levels",
+      "paragraphs": [
+        "Diversification means spreading exposure across different kinds of investments and within a category. Owning several funds does not automatically create diversification if they hold many of the same companies. A broad stock fund and a narrow technology fund may overlap; their different names do not make the underlying holdings independent. Check what each holding owns and whether the risk is concentrated in one company, sector, country or asset type.",
+        "The SEC guide distinguishes asset categories such as stocks, bonds and cash, and notes that diversification within categories also matters. It also warns that a mutual fund focused on one sector may not provide broad diversification. Diversification can reduce concentration risk, but it cannot guarantee a profit or prevent losses in a falling market."
+      ]
+    },
+    {
+      "heading": "Compare the cost of the whole setup",
+      "paragraphs": [
+        "Read the fund or product documents for expense ratios, transaction costs, account charges and possible exit fees. Compare similar products on the same basis, and notice whether a low visible management fee comes with other costs. The SEC’s fee bulletin explains that ongoing fees reduce the amount invested and the return that amount could have earned. Its example is illustrative; actual returns and costs vary.",
+        "A simple portfolio with few holdings can be easier to understand and maintain than a collection of funds added because they were recently popular. Complexity has a cost: you must track overlaps, taxes, rebalancing and changes to your original reason for holding each investment. Before adding a holding, write what exposure it contributes and what risk it introduces."
+      ]
+    },
+    {
+      "heading": "Write a rebalancing rule before the market moves",
+      "paragraphs": [
+        "Rebalancing means returning a portfolio toward its chosen mix when market movements change the weights. Decide how you would notice drift and what threshold or review schedule you would use before a dramatic headline arrives. The SEC describes selling overweight assets, buying underweight assets, or directing new contributions toward underweight categories as possible approaches. Each can have fees or tax consequences, which vary by account and jurisdiction.",
+        "A rule is not a promise that a particular mix will succeed. It is a way to avoid making every decision in response to the latest winner or alarming week. Record the target range, review date, reason for the allocation and conditions that would cause you to revisit the plan, such as a changed goal or time horizon."
+      ]
+    },
+    {
+      "heading": "Make a one-page portfolio map",
+      "paragraphs": [
+        "List each account, holding, broad asset category, approximate percentage, fee and purpose. Include cash outside the investment account if it is part of the same goal. Then look for concentration, overlap, missing categories and holdings you cannot explain. Do not share account numbers or identifying information in a public spreadsheet. Use an official statement or prospectus to verify details rather than relying on a broker’s label.",
+        "If the numbers and implications still feel unclear, use an appropriately licensed fiduciary or financial professional in your jurisdiction and ask how they are paid, what services they provide and what conflicts may exist. The SEC’s guidance is U.S.-specific and not a recommendation to buy a particular fund. Your next action is to write one goal, its expected time horizon and the three costs you will compare before choosing any investment."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Beginners’ Guide to Asset Allocation, Diversification, and Rebalancing",
+      "url": "https://www.sec.gov/investor/pubs/assetallocation.htm",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "purpose": "Supports general concepts of time horizon, risk, diversification at asset and holding levels, and rebalancing; U.S. investor education, not individualized advice."
+    },
+    {
+      "title": "How Fees and Expenses Affect Your Investment Portfolio",
+      "url": "https://www.sec.gov/oiea/Article/ib_fees_expenses.pdf",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "purpose": "Supports the claim that ongoing fees reduce invested value and potential returns over time; illustrative example only."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "invest-your-first-serious-money",
+    "become-completely-debt-free"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

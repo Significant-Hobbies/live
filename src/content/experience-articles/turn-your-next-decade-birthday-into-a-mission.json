@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "turn-your-next-decade-birthday-into-a-mission",
+  "slug": "turn-your-next-decade-birthday-into-a-mission",
+  "title": "Turn a birthday into a year with a shape",
+  "description": "Build a personal birthday mission from one value, a vivid challenge, small milestones and a finish line that fits your actual life.",
+  "intent": "How can a milestone birthday become a meaningful year-long commitment instead of a single spectacle or an overloaded list of resolutions?",
+  "sections": [
+    {
+      "heading": "Choose a theme you can explain",
+      "paragraphs": [
+        "Start with a sentence, not a stunt: ‘I want to become more useful to my neighborhood,’ ‘I want to make room for art again,’ or ‘I want to get comfortable asking for help.’ A good theme can guide several choices without dictating every detail. Ask what you want to be able to point to next year as evidence that you took it seriously.",
+        "Pick a challenge that expresses the theme and belongs to you. If you want to build courage, it might be a public reading after months of writing, not a dramatic leap from an aircraft. If the point is service, a repeatable commitment may say more than one large fundraiser. Do not borrow someone else’s milestone just because it photographs well."
+      ]
+    },
+    {
+      "heading": "Design a finish line you can recognize",
+      "paragraphs": [
+        "Turn the theme into a completed action with observable parts: plan and host a neighborhood skills exchange; finish a collection of short stories and share it with a reader group; or train for an accessible event with a coach and a gradual plan. The finish line should describe what you will do, not promise a result outside your control, such as becoming famous or fixing a community problem on your own.",
+        "Name the smallest version that would still feel honest. A mission can have a full version and a scaled version if money, health, family care or work changes. For a physical activity, use an appropriate professional’s guidance and choose a distance or format that fits your current capacity. The National Institute on Aging’s goal-setting worksheet is specifically an example for physical-activity goals; it prompts short-term and longer-term steps, but it is not a general life-planning authority."
+      ]
+    },
+    {
+      "heading": "Give the year a cadence",
+      "paragraphs": [
+        "Sketch four checkpoints rather than scripting 365 days. In the first month, gather information and ask who needs to be involved. By the next season, complete a small public or practical test. At the midpoint, review the original goal and change the route if the constraints have changed. Near the finish, reserve time for the actual event, handoff or reflection. A mission with no calendar space is an aspiration in costume.",
+        "For example, a year of learning to cook for family could begin with three recipes and a conversation about dietary needs, continue with one shared meal each month, and finish with a small handwritten collection of the dishes people asked to repeat. A year of outdoor challenge could move from local practice to a guided route and end with a carefully chosen expedition. Each checkpoint creates feedback before the final day."
+      ]
+    },
+    {
+      "heading": "Make the people part explicit",
+      "paragraphs": [
+        "Decide whether the mission is private, shared or public. If another person’s labor or story is involved, ask before making it part of your birthday project. Invite a few people to support specific tasks: one friend as a monthly check-in, a mentor for a skills review, or a relative to help preserve a family recipe. Tell them whether you want encouragement, practical help or simply company.",
+        "A celebration can mark the beginning, the halfway point or the end. If you make it public, share the purpose and the next concrete step instead of announcing a heroic identity you now have to perform. Keeping the mission small enough to revise makes it more likely to survive ordinary life."
+      ]
+    },
+    {
+      "heading": "Write the pledge and schedule the first move",
+      "paragraphs": [
+        "Put the mission on one page: why it matters now, what finished looks like, the first three steps, a realistic time or money boundary, and what you will do if the plan becomes unsafe or unsustainable. Add a date to review it. A useful fallback is not failure; it is the route that lets you keep the underlying value when circumstances change.",
+        "Finally choose one action you can complete this week: make the call, reserve the practice slot, draft the first page, or ask the person whose participation matters. Keep the birthday dinner if you want one. Let the mission give the year a direction, and let the first modest appointment prove that it has begun."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Goal-Setting Worksheet for Physical Activity",
+      "url": "https://www.nia.nih.gov/sites/default/files/goal_setting_worksheet-fillable.pdf",
+      "publisher": "National Institute on Aging",
+      "purpose": "A physical-activity-specific example of defining short- and long-term goals; used only when illustrating a physical challenge, not as general life-planning advice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "spend-a-birthday-alone-reflecting-on-the-past-year",
+    "do-a-group-charity-challenge-with-friends",
+    "spend-a-day-reviewing-every-job-relationship-and-home-you-have-had"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

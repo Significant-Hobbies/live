@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "give-blood-50-times-in-your-life",
+  "slug": "give-blood-50-times-in-your-life",
+  "title": "Make repeat blood donation a steady, informed practice",
+  "description": "Build a sustainable blood-donation record around local eligibility decisions, appointment preparation and recovery guidance from the service collecting your blood.",
+  "intent": "A safe long-term approach to the fifty-donation aspiration that treats eligibility, donation type and recovery as decisions for the blood service.",
+  "sections": [
+    {
+      "heading": "Let the blood service set the rules",
+      "paragraphs": [
+        "Fifty donations is a long-range personal hope, not a quota to meet on a schedule. Donation type, interval and eligibility depend on the service and your health at the time. Contact the national or local blood service for its current criteria, then answer screening questions accurately. A deferral is a safety decision, not a failed attempt; ask the service when to check again rather than trying to interpret a rule on your own.",
+        "Do not change medication, hide a recent illness or travel history, or assume that a prior acceptance means you are eligible today. The American Red Cross says final eligibility is determined at the time of donation. That is U.S.-specific guidance; other countries use their own blood services and screening standards."
+      ]
+    },
+    {
+      "heading": "Choose one donation type and learn its rhythm",
+      "paragraphs": [
+        "Ask the service to explain whole blood, platelets and plasma if more than one type is available to you. They use different equipment, take different amounts of time and may have different eligibility rules. Decide with the staff member which option is appropriate; do not choose a type because it seems like a faster way to reach a personal count.",
+        "Create a simple record with date, service, donation type and any follow-up instructions. Avoid storing details you do not need. The record helps you check the interval requested by your provider and notice if you need to ask a question before booking again. It also turns a large lifetime goal into a small, low-pressure next appointment."
+      ]
+    },
+    {
+      "heading": "Prepare for an appointment without overcomplicating it",
+      "paragraphs": [
+        "Read your blood service’s current appointment checklist the day before. The American Red Cross advises donors to be rested, drink extra liquids, eat a meal and bring identification; it also asks donors to disclose prescription and over-the-counter medicines. Requirements can differ elsewhere, so treat your own service’s checklist as authoritative. If you are unsure whether a medicine or recent event matters, ask the service before traveling to an appointment.",
+        "Plan enough time to arrive without rushing and wear a sleeve that can be moved above the elbow if that is part of the service’s process. If you have a concern about needles, fainting, access needs or privacy, tell the staff in advance. The first donation is easier to navigate when you know who can answer questions and where to go after screening."
+      ]
+    },
+    {
+      "heading": "Use the aftercare instructions you receive",
+      "paragraphs": [
+        "Stay for the service’s advised recovery period and follow its instructions about fluids, food, exercise and when to seek help. The Red Cross suggests a snack, extra liquids and avoiding alcohol for the following day; use the instructions from the organization that collected your donation, especially if your donation type or health circumstances differ. Tell staff promptly if you feel unwell rather than trying to push through to preserve a streak.",
+        "Schedule the next donation only after checking the interval the service gives you. A calendar reminder can prompt a future eligibility check; it should not act like permission to donate regardless of health or screening."
+      ]
+    },
+    {
+      "heading": "Count responsibly and celebrate the quiet part",
+      "paragraphs": [
+        "Keep the target in perspective. Your count may change because life, health or the blood supply’s needs change. If you cannot donate, consider asking the service whether it can use help with hosting a drive, making appointment access easier, or sharing accurate local information. Do not pressure friends with a particular eligibility story or imply that everyone should donate.",
+        "After each visit, record the date and one practical note, such as “bring a snack for afterward” or “ask the nurse about this question.” Your next step is to contact your local blood service, review its current eligibility page and book only if it confirms the appointment is appropriate."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "What to Do Before, During and After Your Donation",
+      "url": "https://www.redcrossblood.org/donate-blood/blood-donation-process/before-during-after.html",
+      "publisher": "American Red Cross Blood Services",
+      "purpose": "Supports appointment preparation and aftercare examples such as rest, hydration, food, medication disclosure, a snack and follow-up instructions; applies to Red Cross donors in the United States."
+    },
+    {
+      "title": "Blood Donation Eligibility Requirements",
+      "url": "https://www.redcrossblood.org/donate-blood/how-to-donate/eligibility-requirements.html",
+      "publisher": "American Red Cross Blood Services",
+      "purpose": "States eligibility is assessed by the donation service and that final eligibility is determined at donation."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "get-a-full-health-checkup-including-bloodwork",
+    "volunteer-at-a-hospital-for-a-year",
+    "sort-supplies-during-a-food-bank-volunteer-shift"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

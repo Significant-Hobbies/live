@@ -1,0 +1,60 @@
+{
+  "experienceSlug": "new-york-city-properly",
+  "slug": "new-york-city-properly",
+  "title": "Spend a month in New York by choosing weekly anchors",
+  "description": "Shape a month in New York around one borough or neighborhood each week, using public transit and free city ferries to see the city at a resident pace.",
+  "intent": "Turn a month-long NYC stay into a realistic rhythm across boroughs, adding a repeatable neighborhood method and one verified free cross-harbor route.",
+  "relatedExperienceSlugs": [
+    "visit-all-50-us-states",
+    "spend-a-month-in-japan",
+    "take-a-slow-travel-trip-one-town-one-week-no-plan"
+  ],
+  "sections": [
+    {
+      "heading": "Choose a weekly anchor, not a daily monument list",
+      "paragraphs": [
+        "A month is long enough to notice how New York changes from one neighborhood to another, but only if you stop spending every day crossing the city. Choose a weekly anchor: one area for food and errands, one for museums, one for waterfront or parks, and one for places you missed. This is a planning frame, not a rigid itinerary. Keep a free day each week for weather, laundry, rest or an invitation from someone you meet.",
+        "Settle into a practical routine near your accommodation: find a grocery store, a pharmacy, a library or public space, and the transit route you will use most. Learn the neighborhood on foot at different times of day. Notice which streets feel like shopping corridors, residential blocks or nightlife areas, and adjust your plans to the rhythm you actually observe."
+      ]
+    },
+    {
+      "heading": "Use borough days to see the city’s scale",
+      "paragraphs": [
+        "Plan at least one outing in each borough that interests you, but give each one a reason. Queens might be a food or arts day, Brooklyn a waterfront or neighborhood day, the Bronx a museum or garden day, and Staten Island a ferry and shoreline day. These are starting ideas, not claims that one borough can be reduced to a single attraction. Pick a specific public institution, park or district and check its current hours and access.",
+        "The Staten Island Ferry is a useful, concrete route. NYC DOT says it connects Whitehall Terminal in Lower Manhattan with St. George Terminal on Staten Island, takes about 25 minutes and is free. Use the ride as transit and a harbor view, then decide whether you want to explore the Staten Island side or return. Verify current departures and service advisories before you set a timed plan."
+      ]
+    },
+    {
+      "heading": "Let transit shape the day",
+      "paragraphs": [
+        "New York geography can make two close-looking stops surprisingly slow to connect. Check the route and transfer before you leave, and avoid stacking a fixed-ticket museum, a distant meal and an evening event across multiple boroughs on the same day. Choose a homeward route before a late outing, especially if you are unfamiliar with the area.",
+        "Use the city’s official transit and accessibility information for service status and station conditions. A ferry crossing, subway ride and walk each reveal a different part of the city, but give yourself time for transfers, queues, weather and unexpected delays. Do not assume a route or elevator is operating just because it did earlier in the month."
+      ]
+    },
+    {
+      "heading": "Build repeatable rituals",
+      "paragraphs": [
+        "A month feels less like a checklist when you return to a few places. Pick a neighborhood café, a park bench, a market or a library, and revisit it once a week. You will notice changes in light, weekday pace, familiar faces and seasonal details. Keep one page of notes with the date, route, sound or smell you remember and a question for next time.",
+        "Balance the famous with the ordinary. One day might include a major museum; another can be a long walk along a waterfront or through a neighborhood market. Ask before photographing people, respect residential spaces and keep music or conversation at a considerate volume in shared settings."
+      ]
+    },
+    {
+      "heading": "End each week with a small edit",
+      "paragraphs": [
+        "At the end of each week, look at what took more energy than expected and what you want to repeat. Drop a reservation that no longer interests you; add a rest block if the schedule has become a commute. The goal is a lived month, not maximal coverage. The ferry can fit into a slow day, while a specific museum or performance may need a timed booking—confirm both independently.",
+        "Before arrival, identify your base, a nearby everyday errand and the one weekly anchor you most want to protect. Then use official NYC DOT ferry information and current transit service sources to map your first route."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Staten Island Ferry Traveler Information",
+      "url": "https://www.nyc.gov/html/dot/html/ferrybus/sif-traveler-info.shtml",
+      "publisher": "New York City Department of Transportation",
+      "purpose": "Supports the St. George–Whitehall route, approximate trip duration and free service; official traveler information also gives passenger safety instructions.",
+      "accessLimit": "This page does not provide current schedules; NYC DOT schedule and service notices should be checked for the travel date."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

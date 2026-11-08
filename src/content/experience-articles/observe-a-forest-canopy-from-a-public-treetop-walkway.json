@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "observe-a-forest-canopy-from-a-public-treetop-walkway",
+  "slug": "observe-a-forest-canopy-from-a-public-treetop-walkway",
+  "title": "What can you notice from a treetop walkway that the forest floor hides?",
+  "description": "Plan a slow canopy visit that compares one tree from below and above, tracks light and wildlife, and respects walkway access and safety rules.",
+  "intent": "Answer how to make an elevated canopy visit an observation exercise rather than a quick viewpoint stop, with a repeatable ground-to-canopy comparison.",
+  "sections": [
+    {
+      "heading": "Make a comparison before you climb",
+      "paragraphs": [
+        "Choose a public, purpose-built walkway and check the venue’s current visitor notices before travelling. Weather, maintenance, access arrangements, and route details can change. At Kew, for example, the Treetop Walkway visitor page explains that bad weather or maintenance can close it, so a plan should include a ground-level alternative. Look for the same kind of information at your destination: entrance route, steps or lift, belongings rules, and whether children need close supervision. Do not treat an elevated route as an informal invitation to climb a tree or cross a barrier.",
+        "Before you go up, select one labelled or identifiable tree beside the route. From ground level, sketch the trunk direction, the lower branches, and the light reaching the leaves. You do not need a botanical notebook or expert names; a few shapes and textures are enough. Write the tree label if there is one. If the species is not labelled, describe it by visible features and leave the identification open rather than guessing."
+      ],
+      "bullets": [
+        "Check the venue’s official notices for closures and access details.",
+        "Choose a ground-level observation route as a genuine backup plan."
+      ]
+    },
+    {
+      "heading": "Compare height, light, and structure",
+      "paragraphs": [
+        "Stay aware of other visitors and keep loose items secured. Some walkways flex by design; follow staff directions and do not lean outward to improve a photograph. If the route feels uncomfortable, turn back using the marked path. A safe ground-level visit can still answer a useful question about how a tree changes the space around it."
+      ]
+    },
+    {
+      "heading": "Use a small field-note method",
+      "paragraphs": [
+        "Keep the record to a few comparisons. Note the time of day, whether the canopy is in sun or shade, and one sign of movement such as swaying leaves or a bird crossing the gap between trees. Add a quick diagram with the walkway, trunk, and direction of light. Avoid counting insects or birds unless you have a defined method; an unstructured count can sound more scientific than it is. A plain note such as “three bird calls from upper branches; no visual identification” keeps the observation honest.",
+        "If you visit with a companion, take turns looking in silence for a minute, then compare notes. One person might notice leaf edges while another spots a lichen patch. The differences are useful: viewpoints and attention shape what people notice. Keep the exchange observational rather than competitive, and do not move or collect anything. Public walkways let people study the canopy while protecting it from trampling and unnecessary contact."
+      ],
+      "bullets": [
+        "Separate a seen detail from an interpretation about what it means.",
+        "Use sketches, not collected leaves or branches, to remember the view."
+      ]
+    },
+    {
+      "heading": "Bring the two views together",
+      "paragraphs": [
+        "Back on the ground, return to the tree you chose and compare the two sketches. Which features were obvious only from above? Did the light look different through the crown? Did you notice any birds, insects, lichens, or fungi without being able to identify them? Write down one follow-up question, such as whether this species sheds leaves seasonally or how its canopy shape changes with nearby trees. Use the garden’s own labels or trusted botanical references to check names after your visit.",
+        "For a first attempt, make one page with a before-and-after pair of drawings and a short note about a single surprise. That modest artifact is easier to revisit than a long list of unverified species. If the walkway is closed, stay at ground level and compare the trunk, crown outline, and canopy shadow from two public paths. You can still practise seeing a tree as a layered structure, and you will have a specific question to bring to your next visit."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Treetop Walkway",
+      "url": "https://www.kew.org/kew-gardens/whats-in-the-gardens/treetop-walkway",
+      "publisher": "Royal Botanic Gardens, Kew",
+      "purpose": "Supports the example of upper-canopy observation and the advice to verify closures and visitor constraints on the venue's official page."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "take-a-forest-bathing-walk",
+    "join-a-dusk-bat-walk-with-a-detector"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

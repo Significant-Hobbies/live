@@ -1,0 +1,64 @@
+{
+  "experienceSlug": "learn-calligraphy",
+  "slug": "learn-calligraphy",
+  "title": "A calligraphy practice built around a model and its tools",
+  "description": "Choose a script, nib and short practice sheet, then learn how pressure, spacing and repeated strokes shape a readable calligraphy hand.",
+  "intent": "How can a beginner make a useful first calligraphy practice? This uses two museum examples from Islamic and Japanese traditions to show why practice should follow a specific hand and its tools.",
+  "sections": [
+    {
+      "heading": "Pick a hand before picking a pen",
+      "paragraphs": [
+        "Calligraphy does not use one universal alphabet or tool. The Metropolitan Museum of Art’s teaching material describes calligraphy in Islamic culture as a tradition passed from master to student, with training through copying models; it also explains that reed pens were cut to a width and angle suited to a particular script. The Met’s Japanese collection object shows a different practice: a student using a brush, inkstone and inkstick, guided by his sister and following model writing. These are examples from distinct traditions, not a recipe for all calligraphy. Begin by choosing a specific hand and learning what tools and forms belong to it.",
+        "For a first session, do not begin with a greeting card or a long quotation. Find a reliable model for the hand you chose, then copy one small element that a teacher identifies as appropriate: a stroke, a character or a short form. Ask whether the source is a practice model and how it should be approached. Keep a small record of the source, tool and date so you can compare later attempts without mixing different hands together."
+      ]
+    },
+    {
+      "heading": "Set up a practice strip",
+      "paragraphs": [
+        "Set up the materials recommended for the particular script and tool. The Met’s Islamic calligraphy teaching material describes preparing reed pens, ink and paper as part of the craft; its Japanese collection object depicts a brush, inkstone and inkstick. Those examples should not be combined into an invented universal kit. Use a simple practice surface and a small amount of the ink or medium your teacher recommends. Place scrap material nearby, protect the table, and arrange the sheet so you can make the intended movement without twisting your wrist.",
+        "Choose one variable for the practice strip. If the tool is a reed pen, ask the instructor to show how the pen is cut and held for the script being studied; the Met notes that the shape, width and angle of the nib were selected for a particular script. If you are using a brush, ask how to load and lift it in the specific hand. Make a few marks on scrap before copying the model, and keep the guide and your practice page side by side."
+      ]
+    },
+    {
+      "heading": "Watch pressure and release",
+      "paragraphs": [
+        "Follow the model one element at a time. Look at the direction, length and spacing of a mark before trying to reproduce it. Do not assume that pressure works the same way with a brush, reed pen or pointed nib. The Met’s examples show why tool and tradition matter: the Islamic qalam described in its teaching material and the Japanese brush depicted in its object record belong to different practices. Let the teacher or tradition-specific guide explain how the mark is formed, and then repeat it with attention.",
+        "Compare a copy with the model by asking one narrow question: is the angle close, is the character balanced, or is the space between forms consistent? The answer may depend on the script’s rules, so avoid correcting a form by applying assumptions from a different alphabet. If the line pools, skips or blurs, note what happened and ask whether the tool, paper or ink needs adjustment. Change one thing at a time so you can tell which adjustment helped."
+      ]
+    },
+    {
+      "heading": "Build letters from repeated parts",
+      "paragraphs": [
+        "When the first mark feels more familiar, copy a short character or unit repeatedly from the same model. The Met describes copying models as part of the long training process in the specific Islamic calligraphy tradition covered by its teaching page. Its Japanese practice object also depicts model writing being followed by a learner. Those examples support the value of study and repetition, but they do not imply that every tradition shares identical exercises or standards.",
+        "Give each attempt room. Compare direction, spacing and proportion, and circle the version that most closely follows the model rather than the one that looks most decorative. Save flourishes for later, when you know whether they are part of the hand you are studying. If you have access to a class or practitioner, ask for a demonstration of one difficult movement and then repeat only that movement."
+      ]
+    },
+    {
+      "heading": "End with a useful comparison",
+      "paragraphs": [
+        "At the end, write down the hand, model, tool and material you used, then mark one detail that improved and one that remains unclear. Keep the page even if it looks rough; it shows what you actually tried and gives a teacher something concrete to discuss. Stop if you feel discomfort rather than forcing a long session. A short focused comparison is a more useful first attempt than filling a page with forms you have not yet learned.",
+        "For the next practice, repeat the same element with the same tools, or ask a teacher to choose the next model. Do not switch traditions and carry over technique without instruction. The Met pages are useful as historical and material examples, not a complete modern course. Your next step is to select a named calligraphy hand, find a knowledgeable instructor or reliable tradition-specific guide, and ask what first model and tool they recommend."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Calligraphers and Their Tools",
+      "url": "https://www.metmuseum.org/ru/learn/educators/curriculum-resources/art-of-the-islamic-world/unit-two/calligraphers-and-their-tools",
+      "publisher": "The Metropolitan Museum of Art",
+      "purpose": "Supports claims specifically about Islamic calligraphy training by copying models and the selection/preparation of reed qalam tips for particular scripts; not generalized to all traditions."
+    },
+    {
+      "title": "Calligraphy Practice (Tenarai)",
+      "url": "https://www.metmuseum.org/art/collection/search/871866",
+      "publisher": "The Metropolitan Museum of Art",
+      "purpose": "Supports the Japanese-specific example of a learner guided by an older sibling, using brush, inkstone and inkstick, and following model writing."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "set-and-print-a-line-of-letterpress-type",
+    "write-a-letter-to-your-future-self-and-read-it-in-10-years"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

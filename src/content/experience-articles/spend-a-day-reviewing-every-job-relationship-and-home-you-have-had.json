@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "spend-a-day-reviewing-every-job-relationship-and-home-you-have-had",
+  "slug": "spend-a-day-reviewing-every-job-relationship-and-home-you-have-had",
+  "title": "A personal history day: jobs, homes, and the people who shaped them",
+  "description": "Use a gentle, structured day to revisit the jobs, relationships, and homes that shaped you, then turn memories into a few useful patterns.",
+  "intent": "How can I review my work, relationships, and homes without turning the day into a verdict on my life? Add a practical chronology and evidence-based prompts beyond the experience overview.",
+  "sections": [
+    {
+      "heading": "Set the frame before opening old files",
+      "paragraphs": [
+        "This is a day for noticing, not grading. Choose a start and finish time, a notebook or private document, water and meals, and a way to pause if a memory becomes overwhelming. You do not have to cover every year or resolve every relationship. The point is to make a readable map of what mattered, including ordinary transitions that are easy to forget.",
+        "Draw three parallel lanes: work, relationships, and homes. Add a fourth lane for dates or life events only if it helps you orient yourself. Begin with broad eras—school, first paid work, a move, a caregiving period—rather than trying to retrieve every detail in order. Leave blank spaces where your memory is uncertain; a gap is not a failure."
+      ]
+    },
+    {
+      "heading": "Build each lane from evidence",
+      "paragraphs": [
+        "Use calendars, old addresses, saved photographs, résumés, letters, or messages as memory prompts, not as proof that every moment was good or bad. For each job, note what you actually did, what changed, and one thing you learned about the conditions in which you work well. A job title alone may hide the important story: a supportive manager, a long commute, a skill you carried forward, or a boundary you learned to set.",
+        "For relationships, record the role someone played and the season of life you shared, while protecting private details that do not belong in a personal inventory. You can write “friendship ended after a move” without reconstructing a painful argument. For homes, add a concrete sensory marker—light in the kitchen, the route to a bus stop, a room you made your own—so each place remains more than an address. If you ask an older relative to help remember a period, ask permission before recording; the Library of Congress notes that a recording may later be transcribed or shared."
+      ]
+    },
+    {
+      "heading": "Look for turning points, not a tidy plot",
+      "paragraphs": [
+        "Use a three-step prompt of your own: first write what you can point to, then what you think it meant, then what you still wonder. “I changed teams in March” is an observation; “I wanted more autonomy” is an interpretation. Keeping them separate makes the review more honest and helps you revise a story that has become too simple.",
+        "Ask the same few questions across all three lanes: What did this period ask of me? What helped? What became unsustainable? Which choice was mine, and which constraint was outside my control? A repeated pattern may be useful, but it is not a diagnosis. Several jobs with long commutes might suggest that location matters to your daily energy; it does not mean you made a mistake by taking them."
+      ]
+    },
+    {
+      "heading": "Protect the parts that need care",
+      "paragraphs": [
+        "A full life review can surface grief, conflict, or trauma. Skip an era, write only a neutral label, or stop for the day if continuing feels destabilizing. You do not owe a complete account to the page. If you are revisiting experiences that feel difficult to manage alone, consider speaking with a qualified mental-health professional or trusted support person; this exercise is not therapy.",
+        "Keep other people’s confidentiality in mind if you might share the document. Use initials, omit identifying information, and do not include private messages or details about someone else that you would not want circulated. A private archive can be candid without becoming a public record."
+      ]
+    },
+    {
+      "heading": "Close with a small carry-forward",
+      "paragraphs": [
+        "At the end, circle three entries that still feel alive: perhaps a work condition you want to seek again, a kind of home that made everyday life easier, or a relationship habit worth practicing. Write one sentence of evidence beside each: a moment, not a sweeping claim. Then choose one modest action for the next month, such as contacting a former colleague to thank them, saving a photograph with a date, or protecting one evening for a person you value.",
+        "Leave the rest unresolved. A useful review does not have to convert every chapter into a lesson. Put the notes away, decide when you might return to them, and let the day end without demanding a grand conclusion."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Oral Histories: Family History for Kids",
+      "url": "https://guides.loc.gov/family-history-for-kids/interviews",
+      "publisher": "Library of Congress",
+      "purpose": "Supports asking an older relative's permission before recording and notes that a recording may later be transcribed or shared; the article's work, relationship and home review prompts are original guidance."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "curate-a-five-object-museum-of-your-life",
+    "make-a-map-of-places-you-call-home",
+    "make-a-skills-history-from-things-you-can-now-do"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

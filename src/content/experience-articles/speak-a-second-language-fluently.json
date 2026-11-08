@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "speak-a-second-language-fluently",
+  "slug": "speak-a-second-language-fluently",
+  "title": "Make your second language work beyond the lesson",
+  "description": "Build fluency by handling real conversations, explanations and disagreements in a language you already know, then review where communication breaks down.",
+  "intent": "How can an established learner extend fluency into demanding real situations, rather than repeat beginner study or take a self-rating quiz?",
+  "sections": [
+    {
+      "heading": "Define fluency by the jobs you want the language to do",
+      "paragraphs": [
+        "A useful fluency goal is a set of situations you can handle. You might want to explain your work to a new colleague, follow a fast family dinner, or disagree politely in a meeting. These tasks expose different skills: finding words, keeping a thread, understanding interruptions and repairing a misunderstanding.",
+        "The Council of Europe’s spoken-language descriptors separate qualities such as range, accuracy, fluency, interaction and coherence. Treat those as lenses for reviewing a performance, not a label you must earn. Choose three demanding situations that matter to your life and write what successful communication would look like in each."
+      ]
+    },
+    {
+      "heading": "Build a ladder from familiar to unfamiliar",
+      "paragraphs": [
+        "Keep the language familiar while changing one condition at a time. First explain a topic you know to a patient partner. Then explain the same topic to someone who does not share your assumptions. Next answer a follow-up question, summarize a different viewpoint, or handle a small disagreement. The content stays manageable while the interaction gets less scripted.",
+        "For example, if you can describe your weekend comfortably, try explaining why you chose a particular project, then invite the listener to challenge one part of your reasoning. If you are preparing for a work presentation, practice the talk, a spontaneous question, and a concise answer when you do not know something. Fluency includes graceful repair, not just uninterrupted speech."
+      ]
+    },
+    {
+      "heading": "Practice interaction, not just performance",
+      "paragraphs": [
+        "A prepared monologue can conceal gaps. Arrange conversations where the other person has a genuine reason to respond: planning a meal, comparing two options, describing a process, or deciding where to meet. Ask them to interrupt naturally and tell you when a phrase was unclear. Agree in advance whether you want correction during the conversation or a short review afterward.",
+        "When you cannot follow, use a repair phrase rather than retreating into the other language: ask for the last point again, check whether you understood a name, or restate your interpretation. Keep a short list of the moments that stopped the exchange. Later, look up only the missing phrase or pattern; do not turn every conversation into a grammar exam."
+      ]
+    },
+    {
+      "heading": "Use sources and people that fit your next gap",
+      "paragraphs": [
+        "If you follow conversations but lose precision, collect collocations and connectors from material made for native audiences in a subject you already understand. If you can discuss one subject but freeze elsewhere, rotate topics: a local issue, a personal decision, a hobby and a current event. If interruptions derail you, practice taking the floor with a short transition and then returning to the other person’s point.",
+        "A conversation partner is not automatically a teacher. Tell a tutor or exchange partner the task you are practicing and ask for targeted feedback: one unclear explanation, one awkward transition, or one missed chance to ask a follow-up. Avoid asking for a broad verdict like ‘Am I fluent?’ It gives you little information about what to do next."
+      ]
+    },
+    {
+      "heading": "Keep evidence of progress",
+      "paragraphs": [
+        "Once a month, record yourself completing the same unscripted task: explain a recent decision, tell a story with a complication, or summarize an article and answer questions. Compare whether your point is easier to follow, whether you can respond without long translation pauses, and whether you recover when you lack a word. Do not judge an accent as a proxy for competence.",
+        "Choose the next practice from the failure you observed. If you lost the thread, practice signposting. If a listener misunderstood your explanation, try a simpler example. If you understood but could not enter the discussion, rehearse one polite interruption. Book one real conversation that gives you a reason to use that skill, then note one thing to keep and one to change."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "CEFR qualitative aspects of spoken-language use",
+      "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-3-cefr-3.3-common-reference-levels-qualitative-aspects-of-spoken-language-use",
+      "publisher": "Council of Europe",
+      "purpose": "Provides descriptors for spoken range, accuracy, fluency, interaction and coherence; used as review lenses rather than a personal certification."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "learn-a-new-language-to-conversational-fluency",
+    "become-fluent-in-a-second-language",
+    "learn-someone-s-language-to-have-a-conversation-with-them"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

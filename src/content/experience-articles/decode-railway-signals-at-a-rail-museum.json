@@ -35,7 +35,7 @@
       "heading": "Make a tiny field note",
       "paragraphs": [
         "Write three observations: one physical feature, one rule or process you learned, and one question you still have. For example: “The arm sits above the line of sight; the guide said it indicates permission to proceed; I still wonder how the signal box knew the track ahead was clear.” This keeps observation, explanation and uncertainty separate.",
-        "Before planning a museum trip, check the museum operator’s current visitor information directly. The National Rail Museum website’s visitor page loaded only a brief waiting screen during this research, and the tourism listing includes an old note about renovation. Do not rely on old opening hours or assume an exhibit is available; confirm current arrangements with the museum."
+        "The Delhi Tourism listing is useful for collection context, but it also carries an old renovation notice. Before planning a visit, check current visitor arrangements with the National Rail Museum operator rather than relying on a tourism listing for hours or exhibit access."
       ]
     },
     {
@@ -51,12 +51,6 @@
       "url": "https://delhitourism.gov.in/entertainment/national_rail_museum.html",
       "publisher": "Delhi Tourism",
       "purpose": "Museum collection context for signaling equipment, models, coaches and historical photographs; no current visitor schedule relied on."
-    },
-    {
-      "title": "National Rail Museum visitor information",
-      "url": "https://www.nrmindia.org/whereWhen",
-      "publisher": "National Rail Museum, Indian Railways",
-      "purpose": "Official visitor page checked for current arrangements; page returned only a loading screen, so no current hours or exhibit availability are claimed."
     }
   ],
   "publishedAt": "2026-11-08",

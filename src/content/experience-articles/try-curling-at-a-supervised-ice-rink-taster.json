@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "try-curling-at-a-supervised-ice-rink-taster",
+  "slug": "try-curling-at-a-supervised-ice-rink-taster",
+  "title": "What happens at a beginner curling taster?",
+  "description": "Prepare for a supervised curling taster by learning the rink basics, dressing for a cold surface, and letting an instructor guide every first delivery.",
+  "intent": "What should a first-time curler expect at a supervised taster? This guide explains the game at a beginner level, the questions to ask, and why footwear and instruction matter on ice.",
+  "sections": [
+    {
+      "heading": "Choose an introductory session with an instructor",
+      "paragraphs": [
+        "Look for a club or rink that explicitly welcomes beginners and provides a supervised taster. Ask what the session includes, what clothing and equipment to bring, whether there are age or mobility requirements, and how the facility handles falls or accessibility. Curling stones are heavy, the ice is slippery and the game involves movement around other people; a coached introduction is the right place to learn balance and basic technique. Do not try to slide a stone in a public skating area or without an instructor.",
+        "A useful session lets you understand the rink before asking you to deliver a stone. Tell the organizer if you have concerns about balance, knees, back, cold, or getting down to and up from the ice. Ask whether there is a delivery stick or wheelchair curling option if that would make participation more comfortable. You can observe a demonstration first and decide which parts you want to try."
+      ]
+    },
+    {
+      "heading": "Dress for a cold, slippery surface",
+      "paragraphs": [
+        "Wear warm layers that let you bend and move, and bring clean shoes or clothing as the club requests. Curling Canada’s beginner teacher guide says new curlers need proper grippers when moving on ice and describes how a slider is used for delivery; its specific program may also require protective helmets. These details vary by facility, so follow the host's equipment instructions rather than improvising with tape or household items. Never walk on the ice in a slider without a gripper over it.",
+        "Leave loose bags, long scarves and outdoor grit off the ice. Bring gloves or mittens if the venue recommends them, and ask whether the club supplies shoes, brooms and stones. The instructor can show you where to stand, how to carry a broom and where to wait while others deliver. Keep both feet stable and take only the movements the session leader has cleared you to try."
+      ]
+    },
+    {
+      "heading": "Understand the aim before the technique",
+      "paragraphs": [
+        "World Curling describes the game as teams taking turns sliding granite stones toward a target called the house. A point goes to the team with a stone in or touching the house that is closer to the center than the opponent's nearest stone. You do not need to memorize every rule for a taster. Watch where the stone stops, notice how the team communicates, and ask what the instructor wants you to focus on for your first attempt.",
+        "The three basic shot ideas—placing a guard, drawing toward the house or removing another stone—can wait until you have tried a controlled delivery. Sweeping is another learned skill; let the coach show you how to hold the brush and where to sweep. Do not rush toward a moving stone or cross into another lane. On a beginner session, safe movement and listening matter more than strategy."
+      ]
+    },
+    {
+      "heading": "Take one coached delivery at a time",
+      "paragraphs": [
+        "Before pushing a stone, ask the instructor to demonstrate the starting position and release. Use the club's equipment and method, and let the instructor set the distance and power for your first attempt. Aim toward a broad target rather than trying to hit another stone. After the delivery, stand where the coach directs and observe how your weight shifted and where the stone stopped.",
+        "One awkward attempt does not mean you are unsuited to curling. The surface is unfamiliar, and small changes in balance make a big difference. If you feel unstable, pause and ask to try a stationary grip, a delivery stick or a seated option if available. Stop if you feel pain or dizziness, and tell the instructor rather than trying to push through it."
+      ]
+    },
+    {
+      "heading": "Finish by asking what to practice next",
+      "paragraphs": [
+        "After a few turns, ask what one thing you did consistently and what would make a second session easier. You may discover that you enjoy the social strategy more than the sliding, or that you want to try a wheelchair curling session or recreational league. Make a note of what gear the club provided and what it expects next time. Rules and beginner equipment vary, so the same facility is the best source for its own return instructions.",
+        "Your next action is to contact one curling club or rink and ask for a supervised beginner taster, including its footwear and safety requirements. Arrive ready to watch the demonstration, use the equipment provided and take only the coached movements you feel comfortable attempting."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "What is curling?",
+      "url": "https://worldcurling.org/about/curling/",
+      "publisher": "World Curling",
+      "purpose": "Supports the basic aim of curling, the house, delivery, scoring concepts, equipment and sweeping."
+    },
+    {
+      "title": "Getting Started in Curling: Teacher Guide",
+      "url": "https://www.curling.ca/wp-content/uploads/2026/02/Getting-Started-in-Curling-Teacher-Gudie.pdf",
+      "publisher": "Curling Canada",
+      "purpose": "Supports beginner instruction, footwear basics, use of grippers and session-specific helmet requirement; article directs readers to follow the local host's rules."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "try-target-archery-at-a-supervised-range",
+    "try-a-supervised-water-aerobics-class",
+    "try-polybat-on-an-adapted-table"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

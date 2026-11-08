@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "teach-a-class-or-course",
+  "slug": "teach-a-class-or-course",
+  "title": "Design a course that moves from first steps to confident use",
+  "description": "Plan a multi-session class around learner starting points, a visible progression, repeated practice, feedback and a final demonstration of learning.",
+  "intent": "How do I structure a class or course that builds skill over several meetings? Focus on prerequisites, practice and assessment, not a one-off workshop. Sequence a multi-session class or course around prerequisites, practice and assessment; distinct from a one-off workshop.",
+  "sections": [
+    {
+      "heading": "Name the destination first",
+      "paragraphs": [
+        "Describe what a learner should be able to do by the final session using a visible action: tune an instrument, explain a historical argument, prepare a safe basic dish or solve a defined problem. “Understand the subject” is difficult to teach or assess. Choose a goal the learner can demonstrate in a short task.",
+        "Carnegie Mellon’s Eberly Center recommends that course designers identify objectives, learners’ prior knowledge, constraints, assessment and instructional strategies. Use those as planning prompts, then write a plain-language course promise that fits the time available. A class that promises one usable skill is more trustworthy than one claiming mastery in a few meetings."
+      ]
+    },
+    {
+      "heading": "Find the starting point",
+      "paragraphs": [
+        "Before building lessons, ask what students already know and what they hope to do. A five-minute diagnostic, short conversation or sample exercise can reveal whether people need vocabulary, setup skills or a more advanced challenge. Avoid treating all students as identical just because they enrolled in the same course.",
+        "State prerequisites openly and offer an alternative for people who do not meet them: a short preparation resource, a beginner section or a referral to another class. Record what the group needs, not personal details irrelevant to learning. Explain how you will use any submitted work or recordings and how participants can access accommodations."
+      ]
+    },
+    {
+      "heading": "Sequence practice from simple to integrated",
+      "paragraphs": [
+        "Give each meeting one central step and one way to practice it. If teaching a writing course, learners might first identify a claim, then support it with evidence, then revise a paragraph. If teaching a practical skill, demonstrate the component before asking learners to combine it. Each session should recall something from the previous one.",
+        "Build a modest progression: demonstrate, guided attempt, independent attempt, feedback and a chance to retry. Do not fill every minute with lecture. Learners need time to make a mistake while the stakes are low and ask a specific question. Keep a contingency activity ready for when a concept takes longer than expected."
+      ]
+    },
+    {
+      "heading": "Check learning while there is time to adjust",
+      "paragraphs": [
+        "Use quick checks connected to the objective: a one-question exit note, a worked example, a peer explanation or a short performance. Tell learners what the check is for. It should help them see what to practice and help you notice whether the next lesson assumes a skill the group has not yet learned.",
+        "Plan a final assessment that resembles the intended use. A final demonstration, small project or teach-back often reveals more than a quiz on vocabulary alone. Make the criteria visible in advance, provide an example and let students ask questions about the process. Do not promise credentials unless an authorized body actually awards them."
+      ]
+    },
+    {
+      "heading": "Make the calendar and materials usable",
+      "paragraphs": [
+        "Publish a schedule with dates, topics, preparation and the location or connection details. Note expected workload, cancellation procedures, contact route and any material costs. Share handouts in advance where possible and make them readable on a phone or assistive technology. Check the room and equipment before the first meeting.",
+        "After each session, write down which activity worked, where people became stuck and what you will change. Gather learner feedback that focuses on the class rather than personal judgments. At the end, explain what learners can now practice independently and where to go next. A good course closes the loop between its promise and the demonstrated result."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Design Your Course",
+      "url": "https://www.cmu.edu/teaching/designteach/design/",
+      "publisher": "Carnegie Mellon University Eberly Center",
+      "purpose": "CMU recommends planning learning objectives, student starting points, constraints, assessment, strategies and course schedule before teaching begins."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "teach-a-skill-you-re-good-at-to-a-group-of-strangers",
+    "master-one-dish-so-well-you-could-teach-it"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

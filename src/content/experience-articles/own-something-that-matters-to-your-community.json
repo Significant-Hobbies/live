@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "own-something-that-matters-to-your-community",
+  "slug": "own-something-that-matters-to-your-community",
+  "title": "Find a shared asset your community can steward",
+  "description": "Explore a member-owned cooperative as one shared-ownership model, and distinguish legal ownership from nonprofit roles or public stewardship.",
+  "intent": "What might it mean to own something meaningful together with a community? This focuses on stewardship and shared governance rather than private wealth.",
+  "sections": [
+    {
+      "heading": "Choose what the community actually needs",
+      "paragraphs": [
+        "Begin with a local asset people use or lack: a tool library, community garden, shared workspace, cultural venue, housing cooperative or small grocery. Ask residents what they already rely on and what would make it more accessible. Ownership matters most when it gives a community a real say in something important to daily life.",
+        "Do not start with a building purchase or fundraising target. Start with the need, potential users and people willing to share responsibility. Ask who is currently excluded, who would maintain the asset and what happens during a slow season. A community-owned idea should be shaped by the people who will use it, not only by the founders."
+      ]
+    },
+    {
+      "heading": "Understand what ownership means",
+      "paragraphs": [
+        "A member-owned cooperative is one clear shared-ownership model: USDA explains that members own, use and democratically control the business. That legal relationship differs from volunteering for a nonprofit, serving on a board, or helping steward a public asset; those roles can carry responsibilities or influence without making each participant an owner of the underlying property. Community land trusts also use their own legal structures, leases and bylaws. Do not assume that membership or participation guarantees a universal equity share.",
+        "Request the governing documents before contributing money. Look for voting rules, membership requirements, reserve policy, withdrawal procedure, liability, expected labor and how disputes are handled. Ask exactly which entity owns the building or equipment, what rights a member receives, and whether those rights depend on location or contract. Get independent legal or financial advice where appropriate, especially before buying a share, signing a lease or assuming debt. Do not rely on an organizer’s verbal summary as a guarantee."
+      ]
+    },
+    {
+      "heading": "Test the idea at a small scale",
+      "paragraphs": [
+        "Try a low-risk pilot before acquiring an asset. A tool library can begin with a hosted lending day, a shared garden can start with a permitted plot, and a venue can test a monthly gathering in an existing community room. The pilot reveals maintenance needs, demand and accessibility gaps before anyone takes on a long-term obligation.",
+        "Use a simple record of who came, what was borrowed, which tasks went unfinished and what people requested next. Ask participants whether the process felt fair and understandable. A pilot is not proof of financial viability, but it can make assumptions visible and help the group decide whether to proceed."
+      ]
+    },
+    {
+      "heading": "Build governance into the design",
+      "paragraphs": [
+        "Agree on how decisions are made, how new members join, how conflicts are resolved and who handles routine tasks. Shared ownership can create friction when a small group silently carries all maintenance or when decision rights are unclear. Write down a basic role rotation and a way to replace a steward who needs to step back.",
+        "Make participation accessible: varied meeting times, plain-language records, translation or remote input may help more people take part. Explain which decisions members control and which are limited by regulations, contracts or funding conditions. A community should not be promised control that the legal structure does not actually provide."
+      ]
+    },
+    {
+      "heading": "Steward the asset over time",
+      "paragraphs": [
+        "Plan for repairs, insurance, utilities, supplies and replacement costs before opening. Set aside a reserve according to qualified advice and the organization’s governing rules. Make an annual calendar for inspections and maintenance, and publish who is responsible for each item. If the asset needs professional work, hire qualified providers instead of asking volunteers to improvise.",
+        "Revisit whether the asset still serves the community it was built for. Share an annual account of decisions, costs and use in a format members can understand. If the project cannot continue, have a written plan for transferring, selling or winding it down. The most meaningful ownership may be the community’s ability to care for an asset beyond its founders."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Cooperative Programs",
+      "url": "https://www.rd.usda.gov/rural-business-cooperative-service/cooperative-programs",
+      "publisher": "USDA Rural Development",
+      "purpose": "USDA states that cooperative members own, use and democratically control their business; this is a cooperative example, not a claim about nonprofit or public-asset ownership."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "organise-a-neighbourhood-event",
+    "volunteer-for-something-you-believe-in"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "plot-a-week-of-public-earthquake-records",
+  "slug": "plot-a-week-of-public-earthquake-records",
+  "title": "Read a week of earthquake dots without turning them into a forecast",
+  "description": "Map one week of public earthquake records, preserve magnitude and location fields, and describe patterns cautiously without predicting the next quake.",
+  "intent": "How to create a reproducible map of a week of public earthquake records and separate observed patterns from claims the dataset cannot support.",
+  "relatedExperienceSlugs": [
+    "map-impact-melt-features-on-the-moon",
+    "reproduce-one-chart-from-an-open-dataset",
+    "measure-the-speed-of-sound-with-a-repeatable-experiment"
+  ],
+  "sources": [
+    {
+      "title": "Search Earthquake Catalog",
+      "url": "https://earthquake.usgs.gov/earthquakes/search/",
+      "publisher": "U.S. Geological Survey",
+      "purpose": "Supports selecting dates, magnitude, geography and output format from ComCat, and the catalog result limit."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Define the question before choosing the week",
+      "paragraphs": [
+        "A useful map starts with a bounded question: what did the catalog report during one chosen week within a named region? Pick the dates in UTC, write the boundary clearly, and decide whether you are mapping every event returned or filtering by a minimum magnitude. A plain question prevents a dramatic-looking map from becoming an accidental claim about risk.",
+        "The USGS catalog form lets you filter by start and end time, magnitude, geographic region and other fields, then choose an output such as CSV, GeoJSON or KML. Keep a copy of the query criteria beside the data. A week measured in your local time zone will not necessarily match a week defined by UTC, so state which one you used."
+      ]
+    },
+    {
+      "heading": "Download a small, inspectable table",
+      "paragraphs": [
+        "Export a format you can inspect without losing fields. Keep event time, latitude, longitude, depth and the magnitude value that the catalog supplies. Save the original file unchanged, then make a working copy for plotting. The catalog page says search results are limited; if a broad query approaches that limit, narrow the region or date range instead of treating a partial return as the full dataset.",
+        "Before mapping, check for blank coordinates, repeated event identifiers and records whose magnitude field is missing or not comparable. Do not silently replace blanks with zero. Write down any filter you apply, such as excluding records without a magnitude estimate. This short data note makes it possible for someone else to understand why your plot differs from another person’s."
+      ]
+    },
+    {
+      "heading": "Choose symbols that keep scale honest",
+      "paragraphs": [
+        "Map event locations with point size tied to magnitude only if the scale remains readable. Earthquake magnitudes are not a simple linear count, so a linear-looking bubble legend can exaggerate or hide differences. A safer first map uses one symbol size and a sequential colour or a set of plainly labeled magnitude bands. Include the map projection, date interval, geography and data source in the caption.",
+        "A dense cluster may hide smaller points, while jittering coordinates can falsely imply locations that the catalog did not report. Try transparency or a density view if points overlap, but label the transformation. Do not draw a smooth boundary around a group of dots unless the data and method justify that boundary."
+      ]
+    },
+    {
+      "heading": "Describe only what the plot shows",
+      "paragraphs": [
+        "Write observations with direct language: “The returned catalog records are concentrated along this mapped area,” or “the selected week includes a wider spread of points than the prior sample.” A plotted week is one slice of recorded events, not a full measure of every tremor. A catalog entry can be revised, and different filtering choices can change the picture.",
+        "Avoid converting the map into a forecast or a statement that an area is safe. The USGS search page is a way to query catalog records; this article uses those records descriptively. If you compare two weeks, keep the region, magnitude threshold and query settings identical, then say exactly what changed in the data rather than inferring a cause."
+      ]
+    },
+    {
+      "heading": "Make the result reproducible",
+      "paragraphs": [
+        "Put the query dates, region, threshold, export date and file format beside the chart. Include units for depth and a legend for magnitude bands. If a caption says “one week,” specify the actual start and end timestamps and whether they are UTC. A title such as “USGS catalog events returned for [dates] in [region]” is less catchy but far more informative.",
+        "Finish with a second person trying to reproduce the search from your notes. If they get a different result, check whether the catalog has updated, whether the dates crossed a time zone boundary, or whether a hidden filter remained active. Keep the raw download and your transformed table together, then invite a question about the map’s design rather than asking readers to treat it as a prediction."
+      ]
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

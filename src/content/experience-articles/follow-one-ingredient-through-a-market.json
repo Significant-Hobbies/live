@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "follow-one-ingredient-through-a-market",
+  "slug": "follow-one-ingredient-through-a-market",
+  "title": "A market walk that ends with one ingredient on your plate",
+  "description": "Choose a market ingredient by asking where it came from, how vendors use it, and what cooking method suits its variety before buying a small amount.",
+  "intent": "How to turn a market visit into a concrete ingredient-to-meal investigation, with respectful questions and a useful tasting comparison.",
+  "relatedExperienceSlugs": [
+    "build-a-seasonal-millet-thali",
+    "taste-chocolate-from-three-origins",
+    "turn-vegetable-trimmings-into-stock-and-soup"
+  ],
+  "sources": [
+    {
+      "title": "Community Farmers Markets",
+      "url": "https://www.fdacs.gov/Consumer-Resources/Buy-Fresh-From-Florida/Community-Farmers-Markets",
+      "publisher": "Florida Department of Agriculture and Consumer Services",
+      "purpose": "Offers examples of questions about whether vendors grow products, their origins and seasonality."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Choose something that invites a story",
+      "paragraphs": [
+        "Do one lap before buying. Look for an ingredient displayed in more than one stall, an unfamiliar variety, or a crop shown with its leaves and stems still attached. A walk about one ingredient is more rewarding than trying to learn the whole market at once. Choose something you can cook soon and carry home safely.",
+        "A firm squash, a bunch of greens, a small bag of beans or a fruit you have never tasted can all work. Let the vendor’s description shape your choice, while keeping your budget and kitchen equipment in mind. One modest purchase is enough for the experiment; the point is to trace an ingredient, not return with a full week’s groceries."
+      ]
+    },
+    {
+      "heading": "Ask questions that are easy to answer",
+      "paragraphs": [
+        "Start with permission and a practical question: “I’m learning how to cook this—may I ask what you like to do with it?” If the stall is busy, thank the seller and move on. If they have time, ask whether they grow it themselves, what they call local, or how they know it is ready to use. Florida’s agriculture department suggests this sort of question for shoppers investigating product origin.",
+        "A useful follow-up is about handling: “Would you keep this on the counter or refrigerate it?” or “Which one is better for roasting?” Answers may differ because variety, ripeness and intended use differ. Note the vendor’s own words so you can compare advice at home instead of remembering a polished story that may not match what they said."
+      ]
+    },
+    {
+      "heading": "Use seasonality charts as a starting point",
+      "paragraphs": [
+        "A calendar can help you decide what to ask, but it cannot tell you that every market has the same harvest. Climate, weather, growing method and storage all affect availability. The Florida agency notes that growers using greenhouses may have produce at different times than outdoor crops. If you see something outside its expected season, ask how it was grown rather than assuming the stall is misleading.",
+        "Keep a field note with the ingredient, variety, vendor, origin as described, price paid and suggested preparation. If the seller is unsure about a detail, mark it unknown. That is better provenance than filling gaps with assumptions such as “market means local” or “organic-looking means certified.”"
+      ]
+    },
+    {
+      "heading": "Cook one variable at a time",
+      "paragraphs": [
+        "At home, prepare the ingredient the way the vendor suggested and keep the rest of the dish simple. If you bought two varieties, cook them with the same method so you can notice texture or sweetness differences. If you bought only one, compare two treatments: raw and lightly cooked, steamed and roasted, or plain beside a small amount with sauce.",
+        "Write down what changed as a sensory observation: “the thin stems softened first,” “this variety stayed firm,” or “the aroma became sweeter when warmed.” Avoid turning one meal into a universal claim about a crop. It is a small investigation, and a vendor’s account is one useful local perspective among many."
+      ]
+    },
+    {
+      "heading": "Close the loop with a better next question",
+      "paragraphs": [
+        "Make a meal around the ingredient, then decide whether you would buy it again and what you want to learn next time. Perhaps you found that leaves cook faster than the bulb, or that one variety holds its shape in a stew. Those are specific outcomes you can use on your next trip, not generic market advice.",
+        "If you want to continue, return to the same market and compare the ingredient later in the season or from another grower. Keep the conversation respectful and concise. A good market walk leaves the vendor free to work and leaves you with a real cooking decision, not just a photograph of an attractive stall."
+      ]
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

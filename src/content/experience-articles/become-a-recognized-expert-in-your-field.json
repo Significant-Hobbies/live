@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "become-a-recognized-expert-in-your-field",
+  "slug": "become-a-recognized-expert-in-your-field",
+  "title": "Make expertise visible through work other people can inspect",
+  "description": "Build a reputation around a clear question, useful evidence, honest limits, and work peers can evaluate rather than chasing the expert label.",
+  "intent": "Answers how to earn credible recognition in a field through repeatable, inspectable contributions while keeping expertise distinct from self-promotion.",
+  "sections": [
+    {
+      "heading": "Pick a question small enough to own",
+      "paragraphs": [
+        "“Become an expert” is too broad to guide the next year. Choose a specific question you want people to trust you on, and say what is inside its boundary. A school data analyst might focus on how attendance records are cleaned before district reporting, not “education technology.” A gardener might study one locally suitable native plant group, not all ecology. Narrow does not mean trivial; it makes your evidence legible.",
+        "Write a plain-language version of the question, the audience who needs the answer, and what you would count as a useful contribution. Include the issues you do not yet know. A clearly stated limit prevents a growing reputation from pushing you into claims beyond your actual experience."
+      ]
+    },
+    {
+      "heading": "Build a trail of work",
+      "paragraphs": [
+        "Make a simple evidence map: what you have done, what you observed, what you can share, and what another person could check. Depending on the field, the trail might be a case note, an annotated dataset, a careful how-to, a project retrospective, a public talk, or a small tool with documentation. Describe your role and collaborators accurately. A polished announcement without the underlying work is difficult for others to evaluate.",
+        "Look for a real recurring problem rather than inventing a grand research agenda. If three teams keep asking how to hand off a process, document one handoff, show where errors occur, and test whether a revised checklist helps. Record the context and limits so readers do not mistake a local observation for a rule everywhere."
+      ]
+    },
+    {
+      "heading": "Let peers test your reasoning",
+      "paragraphs": [
+        "Ask someone with relevant experience to challenge the strongest claim in your work. Invite them to identify the missing comparison, the assumption they would question, or a case where your recommendation would fail. Then record the revision. A useful expert earns trust partly by being corrigible: they can say what changed their mind and point out what remains uncertain.",
+        "Professional standards differ by discipline and country. As one U.S. engineering example, the National Society of Professional Engineers’ code expects engineers to practice in areas of competence and make objective, truthful public statements. That is an engineering code, not a general credential for every field, but it captures a useful boundary: do not let a public profile outrun your actual competence."
+      ]
+    },
+    {
+      "heading": "Teach without flattening the subject",
+      "paragraphs": [
+        "Teaching is a strong test of understanding when it leaves room for nuance. Explain one difficult concept to a newcomer, then mark where the analogy stops working. Offer a workshop, write a short guide, or mentor through an established group if the subject has a safe supervised pathway. Avoid treating audience size, titles or invitations as proof that an idea is correct.",
+        "When you speak publicly, name the evidence behind a claim and whether it comes from direct work, a published source, or a reasoned interpretation. If a question falls outside your area, say so and point to someone better qualified. That answer may feel less impressive in the moment, but it gives people a more accurate map of when to rely on you."
+      ]
+    },
+    {
+      "heading": "Review the reputation you are building",
+      "paragraphs": [
+        "Every few months, look at the work a stranger would find first. Does it show a consistent question? Can a reader tell what you did personally? Are older claims corrected when better evidence appears? A short index of projects, talks and writing can make the trail easier to follow without requiring a grand personal brand.",
+        "Ask a trusted peer what they would refer to you for and what they would not. If their answer is narrower than yours, use it to clarify your scope. Then choose one contribution that fills a real gap and finish it to a standard someone else can inspect. Recognition is a response from a field; useful work is the part you can control."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "NSPE Code of Ethics for Engineers",
+      "url": "https://www.nspe.org/career-growth/ethics/nspe-code-ethics-engineers",
+      "publisher": "National Society of Professional Engineers",
+      "purpose": "Supports a field-specific example: NSPE states engineers should practice only in areas of competence and make objective, truthful public statements; this is an engineering code and is not a universal standard for all professions."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "publish-an-article-in-a-magazine",
+    "write-a-book-that-changes-someone-s-life",
+    "climb-the-corporate-ladder-to-a-role-you-dreamed-of"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

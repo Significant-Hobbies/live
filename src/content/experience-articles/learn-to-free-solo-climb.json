@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "learn-to-free-solo-climb",
+  "slug": "learn-to-free-solo-climb",
+  "title": "Understand free soloing before you decide what to learn",
+  "description": "Learn what free solo climbing means, why it has almost no fall margin, and how to build climbing skill through qualified roped instruction.",
+  "intent": "Explain the discipline without presenting a soloing progression: direct readers to qualified roped instruction and honest risk understanding.",
+  "relatedExperienceSlugs": [
+    "climb-a-mountain-over-4-000-metres",
+    "community-d511273f-b104-5228-b141-f343c01a5e5e",
+    "skydive-from-15-000-feet"
+  ],
+  "sections": [
+    {
+      "heading": "Know what the term means",
+      "paragraphs": [
+        "Free soloing is climbing without a rope or protective gear that would arrest a fall. That absence of a backup system is the defining feature, and it means a mistake or an unexpected change in conditions can have catastrophic consequences. The American Alpine Club has documented serious free-solo falls and describes the margin for error as essentially zero. A successful ascent cannot establish that the next one is safe.",
+        "If the idea interests you because you love climbing movement, you can pursue that interest through roped climbing, bouldering with appropriate mats and supervision, or mountaineering instruction that includes protection systems. Those activities are not substitutes for a free solo; they are legitimate ways to develop skill while using safeguards."
+      ]
+    },
+    {
+      "heading": "Separate climbing skill from solo judgment",
+      "paragraphs": [
+        "Climbing ability is only one part of a decision made outdoors. Route-finding, weather, rock condition, fatigue, approach and descent, communication, and rescue access can all affect a day. An accident report from the American Alpine Club describes a climber who had completed a route before but fell after slipping on a wet section. Familiarity did not remove uncertainty in the surface.",
+        "That example is a reason to study risk and use protective systems, not a recipe for selecting an easier unroped route. There is no supervised “safe free-solo course” that can guarantee safety. Be wary of anyone who frames a sequence of unroped attempts as a responsible training plan or says that confidence and repetition make a fall survivable."
+      ]
+    },
+    {
+      "heading": "Build a real foundation with a qualified teacher",
+      "paragraphs": [
+        "If you are new to climbing, book an introductory class at a reputable climbing gym or with a qualified guide. Learn movement, belaying, knots, equipment checks, communication, falling practice in an appropriate setting, and how to ask questions. If you already climb, take instruction for the discipline you want to practice outdoors, and climb with people whose judgment and communication you trust.",
+        "Progress according to feedback from a teacher, not an online grade chart or a dramatic video. Ask what the qualification means, how the instructor supervises students, what the class will cover, and how the provider handles weather or a student who wants to stop. Keep rope systems in the plan; do not remove them to imitate a solo ascent."
+      ]
+    },
+    {
+      "heading": "Study the risk without glamorizing it",
+      "paragraphs": [
+        "Climbing media often shows a polished sequence of movement and leaves out uncertainty, preparation, and consequences. Read incident reports from the American Alpine Club alongside instructional material, and notice how small details such as moisture or an overlooked route feature can matter. Use those reports to expand your understanding of risk, never to extract a route to copy or a way to test yourself.",
+        "Consider what you actually want from the experience. If it is quiet focus, exposure, or mastery of movement, ask a climbing instructor for a roped route or training session that provides those qualities within a protected setting. If the appeal depends specifically on having no protection, pause and speak with an experienced, safety-minded climber or qualified guide before acting."
+      ]
+    },
+    {
+      "heading": "Choose a next step that keeps options open",
+      "paragraphs": [
+        "A useful first step is a roped skills class with clear learning objectives and direct instructor feedback. Afterward, record what felt engaging, what surprised you, and which safeguards you want to understand better. You can continue developing as a climber without committing to an unroped attempt.",
+        "If a friend is urging you to prove something, decline; social pressure is a poor way to make a high-consequence decision. The most informed choice may be not to free solo. Learn the discipline as a subject, seek qualified instruction for climbing itself, and keep your future choices reversible."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Free Solo Fall — Solo Rock Climbing",
+      "url": "https://publications.americanalpineclub.org/articles/13201217662",
+      "publisher": "American Alpine Club",
+      "purpose": "Primary accident analysis illustrating unexpected route conditions and consequences of a free-solo fall."
+    },
+    {
+      "title": "Know The Ropes: Protection",
+      "url": "https://publications.americanalpineclub.org/articles/13201213455",
+      "publisher": "American Alpine Club",
+      "purpose": "Climbing risk article supporting route choice based on ability and risk tolerance, and the value of informed decision-making."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,63 @@
+{
+  "experienceSlug": "the-taj-mahal-india",
+  "slug": "the-taj-mahal-india",
+  "title": "How to read the Taj Mahal as a designed place",
+  "description": "Use the Taj Mahal’s axes, changing marble light, garden channels and calligraphy to turn a visit into a close architectural reading.",
+  "intent": "An observation-led way to read the monument’s architecture and garden during a visit, adding a sequence of details to notice rather than another entry or ticket guide.",
+  "relatedExperienceSlugs": [
+    "visit-the-taj-mahal-at-dawn",
+    "follow-the-narrative-reliefs-around-sanchi-s-gateways",
+    "explore-a-historic-stepwell-s-water-architecture"
+  ],
+  "sections": [
+    {
+      "heading": "Start with the whole composition",
+      "paragraphs": [
+        "Before zooming in on a carving, pause at the main southern gate and let the view settle. The complex is organized around a strong north–south axis: gate, garden, reflecting channel, mausoleum and the river beyond. Notice how the central path and water divide the garden into balanced quarters. The symmetry is a deliberate visual structure, but the river edge gives the composition a different ending from the formal entrance side. Ask what your eye is guided toward at each threshold.",
+        "The official Taj site separates its architecture into exteriors, outlying buildings, interiors, garden and calligraphy. That division is useful as a looking plan: choose one layer at a time instead of trying to absorb the entire site in a single photograph."
+      ],
+      "bullets": [
+        "First view: trace the center line from gate to dome.",
+        "Second view: compare the two sides of the main building rather than assuming every nearby structure is identical."
+      ]
+    },
+    {
+      "heading": "Read the marble from a distance, then close up",
+      "paragraphs": [
+        "From across the garden, the white marble seems almost like a single surface. As you approach, look for the contrast between broad quiet planes and concentrated decoration around openings, arches and the central tomb chamber. The shift in scale is part of the experience: a building that reads as a silhouette from far away rewards slower attention at the threshold. You do not need to identify every stone or motif; note where ornament is dense and where the wall is allowed to remain plain.",
+        "Light changes the appearance of the pale stone. If you visit at a different time from the classic dawn view, make a small comparison: choose one facade detail, observe its shadow edge, then return to the same point later if your itinerary permits. Treat color impressions as conditions of that moment, not a fixed promise about what every visit will look like."
+      ]
+    },
+    {
+      "heading": "Look at the garden as an idea",
+      "paragraphs": [
+        "The garden is not just a foreground for the mausoleum. The long water channels, paths, planted quarters and central crossing establish a measured approach. From the main platform, turn around and look back toward the gate; the building and entrance now frame opposite ends of the same axis. This reversal helps you see how the complex manages arrival and departure, not only the postcard view.",
+        "Pick one channel and follow its line with your eyes until it meets a cross-path. Then notice how the reflecting water can duplicate the building when conditions allow. If there is wind or a crowd, the reflection may break up; that is a useful reminder that the site is experienced in weather and movement, not as a still image."
+      ]
+    },
+    {
+      "heading": "Notice details without turning them into a checklist",
+      "paragraphs": [
+        "The official site’s architecture pages point readers to the exteriors, interiors and calligraphy as distinct subjects. Use that as permission to go deep on one detail. At an arch, compare the border, the lettering and the surface around them. From a respectful distance, look at how decorative bands align across neighboring openings. Inside, follow posted rules and staff directions; do not touch surfaces or block the flow while trying to inspect an element.",
+        "A good visit note can be three lines: one thing that looked different from far away, one detail you only noticed close up, and one question you would want a qualified guide or historian to explain. This preserves curiosity without pretending a quick visit makes you an expert in Mughal architecture."
+      ]
+    },
+    {
+      "heading": "Make a small, realistic route",
+      "paragraphs": [
+        "The site’s official visitor information says the monument is closed on Fridays and lists a visiting window around sunrise to sunset; confirm current entry details with the Archaeological Survey of India before travel because operational notices can change. Allow enough time for security, walking between the gate and mausoleum, and a pause in the garden. A rushed arrival followed by a sprint through the complex tends to reduce the place to a view.",
+        "Choose one primary observation—axis, marble, garden or calligraphy—and one secondary detail. Take a few notes after leaving the busiest interior areas. Your next action is simple: save the official architecture page and decide which single feature you will look for first when you reach the garden."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Taj Mahal official website",
+      "url": "https://www.tajmahal.gov.in/",
+      "publisher": "Department of Tourism, Government of Uttar Pradesh",
+      "purpose": "Official architecture navigation covers exteriors, outlying buildings, interiors, garden and calligraphy; visitor notice states Friday closure and broad visitor hours. Used for the observation categories and to direct readers to verify current access details with ASI."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

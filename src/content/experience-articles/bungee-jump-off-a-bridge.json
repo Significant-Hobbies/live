@@ -1,0 +1,53 @@
+{
+  "experienceSlug": "bungee-jump-off-a-bridge",
+  "slug": "bungee-jump-off-a-bridge",
+  "title": "What to ask before booking a bridge bungee",
+  "description": "Compare bungee operators by regulation, briefing, participant requirements, and weather policy before choosing whether to take part.",
+  "intent": "How can someone assess an operator and make an informed choice before a supervised bridge bungee jump?",
+  "sections": [
+    {
+      "heading": "Choose a responsible operator",
+      "paragraphs": [
+        "A bridge jump can look like one simple choice—step to the edge or turn back—but a careful visit starts long before the platform. First decide whether you want to jump at all, and pick an operator with a real site and a clear briefing process. Bungee providers and local regulations vary. New Zealand’s Standards body says operators there must register and pass periodic independent safety audits, but rules differ elsewhere; check the competent authority where you plan to go. A reputable provider should answer who runs the jump, what the participant briefing covers, how equipment is checked, what eligibility rules apply, and what conditions could pause the activity. A bridge setting does not itself prove the operation is properly managed. Look for an operator that explains its procedures without pressuring you or framing hesitation as failure."
+      ]
+    },
+    {
+      "heading": "Read the current requirements",
+      "paragraphs": [
+        "Read the operator’s current requirements before paying. Some providers publish age, weight, health, clothing, and accessibility conditions; do not rely on a friend’s experience at a different site. If you have a medical concern, injury, or uncertainty about eligibility, ask the operator directly and consult a qualified clinician when appropriate. The operator’s own guidance may also say what to bring and what must be removed before the activity. Avoid trying to self-clear a concern from an online list. If a staff member’s answer is vague, the day feels rushed, or the safety briefing is skipped, you can decline. A booking is not a promise to participate. The site should make space for a clear, unhurried decision."
+      ]
+    },
+    {
+      "heading": "Keep the decision yours",
+      "paragraphs": [
+        "On arrival, pay attention to how the process feels. Staff should identify themselves, explain the activity and its limits, tell you how communication will work, and give you a chance to ask questions. Ask where your belongings go and who can accompany you to the viewing area. Do not imitate a demonstration or handle equipment unless staff explicitly direct you. Follow only the operator’s instructions and let trained staff make the connections and checks. You do not need to perform a jump technique based on a video or another person’s method. For some people, observing from a nearby viewpoint is a satisfying version of the day. The important thing is that your choice is yours, not something pulled out of you by countdown pressure or group expectations."
+      ]
+    },
+    {
+      "heading": "Ask before you book",
+      "paragraphs": [
+        "Before reserving, write down your questions and compare the answers from at least two operators: regulatory status, briefing process, participant conditions, weather policy, and how they handle a decision to stop. A current New Zealand standard is under revision, so do not use a general web article as a substitute for the operator’s current procedures or local rules. For a first attempt, visit the bridge as a spectator if you can, and notice how you respond to the height and setting. If you later choose to jump, arrive rested, disclose relevant concerns, and follow the crew’s instructions. If you change your mind, step back and tell staff plainly. Your next step is to locate the local activity regulator and review the exact operator’s current safety information before booking."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Bungy jumping standard to take a leap forward with new revision",
+      "url": "https://www.standards.govt.nz/news-and-updates/bungy-jumping-standard-to-take-a-leap-forward-with-new-revision",
+      "publisher": "Standards New Zealand",
+      "purpose": "Explains New Zealand’s registration and periodic independent safety audit requirements and the status of its standard revision."
+    },
+    {
+      "title": "Bungy Safety",
+      "url": "https://www.bungy.co.nz/safety/",
+      "publisher": "AJ Hackett Bungy New Zealand",
+      "purpose": "Example of an operator’s published process, participant disclosures, and equipment guidance; advice is provider-specific."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "paraglide-over-the-swiss-alps",
+    "community-abed89fc-7a36-5cb0-9868-e400c8d9d95b"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

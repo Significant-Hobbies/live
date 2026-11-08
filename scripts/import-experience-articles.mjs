@@ -109,8 +109,14 @@ for (const { target, draft, digest, review } of selected) {
 const index = [];
 for (const [category, files] of [...groups.entries()].sort(([a], [b]) => a.localeCompare(b))) {
   const constant = `${category.toUpperCase()}_ARTICLES`;
-  const imports = files.map((file, index) => `import article${index} from './${file}';`).join('\n');
-  const source = `import type { ExperienceArticle } from '~/lib/experience-article-model';\n${imports}\n\nexport const ${constant}: ExperienceArticle[] = [${files.map((_, index) => `article${index}`).join(', ')}];\n`;
+  const bindings = files.map((file) => ({
+    file,
+    name: `article_${basename(file, '.json').replace(/[^a-zA-Z0-9_]/g, '_')}`,
+  }));
+  if (new Set(bindings.map(({ name }) => name)).size !== bindings.length)
+    throw new Error(`Duplicate article import binding in ${category}`);
+  const imports = bindings.map(({ file, name }) => `import ${name} from './${file}';`).join('\n');
+  const source = `import type { ExperienceArticle } from '~/lib/experience-article-model';\n${imports}\n\nexport const ${constant}: ExperienceArticle[] = [${bindings.map(({ name }) => name).join(', ')}];\n`;
   write(join(output, `${category}.ts`), source);
   index.push({ category, constant });
 }

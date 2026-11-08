@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "leave-a-legacy-gift-to-a-charity-in-your-will",
+  "slug": "leave-a-legacy-gift-to-a-charity-in-your-will",
+  "title": "Make a charitable bequest clear and easy to identify",
+  "description": "Explore a charitable gift in a U.S. will by confirming the exact organization, discussing intent with loved ones and getting estate advice locally.",
+  "intent": "What should I check before including a charity in my will? This explains practical identification and communication questions without giving legal or tax instructions.",
+  "sections": [
+    {
+      "heading": "Start with the organization you mean",
+      "paragraphs": [
+        "Write down the charity’s full legal name, location and official website. Large organizations may have national and local branches, funds with similar names, or programs that change over time. Contact the organization’s planned-giving or finance office and ask which legal entity should be named and how it records a bequest notice. Keep the answer with your planning notes.",
+        "Decide whether your intention is a general gift or support for a particular program. A program may not exist in the same form decades later, so ask how the organization handles a restricted gift if the named purpose can no longer be carried out. The organization can explain its own process; it cannot decide how your will should be drafted."
+      ]
+    },
+    {
+      "heading": "Choose the intention before the wording",
+      "paragraphs": [
+        "Some people want a fixed amount, a named asset, or a portion of what remains after other gifts and obligations. Each choice affects the rest of an estate differently. Make a private note about what you hope the gift will do and what flexibility you want the charity to have. Then discuss the options with an estate-planning lawyer or qualified adviser in the jurisdiction whose law governs your will.",
+        "This is important because legal categories, execution rules, estate taxes and terminology vary by country and sometimes within a country. Do not copy a sample clause from a charity website or an online form into a will without professional review. The goal is to make your intention understandable and legally effective under the rules that apply to you."
+      ]
+    },
+    {
+      "heading": "Understand the narrow U.S. tax example",
+      "paragraphs": [
+        "For readers in the United States, the Internal Revenue Service’s Form 706 instructions discuss charitable gifts and bequests in the context of federal estate-tax reporting. The instructions describe when the estate may claim a charitable deduction and note that it depends on the amount actually available for charitable use. That is not a promise that every gift will reduce tax or that a particular estate must file Form 706.",
+        "Tax treatment depends on facts, current law and the relevant state and federal rules. Use the IRS page to frame questions for a qualified estate attorney or tax professional; do not estimate a tax benefit from a web summary. If you live elsewhere, consult the official tax authority and a lawyer in your jurisdiction instead."
+      ]
+    },
+    {
+      "heading": "Talk with people who may be affected",
+      "paragraphs": [
+        "If you want your family or executor to understand why the gift matters, tell them in a separate conversation or letter. Your will’s legal instructions should be handled through the proper process, but a plain-language explanation can reduce surprise. Decide how much detail to share and with whom. You are not obligated to make a private financial choice public.",
+        "Review your plans after major life changes or if the charity merges, changes its name or closes a program. Ask your lawyer how updates should be made so old copies do not create confusion. Keep a record of the adviser who prepared the document and where the signed original is stored, following local legal guidance."
+      ]
+    },
+    {
+      "heading": "Confirm the gift is recorded correctly",
+      "paragraphs": [
+        "When your plan is complete, verify that the organization’s name matches the wording approved by your lawyer. Ask the charity whether it would like a confidential notice for planning purposes and how you can revoke or amend that notice if your intentions change. A nonbinding notification to a charity does not replace a valid will.",
+        "Keep a copy of the organization’s reply with your private planning documents, then give the executor only the information they need to carry out your instructions. Your next step is to contact the charity for its correct legal name and take that information to an estate professional in your jurisdiction."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Instructions for Form 706",
+      "url": "https://www.irs.gov/instructions/i706",
+      "publisher": "Internal Revenue Service",
+      "purpose": "Supports a narrow U.S. example of charitable bequests in federal estate-tax reporting and the limit that deductions reflect amounts actually available for charitable use; not personalized tax advice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "write-your-ethical-will",
+    "start-a-scholarship-fund",
+    "do-a-group-charity-challenge-with-friends"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

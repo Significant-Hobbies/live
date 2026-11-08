@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "host-a-shared-silent-reading-hour",
+  "slug": "host-a-shared-silent-reading-hour",
+  "title": "A low-pressure format for reading with friends",
+  "description": "Plan a shared reading hour that feels social without becoming a book club: choose a comfortable place, agree on quiet time, and leave discussion optional.",
+  "intent": "How can friends read together without assigned books or a discussion obligation? This guide adds a host’s practical decisions: how to make quiet time comfortable, welcome different reading formats, and let conversation end naturally.",
+  "sections": [
+    {
+      "heading": "Choose the room before choosing the ritual",
+      "paragraphs": [
+        "Look for a place where people can arrive without feeling they must perform sociability: a library room, a living room, a quiet courtyard, or a café that welcomes groups. Check the basics first: enough seats, usable light, a washroom nearby, and a noise level that will not turn concentration into hard work. If the venue expects purchases or a booking, say so plainly before inviting anyone.",
+        "The invitation can be short and specific: “Bring whatever you are reading; we will settle in, read quietly for about an hour, then have tea or head home.” That tells people this is neither a homework assignment nor a disguised discussion group. Ask about mobility, lighting, or seating needs in the same ordinary way you would ask about the time."
+      ]
+    },
+    {
+      "heading": "Make the quiet part easy",
+      "paragraphs": [
+        "Set a visible beginning and end, but do not turn the hour into a timer-based challenge. A gentle two-minute arrival buffer lets latecomers find a seat without interrupting the group. Put phones on silent if people want, while making clear that urgent calls, caregiving needs, and comfort breaks are normal. Quiet means shared consideration, not perfect stillness.",
+        "Welcome novels, comics, poetry, audiobooks with headphones, textbooks, and ebooks. Someone may want a larger type size or a screen reader; the point is sustained attention in company, not matching formats. Avoid asking people to explain their choice before they have even opened it. A simple “glad you made it” is enough."
+      ]
+    },
+    {
+      "heading": "Host a first gathering without overplanning",
+      "paragraphs": [
+        "For a first session, invite two or three people and keep the structure spare: arrive, choose a place, read, then offer a closing question such as “Was there anything you felt like sharing?” A guest can pass or leave without explaining. The Silent Book Club model likewise has no assigned reading and makes post-reading socialising optional; borrow that light touch without adopting an organization’s name or implying affiliation.",
+        "Keep refreshments optional and separate from the reading itself. If you are in a café, check the group policy, purchase expectations, and whether lingering is welcome. At home, label tea or snacks and let people serve themselves so the host can read too. A gathering is easier to repeat when the host does not spend the whole hour catering."
+      ]
+    },
+    {
+      "heading": "Notice what would make a second hour better",
+      "paragraphs": [
+        "At the end, ask one practical question: would people prefer the same time and place, a slightly shorter reading block, or a different day? Do not ask anyone to report pages or summarize a book. You might learn that the room was too bright, chairs were uncomfortable, or the quiet stretch was exactly right. Change one thing next time, then see whether it helped.",
+        "A useful first attempt is a single hour with an arrival cushion and a quiet block of roughly forty minutes. If that feels long, shorten it; if a group naturally settles in, extend only by mutual agreement. Let the habit fit the people who actually come, rather than designing an idealized club nobody can sustain."
+      ]
+    },
+    {
+      "heading": "Leave everyone with an easy next step",
+      "paragraphs": [
+        "Close by thanking people for protecting a small pocket of attention together. Offer an optional date by message rather than asking for a public commitment on the spot. If someone wants to talk about a book, listen for what they enjoyed before recommending the next one. A reading hour can be complete even when nobody shares a title.",
+        "Before you invite the group again, write down the room, start time, and one adjustment while they are fresh in your mind. Then send a short invitation with the same clear promise: bring your own reading, settle in, and choose whether to chat afterward."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How Silent Book Club works",
+      "url": "https://silentbook.club/pages/about-us",
+      "publisher": "Silent Book Club",
+      "purpose": "The official format has no assigned reading, welcomes multiple reading formats, and leaves socialising optional."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "run-a-household-listening-circle",
+    "host-a-bring-one-object-story-circle"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

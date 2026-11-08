@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "paint-something-you-re-proud-to-hang-on-a-wall",
+  "slug": "paint-something-you-re-proud-to-hang-on-a-wall",
+  "title": "Design a Small Painting That Can Hold a Wall",
+  "description": "Turn one meaningful subject into a finished wall painting by testing composition, limiting the palette, and planning the final edges.",
+  "intent": "Gives a beginner a manageable path from subject choice to a finished painting, with composition decisions that make the work feel intentional.",
+  "sections": [
+    {
+      "heading": "Choose a subject with a clear silhouette",
+      "paragraphs": [
+        "A painting feels hangable when its idea reads at a glance. Choose one object, a small still life, a plant, a window view, or a place with a recognizable shape. Avoid beginning with “paint everything I can see.” Instead, write one sentence about what you want the viewer to notice: the red bowl against a blue cloth, a single stem leaning into light, or the geometry of roofs at dusk.",
+        "Set the subject where you can return to it, then make three thumbnail sketches on scrap paper. Try a centered arrangement, an off-center arrangement, and a cropped close-up. The National Gallery of Art’s beginner painting resource combines image study with experimentation, while the Rijksmuseum’s composition lesson begins a still life with simple guiding lines on the canvas. Those are useful reminders: decide placement before details."
+      ]
+    },
+    {
+      "heading": "Build a simple composition map",
+      "paragraphs": [
+        "Lightly mark the outer boundary of the main shapes and the direction of the strongest line. For a mug and fruit, you might make the mug the large vertical form and place a small round fruit where it balances the handle. For a landscape, choose whether the horizon sits high or low. Keep a few clear areas of empty space; a painting becomes crowded when every corner competes for attention.",
+        "Check the design in a phone photo or by squinting. If the main shape disappears, adjust the value contrast or simplify the background. You can also crop the photo to the exact panel shape before painting. This quick test is easier than trying to repair a composition after texture and small marks have taken over."
+      ]
+    },
+    {
+      "heading": "Limit the palette on purpose",
+      "paragraphs": [
+        "Pick a small group of colors and mix a light, middle, and dark version of each. A limited palette makes separate objects feel as if they belong in one scene. Before using your surface, test the mixtures beside one another: a warm shadow may sit beside a cool highlight, but the color relationships should support the focal point. Keep the test strip as a record rather than guessing repeatedly on the painting.",
+        "If you are new to paint, try acrylic on canvas paper or a small panel; the Rijksmuseum lesson lists acrylic paper, canvas paper, palette, brushes, and acrylic paint for its exercise. Choose materials you can handle safely and follow the manufacturer’s instructions. Do a small color study first, so the main piece becomes a planned pass rather than a string of corrections."
+      ]
+    },
+    {
+      "heading": "Paint large relationships before small marks",
+      "paragraphs": [
+        "Block in the background and the largest shapes first. Then compare their edges: a sharp edge can draw attention, while a softened edge lets forms recede. Add the darkest accents and brightest lights late, only where they help the viewer read the object. If you find yourself painting tiny veins or labels before the overall shape feels right, step back and return to broad color masses.",
+        "Let layers dry according to the paint instructions. A common beginner frustration is muddy color from repeatedly scrubbing wet paint; instead, decide what needs changing, let the area settle, and make a fresh, simpler pass. Photograph the work from across the room after each session. Distance reveals uneven balance that disappears when your nose is near the surface."
+      ]
+    },
+    {
+      "heading": "Finish for a real place",
+      "paragraphs": [
+        "A finished piece has deliberate edges, not necessarily lots of detail. Check the corners, remove stray marks, and decide whether the surface needs a border or a painted edge. Ask where it might hang and look at the work in that light. If it is meant for a dim hallway, strong value separation may matter more than subtle color shifts; for a bright room, calmer tones may feel easier to live with.",
+        "Choose one final correction and stop. The next action is to make three thumbnail layouts and a small color test today, then paint the version that reads most clearly from a few steps away. That turns “something to hang” from a vague standard into a sequence of decisions you can actually complete."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Process and Product: Painting",
+      "url": "https://www.nga.gov/educational-resources/process-and-product/process-and-product-painting",
+      "publisher": "National Gallery of Art",
+      "purpose": "Beginner painting techniques, experimentation, and examples of how artists use paint."
+    },
+    {
+      "title": "Composition on canvas",
+      "url": "https://www.rijksmuseum.nl/en/story/composition-on-canvas",
+      "publisher": "Rijksmuseum",
+      "purpose": "Painting composition exercise using guiding lines and a still life with acrylic materials."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "learn-watercolour-painting",
+    "make-a-tactile-relief-artwork",
+    "try-kalamkari-drawing-on-cloth-with-an-artisan"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

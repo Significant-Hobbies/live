@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "do-a-solo-camping-trip-with-no-phone",
+  "slug": "do-a-solo-camping-trip-with-no-phone",
+  "title": "Take a solo camping trip without relying on your phone",
+  "description": "Plan a permitted solo camp that gives your phone a rest while keeping a trusted contact, route plan, and appropriate emergency support.",
+  "intent": "Help a first-time solo camper define phone-free use without abandoning emergency communications, and prepare a conservative, permitted trip with a contact plan.",
+  "sections": [
+    {
+      "heading": "Make “no phone” mean no ordinary scrolling",
+      "paragraphs": [
+        "Decide what you want to leave behind: social media, messages, photographs, navigation, or all routine phone use. You can keep the device powered off in a sealed bag while carrying a separate emergency communication device suited to the area. This preserves the spirit of the goal without confusing digital quiet with going unsupported. Check whether the campsite requires a phone-based check-in or permit before choosing it.",
+        "For a first solo night, choose a legal established campground or a well-supported site suited to your experience, rather than a remote location chosen only for its lack of signal. Confirm how to reach the site, where you can park, water and toilet availability, food-storage rules, fire restrictions, and check-in procedure. These details vary by land manager and must come from the specific site."
+      ]
+    },
+    {
+      "heading": "Leave a useful trip plan",
+      "paragraphs": [
+        "Give a trusted person your destination, route, start time, expected return, vehicle description, and the number to call if you are overdue. Agree on a check-in time and what that person should do if you do not report back. The National Park Service’s trip-planning guidance explains that a written plan can help authorities locate a visitor, but it is not a guarantee of safety or rescue; its template also relies on accurate details and a contact who responds.",
+        "If you change plans because of weather, a closure, or a transport problem, update the trusted contact before you go somewhere else. Leave a copy of the campsite reservation and route information where it can be found. Write key phone numbers on paper so you are not dependent on a device for ordinary logistics."
+      ]
+    },
+    {
+      "heading": "Match the site to your experience",
+      "paragraphs": [
+        "Check the land manager’s current rules for permits, parking, fire, quiet hours, food storage, water, and site boundaries. An established car campground is different from a remote backcountry permit area, and neither is automatically right for every beginner. Ask a ranger or campsite host what conditions and wildlife concerns apply now. Do not feed animals or improvise food storage where bears or other wildlife are present.",
+        "Test your tent, sleeping system, stove if permitted, headlamp, and weather layers at home or on a short local outing. Learn to set up the tent before arriving after dark. Carry a map you know how to read and the supplies recommended for the local environment. If you lack experience with a stove, fuel, or water treatment, get qualified instruction and follow the manufacturer’s directions."
+      ]
+    },
+    {
+      "heading": "Keep an emergency path available",
+      "paragraphs": [
+        "A phone may have no signal, a depleted battery, or damage. NPS says a phone is not a substitute for essential supplies and suggests considering a personal locator beacon or satellite phone in some camping settings. Whether you need a device depends on the route, remoteness, and local advice. If you carry one, understand coverage, registration, battery life, and how to activate it before leaving; do not treat it as a replacement for planning or self-rescue skills.",
+        "Tell someone where you will be and when you should return, then follow the itinerary you gave them. Carry emergency items appropriate to the site and know the park or land manager’s emergency procedure. “No phone” can mean no casual use; it should not mean discarding a safety communication method that your trip requires."
+      ]
+    },
+    {
+      "heading": "Let the quiet have structure",
+      "paragraphs": [
+        "Plan a simple evening activity such as cooking at the approved site, listening to the surroundings, or writing by a headlamp. Keep food preparation and fire use within the campground’s current rules. If you feel uncomfortable, need help, or want to end the trip early, use your safety plan and contact the appropriate person; completing the night is optional.",
+        "The NPS guidance is written for U.S. national-park camping, and rules elsewhere differ. For your next step, choose a permitted campground within your experience, confirm current site rules, and send a detailed itinerary to someone who will notice if you are overdue. Then decide which device functions you are actually setting aside."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Trip Planning Guide",
+      "url": "https://www.nps.gov/subjects/healthandsafety/trip-planning-guide.htm",
+      "publisher": "National Park Service",
+      "purpose": "Supports researching current park conditions and rules, carrying backup navigation, sharing a trip plan with a trusted contact, and treating a phone as insufficient as the sole safety preparation."
+    },
+    {
+      "title": "Camping Safely Step 1 - Before the Trip",
+      "url": "https://www.nps.gov/articles/camp-safety-before-the-trip.htm",
+      "publisher": "National Park Service",
+      "purpose": "Supports matching camping setting and difficulty, checking permits and conditions, leaving an itinerary, and considering emergency communication options."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "spend-a-week-fully-off-grid",
+    "spend-a-night-alone-in-the-wilderness",
+    "take-a-trip-completely-alone"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

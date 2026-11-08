@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "spend-a-week-with-each-of-your-parents-while-they-are-well-enough-to-travel",
+  "slug": "spend-a-week-with-each-of-your-parents-while-they-are-well-enough-to-travel",
+  "title": "Give each parent a week shaped around their own pace",
+  "description": "Plan separate parent trips around consent, preferred pace and one shared interest, with a rest day and an easy backup plan built in.",
+  "intent": "How can I plan a separate week with each parent that feels like time together rather than an overpacked itinerary?",
+  "sections": [
+    {
+      "heading": "Start with two separate invitations",
+      "paragraphs": [
+        "Ask each parent if they would like a week away and what kind of trip sounds restorative or fun. Make clear that saying no, choosing a shorter visit, or changing dates is acceptable. A parent may want a familiar nearby place, while the other prefers a city, a shoreline or no travel at all. Do not assume siblings, spouses or partners should be included unless everyone wants that.",
+        "Plan each week as its own project. Even if both parents enjoy the same destination, each may want a different rhythm, conversation or activity. The point is not to make identical trips or prove equal affection; it is to give each relationship attention on terms that feel comfortable to the people traveling."
+      ]
+    },
+    {
+      "heading": "Build around one shared interest",
+      "paragraphs": [
+        "Ask each parent to name one thing they would like to do together. It could be revisiting a town they lived in, trying a food they enjoy, watching a match, visiting an exhibition, sitting by water or cooking at home. Choose one anchor activity and let the rest of the day stay light. If the week begins to look like a checklist, remove an item.",
+        "For an outdoor destination, use the park or site’s own current visitor information to select an activity that matches everyone’s comfort and experience. The U.S. National Park Service trip-planning guide tells groups to involve everyone in planning and choose activities that fit each person. That is especially useful when one traveler wants a longer walk while another would rather take a short path and sit nearby."
+      ]
+    },
+    {
+      "heading": "Make travel logistics part of the invitation",
+      "paragraphs": [
+        "Before booking, talk through dates, transport, lodging, walking distance, stairs, meals, bathrooms, medication storage, rest and costs. Ask what information your parent wants you to handle and what they prefer to arrange themselves. If an access need matters, contact the transport provider or lodging directly and confirm the practical detail rather than relying on a broad label such as “accessible.”",
+        "Keep the plan visible in one shared note: departure windows, addresses, confirmation details, emergency contacts and the day’s main option. Build a no-travel alternative for bad weather, fatigue or a change of heart. A trip can remain meaningful even when the original activity is skipped."
+      ]
+    },
+    {
+      "heading": "Protect unplanned time",
+      "paragraphs": [
+        "Put generous open space in the itinerary. A slow breakfast, a walk around the block, a visit with a relative or an hour doing nothing can become the part everyone remembers. Avoid filling every silence with sightseeing. If you want a substantial conversation, ask whether the person feels like talking rather than turning a quiet meal into a surprise interview.",
+        "If you are traveling by car or visiting a park, agree on a reasonable stopping point and who has the final say to pause. The NPS guide asks trip companions to plan together, check conditions and create a backup plan. Apply those ideas to the whole week: choose a daily anchor, keep a nearby alternate, and discuss what to do if the day feels too tiring."
+      ]
+    },
+    {
+      "heading": "Notice what belongs to this relationship",
+      "paragraphs": [
+        "You might keep a small shared record—a map with one place marked, a menu, a ticket stub or a photo both people like. Ask before taking or sharing pictures. For one parent, the meaningful detail might be repeating a familiar ritual; for the other, it might be learning something new together. Do not compare their weeks by cost, distance or number of attractions.",
+        "At the end, ask what each parent would change if you traveled again. Do not immediately start planning the next trip unless they want to. First choose one parent, offer a low-pressure invitation and let the week take the shape of the relationship you have now."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Trip Planning Guide Package",
+      "url": "https://home.nps.gov/subjects/healthandsafety/upload/Trip-Planning-Guide-Package-508c.pdf",
+      "publisher": "U.S. National Park Service",
+      "purpose": "Supports involving all traveling companions in planning, choosing activities that fit the group, checking conditions and keeping a backup plan for park trips; article applies the planning principle more broadly."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "take-a-trip-with-your-parents-before-it-s-too-late",
+    "go-on-a-friend-led-neighbourhood-tour",
+    "host-a-family-reunion"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

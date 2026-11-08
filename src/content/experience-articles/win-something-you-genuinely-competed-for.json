@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "win-something-you-genuinely-competed-for",
+  "slug": "win-something-you-genuinely-competed-for",
+  "title": "Prepare honestly, then learn from the result",
+  "description": "Choose a real contest, understand its rules, prepare within a sustainable routine and review your performance with enough detail to improve.",
+  "intent": "How can I pursue a competition I care about and learn from the outcome? Focus on fair preparation and post-event feedback, not a guaranteed win. Review a competitive performance and use feedback to choose a next event; distinguish preparation from outcome assessment.",
+  "sections": [
+    {
+      "heading": "Choose a contest with a clear standard",
+      "paragraphs": [
+        "Pick an event where the result matters to you for a reason you can explain: skill, craft, sport, knowledge or public performance. Read the organizer’s rules, eligibility conditions, scoring criteria, deadline and any safety requirements before registering. If the competition uses a ranking or qualification system, verify it on the official organizer’s own page.",
+        "USA Track & Field lists distinct resources for event directors, course certification, athlete representatives and SafeSport. That structure illustrates why a competition’s official organizer matters: the technical standard, safety arrangements and complaint route depend on the specific event. Do not assume a rule from one contest applies to another."
+      ]
+    },
+    {
+      "heading": "Set a controllable preparation plan",
+      "paragraphs": [
+        "Work backward from the event date. Choose a realistic weekly practice schedule, one measurable skill to improve and a rest or recovery plan. If the event involves physical exertion or health risk, consult a qualified professional when you have a health concern; do not treat a generic training calendar as medical advice.",
+        "Make practice resemble the contest format where possible. If you will perform under a time limit, practice finishing within it. If judges score accuracy, ask a qualified coach or peer to use the published criteria. A mock run can reveal equipment, pacing or nerves that are easy to miss during casual practice."
+      ]
+    },
+    {
+      "heading": "Keep the event fair",
+      "paragraphs": [
+        "Confirm what equipment, assistance, references or outside materials the rules allow. Prepare your own work and disclose any required collaboration or adaptation. If the organizer provides an appeals or conduct process, learn where it is before the event. Fair participation protects the meaning of a win and helps you trust your own result.",
+        "On the day, arrive with enough time to check in, locate the venue and handle setup. Bring only permitted equipment and a backup for an ordinary failure such as a dead battery or missing pen. Do not use prohibited substances, unsafe tactics or unauthorized coaching. Ask the event official if a rule is unclear rather than guessing."
+      ]
+    },
+    {
+      "heading": "Notice more than the final place",
+      "paragraphs": [
+        "After competing, record what happened while details are fresh: what you prepared, what felt different under pressure, where time was lost and what feedback you received. Separate the result from the performance. A strong attempt may place lower in a deep field; a win may still reveal a weakness that needs attention.",
+        "Ask an official, coach or trusted observer for one specific observation tied to the rubric. “You need more confidence” is difficult to act on; “you rushed the last section after the cue” gives you something to practice. Thank people who helped and avoid publicly criticizing competitors or judges while emotions are high."
+      ]
+    },
+    {
+      "heading": "Choose a next step based on evidence",
+      "paragraphs": [
+        "Decide whether the next step is another event, a period of practice, a different competition or a pause. Compare the event’s actual demands with the time and resources you want to invest. If the experience felt meaningful but the contest culture was not a fit, there are other ways to pursue the same skill.",
+        "Keep the entry confirmation, official result and your own notes together. When you later look back, you will see not only whether you won but how you prepared and what changed. A genuine competition gives you an honest test; the result is information, not a verdict on your worth."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Resources",
+      "url": "https://www.usatf.org/resources",
+      "publisher": "USA Track & Field",
+      "purpose": "USATF provides official sport resources including event directors, course certification, athlete representatives and SafeSport; competition rules remain specific to each event and discipline."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "compete-in-a-national-championship",
+    "compete-in-an-obstacle-course-race"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

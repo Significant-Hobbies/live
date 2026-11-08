@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "spend-a-week-fully-off-grid",
+  "slug": "spend-a-week-fully-off-grid",
+  "title": "Verify the practical details of a week off-grid",
+  "description": "Choose a legitimate off-grid stay by checking water, power, toilets, communications, access, and host procedures before booking.",
+  "intent": "Help a guest verify what an advertised off-grid week actually provides and prepare around the host's systems without unsafe DIY instructions.",
+  "sections": [
+    {
+      "heading": "Define what off-grid means for this stay",
+      "paragraphs": [
+        "The phrase can describe very different arrangements: a remote cabin with solar power, a campground without mains electricity, or simply a place with weak mobile reception. Decide which parts of ordinary infrastructure you want to leave behind and which services you still need. If a medical device, medication, work duty, or caregiving responsibility depends on reliable power or contact, explain that before choosing a property.",
+        "Read the host’s own description closely, then ask what is included in practice. “Solar power” does not tell you whether outlets can support a laptop, refrigeration, lighting, or medical equipment. “Well water” does not answer whether it is potable, tested, or available year-round. A listing is not a technical manual, so request plain answers from the responsible host."
+      ]
+    },
+    {
+      "heading": "Ask about each system separately",
+      "paragraphs": [
+        "Make a short checklist and get clear responses about water source and drinking-water arrangements; toilets and wastewater; heating and cooking; refrigeration; charging capacity; rubbish; bathing; and what happens during bad weather. Ask who maintains the systems, what guests may operate, and what should be left untouched. Do not open electrical panels, adjust batteries or inverters, modify gas appliances, or make a water source usable by improvisation.",
+        "Also ask which supplies you must bring and what the host provides. If the stay relies on stored water, confirm the usable supply for the number of guests and length of stay. If a backup generator exists, ask whether it is operated only by the host and under what circumstances. The safe guest role is to understand normal use and report a problem, not repair unfamiliar equipment."
+      ]
+    },
+    {
+      "heading": "Check access, weather, and support",
+      "paragraphs": [
+        "Find out whether the property is reachable by an ordinary car, a high-clearance vehicle, a hike, or a boat, and what happens if the access road closes. Ask who to contact for a water, heating, or power failure and whether a caretaker is nearby. Get the exact address or coordinates and identify a nearby town or emergency service before leaving connectivity behind.",
+        "The National Park Service’s camping guidance recommends matching a trip to the setting, season, duration, and group’s abilities; it also advises checking permits, conditions, food storage, and leaving an itinerary with someone who is not on the trip. Those principles are useful for remote lodging, but park rules apply only to the relevant park. Follow the property host’s instructions and local authorities for your specific site."
+      ]
+    },
+    {
+      "heading": "Pack around confirmed facts",
+      "paragraphs": [
+        "Once the host answers, plan meals, layers, lighting, charging, and activities around what is actually available. If refrigeration is limited, ask what storage is safe for the food you plan to bring. If the property has no indoor plumbing, learn the toilet arrangement and bring only supplies the host permits. Choose clothing for forecast conditions and keep essential medications in their required storage conditions; ask a pharmacist or clinician if uncertain.",
+        "Download directions, reservation details, and maps before arrival, and tell a trusted person where you will be and when you expect to check in. If you need a way to call for help, verify whether your carrier works at the site and ask the host about emergency communication. Do not assume a remote cabin’s advertised quiet means no one can respond if something goes wrong."
+      ]
+    },
+    {
+      "heading": "Make the week restorative and realistic",
+      "paragraphs": [
+        "Plan one or two anchor activities for each day, then leave room for weather and a slower pace. A week without ordinary connectivity can make reading, cooking, walking, sketching, or conversation feel spacious; it can also reveal missing practical needs. Keep a paper note of the host’s instructions, check-in procedure, and any local closures.",
+        "Before booking, send the host your system-by-system questions and save the answers with the reservation details. If a critical answer remains unclear, choose another property or a shorter trial stay. The next practical step is to compare two legitimate stays by water, waste, power, access, communications, and emergency arrangements rather than relying on the phrase “off-grid” alone."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Camping Safely Step 1 - Before the Trip",
+      "url": "https://www.nps.gov/articles/camp-safety-before-the-trip.htm",
+      "publisher": "National Park Service",
+      "purpose": "Supports planning around setting, season, trip duration, permits and conditions, plus leaving a route and expected return with an emergency contact; the article is park camping guidance, not a property utility standard."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "do-a-solo-camping-trip-with-no-phone",
+    "sleep-on-a-beach-under-the-stars",
+    "watch-a-sunrise-and-a-sunset-in-the-same-day"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

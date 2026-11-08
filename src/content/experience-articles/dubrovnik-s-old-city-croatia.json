@@ -1,0 +1,71 @@
+{
+  "experienceSlug": "dubrovnik-s-old-city-croatia",
+  "slug": "dubrovnik-s-old-city-croatia",
+  "title": "Read Dubrovnik’s walls as a changing defense",
+  "description": "Use Dubrovnik’s walls, towers and bastions to compare the old city’s land-facing defenses with its seaward edge, safely and at your pace.",
+  "intent": "What can a visitor look for in Dubrovnik’s Old City beyond a full wall lap, and how can the fortifications be understood as a connected system?",
+  "sections": [
+    {
+      "heading": "Start with the system, not the photograph",
+      "paragraphs": [
+        "Dubrovnik’s walls make more sense when you ask what each section was designed to do. The official City Walls operator describes a 1,940-metre circuit with 16 towers, three fortresses and six bastions. The current outline took shape over centuries, with construction continuing until 1660. Those are details worth carrying into the walk: a wall is a sequence of views and defensive decisions, not a single postcard edge.",
+        "The operator describes land-facing sections as roughly four to six metres thick and seaside sections as about 1.5 to three metres. It also explains that defenses changed as weapons changed. Treat those figures as broad context for the site, not a reason to measure anything yourself. Look for how thickness, towers and bastions make the wall’s form vary around the city."
+      ]
+    },
+    {
+      "heading": "Compare land-facing and seaward sides",
+      "paragraphs": [
+        "As you move through the permitted visitor route, notice where the fortifications present a more substantial land-side barrier and where the wall turns toward the sea. Ask what the view protects, what it exposes, and how a tower or bastion interrupts a long line. You do not need a technical map to see that the city’s edge was not built as one uniform curtain.",
+        "Use a simple field note: one feature you can see, one question about its purpose, and one difference from the last section. For example, compare a thick wall face with a projecting bastion; then compare the city skyline against open water. Keep the questions open until a museum label or qualified guide helps answer them. A shape can suggest a function without proving it on its own."
+      ]
+    },
+    {
+      "heading": "Choose a visit that fits your body and attention",
+      "paragraphs": [
+        "A full circuit may be tiring, especially in heat, wind or rain. The operator’s FAQ and code of conduct should guide your decision about access, ticket terms and visitor behavior. It advises caution on the wall and says not to jump, climb, lean over edges or take photographs from the edge. The safest photograph is taken from a stable place within the allowed route, with attention on your footing and other visitors.",
+        "If the circuit is not right for you, consider a ground-level old-town day and use the city’s museums or other public interpretation to understand the fortifications. Do not assume there will be step-free access everywhere or that a ticket allows re-entry; check the official operator’s current details before buying. If mobility, balance or heat is a concern, ask the operator about the specific route and facilities you would encounter."
+      ]
+    },
+    {
+      "heading": "Look for layers around the walls",
+      "paragraphs": [
+        "After the wall visit, take a slower look at how the fortifications meet the city’s streets and buildings. Notice where a gate, stair or opening concentrates movement, and how the stone enclosure relates to the compact block pattern inside. The operator’s own account of construction through 1660 is a reminder that the city’s defenses reflect different moments, not a single design brief.",
+        "A local guide or museum can help distinguish features that are easy to confuse at a glance. Bring one question about a particular tower or bastion rather than asking for a generic history of the city. If you are interested in military architecture, compare the location and shape of one projecting bastion with one tower, then ask what each allowed defenders to observe or protect."
+      ]
+    },
+    {
+      "heading": "Keep the experience respectful and grounded",
+      "paragraphs": [
+        "The Society of Friends of Dubrovnik Antiquities, which operates the walls, publishes visitor guidance. Follow its warnings, wear shoes with dependable grip, carry water and sun protection when appropriate, and check weather conditions before setting out. Stay within the route and follow staff instructions. The stones and narrow walking surfaces are not a place to stage risky poses or force a dramatic photo.",
+        "At the end, write down two differences you noticed between the land and sea sides and one question you still have. Check that question against the operator’s interpretation or ask it on a guided visit. That small act of observation will make the city walls feel less like a lap completed and more like a working piece of urban history you learned to read."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "The City Walls",
+      "url": "https://citywallsdubrovnik.hr/the-city-walls/",
+      "publisher": "Society of Friends of Dubrovnik Antiquities",
+      "purpose": "Supports the walls' length, number of defensive structures, construction history and broad thickness comparison between land- and sea-facing walls."
+    },
+    {
+      "title": "Contacts and code of conduct",
+      "url": "https://citywallsdubrovnik.hr/contacts-en/",
+      "publisher": "Society of Friends of Dubrovnik Antiquities",
+      "purpose": "Identifies the walls operator and supports the visitor safety guidance about caution, edges, climbing, footwear and weather."
+    },
+    {
+      "title": "Frequently Asked Questions",
+      "url": "https://citywallsdubrovnik.hr/faq/",
+      "publisher": "Society of Friends of Dubrovnik Antiquities",
+      "purpose": "Supports checking ticket terms, re-entry and accessibility details with the current operator."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "venice-before-mass-tourism-erases-it",
+    "the-alhambra-granada-spain",
+    "the-korean-dmz"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

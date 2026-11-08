@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "finish-what-you-started",
+  "slug": "finish-what-you-started",
+  "title": "Decide what ‘finished’ means before you reopen the project",
+  "description": "Finish a stalled project by defining a useful end state, shrinking the remaining work, and deciding openly when stopping is wiser than continuing.",
+  "intent": "Answers how to finish a meaningful but stalled personal project; adds a concrete scope-and-closure method while distinguishing completion from a responsible decision to stop.",
+  "sections": [
+    {
+      "heading": "Choose one unfinished thing",
+      "paragraphs": [
+        "List the projects that keep returning to mind: the photo book with captions missing, the half-repaired chair, a course you paused, the family recipe collection, or a short story with an unfinished ending. Pick one that still matters to you and that you can work on without abandoning a responsibility to someone else. If finishing it would violate a promise, safety rule, contract or another person’s boundary, start by addressing that obligation rather than pushing ahead blindly.",
+        "Write down why you started and whether that reason still holds. Sometimes a project stalls because it became harder than expected; sometimes the original goal no longer fits. You are allowed to finish, redesign or stop. The point of this review is to make a conscious choice rather than carry a vague task as a permanent accusation against yourself."
+      ]
+    },
+    {
+      "heading": "Define a finish line you can recognize",
+      "paragraphs": [
+        "Describe the minimum useful finished version in one sentence. For a photo book, it might mean selecting a small set of images, adding dates where known and printing a simple copy. For a chair, it may mean deciding whether it is safe to use after repair or giving it to a qualified restorer. For a writing project, it could be a complete draft shared with one trusted reader rather than a polished publication.",
+        "Separate the finish line from imagined extras. A photo book does not need a matching website; a chair does not need a full room redesign; a story does not need a social-media launch. If the project depends on another person’s approval, name the person and ask when they can review it instead of assuming silence means consent."
+      ]
+    },
+    {
+      "heading": "Find the next physical action",
+      "paragraphs": [
+        "Break the remaining work into actions small enough to start: choose ten images, find the right repair manual, draft the missing ending, or contact the person who has the information you need. Avoid writing ‘work on project’ as a task. Put the materials where you will use them and decide what a first work session can realistically accomplish.",
+        "The Project Management Institute describes project stages such as designing, building, testing, deploying and closing, with knowledge and artifacts archived at close. That is a professional project framework, not a rule for personal goals, but its closing idea is useful: define what has to be handed off, saved or wrapped up so the work can actually end. Your personal version may be a file exported, a room cleaned or a thank-you sent."
+      ]
+    },
+    {
+      "heading": "Reduce scope before adding pressure",
+      "paragraphs": [
+        "If the project still feels too large, remove a feature. Use fewer photos, repair only the damaged part, choose one chapter rather than the whole book, or ask someone qualified to take on work beyond your skills. Set a date for the smaller version and reserve the time. A deadline without a smaller scope can simply reproduce the same stalled project with more stress attached.",
+        "Check whether money, storage, materials or access to another person is the real obstacle. If so, make that dependency explicit. You might ask for a quote, borrow an appropriate tool, request permission or decide that the project should wait. Do not buy new equipment until you know what the next task requires."
+      ]
+    },
+    {
+      "heading": "Close it honestly",
+      "paragraphs": [
+        "When you finish, record what is complete, what is intentionally unfinished and where the final item lives. If you stop, write why and what will happen to the materials: return borrowed items, recycle safely, hand off the work or save a useful draft. A project can end with a clear decision even when its original imagined version never exists.",
+        "Choose the next action now: spend one focused session on the smallest remaining piece, ask for the missing information, or close the project and release the materials. Make the choice visible so you can stop carrying it as an undefined promise."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Projects and The Project Lifecycle",
+      "url": "https://www.pmi.org/about/what-is-a-project",
+      "publisher": "Project Management Institute",
+      "purpose": "Supports the professional-project analogy of structured work phases and closing/archiving project knowledge; it is not a universal personal productivity rule."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "write-and-finish-a-novel",
+    "conduct-an-after-action-review-of-a-personal-project",
+    "take-a-pottery-class-and-make-a-finished-piece"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,55 @@
+{
+  "experienceSlug": "take-a-beginner-land-yachting-lesson",
+  "slug": "take-a-beginner-land-yachting-lesson",
+  "title": "What makes a first land-yachting lesson feel controlled?",
+  "description": "Prepare for a beginner land-yachting lesson by checking the instructor, course boundaries, equipment, wind policy and how the session teaches stopping.",
+  "intent": "Help a prospective beginner choose and prepare for a supervised land-yachting taster, with emphasis on understanding the lesson rather than trying speed independently.",
+  "sections": [
+    {
+      "heading": "Book a coached introduction",
+      "paragraphs": [
+        "A land yacht uses wind to move a wheeled craft across a permitted surface. That makes it an exciting sport, but not one to learn by copying a video and launching on an open beach. The British Federation of Sand and Land Yacht Clubs recommends contacting an established club for a taster or finding a commercial activity provider; it describes structured instruction in theory and practical use of a club yacht. Use those routes to find a legitimate introduction where a coach selects the equipment and conditions.",
+        "Before booking, ask who leads the session, what protective equipment is included, whether you share a yacht with an instructor and how the provider responds to changing wind or weather. Tell them about any access needs or mobility limitations so they can explain whether their equipment and course can accommodate them. Ask for the expected clothing and footwear rather than guessing from photos.",
+        "The exact lesson may vary by provider and location. Confirm what the advertised session covers and what happens if conditions are unsuitable. A page advertising a course is not a guarantee that a particular day's weather, tide or surface will support sailing."
+      ]
+    },
+    {
+      "heading": "Learn the site before moving",
+      "paragraphs": [
+        "Listen to the briefing before approaching the yacht. Ask the instructor to identify the course boundary, the direction of travel, signals for stopping and the area reserved for spectators. A safe course needs predictable separation from other people and obstacles; do not assume that a broad beach is automatically open for land sailing. The federation specifically notes that permission matters when using a potential site.",
+        "Have the instructor demonstrate the craft while it is stationary. Learn what the steering control does, where to place hands and feet, how the sail is managed, and what the instructed stopping procedure is. Then repeat the control explanation in your own words. If any instruction is unclear, ask again before moving; a taster is the right time to slow the activity down.",
+        "Check that any helmet, gloves or other gear fits and is secured as the provider directs. Do not substitute casual protective gear or adjust rigging yourself unless the instructor has shown and approved that task."
+      ]
+    },
+    {
+      "heading": "Progress from a controlled first run",
+      "paragraphs": [
+        "Your first movement should follow the instructor's pace on the marked course. Concentrate on the one control they have just taught rather than trying to cover distance. Wind and surface change the way the yacht responds, so let the instructor decide whether a particular gust or patch of sand is appropriate for continuing.",
+        "Keep your attention on the course and the people around it. Do not race a companion or steer toward a camera. If the yacht feels difficult to control, if you lose track of the boundary, or if another person enters the route, use the stop signal you were taught and follow the instructor's direction. Stop immediately if the coach calls a halt.",
+        "The goal is not to reach top speed. Being able to start, steer through a simple turn and stop when asked gives you a more useful first foundation than an uncontrolled fast ride."
+      ]
+    },
+    {
+      "heading": "Review before choosing another session",
+      "paragraphs": [
+        "At the end, ask which conditions made the lesson manageable and what skill the instructor would teach next. A next step might be another coached session, a different course area or simply waiting for a suitable day. Do not treat one taster as permission to use an unrelated beach or hire a craft without the provider's rules.",
+        "Notice whether the briefing, equipment fit, course boundaries and communication worked for you. If one part did not, share that before booking again. A thoughtful first lesson builds judgment alongside steering, so your next action can be a specific question for the club about its progression and the conditions required for a beginner session."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How to Start",
+      "url": "https://www.britishlandsailing.org.uk/how-to-start.html",
+      "publisher": "British Federation of Sand and Land Yacht Clubs",
+      "purpose": "Recommends a club taster or commercial provider, describes structured training and notes that users need permission for a potential sailing site."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "take-a-sheltered-water-paddleboard-starter-lesson",
+    "watch-a-rocket-launch-from-an-authorized-public-gallery",
+    "try-fencing-in-a-supervised-beginner-class"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

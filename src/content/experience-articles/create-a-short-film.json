@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "create-a-short-film",
+  "slug": "create-a-short-film",
+  "title": "Tell one visual story in a single scene",
+  "description": "Make a first short film by building one small visual story, storyboarding a single scene and editing image and sound into a clear beginning and end.",
+  "intent": "Provide a bounded first-film exercise: a simple visual story with minimal dialogue, carried from storyboard through one-scene edit.",
+  "relatedExperienceSlugs": [
+    "make-a-short-film",
+    "record-a-place-as-a-sound-portrait",
+    "record-a-public-domain-audiobook-chapter"
+  ],
+  "sections": [
+    {
+      "heading": "Make the story visible without a speech",
+      "paragraphs": [
+        "Start with one sentence that describes a visible change: a person searches for a missing key and notices it in an unexpected place; a chair waits empty until someone returns; a paper boat travels from a dry table into a sink. A small change gives you a beginning, middle, and end without needing plot exposition.",
+        "Keep the cast, locations, and objects limited to what you can access. If a viewer needs a paragraph of backstory to understand why the change matters, simplify the idea or add one clear image that carries the missing information. For a first exercise, give yourself a short running time and one scene. The constraint leaves energy for framing and sound."
+      ]
+    },
+    {
+      "heading": "Storyboard the scene before the shoot",
+      "paragraphs": [
+        "Draw a small sequence of frames, even if they are rough boxes. For each frame, write what new information the audience gets and what changes from the previous image. A close view of a hand may reveal a clue; a wider view may show the person’s reaction. Skip shots that repeat an idea without adding a new beat.",
+        "The British Film Institute’s teaching guide encourages viewers to examine how shot composition, camera distance, angle, movement, lighting, and shot order affect meaning; it also suggests changing or removing shots in a storyboard. Use that as an editing question: if a frame disappeared, would the audience still understand the scene? If yes, it may not be needed."
+      ]
+    },
+    {
+      "heading": "Plan the sound before recording",
+      "paragraphs": [
+        "Choose the location for its sound, not only its appearance. Turn off controllable noise, listen for appliances or traffic, and record a short test before performing. Natural sound can make a simple image feel specific: a drawer, footsteps, water, or the room tone after a door closes. Do not add music merely to cover an unclear scene; first see whether the picture and natural sound already explain the moment.",
+        "When filming people, explain the project and ask for permission to record and share their image or voice. Avoid capturing private conversations, identifying details, or music you do not have rights to use. A film that is easy to make is not automatically free to publish."
+      ]
+    },
+    {
+      "heading": "Shoot for continuity, not coverage volume",
+      "paragraphs": [
+        "Record the main action in a stable wide view so you have a complete version of the scene. Then capture only the close details the storyboard requires. Keep the action direction, props, and lighting consistent between shots; take a quick reference photo of the setup if you need to reset it. Ask the performer to repeat actions at a measured pace instead of trying to fix continuity later with excessive cuts.",
+        "Before moving on, listen to each take with headphones if available and check that the key action is in focus. A simple phone or camera can work if the lens is clean, exposure is steady, and the sound is understandable. Do not collect extra angles just because you have storage."
+      ]
+    },
+    {
+      "heading": "Edit to make each beat readable",
+      "paragraphs": [
+        "Put the shots in the storyboard order, then watch without stopping. Notice where you are confused or waiting too long. Trim pauses that do not build meaning, but leave enough time for the viewer to see the important detail. Use sound cuts deliberately: a held sound can connect two images, while silence can let the final change land.",
+        "Show the cut to one person who has not heard your explanation. Ask what they think changed and which moment was clearest. Revise only the part they could not follow. Export a version with a title and credits, then keep the project files. Your next action is to write the one-sentence change and draw six frames before you open the camera app."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Look Again: Teaching Guide to Film and TV",
+      "url": "https://highlandliteracy.com/wp-content/uploads/2015/01/bfi-education-look-again-teaching-guide-to-film-and-tv-2013-03.pdf",
+      "publisher": "British Film Institute education resource",
+      "purpose": "Opened BFI teaching guide for how composition, framing, lighting, camera position and shot order convey meaning and how storyboards can test shot order."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

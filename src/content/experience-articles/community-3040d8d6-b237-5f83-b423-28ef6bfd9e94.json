@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "community-3040d8d6-b237-5f83-b423-28ef6bfd9e94",
+  "slug": "go-on-a-solo-trip-1wk",
+  "title": "Give a solo trip a weekly rhythm, not a rigid itinerary",
+  "description": "Shape a week-plus solo trip with one anchor each day, room to rest and a planned way to change course when energy, weather or cost shifts.",
+  "intent": "How do I make a solo trip longer than a week feel spacious and manageable rather than overbooked?",
+  "sections": [
+    {
+      "heading": "Set one anchor, not a full-day checklist",
+      "paragraphs": [
+        "Start with a destination you can move around in comfortably and choose one main activity for each day. An anchor might be a museum visit, a neighborhood walk, a ferry ride or a booked class. Add one optional stop nearby, then leave an open block. That structure gives you something to look forward to while protecting the freedom that makes solo travel appealing.",
+        "For a nine-day trip, a workable pattern could be arrival and orientation; two days in one neighborhood; a move to a second base; two days there; a low-demand buffer day; and departure. The exact sequence depends on the place, but the principle is useful: avoid changing accommodation every night. Fewer moves mean less packing, less navigation and more chance to recognize a familiar cafe or route."
+      ]
+    },
+    {
+      "heading": "Choose a budget that includes the boring parts",
+      "paragraphs": [
+        "Build the budget from categories rather than a single daily target: transport to and within the destination, lodging, food, entry fees, local connectivity, insurance and a reserve for delays or changes. Mark which costs are fixed before leaving and which can be adjusted. A private room may be worth more to you than an extra paid excursion; a centrally located room might reduce transit time enough to be the better value.",
+        "Keep a small contingency separate from everyday spending and decide in advance what would justify using it, such as a missed connection or an unexpected night. Do not rely on a credit card as your only backup. If the destination uses cash, check reliable local guidance for payment norms and safe access to ATMs. For international travel, confirm entry rules, local laws and alerts using government guidance for your own citizenship."
+      ]
+    },
+    {
+      "heading": "Plan your first evening and your first exit",
+      "paragraphs": [
+        "The first night sets the tone. Choose lodging with a clear route from the station or airport, a realistic arrival time and a check-in process you understand. Save the address offline and make sure your phone can connect. If arriving after dark, ask the host about the safest, simplest route and whether an official taxi or transit option is available. These are practical arrival checks, not a reason to assume a place is unsafe.",
+        "Also decide how you would leave an activity if you became tired or uncomfortable. Identify a transit stop, staffed venue or known meeting point. Share your general itinerary with someone you trust and agree on when you will check in. The U.S. State Department’s travel checklist advises travelers to review destination advisories, entry requirements and local laws; other nationalities should use their own foreign ministry’s advice."
+      ]
+    },
+    {
+      "heading": "Use the middle of the trip as a reset",
+      "paragraphs": [
+        "On a trip longer than a week, make one middle day deliberately light. Do laundry, rest, write notes, sit in a park or visit a market near your lodging. This is not wasted time: it is the point where you can notice whether the route, budget and energy are working. If everything feels easy, add an optional activity later. If you are worn down, you have already made room to recover without canceling the whole trip.",
+        "When moving between bases, avoid pairing a long transfer with a ticketed evening event. Delays can turn a pleasant plan into a frantic sprint. If the travel day is short, select one arrival activity that can be skipped without losing a reservation or deposit. Keep digital copies of key bookings and the next lodging address somewhere you can reach offline."
+      ]
+    },
+    {
+      "heading": "Give yourself a real adjustment rule",
+      "paragraphs": [
+        "Choose a simple rule before departure: if you have to make two rushed decisions in a row, remove the next optional stop; if the weather closes an outdoor plan, switch to a nearby indoor alternative; if costs run ahead, replace a paid activity with a free neighborhood walk. A preset rule reduces the pressure to make every choice feel like a verdict on the trip.",
+        "After the first three days, review what you actually enjoy. Maybe you like a long breakfast and one museum more than four attractions; maybe moving early makes you tired. Adjust the remaining plan based on evidence from your own days. The next step is to draft a one-page itinerary with a daily anchor, a rest window and one alternative, then confirm transport and entry details shortly before travel."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Planning Your Travel",
+      "url": "https://travel.state.gov/en/international-travel/planning.html",
+      "publisher": "U.S. Department of State, Bureau of Consular Affairs",
+      "purpose": "Supports destination-specific checks for travel advisories, entry requirements and local laws; article limits this source to U.S. citizens and directs others to their own government."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "community-2f917272-a593-5978-b653-7b5b702eacea",
+    "community-3ac454c5-a98e-5154-b557-87a2c61777d8",
+    "community-c3300923-5d72-5a6e-986f-8e0c74967fb2"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

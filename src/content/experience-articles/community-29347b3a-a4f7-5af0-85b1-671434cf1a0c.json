@@ -1,0 +1,64 @@
+{
+  "experienceSlug": "community-29347b3a-a4f7-5af0-85b1-671434cf1a0c",
+  "slug": "own-an-extremely-powerful-computer-setup",
+  "title": "Build a powerful computer around the work you really do",
+  "description": "Plan a powerful computer by matching workloads to components, checking upgrade and desk needs, and budgeting for the whole usable setup.",
+  "intent": "Help a buyer translate “extremely powerful” into a workload-based computer and complete desk setup without overspending on headline specifications.",
+  "sections": [
+    {
+      "heading": "Turn “powerful” into three real jobs",
+      "paragraphs": [
+        "Start with tasks, not component names. Write down the heaviest thing you expect to do—perhaps rendering a long video, compiling a large project, running a demanding game while streaming, or editing many high-resolution photographs. Add how often you do it and whether you need the computer to travel. A powerful desktop may suit a fixed editing desk; a laptop may be the right choice when work happens in several rooms or away from home. ENERGY STAR’s buying guide explicitly distinguishes desktop strengths such as upgradeability and larger screens from laptop portability, while noting that compact and all-in-one systems can be harder to repair or upgrade.",
+        "Then choose a bottleneck to solve. Rendering may benefit from a capable processor and graphics system; a large project may need memory and fast storage; gaming can depend on the graphics card and the display’s resolution. These are workload comparisons, not universal component prescriptions. Check current software requirements and independent, workload-matched benchmarks for the exact applications you use. A larger model number or more expensive part alone does not establish that an upgrade will improve your own work."
+      ]
+    },
+    {
+      "heading": "Choose a form factor before parts",
+      "paragraphs": [
+        "A full-size tower leaves more room for replacement parts and cooling, but it takes space and can be noisy. A small desktop is easier to place yet may limit future graphics-card, storage or memory changes. A laptop gives you one integrated setup but often costs more to repair and may make later component changes impossible. ENERGY STAR’s guide cautions that all-in-one computers can be difficult to upgrade because components are tightly packed. Before buying, measure desk depth, under-desk clearance and the space needed for airflow; also check the number and type of ports for your existing monitor, camera, audio interface and external drives.",
+        "If building a desktop, create a compatibility checklist before ordering: motherboard socket and chipset, memory generation and supported capacity, case dimensions, graphics-card clearance, power-supply connectors and operating-system needs. Use the manufacturers’ compatibility pages and manuals for the exact part revisions. For a prebuilt system, request the precise model numbers for major parts and ask which components can be replaced without invalidating a warranty."
+      ]
+    },
+    {
+      "heading": "Budget the experience around the tower",
+      "paragraphs": [
+        "The computer is only one part of a powerful setup. A display that is too small or has the wrong resolution can make a capable graphics system feel wasted; an uncomfortable chair, cramped keyboard or reflective lighting can make long sessions unpleasant. Budget separately for a monitor, keyboard, mouse, headset or speakers, backup storage, surge protection where suitable, and a desk that fits the room. Make a table with “needed now,” “can reuse,” and “later upgrade” columns so a new build does not quietly expand into a full-room renovation.",
+        "For a gaming setup, decide which games and resolution matter before selecting the graphics tier. For video editing, record the footage formats and file sizes you actually handle, then check the editor’s current requirements. For development, list the number of local services or virtual machines you routinely run. These short workload notes make vendor comparisons more useful than a list of aspirational top-end parts."
+      ]
+    },
+    {
+      "heading": "Consider power, support and ownership",
+      "paragraphs": [
+        "A powerful machine may draw more electricity under sustained heavy work. ENERGY STAR provides a model finder for certified computers and says its current criteria cover efficiency in idle and other operating modes. Certification does not tell you how fast a particular system will complete your workload, but it is a concrete way to compare energy performance among eligible products. Confirm local utility rebates through the relevant official finder instead of assuming one applies.",
+        "Read the warranty and support terms before paying. Find out who handles repairs, how long replacement parts remain available, what data you should back up before service, and whether opening the case affects coverage. Keep receipts and a private inventory of serial numbers and configuration. When replacing an old computer, plan a secure data transfer and use a reputable electronics-recycling or take-back program; do not leave drives with personal files intact."
+      ]
+    },
+    {
+      "heading": "Make a decision you can explain",
+      "paragraphs": [
+        "Compare two complete options at the same total budget: a desktop that can be upgraded later, and a portable computer plus dock that you can actually carry. List the specific jobs each handles, the parts that are replaceable, estimated power use where available, support terms and desk footprint. Choose the system whose advantages match a task you will perform regularly. Before ordering, verify the exact configuration on the manufacturer’s page, confirm every port and display connection, and leave room for a backup plan.",
+        "The satisfying version of an “extremely powerful setup” is not a trophy spec sheet. It is a computer that handles your chosen projects without a recurring bottleneck, fits your space, and remains supportable. Write your three workloads and budget ceiling first, then price complete compatible systems against them."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Computers",
+      "url": "https://www.energystar.gov/products/computers",
+      "publisher": "ENERGY STAR / U.S. Environmental Protection Agency",
+      "purpose": "Supports form-factor tradeoffs, the ENERGY STAR product finder and current efficiency criteria; its component capacity examples are explicitly dated and not used as current recommendations."
+    },
+    {
+      "title": "Purchasing Energy-Efficient Computers",
+      "url": "https://www.energy.gov/cmei/femp/purchasing-energy-efficient-computers",
+      "publisher": "U.S. Department of Energy, Federal Energy Management Program",
+      "purpose": "Supports checking product efficiency and life-cycle energy considerations; federal procurement rules are not presented as consumer law."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "learn-to-code-and-ship-an-app",
+    "design-and-3d-print-a-small-functional-bracket"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

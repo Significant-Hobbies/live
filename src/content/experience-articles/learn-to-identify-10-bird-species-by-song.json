@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "learn-to-identify-10-bird-species-by-song",
+  "slug": "learn-to-identify-10-bird-species-by-song",
+  "title": "Build a local list of ten bird songs you can recognize",
+  "description": "Choose ten birds from your own area and learn each song by listening for rhythm, pitch, repetition, and tone before checking a recording.",
+  "intent": "Give a repeatable local listening method for learning ten bird species by song, with verification against reference audio rather than relying on memory or automated matches alone.",
+  "sections": [
+    {
+      "heading": "Choose ten birds you can actually hear",
+      "paragraphs": [
+        "Start with a place you visit often and make a short list of birds recorded in that region and season. A backyard, neighborhood park, or nearby wetland is easier than trying to learn a national list. Ask a local bird club or nature reserve for common songsters, then choose ten whose sounds you can hear repeatedly. If some local species are not vocalizing now, keep them on a later-season list instead of forcing the timeline.",
+        "Cornell Lab’s Bird Academy recommends going slowly and listening to individual songs rather than treating a whole dawn chorus as one sound. Its teaching material uses familiar species and soundscapes as examples, but your own ten should match your location; the Cornell list includes birds from more than one region and should not be copied as a universal set."
+      ]
+    },
+    {
+      "heading": "Describe sound before naming the bird",
+      "paragraphs": [
+        "When you hear a song, pause and note four qualities: rhythm, repetition, pitch, and tone. Is it one clear whistle, a quick series of notes, a buzzy phrase, or a repeated pattern with a pause? Write a few ordinary words or make a simple sketch of the pitch movement. Describing first makes it easier to notice what is distinctive and reduces the urge to guess from a single note.",
+        "Use your own mnemonic if it helps, but mark it as a memory aid, not the bird’s literal words. Cornell’s examples show how human phrases can make patterns easier to recall, while the original recordings remain the reference. Avoid learning only from a clever rhyme; listen to the full phrase and notice how it changes across repetitions."
+      ]
+    },
+    {
+      "heading": "Connect the sound to a visible bird",
+      "paragraphs": [
+        "When you can do so without disturbing it, watch for a bird that is singing. Seeing posture, movement, and place can connect the voice with the species. Stay on paths and keep distance; do not chase a singer into vegetation or use playback loudly to draw it closer. If the bird remains hidden, record the time, habitat, and sound description and leave the identification tentative.",
+        "Use a field guide or a trusted local bird resource to compare your candidate with species found in that habitat. A sound-identification app can suggest possibilities, but check its result against several recordings and the bird’s range before counting it among your ten. Cornell’s lesson links its example birds to recordings so learners can compare the imitation or memory cue with the actual sound."
+      ]
+    },
+    {
+      "heading": "Make a small, repeatable listening route",
+      "paragraphs": [
+        "Choose one quiet route and revisit it at a similar time of day when practical. Stop at a few safe places, listen before looking, and note which sounds come from near or far. Keep the walk short enough that you can repeat it regularly. A notebook with date, place, weather, sound description, likely species, and confidence will show which identifications are getting stronger.",
+        "To study a difficult pair, listen to each species’ reference audio back to back, then close the page and try to describe how they differ. You might notice one begins with an even whistle while another has a rising pitch or rougher finish. Do not depend on exact syllable spellings; people hear sound differently, and individual birds can vary."
+      ]
+    },
+    {
+      "heading": "Count only confident identifications",
+      "paragraphs": [
+        "Keep three columns: heard, likely, and confirmed. Move a bird into the final ten only after you can recognize its song in the field more than once and check it against reliable audio or a knowledgeable birder. If you only know the sound from a recording, mark it as learned-from-audio, not field-confirmed. This distinction makes the goal more honest and reveals what to practice next.",
+        "Bird songs change with species, place, season, and individual variation. Cornell’s Bird Academy pages are designed for learning but focus on their own examples and soundscapes; local confirmation matters. For your next walk, choose one familiar species and write a description of its rhythm, pitch, repetition, and tone before you look up its name."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Learn How to Identify Bird Songs",
+      "url": "https://academy.allaboutbirds.org/learn-how-to-identify-bird-songs/",
+      "publisher": "Bird Academy, Cornell Lab of Ornithology",
+      "purpose": "Supports a gradual listening approach, the use of mnemonic phrases as memory aids, and the linked reference recordings for its ten example species; local bird selection and field confirmation remain necessary."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "spend-an-hour-watching-a-single-tree",
+    "take-a-forest-bathing-walk",
+    "spend-a-night-stargazing-with-no-agenda"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

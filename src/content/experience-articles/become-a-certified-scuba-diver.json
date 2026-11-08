@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "become-a-certified-scuba-diver",
+  "slug": "become-a-certified-scuba-diver",
+  "title": "Choose a Scuba Course That Teaches the Whole Skill Set",
+  "description": "Compare beginner scuba courses by instructor support, confined-water practice, open-water dives, medical screening, and what certification actually covers.",
+  "intent": "Explains the pathway to an entry-level scuba certification and how to choose a training site without treating a card as permission for every dive.",
+  "sections": [
+    {
+      "heading": "Decide where you want to learn",
+      "paragraphs": [
+        "You can study the knowledge portion before entering the water, then complete practical skills in confined water and open-water dives with an instructor. Some people do all of that near home; others complete training while traveling. Compare the tradeoff: local training makes it easier to return for extra practice, while a destination course may need to fit a fixed trip and unfamiliar water conditions.",
+        "PADI’s Open Water Diver information describes knowledge development, instructor-supervised confined-water skills, and open-water dives. Other agencies may structure courses differently. Ask a dive center for its exact syllabus, group size, instructor contact, where the open-water work happens, and what happens if you need more time to demonstrate a skill."
+      ]
+    },
+    {
+      "heading": "Be honest about medical and water readiness",
+      "paragraphs": [
+        "A scuba medical questionnaire asks about conditions that may need assessment by a doctor. Do not guess at the answers or omit a condition to avoid delay. PADI says that if a listed condition applies, a doctor must assess it as related to diving and sign the relevant medical form; local rules may require additional consultation. Speak with the instructor or physician before starting if anything is unclear.",
+        "The entry course also includes basic water-skill requirements, which the instructor evaluates. Check the course’s current requirements before enrolling, and let the training provider know if you need an adaptive approach. A responsible instructor can discuss accommodations and performance criteria. Comfort in water is part of readiness; it is not something to bluff through."
+      ]
+    },
+    {
+      "heading": "Look for patient skill practice",
+      "paragraphs": [
+        "Ask how confined-water sessions are run and whether students can repeat a skill before moving on. You should practice fitting and checking equipment, entering and exiting the water, clearing a mask, buoyancy control, basic navigation, and safety procedures under direct instruction. These are learned step by step; a video or checklist cannot substitute for supervised practice.",
+        "Notice whether the teacher explains what a skill is for and watches you perform it. If you feel rushed, confused, or unable to equalize comfortably, say so and stop for guidance. Learning to dive includes communicating uncertainty. A good course treats a careful question as part of safe diving, not a nuisance."
+      ]
+    },
+    {
+      "heading": "Treat certification as a starting boundary",
+      "paragraphs": [
+        "An entry certification reflects the training and assessment you completed within that agency’s scope. It is not a universal ticket to every depth, condition, wreck, current, or overhead environment. PADI notes that appropriate sites depend on experience level, access and conditions, and interests. After certification, choose dives within your training and seek further instruction where conditions exceed it.",
+        "Ask a dive center how it assesses recent experience and whether you should take a refresher if you have been away from diving. Get comfortable with the equipment used locally before planning a complex trip. Your goal should be to become a calm, communicative buddy who knows when to decline a dive."
+      ]
+    },
+    {
+      "heading": "Compare the complete cost and schedule",
+      "paragraphs": [
+        "Before paying, ask what course materials, rental equipment, pool or confined-water sessions, boat fees, certification fees, and open-water dives are included. PADI explicitly advises students to check these items with the local shop because course packages vary. Ask how weather cancellations are handled and whether you can finish training later if travel interrupts the schedule.",
+        "Choose a dive center where instructors answer questions about supervision, medical screening, equipment, and continuation after the course. Your next step is to read the agency’s course requirements and speak to a local instructor about your water comfort and learning needs. Certification should come from demonstrated competence, not simply from staying on the itinerary."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "PADI Scuba Diving Certification FAQ",
+      "url": "https://www.padi.com/help/scuba-certification-faq",
+      "publisher": "PADI",
+      "purpose": "Course stages, supervised skills, medical questionnaire, water-skill assessment, and questions to ask about equipment and fees."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "scuba-dive-somewhere-extraordinary",
+    "dive-the-blue-hole-in-belize",
+    "swim-with-humpback-whales"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

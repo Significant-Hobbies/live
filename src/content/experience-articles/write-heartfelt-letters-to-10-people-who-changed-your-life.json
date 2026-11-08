@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "write-heartfelt-letters-to-10-people-who-changed-your-life",
+  "slug": "write-heartfelt-letters-to-10-people-who-changed-your-life",
+  "title": "Write Each Thank-You Letter Around One True Moment",
+  "description": "Make appreciation letters specific with one remembered moment, what it meant, and a closing that leaves the recipient free to respond—or not.",
+  "intent": "Helps a writer make ten appreciation letters feel personal rather than quota-driven by focusing on specific memories and a recipient’s comfort.",
+  "sections": [
+    {
+      "heading": "Make a private list before making a quota",
+      "paragraphs": [
+        "Start by naming people who made a difference in a concrete way: a teacher who took your question seriously, a friend who stayed during a hard week, or a colleague who made space for your work. Include people from different parts of life, but do not force the number ten if the exercise starts to feel transactional. One sincere note is better than ten interchangeable ones.",
+        "Write a private line about what each person did and what changed for you because of it. If you cannot remember a specific action, choose a different example or ask yourself what you genuinely appreciate about the relationship. A heartfelt letter describes a real detail, not a generic claim that someone is “amazing.”"
+      ]
+    },
+    {
+      "heading": "Build the letter from a scene",
+      "paragraphs": [
+        "Open with the reason you are writing. Then describe one moment: the sentence they said, the ride they gave you, the time they defended your work, or the ordinary ritual that still matters. Explain how you understood it then and what it means to you now. This keeps the note grounded in a shared experience rather than a list of compliments.",
+        "A 2023 randomized study of Australian adults compared letter and list gratitude exercises. It found differences in reported feelings across formats, including positive feelings and some indebtedness among people writing letters to specific individuals. The study involved private exercises and did not test whether delivering a letter produces the same outcomes. Write to express care, not to secure a response or a particular emotional effect."
+      ]
+    },
+    {
+      "heading": "Make each note sound like you",
+      "paragraphs": [
+        "Use the language you would use with that person. A formal letter may suit a former teacher; a short, warm note may fit a friend. Avoid polishing the voice until it sounds like a greeting card. If humor is part of your relationship, one small joke can make the letter recognizable—but do not use humor to dodge the meaningful thing you want to say.",
+        "For ten people, vary the form. One note might focus on practical help, another on a value you learned by watching the person, and another on a moment you still retell. Do not copy and paste a template with names swapped. The point is to notice what is particular about each relationship."
+      ]
+    },
+    {
+      "heading": "Choose how and whether to send",
+      "paragraphs": [
+        "Some people enjoy receiving a handwritten letter; others may feel exposed by a public tribute or an unexpected emotional conversation. Consider the recipient’s preferences and privacy. A private message, a card, or an unsent letter for your own reflection may all be appropriate. If you are unsure, ask whether they would be open to a note before placing a vulnerable story in a public setting.",
+        "Do not include a secret the recipient trusted you with or detail that could embarrass them. Avoid presenting a letter as a debt they now need to repay. Your gratitude can stand on its own without a request, a social media tag, or a demand that they confirm they received it."
+      ]
+    },
+    {
+      "heading": "Finish with a clean, unpressured close",
+      "paragraphs": [
+        "End by naming what you hope they know: that you remember, that their support mattered, or that you are glad your lives crossed. You can invite a reply, but make it optional. If the note reopens a relationship, let that conversation develop separately instead of loading every expectation into one envelope.",
+        "Your next action is to choose one person and draft a letter around one scene. Read it aloud and remove any sentence that sounds like praise without evidence or that asks the person to comfort you. If it still feels true, decide privately whether sending it would be welcome."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Are Some Ways of Expressing Gratitude More Beneficial Than Others? Results From a Randomized Controlled Experiment",
+      "url": "https://link.springer.com/article/10.1007/s42761-022-00160-3",
+      "publisher": "Affective Science",
+      "purpose": "Randomized study compares letter and list gratitude exercises and reports both positive feelings and indebtedness; letters were private."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "write-your-memoir",
+    "keep-a-journal-for-a-full-year",
+    "write-the-speech-you-would-give-at-your-own-retirement"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

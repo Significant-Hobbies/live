@@ -1,0 +1,59 @@
+{
+  "slug": "complete-a-major-cycling-challenge",
+  "title": "Choose a cycling challenge and prepare for its demands",
+  "description": "Pick a substantial ride that fits your current cycling, then prepare its terrain, bike handling, route logistics and recovery with a coachable plan.",
+  "intent": "Choose a suitable major cycling challenge and prepare through coached skills and progressive riding; distinct from a coast-to-coast itinerary.",
+  "sections": [
+    {
+      "heading": "Choose a challenge by its demands",
+      "paragraphs": [
+        "A major cycling challenge does not have to be a cross-country route. It could be a long sportive, a climbing event, gravel distance, a timed circuit or a personal ride with a clear finish. Compare distance, elevation, surface, traffic, cut-off times, support and weather exposure. Read the organizer’s rules and map before you enter; two rides with the same distance can require very different skills and equipment.",
+        "Use your recent riding as evidence. What is the longest ride you have completed comfortably? What terrain, pace or conditions are new? Choose an event that stretches one or two abilities rather than adding every unknown at once. If you are unsure, ask a qualified cycling coach or a reputable local club to review the event against your experience."
+      ]
+    },
+    {
+      "heading": "Build a plan around your real week",
+      "paragraphs": [
+        "Write down available riding days, work and family commitments, travel time to safe routes and a rest day you can protect. Cycling UK’s example 10-week plan for a 100-kilometre ride progresses the length and intensity of rides, asks riders to adapt training to their schedules, and includes rest. It is a template for that distance and context, not a personal prescription for every rider or a guarantee of finishing.",
+        "Make the first two weeks achievable and review how you recover before adding more. Keep notes on time, terrain and how the ride felt rather than chasing speed on every session. If you become ill or injured, stop the plan and seek appropriate clinical guidance before returning. If you have not exercised for a while or have a health concern, discuss the challenge with a clinician before starting a demanding program."
+      ]
+    },
+    {
+      "heading": "Practice the specific skills",
+      "paragraphs": [
+        "Match practice to the event: steady climbing, controlled descending, gravel cornering, riding in a group, using gears, eating and drinking while moving, or navigating an unfamiliar course. Learn risky handling skills in a supervised setting, not in fast traffic or a crowded trail. A coach or experienced instructor can observe your braking, line choice and bike fit in ways a training chart cannot.",
+        "Before the event, ride at least part of the expected surface and rehearse the practical routine: checking tires, carrying a repair kit, locating water and food, and deciding when to stop. This is a chance to learn what your bike and equipment do, not an invitation to test a new setup on event day."
+      ]
+    },
+    {
+      "heading": "Make logistics part of training",
+      "paragraphs": [
+        "Confirm event registration, start time, travel, parking or transit, bag rules, support stations and withdrawal process. Save the route offline and know where the official course changes are posted. Check whether the event has road closures, marshals or medical support; do not assume an organized ride removes ordinary traffic and weather risks.",
+        "Set up the bicycle for the event surface and have a qualified mechanic inspect anything you cannot assess confidently. Practice with the kit you plan to use, including clothing and lights where relevant. Check local road rules and helmet requirements for the place you will ride. These details vary by country and event, so use the organizer and relevant road-safety authority as current references."
+      ]
+    },
+    {
+      "heading": "Set a finish-day decision rule",
+      "paragraphs": [
+        "Decide in advance what would make you slow down, stop or ask for help. Examples might include unsafe weather, a mechanical problem you cannot fix, a course closure or feeling unwell. Agree with a trusted contact how you will update them and how you will get home if you withdraw. Completing a challenge is never worth concealing an injury or riding into conditions you cannot manage.",
+        "After the ride, record what helped and what surprised you. You may choose a harder route next time, but allow recovery and reflect before committing. A well-chosen major challenge is one that gives you a serious objective while leaving room to adapt. The goal is to arrive prepared to make good decisions throughout the ride, not to obey a schedule at any cost."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "10-week training plan for a 100km ride",
+      "url": "https://www.cyclinguk.org/article/10-week-training-plan-100km-ride",
+      "publisher": "Cycling UK",
+      "purpose": "Supports the example that its 100 km plan gradually progresses ride length/intensity, should fit the rider’s available time and includes rest; its specific plan is not a prescription or outcome guarantee for every event or rider."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "cycle-coast-to-coast",
+    "reach-peak-physical-fitness-for-your-age",
+    "run-a-marathon"
+  ],
+  "experienceSlug": "complete-a-major-cycling-challenge",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

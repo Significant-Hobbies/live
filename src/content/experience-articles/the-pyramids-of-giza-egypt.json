@@ -1,0 +1,66 @@
+{
+  "experienceSlug": "the-pyramids-of-giza-egypt",
+  "slug": "the-pyramids-of-giza-egypt",
+  "title": "Compare Giza as three royal complexes",
+  "description": "Look beyond the three famous silhouettes: Egypt’s antiquities ministry explains how each Giza pyramid belongs to a larger funerary complex.",
+  "intent": "Observe and compare the Giza pyramid complexes during a visit using Egypt’s antiquities authority for carefully bounded history rather than repeating general Egypt travel advice.",
+  "relatedExperienceSlugs": [
+    "see-the-pyramids-of-giza",
+    "visit-all-seven-wonders-of-the-world",
+    "visit-the-taj-mahal-at-dawn"
+  ],
+  "sections": [
+    {
+      "heading": "Begin with the plateau, not a single pyramid",
+      "paragraphs": [
+        "The three large pyramids dominate the view, but the Giza Plateau is a group of connected monuments. Egypt’s Ministry of Tourism and Antiquities identifies the Great Pyramid with Khufu and the other two with Khafre and Menkaure, his son and grandson. It also describes each king’s pyramid as one part of a broader complex, with smaller pyramids, tombs and temples. That gives you a more useful plan than standing at one pyramid and assuming you have seen the whole site.",
+        "Start from a vantage point where you can compare the three forms together. Notice their relative scale and how the plateau’s ground level changes their apparent height. Then choose one complex to inspect more closely. Do not treat approximate measurements or dates from a quick glance as the same thing as a careful archaeological explanation."
+      ]
+    },
+    {
+      "heading": "Compare the three complexes with a question",
+      "paragraphs": [
+        "The Great Pyramid is the largest of the three and was built for Khufu. The ministry’s description of Khafre’s complex says it stands on slightly higher ground, which can make it appear nearly as tall from certain views. This is an excellent reminder that appearance depends on both structure and setting. Menkaure’s pyramid is smaller, but the ministry notes a distinctive mix of granite and limestone casing.",
+        "Use those contrasts as a looking sequence: first compare the silhouettes; next notice the terrain under each; then look for associated temples, causeways or smaller tombs where visitor access allows. A good observation is something you can point to and describe, not an interpretation you cannot support."
+      ]
+    },
+    {
+      "heading": "Look for the supporting architecture",
+      "paragraphs": [
+        "A pyramid was not an isolated monument. The official plateau description names queens’ pyramids, mastaba tombs, boat burials, temples and a decorated causeway as components of royal complexes. Let this change your route: include time to look at the spaces between major structures rather than walking directly from one pyramid photo point to another. Ask your guide how the visible remains relate to the larger plan, and distinguish what is preserved from what is reconstructed in drawings or explanation.",
+        "If the day is crowded or hot, choose a few features and stop often in shaded or designated areas. Do not climb on masonry or enter a closed area for a better angle. Follow posted paths and staff directions; the preservation of the site matters more than completing every possible viewpoint."
+      ]
+    },
+    {
+      "heading": "Keep historical claims precise",
+      "paragraphs": [
+        "The ministry’s pages are useful for names, broad dates and the relationship of the pyramids to their associated monuments. They do not settle every debated question about labor organization, construction sequence or engineering methods. When a guide or exhibit offers a detailed interpretation, note whether it is a documented feature, a scholarly explanation or a hypothesis. This is not skepticism for its own sake; archaeology often distinguishes evidence from reconstruction.",
+        "A useful notebook entry might read: “Khafre’s placement on higher ground changes its apparent height in this view; I want to compare that with the actual structure.” That observation is both concrete and modest. If you hear a striking claim, ask what evidence supports it and where a visitor can learn more."
+      ]
+    },
+    {
+      "heading": "Plan enough time to see the site as a landscape",
+      "paragraphs": [
+        "Check current entry rules, opening information, ticket requirements and transport close to your date through the Ministry and the site custodian. The source used here gives archaeological context, not a guarantee of present access to every chamber or monument. Build a route around the features you most want to compare, leave time for the Sphinx or other accessible areas only if the day allows, and carry water and sun protection appropriate to local conditions.",
+        "Before you arrive, decide which contrast you will look for: size, ground level, materials or supporting structures. That one question will help you return with a clearer memory than a camera roll of nearly identical distant views."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Giza Plateau",
+      "url": "https://egymonuments.gov.eg/archaeological-sites/giza-plateau/",
+      "publisher": "Ministry of Tourism and Antiquities, Egypt",
+      "purpose": "Official archaeology page supports the attribution of the three pyramids to Khufu, Khafre and Menkaure and describes the larger complexes and their associated features."
+    },
+    {
+      "title": "Pyramid Complex of Khafre",
+      "url": "https://egymonuments.gov.eg/en/monuments/pyramid-complex-of-khafre-khefren",
+      "publisher": "Ministry of Tourism and Antiquities, Egypt",
+      "purpose": "Opened ministry description supports the relative higher-ground setting and associated mortuary/valley temples; used only for the bounded visual comparison.",
+      "accessLimit": "Ministry historical pages do not settle every archaeological interpretation and may not reflect current access or ticket rules; verify operational details at date of visit."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

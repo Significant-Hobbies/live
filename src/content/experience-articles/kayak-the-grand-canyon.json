@@ -1,0 +1,71 @@
+{
+  "experienceSlug": "kayak-the-grand-canyon",
+  "slug": "kayak-the-grand-canyon",
+  "title": "Plan a Grand Canyon Kayak Trip Around the River You Can Handle",
+  "description": "Understand how Grand Canyon kayak trips differ from guided raft trips and permit-based private expeditions, with the river skills and logistics in view.",
+  "intent": "Shows how to pursue a Grand Canyon paddle through a legitimate guided or qualified private route, instead of treating the river as a casual kayak outing.",
+  "sections": [
+    {
+      "heading": "Start with the scale of the river trip",
+      "paragraphs": [
+        "The Colorado through Grand Canyon is not a day-rental paddle. National Park Service information distinguishes one-day smooth-water trips from multi-day whitewater journeys through the canyon. The well-known Lees Ferry to Diamond Creek section covers the length of a major expedition, and the NPS lists commercial trips in several craft types. A kayak trip therefore begins with a question about experience and format, not a choice of boat color.",
+        "Decide whether your aim is to paddle your own whitewater kayak, share a raft with a guide, or experience the canyon from a river trip without being responsible for navigation. Ask an outfitter what craft its trip actually uses and what level of previous river experience it expects. Do not infer that “kayak” in a trip description means a beginner can paddle every rapid."
+      ]
+    },
+    {
+      "heading": "Know the guided and private routes",
+      "paragraphs": [
+        "For a first visit, the more accessible route is to contact a National Park Service authorized commercial river concessioner and ask about an experience that matches your paddling history. The NPS describes guided multi-day raft trips and lists the types of craft offered by concessioners; availability and exact boats vary by company. A guided raft trip may still deliver the canyon’s water, camps, side-canyon hikes, and geology without requiring you to lead the group.",
+        "A private river trip is a different undertaking. The NPS permit system says noncommercial launches are self-guided and awarded through a weighted lottery to people who already have the river skills to coordinate and safely lead trips through technical rapids. Its regulations require the trip leader and boatmen to know whitewater safety, first aid, equipment repair, and navigation. A permit is not a training course."
+      ]
+    },
+    {
+      "heading": "Ask about craft and responsibility",
+      "paragraphs": [
+        "If you are looking specifically to kayak, be precise in your questions. Ask whether kayaks are permitted and provided, whether participants must bring their own, which rapids are paddled in a kayak versus raft, and what rescue support is present. The NPS private-trip regulations recognize whitewater canoes and kayaks, but include experience and equipment requirements. That is a sign to match your skill honestly, not a checklist for self-teaching a high-volume river.",
+        "Ask who makes the decision to walk around a rapid, whether the trip has a safety kayaker, and what happens if someone is tired, cold, or separated from their boat. A competent operator should be comfortable explaining that a participant can opt out of paddling a section under the trip’s rules."
+      ]
+    },
+    {
+      "heading": "Plan the canyon as a moving field trip",
+      "paragraphs": [
+        "The river itinerary is only one part of the experience. Some trips include hikes away from the water, camps on river beaches, or stops to look at canyon geology and archaeological landscapes. Ask how much time is spent off the boat and what footwear or walking ability the itinerary calls for. Follow the guide’s directions at side canyons and do not remove or disturb rocks, fossils, or cultural objects.",
+        "A useful way to prepare is to learn a few things to notice: the shift from the river corridor to a side canyon, the color and texture of rock layers, and how a rapid changes the group’s rhythm. Keep a waterproof note card or voice memo for one observation per day rather than trying to record everything from a moving boat."
+      ]
+    },
+    {
+      "heading": "Make your next step a fit check",
+      "paragraphs": [
+        "The NPS maintains current information on commercial river trips, private permits, and river alerts. Dates, rules, and river conditions change, so use current official pages rather than old travel posts when planning. If you are already an experienced kayaker, explain the rivers you have paddled and your rescue training when contacting operators or qualified trip leaders; do not overstate either to secure a place.",
+        "Start with the official commercial concessioner list and ask what kayak options exist for your level. If a private permit is your goal, build substantial comparable whitewater experience with qualified instruction first. A responsible route keeps the canyon expedition memorable for the landscape, not defined by a preventable skills mismatch."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "River Trips and Permits",
+      "url": "https://home.nps.gov/grca/planyourvisit/whitewater-rafting.htm",
+      "publisher": "National Park Service, Grand Canyon National Park",
+      "purpose": "Distinguishes guided commercial and self-guided private river trip types and their routes."
+    },
+    {
+      "title": "3 to 18 Day Commercial River Trips: River Concessioners",
+      "url": "https://www.nps.gov/grca/planyourvisit/river-concessioners.htm",
+      "publisher": "National Park Service, Grand Canyon National Park",
+      "purpose": "Lists authorized concessioners and craft types used on guided trips."
+    },
+    {
+      "title": "Noncommercial River Trip Regulations",
+      "url": "https://www.nps.gov/grca/planyourvisit/upload/Noncommercial_River_Trip_Regulations.pdf",
+      "publisher": "National Park Service, Grand Canyon National Park",
+      "purpose": "Self-guided trip and boatman experience requirements, including whitewater kayaks."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "white-water-raft-a-class-v-river",
+    "the-grand-canyon-usa",
+    "take-a-sheltered-water-paddleboard-starter-lesson"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

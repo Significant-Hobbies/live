@@ -1,0 +1,73 @@
+{
+  "experienceSlug": "komodo-island-indonesia",
+  "slug": "komodo-island-indonesia",
+  "title": "How to prepare for a guided visit to Komodo",
+  "description": "Plan a responsible Komodo National Park visit around official guiding rules, wildlife distance, boat logistics and a low-impact way to watch dragons.",
+  "intent": "Prepare for a responsible Komodo National Park wildlife visit by checking official guide arrangements, route logistics and current local instructions without assuming a sighting.",
+  "relatedExperienceSlugs": [
+    "safari-in-the-serengeti-at-sunrise",
+    "explore-the-amazon-rainforest",
+    "see-the-great-barrier-reef"
+  ],
+  "sections": [
+    {
+      "heading": "Treat the park as wildlife habitat",
+      "paragraphs": [
+        "Komodo dragons are wild animals moving through a protected landscape, not performers placed along a predictable trail. The park’s official guiding page says guiding activities inside the park are managed with licensed nature-tour service providers and describes naturalist-guide services at specific resorts. It does not establish a blanket rule for every route or explain the rule as a response to dragons moving between islands. Before choosing a trip, ask the park or operator which guide arrangement and route apply to the exact site.",
+        "The park also publishes visitor protocols; its formal rules page is in Indonesian. Read the current instructions with your operator before departure and follow the ranger’s directions on the ground. Never feed wildlife, approach an animal for a photograph, or move away from your group to improve a camera angle. If the route or guiding requirement is unclear, pause and confirm it with the park rather than assuming independent access is allowed."
+      ]
+    },
+    {
+      "heading": "Choose the day by the kind of visit you want",
+      "paragraphs": [
+        "Ask whether the itinerary includes Komodo Island, Rinca or another authorized park area, and which walking route is planned. A shorter guided walk can be the better choice if the group includes young children, older travelers or anyone uncomfortable with heat and uneven terrain. A longer route may offer more landscape variety, but should be selected with the guide’s advice about current conditions, not by a promise of seeing a dragon.",
+        "Ask what is included in the operator’s quote: park entry or conservation fees, guide, boat, meals, drinking water, transfers, and any separate island stops. The park website has separate pages for admission and guide services; details may change, and this article does not confirm present prices or permit availability. Get written confirmation and verify that the company explains its official entry arrangements."
+      ]
+    },
+    {
+      "heading": "A useful wildlife-viewing routine",
+      "paragraphs": [
+        "Before stepping ashore, listen to the guide’s instructions and identify the person at the rear of the group. Keep the distance the ranger sets, move at the pace requested and avoid sudden movements. If a dragon appears, stop where instructed rather than crowding forward. A long lens or a patient view from behind the group is a better record than a close, risky image.",
+        "Look beyond the animal. On a walk, notice how open ground, shade and tree cover shape the route; on the boat, observe the relationship between shore, hills and water. Ask the guide how the trail is selected and what signals require the group to alter course. Do not ask the guide to provoke an animal or stage an encounter."
+      ]
+    },
+    {
+      "heading": "Make the boat leg part of the plan",
+      "paragraphs": [
+        "Labuan Bajo is a common departure point, but the order of islands and time on water depend on the operator and conditions. Confirm the departure terminal, transfer time, return plan and what happens if weather or sea state forces a change. Pack any medication you already use, sun protection and a dry layer in a small bag. Follow the boat crew’s directions when boarding and moving on deck.",
+        "If snorkeling is included, ask about life jackets, mask fit, supervision and whether the selected site is suitable for your experience level. A wildlife-focused land visit and a snorkeling stop are separate activities; do not let an attractive itinerary blur what is actually supervised or included."
+      ]
+    },
+    {
+      "heading": "Leave the park with a grounded memory",
+      "paragraphs": [
+        "Take notes after the walk, not while the group is moving: one behavior you observed, one landscape feature, and one question you did not get answered. Avoid publishing a location pin that encourages unsupervised approaches to wildlife. If you want to support conservation, ask the park authority or a reputable local operator about current official channels instead of assuming a tour fee has a particular destination.",
+        "Before booking, your next action is to compare two operators using the same checklist: authorized park access, named guide or ranger arrangements, clear inclusions, safety briefing and a no-guarantee approach to wildlife sightings."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Komodo National Park visitor information",
+      "url": "https://tnkomodo.ksdae.kehutanan.go.id/",
+      "publisher": "Komodo National Park, Ministry of Environment and Forestry, Indonesia",
+      "purpose": "Official park visitor page consulted for park context; the revised body no longer attributes a universal guide prohibition or causal explanation to this homepage.",
+      "accessLimit": "Some visitor sections are in Indonesian; confirm current operational terms directly with the park/operator."
+    },
+    {
+      "title": "Protokol Kunjungan Wisata Alam",
+      "url": "https://tnkomodo.ksdae.kehutanan.go.id/protokol-tnkomodo/",
+      "publisher": "Komodo National Park",
+      "purpose": "Official Indonesian protocol page consulted for visitor rules and prohibited conduct. The page is in Indonesian; article avoids translating detailed prohibitions beyond general group and wildlife-respect advice."
+    },
+    {
+      "title": "Jasa Pemanduan Wisata Alam",
+      "url": "https://tnkomodo.ksdae.kehutanan.go.id/jasa-pemanduan/",
+      "publisher": "Komodo National Park, Ministry of Environment and Forestry, Indonesia",
+      "purpose": "Supports the narrower statement that guiding activity in the park is managed with licensed nature-tour service providers and describes guide services at specific resorts; it does not establish a blanket requirement for every route.",
+      "accessLimit": "Page is in Indonesian; some cited permits/decisions and the listed fee are dated. Confirm current locations, providers, rules and fees directly with the park/operator."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

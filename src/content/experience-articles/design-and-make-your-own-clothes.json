@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "design-and-make-your-own-clothes",
+  "slug": "design-and-make-your-own-clothes",
+  "title": "Fit a first garment before you cut the good fabric",
+  "description": "Make a first garment that fits by choosing a simple pattern, checking its finished measurements and testing adjustments before cutting your final cloth.",
+  "intent": "Help a beginning garment maker prioritize fit and pattern choice through measurement, a test garment and one deliberate adjustment.",
+  "relatedExperienceSlugs": [
+    "mend-a-favourite-garment-with-visible-stitches",
+    "stencil-a-reusable-fabric-bag"
+  ],
+  "sections": [
+    {
+      "heading": "Choose a pattern for the garment you will wear",
+      "paragraphs": [
+        "Pick a garment with a shape you already understand and a closure or construction detail you are ready to learn. A loose elastic-waist skirt or simple top is easier to assess than a tailored jacket with a lining. Look at the pattern envelope for required fabric, skill assumptions, and notions, then check the instructions before buying material.",
+        "Choose fabric that behaves like the pattern calls for. A pattern designed for a drapey woven cloth can fit very differently in a stiff canvas; stretch fabric needs a different construction approach. If you are new to sewing, ask the pattern maker or a local teacher which fabric is appropriate rather than relying only on a color or print you like."
+      ]
+    },
+    {
+      "heading": "Measure yourself and compare garment ease",
+      "paragraphs": [
+        "Use your body measurements to choose a starting pattern size instead of assuming a ready-to-wear label transfers. Simplicity’s size guidance says to compare body measurements with the pattern chart and check the finished-garment measurements; the difference is the ease allowed in the design. That is why selecting a size by one number alone can be misleading.",
+        "Write down the specific measurement where you fall between sizes and consider how you want the garment to fit. For pants, waist, hip, and rise may matter differently than for a loose shirt. If you are unsure, bring the pattern and measurements to a sewing teacher. Do not alter every line at once; first identify what the design is intended to do."
+      ]
+    },
+    {
+      "heading": "Make a test version for the difficult fit areas",
+      "paragraphs": [
+        "Before cutting expensive fabric, use inexpensive cloth with a similar weight to test the areas that determine fit. A complete test garment is not always necessary; for some projects, a partial sample of the bodice or waistband may answer the main question. Mark the center front and back, darts, and any lines you need to compare. Baste seams so you can adjust them without unpicking a finished edge.",
+        "Try it on over the underlayers you expect to wear. Check that you can sit, lift your arms, and move comfortably. Look at the garment from more than one angle and note where it pulls, hangs, or shifts. Take photos if you find it hard to see the back, but have someone help rather than twisting yourself into a mirror pose."
+      ]
+    },
+    {
+      "heading": "Change one thing at a time",
+      "paragraphs": [
+        "Choose the most important fit issue and alter the paper pattern accordingly. If the shoulder seam sits far off the shoulder, for example, ask a teacher to help decide whether size, shoulder adjustment, or garment design is responsible before trimming anything. Keep a record of the adjustment and transfer it to the pattern pieces that need it.",
+        "A fitting problem can also come from sewing accuracy or fabric choice. Check grain direction, seam allowance, and whether the garment was pressed before changing the pattern. If several issues appear, work with a more experienced sewist; guessing at multiple adjustments can make the next version harder to interpret."
+      ]
+    },
+    {
+      "heading": "Cut the final cloth only after the test",
+      "paragraphs": [
+        "Once the test version answers your questions, recheck the pattern layout, grainline, notches, and cutting plan. Leave time to press seams and try the garment on at an intermediate stage rather than sewing the entire project before checking. Keep the pattern and fit notes together so the next make starts with what you learned.",
+        "Your first action is to choose one pattern you can finish and take accurate measurements. Compare them to both the chart and finished garment measurements, then decide whether you need a test version. The cloth you save is less valuable than learning exactly where the garment fits the body you plan to wear it on."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Size charts to help you choose your perfect sewing pattern",
+      "url": "https://simplicity.com/size-charts/",
+      "publisher": "Simplicity Patterns",
+      "purpose": "Opened pattern company guidance to use body measurements rather than ready-to-wear sizes and compare finished garment measurements to understand ease."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

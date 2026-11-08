@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "explore-a-garden-through-scent",
+  "slug": "explore-a-garden-through-scent",
+  "title": "How do you notice more scents in a garden?",
+  "description": "Take a slow garden scent walk by comparing a few aromas, noticing wind and distance, and recording impressions without touching unknown plants.",
+  "intent": "How can I explore a garden through smell without turning it into a plant-identification test? This guide offers a careful sensory walk built around observation and personal associations.",
+  "sections": [
+    {
+      "heading": "Choose a garden and set a gentle pace",
+      "paragraphs": [
+        "A scent walk can happen in a botanical garden, community garden or ordinary public park. Choose a place where visitors are allowed to walk and sit, and check any rules about paths, touching plants, photography or group visits. You do not need a dedicated sensory garden: changing weather, nearby trees and cut grass can all contribute to the experience. Avoid doing the walk when you feel unwell or when fragrances tend to trigger headaches or allergies.",
+        "Before starting, decide on a short route with a few stopping points rather than trying to smell every bed. Royal Botanic Gardens, Kew describes sensory gardens as engaging several senses and suggests aromatic plants such as roses, honeysuckle, jasmine, lavender, rosemary, mint and sage. Use those as examples if you encounter them, not as a checklist or invitation to pick leaves. Plants can be toxic, irritating or protected, and your sense of smell alone cannot identify a species safely."
+      ]
+    },
+    {
+      "heading": "Notice scent at different distances",
+      "paragraphs": [
+        "At the first stop, pause a little away from the plants. What reaches you before you can name it: damp soil, warm leaves, cut grass, a flower or something from a nearby path? Then move closer only where the garden permits, keeping your hands to yourself. Take a comfortable breath; do not put your face against a bloom or inhale deeply from an unknown plant. If no clear aroma appears, note the absence rather than forcing one.",
+        "Compare the same area from different positions. Wind can carry a scent toward or away from you; a sheltered corner may feel stronger than an exposed path. A plant may smell different after rain or sunshine, and some scents are easiest to notice after moving away briefly. These observations are personal and weather-dependent, so describe what you experience rather than claiming a species always smells a certain way."
+      ]
+    },
+    {
+      "heading": "Use words before reaching for a name",
+      "paragraphs": [
+        "Write down three plain descriptors: sharp, sweet, green, earthy, citrus-like, dusty or faint. Add the association it brings, if any, such as a kitchen, a rainy walk or a familiar room. A scent can evoke memory without proving where that memory came from. If a label identifies a plant, record the label separately from your own impression; that leaves room for the sensory experience to be meaningful even when you cannot identify the aroma.",
+        "Try comparing two nearby scents rather than ranking them. Which seems stronger from the path? Which stays in your attention after you walk on? You might notice that a flower is subtle while crushed leaves from another plant carry farther—but do not crush leaves to test the idea. Observe only what the place offers without damage."
+      ]
+    },
+    {
+      "heading": "Make the walk accessible and considerate",
+      "paragraphs": [
+        "Choose a route with places to pause and, if helpful, a bench. If scents are tiring, do a short loop and stop whenever you like. A companion can read plant labels aloud or describe the colors and shapes around a scent; agree beforehand on whether you want quiet or conversation. Keep a respectful distance from other visitors and never block a path while writing.",
+        "The same garden can be experienced through texture, sound, temperature and movement as well as smell. Kew's sensory-garden guidance points to foliage, moving grasses, water and seating as other elements. If a scent is inaccessible or unpleasant to you, shift attention to how the space is arranged or how breeze changes the leaves. The activity does not depend on having a particular sensory response."
+      ]
+    },
+    {
+      "heading": "Keep a small scent map",
+      "paragraphs": [
+        "At the end, sketch your route with two or three stops and add your descriptions: “mint-like near the herb bed,” “wet earth under the tree,” or “no clear scent by the pond.” Mark the date and conditions, such as warm, windy or recently wet, because a return visit may feel different. Do not collect samples; your notes and the garden's own labels are enough to make the walk yours.",
+        "Your next action is to choose one accessible garden loop and spend five quiet minutes at a single stopping point, writing three scent words before looking at the plant label. That small pause will show you whether you want a longer walk or a different setting next time."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How to create a sensory garden",
+      "url": "https://www.kew.org/read-and-watch/how-to-create-a-sensory-garden",
+      "publisher": "Royal Botanic Gardens, Kew",
+      "purpose": "Supports sensory garden principles, examples of aromatic plants, and the use of scent, foliage, sound and seating as elements of a sensory experience."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "look-at-one-museum-object-for-twenty-minutes",
+    "pause-at-the-same-window-for-a-week",
+    "build-a-kite-and-test-it-in-an-open-park"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

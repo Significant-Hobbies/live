@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "follow-cotton-through-a-handloom-village-with-a-weaver",
+  "slug": "follow-cotton-through-a-handloom-village-with-a-weaver",
+  "title": "What should you ask a handloom weaver about cotton?",
+  "description": "Follow cotton yarn through a handloom visit by asking how the yarn is prepared, set on the loom, patterned, and finished in that specific workshop.",
+  "intent": "What can I learn by following cotton through a handloom village? This guide gives visitors a respectful way to understand one workshop's process without assuming every region or weaver works the same way.",
+  "sections": [
+    {
+      "heading": "Ask permission before treating a workshop as a tour",
+      "paragraphs": [
+        "A handloom village is a working place, not a staged exhibit. Before arriving, find out whether visitors are welcome, whether an appointment or local guide is needed, and whether photography is allowed. Ask who should introduce you to a weaver and whether there is a preferred way to support the workshop, such as buying directly or paying for a demonstration. If a loom is running, wait for an invitation before stepping closer; threads can be under tension and work may be interrupted by a visitor's movement.",
+        "Keep the visit focused on the process rather than asking a craftsperson to perform on demand. A useful opening is: “Would you be comfortable showing me one stage of this cloth?” If the answer is no, accept it. Ask before touching yarn, tools, samples or partly woven fabric. A quiet visit that follows the host's pace reveals more than a string of photographs taken without context."
+      ]
+    },
+    {
+      "heading": "Follow the yarn from preparation to loom",
+      "paragraphs": [
+        "Cotton rarely goes straight from a loose hank to a finished cloth. The Indian government's handloom report on Balaramapuram sarees describes preparing warp yarn by washing, winding and arranging it for the loom; it also notes that yarn practices differ by cluster and that weft preparation can follow a different route. Treat that as a prompt for questions, not a universal script. Ask the weaver where this particular yarn came from and which steps happen here, elsewhere in the village or at another workshop.",
+        "Look for the distinction between warp and weft. Warp threads are held lengthwise under tension on the loom; weft passes across them to build the cloth. The weaver may use a beam, bobbins, a frame or locally specific equipment to prepare and manage those threads. Ask what would go wrong if one strand were uneven, or how a repeated motif is kept aligned. Let the weaver name the tools rather than guessing from their shape."
+      ]
+    },
+    {
+      "heading": "Notice what the pattern asks the weaver to do",
+      "paragraphs": [
+        "As the fabric grows, watch how the person controls thread order, tension and repeated movement. If a border or motif appears, ask which decision is made by the loom setup and which decisions the weaver makes while weaving. A pattern can be encoded in the arrangement of warp threads, introduced by the weft or shaped through a combination of preparation and hand control. Do not assume a complex design is simply “automatic” because it repeats; ask how the sequence is planned and checked.",
+        "Pay attention to pace. A weaver may pause to correct a thread, inspect the cloth or reset a tool. Those pauses are part of the making, not an interruption you should rush through. If the practitioner offers a short demonstration, stay in the place they indicate and keep hands away from the moving parts. A video can capture motion, but a brief written note about what the weaver said will preserve the meaning better than an unlabelled clip."
+      ]
+    },
+    {
+      "heading": "Learn the local story without flattening it",
+      "paragraphs": [
+        "Textiles carry choices about material, labor, design, use and trade. Ask who buys this cloth, whether it is worn for a particular occasion and how the design has changed over time. If someone explains a family or community term, ask how it is spelled and whether they are comfortable with you repeating it. One maker's account is valuable testimony about their practice; it does not automatically stand for every weaver or every handloom region.",
+        "If you want to photograph a person, a face, a child or a distinctive design, ask separately and be clear about where the image will appear. A permission to take a keepsake photo is not automatically permission to publish it. Write down the workshop's name only if the host is comfortable being identified, and do not reveal private home details in a public post."
+      ]
+    },
+    {
+      "heading": "Leave with one process question answered",
+      "paragraphs": [
+        "After the visit, sketch the sequence you observed: yarn source, preparation, loom setup, weaving, finishing. Mark any steps the host said were done elsewhere, and keep your own guesses separate from their explanation. If you buy a piece, ask for care guidance and note the maker or cooperative so the object remains connected to its source.",
+        "Your next action is to arrange one host-approved visit and ask a single question about how the warp for that cloth is prepared. Follow the answer through the workshop's actual process, then thank the weaver and support their work in the way they recommend."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Balaramapuram Sarees: Production Process",
+      "url": "https://handlooms.nic.in/assets/img/Publications/Balaramapuram%20Sarees635701520378938440.pdf",
+      "publisher": "Office of the Development Commissioner (Handlooms), Ministry of Textiles, Government of India",
+      "purpose": "Supports a Balaramapuram-specific example of cotton yarn sourcing, warp washing, winding and preparation; the article explicitly avoids treating one cluster's process as universal."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "follow-the-narrative-reliefs-around-sanchi-s-gateways",
+    "explore-reconstructed-yayoi-life-at-yoshinogari",
+    "explore-a-historic-stepwell-s-water-architecture"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

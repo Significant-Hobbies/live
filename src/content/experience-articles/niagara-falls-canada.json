@@ -1,0 +1,70 @@
+{
+  "experienceSlug": "niagara-falls-canada",
+  "slug": "niagara-falls-canada",
+  "title": "Choose a Canadian-side Niagara view that matches your day",
+  "description": "Plan a Niagara Falls visit from the Canadian side by choosing between Table Rock views, a close-up paid attraction and a longer parkway day.",
+  "intent": "How do I shape a Niagara Falls day on the Canadian side around views, accessibility, one paid experience and realistic timing?",
+  "sections": [
+    {
+      "heading": "Choose your scale of encounter",
+      "paragraphs": [
+        "Start by deciding whether you want to see the Falls from a public overlook, feel spray from close range, or spend a day moving through the wider parkway. Niagara Parks places the main Table Rock Welcome Centre beside the brink of the Canadian Horseshoe Falls and near Journey Behind the Falls. That makes the area a convenient anchor if your time is limited or you prefer to decide about paid attractions after arriving.",
+        "For a straightforward first visit, begin with the view from the public area, pause to watch the water for a while, and then choose one paid experience if it adds a perspective you genuinely want. You do not have to buy several attractions to make the day count. The Welcome Centre can provide maps and current information; check opening hours and ticket conditions directly because they vary."
+      ]
+    },
+    {
+      "heading": "Decide whether to go behind the Falls",
+      "paragraphs": [
+        "Journey Behind the Falls is a self-guided attraction that takes visitors down to tunnels and observation areas beside the Horseshoe Falls. Niagara Parks says the experience takes roughly thirty to forty-five minutes on its current page, with timed ticketing and a chance of mist on the observation deck. The close perspective is very different from viewing the broad curve of the Falls above.",
+        "Choose it if the feeling of scale, sound and spray matters more to you than covering multiple attractions. Bring a way to protect your phone and valuables from moisture, and expect damp conditions. Check ticket times and accessibility details before purchase. The attraction is partially accessible: the elevator reaches the tunnels and upper observation area, while the lower deck requires stairs."
+      ]
+    },
+    {
+      "heading": "Make accessibility part of the plan",
+      "paragraphs": [
+        "Niagara Parks’ accessibility information says Journey Behind the Falls is partially wheelchair and scooter accessible. Elevators reach the tunnels and upper observation deck, but the lower deck is reached by stairs. This distinction matters when someone in your party has mobility needs; the upper deck still offers a view, so the decision does not have to be all or nothing.",
+        "Check the current accessibility page and contact Niagara Parks if you need details about equipment, support-person policies, washrooms or route conditions. Do not assume an attraction is fully accessible because its main page uses broad welcoming language. Build in time for lifts, queues and rest, and choose a viewpoint that works for the whole group rather than splitting people by default."
+      ]
+    },
+    {
+      "heading": "Use the parkway for a longer day",
+      "paragraphs": [
+        "If you have more time, treat the Niagara Parkway as a sequence of distinct stops rather than one long walk. Niagara Parks describes a 56-kilometre corridor with seasonal Welcome Centres; staff can help with maps and tickets. Pick one or two points of interest based on your transport and energy, such as a heritage stop or a garden, then leave an unhurried block to return to the Falls.",
+        "Avoid assuming that a pass saves money or that two locations are close enough to combine without checking transport. Compare single tickets with current passes only after you know which attractions you want and their operating hours. If you are crossing an international border, verify entry and re-entry requirements for your passport through official government sources before setting the day’s route."
+      ]
+    },
+    {
+      "heading": "End with one observation",
+      "paragraphs": [
+        "A short pause can make a crowded visit feel more personal. Watch how the Horseshoe Falls changes with angle: from above you see the curve and river; from Journey Behind the Falls you notice the force and sound from near the water. If you have time, return to the overlook later when light or mist has shifted. You do not need a perfect photograph to remember the scale.",
+        "Niagara Parks is the source for its own attractions, ticketing and accessibility; it does not provide a complete current border-entry guide or guarantee that hours and prices will stay fixed. Check live notices before you travel. Your next step is to choose one anchor viewpoint, decide whether the close-up attraction fits your mobility and budget, and keep the rest of the day flexible."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Journey Behind the Falls",
+      "url": "https://www.niagaraparks.com/attractions/journey/",
+      "publisher": "Niagara Parks",
+      "purpose": "Supports the attraction’s tunnels, observation areas, duration, timed-ticketing and mist expectations; dynamic operational details should be rechecked."
+    },
+    {
+      "title": "Accessibility at Niagara Parks",
+      "url": "https://www.niagaraparks.com/visitor-information/accessibility/",
+      "publisher": "Niagara Parks",
+      "purpose": "Supports that Journey Behind the Falls is partially accessible, elevators reach the tunnels and upper deck, and stairs are needed for the lower deck."
+    },
+    {
+      "title": "Visitor Information",
+      "url": "https://www.niagaraparks.com/visitor-information/",
+      "publisher": "Niagara Parks",
+      "purpose": "Supports the Table Rock Welcome Centre’s location and visitor-planning role, and the Niagara Parkway’s length and seasonal welcome centres."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "see-a-natural-wonder-up-close",
+    "see-the-great-barrier-reef"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

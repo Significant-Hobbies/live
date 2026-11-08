@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "spend-a-week-in-a-monastery-or-retreat-centre",
+  "slug": "spend-a-week-in-a-monastery-or-retreat-centre",
+  "title": "Choose a monastery stay by its actual daily rhythm",
+  "description": "Compare retreat schedules, participation expectations, quiet periods, access needs, and support before committing to a week at a monastery.",
+  "intent": "Help a guest determine whether a particular monastery or retreat centre offers a suitable week, using one named programme as an example rather than generalizing across traditions.",
+  "sections": [
+    {
+      "heading": "Decide what kind of week you are seeking",
+      "paragraphs": [
+        "“Monastery” and “retreat centre” cover many traditions and very different guest arrangements. Decide whether you want to observe a religious community, take part in guided practice, study, volunteer, or have time for quiet. A guest stay may include a structured schedule and shared duties; a retreat may have teaching, periods of silence, or specific religious commitments. Read the host’s own current description before you interpret the word retreat.",
+        "For example, Plum Village publishes a sample schedule with sitting and walking meditation, meals, teaching, shared work, and evening silence. It also says schedules vary by season, retreat, and hamlet. This is one Buddhist community’s outline, not a template for Christian monasteries, Hindu ashrams, or secular centres. Use it as evidence that the details matter, then look up the specific place you may visit."
+      ]
+    },
+    {
+      "heading": "Read a full day before booking",
+      "paragraphs": [
+        "Copy the sample schedule into your own notes and mark wake-up time, meals, group sessions, personal time, silence, physical activity, and lights-out. Ask whether each activity is required, optional, or offered only on certain days. Check how the centre handles late arrival, leaving early, missed sessions, visitors, and phone use. If a centre does not publish a timetable, ask for a realistic outline of a normal day before you pay.",
+        "A week with a very early start or long seated periods may be unsuitable for your needs, while a less structured stay may not offer the guidance you want. Explain relevant mobility, dietary, sleep, accessibility, or care requirements privately to the organizers and ask what accommodations are possible. Do not infer what you can manage from a promotional photo or a friend’s account of another retreat."
+      ]
+    },
+    {
+      "heading": "Clarify the commitments and boundaries",
+      "paragraphs": [
+        "Ask what participation means: attendance at prayer or meditation, silence, work practice, shared meals, dress expectations, donations, or rules about photography. Find out whether the place has a code of conduct, a safeguarding contact, and a process for raising concerns. Learn how private consultation or pastoral support works, if it is part of the offering, and what the centre can and cannot provide.",
+        "If you have an ongoing mental-health, medical, or caregiving need, speak with your appropriate professional or support person before choosing an intensive retreat. Ask the centre what support is available and how to leave or change plans. A retreat is not automatically treatment, and no centre’s schedule can promise a particular emotional or spiritual result."
+      ]
+    },
+    {
+      "heading": "Plan travel, meals, and practical needs",
+      "paragraphs": [
+        "Confirm dates, transportation, accommodation type, bedding, meals, payment or donation arrangements, cancellation terms, and what to bring using the host’s current information. Check whether you can reach the site by public transport and how to travel from the stop. If the centre expects guests to help with chores, ask what that involves and whether it is physically accessible for you.",
+        "Pack for the actual location and season. Bring any required medication and instructions from your clinician; do not change a treatment plan to fit a retreat schedule. Save the address, arrival contact, and travel details offline. Tell someone at home how to reach the centre and when you expect to return."
+      ]
+    },
+    {
+      "heading": "Use the first day as a check-in",
+      "paragraphs": [
+        "On arrival, attend the orientation and ask practical questions before the first full day begins. At Plum Village, the sample-schedule page says newcomers receive an orientation to the practice and schedule; another centre may do this differently. Notice whether the actual pace and environment match what you were told. If you feel unwell, unsafe, or unable to participate, speak with staff and use the centre’s stated process to pause or leave.",
+        "After a week, reflect on specific observations: which parts of the rhythm suited you, what questions were answered, and whether you would return for a different programme. For your next step, compare two centres using their own schedule, participation rules, accessibility information, and cancellation terms, not a general idea of what a monastery stay should be."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Sample Schedule",
+      "url": "https://plumvillage.org/retreats/visiting-us/sample-schedule",
+      "publisher": "Plum Village",
+      "purpose": "Supports the sample rhythm of one specific community's retreat programme and its warning that schedules vary by season, retreat, and hamlet; it is not presented as representative of all monastic or retreat traditions."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "do-a-silent-meditation-retreat",
+    "spend-a-day-in-complete-silence",
+    "learn-to-meditate-for-20-minutes-straight"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

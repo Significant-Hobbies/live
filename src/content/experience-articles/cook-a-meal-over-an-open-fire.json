@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "cook-a-meal-over-an-open-fire",
+  "slug": "cook-a-meal-over-an-open-fire",
+  "title": "Build the meal around the site’s fire rules",
+  "description": "Cook over an open fire only where it is permitted, choose a simple menu and use safe food-handling practices from preparation to cleanup.",
+  "intent": "How can I plan an open-fire meal without treating a campfire as a kitchen appliance? This focuses on site permission, food logistics and a conservative menu.",
+  "sections": [
+    {
+      "heading": "Confirm a legal place and time first",
+      "paragraphs": [
+        "An open fire is not automatically allowed because a campground has a fire ring. Check the site’s official fire rules and current restrictions shortly before the trip. The U.S. National Park Service notes that parks set different rules about where and when fires are allowed and that dry or windy conditions can trigger restrictions. That guidance is for U.S. parks; use the authority responsible for the actual site you plan to visit.",
+        "Choose a permitted campground, public site or private location where the owner or manager explicitly allows fires. If rules are unclear, do not light one. A stove may be the appropriate alternative where the site allows it, but check the same local rules. Keep the group away from areas where visitors could be exposed to smoke, sparks or hot equipment."
+      ]
+    },
+    {
+      "heading": "Choose food that suits the equipment",
+      "paragraphs": [
+        "Make a menu that does not require precise oven control: a pot meal, vegetables in a suitable pan or bread already cooked elsewhere can be easier than trying to roast several foods at once. Use cookware designed for the heat source and stable support. Follow the site host’s directions for fire equipment; do not build a new fire ring, move stones or improvise a cooking surface.",
+        "Bring ingredients washed, cut and stored safely before leaving home if the site has no clean preparation area. Keep raw meat separate from ready-to-eat food, and use a cooler or other appropriate cold storage. Pack clean utensils, a thermometer when cooking meat, serving plates and a container for leftovers. The simpler the plan, the less time food and people spend near the fire."
+      ]
+    },
+    {
+      "heading": "Keep heat and food handling separate",
+      "paragraphs": [
+        "Set a preparation area away from the fire so one person can handle food while another tends to the cooking setup. Wash hands before and after handling raw ingredients, and use separate clean boards or utensils for raw and cooked foods. FoodSafety.gov advises checking meat with a food thermometer against the temperature for that specific food; appearance alone does not establish safe doneness. Use the current chart and place the thermometer as its instructions direct.",
+        "Do not leave a fire unattended or let children manage it. Keep clothing, tents and other flammable materials away from heat, and follow the local authority’s extinguisher or water guidance. The NPS campfire page offers general distance and oversight advice, but the site’s own rules govern. Never pour fuel onto a flame or embers."
+      ]
+    },
+    {
+      "heading": "Design a meal you can finish and clean up",
+      "paragraphs": [
+        "Cook one main item and one side rather than timing a multi-course meal over uneven heat. Plan for extra time and have a safe backup meal in case a restriction changes, the weather turns or the fire cannot be used. Do not make a trip depend on collecting wood unless local rules allow it; some parks prohibit collecting wood or require local firewood to reduce pest spread.",
+        "Use only the fire setup and utensils the site allows. Keep serving dishes and leftovers away from raw ingredients. After eating, follow the land manager’s directions for putting out the fire, disposing of ash and packing food waste. Check the fire pit and surrounding area before leaving, and report any issue to the site manager."
+      ]
+    },
+    {
+      "heading": "Record the lesson for another outing",
+      "paragraphs": [
+        "Write down what cooked well, what took too long and whether the menu matched the equipment. Include which location rules you checked and when. Do not copy a fire permission from one campground to another; conditions and regulations differ by place and can change by day. If fire restrictions prevented cooking, the backup plan still let the outing proceed.",
+        "A meal over an open fire is more enjoyable when the fire is only one part of the plan. Your next action is to contact the site manager, confirm current permission and choose one dish you can prepare safely with the equipment they allow."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Campfires",
+      "url": "https://home.nps.gov/articles/campfires.htm",
+      "publisher": "U.S. National Park Service",
+      "purpose": "Supports checking local rules and current fire conditions, following site-specific size/location restrictions and keeping flammables away from the fire; article explicitly limits legal authority to the destination manager."
+    },
+    {
+      "title": "Cook to a Safe Minimum Internal Temperature",
+      "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
+      "publisher": "FoodSafety.gov, U.S. Department of Health and Human Services",
+      "purpose": "Supports use of a food thermometer and category-specific safe internal temperatures for meat; article does not provide a one-size-fits-all temperature."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "spend-a-night-alone-in-the-wilderness",
+    "do-a-solo-camping-trip-with-no-phone",
+    "cook-a-whole-animal-from-nose-to-tail"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

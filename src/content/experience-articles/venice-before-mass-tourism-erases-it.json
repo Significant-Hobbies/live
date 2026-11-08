@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "venice-before-mass-tourism-erases-it",
+  "slug": "venice-before-mass-tourism-erases-it",
+  "title": "See Venice through two walks, not a countdown",
+  "description": "Compare official Cannaregio and San Polo itineraries in Venice, and plan a respectful visit around the places and details you want to understand.",
+  "intent": "How can a visitor explore Venice with more attention to its neighborhoods and built history, without repeating unsupported claims that the city is about to disappear?",
+  "sections": [
+    {
+      "heading": "Replace the countdown with a question",
+      "paragraphs": [
+        "The phrase ‘before mass tourism erases it’ turns a complex city into a deadline. Venice has pressures and active residents, but a short visit cannot measure the future of the city. Make the trip answer a more useful question: how do different sestieri reveal layers of civic, religious and everyday history? A specific route gives you something to notice without treating local life as scenery disappearing for your benefit.",
+        "Choose a small number of places and let the walk connect them. The city’s official Venezia Unica site publishes a Cannaregio itinerary that begins at the Jewish Ghetto and continues through named campos and bridges. Its San Polo page highlights the district’s own landmarks, including Campo San Polo and the Frari. Comparing those routes gives your day a shape while keeping the city’s own public guide as a starting point."
+      ]
+    },
+    {
+      "heading": "Follow the Cannaregio sequence",
+      "paragraphs": [
+        "Begin with the Jewish Ghetto and Campo Ghetto Nuovo, then follow the official itinerary through Santa Maria Misericordia, Ponte Chiodo, Campo dei Gesuiti and Calle Varisco toward Campo Santi Giovanni e Paolo and the later stops. The sequence crosses different kinds of urban space: a defined historic area, narrow streets, bridges and larger campi. Notice how the width of a place changes what people can do there and how a route opens or tightens.",
+        "Do not rush to treat every stop as a photo checkpoint. Pause where it is appropriate, read local interpretation, and keep doorways and bridges clear. If you want to spend time at a site or enter a place of worship, check its own rules and hours. The public route page establishes the order of stops, not current opening times for every destination."
+      ]
+    },
+    {
+      "heading": "Use San Polo for a different reading",
+      "paragraphs": [
+        "San Polo is the smallest sestiere, according to Venezia Unica. Its guide identifies Campo San Polo, Carlo Goldoni’s house, the Scuola Grande San Giovanni Evangelista, the Frari and the Church of San Polo. These are not interchangeable attractions: a campo gives you a sense of public space, a named house connects the district to a person, and a church or scuola can reveal institutional history through architecture and art.",
+        "Pick two or three stops that fit your interests rather than trying to combine the entire Cannaregio sequence and every San Polo landmark in one day. If you care most about streets and neighborhood scale, linger between sites. If you want art or interiors, verify current visitor access with each institution and allow time for its rules. A dense checklist often creates more friction than insight."
+      ]
+    },
+    {
+      "heading": "Travel in a way that respects a lived city",
+      "paragraphs": [
+        "Treat residents’ routes as routes, not a stage. Keep groups compact, move aside before checking a map, and avoid blocking bridges for photographs. Respect posted restrictions and private thresholds. If a street is busy, choose a nearby public campo for a pause rather than insisting on the exact picture you imagined. Take a reusable bottle and plan meals in a way that supports ordinary local businesses, while remembering that no single purchase turns you into a rescuer of a city.",
+        "Before departure, look up any current city visitor requirements and the latest operator guidance for your dates; rules can change. Public transport, access conditions and site admission are time-sensitive. Build your walk around the official neighborhood route, but verify current details for places you hope to enter."
+      ]
+    },
+    {
+      "heading": "Keep one question for the walk home",
+      "paragraphs": [
+        "Choose a detail to track across the two areas: how a bridge directs movement, where a public square widens, what kinds of buildings frame a canal, or how an institution marks its presence in a neighborhood. Write down one example from Cannaregio and one from San Polo. A paired observation can tell you more about urban form than a claim that Venice is frozen in time or already lost.",
+        "Finish by revisiting the map and marking the places you actually reached, then note one thing you would return to without adding more stops. That is a better souvenir than a countdown: a record of how you saw two distinct parts of the city, with room for Venice to remain a living place beyond your itinerary."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Cannaregio: authenticity and traditions",
+      "url": "https://www.veneziaunica.it/en/things-to-do-in-venice/itineraries/cannaregio-authenticity-and-traditions",
+      "publisher": "Venezia Unica / City of Venice",
+      "purpose": "Supports the published Cannaregio itinerary stop sequence beginning at the Jewish Ghetto."
+    },
+    {
+      "title": "San Polo",
+      "url": "https://www.veneziaunica.it/en/things-to-do-in-venice/venice-areas/sestieri/san-polo",
+      "publisher": "Venezia Unica / City of Venice",
+      "purpose": "Supports San Polo's description and the named Campo San Polo, Goldoni house, Scuola Grande San Giovanni Evangelista, Frari and Church of San Polo."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "dubrovnik-s-old-city-croatia",
+    "the-alhambra-granada-spain",
+    "paris-at-dawn"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

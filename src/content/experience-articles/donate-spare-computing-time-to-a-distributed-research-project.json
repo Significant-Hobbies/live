@@ -1,0 +1,60 @@
+{
+  "experienceSlug": "donate-spare-computing-time-to-a-distributed-research-project",
+  "title": "How to choose a trustworthy volunteer computing project",
+  "description": "Compare a volunteer computing project’s goals, published results, security practices, and hardware demands before letting it use spare computer time.",
+  "intent": "A project-selection and low-friction setup guide for donating idle computing capacity, with questions that help a newcomer evaluate fit and manage resources.",
+  "sections": [
+    {
+      "heading": "Read the project before installing anything",
+      "paragraphs": [
+        "Volunteer computing divides research calculations into jobs that can run on participants’ computers and return results to a central project. The BOINC project directory recommends that volunteers read a project’s own site and consider whether its goals are clear and beneficial, whether it publishes results, whether its security practices are trustworthy, and who owns the output. That short review is more useful than joining the project with the most points or the most dramatic description. Look for a named research group, a coherent explanation of the computation, recent signs that the project is active, and a plain route to contact or documentation."
+      ]
+    },
+    {
+      "heading": "Match the work to your machine",
+      "paragraphs": [
+        "“Spare” capacity means the computer remains comfortable for its usual jobs. A desktop that sits unused overnight may suit background work; a laptop used for meetings or travel may need stricter limits. Check whether the project offers applications for your operating system and hardware, and note expected memory, disk, and network use. Do not assume every project can use a graphics processor or that your machine meets a project’s current requirements. BOINC’s getting-started material describes work units being assigned based on the resources available, but project-specific details still matter. Choose work that will not interfere with the tasks you depend on."
+      ]
+    },
+    {
+      "heading": "Set a small trial rather than an open-ended donation",
+      "paragraphs": [
+        "Install only from the official BOINC site, then attach a single project through its verified project URL. Start with conservative local preferences: allow work only when the computer is idle, set a small CPU share, limit disk use, and avoid downloads over a metered or unreliable connection. Check what happens during the first day: fan noise, heat, responsiveness, battery use, and whether the project completes and reports a result. If the machine becomes inconvenient, pause or exit. You can contribute with a few hours or one machine; there is no reason to treat resource donation as a test of commitment."
+      ]
+    },
+    {
+      "heading": "Understand the account and the output",
+      "paragraphs": [
+        "A project may use an account so it can assign jobs and track returned results. Use a unique password if a login is required, and avoid entering credentials through links in unsolicited messages. Think through whether you are comfortable with the project’s terms, privacy practices, and ownership of results. BOINC’s project-selection guidance explicitly asks volunteers to consider the ownership of computed results and trust in security practices. If those answers are missing, choose a project whose documentation is clearer. Do not interpret a contribution counter as proof that a scientific finding is valid; the project remains responsible for checking results and publishing its methods."
+      ]
+    },
+    {
+      "heading": "Leave the setup tidy",
+      "paragraphs": [
+        "After the trial, review the project’s task queue and preferences. A useful donation is quiet, bounded, and easy to stop. If you remove the project, use the client’s detach or remove-project action and verify that queued work is handled as you intend. Keep notes on the project name, the research question, and the machine limits you set; those notes make it easier to resume later without guessing. For a second contribution, compare another project using the same questions instead of attaching every interesting project at once. Choose one you can explain in a sentence, set a modest limit, and let it run only when the computer is genuinely available."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Choosing BOINC projects",
+      "url": "https://boinc.berkeley.edu/projects.php",
+      "publisher": "BOINC, University of California, Berkeley",
+      "purpose": "Supports evaluating project goals, publications, security practices and ownership of computation results before participation."
+    },
+    {
+      "title": "Getting started",
+      "url": "https://boinc.berkeley.edu/intro.php",
+      "publisher": "BOINC, University of California, Berkeley",
+      "purpose": "Supports the account and client setup flow and explains that projects send, run and receive computer work automatically."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "help-classify-research-images-with-stall-catchers",
+    "train-a-small-image-classifier-on-your-own-objects",
+    "build-a-tabletop-seismograph"
+  ],
+  "slug": "donate-spare-computing-time-to-a-distributed-research-project",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

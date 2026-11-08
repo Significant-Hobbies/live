@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "record-a-place-as-a-sound-portrait",
+  "slug": "record-a-place-as-a-sound-portrait",
+  "title": "How do you record a place as a sound portrait?",
+  "description": "Make a short sound portrait by listening for near and distant layers, recording from one fixed spot, and noting time, conditions, and permission.",
+  "intent": "How can I make an audio portrait that conveys a place without narrating over it? This guide uses a simple listening plan, ethical recording and careful description.",
+  "sections": [
+    {
+      "heading": "Choose a place with permission and a reason",
+      "paragraphs": [
+        "A sound portrait is a short recording that helps someone imagine a place through its sounds. Choose a public or private location where recording is allowed and where you can stand without blocking people. A park, courtyard, market edge or quiet street corner can work. Avoid recording in places where people expect privacy, such as homes, clinics or private conversations. If you are on private property, ask the owner or manager first.",
+        "The National Park Service describes each national park as having a distinct soundscape shaped by natural and cultural sounds. You can use that idea at any scale: listen for what gives this particular place its character. Before pressing record, write one question: “What would a listener miss if I described this place only with words?” The answer might be a train fading behind birdsong, a fountain beside footsteps or the changing hum of a room."
+      ]
+    },
+    {
+      "heading": "Listen once before recording",
+      "paragraphs": [
+        "Stand or sit in one safe spot and listen for a full minute without taking out your phone. Note sounds in three distances: close, middle and far. Include quiet sounds and pauses, not only dramatic events. Does the sound repeat, travel, start or stop? Is there a steady background hum under occasional sharp details? A few written notes help you decide what matters and keep the recording from becoming a random collection of noises.",
+        "If the place changes strongly across the day, choose a time that makes the portrait specific and record the time and weather. A morning courtyard and a crowded afternoon courtyard are different scenes; neither is the definitive version. If a loud event begins, you can wait for it to pass or choose to include it deliberately. The goal is a truthful slice of a place, not a perfectly quiet recording."
+      ]
+    },
+    {
+      "heading": "Make a steady, short recording",
+      "paragraphs": [
+        "Use a phone or basic recorder and hold it still, away from clothing that might rub against the microphone. Start with a few seconds of silence before and after the main recording so the clip has a clean beginning and end. Record in short takes rather than running the microphone for a long time. Do not walk around while recording unless movement is part of the idea; changing position alters the sound and can add handling noise.",
+        "Keep voices in the background only when they are incidental and not intelligible. If someone notices the recording or asks you to stop, stop. Ask explicit permission before including an identifiable conversation, performance or personal story. Do not post recordings of people or private spaces without consent. If a sound source is sensitive or a location restricts recording, describe it in notes instead of capturing it."
+      ]
+    },
+    {
+      "heading": "Edit lightly and keep a field note",
+      "paragraphs": [
+        "Listen back with headphones at a comfortable volume. Keep the strongest stretch that conveys the place, and trim only silence or accidental handling noise. Avoid adding effects that make ordinary sounds seem like something they are not. If you combine several takes, label the edit as a constructed portrait and preserve the original files privately. Add a note naming the location in a way that does not expose private addresses, plus date, time, weather and recording position.",
+        "Think about access when sharing: a short written caption can describe what a listener should notice, and a transcript or sound map can help someone who cannot hear the clip. Do not claim that one recording represents an entire neighborhood or a full day. It records one position, at one moment, through one microphone."
+      ]
+    },
+    {
+      "heading": "Make a second portrait with one deliberate change",
+      "paragraphs": [
+        "Compare your notes with the audio. Which expected sound did you miss? Which unexpected sound became central? Did the recording pick up more traffic or wind than your ears did? This is useful information for the next attempt, not evidence that the first recording failed. The NPS soundscape examples can offer ideas for listening closely, but your own audio should remain tied to your actual place and moment.",
+        "Your next action is to choose one safe location, listen without recording for a minute, then capture one steady 30-second take with permission. Write down what was near, far and changing before you listen back."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Natural Sounds: A Symphony of Sounds",
+      "url": "https://www.nps.gov/subjects/sound/index.htm",
+      "publisher": "National Park Service",
+      "purpose": "Supports the concept of a place-specific soundscape made from natural and cultural sounds and the use of recordings to experience place."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "explore-a-garden-through-scent",
+    "listen-to-a-whole-album-without-multitasking",
+    "pause-at-the-same-window-for-a-week"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

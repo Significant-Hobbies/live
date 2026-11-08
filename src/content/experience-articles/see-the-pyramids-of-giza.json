@@ -1,0 +1,53 @@
+{
+  "experienceSlug": "see-the-pyramids-of-giza",
+  "slug": "see-the-pyramids-of-giza",
+  "title": "Pace a first day across the Giza plateau",
+  "description": "Plan a first Giza visit around one or two priorities, separate access tickets, realistic transport time, and breaks in the heat.",
+  "intent": "How can a first-time visitor pace the Giza site using official access details and practical transport and heat decisions?",
+  "sections": [
+    {
+      "heading": "Choose one visit priority",
+      "paragraphs": [
+        "The Pyramids of Giza stand beside Cairo’s expanding city, so the first impression may include roads, visitors, and buildings as well as ancient stone. Plan the visit as a site walk with several choices, not a single photo stop. Egypt’s Ministry of Tourism and Antiquities lists the plateau’s hours as 8 a.m. to 4 p.m. and explains that the area ticket does not include admission to some monuments and tombs. Treat this as operational guidance to verify again before travel, since official information and ticket arrangements can change. Decide what matters most: seeing the main plateau from outside, entering one structure, visiting the Sphinx area, or taking time to compare different views. The Ministry’s map and access information can help you see what is available; do not assume one ticket includes every interior visit."
+      ]
+    },
+    {
+      "heading": "Arrange transport with margin",
+      "paragraphs": [
+        "Set a simple route with a clear beginning and an easy point to stop. A first visit can feel larger than expected because the main monuments sit within a broader archaeological landscape. Choose one or two priorities, then leave room for rest and a change of plan. Agree on transport arrangements with a reputable provider before setting out, including the meeting point, how long you have, and where the return pickup will be. If you are using a taxi, settle the arrangement plainly and keep your own map location visible. Cairo traffic can make return timing difficult to predict, so avoid booking a tight onward connection. Carry a charged phone, some water, and a small amount of sun cover; check the current security and bag rules from official sources before you arrive."
+      ]
+    },
+    {
+      "heading": "Pace the walk",
+      "paragraphs": [
+        "Heat and exposure change how long a walk feels. Wear comfortable shoes and a hat, and take breaks in the shade when possible. The official Egypt visitor information recommends a hat, sunglasses, and comfortable shoes; this is basic preparation, not a promise that every area has shade. If you are visiting with children or anyone who tires easily, agree on a meeting point and choose a shorter loop. Do not let a guide or driver hurry you into purchases, rides, or add-on visits that were not part of your plan. Ask the site staff where photography and entry are permitted. Leave the marked paths and archaeological remains undisturbed; the point of a visit is to see the site, not handle stones or climb for a better angle. An observation pause is worth more than racing between monuments."
+      ]
+    },
+    {
+      "heading": "Finish with a clear route",
+      "paragraphs": [
+        "For a first attempt, choose one focal monument and one secondary stop, then give yourself time to look from more than one distance. Take a wide photograph for orientation and one close detail, but also spend a few minutes without a screen noticing scale, shadow, and how the modern city meets the plateau. Keep notes on the spots you want to revisit rather than trying to record everything. If midday feels demanding, shorten the route; you do not have to see every structure on a single visit. Before leaving, confirm your pickup location and whether the next ticketed stop is included or requires separate admission. Afterward, look at an official map and label the places you actually reached. Your next action is to check the Ministry’s access and ticket page and build a realistic route around one main priority."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Giza Plateau",
+      "url": "https://egymonuments.gov.eg/archaeological-sites/giza-plateau",
+      "publisher": "Egyptian Ministry of Tourism and Antiquities",
+      "purpose": "Supports posted plateau hours, the breadth of the site, and ticket-inclusion limits for individual monuments."
+    },
+    {
+      "title": "FAQ",
+      "url": "https://www.experienceegypt.eg/en/home/faq",
+      "publisher": "Egyptian Tourism Authority",
+      "purpose": "Supports general visitor advice on sun protection and comfortable footwear."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "the-pyramids-of-giza-egypt",
+    "visit-the-temples-of-angkor-wat-cambodia"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

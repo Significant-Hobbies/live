@@ -1,0 +1,56 @@
+{
+  "experienceSlug": "build-logic-gates-in-a-circuit-simulator",
+  "slug": "build-logic-gates-in-a-circuit-simulator",
+  "title": "How do you check a logic gate before combining it with others?",
+  "description": "Use a truth table to test NOT, AND and OR gates in a circuit simulator, then combine checked components and verify every input case again.",
+  "intent": "Give a new learner a stepwise way to reason about basic Boolean gates and catch wiring errors before building a larger simulated circuit.",
+  "sections": [
+    {
+      "heading": "Write expected behavior before wiring",
+      "paragraphs": [
+        "A logic gate turns input bits into output bits according to a rule. A NOT gate reverses one bit. An AND gate outputs 1 only when both inputs are 1, while an OR gate outputs 1 when at least one input is 1. Writing those expectations in a truth table gives you a small reference before you create anything in the simulator.",
+        "The Nand2Tetris Project 1 introduces Boolean Logic as a progression from a primitive NAND gate to composite gates and later combinations, with supplied test scripts and comparison outputs. Use its project outline to understand the relationship between a gate design and a test, while following the specific hardware description language or simulator used in your own course.",
+        "Start with a two-input AND truth table: 00 produces 0, 01 produces 0, 10 produces 0 and 11 produces 1. For OR, only 00 produces 0. For NOT, there are just two cases. Keep the table beside your editor so you can inspect each possible input, not only the one example that happened to work."
+      ]
+    },
+    {
+      "heading": "Build one small component at a time",
+      "paragraphs": [
+        "Use the simulator's supplied example or starter file, and change only the missing logic. Give each gate a clear name and save a clean copy before experimenting. If the assignment expects a primitive component, do not reimplement it unless the project specifically asks; the Nand2Tetris project, for instance, treats NAND as the primitive building block for its first set of chips.",
+        "Run the provided test as soon as the gate is complete. If the output disagrees with your table, identify the first input combination that fails. Trace the signal path from input to output and check the connection or Boolean expression for that case. Randomly moving wires can fix one example while breaking another.",
+        "When the simulator shows a mismatch, compare the expected and actual outputs in order. A single swapped input or inverted signal may affect only some combinations, so preserve the failing row in your notes."
+      ]
+    },
+    {
+      "heading": "Use the complete table, not a lucky example",
+      "paragraphs": [
+        "For a gate with two binary inputs, testing all four combinations is manageable. Check each row systematically and confirm that the same input order appears in your diagram, code and test. If the simulator supports automated scripts, run the official test rather than relying on a visual impression of the circuit.",
+        "Keep the expected table separate from your implementation. If you derive the table by looking only at your own wiring, you may repeat the same mistaken assumption twice. Ask a friend to read the rule and predict one row without seeing your circuit, then compare both predictions with the test output.",
+        "Once a gate passes, avoid editing it while you build the next one. Save the working version or use the project's normal version-control approach so a later combination can be debugged without losing a known-good component."
+      ]
+    },
+    {
+      "heading": "Combine gates and retest the whole circuit",
+      "paragraphs": [
+        "Build a modest combined circuit only after its pieces work independently. Write down what the combined circuit should output for each input case before connecting components. Then test the whole circuit from its external inputs to outputs; a passing subcomponent does not guarantee that your connections are correct.",
+        "When a combined test fails, isolate the smallest part that could explain the mismatch. Check intermediate signals if your simulator exposes them, and compare them with your diagram. Fix one connection or expression at a time, then rerun the complete table so you know the change has not created a new fault.",
+        "A good first finish is one basic gate and one small combination that pass their supplied tests, with a note explaining one error you found. A useful next project is to add a selector or multi-bit version only after the simple truth tables feel routine."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Project 1: Boolean Logic",
+      "url": "https://www.nand2tetris.org/project01",
+      "publisher": "Nand2Tetris",
+      "purpose": "Defines a progression of Boolean logic gates and describes supplied test scripts and comparison outputs for verifying implementations."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "measure-the-speed-of-sound-with-a-repeatable-experiment",
+    "train-a-small-image-classifier-on-your-own-objects",
+    "light-up-a-paper-circuit-card"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

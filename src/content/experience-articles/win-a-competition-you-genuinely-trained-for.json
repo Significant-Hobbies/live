@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "win-a-competition-you-genuinely-trained-for",
+  "slug": "win-a-competition-you-genuinely-trained-for",
+  "title": "Prepare for the Contest You Can Control",
+  "description": "Train for a chosen competition with a coach-informed plan, official rules, realistic process goals, and a calm review of the result.",
+  "intent": "Helps competitors turn a win goal into preparation they can control, while respecting the rules and avoiding any promise of an outcome.",
+  "sections": [
+    {
+      "heading": "Choose the contest and define the result",
+      "paragraphs": [
+        "Pick one competition with a name, date or season, format, and published rules. “Win something” is too broad to guide training. Identify what winning means there: first place, a personal best, a team result, or advancing to a next round. Read the entry conditions and judging system before you build a plan; a contest’s format determines what skills matter.",
+        "Write two goals. One is the outcome you want; the other is a process you control, such as completing a planned routine, executing a pacing strategy, or presenting a fully checked entry. The outcome depends on other competitors and judging. The process goal gives you something useful to practice even when a result goes another way."
+      ]
+    },
+    {
+      "heading": "Turn rules into a preparation checklist",
+      "paragraphs": [
+        "Download the current rulebook and mark eligibility, equipment, timing, scoring, attire, safety, and deadlines. Ask the organizer or coach about any unclear rule before event day. For example, the World Cube Association publishes detailed procedures for scrambles, judges, official timing, and event formats; a speedcuber who hopes to compete should practice the official flow, not just a home timer.",
+        "For a sport or performance event, use its own governing body’s rule set. Do not assume a local contest follows national rules or that old documents still apply. Confirm what happens if you are late, need an accommodation, or must declare an event separately. Understanding logistics reduces preventable mistakes without pretending to control competitors or judges."
+      ]
+    },
+    {
+      "heading": "Train the weak link with feedback",
+      "paragraphs": [
+        "Ask a coach to help identify the part of your performance most likely to limit the result. Work on one specific weakness in each practice block, and get feedback on whether the correction is working. A runner might focus on pacing through a difficult section; a musician could refine a transition; a public speaker might practice clear answers to likely follow-up questions. These examples need different expertise and safety standards.",
+        "After working on a weakness, run a full practice under conditions resembling the competition. Note what changed and what still breaks under pressure. Avoid adding extra sessions or intensity simply because the event is close. If the coach sees fatigue or injury, adjust the plan; arriving healthy and prepared is more useful than a last-minute display of effort."
+      ]
+    },
+    {
+      "heading": "Rehearse the day around the performance",
+      "paragraphs": [
+        "Plan arrival, check-in, warm-up or setup, food and water, equipment, and the route home. Pack the items the organizer requires and a backup for simple failures, such as a spare cable or printed confirmation where relevant. For an event with heats or multiple rounds, understand when you must report and whether your result advances you. Practice the routine of arriving and beginning, not only the central skill.",
+        "Use a short reset ritual that helps you focus without becoming another source of stress: check the equipment, review the process cue, take a steady breath, and start when directed. Keep the ritual flexible enough to work if the venue, schedule, or officials differ from what you expected."
+      ]
+    },
+    {
+      "heading": "Review the competition without rewriting it",
+      "paragraphs": [
+        "Afterward, record what you executed well, what the result showed, and one lesson for the next attempt. Ask your coach for an outside perspective before making sweeping changes. A close loss may point to a skill gap, a tactical choice, or simply a strong field; a win may reveal habits worth keeping. Avoid judging your entire worth by one outcome.",
+        "Your next action is to choose the competition and read its current rules with your coach. Mark one controllable performance goal and one practice task that tests it. Train the task, confirm event logistics, then compete with a plan you understand. You can prepare seriously for a win while staying honest that no training plan can guarantee one."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "WCA Regulations",
+      "url": "https://www.worldcubeassociation.org/regulations.html",
+      "publisher": "World Cube Association",
+      "purpose": "Primary competition rule example covering officials, event formats, timers, scrambles, and competitor procedures."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "compete-in-a-national-championship",
+    "run-a-race-you-had-to-train-for",
+    "compete-in-an-obstacle-course-race"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

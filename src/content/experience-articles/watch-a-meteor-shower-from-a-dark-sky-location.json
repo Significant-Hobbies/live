@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "watch-a-meteor-shower-from-a-dark-sky-location",
+  "slug": "watch-a-meteor-shower-from-a-dark-sky-location",
+  "title": "Choose a place and night for a meteor shower",
+  "description": "Plan a meteor-shower watch around the current peak, moonlight, an open dark sky, and a safe place where you can stay comfortably.",
+  "intent": "Help a reader turn a shower forecast into a practical observing night, focusing on timing, location, comfort, and what to look for rather than promising a meteor count.",
+  "sections": [
+    {
+      "heading": "Pick the shower before the campsite",
+      "paragraphs": [
+        "Start with an astronomy calendar from NASA or another established astronomy organization, and confirm the current year’s peak window for your location. A shower’s broad annual timing does not tell you the best local hour; the Moon, darkness, weather, and radiant position all affect the night. Check a current forecast and moonrise or moonset for the exact date before reserving a site.",
+        "A dark-sky destination is a good starting point, but access rules matter as much as darkness. Verify that visitors may be there after dark, whether overnight parking or camping requires a permit, and when gates close. DarkSky International maintains a map of certified International Dark Sky Places and notes that each site is managed by a third party, so check that place’s own visiting information."
+      ]
+    },
+    {
+      "heading": "Choose an observing spot with a broad view",
+      "paragraphs": [
+        "Look for a location away from direct streetlights with an open view of a large area of sky. A clearing or open field can be more useful than a deep forest even when both are dark, because trees block much of the horizon. Keep a safe distance from roads, cliffs, water, and private property; never pull over somewhere that does not allow stopping just because the view looks good.",
+        "You do not need a telescope to watch meteors. NASA’s Jet Propulsion Laboratory notes that the streaks can appear across the sky and that observers should look at the broad sky, not only stare at the shower’s radiant. Bring a reclining chair or mat so you can watch without craning your neck, and choose a spot where you can stay still without blocking other observers."
+      ]
+    },
+    {
+      "heading": "Plan around the Moon and your eyes",
+      "paragraphs": [
+        "A bright Moon can make faint streaks harder to see. NASA explains that moonlight can wash out meteors in much the same way as artificial skyglow, so compare the shower’s peak dates with the Moon’s phase and position. If the Moon is above the horizon, choose a view where it is behind you or partly blocked while leaving most of the sky open; do not expect darkness to erase its effect.",
+        "Arrive while you can still find the site safely, then give your eyes time to adjust. Limit bright screens and white lights once you settle in. If you need a light to walk around, use a dim red setting if available and point it at the ground. These choices help preserve your own night vision and avoid spoiling the view for people nearby."
+      ]
+    },
+    {
+      "heading": "Pack for hours of sitting outside",
+      "paragraphs": [
+        "Bring more layers than the daytime forecast seems to call for, a warm drink or water, simple snacks, and a comfortable seat. Nights feel colder when you are inactive, and dew or damp ground can soak a blanket. Check whether the site has toilets, drinking water, and a safe way back to your vehicle; those facilities vary even among places with dark-sky certification.",
+        "Tell someone where you are going if the site is remote, and keep a charged phone for necessary safety use even if your plan is to avoid scrolling. If you camp, follow the land manager’s fire, parking, wildlife, and quiet rules. Pack out everything you bring."
+      ]
+    },
+    {
+      "heading": "Observe without turning it into a tally",
+      "paragraphs": [
+        "Once settled, look at the widest patch of sky you can comfortably watch. Meteors may appear far from the radiant, so a group can divide attention across the sky instead of all aiming at one constellation. If you want to remember the night, jot down the start and end time, cloud cover, Moon position, and a few notes afterward. You do not need to count every streak for the experience to be real.",
+        "If clouds move in or you feel cold or tired, change the plan. A short view before cloud cover, a different night in the same peak window, or a return visit to a quieter dark location may be better than sitting out an unsafe drive or worsening weather. Your next step is to choose a shower date, then verify the moon, site access, and forecast together."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How to See the Best Meteor Showers of the Year: Tools, Tips and 'Save the Dates'",
+      "url": "https://www.jpl.nasa.gov/news/how-to-see-the-best-meteor-showers-of-the-year-tools-tips-and-save-the-dates/",
+      "publisher": "NASA Jet Propulsion Laboratory",
+      "purpose": "Supports the effects of urban light and moonlight, the broad field of view, and the fact that meteors may appear across the sky; its shower-date examples are dated and are not reused."
+    },
+    {
+      "title": "Frequently asked questions",
+      "url": "https://darksky.org/resources/faq/0/",
+      "publisher": "DarkSky International",
+      "purpose": "Supports using the certified-place map and checking access with each third-party site manager."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "spend-a-night-stargazing-with-no-agenda",
+    "watch-a-sunrise-and-a-sunset-in-the-same-day",
+    "do-a-solo-camping-trip-with-no-phone"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "spend-a-day-visiting-places-that-shaped-you",
+  "slug": "spend-a-day-visiting-places-that-shaped-you",
+  "title": "Build a Personal Map From Three Places That Changed You",
+  "description": "Plan a reflective day around three places from your own history, with a route, a memory prompt, and care for places still used by others.",
+  "intent": "How do I revisit meaningful places without turning the day into a rushed nostalgia tour? This guide builds a manageable route and a way to capture what has changed.",
+  "sections": [
+    {
+      "heading": "Choose three different kinds of place",
+      "paragraphs": [
+        "Pick one place tied to a beginning, one tied to a change, and one tied to an ordinary routine. A school may stand for a skill you learned; a first apartment for a period of independence; a bus stop, library, or park for a rhythm you once took for granted. These are prompts, not a required list. Avoid choosing a place only because it sounds dramatic.",
+        "Make a note of why each place matters in one sentence. If the reason is complicated or painful, you can leave it off the route. Revisit only places where you can go lawfully and comfortably. A home may now be private property, a workplace may require permission, and a former clinic or school may have access rules. A public sidewalk or nearby park can be a respectful alternative to entering a building."
+      ]
+    },
+    {
+      "heading": "Design a day that leaves room",
+      "paragraphs": [
+        "Put the places on a map and group them by area. Choose a first stop that is easy to reach and keep one optional stop in reserve. Leave time for a meal, a quiet pause, and the slower pace that comes with finding a place changed or closed. If the locations are far apart, choose two rather than turning the day into hours of driving.",
+        "Before setting out, check access, transit, weather, and opening information from the current property owner or official site. A visit to a protected historic place is different from standing outside your childhood street. At Castillo de San Marcos, for example, the National Park Service asks visitors not to lean or sit on fragile coquina stone and warns about uneven surfaces. The local rule is specific to that monument; the larger practical lesson is to follow each place's posted directions and leave its fabric intact."
+      ]
+    },
+    {
+      "heading": "Use a different question at each stop",
+      "paragraphs": [
+        "Do not demand a revelation from yourself. At the first place, ask what you learned there that you still use. At the second, what choice did you make with the information you had then? At the third, what did ordinary life look like—what sound, route, or small object returns to mind? Write down concrete details before interpreting them.",
+        "Notice mismatches without correcting them. The place may look smaller, newer, busier, or less important than memory suggested. That does not make the memory false. Record both versions: “I remember the corridor as endless; today I noticed the short walk between the door and the stairs.” The contrast is the observation, not a verdict on your younger self."
+      ]
+    },
+    {
+      "heading": "Respect the people who use it now",
+      "paragraphs": [
+        "Your memory does not make a shared place yours. Do not photograph people without consent, block entrances, or ask current occupants to validate your story. If a site is private, closed, or associated with difficult memories, choose a legal viewpoint or skip it. You can also visit a public library branch or neighborhood park nearby and write from there.",
+        "Bring water, a charged phone, and comfortable shoes for the actual terrain. Tell a companion where you plan to go if the route is unfamiliar or emotionally heavy. These are simple logistics, not a guarantee that every site is accessible; confirm the particular place's access information before leaving."
+      ]
+    },
+    {
+      "heading": "Close the loop on paper",
+      "paragraphs": [
+        "At the end of the day, write one paragraph for each stop and one sentence connecting them. What changed in your understanding? Which place still feels active in your life, and which belongs mainly to a past chapter? Keep the notes private or share only the parts that belong to you.",
+        "A useful first version is one neighborhood, three stops within it, and a final coffee or bench where you can write. Pick a date and verify that the first stop is open to you."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Safety - Castillo de San Marcos National Monument",
+      "url": "https://www.nps.gov/casa/planyourvisit/safety.htm",
+      "publisher": "National Park Service",
+      "purpose": "Provides a concrete site-specific example of preservation and visitor-safety instructions at a historic place; its rules are not generalized to other properties."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "make-a-timeline-of-the-five-most-important-moments-of-your-life",
+    "spend-a-day-reviewing-every-job-relationship-and-home-you-have-had",
+    "write-down-everything-you-know-about-your-family-history"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

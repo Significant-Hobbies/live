@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "community-991b141b-c36b-527d-9558-1372317b9d93",
+  "slug": "publish-your-book",
+  "title": "Match a finished manuscript to a publishing route",
+  "description": "Compare traditional, hybrid and self-publishing routes for your finished book, then prepare a clean submission or production package before signing.",
+  "intent": "How do I choose a publishing route for a finished manuscript and prepare the next practical step without confusing service models?",
+  "sections": [
+    {
+      "heading": "Choose the route by control, work and cost",
+      "paragraphs": [
+        "A finished manuscript can follow several routes. Traditional publishers select projects and typically handle editing, design, printing and distribution under a contract; the publisher takes on publication costs and the author grants specified rights. Self-publishing gives the author more direct control over production and storefront decisions but also makes the author responsible for coordinating work and distribution. Hybrid services charge authors for some publishing services, so compare exactly what is delivered and who owns which rights.",
+        "The Authors Guild describes these differences in its publishing guidance and advises writers to research hybrid publishers against the Independent Book Publishers Association criteria. Do not choose a route because a service promises “traditional publishing” while asking you to pay substantial upfront fees. Ask for a sample contract, a list of deliverables, the schedule and a clear explanation of royalties, rights, refunds and termination."
+      ]
+    },
+    {
+      "heading": "Prepare the manuscript before you query",
+      "paragraphs": [
+        "For a traditional route, identify agents or publishers who actually handle your genre and accept work through the channel you plan to use. Follow each submission page exactly. A query package may include a letter, synopsis, sample pages or a full manuscript, but requirements vary. Keep a spreadsheet of the name, date, requested materials and response window so you can track submissions without resending the wrong version.",
+        "Before you submit, check spelling, formatting, chapter order, file names and any permissions or acknowledgments that apply. Write a concise description of the book that states its audience and subject accurately. Do not pay a service to “guarantee” representation or publication. A professional editor or writing group can help with craft, but no one can promise the market response."
+      ]
+    },
+    {
+      "heading": "Use contract questions before a signature",
+      "paragraphs": [
+        "If you receive an offer, do not treat enthusiasm as a reason to sign immediately. Ask about rights granted, formats and territories, advances and royalties, accounting, publication schedule, option clauses, reversion or termination, edits and marketing commitments. The terms affect what you can do with the book later. Publishing contracts are legal agreements, so writers with a serious offer should consider advice from a qualified publishing attorney or a writers’ organization in their jurisdiction.",
+        "Hybrid proposals deserve especially careful comparison because you may pay money while granting rights. The Authors Guild recommends evaluating the service, publisher track record, editorial work and contract terms. Request named examples of books they have produced and ask who pays for design, printing, storage, promotion and distribution. If the answer is vague, pause and research the firm before committing."
+      ]
+    },
+    {
+      "heading": "If self-publishing, treat production as a sequence",
+      "paragraphs": [
+        "A self-published edition still needs a professional-quality manuscript, cover, metadata and a plan for distribution. Make a production checklist: developmental and copy edits if needed; proofread; cover art; interior formatting; ISBN and imprint decisions; retailer metadata; accessibility and final proof. You can hire help selectively or do parts yourself, but set aside time for each handoff.",
+        "Amazon KDP’s setup guide is one example of a platform workflow: manuscript and cover are prepared, book details and rights are entered, and the uploaded files are previewed. Its ISBN and distribution choices are platform-specific. If you expect to sell through more than one channel, compare the identifier and distribution rules in your country before choosing a platform-provided ISBN."
+      ]
+    },
+    {
+      "heading": "Make the next step small and verifiable",
+      "paragraphs": [
+        "You do not need to solve the entire publishing industry to move forward. Pick one route to investigate, list three relevant agents or presses, or create a production budget for one self-publishing format. Compare time, editorial control, financial exposure and rights retention in writing. Avoid paying for multiple services until you understand how they fit together.",
+        "If a contract or fee is involved, read the exact terms and ask an independent qualified person about points you do not understand. The next step is to make a one-page route comparison for your book, then prepare the package that route actually requests."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "What Authors Should Know About Hybrid Publishing Contracts",
+      "url": "https://authorsguild.org/resource/what-authors-should-know-about-hybrid-publishing-contracts/",
+      "publisher": "The Authors Guild",
+      "purpose": "Supports distinguishing hybrid contracts from traditional models and research questions about services, contracts and publisher quality; not individual legal advice."
+    },
+    {
+      "title": "4 – Title Setup: Book Details, Content, & Pricing",
+      "url": "https://kdp.amazon.com/en_US/help/topic/G73MVSZ5P69VVCN6",
+      "publisher": "Kindle Direct Publishing Help",
+      "purpose": "Supports the example self-publishing sequence for uploading and previewing files, entering book details and rights/pricing on KDP; platform-specific."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "write-a-book-that-changes-someone-s-life",
+    "publish-an-article-in-a-magazine",
+    "illustrate-a-children-s-book"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

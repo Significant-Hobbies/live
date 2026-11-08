@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "free-dive-to-20-metres",
+  "slug": "free-dive-to-20-metres",
+  "title": "Treat 20 metres as a coached milestone",
+  "description": "Approach a 20-metre freedive as a supervised learning milestone: choose a recognized course, agree on safety support, and accept a no-dive day.",
+  "intent": "Answer how to work toward a 20-metre freedive by framing it as an instructor-led outcome with qualified safety support, not a solo training schedule.",
+  "relatedExperienceSlugs": [
+    "become-a-certified-scuba-diver",
+    "dive-the-blue-hole-in-belize",
+    "scuba-dive-somewhere-extraordinary"
+  ],
+  "sections": [
+    {
+      "heading": "Put the number in its proper place",
+      "paragraphs": [
+        "A depth goal can make freediving sound like a simple countdown: practice for a few weeks, then descend to the target. That is not a responsible way to plan it. Freediving places a person underwater while holding a breath, and ability varies by person, conditions, health, and training. A number on a goal list does not establish readiness.",
+        "The Divers Alert Network (DAN) advises never to freedive alone and to get training from a recognized agency. Treat twenty metres as a possible future milestone set by a qualified instructor after they have assessed your learning and comfort. The right outcome of a course may be a shallower dive, more instruction, or deciding that this activity is not for you."
+      ]
+    },
+    {
+      "heading": "Choose an instructor before choosing a depth",
+      "paragraphs": [
+        "Look for a recognized freediving training agency and an instructor whose qualifications you can verify. Ask how the course handles classroom learning, confined-water skills, open-water conditions, safety cover, emergency response, and student-to-instructor supervision. DAN says an instructor should select an open-water site where students can enter, perform skills, and exit safely, and should cancel or reschedule a section when conditions are unsuitable.",
+        "Tell the instructor honestly about prior water experience, current comfort, health questions, and any long gap since swimming or diving. Ask what the certification does and does not qualify you to do. If a provider promises that every student will reach a fixed depth, encourages breath-hold practice alone, or offers a shortcut around supervision, choose another provider."
+      ]
+    },
+    {
+      "heading": "Agree on the safety plan",
+      "paragraphs": [
+        "Before any water session, understand who is responsible for supervision, how the buddy or safety diver is trained, how the team communicates, and what conditions would end the session. DAN emphasizes that training and buddy contact matter, while also warning that no one should dive alone. Your buddy is not a substitute for instruction, and a casual friend who is not trained to supervise freediving is not a safety plan.",
+        "Do not practice breath-hold challenges in a pool, bathtub, or open water without the qualified supervision specified by your instructor. This article does not provide a breathing routine, depth progression, or training table. Ask your instructor to set every exercise and to explain what to do if you feel unwell or want to stop."
+      ]
+    },
+    {
+      "heading": "Make readiness about communication, not bravado",
+      "paragraphs": [
+        "A good lesson gives you permission to state discomfort plainly and decline an attempt. Ask the instructor how students can pause, end a session, or change a goal without pressure. DAN’s guidance says students should not feel pushed into performing a skill they do not want to do; a certification decision belongs to the instructor and the training standard, not to a number you hoped to reach.",
+        "If you have a medical question, ask a qualified clinician with diving-medicine knowledge rather than relying on an online checklist. If a cold, fatigue, anxiety, or water conditions change how you feel, tell the instructor before entering. You do not need to prove that you can continue."
+      ]
+    },
+    {
+      "heading": "Choose a first step that can end safely",
+      "paragraphs": [
+        "Start by contacting a recognized freediving school and asking for its beginner course outline, supervision plan, instructor credentials, and cancellation rules. If you are unsure about your comfort in water, begin with a general swimming or snorkeling lesson instead. The experience can build confidence without turning a depth target into a deadline.",
+        "Only your instructor can determine whether a particular session is appropriate, and conditions can change. Let the goal remain flexible: perhaps the achievement is learning to equalize comfortably under supervision, communicating with a safety team, or deciding to stop. The next action is to book an introductory conversation, not to attempt a depth on your own."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Freediving Safety",
+      "url": "https://dan.org/alert-diver/article/freediving-safety/",
+      "publisher": "Divers Alert Network",
+      "purpose": "Opened DAN safety guidance on recognized instruction, never diving alone, instructor site selection, canceling unsafe sessions, and not pressuring students."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

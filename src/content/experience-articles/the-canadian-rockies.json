@@ -1,0 +1,60 @@
+{
+  "experienceSlug": "the-canadian-rockies",
+  "slug": "the-canadian-rockies",
+  "title": "Plan a Rockies base around one lake and one valley",
+  "description": "Use Banff, Lake Louise and a transit plan as anchors for a Rockies visit, while checking seasonal shuttle access before fixing each day.",
+  "intent": "Build a practical first Canadian Rockies itinerary around a clear base and real access choices for Lake Louise and Moraine Lake, rather than a generic list of scenic stops.",
+  "relatedExperienceSlugs": [
+    "the-swiss-alps",
+    "hike-a-mountain-that-scares-you",
+    "road-trip-across-new-zealand"
+  ],
+  "sections": [
+    {
+      "heading": "Choose a base that matches your days",
+      "paragraphs": [
+        "The Canadian Rockies cover a large area. If Lake Louise and Moraine Lake are central to your trip, decide whether you want to sleep in the Town of Banff, Lake Louise or elsewhere before assembling day trips. Your base changes the time and transport choices each morning. Parks Canada recommends Roam public transit or its shuttle for these popular lakes and says reservations are required for Parks Canada shuttles.",
+        "Moraine Lake Road is closed to personal vehicles year-round, with access limited to Parks Canada shuttles, licensed commercial operators and registered Moraine Lake Lodge guests. This is a consequential planning detail: a rental car alone does not make the lake accessible. Check the latest official access page for the year you travel and choose a permitted mode before reserving lodging."
+      ]
+    },
+    {
+      "heading": "Build one lake day carefully",
+      "paragraphs": [
+        "Lake Louise and Moraine Lake are often paired in travel plans, but each deserves time on its own. Choose one primary walk or viewpoint and leave the second lake as a shorter stop if your transport permits. Parks Canada lists shuttle and Roam options separately and directs visitors to reservations and current availability. Do not assume a reservation will appear at the time you prefer; use the official reservation service and keep a backup day.",
+        "At Lake Louise, decide whether the goal is a lakeshore view, a longer hike or a quiet hour with the landscape. At Moraine Lake, the access restriction means the transport decision comes first. Avoid adding a strenuous hike to a day that already includes long transfers, especially if weather or altitude affects how you feel."
+      ]
+    },
+    {
+      "heading": "Use transit as part of the itinerary",
+      "paragraphs": [
+        "Parks Canada describes shuttle service as operating seasonally and Roam transit as available year-round on its page checked for this guide, but routes, dates and reservations can change. Read the live schedules and confirm departure points before committing. If you are staying in Banff, compare the actual transit connection with the day you want; if staying at Lake Louise, check the relevant shuttle departure and return details.",
+        "A simple day plan has a firm outbound booking, a realistic walk, food and water, and a return option that does not depend on the last possible departure. Save the operator’s service alerts and identify where you can wait if weather delays a trip. These practical details matter more than squeezing a third famous viewpoint into one day."
+      ]
+    },
+    {
+      "heading": "Give the scenery more than a photo stop",
+      "paragraphs": [
+        "The lakes are visually striking, but a slower visit can make the mountain setting legible. Watch how the water color changes with cloud and angle; compare the open shoreline with the forest edge; notice the scale of the peaks against people on the path. Choose a viewpoint where you can stop without blocking others, and stay on designated trails to protect fragile ground.",
+        "If you want a long hike, use official trail information for distance, elevation and seasonal hazards, and choose a route that matches your experience. Carry essentials and check weather close to departure. Wildlife is wild: maintain the distance required by park guidance, keep food secure, and do not approach or feed animals."
+      ]
+    },
+    {
+      "heading": "Keep a flexible Rockies plan",
+      "paragraphs": [
+        "Make a short list of alternatives for poor weather or sold-out shuttles: a town walk, a visitor centre, a different accessible trail or a rest day. Do not treat an alternative as a failure; mountain conditions can shift quickly and some access is deliberately managed. Confirm operating dates and reservations through Parks Canada and the relevant transit operator shortly before you travel.",
+        "Your next action is to choose your base for the Lake Louise day, then open Parks Canada’s current transportation page and check the exact access method for each lake. Book the day around confirmed transport, not an imagined drive straight to every viewpoint."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Visiting Lake Louise and Moraine Lake",
+      "url": "https://parks.canada.ca/pn-np/ab/banff/visit/parkbus/louise",
+      "publisher": "Parks Canada",
+      "purpose": "Official Banff National Park page supports advance planning, shuttle reservation requirement, Moraine Lake Road private-vehicle closure and permitted access modes, and its stated recommendations for Banff/Lake Louise visitors.",
+      "accessLimit": "Seasonal service dates and reservations are specific to the current page and can change; readers are directed to current booking and transit pages. It does not establish every trail condition."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

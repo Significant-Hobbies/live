@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "design-and-3d-print-a-small-functional-bracket",
+  "slug": "design-and-3d-print-a-small-functional-bracket",
+  "title": "Prototype a bracket for a harmless fit test",
+  "description": "Choose a low-consequence household fit problem, measure its contact points, print a small prototype, and revise the geometry from observed fit.",
+  "intent": "How do I turn a simple household need into a printable bracket without mistaking a prototype for a load-bearing part? This adds a bounded measurement and iteration process.",
+  "sections": [
+    {
+      "heading": "Choose a safe job for the first part",
+      "paragraphs": [
+        "Pick something where the bracket only positions or organizes a light object, such as a small label holder or a clip for a cable on a desk. Avoid anything supporting people, heavy objects, electricity, heat, vehicles, or a safety-critical device. A home 3D print is a prototype, and its material, print orientation, and machine settings affect behavior.",
+        "Write down what the part must touch and what space it must leave open. A bracket that looks right in a model can still collide with a screw head or nearby surface. Take a photo and draw the two surfaces it connects before opening modeling software."
+      ]
+    },
+    {
+      "heading": "Measure the interface, not the fantasy",
+      "paragraphs": [
+        "Measure the actual object and mounting surface with a ruler or caliper, noting where a fastener or edge must pass. Repeat each important measurement and record the range if the surface is irregular. Do not copy dimensions from an online picture when the real object is available. Your model should make contact where needed and leave clearance where it must move.",
+        "Use millimetres consistently in your notes. Write which dimension is the opening, wall thickness, and overall depth; labels prevent swapping width and height later. Decide how the part will be attached, but keep the first version free of tiny features that a beginner printer may not reproduce cleanly."
+      ]
+    },
+    {
+      "heading": "Model the simplest useful shape",
+      "paragraphs": [
+        "Autodesk University’s Tinkercad teaching session presents guided projects in digital modeling and 3D printing, including using Tinkercad to edit a mesh. For a bracket prototype, begin with simple solids and a clear right-angle shape, then add holes or notches only when the physical task requires them. Align the model to the workplane and inspect it from more than one view.",
+        "Give the first print an obvious orientation and enough room for the printer’s normal support strategy. Ask the maker-space operator to review the model before printing if you are new to the equipment. Export and slice using that lab’s approved settings; software defaults vary and should not be treated as engineering certification."
+      ]
+    },
+    {
+      "heading": "Print a test before the finished version",
+      "paragraphs": [
+        "Print only the small area that checks the most uncertain fit if the slicer and printer operator approve that approach. Otherwise print a simple complete prototype in a low-cost material and inspect it only after it has cooled. Keep hands clear of moving parts and follow the machine owner’s operating guidance.",
+        "Check whether the bracket meets the intended surfaces, whether a hole aligns, and whether it can be placed without force. If it binds, identify which measured opening is too small; if it wobbles, find which contact face lacks support. Mark the physical part with a pen and translate that note into a specific model change."
+      ]
+    },
+    {
+      "heading": "Revise without claiming strength",
+      "paragraphs": [
+        "Change one geometry feature at a time and save a version number so you can compare. A better fit is not proof that the bracket can safely hold a load. Do not use it where failure could injure someone or damage valuable property. For structural or load-bearing use, consult an appropriate engineer and rated hardware instead of relying on a hobby print.",
+        "Your next action is to choose one harmless desk-scale fit problem, sketch the interfaces, and ask a printer operator to review the first model. Keep the final test limited to fit and positioning, and label the part as a prototype if anyone else may handle it."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Easy and Fun Student Projects Using Fusion 360, Tinkercad, and More",
+      "url": "https://www.autodesk.com/autodesk-university/class/Easy-and-Fun-Student-Projects-Using-Fusion-360-Tinkercad-and-More-2023",
+      "publisher": "Autodesk University",
+      "purpose": "Supports using guided Tinkercad modeling and editing meshes as a starting point for beginner 3D design; article’s low-consequence scope is precautionary advice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-a-motorised-scribbling-machine",
+    "build-a-chain-reaction-machine-from-household-objects",
+    "make-a-low-voltage-accessibility-switch-with-a-mentor"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

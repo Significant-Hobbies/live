@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "community-01fde0a3-3684-5c7a-b97f-1aa9174144f1",
+  "slug": "celebrate-halloween-tomatino-and-all-sorts-of-other-festivals",
+  "title": "Choose a festival for how you want to take part",
+  "description": "Compare Buñol’s messy La Tomatina with Edinburgh’s outdoor Samhuinn performance, then plan around crowd, access and local event rules.",
+  "intent": "How can I choose a festival that fits my energy and interests, and prepare without flattening different traditions into one checklist?",
+  "sections": [
+    {
+      "heading": "Choose the kind of participation you want",
+      "paragraphs": [
+        "Festivals are not interchangeable events with costumes and crowds. Some invite active participation; others are performances you watch. Some are tied to a local calendar, others are ticketed productions that change their program each year. Start by deciding whether you want movement, food, music, ritual, spectacle, learning or a quiet neighborhood celebration. This makes the shortlist more useful than searching for “the biggest festival.”",
+        "Two events show how different the formats can be. La Tomatina in Buñol is a mass tomato event associated with the town’s festival calendar. Samhuinn in Edinburgh is an outdoor performance on Calton Hill combining music, dance, drumming, fire-play and immersive theatre. They happen in different places and settings; the comparison is about how a visitor participates, not a claim that they share a cultural meaning."
+      ]
+    },
+    {
+      "heading": "Understand what makes La Tomatina specific",
+      "paragraphs": [
+        "Spain’s official tourism site places La Tomatina in Buñol and describes it as a tomato battle whose origin dates to 1945. It identifies the last Wednesday in August as its customary date. This is a crowded, physical event where clothes, shoes and belongings may get wet or stained. Before traveling, confirm the town’s current admission, security, transport and participant rules through official local channels; a calendar listing alone is not a promise that entry is available.",
+        "A good plan is to arrive with clothing you can wash or discard, protect your eyes and phone, and agree on a meeting point outside the densest area. Check whether bags or bottles are restricted and how to leave when the event ends. If you prefer watching to joining a crowd, ask whether there are designated viewing options rather than assuming you can safely stand anywhere."
+      ]
+    },
+    {
+      "heading": "Understand what an outdoor Samhuinn performance asks",
+      "paragraphs": [
+        "Forever Edinburgh describes Samhuinn as a contemporary revival of a Celtic celebration, staged as a story about the transition from summer to winter through music, dance and immersive theatre. Its event listing places the performance on Calton Hill and warns that the terrain is uneven, can become slippery, and may be dark. It also notes the production includes semi-nudity and has age guidance. These are practical reasons to read the current event page before deciding whether it suits your group.",
+        "Outdoor performance is a spectator experience, but the audience still moves through a live site. Dress for weather, bring a small light if organizers recommend it, and check accessibility arrangements directly. A festival’s identity is local and specific; do not treat one Edinburgh production as a representative model for all Halloween celebrations or Celtic traditions."
+      ]
+    },
+    {
+      "heading": "Pick by crowd, sensory load and access",
+      "paragraphs": [
+        "Make a short decision grid: active or spectator, outdoors or indoors, dense crowd or managed seating, fixed date or flexible season, and how easy it is to leave. For someone who dislikes loud noise or close contact, a food or film event with timed entry may be more comfortable than an unstructured street crowd. For children, check age guidance, duration, toilet access and a clear meeting place. For mobility needs, ask organizers about routes, surfaces and viewing areas before booking.",
+        "Do not assume that every festival is open to visitors or that ceremonial events are designed for tourism. Respect local requests about clothing, photography and behavior. If the event is tied to a religious or community observance, read the host organization’s explanation and follow local guidance rather than importing expectations from another country."
+      ]
+    },
+    {
+      "heading": "Plan arrival and departure as part of the event",
+      "paragraphs": [
+        "Check the organizer’s current date, tickets, transport advice and prohibited items. For a busy town event, choose accommodation and a return route before the day; public transport may be more useful than driving, but service patterns vary. Save the event’s official contact details and identify a quieter place to regroup. A little advance planning makes it easier to enjoy the event without continually checking your phone.",
+        "Afterward, reflect on the format you liked: taking part in a shared activity, watching a carefully staged performance or moving between neighborhood events. Then look for a locally organized next event rather than trying to manufacture a festival experience from a checklist. The best first step is to pick one event whose rules, sensory demands and meaning you understand, and check the host’s current guidance."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "La Tomatina tomato festival",
+      "url": "https://www.spain.info/en/calendar/la-tomatina/",
+      "publisher": "Turespaña, Spain’s official tourism website",
+      "purpose": "Supports that La Tomatina is held in Buñol, its last-Wednesday-in-August timing and the 1945 origin account; current ticketing and local arrangements require reconfirmation."
+    },
+    {
+      "title": "Samhuinn Fire Festival",
+      "url": "https://edinburgh.org/event/samhuinn-fire-festival/",
+      "publisher": "Forever Edinburgh / City of Edinburgh Council",
+      "purpose": "Supports this specific event’s performance format, location and audience considerations such as uneven outdoor ground, weather, darkness and age guidance; not generalized to all Halloween events."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "attend-a-multi-day-music-festival",
+    "attend-a-festival-that-changes-your-taste",
+    "rio-de-janeiro-during-carnival"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

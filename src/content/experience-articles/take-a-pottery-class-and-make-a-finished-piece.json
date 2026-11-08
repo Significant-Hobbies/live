@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "take-a-pottery-class-and-make-a-finished-piece",
+  "slug": "take-a-pottery-class-and-make-a-finished-piece",
+  "title": "Choose a Pottery Class by the Piece You Want to Finish",
+  "description": "Pick a pottery class that matches your first project, then understand handbuilding, wheel throwing, trimming, glazing, and firing.",
+  "intent": "Helps a first-time potter choose a class around a realistic finished object and understand which making and studio steps are included.",
+  "sections": [
+    {
+      "heading": "Choose the object before the technique",
+      "paragraphs": [
+        "Start by picturing a finished piece you would actually keep: a small pinch bowl, a thumb-sized dish for keys, or a simple cup. That choice helps you select a class. Handbuilding often gives a beginner direct ways to shape a slab, coil, or pinch form; wheel throwing asks you to coordinate centered clay and a spinning surface. Ask a studio which process fits your object and the time allowed.",
+        "A one-session class may focus on trying the material and leave trimming, glazing, and firing to the studio. A multi-session course may let you return to trim a piece and choose a glaze. Confirm what “finished” means in that particular booking: whether the studio dries and fires work, how you select glaze, when collection happens, and what happens if a piece cracks or warps."
+      ]
+    },
+    {
+      "heading": "Compare handbuilding with the wheel honestly",
+      "paragraphs": [
+        "For handbuilding, ask whether the project is a slab-built tray, coil vessel, or pinch-form bowl and whether the instructor demonstrates joining and smoothing. A small tray can be designed with a drawn outline and gentle walls; a coil vessel needs steady joining where each coil meets the next. Keep the first shape modest so there is time to form, refine, and personalize it.",
+        "For a wheel class, ask whether beginners will learn to center clay or make a small form after an instructor demonstration. Ceramic educator Kara Leigh Ford emphasizes bracing the arms, using body position rather than force, and treating water carefully so clay does not weaken. A beginner’s satisfying win might be centering or pulling a short cylinder, not producing a tall symmetrical vase on demand."
+      ]
+    },
+    {
+      "heading": "Treat clay as a sequence of stages",
+      "paragraphs": [
+        "A piece that looks done while wet is only at the start. Pottery typically requires the clay to firm up before trimming or attaching some details, then dry sufficiently for firing. Glaze and firing happen on the studio’s schedule and depend on its materials and process. Ask what dates are realistic and whether the studio will contact you when work is ready; avoid assuming you can take the object home immediately.",
+        "Make a small signature or mark on the base only if the instructor says it is appropriate for the clay and studio. Write your name and project details on the studio’s tracking card, and learn how finished work is labeled. A careful handoff avoids the very common disappointment of forgetting which bowl is yours after class."
+      ]
+    },
+    {
+      "heading": "Use class time to learn one controllable skill",
+      "paragraphs": [
+        "Ask the teacher what to focus on before you begin. On a wheel, that might be keeping elbows braced and hands moving steadily with the clay; for a handbuilt slab piece, it might be making an even base and joining walls without gaps. Resist trying to decorate every surface while the form is still unstable. Let one successful decision carry the piece.",
+        "When something collapses or leans, pause and ask why rather than adding more pressure. The wheel educator notes that too much water can weaken a form and that body position matters; your instructor can diagnose what is happening with your actual clay and setup. A short correction in the moment will teach more than silently repeating the same failed motion."
+      ]
+    },
+    {
+      "heading": "Plan the finish with the studio",
+      "paragraphs": [
+        "Before booking, ask how many pieces each student can make, what the class fee includes, whether materials are supplied, and whether glazing is a separate return visit. These details matter more than a glossy photo of an advanced student’s work. If you want a functional food-safe object, ask which clays and glazes the studio uses for that purpose; do not assume a decorative class result is suitable for food or drink.",
+        "Choose a studio whose answer describes the complete path from wet clay to collection. Tell the instructor the object you want to make, and ask which technique gives you the best chance of completing it within the class format. Then arrive ready to learn the process—not to demand a perfect first pot."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Six Best Tips for Beginners Learning How to Wheel Throw",
+      "url": "https://ceramicartsnetwork.org/daily/article/six-top-tips-for-beginners-learning-how-to-wheel-throw",
+      "publisher": "Ceramic Arts Network",
+      "purpose": "Pottery educator’s beginner advice on bracing, water use, posture, and focusing on one wheel skill."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "throw-a-kiln-fired-ceramic-pot",
+    "make-something-with-your-hands-you-re-proud-of",
+    "carve-a-reusable-rubber-stamp"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

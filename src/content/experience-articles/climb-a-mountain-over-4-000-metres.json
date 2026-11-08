@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "climb-a-mountain-over-4-000-metres",
+  "slug": "climb-a-mountain-over-4-000-metres",
+  "title": "Choose a 4,000-metre mountain by route, not just altitude",
+  "description": "Compare a mountain’s route, access, and acclimatization needs with your experience, and get qualified local advice before committing to a high-altitude climb.",
+  "intent": "How should I choose among very different mountains that happen to exceed 4,000 metres? This adds a route-selection and risk-planning frame beyond the altitude goal.",
+  "sections": [
+    {
+      "heading": "Start with the route, not the summit number",
+      "paragraphs": [
+        "A 4,000-metre summit is a measurement, not a difficulty rating. One mountain may be a non-technical hike with a long approach; another may require glacier travel, scrambling, or climbing skills. Find the route description from the land manager or qualified local operator and note the technical demands, exposure, approach, and expected time away from help.",
+        "Be honest about the skills you have already practiced. If the route requires ropes, snow travel, or navigation skills you do not have, choose instruction or a different objective rather than learning those skills on the summit attempt. Ask what conditions would lead the guide to turn back and whether the group shares that decision."
+      ]
+    },
+    {
+      "heading": "Treat altitude as its own planning problem",
+      "paragraphs": [
+        "The CDC Yellow Book explains that altitude illness susceptibility varies and that physical fitness does not remove the risk. The appropriate ascent depends on the itinerary and the person, so ask a travel-medicine clinician about your route and medical history before booking. Do not borrow a medication plan or acclimatization schedule from another climber.",
+        "Compare sleeping elevations across the itinerary and ask how an operator builds time for acclimatization. A summit day is only one part of a trip; a rushed arrival or ascent can change the risk even when the trail distance looks manageable. An experienced guide can describe local practice, but cannot predict your personal response."
+      ]
+    },
+    {
+      "heading": "Choose a guide or course with a clear scope",
+      "paragraphs": [
+        "For a first high mountain, ask whether the guide is qualified for the route’s terrain and what training is included. Check group size, decision process, equipment expectations, communication, emergency plan, and cancellation terms. If the route is a technical climb, choose instruction that teaches a progression on appropriate terrain before attempting the mountain itself.",
+        "No guide, course, or piece of equipment can guarantee a safe summit. A reliable plan should be willing to stop, change the objective, or descend when conditions or a participant’s response require it. Treat a summit promise as a reason to ask harder questions."
+      ]
+    },
+    {
+      "heading": "Train for the movement you will actually do",
+      "paragraphs": [
+        "Practice steady uphill walking and descents on local terrain, using the footwear and pack you expect to carry. Build duration gradually and include recovery. For technical routes, fitness is only one part of preparation; take a qualified course for the relevant skills and practice them under supervision before an expedition.",
+        "Pay attention to how equipment fits during ordinary training and ask the guide to check unfamiliar gear before departure. Do not make a first major boot, pack, or layering experiment on the mountain. The route’s operator should tell you what is suitable for its conditions, not a generic online checklist."
+      ]
+    },
+    {
+      "heading": "Set a turnaround rule before the summit day",
+      "paragraphs": [
+        "Agree on a turnaround time and the signs that will cause the group to stop or descend. Your partner, guide, or group should know that you support a no-summit decision. Do not let sunk travel costs turn into pressure to continue when weather, fatigue, or altitude makes the plan unsuitable.",
+        "Your next action is to shortlist two mountains by route requirements, not height alone, then share the route profiles with a qualified guide and travel-medicine clinician before choosing one."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "High-Altitude Travel and Altitude Illness",
+      "url": "https://www.cdc.gov/yellow-book/hcp/environmental-hazards-risks/high-altitude-travel-and-altitude-illness.html",
+      "publisher": "CDC Yellow Book",
+      "purpose": "Supports that susceptibility varies and fitness does not prevent altitude illness, and that ascent/acclimatization planning needs individual attention."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "trek-to-everest-base-camp",
+    "hike-the-pacific-crest-trail",
+    "community-d511273f-b104-5228-b141-f343c01a5e5e"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

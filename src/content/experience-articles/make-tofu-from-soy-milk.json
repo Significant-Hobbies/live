@@ -1,0 +1,57 @@
+{
+  "experienceSlug": "make-tofu-from-soy-milk",
+  "slug": "make-tofu-from-soy-milk",
+  "title": "Why does soy milk become tofu, and how can you tell when curds form?",
+  "description": "Understand the curd-and-press process behind tofu, choose a manageable first batch, and troubleshoot texture without treating one result as failure.",
+  "intent": "Explain what to observe during a first tofu-making session and how milk, coagulant, curd handling, and pressing influence the result.",
+  "sections": [
+    {
+      "heading": "Start with the transformation, not a perfect block",
+      "paragraphs": [
+        "Tofu begins as soy milk. A coagulant helps the milk form curds, which are then gathered and pressed so liquid drains away. Illinois Extension describes tofu as coagulated fresh soymilk and distinguishes regular tofu textures from silken tofu. That simple idea gives you something to observe: a liquid changes into curds, then into a softer or firmer mass depending on how the process is handled. The goal of a first batch can be learning to recognize that change rather than producing a flawless restaurant-style cube.",
+        "Use a recipe from a reputable food educator or tofu maker and read it fully before starting. Recipes vary in soybean preparation, coagulant, heat, pressing, and yield, so combining instructions from two different methods can create confusion. Decide whether you want a small experiment or enough tofu for a meal. A smaller batch is easier to manage, reduces waste when you are still learning, and leaves room for a clear comparison if you repeat it."
+      ]
+    },
+    {
+      "heading": "Set up a clean, calm work area",
+      "paragraphs": [
+        "Gather ingredients, clean utensils, a strainer, clean cloth, mold or perforated container, and a weight before the hot soy milk is ready. Check the coagulant in the recipe and measure it with the correct tool; do not substitute an unknown household ingredient because it looks similar. Wash hands and keep the work surface clean. Soy is a major food allergen, so check who will eat the tofu and prevent cross-contact with other foods. If you are cooking with children, keep hot liquid and draining equipment under adult control.",
+        "Use a heavy pot that gives you room to stir, and set the mold over a bowl or tray to catch liquid. A clean cloth should be large enough to line the mold without slipping into the curds. If the chosen method requires a thermometer, check that it reads correctly and have it nearby. These small preparations make the actual observation easier: you will be able to notice texture and timing instead of searching through drawers while the milk cools."
+      ]
+    },
+    {
+      "heading": "Watch for curds and handle them gently",
+      "paragraphs": [
+        "Follow the recipe’s heating and coagulant instructions exactly. The useful moment is when the mixture changes from smooth liquid toward visible curds and a thinner liquid around them. If the curds are small, fragile, or hard to see, pause and check the recipe’s cues before adding anything else. More coagulant is not automatically the answer; excess or uneven additions can change flavor and texture. Stir only as much as the method asks for. Once curds have formed, rough stirring can break them into pieces that drain differently.",
+        "Scoop or pour the curds into the lined mold using the recipe’s approach, then fold the cloth over them. Pressing is a choice about texture, not a test of strength: a light press can preserve a tender result, while more pressing removes additional liquid and creates a denser block. Use the time and weight recommended by the method, and keep the setup stable so it cannot tip. Note the appearance before and after pressing; it is a useful record for the next attempt."
+      ]
+    },
+    {
+      "heading": "Taste, store, and diagnose one variable",
+      "paragraphs": [
+        "When the batch is ready, handle it cleanly and taste a small plain piece before seasoning. Texture is easier to notice without sauce. Is it custardy, crumbly, springy, or dense? Those words help you compare batches more effectively than “good” or “bad.” Use a tested food-safety source for cooling and storage. Illinois Extension’s home food safety guidance recommends clean hands and surfaces, separation of raw and cooked food, and prompt refrigeration of perishable foods; follow current local guidance for your ingredients and equipment.",
+        "Write down the soybean or milk choice, coagulant from the recipe, pressing method, and one texture observation. Change one variable next time—perhaps pressing duration, not the coagulant and heat together. If the tofu is crumbly, consider whether the recipe’s curds were handled too roughly; if it is too soft, ask whether the pressing stage was shorter than intended. These are questions to check against the method, not universal diagnoses. A useful next step is to use part of the batch in a dish where its texture suits the job, then repeat the same recipe once before experimenting."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tofu Shouldn't Scare You",
+      "url": "https://extension.illinois.edu/blogs/simply-nutritious-quick-and-delicious/2016-04-01-tofu-shouldnt-scare-you",
+      "publisher": "University of Illinois Extension",
+      "purpose": "Supports the curd-and-press explanation and the distinction between regular tofu textures and silken tofu."
+    },
+    {
+      "title": "Food Safety at Home",
+      "url": "https://extension.illinois.edu/food-safety/food-safety-home",
+      "publisher": "University of Illinois Extension",
+      "purpose": "Supports clean preparation, separating foods, and prompt refrigeration of perishables."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-a-seasonal-millet-thali",
+    "prepare-a-bento-with-contrasting-textures"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "test-how-salt-changes-a-simple-dish",
+  "slug": "test-how-salt-changes-a-simple-dish",
+  "title": "A small tasting experiment for seasoning by comparison",
+  "description": "Compare measured seasoning in tiny portions of one unsalted base, keeping every other ingredient constant so you can notice how salt changes flavour and texture.",
+  "intent": "How to run a controlled kitchen tasting about salt’s sensory effect without turning one personal comparison into dietary guidance.",
+  "relatedExperienceSlugs": [
+    "build-a-seasonal-millet-thali",
+    "taste-chocolate-from-three-origins",
+    "prepare-a-bento-with-contrasting-textures"
+  ],
+  "sources": [
+    {
+      "title": "Sodium reduction",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/sodium-reduction",
+      "publisher": "World Health Organization",
+      "purpose": "Supports distinguishing a sensory tasting exercise from health advice; the draft avoids dietary targets."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Choose a base where differences are easy to notice",
+      "paragraphs": [
+        "Use a familiar, plain food that can be divided evenly: cooked rice, a small pot of unsalted beans, or a mild vegetable purée. Avoid a dish with many strong ingredients, since acid, chilli, fat and aromatics can mask a small seasoning difference. Prepare the base once, stir it well, and split it into identical tasting portions.",
+        "Keep the experiment about one question: how does adding salt change what I notice in this particular food? It is not a test of which person has a better palate. Taste is personal, and a single dish cannot tell you what another recipe or person will prefer. The World Health Organization discusses sodium as a public-health nutrient; this activity is only a sensory comparison, not dietary advice."
+      ]
+    },
+    {
+      "heading": "Measure small changes and label them",
+      "paragraphs": [
+        "Use the same salt and a small measuring spoon or scale, then prepare a plain control and two or three lightly seasoned portions. Label the cups before tasting so you can compare them in order. Make the changes small enough that the samples remain food you are comfortable tasting; there is no need to produce an unpleasant or extreme sample.",
+        "Keep all portions the same size and temperature. Salt dissolves differently in hot food and can settle unevenly if the mixture is not stirred. Mix each sample thoroughly and let them reach a similar temperature before comparing. If the base cools, warm all samples together rather than reheating one in a way that changes its moisture."
+      ]
+    },
+    {
+      "heading": "Taste without letting order do the work",
+      "paragraphs": [
+        "Try a small bite of the unsalted control first, then move through the coded samples. Pause and drink water between tastes. If you have another person helping, ask them to shuffle the order or hide the labels, then reveal the sequence afterward. This reduces the urge to report the expected result simply because you know which sample has more salt.",
+        "Write sensory notes before choosing a favourite: “the sweetness seems clearer,” “the beans taste less flat,” “the surface feels firmer,” or “I notice salt itself.” A sample can taste more vivid without being your preferred version. If one comparison seems surprisingly strong, repeat it with freshly mixed portions before treating it as a reliable observation."
+      ]
+    },
+    {
+      "heading": "Change only one part of the recipe",
+      "paragraphs": [
+        "Do not add lemon to one cup or butter to another while testing salt. Those are interesting variables, but they answer different questions. First find a seasoning level you like in the plain base; on another day, test whether acid or fat changes your perception. Keeping one ingredient fixed makes it easier to explain what you observed.",
+        "If the dish already contains salted broth, cheese, pickles or a packaged seasoning, it is not a useful unsalted starting point. Choose a simpler base or describe the test honestly as comparing two finished versions. Never present your result as a universal rule such as “this amount is right for everyone.” It is one person’s response to one recipe."
+      ]
+    },
+    {
+      "heading": "Turn your notes into a cooking decision",
+      "paragraphs": [
+        "For the next batch of the same dish, use the tasting that felt balanced to you and season in stages, tasting along the way. Record the type of base, amount of salt, portion size, temperature and your notes. If you are cooking for others, ask about preferences and dietary requirements instead of assuming they share your taste.",
+        "A useful result is not a perfect number; it is knowing which clues help you season. Maybe salt made a bland bite feel clearer, while a highly salted sample felt harsh. Keep that note attached to the recipe and revisit it when the base changes. If you need medical or nutrition guidance about sodium, use a qualified health professional rather than extrapolating from this tasting."
+      ]
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

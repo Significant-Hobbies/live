@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "cook-a-whole-animal-from-nose-to-tail",
+  "slug": "cook-a-whole-animal-from-nose-to-tail",
+  "title": "Plan the cuts before you bring the animal home",
+  "description": "Work with a qualified butcher to plan a whole-animal cook, choose safe preparations for each cut and use a thermometer for meat handling.",
+  "intent": "How can I cook nose-to-tail without buying more meat than I can safely prepare? This focuses on butcher coordination, menu planning and food safety.",
+  "sections": [
+    {
+      "heading": "Start with a butcher and a realistic table size",
+      "paragraphs": [
+        "“Whole animal” can mean a small bird, a lamb share or a much larger carcass. Choose a size that fits your cooking space, freezer, skills and number of diners. For a first attempt, work with a licensed butcher or experienced chef who can explain what cuts will arrive and which preparation requires separate equipment. A shared or partial animal purchase may be more manageable than trying to cook every cut in one sitting.",
+        "Ask the butcher to describe the cut list in everyday language, how the meat will be packaged and what refrigeration or freezer space you need. Confirm the weight, whether organs are included, and whether you can decline or share cuts you will not use. No cut needs to become a dare. If your aim is to learn, ask the butcher to identify two unfamiliar parts and suggest a safe, tested preparation source."
+      ]
+    },
+    {
+      "heading": "Build a menu around different uses",
+      "paragraphs": [
+        "Before the cooking day, sort the cuts by cooking method and time. Some cuts may suit quick cooking, while tougher connective-tissue cuts generally call for methods and recipes designed for longer cooking; ask the butcher which is which rather than guessing. Plan one centerpiece and a few smaller preparations across different meals. A soup, roast, braise and simple pan-cooked cut can teach different skills without asking one oven to do everything at once.",
+        "Decide where each ingredient and finished dish will go. Make a shopping list that includes containers and labels, not just seasonings. If you have limited freezer room, coordinate delivery dates with the butcher and schedule cooking accordingly. Keep a backup plan for any dish that takes longer than expected, such as a separate prepared side rather than leaving the rest of the meal waiting."
+      ]
+    },
+    {
+      "heading": "Keep raw and ready-to-eat food separate",
+      "paragraphs": [
+        "Treat raw meat as a food-safety task. FoodSafety.gov advises using a food thermometer for safe internal temperatures; color and appearance alone do not establish that meat is safely cooked. Follow its current chart for the specific meat and cut you are preparing. Use clean boards and utensils, wash hands after handling raw meat, and do not put cooked food back on a plate that held raw meat.",
+        "Keep the meat cold until it is time to prepare it and follow official refrigerator and thawing guidance. If you are serving guests who are pregnant, very young, older or immunocompromised, take extra care with the relevant public-health guidance. Do not improvise recipes for raw or undercooked organ meat; use a tested preparation and follow its safety steps."
+      ]
+    },
+    {
+      "heading": "Make unfamiliar cuts approachable",
+      "paragraphs": [
+        "Ask your butcher for the local name and a small explanation of how the cut is usually prepared. Look at a reliable recipe before deciding how much seasoning or time it needs. If a cut is unfamiliar, cook a small portion first and keep the rest safely stored. You can serve it as one option alongside a familiar dish instead of making every guest try it.",
+        "If the animal has cultural or personal significance, learn who raised it and how the butcher describes the processing. Do not treat a particular food tradition as representative of every household or region. Respect guests’ dietary needs and preferences; a meal can be nose-to-tail in intention without pressuring someone to taste every part."
+      ]
+    },
+    {
+      "heading": "Use what you planned and record what you learned",
+      "paragraphs": [
+        "At the end, note which preparations were enjoyed, which were labor-intensive and what you would order differently. Keep labels on stored portions so that the cut and date remain clear. Ask the butcher about responsible uses for remaining parts, or share them with someone who knows how to cook them. Dispose of food safely if it has been held or cooked outside trusted guidance.",
+        "A successful nose-to-tail meal is not measured by how many unusual cuts you can finish. It is a thoughtful plan for using what you receive, respecting the animal and keeping people safe. Start by calling a butcher to ask what size share, cut list and tested preparation source would fit your kitchen."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Cook to a Safe Minimum Internal Temperature",
+      "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
+      "publisher": "FoodSafety.gov, U.S. Department of Health and Human Services",
+      "purpose": "Supports using a food thermometer and the current U.S. safe minimum internal temperature chart for different meats; article directs readers to the relevant item rather than supplying a one-size-fits-all temperature."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "learn-to-butcher-a-whole-fish",
+    "cook-a-meal-over-an-open-fire",
+    "eat-something-you-foraged-or-caught-yourself"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

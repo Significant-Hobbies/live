@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "make-a-timeline-of-the-five-most-important-moments-of-your-life",
+  "slug": "make-a-timeline-of-the-five-most-important-moments-of-your-life",
+  "title": "Choose five life moments and give each a place on the page",
+  "description": "Build a five-moment life timeline with clear selection rules, evidence prompts, and room for uncertainty, so the result feels specific rather than complete.",
+  "intent": "How do I choose and arrange five defining moments without pretending my memory is complete or reducing a life to a tidy success story?",
+  "sections": [
+    {
+      "heading": "Decide what counts as a moment",
+      "paragraphs": [
+        "A timeline is a deliberately small view, not a ranking of your entire life. Decide what “important” means for this version: a change in direction, a first, a loss, a commitment, a place, a relationship, or a moment you understood something differently. You can mix types. The moment does not have to be publicly impressive. Learning to ask for help, leaving a role, or finding a place that felt like home may belong beside a graduation or move.",
+        "Use one sentence to define your selection rule before you begin. For example: “I will choose moments that changed how I spent my time afterward.” That rule makes choices easier and prevents the exercise from becoming an impossible search for the single five most important events across every possible definition."
+      ]
+    },
+    {
+      "heading": "Collect more candidates than you need",
+      "paragraphs": [
+        "Spend a short first pass listing eight to twelve candidates without ordering them. Check old calendars, letters, photographs, school or work documents, travel records, and conversations with family only if those sources feel appropriate. If you ask an older relative to help recall a period, ask permission before recording; the Library of Congress notes that the recording may later be transcribed or shared. Their account can prompt a memory without replacing your own.",
+        "Beside each candidate, record a date or approximate age, a location, and one concrete detail. Use “around the winter after my move” if you cannot verify a month. Mark uncertain details with a question mark rather than making them precise for the sake of a clean line. Memories can be vivid and still uncertain; a timeline can show that honestly."
+      ]
+    },
+    {
+      "heading": "Select five with different kinds of weight",
+      "paragraphs": [
+        "Look across your list and notice whether all candidates tell the same story. If the five are only awards and milestones, consider whether an ordinary turning point or difficult transition changed your direction more. If they are all losses, ask whether an unexpected friendship, a chosen routine, or a moment of belonging also deserves space. This is not a requirement for balance or positivity; it is a way to make the selection deliberate rather than defaulting to what is easiest to display.",
+        "Try a simple test for each candidate: Can I explain what changed after this? Is the event distinct from the other four? Am I including it because it matters to me or because I think it should matter? You may decide an event belongs precisely because it still raises questions. Keep the list editable until you have five that answer your chosen rule in different ways."
+      ]
+    },
+    {
+      "heading": "Draw the timeline with room for notes",
+      "paragraphs": [
+        "Use a long sheet of paper, a digital canvas, or five index cards arranged in sequence. Put the year or approximate age above each event, then write a brief label below it. Add one small piece of evidence or sensory detail: the bus route to a first job, the name of a town, the object in a photograph, or a sentence someone said that you remember. Do not include private information you would not want another person to see if the timeline were shared.",
+        "Make the visual scale flexible. Years of change may deserve more space than a single day; a cluster of major events can share a bracket. Add a second line for what followed if an event only makes sense in context. A timeline is a way to see relationships among memories, not a claim that time itself explains them."
+      ]
+    },
+    {
+      "heading": "Separate memory, interpretation, and open questions",
+      "paragraphs": [
+        "The Library of Congress’s observation-reflection-question approach offers a useful final check. For each entry, mark what you know from a source or clear recollection, what you interpret now, and what remains a question. “I moved in 2016” may be supported by a lease; “that move taught me independence” is a current interpretation. Both can belong, as long as they are not confused.",
+        "Finish by writing one sentence about the pattern you see and one sentence about what the timeline cannot show. Perhaps these events share a theme of choosing community, while missing years contain experiences you have not documented. Keep a photo or scan for yourself, label it with the date you made it, and let future-you change the selection. The five moments are a useful snapshot, not the final account of your life."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Oral Histories: Family History for Kids",
+      "url": "https://guides.loc.gov/family-history-for-kids/interviews",
+      "publisher": "Library of Congress",
+      "purpose": "Supports asking relatives for permission before recording and notes that recordings can be transcribed or shared; it does not provide the article's timeline questions or selection method."
+    },
+    {
+      "title": "Teacher’s Guide: Analyzing Oral Histories",
+      "url": "https://memory.loc.gov/static/programs/teachers/getting-started-with-primary-sources/documents/Analyzing_Oral_Histories.pdf",
+      "publisher": "Library of Congress",
+      "purpose": "Supports the observation, reflection, question and further-investigation sequence used for the final check; it is an educational oral-history guide, not a five-event timeline prescription."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "reconstruct-one-ordinary-childhood-day",
+    "trace-the-journey-of-one-inherited-object",
+    "write-your-memoir"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

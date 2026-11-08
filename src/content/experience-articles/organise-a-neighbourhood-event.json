@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "organise-a-neighbourhood-event",
+  "slug": "organise-a-neighbourhood-event",
+  "title": "Plan a Neighbourhood Gathering Around One Shared Purpose",
+  "description": "Organise a welcoming local event by choosing a clear purpose, involving neighbours early, checking permissions, and assigning simple roles.",
+  "intent": "Gives a small neighbourhood gathering a practical planning path that includes consultation, access, clear responsibilities, and local rules.",
+  "sections": [
+    {
+      "heading": "Start with a reason to bring people together",
+      "paragraphs": [
+        "Choose one purpose: swap seedlings, share a meal, repair household items, welcome new residents, or plan a safer walking route. A clear reason helps people see whether the event is for them and makes the practical choices easier. Keep the first gathering small enough for a few people to coordinate without a committee.",
+        "Name who you hope will feel welcome and what they might need to join. Consider time of day, language, cost, transport, seating, weather, childcare, and mobility. Ask a few neighbors before choosing a date; a schedule that works for one household may exclude shift workers, caregivers, or residents who do not use the same chat group."
+      ]
+    },
+    {
+      "heading": "Ask before booking or closing a space",
+      "paragraphs": [
+        "For a shared room, park, courtyard, or street, find out who controls it and whether you need permission, insurance, a permit, or a traffic plan. Requirements vary by location and event scale. GOV.UK’s small street-party guide, for example, asks organizers in the UK to contact their local council and share the date, road details, affected properties, and whether neighbors have been consulted. Other places have different rules.",
+        "Talk with the people who may be affected, not only the people already enthusiastic. If a road closure would disrupt buses, deliveries, or access for emergency vehicles, change the venue or scale. A neighborhood event should add connection without quietly shifting costs or inconvenience onto people who did not agree."
+      ]
+    },
+    {
+      "heading": "Give people simple roles",
+      "paragraphs": [
+        "Name one coordinator, one person for welcome and accessibility questions, one person for setup, and one person who can handle cleanup. People can take more than one role, but write down who is doing what and when. Avoid relying on a single neighbor to pay up front or stay until everything is finished.",
+        "When inviting people, include the purpose, date, time, location, cost if any, access details, what to bring, and how to ask for help. Offer a way to reply privately if someone does not want to post needs in a group chat. Ask about food allergies if serving food, label dishes, and be honest about what you can verify."
+      ]
+    },
+    {
+      "heading": "Design for conversation, not logistics alone",
+      "paragraphs": [
+        "Arrange chairs in small clusters or place a shared activity at the center so people can join without giving a speech. A repair table, seed exchange, or map of favorite local spots gives neighbors an easy opening line. Put names on labels only if guests want them; people should be free to listen, help, or leave early.",
+        "Create a simple run-of-show: welcome, the shared activity, a break, next steps, and cleanup. Leave room for spontaneous talk. If a conversation gets tense, return to the event’s purpose and make space for people to disagree without turning one volunteer into an unofficial mediator."
+      ]
+    },
+    {
+      "heading": "Close the loop after everyone goes home",
+      "paragraphs": [
+        "Thank helpers, share a short recap, and record what to change next time: start later, add more seating, ask a different block, or improve the route to the venue. Do not publish photos or personal information without permission. If the event revealed an ongoing issue, ask neighbors whether they want a separate follow-up rather than making a commitment on everyone’s behalf.",
+        "Your next action is to ask three neighbors about one simple gathering and a date that works for them. Check the venue rules before sending a broad invitation, then assign a few modest roles. A well-run first event builds trust because the plan is clear, the welcome is genuine, and the cleanup is shared."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Organising a street party: Telling your local council",
+      "url": "https://www.gov.uk/organise-street-party",
+      "publisher": "UK Government",
+      "purpose": "UK example of council notification, road details, affected properties, and neighbor consultation for small street events."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "help-host-a-neighborhood-repair-cafe-session",
+    "share-an-iftar-at-an-open-community-gathering",
+    "go-on-a-friend-led-neighbourhood-tour"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

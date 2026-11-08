@@ -1,0 +1,59 @@
+{
+  "slug": "understand-your-own-health-at-a-deep-level",
+  "title": "Build a clear health summary to use with your clinicians",
+  "description": "Organize current medicines, symptoms, history and questions into a concise record that helps a qualified clinician understand your situation.",
+  "intent": "Organize personal health records and questions for qualified clinicians, distinguishing measurements, symptoms and uncertainty; no self-diagnosis or personalized medical plan.",
+  "sections": [
+    {
+      "heading": "Make one current health snapshot",
+      "paragraphs": [
+        "Create a one-page summary with your main health questions, current care team, important conditions or procedures you know about, allergies and the best way to reach you. Date it and label anything uncertain. The point is not to build a diagnosis from internet reading; it is to help you and a clinician see the same information during a visit.",
+        "Keep a longer folder behind the summary for records you already have: visit notes, imaging reports, lab results, immunization records and referrals. Write the date, clinic and reason beside each file. If two records appear to conflict, mark the discrepancy and ask the healthcare team which information is current rather than choosing a result yourself."
+      ]
+    },
+    {
+      "heading": "List medicines in a way a clinician can check",
+      "paragraphs": [
+        "Write down prescription medicines, over-the-counter products, vitamins and supplements. Include the name on the package, strength if visible, how you take it, why you think it was started and who prescribed it. Note recent changes and side effects you want to discuss. Bring the containers or an up-to-date list to appointments, as AHRQ recommends, so the clinician can verify details with you.",
+        "Do not stop, start, combine or change a medicine based on your own spreadsheet or an article. Ask the prescriber or pharmacist what information is needed and what to do if you miss a dose or notice a reaction. If you have several clinics, ask how they share medication changes and whether you should carry a printed list when traveling or receiving urgent care."
+      ]
+    },
+    {
+      "heading": "Track observations without labeling them",
+      "paragraphs": [
+        "For a symptom or concern, note when it began, how often it happens, how long it lasts, what you were doing and what seems to change it. Record a measurement only when it was taken with an appropriate device and label the unit, time and device. Write ‘not sure’ when you do not know. A timeline is more useful than turning a normal day into a stream of numbers without context.",
+        "Include function: what the concern makes harder, what helps you manage a routine, and whether it is getting better, worse or staying similar from your perspective. If symptoms are severe or urgent, use local emergency care rather than waiting to complete a record. This worksheet supports a conversation; it cannot determine what a symptom means."
+      ]
+    },
+    {
+      "heading": "Prepare questions for the appointment",
+      "paragraphs": [
+        "AHRQ advises writing questions before a medical appointment, bringing medicines and explaining symptoms and health history. Prepare the questions you most need answered first. For example: ‘What might explain this?’ ‘Which details should I monitor?’ ‘What are the options and tradeoffs?’ ‘When should I follow up?’ ‘Who do I contact if this changes?’ Ask the clinician to explain any term or result you do not understand.",
+        "Bring a support person if you want help listening or remembering, and ask the clinic what consent is needed. Take notes or ask whether you may record the conversation. If a plan is unclear, repeat it back in your own words and confirm which next step is yours and which belongs to the care team. The goal is shared understanding, not replacing medical judgment."
+      ]
+    },
+    {
+      "heading": "Protect, update and share carefully",
+      "paragraphs": [
+        "Store records in a secure patient portal or another private place you control. Check who can access a shared family or caregiver account, and use the clinic’s process to correct an inaccurate chart. Share only the relevant pages with a new clinician; avoid posting personal health details in public groups. Keep a backup and make sure a trusted person knows how to locate emergency information if you want them to.",
+        "Review the one-page summary before an appointment or after a meaningful change in care. Mark old medicines inactive rather than silently deleting the history, and keep dates on each version. Your record will never contain every uncertainty or replace specialist review. Its value is that it gives the qualified people caring for you a clear starting point and gives you prepared questions to ask."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Be More Engaged in Your Healthcare",
+      "url": "https://www.ahrq.gov/questions/be-engaged/index.html",
+      "publisher": "Agency for Healthcare Research and Quality",
+      "purpose": "Supports preparing written questions, bringing a complete medicine list, knowing conditions/surgeries and discussing symptoms and history with the clinician; it is U.S. patient-communication guidance and not diagnosis or treatment advice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "get-a-full-health-checkup-including-bloodwork",
+    "get-your-hearing-and-vision-checked",
+    "sleep-8-hours-a-night-for-30-days"
+  ],
+  "experienceSlug": "understand-your-own-health-at-a-deep-level",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

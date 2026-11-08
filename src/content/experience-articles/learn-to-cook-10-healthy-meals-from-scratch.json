@@ -1,0 +1,64 @@
+{
+  "experienceSlug": "learn-to-cook-10-healthy-meals-from-scratch",
+  "slug": "learn-to-cook-10-healthy-meals-from-scratch",
+  "title": "Build ten dinners from a few reliable patterns",
+  "description": "Learn ten practical meals from scratch by repeating a few cooking patterns, planning around your kitchen, and keeping food safety in view.",
+  "intent": "Give a beginner a way to define and practice ten genuinely different home-cooked meals, rather than collecting ten recipes they cannot reproduce.",
+  "sections": [
+    {
+      "heading": "Define ‘from scratch’ for your kitchen",
+      "paragraphs": [
+        "For this goal, decide what you want to learn before choosing recipes. You might count a meal as from scratch when you prepare its main components yourself from basic ingredients, while still using practical staples such as canned beans, frozen vegetables, jarred tomatoes, or stock. That definition keeps the project achievable and makes room for different budgets, schedules, and access to equipment. If you prefer to make every sauce or bread yourself, write that down as a separate stretch goal rather than silently changing the rules halfway through.",
+        "Choose ten meals that vary in technique, not just the main protein. A useful list could include a vegetable-and-bean soup, a sheet-pan meal, a grain bowl, an egg-based dinner, a pasta with vegetables, a stir-fry, a lentil curry, a fish dish, a baked potato with toppings, and a stew. Those are examples, not a required nutrition prescription. The USDA MyPlate meal-planning sheet suggests using a variety of food groups and planning meals around what is already on hand; your own needs may differ, and individualized nutrition advice belongs with a qualified professional."
+      ]
+    },
+    {
+      "heading": "Learn reusable kitchen patterns",
+      "paragraphs": [
+        "A small set of methods makes the ten-meal target more useful. Practice chopping vegetables to similar sizes so they cook at a similar pace. Learn to soften onions without scorching them, simmer dried or canned legumes in a sauce, cook grains using the package’s ratio, and taste a dish before serving so you can adjust seasoning. For a sheet pan, notice how dense vegetables such as potatoes need a head start before tender greens or fish. For a soup, learn how browning aromatics, adding liquid, and finishing with an acidic ingredient changes the result.",
+        "Keep a note after each meal: what you changed, which pan you used, when the food was ready, and what you would do differently next time. The second attempt is often where a method becomes yours. If a recipe feels overloaded with ingredients, choose a simpler one and make one deliberate variation. For instance, keep the same bean-and-tomato base while changing the vegetable or herb. That teaches substitution without requiring you to invent an entire dish from scratch."
+      ]
+    },
+    {
+      "heading": "Plan for your actual week",
+      "paragraphs": [
+        "Pick two meals for the first week and check your pantry, refrigerator, freezer, time, and equipment before shopping. The USDA sheet recommends mapping meals, making a list from ingredients you still need, and using leftovers or freezing extra portions. Those ideas can help keep a cooking project manageable; they are not guarantees about cost or a prescribed diet. Choose recipes with overlapping ingredients, such as spinach used in eggs and pasta, or beans included in soup and grain bowls.",
+        "Begin with a recipe that fits the evening you have. A one-pot lentil soup is forgiving if you have time to simmer; a quick egg-and-vegetable meal may suit a short evening. Read the whole recipe first, gather ingredients, and prep the slowest items before heating the pan. If you cook with someone else, have one person manage hot pans while the other chops or measures, and agree on where knives and handles go. Small organization choices are often more useful than buying specialty gadgets."
+      ]
+    },
+    {
+      "heading": "Keep safe temperatures and storage simple",
+      "paragraphs": [
+        "Use a clean cutting board and separate raw meat or seafood from ready-to-eat food. When a meal includes meat, poultry, eggs, or fish, consult FoodSafety.gov’s current safe-temperature chart and use a food thermometer where it applies; don’t rely only on color or a timer. For example, the chart lists 165°F for poultry and 145°F for fish, while ground meats have their own standards. These values are U.S. federal guidance; readers elsewhere should use their local food-safety authority. Refrigerate leftovers promptly according to current local guidance and label containers so you know what you are reheating.",
+        "‘Healthy’ is not one universal ingredient list. Allergies, cultural food traditions, medical conditions, budget, and preference all matter. Use the ten meals to build confidence with techniques and ingredients you like, rather than treating a government food-group graphic as a personal treatment plan. If you have a condition that requires a specific diet, get meal guidance from a registered dietitian or clinician who knows your needs."
+      ]
+    },
+    {
+      "heading": "Make the list prove a skill",
+      "paragraphs": [
+        "Keep a ten-row checklist with a meal name, the technique it taught, and whether you can make it again without leaning on a step-by-step video. A meal counts when you can reproduce the method well enough to get a satisfying result, even if you still consult a recipe for quantities. At the end, circle the two dinners you want in your regular rotation and write the shopping list for one of them. Start with one simple dish this week, then repeat it before moving on to the next technique."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Meal Planning",
+      "url": "https://www.myplate.gov/sites/default/files/2024-06/TipSheet-24-Meal-Planning.pdf",
+      "publisher": "USDA Food and Nutrition Service, MyPlate",
+      "purpose": "Supports meal planning around available ingredients, variety across food groups, shopping lists, and reusing or freezing planned leftovers; not individualized nutrition advice."
+    },
+    {
+      "title": "Cook to a Safe Minimum Internal Temperature",
+      "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
+      "publisher": "FoodSafety.gov",
+      "purpose": "Supports U.S. safe minimum cooking temperatures and use of a food thermometer for applicable foods; readers should check local rules outside the United States."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "grow-something-you-can-eat-from-seed-to-plate",
+    "master-one-dish-so-well-you-could-teach-it",
+    "make-cheese-from-scratch"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

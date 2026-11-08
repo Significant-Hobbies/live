@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "become-a-recognised-expert-in-your-field",
+  "slug": "become-a-recognised-expert-in-your-field",
+  "title": "Build Expertise People Can Verify in Your Field",
+  "description": "Become more credible in a chosen field through a narrow practice question, expert feedback, documented work, and claims that match the evidence.",
+  "intent": "Reframes recognition as the result of demonstrable expertise, asking the reader to build visible evidence rather than chase a title or guarantee.",
+  "sections": [
+    {
+      "heading": "Choose a problem small enough to study deeply",
+      "paragraphs": [
+        "“My field” may be software, nursing, ceramics, public policy, or a craft. Choose a specific problem people in that field care about: reducing a recurring failure, improving a technique, or explaining a confusing process. The narrower question gives you a way to notice what is already known, what remains uncertain, and what evidence would count as real progress.",
+        "Write a one-sentence question and identify who uses the answer. For instance, instead of “become an expert in woodworking,” focus on how one type of joint performs in a defined project. This is not a claim that the example is the best research topic; it shows how a broad identity goal becomes testable work."
+      ]
+    },
+    {
+      "heading": "Study from people who know the work",
+      "paragraphs": [
+        "Find the recognized standards, books, research, practitioners, or tools that experts in the field actually use. Keep a source log with the claim, the evidence behind it, and what you still cannot conclude. Separate what you observed from what you inferred. A confident explanation that rests on weak evidence can damage trust more quickly than admitting a question is open.",
+        "Ask an experienced practitioner for feedback on a real piece of work. Give them one defined question: is the measurement sound, does the method meet the standard, or what failure mode have I missed? A useful mentor can critique the work, not just praise the ambition. Respect their time by sending a short brief and acting on the feedback before asking again."
+      ]
+    },
+    {
+      "heading": "Practice a skill with a correction loop",
+      "paragraphs": [
+        "Choose a recurring task that exercises the gap you found. Set a specific target, do the task, compare the result with a relevant standard, and write down one adjustment. Then repeat under a slightly different condition. In a writing field, this could mean revising one argument after editorial feedback; in a technical field, it might mean reproducing a result and checking its edge cases.",
+        "A foundational study by Ericsson, Krampe, and Tesch-Römer examined deliberate practice as effort directed toward improving performance. It does not guarantee that practice alone creates recognition, nor that one fixed schedule works for everyone. The practical lesson here is modest: make practice purposeful enough that it yields a correction, not just repetition."
+      ]
+    },
+    {
+      "heading": "Create a trail of work others can inspect",
+      "paragraphs": [
+        "Keep finished projects, notes about methods, and clear before-and-after examples in a portfolio or repository appropriate to your field. Explain the question, approach, outcome, and limits. Ask permission before publishing collaborators’ work, client details, or sensitive data. A careful case study can show judgment more convincingly than a list of credentials without evidence.",
+        "Share what you can support. Present a small finding at a professional group, contribute to a respected publication, teach a narrow skill, or help improve a community resource. The right venue depends on your field. Do not inflate a title or imply that one project makes you an authority across the whole discipline."
+      ]
+    },
+    {
+      "heading": "Let recognition follow the evidence",
+      "paragraphs": [
+        "People may begin to rely on your work when it is useful, accurate, and consistent. Recognition is partly outside your control, so set goals you can measure: a reviewed project, an invited talk, a demonstrated skill, a contribution accepted by a credible venue, or feedback from practitioners. Revisit the original question when the evidence suggests you should change direction.",
+        "Your next step is to pick a narrow problem and ask one knowledgeable person what a good piece of evidence would look like. Do the work, document your method, and invite criticism before advertising your conclusion. Expert reputation grows more honestly when you show how you know, where the answer stops, and what you still need to learn."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Role of Deliberate Practice in the Acquisition of Expert Performance",
+      "url": "https://gwern.net/doc/psychology/writing/1993-ericsson.pdf",
+      "publisher": "Psychological Review",
+      "purpose": "Original research and theoretical account examines purposeful practice in expert performance; article avoids treating practice as a guaranteed path to recognition."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "learn-a-second-discipline-deeply",
+    "teach-a-skill-you-re-good-at-to-a-group-of-strangers"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

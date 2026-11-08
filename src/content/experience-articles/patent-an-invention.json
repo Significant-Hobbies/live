@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "patent-an-invention",
+  "slug": "patent-an-invention",
+  "title": "Write down the invention before you discuss filing",
+  "description": "Prepare for a patent conversation by recording how your invention works, what is new about it and where it has been disclosed.",
+  "intent": "Help an inventor prepare a grounded first patent inquiry by documenting the mechanism, prior art questions, disclosure history and jurisdiction.",
+  "relatedExperienceSlugs": [
+    "design-and-3d-print-a-small-functional-bracket",
+    "make-a-low-voltage-accessibility-switch-with-a-mentor",
+    "start-and-grow-a-business"
+  ],
+  "sections": [
+    {
+      "heading": "Describe the problem and the mechanism",
+      "paragraphs": [
+        "Write a plain-language description of the problem and what your invention does differently. Sketch the parts, label how they connect, and describe what happens when someone uses it. Include alternative versions you have considered. A patent conversation is more useful when you can explain the actual mechanism instead of relying on a catchy product name.",
+        "The U.S. Patent and Trademark Office describes utility patents as covering new and useful processes, machines, articles of manufacture, compositions of matter, or improvements. It also explains that patent examination considers whether claimed subject matter is new, useful, and non-obvious. Those are U.S. legal concepts; requirements and process differ by jurisdiction, and the USPTO page does not decide whether your idea qualifies."
+      ]
+    },
+    {
+      "heading": "Keep a disclosure timeline",
+      "paragraphs": [
+        "Make a dated list of who has seen or heard about the invention, where you showed it, and what was shared. Include demonstrations, online posts, sales conversations, conference submissions, and written proposals. Preserve the relevant emails, versions, and images. A timeline lets a qualified patent professional ask useful questions; it is not itself a legal conclusion about filing deadlines or rights.",
+        "Do not casually publish technical details while you are deciding what to do. If you are working with an employer, university, investor, collaborator, or customer, review the agreements that may affect ownership and confidentiality with qualified counsel. Avoid sending confidential material to a stranger who has not agreed how it will be handled."
+      ]
+    },
+    {
+      "heading": "Look for related inventions without assuming your idea is clear",
+      "paragraphs": [
+        "Search patent databases and technical literature using several descriptions of the function, not only your proposed product name. Record close matches and what they do. The USPTO explains that its examiners search U.S. and foreign patent documents and available literature during examination. A search you perform yourself can help prepare questions, but it does not establish novelty or predict a patent decision.",
+        "If you find something similar, compare mechanisms and claims carefully with a patent professional. Do not assume a small visual change makes the invention legally distinct, and do not assume that a search with no obvious result means there is no prior art."
+      ]
+    },
+    {
+      "heading": "Choose a jurisdiction and get qualified advice",
+      "paragraphs": [
+        "Patents are territorial. Decide where you might need protection and why, then ask a registered patent attorney or agent in the relevant jurisdiction to explain options, costs, timing, and what information they need. The USPTO says the patent process involves complex laws and recommends using a registered patent attorney or agent to prepare an application. This article cannot determine what you should file or how a disclosure affects your rights.",
+        "Ask whether your invention belongs to you, your employer, an institution, or several collaborators. Get that answer before paying for a filing or promising ownership to someone else. If you have not built the invention yet, ask whether a working prototype is necessary for your decision; do not assume a drawing alone resolves technical questions."
+      ]
+    },
+    {
+      "heading": "Prepare a concise first meeting",
+      "paragraphs": [
+        "Bring a one-page summary, labeled diagrams, disclosure timeline, prior-art list, ownership documents, and questions. Ask what is included in the consultation, how confidentiality is handled, and what additional professional roles may be needed. Keep copies of what you share and note follow-up tasks.",
+        "Your next action is to write the mechanism and disclosure timeline before contacting a patent professional. That preparation can make the first conversation more focused while leaving the legal assessment to someone qualified in the jurisdiction that matters."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Applying for Patents",
+      "url": "https://www.uspto.gov/patents/basics/apply",
+      "publisher": "U.S. Patent and Trademark Office",
+      "purpose": "Opened official U.S. patent application guidance on patentable subject matter, examination, prior-art search and the recommendation to use registered patent counsel."
+    },
+    {
+      "title": "Filing a patent application on your own",
+      "url": "https://www.uspto.gov/patents/basics/using-legal-services/pro-se-assistance-program",
+      "publisher": "U.S. Patent and Trademark Office",
+      "purpose": "Opened official USPTO source for complexity of patent process and recommendation of a registered patent attorney or agent."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

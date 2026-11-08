@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "take-an-adult-beginner-swimming-lesson",
+  "slug": "take-an-adult-beginner-swimming-lesson",
+  "title": "How do you choose an adult beginner swimming lesson?",
+  "description": "Choose an adult beginner swim lesson by sharing your experience honestly, checking instructor qualifications, and progressing at a supervised, comfortable pace.",
+  "intent": "How can I begin swimming as an adult without feeling pressured to perform? This guide helps you choose an appropriate class, describe your comfort level and focus on water competence first.",
+  "sections": [
+    {
+      "heading": "Find a supervised adult class",
+      "paragraphs": [
+        "Look for a pool or program that explicitly offers adult beginner instruction and names its safety arrangements. Ask who teaches the class, what training the instructor has, how many learners are in the group and what happens if someone needs extra support. The American Red Cross describes adult lessons as progressing at the learner's own pace under a Water Safety Instructor and separates basic water competence from later stroke development. Local classes differ, so use that as a standard to ask about, not a guarantee about every provider.",
+        "Before booking, tell the organizer whether you can put your face in the water, float with support, or are new to the pool. Mention any access needs, sensory concerns, mobility limits or discomfort with group changing rooms. You do not need to share a personal history in public; ask to speak privately with the instructor or coordinator if a detail affects safety."
+      ]
+    },
+    {
+      "heading": "Know what the first lesson may cover",
+      "paragraphs": [
+        "A beginner lesson may start with pool orientation, safe entry and exit, breathing, getting comfortable in shallow water and using support. The goal is not to swim a length on the first day. Red Cross adult lessons are organized into levels that begin with basic skills and water safety before moving toward strokes and fitness. A good instructor will assess where you are and adjust the next task instead of pushing you into deep water to prove confidence.",
+        "Arrive early enough to find the changing area and ask where to wait. Bring swimwear, a towel and any required goggles or cap, but check the facility's rules first. Follow the lifeguard's and instructor's directions, stay in the assigned area and do not practice alone outside the lesson. If the class is in a public pool, remember that other swimmers may be present and keep clear of their lanes."
+      ]
+    },
+    {
+      "heading": "Move at a pace that lets you stay in control",
+      "paragraphs": [
+        "Tell the instructor when you want a demonstration, a pause or a shallower exercise. A useful lesson lets you repeat one skill until it feels more familiar. If a breathing exercise becomes uncomfortable or you feel panic rising, return to a stable position and tell the instructor; do not force yourself to continue underwater. A qualified coach can offer a different progression or suggest another class format.",
+        "Swimming confidence is not measured by how much water you can tolerate in one session. You can make progress by learning to enter safely, hold the pool edge, float with support or exhale gently into the water. Avoid comparing your pace with children or other adults. Ask for a clear next step that fits your current level and leave room for the body to rest between attempts."
+      ]
+    },
+    {
+      "heading": "Choose a class that fits your learning style",
+      "paragraphs": [
+        "Some learners prefer one-to-one instruction; others find a small group more comfortable because everyone is learning together. Ask whether the class is organized by ability, whether a support person can attend, and how the pool handles accessibility. If the first class does not suit, ask the coordinator about a different instructor, time or level rather than assuming you cannot learn.",
+        "Check practical details such as changing facilities, water temperature, class length, cancellation terms and whether you can observe before enrolling. Do not rely on a listing that says only “all levels” if you are not yet comfortable in water. A short conversation with the instructor can help you understand whether the session is suitable and what they expect from you."
+      ]
+    },
+    {
+      "heading": "Leave with one skill to revisit",
+      "paragraphs": [
+        "After the lesson, note what you practiced, which instruction helped and what you would like to ask next time. Keep the note simple; it is a guide for your next conversation, not a scorecard. If you have a medical concern that may affect exercise or water safety, ask a qualified healthcare professional and the program about appropriate participation before starting.",
+        "Your next action is to contact one adult beginner program and ask how it assesses starting ability, who leads the lesson and how learners request a pause or adaptation. Book only when you know the class is supervised and its first steps match your comfort level."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Swim Lessons for Adults",
+      "url": "https://www.redcross.org/take-a-class/swimming/swim-lessons/adult-swim-lessons",
+      "publisher": "American Red Cross",
+      "purpose": "Supports supervised adult swim instruction, a learner-paced approach and progression from basic water competency to stroke improvement and fitness."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "try-a-supervised-water-aerobics-class",
+    "play-an-introductory-game-of-boccia",
+    "try-polybat-on-an-adapted-table"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

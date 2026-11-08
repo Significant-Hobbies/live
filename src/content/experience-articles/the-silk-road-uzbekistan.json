@@ -1,0 +1,77 @@
+{
+  "experienceSlug": "the-silk-road-uzbekistan",
+  "slug": "the-silk-road-uzbekistan",
+  "title": "Read Uzbekistan’s Silk Road cities one city at a time",
+  "description": "Plan an Uzbekistan route through Samarkand, Bukhara and Khiva by comparing the monuments, streets and living craft traditions each reveals.",
+  "intent": "How can a traveler turn the broad idea of the Silk Road into a grounded visit to three distinct historic cities in Uzbekistan?",
+  "sections": [
+    {
+      "heading": "Treat the Silk Road as a network, not one surviving street",
+      "paragraphs": [
+        "The Silk Road name can make a route sound like a single preserved road. Uzbekistan’s own tourism guide instead presents a network of historic cities and cultural centers. Samarkand, Bukhara and Khiva each offer a different way to read that history: major public ensembles, layered trade and religious sites, and a walled historic town with streets still used by residents. Build your trip around those differences rather than promising yourself that you will ‘see the Silk Road’ in one day.",
+        "Decide what you want to learn: how monumental architecture frames a city, how trade and worship share urban space, or how a historic settlement functions as a living place. That question can guide which city gets the most time and which landmarks you see slowly instead of ticking off every name on a list."
+      ]
+    },
+    {
+      "heading": "Samarkand: compare the monumental ensemble and older settlement",
+      "paragraphs": [
+        "Uzbekistan Travel identifies Registan Square, Shahi Zinda, Gur Emir, Bibi-Khanym Mosque and the ancient settlement of Afrasiab among Samarkand’s major places. They create a useful contrast within one city: a designed monumental square, a sequence of mausoleums and an older archaeological landscape. Rather than trying to photograph each façade, choose one architectural detail to follow—tile patterns, thresholds, courtyards or how a building is approached from the street.",
+        "Pair a major ensemble with a market or craft stop. The official city page places Siab Bazaar near Bibi-Khanym and also names Meros, a mulberry-bark paper workshop. Those stops add ordinary commerce and skilled making to the monuments. Check current access and opening information directly before building a day around a workshop or interior."
+      ]
+    },
+    {
+      "heading": "Bukhara: follow the relationship between square, mosque and trade",
+      "paragraphs": [
+        "Bukhara’s official visitor page describes a historic center with minarets, mosques, madrassas, citadels, mausoleums and old trade centers. Poi-Kalon is a specific anchor: the tourism authority describes an ensemble with the Kalon minaret, a mosque and madrassas. Lyabi-Hauz provides a different kind of center, organized around a pond and surrounding religious and civic buildings. Give each ensemble time to read as a group rather than treating a single minaret as the whole city.",
+        "Bukhara’s shopping domes and workshops offer a way to connect built history with present-day making. Ask before photographing artisans, and buy only what you actually want to carry. If you enter religious sites, follow posted dress, photography and visitor instructions; the city’s own guide includes local guidance for visiting religious sights."
+      ]
+    },
+    {
+      "heading": "Khiva: walk a walled city that is still inhabited",
+      "paragraphs": [
+        "The official tourism page describes Ichan-Kala as a walled city containing mosques, madrassas, minarets, cells, craft workshops and inns, and says people live and work there. That makes Khiva a distinct kind of visit: the monumental setting is also a neighborhood. Move slowly through the stone-paved streets, notice how homes, workshops and visitor sites coexist, and keep doorways clear rather than treating every lane as a stage set.",
+        "Choose a few structures to understand in detail, then leave time to sit or return to a street that caught your attention. The public tourism page does not establish current ticket combinations or opening times for each monument, so check the local official information for the dates you plan to visit. Respect residents’ privacy and ask before taking identifiable photographs."
+      ]
+    },
+    {
+      "heading": "Set a route that leaves room for the journey",
+      "paragraphs": [
+        "Three cities can make a satisfying architecture-focused trip, but each intercity leg takes time and current transport options should be checked before booking. Compare the actual train and road connections for your dates, then avoid placing a timed entry immediately after a long transfer. If you have fewer days, choose two cities and let the third become a future trip rather than compressing every stop into a rushed pass.",
+        "Bring the same observation question to each place. Where does a city gather people? Which buildings dominate the skyline, and which details appear only when you slow down? Make a small set of notes in Samarkand, Bukhara and Khiva. The differences—not a claim that the Silk Road was one uniform culture—will give the journey its meaning."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Uzbekistan tourism overview",
+      "url": "https://uzbekistan.travel/en/uzbekistan/",
+      "publisher": "National Tourism Information Centre of Uzbekistan",
+      "purpose": "Identifies Samarkand, Bukhara and Khiva as historic cities with preserved architectural monuments."
+    },
+    {
+      "title": "Samarkand",
+      "url": "https://uzbekistan.travel/en/i/samarkand/",
+      "publisher": "National Tourism Information Centre of Uzbekistan",
+      "purpose": "Supports Samarkand landmarks, Siab Bazaar and the Meros mulberry-bark paper workshop."
+    },
+    {
+      "title": "Bukhara",
+      "url": "https://uzbekistan.travel/en/i/bukhara/",
+      "publisher": "National Tourism Information Centre of Uzbekistan",
+      "purpose": "Supports Bukhara's named architectural, religious, trade and craft sites."
+    },
+    {
+      "title": "Ichan-Kala",
+      "url": "https://uzbekistan.travel/en/o/ichan-kala/",
+      "publisher": "National Tourism Information Centre of Uzbekistan",
+      "purpose": "Supports Khiva's walled-city composition and the fact that people live and work in the historic area."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "visit-the-temples-of-angkor-wat-cambodia",
+    "the-alhambra-granada-spain",
+    "visit-the-taj-mahal-at-dawn"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

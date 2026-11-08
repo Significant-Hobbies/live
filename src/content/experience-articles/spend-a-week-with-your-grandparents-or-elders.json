@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "spend-a-week-with-your-grandparents-or-elders",
+  "slug": "spend-a-week-with-your-grandparents-or-elders",
+  "title": "Plan a comfortable week around an elder’s everyday life",
+  "description": "Build a week with grandparents or elders around their preferred routines, manageable outings, unhurried meals and time together that can change with energy.",
+  "intent": "How can I make a week with grandparents or elders feel comfortable and shared? This focuses on ordinary routines and access rather than treating the visit as an interview project.",
+  "sections": [
+    {
+      "heading": "Ask what a good week looks like to them",
+      "paragraphs": [
+        "Start by asking what they would enjoy and what they would rather skip. One person may want a daily walk and a meal with friends; another may prefer a quiet visit at home with one planned outing. Do not build the week around the most photogenic activity or assume everyone wants a family-history conversation. The person you are visiting should shape the pace and the choices.",
+        "Ask about practical preferences before arrival: usual meal times, stairs, transportation, hearing or mobility needs, medication routines that you should not disrupt, and what kind of help they welcome. A question such as “Would you rather go out in the morning or stay close to home?” offers a choice without asking them to defend a limitation."
+      ]
+    },
+    {
+      "heading": "Use one anchor a day, not a packed itinerary",
+      "paragraphs": [
+        "Choose one shared anchor for each day: breakfast together, a visit to a familiar garden, a favorite film, helping prepare a dish or seeing a relative. Leave the rest of the day open. A week-long visit can make ordinary routines more meaningful than a chain of excursions because you have time to repeat something and see what feels comfortable.",
+        "Put the outing near the part of the day when your grandparent has more energy, if they know that pattern. Plan a short route and a comfortable place to sit. Check toilets, shade, parking or transit before leaving. Keep the return trip simple, and agree on a backup at home if weather or energy changes. Flexibility is part of the plan, not a failed itinerary."
+      ]
+    },
+    {
+      "heading": "Make shared work feel reciprocal",
+      "paragraphs": [
+        "Cooking, sorting photographs or watering plants can create natural time together, but ask before taking over. An elder may enjoy showing you a recipe while still wanting to do the chopping their own way. Offer two concrete forms of help: “Would it help if I carried the groceries, or would you prefer I set the table?” That makes assistance available without turning the visit into a management project.",
+        "Bring a small practical contribution that fits the person’s routines: ingredients for a meal they already like, a book to read together or a print of a photo they requested. Do not bring bulky gifts or reorganize their home without asking. If a task requires permission from another household member, check first."
+      ]
+    },
+    {
+      "heading": "Share stories only when they want to",
+      "paragraphs": [
+        "Conversation can range from the news and neighborhood to stories about family. Let it move naturally rather than arriving with a list of questions and a recorder. The Library of Congress family-history interview page says to ask an older relative before recording and notes that a recording may later be transcribed or shared; it does not provide a detailed interview method. Recording is optional, not a requirement of a visit. Ask before writing down or recording anything, and accept a no without trying to persuade.",
+        "Some memories are incomplete or different from another relative’s account. Listen without turning the week into a fact-checking session. If a story opens a subject the person does not want to discuss, shift gently. A week together can be valuable even if no new family history is uncovered."
+      ]
+    },
+    {
+      "heading": "Leave room for rest and a return plan",
+      "paragraphs": [
+        "Check in once or twice each day: is the pace still comfortable, and would they like to change tomorrow’s plan? A quiet hour alone may be welcome after a social outing. If you are staying in their home, agree on sleeping arrangements, household routines and how you will share common spaces. Small expectations prevent the visitor’s needs from taking over the host’s home.",
+        "Before you leave, ask which part of the week they would repeat and what they would change. Write down practical details they want you to remember, but do not record private information without permission. Your next step is to ask what one ordinary routine they would enjoy sharing next week, then build a light plan around that answer."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Oral Histories - Family History for Kids",
+      "url": "https://guides.loc.gov/family-history-for-kids/interviews",
+      "publisher": "Library of Congress",
+      "purpose": "The short page advises asking an older relative before recording and notes that recordings may later be transcribed and shared; the article states that recording is optional and does not use the page as a detailed interview method."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "have-one-real-conversation-with-a-grandparent-before-it-is-too-late",
+    "host-a-family-reunion",
+    "spend-a-week-with-each-of-your-parents-while-they-are-well-enough-to-travel"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "read-50-books-in-a-year",
+  "slug": "read-50-books-in-a-year",
+  "title": "Choose a fifty-book year that still leaves room to change your mind",
+  "description": "Shape a 50-book reading year around curiosity, variety, and honest reassessment, so the number guides your choices without making reading feel like a race.",
+  "intent": "How do I select and reassess a fifty-book reading challenge without turning the year into speed-reading or pressure to finish books I dislike?",
+  "sections": [
+    {
+      "heading": "Decide what the number is for",
+      "paragraphs": [
+        "A fifty-book year can be a way to read more widely, revisit a neglected shelf, or give a loose shape to a reading habit. It does not measure how thoughtful a reader you are. Before building a list, write down the reason you want the challenge. If the honest answer is “I want to make room for books again,” then make room—not a penalty system for months when work, illness, caregiving, or attention changes.",
+        "Decide what counts for your own record. You might count books you finish, include audiobooks, or track graphic novels and short story collections as books. The point is consistency in your personal log, not passing a universal test. Choose a simple tracking method such as a notebook or spreadsheet with title, author, format, date started, date finished, and one short note about why you chose it."
+      ]
+    },
+    {
+      "heading": "Build a list with lanes, not fifty obligations",
+      "paragraphs": [
+        "Instead of locking in fifty titles, make a shelf of candidates across a few lanes: fiction, essays or history, science, poetry or plays, books by authors new to you, and something connected to a current question. Add a small number of planned rereads if they matter. A reading list should contain more choices than you expect to need, so that it can respond to mood and availability.",
+        "The Library of Congress National Library Service’s summer-reading lists group recommendations by age range and fiction or nonfiction, a useful example of organizing titles by reader and type rather than by a single ranking. That program serves eligible patrons through its own materials; you can borrow its structure for your own list without assuming that every title or format is available to everyone. Your public library catalogue can suggest local collections and accessible editions."
+      ]
+    },
+    {
+      "heading": "Choose the next book by contrast",
+      "paragraphs": [
+        "After a dense history, try a slim novel or a poetry collection. After a familiar genre, select a book from a different country, era, or form. Contrast can renew interest without requiring you to abandon what you enjoy. Use a friend’s recommendation as a starting point, but read a sample or browse the opening pages before committing. A title that sounds worthy but leaves you cold does not have to occupy the next several weeks.",
+        "Make a short “next three” list rather than sequencing the whole year. Include one book you are excited to start, one that stretches your habits, and one easy backup. If a library hold arrives at the wrong time, move it without guilt. A flexible queue reduces the temptation to read only books that are short enough to increase the count."
+      ]
+    },
+    {
+      "heading": "Give yourself permission to stop",
+      "paragraphs": [
+        "Set a stopping rule before you begin: perhaps give a book a few chapters, or stop sooner if it feels like a poor fit. Record “paused” or “not for me” if you want to remember why; do not count a book you did not finish unless your own rule explicitly counts reading begun. There is no moral value in finishing a book that no longer serves your curiosity. The time may be better spent on another title or on rereading a page that stayed with you.",
+        "If you find yourself skimming only to reach the end, pause and ask whether the challenge still fits. You can lower the target, extend the period, or replace the number with a smaller intention such as reading from a wider range of voices. A target is useful only while it helps you choose what to read."
+      ]
+    },
+    {
+      "heading": "Review the list midway through the year",
+      "paragraphs": [
+        "At a natural midpoint, glance at the log and note which books surprised you, which formats worked, and what you kept postponing. Look for patterns: perhaps evenings are better for short chapters, audio works on a commute, or a particular genre has taken over the list. Adjust the remaining candidates rather than trying to “catch up” by rushing through books.",
+        "At year’s end, save a few notes about the reading rather than only the total. Name one book you would recommend to a particular person, one you may return to, and one question that led you to another title. If you reach fifty, the list was a record of one reading year. If you do not, you still made choices and spent time with books. The next step is to create three categories for your candidate shelf and add a few titles you genuinely want to open."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "May 2026 Collections Connections: 2026 NLS Summer Reading Program",
+      "url": "https://www.loc.gov/nls/new-materials/collections-connections/may-2026-collections-connections/",
+      "publisher": "Library of Congress, National Library Service for the Blind and Print Disabled",
+      "purpose": "Supports the example of organizing a reading list by age range and fiction/nonfiction; the NLS program has its own eligibility and material availability limits and is not a universal reading prescription."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "read-52-books-in-a-year",
+    "read-the-100-books-you-always-meant-to-read",
+    "build-a-personal-reading-family-tree"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

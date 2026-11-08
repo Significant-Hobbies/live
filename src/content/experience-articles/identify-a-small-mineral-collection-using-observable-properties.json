@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "identify-a-small-mineral-collection-using-observable-properties",
+  "slug": "identify-a-small-mineral-collection-using-observable-properties",
+  "title": "Build a mineral identification case from observations",
+  "description": "Work through a few safe teaching specimens by recording luster, streak, and other permitted properties before deciding which names fit.",
+  "intent": "How do I identify specimens without relying on color or risky home tests? This adds a cautious, evidence-first record method for a small teaching set.",
+  "sections": [
+    {
+      "heading": "Choose safe, known teaching specimens",
+      "paragraphs": [
+        "Use a labeled educational kit or specimens supplied by a museum, teacher, or geology group. Do not test unknown dusty, fibrous, or crumbly material. Some minerals can pose hazards; a household identification exercise is not a reason to scratch, grind, taste, heat, or apply acid to a mystery sample. Ask a knowledgeable instructor before using any destructive test.",
+        "Set each piece on a numbered card and keep it in a tray so labels do not become separated. Mineralogy 4 Kids describes minerals through physical properties such as color, crystal form, cleavage, luster, and streak. The goal is to connect observations, not guess a name from one striking feature."
+      ]
+    },
+    {
+      "heading": "Describe appearance before consulting a key",
+      "paragraphs": [
+        "Use consistent light and record the specimen’s surface appearance, visible crystal shape, and any flat break planes. Separate what you see from what you think it means: a metallic-looking surface is an observation; a mineral name is a hypothesis. Photograph each specimen beside its number so you can revisit the comparison later.",
+        "Color can vary, and a weathered surface may not resemble a fresh face. Do not chip a specimen to expose one unless an instructor approves the method and sample. If you cannot see a property clearly, record uncertain instead of inventing a precise description."
+      ]
+    },
+    {
+      "heading": "Use only permitted property tests",
+      "paragraphs": [
+        "A teaching kit may provide a streak plate or hardness reference, but use only the specific materials and procedure supplied with that kit. Ask the instructor which specimens may be tested and how to avoid damaging them. Work over a tray, keep pieces separate, and stop if a mineral sheds dust or behaves unexpectedly.",
+        "Write down the result rather than jumping to the answer. A streak is the color of a mineral’s powder on an appropriate unglazed surface; a scratch comparison is not a license to scrape unknown items across household objects. Check the kit’s method and safety notes first. The purpose is a repeatable observation, not an impressive mark."
+      ]
+    },
+    {
+      "heading": "Compare a combination of clues",
+      "paragraphs": [
+        "Use an approved key to narrow candidates by more than one property. Ask which features support a possible name and which observations conflict with it. A match on color alone is weak; a useful record explains a set of characteristics and names the uncertainty that remains. If the key offers several possibilities, keep them rather than forcing one answer.",
+        "For a pair exercise, cover the answer label and let each person identify the specimen from the notes. Compare reasoning before revealing the label. If the answer differs, inspect which property was ambiguous or which part of the key you interpreted differently. That is a valuable result even when no one lands on the supplied name."
+      ]
+    },
+    {
+      "heading": "Return the collection with its evidence",
+      "paragraphs": [
+        "Make a small card for each specimen with its number, observations, permitted tests, tentative identification, and source used. Mark a kit label as a reference answer rather than proof that every sample of that mineral will look identical. Return test tools and specimens to their assigned containers so the collection stays usable.",
+        "Your next action is to select three known, safe pieces and complete one observation card for each before opening the answer key. Keep tests within the kit’s instructions and ask a geology educator about any specimen that is not clearly identified."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Mineral Properties",
+      "url": "https://min4kids.org/properties",
+      "publisher": "Mineralogical Society of America",
+      "purpose": "Supports the mineral definition and property categories used to structure observations; it does not approve testing unknown or hazardous specimens."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "grow-salt-crystals-and-keep-a-measurement-record",
+    "build-a-model-of-the-moon-s-phases",
+    "plot-a-week-of-public-earthquake-records"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

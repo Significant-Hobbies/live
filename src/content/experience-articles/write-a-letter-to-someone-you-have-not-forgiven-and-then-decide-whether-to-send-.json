@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "write-a-letter-to-someone-you-have-not-forgiven-and-then-decide-whether-to-send-",
+  "slug": "write-a-letter-to-someone-you-have-not-forgiven-and-then-decide-whether-to-send-",
+  "title": "Draft the Difficult Letter Before You Decide What It Is For",
+  "description": "Use an unsent letter to name a hurt clearly, then weigh privacy, safety, and your actual purpose before choosing whether to send anything.",
+  "intent": "How can I write about a hurt without confusing private reflection with forgiveness, reconciliation, or a message the other person must receive?",
+  "sections": [
+    {
+      "heading": "Set a boundary around the exercise",
+      "paragraphs": [
+        "Choose a contained time and a private place. This is a writing exercise, not a requirement to forgive, contact someone, or revisit a relationship that feels unsafe. The American Psychological Association distinguishes forgiveness from reconciliation and from excusing what happened. That distinction matters here: deciding what to do with a letter is separate from deciding what you feel about the person.",
+        "Before writing, set a stop point. You might write for twenty minutes, then take a walk or call a trusted person. If the event is overwhelming, you can stop, use a safer prompt, or seek support from a qualified counselor. Nothing about finishing the page proves that you are ready for contact."
+      ]
+    },
+    {
+      "heading": "Write the event in concrete terms",
+      "paragraphs": [
+        "Begin with “What happened, as I remember it?” Separate observable details from guesses about motive. “You canceled the visit after I had bought the train ticket” is clearer than “You never cared about me.” Then name the effect: lost money, embarrassment, fear, a damaged expectation, or a changed relationship. A precise account helps you see whether the main injury was the act itself, its repetition, or the response afterward.",
+        "Use “I” statements for your experience without diluting the facts. You can say both “I felt humiliated” and “you shared my private news without permission.” The letter need not sound gracious. It does need to be legible to you when you reread it later."
+      ]
+    },
+    {
+      "heading": "Name what remains unresolved",
+      "paragraphs": [
+        "Write what you wish the person understood, what you needed at the time, and what you would ask for now. Some requests are possible: an acknowledgment, correction, or change in future behavior. Others cannot be delivered by a letter, such as undoing a loss or making someone become the person you hoped they would be. Naming that difference can make the decision about contact more realistic.",
+        "Add a paragraph you do not send: what boundary you want to keep regardless of the other person's response. A boundary can be practical—no private conversations, communicate only about shared responsibilities, or do not discuss this with relatives. This is not a threat; it is a description of what you will do to protect your own limits."
+      ]
+    },
+    {
+      "heading": "Decide whether sending serves a purpose",
+      "paragraphs": [
+        "Put the draft away overnight. The next day, underline any sentence that tells the recipient what you want them to do. If there is no clear request, perhaps the letter's purpose was to make your own account visible. If there is a request, ask whether a message is the safest and most useful way to make it. Consider whether the recipient might forward it, respond defensively, or not respond at all.",
+        "If you choose to send a version, remove private details about third parties and keep the request specific. Avoid sending while angry, intoxicated, or under pressure from someone else. For a volatile or abusive situation, do not use a letter to invite renewed access; get support and make a safety plan instead."
+      ]
+    },
+    {
+      "heading": "Keep the choice yours",
+      "paragraphs": [
+        "You can keep, revise, destroy, or archive the unsent letter. If you send something, you can send a shorter version and retain the full draft privately. Sending does not guarantee apology or repair, and not sending does not mean the hurt was unimportant. The useful outcome may simply be a clearer record of what happened and the boundary you want to live by.",
+        "For a first attempt, write three sentences: what happened, what it changed for you, and what you need next. Leave the send decision for another day."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Forgiveness",
+      "url": "https://www.apa.org/topics/forgiveness",
+      "publisher": "American Psychological Association",
+      "purpose": "Supports the distinction between forgiveness and reconciliation; it does not prescribe this letter exercise or promise an emotional outcome."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "write-a-forgiveness-letter-to-yourself",
+    "write-a-letter-to-someone-who-changed-your-life-and-send-it",
+    "ask-forgiveness-from-someone-you-hurt"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

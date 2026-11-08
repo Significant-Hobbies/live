@@ -1,0 +1,71 @@
+{
+  "experienceSlug": "community-f748e747-91ff-52ba-b71c-9b6edc70cf53",
+  "slug": "experience-0-gravity",
+  "title": "Choose a weightless moment by how it is created",
+  "description": "Compare a short parabolic-flight float with orbital microgravity and other research platforms, and verify provider availability and medical rules before booking.",
+  "intent": "What does a zero-gravity experience actually feel like, and how does an aircraft’s brief free-fall differ from living or working in orbit?",
+  "sections": [
+    {
+      "heading": "Know what “zero gravity” means here",
+      "paragraphs": [
+        "A passenger weightless flight does not remove Earth’s gravity. In a parabolic aircraft maneuver, the plane and people inside follow a controlled path so they fall together briefly. NASA calls this reduced-gravity or microgravity research. The sensation is real, but it is short and interrupted by the aircraft’s pull-up and pull-out phases. That is different from the sustained free-fall environment of an orbiting space station.",
+        "NASA describes each reduced-gravity phase on a parabolic flight as about 20 seconds, with typical missions including 15 to 30 parabolas. That gives a useful sense of the rhythm: a brief float, a return to the floor, then another maneuver. The actual number and duration depend on the mission and provider, so confirm the current experience details rather than treating the research profile as a passenger itinerary."
+      ]
+    },
+    {
+      "heading": "Compare the formats by the question they answer",
+      "paragraphs": [
+        "A commercial parabolic flight is the closest public-facing route to repeated short weightless periods, if a provider is operating and accepting passengers. A drop tower creates only a few seconds of microgravity for research payloads; it is not generally a passenger activity. A suborbital flight can provide a longer short interval, while an orbital mission involves a different vehicle, training and access pathway. NASA’s research overview describes these platforms and their very different durations.",
+        "If your interest is sensation, focus on whether you want to float and move in a supervised cabin. If your interest is science, ask what experiments or demonstrations the flight includes. If you want the long-duration environment of space, a short aircraft experience is an analogy, not a substitute. The distinctions keep a dramatic marketing phrase from setting the wrong expectation."
+      ]
+    },
+    {
+      "heading": "Check operations before building a trip around a booking",
+      "paragraphs": [
+        "Confirm the provider’s current schedule, departure airport, age rules, cancellation terms, safety briefing, required clothing and medical screening before paying. As of 8 November 2026, Zero-G’s flight-schedule page said its flights were temporarily paused for maintenance. That is time-sensitive; recheck the provider before making travel plans and do not assume the service has resumed. Other providers have separate schedules and rules.",
+        "Ask what happens if the flight is delayed or canceled, whether passengers can transfer to another date, and what accommodation or transport costs are your responsibility. The flight may operate from a city different from your home, and weather or aircraft maintenance can change a schedule. Leave a buffer day rather than connecting directly to an inflexible international departure."
+      ]
+    },
+    {
+      "heading": "Ask about the physical demands",
+      "paragraphs": [
+        "Parabolic flights involve repeated transitions between higher and reduced gravity, movement in a shared aircraft cabin and potential motion discomfort. Ask the operator for its current safety and health information, including any screening requirements, and discuss personal medical questions with a qualified clinician who knows your situation. Do not use a general article to decide whether the flight is medically suitable for you.",
+        "Make sure you understand the cabin rules, instructor or crew supervision, participant-to-staff ratio and what equipment or objects are allowed. Do not bring loose objects, liquids or cameras into a maneuver unless the provider explicitly permits them. The priority is following the crew’s briefing, not attempting a stunt for a video."
+      ]
+    },
+    {
+      "heading": "Plan a useful before-and-after",
+      "paragraphs": [
+        "Before the experience, choose one question to notice: how does your body orient when the floor is no longer a stable reference, how do you coordinate with another person, or how quickly does the sensation change when the aircraft pulls out? A simple note helps you remember the details after the excitement fades. If you have never floated before, leave room for surprise and do not expect every movement to feel graceful.",
+        "Afterward, compare your experience with NASA’s description of research parabolas and the much longer time available in orbit. The best next step is to verify that a provider is currently operating, read its safety rules carefully and book only if the short repeated intervals match the experience you actually want."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Parabolic Flight",
+      "url": "https://www.nasa.gov/mission/parabolic-flight/",
+      "publisher": "National Aeronautics and Space Administration",
+      "purpose": "Supports how parabolic aircraft produce temporary reduced gravity and the approximate duration and number of research parabolas."
+    },
+    {
+      "title": "How (and why) do NASA researchers simulate microgravity on Earth?",
+      "url": "https://science.nasa.gov/biological-physical/stories/how-and-why-do-nasa-researchers-simulate-microgravity-on-earth/",
+      "publisher": "NASA Science",
+      "purpose": "Supports comparison among drop towers, parabolic flights, suborbital flights and orbital research as different-duration microgravity platforms."
+    },
+    {
+      "title": "Zero-G Flight Schedule and Booking Information",
+      "url": "https://www.gozerog.com/flight-schedule",
+      "publisher": "Zero Gravity Corporation",
+      "purpose": "At check date 2026-11-08 the provider page stated flights were temporarily paused; article includes this time-bounded availability caveat and directs readers to recheck."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "community-f29de36c-a221-59d0-8947-1efec2a2887d",
+    "watch-a-rocket-launch-from-an-authorized-public-gallery",
+    "community-445e35e6-060a-5b06-83f0-8104abb00796"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

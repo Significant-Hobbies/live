@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "read-52-books-in-a-year",
+  "slug": "read-52-books-in-a-year",
+  "title": "Build a 52-book year that still feels like reading",
+  "description": "Plan a varied 52-book year around your real reading time, a flexible mix of formats and genres, and a reset rule for books that are not working.",
+  "intent": "Help the reader build a varied 52-book plan using a realistic weekly rhythm, a flexible selection system and a deliberate way to recover from missed weeks.",
+  "relatedExperienceSlugs": [
+    "read-50-books-in-a-year",
+    "build-a-personal-reading-family-tree",
+    "host-a-shared-silent-reading-hour"
+  ],
+  "sections": [
+    {
+      "heading": "Check the reading pace against your real week",
+      "paragraphs": [
+        "A 52-book year averages one finished book per week, but books differ in length and your reading time changes. Before declaring a daily page quota, look at the last month: when did you read, which formats fit, and how often did work or family interrupt? Use that evidence to choose a reading window that can survive an ordinary week.",
+        "Estimate a range instead of pretending every book takes the same time. A slim essay collection may fit into a few evenings, while a dense novel may need longer. If your baseline is far below one book a week, begin with a smaller target or define the 52 as an aspirational ceiling rather than a test of worth."
+      ]
+    },
+    {
+      "heading": "Create a varied shelf, not a rigid queue",
+      "paragraphs": [
+        "Choose a few broad lanes that make you curious: fiction, history, science, memoir, short stories, poetry, graphic work, or books from a place or language you know little about. Keep several options available in each lane rather than locking a twelve-month sequence before you know what you want to read.",
+        "The 52 Book Club’s annual challenge uses varied categories and describes the challenge as flexible: “your challenge, your rules.” You can borrow the idea of variety without following a prompt list. Make your own balance—for example, one new-to-you genre after every two comfortable picks, or one short book after a difficult one."
+      ]
+    },
+    {
+      "heading": "Build a selection method that keeps choices easy",
+      "paragraphs": [
+        "Keep a short “next up” list with a reason beside each title: recommended by a friend, fits a topic you are curious about, or is available from the library now. Ask a librarian for a few options when the list stops being useful. Borrowing available books avoids buying a large stack that turns reading into an obligation. Include ebooks and audiobooks if they fit your daily routines; listening counts if that is part of your goal.",
+        "Plan the next one or two books, not the whole year. A long list is a pantry, not a contract. When you finish something, pick a title based on your current energy. That small choice keeps momentum without letting the target dictate every reading experience."
+      ]
+    },
+    {
+      "heading": "Decide what happens when a book stalls",
+      "paragraphs": [
+        "Set a personal rule before you get stuck: after a fair trial, you can pause, skim, or stop a book that no longer serves your curiosity. Write down why you stopped, without judging yourself. Maybe the style is not right, you chose it at the wrong time, or another book has become more compelling. Returning it and choosing again is a legitimate adjustment.",
+        "If one missed week creates pressure, do not double the next week’s quota automatically. Look at the year’s remaining time and revise the target or pace. The point of planning is to notice drift early, not punish yourself with a reading debt."
+      ]
+    },
+    {
+      "heading": "Review the year with more than a number",
+      "paragraphs": [
+        "Track title, author, format, start and finish dates, and a sentence about what stayed with you. A simple spreadsheet or notebook is enough. At the end of each month, check whether your mix is varied and whether the reading window is realistic. If you keep postponing longer books, decide whether to change the target, make space for them, or leave the challenge at 52 with no shame.",
+        "Your first step is to choose four titles for the next month: one guaranteed-interest pick, one different genre, one short option, and one recommendation. Set aside a repeatable reading time and review the plan after two weeks. Build a year from flexible months, not from a stack you feel obliged to finish."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "The 52 Book Club: 52 Books in 52 Weeks",
+      "url": "https://www.the52book.club/",
+      "publisher": "The 52 Book Club",
+      "purpose": "Opened organizer’s annual challenge page for 52 books/52 weeks, varied categories and flexible rules."
+    },
+    {
+      "title": "Toronto Public Library Reading Challenge",
+      "url": "https://tpl.ca/books-video-music/books/reading-challenge/",
+      "publisher": "Toronto Public Library",
+      "purpose": "Opened public library challenge page illustrating category variety and a printable tracking form; article does not assume reader is local."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

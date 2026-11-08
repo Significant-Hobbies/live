@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "build-something-that-outlasts-you",
+  "slug": "build-something-that-outlasts-you",
+  "title": "Design the handover before the legacy project grows",
+  "description": "Choose a useful project someone else can maintain, document its purpose and handover, and test that another person can continue it.",
+  "intent": "How do I build something durable without confusing longevity with launching a large institution? This guide focuses on stewardship and handover.",
+  "sections": [
+    {
+      "heading": "Choose a real future user",
+      "paragraphs": [
+        "Start with a problem that will still matter to someone besides you. A neighborhood tool library, a public recipe archive, a mentoring circle, a carefully maintained trail guide or a set of instructions for a recurring community task can outlast its founder if people actually use it. Ask who the future user is, what they need to do, and how often the work needs attention. A project with no identifiable user is difficult to hand over.",
+        "Talk with likely users before building. Bring a one-page sketch or simple trial version and ask where it would help, where it would add work, and what should stay private. A modest project that fits an existing group’s routine may serve longer than a new organization with its own branding and administration. The goal is continuity, not an impressive launch."
+      ]
+    },
+    {
+      "heading": "Make the smallest dependable version",
+      "paragraphs": [
+        "Define what “working” means in observable terms. For a resource, it might be that another person can find a page and use it. For a recurring activity, it might be that a second organizer can run one session using your notes. For a physical object, it might be that its owner can repair or safely use it. Pick a first milestone that can be completed and checked by someone who did not design it.",
+        "Write down the decisions that would otherwise live only in your head: who the project serves, what it does not do, who may change it, how to report a problem and what makes it acceptable to stop. Keep the vocabulary ordinary. If the project needs a spreadsheet, tool, account or storage location, explain how to access it without making one person’s private login the only key."
+      ]
+    },
+    {
+      "heading": "Build the handover as a real test",
+      "paragraphs": [
+        "Invite a potential steward to complete a small task using your instructions. Watch quietly. Where do they hesitate? Which terms are unclear? What information do they ask you to supply from memory? Revise the handover around those gaps, then ask someone else to try it. A process that depends on your constant correction has not yet become maintainable.",
+        "Give the next steward choices: continue, adapt or close the project. Record what must be preserved, what can change and who should be told if the work ends. If people contribute stories, artwork, personal information, money or labor, ask what permissions and expectations apply before handing anything over. A durable project respects the people whose contributions made it possible."
+      ]
+    },
+    {
+      "heading": "Keep records useful and recoverable",
+      "paragraphs": [
+        "Use a clear folder structure and names that explain what each file contains. The U.S. National Archives personal-records guide recommends descriptive filenames, a short explanation of the folder structure and multiple copies stored in different places. You can adapt those simple practices to project notes, instructions and approved public materials. For sensitive records, first decide whether they should be retained at all, who may see them and how they should be protected.",
+        "Choose a realistic review rhythm. A quarterly check may suit a volunteer schedule; a yearly check might be enough for a stable public guide. Give the review a short checklist: is the contact current, does the link work, can the tool still be used, and does the named steward still agree to serve? Let the record point to the next action rather than becoming a documentation project of its own."
+      ]
+    },
+    {
+      "heading": "Know what success and closure look like",
+      "paragraphs": [
+        "Set one measure that reflects usefulness, such as a neighbor completing a task or a new organizer running an event. Avoid vanity counts that reward reach without showing whether the work helps. Ask users what they would miss if the project stopped, and what could be simplified. If interest fades, close it carefully: tell users, return or dispose of shared materials as agreed, and preserve only what has a clear purpose.",
+        "A project that outlasts you does not have to exist forever. Its lasting contribution may be a skill someone learned, a repair method others can repeat or a record that makes future work easier. Your next step is to invite one possible user and one possible steward to review a single-page project idea before you expand it."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Preserving Your Digital Memories: Personal Digital Records",
+      "url": "https://www.archives.gov/files/preservation/formats/pdf/preserving-your-digital-memories.pdf",
+      "publisher": "U.S. National Archives and Records Administration",
+      "purpose": "Supports descriptive file names, a brief folder description and multiple copies in separate locations for selected digital personal records; article adapts this to project handover notes."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "create-a-free-resource-that-helps-thousands-of-people",
+    "start-a-foundation-or-fund-something-that-outlasts-you",
+    "build-a-personal-reading-family-tree"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

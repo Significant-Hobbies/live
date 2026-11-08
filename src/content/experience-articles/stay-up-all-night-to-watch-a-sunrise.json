@@ -1,0 +1,71 @@
+{
+  "experienceSlug": "stay-up-all-night-to-watch-a-sunrise",
+  "slug": "stay-up-all-night-to-watch-a-sunrise",
+  "title": "Plan the Whole Night So the Sunrise Is Not a Drowsy Drive Home",
+  "description": "Choose a legal, familiar viewpoint, check the local sunrise calculation, and arrange a safe ride and recovery plan before staying awake all night.",
+  "intent": "How can I make an overnight sunrise watch feel deliberate and safe, especially when the main challenge is being awake through the dark hours?",
+  "sections": [
+    {
+      "heading": "Pick a place where you are allowed to stay",
+      "paragraphs": [
+        "Start by choosing a public viewpoint, park, or other location with clear nighttime access rules. A scenic overlook that closes at dusk is not an overnight option. Confirm current hours, parking, and whether the area is safe to occupy before planning the night around it. If no suitable place stays open, choose a permitted campsite or a location where overnight access is explicitly allowed.",
+        "Choose somewhere familiar enough to navigate in the dark and close enough that the plan does not depend on a rushed drive. Tell someone where you will be and who is with you. A friend can help make the hours more enjoyable and catch a change in weather or energy before it becomes a problem."
+      ]
+    },
+    {
+      "heading": "Check the clock and the horizon",
+      "paragraphs": [
+        "Use an official sunrise calculator for the date and location. The U.S. Naval Observatory's service provides calculated sunrise and sunset for a selected location and date; its definitions explain that the calculated event is based on the sun's upper edge and that real visibility depends on atmospheric conditions and the horizon. Buildings, hills, haze, and trees can hide the first light even when the calculation is correct.",
+        "Scout the viewpoint in daylight if you can. Find the route to the viewing spot, a place to sit, and an alternate position in case the eastern view is blocked. Bring a small light for the walk, then keep it aimed down so it does not spoil other people's night vision."
+      ]
+    },
+    {
+      "heading": "Make the hours before dawn comfortable",
+      "paragraphs": [
+        "Bring warm layers, water, a snack, and a seat or blanket suitable for the site. The temperature can feel different when you are stationary for several hours, and wind can make an exposed viewpoint unpleasant. Keep food and rubbish contained, follow wildlife guidance, and avoid fires unless the land manager explicitly allows them.",
+        "Plan a sequence instead of staring at the horizon all night: take a short walk on an open path, talk, listen to the night, or note how the sky changes. Check weather forecasts and cancel if visibility, storms, ice, or site conditions make the outing unsuitable. You are allowed to leave before dawn if the plan no longer feels safe or worthwhile."
+      ]
+    },
+    {
+      "heading": "Do not drive when you are sleepy",
+      "paragraphs": [
+        "Decide your return plan before you leave home: a rested driver, public transport that is actually operating, a nearby place to sleep, or a ride arranged in advance. NHTSA warns against drowsy driving and says adequate sleep is the real protection against driving while drowsy; coffee alone may not be enough. Do not treat sunrise as a reason to drive while impaired by a sleepless night.",
+        "If you feel drowsy, stay somewhere safe and legal or hand the driving to a rested person. Avoid alcohol and do not plan to operate machinery or make a long solo drive afterward. The point is to see the sky change and get home safely, not to prove you can function without sleep."
+      ]
+    },
+    {
+      "heading": "Give the morning an ending",
+      "paragraphs": [
+        "Watch for the shift from dark blue to the first bright edge, then give yourself time to take it in. You do not need a perfect photograph. Note the cloud cover, color, and what the landscape looked like before the sun became visible. Once the moment passes, have breakfast or rest somewhere safe instead of rushing into a full day of obligations.",
+        "For your first attempt, choose a familiar legal viewpoint, check the official time, invite a companion, and arrange the return before setting the alarm."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Rise, Set, and Twilight Definitions",
+      "url": "https://aa.usno.navy.mil/faq/RST_defs",
+      "publisher": "U.S. Naval Observatory",
+      "purpose": "Defines calculated sunrise/sunset in relation to the sun's upper edge and explains atmospheric and horizon factors affecting actual observation."
+    },
+    {
+      "title": "Rise/Set Calculator",
+      "url": "https://aa.usno.navy.mil/data/RS_OneDay.html",
+      "publisher": "U.S. Naval Observatory",
+      "purpose": "Calculates sunrise and sunset for a selected date and location; its result is an astronomical calculation, not a guarantee that a particular viewpoint has an unobstructed horizon."
+    },
+    {
+      "title": "Drowsy Driving",
+      "url": "https://www.nhtsa.gov/risky-driving/drowsy-driving",
+      "publisher": "National Highway Traffic Safety Administration",
+      "purpose": "Supports the warning that drowsiness impairs driving and that adequate sleep, rather than relying on coffee alone, is the primary protection; U.S. road-safety guidance."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "watch-a-sunrise-and-a-sunset-in-the-same-day",
+    "watch-a-meteor-shower-from-a-dark-sky-location",
+    "do-a-solo-camping-trip-with-no-phone"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

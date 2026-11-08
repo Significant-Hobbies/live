@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "explore-mangroves-from-sungei-buloh-s-public-boardwalks",
+  "slug": "explore-mangroves-from-sungei-buloh-s-public-boardwalks",
+  "title": "What should you notice on a walk through Sungei Buloh’s mangroves?",
+  "description": "Follow open reserve paths, observe roots and tidal water from the boardwalk, and connect a few sightings without approaching wildlife.",
+  "intent": "A low-impact observation plan for noticing how mangroves, water and wildlife relate along public routes at Sungei Buloh Wetland Reserve.",
+  "sections": [
+    {
+      "heading": "Check the reserve route before you go",
+      "paragraphs": [
+        "Sungei Buloh Wetland Reserve is managed by Singapore’s National Parks Board. Its visitor information presents the reserve as a wetland and mangrove habitat with biodiversity and migratory birds. Check NParks’ current notices, opening information and route map before setting out; boardwalk access, weather and reserve rules can change. Choose a route you can complete comfortably and use only public paths.",
+        "Bring water, sun protection and footwear suitable for the expected conditions. If you are visiting with someone, agree on a meeting point and a pace that leaves time to stop. Do not assume every trail is open or that the full reserve is accessible in all weather. Follow signs, staff instructions and any barriers around sensitive habitat."
+      ]
+    },
+    {
+      "heading": "Begin with the shape of the roots",
+      "paragraphs": [
+        "From the boardwalk, look at how mangrove roots rise from the mud and where the water sits around them. Notice whether a root system is exposed, submerged or shaded at the moment you pass. Do not step off the path to touch roots or mud. A few minutes spent observing one tree can reveal more than trying to photograph every plant in view.",
+        "Describe what you see before you name it: a broad root arch, a line of seedlings, a channel between trees. If you use a field guide or signage, note what source helped you identify a feature. Mangrove forms and tidal patterns differ by species and site, so let the reserve’s interpretive signs or official materials support a specific identification."
+      ]
+    },
+    {
+      "heading": "Watch the water without disturbing it",
+      "paragraphs": [
+        "Choose a visible patch of water and notice its surface, flow and boundary with the mud. Look for changes in reflection, floating leaves or small ripples. A ripple may come from wind, a falling leaf or an animal, and you do not need to decide which one unless you can see evidence. Keep a respectful distance from wildlife and never feed animals to produce a more dramatic sighting.",
+        "If you see a bird or mudskipper, observe quietly and let it move on. Keep binoculars or a camera on the boardwalk and avoid flash or loud playback. Do not block the path while taking a photo. If the animal disappears, record that the sighting ended rather than following it into the vegetation."
+      ]
+    },
+    {
+      "heading": "Link one organism to one habitat feature",
+      "paragraphs": [
+        "Try making a simple connection: a bird stands near a channel; a crab uses the exposed mud; a seedling grows in a sheltered patch. Phrase it as an observation, not a complete ecological explanation. You might write “I saw” or “the sign says” so your own evidence stays separate from a broader claim about why the animal was there.",
+        "Compare two spots along the path. Was one more open to the water, more shaded or closer to a creek? The contrast can suggest questions about habitat, but a single walk cannot establish a species’ preference. Avoid disturbing plants or animals to get a closer look."
+      ]
+    },
+    {
+      "heading": "Leave the reserve as you found it",
+      "paragraphs": [
+        "Carry out everything you bring in and keep to the marked route. If you notice litter or a damaged boardwalk, use the reserve’s official reporting route rather than reaching into unsafe water or vegetation. Make a note of the time, weather and route section that shaped your observations; those details will help you compare a later visit.",
+        "A useful next step is to return at a different tide or season if NParks permits and the route is open. Keep the comparison modest: which water edge, root shape or bird activity seemed different? Save a few words and one permitted photo rather than making a complete inventory. The aim is to leave with a sharper sense of how the mangrove edge changes."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Sungei Buloh Wetland Reserve",
+      "url": "https://www.nparks.gov.sg/visit/parks/park-detail/sungei-buloh-wetland-reserve",
+      "publisher": "National Parks Board, Singapore",
+      "purpose": "Supports the reserve’s mangrove and wetland setting and directs visitors to official park information and etiquette."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "join-a-dusk-bat-walk-with-a-detector",
+    "record-frog-calls-for-frogid-in-australia"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

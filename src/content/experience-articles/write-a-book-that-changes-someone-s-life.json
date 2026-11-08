@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "write-a-book-that-changes-someone-s-life",
+  "slug": "write-a-book-that-changes-someone-s-life",
+  "title": "Write for one reader you can picture",
+  "description": "Turn a hope to help readers into a specific book question, a small draft and a feedback loop that keeps the reader’s needs visible.",
+  "intent": "How can I write a book intended to help someone without promising that it will change lives? This guide builds a reader-centered draft and revision process.",
+  "sections": [
+    {
+      "heading": "Replace the grand promise with a real question",
+      "paragraphs": [
+        "A book cannot guarantee that it will change someone’s life. You can choose a narrower intention: help a new caregiver prepare for a first appointment, show a beginning musician how to practice a short passage, or tell a story that gives one reader language for a difficult feeling. Write the sentence “After reading this, someone should be better able to…” and finish it with an action or understanding you can actually support.",
+        "Name the reader’s starting point. What have they tried? What terms might be unfamiliar? What do they want to do next? If you do not know, ask a few likely readers rather than relying on an imagined audience. A book aimed at “everyone” often makes it harder to decide what belongs on the page."
+      ]
+    },
+    {
+      "heading": "Choose a form that serves the reader",
+      "paragraphs": [
+        "A practical guide, memoir, illustrated explanation, novel and collection of short essays can all matter to readers, but they solve different problems. If the goal is a skill, a sequence with an example and a way to diagnose common mistakes may be useful. If the goal is recognition or reflection, a story may leave more room for readers to bring their own meanings. Choose the form that lets you do the work honestly.",
+        "Sketch the beginning, middle and ending before drafting. For a guide, that could be the reader’s starting question, a sequence of decisions and a next step. For fiction, it could be a character’s desire, an obstacle and a meaningful choice. This outline is a navigation aid, not a contract; revise it when the pages show you a better direction."
+      ]
+    },
+    {
+      "heading": "Draft one complete piece before expanding",
+      "paragraphs": [
+        "Write a chapter or short section that answers one part of the reader’s question. Include a concrete scene, example, exercise or decision. Avoid turning a reader into a symbol for a message; give them specific circumstances and room to make their own choices. For advice involving medicine, law, money or safety, cite appropriate sources, state the jurisdiction and ask a qualified professional to review it.",
+        "Set a modest schedule that fits your real week. Track the next action—draft a scene, check a source, test an exercise—rather than a daily word quota that makes you rush. If a section stalls, write a note about what decision is missing. That gives you something concrete to revisit instead of treating the blank page as a verdict."
+      ]
+    },
+    {
+      "heading": "Test the work with readers, then revise",
+      "paragraphs": [
+        "Ask a small number of intended readers to respond to specific questions: where did you stop, what was unclear, what felt useful, and what did you expect that the section did not provide? Let them know whether you want feedback on structure, clarity, emotional tone or factual accuracy. Do not invite every kind of feedback at once. Listen for recurring confusion while remembering that one person’s preference is not a universal rule.",
+        "Make a revision list and decide which changes improve the reader’s path. Preserve your voice; do not sand away a surprising or uncomfortable part just because it is distinctive. If the book includes health, legal or financial claims, have the relevant material reviewed and mark what is outside your expertise."
+      ]
+    },
+    {
+      "heading": "Choose a publication route with care",
+      "paragraphs": [
+        "After the manuscript has been revised, identify how the intended reader might find it. A local press, specialist publisher, community organization, independent release or open resource may fit better than a large trade deal. The Authors Guild advises writers to research publishers’ submission policies, prepare a clear description and compare editors’ experience with the book’s subject. Its advice concerns publication submissions, not a guarantee of acceptance or readership.",
+        "Read any contract carefully before signing and seek qualified advice if you do not understand rights, options or payment terms. Keep the expectation modest: you can make a book careful, truthful and useful to its intended reader, but their response belongs to them. Your next step is to write a one-page promise describing who the book serves and what a reader can do with it."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How to Submit a Book Without an Agent",
+      "url": "https://authorsguild.org/resource/how-to-submit-a-book-without-an-agent/",
+      "publisher": "The Authors Guild",
+      "purpose": "Supports researching publisher submission rules, preparing a description and selecting subject-appropriate editorial help; used only for the submission stage."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "write-and-finish-a-novel",
+    "write-something-and-publish-it",
+    "get-featured-in-a-major-publication"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

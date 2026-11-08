@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "spend-an-afternoon-doing-one-thing-at-a-time",
+  "slug": "spend-an-afternoon-doing-one-thing-at-a-time",
+  "title": "A practical plan for an afternoon with one task",
+  "description": "Choose one bounded activity for an afternoon, prepare your space and interruptions, and leave a buffer so the focus period stays humane.",
+  "intent": "How do I spend an afternoon on one activity without confusing focus with isolation or forcing the plan through urgent responsibilities?",
+  "sections": [
+    {
+      "heading": "Choose a task with a natural edge",
+      "paragraphs": [
+        "Pick one activity that has a clear enough shape to occupy an afternoon: read a chapter and take notes, cook a meal, repair a chair, draw a room, or walk a familiar loop. “Be productive” is not a task. Write down what finishing means in ordinary terms, such as assembling one shelf or reading for forty minutes, then decide where you will stop.",
+        "Choose something you can do safely and legally in the time available. A complicated home repair, a long drive or a task requiring someone else’s participation may not be a good experiment. This goal is about reducing task switching for a few hours, not proving that you can avoid all contact or ignore the rest of the day."
+      ]
+    },
+    {
+      "heading": "Set a boundary other people can understand",
+      "paragraphs": [
+        "Tell the people affected what you are doing and when you will be available again. If you live with others, pick a time that does not interfere with shared care or obligations. Set a simple urgent-contact route rather than disappearing. If your work is on-call, use a shorter period or choose a different afternoon.",
+        "Silence nonessential notifications if that suits your situation, but keep required alerts and emergency contacts reachable. Apple’s Screen Time documentation describes schedules and app-category allowances on supported iPhone software; you can also simply put one device out of reach or close a browser tab. The tool is optional. The point is a deliberate boundary, not a new setup project."
+      ]
+    },
+    {
+      "heading": "Prepare the space and materials",
+      "paragraphs": [
+        "Before starting, put the materials for the chosen activity where you can reach them. Fill a glass of water, place needed reference books nearby and clear the immediate surface. If the task involves cooking, cutting tools or a walk outside, do the ordinary safety preparation that activity requires instead of treating focus as a reason to rush.",
+        "Write distracting thoughts on a separate scrap of paper rather than following each one. If a real need appears—someone needs help, the stove needs attention or a work emergency arrives—pause and address it. Returning later still counts as an attempt. A focus session is useful only while it remains compatible with your responsibilities and safety."
+      ]
+    },
+    {
+      "heading": "Use one gentle midpoint check",
+      "paragraphs": [
+        "Set a single midpoint reminder if you tend to lose track of time. Ask: Am I still choosing this task? Do I need a stretch, food, a bathroom break or a different stopping point? The answer can be to resume, shorten the remaining time or call the experiment finished. Avoid turning the afternoon into a contest with a timer.",
+        "If you hit a snag, define the next visible action. Instead of “finish the repair,” it might be “identify which screw is loose” or “read the next two pages.” That small adjustment keeps the work concrete. If you are reading, listen to a whole album, drawing, or walking, let the activity itself be the focus rather than creating extra output to prove you did it."
+      ]
+    },
+    {
+      "heading": "Close the afternoon deliberately",
+      "paragraphs": [
+        "Write down what you did, what interrupted you and whether the task boundary was realistic. This is feedback for the next attempt, not a score. Maybe one deep-work block was enough; perhaps the task needed more preparation or a quieter setting. A good afternoon can end with an unfinished project if you made a thoughtful choice about stopping.",
+        "Return to messages and household routines at the time you agreed. If you want to repeat the experiment, choose a different task or the next clear segment of the same one. Your next step is to schedule one afternoon, name a finish line and tell anyone affected when you will be available again."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Set Screen Time Schedules and Time Allowances in Screen Time on iPhone",
+      "url": "https://support.apple.com/en-nz/guide/iphone/iphb0c7313c9/ios",
+      "publisher": "Apple Support",
+      "purpose": "Documents optional app-category time allowances and schedules on iPhone; article does not imply this is required or available on every device."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "listen-to-a-whole-album-without-multitasking",
+    "spend-a-full-day-with-no-screens",
+    "do-a-walking-meditation-every-morning-for-a-month"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

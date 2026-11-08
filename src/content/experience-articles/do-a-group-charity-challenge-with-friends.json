@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "do-a-group-charity-challenge-with-friends",
+  "slug": "do-a-group-charity-challenge-with-friends",
+  "title": "Choose a charity challenge your whole group can own",
+  "description": "Plan a group charity challenge by agreeing on the cause, an inclusive activity, roles and clear donor terms before anyone starts fundraising.",
+  "intent": "Help friends choose and organize a shared challenge while separating the group’s physical goal from transparent fundraising commitments.",
+  "relatedExperienceSlugs": [
+    "compete-in-an-obstacle-course-race",
+    "complete-a-tough-mudder",
+    "run-a-race-you-had-to-train-for"
+  ],
+  "sections": [
+    {
+      "heading": "Agree on the cause before choosing the challenge",
+      "paragraphs": [
+        "Choose an organization or cause that everyone is comfortable representing. Ask the charity whether it welcomes a group fundraiser, how donations should be passed along, and whether it has approved wording, logos, or a fundraising page. If the charity does not respond, do not imply that it formally endorses your event.",
+        "Then choose an activity that the group can shape together: a walk, relay, bike ride, obstacle event, or a non-sport challenge. Ask what people want to do and what they prefer to avoid. The most memorable challenge does not need to be the most punishing one."
+      ]
+    },
+    {
+      "heading": "Make the group plan inclusive",
+      "paragraphs": [
+        "Decide whether everyone participates in the same way. One person may walk, another may organize, and another may handle check-in or photography. Agree in advance how you will support different paces and what happens if someone needs to stop. If using an organized race, review its current accessibility, participation, and equipment rules with the organizer.",
+        "Write down the training or preparation each role actually requires. If the challenge involves physical effort or a high-consequence activity, consult a qualified coach or event professional and choose a lower-risk option if you are uncertain. Do not let fundraising pressure become a reason to ignore pain, weather, or safety instructions."
+      ]
+    },
+    {
+      "heading": "Make donation terms clear before asking",
+      "paragraphs": [
+        "Tell donors which charity will receive the money, whether any costs will be deducted, and what will happen if the group does not complete the challenge. The Charity Commission and Fundraising Regulator in England and Wales say fundraisers should disclose the purpose and contingency for challenge donations upfront. Rules differ elsewhere, so check the relevant regulator and the charity’s requirements for your location.",
+        "Keep records of what was collected and when it was transferred. If people donate through separate personal pages, agree who monitors them and how the group will confirm the total. Never promise that money will be used for a particular purpose unless the charity has confirmed that arrangement."
+      ]
+    },
+    {
+      "heading": "Give everyone a manageable role",
+      "paragraphs": [
+        "Split tasks: one person confirms the charity’s preferences, one checks the venue or event rules, one shares the invitation, and one records donations. Let each person choose the public-facing task they are comfortable with. Set a limit on reminders so friends and relatives do not feel pressured to donate.",
+        "Use a short message that explains the group’s reason for choosing the cause, the activity, the date, and where donations go. Avoid using someone else’s hardship or image to make the appeal more compelling without permission."
+      ]
+    },
+    {
+      "heading": "Finish with an honest report",
+      "paragraphs": [
+        "After the activity, tell participants and donors what happened, what was raised, and when funds were passed on. If the group changed or stopped the challenge, follow the contingency you promised. Thank volunteers who helped without suggesting that donating is the only meaningful form of support.",
+        "Your next action is to contact the charity with one paragraph describing the group, the challenge idea, and the timeline. Wait for its guidance before publishing a fundraising page or promising a donation route."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Raising money for charity: public guidance",
+      "url": "https://www.gov.uk/guidance/raising-money-for-charity-public-guidance",
+      "publisher": "Charity Commission for England and Wales and Fundraising Regulator",
+      "purpose": "Opened current public fundraising guidance on donor transparency, expenses, contingency plans and challenge completion; applies to England and Wales."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

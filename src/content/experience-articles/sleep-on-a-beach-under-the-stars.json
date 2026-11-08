@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "sleep-on-a-beach-under-the-stars",
+  "slug": "sleep-on-a-beach-under-the-stars",
+  "title": "Find a Beach Where Overnight Camping Is Actually Allowed",
+  "description": "Make an overnight beach plan around permission, tides, weather, and wildlife so the night outdoors stays lawful and low-impact.",
+  "intent": "Where can I spend a night near the shore without assuming that a public beach permits sleeping, tents, fires, or vehicle camping?",
+  "sections": [
+    {
+      "heading": "Start with permission, not the view",
+      "paragraphs": [
+        "Many beaches welcome daytime visitors but prohibit overnight camping. A public shoreline is not automatically an overnight campsite, and rules may differ by park, municipality, season, or beach section. Search the official land manager's current camping page or call the ranger station before planning around a sunset. If the rules are unclear, choose a designated campground near the water and walk to the beach during permitted hours.",
+        "The contrast between two U.S. National Park Service examples shows why location matters. Cape Lookout National Seashore permits camping on much of its barrier islands but names closed areas and gives specific siting instructions. Assateague Island National Seashore's 2026 superintendent's compendium prohibits sleeping on the beach and directs overnight stays to designated campgrounds. Neither rule applies to another beach; check the exact site you plan to visit."
+      ]
+    },
+    {
+      "heading": "Read the water before placing a bag",
+      "paragraphs": [
+        "Where camping is allowed, understand the local tide and the land manager's placement rules. Cape Lookout's guide tells campers to keep a campsite above the visible high-tide line and clear enough of it for vehicles to pass. That is a Cape Lookout instruction, not a substitute for a tide chart or the rules at your destination. Do not camp on dunes, vegetation, nesting areas, or a marked closure.",
+        "Check the forecast, surf and tide information from the relevant official sources, and be prepared to cancel if conditions are unsafe. Keep footwear, light, phone, and your exit route accessible. A calm arrival does not guarantee calm conditions overnight, so avoid narrow stretches where rising water could cut off a safe way out."
+      ]
+    },
+    {
+      "heading": "Plan for a quiet, dark night",
+      "paragraphs": [
+        "A sandy beach can be windy, damp, and exposed. Use only shelter permitted at that site, stake it for local conditions, and keep gear contained so it cannot blow toward the water. Salt and sand can damage electronics; a sealed dry bag and a simple headlamp with a low setting are more useful than a large pile of gadgets. Pack warm layers even when the evening feels mild.",
+        "If your aim is to see stars, check moon phase and cloud cover before choosing a night, but treat the sky as a bonus rather than a guarantee. Keep lights directed downward and avoid shining them toward wildlife or other visitors. Leave speakers at home; the sound of the place is part of the experience for everyone nearby."
+      ]
+    },
+    {
+      "heading": "Treat fire and wildlife rules as site-specific",
+      "paragraphs": [
+        "Do not assume a fire ring, driftwood fire, or portable stove is allowed. Cape Lookout's guidance describes tightly bounded rules for open campfires and cooking receptacles, while another shore may prohibit open flames. Use only the equipment and locations the current authority explicitly allows. Never build a fire on dunes, vegetation, a boardwalk, or where an ember could reach dry material.",
+        "Store food and rubbish according to local wildlife rules and carry out what you bring. Do not feed or approach animals for a photograph. If a beach has closures for birds, turtles, or other wildlife, stay outside the marked boundary even if it appears empty."
+      ]
+    },
+    {
+      "heading": "Make the morning easy",
+      "paragraphs": [
+        "Set out only what you need before dark: a warm layer, water, a way to identify your location, and a plan to get back to the vehicle or trail. Tell someone where you will be and when you expect to return. If the route depends on a ferry, gate, or seasonal access, verify the current operating information rather than assuming you can leave at any time.",
+        "Bring a small bag for every scrap of litter and leave the site as you found it. Your next step is to identify one beach with an explicit overnight policy, then read its full current rules before choosing a date."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Beach Camping at Cape Lookout National Seashore",
+      "url": "https://www.nps.gov/calo/planyourvisit/upload/508_CALO_Beach_Camping.pdf",
+      "publisher": "National Park Service",
+      "purpose": "Provides Cape Lookout-specific permitted camping areas, siting above the high-tide line, dune and fire rules; not generalized to other beaches."
+    },
+    {
+      "title": "2026 Assateague Island National Seashore Superintendent's Compendium",
+      "url": "https://www.nps.gov/asis/learn/management/upload/2026-ASIS-Superintendents-Compendium-02Mar26.pdf",
+      "publisher": "National Park Service",
+      "purpose": "Documents Assateague-specific prohibition on overnight beach sleeping and direction to designated campgrounds; cited as a contrasting example only."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "do-a-solo-camping-trip-with-no-phone",
+    "watch-a-meteor-shower-from-a-dark-sky-location",
+    "watch-a-sunrise-and-a-sunset-in-the-same-day"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

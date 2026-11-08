@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "get-featured-in-a-major-publication",
+  "slug": "get-featured-in-a-major-publication",
+  "title": "Pitch a specific story instead of asking for general coverage",
+  "description": "Turn your expertise into a focused, evidence-backed story pitch that explains the reader, angle, reporting plan and why the publication should care.",
+  "intent": "How do I earn attention from a major publication? This turns a broad wish for coverage into a credible specific pitch and separates editorial value from self-promotion.",
+  "sections": [
+    {
+      "heading": "Find the story inside your expertise",
+      "paragraphs": [
+        "“I want to be featured” describes an outcome for you, not a story for readers. Start with a change, tension, question or useful discovery that someone outside your organization would care about. A founder might pitch how a local repair group keeps useful tools in circulation; a researcher might explain one surprising limitation in a popular claim. The story should still make sense if your name appears only once.",
+        "Write the point in one sentence, then write who needs to know it and why now. If the only reason is that you have launched something, ask what readers can learn that is not available in a product announcement. A strong story can include your work as evidence while making space for other voices and facts."
+      ]
+    },
+    {
+      "heading": "Match the angle to a real desk",
+      "paragraphs": [
+        "Read several recent pieces from the target publication and identify the department or editor that handles the topic. Notice whether the outlet publishes reported features, essays, service articles, opinion or interviews, because each format asks for a different contribution. Do not pitch a personal essay to a desk that only accepts reported features, or send an idea to a general address because you could not be bothered to find the right one.",
+        "The Guardian’s contributor guidance advises sending a specific article pitch rather than only saying you are interested in writing. Its contact page directs story suggestions to relevant editorial departments and links to a contributors’ guide. Those details are Guardian-specific; other publications have their own routes and rules. Use the outlet’s current submission instructions, not a stale directory."
+      ]
+    },
+    {
+      "heading": "Make the pitch easy to assess",
+      "paragraphs": [
+        "Lead with the story in two or three sentences: the idea, its reader relevance and why you can report it. Add the likely format, a few sources or people you can approach, and any evidence that makes the timing meaningful. A link to prior work can help an editor judge your reporting, but it should follow the pitch rather than replace it. Be transparent if you have a financial, organizational or personal interest in the topic.",
+        "Keep claims proportionate to the evidence. If you cite a statistic, name the source and date; if the pitch relies on an interview that is not yet confirmed, say so. Avoid claiming that an editor will receive exclusive access unless you can deliver it and it matters to the story. Do not send a complete manuscript unless that publication asks for one."
+      ]
+    },
+    {
+      "heading": "Offer reporting, not just an opinion",
+      "paragraphs": [
+        "If you are pitching analysis, state what evidence could change your mind and what counterargument readers should hear. If you are pitching a profile, explain access and why the subject’s decisions matter beyond their fame. If you are pitching advice, give a concrete example of the problem and how readers could use the piece. That makes the angle testable and helps the editor see what reporting is still required.",
+        "Draft a short outline with the beginning, central turn and ending. The Guardian Careers guidance recommends a brief outline of no more than two paragraphs for its contributors, but that is its own advice and may not fit a different desk. Use the target editor’s current instructions first. A clear outline makes it easier to change the framing before you spend weeks writing."
+      ]
+    },
+    {
+      "heading": "Follow up professionally and protect your work",
+      "paragraphs": [
+        "Send one tailored pitch to the relevant contact and record the date. If the publication provides a response window or asks for no simultaneous submissions, follow it. If you hear nothing after a reasonable period, one concise follow-up may be enough; repeated messages rarely improve the story. An editor may decline because of timing, fit, space or another assignment, not because the idea has no value.",
+        "If the editor is interested, clarify scope, length, deadline, editing, rights and payment in writing before doing substantial commissioned work. Those terms vary by outlet and jurisdiction. Avoid paying someone who promises placement; editorial decisions belong to editors. Your next action is to identify one recent piece that reaches the readers you want, then draft a focused two-paragraph pitch that offers a distinct story with verifiable evidence."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Guardian Careers’ guidelines for contributors and writers",
+      "url": "https://www.theguardian.com/careers/guardian-careers-guidelines-for-contributors-and-writers",
+      "publisher": "The Guardian",
+      "purpose": "Supports writing a specific pitch and brief outline for this Guardian desk and including a distinct angle; not a universal publication rule."
+    },
+    {
+      "title": "How to contact the Guardian",
+      "url": "https://www.theguardian.com/help/contact-us",
+      "publisher": "The Guardian",
+      "purpose": "Supports routing story pitches to the relevant editorial department and using the contributors’ guide."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "give-a-ted-talk",
+    "write-a-book-that-changes-someone-s-life",
+    "start-a-podcast"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

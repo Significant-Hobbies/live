@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "build-a-motorised-scribbling-machine",
+  "slug": "build-a-motorised-scribbling-machine",
+  "title": "Tune a scribbling machine by changing one thing at a time",
+  "description": "Turn a battery motor into a drawing experiment by predicting how weight, marker position, or base shape will change its wandering path.",
+  "intent": "How can I make a motorized scribbler teach me something instead of only producing random marks? This adds a focused test-and-compare method.",
+  "sections": [
+    {
+      "heading": "Give the machine one job",
+      "paragraphs": [
+        "A scribbling machine is easiest to understand when its movement leaves a trace. The Exploratorium describes simple motorized contraptions whose offset motors make them bounce, spin, bump, and travel in unusual paths. Before building, decide what question you want the marks to answer: does moving the motor change the direction, or does changing a pen’s location change the curve?",
+        "Gather a small container, battery-powered motor and maker-approved connection, one or two markers, paper, tape, and a way to attach an off-center weight. Use only a low-voltage educational setup like the museum activity and have an adult handle hot glue or wire tools where appropriate. Avoid modifying mains-powered devices."
+      ]
+    },
+    {
+      "heading": "Make the base stable enough to compare",
+      "paragraphs": [
+        "Attach the motor and marker so the container can move without the parts falling off. The museum suggests recyclable containers as possible bases and gives a rubber band or tape as a way to hold motor leads while still allowing position changes. Make sure the battery connection is secure and can be disconnected before adjusting anything.",
+        "Use a large sheet of scrap paper and mark a start position for the machine. Keep the floor or table clear of anything it could hit. A shallow tray can stop it wandering away, but leave enough room for the path to show. The point is not to engineer a perfect robot; it is to produce a repeatable trace you can compare."
+      ]
+    },
+    {
+      "heading": "Write a prediction before switching on",
+      "paragraphs": [
+        "Pick one variable: the offset weight’s position, its size, the motor orientation, the length of an arm, or the number of markers. Draw a quick sketch of what you think will happen and write why. Run the machine only long enough to capture a visible path, switch it off, and save that sheet as the first trial.",
+        "Change only the selected variable. If you move the motor and change the weight at once, you cannot tell which adjustment caused a new pattern. Keep the battery, base, paper, and run duration the same for the next trial. Label each page with the change rather than relying on memory."
+      ]
+    },
+    {
+      "heading": "Read the trace as evidence",
+      "paragraphs": [
+        "Look for broad differences rather than a single accidental line: a tighter cluster, longer loops, more frequent bumps, or a consistent drift to one side. The mark records the path, but not every movement; a marker can skip if it lifts or run dry. Note those conditions separately rather than interpreting a gap as a motor behavior.",
+        "Repeat a trial if the result looks unusual, using the same setup. Compare the two traces side by side and ask whether your prediction held. A result that disagrees with your guess is useful because it tells you which feature to investigate next."
+      ]
+    },
+    {
+      "heading": "Turn the drawing into a design choice",
+      "paragraphs": [
+        "Once you have a movement you like, choose a paper or surface that suits the mark. The Exploratorium suggests experimenting with other trace materials such as chalk or paintbrushes; keep the setup controlled and protect the work surface. If you add googly eyes or decoration, do so after the behavior test so ornament does not hide the machine’s useful mechanics.",
+        "Save the best trace with its settings written on the reverse. Your next action is to make two runs that differ only in offset weight position, then choose whether you want a compact, roaming, or spinning machine for a finished drawing."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Scribbling Machines",
+      "url": "https://www.exploratorium.edu/sites/default/files/pdfs/scribbling_machines.pdf",
+      "publisher": "Exploratorium",
+      "purpose": "Supports the offset-motor concept, suitable example base materials, detachable lead method, and suggested variables to investigate."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-a-chain-reaction-machine-from-household-objects",
+    "build-a-fruit-battery-and-measure-its-output",
+    "balance-a-hanging-mobile-from-found-materials"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

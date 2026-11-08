@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "write-something-and-publish-it",
+  "slug": "write-something-and-publish-it",
+  "title": "Choose a home for a finished piece before polishing it forever",
+  "description": "Move a completed essay, story, review, or report toward publication by matching its form to a venue and checking permissions, edits, and submission terms.",
+  "intent": "Answers how to choose a suitable home for a finished piece and prepare it for publication; focuses on format, venue and submission terms rather than co-writing workflow.",
+  "sections": [
+    {
+      "heading": "Finish one piece before choosing everywhere",
+      "paragraphs": [
+        "Start with a complete piece, even if it is short: a reported essay, a story, a review, a personal reflection, a how-to or a poem. Give it a temporary title and write one sentence about the reader you hope it will reach. ‘People trying to repair a bicycle’ points toward a different home than ‘readers of speculative fiction.’ A finished draft makes it easier to compare venues without rewriting your idea for every call.",
+        "Give the work a quiet revision pass before submission. Read it after a break, check that the opening tells readers what kind of piece they are entering, and remove sections that repeat the same point. For nonfiction, verify names, dates, quotations and permissions. For fiction, read aloud for rhythm and continuity. The goal is not to make a first piece flawless; it is to make the intended experience clear."
+      ]
+    },
+    {
+      "heading": "Match the form to a real venue",
+      "paragraphs": [
+        "Compare a few plausible homes. A magazine may publish reported or personal essays; a literary journal may focus on short fiction or poetry; a local newspaper may seek regional reporting; a community zine may welcome work tied to a place or theme; a personal newsletter gives you control but requires you to find readers yourself. These are broad formats, not guarantees of current submission windows. Read each venue’s own recent work and submission page before deciding.",
+        "Look for fit in the details: word or file limits, subject area, audience, whether it accepts simultaneous submissions, response timelines if posted, fees and rights requested. A publication is not more legitimate simply because it is difficult to reach. Avoid any call whose terms are unclear or pressure you to pay for a promised placement. Keep a note of the exact page and date you checked because submission rules can change."
+      ]
+    },
+    {
+      "heading": "Prepare a clean, honest submission",
+      "paragraphs": [
+        "Use the requested file type and formatting, and give the file a clear name. Include a short note that identifies the piece, its form and why it fits the venue. A brief biography can say what you do or where you are based if relevant; you do not need to invent credentials. For a personal piece about other people, consider whether you have exposed private details and whether you should seek consent, anonymize, or remove a scene.",
+        "If your work includes images, lyrics, long quotations, maps, or another person’s material, do not assume that public availability means you may republish it. Ask the rights holder or use material whose license permits your use. The U.S. Copyright Office says copyright protects original works fixed in a tangible form, including published and unpublished writing, and that ideas themselves are not protected in the same way as their expression. This is general U.S. information, not legal advice about a particular manuscript or another country’s law."
+      ]
+    },
+    {
+      "heading": "Understand the rights conversation",
+      "paragraphs": [
+        "Read the agreement before you accept publication. It may ask for first-publication rights, a license, exclusivity for a period, a byline, or permission to archive the work. These terms are not interchangeable. Keep a copy of what you agreed to and record when any exclusivity ends. If a contract is confusing, ask the publisher to explain it in plain language or consult a qualified adviser familiar with your jurisdiction and the type of work.",
+        "In the United States, registration is generally voluntary under the Copyright Office’s general FAQ, although there can be separate procedural reasons to register. Do not confuse registration with the decision to submit, and do not register just because a venue suggests it without checking the current official rules and your circumstances."
+      ]
+    },
+    {
+      "heading": "Send it, track it, and keep writing",
+      "paragraphs": [
+        "Create a small submission log with venue, title, date, status and any rights or exclusivity terms. A rejection is information about one editor’s decision, not a reliable measurement of your talent. If the piece remains a fit, revise only when there is a concrete reason, then try another venue whose audience makes sense. If accepted, check the proof, credit line and publication schedule before sharing it widely.",
+        "Choose one completed piece, list three possible homes and compare their published work with your reader sentence. Submit to the best fit you can verify, then begin a new piece while you wait."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Copyright in General (FAQ)",
+      "url": "https://www.copyright.gov/help/faq/faq-general.html",
+      "publisher": "U.S. Copyright Office",
+      "purpose": "Supports the U.S.-specific distinction that copyright covers original fixed expression, applies to published and unpublished work, and generally does not require registration for protection; not individualized legal advice."
+    },
+    {
+      "title": "Registering a Work",
+      "url": "https://www.copyright.gov/help/faq/faq-register.html",
+      "publisher": "U.S. Copyright Office",
+      "purpose": "Supports what registration entails and the public nature of registration records; does not recommend registration for a particular work."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "publish-an-article-in-a-magazine",
+    "write-a-book",
+    "record-a-public-domain-audiobook-chapter"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

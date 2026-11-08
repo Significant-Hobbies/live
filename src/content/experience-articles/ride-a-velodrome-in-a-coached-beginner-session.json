@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "ride-a-velodrome-in-a-coached-beginner-session",
+  "slug": "ride-a-velodrome-in-a-coached-beginner-session",
+  "title": "What happens in a coached velodrome taster session?",
+  "description": "Prepare for a supervised track introduction by checking prerequisites and equipment, listening to the coach, and treating control as the main first skill.",
+  "intent": "A beginner’s guide to choosing a coached velodrome taster, understanding the track bike and safety briefing, and leaving with an appropriate next step.",
+  "sections": [
+    {
+      "heading": "Check whether a taster is the right entry point",
+      "paragraphs": [
+        "A velodrome taster is intended to introduce track riding with a coach and a track-specific bike. Before booking, check the venue’s current age, height, riding ability, clothing and equipment requirements. Lee Valley VeloPark describes its taster as a coached introduction to using a fixed-wheel bike and basic skills for the banked track; another venue may set different requirements.",
+        "Tell the organizer how comfortably you ride a regular bicycle and whether you have any access needs or concerns. Ask whether the session is a true beginner introduction, whether equipment is included, and what happens if you need a break. Do not arrive assuming road cycling automatically prepares you for the fixed-wheel setup or the steep banking."
+      ]
+    },
+    {
+      "heading": "Listen to the equipment briefing",
+      "paragraphs": [
+        "A track bike has no freewheel, so the pedals continue to turn while the bike moves. Learn how to start, slow and stop using the method the coach demonstrates. Let staff fit and check any hired bike, helmet and other required equipment. Wear what the venue specifies and ask for clarification if a strap, shoe or glove feels wrong.",
+        "The track is shared space. Pay attention to the coach’s instructions about where to ride, how to leave the track and how to respond to other riders. Do not copy someone who is moving faster or using a different line. An instructor can explain what the surface, banking and session format mean for your group on that day."
+      ]
+    },
+    {
+      "heading": "Start with smooth control",
+      "paragraphs": [
+        "A useful first goal is a steady line and a calm response to coaching, not speed. Ride at the pace set for the group. Look ahead, keep a predictable line and leave room for others as the coach directs. If you feel anxious or unsteady, say so before the next exercise. The instructor can pause, simplify a drill or guide you off the track safely.",
+        "The coach may ask you to practise a warm-up, a controlled change of speed or a basic formation. Listen for what is expected before moving, and keep enough attention for the track rather than trying to watch everyone at once. You do not need to complete every optional challenge to call a taster a useful first session."
+      ]
+    },
+    {
+      "heading": "Treat the banking with patience",
+      "paragraphs": [
+        "The curve can look intimidating from the track centre. Follow the coach’s chosen entry and speed; do not roll onto the banking independently to test how it feels. Let the group build familiarity in the sequence the venue uses. A taster is structured to introduce a new environment, and the instruction is there to keep riders working within their current skill.",
+        "Between efforts, take the break the session allows and drink water if appropriate. Ask what you found confusing before it becomes a repeated habit. Keep your hands and equipment within the venue’s instructions, and report a problem promptly. Track riding carries risk; staying attentive to the coach and the group is part of participation, not a formality."
+      ]
+    },
+    {
+      "heading": "Decide what to do next",
+      "paragraphs": [
+        "Afterward, identify one skill that felt clearer and one that needs another coached practice. Ask the venue what it requires before an independent or accredited session. Some tracks have staged progression or specific eligibility; follow the local route instead of assuming that one taster authorizes unrestricted riding.",
+        "A good next step might be another beginner session, a basic cycling skills class or simply returning after you have had time to think. Write down the equipment, briefing and instruction that helped. If you do not want to progress, the taster can still stand on its own as a supervised experience."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Cycling Experiences: Velodrome taster",
+      "url": "https://www.better.org.uk/leisure-centre/lee-valley/velopark/cycling-experiences",
+      "publisher": "Lee Valley VeloPark / Better",
+      "purpose": "Supports the coached fixed-wheel introduction and venue-specific guidance about equipment, riding prerequisites and safety information; current operational details are omitted."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "complete-a-major-cycling-challenge",
+    "play-a-first-game-of-walking-football"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

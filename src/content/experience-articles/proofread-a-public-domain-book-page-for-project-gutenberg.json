@@ -1,0 +1,55 @@
+{
+  "experienceSlug": "proofread-a-public-domain-book-page-for-project-gutenberg",
+  "slug": "proofread-a-public-domain-book-page-for-project-gutenberg",
+  "title": "How do you proofread OCR against a scanned book page?",
+  "description": "Compare OCR text with a scanned page line by line, correct recognition errors without modernizing the author's words, and follow project-specific conventions.",
+  "intent": "Give a new volunteer a careful first-page method for checking OCR against an image while preserving the historical text and the project's workflow.",
+  "sections": [
+    {
+      "heading": "Start with the project walkthrough",
+      "paragraphs": [
+        "Optical character recognition can turn a printed page into editable text, but it may confuse letters, punctuation, spacing and line boundaries. Distributed Proofreaders describes a workflow in which a volunteer sees a scan and corresponding OCR text together, then compares them; later volunteers review the page again before formatting stages. That means your task is to follow the current page stage and project instructions, not silently polish the text as though you were editing a modern manuscript.",
+        "Before accepting a page, try the site's walkthrough and read the guidelines for the selected project. Check the language and typeface are ones you can read well enough. A book with unfamiliar names, old typography or extensive tables may be a frustrating first choice even if the page appears short.",
+        "Keep the scan and OCR side by side at a scale where individual characters are legible. Use the site's zoom or browser controls rather than guessing at a blurred word. If your eyes become tired, pause; fatigue makes repeated lines and small punctuation marks easier to miss."
+      ]
+    },
+    {
+      "heading": "Compare one line at a time",
+      "paragraphs": [
+        "Read a line in the image, then follow the corresponding OCR line with your eyes. Check whole words rather than relying on spellcheck. OCR may turn an old-style long s into f, split a word at a line break, drop a small comma or misread a capital letter. It can also produce a plausible word that is still wrong, so context helps you identify where to look closely.",
+        "Correct the page according to the task's stated conventions. Preserve the author's spelling and punctuation when they are visible; do not modernize or rewrite an awkward sentence. A proofreader's role is to restore what the printed page says, not to repair the author's style. If an element is unclear, use the project's uncertainty or query procedure rather than inventing a reading.",
+        "Pay attention to page furniture too: headings, page numbers, footnotes, signatures and small marginal marks may be handled differently by different projects. The project notes take priority over a general habit learned elsewhere."
+      ]
+    },
+    {
+      "heading": "Separate proofreading from formatting",
+      "paragraphs": [
+        "A page-proofing stage and a later formatting stage are distinct jobs. The Distributed Proofreaders overview describes multiple review passes followed by formatting rounds, so do not try to impose final ebook structure while correcting ordinary OCR mistakes unless the page instructions specifically ask you to.",
+        "Formatting conventions can affect paragraph breaks, italics, poetry, tables and hyphenation. A scan may make a printed line look like a paragraph boundary when it is only a line wrap. When in doubt, check the project's examples or help pages and compare a nearby page for consistent treatment.",
+        "Before saving, scan the image once more from top to bottom and compare every line. Then review the corrected text for accidental edits introduced while navigating. A final pass often catches a skipped line, duplicated word or punctuation mark that did not stand out during the first read."
+      ]
+    },
+    {
+      "heading": "Finish the page and learn from review",
+      "paragraphs": [
+        "Save using the site's current submission controls and confirm that the page has moved to the next expected status. If you receive feedback, treat it as guidance about the convention or character you missed; the process depends on reviewers checking work at different stages. Keep a brief private note of a recurring error, such as confusing a letterform, so the next page gets easier.",
+        "Choose one manageable page rather than committing to a long section before you know how the interface feels. Some pages require more research or careful handling than others, and it is acceptable to leave a page for someone with stronger language or subject knowledge. A useful next action is to complete the walkthrough, select a project whose instructions you can follow, and begin with a readable page whose text is not unusually complex."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Distributed Proofreaders: Welcome",
+      "url": "https://www.pgdp.net/c/",
+      "publisher": "Distributed Proofreaders",
+      "purpose": "Explains the scan-and-OCR proofreading workflow, multiple review stages and the volunteer walkthrough."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "read-a-play-aloud-around-a-table",
+    "create-a-map-of-languages-in-your-life",
+    "write-captions-for-ten-unlabelled-personal-photos"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

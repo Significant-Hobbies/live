@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "run-with-the-bulls-in-pamplona",
+  "slug": "run-with-the-bulls-in-pamplona",
+  "title": "Pamplona’s bull run: decide whether to run or watch",
+  "description": "Plan a San Fermín morning with Pamplona’s current bull-run rules, the real choice between running and watching, and practical ways to opt out.",
+  "intent": "Answer whether participation or spectating suits the reader by turning current municipal rules into a clear decision and morning plan.",
+  "relatedExperienceSlugs": [
+    "skydive-from-15-000-feet",
+    "climb-a-mountain-over-4-000-metres",
+    "experience-carnival-in-rio-de-janeiro"
+  ],
+  "sections": [
+    {
+      "heading": "Choose the experience before you choose a place to stand",
+      "paragraphs": [
+        "The encierro is not a staged run alongside a parade. Pamplona’s city guidance describes a route through the old city in which bulls and runners share a confined street course. The city calls it very dangerous, restricts participation to adults, and tells anyone who is not in full condition not to run. Treat that as the central planning fact, rather than as a challenge to overcome.",
+        "If your goal is to witness San Fermín, watching from the public side of the barriers or booking a balcony is a complete way to experience the morning. If what attracts you is the run itself, ask whether you can accept the possibility of being unable to control the crowd, animals, timing, or exit. Hesitation is enough reason to spectate."
+      ]
+    },
+    {
+      "heading": "Read the city rules as conditions, not tips",
+      "paragraphs": [
+        "Pamplona publishes an annual festival order as well as standing guidance. The 2026 order says runners must follow police and technical staff, bans minors from the route, and prohibits intoxication, obstructive objects, running toward or behind the animals, touching them, or stopping in a way that blocks others. The city’s safety page also asks participants to choose a section in advance and withdraw before they are in difficulty.",
+        "Check the current edition’s rules again close to the festival; entrance times and enforcement details can change. Do not rely on old videos, forum posts, or a friend’s account as permission to enter. If a police officer or herder tells you to leave or move, that instruction takes priority over your chosen plan."
+      ]
+    },
+    {
+      "heading": "Make a sober go/no-go decision",
+      "paragraphs": [
+        "The city requires participants to be at least eighteen and forbids entering the route while drunk, impaired, or not physically and mentally fit. Be honest about sleep, illness, injury, medication effects, unfamiliar footwear, and how you respond in dense crowds. There is no need to prove fitness to anyone. A balcony, the public viewing side of the barriers, or watching a broadcast keeps the morning memorable without entering the route.",
+        "Avoid any plan that depends on filming while running. The current order prohibits carrying cameras and phones on the route without authorization, and a device also occupies attention and hands. Leave valuables somewhere secure and travel light if you are attending as a spectator."
+      ]
+    },
+    {
+      "heading": "If you still intend to participate, prepare around official directions",
+      "paragraphs": [
+        "Read Pamplona’s page from start to finish before arriving and learn where the authorized access points are for that year. The city says runners cannot join after the final access time and that the route may close earlier if officials judge it full. You cannot make up a missed entrance by slipping through a barrier.",
+        "Know the section you have selected, how you plan to leave it, and what the city says to do if you fall or reach the bullring. Do not improvise an escape through a doorway, jump a fence, or stand in a blind corner. Those actions can place other people at risk and may violate the rules. The route is managed collectively; a personal plan only works inside its limits."
+      ]
+    },
+    {
+      "heading": "Build a spectator morning instead",
+      "paragraphs": [
+        "For a quieter version, choose an official viewing option and arrive with enough time for closures and crowd control. The city lists public areas behind the barriers, the bullring, and balconies as spectator choices; its practical page advises people to confirm access and viewing arrangements locally. Keep away from spaces reserved for runners and emergency refuge.",
+        "Afterward, leave room for the city’s staff to clear and clean the streets. Pick one safe meeting point with your group outside the route, agree how you will reconnect if mobile service is unreliable, and do not try to approach the bulls or interfere with the herders. The useful next step is simple: read the city’s current San Fermín order, then decide whether you want to watch from a permitted place."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "San Fermín: safety rules for running the bull run",
+      "url": "https://www.pamplona.es/en/node/22029",
+      "publisher": "Pamplona City Council",
+      "purpose": "Age, fitness, route conduct, section selection, and spectator boundaries."
+    },
+    {
+      "title": "San Fermín 2026 municipal order",
+      "url": "https://www.pamplona.es/en/node/56445",
+      "publisher": "Pamplona City Council",
+      "purpose": "Current 2026 route restrictions, prohibited conduct, and staff instructions."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

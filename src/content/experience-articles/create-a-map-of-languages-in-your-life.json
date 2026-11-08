@@ -1,0 +1,51 @@
+{
+  "experienceSlug": "create-a-map-of-languages-in-your-life",
+  "slug": "create-a-map-of-languages-in-your-life",
+  "title": "How can a language map show where words belong in your life?",
+  "description": "Make a personal language map that includes spoken, learned, inherited, and encountered languages while keeping every choice to share voluntary.",
+  "intent": "Offer a private, flexible way to map a person’s relationships with languages beyond fluency, without assuming that identity or family history must be disclosed.",
+  "sections": [
+    {
+      "heading": "Define what counts before you draw",
+      "paragraphs": [
+        "A language map does not have to be a test of how many languages you speak. You might include a language used at home, one you learned in school, a language you hear in a neighborhood, a sign language you use, or a language you want to understand better. You can also leave out any language that feels too private or complicated to put on paper. UNESCO’s guidance recognizes multilingualism as a fundamental human characteristic and an educational approach; a personal map can make room for varied relationships without ranking them.",
+        "Choose the question you want the map to answer. “Where do different languages appear in my week?” leads to a practical map of contexts; “Which languages have shaped my learning?” makes a different kind of page. Write the question at the top so the drawing has a purpose. Set aside any pressure to produce a tidy family tree or complete account. The map is allowed to be partial, change over time, and contain uncertainty."
+      ]
+    },
+    {
+      "heading": "Pick a shape that suits the question",
+      "paragraphs": [
+        "For a simple first map, draw a week as a row of places or moments: home, commute, work or study, messages, music, shops, and time with friends. Add a language name, word, script, or sound where it belongs for you. If you prefer a more reflective page, put yourself in the center and draw paths to people, books, places, or activities linked to different languages. A map can use dots, color, arrows, or small symbols; no one system is required.",
+        "Give each mark a note about your relationship to it. “Speak comfortably,” “understand family phrases,” “learning pronunciation,” or “hear this on the bus” are more honest than a vague fluency scale. You can include a language you are curious about without claiming competence. If you use a color key, make it describe the map rather than value: blue could mean “heard often” while green means “currently studying.” Avoid using color to rank one language as more authentic than another."
+      ]
+    },
+    {
+      "heading": "Include gaps, shifts, and boundaries",
+      "paragraphs": [
+        "Some maps have blank areas. A language may be part of a family story without being one you can speak; a language you once studied may no longer be part of everyday life; another may be meaningful even if you know only a greeting. Those are not mistakes. Add a dashed line or a question mark if you want to show a relationship that is changing or hard to define. A map can also include a boundary: a language or experience you choose not to explain to other people.",
+        "If another person appears on the page, include only what you have permission to represent. Do not label someone’s identity, fluency, or language history for them. A map made in a group should allow private drawing, optional sharing, and the option to describe a pattern rather than reveal a family detail. The useful practice is noticing your own relationship with language; it does not require turning anyone else’s life into evidence."
+      ]
+    },
+    {
+      "heading": "Read the map as a snapshot",
+      "paragraphs": [
+        "When the page feels finished, look for one pattern without forcing a grand conclusion. Maybe one language appears mostly in reading, another in conversation, and another in future plans. Write a sentence such as “I use these words most when…” or “I want more chances to…” That statement is a next action, not a verdict on your identity. If a language you want to learn has a real place in your week, choose one practical step: borrow an introductory book, join a beginner conversation group, or label a few familiar objects at home.",
+        "Keep the map private unless you want to share it. If you do share, tell listeners whether questions are welcome and what details are off limits. Date the page so you can make another version later and compare what moved. A good map is not exhaustive; it gives you a legible picture of where language is present, absent, growing, or deliberately left unnamed. For a first attempt, use one sheet of paper, make only a handful of marks, and stop when the map begins to answer your chosen question."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Languages matter: Global guidance on multilingual education",
+      "url": "https://www.unesco.org/en/articles/languages-matter-global-guidance-multilingual-education?hub=84624",
+      "publisher": "UNESCO",
+      "purpose": "Supports the inclusive framing of multilingualism as a broad human characteristic rather than a fluency ranking."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "translate-a-free-software-resource-into-a-language-you-know",
+    "learn-a-new-language-to-conversational-fluency"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "make-your-own-condiments-from-scratch",
+  "slug": "make-your-own-condiments-from-scratch",
+  "title": "Make one condiment and keep its process clear",
+  "description": "Create a homemade condiment by choosing a style, testing its flavor on a meal and following a tested preservation recipe if you can it.",
+  "intent": "How can I make a condiment from scratch and understand the difference between a fresh kitchen sauce and a shelf-stable preserved one?",
+  "sections": [
+    {
+      "heading": "Pick a condiment with a clear endpoint",
+      "paragraphs": [
+        "Choose what you want the condiment to do. A fresh dressing adds acidity to a meal; a pepper sauce brings heat; a chutney or relish adds texture and sweetness. Decide whether you want something to serve immediately or a preserved jar to store. Those are not interchangeable goals: a recipe meant to be eaten fresh does not automatically become safe for pantry storage when it is poured into a jar.",
+        "For a first shelf-stable project, select a complete tested recipe from a university extension or the National Center for Home Food Preservation. Its Easy Hot Sauce recipe is one concrete example, with specific ingredients, jar size, process times and altitude adjustments. Follow the current recipe exactly and read the general canning instructions before starting. This article is a planning guide, not a canning recipe."
+      ]
+    },
+    {
+      "heading": "Build flavor without changing the preservation formula",
+      "paragraphs": [
+        "If you want to compare flavors, make the tested base as written, then taste a small serving at the table with different foods. Try it alongside beans, eggs or roasted vegetables and note whether its heat, salt or acidity fits. You can explore garnish or serving combinations without altering the batch that is being processed for storage.",
+        "Do not casually change the proportions of vinegar, tomatoes, peppers, salt or other ingredients in a canning recipe. The National Center for Home Food Preservation explains that salsa safety depends on acidity, ingredients, amounts and preparation method, and recommends tested recipes rather than an improvised formula. A kitchen pH strip or an internet substitution is not a substitute for a tested process."
+      ]
+    },
+    {
+      "heading": "Prepare the workspace and ingredients",
+      "paragraphs": [
+        "Read every step before turning on the stove. Check that you have the jars, lids, canner and utensils the recipe requires, and confirm that the process time applies to your elevation and jar size. Use the recipe’s specified ingredient forms and amounts. If you lack a required piece of equipment, pause and choose another tested method rather than improvising.",
+        "Hot peppers deserve careful handling. The National Center’s hot sauce recipe cautions that gloves or thorough handwashing are needed before touching your face or eyes. Keep raw pepper residue away from your eyes, children and pets, and clean the workspace before preparing other food. Follow the recipe’s directions for heating, filling and processing in order."
+      ]
+    },
+    {
+      "heading": "Record the batch you actually made",
+      "paragraphs": [
+        "Write down the recipe title and source, date, ingredients, jar size, elevation range used for process time and any deviations. If something differs from the published process, do not label the jars shelf-stable; ask a qualified local extension or preservation expert how to handle them. Inspect and store finished jars only according to the recipe’s guidance.",
+        "For a fresh condiment, use a recipe designed for fresh serving and follow its refrigeration instructions. Do not assume a mixture containing oil, garlic, herbs or vegetables can sit at room temperature safely just because it tastes acidic. The source for this article covers tested home-canned hot sauce and salsa; it does not establish storage times for every fresh sauce or infused oil."
+      ]
+    },
+    {
+      "heading": "Taste, serve and choose the next variation",
+      "paragraphs": [
+        "Open a properly stored jar as the recipe directs and taste a small amount with a meal. Record flavor, texture and how quickly heat builds. If you want a sweeter or milder version next time, find a different tested recipe that achieves that flavor, or adjust the serving rather than changing a canning formula.",
+        "The useful accomplishment is both culinary and procedural: you can explain what the condiment adds and whether the process was intended for fresh use or preservation. Keep the two goals distinct, use authoritative preservation instructions when canning, and treat each new formula as its own recipe rather than a tweak to a remembered batch."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Easy Hot Sauce",
+      "url": "https://nchfp.uga.edu/how/can/how-do-i-can-tomatoes/easy-hot-sauce/",
+      "publisher": "National Center for Home Food Preservation, University of Georgia",
+      "purpose": "A tested U.S. shelf-stable hot sauce recipe with specified proportions and elevation-dependent process times; recipe must be followed as published."
+    },
+    {
+      "title": "Canning Your Own Salsa Recipe",
+      "url": "https://nchfp.uga.edu/newsflash/canning-your-own-salsa-recipe",
+      "publisher": "National Center for Home Food Preservation, University of Georgia",
+      "purpose": "Explains why salsa acidity, ingredients and processing interact and why improvised formulas should not be canned; not a general fresh-sauce storage guide."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "preserve-a-season-jam-pickle-ferment",
+    "ferment-something-for-the-first-time",
+    "turn-vegetable-trimmings-into-stock-and-soup"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

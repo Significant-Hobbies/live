@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "hike-weekly-for-a-year",
+  "slug": "hike-weekly-for-a-year",
+  "title": "Make a year of hiking fit the seasons",
+  "description": "Plan a weekly hiking year with routes that change with daylight, weather, fitness, and trail conditions, while keeping a practical backup plan.",
+  "intent": "A year-long hiking log needs a repeatable way to choose each week’s route and adapt safely when conditions or life interrupt the plan.",
+  "sections": [
+    {
+      "heading": "Decide what a hiking week means",
+      "paragraphs": [
+        "Before choosing trails, decide what counts as a week completed. A short local path can qualify if your goal is to build a durable outdoor habit; a particular distance or elevation target makes a different challenge. Keep the rule clear enough that you will not renegotiate it every Sunday. You might count one intentional walk on a natural or maintained trail, without requiring a new location each time. The National Park Service notes that parks offer trails for a range of skill levels, and an easier option can still be rewarding. Consistency is not the same as increasing difficulty every week.",
+        "Set up a simple log with date, trail or neighborhood route, conditions, duration or distance if useful, and a sentence about what changed your decision. This lets you see seasonal patterns: a familiar loop may feel different in heat, rain, snow, or reduced daylight. It also makes the year meaningful beyond a tally. You will remember the week when you heard spring peepers, when leaves blocked the stream crossing, or when the short route was the sensible choice."
+      ]
+    },
+    {
+      "heading": "Build a route ladder rather than a fixed climb",
+      "paragraphs": [
+        "Choose a small set of options: an easy loop near home, a longer route for good-weather weekends, and a low-commitment paved or well-maintained path for busy weeks. Add occasional destination hikes when travel and conditions support them. This route ladder protects the habit from becoming an all-or-nothing test. It also helps you avoid escalating mileage just because the calendar says you have completed several weeks.",
+        "For every outing, check the route’s current conditions and weather forecast. At a national park, consult the park’s alerts and ask a ranger about trail difficulty or local hazards. The NPS recommends matching route choice to the group’s ability, leaving a trip plan with someone, and having a backup when conditions are poor. These are useful principles beyond parks, though local agencies and land managers set the actual rules for their trails."
+      ]
+    },
+    {
+      "heading": "Let the calendar change the hike",
+      "paragraphs": [
+        "A weekly commitment spans different daylight and weather. In summer, a shaded morning route may be more comfortable than an exposed ridge at midday. In winter, a shorter maintained path can be a better plan than a remote route that depends on long daylight. In shoulder seasons, mud, ice, stream levels, and closures can matter more than the distance printed on a map. A year-long project rewards noticing these changes, not forcing one favorite trail into every month.",
+        "Keep the hike compact when time is tight: walk an established local trail, take a loop near transit, or choose a shorter route in a managed park. If you are in unfamiliar terrain or at higher elevation than usual, plan for the real conditions rather than your home routine. Do not rely on a phone signal in remote country; the NPS specifically warns that coverage can be unavailable and recommends planning communication and an emergency response appropriate to the area."
+      ]
+    },
+    {
+      "heading": "Protect the habit from injury and bad weather",
+      "paragraphs": [
+        "Use footwear and equipment suited to the route surface, check that your gear works before relying on it, and carry food and water appropriate to the outing. A day hike on an urban greenway has different needs from a backcountry route. Share your route and expected return with a trusted person when appropriate. Turn around if weather, trail closures, darkness, injury, or water crossings make continuing a poor choice. A missed week due to illness or unsafe conditions is not a reason to punish yourself by doubling the next hike.",
+        "If you are returning after a long inactive period, have a medical condition, or plan to move quickly into steep or remote routes, consider discussing that plan with a clinician or qualified outdoor professional. This article is general planning guidance, not a training prescription. The challenge is to make hiking a recurring part of life, and a conservative route choice preserves more future weeks than a risky push on one day."
+      ]
+    },
+    {
+      "heading": "Create a fallback before the first hike",
+      "paragraphs": [
+        "Pick your home-area easy route now, and note a second option that remains usable if rain or an early sunset changes the plan. Add the first outing to your calendar, then write a short trip note after you return. Repeat that process each week: check the conditions, choose the route you can complete safely, and update the log. By the end of the year, the record will show not only where you walked, but how your choices changed with the seasons and your own capacity."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Hike Smart",
+      "url": "https://www.nps.gov/articles/hiking-safety.htm",
+      "publisher": "National Park Service",
+      "purpose": "Supports matching route to ability, checking park alerts and weather, leaving a trip plan, having a backup, and carrying route-appropriate gear; park advice does not replace local trail rules."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "walk-a-long-distance-trail-over-100km",
+    "climb-your-first-mountain",
+    "do-a-solo-camping-trip-with-no-phone"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

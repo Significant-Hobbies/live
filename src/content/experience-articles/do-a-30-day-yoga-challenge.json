@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "do-a-30-day-yoga-challenge",
+  "slug": "do-a-30-day-yoga-challenge",
+  "title": "Shape a 30-day yoga challenge around a practice you can sustain",
+  "description": "Choose a safe, beginner-appropriate yoga format, make room for rest and modifications, and decide what a useful 30-day practice means.",
+  "intent": "Help readers plan a month of yoga around style, instruction, and practical adaptations, without prescribing an intensity or promising health outcomes.",
+  "sections": [
+    {
+      "heading": "Choose a practice format before a calendar",
+      "paragraphs": [
+        "A 30-day challenge can mean thirty short sessions, daily attendance, or thirty days in which yoga is part of the routine. Decide what you mean before signing up. If you are new, an introductory class with a qualified instructor lets you ask questions and learn how to use props; a video gives flexibility but may offer less individual correction. Choose a style and teacher whose pacing, language, and accessibility fit you rather than choosing the most demanding-looking sequence.",
+        "Try one sample session before setting the month’s commitment. Notice whether the teacher explains transitions and offers options, and whether you can see or hear instructions clearly. Write down the exact class or sequence you plan to use so the challenge does not turn into a daily search for a new routine."
+      ]
+    },
+    {
+      "heading": "Make a calendar with options",
+      "paragraphs": [
+        "Plan the time and place for practice, then create a shorter alternative for busy days. For example, you might reserve a longer class on a free evening and use a brief, familiar mobility session when travel or caregiving disrupts the schedule. A rest day can still count as an intentional day in the challenge if your goal is consistency rather than a physical session every day.",
+        "Write down one modification offered by your instructor for poses that feel inaccessible. Blocks, a chair, a wall, or a folded blanket can alter how a movement feels; they are not signs of failure. Avoid selecting advanced inversions or forceful breathing because they appear in a challenge video. NCCIH advises beginners to avoid extreme practices and notes that some conditions may call for modified practice."
+      ]
+    },
+    {
+      "heading": "Set up a safe learning environment",
+      "paragraphs": [
+        "Clear a space where you can extend your arms and legs without hitting furniture, pets, or a hot radiator. Use a stable surface and check that the mat will not slide. Have the props your instructor recommends within reach. If attending a class, tell the teacher you are new and mention any injury, pregnancy, balance concern, or relevant health condition privately before practice.",
+        "The National Center for Complementary and Integrative Health says yoga is generally considered safe for healthy people when performed properly under a qualified instructor, while sprains and strains can occur. It also notes that hot yoga has particular overheating and dehydration risks. That is a reason to choose an ordinary, comfortably cool beginner session if heat exposure is not an informed part of your plan."
+      ]
+    },
+    {
+      "heading": "Notice the difference between effort and warning signs",
+      "paragraphs": [
+        "A stretch may feel unfamiliar, but sharp pain, numbness, dizziness, or a feeling that a joint is being forced are reasons to stop and tell the instructor. Do not use a streak to override your body. If you have a health condition, are pregnant, are older and new to yoga, or have an injury, ask your health professional and the teacher what adaptations are appropriate for you. NCCIH lists examples of conditions that may call for modifications, but it cannot determine what is safe for an individual.",
+        "Keep a simple log: date, session type, modifications, and how you felt afterward. The log helps you spot a pattern, such as a class that repeatedly leaves you uncomfortable or a shorter routine that fits reliably. It is a reflection tool, not a clinical measure of progress."
+      ]
+    },
+    {
+      "heading": "Finish with a practice you can repeat",
+      "paragraphs": [
+        "At the end of the month, review what actually happened. Which time of day worked? Was an in-person class more useful than a home video? Did you need more choice or less variety? You might continue with a regular weekly class, a brief home practice, or a rest from structured sessions. A useful outcome is finding a format that fits your life, not completing every calendar square at any cost.",
+        "NCCIH’s page summarizes evidence and safety considerations but does not validate any particular thirty-day program or promise a health benefit. Your next action is to book or preview one beginner-friendly class, read the teacher’s description, and ask how new students can modify poses before committing to the whole month."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Yoga: Effectiveness and Safety",
+      "url": "https://www.nccih.nih.gov/health/yoga-effectiveness-and-safety",
+      "publisher": "National Center for Complementary and Integrative Health, NIH",
+      "purpose": "Supports the qualified-instructor recommendation, common injury types, beginner cautions, hot-yoga risks, and examples of conditions that may need modifications; it is not individualized medical advice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "learn-to-meditate-for-20-minutes-straight",
+    "spend-a-day-in-complete-silence",
+    "do-a-10-day-silent-meditation-retreat"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

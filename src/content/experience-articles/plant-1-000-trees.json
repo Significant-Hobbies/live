@@ -1,0 +1,60 @@
+{
+  "experienceSlug": "plant-1-000-trees",
+  "slug": "plant-1-000-trees",
+  "title": "How to make a thousand-tree goal survive the planting day",
+  "description": "Plan a tree-planting goal around local ecology, landowner permission, aftercare and recorded survival rather than a headline planting count.",
+  "intent": "A stewardship-first plan for working with an established restoration program toward a thousand-tree target and tracking what remains alive.",
+  "sections": [
+    {
+      "heading": "Start with the site, not the number",
+      "paragraphs": [
+        "A thousand seedlings can be the wrong target for a site that needs a handful of carefully chosen trees, or too small for a larger restoration plan. Ask the land manager what problem the planting is meant to solve: reconnect habitat, shade a stream, replace storm-damaged canopy, or restore a native woodland. The right answer may include protecting natural regeneration instead of adding seedlings. A volunteer day should fit a site plan created with people responsible for the land.",
+        "The U.S. Forest Service describes tree planting as one option in restoration and reports research testing how species richness and planting density affected survival and growth in a particular Hawaiian forest refuge. That study is not a universal recipe. It is a useful reminder to ask what local evidence supports the species and spacing selected for your landscape."
+      ]
+    },
+    {
+      "heading": "Find a legitimate partner and a permitted place",
+      "paragraphs": [
+        "Look for a public land agency, conservation district, Indigenous or community land steward, botanical garden, watershed group, or established restoration nonprofit that identifies the site and its long-term manager. Ask who owns the land, who approved planting there, and who will maintain it after volunteers leave. Do not plant on a vacant lot, roadside or protected area based only on a map or social post.",
+        "A responsible organizer should be able to explain why trees belong at that site, which native or locally appropriate species they chose, what planting stock they will use, and how the work will avoid damaging existing habitat. If the group cannot answer basic questions, offer to help with a cleanup, nursery task or monitoring day while you learn more."
+      ]
+    },
+    {
+      "heading": "Treat one thousand as a stewardship ledger",
+      "paragraphs": [
+        "Build a simple record for each planting batch: date, site, species, source of the seedlings, number planted, responsible partner, and follow-up dates. Use the manager’s preferred monitoring method rather than inventing a survival percentage. A tree that dies and is replaced is not proof of failure, but counting the replacement as an additional living tree would make the headline misleading.",
+        "Make a plan for the unglamorous period after the event. Who will check whether young trees are still present? Who is authorized to water, weed or replace them? What happens during drought, grazing pressure, wildfire or vandalism? If your volunteer group cannot provide aftercare, ask whether your contribution should instead support nursery propagation, protection or an existing monitoring program."
+      ]
+    },
+    {
+      "heading": "Make the planting day useful",
+      "paragraphs": [
+        "Before signing up, ask about site access, tools, terrain, weather, mobility accommodations and whether training is provided. Follow the land manager’s demonstration for hole depth, root handling and backfill; different stock and soils call for different methods. Keep roots from drying out while waiting, and do not improvise fertilizer or amendments that the site manager has not approved. A person planting fewer seedlings carefully can be more useful than a hurried crowd.",
+        "Choose one role that fits you: planting, staging seedlings, checking labels, keeping a count, taking approved monitoring photos, or helping with logistics. Make sure every planted tree is recorded as part of the intended project rather than as an independent act."
+      ]
+    },
+    {
+      "heading": "Report progress honestly and stay involved",
+      "paragraphs": [
+        "Measure progress with separate numbers: seedlings planted, seedlings monitored, and surviving trees at the dates the project actually checked them. The Forest Service study concerns a specific Hawaiian ecosystem and cannot establish what your planting site will achieve; your local partner’s monitoring is the relevant evidence. Keep the record even if the survival picture is disappointing. It tells the group where to adapt its approach.",
+        "A useful first milestone is not a social-media photo of a thousand holes. It is one approved site, a defined planting plan and a named person who will check the batch later. Contact a local restoration organization and ask what work already fits its ecological plan, then join that effort before setting a personal number."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Planting diversity and density shape native plant survival and community assembly in tropical forest restoration",
+      "url": "https://research.fs.usda.gov/treesearch/81260",
+      "publisher": "U.S. Forest Service Research and Development",
+      "purpose": "Describes a multi-year experiment at Hakalau Forest National Wildlife Refuge testing species richness and planting density effects on outplant survival, cover and growth; evidence is site-specific, not universal."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "observe-a-forest-canopy-from-a-public-treetop-walkway",
+    "spend-an-hour-watching-a-single-tree",
+    "volunteer-for-something-you-believe-in",
+    "clean-up-a-beach-or-river-in-your-community"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

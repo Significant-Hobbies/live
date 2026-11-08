@@ -1,0 +1,76 @@
+{
+  "experienceSlug": "invest-your-first-serious-money",
+  "slug": "invest-your-first-serious-money",
+  "title": "Give a first investment a job before choosing an account",
+  "description": "Before investing a meaningful sum, match the money to a time horizon, understand the risks and fees, and verify who is offering the investment.",
+  "intent": "What should I check before investing a meaningful amount for the first time, without mistaking a general guide for personal financial advice?",
+  "sections": [
+    {
+      "heading": "Define what the money is for",
+      "paragraphs": [
+        "“Serious money” is personal. It might be a first bonus, savings accumulated over several years, or an inheritance. Before looking at an investment, write down the purpose and when you may need the funds. Money intended for rent, a near-term move, medical costs, or another short-horizon need has a different job from money set aside for a distant goal. Investor.gov, the U.S. Securities and Exchange Commission’s investor education site, distinguishes savings and emergency funds from investing and notes that all investments carry risk.",
+        "Make a small inventory: amount available, any planned use, debts or obligations you are considering, and the date by which you may need access. This is not a formula for whether to invest. It is a way to avoid treating every dollar as if it has the same deadline. If your situation includes tax questions, debt, dependents, or an imminent purchase, a qualified professional in your jurisdiction can help you compare choices."
+      ]
+    },
+    {
+      "heading": "Write down your time horizon and risk limit",
+      "paragraphs": [
+        "A time horizon is the period until you expect to use the money. Investor.gov explains that horizon and risk tolerance are personal inputs to asset allocation; a longer horizon may make some people more comfortable with volatility, while someone needing the money sooner may prefer less volatility. This is a framework for asking questions, not a prediction that a particular investment will recover by a certain date.",
+        "Describe risk in plain language: “I could see this balance fall substantially and still leave it invested until my goal date,” or “I would need this money if my income stopped.” If a market drop would force you to sell or disrupt a near-term plan, pause before choosing a volatile asset. You can decide to learn first, hold the money in an appropriate savings vehicle, or seek tailored advice. There is no need to invest the entire sum at once merely because it is available."
+      ]
+    },
+    {
+      "heading": "Understand the thing you would own",
+      "paragraphs": [
+        "Before buying, explain the investment to yourself without promotional language. What does it hold? How might it make or lose money? What would make its value change? Can you sell it when needed, and what costs or tax consequences might apply? If it is a fund, look at its holdings and whether the exposure is broad or concentrated. A product described as diversified can still focus on one sector or theme.",
+        "The SEC notes that diversification means spreading exposure across investments and asset classes to reduce risk, but it cannot guarantee a profit or prevent losses. This distinction matters: diversification addresses concentration, not every risk. Avoid choosing an investment because it is trending, because someone online promises a return, or because its recent chart rises smoothly. Every investment involves risk, and historic examples do not set a future return."
+      ]
+    },
+    {
+      "heading": "Compare fees and the person selling it",
+      "paragraphs": [
+        "Fees can appear as a transaction charge, ongoing account fee, advisory fee, or fund operating expense. Read the fee schedule and product disclosure, and write the total in a way you can compare across options. The SEC’s fee bulletin explains that charges reduce the portion of the portfolio left invested and identifies disclosures such as prospectuses, account documents, and statements as places to check. A low headline fee does not answer whether the product fits your goal, but an unexplained fee is a reason to ask more questions.",
+        "If someone recommends an investment, verify their registration or licensing through the regulator for your jurisdiction and use contact information you independently locate. Investor.gov warns about pressure to act immediately, guaranteed high returns with little risk, fake credentials, and unsolicited investment approaches. Pause if an offer depends on secrecy, urgency, gift cards, transfers to an individual, or your reluctance to read the documents."
+      ]
+    },
+    {
+      "heading": "Make the first decision deliberately",
+      "paragraphs": [
+        "Use a one-page checklist before you commit: goal and date; what the investment owns; main ways it could lose value; how you can exit; all fees; tax treatment to verify locally; and who is legally offering it. If you cannot answer these clearly, do not let the size of the sum pressure you into a rushed decision. Set a date to revisit after learning the missing terms or speaking with an appropriately qualified adviser.",
+        "Keep a copy of the documents and your reasoning. If you invest, start only with an amount and product you understand, and make sure the account is protected with strong security. The practical next action is to write the goal and the earliest date you might need this money, then read the official disclosures for any candidate before transferring funds."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Introduction to Investing",
+      "url": "https://www.investor.gov/introduction-investing",
+      "publisher": "U.S. Securities and Exchange Commission, Investor.gov",
+      "purpose": "Supports distinguishing savings for short-term needs from investing, and states that investments carry risk; this is U.S. investor education, not individualized advice or guidance on another country's tax and account rules."
+    },
+    {
+      "title": "Asset Allocation and Diversification",
+      "url": "https://www.investor.gov/introduction-investing/getting-started/asset-allocation",
+      "publisher": "U.S. Securities and Exchange Commission, Investor.gov",
+      "purpose": "Supports using time horizon and risk tolerance as personal considerations and explains diversification; it does not recommend a particular asset mix."
+    },
+    {
+      "title": "How Fees and Expenses Affect Your Investment Portfolio – Investor Bulletin",
+      "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated",
+      "publisher": "U.S. Securities and Exchange Commission, Investor.gov",
+      "purpose": "Supports checking fee disclosures and explains that fees reduce amounts remaining invested; its hypothetical illustrations are not return forecasts."
+    },
+    {
+      "title": "Protect Your Money: How to Avoid Investment Scams",
+      "url": "https://www.investor.gov/protect-your-investments/fraud/protect-your-money",
+      "publisher": "U.S. Securities and Exchange Commission, Investor.gov",
+      "purpose": "Supports pausing over pressure to act now, promises of high returns with little or no risk, fake credentials and unsolicited investment approaches; it is U.S. investor education and does not assess any specific offer."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-an-investment-portfolio",
+    "become-completely-debt-free"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,71 @@
+{
+  "experienceSlug": "write-down-everything-you-know-about-your-family-history",
+  "slug": "write-down-everything-you-know-about-your-family-history",
+  "title": "Start a family history with what you know and what you do not",
+  "description": "Record names, places, dates, stories and uncertainties in one organized family history, then ask relatives for memories with their consent.",
+  "intent": "How do I turn scattered family memories into a useful record while separating firsthand stories, documents and unverified guesses?",
+  "sections": [
+    {
+      "heading": "Start with a simple map of what you know",
+      "paragraphs": [
+        "Begin with yourself and work backward through parents, grandparents and other relatives. For each person, note names used, approximate dates, places lived and relationships you can explain. A small diagram or table is enough. Start at home: family papers, photographs, diaries, letters and certificates may already contain clues, as the U.S. National Archives genealogy guidance points out.",
+        "Mark uncertainty clearly. Write “about 1940,” “possibly near Pune,” or “story from aunt, not yet checked” instead of forcing a precise date or place. Family memory can be valuable without being complete. Keeping the source beside each claim makes it easier for another relative to understand how you learned it."
+      ]
+    },
+    {
+      "heading": "Separate records from recollection",
+      "paragraphs": [
+        "Create simple labels for what you have: a document you saw, a photograph with writing on the back, a story told by a relative, or your own inference. Do not turn a family anecdote into a verified fact because it has been repeated often. If two people remember an event differently, preserve both accounts and note who told each one.",
+        "When recording a story, ask permission first and explain who may read or hear it. Some memories involve adoption, illness, migration, conflict or estrangement. A relative can decline a question or ask that a detail stay private. Your family history can acknowledge a gap without pressuring someone to disclose something they do not want to share."
+      ]
+    },
+    {
+      "heading": "Ask open questions that invite a story",
+      "paragraphs": [
+        "As an original practical suggestion, start with a scene: “What did a normal Sunday look like?” “Who taught you that recipe?” “What was the first room you remember?” Then wait. A specific follow-up such as “What happened next?” may feel more natural than moving rapidly through a long questionnaire. These are example questions, not a method attributed to a source.",
+        "Start with topics you can explore gently: a childhood home, a first job, a local celebration, a name’s origin, a school route or an object that was kept. Avoid leading questions that announce the answer you hope to hear. Record exact phrases only with permission, and label your notes with the person’s name, date, place and topic."
+      ]
+    },
+    {
+      "heading": "Preserve the material without overhandling it",
+      "paragraphs": [
+        "Scan papers and photographs when you can do so safely, but keep track of where the original came from and who owns it. The National Archives’ Family Archives page links to guidance on handling, storing, displaying, digitizing and repairing family papers and photographs. Its advice is for U.S. family archives; for an item that is fragile, moldy or deteriorating, ask a qualified conservator or archive rather than repairing it with household tape.",
+        "Use one folder per family branch or one spreadsheet with columns for person, event, source and confidence. Keep backups of digital files and avoid uploading private family records to public sites without consent. Include a short note explaining your labels so future readers do not confuse an estimate with a birth certificate or a story with a census record."
+      ]
+    },
+    {
+      "heading": "Choose the next question, not the whole tree",
+      "paragraphs": [
+        "At the end of the first session, identify one missing piece that can be pursued respectfully: the town where a relative lived, the name on the back of a photo, or who might know the story of an object. Ask one person whether they are willing to talk, and let them choose a convenient time and whether recording is comfortable.",
+        "A family history will remain partial. That is normal; it can still preserve what is known, who shared it and what remains open. Your next action is to write down five names you can identify, add one source or memory beside each, and mark every uncertain detail visibly before asking anyone else to fill it in."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Oral Histories - Family History for Kids",
+      "url": "https://guides.loc.gov/family-history-for-kids/interviews",
+      "publisher": "Library of Congress",
+      "purpose": "The short guide says to ask an older relative before recording and notes the recording may later be transcribed or shared; it does not support detailed question or listening methods."
+    },
+    {
+      "title": "Begin Genealogical Research",
+      "url": "https://www.archives.gov/files/riverside/begin-genealogical-research.pdf",
+      "publisher": "National Archives and Records Administration",
+      "purpose": "Supports beginning at home with family records and contacting relatives as possible sources; older U.S.-focused genealogy guide."
+    },
+    {
+      "title": "How to Preserve Family Archives",
+      "url": "https://www.archives.gov/preservation/family-archives",
+      "publisher": "National Archives and Records Administration",
+      "purpose": "Links to NARA guidance on handling, storing, displaying, digitizing, repairing, and caring for U.S. family papers and photographs."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "have-one-real-conversation-with-a-grandparent-before-it-is-too-late",
+    "record-your-parents-life-stories",
+    "host-a-family-reunion"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

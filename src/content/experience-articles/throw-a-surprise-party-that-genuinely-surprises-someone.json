@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "throw-a-surprise-party-that-genuinely-surprises-someone",
+  "slug": "throw-a-surprise-party-that-genuinely-surprises-someone",
+  "title": "Plan a Surprise That Feels Like Care, Not a Trap",
+  "description": "Keep a surprise party personal and comfortable by checking boundaries, coordinating one helper, planning a quiet reveal, and making guests feel welcome.",
+  "intent": "Gives a host a low-drama planning approach that keeps the recipient’s preferences and comfort at the center of the surprise.",
+  "sections": [
+    {
+      "heading": "Check whether a surprise suits them",
+      "paragraphs": [
+        "A surprise is only generous if the recipient enjoys being surprised. Think about how they handle crowds, attention, noise, photos, and unexpected schedule changes. If you are not sure, ask a trusted friend or family member about the person’s preferences without asking them to invent a cover story. If the person dislikes surprises, make the event itself the gift and let them choose the time.",
+        "Choose the scale around the recipient, not the host’s wish to stage a big reveal. A few friends waiting in a familiar living room can feel more welcoming than a crowded venue. A surprise may also be a small picnic or a planned dinner with one unexpected guest. Keep the element of surprise limited to one detail."
+      ]
+    },
+    {
+      "heading": "Build a simple event plan",
+      "paragraphs": [
+        "Set a date, rough duration, guest list, and spending limit before inviting people. Choose a venue the recipient can reach comfortably and that fits the group. Make sure one trusted helper handles the practical logistics while you manage the invitations. Too many co-conspirators create more chances for accidental messages and mismatched instructions.",
+        "Give guests one clear arrival time, a parking or transit note, and what to do if they arrive early. Ask them not to post photos or details before the reveal. Name a contact person for questions so the recipient is not the one fielding confusing texts."
+      ]
+    },
+    {
+      "heading": "Coordinate the reveal without deception spirals",
+      "paragraphs": [
+        "Use a plausible reason to bring the recipient to the venue, but keep it ordinary and kind. Avoid fake emergencies, false bad news, or pressuring the person to attend an event they would otherwise decline. If timing is uncertain, tell the recipient you would like to see them and save the surprise for a smaller detail rather than manufacturing a complicated story.",
+        "Agree with the helper on the exact cue: when to open the door, start the music, or bring out the cake. Keep a quieter arrival option ready in case the recipient wants a moment before greeting everyone. If they seem overwhelmed, let them step away without making a scene."
+      ]
+    },
+    {
+      "heading": "Make food and access easy to navigate",
+      "paragraphs": [
+        "Ask guests about food allergies and dietary needs when they RSVP, and label dishes clearly. The U.S. Food and Drug Administration notes that major allergens must be identified on many regulated food labels and that allergic reactions can be serious. Keep original packages for packaged snacks, and do not promise something is allergy-safe unless you can verify its ingredients and handling. If you cannot meet a need, tell the guest honestly.",
+        "Think about seating, lighting, noise, restrooms, stairs, and space for a mobility device. These details can make a small party much easier to enjoy. If you are using a rented venue, ask about accessible entrances and any venue rules before choosing it. Let guests know what the setting will be like."
+      ]
+    },
+    {
+      "heading": "Let the gathering belong to the guest",
+      "paragraphs": [
+        "At the reveal, keep the greeting brief and let the recipient decide how much attention they want. Skip speeches or games unless you know they enjoy them. Give people a natural way to mingle: a photo from a shared trip, a playlist they like, or a few snacks set out where conversation can happen without a stage.",
+        "Your next step is to ask one trusted person whether a surprise would feel welcome, then write a one-page plan with guest count, arrival cue, access needs, food, and a quiet exit option. When the event is over, thank the helper and share photos only if the recipient is comfortable with them."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Food Allergies: What You Need to Know",
+      "url": "https://www.fda.gov/food/buy-store-serve-safe-food/food-allergies-what-you-need-know",
+      "publisher": "U.S. Food and Drug Administration",
+      "purpose": "Food allergy seriousness and U.S. packaged-food allergen labeling background for event hosts."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "host-a-dinner-party-for-20-people",
+    "host-a-family-reunion",
+    "throw-a-party-worth-remembering"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

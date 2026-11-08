@@ -1,0 +1,47 @@
+{
+  "experienceSlug": "ride-the-orient-express",
+  "slug": "ride-the-orient-express",
+  "title": "Choose the right route before the cabin",
+  "description": "Compare the Orient Express route, overnight duration, and cabin details against the journey you want before booking a particular date.",
+  "intent": "How can a traveler choose an Orient Express journey by current route, cabin, and onboard priorities?",
+  "sections": [
+    {
+      "heading": "Name the journey precisely",
+      "paragraphs": [
+        "“Ride the Orient Express” can refer to different experiences, and current itineraries change, so begin by identifying the exact train and route. The Venice Simplon-Orient-Express operator, Belmond, currently lists routes to more than fifteen European cities and distinct journey lengths. Compare the endpoints and overnight duration first: the trip itself may be a one-night crossing, while a longer itinerary can include additional days and destinations. Do not assume a familiar name means one fixed route. Use the operator’s current journey page for the actual date you are considering and confirm what is included in that specific booking. Think about whether your goal is a rail journey, a particular city pair, or time aboard the restored train. That answer will narrow your choice more effectively than picking a route from a vintage poster."
+      ]
+    },
+    {
+      "heading": "Compare cabins for daily comfort",
+      "paragraphs": [
+        "Next, compare the cabin categories using the operator’s current description. Belmond lists historic cabins, suites, and grand suites, and describes private cabins, steward service, restaurant cars, and inclusive dining. Treat those details as a starting point for questions: ask what sleeping arrangement applies to the exact cabin, what washroom facilities are included, how much space is available for luggage, and what dining is covered. If you have a mobility requirement, ask the booking team how your carriage connects to shared areas; the train’s layout may affect how easily you can reach the restaurant or bar. A photograph rarely tells you how a night train feels to live in. Decide whether your priority is a comfortable private room, a particular route, or the social part of dinner and lounge time."
+      ]
+    },
+    {
+      "heading": "Plan the practical edges",
+      "paragraphs": [
+        "Make the evening itself part of your plan. Ask about the dress guidance for the dining service, the timing of meals, and whether there are restrictions on luggage or arrival. If you have dietary or accessibility needs, raise them before booking so the operator can answer specifically. Build a buffer before and after the train: international rail movements and published itineraries can change, and onward tickets or hotel check-ins made too tightly can turn a special journey into a logistics exercise. Keep your passport and travel documents accessible according to the operator’s current instructions. Avoid treating a train experience as a sealed bubble; customs, railway network constraints, and station transfers still shape the trip. A little preparation leaves you freer to notice the carriage details and landscapes."
+      ]
+    },
+    {
+      "heading": "Choose a trip that fits",
+      "paragraphs": [
+        "For a first attempt, choose a route that fits the travel story you want, then compare the cabin and duration as practical constraints. Write down three questions for the booking office: What exactly is included? What is the expected sleeping arrangement? What current journey details could change? Confirm each answer for your chosen date. During the trip, pick one small ritual—watch the scenery for ten minutes before dinner, sketch the interior, or send a postcard from the train. You do not need to document every detail to remember it. If the fare or route does not fit, save the idea and look at a shorter rail journey with a similar landscape rather than stretching your plans around an unsuitable option. Your next step is to review Belmond’s current journeys and accommodation pages together before deciding."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Venice Simplon-Orient-Express",
+      "url": "https://www.belmond.com/en/trains/europe/venice-simplon-orient-express",
+      "publisher": "Belmond",
+      "purpose": "Supports current listed routes, route durations, accommodation categories, steward service, and dining details."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "take-the-trans-siberian-railway-across-russia",
+    "decode-railway-signals-at-a-rail-museum"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

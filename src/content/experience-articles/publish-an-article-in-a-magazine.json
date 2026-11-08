@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "publish-an-article-in-a-magazine",
+  "slug": "publish-an-article-in-a-magazine",
+  "title": "Find the Magazine That Wants This Exact Piece",
+  "description": "Turn a finished article into a credible magazine submission by matching its form, reading the publication, following its rules, and tracking rights.",
+  "intent": "Provides a practical submission path that starts with editorial fit and current guidelines instead of mass-sending a generic pitch.",
+  "sections": [
+    {
+      "heading": "Name the piece before you name the magazine",
+      "paragraphs": [
+        "Write a one-line description of the article’s subject, point of view, and reader. “A reported piece about how a coastal town is adapting its fish market” is more useful than “an article about food.” Decide whether your draft is a reported feature, personal essay, service piece, or review; magazines commission these forms differently.",
+        "For a reported piece, note what you can actually document: people you have permission to quote, public records, scenes you witnessed, and material still missing. For a personal essay, identify the change in understanding the narrative carries. This lets you search for a publication whose recent work resembles your piece in form and subject, rather than sending it to every magazine with a submission page."
+      ]
+    },
+    {
+      "heading": "Read the publication as an editor would",
+      "paragraphs": [
+        "Read several recent pieces from the section you are targeting. Notice how they begin, how much reporting or reflection they contain, and what kind of reader they assume. The Sun, for example, says it looks for personal essays that bring a fresh perspective and wrestle with questions that resist easy answers. That clue helps an essayist judge fit; it is not a recipe to imitate its published writers.",
+        "Make a short comparison: three articles you admire, the element they share with yours, and the gap your work fills. If you cannot explain that relationship in a sentence, keep reading or find another outlet. The goal is not to flatter the editor but to show that you understand the publication and have a distinct story."
+      ]
+    },
+    {
+      "heading": "Follow the current submission path exactly",
+      "paragraphs": [
+        "Open the magazine’s own submission page immediately before sending. Confirm it accepts your genre, whether it wants a complete manuscript or a pitch, the word range, formatting, file type, and the right submission portal. These rules differ and can change. The Sun, for instance, currently asks for complete manuscripts, sets formatting preferences, uses online submissions, and can close its portal when a monthly cap is reached.",
+        "Pay close attention to policies that affect authorship and tools. The Sun says it does not accept submissions created by or with the assistance of AI at any step. Other publications set their own rules. A piece written with tool assistance should not be submitted where that is disallowed; find a publication whose current policy matches how the work was made."
+      ]
+    },
+    {
+      "heading": "Make the pitch precise and supportable",
+      "paragraphs": [
+        "If a publication accepts pitches, lead with a specific subject and why you can report it now. Identify the likely form and length only if the magazine requests that information. Include your access to sources or experience, but do not imply interviews or original reporting that have not happened. A pitch should make it easy for an editor to see the story’s promise and what remains to be done.",
+        "If the publication requests a complete manuscript, send the whole piece in the requested format instead of a query. Proofread names, links, and the attachment; remove comments and placeholder notes. Check whether simultaneous submissions are allowed. If another publication accepts the work, withdraw it promptly wherever it is still under consideration."
+      ]
+    },
+    {
+      "heading": "Keep a clean record of rights and responses",
+      "paragraphs": [
+        "Track the title, publication, date, materials sent, response window, and follow-up rules in a simple sheet. Keep the original draft and copies of every submitted version. If you receive an offer, read the contract for rights, exclusivity, editing, payment, and any republication terms before agreeing. Do not assume the magazine buys every right or that all arrangements are the same.",
+        "Choose one magazine whose recent work genuinely fits your article. Read its live guidelines, revise the piece for that audience, and submit through its stated channel. A thoughtful, accurate submission is a piece of professional work in its own right—even if the editor’s answer is no."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Essays, Fiction & Poetry submission guidelines",
+      "url": "https://www.thesunmagazine.org/submit/essays-fiction-poetry",
+      "publisher": "The Sun Magazine",
+      "purpose": "Current example of publication genre, formatting, whole-manuscript, portal, AI, and simultaneous-submission rules."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "write-something-and-publish-it",
+    "write-a-book",
+    "community-7bca1f54-cb8e-542c-afc8-a7ef31f47655"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

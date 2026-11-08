@@ -1,0 +1,51 @@
+{
+  "experienceSlug": "read-a-play-aloud-around-a-table",
+  "slug": "read-a-play-aloud-around-a-table",
+  "title": "How do you make a table read lively without staging a production?",
+  "description": "Choose a play excerpt, share roles and stage directions, and keep a relaxed read-aloud moving with clear cues and time for the group to compare reactions.",
+  "intent": "Answer how to host a low-pressure play reading that lets each participant explore character and rhythm without turning the evening into a rehearsal or performance.",
+  "sections": [
+    {
+      "heading": "Choose a text that fits the room",
+      "paragraphs": [
+        "Pick a play with a manageable cast and a scene that can stand on its own. A short comic exchange or a moment of tension gives readers enough to respond to without asking them to prepare a whole production. Public libraries and established theatre archives can help you find lawful texts; the Folger Shakespeare Library provides a complete reading text for Twelfth Night, for example. If you choose a modern play, check the rights and use a permitted copy rather than reproducing pages for a group without permission.",
+        "Send the scene and a brief note about the format in advance. Explain that no one needs to act, memorize lines, or use a special voice. Tell people how long the excerpt is and whether they may read silently, take a role, or listen. If someone has low vision, dyslexia, or another access need, offer an accessible version or let them choose a listening role. A good table read should make it easy to participate without requiring performance confidence."
+      ]
+    },
+    {
+      "heading": "Assign roles with room to change",
+      "paragraphs": [
+        "Count the speaking parts and choose a reader for each. One person can read stage directions, or the group can take turns reading them when they appear. If the cast is larger than the group, an interested reader may take two small roles, or the host can read a narrator line. Do not cast people by resemblance to a character or assume someone wants a role because they are expressive. Let participants choose, swap, or pass without explaining.",
+        "Set out the text, pencils for notes, and water. Sit where everyone can see the page and hear one another; a round table is helpful but not essential. Agree on a cue for starting and stopping, and decide whether to pause for questions or read through once before discussing. The Folger text is organized by act and scene, which makes it easy to select a passage with a clear beginning and stopping point. You do not need costumes, props, or a stage."
+      ]
+    },
+    {
+      "heading": "Read for meaning before polishing the lines",
+      "paragraphs": [
+        "For the first pass, read at a comfortable pace and let the language sound ordinary. The reader of stage directions can quietly signal entrances, exits, or changes of place. If a line is difficult, pause, try it again, or ask what a word means. Resist stopping every few sentences to correct delivery; the group is discovering the play together. If participants want a second pass, invite them to choose one question to explore: what a character wants, where a scene changes direction, or how a pause affects the exchange.",
+        "A table read is not a competition for the most dramatic interpretation. People may imagine different voices and motives, and that disagreement can be interesting. Ask for responses to the text rather than judgments about a reader’s skill. For example, “What made that exchange feel tense?” opens conversation; “You should have said it angrily” turns a reader into a target. Keep the focus on how the words work and what the group noticed."
+      ]
+    },
+    {
+      "heading": "Close with one thing the group heard differently",
+      "paragraphs": [
+        "After the final line, ask each person for one moment that surprised them or one character they want to understand better. A listener may have noticed an image or rhythm that a reader missed. If you want to continue, pick a second short scene that responds to the first rather than automatically planning a full read-through of the play. Keep the ending concrete: thank readers, return borrowed texts, and ask whether anyone wants the next excerpt shared in advance.",
+        "For a first attempt, choose four to six pages, allow time for a single read and a brief conversation, and stop while the group still has energy. A good next action is to invite the same people to read another scene with one role changed, then compare what the shift in viewpoint revealed."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Twelfth Night: Entire Play",
+      "url": "https://www.folger.edu/explore/shakespeares-works/twelfth-night/read/",
+      "publisher": "Folger Shakespeare Library",
+      "purpose": "Provides a primary text example organized by act and scene for choosing a manageable excerpt."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "stage-a-shadow-puppet-story",
+    "host-a-bring-one-object-story-circle"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

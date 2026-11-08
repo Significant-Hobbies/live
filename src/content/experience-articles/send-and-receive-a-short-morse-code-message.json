@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "send-and-receive-a-short-morse-code-message",
+  "slug": "send-and-receive-a-short-morse-code-message",
+  "title": "How to make a first Morse exchange feel like a conversation",
+  "description": "Turn sound recognition into a clear two-way Morse exchange: choose a small vocabulary, agree on pacing, and repair missed characters without pressure.",
+  "intent": "How to move from recognizing Morse sounds to a successful two-way exchange, with attention to pacing, turn-taking and repair.",
+  "relatedExperienceSlugs": [
+    "earn-an-amateur-radio-license-in-your-country",
+    "build-a-radio-jove-receiver-with-a-radio-club"
+  ],
+  "sources": [
+    {
+      "title": "Learning Morse Code",
+      "url": "https://www.arrl.org/learning-morse-code",
+      "publisher": "American Radio Relay League",
+      "purpose": "Supports staged character and listening practice and learning the code by sound; this exercise stays off radio."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Choose a message that fits your vocabulary",
+      "paragraphs": [
+        "A first exchange tests listening and turn-taking, not how much code you have memorized. Pick a small set of familiar letters and build a short message from them: a name, a room label, or a choice such as TEA NOW. Keep numbers and punctuation out until both people can recognize letters without checking a chart between sounds.",
+        "The American Radio Relay League’s learning materials present Morse as sound patterns and offer staged practice resources. Listen for each character’s contour rather than silently counting dots and dashes. Three short notes make a different shape from three longer ones. You want the sound to arrive as one unit, the way a spoken syllable does."
+      ]
+    },
+    {
+      "heading": "Leave enough space for a listener",
+      "paragraphs": [
+        "Use a trainer or a local practice oscillator with spacing adjusted for beginners. Fast elements with longer gaps can preserve the character’s sound while giving the receiver time to identify it. If the sequence feels frantic, slow the overall sending or add space between letters. Do not stretch individual dits and dahs so far that their contrast disappears.",
+        "Before trying unfamiliar text, send two warm-up items that both people know. The receiver can say where the timing became hard to follow. This is calibration, not a score. A deliberate, slow exchange teaches more than a rapid stream that only the sender can decode."
+      ]
+    },
+    {
+      "heading": "Take turns with one job at a time",
+      "paragraphs": [
+        "Choose who sends first and who copies. The sender should keep the timing steady instead of changing speed halfway through. The receiver can write each confident letter and leave a blank for an uncertain one rather than guessing from the expected word. Compare the copy with the original only after the transmission ends.",
+        "If a character failed, practise that exact contrast in a short pair: one short pulse against two, or a short-long pattern against long-short. Then put the same character in a different word. That tests whether you recognized the sound itself rather than remembering where it appeared in the first message."
+      ]
+    },
+    {
+      "heading": "Agree how to ask for a repeat",
+      "paragraphs": [
+        "Conversation needs a repair move. Before starting, decide on a simple fallback such as saying “repeat that word” between transmissions, or asking for just the missed group. A beginner session does not need formal radio procedure; it needs permission to ask for a repeat without embarrassment.",
+        "Try one message with a word the receiver does not know only after the basic exchange works. The receiver can request a repeat, then read back what they heard. This reveals whether the problem was a missed sound, an unfamiliar letter or spacing that ran together. “I heard a long middle sound” is more actionable than “I’m bad at this.”"
+      ]
+    },
+    {
+      "heading": "Keep the first conversation off the air",
+      "paragraphs": [
+        "For this practice, use audio files, software, or a local oscillator between two people. Learning code or making practice tones does not itself authorize transmitting on radio frequencies. If amateur radio becomes a later interest, learn the applicable rules from the relevant authority and a local club before transmitting.",
+        "Finish with a short unfamiliar message, then compare it with the sender’s copy. Save a recording only if everyone agrees. Circle one sound pair to revisit and stop while both listeners still have attention. A clear five-word exchange is a complete first conversation; longer material can wait until the listening feels natural."
+      ]
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

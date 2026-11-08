@@ -1,0 +1,66 @@
+{
+  "experienceSlug": "live-with-friends-not-just-roommates",
+  "slug": "live-with-friends-not-just-roommates",
+  "title": "Keep the Friendship While You Learn the Shared-House Details",
+  "description": "Turn a move with friends into a clear shared-living plan for money, chores, guests, quiet, privacy, and what to do when expectations clash.",
+  "intent": "How can friends build a workable home together when being close socially does not mean sharing the same routines, budget, or idea of cleanliness?",
+  "sections": [
+    {
+      "heading": "Talk about the unromantic parts first",
+      "paragraphs": [
+        "Before signing or moving, compare how each person imagines the week: when they work or study, how much quiet they need, whether they host people, and what “clean enough” means. Friendship can make it tempting to assume you will figure the rest out later. The University of Cincinnati's roommate guidance notes that being friends and living together are different relationships, and that agreements often cover sleep, study, cleaning, chores, visitors, personal property, and conflict.",
+        "Use those categories to start a conversation, not to copy a campus policy into a private lease. Ask each person for a concrete example: “How often do you picture guests staying over?” is more useful than “Are you laid-back?” Write down any mismatch before you commit to a home."
+      ]
+    },
+    {
+      "heading": "Make the money plan explicit",
+      "paragraphs": [
+        "List rent, utilities, internet, shared supplies, deposit, and any one-time furniture costs. Decide how bills will be divided and paid, what happens if someone travels, and how you will handle a late payment. Legal duties depend on the lease and local tenancy law; read the actual agreement and get qualified local advice if the obligations are unclear. A friendly verbal promise does not replace understanding who is named on the lease.",
+        "Keep the first shared budget simple. Separate each person's personal purchases from shared essentials and agree before buying an expensive item. If one person earns more or occupies a different room, discuss whether equal splitting makes sense rather than treating it as an automatic rule."
+      ]
+    },
+    {
+      "heading": "Agree on chores as visible jobs",
+      "paragraphs": [
+        "“We'll keep the place tidy” hides several different standards. Name the tasks: dishes, bins, bathroom, kitchen surfaces, floors, and restocking basics. Decide who owns each task and how often it happens. Rotate the jobs people dislike, or let people choose tasks of similar effort. A short Sunday reset can make the plan visible without turning the home into a shift schedule.",
+        "When someone misses a task, bring up the specific impact privately: “The dishes were still here when I needed the sink” instead of “You are always messy.” It is easier to repair a small problem early than an old list of resentments."
+      ]
+    },
+    {
+      "heading": "Protect privacy and solo time",
+      "paragraphs": [
+        "A shared home does not require shared social life. Agree on guests, overnight stays, notice before inviting people over, and whether anyone needs a quiet room after a certain time. Ask before borrowing clothes, food, or equipment, even when you know the person well. Keep private conversations private; do not make a housemate's difficult day into dinner-party material.",
+        "Build in a low-pressure way to spend time together, such as a shared meal every week or a walk after work, but let participation stay optional. Friendship can continue through ordinary courtesy, not constant access to one another."
+      ]
+    },
+    {
+      "heading": "Create a repair routine",
+      "paragraphs": [
+        "Schedule a short house meeting after the first few weeks, then repeat only when useful. Each person can name one thing that is working and one adjustment. The Cincinnati guide recommends periodic check-ins and says it need not be necessary to become best friends to have a comfortable roommate relationship. That is a helpful standard: the home can work even when everyone's social needs differ.",
+        "Agree on how to bring in outside help if a disagreement persists. In campus housing, that may be a resident adviser; in a rented home, the leaseholder, landlord, mediator, or local tenant adviser may be relevant depending on the issue. Start with the written agreement and local rules."
+      ]
+    },
+    {
+      "heading": "Set up the first week",
+      "paragraphs": [
+        "Before move-in, label what is shared, confirm payment dates, and put the chore and guest agreements somewhere everyone can find them. Expect to revisit the details after you learn how the home actually functions. Changing a plan is not failure; it is maintenance.",
+        "Your next step is a one-hour conversation about rent, guests, quiet, and cleaning before anyone signs a lease or packs a box."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Roommates - Campus Life",
+      "url": "https://www.uc.edu/campus-life/housing/resident-support/daily-living/roommates.html",
+      "publisher": "University of Cincinnati",
+      "purpose": "Supports a campus-specific example roommate agreement covering schedules, cleanliness, chores, guests, possessions and conflict, and the distinction between friendship and cohabitation; not a lease or tenancy-law guide."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "take-a-road-trip-with-your-best-friends",
+    "host-a-dinner-party-for-20-people",
+    "make-a-close-friend-in-another-country"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

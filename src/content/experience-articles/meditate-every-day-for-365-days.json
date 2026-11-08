@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "meditate-every-day-for-365-days",
+  "slug": "meditate-every-day-for-365-days",
+  "title": "A year of practice that can survive a missed day",
+  "description": "Set up a repeatable meditation habit with a small baseline, a missed-day recovery rule, and room to change practice when it stops fitting.",
+  "intent": "How can I make a daily meditation goal sustainable without turning missed sessions into shame or making health promises?",
+  "sections": [
+    {
+      "heading": "Choose what counts as a practice",
+      "paragraphs": [
+        "Before the year begins, decide what “meditate” means for your commitment. It could be a brief seated attention practice, a guided session, a walking meditation or another method you have learned. Write down the chosen form and a small baseline duration so you do not renegotiate the definition every night.",
+        "NCCIH says research on meditation’s effects is preliminary and difficult to compare; a year of practice is not a guaranteed health intervention."
+      ]
+    },
+    {
+      "heading": "Anchor it to a moment you already have",
+      "paragraphs": [
+        "A habit is easier to remember when it has a clear cue: after making tea, before opening work messages, or when you sit down after brushing your teeth. Choose a place where you can be reasonably comfortable and a backup option for travel or a busy household. The backup might be a short standing or walking practice rather than a perfect quiet room.",
+        "Set a minimum you can genuinely fit on an ordinary difficult day. You may choose a few minutes, but there is no universal correct duration. If you have a longer session available, take it; on a packed day, complete the baseline and move on. The point is a reliable practice you can resume, not a streak that controls the day."
+      ]
+    },
+    {
+      "heading": "Decide in advance what happens after a miss",
+      "paragraphs": [
+        "Make your recovery rule simple: if a day is missed, restart at the next planned cue. Do not double the next session, extend it as punishment, or declare the year ruined. Travel, illness, caregiving and work changes are normal interruptions, and a plan that cannot absorb them will be brittle.",
+        "A calendar checkmark can remind you, but avoid turning the record into a competition. A short note—“sat after breakfast,” “walked during lunch,” “skipped because I was sick”—can help you adjust the cue without judging yourself. If tracking adds pressure, use a weekly glance instead of daily marks."
+      ]
+    },
+    {
+      "heading": "Review the method, not just the count",
+      "paragraphs": [
+        "Once a month, ask whether the practice still feels clear and manageable. Are you comfortable with the posture? Do you know what to do when attention wanders? Is the chosen time realistic, or does it repeatedly collide with work or sleep? Change the cue or format if needed while keeping your written definition honest.",
+        "If you are learning from a teacher, ask about their training and experience. If the practice becomes distressing, stop and seek appropriate support. A year-long goal does not require continuing a method that is not working for you."
+      ]
+    },
+    {
+      "heading": "Finish with a year you can describe",
+      "paragraphs": [
+        "At the end, count days only if the number helps you understand your practice. You can instead summarize the formats you tried, the times that fit, and the circumstances that regularly disrupted the habit. That tells you more than a perfect-looking chain of marks.",
+        "Your next step is to choose a cue, write a low-friction baseline and write the recovery rule on the same card. Then begin with one session. The commitment is daily practice as a direction; one missed day is information for the plan, not evidence that you lack discipline or that your meditation year no longer counts."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Meditation and Mindfulness: Effectiveness and Safety",
+      "url": "https://www.nccih.nih.gov/health/meditation-and-mindfulness-effectiveness-and-safety",
+      "publisher": "National Center for Complementary and Integrative Health, NIH",
+      "purpose": "Supports the variety of practices, limits of evidence, instructor-experience questions, and not substituting for conventional care."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "learn-to-meditate-for-20-minutes-straight",
+    "do-a-walking-meditation-every-morning-for-a-month",
+    "create-a-morning-ritual-you-keep-for-a-year"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "grow-something-you-can-eat",
+  "slug": "grow-something-you-can-eat",
+  "title": "Start With One Edible Plant That Fits Your Light and Space",
+  "description": "Grow one edible plant from seed or transplant by matching its needs to your light, container, time, and local growing guidance.",
+  "intent": "How can I complete a small food-growing project without buying a full garden setup or choosing a plant that does not fit my space?",
+  "sections": [
+    {
+      "heading": "Choose the growing place before the crop",
+      "paragraphs": [
+        "Look at the site you actually have: a sunny balcony, a bright kitchen window, a community plot, or a small patch of ground. Note how many hours of direct light it receives, whether water is nearby, and how much room a mature plant can occupy. A container can work for some vegetables, but the container's size, drainage, local climate, and crop all matter.",
+        "The USDA National Agricultural Library's vegetable-gardening hub points new growers toward planning, site selection, soil preparation, planting, maintenance, and harvest, and links to container-gardening guides. Use that as a sequence, not a promise that any crop will thrive in any pot. Check a regional university or extension growing guide for your climate and intended plant before buying supplies."
+      ]
+    },
+    {
+      "heading": "Make the first crop a small commitment",
+      "paragraphs": [
+        "Choose one plant you will enjoy eating and can check regularly. Herbs or leafy greens may suit a small container, while a larger fruiting plant may need more space and support; let a local growing guide settle the exact choice for your conditions. Starting with a single crop makes it easier to notice whether light, water, or crowding is the issue.",
+        "Decide whether seed or a young plant makes more sense for your first attempt. Seeds can make the full growing cycle visible, but a transplant can reduce the time before you see the plant take shape. Follow the packet or local extension instructions for planting depth, spacing, and timing rather than guessing from a photo."
+      ]
+    },
+    {
+      "heading": "Prepare the basics without overbuying",
+      "paragraphs": [
+        "Use a container with drainage if you are growing above ground, and use potting medium appropriate for containers rather than digging up soil from an unknown site. If you are planting in a yard or community plot, learn what is in the existing soil and whether the garden has shared rules. A saucer can protect a balcony floor, but do not let it leave the roots standing in water.",
+        "Gather only the tools you need for the chosen plant: the container or plot, growing medium, seeds or transplant, water, and a way to label it. Avoid buying fertilizer or pest treatments before you know what the plant needs. Ask a local extension service or experienced community gardener if a problem appears."
+      ]
+    },
+    {
+      "heading": "Observe before you react",
+      "paragraphs": [
+        "Check the plant at a regular time and note what has changed: new leaves, dry surface, leaning stems, or signs of insects. A simple log with date, weather, and watering is more useful than changing several things at once. If leaves droop, check the growing medium and recent weather before automatically adding more water.",
+        "Keep pests and plant disease in perspective. Identify the problem before using any treatment, read product labels, and follow local guidance, especially if children or pets can reach the garden. Wash harvested produce and handle it according to food-safety guidance for that crop."
+      ]
+    },
+    {
+      "heading": "Make the harvest part of the project",
+      "paragraphs": [
+        "Harvest when your crop's local guide says it is ready, not just when you are impatient. Take only what the plant can spare according to its growing instructions. Use the produce in one meal you already know how to make, or share a small amount with someone who will enjoy it. The amount may be modest; learning how the plant responds is part of the result.",
+        "At the end, note what you would change next time: site, variety, container, or timing. Your next step is to choose a growing spot and find a regional guide for one edible plant suited to it."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Vegetable Gardening",
+      "url": "https://www.nal.usda.gov/plant-production-gardening/vegetable-gardening",
+      "publisher": "U.S. Department of Agriculture, National Agricultural Library",
+      "purpose": "Links to planning, site-selection, soil, planting, maintenance, harvesting and container-gardening resources; it is a resource hub rather than crop-specific planting instructions."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "grow-something-you-can-eat-from-seed-to-plate",
+    "cook-a-meal-entirely-from-your-existing-pantry",
+    "turn-vegetable-trimmings-into-stock-and-soup"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

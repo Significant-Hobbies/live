@@ -1,0 +1,70 @@
+{
+  "experienceSlug": "community-882ff75a-9a84-5fc9-aea6-776fff8d3e06",
+  "slug": "participate-in-a-car-race-with-a-sports-car",
+  "title": "Take a legitimate route from track day to club racing",
+  "description": "Learn how a first sports-car race differs from a track day, and map the club, training and licence steps for a UK circuit-racing pathway.",
+  "intent": "Give a beginner a bounded UK example of how to investigate club circuit racing, with licence, instruction, vehicle and event requirements checked before entry.",
+  "sections": [
+    {
+      "heading": "Clarify what “race” means",
+      "paragraphs": [
+        "A sports-car driving day, a timed track session and wheel-to-wheel competition are not interchangeable. A track day lets you learn a circuit in a controlled setting under that provider’s rules; a race places you in a regulated competition with a vehicle class, event organiser, licence and technical requirements. If your goal is to compete, start with an event and discipline rather than buying a sports car and hoping it qualifies.",
+        "This guide uses the United Kingdom as an example. Motorsport UK says its Race Club licence is required for circuit racing and that licence requirements vary by discipline and event. The regulator advises checking with the organiser or championship when unsure. Requirements elsewhere differ; use your national governing body and the specific event’s current regulations if you plan to race in another country."
+      ]
+    },
+    {
+      "heading": "Observe a meeting and speak with a club",
+      "paragraphs": [
+        "A low-risk first step is to attend a permitted race meeting as a spectator. Notice how the day is organised: practice, qualifying, grid preparation, briefings, race control, marshals and paddock access. Ask competitors which club runs the championship and what a first entrant should read. Motorsport UK lists local clubs, events and schools as entry points; its own event finder can help identify meetings by date and location.",
+        "The paddock conversation should be practical. Ask whether a championship has arrive-and-drive options, what class rules apply to the sports car you have in mind and whether a newcomer can volunteer or observe. Motorsport UK says some championships provide packages where a team supplies and runs the car, so owning one is not always a precondition. That availability depends on the championship and date; contact its organiser directly."
+      ]
+    },
+    {
+      "heading": "Follow the licence and instruction route",
+      "paragraphs": [
+        "For the UK circuit-racing path, Motorsport UK describes a First Race Competition Licence pack and a Race Licence Test Day at an approved racing school. Its current guidance says the test day is the next step toward a licence and points beginners to accredited schools. A separate licence page says race applicants need an ARDS test; exact prerequisites, medical or vision checks, documents and fees can change, so read the current application and confirm with Motorsport UK before booking.",
+        "If you have never driven on a circuit, ask the school which novice format it recommends and whether the course car is supplied. Motorsport UK’s circuit-racing guide says first-time applicants may consider track days and basic training before the competition route. Do not treat a public-road driving licence, fast road driving or a simulator as a replacement for the organiser’s required instruction and authorisation."
+      ]
+    },
+    {
+      "heading": "Choose the car after the category",
+      "paragraphs": [
+        "Decide which championship and class you want before buying. Motorsport UK notes that vehicle requirements depend on the series and that a car must meet its technical regulations. A sports car that looks suitable may be incompatible with the class, safety equipment, modifications or budget. Ask the championship for the current technical rules and an eligibility check for the exact model and build. Confirm what safety equipment is required for the driver and vehicle, and who can inspect or prepare it.",
+        "Price the full season rather than one entry: licence, club membership, safety gear, transport or storage, entry fees, tyres, fuel, maintenance, repairs and accommodation. Motorsport UK’s published cost figures are estimates and are not used here as a promise of total cost. Build your own quote from the current organiser and supplier information; include a reserve for damage and missed events."
+      ]
+    },
+    {
+      "heading": "Make the first step a real decision",
+      "paragraphs": [
+        "Write down whether you want competition, high-performance instruction or simply a chance to drive a circuit. If you want wheel-to-wheel racing in the UK, choose a permitted event, contact a local club and request its current novice pathway. Ask what licence and accredited course apply, whether a car can be hired or shared, and which technical regulations govern the class. Keep the answers together before paying for equipment or a car.",
+        "Then book the next step that matches your answer: spectator ticket, club introduction, school consultation or beginner track day. A race entry comes later, after the relevant training and licence are completed and the car is confirmed eligible. The governing body and organiser—not an informal online forum—are the route to current requirements."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Become a Racing Driver",
+      "url": "https://motorsportuk.org/become-a-racing-driver/",
+      "publisher": "Motorsport UK",
+      "purpose": "Supports the UK first-race pack, Race Licence Test Day, approved schools, event finder and possible arrive-and-drive routes; costs and eligibility are current-page information and must be rechecked."
+    },
+    {
+      "title": "Competition Licences",
+      "url": "https://motorsportuk.org/Competitors/Competition-Licences/",
+      "publisher": "Motorsport UK",
+      "purpose": "Supports that UK licence types vary by discipline and organiser, and that Race applicants take the ARDS test; check current forms and regulations before applying."
+    },
+    {
+      "title": "Circuit Racing",
+      "url": "https://motorsportuk.org/get-started/types-of-motor-sport/circuit-racing/",
+      "publisher": "Motorsport UK",
+      "purpose": "Supports the UK-specific sequence of novice instruction, race licence and championship-specific car requirements; detailed medical rules and technical specifications must be confirmed in current materials."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "drive-a-racecar-at-full-speed",
+    "community-065ff51d-0609-555b-9a4b-a38fcecd3e69"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "master-one-dish-so-well-you-could-teach-it",
+  "slug": "master-one-dish-so-well-you-could-teach-it",
+  "title": "Turn one dependable dish into a short cooking lesson",
+  "description": "Choose a dish you want to teach, practice its critical steps, write a short lesson plan and help someone make it with you.",
+  "intent": "How can I learn one dish deeply enough to explain its ingredients, sequence and adjustments to a beginner?",
+  "sections": [
+    {
+      "heading": "Choose a dish with teachable decisions",
+      "paragraphs": [
+        "Pick a dish you enjoy and can make with ordinary equipment. It should have a few visible decisions to explain, such as how to prepare ingredients, when to add them and how to tell a step is complete. A vegetable stir-fry, soup or simple flatbread can work if you already know the method; choose a recipe with clear measurements and a reliable source rather than trying to teach an untested improvisation.",
+        "Define what “teach” means: by the end, a learner can prepare the ingredients, follow the sequence and explain one cue they used to decide what to do next. Mississippi State University Extension’s Cooking Matters for Adults is one example of hands-on cooking education organized into six weekly lessons; its listed topics include food preparation and knife safety. That is a program example, not a required class length or guarantee of learning for every learner."
+      ]
+    },
+    {
+      "heading": "Practice until you can explain the hard parts",
+      "paragraphs": [
+        "Cook the dish several times, changing one variable at a time only when the recipe supports it. Keep notes on what is easy to miss: a measurement, a timing cue, an ingredient that should be ready first or a tool a beginner might not recognize. Photographing each stage can help you teach without relying on memory.",
+        "If a result changes, identify what changed before rewriting the recipe. Ingredient size, pan shape, heat source and timing can all make a home kitchen differ from a recipe’s context. Describe the observable cue—such as a texture or color stated in your chosen recipe—instead of inventing a precise time that may not fit every stove. For food safety, use the recipe’s safe handling directions and an authoritative safety source when the dish contains foods that need temperature control."
+      ]
+    },
+    {
+      "heading": "Write a one-page lesson outline",
+      "paragraphs": [
+        "Keep the lesson short enough to complete together. List the outcome, ingredients, equipment, setup, steps and one or two likely snags. Decide what the learner will do themselves; a class becomes more useful when the learner measures, stirs or makes a choice instead of only watching you cook.",
+        "Break the process into a few stages: prepare, cook, taste and reflect. Ask the learner to predict the next step before you reveal it. Explain why a step matters in terms of the dish’s texture or balance, while avoiding unsupported nutrition or health claims. Leave time for a question and a second attempt at the step that caused difficulty."
+      ]
+    },
+    {
+      "heading": "Make the session comfortable and safe",
+      "paragraphs": [
+        "Before inviting someone, ask about allergies, dietary restrictions, accessibility, language and comfort using knives or heat. Agree on a kitchen location, cleanup plan and whether the learner wants to taste the dish. Do not pressure anyone to eat an ingredient. Keep raw and ready-to-eat ingredients separate where the food-safety guidance for your recipe requires it.",
+        "If this is a group, keep the station size manageable and assign clear roles. Provide a non-knife option, such as measuring or keeping the ingredient list, for someone who would rather not handle sharp tools. If you cannot safely supervise the equipment available, choose a no-heat variation instead of improvising around a hazard."
+      ]
+    },
+    {
+      "heading": "Ask the learner to teach it back",
+      "paragraphs": [
+        "At the end, ask the learner to explain the order in their own words and identify one cue they will watch next time. Their answer shows where your instructions were clear and where they need a picture, a simpler term or another demonstration. A brief feedback question—what step felt confusing?—is more useful than asking whether they liked your teaching.",
+        "Give them the recipe and your notes, including any substitutions that were tested and any steps that should not be changed. If the dish needs specialized equipment or a careful food-safety step, state that plainly. Your accomplishment is not merely cooking a dish well; it is making the method understandable and repeatable for another person."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Cooking Matters for Adults",
+      "url": "https://accessibility.extension.msstate.edu/programs/cooking-matters-for-adults",
+      "publisher": "Mississippi State University Extension Service",
+      "purpose": "Describes one hands-on adult cooking course, its specific target audience, skills and six-week/twelve-hour format; supports a real program example, not a universal teaching standard."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "teach-a-skill-you-re-good-at-to-a-group-of-strangers",
+    "make-cheese-from-scratch",
+    "learn-to-butcher-a-whole-fish"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

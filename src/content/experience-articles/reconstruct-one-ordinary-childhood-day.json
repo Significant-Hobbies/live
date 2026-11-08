@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "reconstruct-one-ordinary-childhood-day",
+  "slug": "reconstruct-one-ordinary-childhood-day",
+  "title": "How can you piece together an ordinary day from childhood?",
+  "description": "Use a few dated objects, photos and voluntary conversations to build a small day-by-day sketch while separating evidence from uncertain memory.",
+  "intent": "A gentle method for reconstructing one everyday childhood day without forcing certainty, pressuring relatives or turning memory into a quiz.",
+  "sections": [
+    {
+      "heading": "Choose a day small enough to hold",
+      "paragraphs": [
+        "Pick a narrow period and an ordinary day: getting ready for school, a weekend at home or a familiar route to a relative’s place. A landmark birthday can bring more facts, but an everyday day often shows the rhythms you are trying to recover. Decide on a short window rather than attempting to reconstruct a whole childhood.",
+        "Set a boundary before you start. Some memories may be private, painful or shared with people who do not want to revisit them. You can work from your own photographs and notes, or invite a willing relative to talk; nobody owes you a memory. Avoid treating a disagreement as evidence that one person is lying."
+      ]
+    },
+    {
+      "heading": "Gather anchors and label their strength",
+      "paragraphs": [
+        "Look for a dated photograph, school calendar, letter, object or map that gives the day an anchor. Note where each item came from and what it actually shows. A photo of a kitchen proves that the room looked a certain way when the picture was taken; it does not prove what you ate there every day. Use a simple label such as “dated evidence,” “my recollection,” or “someone else remembers.”",
+        "Draw a rough day in sequence: wake, commute, school or work, food, play, evening. Leave blanks where you do not know. The blank spaces prevent an attractive guess from becoming a false detail later. If a timetable or calendar helps, check its date and place before applying it to your own routine."
+      ]
+    },
+    {
+      "heading": "Invite a conversation without testing anyone",
+      "paragraphs": [
+        "If you ask a friend or relative, tell them what you are trying to piece together and that “I don’t remember” is a useful answer. StoryCorps recommends sharing planned questions ahead of time, using open-ended prompts and letting a conversation move beyond a script. Ask what an ordinary morning felt like or what people usually carried, rather than offering a detail and asking them to confirm it.",
+        "Follow up gently when a detail interests them: “What happened next?” or “What do you remember about that place?” Do not lead someone toward your preferred version. If you take notes or record, ask explicit permission first and agree how the material may be kept or shared. Stop or change the subject if either person becomes uncomfortable."
+      ]
+    },
+    {
+      "heading": "Keep parallel memories visible",
+      "paragraphs": [
+        "You may remember a route one way while a sibling remembers another. Write both accounts with their source and date rather than forcing them into a single narrative. Memories can preserve different viewpoints, and some details may have changed through retelling. A respectful reconstruction can show that uncertainty and disagreement instead of presenting one polished story as recovered fact.",
+        "Make a short sequence with captions such as “I remember,” “photo dated,” and “aunt recalls.” Include what you still do not know. If a detail matters, seek another independent source or leave it unresolved. Keep sensitive names and family details private unless everyone affected agrees to a wider audience."
+      ]
+    },
+    {
+      "heading": "Finish with one ordinary detail",
+      "paragraphs": [
+        "Choose a modest detail that gives the day texture: what you waited for, where shoes were left, a sound from the street, or how a bag felt after school. State whether it comes from an object, a photograph or a person’s memory. A careful note of uncertainty can be more valuable than an invented complete scene.",
+        "Thank the people who contributed and offer them a chance to correct their own words if you plan to share the reconstruction. A useful next action is to revisit one missing point with a source you can check, or to save the draft privately and return later. Leave the day unfinished if that is what the evidence supports."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tips for a Great Conversation",
+      "url": "https://storycorps.org/participate/tips-for-a-great-conversation/",
+      "publisher": "StoryCorps",
+      "purpose": "Supports planning and sharing questions, open-ended prompts, follow-up questions, conversational flexibility and vivid sensory details."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "share-a-childhood-game-across-generations",
+    "record-a-conversation-with-an-elder-and-preserve-it"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

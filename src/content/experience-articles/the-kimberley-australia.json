@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "the-kimberley-australia",
+  "slug": "the-kimberley-australia",
+  "title": "Narrow a Kimberley trip to one kind of country",
+  "description": "Choose a Kimberley visit by coast, sea country and access permissions, then verify the exact park, operator and route with Western Australia’s authorities.",
+  "intent": "How do I choose a realistic Kimberley experience while respecting remote access, Traditional Owner permissions and park-specific rules?",
+  "sections": [
+    {
+      "heading": "Do not plan from the region name alone",
+      "paragraphs": [
+        "“The Kimberley” is too large a label to use as a daily itinerary. Begin by choosing the area and type of visit you mean: an inland park, a marine park, or a coastal trip that combines boat access and shore visits. Western Australia’s Parks and Wildlife commercial-operator conditions describe the North Kimberley Marine Park as a large island and reef environment with different rules by zone; those details cannot be applied to every park across the region.",
+        "Write down the specific place names you hope to visit and ask which are on the actual route. If a trip description says only “Kimberley coast,” request the park, marine zone, departure point and any planned landings. The region is remote enough that generic travel estimates or a map pin may conceal a major difference in access and support."
+      ]
+    },
+    {
+      "heading": "Choose coast or inland as your first anchor",
+      "paragraphs": [
+        "A coast-focused visit puts sea country, reefs, islands and boat time at the center. The North Kimberley Marine Park spans traditional lands associated with several Traditional Owner groups, and its management material describes coral reefs and protected marine life. A land-focused visit has different requirements: park access, roads, permits and local cultural protocols. Do not try to combine both sides without checking the actual transfers and permissions.",
+        "For a boat-based idea, ask whether you want a multi-day cruise, a shorter charter or a visit to a specific marine park. For an inland idea, ask the relevant park authority about access, season, road type, camping and communications. The safest itinerary is the one whose route and support are fully described before you depart."
+      ]
+    },
+    {
+      "heading": "Check permission before any shore visit",
+      "paragraphs": [
+        "Some coastal areas adjacent to North Kimberley Marine Park are Native Title areas, and Western Australia’s park conditions say operators need Traditional Owner permission to operate in those terrestrial areas. The same document lists distinct commercial activities and park-zone conditions. A vessel’s general permission to enter water does not automatically authorize a landing on every beach or island.",
+        "Ask the operator to explain where shore visits are planned and how it confirms required passes, permits or approvals. Where possible, use interpretation approved or provided by Traditional Owners, and do not treat sensitive cultural places as photo stops. If a location is closed or not included in permissions, accept the boundary rather than improvising a landing."
+      ]
+    },
+    {
+      "heading": "Compare what support exists in remote country",
+      "paragraphs": [
+        "Remote coastal and inland routes need clear contingencies. Ask how the operator handles communications, medical events, weather closures, fuel or mechanical problems and return delays. The Kimberley marine-park management material notes that the remote nature of the area and its natural hazards create risks for unwary visitors. That is a reason to ask concrete questions, not to rely on a glossy promise that the trip is “safe.”",
+        "For private travel, check current park alerts and route information with the relevant Western Australian agency, and confirm any permit directly with the authority or Traditional Owner corporation. A charter can require permits or approvals beyond a normal visitor booking. Keep your plan with someone outside the region and establish a check-in schedule that works without dependable mobile coverage."
+      ]
+    },
+    {
+      "heading": "Choose a narrower first trip",
+      "paragraphs": [
+        "Pick one anchor that gives the trip shape: a named coastal marine park, an approved cultural tour, or a particular inland park. Then keep enough days around it that a weather or access change does not force you to race to the next destination. If the experience you want is broad cultural learning, ask a Traditional Owner-led organization how visitors can participate respectfully and what can be shared.",
+        "This article uses Western Australia’s specific North Kimberley and park-operator material; it does not describe every Kimberley park, determine a visitor’s permit eligibility or guarantee a route. Your next step is to turn the region name into a list of exact sites, then verify current access and permissions for each before booking transport."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Park Specific Information and Conditions: Kimberley Region",
+      "url": "https://www.dbca.wa.gov.au/media/581/download",
+      "publisher": "Department of Biodiversity, Conservation and Attractions, Western Australia",
+      "purpose": "Supports the North Kimberley Marine Park’s Traditional Owner context, commercial operator conditions, need for permissions for some adjacent landings, permitted activities and remoteness risks."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "the-kimberley-coast-by-boat",
+    "the-whitsunday-islands-australia"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

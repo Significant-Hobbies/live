@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "run-for-local-office",
+  "slug": "run-for-local-office",
+  "title": "How to find out what a local campaign requires",
+  "description": "Check the exact office, filing authority, qualification rules, deadlines, signatures, disclosures and campaign finances before announcing a local run.",
+  "intent": "A U.S.-scoped early checklist for assessing a local candidacy through the election office that controls ballot access and current rules.",
+  "sections": [
+    {
+      "heading": "Choose an office by its actual responsibilities",
+      "paragraphs": [
+        "Start with a local problem you want to work on, then learn which office has authority over it. A school board, city council, county commission and mayor can have very different powers, workloads and geographic constituencies. Read the office’s current duties, budget and recent meeting minutes. Attend a meeting before deciding; a campaign is a public commitment to understand the job, not simply a platform for a cause.",
+        "Talk with people who use the service and with someone who has held or staffed the office. Ask what the position can change, what requires another agency, how much time the role takes, and which decisions are constrained by law or budget. Write a short statement of what you could realistically do in the first year without promising outcomes outside the office’s control."
+      ]
+    },
+    {
+      "heading": "Find the right election official and current forms",
+      "paragraphs": [
+        "This guide uses the United States as an example. The U.S. Election Assistance Commission’s overview says candidate filing rules vary by state and sometimes by office within a state. Local candidates may file with a local office, while other candidates file with the state elections office. Start with the current election administrator for the jurisdiction and ask for the official candidate packet, filing calendar and contact for questions.",
+        "Do not rely on an old campaign page, a friend’s checklist or a previous candidate’s signature count. Confirm the exact office name, election date, filing window, accepted filing methods and whether the rules differ for party, independent or write-in candidates. Save the current official packet and note when you checked it."
+      ]
+    },
+    {
+      "heading": "Check eligibility and ballot access carefully",
+      "paragraphs": [
+        "The EAC describes common candidate paperwork that can include a declaration of candidacy, an affidavit, filing fee or nomination petition, and statements of financial interest. Qualifications may include age, residency, voter registration or other office-specific requirements. The details are controlled by current local and state law, so ask the election office to point to the governing rule and have an election lawyer review uncertainty.",
+        "If signatures are required, learn the valid voter pool, format, collection window, witness rules, page requirements and submission deadline before asking anyone to sign. A form can be invalid even when the supporter’s intent is clear. Build a buffer for checking entries and resubmitting if allowed; do not plan to finish on the final day."
+      ]
+    },
+    {
+      "heading": "Build a campaign that can meet its obligations",
+      "paragraphs": [
+        "Ask the election administrator or state ethics agency when a campaign committee must be formed, what financial records to keep, which reports are due and how donations or expenses must be disclosed. These requirements vary and may start before the campaign feels public. Use official instructions and a qualified local treasurer or adviser. Separate campaign money from personal funds and document every transaction.",
+        "Plan a realistic campaign around your life: the people who can help, time for canvassing and meetings, accessible ways to participate, childcare or work constraints, and a basic communications plan. Do not promise volunteers a role until you know what the rules permit. Tell supporters what information is public and get their permission before listing them."
+      ]
+    },
+    {
+      "heading": "Make the first decision reversible",
+      "paragraphs": [
+        "Before announcing, complete a one-page readiness check: the job’s responsibilities, verified eligibility, filing deadline, signature or fee requirement, campaign-finance contact, likely workload, and people you have consulted. If any item is unclear, call the election office. You can decide to run, support a candidate whose priorities align, or serve through a board or advisory role after learning what the office entails.",
+        "The EAC’s national overview is useful for knowing what questions to ask, but it cannot establish your eligibility or calculate the deadline for a local race. Your first concrete action is to request the current candidate packet from the correct election authority and ask for a short appointment to walk through it."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Election Administration in the United States, Candidate Filing",
+      "url": "https://www.eac.gov/sites/default/files/2025-04/Helping_America_Vote_Election_Admin_in_US_508.pdf",
+      "publisher": "U.S. Election Assistance Commission",
+      "purpose": "Explains candidate filing documents, qualification checks, petitions or fees, filing authorities and state-by-state variation."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "advocate-for-a-policy-change-you-believe-in",
+    "volunteer-for-something-you-believe-in",
+    "own-something-that-matters-to-your-community"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

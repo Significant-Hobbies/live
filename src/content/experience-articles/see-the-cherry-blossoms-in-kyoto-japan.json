@@ -1,0 +1,71 @@
+{
+  "experienceSlug": "see-the-cherry-blossoms-in-kyoto-japan",
+  "slug": "see-the-cherry-blossoms-in-kyoto-japan",
+  "title": "A Kyoto blossom day that still works when the forecast shifts",
+  "description": "Plan a Kyoto cherry-blossom outing around changing bloom forecasts, distinct viewing landscapes, and a second choice that remains worthwhile.",
+  "intent": "How can I plan a Kyoto blossom outing without building the whole trip around one predicted peak day? This guide offers flexible place pairings and a forecast-aware decision.",
+  "sections": [
+    {
+      "heading": "Treat the forecast as a planning signal",
+      "paragraphs": [
+        "Cherry blossom timing is not a fixed appointment. Japan’s official tourism forecast page presents forecasts, while Kyoto’s official guide emphasizes that varieties differ and conditions such as elevation influence when blossoms appear. Read a forecast as a reason to stay flexible, not a guarantee for a particular tree or street. Check updates again near the visit and keep one alternate plan that does not depend on full bloom.",
+        "Make the first choice about the kind of scene you want. The Philosopher’s Path follows a canal beneath a cherry canopy between Ginkaku-ji and Nyakuoji Bridge. Maruyama Park is known for its weeping cherry and evening illumination, which creates a different experience and can draw a crowd. These are not interchangeable backdrops: one is a linear waterside walk, the other a gathering place around a focal tree. Choose based on whether you want to move slowly or stay in one place."
+      ]
+    },
+    {
+      "heading": "Build a short route with a deliberate stopping point",
+      "paragraphs": [
+        "For a canal walk, decide in advance whether you want to stroll a segment or make the path part of a larger eastern Kyoto day. The official destination guide places it between Ginkaku-ji and Nyakuoji Bridge and notes nearby temples. That gives you a natural exit or extension point: walk until the canal and blossoms feel complete, then continue to a nearby destination only if the day still has room. Avoid scheduling several widely separated blossom spots as if the city were one garden.",
+        "At each stop, pick a small observation task. Look at the whole canopy first, then notice how branches cross the water or how the path changes where it narrows. At a weeping cherry, compare the branch shape and hanging flowers with the more upright tree forms you see elsewhere. This turns a crowded visit into an encounter with different varieties and structures, rather than a race to collect identical photographs."
+      ]
+    },
+    {
+      "heading": "Choose the day’s plan from what is actually visible",
+      "paragraphs": [
+        "Use a simple decision tree the morning you go. If your first-choice area shows open blossoms and the paths feel manageable, take the intended slow walk. If that area is early or past its showiest stage, switch to a different variety or landscape rather than forcing the original plan. Kyoto’s official cherry blossom guide lists multiple types and locations, including later-blooming mountain cherry examples; it also notes that timing varies. A shift can therefore change what is visible without ending the day.",
+        "Cloud, rain, and wind change how you experience a blossom landscape, even when the trees are open. Keep a sheltered cultural or neighborhood stop nearby as a companion, not as a consolation prize. If the crowd is dense, pause at the edge rather than blocking a narrow path for a photo. The aim is to notice a place while leaving the route usable for residents and other visitors."
+      ]
+    },
+    {
+      "heading": "Photograph lightly and leave room for other visitors",
+      "paragraphs": [
+        "Make one establishing photograph, then put the camera away for a few minutes. If you take close-ups, do not pull branches, step into planted beds, or obstruct a bridge or path. At a popular focal tree, wait for a clear moment or frame the scene without trying to remove every person from view. A photograph that shows the space as shared can be a more honest record of the day.",
+        "Travel timing and transport arrangements can change during a busy season. Check Kyoto’s current transit and responsible-travel information close to your visit, and choose arrival times and routes that fit the local guidance. An early start can be useful for a quiet walk, but do not assume that every site, gate or service opens at the same time."
+      ]
+    },
+    {
+      "heading": "Use a two-place plan instead of chasing peak bloom",
+      "paragraphs": [
+        "Write two versions of the day: “canal and temple surroundings” and “one focal tree plus a slower neighborhood walk.” Choose between them after checking the latest forecast and local updates. Keep meals and transit flexible enough that a change of location does not create a rushed cross-city loop. If a favorite tree has already lost petals, look for the shape of the branches, the carpet of fallen blossoms where permitted, or the contrast between early and late varieties.",
+        "Kyoto’s blossom season is more interesting when it is not reduced to a single peak label. Your next action is to shortlist one linear landscape and one distinct tree or garden setting, then decide between them using the latest official forecast and what you can actually see that day."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Spring in Japan: Cherry Blossom Forecast",
+      "url": "https://www.japan.travel/en/see-and-do/cherry-blossom-forecast/",
+      "publisher": "Japan National Tourism Organization",
+      "purpose": "Provides an official forecast page and context for bloom timing; forecasts are time-sensitive and should be revisited."
+    },
+    {
+      "title": "Kyoto Cherry Blossoms: Varieties and Recommended Viewing Spots",
+      "url": "https://kyoto.travel/en/travel-inspiration/cherry-blossoms/",
+      "publisher": "Kyoto City Official Guide",
+      "purpose": "Identifies different cherry varieties and viewing areas, supporting the article’s plan around distinct bloom types and locations."
+    },
+    {
+      "title": "Philosopher’s Path (Tetsugaku-no-michi)",
+      "url": "https://kyoto.travel/en/destinations/philosophers-path-tetsugakunomichi/",
+      "publisher": "Kyoto City Official Guide",
+      "purpose": "Confirms the canal-side route between Ginkaku-ji and Nyakuoji Bridge and nearby temple context."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "follow-a-colour-through-your-neighbourhood",
+    "explore-a-garden-through-scent",
+    "make-a-map-of-places-you-call-home"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

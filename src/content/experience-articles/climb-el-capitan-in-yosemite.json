@@ -1,0 +1,71 @@
+{
+  "experienceSlug": "climb-el-capitan-in-yosemite",
+  "slug": "climb-el-capitan-in-yosemite",
+  "title": "What an El Capitan big-wall commitment asks of a climber",
+  "description": "Understand El Capitan as a technical, multi-day Yosemite big-wall objective, with experience, route research, permits and stewardship considered before an attempt.",
+  "intent": "What should a climber resolve before treating El Capitan as a goal? Frame the commitment through demonstrated readiness, Yosemite rules and the consequences of an overnight wall climb.",
+  "sections": [
+    {
+      "heading": "Treat the route as a major climbing project",
+      "paragraphs": [
+        "El Capitan is not a first climbing objective or a place to learn big-wall systems on the wall. Start with the exact route and current information, then compare its demands with climbs you have completed. A qualified climbing mentor or guide who knows Yosemite can help assess your experience with multi-pitch movement, aid systems, hauling, anchors, partner communication and self-rescue. This is a readiness conversation, not technical instruction.",
+        "Ask what has changed recently: closures, rockfall, fixed gear, access trails and descent conditions. The National Park Service says climbers need to prepare for injuries, evacuations, unplanned bivouacs and rapid weather changes. Verify conditions close to the trip through official park pages and current climbing sources."
+      ]
+    },
+    {
+      "heading": "Make demonstrated systems the gate",
+      "paragraphs": [
+        "Before an overnight attempt, complete comparable objectives with the same partner and systems. A partner who climbs well on short routes may still be unfamiliar with a long wall’s shared work, fatigue and decisions. Practice on suitable climbs under qualified supervision; do not treat an online gear list as a substitute for rehearsed skills.",
+        "Discuss how you communicate when out of sight, what you do after a delay and which conditions trigger retreat. A decision to abandon the route can be the right outcome of a serious plan. Ask an experienced Yosemite climber to review your route and readiness; if the group cannot explain its plan clearly, choose a shorter objective first."
+      ]
+    },
+    {
+      "heading": "Check Yosemite rules and current conditions",
+      "paragraphs": [
+        "The National Park Service requires all climbers staying overnight on Yosemite big walls to have a wilderness climbing permit. Its climbing regulations page also explains that trash, including human waste, must come down, and that fixed ropes and gear have stewardship restrictions. Permit procedures and closures can change, so read current park pages before leaving and again before the attempt.",
+        "Do not assume old fixed ropes are maintained or approved. NPS says established fixed ropes at locations such as below Heart Ledges are not maintained or condoned by the agency. Plan with current information and qualified partners; do not use abandoned hardware as a substitute for competence. If a closure or ranger instruction affects the route, respect it and choose another plan."
+      ]
+    },
+    {
+      "heading": "Plan an overnight without cached convenience",
+      "paragraphs": [
+        "A big wall makes food, water, waste and gear environmental decisions. NPS requires proper storage of food and scented items and says everything hauled onto the cliff—including trash—must be carried back down. Plan logistics with experienced partners so what you bring, how you manage waste and how you descend fit together.",
+        "Ask where the permit is obtained, what information it requires and how the park wants overnight climbers to minimize impact. NPS describes permits as part of wilderness stewardship and education. Do not leave supplies for a future party or throw anything from the wall. Other climbers, hikers and wildlife share the area below."
+      ]
+    },
+    {
+      "heading": "Make the next step deliberately smaller",
+      "paragraphs": [
+        "If El Capitan is several levels beyond your experience, set a measurable intermediate project instead of rushing toward a date. Choose a multi-pitch route or guided training objective where you can practice partner systems and decision-making under supervision. Keep a log of what you can do consistently, what required coaching and what still feels uncertain.",
+        "Your next action is to read Yosemite’s current climbing regulation and permit pages, then ask an experienced big-wall climber to review your intended route and recent comparable climbs. If that review points to a gap, the next route is the useful goal. El Capitan rewards preparation more than a calendar promise."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Climbing Regulations",
+      "url": "https://www.nps.gov/yose/planyourvisit/climbing_regulations.htm",
+      "publisher": "National Park Service, Yosemite National Park",
+      "purpose": "Sets overnight permit, fixed-rope, food-storage and trash-return requirements for Yosemite big-wall climbing."
+    },
+    {
+      "title": "Rock Climbing in Yosemite",
+      "url": "https://www.nps.gov/thingstodo/rockclimbing.htm",
+      "publisher": "National Park Service, Yosemite National Park",
+      "purpose": "Advises climbers to prepare for emergencies, evacuations and weather changes and reiterates stewardship."
+    },
+    {
+      "title": "Current Conditions",
+      "url": "https://home.nps.gov/yose/planyourvisit/conditions.htm",
+      "publisher": "National Park Service, Yosemite National Park",
+      "purpose": "Provides current closure and hazard information; should be checked close to a climb."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "climb-a-mountain-over-4-000-metres",
+    "climb-your-first-mountain",
+    "climb-a-tree-with-a-qualified-recreational-climbing-provider"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

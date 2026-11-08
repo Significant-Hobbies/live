@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "eat-street-food-in-bangkok",
+  "slug": "eat-street-food-in-bangkok",
+  "title": "Make a Bangkok street-food walk a small tasting study",
+  "description": "Plan a manageable Bangkok street-food outing around one neighborhood, a few different dishes and current food-safety and access guidance.",
+  "intent": "How can I experience Bangkok street food thoughtfully, choosing a neighborhood and dishes while handling food and travel risks carefully?",
+  "sections": [
+    {
+      "heading": "Choose a neighborhood before choosing a checklist",
+      "paragraphs": [
+        "Bangkok street food is not one market or one cuisine. Start with a district and a realistic route, then leave room to follow what is actually open. The Tourism Authority of Thailand’s older Chinatown guide describes Yaowarat as a street-food destination and names yen ta fo noodles, seafood barbecue and Chinese desserts among examples. Treat it as inspiration for a food-focused walk, not a current schedule: stall locations, hours and offerings can change, so check recent local information before traveling.",
+        "Pick one anchor area rather than trying to cross the city between meals. In Yaowarat, for example, you could pair a savory noodle dish with a dessert and notice how Chinese-Thai flavors and neighborhood landmarks share the outing. If a line, menu or crowd feels uncomfortable, move on. The point is to pay attention, not to complete a list made for someone else."
+      ]
+    },
+    {
+      "heading": "Choose dishes that show different techniques",
+      "paragraphs": [
+        "Make a short tasting plan with contrasts: a noodle soup such as the yen ta fo named in the Tourism Authority guide, something grilled or cooked to order, and a small sweet. Ask what is in a dish before ordering, especially for shellfish, peanuts or other ingredients that matter to you. A picture menu can help, but it may not show every ingredient or cross-contact risk. Use a translation tool or ask a trusted local guide when communication is uncertain.",
+        "Notice the work in front of you: the order a cook adds ingredients, the texture of noodles, the balance of sour, salty, sweet and heat, or how a dish is served. Jot down names and a few sensory details afterward. Do not block the stall or photograph workers or diners without permission. Buy something before taking space, and follow the vendor’s cues about ordering, payment, seating and cleanup."
+      ]
+    },
+    {
+      "heading": "Use current health guidance for Thailand",
+      "paragraphs": [
+        "Food safety is part of the trip, not a guarantee attached to a busy stall. The CDC’s 2026 Yellow Book guidance for Thailand says travelers who choose street food can reduce some risk by choosing food cooked to order and served steaming hot, avoiding raw or undercooked food and raw garnishes, and choosing fruit they peel themselves. It also advises sealed drinks and avoiding tap water and ice in the travel context it describes. These precautions cannot remove all risk; foodborne illness can still occur.",
+        "CDC travel guidance is written for travelers and can be too broad for a person’s medical circumstances. If you have a condition, allergy, pregnancy-related concern or specific dietary need, use current advice from an appropriate clinician or travel-health professional. Do not treat an appearance, a queue or an online rating as a food-safety inspection."
+      ]
+    },
+    {
+      "heading": "Keep the walk comfortable and considerate",
+      "paragraphs": [
+        "Check current transit, weather and neighborhood access on the day. Carry a small amount of cash if useful, but confirm accepted payment and avoid displaying valuables. Plan water and rest breaks, keep the route flexible and know how you will return to your lodging. If you are joining a guided tasting, ask whether the guide has permission to bring groups and how the visit supports vendors.",
+        "Eat at a pace that lets you notice each dish. You can split portions with willing companions, but do not assume vendors will accommodate a request or that every food is available every evening. If a stall is crowded, step aside after ordering rather than occupying a table while planning the next stop."
+      ]
+    },
+    {
+      "heading": "Keep a record that helps you remember",
+      "paragraphs": [
+        "After the walk, note the neighborhood, dishes, ingredients you could identify, and what you would order again. Separate what you tasted from what you learned from a guide or read later. If you share recommendations, include the date and avoid claiming that one block represents all of Bangkok’s food culture.",
+        "A good outing might be three carefully chosen tastes and a lively walk, not a marathon of stalls. Let current local information guide the logistics and current public-health advice guide your risk decisions. The older official tourism article offers neighborhood context and dish examples, not proof that any named stall remains open today."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Thailand — CDC Yellow Book 2026",
+      "url": "https://www.cdc.gov/yellow-book/hcp/asia/thailand.html",
+      "publisher": "U.S. Centers for Disease Control and Prevention",
+      "purpose": "Current travel-health guidance for Thailand’s food and water precautions; risk reduction examples are not guarantees or individualized medical advice."
+    },
+    {
+      "title": "The Adventure Through Bangkok’s Chinatown",
+      "url": "https://www.tourismthailand.org/Articles/the-adventure-through-bangkok-s-chinatown",
+      "publisher": "Tourism Authority of Thailand",
+      "purpose": "Older neighborhood guide identifies Yaowarat and gives example dishes and landmarks; not used for current hours, stall availability or safety claims."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "follow-one-ingredient-through-a-market",
+    "eat-your-way-through-a-country-one-market-at-a-time",
+    "eat-at-the-source-coffee-in-ethiopia-tea-in-japan-chocolate-in-ecuador"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

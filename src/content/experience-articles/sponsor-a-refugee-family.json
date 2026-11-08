@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "sponsor-a-refugee-family",
+  "slug": "sponsor-a-refugee-family",
+  "title": "Start with the sponsorship pathway, not a promise",
+  "description": "Learn which refugee-sponsorship pathway exists in your country, what a sponsor group must provide and how to protect a family’s privacy and choice.",
+  "intent": "How can I explore refugee-family sponsorship without assuming a program is open or that every route admits a named family? This guide separates pathways and first checks.",
+  "sections": [
+    {
+      "heading": "Find out what “sponsorship” means where you live",
+      "paragraphs": [
+        "The phrase can describe different arrangements. UNHCR distinguishes private or named sponsorship, where sponsors help with admission and settlement, from community sponsorship, where sponsors support people already admitted through another route. Programs exist in only some countries, and rules differ. Start with the UNHCR help page for your destination country and its links to the responsible government department.",
+        "Do not assume that a sponsor can nominate a particular family, that a family can apply directly, or that a program is currently accepting groups. Some pathways are paused, limited to specific categories, or handled only through accredited organizations. Check today’s official notice before fundraising, contacting a family about a promise, or paying an intermediary."
+      ]
+    },
+    {
+      "heading": "Follow the authorized route",
+      "paragraphs": [
+        "Ask the responsible agency or established sponsorship organization which types of groups can participate, what vetting and training are required, who makes admission decisions and what support period is expected. If a family is already in the country, ask whether the route is community sponsorship rather than a visa pathway. Do not try to work around official processes or represent your group as able to secure someone’s admission.",
+        "UNHCR says family reunification is distinct from private sponsorship. If the people you hope to support are close relatives, check whether the destination country has a family-reunification process instead. Keep immigration questions with qualified legal and government sources; refugee sponsorship rules are not interchangeable across borders."
+      ]
+    },
+    {
+      "heading": "Be honest about what the group can sustain",
+      "paragraphs": [
+        "Before forming a group, write down available time, funds, language skills, transport, housing support and people who can cover gaps. Ask the official program what financial or in-kind commitments it requires and how long they last. Do not promise a home, job, interpretation or childcare unless you can provide it under the program’s rules and with the family’s agreement.",
+        "Divide tasks among named people, but avoid treating a family as a project plan. A newcomer may want help with one task and prefer to manage another privately. Ask how they would like to receive support, explain choices clearly and let them decline. The state and authorized organizations retain responsibilities that volunteers cannot replace."
+      ]
+    },
+    {
+      "heading": "Plan welcome without taking over",
+      "paragraphs": [
+        "A practical welcome might mean learning the transit route together, explaining how to access a local service, finding an interpreter, or introducing neighbors by invitation. Make an appointment with the family before visiting. Do not post names, photographs, immigration details or personal stories without explicit permission; avoid sharing private case information in a group chat or fundraiser.",
+        "Ask about accessibility, food, prayer, language, children’s routines and preferred forms of communication without demanding an explanation. Offer options and let the family decide what works. If a person says they do not need help with something, accept that answer and keep the door open."
+      ]
+    },
+    {
+      "heading": "Review the support after arrival",
+      "paragraphs": [
+        "A good group meets regularly to check whether its agreed tasks are being completed and whether the family wants anything changed. Keep basic expense records and follow the program’s privacy and reporting rules. If a task becomes unsafe, beyond your role or impossible to sustain, contact the program coordinator instead of improvising. Do not treat a successful sponsorship as guaranteed by goodwill alone.",
+        "Begin with one step: use the official country page to identify whether a private or community sponsorship program exists, whether it is open and which accredited organization can explain eligibility. Make no offer to a family until you understand the route and can meet its obligations."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Sponsorship programmes for Refugees",
+      "url": "https://help.unhcr.org/global/sponsorship-programmes-for-refugees/",
+      "publisher": "United Nations High Commissioner for Refugees",
+      "purpose": "Supports the distinction between private and community sponsorship, the limited and country-specific availability of programs, the state’s role, and the distinction from family reunification."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "fund-a-child-s-education-for-a-year",
+    "do-a-group-charity-challenge-with-friends",
+    "volunteer-for-something-you-believe-in"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,63 @@
+{
+  "experienceSlug": "take-a-forest-bathing-walk",
+  "slug": "take-a-forest-bathing-walk",
+  "title": "Make a forest walk about noticing, not distance",
+  "description": "Plan a forest bathing walk around sensory observation, an accessible route, and low-impact choices that respect wildlife and other visitors.",
+  "intent": "Clarify the Japanese origin of shinrin-yoku and offer a grounded forest observation route without promising medical effects or treating every woodland as identical.",
+  "sections": [
+    {
+      "heading": "Treat this as a way of paying attention",
+      "paragraphs": [
+        "Forest bathing is a literal translation of the Japanese term shinrin-yoku. Japan’s Forestry Agency says it introduced the idea in 1982 as an accessible way to become familiar with forests, and describes the practice as receiving the forest through the senses. That is a useful frame for this walk: the objective is to notice the place, not to cover a distance, identify every plant, or claim that a certain number of minutes will produce a health result. This article does not promise a medical benefit.",
+        "Choose a wooded public place that matches your mobility, weather, and comfort. A broad park path, arboretum, managed forest trail, or even a tree-filled neighborhood greenway can work for a slow observation. Check the land manager’s current rules, access, weather, and closures. A forest trail may have uneven ground or no reliable phone signal; pick a route you can complete without depending on an unverified facility or service."
+      ]
+    },
+    {
+      "heading": "Choose three things to notice",
+      "paragraphs": [
+        "Before you start, decide on a few sensory anchors so the walk has shape without becoming a checklist. For example: notice one sound that repeats, one pattern of light, and one surface or scent you can experience without touching or disturbing anything. You might hear wind pass through different layers of leaves, compare the brightness of an opening and a shaded path, or notice damp earth after rain. Use descriptive language—‘cool, resin-like smell near the trail’—rather than assuming you know the tree or source.",
+        "Move slowly enough to look up and around, but keep a safe eye on the path. Stop in a place where you do not block other visitors. If sitting is more comfortable, find a permitted bench or clearing and observe from there. You do not have to remove your shoes, touch bark or moss, taste plants, or close your eyes. These choices can be uncomfortable or unsafe, and they can disturb the setting or people around you."
+      ]
+    },
+    {
+      "heading": "Let one small patch hold your attention",
+      "paragraphs": [
+        "Pause beside a tree, fallen log, or patch of ground and spend several minutes looking without trying to photograph or name every detail. Notice how the same scene changes as clouds pass or a breeze moves branches. If your attention wanders, return to one visible detail, such as a leaf edge or the line where the trail curves. The practice is to notice what is present, not to force a special feeling.",
+        "You can carry a pocket notebook and record a few words afterward. Keep observations separate from guesses: ‘three bird calls from the canopy’ is clearer than writing down a species you have not identified. Avoid collecting, feeding wildlife, leaving food scraps, or stepping off marked trails for a better view. The U.S. Forest Service’s Leave No Trace guidance recommends traveling on durable surfaces, leaving natural items in place, respecting wildlife, and being considerate of other visitors. Follow the rules of your specific site as well."
+      ]
+    },
+    {
+      "heading": "Use the route as a quiet conversation",
+      "paragraphs": [
+        "Try an easy out-and-back or loop so you do not need to navigate complicated junctions while your attention is elsewhere. On the way out, notice the broader setting—trail surface, canopy, open spaces, and sounds from nearby roads or water. On the way back, choose one feature to revisit and see whether you notice anything different. If you are walking with someone, agree whether you want quiet, occasional conversation, or a shared observation game before starting.",
+        "A guided forest program can add local ecology or cultural context, but the leader and site determine what it includes. Ask whether the route is accessible, what the guide teaches, and whether the program makes health claims. The Forestry Agency’s description is specific to the Japanese practice and its own history; a commercial tour elsewhere may use the term differently. Choose based on what is actually offered rather than assuming every ‘forest bathing’ label means the same experience."
+      ]
+    },
+    {
+      "heading": "End with one detail to take home",
+      "paragraphs": [
+        "At the end of the walk, write down one sound, color, texture, or change you would have missed on a faster outing. Note the trail and date so you can return in another season and compare. Pack out anything you brought, leave plants and wildlife undisturbed, and make your next walk fit the conditions. A good first action is to choose a familiar, permitted wooded route and spend the first ten minutes noticing three things before deciding how far to go."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Shinrin-yoku (Forest Bathing)",
+      "url": "https://www.rinya.maff.go.jp/j/sin_riyou/morigyo/forest_activity/info/shinrin-yoku.html",
+      "publisher": "Forestry Agency, Government of Japan",
+      "purpose": "Supports the Japanese agency's 1982 introduction of shinrin-yoku and its description of forest bathing as receiving the forest through the senses; source is Japanese-language and does not establish a medical benefit."
+    },
+    {
+      "title": "7 Principles of Leave No Trace",
+      "url": "https://www.fs.usda.gov/media/228479",
+      "publisher": "U.S. Forest Service",
+      "purpose": "Supports low-impact outdoor choices such as using durable surfaces, leaving natural objects in place, respecting wildlife, and considering other visitors; presented for the named forest context, with local rules taking precedence."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "spend-an-hour-watching-a-single-tree",
+    "observe-a-forest-canopy-from-a-public-treetop-walkway"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

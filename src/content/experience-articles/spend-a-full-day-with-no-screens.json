@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "spend-a-full-day-with-no-screens",
+  "slug": "spend-a-full-day-with-no-screens",
+  "title": "Plan a screen-free day around your real obligations",
+  "description": "Set up one screen-free day with clear work and care arrangements, paper backups, accessible activities, and exceptions for essential needs.",
+  "intent": "Help a reader plan one practical screen-free day that protects work, caregiving, accessibility, and emergency needs without framing it as a detox or health intervention.",
+  "sections": [
+    {
+      "heading": "Define which screens you are setting aside",
+      "paragraphs": [
+        "List what counts for your day: phone, television, laptop, tablet, e-reader, car display, or work terminal. Decide in advance whether a device used for an essential medical, access, navigation, or safety function is exempt. A clear boundary is easier to follow than an absolute rule improvised when a real need comes up.",
+        "Choose a day when you are not on call for work, responsible for a time-sensitive task, or coordinating care that depends on a screen. Tell household members and colleagues how to reach you for urgent needs. If you share caregiving, school, or travel plans, agree on the arrangement with the people affected before you power devices down. The goal is one intentional day, not making someone else carry an unexpected burden."
+      ]
+    },
+    {
+      "heading": "Move the information off your devices",
+      "paragraphs": [
+        "Write down addresses, appointments, transit details, reservation numbers, and important phone numbers on paper. If you expect to cook, choose a recipe you can print or already know. Put a wall clock, paper calendar, books, notebook, board game, and any needed cash or physical tickets where you can find them. This small preparation prevents a routine errand from becoming an unplanned reason to reopen a screen.",
+        "If your day includes a park or outdoor route, check access, weather, and closures in advance and carry a map or directions you can use offline. The National Park Service recommends a backup paper map because a phone may be lost, damaged, out of battery, or without service; that guidance is for park trips, but the practical point applies to any offline plan."
+      ]
+    },
+    {
+      "heading": "Plan alternatives for the usual screen moments",
+      "paragraphs": [
+        "Notice when you usually reach for a device: first thing in the morning, while eating, between tasks, or before bed. Put a concrete replacement in that time slot. You might make breakfast with someone, walk a familiar route, visit a library, work on a puzzle, cook from a printed recipe, or do one household task without audio playing in the background. Pick a few choices rather than filling every hour.",
+        "If you live with others, ask what they would enjoy doing too. Make space for people who need screens for accessibility or communication; this is a personal experiment, not a rule to impose on a household. You can set aside entertainment screens while keeping a device available for a support worker, medical equipment, a translator, or emergency contact."
+      ]
+    },
+    {
+      "heading": "Keep safety and access arrangements intact",
+      "paragraphs": [
+        "If you need a phone for emergency calls, medication reminders, navigation, or assistive technology, keep it available for that purpose and define the exception. Do not disable safety or accessibility features to make the challenge stricter. For a long walk or unfamiliar outing, leave your route and expected return with a trusted person and carry the navigation and supplies appropriate to the location. A screen-free day should not mean being unreachable when you have a responsibility or taking an avoidable risk."
+      ]
+    },
+    {
+      "heading": "Close the day with a short review",
+      "paragraphs": [
+        "At the end, write down what was easier than expected, what created friction, and what you would change next time. Did printed instructions help? Did you need a specific accessibility tool? Did someone rely on a screen you had planned to avoid? Use those observations to make a future day more considerate and workable.",
+        "The point is not to score a perfect streak or promise a health benefit. You may decide to repeat the day, shorten it, or set a screen-free meal instead. For your next action, choose a date and check your calendar, care responsibilities, travel, and emergency needs before putting your phone away."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Trip Planning Guide",
+      "url": "https://www.nps.gov/subjects/healthandsafety/trip-planning-guide.htm",
+      "publisher": "National Park Service",
+      "purpose": "Supports the use of offline and paper navigation backups for park outings and advance planning around conditions and trip plans; it is not a general screen-use or health recommendation."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "do-a-digital-detox-for-a-full-week",
+    "spend-a-day-in-complete-silence",
+    "spend-an-afternoon-doing-one-thing-at-a-time"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,66 @@
+{
+  "experienceSlug": "take-the-trans-siberian-railway-across-russia",
+  "slug": "take-the-trans-siberian-railway-across-russia",
+  "title": "Make the Trans-Siberian a long-term plan, not a rushed booking",
+  "description": "Design a future rail journey around the time you want between stops, but check your own government’s Russia advice before making travel commitments.",
+  "intent": "How can I shape a long rail journey across Russia while accounting for the fact that current travel guidance may make a trip inappropriate? This adds a go/no-go review to the route idea.",
+  "sections": [
+    {
+      "heading": "Begin with the current go/no-go check",
+      "paragraphs": [
+        "Before you compare sleeper cabins, decide whether travel is advisable for you now. As of 7 November 2026, the UK Foreign, Commonwealth & Development Office advises against all travel to Russia and warns that insurance may be invalidated if someone travels against its advice. That guidance is written for UK travelers; consult the advice from your own government and insurer as well.",
+        "If the current advisory says not to travel, keep the route as a future project and do not make nonrefundable bookings. A famous train journey is not worth treating a warning as a box to tick. Revisit official advice close to any decision because security conditions, airspace, entry requirements, and insurance terms can change."
+      ]
+    },
+    {
+      "heading": "Sketch the experience you want later",
+      "paragraphs": [
+        "For a future version, decide what matters most: long uninterrupted days aboard, several nights in cities, or a shorter segment that ends before the journey becomes tiring. Write down what you would like to notice—landscape, station architecture, changes in language or climate—rather than treating the whole line as a single photo opportunity.",
+        "A long journey feels different when broken into pauses. Consider whether you want a few longer stops or a succession of brief ones, then make a draft map without attaching dates or promises. Keep the first itinerary as a question: what would make time on the train enjoyable, and what would you rather experience ashore?"
+      ]
+    },
+    {
+      "heading": "Plan for the rhythm of a shared carriage",
+      "paragraphs": [
+        "When travel becomes appropriate, read the exact train and accommodation information from the rail operator before booking. Do not assume every train on a route has the same facilities. For a long ride, think about what you need for quiet, sleep, meals, and movement, and how you will share limited space considerately with other passengers.",
+        "Carry a small set of low-key activities that do not depend on reliable connectivity: a book, notebook, cards, or downloaded maps and language notes. Keep valuables secure, follow the operator’s current carriage rules, and avoid leaving documents or devices unattended. These are planning prompts, not a substitute for the current operator’s instructions."
+      ]
+    },
+    {
+      "heading": "Treat Baikal as a route choice, not a station photo",
+      "paragraphs": [
+        "The Trans-Siberian’s main passenger line now passes south of Lake Baikal through Irkutsk, Slyudyanka, and Ulan-Ude; it does not follow the old Circum-Baikal shoreline railway. That distinction changes the trip you are imagining. If the lake is a priority, compare a stop in Irkutsk with a separate excursion on the historic line rather than assuming the through train will crawl along the water.",
+        "The Circum-Baikal line runs about 89 kilometres between Slyudyanka and Port Baikal on the lake’s southwest shore. A local Irkutsk route guide describes tunnels, stone galleries, bridges, and retaining walls directly above the water. Slyudyanka’s marble-clad station is a useful visual starting point; Marituy and Polovinnaya are mid-line stops, while Port Baikal faces Listvyanka across the Angara source. These places make different stops: station architecture at Slyudyanka, railway engineering along the shore, and ferry geography at Port Baikal.",
+        "This is a branch excursion with its own train and ferry connections, not a casual hop off the Moscow–Vladivostok service. The guide distinguishes a slow suburban train that stops along the line from programmed tourist trains, and says the suburban service does not run every day. Treat that as a design constraint, not a timetable: check current operator information before building any future dates around it. If you only have time for a through-route pause, decide whether Irkutsk’s city and Baikal access is enough; if the shoreline engineering is the point, reserve a separate, flexible segment."
+      ]
+    },
+    {
+      "heading": "Keep a trip file that can be safely reopened",
+      "paragraphs": [
+        "Save the draft route, official travel advisories, operator references, insurance questions, and reasons to delay in one dated file. When conditions change, re-check each item rather than relying on an old booking plan or traveler report. Do not try to work around entry rules or restrictions.",
+        "Your next action is to write down why this journey matters to you, then set a reminder to review official travel advice before any booking research. The route can remain a meaningful goal while the go/no-go decision follows current evidence."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Russia travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/russia",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "purpose": "Supports the current UK government warning against all travel and the advice that insurance may be invalidated; it is not universal advice for every nationality."
+    },
+    {
+      "title": "The Circum-Baikal Railway and Port Baikal",
+      "url": "https://irkutsk.ru/en/routes/circum-baikal-railway-and-port-baikal/",
+      "publisher": "Irkutsk.ru",
+      "purpose": "Supports the distinction between the main Trans-Siberian route and the old Circum-Baikal branch, its Slyudyanka–Port Baikal geography, the shoreline engineering features and the different suburban versus programmed tourist-train patterns; current schedules are not asserted."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "visit-every-continent",
+    "visit-all-seven-wonders-of-the-world",
+    "visit-all-50-us-states"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

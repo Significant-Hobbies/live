@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "read-the-100-books-you-always-meant-to-read",
+  "slug": "read-the-100-books-you-always-meant-to-read",
+  "title": "Build a reading list you can actually live with",
+  "description": "Turn an ambitious 100-book list into a flexible reading practice with choices across genres, formats and lengths rather than a rushed quota.",
+  "intent": "How do I read the hundred books I have long meant to read without making reading a chore? Focus on selection, access and sustainable pacing.",
+  "sections": [
+    {
+      "heading": "Make a list that invites you back",
+      "paragraphs": [
+        "Start with the books you truly want to read, not books you feel embarrassed not to have read. Divide the first twenty into categories such as a novel, history, science, memoir, poetry and a book chosen by someone you trust. Keep a “maybe later” list so curiosity can change without feeling like failure.",
+        "The Library of Congress National Library Service publishes themed minibibliographies for discovery, including subjects such as history, music, fiction, caregiving and travel. Its catalog is designed for eligible patrons in the NLS network, so use the titles as inspiration if you are outside that service rather than assuming every format is available to you."
+      ]
+    },
+    {
+      "heading": "Mix length, voice and format",
+      "paragraphs": [
+        "A hundred long novels can make the goal feel like a wall. Pair them with essays, plays, short story collections, graphic nonfiction or a slim poetry book. Alternate demanding reading with a book you find easy to enter. The aim is a varied conversation with books, not a contest in page counts.",
+        "Choose the format that fits your life: print for annotation, ebook for adjustable type, audio for hands-free listening or a library copy for low-cost exploration. Audiobooks are reading for the purpose of engaging with a text; you do not need to defend the format. Libraries can also help locate accessible versions and recommend books by mood, length or subject."
+      ]
+    },
+    {
+      "heading": "Set a pace with room for life",
+      "paragraphs": [
+        "Choose a rhythm you can repeat, such as reading for twenty minutes after dinner or carrying one book for transit. Check your actual pace after a month and set a realistic date only then. If you finish four books in a quiet month and one in a demanding month, your practice is working; a rigid daily target can make an interruption feel like a reason to quit.",
+        "Keep a very small record: title, author, date finished and one sentence about what stayed with you. Do not write a full review unless you enjoy doing so. When a book is not working, decide whether you want to pause, skim, switch editions or stop. Reading time is limited; finishing everything is not the purpose."
+      ]
+    },
+    {
+      "heading": "Use a gentle system for choosing next",
+      "paragraphs": [
+        "When you finish, select the next title from three shelves: one planned classic, one current curiosity and one recommendation. That gives structure without eliminating surprise. If you are unsure about a long book, borrow it first or sample the opening before buying. A list can be reordered when the person you are becoming wants different books.",
+        "Avoid making the hundred titles a public ranking of “important” literature. Include writers from different places and periods, and ask whose voices are missing from your first version. A local librarian can help identify strong translations, introductions and editions. If a text carries difficult history, choose context from a reputable source instead of treating a novel as a complete record of a culture."
+      ]
+    },
+    {
+      "heading": "Let the milestone change shape",
+      "paragraphs": [
+        "Revisit the list every ten completed books. Note patterns: which subjects made you curious, which formats suited your days and which selections you would now replace. The checkpoint protects the list from becoming a promise made to an older version of yourself. Keep the title count if it motivates you, but let the contents stay alive.",
+        "At the hundredth book, make a small record of the path: the books shared with friends, the one you nearly abandoned, the unexpected favorite and the work you want to read next. A reading milestone is stronger when it leaves you with questions rather than a claim that you have finished the canon."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Book Lists",
+      "url": "https://www.loc.gov/nls/new-materials/book-lists/",
+      "publisher": "National Library Service for the Blind and Print Disabled, Library of Congress",
+      "purpose": "NLS offers themed minibibliographies to help patrons discover books; its lists and borrowing services are intended for eligible users in its library network."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "read-52-books-in-a-year",
+    "re-read-a-book-that-changed-your-life-and-see-what-you-notice-now"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

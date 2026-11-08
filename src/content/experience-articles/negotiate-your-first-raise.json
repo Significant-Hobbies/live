@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "negotiate-your-first-raise",
+  "slug": "negotiate-your-first-raise",
+  "title": "Prepare a first raise conversation with evidence and a clear request",
+  "description": "Organize a first raise request around expanded responsibilities, results, relevant pay context, and a calm plan for asking what happens next.",
+  "intent": "Answers how to prepare for a first raise conversation; adds an evidence file, a scoped request and follow-up questions without prescribing a salary or promising an outcome.",
+  "sections": [
+    {
+      "heading": "Check whether this is the right conversation",
+      "paragraphs": [
+        "A raise conversation is easier to prepare when you know the decision process. Review your employer’s compensation cycle, role expectations and manager responsibilities if those are documented. If a review is coming soon, ask whether compensation is considered in that meeting or on another timeline. In a small workplace, the process may be informal; you can still ask how decisions are made and who needs to be involved.",
+        "Separate an urgent pay problem from a routine growth discussion. If you are facing a contract, wage, discrimination or retaliation concern, those questions may require qualified advice in your jurisdiction; a negotiation script is not legal guidance. For a regular raise request, focus on the scope of your role, documented contribution and the next decision point."
+      ]
+    },
+    {
+      "heading": "Build a concise evidence page",
+      "paragraphs": [
+        "Make a short record of what changed since your last compensation discussion: projects you now own, responsibilities added, problems you solved, quality improvements, customers or colleagues you support, and skills you use independently. Prefer examples with dates and outcomes over adjectives. ‘I handled the monthly handoff after the team change and documented the steps’ is more useful than ‘I work incredibly hard.’ Include collaboration accurately; do not present another person’s work as yours.",
+        "Add examples that show the level of responsibility, not just volume. A quiet but important improvement—fewer handoff errors, a clearer onboarding note, a safer process—may be more persuasive than a long list of tasks. If you do not have a direct metric, describe the change plainly and distinguish your observation from a verified company figure."
+      ]
+    },
+    {
+      "heading": "Research pay without treating averages as a promise",
+      "paragraphs": [
+        "If you work in the United States, the Bureau of Labor Statistics’ Occupational Employment and Wage Statistics pages show wage estimates by occupation and geography, with distributions and industry context. Use the occupational definition carefully: your job title may not match the work described, and national figures do not determine what your employer can or should pay you. Check other credible sources relevant to your field and location, including published ranges for comparable roles when available.",
+        "Note the date, location and responsibilities attached to any comparison. A salary figure from a different city, seniority or business model can mislead. If your country has official labor statistics, consult that agency instead; employment law, pay transparency rules and negotiation norms vary by jurisdiction. You do not need to disclose a private figure to a coworker to make a reasoned request."
+      ]
+    },
+    {
+      "heading": "Make a request and leave room for a real answer",
+      "paragraphs": [
+        "Ask for a dedicated meeting and state the purpose briefly. In the meeting, connect your request to the evidence: ‘My role has expanded to include these responsibilities. I’d like to discuss adjusting my compensation to reflect that scope.’ If you have a well-supported target, state it calmly and explain how you arrived at it. Avoid presenting a figure as objectively correct when your information is incomplete.",
+        "Then pause and listen. Your manager may need to check a budget, compare internal levels or speak with someone else. Ask what the review requires, who will decide and when you can expect an answer. If the answer is no, ask which gap they see: performance, scope, timing, budget or policy. These are different problems and call for different next steps."
+      ]
+    },
+    {
+      "heading": "Leave with a written follow-up",
+      "paragraphs": [
+        "Afterward, send a concise summary of the request, the evidence you discussed and any agreed next step. If compensation cannot change now, ask whether a date to revisit it can be set and what measurable responsibilities or outcomes would matter. Do not accept an indefinite promise as a plan; ask how progress will be reviewed.",
+        "A first negotiation can feel awkward because it makes your work and its value explicit. Practice the opening sentence once, bring the evidence page and write down your question about the decision timeline. That is enough preparation for a clear conversation."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How much could I be earning? Using Occupational Employment and Wage Statistics data during salary negotiations",
+      "url": "https://www.bls.gov/oes/earnings.htm",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "purpose": "Supports using U.S. occupational wage estimates and distributions by occupation, location and industry as context; it does not establish an individual entitlement or employer-specific pay target."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "make-a-skills-history-from-things-you-can-now-do",
+    "become-a-recognized-expert-in-your-field",
+    "spend-a-day-reviewing-every-job-relationship-and-home-you-have-had"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

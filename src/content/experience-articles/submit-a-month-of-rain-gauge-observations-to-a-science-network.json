@@ -1,0 +1,61 @@
+{
+  "experienceSlug": "submit-a-month-of-rain-gauge-observations-to-a-science-network",
+  "slug": "submit-a-month-of-rain-gauge-observations-to-a-science-network",
+  "title": "How do you keep a month of rain observations consistent?",
+  "description": "Choose an established observation network, follow its gauge and training rules, and keep a simple daily record that includes missed or unusual days.",
+  "intent": "A practical routine for carrying out a month of precipitation observations without inventing equipment standards or hiding gaps in the data.",
+  "sections": [
+    {
+      "heading": "Choose the network before buying a gauge",
+      "paragraphs": [
+        "Start by deciding which science network you can realistically report to. Projects differ in locations, instruments, observation windows and data rules. CoCoRaHS, for example, is a volunteer network that gathers precipitation reports for mapping and research, and its onboarding materials specify the kind of gauge and training expected for its observers. That is one network’s method, not a universal rain-gauge standard.",
+        "Read the project’s official instructions before purchasing equipment. Check whether it accepts participants in your area, which gauge model or location it requires, how it defines a day, and how to submit zero or missed observations. If you cannot meet the method, choose a different network or keep the measurements as a personal learning record rather than presenting them as approved data."
+      ],
+      "bullets": [
+        "Never substitute an unapproved gauge for a network’s required instrument and label the result as official."
+      ]
+    },
+    {
+      "heading": "Select a safe and stable measurement site",
+      "paragraphs": [
+        "Follow the network’s siting instructions for distance from buildings, trees and obstacles. Those details affect what the gauge catches, so do not choose a convenient ledge and assume it is comparable with a reference station. Make sure the gauge is stable, reachable without climbing, and placed where you can inspect it safely during ordinary weather.",
+        "The CoCoRaHS welcome material warns observers not to put personal safety at risk when reading a gauge. Use that rule as a boundary: do not go outside during lightning, flooding, strong winds or other dangerous conditions to save a measurement. Check how the network wants you to report accumulated precipitation when a reading is missed."
+      ]
+    },
+    {
+      "heading": "Build a daily routine you can repeat",
+      "paragraphs": [
+        "Choose a practical observation time that matches the network’s guidance and your routine. CoCoRaHS asks observers to report the actual observation time if they cannot use its preferred time, and its participant form emphasizes reading and emptying the gauge consistently. A regular reminder can help, but consistency means recording when you actually observed rather than changing the time in your log afterward.",
+        "Write down the date, time, reading, weather notes and any interruption. If the gauge is empty, follow the network’s procedure for a zero reading. If you are away, follow its guidance for an accumulated total; do not divide that total among days by guessing. Label uncertain measurements and ask the local coordinator how to handle them."
+      ]
+    },
+    {
+      "heading": "Keep the month honest when life intervenes",
+      "paragraphs": [
+        "A month of useful observation does not require a perfect daily streak. Travel, equipment trouble or unsafe conditions may create gaps. Record a missed day plainly, then resume at the next safe opportunity. Do not backfill from a nearby weather app or a neighbour’s gauge unless the project specifically asks for an estimate and gives a method. Your own station is useful because it records what fell at that site.",
+        "Check the gauge and its surroundings at the intervals described by the network. If it shifts, clogs or is damaged, note when you noticed and contact the project if required. Avoid making repairs that change the instrument without guidance. A short note about a local obstruction or unusual event can help explain the record without overstating what the measurement proves."
+      ]
+    },
+    {
+      "heading": "Submit and review the record",
+      "paragraphs": [
+        "Before sending reports, confirm units and dates in the entry form. Check for a misplaced decimal, an observation time entered in the wrong field or an accumulated total mistakenly recorded as one day. Networks may use observations in maps or research, so careful reporting matters more than producing impressive numbers. Keep your personal log until you know whether the network retains a copy you can revisit.",
+        "At the end of the month, review where your routine held and where it became awkward. If you want to continue, check the network’s current training and equipment guidance again. If the project is not available in your region, look for a local meteorological or citizen-science program with a clearly stated observation method rather than sending unsupported measurements to an unrelated platform."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Volunteer Observer Application Form",
+      "url": "https://media.cocorahs.org/docs/CoCo%20RaHS%20Volunteer%20App%20Form_04-13A.pdf",
+      "publisher": "CoCoRaHS / Colorado Climate Center",
+      "purpose": "Supports CoCoRaHS-specific training, approved gauge, consistent daily observation time and accumulated reporting expectations."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "submit-a-complete-bird-checklist-to-ebird",
+    "program-a-small-digital-weather-station"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

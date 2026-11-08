@@ -1,0 +1,60 @@
+{
+  "experienceSlug": "practice-three-vegetable-knife-cuts-for-one-meal",
+  "title": "Which three vegetable cuts make a weeknight meal easier?",
+  "description": "Practice three useful vegetable cuts for one meal: even slices, a small dice, and thin matchsticks, using a stable board and controlled pace.",
+  "intent": "A practical kitchen session for learning consistent slices, dice, and julienne from vegetables that will actually go into one meal, with safe handling and a review loop.",
+  "sections": [
+    {
+      "heading": "Pick vegetables that make the cuts visible",
+      "paragraphs": [
+        "Choose three vegetables with different shapes and textures, such as a bell pepper, carrot, and cucumber, then plan to use them in the same salad, grain bowl, or quick sauté. Set out a stable cutting board, a clean towel to stop it sliding, and one comfortable sharp knife. A chef’s knife handles most slicing and dicing; a smaller knife can help with peeling or trimming. The Institute of Culinary Education’s beginner guidance focuses on grip, body position, a tucked guiding hand, and controlled movement. If you are new to knives, use a slower pace and ask an experienced cook to demonstrate before practicing."
+      ]
+    },
+    {
+      "heading": "Cut one even slice first",
+      "paragraphs": [
+        "Start with a flat, stable surface: trim a small amount from a round vegetable so it can rest securely, or cut a pepper wall into manageable panels. Use a controlled forward-and-down movement rather than forcing the blade. Make a few slices of similar thickness and compare them side by side. Even slices are useful for roasting or sandwiches because they cook or stack more consistently. If one is much thicker than the others, notice how the ingredient sat on the board or how your hand moved. Do not try to correct a slice while the knife is moving; stop, reset the vegetable, and begin again deliberately."
+      ]
+    },
+    {
+      "heading": "Turn strips into a small dice",
+      "paragraphs": [
+        "For a dice, create stable flat pieces first, then cut them into parallel strips and rotate the strips to cross-cut them. A pepper can be opened into a flat wall before cutting; ICE’s demonstration shows how to remove the core and turn strips into dice. Choose a modest size rather than chasing restaurant-sized precision. Keep fingertips curled back and use the knuckles of the guiding hand to help maintain spacing. Push stray pieces aside with the blade’s spine or your hand away from the cutting edge, never with fingertips in the knife’s path. Put the diced vegetable straight into your meal mise en place."
+      ]
+    },
+    {
+      "heading": "Practice thin matchsticks with a carrot",
+      "paragraphs": [
+        "To make matchsticks, cut a carrot into a shorter section and square a small piece so it sits still. Slice it into thin planks, stack a few planks only if they remain steady, then cut parallel strips. Stop whenever the stack shifts. The goal is consistent enough to cook or eat easily, not identical slender pieces. If a carrot feels hard or awkward, switch to a softer vegetable or slice it into wider batons. Keep the cuts away from an unstable edge and do not use a dull or damaged knife; ICE notes that slipping is a risk with a dull blade."
+      ]
+    },
+    {
+      "heading": "Use all three cuts in one meal",
+      "paragraphs": [
+        "Separate the vegetables by the way they should be cooked: a small dice may need more heat, while delicate matchsticks can go in near the end or stay raw. Combine them in one dish so the practice produces dinner rather than a pile of unused trimmings. Taste the meal and note whether the cut size affected texture or cooking time. Wash and store leftovers promptly according to food-safety guidance. For the next session, repeat just one cut with one new vegetable and compare the results. Your concrete finish is a meal with three different cuts on the plate and one short note about which cut felt easiest to control."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Video: Knife Skills, Three Ways",
+      "url": "https://www.ice.edu/blog/video-knife-skills-three-ways",
+      "publisher": "Institute of Culinary Education",
+      "purpose": "Supports knife grip, curled fingertips, controlled slicing, and stepwise pepper and onion cuts."
+    },
+    {
+      "title": "Basic Knife Skills",
+      "url": "https://www.ice.edu/blog/knife-skills-video",
+      "publisher": "Institute of Culinary Education",
+      "purpose": "Supports practicing grip, hand position, posture and follow-through as the foundation for slicing and julienne."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "cook-a-meal-entirely-from-your-existing-pantry",
+    "roll-vegetarian-maki-for-a-picnic-at-home",
+    "make-pasta-from-scratch"
+  ],
+  "slug": "practice-three-vegetable-knife-cuts-for-one-meal",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

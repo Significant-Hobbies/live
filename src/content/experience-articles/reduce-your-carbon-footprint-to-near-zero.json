@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "reduce-your-carbon-footprint-to-near-zero",
+  "slug": "reduce-your-carbon-footprint-to-near-zero",
+  "title": "Turn “near zero” into a trackable household project",
+  "description": "Use a measured household baseline to choose durable emissions cuts, revisit the biggest sources and describe progress without claiming net zero.",
+  "intent": "How can I make a practical household effort toward a very low carbon footprint without treating an incomplete calculator as proof of zero emissions?",
+  "sections": [
+    {
+      "heading": "Define the boundary before chasing a number",
+      "paragraphs": [
+        "“Near zero” sounds precise, but a household estimate can cover different activities and leave others out. Decide what you mean: perhaps the home energy, driving and waste categories in one year, or a broader inventory that also includes flights, food and purchases. Record what is inside the boundary and what is missing. A result from a limited calculator is not a complete account of every emission associated with your life.",
+        "The U.S. EPA household calculator estimates home energy, transportation and waste, and says results differ with location, habits and choices. It can be a useful U.S. starting point, especially if you use your own utility and fuel data rather than national averages. It is not a global emissions inventory or a verification certificate. If you live elsewhere, use local data and factors where available."
+      ]
+    },
+    {
+      "heading": "Build a baseline you can reproduce",
+      "paragraphs": [
+        "Gather a year of utility bills, fuel or mileage records and household waste information, then enter the same period consistently. Save the assumptions and date beside the result. If a figure depends on an average or a rough estimate, label it as such instead of presenting it with false precision. The EPA calculator itself distinguishes rough average estimates from entries based on a household’s own use.",
+        "Make a short list of the largest categories the calculator reveals. Avoid trying to change every habit in a weekend. Pick one action that addresses a meaningful source and that the household can actually maintain: for example, compare transport options for a regular journey or ask the utility what electricity supply options exist. Check cost, access, safety and other household needs before changing equipment or routines."
+      ]
+    },
+    {
+      "heading": "Choose actions that survive ordinary life",
+      "paragraphs": [
+        "A durable change is easier to assess than a burst of perfect behavior. If you are considering a vehicle or commute change, map the real routes, weather, time and accessibility requirements first. If you are changing home energy use, distinguish actions you control from those that need a landlord, utility or building owner. For waste, identify what your local collection actually accepts before sorting or buying special containers.",
+        "Keep this as an emissions project rather than a moral scorecard. A missed week does not erase a useful structural change; a symbolic purchase does not automatically cancel an emission. Be wary of simple claims that an individual activity is “carbon neutral” without seeing the boundary, method and evidence behind the claim."
+      ]
+    },
+    {
+      "heading": "Recalculate on the same terms",
+      "paragraphs": [
+        "After several months, repeat the estimate using the same tool, data period and household boundary. Note differences in weather, household size, travel or utility factors that could affect the result. If the underlying method or electricity mix changed, record that too. A change in the reported number may reflect changed behavior, changed inputs or both.",
+        "Use the result to choose the next practical step. If home energy dominates, investigate that category; if transportation does, examine the trips you can realistically alter. The calculator offers categories and estimated actions, but it cannot decide which action fits your situation or prove a particular reduction in every context."
+      ]
+    },
+    {
+      "heading": "Report progress without overclaiming",
+      "paragraphs": [
+        "Write a one-page log: boundary, baseline date, sources of data, changes made, constraints and next review date. Say “our estimate for these categories fell” when that is what you measured. Avoid saying your total footprint is zero if you have not measured all relevant sources or independently verified the method.",
+        "A useful long-term target can be directionally ambitious and still honest about uncertainty. Keep the project open to better data and shared infrastructure changes. Household choices matter within the boundary you track, while the boundary itself keeps the result from pretending to describe everything."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Carbon Footprint Calculator",
+      "url": "https://www.epa.gov/ghgemissions/carbon-footprint-calculator",
+      "publisher": "U.S. Environmental Protection Agency",
+      "purpose": "Defines the U.S. household calculator’s home energy, transportation and waste categories and recommends using household data for a more accurate estimate; not a full life-cycle inventory or verification."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "start-a-community-garden",
+    "clean-up-a-beach-or-river-in-your-community",
+    "visit-a-repair-cafe-with-a-friend"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

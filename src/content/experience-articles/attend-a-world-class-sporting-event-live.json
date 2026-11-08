@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "attend-a-world-class-sporting-event-live",
+  "slug": "attend-a-world-class-sporting-event-live",
+  "title": "Choose a live sporting event for the part you want to notice",
+  "description": "Choose a live sporting event by the competition, venue view and atmosphere you want, then plan entry, transport and a useful way to follow the action.",
+  "intent": "How can I make a live sporting event feel like more than watching a screen in a crowd? This helps match the event and seat to the kind of viewing experience I want.",
+  "sections": [
+    {
+      "heading": "Choose the sport before choosing the spectacle",
+      "paragraphs": [
+        "A world-class label is less useful than a clear reason to go. Decide whether you want to watch a familiar team, see a sport you have never understood, or feel the atmosphere of a major final. Those intentions point toward different events. A team match rewards knowing players and season context; a timed event may make the scale and pace easier to follow; a tournament creates variety but asks you to plan around sessions and breaks.",
+        "If you do not know a sport well, watch a short explainer and learn one rule that affects scoring and one moment when play changes. Do not try to memorize every strategy before arriving. The first live match is an observation exercise: watch where players move when they do not have the ball, when the audience reacts and how the game changes after a substitution or timeout."
+      ]
+    },
+    {
+      "heading": "Match the view to the experience",
+      "paragraphs": [
+        "Look at the official venue map and seating description before choosing a ticket. A close seat makes individual expressions and speed vivid; a higher or more central view may make formation and movement easier to see. These are viewing preferences, not guarantees; the sport, venue shape, sightline and event layout matter. Check whether the seat is behind a goal, near a corner, or facing the long side, then decide which perspective would help you follow the action.",
+        "For a first visit, a clear view may matter more than being closest to the field. If you want crowd energy, a supporter section may suit you, but check its standing, noise and access conditions. If you need a seat with specific access features, use the venue’s official accessibility information or contact the organizer rather than guessing from a generic map."
+      ]
+    },
+    {
+      "heading": "Plan around the actual session",
+      "paragraphs": [
+        "A ticket can be tied to an entrance, session, bag rule, public-transport route and exit arrangement. The official Paris 2024 Paralympic spectator guide, for example, tells visitors to check the entrance on their ticket, follow the recommended transport route and review its event-specific bag restrictions. It is an example from that event, not a rule for every venue. Use the guide for the event you attend and check whether re-entry, lockers, cashless payment or prohibited items differ.",
+        "Plan the return journey as carefully as the arrival. When a crowd leaves at once, a nearby train stop may be busy and rideshare pickup points can move. Save the venue address and transport alternatives. Choose a meeting point with companions in case you lose mobile service; do not rely on one person’s phone battery for the group."
+      ]
+    },
+    {
+      "heading": "Give the event a small personal ritual",
+      "paragraphs": [
+        "Arrive with enough time to find your seat, settle in and notice the venue before play begins. Pick one thing to track: how the team presses, how a runner positions for a rebound, or how the crowd responds when the underdog has possession. If you are watching a multi-event program, choose one contest to follow closely rather than turning the whole visit into a checklist of names and photos.",
+        "A short note at halftime can help you remember what was surprising. Compare your expectation with what you noticed in person: the pace, the distance, the sound from the stands or the waiting between attempts. You do not need to record everything. A few details that are particular to this event will make the memory richer than a camera roll full of the scoreboard."
+      ]
+    },
+    {
+      "heading": "Make the visit accessible and enjoyable",
+      "paragraphs": [
+        "Bring only what the venue permits, check weather guidance, wear shoes suitable for the route from transport to your seat and take any access support you need. The Olympics guide advises spectators to check weather and plan clothing for its ceremony; an outdoor match or open-air track meet will have its own conditions. Follow the venue’s current instructions and ask staff if a route or seat is unclear.",
+        "Afterward, write down one moment that made more sense live than it does on television. Your next action is to choose the event and seating view around that moment, then check the organizer’s official spectator guide for the session you plan to attend."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Official spectator guide: Paris 2024 Paralympic Opening Ceremony",
+      "url": "https://library.olympics.com/digitalCollection/DigitalCollectionAttachmentDownloadHandler.ashx?documentId=3416480&parentDocumentId=3416479&skipCopyright=true&skipWatermark=true",
+      "publisher": "Paris 2024 / Olympic Studies Centre Library",
+      "purpose": "Provides a concrete event-specific example of checking entrance number, transport, weather and bag restrictions; not presented as a current guide for other events."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "play-a-first-game-of-walking-football",
+    "attend-a-multi-day-music-festival"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

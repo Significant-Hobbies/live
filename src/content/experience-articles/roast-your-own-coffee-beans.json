@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "roast-your-own-coffee-beans",
+  "slug": "roast-your-own-coffee-beans",
+  "title": "Keep the roast small enough to learn from",
+  "description": "Roast a small batch of green coffee using one safe, well-understood method, then record the change from raw bean to brewed cup.",
+  "intent": "How can I roast coffee for the first time and learn what the roast changed? This emphasizes a small controlled batch and honest sensory notes.",
+  "sections": [
+    {
+      "heading": "Choose a method before buying beans",
+      "paragraphs": [
+        "Home roasting can use a purpose-built machine, a class, or other equipment designed for the task. Choose a method with clear operating instructions, ventilation guidance and safety limits. Do not adapt a kitchen pan, grill or appliance unless its maker says it is suitable for roasting coffee. The process involves heat and smoke; follow the manufacturer’s instructions, keep children and pets away from the work area and stop if the setup is not ventilating as intended.",
+        "Buy a small quantity of green coffee from a supplier who can explain its origin and processing. Choose one lot rather than a sampler so the first batch has fewer variables. Ask the supplier whether the beans are intended for roasting and how they are stored. Record the lot name and purchase date; do not rely on a generic “light” or “dark” label as a substitute for your own notes."
+      ]
+    },
+    {
+      "heading": "Make one small test batch",
+      "paragraphs": [
+        "Use the roaster maker’s exact batch size and instructions. Weigh the beans, note the starting condition and keep the same equipment setting for your first repeat. If you take a class, ask the instructor to explain what you should observe and what you must not touch. Avoid opening a hot machine or moving beans while its mechanism is running.",
+        "Write down the time, setting, visible color change and any sounds the machine’s instructions tell you to monitor. Do not chase a dramatic crack or smoke level if the maker’s manual does not say to. The goal is to create a safe, repeatable first batch, not to imitate a video whose equipment and room may be different."
+      ]
+    },
+    {
+      "heading": "Cool, label and wait before judging",
+      "paragraphs": [
+        "Follow the equipment instructions for cooling and cleaning. Label the batch with the bean, date and roast notes. Let it rest and use the same brewing method as your comparison cup, so the brewing variable does not overwhelm what the roast changed. Avoid brewing immediately just because the beans are ready to handle; a consistent resting interval makes comparisons easier.",
+        "The Specialty Coffee Association explains that roasted beans release carbon dioxide after roasting and that this release changes over time. It also notes that ground coffee loses carbon dioxide much faster than whole beans. This is why your notebook should include the roast date and whether you ground the beans just before brewing. The source describes freshness observations, not a universal ideal resting period."
+      ]
+    },
+    {
+      "heading": "Taste against a reference",
+      "paragraphs": [
+        "Brew the roasted batch beside a coffee you already know. Keep the water, grinder setting, dose and brew method as similar as possible. Note whether the cup seems more bitter, sweet, sharp, flat, aromatic or difficult to describe. Use plain sensory language rather than assuming a roast color automatically predicts flavor. If you have a friend, ask them to taste without telling them which cup is yours.",
+        "A simple cupping session can help you compare multiple coffees later, but first learn what one variable does. If the cup tastes unpleasant, write that down without blaming yourself: the batch, green coffee, roast curve or brewing could all matter. Do not change all of them at once."
+      ]
+    },
+    {
+      "heading": "Repeat with one deliberate change",
+      "paragraphs": [
+        "On the next batch, change only one setting your equipment maker allows you to change. Keep the bean and brew method the same. Compare your two notes and decide whether you can identify a preference. If the equipment manual does not describe a safe adjustment, do not experiment beyond its instructions. A beginner can learn a great deal by repeating a known process carefully.",
+        "Save the beans in a clean, airtight container away from heat and light, following your supplier’s storage guidance. Your next step is to choose one lot and one roasting method with published safety and operating instructions, then make only a small, labeled batch."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Coffee Decoded: What is “freshly roasted” coffee?",
+      "url": "https://sca.coffee/sca-news/coffee-decoded-9-fresh-coffee",
+      "publisher": "Specialty Coffee Association",
+      "purpose": "Supports narrow observations that roasted whole beans degas over time and that grinding accelerates loss of CO2; the article uses this to explain recording roast and grind dates, not to prescribe a universal rest period."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "run-a-small-coffee-cupping",
+    "eat-at-the-source-coffee-in-ethiopia-tea-in-japan-chocolate-in-ecuador",
+    "brew-your-own-beer-or-wine"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

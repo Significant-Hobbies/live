@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "grow-edible-sugar-crystals",
+  "slug": "grow-edible-sugar-crystals",
+  "title": "Make rock candy without turning the jar into guesswork",
+  "description": "Grow edible sugar crystals with food-safe materials, adult help for hot syrup, a clean jar and an undisturbed wait, then compare seed and growth patterns.",
+  "intent": "How to grow and evaluate edible rock candy while controlling cleanliness, seed crystals, waiting conditions and the burn risk from hot syrup.",
+  "relatedExperienceSlugs": [
+    "grow-salt-crystals-and-keep-a-measurement-record",
+    "build-a-seasonal-millet-thali",
+    "test-how-salt-changes-a-simple-dish"
+  ],
+  "sources": [
+    {
+      "title": "Rock Candy Recipe",
+      "url": "https://annex.exploratorium.edu/cooking/bread/recipe-rockcandy.html",
+      "publisher": "Exploratorium",
+      "purpose": "Supports food-safe materials, a prepared string or stick, undisturbed growth over several days and the serious burn risk of hot syrup."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Treat the syrup as a serious burn hazard",
+      "paragraphs": [
+        "Rock candy begins with a concentrated sugar solution, and that syrup becomes extremely hot during preparation. The Exploratorium explicitly warns that the syrup can cause burns and that children need adult help. Have a capable adult handle the heating and pouring, use the recipe’s equipment and pot holders, and keep bystanders away from the stove and jar. Do not improvise with an open flame at the table.",
+        "Set up a clean, heat-safe jar on a stable surface before preparation. Keep it away from the edge, curtains, pets and curious hands. A jar can stay hot after the pour even when the outside feels cooler. If you are a child or are uncertain about the hot step, watch the adult prepare it and take over only once the jar is safely placed and cooled."
+      ]
+    },
+    {
+      "heading": "Prepare the hanging support cleanly",
+      "paragraphs": [
+        "Use a clean food-safe stick or cotton string suspended from a pencil or support that rests across the jar. The string should hang without touching the bottom or sides if you want to see crystals grow on it. The Exploratorium’s recipe soaks the string in the sugar solution and lets it dry before returning it to the jar; this gives crystals a surface on which to start.",
+        "Keep the support from swinging into the jar. If you choose a stick, check that it stays centered and does not fall in. Cover the jar in the way the recipe directs while still allowing the intended setup to work. A loose cover helps keep dust out, but do not seal the jar if the recipe expects evaporation."
+      ]
+    },
+    {
+      "heading": "Give the jar time and stillness",
+      "paragraphs": [
+        "After the solution is prepared and the support is in place, leave the jar undisturbed at room temperature. Exploratorium says the process usually takes about a week and warns against touching the jar before it is finished. Choose a visible shelf out of direct traffic, mark the start date, and resist lifting the stick to check whether crystals have formed.",
+        "A daily look from the outside is enough. Record the date, liquid clarity, visible crystals and whether they appear on the string, stick or jar. If you move the jar, write down when and why; movement can disturb the growing structures. Avoid adding extra sugar or water partway through, because that changes the solution and makes the first experiment hard to interpret."
+      ]
+    },
+    {
+      "heading": "Compare the crystals, not just their size",
+      "paragraphs": [
+        "At the end, compare where crystals formed and whether they look like separate grains, a rough coating or larger connected pieces. The Exploratorium explains that rock candy consists of many sugar crystals grown together and connects the visible forms to the structure of individual crystals. You can photograph the jar from the same angle and sketch the patterns without lifting the string.",
+        "If you want to compare seed treatment, set up two clean jars with the same recipe and change only whether one support carries sugar seeds. Label them before they are filled and keep them in the same place. Do not claim the seeded sample grew faster just because it looks larger in a single photo; record the start, observation days and the way you compared both samples."
+      ]
+    },
+    {
+      "heading": "Only eat it if the food setup stayed clean",
+      "paragraphs": [
+        "This is an edible science activity only when the ingredients and equipment remain food-safe and clean, and when the setup has not been used for a non-food crystal experiment. Do not eat salt or Epsom salt crystals from a separate demonstration. If a jar was touched, contaminated, or left in a place where dust or animals could reach it, treat it as a display rather than food.",
+        "When it is ready, follow the recipe’s safe cooling and removal instructions with adult help. Share the result as a small tasting, and describe what changed instead of promising that every home jar will look the same. The Exploratorium notes that sugar crystals need time to grow; a few clear observations and a safely made piece of rock candy are a satisfying outcome even if the crystals are modest."
+      ]
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

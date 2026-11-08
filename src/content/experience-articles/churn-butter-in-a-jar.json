@@ -1,0 +1,57 @@
+{
+  "experienceSlug": "churn-butter-in-a-jar",
+  "slug": "churn-butter-in-a-jar",
+  "title": "What changes inside a jar as cream turns into butter?",
+  "description": "Follow the stages of jar-churned butter, recognize when cream separates, keep the food handling simple, and make a small batch worth tasting.",
+  "intent": "Explain the visible stages and practical choices in a jar butter experiment, including how to respond when cream looks like whipped cream before separating.",
+  "sections": [
+    {
+      "heading": "Set up a small, easy-to-watch batch",
+      "paragraphs": [
+        "Use pasteurized cream, a clean jar with a secure lid, and enough room inside for the cream to move. Cornell Cooperative Extension’s classroom activity fills a jar about half to three-quarters full, leaving space for the cream to be shaken. A smaller amount is easier for one person to handle; a family can take turns so the jar does not become tiring. Check that the lid fits before adding cream, and keep a cloth nearby in case the jar sweats or slips.",
+        "Clear the work surface and wash hands before beginning. Keep the cream cold until the activity starts, and return any unused cream to the refrigerator. Check for dairy allergies and avoid cross-contact with other foods. If you are doing this with children, an adult should check the lid and supervise the tasting and handling. The goal is to watch a food change, not to turn the kitchen into a race to finish shaking first."
+      ]
+    },
+    {
+      "heading": "Notice the stages instead of watching the clock",
+      "paragraphs": [
+        "As the jar moves, the cream first thickens into a whipped-looking mass. Keep going, taking turns, and listen for the change in movement inside the jar. Eventually a solid mass of butter separates from liquid buttermilk. Cornell Cooperative Extension’s activity describes this separation as butterfat collecting into a solid while the liquid remains around it. You can pause occasionally to look through the jar, but keep the lid on during shaking so the mixture stays contained.",
+        "If the cream becomes thick and seems stuck at the whipped stage, do not assume the batch is ruined. Continue shaking with comfortable, steady movements and trade the jar to another person if your arms need a rest. The timing varies with the cream, jar, and pace. Once you see a distinct solid clump and liquid, stop; further shaking is not needed to prove that separation occurred. Note what the cream looked like just before the change, because that intermediate stage is part of the science."
+      ]
+    },
+    {
+      "heading": "Separate the butter and decide how to use the liquid",
+      "paragraphs": [
+        "Open the jar carefully and pour off the buttermilk into a clean container. The extension activity suggests a gentle rinse under cold water to remove excess liquid; if you try that method, use clean water and handle the butter with clean hands or utensils. Do not pour liquid back into the jar after tasting or touching the butter. Add a little salt only after the plain butter has been tasted, so you can notice the original flavor first.",
+        "The liquid is not necessarily the same as cultured buttermilk from a store, so do not substitute it in a recipe without checking what that recipe expects. Keep both products chilled and follow current food-safety guidance. FoodSafety.gov’s chart says cream and buttermilk exposed to temperatures of 40°F (4°C) or above for more than two hours should be discarded. If you are unsure how long ingredients sat out, choose safety over saving a small batch."
+      ]
+    },
+    {
+      "heading": "Compare results and make the next batch easier",
+      "paragraphs": [
+        "Spread a small amount on a plain cracker or bread and note the texture: soft, grainy, or firm. Then compare the remaining liquid’s appearance and smell with what you expected. If separation was difficult, next time use a smaller jar volume, a more secure lid, or shorter turns between shakers. Change one thing at a time so you can tell which adjustment helped. A simple note—cream type, fill level, and what you observed at each stage—turns a fun activity into a repeatable experiment.",
+        "Clean the jar and tools promptly, and refrigerate any butter you plan to keep. Keep the activity focused on observation: predict what shaking might do, check the cream at intervals, and explain the moment you first saw solids and liquid separate. The useful next action is to invite each person to describe one change they noticed before tasting the butter; comparing observations is often more interesting than comparing who shook hardest."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Making Homemade Butter",
+      "url": "https://s3.amazonaws.com/assets.cce.cornell.edu/attachments/57461/Making_Homemade_Butter.pdf?1654174784=",
+      "publisher": "Cornell Cooperative Extension",
+      "purpose": "Supports clean jar preparation, leaving space in the jar, shaking cream until butter forms, and draining buttermilk."
+    },
+    {
+      "title": "Food Safety During Power Outage",
+      "url": "https://www.foodsafety.gov/food-safety-charts/food-safety-during-power-outage",
+      "publisher": "FoodSafety.gov",
+      "purpose": "The refrigerated-food chart lists cream and buttermilk for disposal after more than two hours at 40°F (4°C) or above."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "make-tofu-from-soy-milk",
+    "prepare-a-bento-with-contrasting-textures"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

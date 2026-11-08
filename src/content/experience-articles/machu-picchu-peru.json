@@ -1,0 +1,77 @@
+{
+  "experienceSlug": "machu-picchu-peru",
+  "slug": "machu-picchu-peru",
+  "title": "Pick your Machu Picchu circuit by what you want to see",
+  "description": "Compare the official panoramic, classic and royal circuits at Machu Picchu, then check the route map and current ticket rules against your needs.",
+  "intent": "Which official Machu Picchu circuit or route fits a visitor’s priorities and access needs, beyond planning an early arrival?",
+  "sections": [
+    {
+      "heading": "Choose the view or the city route first",
+      "paragraphs": [
+        "Machu Picchu tickets are tied to a defined circuit and route, so begin with what you want the visit to emphasize. The official Ministry of Culture site currently lists three circuit families: Panoramic, Machupicchu Classic and Machupicchu Royalty, with named routes under each. Some routes include a mountain or a seasonal extension; others focus on the archaeological city. Do not buy a ticket based only on a familiar phrase like ‘classic tour.’ Match the exact route code on the ticket to the current map.",
+        "If your priority is the broad landscape, compare the Panoramic route options and their mountain or viewpoint labels. If your priority is moving through the city’s archaeological features, compare the classic route maps. If you want a designated mountain add-on such as Waynapicchu, look at the Royalty route list and confirm its separate conditions. These choices are not interchangeable once you are on site."
+      ]
+    },
+    {
+      "heading": "Read the map before choosing the classic circuit",
+      "paragraphs": [
+        "The Ministry’s map for Circuit 2, Route 2-B names a sequence of places including the upper and lower platforms, the dry moat, the Temple of the Sun viewpoint, Temple Square, the Intiwatana pyramid, Sacred Rock, the water mirrors and the Temple of the Condor. The map lets you trace how this particular route is drawn through those features rather than relying on a short description. Route 2-B is titled “Lower Terrace Route”; check the actual map to understand what that means for the ticket you are considering.",
+        "The Route 2-B map lists a maximum stay of two and a half hours for this route. Use that limit to decide whether you want a focused visit or a guided explanation that covers only a few landmarks. Check the current visiting-hours page and the exact admission slot when you book; the hours and route arrangements may be updated by the authorities."
+      ]
+    },
+    {
+      "heading": "Use panoramic and mountain routes deliberately",
+      "paragraphs": [
+        "The official map for Circuit 1 Route 1-A names the Machupicchu Mountain route and lists a maximum stay of up to seven hours. That is a very different commitment from a Circuit 2 visit. The current route listing also identifies Intipunku and Inka Bridge routes as seasonal options. Do not infer that a route is available on your date just because it appears on a general map; the official list marks seasonal routes and ticket capacity affects what can be purchased.",
+        "A mountain label should make you check the actual walking demands, not guess them from the route name. Review the official map, elevation and access details with the Ministry or a qualified local operator. If you have a disability, injury, balance concern or limited stamina, ask for current route-specific access information before choosing and plan with a companion or professional support as appropriate. The available sources do not establish that any circuit is universally accessible."
+      ]
+    },
+    {
+      "heading": "Keep the visit within the rules",
+      "paragraphs": [
+        "The city is a protected archaeological site with timed entry and route controls. Arrive with a ticket for the precise route and time, and follow staff directions rather than changing course to reach a viewpoint shown on another circuit’s map. Bring only what the current visitor rules allow, and check the official site for the latest restrictions, entry windows and transport arrangements from Aguas Calientes.",
+        "If you are traveling with a guide, share your route code in advance and agree on a few places to discuss. The short time on some routes makes a focused question useful: how does a terrace shape the slope, what changes as the path moves from platform to plaza, or how do the buildings relate to the mountain setting? Keep interpretation grounded in an official sign or qualified guide instead of treating speculation as fact."
+      ]
+    },
+    {
+      "heading": "Make a decision checklist",
+      "paragraphs": [
+        "Before purchasing, answer four questions: do you want a panoramic view or more time within the city; does your chosen route add a mountain or seasonal option; what walking and access details must be confirmed for your group; and does the current ticket slot give enough time for the day’s transport? Compare the exact route map and ticket description, not only the circuit number.",
+        "Then choose the route that matches the experience you want and the effort you can safely manage. Check current official updates again close to travel, because capacity, schedule and route availability are operational details. A good visit is not the one with the longest list of stops; it is the one whose map, time and access demands fit the people making the trip."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Circuits and routes",
+      "url": "https://www.machupicchu.gob.pe/circuits-and-routes/?lang=en",
+      "publisher": "Peruvian Ministry of Culture / Machupicchu Official Site",
+      "purpose": "Supports the current list of three circuit families and their ten named routes, including seasonal options."
+    },
+    {
+      "title": "Circuit 1, Route 1-A: Machupicchu Mountain Route",
+      "url": "https://www.machupicchu.gob.pe/wp-content/uploads/2024/05/C1-R1AP.pdf",
+      "publisher": "Peruvian Ministry of Culture, Cusco Directorate",
+      "purpose": "Supports named features on Route 1-A and its listed maximum stay of seven hours."
+    },
+    {
+      "title": "Circuit 2, Route 2-B: Lower Terrace Route",
+      "url": "https://www.machupicchu.gob.pe/wp-content/uploads/2024/06/6-C2-R2B.pdf",
+      "publisher": "Peruvian Ministry of Culture, Cusco Directorate",
+      "purpose": "Supports the named Circuit 2 landmarks, lower-terrace route name and listed two-and-a-half-hour maximum stay."
+    },
+    {
+      "title": "Visiting hours",
+      "url": "https://www.machupicchu.gob.pe/visiting-hours/?lang=en",
+      "publisher": "Peruvian Ministry of Culture / Machupicchu Official Site",
+      "purpose": "Directs readers to current visiting hours by circuit and route."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "watch-the-sunrise-from-machu-picchu-peru",
+    "visit-the-temples-of-angkor-wat-cambodia",
+    "the-taj-mahal-india"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

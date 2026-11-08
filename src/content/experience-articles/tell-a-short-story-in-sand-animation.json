@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "tell-a-short-story-in-sand-animation",
+  "slug": "tell-a-short-story-in-sand-animation",
+  "title": "Plan a sand animation around one image that can change",
+  "description": "Build a short sand-animation story from three images, using negative space, hand movement, and rehearsal to make each transformation readable.",
+  "intent": "How do I make sand animation tell a story instead of presenting a row of unrelated drawings? This guide focuses on designing transformations that an audience can follow.",
+  "sections": [
+    {
+      "heading": "Write the transition before drawing",
+      "paragraphs": [
+        "Sand animation works best when a mark can become something else. Instead of choosing three beautiful but unrelated pictures, write a small chain: a seed becomes a sprout, the sprout becomes a tree, and the tree becomes a bird’s wing. The middle image should carry a shape or direction that can plausibly turn into the next. That gives the viewer a reason to watch the change rather than wait for the next illustration.",
+        "Keep the story to one clear change of state: arrival, growth, departure, loss, or return. A silent sequence needs no explanatory paragraph, but the audience should be able to describe what changed. Draw three thumbnail frames on paper, then sketch an arrow between them and name the physical action that changes the picture. If you cannot describe the transition in a short verb—open, fold, drift, split, grow—simplify the design."
+      ]
+    },
+    {
+      "heading": "Set up a forgiving surface",
+      "paragraphs": [
+        "Professional live sand performances use an illuminated surface and a camera or projection system so the changing image can be seen by an audience. At home, you can explore the same hand-and-grain idea with a shallow tray and safe, diffuse light below or beside it. Keep the sand contained and away from eyes, vents, food, and electronics. Do not improvise exposed mains wiring or place loose sand inside equipment. If you do not have a safe lightbox, use a tray on a table and treat overhead light as part of the composition.",
+        "Spread a thin, even layer rather than a mound. A fingertip can push a line through the grain, while a small pinch creates a brighter region when light comes through the cleared area. Try one simple exercise: make a dark silhouette by pushing sand away from a central shape, then restore the sand and make the opposite image by leaving the shape raised. Notice that the same gesture can add or remove material depending on the background."
+      ]
+    },
+    {
+      "heading": "Use contrast and hand paths deliberately",
+      "paragraphs": [
+        "Before refining details, make each frame legible from across the room. A face can be reduced to a head shape, a direction of gaze, and one strong feature. A landscape might need only a horizon and one recognizable object. Fine eyelashes, tiny lettering, and intricate texture vanish quickly when the next frame begins. Choose large shapes with open areas around them; the empty space is not leftover material but the place where the next image can appear.",
+        "Plan your hand path so you do not erase the image before the audience has time to read it. Rehearse a sequence at half speed and watch whether your wrist blocks the important area. Try pushing grains outward to reveal a figure, or sweeping a silhouette away to turn it into a new horizon. Keep the changes you can perform consistently with relaxed movements; a complicated finger choreography is likely to feel different every time."
+      ]
+    },
+    {
+      "heading": "Rehearse the timing with a witness",
+      "paragraphs": [
+        "Perform once without music and ask a friend to tell you what they saw, in order. If they identify the first and last images but miss the middle transformation, add a pause or make the shared shape more obvious. If they describe an interpretation different from yours, that can be useful: sand images are suggestive, and you can decide whether ambiguity adds interest or confuses the action.",
+        "Then choose a simple sound bed or work in silence. Music should support the rhythm rather than explain the plot. Give the audience a beat to recognize an image before changing it. A pause can create more tension than extra detail. Rehearse in the same light and camera angle you will use, since a shadow from your hand may hide a line that looked clear while drawing."
+      ]
+    },
+    {
+      "heading": "Finish with a transformation, not a perfect picture",
+      "paragraphs": [
+        "Record a first take from above if you want to review the sequence. Watch for moments where your hand crosses the camera, grains clump, or a transition takes too long. Adjust one thing at a time: simplify one image, increase the pause, or change the direction of the sweep. Because the image disappears as it changes, you do not need to preserve a flawless final drawing. The ending can be the moment the last image opens into blank sand again.",
+        "After rehearsal, write the three-image chain and the gesture that links each pair. That compact score is enough to perform again without turning the work into a mechanical frame list. Your next action: spread a test layer, make one silhouette, and practice turning it into a second shape in a single uninterrupted movement."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "About Sand Animation",
+      "url": "https://www.sand-artist.com/about-sand-animation/",
+      "publisher": "Charlene Lanzel, Sand Artist",
+      "purpose": "Describes live sand storytelling, an illuminated glass surface, hand manipulation and projection; used narrowly for the performance setup and ephemeral image form."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "animate-a-strip-in-a-homemade-zoetrope",
+    "stage-a-shadow-puppet-story",
+    "make-a-cyanotype-print-from-everyday-objects"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

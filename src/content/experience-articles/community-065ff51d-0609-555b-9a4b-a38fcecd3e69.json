@@ -1,0 +1,51 @@
+{
+  "experienceSlug": "community-065ff51d-0609-555b-9a4b-a38fcecd3e69",
+  "slug": "drive-monster-truck",
+  "title": "What a supervised monster-truck driving class actually teaches",
+  "description": "See how a supervised monster-truck class combines track awareness, controls and vehicle care, and what to ask before booking a first session.",
+  "intent": "Help an interested beginner compare a supervised monster-truck class with a spectator ride and prepare useful questions about format, access and cost.",
+  "sections": [
+    {
+      "heading": "Separate the ride from the driver seat",
+      "paragraphs": [
+        "“Monster-truck experience” can mean two different things. A ride puts you in the passenger seat while a professional handles the truck; a driving class puts you at the controls under close supervision. Confirm which one the listing actually sells, how long you are in the vehicle, and whether instruction is hands-on or mostly demonstration. HorsePower Park in Morganton, North Carolina, describes a class that covers track and pit safety, startup, braking, steering, obstacles and radio protocol. That gives you a concrete checklist for comparing programs, but it is one provider’s published format, not an industry-wide standard.",
+        "A reputable first session should make the supervised setting central. Ask who is in the vehicle or immediately controlling the exercise, what safety gear is supplied, how participants are screened, and what happens if weather or equipment changes the plan. The class page says its sessions are supervised by a professional driver and that protective gear is provided; ask the operator to confirm current details for your date."
+      ]
+    },
+    {
+      "heading": "Learn the environment before the throttle",
+      "paragraphs": [
+        "A monster truck is a specialist vehicle used in a managed show environment. The interesting beginner task is not trying a stunt; it is noticing how a driver is taught to read the space. HorsePower Park lists track signals, spectator surroundings, restraint systems, remote ignition interruption and safe movement around trucks among its curriculum. Ask the instructor to explain where you should look before the vehicle moves and how a stop instruction is communicated. If those basics are rushed, pause and request clarification.",
+        "A useful first attempt can be modest: sit through the briefing, identify the marked practice area and observer boundary, then complete only the instructor-selected exercise. Driving over a small obstacle under direct instruction is a different activity from improvising a jump. Let the professional decide what belongs in a beginner session; never imitate show footage in a normal vehicle or on an informal lot."
+      ]
+    },
+    {
+      "heading": "Ask about the truck and the course",
+      "paragraphs": [
+        "The vehicle itself changes the experience. HorsePower Park advertises mini, junior and professional truck classes and notes that seat sizes vary. Ask which truck is appropriate for your height and fit, whether you will enter and exit with assistance, and what controls the instructor expects you to operate. Confirm the exact course surface, number of learners sharing the session, individual driving time and whether an observer may watch from a designated place. The provider’s page says class length varies and describes a two-to-four-hour booking window; treat that as its current published estimate, not a universal duration.",
+        "Clarify the financial terms in writing. The page currently describes a refundable damage deposit with conditions, but deposits and tuition can change. Ask what is included, what could be withheld, what counts as intentional damage, and how a weather reschedule works. Compare the full amount and cancellation terms rather than relying on an advertised starting figure."
+      ]
+    },
+    {
+      "heading": "Make the first visit practical",
+      "paragraphs": [
+        "Wear the clothing the operator specifies; the HorsePower Park page recommends closed-toe shoes and long pants and says safety gear is provided. Bring identification if requested, arrive early enough for check-in, and do not assume that a venue has the same age, fit or medical requirements as another school. If you have a concern about whether a session is appropriate for you, discuss it with the operator before paying and consult a qualified clinician where that is relevant.",
+        "Keep the day focused on one new skill. After the class, write down one control or safety habit you understood better, and one question you would ask before a second session. If you mainly want to feel the scale and sound of the trucks, a passenger ride or live show may meet that goal more simply. If you specifically want to drive, contact a supervised school, request its current written format and requirements, then decide whether that exact session fits."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "What You Learn and Event Format",
+      "url": "https://monsterfreestyle.com/classes",
+      "publisher": "Monster X / HorsePower Park",
+      "purpose": "Describes its own supervised class format, curriculum topics, supplied safety gear, participant requirements and location; booking details and prices can change."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "drive-a-racecar-at-full-speed",
+    "community-882ff75a-9a84-5fc9-aea6-776fff8d3e06"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

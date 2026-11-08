@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "show-up-for-someone-in-a-crisis-without-being-asked",
+  "slug": "show-up-for-someone-in-a-crisis-without-being-asked",
+  "title": "Offer a concrete kind of help and let them choose",
+  "description": "Support someone through a crisis with one specific offer, respect for their privacy and choices, and clear limits on what you can provide.",
+  "intent": "How can I show up without making the person manage my help, invade their privacy, or take on a role I cannot safely fill?",
+  "sections": [
+    {
+      "heading": "Find out whether they want company or practical help",
+      "paragraphs": [
+        "A crisis can make even ordinary decisions feel crowded. Instead of beginning with “Tell me everything” or “What can I do?”, offer a low-pressure choice: “I can bring dinner Tuesday, drive you to the appointment, or just sit nearby. Would any of those help?” A specific offer saves the person from inventing a task for you.",
+        "The World Health Organization’s Psychological First Aid guide describes humane, practical support that respects a person’s dignity, culture and abilities after a serious crisis. That framework is useful here: ask what is needed, listen, and do not assume your preferred kind of help matches theirs. A refusal is an answer, not a cue to push harder."
+      ]
+    },
+    {
+      "heading": "Choose one task you can actually complete",
+      "paragraphs": [
+        "Make the offer narrow enough to deliver. “I’ll pick up your prescription at the pharmacy you name” is clearer than “I’ll handle errands.” “I can take the dog for a walk at 5” gives the person a time and a choice. If the task involves money, keys, personal documents or contact with other people, agree on details before acting.",
+        "Do not promise to solve a situation you cannot control. You may not be able to find housing, change a diagnosis, stop a court process or remove a family conflict. You can help with one call, accompany someone while they ask questions, or make a meal. When a task needs professional knowledge, offer to help them reach a qualified service rather than trying to become that service."
+      ]
+    },
+    {
+      "heading": "Listen without turning the moment into an interview",
+      "paragraphs": [
+        "Give the person time to speak or stay quiet. Ask whether they want advice, distraction or someone to listen. Avoid probing for details they have not volunteered, comparing their experience with another person’s, or sharing their story to recruit helpers without permission. Privacy is part of support.",
+        "If they do talk, reflect the practical issue you heard: “You have two appointments and no ride,” or “You’re not ready to tell the wider family.” This lets them correct you and helps keep the conversation grounded. The WHO guide is for serious crisis events and field workers; it is not a replacement for mental-health, medical or emergency care."
+      ]
+    },
+    {
+      "heading": "Make a small network, not a secret burden",
+      "paragraphs": [
+        "Ask whether they want one or two trusted people looped in. If several friends are helping, coordinate practical tasks with consent so the person does not receive six duplicate meals and no help with transport. A shared calendar can work if access is limited to the people the person chooses.",
+        "If you are concerned about immediate danger or someone cannot meet urgent basic needs, contact local emergency or crisis services and follow their instructions. Do not promise absolute secrecy when safety is at stake. Because emergency numbers and services vary by country, know the local route where you are and ask a qualified responder what to do."
+      ]
+    },
+    {
+      "heading": "Check in once, then keep your word",
+      "paragraphs": [
+        "After the first offer, send a brief follow-up that does not demand a report: “I’m free Thursday for the pharmacy run if that still helps; no need to reply if plans changed.” If they accept, do the agreed task at the agreed time. Reliability matters more than adding dramatic gestures.",
+        "Choose a limit that protects your own capacity. You can say, “I can take you this week, but I cannot be on call overnight.” If the need continues, help identify other support rather than disappearing or resenting the person. Your next step is one message with a specific offer and an easy way to decline."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Psychological first aid: Guide for field workers",
+      "url": "https://www.who.int/publications-detail-redirect/9789241548205",
+      "publisher": "World Health Organization, War Trauma Foundation and World Vision International",
+      "purpose": "Framework for humane, practical help that respects dignity, culture and abilities after serious crisis events."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "make-a-family-emergency-contact-plan-together",
+    "sit-with-a-dying-person-and-just-be-present",
+    "volunteer-at-a-hospital-for-a-year"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

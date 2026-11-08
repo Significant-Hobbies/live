@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "keep-a-journal-for-a-decade",
+  "slug": "keep-a-journal-for-a-decade",
+  "title": "Build a journal habit that can survive ten years",
+  "description": "Choose a journal format, write entries that are easy to revisit, and set up a low-friction routine with privacy and preservation in mind.",
+  "intent": "Help a reader design a durable decade-long journaling practice with missed-day recovery, a searchable structure, and realistic preservation choices.",
+  "sections": [
+    {
+      "heading": "Choose a format you can keep using",
+      "paragraphs": [
+        "Decide whether you prefer a notebook, a dated diary, plain text files, or a mix. Consider where you naturally have time to write, whether handwriting or typing feels easier, and whether you need accessibility features. A beautiful notebook that stays on a shelf is a poorer fit than a modest format you will actually open.",
+        "If you choose paper, pick a size and binding that are comfortable to carry and write in. If you choose digital, choose a format you can export and a place where you can make copies. Avoid selecting a service solely because it promises permanence; ownership, access, pricing, and file export can change. Keep private details out of any shared account or public space unless you intend them to be seen."
+      ]
+    },
+    {
+      "heading": "Make entries small and specific",
+      "paragraphs": [
+        "Set a minimum that can fit into an ordinary day: a date, a few lines, and one concrete detail. You might record what surprised you, a decision you are considering, a conversation you want to remember, or what changed since last week. Specific observations become easier to revisit than repeated summaries such as “busy day, nothing much happened.”",
+        "Use a few recurring prompts if a blank page stops you: What did I notice? What took effort? What do I want to ask later? What changed my mind? You do not need to answer every prompt. Leave space for lists, sketches, copied recipes, or notes about a place; the journal is your record, not an assignment with a required style."
+      ]
+    },
+    {
+      "heading": "Create a rhythm that survives missed days",
+      "paragraphs": [
+        "Link writing to an existing moment, such as after breakfast, before bed, or Sunday afternoon. Keep the notebook or device where that moment happens. If you miss a day, continue on the next page without backfilling a perfect account. A decade-long practice must allow for travel, illness, work, family, and seasons when writing feels unwelcome.",
+        "Once a month, skim the entries and add a short index: people, places, projects, questions, or page numbers you may want later. A paper index can be a few pages at the back; a digital journal can use consistent dates and tags. The index is a retrieval aid, not a judgment about how productive the month was."
+      ]
+    },
+    {
+      "heading": "Protect the privacy of the record",
+      "paragraphs": [
+        "Decide who may read the journal now and what should happen to it later. A private journal can include details about other people, so avoid copying their sensitive information into a public archive without permission. If you are storing entries online, understand the account recovery and sharing settings. A locked drawer or encrypted device may suit you better depending on who has access to your home and accounts.",
+        "If the journal raises difficult emotions, you can stop writing, change topics, or seek support from someone you trust. You do not owe the journal an unfiltered record. Marking a passage private or skipping it can be a thoughtful boundary, not a failure of honesty."
+      ]
+    },
+    {
+      "heading": "Make a preservation plan once a year",
+      "paragraphs": [
+        "If the journal is digital, keep descriptive filenames and a simple folder structure, save copies in more than one place, and open them occasionally to confirm they are readable. The Library of Congress’s older digital-memory guide recommends copies in different locations and regular checks for preserved media; the specific devices it lists are dated, but the basic need to review files still matters. Consider exporting important entries when you change platforms.",
+        "For a paper journal, store it somewhere dry and protected from spills and direct sunlight, and keep a short inventory of volumes by year. If you later scan pages, preserve the original and check that the scan includes the full page. Your next step is to choose a journal format and write the first entry as a dated note, not a promise to write perfectly for ten years."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Preserving Your Digital Memories",
+      "url": "https://www.archives.gov/files/preservation/formats/pdf/preserving-your-digital-memories.pdf",
+      "publisher": "National Digital Information Infrastructure and Preservation Program, Library of Congress",
+      "purpose": "Supports organizing personal digital records with descriptive names and making copies in different locations with periodic checks; it is an older guide and its specific storage-media examples are dated."
+    },
+    {
+      "title": "Digitizing Family Papers and Photographs",
+      "url": "https://www.archives.gov/preservation/family-archives/digitizing",
+      "publisher": "U.S. National Archives and Records Administration",
+      "purpose": "Supports retaining paper originals after digitizing and adding descriptive metadata and multiple backups; the page was last reviewed in 2021 and is about family papers, not journal-writing practice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "keep-a-journal-for-a-full-year",
+    "write-a-letter-to-your-future-self-and-read-it-in-10-years",
+    "do-a-structured-life-review-decade-by-decade"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

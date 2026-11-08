@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "georgia-the-country",
+  "slug": "georgia-the-country",
+  "title": "Build a Georgia trip around one strong contrast",
+  "description": "Pair Tbilisi with one Georgian region or historic town, then plan the route around what you want to understand rather than a rushed country checklist.",
+  "intent": "Choose a realistic first Georgia itinerary that balances the capital with one distinct place, using Mtskheta as a concrete nearby heritage comparison and setting priorities before adding regions.",
+  "relatedExperienceSlugs": [
+    "the-silk-road-uzbekistan",
+    "transylvania-romania",
+    "visit-a-country-you-know-nothing-about"
+  ],
+  "sections": [
+    {
+      "heading": "Pick a contrast before you pick a checklist",
+      "paragraphs": [
+        "Georgia can tempt a visitor into an impossible sequence: capital, wine country, mountain villages, coast, cave monasteries and several ancient sites in a short stay. Make the trip more coherent by choosing one contrast. Pair the urban layers of Tbilisi with a smaller historic place, or choose mountains and spend the rest of the time learning one region slowly. A trip with fewer transfers often leaves more space for conversations, meals and the details that make a place memorable.",
+        "Mtskheta offers a useful first comparison with the capital. Georgia Travel identifies it as a historic destination and points visitors toward Svetitskhoveli Cathedral, Jvari Monastery and Samtavro. Treat these as distinct sites with their own access conditions, not as a promise that each will be open or easy to reach on your chosen date."
+      ]
+    },
+    {
+      "heading": "Use Mtskheta to make history visible",
+      "paragraphs": [
+        "At Svetitskhoveli, start by observing the relationship between the cathedral and its town setting. At Jvari, the elevated position changes the view and the way the landscape is read. Samtavro adds another stop, but it is more valuable to understand two sites than to collect three names without looking. The tourism authority’s page provides the place anchors; a local guide, museum or site interpretation can supply historical context beyond a short web description.",
+        "Write down one architectural feature, one view and one question about how the town changed over time. Keep the question open. Georgia’s religious history is layered, and a brief visit cannot support a sweeping claim about every community or period."
+      ]
+    },
+    {
+      "heading": "Choose the next region by the time it costs",
+      "paragraphs": [
+        "Once you decide whether the trip is about food and wine, high mountains, cave heritage or the Black Sea, compare the real travel legs before adding another stop. Road distance alone is a poor measure of effort: border crossings, weather, traffic, mountain roads and public transport can alter a day. Ask your accommodation or transport provider what a door-to-door transfer involves, and leave a buffer before a fixed departure or flight.",
+        "If the Caucasus mountains are the draw, build a dedicated region stay rather than treating a village as a quick photo stop. If wine is the focus, give the producer or village time and ask how visits are hosted. Georgia Travel’s cultural material is a useful orientation, but it is not a current booking calendar or safety bulletin."
+      ]
+    },
+    {
+      "heading": "Travel with cultural curiosity and good manners",
+      "paragraphs": [
+        "Learn a few greetings and the pronunciation of place names before arrival. When visiting churches or monasteries, follow posted clothing and photography guidance, keep voices low and do not interrupt worship. Ask before photographing people, especially during family gatherings or religious observance. If a host offers food or wine, say what you can and cannot have clearly and politely; participation should remain comfortable rather than a test of belonging.",
+        "Food can become a way to notice regional difference. Rather than declaring a single dish “authentic,” ask where the ingredients or preparation are associated with and whether the host has a local variation. A market or family table can teach more than a rushed tasting, but respect the vendor’s time and rules."
+      ]
+    },
+    {
+      "heading": "Make a plan that can bend",
+      "paragraphs": [
+        "Before departure, check official travel advisories for your nationality, current transport and local conditions, then confirm opening details with each site. The cited tourism page identifies Mtskheta’s landmarks but does not guarantee operating hours, transport timetables or admission. Avoid building an itinerary whose success depends on making every connection on the minute.",
+        "A practical first version is two or three nights in Tbilisi, one day for Mtskheta if current access and transport suit, then a separate region only if the remaining time allows. Adjust that skeleton to your arrival time, mobility and interests. Your next step is to choose the contrast that matters most and check the official local site information for those exact places."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Discover Ancient Charm of Mtskheta",
+      "url": "https://georgia.travel/cities-towns/mtskheta",
+      "publisher": "Georgia Travel, Georgian National Tourism Administration",
+      "purpose": "Supports Mtskheta as a named destination and identifies Svetitskhoveli, Jvari and Samtavro as landmarks for a focused comparison. Does not establish current opening hours, admission, or transport availability."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "record-a-song-and-release-it",
+  "slug": "record-a-song-and-release-it",
+  "title": "Take one original song from demo to finished mix",
+  "description": "Take one original song from a rough demo to a finished mix by keeping the arrangement focused, checking playback, and clearing source material.",
+  "intent": "How can a musician move one original song from rough demo through recording and mix while checking the rights to the material used?",
+  "sections": [
+    {
+      "heading": "Keep the project to one song",
+      "paragraphs": [
+        "Choose one song to take from rough idea to finished file. A first release project becomes clearer when it is one original song with a defined length, arrangement, and deadline. Make a rough demo before buying gear: voice memo or simple home recording can reveal whether the melody and structure hold together. Mark the sections—verse, chorus, bridge if needed—and decide which parts must be present for the song to feel complete. Keep the project to one song so each recording and mix decision can be compared with the same musical idea. Write down what the song is trying to make a listener feel, and limit the arrangement to the parts that support it. If the demo already communicates the idea, resist adding instruments just because the software has them."
+      ]
+    },
+    {
+      "heading": "Capture a clean, repeatable take",
+      "paragraphs": [
+        "For recording, improve the room and performance before chasing plugins. Choose a quiet time, reduce obvious background noise, and make a test recording while listening for clipping, room echo, and distracting breaths or handling sounds. Record a short section first, then listen back on headphones and speakers at a comfortable volume. Keep a versioned copy of the project and a separate backup of the audio files before making major edits. If a part is distracting, simplify or rerecord it; editing cannot create a performance you never captured. The same song can be made as a solo voice and instrument performance, or built from separate takes. Pick the method that keeps the musical idea intact and that you can repeat without losing track of files."
+      ]
+    },
+    {
+      "heading": "Mix for the song’s central idea",
+      "paragraphs": [
+        "Mix for balance and clarity before adding effects. Set the vocal or lead part where the words and melody are easy to follow, then bring in accompaniment until it supports rather than competes. Listen at low volume, on earbuds, and through ordinary speakers; if the hook disappears on one playback system, identify which part is masking it. Leave some time between listening passes so you do not make every decision while fatigued. Export a draft and ask one trusted listener a narrow question: what part do you remember, and where did your attention drift? Use that feedback selectively. When the mix is settled, export a final file and listen to the export from start to finish; check its beginning, ending, and that no accidental silence or clipped tail remains."
+      ]
+    },
+    {
+      "heading": "Check rights before sharing",
+      "paragraphs": [
+        "Before releasing the song, make a rights checklist for every musical element and sound you use. The U.S. Copyright Office explains that a song’s musical work and its sound recording are separate protected works; a recording can include both the composition and a particular performance. If you wrote and recorded everything yourself, keep clear notes about contributors and files. If you used a beat, sample, lyric, or cover material, check its permission or license before distributing it; do not assume a short excerpt is automatically free to use. Release steps vary by platform and country, so read the chosen distributor’s current requirements. For a first attempt, set a deadline to finish one mix, share it privately with a small group, then prepare the final release only after the rights and file details are clear. Your next action is to record a one-minute demo and choose the song’s arrangement."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "What Musicians Should Know about Copyright",
+      "url": "https://www.copyright.gov/engage/musicians/",
+      "publisher": "U.S. Copyright Office",
+      "purpose": "Explains the distinction between the musical work and sound recording and the need to check permission or licensing when using another creator’s work."
+    },
+    {
+      "title": "Recording",
+      "url": "https://manual.audacityteam.org/man/recording.html",
+      "publisher": "Audacity Development Manual",
+      "purpose": "Supports recording takes onto the same or new tracks, monitoring levels, saving/exporting a safety copy and checking for detected dropouts; details are Audacity-specific."
+    },
+    {
+      "title": "Mixing Audio Tracks",
+      "url": "https://manual.audacityteam.org/man/mixing.html",
+      "publisher": "Audacity Development Manual",
+      "purpose": "Supports the distinction between mixing multiple tracks and rendering a mix, and that export automatically mixes tracks subject to mute/solo state; details are Audacity-specific."
+    },
+    {
+      "title": "Export Audio",
+      "url": "https://manual.audacityteam.org/man/file_export_dialog.html",
+      "publisher": "Audacity Development Manual",
+      "purpose": "Supports checking export range, muted tracks and playback/export relationship when delivering an audio file; details are Audacity-specific."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "compose-an-original-piece-of-music",
+    "record-and-release-music-you-made"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

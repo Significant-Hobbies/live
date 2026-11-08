@@ -1,0 +1,70 @@
+{
+  "experienceSlug": "transylvania-romania",
+  "slug": "transylvania-romania",
+  "title": "Use Sighișoara to see Transylvania through a historic town",
+  "description": "Plan a focused Transylvania visit around Sighișoara’s fortified medieval centre, then compare a town stay with a wider regional itinerary.",
+  "intent": "How can I make a first Transylvania trip concrete without relying on Dracula clichés? Use Sighișoara as a place-based anchor and choose the surrounding pace deliberately.",
+  "sections": [
+    {
+      "heading": "Choose a real place as your anchor",
+      "paragraphs": [
+        "Transylvania is a region, not a single attraction. Use Sighișoara’s historic centre as an anchor for a trip focused on urban form, craft history and a compact old town. UNESCO describes it as a small fortified medieval settlement founded by Transylvanian Saxon craftsmen and merchants. That gives you a grounded starting point beyond fictional vampire associations.",
+        "Decide whether you want to stay in Sighișoara or visit as part of a wider circuit. A town stay gives you more time to notice its streets at different hours; a regional circuit may connect it with other heritage sites but requires more transfers. Check current rail, bus and lodging information directly with operators rather than assuming a day trip is easy."
+      ]
+    },
+    {
+      "heading": "Read the fortified town carefully",
+      "paragraphs": [
+        "Treat the historic centre as a lived place, not a film set. Notice how the fortified settlement sits within the wider town and where commercial streets meet quieter lanes. UNESCO’s description links the town’s history to Saxon craftsmen and merchants and its strategic and commercial role. Use this context to ask what the walls, routes and building scale suggest about settlement and trade.",
+        "Make the town’s shape part of the visit. UNESCO’s heritage dossier describes School Street as the citadel’s main axis between City Square and the north and south gates, with the Clock Tower at the southern gate connecting the upper town to the Lower Town. The municipality likewise identifies the Clock Tower as the principal entrance and current home of the town History Museum. Compare walking School Street across the citadel with descending toward the Lower Town: the first follows the upper fortified plateau, while the second shows how streets continue down its slope. The museum is an optional stop; verify its current access directly."
+      ]
+    },
+    {
+      "heading": "Balance one town with one wider view",
+      "paragraphs": [
+        "After tracing the citadel’s main axis once, pause to read one block rather than walking another loop. UNESCO describes narrow streets lined by closely aligned houses and an older urban fabric of small plots; compare a tight street frontage with the way buildings meet the steep slope below. Look at the transitions between a side passage and a longer street, but do not infer who lives in a house or whether an entrance is public. The point is to see how the slope, plot pattern and street network shape the upper and lower town differently.",
+        "A practical day in Sighișoara can include the historic centre, a local meal and a slower walk through the present-day town. Keep some time free for weather, a museum visit or a longer conversation with a local guide. A narrow itinerary often creates more room for history than a sequence of long transfers."
+      ]
+    },
+    {
+      "heading": "Plan for seasonal and access details",
+      "paragraphs": [
+        "Look up current rail and bus connections, local visitor information, and any site-specific accessibility or conservation rules. UNESCO’s page is historical context, not an operating schedule. Check museum access and closures close to departure, especially if a single site is central to the trip. If you rely on public transport, verify the return leg and avoid designing a day that depends on a last-minute connection.",
+        "Use a local guide or museum interpreter if you want more detail about Saxon history, architecture or community memory. Ask how the town’s story is represented and whose experience is being described. Avoid reducing living communities to a medieval tableau; respectful questions and attention to local interpretation produce a richer visit."
+      ]
+    },
+    {
+      "heading": "Carry home a grounded memory",
+      "paragraphs": [
+        "Write down one detail that changed your impression: the relationship between the fortified centre and the modern town, an architectural feature, or a story from a local source. A note helps keep the visit anchored in what you actually saw instead of familiar movie imagery. If you photograph architecture, include context and avoid intrusive close-ups of residents.",
+        "Sighișoara can be a full visit or the first chapter of a longer Transylvania journey. Decide which it is before you book, check current details through local official sources, and leave space for the place to complicate your expectations. A region becomes memorable through its real streets and histories, not a costume or a single legend."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Historic Centre of Sighişoara",
+      "url": "https://whc.unesco.org/en/list/902/",
+      "publisher": "UNESCO World Heritage Centre",
+      "purpose": "UNESCO describes Sighișoara as a small fortified medieval town founded by Transylvanian Saxon craftsmen and merchants, and explains its historic significance; it is not a current visitor-hours or transport source."
+    },
+    {
+      "title": "Historic Centre of Sighișoara: ICOMOS Evaluation (1999)",
+      "url": "https://whc.unesco.org/document/204/#page=130",
+      "publisher": "ICOMOS",
+      "purpose": "ICOMOS 1999 evaluation section hosted by the UNESCO World Heritage Centre, printed page 130; describes the citadel’s School Street axis, north and south gates, Clock Tower connection to the Lower Town, street layout and Schoolchildren’s Staircase. Historical heritage description, not a current access or timetable source."
+    },
+    {
+      "title": "The Citadel Towers (Turnurile Cetății)",
+      "url": "https://primariasighisoara.ro/portal/mures/sighisoara/portal.nsf/pagini/turnurile%2Bcetatii-00004366",
+      "publisher": "Sighișoara City Hall",
+      "purpose": "Municipal page identifies the Clock Tower as the citadel’s principal entrance and present location of the History Museum, and describes the Tinsmiths’ Tower’s defensive position; it does not give visitor hours."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "venice-before-mass-tourism-erases-it",
+    "the-scottish-highlands"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

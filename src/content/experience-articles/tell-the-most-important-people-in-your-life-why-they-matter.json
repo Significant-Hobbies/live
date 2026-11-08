@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "tell-the-most-important-people-in-your-life-why-they-matter",
+  "slug": "tell-the-most-important-people-in-your-life-why-they-matter",
+  "title": "Say why they matter with one remembered moment",
+  "description": "Tell someone why they matter by naming one remembered action, the effort you noticed and what it meant to you, without asking for anything back.",
+  "intent": "Help the reader express appreciation in a live conversation with a specific memory and no demand for reciprocation, distinct from writing a letter.",
+  "relatedExperienceSlugs": [
+    "share-a-childhood-game-across-generations",
+    "arrange-an-accessible-outing-with-a-friend",
+    "make-a-friendship-map-together"
+  ],
+  "sections": [
+    {
+      "heading": "Choose the person and the moment",
+      "paragraphs": [
+        "Pick one person and one moment you can locate in time: the afternoon they drove across town when your plans fell apart, the way they asked again when you went quiet, or the time they taught you a practical skill without making you feel foolish. Specific memories give you something honest to say; broad praise such as “you are the best” can feel less personal.",
+        "The Greater Good in Action practice from UC Berkeley suggests naming what the other person did, acknowledging the effort, and describing how it met a need or mattered. Use that structure as a prompt, not as a script. The words should sound like something you would actually say."
+      ]
+    },
+    {
+      "heading": "Keep the appreciation focused on them",
+      "paragraphs": [
+        "Try a short beginning: “I’ve been thinking about when you…” Then describe what they did, what you noticed about the care or effort, and what changed for you. For example, “You stayed after the meeting to help me sort out the next step. I know you had your own work waiting, and it helped me feel less alone with the decision.” Replace that example with your own memory.",
+        "Avoid turning appreciation into an evaluation of someone’s whole character or a list of accomplishments. Focus on a moment they chose, not a trait they must keep proving. If the person is a colleague or family member, respect their privacy and choose a setting where they can receive the words comfortably."
+      ]
+    },
+    {
+      "heading": "Make it a conversation, not a performance",
+      "paragraphs": [
+        "If possible, speak face to face or by voice in a calm moment. Ask whether they have a minute, then say what you came to say without building suspense. Keep the first version brief; you can answer questions if they want to talk more. If you get emotional or stumble, pause. You do not need perfect delivery for the memory to be true.",
+        "Some people are uncomfortable with intense praise or public attention. Match the setting to the relationship: a quiet walk can suit a close friend; a private check-in can work better than a speech at a gathering. Ask permission before sharing the appreciation publicly or recording it."
+      ]
+    },
+    {
+      "heading": "Do not attach a request",
+      "paragraphs": [
+        "Let the moment stand on its own. Avoid ending with a favor, apology that asks them to reassure you, or expectation that they say something equally meaningful back. They may respond warmly, joke, change the subject, or need time. None of those reactions is a measure of whether you were allowed to speak.",
+        "If you have unresolved conflict, separate the conversation from a negotiation. You can still appreciate one action while recognizing that the relationship has other difficult parts. Do not use praise to pressure someone into forgiveness, contact, or continued access."
+      ]
+    },
+    {
+      "heading": "Make the next action small",
+      "paragraphs": [
+        "Before you meet, write the memory in one sentence and say it out loud once. Remove any sentence that sounds borrowed or asks the other person to confirm your interpretation. Then choose a time when neither of you is rushing.",
+        "Afterward, let them decide whether they want to continue the conversation. The next action is not to repeat the compliment until you get a response; it is simply to tell one person, in your own words, what you remember and why it mattered."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "A Better Way to Say “Thank You”",
+      "url": "https://ggia.berkeley.edu/practice/practice_as_pdf/a_better_way_to_say_thank_you?printPractice=Y",
+      "publisher": "Greater Good in Action, UC Berkeley",
+      "purpose": "Opened practice guide recommending a specific action, effort noticed and meaningful impact in an expression of appreciation."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

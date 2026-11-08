@@ -1,0 +1,64 @@
+{
+  "experienceSlug": "the-temples-of-bagan-myanmar",
+  "slug": "the-temples-of-bagan-myanmar",
+  "title": "Read Bagan as a sacred landscape, if travel is currently viable",
+  "description": "A thoughtful Bagan guide to Buddhist architecture and living practice, beginning with the current safety question and a careful way to observe.",
+  "intent": "How can I understand Bagan’s Buddhist art and living religious landscape while making a clear-eyed, current safety decision about travel?",
+  "sections": [
+    {
+      "heading": "Make the safety decision before the itinerary",
+      "paragraphs": [
+        "Bagan is a major cultural landscape, but travel decisions should begin with the current situation rather than a sunrise photograph. As of 6 November 2026, the U.K. Foreign, Commonwealth & Development Office advises against all but essential travel to Mandalay Region and says security conditions can deteriorate at short notice. Its page warns that travel against its advice could invalidate insurance. The guidance is for U.K. travellers; people of other nationalities should read their own government’s latest advice.",
+        "Do not assume a historic site’s existence means that the surrounding journey is safe, open or insurable. Check the regional wording and map in the advisory, speak with your insurer about the exact route, and confirm current access through official channels. If the practical answer is to postpone, you can still study Bagan from museum collections, scholarly work and UNESCO documentation without presenting that as equivalent to being there."
+      ]
+    },
+    {
+      "heading": "See a cultural landscape, not a monument count",
+      "paragraphs": [
+        "UNESCO describes Bagan as a sacred landscape on a bend of the Ayeyarwady River, with temples, stupas, monasteries, archaeological remains and continuing Buddhist practice. Its account connects the architectural peak of the eleventh to thirteenth centuries with traditions of merit-making. That context changes how you look: a temple is part of a religious and social landscape, not merely one more structure to photograph.",
+        "Choose a manageable observation question if visiting becomes feasible: how do buildings of different size and form sit within the plain, or how do worshippers use a monument today? Do not claim to know the meaning of a ritual just from watching. Read an authoritative interpretation, speak respectfully with a qualified guide if appropriate, and leave prayer and offerings undisturbed."
+      ]
+    },
+    {
+      "heading": "Compare forms without flattening their purpose",
+      "paragraphs": [
+        "At a temple or stupa, notice the silhouette first: solid mass, rising terraces, a tapering crown, or an entrance that draws you inward. Then look for surfaces—brick, plaster, painted or sculpted detail—only from places where visitors are allowed. UNESCO’s description notes a diversity of sizes, scales, materials and designs, and surviving murals, sculptures and inscriptions. It does not mean every structure is accessible or that all details are original and untouched.",
+        "Use a small sketch to compare two visible forms rather than racing between famous names. Mark how each relates to the horizon and nearby buildings. If you encounter a closed stair or damaged area, keep to the permitted route; climbing or touching can harm fragile heritage and put you at risk. Interpretive materials and local guides can help explain distinctions that a photograph cannot."
+      ]
+    },
+    {
+      "heading": "Respect living practice and local life",
+      "paragraphs": [
+        "UNESCO emphasizes that Bagan remains a living Buddhist landscape, with worship and continuing cultural practices alongside its archaeological importance. Dress and behave according to local instructions at religious places, keep voices low, and ask before photographing worshippers. A monk or resident is not a visitor attraction. If a ritual is underway, stay back and let participants determine whether observation is welcome.",
+        "Avoid repeating the idea that the site is empty or frozen in a distant century. The surrounding communities and modern life belong to the place. Buy or learn from local cultural practitioners where it is appropriate and safe, and do not pressure people to perform or narrate private religious practices. Listening carefully is a better form of attention than collecting staged encounters."
+      ]
+    },
+    {
+      "heading": "If conditions allow, keep the visit small",
+      "paragraphs": [
+        "If official advice, access and insurance all support travel, choose one area and a limited number of monuments, then leave time for interpretation rather than treating the day as a race. Confirm current roads, site restrictions and local guidance just before setting out. A flexible plan matters in a situation where the U.K. advisory says movement restrictions can change quickly. Do not travel into any area your own government advises against.",
+        "UNESCO supports the cultural and architectural framing here; it does not report present security conditions, current monument openings, transport availability or visitor rules. The cited FCDO advice is current as of 6 November 2026 but applies to U.K. travellers. First read the current advice for your passport and destination, then make a simple go, postpone or remote-study decision before choosing a route."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Bagan",
+      "url": "https://whc.unesco.org/en/list/1588/",
+      "publisher": "UNESCO World Heritage Centre",
+      "purpose": "Supports Bagan’s sacred landscape, Buddhist artistic and architectural variety, historical period and continuing living practices."
+    },
+    {
+      "title": "Myanmar travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/myanmar?cache=1683726569",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "purpose": "Supports the current U.K.-specific travel advice for Mandalay Region as of 6 November 2026, short-notice security changes and possible insurance invalidation."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "angkor-wat-cambodia",
+    "visit-the-temples-of-angkor-wat-cambodia"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

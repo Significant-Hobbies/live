@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "give-a-public-talk-or-presentation",
+  "slug": "give-a-public-talk-or-presentation",
+  "title": "Build a Short Talk Around One Idea Your Audience Can Use",
+  "description": "Choose a narrow subject, shape a clear opening and three supporting points, then rehearse for the room and time you actually have.",
+  "intent": "How do I prepare a first public talk that is focused, understandable, and suited to a real audience rather than a pile of slides?",
+  "sections": [
+    {
+      "heading": "Choose a point, not a territory",
+      "paragraphs": [
+        "Start with the people who will be listening and one thing you want them to understand or do. “Urban gardening” is a territory; “how to keep herbs alive on a shaded windowsill” is a talk. A narrow point helps you decide what belongs and what can wait for another presentation.",
+        "Write your purpose in one sentence: explain, persuade, demonstrate, or tell a story. Then imagine the listener's starting question. If the audience is a neighborhood group, use local examples and familiar language; if it is a technical group, define the terms they may not share. The Toastmasters speech guide recommends tying the introduction to the main point and organizing the body around supporting points."
+      ]
+    },
+    {
+      "heading": "Make an outline with a beginning and a turn",
+      "paragraphs": [
+        "Use a simple structure: open with a question, scene, or useful problem; explain two or three supporting ideas; finish with the conclusion you want remembered. A practical talk about herbs might begin with a drooping basil plant, show how light and drainage differ, then end with a one-week observation plan. Each section should move the listener toward the same central idea.",
+        "Write examples beside each point before writing full sentences. One vivid example often explains more than a stack of abstract claims. If you use a statistic or quote, record where it came from and check its context; do not rely on a number you remember vaguely. The audience should be able to tell which claims are evidence and which are your own experience or judgment."
+      ]
+    },
+    {
+      "heading": "Use slides only when they carry information",
+      "paragraphs": [
+        "A slide can show a map, a comparison, or a process that is hard to describe aloud. It can also compete with you. Make each visual answer a question, and remove anything that merely repeats your script. If the room has no projector, can you still deliver the talk? If the answer is no, bring a printed backup or reshape the talk so the idea survives without the equipment.",
+        "Check your room setup: microphone, screen, lectern, seating, and whether anyone will join remotely. These choices change how you speak and move. Ask the host about the expected length and how questions will work before you finish the draft."
+      ]
+    },
+    {
+      "heading": "Rehearse for the actual room",
+      "paragraphs": [
+        "Practice aloud, standing if possible. Mark places to pause, breathe, or show a visual. Time the full talk, including the opening and conclusion. If it runs long, cut a point rather than rushing every sentence. Toastmasters advises practicing out loud and considering the speaking environment, including microphone and screen setup.",
+        "Do one rehearsal with a listener who resembles your audience. Ask only two questions: what was the main idea, and where did attention drift? Their answers can reveal a confusing transition or an example that needs context. Do not ask whether they “liked” you; that does not tell you whether the talk worked."
+      ]
+    },
+    {
+      "heading": "Deliver, then capture one lesson",
+      "paragraphs": [
+        "Before the event, bring a copy of your outline, water, and any adapter or handout you genuinely need. Arrive with enough time to test the equipment. If nerves rise, slow down the first sentence and look at a person who seems engaged. You do not need to perform a different personality; you need to help people follow an idea.",
+        "Afterward, write down one moment that landed and one adjustment for next time. Send a thank-you to the organizer if appropriate. For a first talk, choose a short local event or small group where the subject is familiar, then draft a one-sentence purpose and three supporting points today."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How to Write and Deliver a Speech",
+      "url": "https://toastmasters.org/resources/public-speaking-tips/How-to-Write-and-Deliver-a-Speech",
+      "publisher": "Toastmasters International",
+      "purpose": "Supports a main-point-centered outline, opening/body/conclusion structure, audience-focused examples, and aloud rehearsal; used as a practical speaking guide, not a research source for broader claims."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "teach-a-skill-you-re-good-at-to-a-group-of-strangers",
+    "write-the-speech-you-would-give-at-your-own-retirement",
+    "write-something-and-publish-it"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

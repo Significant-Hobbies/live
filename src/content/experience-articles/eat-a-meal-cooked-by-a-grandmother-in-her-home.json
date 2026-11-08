@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "eat-a-meal-cooked-by-a-grandmother-in-her-home",
+  "slug": "eat-a-meal-cooked-by-a-grandmother-in-her-home",
+  "title": "Be a respectful guest at an elder’s family table",
+  "description": "Arrange a trusted hosted meal with clear consent, allergy and access notes, curious questions and an offer to contribute without treating a home as a show.",
+  "intent": "A practical guide to joining a hosted home meal as a respectful guest, with attention to consent, cultural context and the host’s own boundaries.",
+  "sections": [
+    {
+      "heading": "Find a host through a trusted route",
+      "paragraphs": [
+        "A meal in someone’s home is a relationship, not a performance to book. Start through a local organization, community food group, mutual contact or established host program that explains how guests and hosts are introduced. Read what the host actually offers and ask how many people will be there, what the gathering involves and what information is shared about guests. Do not assume that a person wants to represent an entire culture because of their age, family role or cuisine.",
+        "Ask whether the visit is genuinely welcome and whether the host prefers a particular contribution. A hosted meal might include cooking together, conversation, or simply sitting down to eat. Let the person describe the experience they want to offer rather than arriving with a camera, a list of questions or expectations that they recreate a story you have heard elsewhere."
+      ]
+    },
+    {
+      "heading": "Share practical needs before the invitation",
+      "paragraphs": [
+        "Tell the host or organizer about allergies, dietary requirements, mobility access and anything that could make the visit uncomfortable. Be direct and early: “I have a serious peanut allergy. Can the organizer confirm whether this meal can safely accommodate it?” If they cannot, thank them and decline. A private home may not be able to guarantee allergen control; do not ask someone to promise safety beyond what they can provide. Bring medication you normally carry and follow your clinician’s advice.",
+        "Agree on the date, arrival time, who else will attend, whether shoes come off, and how long the visit is expected to last. Ask whether payment or a contribution is expected and how it works. These details prevent the host from having to negotiate while preparing food."
+      ]
+    },
+    {
+      "heading": "Listen for the knowledge inside ordinary details",
+      "paragraphs": [
+        "Food traditions often live in small practical decisions: which ingredient is bought in season, how a dough feels when it is ready, why a dish is served for a particular gathering, or how leftovers are used. Slow Food’s education handbook recommends meeting local food people, collecting stories and treating local food knowledge as something learned through relationships and practice. Let your questions follow the host’s interest; they may want to tell a story, teach a step or just enjoy the meal.",
+        "Ask questions that leave room for an answer beyond a recipe: “Who taught you this?” “What do you change when this ingredient is different?” “Is there a part you would like me to help with?” If the host does not want to explain, let the conversation move on. Avoid grading authenticity or comparing the dish to a restaurant version."
+      ]
+    },
+    {
+      "heading": "Offer help without taking over",
+      "paragraphs": [
+        "Ask before entering the kitchen, handling a pot or clearing a plate. “Would it help if I chop these?” gives the host a real choice; reaching for a knife can create more work. If invited to participate, follow the steps as shown and ask before changing an ingredient. If you would like to bring a gift, ask the organizer what is appropriate; flowers, alcohol or sweets can be awkward when someone has preferences, dietary restrictions or limited storage.",
+        "During the meal, give the host your attention. Put your phone away unless you need it for access or safety. If you want to take a photograph, ask before taking it and again before sharing it. A yes to one photo is not automatic permission to post a face, a home interior or a recipe publicly."
+      ]
+    },
+    {
+      "heading": "Leave a clear, grateful ending",
+      "paragraphs": [
+        "Thank the host for a specific thing you valued, such as showing how a particular dough changes under the hand or explaining when the family eats the dish. If a contribution was agreed, deliver it as promised and do not leave unasked cleanup behind. If the host shares a recipe, ask whether you may write it down and whether any part should remain private. Some knowledge is meant to be shared in conversation, not copied into a public post.",
+        "Afterward, send one short thank-you through the channel the organizer recommends. Do not contact the host privately or publish their story unless they have agreed to that. A good first meal ends with an invitation to listen more, not an assumption that you are now entitled to someone’s time."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Slow Food Education Handbook",
+      "url": "https://www.slowfood.com/wp-content/uploads/2023/09/SlowFoodEducation_Handbook_EN.pdf",
+      "publisher": "Slow Food",
+      "purpose": "Recommends meeting local food people, collecting stories, learning through practice and recognizing food knowledge within local context."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "create-a-family-cookbook-with-old-recipes",
+    "exchange-handwritten-recipes-through-the-post",
+    "record-a-conversation-with-an-elder-and-preserve-it"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

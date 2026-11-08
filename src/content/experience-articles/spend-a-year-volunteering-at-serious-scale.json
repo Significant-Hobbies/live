@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "spend-a-year-volunteering-at-serious-scale",
+  "slug": "spend-a-year-volunteering-at-serious-scale",
+  "title": "Turn twelve months of service into dependable work",
+  "description": "Choose a year-long volunteer role with clear responsibilities, supervision and a sustainable weekly rhythm that meets a real organizational need.",
+  "intent": "How do I contribute at a serious scale for a year without making a role harder for the organization? Focus on continuity and role fit.",
+  "sections": [
+    {
+      "heading": "Choose a role around a real need",
+      "paragraphs": [
+        "A year is long enough for routine tasks to become valuable, but only if the organization has planned work for you. Start by asking a local nonprofit, school, museum, park or mutual-aid group what recurring responsibilities go undone. Describe your skills, schedule and physical limits honestly; do not promise a heroic number of hours you have not tested.",
+        "The National Park Service describes roles including trail maintenance, public education, wildlife monitoring, campground hosting and archive work, with both one-day and year-round options. That range is a reminder that “serious” service does not require dramatic fieldwork. Reliable weekly records support, scheduling, translation or inventory may be what a team most needs."
+      ]
+    },
+    {
+      "heading": "Agree on scope before starting",
+      "paragraphs": [
+        "Ask for a role description, supervisor, training plan, expected shift pattern and a way to raise concerns. Clarify whether expenses are reimbursed, what records you must keep, and which decisions belong to paid staff. If a position has background checks, certifications or safety procedures, complete them through the organization rather than substituting your own experience.",
+        "Define what completion means in practical terms: cover a recurring shift for the season, maintain a dataset, help prepare a program cycle, or finish a specific repair under staff direction. Agree on a backup plan for illness, travel and work changes. A plan that accounts for absences protects the organization better than pretending you will never miss a day."
+      ]
+    },
+    {
+      "heading": "Build a cadence that survives ordinary weeks",
+      "paragraphs": [
+        "Treat the first month as a calibration period. Track the real door-to-door time, energy and travel cost after each shift. If the role is more demanding than expected, renegotiate early rather than silently reducing attendance. Use the supervisor’s preferred channel to confirm shifts and hand over unfinished tasks.",
+        "Make a small monthly review with your coordinator: what was completed, what changed, what training is missing and whether the work still matches the team’s priorities. This keeps your year aligned with current needs instead of a private project. If a task is consistently blocked, ask whether another assignment would help more."
+      ]
+    },
+    {
+      "heading": "Keep learning and respect the boundary",
+      "paragraphs": [
+        "A volunteer can bring initiative while still following the organization’s procedures. Ask before changing forms, contacting clients, speaking for the organization or sharing images. In roles involving children, animals, health, confidential records or public safety, use approved supervision and reporting routes. Good intentions do not replace training or professional authority.",
+        "Save only the information you are permitted to retain. Do not copy participant lists to a personal device or publish an anecdote that makes someone identifiable without permission. Where direct service is emotionally intense, discuss debriefing and support with the supervisor. A sustainable year includes a healthy boundary around the work."
+      ]
+    },
+    {
+      "heading": "Close the year with a useful handoff",
+      "paragraphs": [
+        "Set an end date early enough for the team to recruit or reassign work. Give notice if you need to leave sooner, document what is in progress and return keys or equipment. Ask the organization what should be transferred and in what format; concise notes can matter more than a celebratory report.",
+        "At the end, request feedback about reliability and the usefulness of your contribution. Record the skills you gained and any ongoing relationship the organization wants to continue, without assuming it owes you a reference or future role. A serious year is measured by the work the team could count on and the clean transition you leave behind."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Volunteer With Us",
+      "url": "https://www.nps.gov/subjects/volunteer/index.htm",
+      "publisher": "National Park Service",
+      "purpose": "NPS lists volunteer work ranging from research and trail care to education and archives, with opportunities from one day to year-round and official opportunity listings."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "volunteer-for-something-you-believe-in",
+    "complete-a-bounded-un-online-volunteering-assignment"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

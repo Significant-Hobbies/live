@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "create-a-home-that-feels-like-you",
+  "slug": "create-a-home-that-feels-like-you",
+  "title": "Use your routines and memories to shape a home",
+  "description": "Make a home feel personal by mapping daily routines, meaningful objects, sensory preferences, and the changes that would make rooms work better.",
+  "intent": "Answers how to make a home reflect the people living in it through specific choices and routines rather than a matching decor style or shopping list.",
+  "sections": [
+    {
+      "heading": "Map the day before you choose a look",
+      "paragraphs": [
+        "Walk through your home at three ordinary moments: leaving in the morning, returning with bags, and winding down at night. Notice where keys land, where shoes gather, where people stop to talk, and where clutter blocks the next task. These small frictions reveal more about what the home needs than a mood board alone. Sketch the path you actually take and mark one place where a better landing spot would help.",
+        "Then name the feeling each room should support. A kitchen may need to make weekday cooking easy, while the living room may be a place for quiet reading rather than formal entertaining. A room can serve more than one purpose, but decide which activity gets priority before arranging furniture around every possible use."
+      ]
+    },
+    {
+      "heading": "Choose a few objects with a story",
+      "paragraphs": [
+        "Pick three things you already own that carry meaning: a family recipe card, a photograph from a place you lived, a repaired chair, a child’s drawing, or a book with notes in the margins. Notice what they share. Perhaps the colors are muted, the materials are handmade, or the stories connect to travel and family. Use that pattern as a guide for new choices instead of buying a full room at once.",
+        "A meaningful display needs space around it. Put a small group on one shelf or wall, then remove items that compete with the story. If an object is valuable or fragile, consider light, humidity and safe mounting before displaying it; ask a conservator or qualified installer for advice where the material or weight requires it."
+      ]
+    },
+    {
+      "heading": "Make comfort concrete",
+      "paragraphs": [
+        "“Cozy” can mean warmer light, a chair that supports your body, a clear place to set a mug, quieter evenings, or enough storage to see the floor. Write down what you would notice if the room improved. For example: “I can read after dinner without moving the lamp or borrowing a chair from the bedroom.” That turns a vague wish into a testable change.",
+        "If the problem is temperature, drafts or ventilation, treat it as a building-performance question as well as a decor choice. In the United States, the Department of Energy describes a Home Performance with ENERGY STAR approach that starts with a comprehensive home evaluation and qualified contractor networks. It is one program example; local services, eligibility and technical advice vary."
+      ]
+    },
+    {
+      "heading": "Build in layers you can change",
+      "paragraphs": [
+        "Start with movable decisions: rearrange furniture, change a lamp, hang a picture, or test a rug with tape marking its footprint before buying. Live with one change for several days and notice whether it helps the routine you identified. If it does, keep it; if not, change it while the choice is still inexpensive and reversible.",
+        "Treat permanent work differently. Before changing walls, wiring, plumbing, windows or heating, consult qualified local professionals and verify permits or building rules with the relevant authority. A personal vision does not replace structural, electrical or safety assessment. Keep a short record of what was changed, by whom, and where product instructions or maintenance information live."
+      ]
+    },
+    {
+      "heading": "Let the home tell a truthful story",
+      "paragraphs": [
+        "A home can feel like its people without looking finished or expensive. Leave room for an unfinished project, a borrowed object, a visible instrument, or a shared calendar if those things describe how life really works. Ask household members what they want displayed and what they prefer to keep private. If tastes differ, give each person one small area to shape and agree on a shared area together.",
+        "Your next move is to choose one high-friction corner and one meaningful object. Solve the practical problem first, then place the object where it can be enjoyed without getting in the way. That paired decision—use and memory—can become the start of a room that feels personal."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Home Performance with ENERGY STAR",
+      "url": "https://www.energy.gov/cmei/buildings/home-performance-energy-star",
+      "publisher": "U.S. Department of Energy",
+      "purpose": "Supports only the U.S. example that this home-upgrade program uses a comprehensive evaluation and qualified contractor networks; it is not a general design guide or a guarantee of local program availability."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-or-restore-a-home",
+    "make-a-map-of-places-you-call-home",
+    "create-a-shared-household-agreement"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "write-a-manifesto-for-how-you-want-to-live",
+  "slug": "write-a-manifesto-for-how-you-want-to-live",
+  "title": "Write a personal manifesto you can actually use",
+  "description": "Turn broad values into a short personal manifesto with observable choices, room for change, and a review that tests whether each line fits real life.",
+  "intent": "Answers how to write a personal manifesto without producing grand slogans; adds a test for turning stated values into decisions and revising them over time.",
+  "sections": [
+    {
+      "heading": "Start with decisions, not mottos",
+      "paragraphs": [
+        "A useful manifesto helps when two good things compete: security and experimentation, privacy and generosity, ambition and time with people you love. Start by recalling three real decisions from the last year. What did you protect? What did you trade away? Which choice still feels like yours, even if it was difficult? These scenes reveal more than a list of admirable words copied from a poster.",
+        "Write one value beside each scene, using ordinary language. ‘Make room for people’ may be more useful than ‘connection.’ ‘Choose work I can stand behind’ may say more than ‘integrity.’ The U.S. Veterans Health Administration’s Whole Health Library describes values as individually meaningful and as a direction for action; treat that as a reflection prompt, not a clinical rule or a claim that values never change."
+      ]
+    },
+    {
+      "heading": "Translate each value into a visible behavior",
+      "paragraphs": [
+        "For every value, add a line that someone could recognize in an ordinary week. ‘I value creativity’ is hard to act on. ‘I keep one evening open to make something before I buy another tool’ describes a choice. ‘I value family’ could become ‘I ask relatives what kind of help they want instead of assuming.’ These statements are not commandments; they make your intentions concrete enough to notice.",
+        "Then name one boundary or cost. A value of rest might mean declining a late meeting, accepting a slower reply, or taking a day off even when the inbox remains. If your sentence promises unlimited availability, it may be a wish to please rather than a principle you can live with. Put the tradeoff on paper so the value has weight."
+      ]
+    },
+    {
+      "heading": "Build a small, readable document",
+      "paragraphs": [
+        "Keep the first version short: perhaps six to ten lines, each beginning with a plain verb. Use ‘I will try’ for behaviors that depend on other people or circumstances. Use ‘I will not’ sparingly, for boundaries you actually intend to hold. Add a sentence about how you want to repair a mistake; otherwise the document can sound like a portrait of an ideal person who never slips.",
+        "Avoid rules that control other people, such as ‘My friends must always…’ A personal manifesto is about your choices. ‘I will ask before giving advice’ is a commitment you own; ‘People must listen to me’ is not. If a line condemns a group or forces someone else to behave a certain way, rewrite it around your own response."
+      ]
+    },
+    {
+      "heading": "Try it against a real week",
+      "paragraphs": [
+        "Before calling it finished, test two lines against your calendar and obligations. If you wrote ‘I protect my health,’ choose a small decision you control, such as scheduling a checkup you already intend to book or leaving a little transition time between commitments. Do not turn the sentence into an unqualified medical prescription. If you wrote ‘I learn continuously,’ choose a subject and one modest block of time rather than adding a new course you cannot sustain.",
+        "Look for contradictions. A line about generosity may sit beside one about financial security; both can remain if you explain the limits. ‘I help when I can do so without hiding the cost from my household’ is more honest than erasing the conflict."
+      ]
+    },
+    {
+      "heading": "Keep it revisable",
+      "paragraphs": [
+        "Date the page and set a reminder to reread it after a season or a major change. Ask which lines guided an actual choice, which ones became unrealistic, and which deserve to be removed. Changing a value statement does not prove you lacked conviction; new responsibilities and new knowledge can change what a good choice looks like.",
+        "Share it only if you want to. A manifesto may include private commitments, family context or work decisions you would not want circulated. For a first draft, write three lines from remembered decisions, then add one behavior and one honest limit to each."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Values - Whole Health Library",
+      "url": "https://www.va.gov/WHOLEHEALTHLIBRARY/tools/values.asp",
+      "publisher": "U.S. Department of Veterans Affairs",
+      "purpose": "Supports treating values as personally meaningful directions for choices; does not define a universal set of values or prescribe this manifesto exercise."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "create-a-personal-annual-report",
+    "write-your-ethical-will",
+    "make-a-skills-history-from-things-you-can-now-do"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

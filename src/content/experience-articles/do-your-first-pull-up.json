@@ -1,0 +1,57 @@
+{
+  "experienceSlug": "do-your-first-pull-up",
+  "slug": "do-your-first-pull-up",
+  "title": "Turn your first pull-up into a clear movement goal",
+  "description": "Prepare for a first pull-up by defining the movement, choosing manageable practice variations, and building a patient strength routine.",
+  "intent": "Explain how to make the first pull-up a measurable skill goal and choose sensible practice steps without prescribing an individual training program.",
+  "sections": [
+    {
+      "heading": "Decide what your first rep will look like",
+      "paragraphs": [
+        "A pull-up goal needs a clear finish line. Decide whether you mean an overhand grip, a chin-up with palms facing you, or any strict body-weight rep; those are related but distinct movements. For a straightforward standard, begin from a controlled hang, pull until your chin passes the bar, and lower under control without kicking. If shoulder mobility, grip, equipment, or comfort changes what is appropriate, ask a qualified coach to help you choose a safe standard. Write that choice down so a later assisted rep does not accidentally become the claimed unassisted one.",
+        "Check the setup before practicing. The bar must be installed or supported according to its manufacturer’s instructions, with enough clearance to mount and dismount safely. Avoid improvised door frames, unstable furniture, or a bar whose rating or fit you cannot verify. A sturdy playground or gym bar may be available, but inspect it and follow the facility’s rules. A step or box can help you reach the bar and get down without jumping into a fatigued landing."
+      ]
+    },
+    {
+      "heading": "Use versions that reduce the load",
+      "paragraphs": [
+        "If you cannot yet perform a full rep, practice the pieces of the movement. A cable or resistance-band pulldown builds a related pulling pattern; a band-assisted pull-up or an appropriately counterweighted machine reduces the load you lift. A controlled hang can familiarize you with grip and shoulder position, while a coach-guided lowering phase can help you learn the descent. These are options, not a ladder everyone must follow in the same order. Choose equipment you understand and a variation that does not cause pain.",
+        "The CDC lists pull-ups among examples of body-weight muscle-strengthening activity, but that general activity guidance does not give a personalized route to a first repetition. It also emphasizes strength work for all major muscle groups. Consider balancing pull practice with pushing, legs, and trunk exercises rather than repeating one movement until you are exhausted. If you have pain, a health condition, or are returning after injury, ask a clinician or qualified exercise professional about the right starting point."
+      ]
+    },
+    {
+      "heading": "Practice quality before volume",
+      "paragraphs": [
+        "Keep notes about grip, assistance level, sets, and how the movement felt. If you are using an assisted machine, record its counterweight; if a band helps, record the band and setup. That way, a lighter assistance setting is visible progress rather than a vague feeling that training is working. Start with a small amount of practice and finish while you can still control the movement. More repetitions are not automatically better if your hands slip or your shoulders become irritated.",
+        "Rest between demanding sessions and avoid testing a maximum every workout. The goal is a strong, repeatable skill, not a daily struggle against fatigue. Grip width, body size, training history, and equipment affect how a pull-up feels, so someone else’s schedule is not a useful benchmark. A coach can inspect your setup and help distinguish a strength limitation from a technique or equipment problem."
+      ]
+    },
+    {
+      "heading": "Make the first attempt a real test",
+      "paragraphs": [
+        "When you are ready to test, use the exact definition you chose at the start. Approach the bar from a stable step, set your grip, begin from the intended start position, and attempt one smooth rep. Do not swing, kick, or shorten the range at the last moment if your goal is a strict repetition. If you do not make it, step down safely and record what happened: perhaps the initial hang was comfortable but the pull stalled halfway. That gives you a more useful next practice target than a pass-or-fail judgment.",
+        "Do not take repeated maximal attempts when you are already tired. If you develop sharp or unusual pain, stop and seek appropriate guidance rather than pushing through. A first pull-up can take a long time for some people and may not be an appropriate goal for everyone in every season. Adapt the target if needed; assisted pull-ups and other pulling movements can still be worthwhile strength work."
+      ]
+    },
+    {
+      "heading": "Set the next training action",
+      "paragraphs": [
+        "Write down your movement standard, where you can practice safely, and one manageable assisted variation. Schedule an initial session with enough time to learn the setup instead of chasing a rep immediately. Revisit the notes after a few sessions and adjust only one variable at a time, such as assistance or range. The milestone is a clean first rep; the habit that helps you approach it is consistent, balanced strength practice that respects your current capacity."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Physical Activity Guidelines for Americans, 2nd edition",
+      "url": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf",
+      "publisher": "U.S. Department of Health and Human Services",
+      "purpose": "Lists pull-ups among body-weight calisthenics and describes general muscle-strengthening activity; it does not prescribe a first-pull-up program."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "do-100-push-ups-in-a-row",
+    "spend-a-year-strength-training"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

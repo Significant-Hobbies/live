@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "re-read-a-book-that-changed-your-life-and-see-what-you-notice-now",
+  "slug": "re-read-a-book-that-changed-your-life-and-see-what-you-notice-now",
+  "title": "Return to an old favorite with a reader’s notebook",
+  "description": "Re-read a book that once changed your outlook with a light-touch notebook method for spotting what endured, what shifted, and why.",
+  "intent": "How do I reread an influential book in a way that reveals my changing perspective rather than merely checking whether I still agree?",
+  "sections": [
+    {
+      "heading": "Choose the book and recover the old context",
+      "paragraphs": [
+        "Pick a book you can actually revisit: the novel you pressed into a friend’s hands, a book of essays that changed how you spoke about work, or a practical text you read at a turning point. Before opening it, write down what you remember: a scene, argument, image, or sentence in your own words. Add where you were in life and what question you hoped the book would answer. The point is not to test your memory; it is to capture the version of you who first encountered it.",
+        "If the book now feels connected to a painful period, you can choose another one or stop. Rereading is an invitation, not an obligation to recover a former self. A library copy, ebook, or audiobook can work equally well; choose the format that lets you slow down and make notes without turning the session into a scavenger hunt for quotations."
+      ]
+    },
+    {
+      "heading": "Use a three-column reading log",
+      "paragraphs": [
+        "The Library of Congress’s guide to analyzing printed texts suggests moving among observation, reflection, and questions. Adapt that approach to your reading: note what is on the page, what you think it is doing, and what you want to ask now. A compact page might have three columns labeled “I notice,” “I think,” and “I wonder.” Record a chapter or page reference for your own use, then paraphrase the idea instead of copying long passages.",
+        "For a novel, an observation might be that the narrator avoids naming a particular fear. Your reflection could be that you once read that silence as confidence; your question might be what evidence supports either interpretation. For nonfiction, note the claim and the kind of example the author uses, then ask whether that example still feels persuasive to you. Separate the author’s words from your reaction so a remembered paraphrase does not accidentally become a quotation."
+      ]
+    },
+    {
+      "heading": "Compare the old reading with the present one",
+      "paragraphs": [
+        "Do not make yourself read every page at the same pace. Give a few chapters your full attention, skim a section you remember well, and linger where your margin marks or notes show that you once stopped. If your copy is unmarked, use the table of contents to choose a passage that represents the book’s main idea and one that surprises you. You can also read a chapter aloud or listen to it while walking, then write down which detail stayed with you.",
+        "Ask concrete comparison questions: Which character or claim do I now sympathize with? Which parts feel dated, incomplete, or newly complicated? Has my own experience supplied context the book could not? If an argument still moves you, identify what specifically convinces you. If it no longer does, name the assumption that changed. One difference in response is more useful than declaring the book either timeless or irrelevant."
+      ]
+    },
+    {
+      "heading": "Let disagreement be specific",
+      "paragraphs": [
+        "A book can matter to you and still contain an argument you would now challenge. You can preserve both facts. For a memoir or history, check whether you are relying on the author’s account or an independent historical source; a personal book is not automatically a complete record. For fiction, try to distinguish your dislike of a character’s choice from your judgment of the craft. This is a reread, not a loyalty test.",
+        "If a passage stirs a strong reaction, pause and write what it brought up before deciding what the author meant. You may find that the book is a prompt for your own memory rather than a source of guidance. Keep that distinction visible in your notes: “the text says” belongs beside evidence, while “I connect this with” belongs beside interpretation."
+      ]
+    },
+    {
+      "heading": "Finish with one changed question",
+      "paragraphs": [
+        "When you finish, revisit your first page. What did you remember accurately? What did you forget? Which old response remains, and what surprised you? End with one question the book gives you now—perhaps about a friendship, a habit, or an idea you want to examine further. Do not force a life lesson if the honest outcome is simply noticing that your taste changed.",
+        "If the book feels worth sharing, write a short note to a friend describing the kind of reader who might enjoy it and the one question you would discuss over coffee. Otherwise, return it to the shelf with a date inside your notebook. The next reread can wait until another version of you is ready to meet it."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Teacher’s Guide: Analyzing Books and Other Printed Texts",
+      "url": "https://www.loc.gov/static/programs/teachers/getting-started-with-primary-sources/documents/Analyzing_Books_and_Other_Printed_Texts.pdf",
+      "publisher": "Library of Congress",
+      "purpose": "Supports the observe/reflect/question approach to examining printed texts; the reader notebook is an adaptation, not a Library of Congress reading prescription."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-a-personal-reading-family-tree",
+    "read-52-books-in-a-year",
+    "read-old-postcards-as-historical-evidence"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "marble-a-sheet-of-paper",
+  "slug": "marble-a-sheet-of-paper",
+  "title": "How can you make marbled paper at home?",
+  "description": "Create marbled paper with a simple surface-printing setup, testing how loose color swirls transfer and how small changes alter the finished sheet.",
+  "intent": "How can I make one successful sheet of marbled paper without expensive equipment? This guide helps choose a beginner method, control the pattern, and learn from the first transfer.",
+  "sections": [
+    {
+      "heading": "Choose one beginner marbling method",
+      "paragraphs": [
+        "Paper marbling means making a pattern on a liquid or creamy surface and transferring it to paper. For a first trial, choose a small, contained method using washable paint or food coloring and shaving cream, rather than preparing a specialized thickened bath. A Frist Art Museum classroom activity demonstrates the shaving-cream approach: smooth the cream in a tray, add a few colors, swirl lightly, press heavy paper onto the surface, then scrape away the excess. It is a useful starting point, not the only traditional marbling process.",
+        "Use a shallow disposable tray, heavy paper, a toothpick or plastic fork, a piece of cardboard for scraping, and a washable colorant suitable for your workspace. Protect the table with a reusable mat or paper, tie back loose sleeves, and keep the tray away from food preparation. Ask a teacher or caregiver to handle any materials with strong fragrance or chemical warnings. This method is for decorative paper, not for food contact."
+      ]
+    },
+    {
+      "heading": "Set up a pattern you can repeat",
+      "paragraphs": [
+        "Smooth a thin, even layer of cream into the tray. Place a few small drops of color far enough apart that you can see them move. With a toothpick, draw a simple comb, curve or set of parallel lines. Stop while the colors remain distinct; stirring until they blend makes a uniform tint rather than a marbled design. Take a quick photo of the surface before transferring so you can compare the pattern with the print.",
+        "For your first sheet, choose just two colors and one motion. A single serpentine line is easier to interpret than a dozen overlapping swirls. If the color sinks or spreads unevenly, try a fresh tray and smaller drops rather than adding more pigment. Keep the paper nearby before you begin because the pattern is temporary and the transfer works best while the surface is undisturbed."
+      ]
+    },
+    {
+      "heading": "Lay the paper gently",
+      "paragraphs": [
+        "Lower the paper from one edge to the other so it contacts the surface evenly and does not trap a large air pocket. Press lightly over the back; pushing hard can smear the pattern or wrinkle the sheet. Lift it slowly from one corner. The color will look different after the cream is scraped away, so resist judging it while it is still covered. Use the cardboard edge to remove the excess cream in one careful pass, wiping the tool clean between sheets.",
+        "Set the printed paper flat to dry on a protected surface. Follow the colorant and paper instructions, especially if the item will be used by children. Do not rub the wet print or stack it against another sheet. A slightly wavy edge can often be flattened later under a clean board once fully dry, but avoid heat that could damage the paper or any pigment."
+      ]
+    },
+    {
+      "heading": "Diagnose the pattern instead of starting over",
+      "paragraphs": [
+        "If the print is muddy, use fewer colors or make fewer strokes next time. If the color is patchy, check that the sheet touched the whole surface and that the cream layer was smooth. If the page tears, try heavier paper or lift more slowly. Change one variable at a time and label each dry sheet with the colors, tool and movement used. That turns a few imperfect prints into a practical sample book.",
+        "You can make a set that feels intentional by varying only one choice: same two colors with a different line pattern, or same pattern with a warmer palette. Let each sheet dry before deciding what it might become. A first success could be a bookmark, card front or cover for a small notebook; you do not need to plan a large project before learning how the process behaves."
+      ]
+    },
+    {
+      "heading": "Use the print as a record of the experiment",
+      "paragraphs": [
+        "The most useful comparison is between the surface you planned and the mark that reached the page. Was the pattern too busy, too faint or unexpectedly beautiful? Write one sentence on the back of each dry sample rather than trying to remember the setup. Keep one print unchanged as a reference; cut or decorate the others only after they are dry.",
+        "Your next action is to prepare one two-color tray, make a single deliberate swirl and transfer one heavy-paper sheet. If the result interests you, make a second with the same colors and a different tool stroke so you can see what the motion actually changes."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "ArtQuest: Marbled Paper",
+      "url": "https://fristartmuseum.org/wp-content/uploads/301-Marbled-Paper_RTP_2020.07.16-1.pdf",
+      "publisher": "Frist Art Museum",
+      "purpose": "Supports the beginner shaving-cream method, use of a few colors, light swirling, heavy paper transfer and scraping away excess before drying."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "print-a-set-of-foam-relief-postcards",
+    "stencil-a-reusable-fabric-bag",
+    "make-a-small-mosaic-panel"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

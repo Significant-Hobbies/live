@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "illustrate-a-children-s-book",
+  "slug": "illustrate-a-children-s-book",
+  "title": "Map the page turns before polishing the pictures",
+  "description": "Plan children’s-book illustrations with a rough dummy first: map page turns, character continuity and emotional beats before finishing the artwork.",
+  "intent": "Help an illustrator use a rough full-book dummy to solve pacing, action and character continuity before investing in finished spreads.",
+  "relatedExperienceSlugs": [
+    "draw-a-wordless-six-panel-comic",
+    "tell-a-short-story-in-sand-animation"
+  ],
+  "sections": [
+    {
+      "heading": "Read for what the pictures need to carry",
+      "paragraphs": [
+        "Read the text once without drawing. On a second pass, underline what the words already say and circle what the reader still needs to see: the character’s expression, a change in place, a hidden object, or an action that the sentence does not describe. These are promising picture moments. If every spread merely repeats the text, the images may not be adding a second layer.",
+        "Choose a consistent visual point of view. Decide how close the reader stands to the characters and what details belong in the world. A child’s perspective might place a table edge high in the frame; a quiet observation may leave more open space. Let the subject and mood determine the choice rather than forcing every page into the same centered pose."
+      ]
+    },
+    {
+      "heading": "Make the rough dummy small and complete",
+      "paragraphs": [
+        "Fold or arrange paper into a sequence of page spreads and sketch every page quickly. Include the text placement, even if the words are temporary. Use simple marks for character positions, direction of movement, and the object the reader should notice. Keep the drawing rough enough that you can move a beat without feeling you have wasted finished art.",
+        "The Society of Children’s Book Writers and Illustrators describes the rough picture-book dummy required by its Don Freeman grant as the full text paired with sketches, plus two finished illustrations, to show mood, action, characterization and pacing. For that specific grant, its page lists a different route for pre-published illustrators: submit either a portfolio of finished work or the dummy; published illustrators submit the dummy. These are grant-application requirements, not a universal definition of every children’s-book dummy or a requirement for every illustrator. For your own planning, a rough complete sequence can still help test whether the story’s images carry clearly from page to page."
+      ]
+    },
+    {
+      "heading": "Design page turns as moments of change",
+      "paragraphs": [
+        "Look at each pair of facing pages and the turn that follows. Ask what question the reader carries forward and what the next spread reveals. A character can move from the left page toward an unseen destination; the turn can show what they find. Or an image can delay a reveal by showing a reaction before the object appears.",
+        "Mark the spreads where the story’s emotional temperature changes. A large, quiet image may give a reader time to absorb loss or wonder; a tighter, busy sequence may support a playful chase. These are options, not formulas. The useful question is whether the pace matches what happens in the story."
+      ]
+    },
+    {
+      "heading": "Keep the character recognizable in new situations",
+      "paragraphs": [
+        "Create a simple character sheet with a front view, side view, expressions, and a few actions the story requires. Note the details that matter most—a distinctive curl, clothing shape, scale next to a chair—so the character remains recognizable when the pose changes. Then check the rough dummy for size and proportion from spread to spread.",
+        "If someone else wrote the text, share the dummy early and ask where the pictures seem to add or contradict meaning. Agree on who is responsible for which decisions and whether the project is private practice or intended for submission. Do not assume that drawing an existing published character gives permission to reproduce it commercially."
+      ]
+    },
+    {
+      "heading": "Finish a sample after the sequence works",
+      "paragraphs": [
+        "Choose one spread that tests the book’s visual approach and finish that image. Use it to refine palette, line, paper, or digital method before applying the choices to every page. If the sample takes far longer than expected, simplify the technique or change the schedule before committing to a full set.",
+        "Ask a reader to look through the dummy without your explanation. Notice where they pause, where they predict the next turn, and whether the characters’ actions are clear. The next step is to make one small complete dummy and revise the sequence before polishing a single illustration."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Don Freeman Work-in-Progress Grant: illustrator requirements",
+      "url": "https://www.scbwi.org/awards-and-grants/for-illustrators/don-freeman-work-in-progress-grant",
+      "publisher": "Society of Children’s Book Writers and Illustrators",
+      "purpose": "Supports the requirements for this specific SCBWI Don Freeman grant: published illustrators submit a full-text rough dummy and two finished illustrations; pre-published illustrators may submit that dummy or a portfolio. Article no longer presents grant criteria as a universal definition."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

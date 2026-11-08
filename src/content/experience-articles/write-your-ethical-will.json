@@ -1,0 +1,59 @@
+{
+  "slug": "write-your-ethical-will",
+  "title": "Write a values letter your family can keep",
+  "description": "Shape a private letter around the values, lessons and hopes you want to pass on, and keep it separate from legal estate documents.",
+  "intent": "Decide the audience, privacy and handover for a nonbinding ethical will; distinguish it from a legal will and from writing the stories.",
+  "sections": [
+    {
+      "heading": "Name the purpose and audience",
+      "paragraphs": [
+        "An ethical will is a personal message about what matters to you: values, lessons, hopes, gratitude or blessings. It is not the same project as a memoir, which tells a broader story of events, and it should not be used to direct property or replace a legally prepared will. Think of it as a letter someone might read to understand what you hoped to pass along, not as an instruction they must follow.",
+        "Before drafting, name one or two intended readers. A letter to a child, a group of close friends and a future generation will use different examples and language. You can also write for yourself and decide later whether to share it. Start a note with: ‘I want this letter to make it easier for you to know…’ If the sentence sounds like a demand, rewrite it as an invitation or a story."
+      ]
+    },
+    {
+      "heading": "Choose what belongs in it",
+      "paragraphs": [
+        "Use a few concrete prompts: What belief has changed how you treat people? Which mistake taught you something you want someone else to know? Who helped you when you needed it? What do you hope the reader gives themselves permission to do? Choose details you are comfortable putting in a document that could be copied or discovered later.",
+        "Write in your own voice instead of trying to sound wise. A specific moment—a conversation, a difficult choice or an ordinary routine—often says more than a list of abstract principles. If a lesson is still unresolved, say so. You do not need a perfect ending or a verdict on your whole life; honesty about uncertainty is part of an honest letter."
+      ]
+    },
+    {
+      "heading": "Keep it distinct from legal planning",
+      "paragraphs": [
+        "A legal will deals with property and must follow rules that depend on where it is made. Cornell Law School’s Legal Information Institute describes a will as a legal document concerning estate distribution and notes that the applicable rules depend on jurisdiction. Treat this as general U.S. legal information, not advice about your own documents. If you need to distribute assets, name guardians or make health-care decisions, use the appropriate legal documents and qualified local advice.",
+        "Keep files visibly separate. Give the personal letter a title such as ‘Values letter’ and store it apart from signed estate papers, with a note that it is nonbinding. Do not add account numbers, passwords or directions that could be mistaken for legally operative instructions. If you already have a legal will, do not write on or attach informal changes to it; ask your lawyer how to update it properly."
+      ]
+    },
+    {
+      "heading": "Decide privacy and delivery",
+      "paragraphs": [
+        "Choose whether this stays private, goes to one person now, or should be offered later. Tell the intended custodian what the letter is and what they may do with it. If you want it delivered at a particular time, avoid implying that someone is legally obligated to follow an instruction unless a local lawyer has arranged that through the right document.",
+        "Consider the reader’s comfort. A legacy letter can include apologies or intimate history, but it is not a demand for forgiveness or a way to settle another person’s experience. Ask whether a recipient would welcome it, especially if the relationship is strained. You can create a shorter, gentler version for sharing and keep a longer private version for yourself."
+      ]
+    },
+    {
+      "heading": "Revise for clarity, then hand it over",
+      "paragraphs": [
+        "Write a first draft without editing every sentence. The next day, underline the lines that sound like your speaking voice and cross out anything that lectures, blames or makes a promise you cannot control. Keep the letter short enough that the intended reader can finish it in one sitting. Read it aloud or ask a trusted person to flag confusing wording, while respecting your privacy.",
+        "Add the date and a contact for the custodian, then review your decision about audience every year or after a major life change. You can revise, withdraw or destroy a personal letter. The useful measure is whether it says something you genuinely want the reader to carry—not whether it resolves the past, changes their choices or substitutes for careful legal planning."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Will",
+      "url": "https://www.law.cornell.edu/wex/will",
+      "publisher": "Cornell Law School Legal Information Institute",
+      "purpose": "Supports the general distinction that a will is a legal document for estate distribution and that applicable formalities depend on jurisdiction; this U.S. legal information page is not individualized legal advice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "write-your-memoir",
+    "make-a-timeline-of-the-five-most-important-moments-of-your-life",
+    "leave-a-legacy-gift-to-a-charity-in-your-will"
+  ],
+  "experienceSlug": "write-your-ethical-will",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

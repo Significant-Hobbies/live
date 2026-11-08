@@ -1,0 +1,71 @@
+{
+  "experienceSlug": "eat-at-the-source-coffee-in-ethiopia-tea-in-japan-chocolate-in-ecuador",
+  "slug": "eat-at-the-source-coffee-in-ethiopia-tea-in-japan-chocolate-in-ecuador",
+  "title": "Compare three ingredient journeys, not just three tastings",
+  "description": "Plan a coffee, tea and cacao tasting around how each ingredient is grown, transformed and shared in Ethiopia, Uji and Ecuador.",
+  "intent": "How can I experience coffee in Ethiopia, tea in Japan and chocolate in Ecuador while learning about place, processing and local context?",
+  "sections": [
+    {
+      "heading": "Make one question travel with you",
+      "paragraphs": [
+        "Instead of treating this as a checklist of drinks, carry one question across all three stops: what changes between the growing place and the cup or bar? Compare the landscape, the people who process the ingredient, the tools, the final preparation and the setting in which it is shared. Keep a small field note with the place, ingredient, preparation and one question you still have.",
+        "Make your plans around current local hosts and confirmed visits, not an assumption that a plantation, ceremony or production line is open to visitors. The Ecuadorian Ministry of Tourism’s 2023 report describes tourism work around Palanda’s cacao story and cacao experiences across regions; it also describes the offering as being developed. Treat the document as a historical snapshot, then check present access with a local operator before booking."
+      ]
+    },
+    {
+      "heading": "In Ethiopia, ask about the coffee in the room",
+      "paragraphs": [
+        "A coffee visit can focus on a cup in a café, a guided tasting of beans from a named growing area, or a hosted coffee ceremony. Those are different experiences. UNESCO’s account describes a ceremony in which beans are roasted, ground and brewed in a jebena, followed by successive servings; it also discusses the social and spiritual context. The source is one overview, not a rule that every Ethiopian household or community follows the same sequence.",
+        "Ask your host how this particular coffee is sourced and prepared, and whether they welcome questions or photography. Listen for the difference between a bean’s growing region and the ceremony’s host community. Let the people hosting explain the tradition in their own terms rather than treating a private household ritual as a performance owed to visitors."
+      ]
+    },
+    {
+      "heading": "In Uji, distinguish tea styles and ceremony",
+      "paragraphs": [
+        "The Japan National Tourism Organization’s Uji guide describes the town as associated with tea and tea ceremony, and names locally grown green tea as a tasting option. Its Japan Heritage account traces tea cultivation around Kyoto, Uji and southern Kyoto Prefecture, and distinguishes powdered matcha from infused sencha and later gyokuro. This gives you concrete comparisons: powdered versus steeped tea, everyday tasting versus a hosted ceremony, and a leaf’s preparation versus the setting around it.",
+        "If you take a tea class, ask whether the session centers on tasting, processing, or the etiquette of a particular tea practice. Follow the host’s cues for handling bowls, utensils and conversation. Tea customs vary by style and setting; a single class cannot represent all Japanese tea culture."
+      ]
+    },
+    {
+      "heading": "In Ecuador, follow cacao through its stages",
+      "paragraphs": [
+        "For chocolate, look for a host who can connect cacao growing with fermentation, drying, roasting, grinding and the finished product. The Ministry of Tourism report says Ecuadorian tourism programming has included visits to Palanda and experiences showing cultivation and cacao transformation. It also describes the national interest in the Mayo Chinchipe archaeological story in Palanda, in the Amazon region. Treat those as destination context, not proof that any particular farm or museum is currently open.",
+        "Ask which cacao type or producer you are tasting, what steps happened on site and what was done elsewhere. Compare a cacao nib or pulp, if offered, with a finished chocolate, and note where sweetness or added ingredients enter the process. Avoid repeating “origin” as though all Ecuadorian cacao comes from one region or one historical account."
+      ]
+    },
+    {
+      "heading": "Compare notes without flattening traditions",
+      "paragraphs": [
+        "Use the same tasting prompts at each stop: aroma before tasting, texture, temperature, bitterness or acidity, what was added, and who prepared or served it. Then note what cannot be compared directly: a coffee ceremony is a social practice, Uji tea styles are different products and preparation traditions, and cacao tours may emphasize agriculture, archaeology or chocolate making.",
+        "Keep receipts and names of hosts or producers so you can follow up on questions. Confirm travel dates, access, language and payment directly with current providers. The goal is not to pronounce one place the authentic source for a whole ingredient; it is to learn how a particular community, landscape and craft connect in the experience you actually attend."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ethiopia, the Home of Coffee",
+      "url": "https://www.unesco.org/en/articles/ethiopia-home-coffee",
+      "publisher": "UNESCO Courier",
+      "purpose": "One cultural account of Ethiopian coffee ceremony, its preparation and social/religious context; not a universal description of every community."
+    },
+    {
+      "title": "Japanese Tea: Eight Centuries of Tradition (Kyoto Prefecture)",
+      "url": "https://www.japan.travel/japan-heritage/popular/japanese-tea-kyoto-eisai-toganoo-uji-gyokuro",
+      "publisher": "Japan National Tourism Organization / Japan Heritage",
+      "purpose": "Regional context for Kyoto-area tea cultivation and distinctions among matcha, sencha and gyokuro; current access to classes is not established by this history page."
+    },
+    {
+      "title": "Policy Progress Report on Ecuadorian Cacao Tourism",
+      "url": "https://www.turismo.gob.ec/wp-content/uploads/2023/12/SDT_Informe-politica-cacao-04-12-2023.pdf",
+      "publisher": "Ecuador Ministry of Tourism",
+      "purpose": "2023 report describes Palanda cacao heritage, tourism-development work and experiences connecting cultivation and transformation; historical program status, not a current visitor-access guarantee."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "follow-one-ingredient-through-a-market",
+    "eat-your-way-through-a-country-one-market-at-a-time",
+    "eat-street-food-in-bangkok"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "do-a-digital-detox-for-a-full-week",
+  "slug": "do-a-digital-detox-for-a-full-week",
+  "title": "A week offline that keeps the essentials online",
+  "description": "Define a week of reduced screen use around essential work, care, banking and safety, then choose practical substitutes before switching devices off.",
+  "intent": "How can I reduce discretionary screen time for a full week while preserving the services and relationships I still need?",
+  "sections": [
+    {
+      "heading": "Decide what you are reducing",
+      "paragraphs": [
+        "“Digital detox” can mean anything from pausing social media to turning off every connected device. Write a clear scope before the week starts. For example: no entertainment feeds or games, but keep work email during work hours, maps for travel, banking access and calls from family. A specific boundary is easier to follow than a vow to “use my phone less.”",
+        "Separate optional habits from necessary access. List the apps and services you rely on for caregiving, health appointments, transit, payments, work, accessibility or emergency contact. A full offline week may not fit those responsibilities. You can still take on a substantial reduction by switching off one category or setting clear windows for essential use."
+      ]
+    },
+    {
+      "heading": "Tell the people and services affected",
+      "paragraphs": [
+        "Let coworkers, household members and close friends know what will change and how to reach you. Set an alternate contact route for urgent needs and make sure your voicemail or work coverage is clear. If you are the person who coordinates care, payments or household logistics, assign a backup and test the handoff before the week begins.",
+        "Download tickets, directions or confirmation numbers you may need and check that offline copies are usable. Make sure you can reach your bank, transit provider or clinic through a supported channel. This is not a challenge to abandon essential services; the point is to remove automatic scrolling without creating a preventable problem for you or someone depending on you."
+      ]
+    },
+    {
+      "heading": "Prepare a substitute for the reflex",
+      "paragraphs": [
+        "Notice the moments when you reach for a screen: waiting for a kettle, avoiding a difficult task, commuting or winding down at night. Put an alternative in that exact place: a paperback by the kettle, a paper shopping list, a walk route, a puzzle, or a short conversation. If you do not choose a substitute, the old habit will be the easiest option.",
+        "Tell your friends what you will do instead of disappearing. A paper note on the calendar, an in-person lunch or a scheduled landline call can preserve a relationship without making a phone the default. If your friends are in other time zones, agree on a practical contact method rather than assuming that everyone can adapt to your experiment."
+      ]
+    },
+    {
+      "heading": "Make the week adjustable",
+      "paragraphs": [
+        "Create a small exception plan for work emergencies, illness or travel disruption. Write the exception down so one necessary use does not quietly expand into an unplanned return to every app. If your job requires a device, use a work window and leave personal browsing unavailable during that time.",
+        "If you use an iPhone, Apple’s Screen Time settings document schedules and time allowances by app category and allow selected apps and contacts to remain available. That is one optional tool, not a requirement; settings vary across devices. You can also log out, remove shortcuts from your home screen, or put the device in another room. Keep emergency access intact."
+      ]
+    },
+    {
+      "heading": "Review the week without judging it",
+      "paragraphs": [
+        "At the end, note what you missed, what you did not miss, and which practical substitute worked. Look at the original scope: did it protect necessary access? Did one app or time of day account for most of the friction? The answer may point toward a smaller lasting boundary rather than permanent abstinence.",
+        "Restore access deliberately. Reinstall or sign back into only the services you want, and consider keeping one screen-free period or app limit if it helped. The one-week goal is an experiment in attention and logistics, not a claim that screens are harmful or that a week offline will cure a problem. Your next step is to write the scope and emergency exceptions on a page before the start date."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Set Screen Time Schedules and Time Allowances in Screen Time on iPhone",
+      "url": "https://support.apple.com/en-nz/guide/iphone/iphb0c7313c9/ios",
+      "publisher": "Apple Support",
+      "purpose": "Documents category schedules, time allowances and selected apps/contacts that can remain available; the optional feature is iPhone-specific."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "spend-a-full-day-with-no-screens",
+    "spend-a-week-fully-off-grid",
+    "do-a-solo-camping-trip-with-no-phone"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

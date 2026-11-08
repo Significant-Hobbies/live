@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "volunteer-at-a-hospital-for-a-year",
+  "slug": "volunteer-at-a-hospital-for-a-year",
+  "title": "Make a year of hospital volunteering workable",
+  "description": "Explore a hospital volunteer role by checking its application, screening, training, weekly commitment and boundaries before signing up for a year.",
+  "intent": "How can I make a sustained hospital volunteer commitment while respecting the hospital’s screening, training and patient-care boundaries?",
+  "sections": [
+    {
+      "heading": "Start with the work the hospital actually needs",
+      "paragraphs": [
+        "Hospital volunteering is a service role shaped by a particular institution, department and shift. It may involve wayfinding, stocking, greeting, visitor support or another task; it does not automatically mean assisting with clinical care. Read the volunteer office’s current openings and choose tasks you can do reliably. If your goal is patient contact, ask how the hospital defines that contact and whether the role is available to new volunteers.",
+        "Before committing for a year, ask who supervises you, what training comes before a first shift, what happens when you are sick, and whether there is a minimum period or weekly schedule. A recurring calendar slot is more useful than a grand promise you cannot keep. Your role should fit the site’s current needs, not an imagined version of hospital work."
+      ]
+    },
+    {
+      "heading": "Treat screening as part of the role",
+      "paragraphs": [
+        "Requirements vary by hospital and location. As one specific example, Mayo Clinic’s Florida adult-volunteer page describes an application and interview, background check, tuberculosis screening, proof of immunity for several diseases, online modules, a uniform and one-on-one training. It says most volunteers there work at least one four-hour shift weekly, depending on service area. Those are Mayo Clinic Florida’s stated arrangements, not a universal hospital rule; verify current requirements with the institution where you apply.",
+        "Ask about the full timeline and any costs before you plan around a start date. Some sites may have placement limits or wait periods. If a health or access requirement presents a barrier, ask the volunteer office what accommodations or alternative roles are available. Do not share medical details with patients or other volunteers; direct screening questions to the authorized office."
+      ]
+    },
+    {
+      "heading": "Learn privacy and role boundaries early",
+      "paragraphs": [
+        "A hospital volunteer may encounter names, conversations, room numbers or personal stories. Learn the site’s confidentiality rules and follow them off shift as carefully as on shift. Do not photograph patients, repeat identifying details, look up a person’s chart or ask for a private update. A patient’s visible friendliness does not grant permission to share their story.",
+        "Stay within the task you were trained and assigned to do. If someone asks for clinical advice, medication help, translation beyond your authorization, or a decision you cannot make, contact the responsible staff member. Likewise, do not promise that a service, appointment or outcome will happen. A calm handoff is often more helpful than improvising in a high-pressure setting."
+      ]
+    },
+    {
+      "heading": "Build a schedule that lasts",
+      "paragraphs": [
+        "Put the shift, travel time and recovery time into your normal calendar. Ask whether the role is weekly, seasonal or project based, how to report absence, and whether you are expected to find a substitute. Give the coordinator notice when you cannot attend; patients and staff may plan around the service. Keep contact details and check-in instructions in one place.",
+        "After the first month, assess the real load: commute, standing, emotional demands and schedule changes. If you need a different assignment, talk to the volunteer office rather than silently disappearing. A year of service can include a pause, a changed shift or a responsible end date if the program permits it. Reliability includes honest communication about what you can sustain."
+      ]
+    },
+    {
+      "heading": "Review what the year meant",
+      "paragraphs": [
+        "At the end, ask your supervisor for feedback on punctuality, communication and whether your tasks met a need. Record the skills you practiced without including patient-identifying details. If you continue, confirm next year’s requirements and availability rather than assuming last year’s placement renews automatically.",
+        "The measure of a useful commitment is not proximity to dramatic moments. It can be a visitor reaching the right clinic, supplies arriving where needed or a staff team receiving predictable help. Keep the institution’s boundaries intact, and let the people receiving care decide what interaction they want."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Becoming a volunteer — Florida adult volunteers",
+      "url": "https://www.mayoclinic.org/about-mayo-clinic/volunteers/florida/becoming-volunteer",
+      "publisher": "Mayo Clinic",
+      "purpose": "Specific Florida adult-volunteer application, screening, training and typical shift example; requirements vary by site and service area."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "sort-supplies-during-a-food-bank-volunteer-shift",
+    "sit-with-a-dying-person-and-just-be-present",
+    "show-up-for-someone-in-a-crisis-without-being-asked"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

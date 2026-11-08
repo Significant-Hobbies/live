@@ -1,0 +1,71 @@
+{
+  "slug": "the-alhambra-granada-spain",
+  "title": "Plan the Alhambra around your timed palace entry",
+  "description": "Reserve through the official Alhambra channel, build the route around the Nasrid Palaces slot, and leave time for the rest of the complex.",
+  "intent": "Turn an Alhambra visit into a timed route around the Nasrid Palaces entry and official access information.",
+  "sections": [
+    {
+      "heading": "Start with the official ticket channel",
+      "paragraphs": [
+        "Use the Patronato de la Alhambra y Generalife’s official visit and ticket pages to check current availability, access conditions, prices and opening hours. Avoid assuming that a third-party tour includes the same spaces or entry time as a general ticket. Keep the confirmation and identification details required by the official system, and check current instructions again before you travel.",
+        "The official visitor guidance says the ticket shows a specific entry time for the Nasrid Palaces and that missing it can mean losing access to that part of the visit. This should shape the day: note the palace slot first, then decide whether to see the Alcazaba, Partal or Generalife before or after it. Do not treat the scheduled slot as flexible unless the official authority confirms that."
+      ]
+    },
+    {
+      "heading": "Plan the sequence around that appointment",
+      "paragraphs": [
+        "The Patronato identifies four main visitable areas: the Alcazaba, Nasrid Palaces, Partal and Generalife. Its planning page says the average visit is around three hours and recommends choosing an order that respects the palace entry time. Sketch the order with your entry gate and walking time in mind. Leave room for security, finding the correct entrance and moving between areas without rushing.",
+        "Do not add a tight restaurant reservation or a second ticketed attraction immediately after the complex. If a timed palace slot is late in your visit window, prioritize the other areas first and confirm the current hours. The site’s official instructions can change for conservation, safety or visitor management, so use the live page rather than an old itinerary."
+      ]
+    },
+    {
+      "heading": "Choose a visit style that fits your interests",
+      "paragraphs": [
+        "Decide whether you want to focus on architecture and decoration, gardens and water, defensive spaces or the way the complex relates to Granada. UNESCO describes the Alhambra, Generalife and Albayzín as complementary parts of a historic urban landscape, with the Alhambra and Generalife on one hill and the Albayzín on another. That context suggests a useful second half to the day: after the monument, look back at it from a public viewpoint in the old district.",
+        "A guided visit can help if you want specialist interpretation or have limited time. Compare the guide’s scope, language, group size and ticket arrangement with the official rules. If you prefer to move slowly, use the site’s map and choose fewer rooms and gardens to explore attentively instead of trying to cover everything at once."
+      ]
+    },
+    {
+      "heading": "Prepare for the site itself",
+      "paragraphs": [
+        "Check the current visitor conditions for permitted bags, photography, accessibility, footwear and entry documents. The official ticket page currently emphasizes punctuality for palace entry and carrying the ticket; the authority’s latest route notices may modify access to areas. Use those official instructions as the final word. Comfortable shoes, water and sun protection can help with a long visit, but follow the site’s specific restrictions.",
+        "If you need step-free access, mobility support, a companion arrangement or language assistance, contact the official visitor service before buying. Ask a precise question and keep the response. Conditions in a historic complex can differ from a modern museum; do not infer access from a photo or a general travel blog."
+      ]
+    },
+    {
+      "heading": "Pair the monument with Granada",
+      "paragraphs": [
+        "Treat the Alhambra as one part of a Granada visit rather than a self-contained checklist. The UNESCO page describes the neighboring Albayzín’s narrow streets and traditional urban form; plan a separate walk there when you have time and energy. Confirm any site access and local route conditions independently, since the district is also a lived-in neighborhood.",
+        "Afterward, write down one architectural detail you noticed and one question you want to explore further. That small pause helps the visit become more than a timed ticket. The essential preparation is simple: use official entry information, keep the palace appointment visible, and leave enough space around it to experience the rest of the site without trying to outrun the clock."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Organize your visit",
+      "url": "https://www.alhambra-patronato.es/en/visit/organize-your-visit",
+      "publisher": "Patronato de la Alhambra y Generalife",
+      "purpose": "Supports the four main visit spaces, the need to plan around the Nasrid Palaces time printed on the ticket, and the authority’s approximate three-hour duration; current conditions and route can change."
+    },
+    {
+      "title": "Alhambra, Generalife and Albayzín, Granada",
+      "url": "https://whc.unesco.org/en/list/314",
+      "publisher": "UNESCO World Heritage Centre",
+      "purpose": "Supports the relationship between the Alhambra/Generalife and the neighboring Albayzín as distinct parts of Granada’s historic landscape; not an access or ticketing source."
+    },
+    {
+      "title": "Official tickets",
+      "url": "https://tickets.alhambra-patronato.es/en/",
+      "publisher": "Patronato de la Alhambra y Generalife",
+      "purpose": "Supports checking the official ticket channel and current visitor notices, including possible changes to routes for conservation and safety; the displayed notice is time-sensitive."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "walk-the-camino-de-santiago-800km-across-spain",
+    "visit-a-country-you-know-nothing-about",
+    "the-amalfi-coast-italy"
+  ],
+  "experienceSlug": "the-alhambra-granada-spain",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "community-573cdefc-9b87-56e0-b085-c87606daa940",
+  "slug": "finish-a-marathon",
+  "title": "Make race day predictable enough to stay present",
+  "description": "Plan a marathon around check-in, your coach-agreed pacing, aid stations and a post-finish meeting point rather than improvising on race morning.",
+  "intent": "How should I organize a marathon race day so I can focus on the run and respond calmly if the plan changes?",
+  "sections": [
+    {
+      "heading": "Use the organizer’s schedule as your source of truth",
+      "paragraphs": [
+        "Race morning is shaped by one specific event, not by a universal marathon template. Read the organizer’s participant guide for start access, bag policy, transport, cutoffs, wave or corral procedures, restroom locations and aid station details. Write the key times and places in one note you can reach offline. Do not rely on last year’s social post or another city’s course map.",
+        "The Boston Athletic Association’s current athlete guide is a concrete example of the details an organizer may provide: medical stations, hydration, portable toilets, finish support and rules for timing. Those arrangements are Boston-specific and change by year. Your own event may have different station spacing, bag drop, medical support or finish access. Use its instructions for the exact course you entered."
+      ]
+    },
+    {
+      "heading": "Agree on effort with your coach before the start",
+      "paragraphs": [
+        "If you have a coach, discuss the race plan before race week: what effort range or pace cues you intend to use, what would cause you to slow down, and what signals mean you should stop and seek help. Avoid turning a goal pace into a promise. Heat, wind, hills, crowding and how you feel that morning can all alter the day. A plan with decision points is more useful than one rigid split chart.",
+        "If you do not work with a coach, use the event’s official guidance and your own training experience to make a conservative plan. Do not experiment with unfamiliar shoes, fueling products or equipment on race morning. A health professional can advise on medical issues or symptoms; this article cannot prescribe an individualized hydration, nutrition or pacing plan."
+      ]
+    },
+    {
+      "heading": "Rehearse the logistics once",
+      "paragraphs": [
+        "Before the race, decide what you will wear, how you will travel to the start, where you will check a bag, and how you will get home or to your hotel. Check the organizer’s prohibited-item list and whether a bag must meet a specific size. Set out clothing with the forecast in mind and keep a dry layer for after the finish if the event allows it. Confirm that your watch, phone or assistive device is charged, but do not make a gadget necessary for your plan.",
+        "Plan a meeting point with supporters that is outside the crowded finish flow and easy to describe. Large events can have limited cell service and road closures. Share your bib number, approximate finish window and the event’s official tracking option if one exists. Decide in advance what to do if you miss each other rather than wandering while exhausted."
+      ]
+    },
+    {
+      "heading": "Keep aid stations and support simple",
+      "paragraphs": [
+        "Know where the official aid stations are and what they are expected to offer, but do not assume that a particular product or service will be there unless the organizer confirms it. If you need a personal support plan or medical device, check the event’s rules and accommodations process early. For a local course, the organizer may allow supporters at certain spots and prohibit them from running alongside participants; follow that policy.",
+        "Think about the logistics of accepting fluids or supplies without creating a collision. Move predictably, avoid stopping abruptly in the middle of the route, and follow volunteers’ directions. If you use a mobility aid, guide runner or accessibility accommodation, check in with the event staff well before race day so you understand how the start and finish work for your category."
+      ]
+    },
+    {
+      "heading": "Treat finishing and recovery as part of the event",
+      "paragraphs": [
+        "After the finish, follow the event’s chute and medical directions, collect only the items you need, and reconnect with your support person at the agreed point. Keep your phone accessible and carry your lodging details. If you feel unwell, tell an event medical worker rather than leaving alone or dismissing symptoms. The event’s own medical team is the right immediate resource on site.",
+        "Give the next day room for rest and ordinary logistics instead of planning a long sightseeing schedule. Arrange transport and food that do not depend on an ambitious walk across town. The practical next step is to download the current participant guide, write a one-page race-day sequence and share your meeting plan with someone who will be there."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Info for Athletes",
+      "url": "https://www.baa.org/races/boston-marathon/info-for-athletes/",
+      "publisher": "Boston Athletic Association",
+      "purpose": "Used as an event-specific example of a race guide’s course aid, medical and finish-area details; no Boston logistics are generalized to other races."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "run-a-marathon",
+    "complete-a-100-mile-ultramarathon",
+    "complete-a-triathlon"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

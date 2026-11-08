@@ -1,0 +1,47 @@
+{
+  "experienceSlug": "paraglide-over-the-swiss-alps",
+  "slug": "paraglide-over-the-swiss-alps",
+  "title": "Choose a tandem flight by logistics and conditions",
+  "description": "Choose a Swiss Alps tandem flight by launch logistics, pilot credentials, accessibility, and its weather and cancellation policy.",
+  "intent": "How can a first-time passenger choose a tandem paraglide by location, pilot qualification, and weather flexibility?",
+  "sections": [
+    {
+      "heading": "Choose a launch experience",
+      "paragraphs": [
+        "A tandem paraglide over the Alps is not just a question of which peak looks best in a photo. Choose a departure area by the whole experience: how you reach the launch, how much time you have, what landscape you hope to see, and what you will do if weather postpones the flight. A local tandem provider can explain where flights start and what the transfer involves. Zurich Paragliding says its tandem pilots are licensed by the Swiss Paragliding and Hang Gliding Federation, and tells passengers to check in the day before for weather and meeting-point updates. That is provider-specific information, so verify the same details with the operator you choose. Ask who flies with you, what language the briefing is in, whether the flight has a walking or uphill component, and how a cancellation or reschedule works."
+      ]
+    },
+    {
+      "heading": "Check logistics and flexibility",
+      "paragraphs": [
+        "Compare the operator’s published eligibility and equipment rules with your own needs. Ask whether clothing, footwear, or personal items affect the flight and what the operator supplies. If you have an access need or medical concern, contact the provider before booking rather than guessing from a general description. Weather can affect whether a tandem flight proceeds; the Zurich provider lists precipitation, fog, or strong wind as reasons it may postpone a flight. Do not treat a booking confirmation as a guarantee that you will launch that day. Leave a flexible day around the flight if you can, and avoid making an expensive connection depend on a precise landing time. Keep the booking contact and meeting details saved offline in case you are traveling between valleys."
+      ]
+    },
+    {
+      "heading": "Let the pilot lead",
+      "paragraphs": [
+        "A first flight goes more smoothly when you arrive ready to listen, not when you have memorized a video. The pilot gives the briefing and decides whether conditions are suitable. Ask questions if you do not understand the sequence, then follow the pilot’s instructions on site. Do not try to take control of equipment or imitate actions you have seen online. If you feel uncertain, say so; the crew can explain your options. Some launch areas may involve walking or uneven ground, so ask in advance if that is important for you. Choose a provider that answers without minimizing weather, access, or comfort questions. The view is only one part of the experience; the anticipation, quiet in the air, and landscape shifting below all deserve room."
+      ]
+    },
+    {
+      "heading": "Compare operators before booking",
+      "paragraphs": [
+        "For a first attempt, pick one region and compare two tandem providers on pilot qualification, meeting logistics, weather policy, accessibility, and what the price includes. Check the federation or local regulator information yourself where available, rather than relying only on a badge in an advertisement. Choose a day with schedule flexibility and keep your evening open. If weather delays the flight, use the time to explore from the ground and let the operator give the next update. After landing, note the landscape you recognized from above and what surprised you. Your next step is to contact a local tandem operator with those questions and confirm that its pilot qualification and weather process fit your expectations."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Passenger Info",
+      "url": "https://www.zurichparagliding.com/passenger-info/",
+      "publisher": "Zurich Paragliding",
+      "purpose": "Provider-specific passenger information says tandem pilots are licensed by the Swiss federation and that weather may postpone flights."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "the-swiss-alps",
+    "learn-to-fly-a-plane"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "extract-fruit-dna-in-an-educational-workshop",
+  "slug": "extract-fruit-dna-in-an-educational-workshop",
+  "title": "See what a fruit DNA extraction can actually show",
+  "description": "Use an instructor-led fruit extraction to connect each step to a visible change, then separate a cloudy precipitate from a purified genetic sample.",
+  "intent": "What does the visible material in a fruit DNA activity tell me, and what can it not prove? This adds a concept-first observation plan to the supervised workshop brief.",
+  "sections": [
+    {
+      "heading": "Ask what the activity is designed to demonstrate",
+      "paragraphs": [
+        "A classroom extraction is a model of how biological material can be released and separated from a mixture. The Exploratorium’s activity names kiwi fruit as its sample and describes the visible material as genetic material extracted from fruit cells. Ask the instructor which steps are being demonstrated and what the final material can support you saying.",
+        "The white or cloudy strands can be satisfying to see, but a visible precipitate is not a purified genome ready for sequencing or ancestry claims. Treat the result as an educational observation. Do not infer traits, genetic similarity, or medical information from the appearance of a small sample."
+      ]
+    },
+    {
+      "heading": "Use the workshop’s instructions and equipment",
+      "paragraphs": [
+        "Follow the educator’s written protocol exactly and work only with the materials and quantities supplied for the workshop. The published Exploratorium activity includes measured ingredients, temperature-controlled water baths, filtration, and chilled ethanol; those are reasons to do the activity with supervision rather than recreate it casually from a paragraph. Ask who handles blades, hot water, and any flammable materials.",
+        "Wear the protective equipment required by the instructor and keep food and drink away from the experiment area. Do not substitute household spirits, cleaning products, or a different solvent. If you are a participant who is unsure about a step, stop and ask rather than improvising."
+      ]
+    },
+    {
+      "heading": "Observe the job of each step",
+      "paragraphs": [
+        "Before starting, make a simple table with columns for action, what changes, and the explanation the instructor gives. Mashing changes the fruit’s physical structure; the detergent-and-salt solution is part of the class protocol for releasing cellular contents. Filtration removes larger solids. Keep those observations distinct from what you see later in the tube.",
+        "The workshop’s sequence can make a clear teaching story: break up tissue, mix, separate solids, then observe material that collects at the interface after the instructor’s precipitation step. Note the actual appearance and timing as reported by your class, not what a video showed under different conditions."
+      ]
+    },
+    {
+      "heading": "Record uncertainty instead of overclaiming",
+      "paragraphs": [
+        "Draw the sample tube or take a permitted photograph with a label identifying the fruit and group. Write that the material is a visible extract from the activity. If the instructor asks what it proves, a careful answer is that the protocol makes material thought to include DNA visible; the class sample has not been tested as a pure substance.",
+        "Ask how scientists could distinguish DNA from other molecules and what extra purification and measurement would be needed. That question opens the door to modern genetics without implying a classroom extraction performs those analyses."
+      ]
+    },
+    {
+      "heading": "Finish as a lab participant",
+      "paragraphs": [
+        "Dispose of liquids and solids as the instructor directs; do not pour leftovers down a drain unless told that is the workshop’s procedure. Wash hands and clear the bench using the class cleanup plan. Keep your notes on the method and learning, not on private samples or personal genetic conclusions.",
+        "Your next action is to ask the workshop leader for the approved protocol and identify one question about the role of a step before the activity begins. Afterward, write a short explanation of what you observed and one limitation the result cannot overcome."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Fruitful DNA Extraction",
+      "url": "https://www.exploratorium.edu/sites/default/files/dna.pdf",
+      "publisher": "Exploratorium",
+      "purpose": "Supports the supervised sample protocol and visible fruit-extract framing; the article explicitly limits claims to the classroom demonstration."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "separate-pen-inks-with-paper-chromatography",
+    "grow-salt-crystals-and-keep-a-measurement-record",
+    "identify-a-small-mineral-collection-using-observable-properties"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

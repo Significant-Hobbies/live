@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "road-trip-across-new-zealand",
+  "slug": "road-trip-across-new-zealand",
+  "title": "Build a New Zealand drive around real travel days",
+  "description": "Plan a New Zealand road trip by island, slower road sections, ferry logistics and real stops; map distance alone is a poor measure of a driving day.",
+  "intent": "How do I turn a map into New Zealand driving days that leave room for road conditions and stops? Focus on route shape and the North–South Island handoff.",
+  "sections": [
+    {
+      "heading": "Choose a trip shape before attractions",
+      "paragraphs": [
+        "New Zealand’s two main islands reward different route shapes, and crossing between them is a separate travel leg. Tourism New Zealand’s journey planner says drive times are approximate and do not include stops, winding roads, heavy traffic or weather. It recommends extra time and breaks, and notes the car ferry between islands. Driving both islands is a sequence of decisions, not one continuous line on a map.",
+        "Pick a spine: a North Island loop, a South Island loop, or a one-way route with a ferry crossing. Then choose a few anchor areas that deserve more than one night. If you stop at every name on the national map, the days become transfers rather than visits. Decide whether you want to walk, kayak, explore a town or simply watch the landscape, and give that activity its own time."
+      ]
+    },
+    {
+      "heading": "Use official drive times as a floor",
+      "paragraphs": [
+        "Start with the official travel-time calculator, then add the parts it excludes: stops, road shape, traffic and weather. A day with a mountain pass, ferry connection or scenic pullouts should not be scheduled like a direct commute. Add time for meals, fuel and arriving before an activity closes. If the itinerary works only when every leg takes the minimum estimate, simplify it.",
+        "Give each driving day a clear finish point and decide what would make you stop earlier. Fatigue, weather, roadworks and a slower pace count. Review current road-safety information for your license, vehicle and season. After a long flight, build in recovery rather than making the first day your longest drive."
+      ]
+    },
+    {
+      "heading": "Handle the island crossing as its own booking",
+      "paragraphs": [
+        "The official tourism site describes the car ferry as the connection between the North and South Islands for vehicles. Check current operator schedules, vehicle requirements, check-in instructions and disruption policies directly before fixing connecting accommodation or tours. Ferry times, roads and weather can change; avoid placing a tight, nonrefundable activity right after arrival.",
+        "If the itinerary is flexible, keep the islands separate and fly or travel without a car, then arrange ground transport at the other end. If you take a vehicle, include the crossing in your time and fatigue budget. Do not assume a ferry booking solves parking, fuel or rental-car drop-off: confirm the exact operator terms."
+      ]
+    },
+    {
+      "heading": "Leave room for a place not on the map",
+      "paragraphs": [
+        "Touring maps and official itineraries help reveal regional highways and stops, but a map should generate options rather than dictate pace. Pick one scenic stretch where you will not schedule anything else that day. If the light is good or a short walk is inviting, you can stop without making the rest of the route impossible.",
+        "Keep overnight stays clustered. A multi-night base can turn one region into an actual experience: a morning walk, unhurried meal or weather-dependent outing. Before reserving a remote stay, check current distances to fuel, groceries and services. Avoid making a late arrival your default in rural areas."
+      ]
+    },
+    {
+      "heading": "Build a route you can shorten gracefully",
+      "paragraphs": [
+        "Write a primary plan and a shorter version of each driving day. The short version might mean skipping an attraction, staying an extra night or stopping at the next town. A plan that survives a weather delay lets you make decisions with daylight and energy rather than pressure.",
+        "Your next action is to choose which island gets most of your time, mark only a few overnight anchors, and run the route through Tourism New Zealand’s calculator. Add real stop time and handle the ferry as a separate booking. The map will still be there if a region needs another trip."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Travel time and distance calculator",
+      "url": "https://www.newzealand.com/int/travel-times-and-distances-calculator/",
+      "publisher": "Tourism New Zealand",
+      "purpose": "Explains approximate drive times and exclusions, recommends extra time and breaks, and notes the inter-island car ferry."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "road-trip-with-no-fixed-destination",
+    "take-a-road-trip-with-your-best-friends",
+    "make-a-local-walking-loop-using-a-public-ferry"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "forage-for-wild-mushrooms",
+  "slug": "forage-for-wild-mushrooms",
+  "title": "Learn mushroom foraging without betting on a guess",
+  "description": "Make a first wild-mushroom outing an expert-led identification lesson, follow land rules and keep every uncertain specimen out of the kitchen.",
+  "intent": "A safety-first beginner plan for learning mushroom field observation and local permissions without relying on self-identification or an app to decide edibility.",
+  "sections": [
+    {
+      "heading": "Make the first outing a class, not a harvest",
+      "paragraphs": [
+        "Wild mushrooms are not a safe beginner food-identification exercise. The U.S. Forest Service’s Natural Inquirer material says wild species can be difficult to identify, some poisonous species resemble edible ones, and learning the skill takes years. For a first outing, choose a walk led by an experienced local mycologist, university extension educator or established natural-history group. Tell the guide you are there to learn, not to collect a meal.",
+        "Ask the organizer who will lead identification, whether participants are allowed to collect, what local permits apply, and whether the outing includes a clear boundary between field observation and eating. Do not treat a guide’s brief comment about one specimen as permission to eat other mushrooms that look similar."
+      ]
+    },
+    {
+      "heading": "Use permission and habitat rules first",
+      "paragraphs": [
+        "Find out who manages the land and what its rules say about collecting fungi. Protected parks, nature reserves, private land and public forests may have different restrictions. A map showing a forest does not grant access. Ask the land manager or event leader whether a permit, fee, seasonal rule or species limit applies and follow the answer for that specific site.",
+        "Observe where the mushroom grows without disturbing surrounding soil or vegetation. Note the host tree or substrate, habitat, season and nearby conditions, but do not turn these clues into an edible identification. If collecting is permitted, take only what the local leader says is appropriate and leave the rest of the site intact. Photography is a useful record that does not require removing specimens."
+      ]
+    },
+    {
+      "heading": "Learn a repeatable observation routine",
+      "paragraphs": [
+        "With a guide, look at the whole specimen in place: cap, underside, stem, base and the way it attaches to its substrate. Record several views and the environment. Do not cut away the base before the instructor has shown what details matter. Avoid crowding or damaging a patch to photograph every example. The educational objective is to compare observations and ask what feature distinguishes two similar-looking species.",
+        "Field guides, expert groups and phone recognition tools can help organize learning, but none should be used alone to decide that a wild mushroom is safe to eat. The Forest Service text warns that dangerous lookalikes exist. A confident image match is still not a verified food identification, especially when the specimen is young, damaged or changing with age."
+      ]
+    },
+    {
+      "heading": "Keep the kitchen out of the first experiment",
+      "paragraphs": [
+        "Do not taste a raw fragment, test a mushroom on skin, rely on a folk rule, or make food decisions from a photograph or app match. Keep uncertain specimens out of the kitchen and away from children and pets. Field observation is not food identification, and this beginner outing should not include eating gathered fungi.",
+        "If someone may have eaten a wild mushroom, contact the local poison-control service or emergency medical service promptly rather than waiting for an online identification or symptoms. Poison-center numbers and emergency routes vary by country. If it does not delay getting help, preserve a photograph or remaining specimen for qualified professionals."
+      ]
+    },
+    {
+      "heading": "Build skill through a local record",
+      "paragraphs": [
+        "After the walk, write down three observations you learned and one question you still have. Compare your photos with the instructor’s confirmed examples, then ask what the group recommends as the next supervised outing. A season of learning common fungi is more responsible than a basket collected from a single confident guess.",
+        "Your first practical step is to find a local mycology club, extension program or natural-history walk and ask whether beginners can attend without collecting or eating anything. If that sounds less exciting than cooking your find, remember that the point of this first day is to come home with better questions and an intact patch."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Morel of the Story: A Guide to Morel Mushrooms",
+      "url": "https://research.fs.usda.gov/download/treesearch/80155.pdf",
+      "publisher": "U.S. Forest Service, Natural Inquirer",
+      "purpose": "Warns that wild mushroom identification is difficult and that poisonous mushrooms may resemble edible species; it does not identify a particular specimen or give treatment advice."
+    },
+    {
+      "title": "Wild Mushroom Poisoning",
+      "url": "https://www.health.nsw.gov.au/environment/factsheets/Pages/wild-mushroom-poisoning.aspx",
+      "publisher": "NSW Health",
+      "purpose": "Advises contacting the local poison information service immediately after possible ingestion rather than waiting for symptoms. The contact number and health system are Australian, so this article directs readers to their own local service."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "spend-an-hour-watching-a-single-tree",
+    "learn-to-identify-10-bird-species-by-song",
+    "take-a-forest-bathing-walk"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

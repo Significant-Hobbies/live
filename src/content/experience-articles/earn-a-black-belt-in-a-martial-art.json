@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "earn-a-black-belt-in-a-martial-art",
+  "slug": "earn-a-black-belt-in-a-martial-art",
+  "title": "Choose a Dojo for the Practice Behind the Belt",
+  "description": "Find a martial-arts school with a clear grading path, safe instruction, and feedback that treats a black belt as a learning milestone.",
+  "intent": "Helps a prospective student compare schools and understand why belt requirements belong to a specific art, instructor, and governing body.",
+  "sections": [
+    {
+      "heading": "Start with the art and its purpose",
+      "paragraphs": [
+        "Black belt does not mean the same thing across martial arts. Before looking for a school, decide whether you want striking, grappling, forms, self-defense, competition, or a combination. Visit classes in the art you are considering and observe how beginners are introduced to contact, how partners are matched, and whether students can ask questions without being mocked.",
+        "Ask the instructor what the first year is meant to teach, how students are evaluated, and what happens when someone needs more time. A thoughtful answer explains the curriculum and gives examples of feedback, rather than promising a quick belt. Your fit with the teacher and training culture matters more than the color on a shop window."
+      ]
+    },
+    {
+      "heading": "Ask for the actual grading pathway",
+      "paragraphs": [
+        "Find out who awards the rank: the instructor, a school association, a national federation, or another body. Ask whether there is a written syllabus and whether students must demonstrate technique, forms, sparring, teaching, knowledge, or service. Requirements differ across schools and styles, so write down the answer and compare it with the organization that recognizes the rank.",
+        "Judo offers a clear example of why grades need context. The International Judo Federation’s 2026 reform describes dan standards that include technical proficiency as well as knowledge of judo culture, history, and educational values. It calls first dan a beginning of more serious study, not a declaration of excellence. Other arts set their own criteria; do not assume judo’s rules apply to them."
+      ]
+    },
+    {
+      "heading": "Look for a safe way to become competent",
+      "paragraphs": [
+        "A legitimate school makes safety visible. Beginners learn how to stop, fall, tap, or disengage according to the art before intensity rises. Ask how injuries are handled, whether protective equipment is required, and what policies govern youth classes. Observe a class across levels: advanced students should be able to work carefully with new partners, not use them to prove toughness.",
+        "Training should make room for different bodies and starting points. A good instructor offers modifications and monitors pairings. If you see pressure to continue through pain, humiliation presented as discipline, or unexplained charges tied to grading, pause and seek another school. Skill grows through consistent practice and useful corrections, not through unsafe tests."
+      ]
+    },
+    {
+      "heading": "Use each grading as structured feedback",
+      "paragraphs": [
+        "After each assessment, ask what you can now do reliably and what needs more practice. Keep a training journal with one technique or principle to work on, a question for the teacher, and a note about how it felt with a partner. This makes a belt test a checkpoint in learning rather than a vague judgment about whether you are “good enough.”",
+        "Practice the exact basics your instructor identifies. In grappling, that may be balance and safe falling; in a striking art, stance, distance, and controlled combinations; in a form-based class, transitions and intent. These are examples, not universal requirements. The school’s syllabus and coaching should direct your work."
+      ]
+    },
+    {
+      "heading": "Let the milestone stay in perspective",
+      "paragraphs": [
+        "A black belt can mark a substantial commitment, but rank is not a promise of invulnerability, authority outside the art, or mastery of every situation. The IJF explicitly describes judo grades as markers in a continuing path rather than measures of personal worth. That perspective is useful whatever art you study: celebrate what you have learned and keep a beginner’s willingness to be corrected.",
+        "Your next action is to visit two schools, watch a beginner class, and ask each instructor to show the published grading path and safety policies. Choose the place where the expectations are clear, the practice is respectful, and you can imagine returning to train after the novelty of the first week fades."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Towards a Universal Reference for Judo Grades",
+      "url": "https://www.ijf.org/news/show/towards-a-universal-reference-for-judo-grades",
+      "publisher": "International Judo Federation",
+      "purpose": "Explains the 2026 judo grading context and that dan standards cover technical and cultural knowledge; first dan begins deeper study."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "earn-a-black-belt-or-equivalent-mastery",
+    "learn-non-contact-boxing-footwork-and-pad-skills",
+    "compete-in-a-national-championship"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

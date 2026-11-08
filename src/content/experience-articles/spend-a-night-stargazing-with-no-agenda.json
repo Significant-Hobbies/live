@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "spend-a-night-stargazing-with-no-agenda",
+  "slug": "spend-a-night-stargazing-with-no-agenda",
+  "title": "Let a night under the stars stay open-ended",
+  "description": "Choose a safe dark-sky place, prepare for a long night outside, and give yourself simple ways to notice the sky without a viewing checklist.",
+  "intent": "Help someone arrange a comfortable, safe, unstructured night of stargazing, distinct from planning around a specific meteor shower or astronomical target.",
+  "sections": [
+    {
+      "heading": "Choose a place that lets the sky stay wide",
+      "paragraphs": [
+        "Look for a place where the sky is open, access is permitted after dark, and you can remain safely for several hours. A public dark-sky site, observatory grounds during an open event, or a campsite with an unobstructed area can work. NASA’s stargazing guidance points out that a forest or canyon may be dark but still block a broad view, so check the horizon and tree cover on a daytime map or visit beforehand.",
+        "Dark skies are useful, but a remote location is not automatically safer or more enjoyable. Confirm parking, gate hours, toilets, weather exposure, and whether overnight access is allowed. If you are new to the site, go with someone or choose a managed place with clear visitor information. Tell a trusted person where you will be and when you expect to return."
+      ]
+    },
+    {
+      "heading": "Decide what “no agenda” means",
+      "paragraphs": [
+        "You might leave the telescope, target list, and photography plan at home. Or bring binoculars and a star chart but let them stay in the bag unless curiosity turns toward a particular object. The point is to remove the feeling that you must complete a list. A folded blanket, chair, warm drink, and small notebook can be enough.",
+        "A notebook can hold observations without turning the night into a task: one constellation you noticed, the time a cloud crossed, a sound from the field, or a question you want to look up later. If naming constellations feels relaxing, do it; if it pulls your attention away from the view, set the chart aside."
+      ]
+    },
+    {
+      "heading": "Make darkness comfortable",
+      "paragraphs": [
+        "Bring warm layers, a dry place to sit, water, a snack, and a safe light for walking. Temperatures can drop after sunset, especially if you are sitting still. Check the forecast for cloud, wind, and precipitation, and leave if conditions become unsafe. If the site is exposed, know where shelter is before nightfall.",
+        "Limit bright lights that affect your own night vision and other visitors’ observing. Keep headlights off after parking where permitted and use only the light needed to move around safely. DarkSky International’s visitor resources stress checking the individual place’s details because protected dark-sky sites are operated by different managers. Follow their rules and avoid disturbing nearby wildlife or residents."
+      ]
+    },
+    {
+      "heading": "Notice one detail at a time",
+      "paragraphs": [
+        "Begin with the overall sky rather than immediately trying to identify everything. Notice which areas look brighter, how clouds change the visible pattern, or where the horizon becomes darker. After a few minutes, pick one region of sky and see what appears there. A single star, planet, or passing aircraft can become a point of attention without needing to be the night’s main event.",
+        "If you bring a companion, agree that conversation can pause without being awkward. You could each choose one thing to notice and share it when ready. Keep voices low, avoid shining lights toward other people, and respect the quiet of a place where others may have traveled to observe."
+      ]
+    },
+    {
+      "heading": "Leave the night gently",
+      "paragraphs": [
+        "Before you go, check the route back to the car or trailhead and make sure your group has not left a light or item behind. If conditions or fatigue make driving unsafe, use the backup plan you arranged earlier. A night outside should end with enough time to get home safely, rather than pressing on because you hoped to watch until dawn.",
+        "On the way home or the next morning, jot down one image or question that stayed with you. NASA’s general stargazing guide offers location advice but cannot predict local clouds or guarantee a dark sky. For a low-pressure first attempt, choose a familiar permitted location, check the Moon and forecast, and leave the telescope packed unless you genuinely want it."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How to Find Good Places to Stargaze",
+      "url": "https://science.nasa.gov/solar-system/skywatching/how-to-find-good-places-to-stargaze/",
+      "publisher": "NASA Science",
+      "purpose": "Supports choosing a site with a broad, open sky rather than assuming every dark landscape offers a clear horizon; current weather and access still require local checks."
+    },
+    {
+      "title": "Frequently asked questions",
+      "url": "https://darksky.org/resources/faq/0/",
+      "publisher": "DarkSky International",
+      "purpose": "Supports checking the map and the third-party operator's visitor information for individual certified places."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "watch-a-meteor-shower-from-a-dark-sky-location",
+    "spend-a-full-day-with-no-screens",
+    "watch-a-sunrise-and-a-sunset-in-the-same-day"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

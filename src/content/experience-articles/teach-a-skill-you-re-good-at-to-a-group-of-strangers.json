@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "teach-a-skill-you-re-good-at-to-a-group-of-strangers",
+  "slug": "teach-a-skill-you-re-good-at-to-a-group-of-strangers",
+  "title": "Plan a one-session workshop with one thing learners can do",
+  "description": "Turn a skill you know into a beginner workshop with one visible outcome, a short demonstration, guided practice, and room for questions.",
+  "intent": "How do I teach one practical skill to unfamiliar beginners in a single session without trying to cover an entire course?",
+  "sections": [
+    {
+      "heading": "Choose one small learner outcome",
+      "paragraphs": [
+        "Start with what a participant should be able to do by the end, not everything you know about the subject. A repair workshop might help each person identify a loose button and sew it securely; a drawing session might have each person sketch a simple object using two shapes. Keep the outcome visible, achievable within the time, and useful without requiring participants to become experts.",
+        "The CDC’s training-development guidance describes learning objectives as brief statements of what learners can do after a session and recommends action-oriented, specific and measurable outcomes. Its examples are for public-health training, but the core planning question transfers: what will a beginner demonstrate, make or explain before leaving? Use one outcome to decide what to leave out."
+      ]
+    },
+    {
+      "heading": "Design around a beginner’s first attempt",
+      "paragraphs": [
+        "Imagine a person who has never touched the tools or vocabulary. What could confuse them in the first five minutes? List the equipment, safety or access needs, unfamiliar words and assumptions you would otherwise skip. Provide an alternative for a participant who cannot comfortably use a particular tool or movement.",
+        "Choose an example that shows the whole skill in a small form. If you are teaching a simple knot, demonstrate on a short piece of rope before asking anyone to tackle a complex use. If you are sharing a basic cooking technique, show the motion with a small sample before expecting a full dish. Make the first outcome finishable even if the participant works slowly."
+      ]
+    },
+    {
+      "heading": "Use a short teach-practice-feedback loop",
+      "paragraphs": [
+        "Keep the session active. Introduce the goal, demonstrate one step at a time, then let learners try the same step while you circulate. Pause to ask what they notice and invite questions before moving on. A small practical result gives people something to take away and gives you a natural way to check whether your explanation made sense.",
+        "Plan a brief feedback moment that is kind and specific. Instead of “good job,” name what worked—“you kept the fabric tension even”—then offer one next adjustment. Ask permission before taking over someone’s work. Some learners want a quiet demonstration; others learn by asking questions. Offer more than one route where possible, without forcing anyone to perform publicly."
+      ]
+    },
+    {
+      "heading": "Make the group feel welcome",
+      "paragraphs": [
+        "When teaching strangers, establish the room before the lesson starts. Greet participants, explain where materials and facilities are, tell people how to ask for help, and make clear that beginners are expected. If the group includes different experience levels, invite people to share what they already know without making them prove it.",
+        "Decide what information you will collect and why. A sign-up form might ask about access needs and previous experience, but avoid gathering sensitive details you do not need. Ask permission before photographing or sharing participants’ work. Tell the host or venue what you need for setup, cleanup and safety, and agree on who handles registration or any participant fees."
+      ]
+    },
+    {
+      "heading": "Keep the first workshop modest",
+      "paragraphs": [
+        "Set a realistic group size based on the equipment, space and amount of individual feedback you can provide. A small group is easier to support than a packed room when tools need supervision. If the skill involves physical risk, chemicals, food safety or specialized equipment, teach only within your qualifications and use an appropriate supervised venue; do not improvise instructions beyond your competence.",
+        "After the session, ask one or two concrete questions: What could you do at the end that you could not do at the beginning? Which instruction or step was unclear? What would you want more time to practice? Use the answers to revise the next session, not to claim that every learner mastered the skill. Your next step is to write the one-sentence outcome and invite a few beginners to try a short pilot."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Design Training: Learning Objectives",
+      "url": "https://www.cdc.gov/training-development/php/about/design-training-learning-objectives.html",
+      "publisher": "Centers for Disease Control and Prevention",
+      "purpose": "Supports a learner-centered, specific and demonstrable workshop outcome; CDC examples address public-health training, not every informal workshop."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "teach-a-class-or-course",
+    "support-a-computer-learning-session-through-a-community-program",
+    "teach-english-in-a-developing-country"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

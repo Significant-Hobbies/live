@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "build-a-chain-reaction-machine-from-household-objects",
+  "slug": "build-a-chain-reaction-machine-from-household-objects",
+  "title": "Debug the gaps between steps in a chain-reaction build",
+  "description": "Plan a household chain reaction around one safe final action, test each transfer separately, and diagnose the exact gap when a domino, ramp or lever fails.",
+  "intent": "How to design and debug a reliable chain reaction using transfers between mechanisms, with specific failure diagnosis and household-scale safety limits.",
+  "relatedExperienceSlugs": [
+    "build-a-hand-cranked-cardboard-automaton",
+    "light-up-a-paper-circuit-card",
+    "test-a-paper-glider-with-controlled-design-changes"
+  ],
+  "sources": [
+    {
+      "title": "The Ultimate Chain Reaction Challenge",
+      "url": "https://www.npl.co.uk/skills-learning/outreach/the-ultimate-chain-reaction",
+      "publisher": "National Physical Laboratory",
+      "purpose": "Shows chain-reaction builds as a sequence of steps and energy exchanges, useful for planning distinct mechanisms rather than a single uncontrolled fall."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Choose an ending before the first domino",
+      "paragraphs": [
+        "Pick a gentle final action that can happen on a tabletop: lift a paper flag, ring a small bell, or slide a note into view. Then work backward from that ending. If the last step needs a pull, ask what object can provide that pull; if it needs a tilt, decide what falling weight can turn the lever. A clear ending gives the build a purpose.",
+        "The National Physical Laboratory’s chain-reaction challenge frames the machine as a set of steps and energy exchanges. Borrow that way of thinking, but keep your own build small. Avoid flames, glass, heavy objects, mains electricity, or anything that could tip furniture or hit a person. Household objects can still surprise you when a rolling marble misses its cup."
+      ]
+    },
+    {
+      "heading": "Make each transfer visible",
+      "paragraphs": [
+        "Sketch a short sequence as boxes and arrows: a card tips a book, the book releases a ball, the ball knocks a block, the block pulls a string. Each arrow is a transfer that needs a contact point, enough movement and a stable support. If you cannot point to where one object touches the next, there is probably a gap in the design.",
+        "Build the ending mechanism first and test it with your hand. Then add the preceding step and trigger it directly. A ramp that works when you place a ball at its start may fail when another object drops it from too high or too far sideways. Use folded paper, tape and books as adjustable guides before making a permanent-looking structure."
+      ]
+    },
+    {
+      "heading": "Test one link, not the whole machine",
+      "paragraphs": [
+        "Label the steps with removable notes. Trigger step one and watch the exact handoff to step two. If step two does not start, leave the rest of the machine untouched and adjust only that interface: the ramp angle, the distance between dominoes, or the height at which a tab is released. A successful test is repeatable from the same starting position.",
+        "Once the first link works, add the next one and test the combined pair. This is slower than building the whole contraption in a burst, but it saves time spent searching through a collapse where several things moved. If you change an upstream ramp, re-test downstream links because the incoming speed or direction may have changed."
+      ]
+    },
+    {
+      "heading": "Diagnose a failure by the motion you saw",
+      "paragraphs": [
+        "When a ball rolls past a cup, check its path and launch point before widening the target. When dominoes stop early, examine spacing and whether one block is leaning. When a string slips off a spool, change the route or anchor rather than adding a stronger pull. Use a phone video only if the people in the room agree; slow playback can show the first transfer that failed.",
+        "Make one adjustment at a time and write it down. “Raised the left end of the ramp” gives you a reversible experiment; “made it better” does not. If the mechanism becomes less reliable, restore the previous setting. A chain reaction can be entertaining because it is delicate; the goal is not to eliminate all surprise but to make the important transitions dependable."
+      ]
+    },
+    {
+      "heading": "Give the build a soft landing",
+      "paragraphs": [
+        "Check the table and floor for rolling objects, pinched fingers, unstable stacks and trip hazards before every run. Keep the build away from pets, hot drinks and the table edge. Use small, light objects, secure only what needs to stay still, and keep the final action harmless. A low-energy chain can still damage a lamp if it launches a hard object across the room.",
+        "Invite each builder to describe one handoff they designed and one they had to change. The NPL’s challenge makes energy exchange a visible part of the machine; you can do the same with a quick diagram beside your build. Finish with one careful run from the agreed starting point, then dismantle the machine and return the household objects to use."
+      ]
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

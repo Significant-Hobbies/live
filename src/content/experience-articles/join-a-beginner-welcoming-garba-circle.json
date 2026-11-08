@@ -1,0 +1,64 @@
+{
+  "experienceSlug": "join-a-beginner-welcoming-garba-circle",
+  "slug": "join-a-beginner-welcoming-garba-circle",
+  "title": "How can a first-time dancer join a beginner Garba circle respectfully?",
+  "description": "Ask a local teacher or host to show the entry step, follow the circle’s pace, and learn how the event’s setting shapes the dance.",
+  "intent": "A respectful beginner plan for joining a Garba circle by learning from a local practitioner, understanding the event’s context and adapting your participation.",
+  "sections": [
+    {
+      "heading": "Find a host who welcomes beginners",
+      "paragraphs": [
+        "Look for a class, community group or event that says it welcomes newcomers, and ask who will teach the first steps. The Indian Ministry of Culture’s public directory of folk-dance artists and groups includes Gujarat dance entries and links to performances; it can help you find a starting point, though it is not a beginner class listing. Ask a local teacher or organizer about the specific event you plan to attend.",
+        "Garba is not one uniform choreography that every circle follows. Music, steps, dress and the occasion can differ. Tell the host you are new and ask whether you should observe a round before joining, what footwear is appropriate and whether there are any customs you should know. Respect the host’s answer if they recommend a different session."
+      ]
+    },
+    {
+      "heading": "Learn the simplest movement from a practitioner",
+      "paragraphs": [
+        "Ask the teacher to show a short step at the speed they use for beginners. Stand where you can see the feet and the direction of travel, then practise the movement without trying to add turns or claps immediately. Follow the group’s orientation and spacing. A person who has learned from the local community can explain which movement belongs to that circle and how it changes with the song.",
+        "The Ministry directory can point you toward named performers and groups, but a video is not a substitute for in-person instruction. If you watch a performance online, observe the rhythm and formation rather than trying to copy every flourish. Ask permission before filming a class or sharing a participant’s image."
+      ]
+    },
+    {
+      "heading": "Learn the circle before entering it",
+      "paragraphs": [
+        "Watch how the circle travels and where people join or exit. Notice whether the group uses a steady line or changes direction as the music develops. Start at the place the host suggests and leave enough space for the people around you. If you lose the step, keep a small movement or pause at the edge until you can rejoin safely.",
+        "Avoid cutting across the circle to reach a friend or accelerating to catch up. A moving group needs predictable spacing. If you feel dizzy, fatigued or uncomfortable, step out where the organizer indicates, take a break and return only if you want to. Enjoyment does not require matching the fastest dancer."
+      ]
+    },
+    {
+      "heading": "Ask about the setting and its meaning",
+      "paragraphs": [
+        "Before the session, ask whether the event is part of a festival, worship, a cultural gathering or a class. Garba has ritual and community contexts, and the host can explain how this particular circle relates to them. Do not assume a performance costume or movement is suitable for every setting. If an organizer asks for a specific form of respect, follow their guidance.",
+        "You can ask a brief question after the dance rather than interrupting a song to request explanations. Listen without turning the answer into a debate about whether your experience matches a video. A teacher’s description of their own circle is more useful than a generic internet checklist."
+      ]
+    },
+    {
+      "heading": "Leave with one step to practise",
+      "paragraphs": [
+        "Thank the host and name one thing that became clearer: the entry point, a repeated foot pattern or how the circle changed speed. Ask whether there is a beginner class or another community event where you can continue learning. If you share a photo, get permission from the people shown and credit the group if it requests that.",
+        "A good next step is to practise the first movement with the teacher’s permission, then return to the same circle and notice what feels more familiar. Keep your notes focused on what the host taught you and what you would like to ask next. That preserves the local context instead of turning Garba into a generic dance challenge."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Folk Dance – Artists/Groups Empanelled",
+      "url": "https://www.indiaculture.gov.in/sites/default/files/pdf/Folk_Dance_as_on_01.03.2024-223-255.pdf",
+      "publisher": "Ministry of Culture, Government of India",
+      "purpose": "Supports the existence of a public directory of folk-dance artists/groups with Gujarat dance performance references; used as a route to local practitioners, not as a cultural instruction manual."
+    },
+    {
+      "title": "Garba of Gujarat",
+      "url": "https://ich.unesco.org/en/RL/garba-of-gujarat-01962",
+      "publisher": "UNESCO Intangible Cultural Heritage",
+      "purpose": "Intended as cultural context for the Gujarat dance; page text was blocked by an anti-bot challenge during this check."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "learn-a-beginner-kolam-from-a-practitioner",
+    "learn-madhubani-linework-from-a-practicing-artist"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

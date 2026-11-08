@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "compose-an-original-piece-of-music",
+  "slug": "compose-an-original-piece-of-music",
+  "title": "Turn a short musical motif into a complete instrumental sketch",
+  "description": "Start with a small rhythmic or melodic cell, vary it in a few ways and arrange a short instrumental piece with a clear beginning and ending.",
+  "intent": "How can a short instrumental idea become a complete piece? This gives a motif-led composing exercise distinct from writing lyrics or planning a release.",
+  "sections": [
+    {
+      "heading": "Capture one small musical cell",
+      "paragraphs": [
+        "Begin with a sound you can remember: three notes, a rhythm tapped on a table, a bass movement, or a chord colour. Record it immediately by humming into a phone or writing a simple note pattern. Keep the first version deliberately small. Berklee’s listening guidance breaks music into melody, chords, lyrics and groove, and describes a motif as a recurring pitch-and-rhythm idea. That gives you a useful lens: your raw idea can be rhythmic even before it becomes a tune.",
+        "If you play an instrument, improvise for a minute and then stop. Listen back and mark one small fragment that still interests you. If you do not read notation, use a voice memo and write approximate syllables or draw a contour: rising, held, falling. Do not wait until you can transcribe perfectly. The goal is to preserve the seed so you can work on it rather than relying on memory."
+      ]
+    },
+    {
+      "heading": "Make variations that change one feature",
+      "paragraphs": [
+        "Repeat the motif, then make a second version with one deliberate change. Shift its ending note, leave a rest, move it to a lower register, stretch its final sound, or alter the rhythm while keeping the contour. Compare versions side by side. If every part changes at once, the relation disappears and the listener hears a new idea rather than a development. If nothing changes, repetition may feel static.",
+        "Try a call-and-response shape: the first phrase presents the motif, and the second answers it with a related fragment. A held note after a busy pattern creates contrast without adding new material. A brief silence can also act like a phrase boundary. Make a rough recording for each variation, because the timing that feels natural while playing may shift when repeated."
+      ]
+    },
+    {
+      "heading": "Choose a small arrangement",
+      "paragraphs": [
+        "Use two roles rather than many instruments: one carries the motif, the other establishes pulse, harmony or a drone. A keyboard could play a repeating low note under a sung line; a guitar could answer a flute with short fragments; a hand drum can mark a pattern while a melody rests. The roles need to leave space for each other. If every instrument plays the same rhythm and register, the arrangement becomes crowded even when the notes are simple.",
+        "Choose a comfortable tempo and record a few bars. Leave the piece in the key or range that makes the motif easy to perform. You can move it later if the chosen instrument cannot reach a note. When arranging, listen to the bass and melody separately, then together. A bass note that changes beneath the same melody can change its character; use that as a choice rather than a preset formula."
+      ]
+    },
+    {
+      "heading": "Give the piece a shape",
+      "paragraphs": [
+        "A useful short form might be opening statement, variation, return. Begin with a single instrument, bring in the supporting part for the variation, then let the motif return with one new colour. Alternatively, start with the accompaniment and introduce the melody later. The form should make the listener notice a change and recognize what has returned. Sketch this as three labels before recording.",
+        "The ending does not need a grand cadence. It can be the motif slowed down, a final held note, a pause before one last sound, or a clean stop after the returning idea. Record two endings and compare which one feels intentional. A fade-out is not automatically a conclusion; it can simply stop the sound from being heard."
+      ]
+    },
+    {
+      "heading": "Listen, revise and keep the source",
+      "paragraphs": [
+        "Play the sketch once without stopping. Note where the motif is clear, where the accompaniment masks it and which transition feels accidental. Change one thing, then record again. Save the initial idea beside the revision so you can trace how it developed. A voice memo, a handwritten bar, or a simple sequencer project can all serve as a record; notation software is optional until you need it.",
+        "If you use a reference recording, study a narrow feature—perhaps how a repeated phrase changes on its return—then close it and write your own material. Your own recording or notation is the working source. Label its date and instrumentation, and ask a musician to identify the motif after one listen. If they can hum it back, the piece has a recognizable center."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "4 Critical Listening Tips for Songwriters",
+      "url": "https://online.berklee.edu/takenote/four-critical-listening-tips-for-songwriters/",
+      "publisher": "Berklee Online",
+      "purpose": "Supports using motif, rhythm and pitch as distinct parts of melody and the value of listening for recurring musical ideas."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "learn-to-play-a-musical-instrument",
+    "record-a-song-and-release-it"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

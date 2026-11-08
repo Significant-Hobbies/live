@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "write-the-story-of-how-you-became-who-you-are",
+  "slug": "write-the-story-of-how-you-became-who-you-are",
+  "title": "Write a short story about how you became yourself",
+  "description": "Build a short origin story from a few turning-point scenes, check what you can verify, and leave room for the way your interpretation has changed.",
+  "intent": "Help someone write a short, personal origin story through selected scenes and present-day interpretation, distinct from a book-length memoir.",
+  "sections": [
+    {
+      "heading": "Choose a question, not your whole life",
+      "paragraphs": [
+        "A short origin story does not need to explain every year. Start with one question: How did I come to care about this work? When did I stop treating home as temporary? What made me choose a different kind of relationship? The question gives the story a shape and helps you leave out details that do not belong.",
+        "List a handful of moments that might answer it. Include an ordinary scene, not only a dramatic turning point: a bus ride, a kitchen conversation, a first day at work, or a small choice repeated over time. For each moment, note what you remember directly and what you know from a letter, photograph, record, or another person."
+      ]
+    },
+    {
+      "heading": "Build the story from scenes",
+      "paragraphs": [
+        "Choose two or three scenes that changed what you did next. Write what a reader could see or hear: the place, the people present, a concrete object, and the decision or uncertainty in the moment. Then add what you understood then. Keep the scene grounded in what you actually remember rather than inventing dialogue or certainty to make it dramatic.",
+        "A useful short structure is: the question you carried, a scene that sharpened it, a choice or relationship that changed your direction, and what you understand now. This is only a draft frame. If the scenes do not fit neatly, follow the order that makes the most sense to you rather than forcing a tidy life lesson."
+      ]
+    },
+    {
+      "heading": "Separate memory from evidence",
+      "paragraphs": [
+        "Memory is not a recording of every detail. The Oral History Association notes that oral history relies on recollection filtered through changing personal and social context. That observation can help a writer stay honest: label an exact date as verified only when you checked it, and use language such as “I remember” when describing a remembered scene. You can preserve the importance of a memory without claiming certainty about every detail.",
+        "Look through calendars, photographs, letters, or public records if a detail matters to the story. Ask someone who was there what they recall, but do not use their memory to erase your own perspective. Two people can remember the same family event differently. Your story may acknowledge a disagreement rather than pretending there is one uncontested account."
+      ]
+    },
+    {
+      "heading": "Give other people room and privacy",
+      "paragraphs": [
+        "A story about your development will include people who are still living. Use only details needed to explain your own choices, and consider changing or omitting identifying information when a private event does not need to be public. Ask permission before quoting a private message or sharing someone else’s sensitive experience. Your right to tell your own story does not automatically give you permission to expose another person’s.",
+        "If the story is just for you, say so in the draft. If you plan to share it with family, friends, or a wider audience, make a separate pass for accuracy, consent, and unintended disclosure. Avoid presenting relatives as characters whose only purpose was to teach you a lesson; include their own context where you know it and leave uncertainty visible where you do not."
+      ]
+    },
+    {
+      "heading": "End with the interpretation you hold today",
+      "paragraphs": [
+        "After the last scene, explain what you think now and what remains unresolved. Maybe an early choice looks different after later experience; maybe you can see several influences rather than a single turning point. A thoughtful ending can hold that complexity instead of claiming that everything happened for a reason.",
+        "Read the draft aloud and underline any sentence that sounds more certain than your evidence. Cut the material that belongs to a future memoir, keep one detail that only you could supply, and make the ending answer the opening question as honestly as you can today. Your next step is to write the opening scene for twenty minutes without trying to publish it."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "OHA Core Principles",
+      "url": "https://oralhistory.org/oha-core-principles/",
+      "publisher": "Oral History Association",
+      "purpose": "Supports the distinction between remembered recollection and an objective recording, the role of changing personal and social context, and consent and care around sharing others' stories; it is oral-history guidance, not a creative-writing formula."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "write-your-memoir",
+    "make-a-timeline-of-the-five-most-important-moments-of-your-life",
+    "write-a-letter-to-your-younger-self"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "tibet-and-the-tibetan-plateau",
+  "slug": "tibet-and-the-tibetan-plateau",
+  "title": "Plan a plateau journey around access, pace and place",
+  "description": "A grounded way to plan travel across Tibet and the plateau: distinguish cultural visits from remote routes, check access and prepare for uncertainty.",
+  "intent": "How do I plan a meaningful Tibet or Tibetan Plateau journey while recognizing access, altitude and emergency-support limits?",
+  "sections": [
+    {
+      "heading": "Start by defining the place you mean",
+      "paragraphs": [
+        "“Tibet and the Tibetan Plateau” can describe a vast region rather than one itinerary. Before comparing trips, decide whether your interest is a particular city and monastery, a highland landscape, or a longer overland route. These are different experiences with different access, transport and support needs. Write down a small number of places that matter to you and check whether they are actually open to the kind of visitor you are.",
+        "Use a current government advisory for your nationality and the official authorities responsible for permits and transport. The U.S. State Department currently warns of extra security measures and limited consular services in Tibetan Autonomous Prefectures, and severe limits on its consular officers in the Tibet Autonomous Region. That is U.S.-specific information, not a substitute for the advice that applies to you."
+      ]
+    },
+    {
+      "heading": "Separate cultural focus from long-distance ambition",
+      "paragraphs": [
+        "A short, place-based visit can center on architecture, religious practice, local food and conversation, where those visits are permitted. A long plateau crossing adds distance, weather exposure and dependence on transport. Do not treat the second as a more complete or more authentic version of the first. Choose the format that leaves enough time and practical support for the places you want to understand.",
+        "For a cultural focus, select one location and one question: how does a monastery function as a living place, or how do buildings respond to their setting? Learn visitor etiquette and photography rules before entering religious sites. For a route focus, ask an authorized operator for the exact proposed stops, road conditions contingency, overnight elevations, communications plan and what happens if a section becomes inaccessible."
+      ]
+    },
+    {
+      "heading": "Treat altitude and remoteness as planning facts",
+      "paragraphs": [
+        "High-elevation travel is not just a scenic upgrade. The State Department notes limited information about medical and emergency services in the Tibet Autonomous Region and specifically mentions risk during mountain sports. That warning is a reason to discuss your personal health and travel plan with a clinician familiar with high-altitude travel before committing, especially if you have a relevant condition or take regular medication. This guide cannot assess your individual risk.",
+        "Ask the operator what medical support is realistically available, how an evacuation is arranged, whether the itinerary can slow or shorten, and what insurance exclusions apply. A vague answer is useful information. Do not use someone else’s pace, symptoms or altitude schedule as a model for your body; seek professional advice and follow local instructions."
+      ]
+    },
+    {
+      "heading": "Build a flexible route, not a string of promises",
+      "paragraphs": [
+        "The U.S. advisory says authorities may impose curfews and travel restrictions on short notice and that security checks and police presence are common in the regions it covers. Plan for a route to change: avoid connecting a remote journey to a nonrefundable departure with no buffer, keep copies of documents accessible, and establish a check-in arrangement with someone at home. Verify permitted access and entry documents directly with the relevant authorities before booking.",
+        "A responsible itinerary includes a meaningful fallback: a shorter stay in an accessible town, a remote cultural study session, or postponing the trip if conditions do not support the original plan. A fallback is not a failure. It keeps your interest in the region intact without assuming that a traveller can override a closure or local rule."
+      ]
+    },
+    {
+      "heading": "Choose your next action",
+      "paragraphs": [
+        "Write a one-page brief with your intended region, the cultural or landscape question you want to explore, dates that can move, health questions for a clinician, and the official sources you need to check. Ask operators to respond to the actual route and emergency questions rather than sending a generic package. Compare replies for specificity and avoid paying until you understand what permissions, transport and support are included.",
+        "The State Department page cited here is updated and relevant to U.S. citizens; it does not give a complete access map, medical protocol, permit guide or assurance that any attraction is open. Recheck the government advice for your own citizenship and the current requirements from Chinese authorities close to departure. Then make a go, change or postpone decision based on what is verifiable."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "China Travel Advisory",
+      "url": "https://travel.state.gov/en/international-travel/travel-advisories/china.html",
+      "publisher": "U.S. Department of State",
+      "purpose": "Supports U.S.-specific warnings about security checks, short-notice restrictions, limited consular service and limited emergency-service information in the Tibet Autonomous Region."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "climb-a-mountain-over-4-000-metres",
+    "trek-to-everest-base-camp"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

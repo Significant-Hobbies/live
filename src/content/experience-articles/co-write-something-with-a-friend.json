@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "co-write-something-with-a-friend",
+  "slug": "co-write-something-with-a-friend",
+  "title": "How to make a shared draft feel like both of you",
+  "description": "Plan a short co-writing session with clear roles, kind editing rules and an agreement about credit, privacy and what happens to the finished piece.",
+  "intent": "A practical way to begin and finish a small shared piece while protecting the friendship and agreeing who can revise or share it.",
+  "sections": [
+    {
+      "heading": "Choose a form that can be finished",
+      "paragraphs": [
+        "A first collaboration works best when its edges are visible. Pick something a reader can finish in one sitting: a two-page scene, a letter to a mutual friend, a short comic script, or a poem made from alternating lines. Bring two or three possible subjects each, then choose one both of you actually care about. Write a one-sentence purpose, such as “make our friend laugh about the lost-train weekend.” That sentence helps you notice when an interesting tangent has become a different project.",
+        "Set a modest length and a stop time before opening a document. A complete 600-word piece with a clear ending is more satisfying than an ambitious anthology that leaves one person waiting for the other."
+      ]
+    },
+    {
+      "heading": "Agree on the working rules before the first line",
+      "paragraphs": [
+        "Decide whether you will alternate paragraphs, interview one another and assemble the answers, or draft separately and combine. No method is inherently fairer; the important thing is knowing what each person is agreeing to. In a shared document, use comments for questions and suggestions, and avoid silently replacing a passage your friend wrote. Mark a disputed sentence with both versions and keep moving until the draft exists.",
+        "Talk about authorship in ordinary language: whose names will appear, whether either person may use a section separately, who has final say, and whether the piece will stay private. The U.S. Copyright Office describes a joint work as contributions intended to merge into a unitary whole, while legal rights depend on facts and applicable law. A simple written agreement avoids assumptions; it is not a substitute for legal advice when rights or money matter."
+      ]
+    },
+    {
+      "heading": "Draft in passes, not in a tug-of-war",
+      "paragraphs": [
+        "Use the first pass to collect material, not to prove whose sentence is better. One person can write a rough opening while the other supplies examples, or each can write a short scene from a different point of view. Put brackets around gaps such as “[what did the station smell like?]” instead of stopping to research every detail. Then read from the beginning and identify what the piece is trying to do.",
+        "For the editing pass, take turns naming one thing that works and one place that needs attention. Ask “what do you want this line to make the reader feel?” before cutting it. If your styles differ, preserve that difference where it adds texture; smooth only accidental jumps that make the meaning hard to follow."
+      ]
+    },
+    {
+      "heading": "Use disagreement as information",
+      "paragraphs": [
+        "A disagreement about tone may reveal that you imagined different readers. A disagreement about a memory may mean each of you remembers a different part, not that one is dishonest. Separate facts you can check, recollections that should be presented as one person’s memory, and creative choices where either version could work. If one person feels exposed, pause and ask whether the material belongs in a shared piece at all.",
+        "You can also divide the work by strength without turning the arrangement into a hierarchy: one person may enjoy shaping dialogue, the other finding the ending. Check that both still recognize their contribution in the finished draft. If a disagreement stops being fun, save a copy and take a break rather than forcing a resolution while tired."
+      ]
+    },
+    {
+      "heading": "Finish, credit and keep a clean copy",
+      "paragraphs": [
+        "Read the piece aloud together. Listen for a missing transition, repeated setup, or a joke that works only because you both know the backstory. Make the last edits together, save a dated copy, and agree on a filename that says what the piece is. Before sending it to anyone, ask again: “Are you comfortable with this audience seeing it?” Consent to write together is not automatic consent to publish.",
+        "A useful first session ends with a complete draft and a next step you can name: leave it private, ask the intended recipient whether they want it, or schedule one final edit. Save both the working version and the agreed final version. Then each write down one contribution the other brought that you would not have thought of alone."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Compendium of U.S. Copyright Office Practices, Chapter 500",
+      "url": "https://www.copyright.gov/comp3/redlines/chap500.pdf",
+      "publisher": "U.S. Copyright Office",
+      "purpose": "Defines joint work as contributions intended to merge into a unitary whole; explains the Copyright Office cannot give case-specific legal advice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "write-something-and-publish-it",
+    "write-heartfelt-letters-to-10-people-who-changed-your-life",
+    "write-a-letter-to-someone-who-changed-your-life"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

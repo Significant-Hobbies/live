@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "adopt-or-foster-a-child",
+  "slug": "adopt-or-foster-a-child",
+  "title": "How to explore fostering and adoption with care",
+  "description": "Compare fostering and adoption through a licensed local agency, learn what assessment involves and center a child’s needs before making a commitment.",
+  "intent": "A child-centered first inquiry into fostering versus adoption, emphasizing local agency guidance, preparation and the different permanence questions.",
+  "sections": [
+    {
+      "heading": "Clarify what you are considering",
+      "paragraphs": [
+        "Fostering and adoption can both create a family relationship, but they are different legal and practical paths. Foster care generally responds to a child’s immediate care needs while public agencies work toward a permanency plan; adoption establishes a permanent legal parent-child relationship. Individual cases and terminology vary by jurisdiction. Before deciding which route sounds right, ask a licensed local agency to explain its current role, the children it serves and what decisions caregivers can make.",
+        "A useful reflection is to write down what kind of support you can realistically offer: short-term care, caring for siblings together, a particular age range, or long-term parenting. Avoid treating children as a route to fulfil an adult goal. The question is what the child needs and whether your household can meet it with sustained support."
+      ]
+    },
+    {
+      "heading": "Start with an official local agency",
+      "paragraphs": [
+        "Use the government child-welfare department or a licensed adoption/foster agency as your first contact, rather than a social-media post or an intermediary who promises a fast placement. Ask which agency licenses caregivers, what orientation looks like, whether the first information session creates an obligation, and how to raise concerns about ethical practice. For adoption, ask what types of adoption the agency handles and which legal professional should explain the process.",
+        "In the United States, the Children’s Bureau’s Child Welfare Information Gateway explains that foster-parent approval includes a home study of the applicant, family and home environment. Its materials also show that requirements and agency procedures differ by state. The detailed state information in one source is dated, so confirm every current eligibility, training and timing rule with the relevant agency."
+      ]
+    },
+    {
+      "heading": "Prepare for assessment rather than trying to perform",
+      "paragraphs": [
+        "A home study is a process for understanding whether a home can safely meet a child’s needs, not a decorating contest. Ask what records and conversations it involves, who in the household participates, how references are used, and how the agency handles privacy. The U.S. guidance describes interviews, visits and background checks as common parts of assessment; exact requirements vary. Be truthful about finances, health, household stress and support rather than guessing what answer an assessor wants.",
+        "Ask about training on child development, grief, separation, cultural identity, trauma-informed caregiving, school coordination and working with caseworkers or birth family. Those subjects matter because children may have relationships, histories and needs that adults cannot know before placement. Training should help you make an informed decision, not pressure you to say yes."
+      ]
+    },
+    {
+      "heading": "Discuss support and limits before a placement",
+      "paragraphs": [
+        "Ask how respite, caseworker access, healthcare decisions, school enrollment, visits with relatives, emergency support and financial reimbursement are handled. A fostering agency should explain how you can reach the child’s team and what your responsibilities are. Make a household plan for work schedules, childcare, transportation and how other children will be supported. The support plan should be specific enough that you know whom to call on an ordinary difficult day.",
+        "If an agency cannot explain its oversight, costs or complaint process, pause and speak to the government licensing authority. In adoption, get independent legal advice on any agreement, especially cross-border or private arrangements. Do not rely on a verbal promise about eligibility, contact or a child’s future; ask the responsible professional to explain what is legally enforceable."
+      ]
+    },
+    {
+      "heading": "Take one low-pressure next step",
+      "paragraphs": [
+        "Choose one official agency and attend an information session with questions prepared. You might ask: What are the current steps? What needs do children in this area have? What support continues after placement? What does the agency expect if reunification is the plan? What costs or legal advice should I budget for? You can decide that fostering or adoption is not right for your household after learning more; an inquiry is not a promise.",
+        "If you move forward, keep the child’s privacy at the center. Do not post placement details, photographs or sensitive history without authorization. If the child’s safety or wellbeing concerns you, use the caseworker and required reporting channels immediately. The best preparation is honest reflection followed by current guidance from professionals responsible for the child’s welfare."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Home Study Requirements for Prospective Foster Parents",
+      "url": "https://artifacts.childwelfare.gov/public/documents/home-study-requirements-prospective-foster-parent.pdf?VersionId=E3.Cqzr4MvPJclcNI7F4k6bKoxzHrPsn",
+      "publisher": "Child Welfare Information Gateway, U.S. Department of Health and Human Services",
+      "purpose": "Describes foster-care home-study approval and common assessment elements; the document itself warns that state laws and policies vary and its specific state details are dated."
+    },
+    {
+      "title": "Adoption: Considering Your Options and Making a Plan",
+      "url": "https://artifacts.childwelfare.gov/public/documents/adoption-considering-options-making-plan.pdf?VersionId=VBsI6nveM4v3eEBK2rHMzrV8jQBA3AGZ",
+      "publisher": "Child Welfare Information Gateway, U.S. Department of Health and Human Services",
+      "purpose": "Explains adoption home studies and encourages prospective families to understand agency and legal processes."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "fund-a-child-s-education-for-a-year",
+    "sponsor-a-refugee-family",
+    "make-a-family-emergency-contact-plan-together"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

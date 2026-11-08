@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "give-something-away-that-costs-you-something",
+  "slug": "give-something-away-that-costs-you-something",
+  "title": "Give in a Way That Helps the Recipient, Not Your Self-Image",
+  "description": "Choose a gift of time, money, or a meaningful possession by asking what the recipient needs and what you can give without strings attached.",
+  "intent": "How can I give away something that matters to me without turning generosity into a performance, an unsafe financial choice, or a gift the recipient does not want?",
+  "sections": [
+    {
+      "heading": "Decide what the giving is for",
+      "paragraphs": [
+        "Start with the person, group, or cause that would receive your gift. Ask what would actually be useful before offering an item or commitment. A sentimental object may matter more to you than to a recipient who needs storage space; a large public gesture may create pressure rather than help. Quiet, practical giving can be more respectful than a dramatic reveal.",
+        "Choose one form: time, a specific amount of money you can afford, a useful possession, or an opportunity you have the right to share. Do not promise an amount or ongoing role that would put your own essentials at risk. If you are uncertain, offer a smaller, clear commitment and let the other person accept or decline freely."
+      ]
+    },
+    {
+      "heading": "Make the cost real but bounded",
+      "paragraphs": [
+        "The cost does not need to be financial. You might give an afternoon to help a neighbor move, pass along a tool you use less often, or contribute a portion of discretionary income to a cause you have researched. Name the cost honestly before giving. If you would resent the gift or need the recipient to praise you for it, pause and choose something more sustainable.",
+        "A good boundary can make a gift more reliable: “I can help for two hours Saturday,” “I can contribute this amount once,” or “This chair is yours if you have room for it.” Clear terms prevent an offer from quietly becoming a debt or a recurring obligation neither person discussed."
+      ]
+    },
+    {
+      "heading": "Respect consent and practical details",
+      "paragraphs": [
+        "Ask before giving large, personal, or difficult-to-store items. Confirm pickup, delivery, condition, and any associated cost. For time, agree on the task and finish time. For money, give through the recipient's preferred verified channel and do not request access to private accounts or personal information you do not need.",
+        "If you are supporting a charitable organization, check its current needs and how it uses contributions. In the United States, the IRS provides a search tool for organizations eligible to receive tax-deductible charitable contributions and distinguishes gifts to people from deductible charitable contributions. Tax rules vary by country; do not assume a personal gift is deductible or claim a tax benefit without checking current local rules."
+      ]
+    },
+    {
+      "heading": "Let go without controlling the result",
+      "paragraphs": [
+        "Once you give, the recipient gets to decide how to use the gift within any clear agreement. Do not repeatedly ask whether it was the best possible choice or attach a demand for a particular public response. If a donated item is not useful, it is okay for the recipient to pass it on. If a volunteer task turns out to be different from what you expected, discuss the mismatch rather than using the gift as leverage.",
+        "You can still learn from the experience. Afterwards, ask yourself whether the gift met a real need, whether the boundary worked, and what you would change next time. That keeps generosity connected to attention and follow-through rather than self-punishment."
+      ]
+    },
+    {
+      "heading": "Choose a next action you can complete",
+      "paragraphs": [
+        "For an item, ask whether the recipient wants it before arranging transport. For time, propose a specific day and task. For a charitable contribution, verify the organization and its current instructions. Then complete the offer without making the recipient manage your feelings about it.",
+        "Your next step is to identify one useful thing you can give this week, ask first, and set a limit that you can honor comfortably."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Topic No. 506, Charitable Contributions",
+      "url": "https://www.irs.gov/taxtopics/tc506",
+      "publisher": "Internal Revenue Service",
+      "purpose": "Supports the U.S.-specific distinction between qualified charitable contributions and gifts to individuals, and recommends using IRS Tax Exempt Organization Search to check eligibility; not tax advice for other jurisdictions."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "volunteer-for-something-you-believe-in",
+    "do-a-group-charity-challenge-with-friends",
+    "leave-a-legacy-gift-to-a-charity-in-your-will"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

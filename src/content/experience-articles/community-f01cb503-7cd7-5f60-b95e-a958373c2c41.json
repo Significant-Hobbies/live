@@ -1,0 +1,64 @@
+{
+  "experienceSlug": "community-f01cb503-7cd7-5f60-b95e-a958373c2c41",
+  "slug": "have-a-dog",
+  "title": "Decide whether a dog fits your everyday life",
+  "description": "Work through time, home rules, care costs and backup plans before bringing a dog home, then choose a dog whose needs fit your household.",
+  "intent": "Help a prospective owner decide whether their household can meet a dog’s daily and long-term needs before choosing a source or breed.",
+  "sections": [
+    {
+      "heading": "Picture an ordinary weekday",
+      "paragraphs": [
+        "Before looking at puppies or adoption photos, write out a normal weekday from wake-up to bedtime. Who handles feeding, bathroom breaks, walks, play, grooming and training? What happens when everyone is at work or school? Dogs need regular companionship and activity, not only occasional weekend outings. The American Veterinary Medical Association advises choosing a dog suited to your home and lifestyle and treating care as a commitment for the animal’s life.",
+        "Make the plan concrete. If the household leaves early, identify who can manage the first outdoor break. If evening plans often run late, decide who can cover the dog’s needs. Consider stairs, elevators, neighbors, shared yards, noise sensitivity, housing rules and the size of the space. A yard does not replace interaction, and a small home does not automatically rule out a dog; match the individual dog’s needs to the actual routine."
+      ]
+    },
+    {
+      "heading": "Budget for care and interruptions",
+      "paragraphs": [
+        "List recurring costs: food, preventive veterinary care, routine appointments, grooming, training, supplies and local licensing. Add a separate emergency reserve and the cost of boarding or a sitter. Adoption or purchase is only the initial expense. Ask a veterinarian for a realistic estimate based on the kind of dog you are considering, and ask the shelter or rescue what care has already been provided and what records are available.",
+        "Plan for travel, illness and changes in work. Identify two people or services who could provide care if your primary plan fails. The AVMA recommends preparing for emergencies, arranging care when the owner is away and making alternate arrangements if ownership becomes impossible. That planning is not pessimism; it protects the dog from sudden uncertainty."
+      ]
+    },
+    {
+      "heading": "Choose for temperament and care needs",
+      "paragraphs": [
+        "Talk to a shelter, rescue or responsible breeder who knows the specific dog. Ask about energy, sociability, comfort with children or other animals, grooming, separation tolerance and known health needs. Describe your routine plainly, including how much time the dog would be alone. A capable shelter, rescue or breeder should be willing to discuss the individual dog’s temperament and needs with you. A breed label alone cannot tell you how an individual dog will fit.",
+        "If you have children, assign adults—not children—as the final owners of daily care. Children can participate with supervision, but an adult must be willing and available to handle the responsibility. Ask how the dog behaves around handling and household noise, and let the animal approach new people at a comfortable pace. Do not choose a dog to solve loneliness or a family disagreement; agree on the responsibilities first."
+      ]
+    },
+    {
+      "heading": "Check local rules before bringing a dog home",
+      "paragraphs": [
+        "Confirm that your housing allows the dog and check local ordinances for licensing, leash rules, noise, waste and containment. The AVMA specifically advises following local requirements, including licensing and leash rules. Requirements depend on where you live, so use the relevant city or county website and ask your landlord or housing association for written approval where needed.",
+        "Set up identification before the first walk: a properly fitted collar with current contact details and a plan for updating registration if you move. Ask the veterinarian what identification and preventive-care steps suit the dog. Keep a folder for adoption or purchase records, vaccination history and local registration details. This makes routine appointments and emergency handoffs easier."
+      ]
+    },
+    {
+      "heading": "Prepare the first week, not just the first day",
+      "paragraphs": [
+        "Before arrival, set up a quiet resting place, food and water bowls, cleaning supplies, secure storage for household hazards and a simple household schedule. Ask the dog’s current caretaker what food and routine the dog knows, then ask your veterinarian how to handle any transition. Give the dog time to settle rather than inviting a stream of visitors. A predictable first week makes it easier to notice what the dog is comfortable with and where support is needed.",
+        "Choose one initial training goal such as calmly responding to its name or settling in a designated resting area, and use a qualified trainer if you need help. The AVMA recommends appropriate socialization, training, exercise and mental stimulation, while reminding owners to consult veterinarians for health concerns and quality-of-life decisions. A dog is a relationship built through ordinary care. Before you commit, make the weekday plan, backup-care list and local-rules check; then meet dogs whose needs fit the life you can actually offer."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Selecting a Pet Dog",
+      "url": "https://avma.org/resources/pet-owners/petcare/selecting-pet-dog",
+      "publisher": "American Veterinary Medical Association",
+      "purpose": "Supports assessing lifestyle fit, daily and lifetime responsibility, adult supervision, activity needs and matching a dog’s temperament and needs."
+    },
+    {
+      "title": "Pet Ownership",
+      "url": "https://ebusiness.avma.org/files/productdownloads/Responsible-Pet-Ownership-EnglishColor.pdf",
+      "publisher": "American Veterinary Medical Association",
+      "purpose": "Supports local ordinance compliance, identification, costs, emergency planning, veterinary care, exercise, mental stimulation and lifelong commitment."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "dog-sled-in-alaska",
+    "prepare-enrichment-materials-for-an-animal-shelter"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

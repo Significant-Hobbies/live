@@ -1,0 +1,74 @@
+{
+  "experienceSlug": "the-dead-sea-jordan-israel",
+  "slug": "the-dead-sea-jordan-israel",
+  "title": "Choose one Dead Sea shore and verify the route",
+  "description": "The Dead Sea has separate Jordanian and Israeli access systems; choose a named authorized location and check border, park and site conditions.",
+  "intent": "Understand the Dead Sea as a cross-border landscape and choose a specific authorized visitor place, adding jurisdiction and current-access checks rather than another floating tutorial.",
+  "relatedExperienceSlugs": [
+    "swim-in-the-dead-sea",
+    "petra-jordan",
+    "wadi-rum-jordan"
+  ],
+  "sections": [
+    {
+      "heading": "Treat the Dead Sea as a region, not one beach",
+      "paragraphs": [
+        "The Dead Sea shore spans different jurisdictions, visitor sites and transport systems. For this guide, choose a single country for a day rather than assuming that nearby points on a map share the same entry rules. The Jordan Tourism Board lists Jordan-side destinations such as the Dead Sea and the Panorama Dead Sea Complex; on the Israeli side, the Nature and Parks Authority manages En Gedi Nature Reserve. These are distinct visits with different official booking and access channels.",
+        "Before booking, identify the exact facility or protected area and the country where it sits. Check your nationality’s current entry requirements, border crossing status and official travel advice. Do not plan an international crossing as a casual add-on; it can involve separate visa, transport and security considerations. This article does not assess current legal or security conditions for any traveler."
+      ]
+    },
+    {
+      "heading": "Pick an authorized place for the experience you want",
+      "paragraphs": [
+        "If your goal is a managed bathing area, compare the official Jordan Tourism Board’s Dead Sea visitor information with a named resort or public beach and confirm what access is available to day visitors. If your goal is a nature walk, choose an authorized reserve such as Wadi Mujib on the Jordan side or En Gedi in Israel only after checking its operator’s current access and safety rules. A nature reserve is not an informal route to the shoreline.",
+        "The Royal Society for the Conservation of Nature’s 2026 visitor document lists specific Mujib Biosphere Reserve trails and their guided or self-guided status. It is a concrete example of why “Dead Sea hike” is too vague: trail difficulty, supervision and booking vary by route. Confirm directly with RSCN before traveling; do not rely on last season’s hours or fee."
+      ]
+    },
+    {
+      "heading": "Compare coast, canyon and viewpoint days",
+      "paragraphs": [
+        "A resort or managed public beach day can be mostly rest; a canyon trail or reserve visit is a separate physical activity that may require footwear, a guide or advance reservation. Use a designated public viewpoint for a landscape overview, then decide whether to visit a managed bathing site or reserve on another day rather than trying to make every stop fit one outing.",
+        "On the Israeli side, En Gedi is an oasis reserve overlooking the Dead Sea, with trails and archaeological remains. The Nature and Parks Authority posts changes after flood events and can close or modify routes. That is a practical reminder to check the specific reserve page on the day, even if your accommodation is open."
+      ]
+    },
+    {
+      "heading": "Protect yourself and the landscape",
+      "paragraphs": [
+        "Follow posted water and trail guidance at the site you choose. Avoid entering closed areas, do not treat salt crust or sinkholes as stable ground, and leave wildlife and archaeological features undisturbed. For a swim or strenuous walk, ask the operator about current conditions, supervision and what is included; general travel copy cannot assess personal health or water safety for you.",
+        "Bring sun protection, drinking water and footwear suited to the activity, and take rest breaks in the heat. If a location is closed or a route is altered, do not seek an unofficial detour. The safer alternative is a different authorized site or a shorter day."
+      ]
+    },
+    {
+      "heading": "Make the access check part of the plan",
+      "paragraphs": [
+        "The cited pages establish which authorities manage the named sites, not current cross-border conditions or universal entry eligibility. Check your government’s travel advice for the relevant country, each site’s own booking page, and official border/visa information before purchasing nonrefundable transport. Keep the Jordan and Israel legs separate in your itinerary unless you have verified every crossing step for your nationality and date.",
+        "Your next action is to choose a single shore, write down the exact beach, reserve or trail you want, and open that site authority’s current access notice. Then confirm travel and border rules through official channels before you add another jurisdiction."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Dead Sea",
+      "url": "https://international.visitjordan.com/wheretogo/the-dead-sea/",
+      "publisher": "Jordan Tourism Board",
+      "purpose": "Official tourism page consulted for named Jordan-side destinations and Dead Sea visitor orientation.",
+      "accessLimit": "Tourism overview is not visa, border, legal or security guidance and does not establish individual access eligibility."
+    },
+    {
+      "title": "Mujib Biosphere Reserve Trails 2026",
+      "url": "https://www.rscn.org.jo/uploaded_files/reservation/Mujib%20Biosphere%20Reserve%20Trails%202026.pdf",
+      "publisher": "Royal Society for the Conservation of Nature, Jordan",
+      "purpose": "Opened official 2026 trail document identifying Siq Trail as self-guided and Ibex Trail as guided, with published durations and group limits. Article does not repeat prices.",
+      "accessLimit": "Season-specific 2026 schedule; confirm current conditions and reservations with RSCN."
+    },
+    {
+      "title": "En Gedi Nature Reserve",
+      "url": "https://en.parks.org.il/reserve-park/en-gedi-nature-reserve/",
+      "publisher": "Israel Nature and Parks Authority",
+      "purpose": "Official reserve page consulted for the named Israeli-side reserve and notice that unusual floods affected trails; used to direct fresh access checks.",
+      "accessLimit": "Page is jurisdiction-specific and does not establish current border access or a Jordan itinerary; conditions and closures can change."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "the-kimberley-coast-by-boat",
+  "slug": "the-kimberley-coast-by-boat",
+  "title": "Ask better questions before booking a Kimberley cruise",
+  "description": "Compare Kimberley coastal cruises by named marine park, planned shore visits, permits, wildlife rules and the operator’s remote-area contingency plan.",
+  "intent": "What should I compare when booking a Kimberley coastal cruise so the route, Traditional Owner permissions and wildlife practices are clear?",
+  "sections": [
+    {
+      "heading": "Ask for the coastline, not only the cruise name",
+      "paragraphs": [
+        "“Kimberley coast” can describe many routes across a remote region. Ask the operator to list the marine parks, bays, islands and planned shore visits for the exact departure date. Western Australia’s official park conditions distinguish North Kimberley Marine Park from Lalang-gaddam Marine Park and describe separate zoned activities and conditions. An itinerary that names its destinations lets you check those rules and understand what you may actually see.",
+        "Compare how many days are spent underway, how often passengers go ashore, and what kind of landing is involved. A cruise might view a waterfall from the water, anchor near an island, or offer a guided landing where permission exists. These are not interchangeable. Ask whether a landing is confirmed, conditional on tides or weather, or only a possible part of the itinerary."
+      ]
+    },
+    {
+      "heading": "Treat permissions as a booking question",
+      "paragraphs": [
+        "Western Australia’s Department of Biodiversity, Conservation and Attractions says some adjacent terrestrial areas in North Kimberley require permission from the appropriate Traditional Owner corporation; for certain areas, operators must obtain passes or approvals before visiting. Its rules also identify Dambimangari Visitor Pass requirements in Lalang-gaddam land areas. A vessel’s permission to cruise in a marine park does not automatically cover every landing.",
+        "Ask who is responsible for each permission and whether it is already in place. Ask which Traditional Owner group’s country the itinerary enters and whether cultural interpretation is authorized. A respectful operator should explain where visitors are welcome, what cannot be photographed or shared, and how the itinerary changes if permission is not granted. Do not pressure a crew to land in a restricted area."
+      ]
+    },
+    {
+      "heading": "Compare wildlife practices and boat handling",
+      "paragraphs": [
+        "The official North Kimberley conditions require operators not to force interactions with whales, crocodiles or turtles and specify a 500-metre approach distance from whale mothers and calves. They also prohibit coral reef walking and feeding fish. Those rules are useful questions for your operator: how do crew position the boat, what happens if wildlife approaches, and do guests ever enter a reef area on foot?",
+        "Do not expect guaranteed sightings or close approaches. A responsible encounter may mean watching an animal from a distance or leaving a site without a photograph. If a wildlife interaction feels pressured, follow crew instructions and report concerns through the official park channels after the trip. Never handle wildlife, feed it or ask a boat to follow animals for longer than the operator’s rules allow."
+      ]
+    },
+    {
+      "heading": "Check the remote-area contingency",
+      "paragraphs": [
+        "A coastal cruise should be able to explain its emergency plan in plain terms: communications, medical response, weather decisions, mechanical redundancy and how it updates shore contacts. Ask what passenger mobility is required for tender transfers and uneven landings. If you need medication, accessible facilities or a particular support arrangement, confirm it directly in writing before booking.",
+        "The marine park authority notes that the Kimberley is remote and subject to natural hazards. The conditions also require approved monitoring systems on vessels in specified areas. These regulations are not a substitute for judging an individual operator’s safety record, insurance, vessel suitability or current licence. Ask for the formal operator details and verify the exact permissions through the relevant authority where needed."
+      ]
+    },
+    {
+      "heading": "Choose an itinerary you can verify",
+      "paragraphs": [
+        "Make a side-by-side comparison with five rows: named marine parks, number and type of shore visits, relevant Traditional Owner permissions, wildlife practices, and emergency contingencies. Add the written cancellation terms for weather or access changes. The strongest itinerary is the one whose operator answers those questions clearly and whose route still sounds worthwhile if one landing is removed.",
+        "The official Western Australian document is specific to park and commercial-operator conditions and can change; it does not promise that a particular cruise will run or that every listed activity is permitted in every zone. Check the latest agency and Traditional Owner information before booking. Your next step is to send the operator the five questions above and compare its written reply with the exact route map."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Park Specific Information and Conditions: Kimberley Region",
+      "url": "https://www.dbca.wa.gov.au/media/581/download",
+      "publisher": "Department of Biodiversity, Conservation and Attractions, Western Australia",
+      "purpose": "Supports marine-park zones, operator permissions, land-access approvals, wildlife distances, no reef-walking and vessel-management conditions for North Kimberley and Lalang-gaddam."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "the-whitsunday-islands-australia",
+    "swim-with-humpback-whales"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

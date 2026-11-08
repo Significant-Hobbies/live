@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "get-a-full-health-checkup-including-bloodwork",
+  "slug": "get-a-full-health-checkup-including-bloodwork",
+  "title": "What to ask before ordering a broad blood panel",
+  "description": "Prepare for a clinician-led checkup by bringing health history and asking what each proposed test is for, what it may miss, and how results change care.",
+  "intent": "What makes a health review useful, and how can I discuss bloodwork without assuming that more tests are always better?",
+  "sections": [
+    {
+      "heading": "Start with the reason for the visit",
+      "paragraphs": [
+        "A checkup is a conversation about your health context, preventive care and questions, not a standard shopping list of laboratory tests. The U.S. CDC describes preventive visits as potentially including exams, screening tests, vaccines and counseling. Which services fit depends on factors a clinician can review with you; recommendations and coverage also differ by jurisdiction and health system.",
+        "Before the appointment, write down why you booked it. Is there a new symptom, a family-history concern, a medicine you want to review, or a preventive visit you postponed? Keep those threads distinct. A new symptom may need an evaluation different from routine screening, and no online checklist can substitute for discussing it with a qualified clinician."
+      ]
+    },
+    {
+      "heading": "Bring the context a test needs",
+      "paragraphs": [
+        "Collect a short medication and supplement list, relevant past results if available, allergies, and family health history. Note when a symptom started, what changes it, and how it affects daily life. The federal MyHealthfinder screening guide encourages people to discuss family history and prepare questions before talking about screening.",
+        "You do not need to arrive with a diagnosis or demand a complete panel. If you do not know a relative’s exact diagnosis, say what you know and label what is uncertain. A family story such as “someone had a blood problem” is a starting point for clarification, not enough information to determine a test on its own."
+      ]
+    },
+    {
+      "heading": "Ask what each proposed test answers",
+      "paragraphs": [
+        "For every suggested blood test, ask: What question are we trying to answer? Is this screening because I have no symptoms, or is it part of investigating something? What could a normal or abnormal result mean? Would the answer change what we do next? Is there a timing or preparation requirement? These questions make the purpose visible without assuming the clinician is wrong.",
+        "Screening can have potential harms as well as benefits. MyHealthfinder notes that some tests can lead to risks such as bleeding or infection, and it encourages a discussion of risks and benefits. A result can also create follow-up testing or uncertainty. Ask how incidental or borderline findings would be interpreted in your context."
+      ]
+    },
+    {
+      "heading": "Make follow-up part of the plan",
+      "paragraphs": [
+        "Before leaving, confirm when and how results will arrive, who will explain them, and whom to contact if you have a question. If you are asked to fast or adjust a routine before a test, get the instruction directly from the clinic or lab. Requirements vary by test; do not guess based on another person’s experience.",
+        "If a result falls outside a reference range, avoid treating the number as a diagnosis by itself. Ask what it means alongside symptoms, prior results and other information, whether it should be repeated, and what the next step is. Keep a copy for your records if your health system allows it."
+      ]
+    },
+    {
+      "heading": "Leave with questions answered",
+      "paragraphs": [
+        "A useful appointment can end with no blood draw if no test is indicated, or with a carefully selected test and a clear follow-up plan. That is a clinical decision, not a failure to complete a “full” checkup. If a test is declined or deferred, ask what signs or changes should prompt another conversation.",
+        "Make a one-page appointment note: your main concern, the clinician’s explanation of each test, preparation instructions, result timing and follow-up contact. For health systems outside the United States, use local preventive-care guidance and local clinicians; the CDC and MyHealthfinder pages cited here describe U.S. information, not universal screening schedules."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Are You Up to Date on Your Preventive Care?",
+      "url": "https://www.cdc.gov/chronic-disease/prevention/preventive-care.html",
+      "publisher": "Centers for Disease Control and Prevention",
+      "purpose": "Describes preventive visits and examples of services; U.S. public-health guidance."
+    },
+    {
+      "title": "Get Screened",
+      "url": "https://odphp.health.gov/myhealthfinder/doctor-visits/screening-tests/get-screened",
+      "publisher": "Office of Disease Prevention and Health Promotion, U.S. Department of Health and Human Services",
+      "purpose": "Supports bringing family history, discussing individualized screenings and asking about risks and benefits."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "understand-your-own-health-at-a-deep-level",
+    "get-your-hearing-and-vision-checked",
+    "sleep-8-hours-a-night-for-30-days"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

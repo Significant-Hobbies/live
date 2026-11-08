@@ -1,0 +1,47 @@
+{
+  "experienceSlug": "hike-the-appalachian-trail-end-to-end",
+  "slug": "hike-the-appalachian-trail-end-to-end",
+  "title": "Plan the Appalachian Trail one resupply section at a time",
+  "description": "Plan an Appalachian Trail thru-hike around land-manager rules, resupply points, rest days, and a realistic section-by-section rehearsal.",
+  "intent": "How can a first-time long-distance hiker turn the Appalachian Trail into a realistic sequence of sections and resupply decisions?",
+  "sections": [
+    {
+      "heading": "Define what you mean by end to end",
+      "paragraphs": [
+        "A through-hike is a season-long logistics project as much as a walking goal. Before choosing a start date, decide what “end to end” means for you: an uninterrupted walk, a continuous itinerary completed with short gaps, or a staged journey across several seasons. The Appalachian Trail crosses different land managers, and rules are not identical from one section to another. The National Park Service notes the Trail itself is free to walk, while some parks along it charge fees or require permits or reservations for parking, shelters, or overnight stays. Build a route that includes those local rules. A calendar estimate from another hiker cannot substitute for your own pace, weather margins, rest days, and closures. Start with a map and a clear answer about whether you want to carry everything or use resupply points."
+      ]
+    },
+    {
+      "heading": "Plan by sections and rules",
+      "paragraphs": [
+        "A useful first planning unit is not the whole trail; it is a section with a resupply and a safe exit. Mark where you can reach a road or town, how you will get food, and which overnight areas require reservations. The NPS page gives examples of different permit and shelter policies in the Smokies and Shenandoah, which shows why a single generic plan can fail. Check each land manager’s current instructions for the dates you will pass through. Keep an offline map and a list of emergency and local information; do not assume mobile signal everywhere. Decide how you will adjust if you fall behind, need a rest day, or a section closes. A through-hike plan needs decision points, not just a line drawn from Georgia to Maine."
+      ]
+    },
+    {
+      "heading": "Rehearse the routine",
+      "paragraphs": [
+        "Build fitness and equipment decisions gradually. If you are new to long-distance walking, start with a local overnight or multi-day section before committing to a full season. Notice how your pack, shoes, and daily routine feel after several hours, then change one thing at a time. Ask an experienced outdoor educator or local trail organization to review your plan, particularly your resupply, weather, and shelter assumptions. Avoid making the heaviest or most expensive purchase before you know what you need. Keep space in your schedule for rest, laundry, and unexpected delays; a day off can prevent a small discomfort from forcing a larger change. Follow signs, land-manager notices, and posted camping rules. A long-distance goal is more sustainable when you can revise the schedule without treating every pause as failure."
+      ]
+    },
+    {
+      "heading": "Make a bounded first trip",
+      "paragraphs": [
+        "For a first attempt, choose a three- to five-day section near a dependable resupply point and complete it as a self-contained journey. Record how long your days actually take, what you used from your pack, and how you felt at the end of each day. Write down every permit or reservation you needed and how you obtained it. That is a practical rehearsal for a longer itinerary, and it gives you real data about your pace instead of borrowed assumptions. If the section is enjoyable, use those notes to plan the next stretch. If it is not, you still have a worthwhile hike and a clearer idea of what kind of trip you want. Your next step is to check current NPS and land-manager requirements for one proposed segment before choosing a season-long start."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Fees & Passes – Appalachian National Scenic Trail",
+      "url": "https://www.nps.gov/appa/planyourvisit/fees.htm",
+      "publisher": "U.S. National Park Service",
+      "purpose": "Explains that the A.T. has no entrance pass but some public lands along it charge fees or require overnight permits and reservations; gives examples of park-specific requirements."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "hike-the-pacific-crest-trail",
+    "patagonia-argentina-and-chile"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

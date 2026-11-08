@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "climb-something-that-genuinely-frightens-you",
+  "slug": "climb-something-that-genuinely-frightens-you",
+  "title": "Choose a climb that tests courage without hiding the real risk",
+  "description": "Turn climbing fear into a route choice: name what feels intimidating, compare terrain honestly, and plan with a qualified local guide.",
+  "intent": "Answers how to choose a frightening climb with a real but managed challenge, distinguishing height or exposure from technical and alpine risk.",
+  "sections": [
+    {
+      "heading": "Name the fear before choosing the climb",
+      "paragraphs": [
+        "“A climb that scares me” can mean standing high above the ground, committing to exposed movement, trusting gear, navigating a long route, or worrying about weather and retreat. Those fears point to different experiences. Write down what you imagine happening, then ask an experienced instructor to help distinguish a normal nerves response from a hazard that needs a different objective or more preparation. Fear itself is not proof that a route is either safe or unsafe.",
+        "Choose a challenge that fits your current experience and the level of supervision available. A tall indoor wall can test height tolerance in a controlled facility; a short outdoor climb adds rock, weather and approach conditions; a multi-pitch or alpine route brings additional planning and terrain decisions. The point is not to jump several levels at once."
+      ]
+    },
+    {
+      "heading": "Compare the setting, not just the grade",
+      "paragraphs": [
+        "A number or grade does not tell the whole story. Two routes with similar technical ratings may differ in exposure, protection, approach, descent, rock quality, crowding and the consequences of a mistake. Tell a guide which factor you want to challenge and which factors you are not ready to stack on top of it. If height is the main fear, a well-managed single pitch may be a better first experiment than an isolated route with a complicated descent.",
+        "Ask how the provider classifies the terrain, what the day includes, what would make the group turn around, and what happens if someone becomes uncomfortable. In the United States, the American Mountain Guides Association describes a scope of practice tied to a guide’s level of training and certification; its example distinguishes multi-pitch rock guiding from other work. Check local qualifications and land rules elsewhere."
+      ]
+    },
+    {
+      "heading": "Set a clear plan with the instructor",
+      "paragraphs": [
+        "Before committing, share your actual climbing history, any time away from climbing and what specifically feels frightening. Ask the instructor to describe the approach, likely conditions, equipment supplied, participant-to-guide arrangement and communication plan in ordinary language. A provider who listens and offers a more suitable objective is giving you useful information, not spoiling the challenge.",
+        "Agree on a simple pause signal and how you will discuss changing objectives. You do not need to promise that you will reach the top. The meaningful commitment can be to participate thoughtfully, follow the instructor’s direction and make an honest decision if the conditions or your comfort change. Never climb beyond the provider’s plan or attempt a technical route without appropriate instruction and supervision."
+      ]
+    },
+    {
+      "heading": "Make the attempt about learning",
+      "paragraphs": [
+        "Afterward, write down what was difficult in concrete terms: reaching the start, looking down, communicating, staying focused, or tolerating uncertainty. Also note what helped. “I felt less afraid” is not the only useful outcome. Perhaps you learned that exposure is manageable when you understand the plan, or that you prefer a shorter route with a clear descent. Those observations can shape a next step without turning the day into a test of toughness.",
+        "If you want to build gradually, ask the same instructor to suggest one specific skill or setting to revisit. A route can be frightening because it is unfamiliar rather than because it is the hardest available option. Choose a day whose challenge is deliberate, whose risks have been explained, and whose stop conditions are understood by everyone."
+      ]
+    },
+    {
+      "heading": "Close the loop before you book",
+      "paragraphs": [
+        "Check the provider’s current qualifications, insurance or permit status where applicable, and experience with the exact terrain. The AMGA is a U.S. example, not a universal credential; other countries and areas may have their own systems, access rules and environmental conditions. Confirm those details directly with the responsible organization or land manager.",
+        "Write a sentence completing this prompt: “I want to feel the fear of ___ while keeping ___ within the instructor’s plan.” If you cannot fill in the second blank with something concrete, choose a simpler objective or get more advice before booking."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "AMGA Scope of Practice",
+      "url": "https://www.amga.com/resources/scope-of-practice",
+      "publisher": "American Mountain Guides Association",
+      "purpose": "Supports the U.S.-specific point that AMGA training and scope of practice are tied to terrain and guide qualification, including a multi-pitch guiding example; it does not certify every provider or establish requirements outside the AMGA system."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "climb-your-first-mountain",
+    "climb-el-capitan-in-yosemite",
+    "climb-a-mountain-over-4-000-metres"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

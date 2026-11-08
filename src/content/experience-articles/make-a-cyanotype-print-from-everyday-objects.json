@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "make-a-cyanotype-print-from-everyday-objects",
+  "slug": "make-a-cyanotype-print-from-everyday-objects",
+  "title": "Compose a cyanotype before the light reaches the paper",
+  "description": "Arrange a small photogram on prepared cyanotype paper, test one exposure variable at a time, and follow the paper maker’s wash instructions.",
+  "intent": "How can I make a clear first cyanotype rather than guessing at exposure and losing the arrangement? This adds composition and troubleshooting guidance to the brief.",
+  "sections": [
+    {
+      "heading": "Understand the image you are making",
+      "paragraphs": [
+        "A cyanotype is a photographic process that makes an image through light-sensitive material, producing a characteristic blue print. The V&A’s overview places cyanotype among photographic processes; prepared paper kits make a first experiment simpler because the maker supplies handling and exposure directions. This guide is about arranging a photogram with opaque objects, not mixing sensitizing chemicals.",
+        "Choose objects with interesting edges: a key, lace, translucent packaging, cut paper, or a naturally fallen leaf. Ask permission before using another person’s object, and do not take living plants from a public place. Thin or translucent materials let some light through and may create softer shapes than a solid object."
+      ]
+    },
+    {
+      "heading": "Make a composition on plain paper first",
+      "paragraphs": [
+        "Place a sheet the same size as the prepared paper on your table and arrange objects there. Decide where the eye should land, then leave a quiet area around the strongest silhouette. A dense arrangement can become a jumble; a few pieces with different scales often read more clearly. Photograph the mock-up so you can recreate it after moving to the light-sensitive sheet.",
+        "Think about contact. The parts touching the paper tend to make sharper edges, while lifted pieces can cast softer outlines. A glass sheet can hold objects flat if the kit permits it, but avoid improvised pressure that could break glass or damage the paper. Follow the kit’s instructions for any protective covering."
+      ]
+    },
+    {
+      "heading": "Keep exposure experiments controlled",
+      "paragraphs": [
+        "Set up the work area before uncovering the prepared sheet. Keep it in the light conditions specified by the manufacturer and work efficiently; do not assume all papers respond identically. If your kit includes a test strip, expose a small sample first. Change one factor—such as exposure duration—while keeping the arrangement and conditions as similar as possible.",
+        "Cloud cover, season, shade, and daylight strength can change the result. That is why a copied time from someone else is a poor substitute for the maker’s directions and a test. Note the time, conditions, and materials on a separate card while they are fresh."
+      ]
+    },
+    {
+      "heading": "Wash and dry according to the kit",
+      "paragraphs": [
+        "Once the image has been exposed, follow the specific rinse or wash instructions that came with the paper. Keep used water and materials within the handling guidance, and do not add chemicals unless the kit explicitly tells you to. Lay the print flat or hang it as directed, away from anything that could stain it while it dries.",
+        "Judge the image after drying rather than while wet. Compare the actual result with your test strip and notes: is the background too dark, are silhouettes too pale, or did an object shift? One change at a time makes the next attempt easier to interpret."
+      ]
+    },
+    {
+      "heading": "Make the second print a deliberate variation",
+      "paragraphs": [
+        "A second print can test one clear question: does a closer contact edge sharpen this object, or does a different exposure reveal more detail in translucent lace? Keep the rest of the arrangement stable. Label both prints on the back with date, paper type, conditions, and what changed. That small record turns a pleasant craft session into a repeatable process.",
+        "Share the result with the objects credited if their owner agrees. Your next action is to build one paper mock-up, choose three objects with distinct silhouettes, and read the kit’s exposure and wash instructions before opening the prepared sheet."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "An A to Z of photographic processes",
+      "url": "https://www.vam.ac.uk/articles/photographic-processes",
+      "publisher": "Victoria and Albert Museum",
+      "purpose": "Provides photographic-process context; kit-specific handling, exposure, and washing must come from the prepared-paper maker."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "carve-a-reusable-rubber-stamp",
+    "make-a-tactile-relief-artwork",
+    "engineer-a-pop-up-paper-scene"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

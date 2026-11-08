@@ -1,0 +1,78 @@
+{
+  "experienceSlug": "new-orleans-usa",
+  "slug": "new-orleans-usa",
+  "title": "Read New Orleans through three neighborhood walks",
+  "description": "Compare the French Quarter, Tremé and Garden District through architecture, music and local history, then plan transit and site visits around current access.",
+  "intent": "Create a place-specific first visit by linking neighborhoods to distinct cultural anchors and choosing a walk that leaves room for context, not just a checklist.",
+  "relatedExperienceSlugs": [
+    "new-york-city-properly",
+    "attend-a-multi-day-music-festival"
+  ],
+  "sections": [
+    {
+      "heading": "Use the French Quarter as a starting point, not a summary",
+      "paragraphs": [
+        "The French Quarter is a useful first walk because Louisiana’s State Museum identifies several historic museum buildings there, including the Cabildo and Presbytère on Jackson Square and the Old U.S. Mint at the edge of the Quarter. Those anchors make it possible to connect architecture with collections rather than treating the area as a row of facades. Choose one museum or public interpretation stop, then walk nearby streets slowly and notice how balconies, courtyards and street patterns change block by block.",
+        "The Quarter is also a living neighborhood. Keep voices and photography respectful, do not enter private courtyards, and remember that residents are moving through ordinary routines around visitor activity. Bourbon Street is only one street; compare it with a quieter stretch such as Royal Street or the riverfront to see how the visitor experience changes."
+      ]
+    },
+    {
+      "heading": "Make a second stop in Tremé",
+      "paragraphs": [
+        "Tremé adds a distinct cultural frame. The National Park Service’s New Orleans Jazz National Historical Park describes Tremé as an early French-speaking Creole of color community and identifies Armstrong Park and Congo Square within the neighborhood. Use those public anchors to orient a walk, then consult a museum or knowledgeable local guide for deeper history. Avoid compressing the history of Black New Orleans into a single music stop.",
+        "Choose an organized walking tour or a public cultural site whose current schedule you can verify. Ask what the guide considers a respectful way to discuss neighborhood life and whether any stop is a private residence or active place of worship. A good route should leave time for listening and questions, not only photographs."
+      ]
+    },
+    {
+      "heading": "Compare the Garden District on foot",
+      "paragraphs": [
+        "A third walk can shift to the Garden District. The National Register’s record places the historic district within boundaries along Carondelet, Josephine, Magazine and Louisiana Avenue and identifies mid-19th-century revival and late Victorian architecture among its styles. From public sidewalks inside the district, compare porches, ironwork, setbacks and tree cover without treating homes as museum interiors. Check transit and any organized tour separately; the register documents historic significance, not current access.",
+        "If architecture interests you, choose a few publicly interpreted sites or join a local guide rather than trying to enter private properties. Ask how preservation rules shape buildings and what has changed over time. Your observations should distinguish what you can see—materials, ironwork, trees—from the social history that needs a source or a guide."
+      ]
+    },
+    {
+      "heading": "Let music be a listening practice",
+      "paragraphs": [
+        "New Orleans music is not background decoration. Pick one live performance or public music program and pay attention to the setting, the ensemble and the audience. Read the venue’s current age, entry and photography rules before going, and consider whether the space welcomes conversation during a set or expects quiet listening. If you want to learn about jazz history, the Louisiana State Museum identifies its Old U.S. Mint as a site with a jazz collection and performance venue; verify current exhibits and events through the museum before planning around it.",
+        "Avoid asking a musician to explain an entire tradition between sets or assuming every performer is available for a photograph. Buy a ticket or support the venue as appropriate, and let the performance remain the main event."
+      ]
+    },
+    {
+      "heading": "Build a manageable first day",
+      "paragraphs": [
+        "Group stops by neighborhood rather than crossing town repeatedly. A first day might focus on the Quarter and Jackson Square; a second can pair Tremé with an evening music plan; another can explore the Garden District. Check weather, transit and opening hours close to the visit, and leave time for meals and rest. The named tourism and state pages establish places and institutions, not current hours or safety conditions.",
+        "Your next action is to select one neighborhood, one public cultural anchor and one question you want answered there. Then check the institution’s current schedule and transit operator updates before you go."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Louisiana State Museum",
+      "url": "https://www.crt.state.la.us/louisiana-state-museum/",
+      "publisher": "Louisiana Department of Culture, Recreation and Tourism",
+      "purpose": "Supports the State Museum’s complex of historic French Quarter buildings, specifically the Cabildo and Presbytère at Jackson Square, and its historic/cultural collections mission. Opened official department page.",
+      "accessLimit": "This older department page points to the museum’s newer web home and does not provide current hours, event schedules or ticket details."
+    },
+    {
+      "title": "French Quarter: The Vieux Carré",
+      "url": "https://www.neworleans.com/plan/neighborhoods/french-quarter/",
+      "publisher": "New Orleans & Company",
+      "purpose": "Opened official visitor-industry neighborhood page and its city-planning navigation, including neighborhood, music, transit and streetcar guides; used for planning categories and neighborhood framing.",
+      "accessLimit": "Tourism office content is not a current transit service alert and not a substitute for residents’ or historians’ accounts."
+    },
+    {
+      "title": "Jazz Neighborhoods Map",
+      "url": "https://www.nps.gov/jazz/learn/historyculture/jazz-map.htm",
+      "publisher": "New Orleans Jazz National Historical Park, National Park Service",
+      "purpose": "Supports the stated Tremé historic and musical context and the inclusion of Armstrong Park and Congo Square as neighborhood anchors. It does not establish current events or access."
+    },
+    {
+      "title": "Garden District National Register Asset Detail",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/71000358",
+      "publisher": "National Register of Historic Places, National Park Service",
+      "purpose": "Supports the Garden District’s historic boundaries and registered architectural styles, including mid-19th-century revival and late Victorian. The record dates to 1971 and is used only for historic classification, not current access or conditions."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

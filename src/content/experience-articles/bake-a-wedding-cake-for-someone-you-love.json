@@ -1,0 +1,71 @@
+{
+  "experienceSlug": "bake-a-wedding-cake-for-someone-you-love",
+  "slug": "bake-a-wedding-cake-for-someone-you-love",
+  "title": "Plan the wedding cake as a series of tested decisions",
+  "description": "Make a reliable wedding cake by agreeing on serving needs, testing each tier, rehearsing supports and arranging safe transport and storage.",
+  "intent": "A practical schedule for creating a meaningful wedding cake without relying on a first-time bake or unsupported tier-stacking guess.",
+  "sections": [
+    {
+      "heading": "Start with the couple’s actual brief",
+      "paragraphs": [
+        "Ask what the couple wants the cake to do: feed a small table, provide a cutting moment, echo a family flavor or simply look celebratory. Confirm the serving count with the host or caterer, and ask about allergies, dietary needs, venue rules, refrigeration and delivery timing. Do not promise an allergen-free result unless you can control ingredients, tools and cross-contact to the required standard.",
+        "Choose one flavor and one dependable cake recipe before designing tiers. A single-layer practice cake gives you information about flavor, crumb, frosting and how the cake behaves in your kitchen. Share a small tasting with the couple and let them choose from two or three options rather than asking them to approve every decoration."
+      ]
+    },
+    {
+      "heading": "Build a schedule backward from the event",
+      "paragraphs": [
+        "Write down the event time, delivery deadline, chilling time, decorating time and when the venue can receive the cake. Work backward to schedule a practice bake, shopping, baking, cooling, filling, decorating, boxing and transport. Baking several tiers for the first time the night before invites avoidable problems. If the schedule is too tight, make a smaller cake, separate the tiers for assembly at the venue, or enlist a baker for the structural work.",
+        "Use a recipe written for the pan sizes you plan to bake in. Wilton’s wedding-cake guide provides pan and batter charts but notes that serving numbers and icing quantities are guides. Do a test batch in the actual pan; ovens and pan materials vary. Avoid assuming that multiplying a recipe by three will bake evenly in a larger pan."
+      ]
+    },
+    {
+      "heading": "Make layers level and the supports deliberate",
+      "paragraphs": [
+        "Cool each layer fully before leveling or filling. Wilton’s cake guide recommends leveling domes and keeping cuts even, and its stacked-tier instructions use cake boards and dowel supports. Practice the construction on a small test cake before the event. A tier needs a board under it, and the board must rest on supports in the tier below; frosting alone cannot hold the weight safely.",
+        "Keep the design within your tools and transport plan. Tall tiers, heavy decorations, warm weather and soft fillings make assembly more difficult. A two-tier cake with sturdy frosting and a simple border can feel more personal than an ambitious structure that shifts in transit. If you are unsure about a structure, ask an experienced cake decorator to review the plan."
+      ]
+    },
+    {
+      "heading": "Protect food and the finished cake",
+      "paragraphs": [
+        "Use clean tools, wash hands and follow the recipe’s storage instructions, especially when filling contains dairy, eggs or fresh fruit. FoodSafety.gov advises discarding certain refrigerated foods after they have been above refrigerator temperature for more than two hours, but a cake’s ingredients and conditions matter; follow the applicable food-safety guidance and keep perishable fillings cold. Ask the venue how it will receive and store the cake.",
+        "Transport tiers in stable boxes on a level surface, with the car cool and the route planned. If assembled on site, bring the supports and tools you practiced with. Confirm the venue’s table is level and large enough, and give the coordinator a simple note about where the cake should stay until serving."
+      ]
+    },
+    {
+      "heading": "Let the day be about the person, not perfection",
+      "paragraphs": [
+        "Decorate in a style the couple will recognize: a color from the invitation, a modest cluster of flowers confirmed safe for food contact, or a piping detail they remember from home. Get permission before using heirloom decorations or family photographs. Leave enough time for a plain finish; a small imperfection on a cake made by someone who loves them is less important than showing up calmly.",
+        "Your next step is a conversation about servings, flavor, allergies, delivery and the venue’s storage. Write those answers down, then make a one-tier practice cake. If that test is not reliable, adjust the ambition now while there is still time."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wedding Cake Guide: How to Bake and Cut Wedding Cakes",
+      "url": "https://wilton.com/baking-inspiration/wedding-cake-guide/",
+      "publisher": "Wilton",
+      "purpose": "Provides wedding-tier pan guidance and cautions that serving and icing amounts are approximate guides."
+    },
+    {
+      "title": "Stacked Tiered Cake Construction",
+      "url": "https://wilton.com/stacked-tiered-cake-construction/wltech-423/",
+      "publisher": "Wilton",
+      "purpose": "Describes use of cake boards and dowels to stabilize stacked tiers."
+    },
+    {
+      "title": "Refrigerated Food and Power Outages: When to Save It and When to Throw It Out",
+      "url": "https://www.foodsafety.gov/food-safety-charts/food-safety-during-power-outage",
+      "publisher": "FoodSafety.gov",
+      "purpose": "Provides U.S. guidance on food exposed above refrigerator temperature, including certain cakes and dairy or egg fillings."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "exchange-handwritten-recipes-through-the-post",
+    "create-a-family-cookbook-with-old-recipes",
+    "eat-a-12-course-tasting-menu"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

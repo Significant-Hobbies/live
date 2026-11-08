@@ -1,0 +1,59 @@
+{
+  "slug": "repair-a-relationship-you-ve-damaged",
+  "title": "Follow an apology with changed behavior",
+  "description": "Acknowledge the specific harm, offer repair without demanding forgiveness, and let the other person set boundaries around future contact.",
+  "intent": "Make a practical follow-through plan after an apology, accepting boundaries and checking whether ongoing contact is welcome.",
+  "sections": [
+    {
+      "heading": "Get clear about the harm first",
+      "paragraphs": [
+        "Before contacting the person, write a private account of what you did, what impact they described, and what responsibility is yours. Remove the explanation that begins with ‘but.’ If your account depends on proving your good intentions, you are not yet ready to hear their experience. A qualified counselor can help you sort through a complicated conflict, especially when safety, coercion or repeated harmful behavior is involved.",
+        "Ask yourself what can be repaired in practical terms: replacing something, correcting false information, changing a routine, or stopping a behavior. Some harm has no direct substitute. You can still make a concrete change without pretending it erases what happened. Do not plan a surprise visit or use another person to carry a message if contact is unwelcome."
+      ]
+    },
+    {
+      "heading": "Make one direct, unpressured apology",
+      "paragraphs": [
+        "If contact is safe and welcome, keep the apology focused. Name the action, acknowledge the impact, take responsibility and say what you are changing. The Greater Good Science Center article ‘What an Apology Must Do’ describes acknowledgment, explanation, remorse and reparation as possible elements; it does not mean every apology needs the same script. Avoid asking the person to reassure you or accept your explanation before they have spoken.",
+        "A short invitation can be: ‘I did ____. I understand that it ____. I am sorry. I am changing _____. Is there a form of repair you would want me to consider?’ If the person has asked for space or no contact, do not send the message. Respecting a clear boundary is itself part of taking responsibility."
+      ]
+    },
+    {
+      "heading": "Offer repair without bargaining",
+      "paragraphs": [
+        "Listen to the requested repair and repeat back what you understood before proposing anything. If the request is feasible and appropriate, agree on a specific action and date. If you cannot do it, say so plainly and offer a realistic alternative without turning the conversation into a negotiation over whether the original harm mattered.",
+        "Do not attach conditions such as ‘I’ll do this if you forgive me’ or ‘you should tell everyone I apologized.’ Repair is not a purchase of access, a public endorsement or a shortcut back to the old relationship. If money, work, legal obligations or a power imbalance are involved, seek appropriate professional guidance before making commitments or pressuring the other person to handle it informally."
+      ]
+    },
+    {
+      "heading": "Show change through a follow-through plan",
+      "paragraphs": [
+        "Choose one observable behavior that prevents a repeat. Put a reminder, accountability partner, training or professional support in place so change does not depend on the other person monitoring you. If the harm involved a recurring pattern, write down what you will do at the moment you notice the pattern starting and who can help you interrupt it.",
+        "Set a date to review your own behavior, not to demand a relationship update. If you promised to correct a record or replace property, complete that task and send only the necessary confirmation. Do not use follow-up messages to reopen the emotional conversation. The person may need a long time, may not respond, or may decide the relationship is over."
+      ]
+    },
+    {
+      "heading": "Let the other person decide what comes next",
+      "paragraphs": [
+        "After an apology, ask once whether future contact is welcome. If they say no, do not test the boundary through different channels, mutual friends or public posts. If they are unsure, let them choose when to reach out. You can regret the harm and still accept that reconciliation is not yours to grant yourself.",
+        "If contact continues by mutual choice, rebuild slowly through predictable actions and ordinary conversation. Do not ask for a deadline for trust or forgiveness. Make room for the other person to revise their boundaries. A successful repair may mean a safer, clearer relationship; it may also mean you have learned to act differently while the other person chooses distance. Both outcomes can coexist with sincere accountability."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "What an Apology Must Do",
+      "url": "https://greatergood.berkeley.edu/article/item/what_an_apology_must_do",
+      "publisher": "Greater Good Science Center, University of California, Berkeley",
+      "purpose": "Supports the narrow framework that an apology may include acknowledgment, explanation, remorse and reparation, and that the offended person’s needs matter; it does not promise forgiveness or prescribe contact when unwanted."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "ask-forgiveness-from-someone-you-hurt",
+    "write-a-letter-to-someone-who-changed-your-life",
+    "forgive-someone-who-hurt-you"
+  ],
+  "experienceSlug": "repair-a-relationship-you-ve-damaged",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

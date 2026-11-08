@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "throw-a-party-worth-remembering",
+  "slug": "throw-a-party-worth-remembering",
+  "title": "Give a party one reason to feel like this particular gathering",
+  "description": "Plan a memorable party around one meaningful shared detail, a welcoming rhythm, and an easy way for guests to join without needing to perform.",
+  "intent": "Answers how to make a party memorable without relying on expensive spectacle; adds a design method based on one shared detail, guest comfort and pacing.",
+  "sections": [
+    {
+      "heading": "Choose the feeling before the theme",
+      "paragraphs": [
+        "Start with why these people are gathering. Is it a reunion after a long gap, a birthday, a move, a new beginning, or an ordinary evening when everyone can finally meet? Write one sentence about how you want people to feel when they leave: welcomed, amused, connected, or pleasantly surprised. That sentence will help you decide which details to keep and which are decorations for their own sake.",
+        "A memorable party does not need a costume theme or an elaborate itinerary. Choose one anchor: a song each guest associates with the host, a map showing how people know one another, a dish connected to the occasion, or a small display of photographs with permission from the people pictured. One thoughtful detail gives the gathering a center without turning guests into an audience."
+      ]
+    },
+    {
+      "heading": "Make arrival easy",
+      "paragraphs": [
+        "A party begins before the first conversation. Include the practical information guests need: exact address, start and end window, transport or parking notes you can verify, accessibility details and whether food will be served. If the location is difficult to find, give one simple landmark or arrival instruction. If guests do not know each other, consider a clear name tag or a low-key introduction rather than leaving everyone to decode the room.",
+        "Keep an area where someone can sit quietly, step away from loud music or talk to one person. People arrive with different energy, social comfort and needs. A host can offer a warm greeting without insisting every guest join every activity. A party that has an exit and a pause can still be lively."
+      ]
+    },
+    {
+      "heading": "Give the evening a gentle rhythm",
+      "paragraphs": [
+        "Think in three loose phases: arrival and settling in, one shared moment, then open conversation. The shared moment might be a toast, a quick collaborative playlist, a story about how the group came together, or a short game that can be skipped without awkwardness. Announce the activity, show how long it will take and make participation optional. A flexible rhythm helps without making the evening feel like a conference agenda.",
+        "Choose music that leaves room for the kind of conversation you want. If the gathering is for catching up, keep it at a level where people can hear each other. If dancing is the point, create a separate space or time for it. Set a clear end point so cleanup, transport and childcare do not become a surprise for guests."
+      ]
+    },
+    {
+      "heading": "Serve food with care and clarity",
+      "paragraphs": [
+        "Ask about dietary needs when guests reply, and label dishes with ingredients you know. If someone has an allergy, do not guess whether a dish is safe or promise that a shared kitchen avoided cross-contact; ask what information they need and let them decide what to eat. The Food Standards Agency guidance for community and charity events in England, Northern Ireland and Wales encourages hosts to provide allergen information where possible. Its exact legal guidance is location- and event-specific, so check the authority in your area for anything beyond an informal home gathering.",
+        "Plan a menu you can manage while welcoming people. One main dish, a substantial vegetarian choice, something simple to snack on and water can be more hospitable than several complicated recipes that keep you away from your guests. Tell guests whether they should bring food, and avoid making a contribution feel mandatory."
+      ]
+    },
+    {
+      "heading": "End with a detail guests can carry",
+      "paragraphs": [
+        "Give the gathering one final moment: thank people for coming, let each person write a line on a shared card, or send them home with a recipe or photograph they chose. Do not make a surprise public disclosure about a guest, propose a toast that exposes private history or pressure anyone to perform. If you take photos, ask before posting them.",
+        "After everyone leaves, note what people actually enjoyed and what felt like work. Then choose one small detail for next time. Start by inviting a manageable group and writing the sentence that explains why these particular people should be in the same room."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Providing food at community and charity events",
+      "url": "https://www.gov.uk/government/publications/providing-food-at-community-and-charity-events",
+      "publisher": "UK Food Standards Agency via GOV.UK",
+      "purpose": "Supports that FSA guidance for community events encourages offering allergen information where possible; current guidance applies to England, Northern Ireland and Wales and is not a general rule for every private party."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "host-a-dinner-party-for-20-people",
+    "throw-a-surprise-party-that-genuinely-surprises-someone",
+    "attend-a-multi-day-music-festival"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

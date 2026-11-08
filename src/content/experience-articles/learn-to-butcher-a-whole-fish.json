@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "learn-to-butcher-a-whole-fish",
+  "slug": "learn-to-butcher-a-whole-fish",
+  "title": "Learn whole-fish cuts with a trained fishmonger",
+  "description": "Practice scaling, gutting and filleting one whole fish with an experienced instructor, then store and cook it using current food-safety guidance.",
+  "intent": "How can I learn to break down a whole fish safely and understand which cuts suit different meals?",
+  "sections": [
+    {
+      "heading": "Book a supervised first lesson",
+      "paragraphs": [
+        "A whole fish is a better lesson when someone can demonstrate the knife angle, hold the fish securely and correct your technique in real time. Ask a fishmonger, seafood educator or cooking instructor whether they teach scaling, gutting, filleting and portioning on the species you plan to use. Confirm who supplies the fish, what tools are used and whether you will be allowed to handle the knife yourself.",
+        "Do not assume one species teaches every other fish. Body shape, bones, scales and thickness change how a cut behaves. A guide in Alabama Cooperative Extension’s seafood preparation material illustrates scaling, eviscerating, dressing and filleting, but the guide is regional and not a replacement for supervised practice with the type of fish in front of you."
+      ]
+    },
+    {
+      "heading": "Choose the fish and workspace deliberately",
+      "paragraphs": [
+        "For the first session, ask the instructor for a manageable fish size and one clear outcome: perhaps produce two fillets and identify the remaining bones and trimmings. Decide in advance whether the class will use the head, collar, frame or skin in another dish. If those parts are not part of your plan, ask how they will be handled and disposed of; do not let food waste or an unfamiliar technique surprise you at the table.",
+        "Prepare a stable, washable cutting surface, a sharp flexible knife appropriate to the lesson, a bowl for usable portions and a separate container for scraps. Keep the cutting area uncluttered and dry enough to hold the fish securely. A sharp knife is not automatically safer in an untrained hand, so let the instructor demonstrate safe hand position and how to stop if the fish or board slips."
+      ]
+    },
+    {
+      "heading": "Learn the anatomy through the cuts",
+      "paragraphs": [
+        "Ask the instructor to point out the backbone, ribs, belly cavity, fins and collar before the first cut. A fish fillet follows the backbone and separates flesh from the rib cage; seeing this once helps explain why the blade is held at a shallow angle and why rushing through the rib section wastes meat. Use light, controlled motions and let the fish’s structure guide the knife instead of forcing a deep cut.",
+        "An Alabama Cooperative Extension seafood guide describes filleting by cutting along the backbone, then turning the knife flat to move along the ribs and free the flesh; it also explains scaling and evisceration as distinct preparation steps. Use the guide as a visual reference for those terms, not as a species-independent recipe. Ask your instructor to identify any bones or structures that differ on your fish."
+      ]
+    },
+    {
+      "heading": "Practice one clean repeat",
+      "paragraphs": [
+        "Make one side under observation, then pause to inspect the result with the instructor. Look for meat left on the frame, ragged cuts, pin bones or damage to the skin. Ask which adjustment would improve the next pass. Repeat on the other side if the first cut and your comfort level permit; the objective is control and understanding rather than speed.",
+        "Keep raw fish and its tools away from ready-to-eat foods. FoodSafety.gov recommends separating raw seafood, washing hands and utensils after handling it, keeping fish cold and using a food thermometer for cooked fish. Its U.S. guidance gives 145°F (63°C) as the safe minimum for most fish, or the listed visual cue; follow current local food-safety rules where you live."
+      ]
+    },
+    {
+      "heading": "Use the portions while they are in good condition",
+      "paragraphs": [
+        "Move the finished portions promptly into refrigeration or onto ice according to current food-safety guidance. Label any portion you freeze with the fish name and date. Cook one fillet simply to assess texture, and use the second to practice a different preparation that suits its thickness. Do not make a claim that a fish is safe because it smells acceptable; follow safe storage and cooking instructions.",
+        "Finish by writing a short cutting map: where the fillet separated, which bones remained, and which step you want to repeat. A fishmonger can also explain how a whole fish’s market name, origin and size relate to its bones and preparation. Check local sourcing and sustainability questions with appropriate regional sources; this lesson teaches butchery, not seafood traceability or fishing law."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Preparation and Preservation of Alabama Seafood",
+      "url": "https://seafood.oregonstate.edu/sites/agscid7/files/snic/preparation-and-preservation-of-alabama-seafood-auburn.pdf",
+      "publisher": "Alabama Cooperative Extension System / Auburn University",
+      "purpose": "Illustrated regional guide for fish scaling, evisceration, dressing and filleting along backbone/ribs; not a species-specific substitute for supervised instruction, and its preservation statements are not relied upon."
+    },
+    {
+      "title": "Safe Selection and Handling of Fish and Shellfish",
+      "url": "https://www.foodsafety.gov/blog/safe-selection-and-handling-fish-and-shellfish",
+      "publisher": "FoodSafety.gov",
+      "purpose": "U.S. guidance on raw seafood separation, handwashing, chilling and cooking; local food-safety requirements and advisories may differ."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "eat-something-you-foraged-or-caught-yourself",
+    "make-cheese-from-scratch",
+    "make-your-own-condiments-from-scratch"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

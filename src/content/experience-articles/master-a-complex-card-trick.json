@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "master-a-complex-card-trick",
+  "slug": "master-a-complex-card-trick",
+  "title": "Make a card routine clear before making it impressive",
+  "description": "Learn a complex card trick by splitting the method into one move at a time, checking angles and timing, then rehearsing the audience-facing story.",
+  "intent": "Answer how to master a card trick by separating handling from presentation, choosing a practice test and building a routine the audience can follow.",
+  "relatedExperienceSlugs": [
+    "community-e62581a3-63bf-5377-b303-ddf458d28e96",
+    "perform-on-a-stage-in-front-of-a-crowd",
+    "perform-stand-up-comedy"
+  ],
+  "sections": [
+    {
+      "heading": "Choose an effect you can explain simply",
+      "paragraphs": [
+        "Before learning a difficult routine, describe what the audience should remember: a freely chosen card returns, a prediction matches, or a selection appears in an unexpected place. If the effect takes several sentences to explain, make the presentation simpler. A complex method only helps when the audience can follow the premise and the ending.",
+        "Learn from a magician or teacher who explains the method clearly and whose material you have permission to study. David Williamson’s learning page, for example, offers card instruction and frames practice and performance as parts of learning magic. Avoid copying a performer’s signature routine or script word for word; build your own presentation around the method you are authorized to use."
+      ]
+    },
+    {
+      "heading": "Separate the handling into small checkpoints",
+      "paragraphs": [
+        "Watch or read the instruction once without handling the deck. Write down the sequence of actions in plain language, then practice each movement slowly and openly. Check that the cards remain squared, the grip looks ordinary, and the action stays within your natural range of motion. A mirror can help, but it can also make you stare at your hands rather than notice what a spectator sees.",
+        "Practice the transitions between actions; a move that works alone may become awkward when you speak, gesture, or hand the deck to someone. Keep the first session short enough that you can stay attentive. If the move starts getting worse, stop and return later rather than drilling with increasing tension."
+      ]
+    },
+    {
+      "heading": "Test angles with a real observer",
+      "paragraphs": [
+        "A camera can show whether a hand blocks the view, but a person sitting across the table can reveal whether your gaze or timing gives the moment away. Ask one trusted friend to watch the routine from the position a spectator would have. Do not ask them to reveal the secret; ask when the action looked unnatural or when their attention drifted.",
+        "Try the same routine standing, seated, and with a different table height if you expect to perform in varied settings. If the method only works from one narrow angle, choose a setting where that is appropriate or learn another effect. Do not use a casual performance to pressure someone into giving money, personal information, or consent."
+      ]
+    },
+    {
+      "heading": "Write the audience-facing story",
+      "paragraphs": [
+        "Give the routine a beginning, a reason for the selection, and a clear final image. Use only the words needed to direct attention and make the effect matter. Silence can be stronger than explaining every action. Practice the patter separately, then combine it with the handling at a comfortable pace.",
+        "Record a full run once and listen without watching the video. Does the story make sense on its own? Then watch without sound. Are the actions still readable? If one channel fails, simplify the script or movement until the sequence is clear."
+      ]
+    },
+    {
+      "heading": "Perform, review, and refine one thing",
+      "paragraphs": [
+        "Start with someone who knows you are practicing. Afterward, ask which moment they remember and whether any handling looked unusual. Change one aspect, then test again. A trick is not mastered because it fooled one person once; you are looking for a routine you can perform consistently while attending to another human being.",
+        "The next step is to choose one source you trust, write a four-step practice checklist, and schedule a short session where you only work on the hardest transition. When the handling is dependable, test the whole effect for a friendly audience and refine the story from what they actually notice."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Learn Magic with David Williamson",
+      "url": "https://davidwilliamson.com/learn",
+      "publisher": "David Williamson, magician",
+      "purpose": "Opened magician’s own instruction page showing card tricks and practice/performance guidance; article uses no specific secret method."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

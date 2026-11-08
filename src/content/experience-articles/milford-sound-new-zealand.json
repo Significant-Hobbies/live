@@ -1,0 +1,60 @@
+{
+  "experienceSlug": "milford-sound-new-zealand",
+  "slug": "milford-sound-new-zealand",
+  "title": "Make the Milford Road part of the Milford Sound day",
+  "description": "Plan Piopiotahi Milford Sound as a full Te Anau road journey, with official DOC advice on alpine driving, delays and visitor timing.",
+  "intent": "Help a visitor plan the named Milford Sound day with a realistic road and cruise sequence, grounded in current Department of Conservation journey guidance.",
+  "relatedExperienceSlugs": [
+    "fiordland-new-zealand",
+    "road-trip-across-new-zealand",
+    "the-norwegian-fjords"
+  ],
+  "sections": [
+    {
+      "heading": "Start from the right map",
+      "paragraphs": [
+        "Milford Sound, also called Piopiotahi, is not a quick detour from Queenstown. New Zealand’s Department of Conservation describes the 119-kilometre Milford Road journey from Te Anau as passing through Fiordland National Park, with glacier-carved valleys, native beech forest, lakes and waterfalls. It calls the road a challenging alpine route shared by cars, buses, campervans and cyclists. Build your day around the journey, not only the boat at the end.",
+        "If you are sleeping in Queenstown, compare a coach day with a self-drive day honestly. DOC’s page estimates about four and a half hours each way from Queenstown without stops, and about two and a half from Te Anau; current weather, traffic, stops and road control can add time. A Te Anau overnight can make the day less rushed, but check accommodation and transport for your dates."
+      ]
+    },
+    {
+      "heading": "Choose a cruise time after the drive plan",
+      "paragraphs": [
+        "If you have a booked cruise, DOC advises allowing one hour for parking and walking to the visitor terminal. Treat that as an arrival buffer at Milford, not as time for scenic stops en route. Choose a sailing that leaves room for the road journey and any traffic-control delay at Homer Tunnel. The tunnel is one lane and DOC says signals can cause delays; do not schedule the last possible departure if missing it would strand the group.",
+        "A coach can simplify the driving and parking part of the day, especially if you want to look at the landscape rather than concentrate on the road. If you drive, check who is comfortable with a narrow, winding alpine road and agree on safe pull-offs before starting. Pull over only where permitted and with enough warning; do not stop suddenly for a photograph."
+      ]
+    },
+    {
+      "heading": "Use stops to understand the route",
+      "paragraphs": [
+        "The road is part of the experience. DOC describes changing landscapes along the drive: beech forest, glacier-shaped valleys, lakes and waterfalls. Choose one or two official stops rather than trying to stop at every viewpoint. At each, notice how the setting changes—forest to open valley, lake edge to steep rock, or road corridor to the fiord—and leave enough time to return to your vehicle safely.",
+        "DOC recommends arriving after 1:30 p.m. to avoid peak summer crowds at Milford and notes that traffic and parking are often busiest between 9:30 a.m. and 1:30 p.m. Use that as seasonal planning guidance, not a guarantee of an empty car park. Check current road and weather status because DOC says conditions can change with weather, rockfalls, avalanches and maintenance."
+      ]
+    },
+    {
+      "heading": "Pack for a remote day",
+      "paragraphs": [
+        "DOC notes there are no fuel stations or shops between Te Anau and Milford Sound, and mobile coverage is patchy. Start with fuel, food, water, warm clothing and rain protection. Keep an offline route plan, check road status before departure and tell someone your rough schedule. The page describes exposure to landslides, avalanches, earthquakes and severe weather; follow closures and official instructions instead of trying to bypass them.",
+        "Even on a cruise day, bring a warm layer and rain protection because conditions can differ between the vehicle and the water. Pack only what you can manage during boarding and walking. If a passenger has mobility needs, contact the cruise operator about boarding and accessible facilities rather than assuming a vessel or stop will fit."
+      ]
+    },
+    {
+      "heading": "Have a fallback that still feels like Fiordland",
+      "paragraphs": [
+        "If the road closes or weather disrupts a cruise, do not pressure a driver to continue. Ask the road authority or operator what is safe and what can be rescheduled. A quieter day in Te Anau or another open Fiordland walk can be a worthwhile alternative. Avoid booking a flight or connection that leaves no recovery time after a long drive.",
+        "Your next action is to choose a Te Anau or Queenstown base, select a coach or self-drive plan, then check DOC’s current Milford Road status and allow a full hour for terminal arrival before your cruise."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Journey tips for Piopiotahi Milford Sound",
+      "url": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/fiordland/places/fiordland-national-park/places-to-go/milford-road-milford-sound-area/journey-tips-for-piopiotahi-milford-sound",
+      "publisher": "Department of Conservation Te Papa Atawhai, New Zealand",
+      "purpose": "Supports the Te Anau–Milford road distance and landscape, challenging alpine road conditions, approximate drive times, peak period pattern, cruise terminal buffer, tunnel delays and need to check current road status.",
+      "accessLimit": "The page provides estimates and seasonal guidance, not a live prediction for a travel date; current road status and operator plans must be checked before departure."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

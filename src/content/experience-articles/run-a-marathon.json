@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "run-a-marathon",
+  "slug": "run-a-marathon",
+  "title": "Make the marathon a long-term completion project",
+  "description": "Choose a marathon and a realistic preparation window, build gradually from your current running and plan the event’s practical details.",
+  "intent": "How can I prepare to complete a first marathon with a gradual, sustainable approach without mistaking a generic plan for personal medical advice?",
+  "sections": [
+    {
+      "heading": "Define the goal as finishing the distance",
+      "paragraphs": [
+        "A marathon is 26.2 miles (42.195 kilometers). Decide whether your goal is simply to complete the distance, run continuously, or use planned walking intervals. Those are distinct aims. This article focuses on preparing for a first finish; it does not cover Boston qualifying standards or prescribe an individual training plan.",
+        "Choose an event whose course, date, weather and travel demands suit your life. Read the race’s own current rules, cutoff information, start logistics and aid-station details before registering. Some events fill or change their procedures, so confirm the information on the organizer’s official page rather than assuming last year’s details still apply."
+      ]
+    },
+    {
+      "heading": "Start from the running you can do now",
+      "paragraphs": [
+        "Record what you currently do: how often you run or walk, the routes you enjoy, and any schedule constraints. If you have not been running regularly, begin with an activity level that feels manageable and build gradually rather than jumping directly into long distances. NIDDK’s U.S. activity guidance advises people who have been inactive to start slowly and gradually increase how long and how often they are active; it also says to seek help from a health professional or certified fitness professional when guidance is needed.",
+        "A marathon training calendar cannot know your medical history, previous injuries, sleep, work shifts or local climate. Use a plan as a structure to discuss with a qualified coach, clinician or physical therapist when appropriate. Do not copy another runner’s mileage or pace because the numbers look impressive. Progress that fits your current capacity is more useful than a deadline that forces you to ignore warning signs."
+      ]
+    },
+    {
+      "heading": "Build a routine that includes recovery",
+      "paragraphs": [
+        "Choose a weekly rhythm you can repeat around work and family. Keep a simple log of distance or time, effort, sleep, weather and how you felt the next day. If a planned workout repeatedly disrupts your life or causes persistent pain, reassess the load with qualified help. NIDDK advises stopping if you do not feel right and contacting a health professional about warning signs such as chest pressure, extreme shortness of breath or dizziness.",
+        "Train on routes where you can stop or shorten the session safely. Include rest and easier days as part of the plan rather than treating them as failure. Practice the gear you expect to use on event day during ordinary training, and pay attention to chafing, weather and access to water. Avoid a last-minute increase in distance to make up for missed sessions."
+      ]
+    },
+    {
+      "heading": "Practice the event’s practical skills",
+      "paragraphs": [
+        "A long race asks for more than running fitness. Learn how the course is laid out, where aid stations and bathrooms are, what transport is available and how a friend could find you afterward. Practice carrying the food and drink you intend to use and check the event’s rules about outside supplies. Do not try a new shoe, meal or fueling product for the first time on race morning.",
+        "Plan a backup for travel delays, poor weather and a pace that changes during the race. Decide in advance when you would slow, walk, stop or ask for help. A responsible finish includes using the event’s medical support and following staff instructions. Do not use another participant’s experience to predict how your own body will respond."
+      ]
+    },
+    {
+      "heading": "Review the goal without making it a verdict",
+      "paragraphs": [
+        "After the event, note what preparation helped, what was difficult and whether you want to run another distance. Completing the course is an experience, not a measure of character. If you do not start or finish, you can still learn from the preparation and choose a safer next step.",
+        "Keep this goal distinct from qualifying for a particular race. Boston qualification is a separate standard with event rules and time categories that can change; a first marathon is about preparing for and completing your chosen course. Use the organizer’s current information for the event you enter and qualified advice for training questions specific to you."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Marathon",
+      "url": "https://worldathletics.org/disciplines/relays/marathon",
+      "publisher": "World Athletics",
+      "purpose": "Confirms the standard marathon distance; does not provide a beginner training plan."
+    },
+    {
+      "title": "Staying Active at Any Size",
+      "url": "https://www.niddk.nih.gov/health-information/weight-management/staying-active-at-any-size",
+      "publisher": "U.S. National Institute of Diabetes and Digestive and Kidney Diseases",
+      "purpose": "General U.S. guidance supports gradual increase from inactivity, activity matched to ability and stopping/seeking professional input for warning signs; not a marathon training plan or individualized medical advice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "run-a-race-you-had-to-train-for",
+    "qualify-for-the-boston-marathon",
+    "complete-a-100-mile-ultramarathon"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

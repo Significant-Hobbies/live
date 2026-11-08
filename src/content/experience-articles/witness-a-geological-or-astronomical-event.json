@@ -1,0 +1,70 @@
+{
+  "experienceSlug": "witness-a-geological-or-astronomical-event",
+  "slug": "witness-a-geological-or-astronomical-event",
+  "title": "Witness a solar eclipse with a location-specific plan",
+  "description": "Choose a site inside or outside the path of totality, check its local eclipse timings, and prepare safe direct or indirect viewing.",
+  "intent": "Help plan a safe observation of a solar eclipse by selecting a specific site, checking local phases, and arranging a cloud backup.",
+  "sections": [
+    {
+      "heading": "Choose the eclipse and the kind of view",
+      "paragraphs": [
+        "Start with a specific solar eclipse and a location, not a generic “eclipse trip.” NASA’s future-eclipse page lists upcoming events by date, type and broad visibility region. Check whether the place you are considering lies in the path of totality or will see only a partial eclipse. If totality is the goal, the path matters: being nearby can still mean seeing only a partial phase. A partial view is a real event too, but it never gives the brief unfiltered-viewing window associated with totality.",
+        "NASA’s event maps and path tables let you compare candidate places before booking. Choose one primary site and note its exact coordinates or town, then compare that point to the path limits. Avoid choosing a country or region as though every location within it has the same view. Recheck the event page and map for the date you plan to travel; the NASA tables use Universal Time, so translate the relevant phases carefully to local clock time."
+      ]
+    },
+    {
+      "heading": "Turn the path into a workable day plan",
+      "paragraphs": [
+        "For your exact viewing place, write down the local start, maximum and end times from a trusted event table or astronomy source. NASA’s path page gives the 2027 eclipse’s geographic limits and central-line circumstances in Universal Time; it is useful for confirming the path, but its times are not automatically the local clock times for your lodging. Confirm the time zone and daylight-saving offset for the location before setting alarms or arranging transport.",
+        "Pick a permitted public place with room to settle in, a clear view of the Sun’s part of the sky, and a practical route in and out. Check the site manager’s current opening, parking and accessibility information. If totality matters to you, choose a backup site that also lies inside the totality path and can be reached without a rushed drive. Share the plan with your group and agree on a meeting point before mobile networks become busy."
+      ]
+    },
+    {
+      "heading": "Prepare the cloud decision before you travel",
+      "paragraphs": [
+        "Cloud cover can block a view even when the path and timing are right. Before departure, identify one alternate viewing location and a point at which you will stop chasing clearer skies. Keep that alternate inside the desired eclipse zone if totality is essential, and check road access and venue rules rather than driving toward a random gap in the forecast. If moving sites would create a rushed or unsafe trip, stay put and observe the changing daylight, temperature feel and shadows without claiming to have seen the Sun’s obscured phases.",
+        "Make a simple fallback: check whether a reliable astronomy organization or NASA will stream the event, and have an indoor place to follow it if the sky closes in. A clouded-out visit can still become a record of what you observed and how conditions changed. This is a backup, not a promise of clear skies or a substitute for confirming local visibility."
+      ]
+    },
+    {
+      "heading": "Use eye and equipment protection correctly",
+      "paragraphs": [
+        "For every partial phase, look directly at the Sun only through proper solar viewers. NASA says ordinary sunglasses are not safe, and viewers should be inspected and discarded if scratched, torn or damaged. During a total solar eclipse, direct viewing without a viewer is safe only during the brief total phase when the Moon completely covers the Sun’s bright face; put the viewer back on as soon as any bright Sun reappears. If you are unsure whether you are in totality, keep the protection on.",
+        "Never look at the Sun through a camera, binoculars or telescope while wearing eclipse glasses. Those optics need a purpose-built solar filter secured at the front. If you do not have verified equipment, choose indirect viewing: NASA describes a pinhole projector that casts the Sun’s image onto a surface while you keep the Sun behind you and never look through the pinhole. Supervise children using viewers and keep the observation simple."
+      ]
+    },
+    {
+      "heading": "Record what happened at your site",
+      "paragraphs": [
+        "Bring a notebook, a watch set to local time and a way to stay comfortable outdoors. Record the place, the source used for timing, cloud conditions, and what you could actually see at each phase. Sketch the changing shape of the Sun only through a safe viewer or by projection; otherwise note the light and shadow around you. Leave photography for a planned, safely filtered setup so it does not take over the event.",
+        "Afterward, compare your notes with the predicted path and local circumstances. Separate observation from interpretation: write “clouds covered the Sun at maximum” if that is what happened, not a guessed measurement of darkness or temperature. This record helps you decide whether a future eclipse trip should prioritize being inside totality, a more accessible site, or a lower-travel plan."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Eclipse Viewing Safety",
+      "url": "https://science.nasa.gov/eclipses/safety/",
+      "publisher": "NASA Science",
+      "purpose": "Supports the different eye-protection rules for partial and total solar eclipses; damaged-viewer and child-supervision cautions; front-mounted solar filters for optics; and indirect pinhole projection. NASA source page last updated March 20, 2026."
+    },
+    {
+      "title": "Eclipses During 2027",
+      "url": "https://eclipse.gsfc.nasa.gov/OH/OH2027.html",
+      "publisher": "NASA Goddard Space Flight Center eclipse site",
+      "purpose": "Supports the distinction between Universal Time and local time and provides NASA event/type/date references for 2027."
+    },
+    {
+      "title": "Path of the Total Solar Eclipse of 2027 Aug 02",
+      "url": "https://eclipse.gsfc.nasa.gov/SEpath/SEpath2001/SE2027Aug02Tpath.html",
+      "publisher": "NASA Goddard Space Flight Center eclipse site",
+      "purpose": "Supports using path boundaries and the central-line table to compare candidate sites for the 2027 total solar eclipse. The table is in Universal Time and is not a local venue, weather or travel-access guarantee."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "watch-a-meteor-shower-from-a-dark-sky-location",
+    "spend-a-night-stargazing-with-no-agenda"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

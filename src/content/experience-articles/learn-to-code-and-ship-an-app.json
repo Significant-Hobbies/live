@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "learn-to-code-and-ship-an-app",
+  "slug": "learn-to-code-and-ship-an-app",
+  "title": "A small app project that teaches the whole shipping loop",
+  "description": "Choose one tiny app job, build the smallest useful version, test it with someone else and make the instructions clear before sharing it.",
+  "intent": "How do I learn enough coding to ship an app? This follows one small user task through build, testing and handoff rather than teaching a broad language survey.",
+  "sections": [
+    {
+      "heading": "Choose one job a person can finish",
+      "paragraphs": [
+        "An app idea such as “organize my life” is too broad for a first project. Pick a task with a visible result: save three favorite walking routes, split a shared grocery list into checked and unchecked items, or calculate how many pages remain in a book. Write what a person enters, what the app changes and what they see afterward. This keeps the first version small enough to finish and gives you a testable definition of working.",
+        "Draw three screens or states on paper: before input, after an action and after reopening. A list app, for example, needs an empty state, a way to add an item and a way to tell whether it was saved. Sketching these states exposes missing decisions before you spend a night styling a button."
+      ]
+    },
+    {
+      "heading": "Build the shortest end-to-end path",
+      "paragraphs": [
+        "Implement the action from input to visible result before adding settings, accounts or a theme switch. If it is a local app, first make one item appear in a list. Then decide whether it needs to survive closing the app; persistence is a separate feature and can add storage decisions. If it is a web app, make the central page work at a narrow screen width and a desktop width, not only in the editor preview.",
+        "Keep notes of errors and the change that resolved each one. Read the error message before trying random edits; if the message names a file and line, inspect the surrounding code. Use the language’s built-in tools and documentation. The goal is not to avoid confusion but to learn a repeatable way to narrow it."
+      ]
+    },
+    {
+      "heading": "Test the task with a fresh person",
+      "paragraphs": [
+        "Ask someone who did not watch you build it to complete the task while you observe. Give them the goal but do not narrate each click. Notice where they hesitate, what label they misunderstand and whether an action seems to lose their work. A short test with one person cannot establish that an app is good for everyone, but it often reveals a concrete mismatch between your mental model and the interface.",
+        "Write down the exact step where they got stuck. Fix that issue before adding a feature they did not need. Try edge cases yourself: no items, a long item name, accidental double tap, closing and reopening. If the app handles personal information, keep the first experiment with sample data and avoid collecting real details until you understand storage and privacy responsibilities."
+      ]
+    },
+    {
+      "heading": "Make the project understandable to its next user",
+      "paragraphs": [
+        "A small project is not finished when it runs only on your laptop. Include a short README explaining what it does, how to start it, and any limitations a user should know. GitHub’s documentation describes a README as a place to communicate what a project is useful for and how people can get started. Even if you do not publish the code there, those questions are a useful handoff test.",
+        "Add a screenshot or a short example if it makes the app easier to understand. Keep instructions honest: if a feature is unfinished, say so; if the project requires a particular runtime or setup, name it. Do not include access keys, private information or sample data that identifies a real person."
+      ]
+    },
+    {
+      "heading": "Ship, then observe one real use",
+      "paragraphs": [
+        "Choose a sharing path that matches the app: a static hosted page, a test build on your own device, or a small private handoff. Record which version you shared and what it needs to run. Shipping does not require a public launch; it means another person can reach the result without reproducing your development setup. For a project that handles payments, health, location or other sensitive data, pause and learn the relevant safeguards before inviting real users.",
+        "After sharing, ask the tester to use it once more without you present. Did the instructions make sense? Did the saved state persist? Which part felt slower than expected? Pick one fix and make a new version, then update the README. Your next action is to write the app’s single user task on a sticky note and sketch the three states it needs."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "About the repository README file",
+      "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes",
+      "publisher": "GitHub Docs",
+      "purpose": "Supports the README as a place to explain a project’s purpose and how people can get started; project design and testing advice is original."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "program-conway-s-game-of-life",
+    "program-a-small-digital-weather-station",
+    "start-something-a-business-blog-or-side-project"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

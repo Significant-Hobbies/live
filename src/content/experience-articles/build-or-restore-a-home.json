@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "build-or-restore-a-home",
+  "slug": "build-or-restore-a-home",
+  "title": "Start a home project by deciding what must stay",
+  "description": "Compare building new with restoring an existing home, then turn your priorities, site questions, professional advice, and budget into a workable brief.",
+  "intent": "Answers how to turn the ambition to shape a home into a decision-ready project brief, distinguishing new construction from historic rehabilitation.",
+  "sections": [
+    {
+      "heading": "Decide what “home” must do",
+      "paragraphs": [
+        "Before looking at plans or paint, write down the jobs the home must perform: sleep, cook, work, welcome people, care for children, store equipment, or support someone with limited mobility. Separate needs from preferences. “A quiet bedroom away from the street” is a requirement; “a particular tile” may be a preference. Rank the non-negotiables so a beautiful drawing does not quietly crowd out a daily need.",
+        "Then compare the project types honestly. Building new starts with a site, a brief and many decisions about layout and systems. Restoring an existing home starts with what is already there: its structure, materials, previous alterations and unknown conditions. The right choice can depend on location, ownership, local rules, financing and condition; a qualified local architect, engineer, surveyor or builder can assess the case."
+      ]
+    },
+    {
+      "heading": "If you are restoring, learn the building before changing it",
+      "paragraphs": [
+        "Walk through with a notebook and photograph existing details before removing or covering anything. Record cracks, damp, drafts, door swings, room-to-room paths, electrical and plumbing locations, and features you would regret losing. Do not treat a photograph as a diagnosis: structural movement, hazardous materials and water problems need qualified assessment.",
+        "For a historic property in the United States, the National Park Service guidelines recommend a preservation sequence that begins with protection and maintenance, then repair, and only considers replacement when repair is not possible. The guidelines also say they are general rather than case-specific; preservation professionals should help identify which features matter in a particular building. That is a useful caution against assuming that “old” means either untouchable or disposable."
+      ]
+    },
+    {
+      "heading": "If you are building, make the site part of the design",
+      "paragraphs": [
+        "Visit the site at different times of day. Notice where people arrive, which rooms might get direct sun, what the street sounds like, where water runs after rain, and what a visitor sees at the entrance. Ask your design professional to show how the plan responds to those observations rather than presenting an attractive floor plan that could sit anywhere.",
+        "Use a rough bubble plan before debating finished surfaces: connect the rooms that need to work together and separate the ones that conflict. A kitchen beside an entry may make groceries easier to unload; a work area next to a noisy television room may create a daily nuisance. These are questions to test on paper with a qualified designer, not a substitute for code or engineering review."
+      ]
+    },
+    {
+      "heading": "Write a brief people can price and challenge",
+      "paragraphs": [
+        "Put the project in a one-page brief: who will live there, what routines matter, what must be accessible, what existing features should remain, and what “finished” means. Include a list of unknowns as well as preferences. A restoration brief might say “repair the original wood windows if condition permits”; a new-build brief might say “keep the dining table close to the kitchen and preserve a quiet room for calls.”",
+        "Ask each professional what they will inspect, what decisions they need from you, how they document assumptions, and what is outside their scope. Get local advice on permits, utility connections, safety, property boundaries and contracts; rules and licensing differ by jurisdiction. Price major work with contingencies and clarify who handles design revisions, inspections and changes."
+      ]
+    },
+    {
+      "heading": "Protect the project from decision fatigue",
+      "paragraphs": [
+        "Choose a few decisions to make early because they affect many others: the number of rooms, major circulation paths, heating and cooling approach, storage and how the home connects to outdoors. Delay easy-to-replace details until the layout and building condition are understood. Keep a decision log with the choice, reason, cost or maintenance consequence, and who confirmed it.",
+        "Before authorizing a large phase, ask a second person to explain the plan back to you in plain language. If their description does not match your brief, pause and resolve the mismatch. Your next practical step is to schedule a site walk with the right local professional and leave with a written list of what still needs investigation."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Guidelines for Rehabilitating Historic Buildings",
+      "url": "https://www.nps.gov/articles/000/guidelines-rehabilitating-historic-buildings.htm",
+      "publisher": "U.S. National Park Service",
+      "purpose": "Supports a narrow example for U.S. historic rehabilitation: preserve character-defining features, begin with maintenance, prefer repair before replacement and seek qualified preservation professionals for case-specific decisions; not general building-code or site-specific advice."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "create-a-home-that-feels-like-you",
+    "build-homes-with-habitat-for-humanity",
+    "make-a-map-of-places-you-call-home"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

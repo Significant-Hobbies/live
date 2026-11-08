@@ -1,0 +1,65 @@
+{
+  "experienceSlug": "compete-in-a-national-championship",
+  "slug": "compete-in-a-national-championship",
+  "title": "Trace One National Championship Back to Its Qualifier",
+  "description": "Choose a named national championship, verify its entry path with the governing body, and plan the season around eligibility and measurable standards.",
+  "intent": "Turns an ambitious goal into a competition-specific entry investigation, using official rules rather than assumed eligibility or a generic training promise.",
+  "sections": [
+    {
+      "heading": "Name the championship and event first",
+      "paragraphs": [
+        "“Nationals” is not one competition. Start with a sport, discipline, age or classification group, and the event you want to enter. Find the organization that owns the competition and locate the current-year entry or qualification page. Note what season the rules apply to; a previous year’s standards are useful background, not proof that the next cycle is identical.",
+        "Write down the exact question you need answered: Do you need a qualifying mark, a regional finish, a membership, a license, citizenship or residency, or a selection process? For a track championship, for example, an entry mark may need to come from an approved competition and use legal timing. Another sport may qualify through sanctioned events, rankings, association nominations, or a bracket path."
+      ]
+    },
+    {
+      "heading": "Map the path in reverse",
+      "paragraphs": [
+        "Start at the national event and follow every linked qualification document backward. Build a simple chain: national entry criteria, qualifying competition, local or regional event, registration, and membership or eligibility checks. Mark the deadline attached to each. If a rule says “qualifying window,” copy the opening and closing dates instead of estimating from the event calendar.",
+        "USA Track & Field’s 2026 indoor combined-events page is a historical example of how detailed a national championship rule set can be: it covered membership and eligibility, accepted competition sources, timing and mark conditions. The linked 2026 Indoor Championships declaration page separately shows how entry verification and declaring an intention to compete were distinct steps. Those 2026 deadlines have passed. Use these pages to recognize the questions to ask, then obtain the current rules and dates for your exact target event; neither page establishes eligibility for a later season."
+      ]
+    },
+    {
+      "heading": "Ask the administrator about edge cases",
+      "paragraphs": [
+        "If you are close to a standard or have a classification, age, affiliation, or documentation question, ask the event administrator in writing. Include the exact event, rule section, your situation, and the date you need an answer by. Save the reply with the current rules. A vague phone answer can be difficult to rely on later if registration asks for a specific document.",
+        "Do not assume that being talented, locally ranked, or a previous qualifier automatically earns entry. Some events have minimum marks, field limits, formal declarations, or exceptions that require approval in advance. If you need an exception, find the official process and deadline while there is still time to act."
+      ]
+    },
+    {
+      "heading": "Turn qualification into a coachable season",
+      "paragraphs": [
+        "Once the route is clear, take the rule sheet to a qualified coach. Ask which preparation benchmarks matter for your event and how to fit the qualifying meet into a healthy season. Define controllable goals—complete the entry process, execute the planned performance, learn from the result—alongside the outcome goal. A national start may be meaningful even if the final placing is not what you hoped.",
+        "Schedule a checkpoint before the qualification window closes. If your progress is behind the plan, the coach can help decide whether to adjust the event, seek another sanctioned opportunity, or target a later championship cycle. Do not try to force an unsafe last-minute peak just because an entry deadline is near."
+      ]
+    },
+    {
+      "heading": "Keep a proof-of-entry folder",
+      "paragraphs": [
+        "Store the official eligibility page, your membership confirmation, result records, qualification evidence, registration receipt, and written answers together. After an eligible performance, confirm that the result appears in the accepted database or has been submitted in the required format. Then complete any declaration separately; a verified qualifying result may not by itself confirm that you intend to compete.",
+        "Your next step is to name one championship and download its current entry rules. Put every qualification step and deadline on a calendar, then confirm the first uncertain requirement with the governing body. That is the shortest route from an aspiration to a real, reviewable path onto the start list."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Qualifying Information",
+      "url": "https://www.usatf.org/events/2026/2026-usatf-indoor-combined-events-championships/qualifying-information",
+      "publisher": "USA Track & Field",
+      "purpose": "Historical 2026 example of one national event’s eligibility, accepted marks and qualifying standards. Its deadlines have passed; it is not current entry advice."
+    },
+    {
+      "title": "Declaration Steps and Entry Status",
+      "url": "https://www.usatf.org/events/2026/2026-usatf-indoor-championships/declaration-steps-and-entry-status",
+      "publisher": "USA Track & Field",
+      "purpose": "Historical 2026 Indoor Championships example distinguishing entry verification from declaring intent to compete. Its declaration dates have passed."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "win-a-competition-you-genuinely-trained-for",
+    "run-a-race-you-had-to-train-for",
+    "compete-in-an-obstacle-course-race"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

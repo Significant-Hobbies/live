@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "stretch-strudel-dough-by-hand",
+  "slug": "stretch-strudel-dough-by-hand",
+  "title": "Let the strudel dough tell you when it is ready to stretch",
+  "description": "Use dough feel, rest, and a cloth-covered table to stretch strudel gently, then plan the filling so the thin sheet is easy to roll.",
+  "intent": "How can I stretch strudel dough without tearing it from impatience or heavy handling? This adds a tactile pacing and assembly plan to the short activity.",
+  "sections": [
+    {
+      "heading": "Make the workspace before the dough",
+      "paragraphs": [
+        "Choose a table you can walk around and cover it with a clean cloth suited to the task. Clear nearby edges and set out the filling, pastry brush or spoon, and a sheet pan before stretching begins. Once the dough is thin, leaving to fetch a tool can let it dry or cause an avoidable tear.",
+        "King Arthur Baking’s strudel dough recipe uses a tablecloth to help with stretching and rolling, and calls for rested dough. Follow one complete recipe for the dough and filling rather than pairing an unfamiliar dough formula with a very wet filling."
+      ]
+    },
+    {
+      "heading": "Rest is part of the technique",
+      "paragraphs": [
+        "The cited recipe explains that resting makes the dough easier to manipulate and suggests letting refrigerated dough sit briefly at room temperature if it is difficult to stretch. Use the recipe’s timing and feel cues; do not rush simply because the dough looks smooth. A rested ball gives gluten time to relax, so less force is needed.",
+        "Before stretching, lightly oil your hands if the recipe recommends it. The dough should feel lightly tacky rather than sticky or dry. If it springs back strongly or resists, pause and let it rest as directed. Pulling harder is more likely to produce an uneven edge than a thinner sheet."
+      ]
+    },
+    {
+      "heading": "Begin with gentle hand stretching",
+      "paragraphs": [
+        "Start by stretching the dough a little in your hands, preserving a rough rectangle. When it becomes too large to manage comfortably, lay it on the cloth. Use the recipe’s gentle technique to move underneath the dough and ease it outward bit by bit. Work around the perimeter rather than stretching one corner until the middle becomes thick.",
+        "A tablecloth pattern can help you judge whether the sheet is becoming translucent, but do not force a perfect sheet if a small tear appears. The recipe notes that some small tears can be rolled inside during assembly. If a tear is large, ask whether it can be patched or better to restart with a smaller piece."
+      ]
+    },
+    {
+      "heading": "Thin edges and uneven spots thoughtfully",
+      "paragraphs": [
+        "When the dough reaches the table edges, inspect the perimeter. Thick edges can make the finished roll bulky, so the recipe suggests gently stretching them with fingers. Avoid brushing melted butter roughly across the sheet; the same recipe warns that brushing can tear it and uses a drizzle instead.",
+        "The aim is not an invisible sheet at any cost. A slightly thicker patch may still bake well, while a hole under a wet filling can leak. Keep your movements calm, and avoid lifting the whole sheet to inspect it; the cloth supports the dough and helps you move less."
+      ]
+    },
+    {
+      "heading": "Roll with the cloth and keep notes",
+      "paragraphs": [
+        "Add a filling spread in the recipe’s specified way, leaving the edge it needs for rolling. Use the cloth to help guide the dough over the filling rather than dragging a hand across the delicate sheet. Transfer the roll carefully to its tray and bake following the full recipe.",
+        "If the dough tears, note when it happened and whether the dough felt too cold, too dry, or overhandled; do not treat every tear as failure. Your next action is to make one measured dough batch, rest it as instructed, and prepare the table and filling before you begin stretching."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Strudel Dough",
+      "url": "https://www.kingarthurbaking.com/recipes/strudel-dough-recipe",
+      "publisher": "King Arthur Baking; recipe by Erin Jeanne McDowell",
+      "purpose": "Supports the rest and texture cues, cloth-covered table, gradual hand stretching, edge thinning, and rolling with the tablecloth."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "laminate-pastry-and-bake-a-first-batch-of-croissants",
+    "bake-hollow-choux-pastry-and-fill-it",
+    "make-a-sheet-of-washi-with-a-papermaker"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

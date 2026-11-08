@@ -1,0 +1,81 @@
+{
+  "experienceSlug": "get-your-hearing-and-vision-checked",
+  "slug": "get-your-hearing-and-vision-checked",
+  "title": "Book the right hearing and eye appointments",
+  "description": "Prepare for hearing and vision checks by matching each concern to the right professional, asking about tests, and following up on results.",
+  "intent": "Help readers organize hearing and vision appointments while avoiding the assumption that one screening schedule or test fits every adult.",
+  "sections": [
+    {
+      "heading": "Treat hearing and vision as separate checks",
+      "paragraphs": [
+        "‘Get checked’ sounds like one appointment, but hearing and vision are different systems and may involve different professionals and tests. An eye examination might assess clarity of vision and look for eye disease; a hearing evaluation may involve an audiologist or an ear, nose, and throat specialist. You can schedule them together if that is convenient, but do not assume a quick office screen includes a complete diagnostic evaluation. When booking, explain whether you want a routine check, have a specific concern, or are following a clinician’s recommendation.",
+        "The U.S. National Eye Institute says the kind and frequency of dilated eye exams depend on risk, and advises discussing the right interval with a doctor. Its page lists specific examples of groups who may need exams more often, but those examples are not a complete personal schedule for every condition or country. The U.S. National Institute on Deafness and Other Communication Disorders offers a questionnaire for adults ages 18–64; it says several affirmative answers may be a reason to seek a professional hearing evaluation. That tool is not a diagnosis and does not apply to every age group."
+      ]
+    },
+    {
+      "heading": "Prepare useful details before you call",
+      "paragraphs": [
+        "Write down what prompted the appointment. For vision, note changes such as blur at distance or close range, trouble driving at night, eye discomfort, or headaches after screen use. For hearing, note situations where speech is hard to follow, such as a busy restaurant or group conversation, and whether the problem affects one or both ears. Include when you first noticed it and whether it is changing. These observations help a professional understand the question, but they do not identify the cause.",
+        "Bring glasses or contact lens details, prior prescriptions, relevant medical history, medications, and insurance or referral information if the clinic requests them. Ask whether the appointment includes a comprehensive exam or a screening only, how long it may take, and whether you should arrange transport if drops could temporarily blur vision. Policies and coverage differ by country, clinic, and plan, so verify directly rather than relying on a generic online estimate."
+      ]
+    },
+    {
+      "heading": "Ask what each result means",
+      "paragraphs": [
+        "At the appointment, ask what was tested, what the results mean, and whether any follow-up is recommended. If a quick screen is normal but you still have difficulty seeing or hearing, ask whether a fuller evaluation is appropriate. A screening test is designed to identify a possible issue; it does not necessarily explain the issue. Request a copy of results or note the clinic’s instructions, especially if another provider needs to see them.",
+        "For a dilated eye exam, the National Eye Institute explains that drops widen the pupils and can leave vision blurry or light-sensitive for a few hours. Ask the clinic what to expect in your case and plan transport or work accordingly. Some exam components—such as a visual acuity test, visual field assessment, eye movement check, pupil response, and pressure measurement—may be part of the exam, but your clinician determines what is appropriate. Do not assume every visit includes every test."
+      ]
+    },
+    {
+      "heading": "Handle specific warning signs differently from routine care",
+      "paragraphs": [
+        "A routine check belongs on a calendar; certain sudden symptoms need prompt professional attention. The National Eye Institute says a sudden increase in floaters, flashes of light, or a dark curtain or shadow in the field of vision can signal retinal detachment and advises seeing an eye doctor or going to an emergency room right away. Its corneal guidance also says to seek immediate eye care for intense eye pain, a vision change, blurry vision, a serious eye injury, or an object stuck in the eye. NIDCD describes sudden rapid hearing loss over hours or days, often in one ear, as a medical emergency and says to visit a doctor immediately. These are specific warning signs, not a complete list of emergencies or a diagnosis. Use local emergency services when needed and follow a qualified clinician’s instructions.",
+        "The goal is not to chase a perfect result. Corrected vision, a stable finding, a referral, or a recommendation to return later are all outcomes that can make your next decision clearer. If cost or access is a barrier, ask the clinic or national health service about appropriate low-cost options, but verify current eligibility and availability in your area."
+      ]
+    },
+    {
+      "heading": "Make the next step easy",
+      "paragraphs": [
+        "Choose the appointment that is easiest to book first, and schedule the other one separately if combining them is not practical. Before you hang up, write down where to go, what to bring, and how results will be shared. If the provider recommends follow-up, add the next action to your calendar and note the reason. That small record turns a vague health intention into a completed check and a clear path for whatever comes next."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Get a Dilated Eye Exam",
+      "url": "https://www.nei.nih.gov/eye-health-information/healthy-vision/finding-eye-doctor/get-dilated-eye-exam",
+      "publisher": "U.S. National Eye Institute",
+      "purpose": "Supports the purpose and components of dilated eye exams, risk-dependent frequency, and temporary blurry/light-sensitive vision after drops; not an individualized screening schedule."
+    },
+    {
+      "title": "Do You Need a Hearing Test?",
+      "url": "https://www.nidcd.nih.gov/health/do-you-need-hearing-test",
+      "publisher": "U.S. National Institute on Deafness and Other Communication Disorders",
+      "purpose": "Provides a screening questionnaire for adults ages 18–64 and suggests professional evaluation for multiple affirmative responses; not a diagnosis or universal screening rule."
+    },
+    {
+      "title": "Retinal Detachment",
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/retinal-detachment",
+      "publisher": "U.S. National Eye Institute",
+      "purpose": "Supports prompt eye-doctor or emergency-room care for a sudden increase in floaters, flashes, or a curtain/shadow in the visual field; not a full triage guide."
+    },
+    {
+      "title": "Corneal Conditions",
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/corneal-conditions",
+      "publisher": "U.S. National Eye Institute",
+      "purpose": "Lists intense eye pain, vision change, blurry vision, object in the eye, and serious eye injury as reasons to go to an eye doctor or emergency room right away."
+    },
+    {
+      "title": "Sudden Deafness",
+      "url": "https://www.nidcd.nih.gov/health/sudden-deafness?nav=tw",
+      "publisher": "U.S. National Institute on Deafness and Other Communication Disorders",
+      "purpose": "Defines sudden sensorineural hearing loss and says its symptoms should be treated as a medical emergency with a doctor visit immediately; not an individualized diagnosis."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "get-a-full-health-checkup-including-bloodwork",
+    "understand-your-own-health-at-a-deep-level"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

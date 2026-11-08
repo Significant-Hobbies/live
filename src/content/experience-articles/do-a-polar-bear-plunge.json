@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "do-a-polar-bear-plunge",
+  "slug": "do-a-polar-bear-plunge",
+  "title": "How to choose a supervised polar plunge",
+  "description": "Plan one organized polar plunge by checking the host’s safety plan, entry and exit setup, medical coverage, and post-event warming arrangements.",
+  "intent": "How can I distinguish a supervised community plunge from an improvised cold-water dare, and what should I ask the organizer?",
+  "sections": [
+    {
+      "heading": "Choose an event with a named organizer",
+      "paragraphs": [
+        "Look for a community event run by a recognizable nonprofit, municipality, club or established venue. Read the organizer’s current page for the date, location, age rules, participant instructions and contact details. A social post inviting people to meet at an unsupervised beach is not the same as a staffed event with an emergency plan.",
+        "Before registering, ask who controls water entry, how participants exit, whether trained responders are present, and where people can get warm and dry afterward. An organizer should explain the plan plainly. Do not treat a crowd, a banner or a volunteer with a clipboard as proof that water safety is covered."
+      ]
+    },
+    {
+      "heading": "Understand why the cold is not a toughness test",
+      "paragraphs": [
+        "The American Heart Association describes sudden cold-water immersion as capable of triggering rapid changes in breathing, heart rate and blood pressure. An involuntary gasp can create an immediate drowning hazard; cold exposure can also affect coordination and thinking. These are reasons to treat a plunge as a managed water event, not a test of endurance.",
+        "The AHA article notes that risks vary with a person’s health and that evidence for claimed health benefits is uncertain. If you have a heart or other health concern, ask a clinician whether participation is appropriate. An article or waiver cannot provide personal clearance. No one should be pressured to enter because they paid, dressed up or brought friends."
+      ]
+    },
+    {
+      "heading": "Inspect the sequence, not just the splash",
+      "paragraphs": [
+        "A good plan covers more than the moment someone is in the water. Ask where the queue forms, how the entry area is kept clear, whether conditions are checked, how staff respond if someone needs help and how the exit avoids crowding. If the event uses a pool or managed shoreline, check what facility staff and lifeguards are responsible for.",
+        "Ask where you go immediately after exiting and whether there is a place to change. Bring warm dry layers, following the organizer’s directions. These are comfort arrangements, not a home rewarming protocol. If the event cannot explain who supervises the water or how help is summoned, skip it."
+      ]
+    },
+    {
+      "heading": "Decide your boundary ahead of time",
+      "paragraphs": [
+        "You can attend, cheer, donate or volunteer without entering the water. If you participate, decide before the event that you can stop at the edge, change your mind or exit promptly. Set that boundary with companions before excitement and group photos make it harder to speak up.",
+        "Avoid combining a plunge with alcohol, a dare or pressure to remain immersed. Do not turn one event into a private cold-water challenge afterward. A one-time organized gathering is different from routine immersion; this goal does not imply that daily exposure is a suitable next step."
+      ]
+    },
+    {
+      "heading": "Make one call before you go",
+      "paragraphs": [
+        "Contact the organizer through a current official channel and ask: Who oversees water safety? What are the entry and exit arrangements? What is the weather cancellation process? Where is post-plunge changing space? What should participants bring, and what will the event supply? Confirm details close to the date because site conditions and schedules can change.",
+        "If answers are vague, choose another event or stay on shore. If they are clear, read the instructions again, plan your arrival and a warm ride home, and tell your group your boundary. A successful plunge is not measured by duration; the useful goal is participating only within a credible, supervised plan."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "You're not a polar bear: The plunge into cold water comes with risks",
+      "url": "https://www.heart.org/en/news/2022/12/09/youre-not-a-polar-bear-the-plunge-into-cold-water-comes-with-risks",
+      "publisher": "American Heart Association",
+      "purpose": "Cold shock and uncertainty around benefits; expert-interview reporting, not individualized medical guidance."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "take-a-cold-plunge-every-morning-for-a-month",
+    "swim-a-mile-without-stopping",
+    "complete-a-triathlon"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

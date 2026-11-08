@@ -1,0 +1,78 @@
+{
+  "experienceSlug": "work-through-a-celestial-navigation-sight-reduction",
+  "slug": "work-through-a-celestial-navigation-sight-reduction",
+  "title": "A desk-only worked example of a star sight correction",
+  "description": "Follow a real USNO Sirius row through one clearly simulated altitude correction, with the sign and arithmetic shown and no claim of a usable position fix.",
+  "intent": "How do I apply a celestial altitude correction and label the intercept without confusing computed USNO output with a real observation? This adds a reproducible desk-only example.",
+  "sections": [
+    {
+      "heading": "Set a boundary around the exercise",
+      "paragraphs": [
+        "This is a desk calculation, not a navigation exercise at sea. The US Naval Observatory (USNO) row below is actual output from its Celestial Navigation Data service. The apparent altitude used in the arithmetic is invented solely for practice; no sextant was used and no observed position can be inferred.",
+        "The service requires a date, a UT1 time and latitude/longitude coordinates in decimal degrees. It assumes sea-level observations. For this reproducible query the inputs were date 2021-08-30, time 16:11 UT1, and coordinates 36.8508° N, 75.2859° W (entered as 36.8508, -75.2859). The date and coordinates follow the service’s published example; the time is specified here for this query."
+      ]
+    },
+    {
+      "heading": "Copy one actual star row",
+      "paragraphs": [
+        "The USNO API returned this row for Sirius (navigation star 18): GHA 120.301286°, declination 16.742609° S, computed altitude Hc 21.649534°, and azimuth Zn 226.779081°. Its altitude corrections were refraction −0.041283°, semidiameter 0.000000°, parallax in altitude 0.000000°, and total Sum −0.041283°. These are the service’s computed astronomical values, not readings from an observer.",
+        "The USNO page explains that stars have zero semidiameter and parallax corrections in this table. The negative refraction correction lowers the apparent altitude to the corrected observed altitude under the service’s convention: Ho = ha + Sum. Here, ha means apparent altitude, already beyond any hypothetical instrument and dip corrections. Keeping that definition explicit avoids quietly adding corrections that this small example does not calculate."
+      ]
+    },
+    {
+      "heading": "Apply the correction with units visible",
+      "paragraphs": [
+        "Now introduce the simulated part: suppose a worksheet has an invented apparent altitude ha = 21°40.000′ for Sirius. This is not claimed to be a plausible sight or a measured value. Convert the USNO refraction correction to minutes: −0.041283° × 60 = −2.476980′. For a star, the other two terms are zero, so Sum is still −2.476980′.",
+        "Apply the published rule, Ho = ha + Sum: 21°40.000′ + (−2.476980′) = 21°37.523020′. A quick independent check in decimal degrees gives ha = 21.666666667°, Sum = −0.041283°, and Ho = 21.625383667°. Converting the latter back gives 21°37.523020′. The two paths agree."
+      ]
+    },
+    {
+      "heading": "Compare Ho and Hc, then label the sign",
+      "paragraphs": [
+        "Convert the actual USNO Hc row to degrees and minutes: 21.649534° × 60 = 1,298.972040′, or 21°38.972040′. Compare the practice Ho with Hc: Ho − Hc = 21°37.523020′ − 21°38.972040′ = −1.449020′. The corrected practice altitude is lower than the computed altitude.",
+        "NGA’s Sight Reduction Tables for Marine Navigation, Publication 229, labels an intercept away when Hc is greater than Ho and toward when Ho is greater than Hc. So the arithmetic sign here corresponds to an away intercept of about 1.4′ (rounded to a tenth). The signed subtraction is Ho − Hc; the conventional direction label communicates which way the line is plotted. Do not turn this paper result into a fix: the altitude was simulated, and a real line of position requires a valid observation, appropriate corrections, and plotting with the body’s azimuth."
+      ]
+    },
+    {
+      "heading": "Keep the record auditable",
+      "paragraphs": [
+        "A useful worksheet separates the data into three groups: service inputs; the copied USNO row; and the simulated measurement and arithmetic. Mark each number as “USNO returned” or “invented for practice.” Preserve the units at every step, especially when converting decimal degrees to minutes. If a partner gets a different result, check whether they added the signed correction, converted degrees by multiplying by 60, and compared Ho with Hc in the same order.",
+        "The USNO notes say the correction values strictly apply when observations were made from the assumed position, with the specified limb condition for Sun or Moon; small errors may arise when they are applied near that position. This simplified star example avoids limb corrections, but it still omits real sight-taking and plotting. Your next step is to repeat only the arithmetic with another returned star row, keeping any invented altitude plainly labeled and the calculation on paper."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Celestial Navigation Data for Assumed Position and Time",
+      "url": "https://aa.usno.navy.mil/data/celnav",
+      "publisher": "U.S. Naval Observatory",
+      "purpose": "Defines required inputs, output fields, sea-level assumption, star corrections and the Ho = ha + Sum convention; warns where corrections apply."
+    },
+    {
+      "title": "USNO Celestial Navigation API response for the stated query",
+      "url": "https://aa.usno.navy.mil/api/celnav?date=2021-8-30&time=16:11&coords=36.8508,-75.2859",
+      "publisher": "U.S. Naval Observatory",
+      "purpose": "Actual queried JSON output for the stated date, UT1 time and assumed coordinates, including the Sirius row transcribed in the example."
+    },
+    {
+      "title": "Astronomical Applications API Documentation",
+      "url": "https://aa.usno.navy.mil/data/api",
+      "publisher": "U.S. Naval Observatory",
+      "purpose": "Documents the celnav endpoint, date/time formats and decimal-degree coordinate convention."
+    },
+    {
+      "title": "Sight Reduction Tables for Marine Navigation, Publication 229, Volume 2",
+      "url": "https://msi.nga.mil/api/publications/download?key=16694509%2FSFH00000%2FV2%2FPub229Vol2.pdf&type=download",
+      "publisher": "National Geospatial-Intelligence Agency",
+      "purpose": "Supports the toward/away intercept convention and identifies how Ho compared with Hc determines the direction."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "navigate-a-beginner-orienteering-course-with-a-paper-map",
+    "analyze-an-exoplanet-transit-with-real-telescope-data",
+    "build-a-model-of-the-moon-s-phases",
+    "spend-a-night-stargazing-with-no-agenda"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

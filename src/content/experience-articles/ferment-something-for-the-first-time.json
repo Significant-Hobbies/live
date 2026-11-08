@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "ferment-something-for-the-first-time",
+  "slug": "ferment-something-for-the-first-time",
+  "title": "Start fermentation with one tested cabbage recipe",
+  "description": "Choose one tested sauerkraut method, prepare clean equipment and follow its salt, temperature and storage directions without improvising.",
+  "intent": "What is a sensible first home fermentation? This narrows the goal to a tested sauerkraut process and explains which variables to keep controlled.",
+  "sections": [
+    {
+      "heading": "Choose a specific ferment and a reliable recipe",
+      "paragraphs": [
+        "For a first project, choose one fermented food with a complete tested recipe rather than a video that leaves measurements to intuition. Sauerkraut is a useful example because the National Center for Home Food Preservation provides a full recipe and describes the container, salt, weights and temperature guidance. Use that recipe as written. Do not mix directions from two sources or treat a brine ratio for one vegetable as appropriate for another.",
+        "Read the entire recipe before buying cabbage. Check what vessel, cover, weight, ingredients and storage method it calls for. Confirm that you have a space where the container can sit undisturbed within the recipe’s conditions. If you do not have the needed equipment, wait until you do or choose another fully tested recipe."
+      ]
+    },
+    {
+      "heading": "Prepare the workspace and record the start",
+      "paragraphs": [
+        "Clean the work area and use the suitable fermentation container and cover specified by the source. Weigh or measure ingredients exactly as directed. Make a small batch only if the tested recipe includes a smaller batch size; do not scale by guesswork. Write down the recipe title, source, date, ingredients, vessel and room conditions. This makes it easier to compare the result with the instructions.",
+        "Keep the ferment in the place the recipe specifies, away from pets, children and accidental knocks. The National Center for Home Food Preservation notes that temperature affects fermentation time and quality for its sauerkraut recipe. Follow its range and monitoring directions; do not rely on a calendar estimate if the source says to use a process cue."
+      ]
+    },
+    {
+      "heading": "Observe without changing the process",
+      "paragraphs": [
+        "Watch for the signs the recipe identifies, such as bubbling and the point when fermentation is complete. If the instructions say to keep ingredients submerged or check the surface, do so in the way described. Do not add more salt, water or spices because the ferment tastes different from a restaurant version. A different smell or appearance can require careful interpretation; if it seems spoiled or the source’s criteria are not met, do not taste it to find out.",
+        "If you see a condition that the recipe does not explain, consult a qualified food-preservation authority rather than crowdsourcing a safety decision. Some fermented foods rely on acidity, salt or temperature in specific combinations. A successful batch depends on the full method, not on the word “fermented” or a generic jar."
+      ]
+    },
+    {
+      "heading": "Finish and store only as directed",
+      "paragraphs": [
+        "When the source’s stated fermentation cue is met, use its storage or canning instructions exactly. The NCHFP recipe explains that fully fermented sauerkraut may be refrigerated or canned using its specific tested procedure and processing information. Those options are not interchangeable. If you do not plan to can it, follow the recipe’s refrigeration method and use clean utensils each time.",
+        "Label the container with the date and source recipe. Keep the batch separate from older ferments until you are confident it matches the source’s end point and storage directions. Never seal a ferment in a way that creates pressure unless the equipment is designed for it and the source explains how to use it."
+      ]
+    },
+    {
+      "heading": "Learn one thing before choosing another ferment",
+      "paragraphs": [
+        "After the batch is complete, note the texture, salt balance, acidity and how consistently you followed the recipe. Keep the note factual: “fermented at the listed temperature for the source’s stated window” is more useful than “best ever.” If you liked the process, repeat the same recipe before changing ingredients. Repetition helps distinguish the method from variation in produce or room conditions.",
+        "Then choose a second fermentation with its own tested source and safety instructions. Do not assume the sauerkraut method applies to pickles, dairy, beans or beverages. Your next step is to read the NCHFP sauerkraut recipe from start to finish and gather the listed equipment before beginning."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Sauerkraut",
+      "url": "https://nchfp.uga.edu/how/ferment/recipes/sauerkraut",
+      "publisher": "National Center for Home Food Preservation, University of Georgia Cooperative Extension",
+      "purpose": "Provides a tested sauerkraut method and specific container, salt, temperature, fermentation and storage guidance; article directs readers to follow the full current instructions without modification."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "preserve-a-season-jam-pickle-ferment",
+    "make-your-own-condiments-from-scratch",
+    "bake-sourdough-weekly-for-a-year"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

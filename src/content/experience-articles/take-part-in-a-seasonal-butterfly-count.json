@@ -1,0 +1,51 @@
+{
+  "experienceSlug": "take-part-in-a-seasonal-butterfly-count",
+  "slug": "take-part-in-a-seasonal-butterfly-count",
+  "title": "How do you make a butterfly count useful without knowing every species?",
+  "description": "Join a seasonal butterfly count by choosing a suitable spot, recording only what you can identify, and keeping the observation period consistent.",
+  "intent": "Answer how a beginner can contribute a careful butterfly count, including how to handle uncertain identifications and why repeatable effort matters.",
+  "sections": [
+    {
+      "heading": "Find the count method used in your region",
+      "paragraphs": [
+        "Butterfly counts can be casual public events, timed observations, or structured surveys with a fixed route and schedule. Find out which kind your local organizer is running before you begin. Butterfly Conservation’s local monitoring guidance describes a 15-minute timed count that can be conducted at a suitable site and notes that consistent effort helps make records more useful. Other programs may use a different duration, route, or season, so use their current instructions instead of borrowing a method from another country.",
+        "Pick a place where you can stand or walk without trampling plants or blocking other visitors. A sunny, sheltered edge may help you see butterflies, but choose safety and access first. Check the organizer’s weather guidance, whether the site needs permission, and whether you should count from one point or follow a route. If the event is part of a formal survey, learn its start and end cues so your record can be compared fairly with other observations."
+      ]
+    },
+    {
+      "heading": "Count what you can identify",
+      "paragraphs": [
+        "Bring a field guide or use the identification resource recommended by the count organizer. Notice size, color pattern, flight style, and the plant or habitat nearby, but do not chase or capture an insect to get a better view. If a butterfly passes too quickly, record it as uncertain or leave it out according to the project instructions. A careful count is not improved by adding guesses. If the organizer accepts broad groups, use that option and explain what you could see.",
+        "Record the number and type of butterflies as the protocol asks. If the count is timed, begin when ready and keep the effort period consistent. Avoid counting the same individual repeatedly if you can reasonably tell it is circling the same patch; if you cannot distinguish individuals, follow the project’s stated counting rule. Add brief context such as shade, wind, or cloud cover if the form requests it. Do not invent exact weather measurements from memory."
+      ]
+    },
+    {
+      "heading": "Make the record repeatable",
+      "paragraphs": [
+        "Write down the date, location, effort period, and identification confidence while the details are fresh. For a fixed survey, use the same route or observation point each time, and follow the organizer’s guidance on how to report zero butterflies. A zero count is information about a particular place and moment; it is not evidence that butterflies are absent from the wider area. If you use a phone app, check that the location pin is correct before submitting and avoid sharing sensitive site details if the organizer advises otherwise.",
+        "If a species is unfamiliar, note the visible features and ask an experienced recorder to help after the count. Butterfly Conservation’s local guidance treats timed counts as one method among several rather than a substitute for all monitoring. That distinction matters: a casual one-off count can be a useful encounter, but it should not be presented as a long-term population survey. The method determines what conclusions your observation can support."
+      ]
+    },
+    {
+      "heading": "Use one observation to choose a next step",
+      "paragraphs": [
+        "After the count, compare your notes with the organizer’s identification list and see which features were most useful. You might notice that wing underside patterns are easier to see when a butterfly rests, or that a route includes several habitat types. Keep your observations separate from conclusions about population change unless the project has enough repeated, standardized data to support that claim.",
+        "For a first attempt, join an organized count or use a local nature group’s instructions, then repeat the same method another day if the project invites follow-up. Keep the activity low-impact: observe from paths, leave flowers and caterpillars undisturbed, and share records only through the channel the organizer recommends. Your next useful action is to identify one common local species using an official guide before the count begins, then spend the session practising that identification alongside careful recording."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Guidance for monitoring butterflies at a local scale",
+      "url": "https://www.butterfly-conservation.org/sites/default/files/2026-01/Guidance%20for%20monitoring%20butterflies%20at%20a%20local%20scale.pdf",
+      "publisher": "Butterfly Conservation",
+      "purpose": "Supports the role of a 15-minute multi-species timed count and the value of consistent recording effort."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "document-a-wild-species-for-inaturalist",
+    "join-a-dusk-bat-walk-with-a-detector"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

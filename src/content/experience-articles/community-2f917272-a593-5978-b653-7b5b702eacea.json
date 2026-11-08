@@ -1,0 +1,60 @@
+{
+  "experienceSlug": "community-2f917272-a593-5978-b653-7b5b702eacea",
+  "slug": "go-on-a-long-car-ride-1wk",
+  "title": "Make a week-long road trip feel like a journey",
+  "description": "Build a long road trip around a few anchors, realistic driving days and proper rest; use a flexible route instead of filling every hour.",
+  "intent": "Plan the rhythm of a week or longer car journey, adding a repeatable day structure and realistic fatigue breaks rather than an itinerary that prizes distance.",
+  "relatedExperienceSlugs": [
+    "road-trip-with-no-fixed-destination",
+    "take-a-road-trip-with-your-best-friends",
+    "road-trip-across-new-zealand"
+  ],
+  "sections": [
+    {
+      "heading": "Choose a shape for the week",
+      "paragraphs": [
+        "A long road trip can be a loop, a one-way route or a chain of visits. Decide which shape fits your available days and how you will return the car if you are not driving home. Pick one or two anchor places you genuinely care about, then fill the route between them with flexible stops. A map full of pins can hide the actual distance and leave no time to pause.",
+        "Give each day a rough purpose: travel, explore, recover or meet someone. You do not need to drive a set number of hours every day. NHTSA’s road-trip guidance recommends allowing time for stops, stretching, food and changing drivers or resting if drowsy. Use that as a safety baseline, then adapt to local rules, roads and daylight where you are driving."
+      ]
+    },
+    {
+      "heading": "Plan the day in two blocks",
+      "paragraphs": [
+        "Instead of calculating a perfect minute-by-minute schedule, choose a morning destination and an afternoon decision point. If the morning drive takes longer than expected, drop the optional stop. If the weather is good and everyone feels rested, you can take the scenic route. Keep the accommodation booked or at least know what your fallback is before entering a remote area or arriving late.",
+        "Save fuel, food and rest stops in advance, especially where services are sparse. Check the vehicle before departure, including tires and lights, and understand what roadside assistance covers. NHTSA advises checking tires before a long trip; its specific guidance is for U.S. driving conditions, so follow your local vehicle rules and assistance services elsewhere."
+      ]
+    },
+    {
+      "heading": "Share the load without pressuring anyone",
+      "paragraphs": [
+        "If there is more than one driver, agree on who is comfortable with which roads and conditions. A passenger can navigate, watch for closures, handle music or find a stop, but the driver should not read a phone while moving. If only one person drives, shorten the day and plan proper sleep. Do not use caffeine, loud music or open windows as a substitute for rest when someone is drowsy.",
+        "Set a group rule that anyone can ask for a break without being teased. Check in before the next leg: tired, hungry, tense or comfortable? A stop may prevent a small irritation from taking over the whole day. Keep quieter activities for evenings, when driving is done."
+      ]
+    },
+    {
+      "heading": "Collect the trip as you go",
+      "paragraphs": [
+        "Choose one low-effort record: a daily map mark, a short voice memo after parking, or one photo with a sentence about what surprised you. Keep it brief enough not to turn each stop into content production. At the end of a day, write down one place you would revisit, one detour you would skip next time and one person or detail you remember.",
+        "A week-long trip has room for an unexpected day. Leave one unscheduled block every few days for laundry, repairs, weather or simply staying longer somewhere you like. That spare space helps a trip feel chosen instead of endured."
+      ]
+    },
+    {
+      "heading": "Make a safe finish as important as departure",
+      "paragraphs": [
+        "NHTSA advises not to rush to a destination, and to stop or change drivers when drowsiness appears. Decide in advance that a late arrival is acceptable and a tired driver will stop. If you see lane drifting, miss signs or struggle to stay alert, find a safe place to stop and rest. Do not rely on “just one more hour.”",
+        "Before leaving, check the route, local driving rules, insurance, roadside assistance, and whether your lodging accepts late arrival. Your next action is to sketch a route with two anchors and one flexible day, then choose a realistic first driving leg."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Summer Driving Tips",
+      "url": "https://www.nhtsa.gov/summer-driving-tips",
+      "publisher": "National Highway Traffic Safety Administration, U.S. Department of Transportation",
+      "purpose": "Supports road-trip preparation including tire checks before long trips, not rushing, planning stops for stretching/food, and changing drivers or resting if drowsy.",
+      "accessLimit": "U.S. federal source; local road rules, weather, services and emergency numbers vary by country."
+    }
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

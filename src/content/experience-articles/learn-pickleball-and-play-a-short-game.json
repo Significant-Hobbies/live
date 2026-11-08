@@ -1,0 +1,58 @@
+{
+  "experienceSlug": "learn-pickleball-and-play-a-short-game",
+  "slug": "learn-pickleball-and-play-a-short-game",
+  "title": "What three pickleball rules help a first game make sense?",
+  "description": "Learn the court zones, serving direction and two-bounce rule, then practise a cooperative rally before playing a short, relaxed first game.",
+  "intent": "A short learning sequence for understanding the basic court, serve and bounce rules before playing a relaxed first game.",
+  "sections": [
+    {
+      "heading": "Map the court before the first serve",
+      "paragraphs": [
+        "Pickleball combines elements of racket sports on a compact court. Start by identifying the non-volley zone near the net, often called the kitchen, and the service courts. USA Pickleball’s beginner explanation introduces the game and its core rules; read the current official rules if your group is playing a formal match because interpretations and rule details can change.",
+        "Ask which side serves first and where the server and receiver should stand. The court lines matter: a ball that lands on a boundary may count differently from one outside it. Walk through one example slowly before playing so nobody has to learn the geometry while chasing the ball."
+      ]
+    },
+    {
+      "heading": "Practise a legal serve at an easy pace",
+      "paragraphs": [
+        "Use the serving motion described in USA Pickleball’s current beginner materials and confirm the group’s version before starting. Aim diagonally into the opposite service court rather than for power. If you are learning, agree that a missed serve simply becomes another practice attempt before scorekeeping begins.",
+        "A comfortable grip and a repeatable swing matter more than a fast ball. Give the receiver room and wait until everyone is ready. If the serve lands out or clips the net, ask what the group’s rules say before replaying. Recreational groups may simplify practice, but do not confuse a teaching adjustment with the official rule."
+      ]
+    },
+    {
+      "heading": "Understand the two-bounce sequence",
+      "paragraphs": [
+        "USA Pickleball’s beginner page describes the two-bounce rule: after the serve, the receiving side lets the ball bounce before returning it, and the serving side then lets the return bounce before hitting it. After those first two bounces, players may volley or play a bounce. Practise that sequence slowly until both sides know when a volley is allowed.",
+        "Call “bounce” or “mine” early and leave room for your partner. If both players reach for the same ball, agree on a simple call before the next rally. The aim is a controlled return that someone can reach, not a winner. A short cooperative exchange gives you time to notice the court and the rules."
+      ]
+    },
+    {
+      "heading": "Treat the non-volley zone as a place to learn",
+      "paragraphs": [
+        "The kitchen is the marked area beside the net where players cannot volley the ball under the official rules. Ask the group to point out the boundary and explain what counts as a volley in the version they are using. Practise hitting a ball after it bounces in that area so the line becomes familiar.",
+        "Keep your feet and paddle under control near the net. If you step into the zone while volleying, stop and ask for a correction rather than arguing about a point. Read the official rulebook or USA Pickleball’s latest guidance for edge cases; a single short introduction is not a substitute for the full rules."
+      ]
+    },
+    {
+      "heading": "Play a short game and review one rule",
+      "paragraphs": [
+        "Agree on a short game, a relaxed scoring method and a way to rotate players before you begin. Afterward, name one rule that now feels clear and one question to check. If a disagreement arose, look up the current USA Pickleball rule rather than relying on memory or treating the loudest player as the authority.",
+        "A useful next step is to practise serves or returns for a few minutes with a partner, then play again. Keep the pace enjoyable and pause if anyone is tired or uncomfortable. The first session is most successful when everyone understands where to stand and can get to the next shot."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "What Is Pickleball and How to Play?",
+      "url": "https://usapickleball.org/pickleball-skills/level-one/what-is-pickleball-how-to-play/",
+      "publisher": "USA Pickleball",
+      "purpose": "Supports introductory pickleball format and rules including the serve, two-bounce sequence and non-volley zone; readers are directed to current official rules for full detail."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-a-cooperative-table-tennis-rally",
+    "play-sitting-volleyball-with-an-inclusive-club"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

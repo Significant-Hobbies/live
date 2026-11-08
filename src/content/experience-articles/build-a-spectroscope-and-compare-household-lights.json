@@ -1,0 +1,59 @@
+{
+  "experienceSlug": "build-a-spectroscope-and-compare-household-lights",
+  "slug": "build-a-spectroscope-and-compare-household-lights",
+  "title": "How can a homemade spectroscope compare household lights?",
+  "description": "Build a simple spectroscope and compare familiar indoor lights by the colors and lines they show, while keeping the instrument away from direct sunlight.",
+  "intent": "How can I use a homemade spectroscope to compare household lights? This guide focuses on a safe, repeatable comparison and what a spectrum can—and cannot—tell a beginner.",
+  "sections": [
+    {
+      "heading": "Know what the instrument shows",
+      "paragraphs": [
+        "A spectroscope uses a diffraction grating to spread light into a spectrum. Instead of seeing only a bulb's overall color, you may see a broad band or separated brighter lines. NASA's Astronomer's Toolbox activity has students build and calibrate simple spectroscopes and compare different light sources. The pattern is a clue about the light source, not a complete diagnosis of the bulb or a direct reading of its energy use. Start with observation before looking up explanations.",
+        "Use a commercial classroom diffraction grating or a NASA-tested classroom design with an adult if the activity involves cutting. Keep the opening narrow and the grating clean; fingerprints can blur the view. A cardboard tube or box helps block stray room light. Follow the template's orientation, because turning the grating can rotate the spectrum. Do not look at the Sun or aim a spectroscope at direct sunlight. For a household-light comparison, use ordinary indoor lamps and keep the device at a comfortable distance."
+      ]
+    },
+    {
+      "heading": "Make a fair comparison",
+      "paragraphs": [
+        "Choose two or three different indoor lights, such as a warm household lamp and a cool office fixture. Check that the fixtures are safe to approach and do not open or modify them. Let each light warm up as its maker recommends, then view it from the same place and angle. If possible, darken the room enough to reduce glare without creating a trip hazard. Make sure another person knows you are moving around in a dim room.",
+        "For each source, record its label, the viewing distance, whether it flickers to your eyes and what the spectrum looks like: continuous band, distinct bright lines, or something unclear. Use a sketch rather than trying to photograph through the grating; phone cameras may display colors differently. Do not compare a lamp at one distance with another from across the room and then conclude that the spectrum itself changed."
+      ]
+    },
+    {
+      "heading": "Look for patterns without overclaiming",
+      "paragraphs": [
+        "A broad spectrum and a few bright lines are different observations. NASA's educational activity explains that spectroscopes let students compare light sources and introduces how spectral patterns can help scientists identify material in astronomical light. Household bulbs, however, are designed objects with multiple components, coatings and power electronics. A simple classroom instrument may not identify every ingredient or even show a sharply resolved pattern. Label what you saw and leave the explanation open when the evidence is weak.",
+        "Repeat a view once before drawing a conclusion. Check whether the slit is still narrow, whether stray light is entering the box and whether you are looking through the grating in the correct direction. If two bulbs seem similar, that does not prove they use the same technology. Find the product label or manufacturer information for a fuller answer, and avoid dismantling any fixture to investigate it."
+      ]
+    },
+    {
+      "heading": "Keep the experiment safe and manageable",
+      "paragraphs": [
+        "Never use the instrument to stare at the Sun, laser pointers or intense light sources. Do not remove covers, touch hot bulbs or climb to reach a ceiling fixture. If a light flickers, buzzes, smells hot or has damaged wiring, stop using it and tell the responsible adult or building manager. The goal is to study emitted light from a safe position, not to troubleshoot household electrical equipment.",
+        "Choose a small set of lamps you can view without moving furniture or reaching overhead. Ask for permission before inspecting lights in a shared space. If the device requires a sharp cutting tool, hot glue or a blade, an adult should handle those steps. Keep the spectroscope out of direct sunlight when not in use so that it does not become a focusing tool in someone's hands."
+      ]
+    },
+    {
+      "heading": "Turn the first spectrum into a better question",
+      "paragraphs": [
+        "After observing, compare your sketches side by side. Which source showed the clearest features? Which view was hard to read? Write one question such as “Why does this bulb show a wider band?” and look for a NASA lesson or manufacturer explanation that matches the exact kind of lamp. A good experiment can end with a more precise question rather than a dramatic conclusion.",
+        "Your next action is to build or borrow one simple spectroscope, then compare two safe indoor lamps from the same position and record only what the instrument shows. Keep sunlight, lasers, and opened fixtures out of the experiment."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Astronomer's Toolbox: Spectroscope Activity",
+      "url": "https://science.nasa.gov/learn/heat/resource/astronomers-toolbox-spectroscope-activity/",
+      "publisher": "NASA Science, Afterschool Universe",
+      "purpose": "Supports building and calibrating a simple spectroscope and examining different light sources as a way to learn about light analysis."
+    }
+  ],
+  "relatedExperienceSlugs": [
+    "build-a-tabletop-seismograph",
+    "build-a-radio-jove-receiver-with-a-radio-club",
+    "train-a-small-image-classifier-on-your-own-objects"
+  ],
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}
