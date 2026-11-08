@@ -185,7 +185,7 @@ test('guest evidence imports privately and survives reload and another signed-in
   await expect(panel.getByRole('list', { name: 'Item updates' })).toContainText(
     'Found a sailing club.'
   );
-  await expect(panel.getByRole('combobox', { name: 'Visibility', exact: true })).toHaveValue(
+  await expect(panel.getByRole('combobox', { name: 'Who can see this item?', exact: true })).toHaveValue(
     'private'
   );
   await page.reload();
@@ -393,7 +393,7 @@ test('a large guest list imports in batches and keeps non-Latin goals distinct w
   await page.reload();
   await expect(page.locator('main button[aria-expanded]')).toHaveCount(101);
   panel = await openItem(page, titles[0]!);
-  await expect(panel.getByRole('combobox', { name: 'Visibility', exact: true })).toHaveValue(
+  await expect(panel.getByRole('combobox', { name: 'Who can see this item?', exact: true })).toHaveValue(
     'private'
   );
 });
