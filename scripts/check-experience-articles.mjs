@@ -1,6 +1,6 @@
 import { createHash } from 'node:crypto';
 import { readFileSync, readdirSync } from 'node:fs';
-import { resolve, join } from 'node:path';
+import { basename, resolve, join } from 'node:path';
 
 const root = process.cwd();
 const draftsIndex = process.argv.indexOf('--drafts');
@@ -43,6 +43,8 @@ for (const file of files) {
   }
   const slug = article.experienceSlug;
   const target = targetMap.get(slug);
+  if (basename(file) !== `${slug}.json`)
+    add(slug, 'Article filename must match its canonical experience slug');
   articleDigests.set(slug, createHash('sha256').update(bytes).digest('hex'));
   if (!target || article.slug !== target.articleSlug)
     add(slug, 'Canonical experience/article mapping does not match the public inventory');
