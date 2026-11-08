@@ -35,10 +35,7 @@ export {
 } from './.open-next/worker.js';
 
 const CACHE_CONTROL = 'public, max-age=0, s-maxage=86400, must-revalidate';
-const DATA_CACHE_CONTROL = new Map([
-  ['/sitemap.xml', 'public, max-age=300, s-maxage=3600'],
-  ['/video-sitemap.xml', 'public, max-age=300, s-maxage=3600'],
-]);
+const DATA_CACHE_CONTROL = new Map([['/video-sitemap.xml', 'public, max-age=300, s-maxage=3600']]);
 // Public marketing + free-tool surfaces (anon HTML only).
 const CACHEABLE_EXACT = new Set([
   '/',
@@ -70,7 +67,6 @@ const CACHEABLE_EXACT = new Set([
   '/hobbies/random',
   '/privacy',
   '/terms',
-  '/sitemap.xml',
   '/video-sitemap.xml',
 ]);
 const CACHEABLE_PREFIXES = [
@@ -84,7 +80,6 @@ const CACHEABLE_PREFIXES = [
   // Public detail pages — the high-cardinality surfaces crawlers land on.
   // Anonymous requests get the public render; owners and signed-in users
   // carry a session cookie and bypass the shared cache entirely.
-  '/u',
   '/b',
   '/timeline',
 ];
@@ -142,6 +137,14 @@ function jsonApiError(status, code, message, path) {
 async function fetchOpenNext(request, env, ctx) {
   const response = await openNext.fetch(request, env, ctx);
   const pathname = new URL(request.url).pathname;
+  // Profile visibility and individual shared items can change at any time.
+  // Ignore old edge entries and prevent downstream caches retaining a public
+  // profile or a sitemap entry after its owner makes it private.
+  if (pathname === '/sitemap.xml' || pathname === '/u' || pathname.startsWith('/u/')) {
+    const fresh = new Response(request.method === 'HEAD' ? null : response.body, response);
+    fresh.headers.set('Cache-Control', 'private, no-store');
+    return fresh;
+  }
   if (isApiPath(pathname) && response.status === 404) {
     return jsonApiError(
       404,
