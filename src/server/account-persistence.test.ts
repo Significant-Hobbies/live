@@ -22,7 +22,7 @@ import { DatabaseSync, type StatementSync } from 'node:sqlite';
 import { type Auth, betterAuth, type BetterAuthOptions } from 'better-auth';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
 import { eq } from 'drizzle-orm';
-import { drizzle } from 'drizzle-orm/d1';
+import { drizzle, type DrizzleD1Database } from 'drizzle-orm/d1';
 import { beforeAll, describe, expect, it, vi } from 'vitest';
 
 import * as schema from '~/db/schema';
@@ -43,6 +43,7 @@ import {
   removeBucketListItem,
   updateBucketListItem,
   updateBucketListItemStatus,
+  updateBucketListItemVisibility,
 } from '~/lib/actions/bucket-list';
 import { visibleBucketSteps } from '~/lib/bucket-steps';
 import { importLocalBucketItems } from '~/lib/actions/local-bucket-import';
@@ -50,10 +51,16 @@ import { importBucketItems } from '~/lib/local-bucket-import';
 import { importLocalAccountData } from '~/lib/actions/local-import';
 import { getServerAuthSession } from '~/server/auth';
 import { readLiveRecords, readLiveSummary } from './personal-platform-live';
+import { getVisibleProfile, getPublicProfileItems } from './profiles';
+import { setProfileVisibility } from '~/lib/actions/profile-privacy';
+import { renderPublicRouteMarkdown } from '~/lib/public-route-markdown';
+import ProfilePage, { generateMetadata as profileMetadata } from '~/app/u/[username]/page';
+import sitemap from '~/app/sitemap';
+import { addBucketStep, setBucketStepDone } from '~/lib/actions/bucket-steps';
 
 const harness = vi.hoisted(() => ({
   database: null as MemoryD1 | null,
-  db: null as ReturnType<typeof drizzle> | null,
+  db: null as DrizzleD1Database<typeof schema> | null,
 }));
 
 vi.mock('~/server/db', () => ({
@@ -177,7 +184,7 @@ function migratedDatabase(): MemoryD1 {
   return new MemoryD1(sqlite);
 }
 
-function issuer(db: ReturnType<typeof drizzle>): Auth<BetterAuthOptions> {
+function issuer(db: DrizzleD1Database<typeof schema>): Auth<BetterAuthOptions> {
   return betterAuth({
     // Same local-development fallback secret as ~/lib/auth, so the signed
     // session cookies this issuer mints verify under the production module.
@@ -266,7 +273,7 @@ async function itemRows(userId: string) {
   return harness.db!.select().from(bucketListItems).where(eq(bucketListItems.userId, userId));
 }
 
-let db!: ReturnType<typeof drizzle>;
+let db!: DrizzleD1Database<typeof schema>;
 let store!: MemoryD1;
 let auth!: Auth<BetterAuthOptions>;
 let personalPlatformUser!: (request: Request) => Promise<string | Response>;
@@ -771,4 +778,164 @@ it('retries a partially completed multi-item import without duplicating the conf
     matched: 1,
   });
   expect(await itemRows(owner.userId)).toHaveLength(2);
+});
+
+describe('public profile and individual item privacy on durable storage', () => {
+  it('keeps private items and their private details out of a public profile and rejects another owner', async () => {
+    const a = await signUp(issuer(db), 'privacy-owner@example.test', 'Privacy Owner');
+    const b = await signUp(issuer(db), 'privacy-other@example.test', 'Other Owner');
+    await db
+      .update(users)
+      .set({ username: 'privacy-owner', bio: 'Profile bio' })
+      .where(eq(users.id, a.userId));
+    expect(
+      (await db.query.users.findFirst({ where: eq(users.id, a.userId) }))?.profileVisibility
+    ).toBe('private');
+    expect(await getVisibleProfile('privacy-owner')).toBeNull();
+    expect(await getVisibleProfile('privacy-owner', b.userId)).toBeNull();
+    expect((await getVisibleProfile('privacy-owner', a.userId))?.id).toBe(a.userId);
+
+    asUser(a);
+    await addBucketListItem({ title: 'Hidden personal plan', description: 'Private note secret' });
+    await addBucketListItem({
+      title: 'Shared experience title',
+      description: 'Shared item private notes',
+    });
+    const items = await itemRows(a.userId);
+    const hidden = items.find((item) => item.title === 'Hidden personal plan')!;
+    const shared = items.find((item) => item.title === 'Shared experience title')!;
+    const step = await addBucketStep(shared.id, 'Private step secret');
+    await setBucketStepDone(step.id, true);
+    await db.insert(bucketItemUpdates).values({
+      id: crypto.randomUUID(),
+      itemId: shared.id,
+      userId: a.userId,
+      text: 'Private progress secret',
+      createdAt: new Date(),
+    });
+    expect(await setProfileVisibility('public')).toMatchObject({ success: true });
+    expect((await itemRows(a.userId)).every((item) => item.visibility === 'private')).toBe(true);
+    expect(await getPublicProfileItems(a.userId)).toEqual([]);
+    await updateBucketListItemVisibility(shared.id, 'public');
+    const publicItems = await getPublicProfileItems(a.userId);
+    expect(publicItems.map((item) => item.title)).toEqual(['Shared experience title']);
+    expect(Object.keys(publicItems[0]).sort()).toEqual([
+      'category',
+      'id',
+      'status',
+      'targetYear',
+      'title',
+    ]);
+    const markdown = await renderPublicRouteMarkdown('/u/privacy-owner');
+    expect(markdown).toContain('Shared experience title');
+    for (const secret of [
+      'Hidden personal plan',
+      'Private note secret',
+      'Shared item private notes',
+      'Private step secret',
+      'Private progress secret',
+    ])
+      expect(markdown).not.toContain(secret);
+    expect((await sitemap()).some((entry) => entry.url.endsWith('/u/privacy-owner'))).toBe(true);
+
+    asUser(b);
+    await expect(updateBucketListItemVisibility(hidden.id, 'public')).rejects.toThrow(
+      'Item not found'
+    );
+    expect((await itemRows(a.userId)).find((item) => item.id === hidden.id)?.visibility).toBe(
+      'private'
+    );
+    asUser(a);
+    await expect(
+      updateBucketListItemVisibility(hidden.id, 'everyone' as 'public')
+    ).rejects.toThrow();
+    await setProfileVisibility('private');
+    expect(await getVisibleProfile('privacy-owner')).toBeNull();
+    expect(await renderPublicRouteMarkdown('/u/privacy-owner')).toBeNull();
+    expect(
+      await profileMetadata({ params: Promise.resolve({ username: 'privacy-owner' }) })
+    ).toMatchObject({ title: 'Profile unavailable', robots: { index: false, follow: false } });
+    asUser(b);
+    await expect(
+      ProfilePage({ params: Promise.resolve({ username: 'privacy-owner' }) })
+    ).rejects.toThrow();
+    expect((await sitemap()).some((entry) => entry.url.endsWith('/u/privacy-owner'))).toBe(false);
+    expect((await itemRows(a.userId)).find((item) => item.id === shared.id)?.visibility).toBe(
+      'public'
+    );
+  });
+
+  it('claims an available public handle atomically, preserves existing handles and validates the authenticated write', async () => {
+    const a = await signUp(issuer(db), 'privacy-claim-a@example.test', 'Claim A');
+    const b = await signUp(issuer(db), 'privacy-claim-b@example.test', 'Claim B');
+    asUser(a);
+    expect(await setProfileVisibility('public', 'privacy-claim')).toEqual({
+      success: true,
+      username: 'privacy-claim',
+    });
+    expect(await setProfileVisibility('public', 'privacy-claim')).toEqual({
+      success: true,
+      username: 'privacy-claim',
+    });
+    asUser(b);
+    expect(await setProfileVisibility('public', 'privacy-claim')).toMatchObject({ success: false });
+    const bob = await db.query.users.findFirst({ where: eq(users.id, b.userId) });
+    expect(bob).toMatchObject({ username: null, profileVisibility: 'private' });
+    expect(await setProfileVisibility('public', 'INVALID USERNAME')).toMatchObject({
+      success: false,
+    });
+    expect(await setProfileVisibility('everyone' as 'public', 'valid-handle')).toMatchObject({
+      success: false,
+    });
+    mockSession.mockResolvedValue(null);
+    expect(await setProfileVisibility('public', 'valid-handle')).toMatchObject({ success: false });
+    expect(
+      (await db.query.users.findFirst({ where: eq(users.id, b.userId) }))?.profileVisibility
+    ).toBe('private');
+    expect((await db.query.users.findFirst({ where: eq(users.id, a.userId) }))?.username).toBe(
+      'privacy-claim'
+    );
+  });
+
+  it('migrates existing addressable profiles without publishing their private list items', () => {
+    const sqlite = new DatabaseSync(':memory:');
+    try {
+      const dir = join(process.cwd(), 'migrations', 'd1');
+      const files = readdirSync(dir)
+        .filter((name) => name.endsWith('.sql'))
+        .sort();
+      for (const file of files.filter((name) => !name.startsWith('0009_')))
+        sqlite.exec(readFileSync(join(dir, file), 'utf8'));
+      sqlite.exec(
+        "INSERT INTO User (id, username) VALUES ('legacy-profile', 'legacy-name'), ('legacy-unclaimed', NULL)"
+      );
+      sqlite.exec(
+        "INSERT INTO BucketListItem (id, userId, title, description, visibility) VALUES ('legacy-goal', 'legacy-profile', 'Private legacy goal', 'Keep this private', 'private')"
+      );
+      sqlite.exec(readFileSync(join(dir, '0009_noisy_dorian_gray.sql'), 'utf8'));
+      expect(
+        sqlite.prepare("SELECT profileVisibility FROM User WHERE id='legacy-profile'").get()
+      ).toMatchObject({ profileVisibility: 'public' });
+      expect(
+        sqlite.prepare("SELECT profileVisibility FROM User WHERE id='legacy-unclaimed'").get()
+      ).toMatchObject({ profileVisibility: 'private' });
+      sqlite.exec("INSERT INTO User (id, username) VALUES ('new-profile', 'new-name')");
+      expect(
+        sqlite.prepare("SELECT profileVisibility FROM User WHERE id='new-profile'").get()
+      ).toMatchObject({ profileVisibility: 'private' });
+      expect(
+        sqlite
+          .prepare(
+            "SELECT title, description, visibility FROM BucketListItem WHERE id='legacy-goal'"
+          )
+          .get()
+      ).toMatchObject({
+        title: 'Private legacy goal',
+        description: 'Keep this private',
+        visibility: 'private',
+      });
+    } finally {
+      sqlite.close();
+    }
+  });
 });

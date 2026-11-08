@@ -1,0 +1,42 @@
+name: Profile privacy database
+on:
+  workflow_dispatch:
+    inputs:
+      operation:
+        description: Inspect schema or apply only the checked profile privacy migration
+        required: true
+        default: inspect
+        type: choice
+        options: [inspect, apply]
+
+concurrency:
+  group: live-profile-privacy-database
+  cancel-in-progress: false
+
+jobs:
+  profile-privacy:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - name: Prepare pnpm
+        run: |
+          corepack enable
+          corepack install
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+      - name: Inspect or apply profile privacy migration
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          PRIVACY_DB_OPERATION: ${{ inputs.operation }}
+        run: |
+          if [ "$PRIVACY_DB_OPERATION" = apply ]; then
+            node scripts/profile-privacy-database.mjs --remote --apply
+          else
+            node scripts/profile-privacy-database.mjs --remote
+          fi

@@ -87,3 +87,55 @@ describe.each(['significanthobbies.com', 'live.significanthobbies.com'])(
     });
   }
 );
+
+describe.each(['significanthobbies.com', 'live.significanthobbies.com'])(
+  'Current profile privacy at the edge on %s',
+  (hostname) => {
+    it.each([
+      ['/u/privacy-owner', 'text/html', 404],
+      ['/u/privacy-owner/opengraph-image', 'image/png', 200],
+      ['/sitemap.xml', 'application/xml', 200],
+    ])(
+      'ignores a warmed public cache after visibility changes for %s',
+      async (path, type, status) => {
+        const cache = {
+          match: vi.fn(async () => new Response('Previously public personal content')),
+          put: vi.fn(),
+        };
+        vi.stubGlobal('caches', { default: cache });
+        vi.clearAllMocks();
+        const request = new Request(`https://${hostname}${path}`);
+        nextFetch.mockImplementationOnce(
+          async () =>
+            new Response('Currently public content', { headers: { 'Content-Type': type } })
+        );
+        const publicResponse = await worker.fetch(request, environment, context);
+        expect(await publicResponse.text()).toBe('Currently public content');
+        expect(publicResponse.headers.get('cache-control')).toBe('private, no-store');
+        nextFetch.mockImplementationOnce(
+          async () =>
+            new Response('Current privacy-safe response', {
+              status,
+              headers: { 'Content-Type': type },
+            })
+        );
+        const hiddenResponse = await worker.fetch(request, environment, context);
+        expect(hiddenResponse.status).toBe(status);
+        expect(await hiddenResponse.text()).toBe('Current privacy-safe response');
+        expect(hiddenResponse.headers.get('cache-control')).toBe('private, no-store');
+        nextFetch.mockImplementationOnce(async () => new Response(null, { status }));
+        const head = await worker.fetch(
+          new Request(request, { method: 'HEAD' }),
+          environment,
+          context
+        );
+        expect(head.status).toBe(status);
+        expect(head.headers.get('cache-control')).toBe('private, no-store');
+        expect(await head.text()).toBe('');
+        expect(nextFetch).toHaveBeenCalledTimes(3);
+        expect(cache.match).not.toHaveBeenCalled();
+        expect(cache.put).not.toHaveBeenCalled();
+      }
+    );
+  }
+);
