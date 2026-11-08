@@ -22,22 +22,28 @@ test('all curated collections serve crawlable activity links and match their str
     expect(xml).toContain(`/experiences/collections/${collection.slug}</loc>`);
 });
 
-test('every enhanced guide serves its unique plan to a visitor without JavaScript', async ({
-  request,
-}) => {
-  for (const [slug, guide] of Object.entries(EXPERIENCE_GUIDES)) {
-    const response = await request.get(`/experiences/${slug}`);
-    expect(response.status(), slug).toBe(200);
-    const html = await response.text();
-    expect(html).toContain(
-      `rel="canonical" href="https://significanthobbies.com/experiences/${slug}"`
-    );
-    expect(html).toContain('Plan the experience');
-    expect(html).toContain('What counts as done');
-    expect(html).toContain(guide.steps[0].title);
-    expect(html).not.toContain('"@type":"HowTo"');
-  }
-});
+// Each case covers a bounded slice of the complete inventory. One aggregate
+// inventory case exhausted CI's timeout while compiling distinct cold dev routes.
+const guides = Object.entries(EXPERIENCE_GUIDES);
+for (let offset = 0; offset < guides.length; offset += 20) {
+  const batch = guides.slice(offset, offset + 20);
+  test(`enhanced guides ${offset + 1}–${offset + batch.length} serve their unique plans without JavaScript`, async ({
+    request,
+  }) => {
+    for (const [slug, guide] of batch) {
+      const response = await request.get(`/experiences/${slug}`);
+      expect(response.status(), slug).toBe(200);
+      const html = await response.text();
+      expect(html, slug).toContain(
+        `rel="canonical" href="https://significanthobbies.com/experiences/${slug}"`
+      );
+      expect(html, slug).toContain('Plan the experience');
+      expect(html, slug).toContain('What counts as done');
+      expect(html, slug).toContain(guide.steps[0].title);
+      expect(html, slug).not.toContain('"@type":"HowTo"');
+    }
+  });
+}
 
 test('a visitor can choose a collection, save an activity and complete it after reloading', async ({
   page,
