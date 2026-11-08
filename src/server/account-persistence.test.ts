@@ -813,7 +813,7 @@ describe('public profile and individual item privacy on durable storage', () => 
       text: 'Private progress secret',
       createdAt: new Date(),
     });
-    expect(await setProfileVisibility('public')).toMatchObject({ success: true });
+    expect(await setProfileVisibility(a.userId, 'public')).toMatchObject({ success: true });
     expect((await itemRows(a.userId)).every((item) => item.visibility === 'private')).toBe(true);
     expect(await getPublicProfileItems(a.userId)).toEqual([]);
     await updateBucketListItemVisibility(shared.id, 'public');
@@ -849,7 +849,7 @@ describe('public profile and individual item privacy on durable storage', () => 
     await expect(
       updateBucketListItemVisibility(hidden.id, 'everyone' as 'public')
     ).rejects.toThrow();
-    await setProfileVisibility('private');
+    await setProfileVisibility(a.userId, 'private');
     expect(await getVisibleProfile('privacy-owner')).toBeNull();
     expect(await renderPublicRouteMarkdown('/u/privacy-owner')).toBeNull();
     expect(
@@ -869,26 +869,37 @@ describe('public profile and individual item privacy on durable storage', () => 
     const a = await signUp(issuer(db), 'privacy-claim-a@example.test', 'Claim A');
     const b = await signUp(issuer(db), 'privacy-claim-b@example.test', 'Claim B');
     asUser(a);
-    expect(await setProfileVisibility('public', 'privacy-claim')).toEqual({
+    expect(await setProfileVisibility(a.userId, 'public', 'privacy-claim')).toEqual({
       success: true,
       username: 'privacy-claim',
     });
-    expect(await setProfileVisibility('public', 'privacy-claim')).toEqual({
+    expect(await setProfileVisibility(a.userId, 'public', 'privacy-claim')).toEqual({
       success: true,
       username: 'privacy-claim',
     });
     asUser(b);
-    expect(await setProfileVisibility('public', 'privacy-claim')).toMatchObject({ success: false });
-    const bob = await db.query.users.findFirst({ where: eq(users.id, b.userId) });
-    expect(bob).toMatchObject({ username: null, profileVisibility: 'private' });
-    expect(await setProfileVisibility('public', 'INVALID USERNAME')).toMatchObject({
+    expect(await setProfileVisibility(a.userId, 'public', 'unintended-handle')).toMatchObject({
+      success: false,
+      error: 'Your signed-in account changed. Reload Settings and try again.',
+    });
+
+    expect(await setProfileVisibility(b.userId, 'public', 'privacy-claim')).toMatchObject({
       success: false,
     });
-    expect(await setProfileVisibility('everyone' as 'public', 'valid-handle')).toMatchObject({
+    const bob = await db.query.users.findFirst({ where: eq(users.id, b.userId) });
+    expect(bob).toMatchObject({ username: null, profileVisibility: 'private' });
+    expect(await setProfileVisibility(b.userId, 'public', 'INVALID USERNAME')).toMatchObject({
+      success: false,
+    });
+    expect(
+      await setProfileVisibility(b.userId, 'everyone' as 'public', 'valid-handle')
+    ).toMatchObject({
       success: false,
     });
     mockSession.mockResolvedValue(null);
-    expect(await setProfileVisibility('public', 'valid-handle')).toMatchObject({ success: false });
+    expect(await setProfileVisibility(b.userId, 'public', 'valid-handle')).toMatchObject({
+      success: false,
+    });
     expect(
       (await db.query.users.findFirst({ where: eq(users.id, b.userId) }))?.profileVisibility
     ).toBe('private');

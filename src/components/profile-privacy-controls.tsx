@@ -58,10 +58,26 @@ function ProfilePublicLink({
   );
 }
 
+function ProfilePrivacyIntro() {
+  return (
+    <div>
+      <h2 id="profile-privacy-heading" className="font-serif text-3xl font-medium text-foreground">
+        Profile privacy
+      </h2>
+      <p id="profile-privacy-help" className="mt-2 text-sm leading-relaxed text-muted-foreground">
+        A public profile shows your name, bio, creed, website, life grid and the items you choose to
+        share. New list items stay private. Notes, steps and progress updates are only for you.
+      </p>
+    </div>
+  );
+}
+
 export function ProfilePrivacyControls({
+  ownerId,
   initialVisibility,
   username,
 }: {
+  ownerId: string;
   initialVisibility: 'private' | 'public';
   username: string;
 }) {
@@ -81,7 +97,11 @@ export function ProfilePrivacyControls({
     setConfirmed(false);
     startTransition(async () => {
       try {
-        const result = await setProfileVisibility(selection, username ? undefined : handle);
+        const result = await setProfileVisibility(
+          ownerId,
+          selection,
+          username ? undefined : handle
+        );
         if (!result.success) {
           setError(result.error ?? 'Profile visibility could not be saved.');
           return;
@@ -99,18 +119,7 @@ export function ProfilePrivacyControls({
 
   return (
     <section aria-labelledby="profile-privacy-heading" className="space-y-4">
-      <div>
-        <h2
-          id="profile-privacy-heading"
-          className="font-serif text-3xl font-medium text-foreground"
-        >
-          Profile privacy
-        </h2>
-        <p id="profile-privacy-help" className="mt-2 text-sm leading-relaxed text-muted-foreground">
-          A public profile shows your name, bio, creed, website, life grid and the items you choose
-          to share. New list items stay private. Notes, steps and progress updates are only for you.
-        </p>
-      </div>
+      <ProfilePrivacyIntro />
       <label htmlFor="profile-visibility" className="block text-sm font-medium text-foreground">
         Who can see your profile?
       </label>

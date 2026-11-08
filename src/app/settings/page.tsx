@@ -56,6 +56,8 @@ export default async function SettingsPage() {
       {user ? (
         <SpotlightCard className="mb-6 border-0" innerClassName="p-6 sm:p-9">
           <ProfilePrivacyControls
+            key={user.id}
+            ownerId={user.id}
             initialVisibility={user.profileVisibility}
             username={user.username ?? ''}
           />

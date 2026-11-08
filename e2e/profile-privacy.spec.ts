@@ -182,3 +182,80 @@ test('a first public handle is claimed through the account and an unconfirmed sa
     caret: 'initial',
   });
 });
+
+test('a stale Settings page cannot publish a newly signed-in account', async ({
+  page,
+  browser,
+}) => {
+  const first = `first-${randomUUID().slice(0, 8)}`;
+  const second = `second-${randomUUID().slice(0, 8)}`;
+  await signUp(page, first);
+  await page.goto('/settings');
+  const control = page.getByRole('combobox', { name: 'Who can see your profile?', exact: true });
+  await waitForHydrated(control);
+  await control.selectOption('public');
+  expect(
+    (
+      await page.request.post('/api/auth/sign-out', {
+        data: {},
+        headers: { Origin: 'http://localhost:3000' },
+      })
+    ).ok()
+  ).toBe(true);
+  await signUp(page, second);
+  await action(page, () =>
+    page.getByRole('button', { name: 'Save profile visibility', exact: true }).click()
+  );
+  await expect(page.getByRole('button', { name: 'Saving…', exact: true })).toHaveCount(0);
+  const visitor = await browser.newContext();
+  try {
+    expect((await visitor.request.get(`http://localhost:3000/u/${second}`)).status()).toBe(404);
+    expect((await visitor.request.get(`http://localhost:3000/u/${first}`)).status()).toBe(404);
+    await expect(
+      page.getByRole('alert').filter({ hasText: 'Your signed-in account changed.' })
+    ).toBeVisible();
+  } finally {
+    await visitor.close();
+  }
+});
+
+test('a stale Settings page cannot claim a first handle for a newly signed-in account', async ({
+  page,
+  browser,
+}) => {
+  const username = `stale-${randomUUID().slice(0, 8)}`;
+  await signUp(page);
+  await page.goto('/settings');
+  const control = page.getByRole('combobox', { name: 'Who can see your profile?', exact: true });
+  await waitForHydrated(control);
+  await control.selectOption('public');
+  await page.getByRole('textbox', { name: 'Public username', exact: true }).fill(username);
+  expect(
+    (
+      await page.request.post('/api/auth/sign-out', {
+        data: {},
+        headers: { Origin: 'http://localhost:3000' },
+      })
+    ).ok()
+  ).toBe(true);
+  await signUp(page);
+  await action(page, () =>
+    page.getByRole('button', { name: 'Save profile visibility', exact: true }).click()
+  );
+  await expect(
+    page.getByRole('alert').filter({ hasText: 'Your signed-in account changed.' })
+  ).toBeVisible();
+  const visitor = await browser.newContext();
+  try {
+    expect((await visitor.request.get(`http://localhost:3000/u/${username}`)).status()).toBe(404);
+    await page.reload();
+    await waitForHydrated(control);
+    await expect(control).toHaveValue('private');
+    await control.selectOption('public');
+    await expect(page.getByRole('textbox', { name: 'Public username', exact: true })).toHaveValue(
+      ''
+    );
+  } finally {
+    await visitor.close();
+  }
+});
