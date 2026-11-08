@@ -481,7 +481,7 @@ async function main() {
       if (user) {
         await db
           .update(schema.users)
-          .set({ username: demo.username, name: demo.name })
+          .set({ username: demo.username, name: demo.name, profileVisibility: 'public' })
           .where(eq(schema.users.id, user.id));
       } else {
         const [newUser] = await db
@@ -490,6 +490,7 @@ async function main() {
             email: demo.email,
             name: demo.name,
             username: demo.username,
+            profileVisibility: 'public',
             image: `https://api.dicebear.com/7.x/initials/svg?seed=${demo.name}`,
           })
           .returning();
