@@ -8,6 +8,7 @@ import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
 
 import { ProfileForm } from './profile-form';
+import { ProfilePrivacyControls } from '~/components/profile-privacy-controls';
 
 export const metadata = {
   title: 'Settings',
@@ -27,6 +28,7 @@ export default async function SettingsPage() {
           bio: true,
           website: true,
           creed: true,
+          profileVisibility: true,
         },
       })
     : null;
@@ -51,9 +53,21 @@ export default async function SettingsPage() {
         </h1>
       </header>
 
+      {user ? (
+        <SpotlightCard className="mb-6 border-0" innerClassName="p-6 sm:p-9">
+          <ProfilePrivacyControls
+            key={user.id}
+            ownerId={user.id}
+            initialVisibility={user.profileVisibility}
+            username={user.username ?? ''}
+          />
+        </SpotlightCard>
+      ) : null}
       <SpotlightCard className="border-0" innerClassName="p-6 sm:p-9">
         <h2 className="mb-6 font-serif text-3xl font-medium text-foreground">Edit profile</h2>
         <ProfileForm
+          key={user?.id ?? 'local'}
+          ownerId={user?.id ?? null}
           initialName={user?.name ?? ''}
           initialBio={user?.bio ?? ''}
           initialWebsite={user?.website ?? ''}

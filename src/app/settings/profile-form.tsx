@@ -9,6 +9,7 @@ import { browserRecordAdapter, readLocalRecord, writeLocalRecord } from '~/lib/l
 import type { StorageMode } from '~/lib/storage-mode';
 
 interface ProfileFormProps {
+  ownerId: string | null;
   initialName: string;
   initialBio: string;
   initialWebsite: string;
@@ -18,6 +19,7 @@ interface ProfileFormProps {
 }
 
 export function ProfileForm({
+  ownerId,
   initialName,
   initialBio,
   initialWebsite,
@@ -83,17 +85,18 @@ export function ProfileForm({
 
     startTransition(async () => {
       try {
-        await updateProfile({
+        const profile = await updateProfile(ownerId, {
           name: name.trim() || undefined,
           bio: bio.trim(),
           website: website.trim(),
         });
+        if (!profile.success) throw new Error(profile.error ?? 'Could not save your profile');
         // Separate action rather than folding creed into updateProfile: it owns
         // the 500-char cap and revalidates /dashboard, where the creed is the
         // page heading. It had no caller at all before this, so `users.creed`
         // was NULL for every user and both display surfaces always fell back.
         if (creed.trim() !== initialCreed.trim()) {
-          const res = await updateCreed(creed);
+          const res = await updateCreed(ownerId, creed);
           if (!res.success) throw new Error(res.error ?? 'Could not save your creed');
         }
         setToast(true);

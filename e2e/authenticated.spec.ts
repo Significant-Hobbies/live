@@ -121,6 +121,7 @@ test.describe('authenticated surfaces', () => {
   test('Live and the weekly log persist independently after the split', async ({ authedPage }) => {
     await authedPage.goto('/live-more');
     const chosenIdea = `Zorblax Quivanta walk ${crypto.randomUUID().slice(0, 8)}`;
+    await waitForHydrated(authedPage.getByLabel('What do you still want to live?'));
     await authedPage.getByLabel('What do you still want to live?').fill(chosenIdea);
     const keepDream = authedPage.getByRole('button', { name: 'Keep this exact dream' });
     await waitForHydrated(keepDream);
@@ -129,15 +130,18 @@ test.describe('authenticated surfaces', () => {
 
     const journal = 'I noticed something new today.';
     await authedPage.goto('/journal');
-    await waitForHydrated(authedPage.locator('#weekly-entry'));
-    await authedPage.locator('#weekly-entry').fill(journal);
+    await waitForHydrated(authedPage.locator('#weekly-entry').filter({ visible: true }));
+    await authedPage.locator('#weekly-entry').filter({ visible: true }).fill(journal);
     await authedPage.getByRole('button', { name: /Save this week|Update this week/ }).click();
     await authedPage.goto('/live-more');
+    await waitForHydrated(authedPage.getByLabel('What do you still want to live?'));
     await authedPage.getByLabel('What do you still want to live?').fill(chosenIdea);
     await expect(authedPage.getByRole('button', { name: 'Calling now' })).toBeVisible();
 
     await authedPage.goto('/journal');
-    await expect(authedPage.locator('#weekly-entry')).toHaveValue(journal);
+    await expect(authedPage.locator('#weekly-entry').filter({ visible: true })).toHaveValue(
+      journal
+    );
     await authedPage.goto('/live-more');
     await expect(authedPage.getByRole('heading', { name: chosenIdea, level: 1 })).toBeVisible();
   });
@@ -150,7 +154,7 @@ test.describe('authenticated surfaces', () => {
 
   test('the weekly journal offers one entry about last week', async ({ authedPage }) => {
     await authedPage.goto('/journal');
-    await expect(authedPage.locator('#weekly-entry')).toBeVisible();
+    await expect(authedPage.locator('#weekly-entry').filter({ visible: true })).toBeVisible();
     await expect(authedPage.getByRole('button', { name: 'Previous week' })).toBeVisible();
     await expect(
       authedPage.getByRole('heading', { name: /What did (this|last|that) week hold\?/ })
@@ -262,8 +266,8 @@ test.describe('authenticated surfaces', () => {
       'aria-checked',
       'true'
     );
-    await panel.getByLabel('Visibility').selectOption('public');
-    await expect(panel.getByLabel('Visibility')).toHaveValue('public');
+    await panel.getByLabel('Who can see this item?').selectOption('public');
+    await expect(panel.getByLabel('Who can see this item?')).toHaveValue('public');
     await panel.getByRole('button', { name: 'Remove from list', exact: true }).click();
     await panel.getByRole('button', { name: 'Remove', exact: true }).click();
     await expect(authedPage.getByRole('button', { name: `Mark ${title} as lived` })).toHaveCount(0);

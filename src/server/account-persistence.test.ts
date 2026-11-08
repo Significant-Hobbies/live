@@ -53,6 +53,7 @@ import { getServerAuthSession } from '~/server/auth';
 import { readLiveRecords, readLiveSummary } from './personal-platform-live';
 import { getVisibleProfile, getPublicProfileItems } from './profiles';
 import { setProfileVisibility } from '~/lib/actions/profile-privacy';
+import { updateProfile, updateCreed } from '~/lib/actions/user';
 import { renderPublicRouteMarkdown } from '~/lib/public-route-markdown';
 import ProfilePage, { generateMetadata as profileMetadata } from '~/app/u/[username]/page';
 import sitemap from '~/app/sitemap';
@@ -813,7 +814,7 @@ describe('public profile and individual item privacy on durable storage', () => 
       text: 'Private progress secret',
       createdAt: new Date(),
     });
-    expect(await setProfileVisibility('public')).toMatchObject({ success: true });
+    expect(await setProfileVisibility(a.userId, 'public')).toMatchObject({ success: true });
     expect((await itemRows(a.userId)).every((item) => item.visibility === 'private')).toBe(true);
     expect(await getPublicProfileItems(a.userId)).toEqual([]);
     await updateBucketListItemVisibility(shared.id, 'public');
@@ -849,7 +850,7 @@ describe('public profile and individual item privacy on durable storage', () => 
     await expect(
       updateBucketListItemVisibility(hidden.id, 'everyone' as 'public')
     ).rejects.toThrow();
-    await setProfileVisibility('private');
+    await setProfileVisibility(a.userId, 'private');
     expect(await getVisibleProfile('privacy-owner')).toBeNull();
     expect(await renderPublicRouteMarkdown('/u/privacy-owner')).toBeNull();
     expect(
@@ -869,32 +870,90 @@ describe('public profile and individual item privacy on durable storage', () => 
     const a = await signUp(issuer(db), 'privacy-claim-a@example.test', 'Claim A');
     const b = await signUp(issuer(db), 'privacy-claim-b@example.test', 'Claim B');
     asUser(a);
-    expect(await setProfileVisibility('public', 'privacy-claim')).toEqual({
+    expect(await setProfileVisibility(a.userId, 'public', 'privacy-claim')).toEqual({
       success: true,
       username: 'privacy-claim',
     });
-    expect(await setProfileVisibility('public', 'privacy-claim')).toEqual({
+    expect(await setProfileVisibility(a.userId, 'public', 'privacy-claim')).toEqual({
       success: true,
       username: 'privacy-claim',
     });
     asUser(b);
-    expect(await setProfileVisibility('public', 'privacy-claim')).toMatchObject({ success: false });
-    const bob = await db.query.users.findFirst({ where: eq(users.id, b.userId) });
-    expect(bob).toMatchObject({ username: null, profileVisibility: 'private' });
-    expect(await setProfileVisibility('public', 'INVALID USERNAME')).toMatchObject({
+    expect(await setProfileVisibility(a.userId, 'public', 'unintended-handle')).toMatchObject({
+      success: false,
+      error: 'Your signed-in account changed. Reload Settings and try again.',
+    });
+
+    expect(await setProfileVisibility(b.userId, 'public', 'privacy-claim')).toMatchObject({
       success: false,
     });
-    expect(await setProfileVisibility('everyone' as 'public', 'valid-handle')).toMatchObject({
+    const bob = await db.query.users.findFirst({ where: eq(users.id, b.userId) });
+    expect(bob).toMatchObject({ username: null, profileVisibility: 'private' });
+    expect(await setProfileVisibility(b.userId, 'public', 'INVALID USERNAME')).toMatchObject({
+      success: false,
+    });
+    expect(
+      await setProfileVisibility(b.userId, 'everyone' as 'public', 'valid-handle')
+    ).toMatchObject({
       success: false,
     });
     mockSession.mockResolvedValue(null);
-    expect(await setProfileVisibility('public', 'valid-handle')).toMatchObject({ success: false });
+    expect(await setProfileVisibility(b.userId, 'public', 'valid-handle')).toMatchObject({
+      success: false,
+    });
     expect(
       (await db.query.users.findFirst({ where: eq(users.id, b.userId) }))?.profileVisibility
     ).toBe('private');
     expect((await db.query.users.findFirst({ where: eq(users.id, a.userId) }))?.username).toBe(
       'privacy-claim'
     );
+  });
+
+  it('binds profile and creed edits to the initiating account before any durable write', async () => {
+    const a = await signUp(issuer(db), 'profile-editor-a@example.test', 'Editor A');
+    const b = await signUp(issuer(db), 'profile-editor-b@example.test', 'Editor B');
+    asUser(a);
+    expect(
+      await updateProfile(a.userId, {
+        name: 'Updated A',
+        bio: 'Owner A biography',
+        website: 'https://example.org',
+      })
+    ).toEqual({ success: true });
+    expect(await updateCreed(a.userId, 'Owner A creed')).toEqual({ success: true });
+    const owner = await db.query.users.findFirst({ where: eq(users.id, a.userId) });
+    expect(owner).toMatchObject({
+      name: 'Updated A',
+      bio: 'Owner A biography',
+      website: 'https://example.org',
+      creed: 'Owner A creed',
+    });
+
+    asUser(b);
+    expect(await updateProfile(a.userId, { bio: 'Private A draft' })).toMatchObject({
+      success: false,
+      error: 'Your signed-in account changed. Reload Settings and try again.',
+    });
+    expect(await updateCreed(a.userId, 'Private A creed draft')).toMatchObject({
+      success: false,
+      error: 'Your signed-in account changed. Reload Settings and try again.',
+    });
+    expect(await updateProfile(null, { bio: 'Unbound draft' })).toMatchObject({ success: false });
+    expect(await updateCreed(null, 'Unbound creed')).toMatchObject({ success: false });
+    expect(await db.query.users.findFirst({ where: eq(users.id, b.userId) })).toMatchObject({
+      name: 'Editor B',
+      bio: null,
+      website: null,
+      creed: null,
+    });
+    expect(await db.query.users.findFirst({ where: eq(users.id, a.userId) })).toEqual(owner);
+
+    mockSession.mockResolvedValue(null);
+    expect(await updateProfile(a.userId, { bio: 'Anonymous edit' })).toMatchObject({
+      success: false,
+      error: 'Not authenticated',
+    });
+    expect(await updateCreed(a.userId, 'Anonymous creed')).toMatchObject({ success: false });
   });
 
   it('migrates existing addressable profiles without publishing their private list items', () => {

@@ -69,10 +69,11 @@ export function FirstTimelinePublishPrompt({
                   tabIndex={-1}
                   className="font-serif text-lg font-semibold text-foreground focus:outline-none"
                 >
-                  Your first timeline is on your profile.
+                  Your first timeline is public.
                 </p>
                 <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                  You can make it private again from the visibility menu at any time.
+                  You can make it private again from the visibility menu. Profile privacy is managed
+                  separately in Settings.
                 </p>
               </div>
             </div>

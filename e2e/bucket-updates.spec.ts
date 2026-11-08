@@ -102,7 +102,9 @@ test('account updates survive reload and are absent from another account', async
   });
   expect(prepareProfile.ok()).toBeTruthy();
   let panel = await addItem(page, title);
-  await panel.getByRole('combobox', { name: 'Visibility', exact: true }).selectOption('public');
+  await panel
+    .getByRole('combobox', { name: 'Who can see this item?', exact: true })
+    .selectOption('public');
   const draft = panel.getByRole('textbox', { name: 'Add an update', exact: true });
   await expect(draft).toBeEnabled();
   await draft.fill(secret);
