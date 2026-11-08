@@ -99,7 +99,7 @@ for (const file of files) {
       }
       words += paragraph.trim().split(/\s+/).length;
       if (
-        /\b(?:assignment brief|this assignment|this draft|during (?:this|our) source review|topic-intents\.json|writer-contract\.md|source-checks\.jsonl|articleSlug|experienceSlug|staged catalog|canonical seed)\b/i.test(
+        /\b(?:assignment brief|this assignment|this draft|during (?:this|our) (?:source review|research|review)|topic-intents\.json|writer-contract\.md|source-checks\.jsonl|articleSlug|experienceSlug|staged catalog|canonical seed)\b/i.test(
           paragraph
         )
       )
