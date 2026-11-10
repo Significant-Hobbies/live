@@ -113,6 +113,13 @@ describe('bounded device import batches', () => {
 });
 
 describe('device bucket import preparation', () => {
+  it('preserves exact tentative dates when preparing the account import', async () => {
+    seed([{ id: 'date-item', title: 'Sail', targetYear: 2031, targetDate: '2031-06-12' }]);
+    expect((await readLocalBucketSnapshot())!.items[0]).toMatchObject({
+      targetDate: '2031-06-12',
+      targetYear: 2031,
+    });
+  });
   it('materializes stable legacy identifiers, maps description, and preserves cleared notes', async () => {
     seed([
       'Sail',

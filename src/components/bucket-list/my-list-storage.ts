@@ -8,6 +8,7 @@ import {
 import { addBucketStep, removeBucketStep, setBucketStepDone } from '~/lib/actions/bucket-steps';
 import type { BucketStep } from '~/lib/bucket-steps';
 import { normalizeDreamTitle } from '~/lib/dream-atlas';
+import { bucketTargetPatch } from '~/lib/bucket-target';
 import { addBucketItemUpdate } from '~/lib/actions/bucket-updates';
 import {
   BucketUpdateInputSchema,
@@ -26,6 +27,7 @@ export type MyListItem = {
   title: string;
   status: 'planned' | 'in_progress' | 'done';
   targetYear?: number | null;
+  targetDate?: string | null;
   visibility?: string;
   notes?: string | null;
   category?: string | null;
@@ -39,7 +41,7 @@ export type MyListItem = {
 
 type NewItem = { title: string; description?: string; category?: string };
 type ItemPatch = Partial<
-  Pick<MyListItem, 'title' | 'status' | 'targetYear' | 'visibility' | 'notes'>
+  Pick<MyListItem, 'title' | 'status' | 'targetYear' | 'targetDate' | 'visibility' | 'notes'>
 >;
 type BucketRecord = { items?: Array<string | Record<string, unknown>>; [key: string]: unknown };
 
@@ -96,6 +98,7 @@ export function localMyListStorage(
     return items;
   }
   async function update(id: string, patch: ItemPatch) {
+    patch = { ...patch, ...bucketTargetPatch(patch) };
     if (patch.title !== undefined) {
       const title = patch.title.trim();
       if (!title || title.length > 200)
@@ -211,10 +214,11 @@ export function serverMyListStorage(initial: MyListItem[]): MyListStorage {
       if (patch.status) await updateBucketListItemStatus(id, patch.status);
       if (patch.visibility === 'public' || patch.visibility === 'private')
         await updateBucketListItemVisibility(id, patch.visibility);
-      if ('title' in patch || 'targetYear' in patch || 'notes' in patch) {
+      if ('title' in patch || 'targetYear' in patch || 'targetDate' in patch || 'notes' in patch) {
         const result = await updateBucketListItem(id, {
           ...('title' in patch ? { title: patch.title } : {}),
           ...('targetYear' in patch ? { targetYear: patch.targetYear } : {}),
+          ...('targetDate' in patch ? { targetDate: patch.targetDate } : {}),
           ...('notes' in patch ? { description: patch.notes } : {}),
         });
         if (!result?.success)
@@ -227,6 +231,7 @@ export function serverMyListStorage(initial: MyListItem[]): MyListStorage {
       return replace(id, (item) =>
         patchItem(item, {
           ...patch,
+          ...bucketTargetPatch(patch),
           ...(patch.title !== undefined ? { title: patch.title.trim() } : {}),
         })
       );

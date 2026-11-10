@@ -488,6 +488,40 @@ describe('local account import replay', () => {
 });
 
 describe('bucket-list readiness on durable storage', () => {
+  it('persists tentative dates, rejects invalid dates and other owners, and preserves year-only plans', async () => {
+    const a = await signUp(issuer(db), 'bucket-date-a@example.test', 'Date A');
+    const b = await signUp(issuer(db), 'bucket-date-b@example.test', 'Date B');
+    asUser(a);
+    const { id } = await addBucketListItem({
+      title: 'A long-term dream',
+      description: 'Keep this',
+      targetYear: 2030,
+    });
+    await updateBucketListItem(id!, { targetDate: '2031-06-12' });
+    expect((await itemRows(a.userId))[0]).toMatchObject({
+      targetDate: '2031-06-12',
+      targetYear: 2031,
+      description: 'Keep this',
+      status: 'planned',
+    });
+    await expect(updateBucketListItem(id!, { targetDate: '2031-02-29' })).rejects.toThrow();
+    asUser(b);
+    await expect(updateBucketListItem(id!, { targetDate: '2035-03-10' })).rejects.toThrow(
+      'Item not found'
+    );
+    asUser(a);
+    expect((await itemRows(a.userId))[0]!.targetDate).toBe('2031-06-12');
+    store.failOn(/update "BucketListItem"/i);
+    await expect(updateBucketListItem(id!, { targetDate: '2032-07-14' })).rejects.toThrow();
+    store.failOn(null);
+    expect((await itemRows(a.userId))[0]!.targetDate).toBe('2031-06-12');
+    await updateBucketListItem(id!, { targetDate: '2032-07-14' });
+    await updateBucketListItem(id!, { targetDate: null });
+    expect((await itemRows(a.userId))[0]).toMatchObject({ targetDate: null, targetYear: 2032 });
+    await updateBucketListItem(id!, { targetDate: '2032-07-14' });
+    await updateBucketListItem(id!, { targetYear: 2035 });
+    expect((await itemRows(a.userId))[0]).toMatchObject({ targetDate: null, targetYear: 2035 });
+  });
   function guestItem(title = 'Build a boat') {
     return {
       id: crypto.randomUUID(),
@@ -496,6 +530,7 @@ describe('bucket-list readiness on durable storage', () => {
       category: 'adventure' as const,
       status: 'done' as const,
       targetYear: 2027,
+      targetDate: '2027-06-12',
       createdAt: '2026-10-01T09:00:00.000Z',
       updatedAt: '2026-10-02T09:00:00.000Z',
       completedAt: '2026-10-02T09:00:00.000Z',
@@ -636,6 +671,7 @@ describe('bucket-list readiness on durable storage', () => {
       status: 'done',
       visibility: 'private',
       targetYear: 2027,
+      targetDate: '2027-06-12',
     });
     expect(saved!.completedAt!.toISOString()).toBe(item.completedAt);
     const steps = await db

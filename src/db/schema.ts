@@ -307,6 +307,7 @@ export const bucketListItems = sqliteTable(
     sourceSlug: text('sourceSlug'),
     sourceItemTitle: text('sourceItemTitle'),
     targetYear: integer('targetYear'),
+    targetDate: text('targetDate'),
     completedAt: integer('completedAt', { mode: 'timestamp' }),
     createdAt: integer('createdAt', { mode: 'timestamp' }).notNull().default(sql`(unixepoch())`),
     updatedAt: integer('updatedAt', { mode: 'timestamp' }).notNull().default(sql`(unixepoch())`),

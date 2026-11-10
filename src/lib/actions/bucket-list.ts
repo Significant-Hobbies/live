@@ -10,6 +10,7 @@ import type { BingoVisibility, BucketListDraft } from '~/lib/life-bingo';
 import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
 import { normalizeDreamTitle } from '~/lib/dream-atlas';
+import { bucketTargetDateSchema, bucketTargetPatch } from '~/lib/bucket-target';
 
 const IntentionSchema = z.enum([
   'adventure',
@@ -343,6 +344,7 @@ const UpdateItemSchema = z.object({
   title: z.string().trim().min(1).max(200).optional(),
   description: z.string().max(500).nullable().optional(),
   targetYear: z.number().int().min(1900).max(2200).nullable().optional(),
+  targetDate: bucketTargetDateSchema.nullable().optional(),
   category: z.enum(CATEGORIES).nullable().optional(),
 });
 
@@ -351,6 +353,7 @@ export async function updateBucketListItem(
   patch: {
     title?: string;
     targetYear?: number | null;
+    targetDate?: string | null;
     category?: string | null;
     description?: string | null;
   }
@@ -358,13 +361,14 @@ export async function updateBucketListItem(
   const session = await getServerAuthSession();
   if (!session?.user?.id) throw new Error('Not authenticated');
   const parsed = UpdateItemSchema.parse(patch);
-  if (parsed.title !== undefined) {
+  if (parsed.title !== undefined || parsed.targetDate !== undefined) {
     const existing = await db
       .select({ id: bucketListItems.id, title: bucketListItems.title })
       .from(bucketListItems)
       .where(eq(bucketListItems.userId, session.user.id));
     if (!existing.some((item) => item.id === id)) throw new Error('Item not found');
     if (
+      parsed.title !== undefined &&
       existing.some(
         (item) =>
           item.id !== id && normalizeDreamTitle(item.title) === normalizeDreamTitle(parsed.title!)
@@ -374,7 +378,7 @@ export async function updateBucketListItem(
   }
   await db
     .update(bucketListItems)
-    .set({ ...parsed, updatedAt: new Date() })
+    .set({ ...parsed, ...bucketTargetPatch(parsed), updatedAt: new Date() })
     .where(and(eq(bucketListItems.id, id), eq(bucketListItems.userId, session.user.id)));
   await revalidateItemSurfaces(session.user.id);
   return { success: true };

@@ -6,6 +6,7 @@ import { z } from 'zod';
 import { bucketItemUpdates, bucketListItems, userQuests } from '~/db/schema';
 import { bucketTransferItemSchema, type BucketTransferItem } from '~/lib/bucket-list-data';
 import { normalizeDreamTitle } from '~/lib/dream-atlas';
+import { bucketTargetPatch } from '~/lib/bucket-target';
 import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
 
@@ -85,6 +86,7 @@ function scalarConflict(item: BucketTransferItem, existing: StoredItem) {
   const fields = [
     [item.notes, existing.description],
     [item.targetYear, existing.targetYear],
+    [item.targetDate, existing.targetDate],
     [item.category, existing.category],
     [item.sourceSlug, existing.sourceSlug],
     [item.sourceItemTitle, existing.sourceItemTitle],
@@ -149,6 +151,7 @@ async function insertGraph(item: BucketTransferItem, id: string, owner: string) 
       status: item.status,
       visibility: 'private',
       targetYear: item.targetYear ?? null,
+      ...bucketTargetPatch(item),
       sourceSlug: item.sourceSlug ?? null,
       sourceItemTitle: item.sourceItemTitle ?? null,
       createdAt: date(item.createdAt),

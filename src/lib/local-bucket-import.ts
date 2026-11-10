@@ -53,6 +53,7 @@ function transferItem(raw: unknown) {
     'category',
     'status',
     'targetYear',
+    'targetDate',
     'sourceSlug',
     'sourceItemTitle',
     'createdAt',

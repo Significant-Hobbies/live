@@ -9,6 +9,7 @@ import { ListInspiration } from '~/components/list-inspiration';
 import { experienceImage } from '~/lib/experience-images';
 import { normalizeDreamTitle } from '~/lib/dream-atlas';
 import type { BucketUpdateInput } from '~/lib/bucket-updates';
+import { formatBucketTargetDate } from '~/lib/bucket-target';
 import {
   bucketListExport,
   downloadBucketJson,
@@ -62,6 +63,7 @@ export function MyList({
   const [error, setError] = useState('');
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [notesDrafts, setNotesDrafts] = useState<Record<string, string>>({});
+  const [dateDrafts, setDateDrafts] = useState<Record<string, string>>({});
   const [notesFailures, setNotesFailures] = useState<Record<string, boolean>>({});
   const [updateDrafts, setUpdateDrafts] = useState<Record<string, BucketUpdateInput>>({});
   const [updateFeedback, setUpdateFeedback] = useState<
@@ -254,6 +256,19 @@ export function MyList({
       notesError={notesFailures[selected.id] ?? false}
       onNotesChange={(value) => setNotesDrafts((current) => ({ ...current, [selected.id]: value }))}
       onNotesSave={() => void saveNotes(selected, notesDrafts[selected.id] ?? selected.notes ?? '')}
+      targetDate={{
+        value: dateDrafts[selected.id] ?? selected.targetDate ?? '',
+        onChange: (value) => setDateDrafts((current) => ({ ...current, [selected.id]: value })),
+        onSave: async () => {
+          const value = dateDrafts[selected.id] ?? selected.targetDate ?? '';
+          if (await mutate((adapter) => adapter.update(selected.id, { targetDate: value || null })))
+            setDateDrafts((current) => {
+              const next = { ...current };
+              delete next[selected.id];
+              return next;
+            });
+        },
+      }}
       updateComposer={{
         draft: updateDrafts[selected.id]?.text ?? '',
         feedback: updateFeedback[selected.id],
@@ -495,7 +510,11 @@ function ItemRow({
                   {STATUS_LABELS[item.status]}
                 </span>
                 {next && <span className="break-words">Next: {next.text}</span>}
-                {item.targetYear && <span>· by {item.targetYear}</span>}
+                {item.targetDate ? (
+                  <span>· aiming for {formatBucketTargetDate(item.targetDate)}</span>
+                ) : item.targetYear ? (
+                  <span>· by {item.targetYear}</span>
+                ) : null}
               </>
             )}
           </span>
@@ -516,6 +535,7 @@ function ItemPanel({
   notesError,
   onNotesChange,
   onNotesSave,
+  targetDate,
   updateComposer,
   onBack,
   mutate,
@@ -528,6 +548,11 @@ function ItemPanel({
   notesError: boolean;
   onNotesChange: (value: string) => void;
   onNotesSave: () => void;
+  targetDate: {
+    value: string;
+    onChange: (value: string) => void;
+    onSave: () => Promise<void>;
+  };
   updateComposer: {
     draft: string;
     feedback: 'failed' | 'recovered' | undefined;
@@ -736,7 +761,7 @@ function ItemPanel({
         )}
       </form>
       <h3 className="mt-6 text-sm text-muted-foreground">When</h3>
-      <label htmlFor={`year-${item.id}`} className="sr-only">
+      <label htmlFor={`year-${item.id}`} className="mt-2 block text-sm text-muted-foreground">
         Target year
       </label>
       <select
@@ -756,6 +781,50 @@ function ItemPanel({
           </option>
         ))}
       </select>
+      <form
+        className="mt-4"
+        onSubmit={(event) => {
+          event.preventDefault();
+          void targetDate.onSave();
+        }}
+      >
+        <label htmlFor={`target-date-${item.id}`} className="block text-sm text-muted-foreground">
+          Tentative target date
+        </label>
+        <p id={`target-date-help-${item.id}`} className="mt-1 text-xs text-muted-foreground">
+          Have a day in mind? Set a starting point. You can change it anytime.
+        </p>
+        <div className="mt-2 flex flex-wrap gap-2">
+          <input
+            id={`target-date-${item.id}`}
+            type="date"
+            min="1900-01-01"
+            max="2200-12-31"
+            value={targetDate.value}
+            onChange={(event) => targetDate.onChange(event.target.value)}
+            aria-describedby={`target-date-help-${item.id}`}
+            disabled={saving}
+            className="min-h-11 min-w-0 flex-1 rounded-xl border border-border bg-surface px-3 text-base"
+          />
+          <button
+            type="submit"
+            disabled={saving || targetDate.value === (item.targetDate ?? '')}
+            className="min-h-11 rounded-xl border border-border px-4 text-sm focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-50"
+          >
+            Save date
+          </button>
+        </div>
+        {targetDate.value && (
+          <button
+            type="button"
+            disabled={saving}
+            onClick={() => targetDate.onChange('')}
+            className="min-h-11 text-sm text-muted-foreground underline underline-offset-4"
+          >
+            Clear date
+          </button>
+        )}
+      </form>
       {account && (
         <>
           <label

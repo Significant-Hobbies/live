@@ -51,6 +51,46 @@ beforeEach(async () => {
   await act(async () => root.render(<MyList initialItems={[]} />));
 });
 
+it('keeps a failed target-date draft across item switches and retries without changing status', async () => {
+  await act(async () =>
+    root.render(
+      <MyList
+        key="dates"
+        initialItems={[
+          { id: 'one', title: 'Sail', status: 'planned', targetYear: 2030, steps: [] },
+          { id: 'two', title: 'Swim', status: 'planned', steps: [] },
+        ]}
+      />
+    )
+  );
+  const open = async (title: string) =>
+    act(async () => {
+      (container.querySelector(`[aria-label="Open ${title}"]`) as HTMLButtonElement).click();
+    });
+  await open('Sail');
+  const field = container.querySelector<HTMLInputElement>('#target-date-one')!;
+  await act(async () => {
+    Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value')!.set!.call(
+      field,
+      '2031-06-12'
+    );
+    field.dispatchEvent(new Event('input', { bubbles: true }));
+  });
+  updateNotes.mockRejectedValueOnce(new Error('Offline'));
+  await click('Save date');
+  expect(container.querySelector('[role="alert"]')?.textContent).toContain(
+    'Changes could not be saved'
+  );
+  await open('Swim');
+  await open('Sail');
+  expect(container.querySelector<HTMLInputElement>('#target-date-one')!.value).toBe('2031-06-12');
+  await click('Save date');
+  expect(updateNotes).toHaveBeenLastCalledWith('one', { targetDate: '2031-06-12' });
+  expect(container.querySelector('[aria-label="Open Sail"]')?.textContent).toContain('12 Jun 2031');
+  expect(container.querySelector<HTMLSelectElement>('#year-one')!.value).toBe('2031');
+  expect(container.querySelector('[aria-checked="true"]')?.textContent).toBe('To do');
+});
+
 describe('item updates', () => {
   async function openUpdateItem() {
     await act(async () =>
