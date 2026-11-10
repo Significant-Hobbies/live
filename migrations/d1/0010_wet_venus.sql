@@ -1,0 +1,1 @@
+ALTER TABLE `BucketListItem` ADD `targetDate` text;

@@ -1,6 +1,7 @@
 import { describe, expect, it, vi } from 'vitest';
 import { localMyListStorage } from './my-list-storage';
 import type { LocalRecordAdapter } from '~/lib/local-record-store';
+import { bucketListExport } from '~/lib/bucket-list-data';
 
 vi.mock('~/lib/actions/bucket-list', () => ({}));
 vi.mock('~/lib/actions/bucket-steps', () => ({}));
@@ -31,6 +32,51 @@ function memoryAdapter(value: unknown) {
 }
 
 describe('local My list storage', () => {
+  it('ignores malformed stored dates without writing during load or losing the rest of the item', async () => {
+    const { adapter } = memoryAdapter({
+      items: [
+        { id: 'bad', title: 'Sail', targetDate: 'not-a-date', targetYear: 2030, extra: 42 },
+        { id: 'object', title: 'Swim', targetDate: { day: 12 } },
+      ],
+    });
+    expect(await localMyListStorage(adapter).load()).toMatchObject([
+      { id: 'bad', targetDate: null, targetYear: 2030, extra: 42 },
+      { id: 'object', targetDate: null },
+    ]);
+    expect(adapter.put).not.toHaveBeenCalled();
+  });
+  it('saves, reschedules, and clears exact dates without changing the item evidence', async () => {
+    const { adapter } = memoryAdapter({
+      items: [{ id: 'item', title: 'Sail', targetYear: 2030, notes: 'Keep this', extra: 42 }],
+    });
+    const storage = localMyListStorage(adapter);
+    await storage.load();
+    await storage.update('item', { targetDate: '2031-06-12' });
+    expect(bucketListExport(storage.snapshot()).items[0]).toMatchObject({
+      targetDate: '2031-06-12',
+      targetYear: 2031,
+    });
+    expect((await localMyListStorage(adapter).load())[0]).toMatchObject({
+      targetDate: '2031-06-12',
+      targetYear: 2031,
+      notes: 'Keep this',
+      extra: 42,
+      status: 'planned',
+    });
+    vi.mocked(adapter.put).mockRejectedValueOnce(new Error('aborted'));
+    await expect(storage.update('item', { targetDate: '2032-07-14' })).rejects.toThrow('aborted');
+    expect(storage.snapshot()[0]!.targetDate).toBe('2031-06-12');
+    await storage.update('item', { targetDate: '2032-07-14' });
+    await storage.update('item', { targetDate: null });
+    expect(storage.snapshot()[0]).toMatchObject({ targetDate: null, targetYear: 2032 });
+    await storage.update('item', { targetDate: '2032-07-14' });
+    await storage.update('item', { targetYear: 2035 });
+    expect((await localMyListStorage(adapter).load())[0]).toMatchObject({
+      targetDate: null,
+      targetYear: 2035,
+    });
+    await expect(storage.update('item', { targetDate: '2030-02-30' })).rejects.toThrow();
+  });
   it('persists dated updates separately from notes and steps, newest first and once per token', async () => {
     const { adapter } = memoryAdapter({
       items: [{ id: 'item', title: 'Sail', notes: 'Keep this', extra: 42 }],
