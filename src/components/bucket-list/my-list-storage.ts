@@ -8,7 +8,7 @@ import {
 import { addBucketStep, removeBucketStep, setBucketStepDone } from '~/lib/actions/bucket-steps';
 import type { BucketStep } from '~/lib/bucket-steps';
 import { normalizeDreamTitle } from '~/lib/dream-atlas';
-import { bucketTargetPatch } from '~/lib/bucket-target';
+import { bucketTargetDateSchema, bucketTargetPatch } from '~/lib/bucket-target';
 import { addBucketItemUpdate } from '~/lib/actions/bucket-updates';
 import {
   BucketUpdateInputSchema,
@@ -135,11 +135,13 @@ export function localMyListStorage(
           unrecognised?.push(raw);
           return [];
         }
+        const targetDate = bucketTargetDateSchema.safeParse(item.targetDate);
         return [
           {
             ...item,
             id: typeof item.id === 'string' && item.id ? item.id : crypto.randomUUID(),
             title: item.title,
+            targetDate: targetDate.success ? targetDate.data : null,
             notes:
               item.notes !== undefined
                 ? (item.notes as string | null)

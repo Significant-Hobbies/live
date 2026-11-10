@@ -32,6 +32,19 @@ function memoryAdapter(value: unknown) {
 }
 
 describe('local My list storage', () => {
+  it('ignores malformed stored dates without writing during load or losing the rest of the item', async () => {
+    const { adapter } = memoryAdapter({
+      items: [
+        { id: 'bad', title: 'Sail', targetDate: 'not-a-date', targetYear: 2030, extra: 42 },
+        { id: 'object', title: 'Swim', targetDate: { day: 12 } },
+      ],
+    });
+    expect(await localMyListStorage(adapter).load()).toMatchObject([
+      { id: 'bad', targetDate: null, targetYear: 2030, extra: 42 },
+      { id: 'object', targetDate: null },
+    ]);
+    expect(adapter.put).not.toHaveBeenCalled();
+  });
   it('saves, reschedules, and clears exact dates without changing the item evidence', async () => {
     const { adapter } = memoryAdapter({
       items: [{ id: 'item', title: 'Sail', targetYear: 2030, notes: 'Keep this', extra: 42 }],

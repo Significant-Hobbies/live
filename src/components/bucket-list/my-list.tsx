@@ -252,10 +252,12 @@ export function MyList({
         pending: removal.phase !== 'idle',
         remove: () => scheduleRemoval(selected),
       }}
-      notes={notesDrafts[selected.id] ?? selected.notes ?? ''}
-      notesError={notesFailures[selected.id] ?? false}
-      onNotesChange={(value) => setNotesDrafts((current) => ({ ...current, [selected.id]: value }))}
-      onNotesSave={() => void saveNotes(selected, notesDrafts[selected.id] ?? selected.notes ?? '')}
+      notes={{
+        value: notesDrafts[selected.id] ?? selected.notes ?? '',
+        failed: notesFailures[selected.id] ?? false,
+        onChange: (value) => setNotesDrafts((current) => ({ ...current, [selected.id]: value })),
+        onSave: () => void saveNotes(selected, notesDrafts[selected.id] ?? selected.notes ?? ''),
+      }}
       targetDate={{
         value: dateDrafts[selected.id] ?? selected.targetDate ?? '',
         onChange: (value) => setDateDrafts((current) => ({ ...current, [selected.id]: value })),
@@ -532,9 +534,6 @@ function ItemPanel({
   saving,
   removalControl,
   notes,
-  notesError,
-  onNotesChange,
-  onNotesSave,
   targetDate,
   updateComposer,
   onBack,
@@ -544,10 +543,12 @@ function ItemPanel({
   account: boolean;
   saving: boolean;
   removalControl: { pending: boolean; remove: () => void };
-  notes: string;
-  notesError: boolean;
-  onNotesChange: (value: string) => void;
-  onNotesSave: () => void;
+  notes: {
+    value: string;
+    failed: boolean;
+    onChange: (value: string) => void;
+    onSave: () => void;
+  };
   targetDate: {
     value: string;
     onChange: (value: string) => void;
@@ -766,6 +767,7 @@ function ItemPanel({
       </label>
       <select
         id={`year-${item.id}`}
+        aria-describedby={item.targetDate ? `year-help-${item.id}` : undefined}
         value={item.targetYear ?? ''}
         disabled={saving}
         onChange={(event) => {
@@ -781,6 +783,11 @@ function ItemPanel({
           </option>
         ))}
       </select>
+      {item.targetDate && (
+        <p id={`year-help-${item.id}`} className="mt-2 text-xs text-muted-foreground">
+          Changing the year clears the exact date.
+        </p>
+      )}
       <form
         className="mt-4"
         onSubmit={(event) => {
@@ -856,15 +863,15 @@ function ItemPanel({
       </label>
       <textarea
         id={`notes-${item.id}`}
-        value={notes}
+        value={notes.value}
         maxLength={500}
         disabled={saving}
-        onChange={(event) => onNotesChange(event.target.value)}
-        onBlur={onNotesSave}
+        onChange={(event) => notes.onChange(event.target.value)}
+        onBlur={notes.onSave}
         placeholder="Why this matters, links, who to do it with…"
         className="mt-2 min-h-24 w-full resize-y rounded-xl border border-border bg-surface px-4 py-3 text-sm"
       />
-      {notesError && (
+      {notes.failed && (
         <p role="alert" className="mt-2 text-sm text-destructive">
           Notes could not be saved. Your draft is still here.
         </p>
