@@ -212,6 +212,33 @@ describe('Generated public blog HTML', () => {
     }
   );
 
+  it.each([206, 412, 416, 500, 503])(
+    'falls through for incomplete or unavailable artifact status %s',
+    async (status) => {
+      const cancel = vi.fn();
+      assetFetch.mockResolvedValueOnce(
+        new Response(new ReadableStream({ cancel }), {
+          status,
+          headers: { 'Content-Type': 'text/html' },
+        })
+      );
+      const response = await worker.fetch(new Request(article), environment, context);
+      expect(response.status).toBe(200);
+      expect(await response.text()).toBe('application HTML');
+      expect(cancel).toHaveBeenCalledTimes(1);
+      expect(nextFetch).toHaveBeenCalledTimes(1);
+    }
+  );
+
+  it('requires HTML metadata before serving an artifact', async () => {
+    assetFetch.mockResolvedValueOnce(
+      new Response('wrong representation', { headers: { 'Content-Type': 'application/json' } })
+    );
+    const response = await worker.fetch(new Request(article), environment, context);
+    expect(await response.text()).toBe('application HTML');
+    expect(nextFetch).toHaveBeenCalledTimes(1);
+  });
+
   it('keeps non-document writes with the untouched application request', async () => {
     const request = new Request(article, { method: 'POST', body: 'unchanged input' });
     const response = await worker.fetch(request, environment, context);

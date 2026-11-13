@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 import { Avatar, AvatarFallback, AvatarImage } from '~/components/ui/avatar';
 import { Button } from '~/components/ui/button';
@@ -27,6 +28,11 @@ const NAV_LINKS = [
 
 export function Nav() {
   const { data: session, isPending } = authClient.useSession();
+  const [hasResolvedSession, setHasResolvedSession] = useState(false);
+  useEffect(() => {
+    if (!isPending) setHasResolvedSession(true);
+  }, [isPending]);
+  const accountPending = isPending && !hasResolvedSession;
   const presentation = useAccountPresentation(session?.user.id ?? null);
   const user = session?.user ? { ...session.user, username: null, ...presentation.user } : null;
   const links = NAV_LINKS;
@@ -57,7 +63,7 @@ export function Nav() {
             <NavLinks links={links} />
           </div>
 
-          {isPending ? (
+          {accountPending ? (
             <Button
               asChild
               className="h-11 rounded-xl bg-transparent px-5 normal-case text-muted-foreground hover:bg-muted"
@@ -160,7 +166,7 @@ export function Nav() {
               </DropdownMenuContent>
             </DropdownMenu>
           )}
-          <MobileMenu links={links} isLoggedIn={!!user} accountPending={isPending} />
+          <MobileMenu links={links} isLoggedIn={!!user} accountPending={accountPending} />
         </div>
       </div>
     </nav>

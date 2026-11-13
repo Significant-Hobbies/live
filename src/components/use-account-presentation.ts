@@ -2,22 +2,25 @@
 
 import { useEffect, useReducer, useState } from 'react';
 
-export type AccountPresentation = {
+type AccountPresentation = {
   id: string;
   name: string | null;
   image: string | null;
   username: string | null;
 };
 
+function nullableText(value: unknown): value is string | null {
+  return value === null || typeof value === 'string';
+}
+
 function accountPresentation(value: unknown, userId: string): AccountPresentation | null {
   if (!value || typeof value !== 'object' || !('user' in value)) return null;
   const user = value.user;
   if (!user || typeof user !== 'object') return null;
   if (!('id' in user) || user.id !== userId) return null;
-  if (!('name' in user) || (user.name !== null && typeof user.name !== 'string')) return null;
-  if (!('image' in user) || (user.image !== null && typeof user.image !== 'string')) return null;
-  if (!('username' in user) || (user.username !== null && typeof user.username !== 'string'))
-    return null;
+  if (!('name' in user) || !nullableText(user.name)) return null;
+  if (!('image' in user) || !nullableText(user.image)) return null;
+  if (!('username' in user) || !nullableText(user.username)) return null;
   return { id: userId, name: user.name, image: user.image, username: user.username };
 }
 
