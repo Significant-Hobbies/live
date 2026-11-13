@@ -11,7 +11,12 @@ vi.mock('../../.open-next/worker.js', () => ({
   DOShardedTagCache: {},
   BucketCachePurge: {},
 }));
-vi.mock('../../.open-next/cache-release.mjs', () => ({ buildId: 'test-release' }));
+vi.mock('../../.open-next/cache-release.mjs', () => ({
+  buildId: 'test-release',
+  publicBlogArtifacts: {
+    '/blog/compiled-article': '/__live_prerender/test-release/blog/compiled-article/',
+  },
+}));
 vi.mock('../../timing.mjs', () => ({ withTiming: (handler: unknown) => handler }));
 vi.mock('../../agent-edge.mjs', () => ({ handleAgentEdge: () => null }));
 vi.mock('../../agent-route-markdown.mjs', async (importOriginal) => ({
@@ -106,6 +111,129 @@ describe('Owned public binary assets', () => {
     expect(await response.text()).toBe('application response');
     expect(assetFetch).not.toHaveBeenCalled();
     expect(nextFetch).toHaveBeenCalledWith(request, environment, context);
+  });
+});
+
+describe('Generated public blog HTML', () => {
+  const article = 'https://significanthobbies.com/blog/compiled-article';
+  const stored =
+    'https://significanthobbies.com/__live_prerender/test-release/blog/compiled-article/';
+  const cache = { match: vi.fn(async () => undefined), put: vi.fn() };
+  beforeEach(() => {
+    vi.clearAllMocks();
+    vi.stubGlobal('caches', { default: cache });
+    assetFetch.mockImplementation(
+      async () =>
+        new Response('compiled HTML', {
+          headers: { 'Content-Type': 'text/html; charset=utf-8', ETag: 'compiled-body' },
+        })
+    );
+    nextFetch.mockImplementation(
+      async () =>
+        new Response('application HTML', {
+          headers: { 'Content-Type': 'text/html' },
+        })
+    );
+  });
+
+  it.each(['GET', 'HEAD'])(
+    'serves byte-preserved %s HTML with public validators and correct Vary',
+    async (method) => {
+      const request = new Request(`${article}?utm_source=first&gclid=private-click`, {
+        method,
+        headers: { Accept: 'text/html', 'If-None-Match': 'older-body' },
+      });
+      const response = await worker.fetch(request, environment, context);
+      expect(response.status).toBe(200);
+      expect(await response.text()).toBe(method === 'HEAD' ? '' : 'compiled HTML');
+      expect(response.headers.get('Content-Type')).toBe('text/html; charset=utf-8');
+      expect(response.headers.get('ETag')).toBe('compiled-body');
+      expect(response.headers.get('Cache-Control')).toBe(
+        'public, max-age=0, s-maxage=86400, must-revalidate'
+      );
+      expect(response.headers.get('x-edge-cache')).toBe('ASSET');
+      const vary = response.headers
+        .get('Vary')
+        ?.toLowerCase()
+        .split(',')
+        .map((value) => value.trim());
+      expect(vary).toEqual(
+        expect.arrayContaining([
+          'accept',
+          'accept-encoding',
+          'rsc',
+          'next-router-state-tree',
+          'next-router-prefetch',
+          'next-router-segment-prefetch',
+        ])
+      );
+      const assetRequest = assetFetch.mock.calls[0]![0] as Request;
+      expect(assetRequest.url).toBe(stored);
+      expect(assetRequest.method).toBe(method);
+      expect(assetRequest.headers.get('If-None-Match')).toBe('older-body');
+      expect(request.url).toContain('private-click');
+      expect(nextFetch).not.toHaveBeenCalled();
+      expect(cache.match).not.toHaveBeenCalled();
+      expect(cache.put).not.toHaveBeenCalled();
+    }
+  );
+
+  it.each(['GET', 'HEAD'])('keeps conditional %s 304 metadata and no body', async (method) => {
+    assetFetch.mockResolvedValueOnce(
+      new Response(null, { status: 304, headers: { ETag: 'compiled-body' } })
+    );
+    const response = await worker.fetch(
+      new Request(article, { method, headers: { 'If-None-Match': 'compiled-body' } }),
+      environment,
+      context
+    );
+    expect(response.status).toBe(304);
+    expect(response.headers.get('ETag')).toBe('compiled-body');
+    expect(await response.text()).toBe('');
+    expect(nextFetch).not.toHaveBeenCalled();
+  });
+
+  it('keeps non-document writes with the untouched application request', async () => {
+    const request = new Request(article, { method: 'POST', body: 'unchanged input' });
+    const response = await worker.fetch(request, environment, context);
+    expect(await response.text()).toBe('application HTML');
+    expect(nextFetch).toHaveBeenCalledWith(request, environment, context);
+    expect(await request.text()).toBe('unchanged input');
+    expect(assetFetch).not.toHaveBeenCalled();
+  });
+
+  it('cancels a missing artifact and follows the same normalized application path', async () => {
+    const cancel = vi.fn();
+    assetFetch.mockResolvedValueOnce(new Response(new ReadableStream({ cancel }), { status: 404 }));
+    const response = await worker.fetch(
+      new Request(`${article}?utm_source=first`),
+      environment,
+      context
+    );
+    expect(await response.text()).toBe('application HTML');
+    expect(cancel).toHaveBeenCalledTimes(1);
+    expect((nextFetch.mock.calls[0]![0] as Request).url).toBe(article);
+  });
+
+  it.each([
+    ['/blog/compiled-article?q=pottery', {}],
+    ['/blog/compiled-article?unknown=retained', {}],
+    ['/blog/compiled-article', { Cookie: '__Secure-better-auth.session_token=owner' }],
+    ['/blog/compiled-article', { Authorization: 'Bearer owner' }],
+    ['/blog/compiled-article', { 'cf-access-jwt-assertion': 'owner' }],
+    ['/blog/compiled-article', { RSC: '1' }],
+    ['/blog/compiled-article', { Accept: 'text/x-component' }],
+    ['/blog/compiled-article', { Accept: 'application/json' }],
+    ['/blog/another-article', {}],
+    ['/u/owner', {}],
+    ['/b/owner', {}],
+    ['/api/account-presentation', {}],
+  ])('keeps noneligible %s with the application', async (path, headers) => {
+    const request = new Request(`https://significanthobbies.com${path}`, { headers });
+    const response = await worker.fetch(request, environment, context);
+    expect(await response.text()).toBe('application HTML');
+    expect(assetFetch).not.toHaveBeenCalled();
+    expect(nextFetch).toHaveBeenCalled();
   });
 });
 
