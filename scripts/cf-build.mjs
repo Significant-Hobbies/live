@@ -14,7 +14,7 @@
  * 4. Run opennextjs-cloudflare build --skipNextBuild
  */
 import { execSync } from 'node:child_process';
-import { readdirSync, existsSync, cpSync, readFileSync, writeFileSync } from 'node:fs';
+import { readdirSync, existsSync, cpSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -187,6 +187,57 @@ function patchNftFiles() {
 console.log('[cf-build] Step 1: Running Next.js build...');
 execSync('pnpm build', { cwd: projectDir, stdio: 'inherit' });
 
+const prerenderManifest = JSON.parse(
+  readFileSync(join(projectDir, '.next/prerender-manifest.json'), 'utf8')
+);
+const prerenderedPaths = Object.keys(prerenderManifest.routes);
+const liveDocumentPaths = [
+  '/explore',
+  '/experiences',
+  '/search',
+  '/compare-journeys',
+  '/timelines/recent',
+  '/bucket-list',
+  '/settings',
+  '/journal',
+  '/history',
+  '/trajectory',
+  '/life-in-weeks',
+  '/live-more',
+  '/commitments',
+  '/api/account-presentation',
+];
+const liveDocumentPrefixes = [
+  '/hobbies/',
+  '/experiences/',
+  '/b/',
+  '/u/',
+  '/timeline/',
+  '/bucket-list/',
+];
+const frozenLivePaths = [
+  ...prerenderedPaths,
+  ...Object.keys(prerenderManifest.dynamicRoutes),
+].filter((path) => {
+  if (
+    path === '/hobbies/random' ||
+    path === '/experiences/collections' ||
+    path.startsWith('/experiences/collections/')
+  )
+    return false;
+  return (
+    liveDocumentPaths.includes(path) ||
+    liveDocumentPrefixes.some((prefix) => path.startsWith(prefix))
+  );
+});
+const representativeArticle = '/blog/analyze-an-exoplanet-transit-with-real-telescope-data';
+if (!prerenderManifest.routes[representativeArticle] || frozenLivePaths.length) {
+  throw new Error(
+    `Public rendering boundary changed: article prerendered=${Boolean(prerenderManifest.routes[representativeArticle])}; live routes prerendered=${frozenLivePaths.join(', ')}`
+  );
+}
+console.log('[cf-build] Public article/live-data prerender boundary verified.');
+
 // Step 2: Copy full next/dist into .next pnpm store
 console.log('[cf-build] Step 2: Patching .next pnpm store with full next dist...');
 patchDotNextStore();
@@ -218,8 +269,37 @@ execSync('node scripts/run-overlay-astro-landing.mjs --strict', {
 const buildId = readFileSync(join(projectDir, '.next/BUILD_ID'), 'utf8').trim();
 if (!buildId)
   throw new Error('Next build identity is missing; refusing an unversioned HTML cache.');
+if (!/^[A-Za-z0-9_-]+$/.test(buildId))
+  throw new Error('Unsupported build identity for public artifacts.');
+const publicBlogArtifacts = {};
+for (const route of prerenderedPaths) {
+  const entry = prerenderManifest.routes[route];
+  if (entry.srcRoute !== '/blog/[slug]' || entry.initialRevalidateSeconds !== false) continue;
+  if (!/^\/blog\/[a-z0-9-]+$/.test(route))
+    throw new Error(`Unsupported public article route: ${route}`);
+  const assetPath = `/__live_prerender/${buildId}${route}/`;
+  const destination = join(projectDir, '.open-next/assets', assetPath.slice(1));
+  mkdirSync(destination, { recursive: true });
+  cpSync(
+    join(projectDir, '.next/server/app', `${route.slice(1)}.html`),
+    join(destination, 'index.html')
+  );
+  publicBlogArtifacts[route] = assetPath;
+}
+const blogDetailPaths = prerenderedPaths.filter(
+  (route) => prerenderManifest.routes[route].srcRoute === '/blog/[slug]'
+);
+if (
+  !publicBlogArtifacts[representativeArticle] ||
+  Object.keys(publicBlogArtifacts).length !== blogDetailPaths.length
+) {
+  throw new Error('Public article artifact coverage changed; refusing a framework-only release.');
+}
+console.log(
+  `[cf-build] Emitted ${Object.keys(publicBlogArtifacts).length} immutable public article artifacts.`
+);
 writeFileSync(
   join(projectDir, '.open-next/cache-release.mjs'),
-  `export const buildId = ${JSON.stringify(buildId)};\n`
+  `export const buildId = ${JSON.stringify(buildId)};\nexport const publicBlogArtifacts = ${JSON.stringify(publicBlogArtifacts)};\n`
 );
 console.log('[cf-build] Build complete!');

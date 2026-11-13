@@ -60,6 +60,7 @@ import sitemap from '~/app/sitemap';
 import { addBucketStep, setBucketStepDone } from '~/lib/actions/bucket-steps';
 
 const harness = vi.hoisted(() => ({
+  requestHeaders: null as Headers | null,
   database: null as MemoryD1 | null,
   db: null as DrizzleD1Database<typeof schema> | null,
 }));
@@ -70,6 +71,7 @@ vi.mock('~/server/db', () => ({
   },
 }));
 vi.mock('~/server/auth', () => ({ getServerAuthSession: vi.fn() }));
+vi.mock('next/headers', () => ({ headers: async () => harness.requestHeaders ?? new Headers() }));
 vi.mock('next/cache', () => ({ revalidatePath: vi.fn(), revalidateTag: vi.fn() }));
 vi.mock('~/lib/analytics', () => ({ trackCoreAction: vi.fn() }));
 
@@ -1033,4 +1035,102 @@ describe('public profile and individual item privacy on durable storage', () => 
       sqlite.close();
     }
   });
+});
+
+describe('old-account lazy app User without Nav', () => {
+  it.each(['import-first', 'bucket-import-first', 'save-first', 'parallel-presentation'])(
+    'keeps server authorization safe for %s',
+    async (order) => {
+      store.exec('PRAGMA foreign_keys=ON');
+      const owner = await signUp(issuer(db), `old-${order}@example.test`, 'Legacy account');
+      const other = await signUp(issuer(db), `other-${order}@example.test`, 'Other account');
+      await db.delete(users).where(eq(users.id, owner.userId));
+      expect(await db.query.users.findFirst({ where: eq(users.id, owner.userId) })).toBeUndefined();
+      harness.requestHeaders = sessionHeaders(owner.cookie);
+      const actual = await vi.importActual<typeof import('~/server/auth')>('~/server/auth');
+      mockSession.mockImplementation(actual.getServerAuthSession);
+      const habitId = `local-habit-${order}`;
+      const payload = {
+        profile: null,
+        onboarding: null,
+        commitments: null,
+        daily: {
+          habits: [
+            {
+              id: habitId,
+              name: 'Legacy import',
+              status: 'active',
+              targetFrequency: 'daily',
+              icon: null,
+            },
+          ],
+          logs: [],
+          journals: [],
+        },
+      };
+      const importData = () => importLocalAccountData(payload);
+      const importBucket = () =>
+        importLocalBucketItems({
+          expectedUserId: owner.userId,
+          items: [
+            {
+              id: crypto.randomUUID(),
+              title: `Legacy device bucket ${order}`,
+              notes: 'Device note',
+              category: 'adventure',
+              status: 'planned',
+              targetYear: null,
+              targetDate: null,
+              createdAt: '2026-11-13T00:00:00.000Z',
+              updatedAt: '2026-11-13T00:00:00.000Z',
+              completedAt: null,
+              steps: [],
+              updates: [],
+            },
+          ],
+        });
+      const save = () => addBucketListItem({ title: `Legacy save ${order}` });
+      const presentation = () => actual.getServerAuthSession();
+      try {
+        if (order === 'import-first') {
+          expect(await importData()).toEqual({ success: true });
+          expect(await save()).toMatchObject({ success: true, added: true });
+          expect((await presentation())?.user.id).toBe(owner.userId);
+        } else if (order === 'bucket-import-first') {
+          expect(await importBucket()).toMatchObject({ success: true, imported: 1 });
+          expect(await importData()).toEqual({ success: true });
+          expect(await save()).toMatchObject({ success: true, added: true });
+          expect((await presentation())?.user.id).toBe(owner.userId);
+        } else if (order === 'save-first') {
+          expect(await save()).toMatchObject({ success: true, added: true });
+          expect(await importData()).toEqual({ success: true });
+          expect((await presentation())?.user.id).toBe(owner.userId);
+        } else {
+          const [imported, saved, sessionResult, bucketResult] = await Promise.all([
+            importData(),
+            save(),
+            presentation(),
+            importBucket(),
+          ]);
+          expect(bucketResult).toMatchObject({ success: true, imported: 1 });
+          expect(imported).toEqual({ success: true });
+          expect(saved).toMatchObject({ success: true, added: true });
+          expect(sessionResult?.user.id).toBe(owner.userId);
+        }
+        expect(await db.query.users.findFirst({ where: eq(users.id, owner.userId) })).toMatchObject(
+          { id: owner.userId }
+        );
+        expect(await db.query.habits.findFirst({ where: eq(habits.id, habitId) })).toMatchObject({
+          userId: owner.userId,
+        });
+        expect(await itemRows(owner.userId)).toHaveLength(
+          ['bucket-import-first', 'parallel-presentation'].includes(order) ? 2 : 1
+        );
+        expect(await itemRows(other.userId)).toHaveLength(0);
+      } finally {
+        mockSession.mockReset();
+        harness.requestHeaders = null;
+      }
+    }
+  );
 });

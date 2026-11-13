@@ -8,9 +8,10 @@ import { NavLinks } from './nav-links';
 interface MobileMenuProps {
   links: { href: string; label: string }[];
   isLoggedIn: boolean;
+  accountPending?: boolean;
 }
 
-export function MobileMenu({ links, isLoggedIn }: MobileMenuProps) {
+export function MobileMenu({ links, isLoggedIn, accountPending = false }: MobileMenuProps) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -43,7 +44,20 @@ export function MobileMenu({ links, isLoggedIn }: MobileMenuProps) {
           <div className="flex flex-col gap-2 px-4 py-4">
             <NavLinks links={links} mobile onNavigate={() => setOpen(false)} />
             <div className="my-1 border-t border-border" />
-            {isLoggedIn ? (
+            {accountPending ? (
+              <Link
+                href="/bucket-list"
+                prefetch={false}
+                aria-busy="true"
+                onClick={() => setOpen(false)}
+                className="flex min-h-12 items-center justify-center rounded-xl bg-muted px-4 text-center text-base text-foreground"
+              >
+                Account
+                <span role="status" className="sr-only">
+                  Checking account…
+                </span>
+              </Link>
+            ) : isLoggedIn ? (
               <Link
                 href="/settings"
                 prefetch={false}

@@ -14,7 +14,7 @@
 import { isLiveHost } from './live-origins.mjs';
 import { withPublicDocumentHints } from './public-document-hints.mjs';
 import openNext from './.open-next/worker.js';
-import { buildId } from './.open-next/cache-release.mjs';
+import { buildId, publicBlogArtifacts } from './.open-next/cache-release.mjs';
 import { createReleaseCache, publicHtmlRequest } from './release-cache.mjs';
 import { withTiming } from './timing.mjs';
 import { handleAgentEdge } from './agent-edge.mjs';
@@ -321,6 +321,36 @@ export default {
 
         const cache = createReleaseCache(caches.default, buildId);
         const renderRequest = publicHtmlRequest(getRequest);
+        const assetPath = publicBlogArtifacts[url.pathname];
+        const accept = request.headers.get('Accept')?.toLowerCase() ?? '*/*';
+        if (
+          env.ASSETS &&
+          assetPath &&
+          !new URL(renderRequest.url).search &&
+          (accept.includes('text/html') || accept.includes('*/*'))
+        ) {
+          const asset = await env.ASSETS.fetch(
+            new Request(new URL(assetPath, request.url), request)
+          );
+          if (
+            asset.status === 304 ||
+            (asset.status === 200 && asset.headers.get('Content-Type')?.includes('text/html'))
+          ) {
+            const headers = new Headers(asset.headers);
+            headers.set('Cache-Control', cacheControlForPath(url.pathname));
+            headers.append(
+              'Vary',
+              'rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept, Accept-Encoding'
+            );
+            headers.set('x-edge-cache', 'ASSET');
+            return new Response(isHead ? null : asset.body, {
+              status: asset.status,
+              statusText: asset.statusText,
+              headers,
+            });
+          }
+          await asset.body?.cancel();
+        }
         const cached = await cache.match(renderRequest);
         if (cached) {
           const hit = new Response(isHead ? null : cached.body, cached);
