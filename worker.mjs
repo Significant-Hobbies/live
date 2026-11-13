@@ -15,7 +15,7 @@ import { isLiveHost } from './live-origins.mjs';
 import { withPublicDocumentHints } from './public-document-hints.mjs';
 import openNext from './.open-next/worker.js';
 import { buildId } from './.open-next/cache-release.mjs';
-import { createReleaseCache } from './release-cache.mjs';
+import { createReleaseCache, publicHtmlRequest } from './release-cache.mjs';
 import { withTiming } from './timing.mjs';
 import { handleAgentEdge } from './agent-edge.mjs';
 import { handleCachedPublicRouteMarkdown } from './agent-route-markdown.mjs';
@@ -111,6 +111,10 @@ function hasAuthCookie(request) {
   return AUTH_COOKIE_FRAGMENTS.some((c) => cookie.includes(c));
 }
 
+function hasAuthHeaders(request) {
+  return request.headers.has('Authorization') || request.headers.has('cf-access-jwt-assertion');
+}
+
 function isApiPath(pathname) {
   return pathname === '/api' || pathname.startsWith('/api/');
 }
@@ -195,6 +199,18 @@ export default {
         if (agent) return agent;
       }
       try {
+        if (
+          env.ASSETS &&
+          ['GET', 'HEAD'].includes(request.method) &&
+          /^\/(?:images|experiences|hero|categories|footer-art)\/.+\.(?:avif|gif|ico|jpe?g|png|svg|webp|mp4|webm|woff2?)$/i.test(
+            requestUrl.pathname
+          )
+        ) {
+          const asset = await env.ASSETS.fetch(request);
+          if (asset.status !== 404)
+            return request.method === 'HEAD' ? new Response(null, asset) : asset;
+          await asset.body?.cancel();
+        }
         const markdown = await handleCachedPublicRouteMarkdown(
           request,
           async (sourcePath) => {
@@ -217,7 +233,7 @@ export default {
           },
           {
             cache: caches.default,
-            cacheEnabled: !hasAuthCookie(request),
+            cacheEnabled: !hasAuthCookie(request) && !hasAuthHeaders(request),
             waitUntil: (promise) => ctx.waitUntil(promise),
           }
         );
@@ -295,8 +311,17 @@ export default {
           }
         }
 
+        if (
+          hasAuthHeaders(request) ||
+          request.headers.get('RSC') === '1' ||
+          request.headers.get('Accept')?.includes('text/x-component')
+        ) {
+          return fetchOpenNext(request, env, ctx);
+        }
+
         const cache = createReleaseCache(caches.default, buildId);
-        const cached = await cache.match(getRequest);
+        const renderRequest = publicHtmlRequest(getRequest);
+        const cached = await cache.match(renderRequest);
         if (cached) {
           const hit = new Response(isHead ? null : cached.body, cached);
           // Cache storage can rewrite browser max-age; restore the route policy.
@@ -305,7 +330,16 @@ export default {
           return hit;
         }
 
-        const response = await openNext.fetch(getRequest, env, ctx);
+        const response = await openNext.fetch(renderRequest, env, ctx);
+        if (
+          renderRequest !== getRequest &&
+          [301, 302, 303, 307, 308].includes(response.status) &&
+          response.headers.has('Location')
+        ) {
+          await response.body?.cancel();
+          const redirect = await openNext.fetch(getRequest, env, ctx);
+          return isHead ? new Response(null, redirect) : redirect;
+        }
 
         // Only cache 2xx HTML responses — never error pages or redirects.
         const contentType = response.headers.get('content-type') ?? '';
@@ -336,10 +370,9 @@ export default {
           statusText: response.statusText,
           headers,
         });
-        // The Cache API only accepts GET-keyed requests — key on getRequest so
-        // a HEAD probe still populates (and later hits) the same cache entry
-        // a GET to the same URL uses.
-        ctx.waitUntil(cache.put(getRequest, cacheable.clone()));
+        // Cache the tracking-normalized GET request so HEAD and tracking-only
+        // variants share identifier-free HTML.
+        ctx.waitUntil(cache.put(renderRequest, cacheable.clone()));
 
         const clientResponse = new Response(isHead ? null : body, {
           status: response.status,

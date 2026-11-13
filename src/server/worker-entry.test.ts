@@ -25,6 +25,187 @@ import worker from '../../worker.mjs';
 const context = { waitUntil: vi.fn() };
 const environment = { ASSETS: { fetch: assetFetch } };
 
+describe('Owned public binary assets', () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+    vi.stubGlobal('caches', {
+      default: { match: vi.fn(async () => undefined), put: vi.fn() },
+    });
+    nextFetch.mockImplementation(async () => new Response('application response'));
+  });
+
+  it.each([
+    ['/experiences/road-trip-1200.webp', 'image/webp'],
+    ['/images/live-more/pottery-v1.webp', 'image/webp'],
+    ['/hero/example.mp4', 'video/mp4'],
+    ['/categories/creative.jpg', 'image/jpeg'],
+    ['/footer-art/example.webp', 'image/webp'],
+  ])('serves %s without initializing the application renderer', async (path, type) => {
+    const bytes = new Uint8Array([0, 1, 127, 255]);
+    assetFetch.mockResolvedValueOnce(
+      new Response(bytes, {
+        headers: {
+          'Content-Type': type,
+          ETag: 'owned-asset',
+          'Cache-Control': 'public, max-age=60',
+        },
+      })
+    );
+    const request = new Request(`https://significanthobbies.com${path}`, {
+      headers: { Cookie: '__Secure-better-auth.session_token=owner' },
+    });
+    const response = await worker.fetch(request, environment, context);
+    expect(response.status).toBe(200);
+    expect(response.headers.get('content-type')).toBe(type);
+    expect(response.headers.get('etag')).toBe('owned-asset');
+    expect(new Uint8Array(await response.arrayBuffer())).toEqual(bytes);
+    expect(assetFetch).toHaveBeenCalledWith(request);
+    expect(nextFetch).not.toHaveBeenCalled();
+  });
+
+  it.each([
+    ['HEAD', 200],
+    ['GET', 304],
+    ['HEAD', 304],
+  ])('preserves asset %s status %s and validators', async (method, status) => {
+    assetFetch.mockResolvedValueOnce(
+      new Response(null, { status, headers: { ETag: 'same-file' } })
+    );
+    const response = await worker.fetch(
+      new Request('https://live.significanthobbies.com/experiences/road-trip-1200.webp', {
+        method,
+        headers: { 'If-None-Match': 'same-file' },
+      }),
+      environment,
+      context
+    );
+    expect(response.status).toBe(status);
+    expect(response.headers.get('etag')).toBe('same-file');
+    expect(await response.text()).toBe('');
+    expect(nextFetch).not.toHaveBeenCalled();
+  });
+
+  it('keeps a missing binary path with the application route', async () => {
+    assetFetch.mockResolvedValueOnce(new Response('asset missing', { status: 404 }));
+    const request = new Request('https://significanthobbies.com/experiences/community-item.webp');
+    const response = await worker.fetch(request, environment, context);
+    expect(await response.text()).toBe('application response');
+    expect(nextFetch).toHaveBeenCalledWith(request, environment, context);
+  });
+
+  it.each([
+    ['GET', '/experiences/sources.json'],
+    ['GET', '/experiences/learn-to-draw-portraits'],
+    ['GET', '/experiences/learn-to-draw-portraits.md'],
+    ['GET', '/u/owner/avatar.webp'],
+    ['GET', '/api/export.webp'],
+    ['POST', '/experiences/road-trip-1200.webp'],
+  ])('keeps %s %s outside the binary shortcut', async (method, path) => {
+    const request = new Request(`https://significanthobbies.com${path}`, { method });
+    const response = await worker.fetch(request, environment, context);
+    expect(await response.text()).toBe('application response');
+    expect(assetFetch).not.toHaveBeenCalled();
+    expect(nextFetch).toHaveBeenCalledWith(request, environment, context);
+  });
+});
+
+describe('Public HTML tracking isolation', () => {
+  const records = new Map<string, Response>();
+  const htmlCache = {
+    match: vi.fn(async (request: Request) => records.get(request.url)?.clone()),
+    put: vi.fn(async (request: Request, response: Response) =>
+      records.set(request.url, response.clone())
+    ),
+  };
+
+  beforeEach(() => {
+    vi.clearAllMocks();
+    records.clear();
+    vi.stubGlobal('caches', { default: htmlCache });
+    nextFetch.mockImplementation(
+      async (request: Request) =>
+        new Response(`SSR and RSC URL: ${request.url}`, {
+          headers: { 'Content-Type': 'text/html' },
+        })
+    );
+  });
+
+  it('never stores the first visitor tracking identifier in shared HTML', async () => {
+    const base = 'https://significanthobbies.com/experiences/learn-to-draw-portraits?q=pottery';
+    const firstRequest = new Request(`${base}&utm_source=first&gclid=first-private-click`, {
+      headers: { Accept: 'text/html', 'Accept-Language': 'en-GB' },
+    });
+    const first = await worker.fetch(firstRequest, environment, context);
+    expect(await first.text()).toBe(`SSR and RSC URL: ${base}`);
+    await Promise.all(context.waitUntil.mock.calls.map(([promise]) => promise));
+    for (const url of [base, `${base}&utm_source=second&gclid=second-private-click`]) {
+      const response = await worker.fetch(new Request(url), environment, context);
+      expect(response.headers.get('x-edge-cache')).toBe('HIT');
+      expect(await response.text()).toBe(`SSR and RSC URL: ${base}`);
+    }
+    expect(nextFetch).toHaveBeenCalledTimes(1);
+    expect(nextFetch.mock.calls[0][0].headers.get('Accept-Language')).toBe('en-GB');
+    expect(firstRequest.url).toContain('gclid=first-private-click');
+  });
+
+  it('does not render a tracked conditional 304 response twice', async () => {
+    nextFetch.mockResolvedValueOnce(new Response(null, { status: 304 }));
+    const response = await worker.fetch(
+      new Request('https://significanthobbies.com/blog/example?utm_source=first', {
+        headers: { 'If-None-Match': 'known-version' },
+      }),
+      environment,
+      context
+    );
+    expect(response.status).toBe(304);
+    expect(nextFetch).toHaveBeenCalledTimes(1);
+    expect(htmlCache.put).not.toHaveBeenCalled();
+  });
+
+  it('preserves the original tracking URL when Next redirects', async () => {
+    nextFetch.mockImplementation(async (request: Request) => {
+      const url = new URL(request.url);
+      url.pathname = url.pathname.replace(/\/$/, '');
+      return new Response(null, { status: 308, headers: { Location: url.href } });
+    });
+    const response = await worker.fetch(
+      new Request(
+        'https://significanthobbies.com/experiences/pottery/?q=clay&utm_source=first&gclid=click'
+      ),
+      environment,
+      context
+    );
+    expect(response.status).toBe(308);
+    expect(response.headers.get('location')).toBe(
+      'https://significanthobbies.com/experiences/pottery?q=clay&utm_source=first&gclid=click'
+    );
+    expect(htmlCache.put).not.toHaveBeenCalled();
+  });
+
+  it.each([
+    [
+      '/experiences/learn-to-draw-portraits',
+      { Cookie: '__Secure-better-auth.session_token=owner' },
+    ],
+    ['/experiences/learn-to-draw-portraits', { Authorization: 'Bearer test-only' }],
+    ['/b/private-owner', { 'cf-access-jwt-assertion': 'test-only' }],
+    ['/experiences/learn-to-draw-portraits', { RSC: '1' }],
+    ['/experiences/learn-to-draw-portraits', { Accept: 'text/x-component' }],
+    ['/api/catalog', {}],
+    ['/u/owner', {}],
+  ])('keeps private, API and component requests unchanged at %s', async (path, headers) => {
+    const request = new Request(
+      `https://significanthobbies.com${path}?utm_source=owner&gclid=private-click`,
+      { headers }
+    );
+    const response = await worker.fetch(request, environment, context);
+    expect(await response.text()).toContain('gclid=private-click');
+    expect(nextFetch).toHaveBeenCalledWith(request, environment, context);
+    expect(htmlCache.match).not.toHaveBeenCalled();
+    expect(htmlCache.put).not.toHaveBeenCalled();
+  });
+});
+
 describe.each(['significanthobbies.com', 'live.significanthobbies.com'])(
   'Live homepage entry on %s',
   (hostname) => {
@@ -75,6 +256,22 @@ describe.each(['significanthobbies.com', 'live.significanthobbies.com'])(
         expect(nextFetch).not.toHaveBeenCalled();
       }
     );
+
+    it.each<Record<string, string>>([
+      { RSC: '1' },
+      { Accept: 'text/x-component' },
+      { Authorization: 'Bearer test-only' },
+      { 'cf-access-jwt-assertion': 'test-only' },
+    ])('serves anonymous root component navigation from the Astro overlay', async (headers) => {
+      const response = await worker.fetch(
+        new Request(`https://${hostname}/`, { headers }),
+        environment,
+        context
+      );
+      expect(response.status).toBe(200);
+      expect(await response.text()).toBe('public landing');
+      expect(nextFetch).not.toHaveBeenCalled();
+    });
 
     it('leaves signed-in deep links with the application session checks', async () => {
       const request = new Request('https://live.significanthobbies.com/bucket-lists/will-smith', {
