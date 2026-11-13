@@ -269,7 +269,7 @@ export default {
             },
           });
         }
-        if (hasAuthCookie(request) || hasAuthHeaders(request)) {
+        if (hasAuthCookie(request)) {
           return fetchOpenNext(request, env, ctx);
         }
         const getRequest = isHead ? new Request(request, { method: 'GET' }) : request;
@@ -312,6 +312,7 @@ export default {
         }
 
         if (
+          hasAuthHeaders(request) ||
           request.headers.get('RSC') === '1' ||
           request.headers.get('Accept')?.includes('text/x-component')
         ) {
@@ -330,7 +331,11 @@ export default {
         }
 
         const response = await openNext.fetch(renderRequest, env, ctx);
-        if (renderRequest !== getRequest && response.status >= 300 && response.status < 400) {
+        if (
+          renderRequest !== getRequest &&
+          [301, 302, 303, 307, 308].includes(response.status) &&
+          response.headers.has('Location')
+        ) {
           await response.body?.cancel();
           const redirect = await openNext.fetch(getRequest, env, ctx);
           return isHead ? new Response(null, redirect) : redirect;

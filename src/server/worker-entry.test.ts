@@ -148,6 +148,20 @@ describe('Public HTML tracking isolation', () => {
     expect(firstRequest.url).toContain('gclid=first-private-click');
   });
 
+  it('does not render a tracked conditional 304 response twice', async () => {
+    nextFetch.mockResolvedValueOnce(new Response(null, { status: 304 }));
+    const response = await worker.fetch(
+      new Request('https://significanthobbies.com/blog/example?utm_source=first', {
+        headers: { 'If-None-Match': 'known-version' },
+      }),
+      environment,
+      context
+    );
+    expect(response.status).toBe(304);
+    expect(nextFetch).toHaveBeenCalledTimes(1);
+    expect(htmlCache.put).not.toHaveBeenCalled();
+  });
+
   it('preserves the original tracking URL when Next redirects', async () => {
     nextFetch.mockImplementation(async (request: Request) => {
       const url = new URL(request.url);
@@ -243,19 +257,21 @@ describe.each(['significanthobbies.com', 'live.significanthobbies.com'])(
       }
     );
 
-    it.each<Record<string, string>>([{ RSC: '1' }, { Accept: 'text/x-component' }])(
-      'serves anonymous root component navigation from the Astro overlay',
-      async (headers) => {
-        const response = await worker.fetch(
-          new Request(`https://${hostname}/`, { headers }),
-          environment,
-          context
-        );
-        expect(response.status).toBe(200);
-        expect(await response.text()).toBe('public landing');
-        expect(nextFetch).not.toHaveBeenCalled();
-      }
-    );
+    it.each<Record<string, string>>([
+      { RSC: '1' },
+      { Accept: 'text/x-component' },
+      { Authorization: 'Bearer test-only' },
+      { 'cf-access-jwt-assertion': 'test-only' },
+    ])('serves anonymous root component navigation from the Astro overlay', async (headers) => {
+      const response = await worker.fetch(
+        new Request(`https://${hostname}/`, { headers }),
+        environment,
+        context
+      );
+      expect(response.status).toBe(200);
+      expect(await response.text()).toBe('public landing');
+      expect(nextFetch).not.toHaveBeenCalled();
+    });
 
     it('leaves signed-in deep links with the application session checks', async () => {
       const request = new Request('https://live.significanthobbies.com/bucket-lists/will-smith', {
