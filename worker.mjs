@@ -370,9 +370,8 @@ export default {
           statusText: response.statusText,
           headers,
         });
-        // The Cache API only accepts GET-keyed requests — key on getRequest so
-        // a HEAD probe still populates (and later hits) the same cache entry
-        // a GET to the same URL uses.
+        // Cache the tracking-normalized GET request so HEAD and tracking-only
+        // variants share identifier-free HTML.
         ctx.waitUntil(cache.put(renderRequest, cacheable.clone()));
 
         const clientResponse = new Response(isHead ? null : body, {
