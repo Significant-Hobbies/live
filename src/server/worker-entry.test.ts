@@ -109,6 +109,66 @@ describe('Owned public binary assets', () => {
   });
 });
 
+describe('Public HTML tracking isolation', () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+    const records = new Map<string, Response>();
+    vi.stubGlobal('caches', {
+      default: {
+        match: vi.fn(async (request: Request) => records.get(request.url)?.clone()),
+        put: vi.fn(async (request: Request, response: Response) =>
+          records.set(request.url, response.clone())
+        ),
+      },
+    });
+    nextFetch.mockImplementation(
+      async (request: Request) =>
+        new Response(`SSR and RSC URL: ${request.url}`, {
+          headers: { 'Content-Type': 'text/html' },
+        })
+    );
+  });
+
+  it('never stores the first visitor tracking identifier in shared HTML', async () => {
+    const base = 'https://significanthobbies.com/experiences/learn-to-draw-portraits?q=pottery';
+    const firstRequest = new Request(`${base}&utm_source=first&gclid=first-private-click`, {
+      headers: { Accept: 'text/html', 'Accept-Language': 'en-GB' },
+    });
+    const first = await worker.fetch(firstRequest, environment, context);
+    expect(await first.text()).toBe(`SSR and RSC URL: ${base}`);
+    await Promise.all(context.waitUntil.mock.calls.map(([promise]) => promise));
+    for (const url of [base, `${base}&utm_source=second&gclid=second-private-click`]) {
+      const response = await worker.fetch(new Request(url), environment, context);
+      expect(response.headers.get('x-edge-cache')).toBe('HIT');
+      expect(await response.text()).toBe(`SSR and RSC URL: ${base}`);
+    }
+    expect(nextFetch).toHaveBeenCalledTimes(1);
+    expect(nextFetch.mock.calls[0][0].headers.get('Accept-Language')).toBe('en-GB');
+    expect(firstRequest.url).toContain('gclid=first-private-click');
+  });
+
+  it.each([
+    [
+      '/experiences/learn-to-draw-portraits',
+      { Cookie: '__Secure-better-auth.session_token=owner' },
+    ],
+    ['/experiences/learn-to-draw-portraits', { RSC: '1' }],
+    ['/experiences/learn-to-draw-portraits', { Accept: 'text/x-component' }],
+    ['/api/catalog', {}],
+    ['/u/owner', {}],
+  ])('keeps private, API and component requests unchanged at %s', async (path, headers) => {
+    const request = new Request(
+      `https://significanthobbies.com${path}?utm_source=owner&gclid=private-click`,
+      { headers }
+    );
+    const response = await worker.fetch(request, environment, context);
+    expect(await response.text()).toContain('gclid=private-click');
+    expect(nextFetch).toHaveBeenCalledWith(request, environment, context);
+    expect(caches.default.match).not.toHaveBeenCalled();
+    expect(caches.default.put).not.toHaveBeenCalled();
+  });
+});
+
 describe.each(['significanthobbies.com', 'live.significanthobbies.com'])(
   'Live homepage entry on %s',
   (hostname) => {

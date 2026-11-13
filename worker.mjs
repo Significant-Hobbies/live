@@ -15,7 +15,7 @@ import { isLiveHost } from './live-origins.mjs';
 import { withPublicDocumentHints } from './public-document-hints.mjs';
 import openNext from './.open-next/worker.js';
 import { buildId } from './.open-next/cache-release.mjs';
-import { createReleaseCache } from './release-cache.mjs';
+import { createReleaseCache, publicHtmlRequest } from './release-cache.mjs';
 import { withTiming } from './timing.mjs';
 import { handleAgentEdge } from './agent-edge.mjs';
 import { handleCachedPublicRouteMarkdown } from './agent-route-markdown.mjs';
@@ -268,6 +268,12 @@ export default {
         if (hasAuthCookie(request)) {
           return fetchOpenNext(request, env, ctx);
         }
+        if (
+          request.headers.get('RSC') === '1' ||
+          request.headers.get('Accept')?.includes('text/x-component')
+        ) {
+          return fetchOpenNext(request, env, ctx);
+        }
         const getRequest = isHead ? new Request(request, { method: 'GET' }) : request;
 
         // Short-circuit: the Astro landing is overlaid into
@@ -308,7 +314,8 @@ export default {
         }
 
         const cache = createReleaseCache(caches.default, buildId);
-        const cached = await cache.match(getRequest);
+        const renderRequest = publicHtmlRequest(getRequest);
+        const cached = await cache.match(renderRequest);
         if (cached) {
           const hit = new Response(isHead ? null : cached.body, cached);
           // Cache storage can rewrite browser max-age; restore the route policy.
@@ -317,7 +324,7 @@ export default {
           return hit;
         }
 
-        const response = await openNext.fetch(getRequest, env, ctx);
+        const response = await openNext.fetch(renderRequest, env, ctx);
 
         // Only cache 2xx HTML responses — never error pages or redirects.
         const contentType = response.headers.get('content-type') ?? '';
@@ -351,7 +358,7 @@ export default {
         // The Cache API only accepts GET-keyed requests — key on getRequest so
         // a HEAD probe still populates (and later hits) the same cache entry
         // a GET to the same URL uses.
-        ctx.waitUntil(cache.put(getRequest, cacheable.clone()));
+        ctx.waitUntil(cache.put(renderRequest, cacheable.clone()));
 
         const clientResponse = new Response(isHead ? null : body, {
           status: response.status,
