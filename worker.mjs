@@ -195,6 +195,18 @@ export default {
         if (agent) return agent;
       }
       try {
+        if (
+          env.ASSETS &&
+          ['GET', 'HEAD'].includes(request.method) &&
+          /^\/(?:images|experiences|hero|categories|footer-art)\/.+\.(?:avif|gif|ico|jpe?g|png|svg|webp|mp4|webm|woff2?)$/i.test(
+            requestUrl.pathname
+          )
+        ) {
+          const asset = await env.ASSETS.fetch(request);
+          if (asset.status !== 404)
+            return request.method === 'HEAD' ? new Response(null, asset) : asset;
+          await asset.body?.cancel();
+        }
         const markdown = await handleCachedPublicRouteMarkdown(
           request,
           async (sourcePath) => {

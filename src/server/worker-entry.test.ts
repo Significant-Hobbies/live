@@ -25,6 +25,90 @@ import worker from '../../worker.mjs';
 const context = { waitUntil: vi.fn() };
 const environment = { ASSETS: { fetch: assetFetch } };
 
+describe('Owned public binary assets', () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+    vi.stubGlobal('caches', {
+      default: { match: vi.fn(async () => undefined), put: vi.fn() },
+    });
+    nextFetch.mockImplementation(async () => new Response('application response'));
+  });
+
+  it.each([
+    ['/experiences/road-trip-1200.webp', 'image/webp'],
+    ['/images/live-more/pottery-v1.webp', 'image/webp'],
+    ['/hero/example.mp4', 'video/mp4'],
+    ['/categories/creative.jpg', 'image/jpeg'],
+    ['/footer-art/example.webp', 'image/webp'],
+  ])('serves %s without initializing the application renderer', async (path, type) => {
+    const bytes = new Uint8Array([0, 1, 127, 255]);
+    assetFetch.mockResolvedValueOnce(
+      new Response(bytes, {
+        headers: {
+          'Content-Type': type,
+          ETag: 'owned-asset',
+          'Cache-Control': 'public, max-age=60',
+        },
+      })
+    );
+    const request = new Request(`https://significanthobbies.com${path}`, {
+      headers: { Cookie: '__Secure-better-auth.session_token=owner' },
+    });
+    const response = await worker.fetch(request, environment, context);
+    expect(response.status).toBe(200);
+    expect(response.headers.get('content-type')).toBe(type);
+    expect(response.headers.get('etag')).toBe('owned-asset');
+    expect(new Uint8Array(await response.arrayBuffer())).toEqual(bytes);
+    expect(assetFetch).toHaveBeenCalledWith(request);
+    expect(nextFetch).not.toHaveBeenCalled();
+  });
+
+  it.each([
+    ['HEAD', 200],
+    ['GET', 304],
+    ['HEAD', 304],
+  ])('preserves asset %s status %s and validators', async (method, status) => {
+    assetFetch.mockResolvedValueOnce(
+      new Response(null, { status, headers: { ETag: 'same-file' } })
+    );
+    const response = await worker.fetch(
+      new Request('https://live.significanthobbies.com/experiences/road-trip-1200.webp', {
+        method,
+        headers: { 'If-None-Match': 'same-file' },
+      }),
+      environment,
+      context
+    );
+    expect(response.status).toBe(status);
+    expect(response.headers.get('etag')).toBe('same-file');
+    expect(await response.text()).toBe('');
+    expect(nextFetch).not.toHaveBeenCalled();
+  });
+
+  it('keeps a missing binary path with the application route', async () => {
+    assetFetch.mockResolvedValueOnce(new Response('asset missing', { status: 404 }));
+    const request = new Request('https://significanthobbies.com/experiences/community-item.webp');
+    const response = await worker.fetch(request, environment, context);
+    expect(await response.text()).toBe('application response');
+    expect(nextFetch).toHaveBeenCalledWith(request, environment, context);
+  });
+
+  it.each([
+    ['GET', '/experiences/sources.json'],
+    ['GET', '/experiences/learn-to-draw-portraits'],
+    ['GET', '/experiences/learn-to-draw-portraits.md'],
+    ['GET', '/u/owner/avatar.webp'],
+    ['GET', '/api/export.webp'],
+    ['POST', '/experiences/road-trip-1200.webp'],
+  ])('keeps %s %s outside the binary shortcut', async (method, path) => {
+    const request = new Request(`https://significanthobbies.com${path}`, { method });
+    const response = await worker.fetch(request, environment, context);
+    expect(await response.text()).toBe('application response');
+    expect(assetFetch).not.toHaveBeenCalled();
+    expect(nextFetch).toHaveBeenCalledWith(request, environment, context);
+  });
+});
+
 describe.each(['significanthobbies.com', 'live.significanthobbies.com'])(
   'Live homepage entry on %s',
   (hostname) => {
