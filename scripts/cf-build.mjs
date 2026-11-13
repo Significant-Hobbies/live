@@ -17,6 +17,7 @@ import { execSync } from 'node:child_process';
 import { readdirSync, existsSync, cpSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { emitNotFoundArtifact } from './build-not-found-artifact.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const projectDir = resolve(__dirname, '..');
@@ -298,8 +299,9 @@ if (
 console.log(
   `[cf-build] Emitted ${Object.keys(publicBlogArtifacts).length} immutable public article artifacts.`
 );
+const notFoundArtifact = emitNotFoundArtifact(projectDir, buildId);
 writeFileSync(
   join(projectDir, '.open-next/cache-release.mjs'),
-  `export const buildId = ${JSON.stringify(buildId)};\nexport const publicBlogArtifacts = ${JSON.stringify(publicBlogArtifacts)};\n`
+  `export const buildId = ${JSON.stringify(buildId)};\nexport const publicBlogArtifacts = ${JSON.stringify(publicBlogArtifacts)};\nexport const notFoundArtifact = ${JSON.stringify(notFoundArtifact)};\n`
 );
 console.log('[cf-build] Build complete!');

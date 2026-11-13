@@ -12,6 +12,7 @@ vi.mock('../../.open-next/worker.js', () => ({
   BucketCachePurge: {},
 }));
 vi.mock('../../.open-next/cache-release.mjs', () => ({
+  notFoundArtifact: null,
   buildId: 'test-release',
   publicBlogArtifacts: {
     '/blog/compiled-article': '/__live_prerender/test-release/blog/compiled-article/',
