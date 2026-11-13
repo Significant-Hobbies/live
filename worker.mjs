@@ -111,6 +111,10 @@ function hasAuthCookie(request) {
   return AUTH_COOKIE_FRAGMENTS.some((c) => cookie.includes(c));
 }
 
+function hasAuthHeaders(request) {
+  return request.headers.has('Authorization') || request.headers.has('cf-access-jwt-assertion');
+}
+
 function isApiPath(pathname) {
   return pathname === '/api' || pathname.startsWith('/api/');
 }
@@ -229,7 +233,7 @@ export default {
           },
           {
             cache: caches.default,
-            cacheEnabled: !hasAuthCookie(request),
+            cacheEnabled: !hasAuthCookie(request) && !hasAuthHeaders(request),
             waitUntil: (promise) => ctx.waitUntil(promise),
           }
         );
@@ -265,13 +269,7 @@ export default {
             },
           });
         }
-        if (hasAuthCookie(request)) {
-          return fetchOpenNext(request, env, ctx);
-        }
-        if (
-          request.headers.get('RSC') === '1' ||
-          request.headers.get('Accept')?.includes('text/x-component')
-        ) {
+        if (hasAuthCookie(request) || hasAuthHeaders(request)) {
           return fetchOpenNext(request, env, ctx);
         }
         const getRequest = isHead ? new Request(request, { method: 'GET' }) : request;
@@ -313,6 +311,13 @@ export default {
           }
         }
 
+        if (
+          request.headers.get('RSC') === '1' ||
+          request.headers.get('Accept')?.includes('text/x-component')
+        ) {
+          return fetchOpenNext(request, env, ctx);
+        }
+
         const cache = createReleaseCache(caches.default, buildId);
         const renderRequest = publicHtmlRequest(getRequest);
         const cached = await cache.match(renderRequest);
@@ -325,6 +330,11 @@ export default {
         }
 
         const response = await openNext.fetch(renderRequest, env, ctx);
+        if (renderRequest !== getRequest && response.status >= 300 && response.status < 400) {
+          await response.body?.cancel();
+          const redirect = await openNext.fetch(getRequest, env, ctx);
+          return isHead ? new Response(null, redirect) : redirect;
+        }
 
         // Only cache 2xx HTML responses — never error pages or redirects.
         const contentType = response.headers.get('content-type') ?? '';

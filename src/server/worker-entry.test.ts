@@ -110,17 +110,18 @@ describe('Owned public binary assets', () => {
 });
 
 describe('Public HTML tracking isolation', () => {
+  const records = new Map<string, Response>();
+  const htmlCache = {
+    match: vi.fn(async (request: Request) => records.get(request.url)?.clone()),
+    put: vi.fn(async (request: Request, response: Response) =>
+      records.set(request.url, response.clone())
+    ),
+  };
+
   beforeEach(() => {
     vi.clearAllMocks();
-    const records = new Map<string, Response>();
-    vi.stubGlobal('caches', {
-      default: {
-        match: vi.fn(async (request: Request) => records.get(request.url)?.clone()),
-        put: vi.fn(async (request: Request, response: Response) =>
-          records.set(request.url, response.clone())
-        ),
-      },
-    });
+    records.clear();
+    vi.stubGlobal('caches', { default: htmlCache });
     nextFetch.mockImplementation(
       async (request: Request) =>
         new Response(`SSR and RSC URL: ${request.url}`, {
@@ -147,11 +148,33 @@ describe('Public HTML tracking isolation', () => {
     expect(firstRequest.url).toContain('gclid=first-private-click');
   });
 
+  it('preserves the original tracking URL when Next redirects', async () => {
+    nextFetch.mockImplementation(async (request: Request) => {
+      const url = new URL(request.url);
+      url.pathname = url.pathname.replace(/\/$/, '');
+      return new Response(null, { status: 308, headers: { Location: url.href } });
+    });
+    const response = await worker.fetch(
+      new Request(
+        'https://significanthobbies.com/experiences/pottery/?q=clay&utm_source=first&gclid=click'
+      ),
+      environment,
+      context
+    );
+    expect(response.status).toBe(308);
+    expect(response.headers.get('location')).toBe(
+      'https://significanthobbies.com/experiences/pottery?q=clay&utm_source=first&gclid=click'
+    );
+    expect(htmlCache.put).not.toHaveBeenCalled();
+  });
+
   it.each([
     [
       '/experiences/learn-to-draw-portraits',
       { Cookie: '__Secure-better-auth.session_token=owner' },
     ],
+    ['/experiences/learn-to-draw-portraits', { Authorization: 'Bearer test-only' }],
+    ['/b/private-owner', { 'cf-access-jwt-assertion': 'test-only' }],
     ['/experiences/learn-to-draw-portraits', { RSC: '1' }],
     ['/experiences/learn-to-draw-portraits', { Accept: 'text/x-component' }],
     ['/api/catalog', {}],
@@ -164,8 +187,8 @@ describe('Public HTML tracking isolation', () => {
     const response = await worker.fetch(request, environment, context);
     expect(await response.text()).toContain('gclid=private-click');
     expect(nextFetch).toHaveBeenCalledWith(request, environment, context);
-    expect(caches.default.match).not.toHaveBeenCalled();
-    expect(caches.default.put).not.toHaveBeenCalled();
+    expect(htmlCache.match).not.toHaveBeenCalled();
+    expect(htmlCache.put).not.toHaveBeenCalled();
   });
 });
 
@@ -216,6 +239,20 @@ describe.each(['significanthobbies.com', 'live.significanthobbies.com'])(
         expect(response.status).toBe(200);
         expect(assetFetch.mock.calls[0][0].url).toBe(`https://${hostname}/live.html`);
         expect(await response.text()).toBe(method === 'HEAD' ? '' : 'public landing');
+        expect(nextFetch).not.toHaveBeenCalled();
+      }
+    );
+
+    it.each<Record<string, string>>([{ RSC: '1' }, { Accept: 'text/x-component' }])(
+      'serves anonymous root component navigation from the Astro overlay',
+      async (headers) => {
+        const response = await worker.fetch(
+          new Request(`https://${hostname}/`, { headers }),
+          environment,
+          context
+        );
+        expect(response.status).toBe(200);
+        expect(await response.text()).toBe('public landing');
         expect(nextFetch).not.toHaveBeenCalled();
       }
     );
