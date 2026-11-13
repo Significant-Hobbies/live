@@ -2,6 +2,14 @@ import { act } from 'react';
 import { createRoot, type Root } from 'react-dom/client';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { useAccountPresentation } from './use-account-presentation';
+import { Nav } from './nav';
+
+const sessionState = vi.hoisted(() => ({ isPending: true, data: null }));
+vi.mock('~/lib/auth-client', () => ({ authClient: { useSession: () => sessionState } }));
+vi.mock('next/navigation', () => ({
+  usePathname: () => '/blog/example',
+  useRouter: () => ({ push: vi.fn(), refresh: vi.fn() }),
+}));
 
 let root: Root;
 let host: HTMLDivElement;
@@ -24,6 +32,7 @@ beforeEach(() => {
   vi.stubGlobal('IS_REACT_ACT_ENVIRONMENT', true);
   vi.stubGlobal('fetch', fetchPresentation);
   fetchPresentation.mockReset();
+  sessionState.isPending = true;
   host = document.createElement('div');
   document.body.append(host);
   root = createRoot(host);
@@ -94,5 +103,28 @@ describe('account presentation lifetime', () => {
     fetchPresentation.mockRejectedValueOnce(new Error('offline'));
     await act(async () => current.refresh());
     expect(current.user).toBeNull();
+  });
+});
+
+describe('navigation session resolution', () => {
+  it('keeps desktop and mobile Sign in steady during a signed-out refetch', async () => {
+    await act(async () => root.render(<Nav />));
+    const menu = host.querySelector('button[aria-label="Open menu"]');
+    expect(menu).not.toBeNull();
+    await act(async () => menu?.dispatchEvent(new MouseEvent('click', { bubbles: true })));
+    const pendingLinks = host.querySelectorAll('a[aria-busy="true"]');
+    expect(pendingLinks).toHaveLength(2);
+    expect([...pendingLinks].every((link) => link.getAttribute('href') === '/bucket-list')).toBe(
+      true
+    );
+    sessionState.isPending = false;
+    await act(async () => root.render(<Nav />));
+    expect(host.querySelectorAll('a[href="/login"]')).toHaveLength(2);
+    expect(host.querySelectorAll('a[aria-busy="true"]')).toHaveLength(0);
+    sessionState.isPending = true;
+    await act(async () => root.render(<Nav />));
+    expect(host.querySelectorAll('a[href="/login"]')).toHaveLength(2);
+    expect(host.querySelectorAll('a[aria-busy="true"]')).toHaveLength(0);
+    expect(fetchPresentation).not.toHaveBeenCalled();
   });
 });
