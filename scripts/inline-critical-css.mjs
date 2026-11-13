@@ -61,6 +61,7 @@ export async function runInlineCss(opts = {}) {
     path: staticRoot,
     publicPath: '/_next/',
     preload: 'swap',
+    reduceInlineStyles: false,
     inlineFonts: false,
     pruneSource: false,
     logLevel: 'warn',
