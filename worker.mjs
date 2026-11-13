@@ -14,7 +14,8 @@
 import { isLiveHost } from './live-origins.mjs';
 import { withPublicDocumentHints } from './public-document-hints.mjs';
 import openNext from './.open-next/worker.js';
-import { buildId, publicBlogArtifacts } from './.open-next/cache-release.mjs';
+import { buildId, publicBlogArtifacts, notFoundArtifact } from './.open-next/cache-release.mjs';
+import { createNotFoundAssetHandler } from './not-found-artifact.mjs';
 import { createReleaseCache, publicHtmlRequest } from './release-cache.mjs';
 import { withTiming } from './timing.mjs';
 import { handleAgentEdge } from './agent-edge.mjs';
@@ -35,6 +36,7 @@ export {
 } from './.open-next/worker.js';
 
 const CACHE_CONTROL = 'public, max-age=0, s-maxage=86400, must-revalidate';
+const fetchNotFoundAsset = createNotFoundAssetHandler(notFoundArtifact);
 const DATA_CACHE_CONTROL = new Map([['/video-sitemap.xml', 'public, max-age=300, s-maxage=3600']]);
 // Public marketing + free-tool surfaces (anon HTML only).
 const CACHEABLE_EXACT = new Set([
@@ -238,6 +240,8 @@ export default {
           }
         );
         if (markdown) return markdown;
+        const notFound = await fetchNotFoundAsset(request, env);
+        if (notFound) return notFound;
 
         // HEAD must get the same routing decision as GET — the branches below
         // (the Astro asset overlay especially) are what actually answers "/"
