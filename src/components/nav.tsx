@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 
 import { Avatar, AvatarFallback, AvatarImage } from '~/components/ui/avatar';
@@ -9,7 +11,8 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '~/components/ui/dropdown-menu';
-import { getServerAuthSession } from '~/server/auth';
+import { authClient } from '~/lib/auth-client';
+import { useAccountPresentation } from './use-account-presentation';
 
 import { MobileMenu } from './mobile-menu';
 import { NavLinks } from './nav-links';
@@ -22,15 +25,17 @@ const NAV_LINKS = [
   { href: '/life-in-weeks', label: 'Life in weeks' },
 ];
 
-export async function Nav() {
-  const session = await getServerAuthSession();
+export function Nav() {
+  const { data: session, isPending } = authClient.useSession();
+  const presentation = useAccountPresentation(session?.user.id ?? null);
+  const user = session?.user ? { ...session.user, username: null, ...presentation.user } : null;
   const links = NAV_LINKS;
 
   return (
     <nav data-site-nav className="sticky top-0 z-50 border-b border-border bg-background">
       <div className="mx-auto flex h-16 max-w-[1180px] items-center justify-between px-4">
         <Link
-          href={session?.user ? '/bucket-list' : '/experiences'}
+          href={user ? '/bucket-list' : '/experiences'}
           prefetch={false}
           className="group inline-flex min-h-11 items-center gap-2.5 text-base font-bold text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
         >
@@ -52,25 +57,32 @@ export async function Nav() {
             <NavLinks links={links} />
           </div>
 
-          {session?.user ? (
-            <DropdownMenu>
+          {isPending ? (
+            <span
+              role="status"
+              className="inline-flex h-11 items-center px-5 text-sm text-muted-foreground"
+            >
+              Loading account…
+            </span>
+          ) : user ? (
+            <DropdownMenu onOpenChange={(open) => open && presentation.refresh()}>
               <DropdownMenuTrigger asChild>
                 <button
                   aria-label="Open account menu"
                   className="flex size-11 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-foreground/30"
                 >
                   <Avatar className="h-10 w-10 border-2 border-foreground shadow-[0_2px_8px_color-mix(in_srgb,var(--scrim)_14%,transparent)]">
-                    <AvatarImage src={session.user.image ?? ''} />
+                    <AvatarImage src={user.image ?? ''} />
                     <AvatarFallback className="bg-foreground/10 text-foreground text-sm">
-                      {session.user.name?.[0] ?? 'U'}
+                      {user.name?.[0] ?? 'U'}
                     </AvatarFallback>
                   </Avatar>
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-48">
-                {session.user.username ? (
+                {user.username ? (
                   <DropdownMenuItem asChild>
-                    <Link href={`/u/${session.user.username}`} prefetch={false}>
+                    <Link href={`/u/${user.username}`} prefetch={false}>
                       My Profile
                     </Link>
                   </DropdownMenuItem>
@@ -104,25 +116,25 @@ export async function Nav() {
 
         {/* Mobile nav */}
         <div className="flex items-center gap-2 lg:hidden">
-          {session?.user && (
-            <DropdownMenu>
+          {user && (
+            <DropdownMenu onOpenChange={(open) => open && presentation.refresh()}>
               <DropdownMenuTrigger asChild>
                 <button
                   aria-label="Open account menu"
                   className="flex size-11 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-foreground/30"
                 >
                   <Avatar className="h-10 w-10 border-2 border-foreground shadow-[0_2px_8px_color-mix(in_srgb,var(--scrim)_14%,transparent)]">
-                    <AvatarImage src={session.user.image ?? ''} />
+                    <AvatarImage src={user.image ?? ''} />
                     <AvatarFallback className="bg-foreground/10 text-foreground text-sm">
-                      {session.user.name?.[0] ?? 'U'}
+                      {user.name?.[0] ?? 'U'}
                     </AvatarFallback>
                   </Avatar>
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-48">
-                {session.user.username ? (
+                {user.username ? (
                   <DropdownMenuItem asChild>
-                    <Link href={`/u/${session.user.username}`} prefetch={false}>
+                    <Link href={`/u/${user.username}`} prefetch={false}>
                       My Profile
                     </Link>
                   </DropdownMenuItem>
@@ -143,7 +155,7 @@ export async function Nav() {
               </DropdownMenuContent>
             </DropdownMenu>
           )}
-          <MobileMenu links={links} isLoggedIn={!!session?.user} />
+          <MobileMenu links={links} isLoggedIn={!!user} accountPending={isPending} />
         </div>
       </div>
     </nav>

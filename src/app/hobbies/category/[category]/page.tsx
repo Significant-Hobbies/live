@@ -21,6 +21,8 @@ import type { Phase } from '~/lib/types';
 import { parseJSONColumn } from '~/lib/utils';
 import { db } from '~/server/db';
 
+export const dynamic = 'force-dynamic';
+
 interface Props {
   params: Promise<{ category: string }>;
 }
