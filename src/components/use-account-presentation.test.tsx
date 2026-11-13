@@ -76,6 +76,14 @@ describe('account presentation lifetime', () => {
     expect(current.user).toBeNull();
   });
 
+  it('retains the same verified account presentation when a refresh is unavailable', async () => {
+    fetchPresentation.mockResolvedValueOnce(payload('owner', 'known-name'));
+    await render('owner');
+    fetchPresentation.mockResolvedValueOnce(new Response(null, { status: 503 }));
+    await act(async () => current.refresh());
+    expect(current.user?.username).toBe('known-name');
+  });
+
   it('ignores a response for a different user and tolerates unavailable presentation', async () => {
     fetchPresentation.mockResolvedValueOnce(payload('another-account', 'private-name'));
     await render('owner');

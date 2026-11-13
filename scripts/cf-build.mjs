@@ -191,14 +191,45 @@ const prerenderManifest = JSON.parse(
   readFileSync(join(projectDir, '.next/prerender-manifest.json'), 'utf8')
 );
 const prerenderedPaths = Object.keys(prerenderManifest.routes);
+const liveDocumentPaths = [
+  '/explore',
+  '/experiences',
+  '/search',
+  '/compare-journeys',
+  '/timelines/recent',
+  '/bucket-list',
+  '/settings',
+  '/journal',
+  '/history',
+  '/trajectory',
+  '/life-in-weeks',
+  '/live-more',
+  '/commitments',
+  '/api/account-presentation',
+];
+const liveDocumentPrefixes = [
+  '/hobbies/',
+  '/experiences/',
+  '/b/',
+  '/u/',
+  '/timeline/',
+  '/bucket-list/',
+];
 const frozenLivePaths = [
   ...prerenderedPaths,
   ...Object.keys(prerenderManifest.dynamicRoutes),
-].filter(
-  (path) =>
-    ['/explore', '/api/account-presentation'].includes(path) ||
-    ['/hobbies/category/', '/b/', '/u/'].some((prefix) => path.startsWith(prefix))
-);
+].filter((path) => {
+  if (
+    path === '/hobbies/random' ||
+    path === '/experiences/collections' ||
+    path.startsWith('/experiences/collections/')
+  )
+    return false;
+  return (
+    liveDocumentPaths.includes(path) ||
+    liveDocumentPrefixes.some((prefix) => path.startsWith(prefix))
+  );
+});
 const representativeArticle = '/blog/analyze-an-exoplanet-transit-with-real-telescope-data';
 if (!prerenderManifest.routes[representativeArticle] || frozenLivePaths.length) {
   throw new Error(
@@ -254,6 +285,15 @@ for (const route of prerenderedPaths) {
     join(destination, 'index.html')
   );
   publicBlogArtifacts[route] = assetPath;
+}
+const blogDetailPaths = prerenderedPaths.filter(
+  (route) => prerenderManifest.routes[route].srcRoute === '/blog/[slug]'
+);
+if (
+  !publicBlogArtifacts[representativeArticle] ||
+  Object.keys(publicBlogArtifacts).length !== blogDetailPaths.length
+) {
+  throw new Error('Public article artifact coverage changed; refusing a framework-only release.');
 }
 console.log(
   `[cf-build] Emitted ${Object.keys(publicBlogArtifacts).length} immutable public article artifacts.`

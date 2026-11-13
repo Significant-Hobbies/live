@@ -45,12 +45,18 @@ export function MobileMenu({ links, isLoggedIn, accountPending = false }: Mobile
             <NavLinks links={links} mobile onNavigate={() => setOpen(false)} />
             <div className="my-1 border-t border-border" />
             {accountPending ? (
-              <span
-                role="status"
-                className="flex min-h-12 items-center justify-center px-4 text-base text-muted-foreground"
+              <Link
+                href="/bucket-list"
+                prefetch={false}
+                aria-busy="true"
+                onClick={() => setOpen(false)}
+                className="flex min-h-12 items-center justify-center rounded-xl bg-muted px-4 text-center text-base text-foreground"
               >
-                Loading account…
-              </span>
+                Account
+                <span role="status" className="sr-only">
+                  Checking account…
+                </span>
+              </Link>
             ) : isLoggedIn ? (
               <Link
                 href="/settings"

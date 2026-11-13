@@ -332,7 +332,8 @@ export default {
           const asset = await env.ASSETS.fetch(
             new Request(new URL(assetPath, request.url), request)
           );
-          if (asset.status !== 404) {
+          const redirects = asset.status >= 300 && asset.status < 400 && asset.status !== 304;
+          if (asset.status !== 404 && !redirects) {
             const headers = new Headers(asset.headers);
             headers.set('Cache-Control', cacheControlForPath(url.pathname));
             headers.append(

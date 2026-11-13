@@ -58,12 +58,17 @@ export function Nav() {
           </div>
 
           {isPending ? (
-            <span
-              role="status"
-              className="inline-flex h-11 items-center px-5 text-sm text-muted-foreground"
+            <Button
+              asChild
+              className="h-11 rounded-xl bg-transparent px-5 normal-case text-muted-foreground hover:bg-muted"
             >
-              Loading account…
-            </span>
+              <Link href="/bucket-list" prefetch={false} aria-busy="true">
+                Account
+                <span role="status" className="sr-only">
+                  Checking account…
+                </span>
+              </Link>
+            </Button>
           ) : user ? (
             <DropdownMenu onOpenChange={(open) => open && presentation.refresh()}>
               <DropdownMenuTrigger asChild>

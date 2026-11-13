@@ -193,6 +193,25 @@ describe('Generated public blog HTML', () => {
     expect(nextFetch).not.toHaveBeenCalled();
   });
 
+  it.each([301, 302, 303, 307, 308])(
+    'never exposes an internal artifact redirect for status %s',
+    async (status) => {
+      const cancel = vi.fn();
+      assetFetch.mockResolvedValueOnce(
+        new Response(new ReadableStream({ cancel }), {
+          status,
+          headers: { Location: stored },
+        })
+      );
+      const response = await worker.fetch(new Request(article), environment, context);
+      expect(response.status).toBe(200);
+      expect(response.headers.get('Location')).toBeNull();
+      expect(await response.text()).toBe('application HTML');
+      expect((nextFetch.mock.calls[0]![0] as Request).url).toBe(article);
+      expect(cancel).toHaveBeenCalledTimes(1);
+    }
+  );
+
   it('keeps non-document writes with the untouched application request', async () => {
     const request = new Request(article, { method: 'POST', body: 'unchanged input' });
     const response = await worker.fetch(request, environment, context);
