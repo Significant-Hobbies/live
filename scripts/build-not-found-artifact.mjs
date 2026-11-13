@@ -4,6 +4,7 @@ import { join } from 'node:path';
 import { generateETag } from 'next/dist/server/lib/etag.js';
 
 const NO_OP_MIDDLEWARE = 'fb4c7f4c1000b530f98f502dc05beec4fad327f3693ccc2a8f1958e571190eec';
+const OPEN_NEXT_PIPELINE = '49933d601dabad54e3ffca91c01a611d42eb486b6c7a1d38f7a6ce72f884e741';
 const RSC_PROTOCOL = {
   header: 'rsc',
   varyHeader: 'rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch',
@@ -87,6 +88,8 @@ export function emitNotFoundArtifact(projectDir, buildId) {
 function validateRoutingAuthority(projectDir, routes) {
   const middleware = readFileSync(join(projectDir, 'src/middleware.ts'));
   const middlewareHash = createHash('sha256').update(middleware).digest('hex');
+  const pipeline = readFileSync(join(projectDir, 'open-next.config.ts'));
+  const pipelineHash = createHash('sha256').update(pipeline).digest('hex');
   const supportedProtocol =
     Object.keys(routes.rsc).length === Object.keys(RSC_PROTOCOL).length &&
     Object.entries(RSC_PROTOCOL).every(([key, value]) => routes.rsc[key] === value);
@@ -103,7 +106,8 @@ function validateRoutingAuthority(projectDir, routes) {
     routes.dataRoutes.length ||
     !supportedProtocol ||
     !supportedRewrites ||
-    middlewareHash !== NO_OP_MIDDLEWARE
+    middlewareHash !== NO_OP_MIDDLEWARE ||
+    pipelineHash !== OPEN_NEXT_PIPELINE
   )
     throw new Error(
       'Unknown404 routing authority changed; qualify it before enabling the asset path.'

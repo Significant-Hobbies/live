@@ -89,6 +89,6 @@ function ordinaryPath(pathname) {
     !pathname.includes('//') &&
     !pathname.endsWith('/') &&
     !/\.(?:md|rsc)$|\.segments(?:\/|$)/i.test(pathname) &&
-    !/^\/(?:api|_next|_astro|\.well-known)(?:\/|$)/i.test(pathname)
+    !/^\/(?:api|_next|_astro|cdn-cgi|\.well-known)(?:\/|$)/i.test(pathname)
   );
 }

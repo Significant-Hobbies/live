@@ -51,6 +51,8 @@ describe('compiler-authoritative unknown HTML', () => {
     '/api/unknown',
     '/_next/unknown',
     '/_astro/unknown',
+    '/cdn-cgi/image/unknown',
+    '/cdn-cgi/_next_cache/unknown',
     '/.well-known/unknown',
     '/hub',
     '/health',

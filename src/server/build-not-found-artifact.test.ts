@@ -17,6 +17,7 @@ const { generateRoutesManifest } = createRequire(join(process.cwd(), 'package.js
   'next/dist/build/generate-routes-manifest.js'
 );
 const middleware = readFileSync(join(process.cwd(), 'src/middleware.ts'), 'utf8');
+const pipeline = readFileSync(join(process.cwd(), 'open-next.config.ts'), 'utf8');
 const dirs = [
   'src',
   '.next',
@@ -31,6 +32,7 @@ const dirs = [
   '.open-next/assets/__live_prerender/build-fixture/_not-found',
 ];
 const files = [
+  'open-next.config.ts',
   'src/middleware.ts',
   '.next/routes-manifest.json',
   '.next/app-path-routes-manifest.json',
@@ -71,6 +73,7 @@ function fixture() {
   json('.next/server/app/_not-found.meta', { status: 404 });
   writeFileSync(join(root, '.next/server/app/_not-found.html'), html);
   writeFileSync(join(root, 'src/middleware.ts'), middleware);
+  writeFileSync(join(root, 'open-next.config.ts'), pipeline);
   writeFileSync(join(root, '.open-next/assets/docs/guide.html'), 'Public asset');
   return { root, routesManifest, json };
 }
@@ -110,6 +113,7 @@ describe('generated unknown404 authority', () => {
     'missing-app-route',
     'matcher',
     'middleware',
+    'pipeline',
     'status',
     'noindex',
   ])('fails closed when %s authority changes', (change) => {
@@ -129,6 +133,8 @@ describe('generated unknown404 authority', () => {
         join(root, 'src/middleware.ts'),
         'export function middleware() { return new Response("Private"); }'
       );
+    if (change === 'pipeline')
+      writeFileSync(join(root, 'open-next.config.ts'), 'export default { skewProtection: true };');
     if (change === 'status') json('.next/server/app/_not-found.meta', { status: 200 });
     if (change === 'noindex')
       writeFileSync(
