@@ -126,6 +126,13 @@ export function ExperiencesIndexView({
         >
           Browse collections for weekends, solo time and more
         </Link>
+        . Choosing a hobby rather than a one-off experience?{' '}
+        <Link
+          href="/what-are-significant-hobbies"
+          className="text-foreground underline underline-offset-4"
+        >
+          Pick a first session that fits your life
+        </Link>
         .
       </p>
 
