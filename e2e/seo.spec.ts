@@ -7,9 +7,30 @@ test.describe('SEO', () => {
     expect(title).toContain('Live');
   });
 
-  test('pillar page exists', async ({ page }) => {
+  test('hobby explainer connects practical choices to the current product', async ({ page }) => {
     await page.goto('/what-are-significant-hobbies');
-    await expect(page.locator('h1')).toContainText('Significant Hobbies');
+    await expect(page.locator('h1')).toHaveText('What are significant hobbies?');
+    await expect(page.getByRole('link', { name: 'Find something to try' })).toHaveAttribute(
+      'href',
+      '/experiences'
+    );
+    await expect(page.locator('main a[href="/timeline/new"]')).toHaveCount(0);
+    await expect(
+      page.getByRole('heading', { name: 'Choose a first session you can actually do' })
+    ).toBeVisible();
+    const faq = await page.locator('script[type="application/ld+json"]').evaluateAll((scripts) =>
+      scripts
+        .flatMap((script) => {
+          const data = JSON.parse(script.textContent || '{}');
+          return data['@graph'] || [data];
+        })
+        .find((node) => node['@type'] === 'FAQPage')
+    );
+    expect(faq.mainEntity).toHaveLength(4);
+    for (const item of faq.mainEntity) {
+      await expect(page.getByRole('heading', { name: item.name, exact: true })).toBeVisible();
+      await expect(page.getByText(item.acceptedAnswer.text, { exact: true })).toBeVisible();
+    }
   });
 
   test('sitemap is accessible', async ({ page }) => {

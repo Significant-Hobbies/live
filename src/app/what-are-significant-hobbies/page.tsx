@@ -1,630 +1,255 @@
-import { withPublicMetadata } from '~/lib/public-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-import {
-  FadeIn,
-  GridBackground,
-  SpotlightCard,
-  StaggerContainer,
-  StaggerItem,
-  TextGenerateEffect,
-} from '~/components/aceternity';
+import { FadeIn, GridBackground } from '~/components/aceternity';
 import { JsonLd } from '~/components/json-ld';
+import { withPublicMetadata } from '~/lib/public-metadata';
+import { DEFAULT_SOCIAL_IMAGE, SITE_URL } from '~/lib/site-metadata';
+
+const title = 'What are significant hobbies? A practical guide';
+const description =
+  'Choose a hobby that fits your time, budget and company. Try practical first sessions and save bucket-list experiences privately with Live.';
+const path = '/what-are-significant-hobbies';
 
 export const metadata: Metadata = withPublicMetadata({
-  title: 'What Are Significant Hobbies? — SignificantHobbies',
-  description:
-    'Significant hobbies are the interests that shape who you are across life phases. Learn how to map your hobby journey, discover your hobby personality, and find what to try next.',
+  title: { absolute: `${title} | Live` },
+  description,
+  alternates: { canonical: `${SITE_URL}${path}` },
   openGraph: {
-    title: 'What Are Significant Hobbies?',
-    description: 'The interests that shape who you are across life phases.',
+    type: 'article',
+    title,
+    description,
+    url: `${SITE_URL}${path}`,
+    images: [{ url: DEFAULT_SOCIAL_IMAGE }],
   },
-  alternates: { canonical: 'https://significanthobbies.com/what-are-significant-hobbies' },
+  twitter: { card: 'summary_large_image', title, description, images: [DEFAULT_SOCIAL_IMAGE] },
 });
 
-const ARCHETYPES = [
+const examples = [
   {
-    name: 'Renaissance Explorer',
-    emoji: '🗺️',
-    description:
-      'You collect experiences. Wide-ranging curiosity defines you — always trying something new, rarely staying in one lane. Your breadth is your superpower.',
+    title: 'Make something',
+    hobby: 'Drawing',
+    experience: 'Finish a sketchbook of your neighborhood.',
+    session:
+      'Use a pen you own to draw one object for fifteen minutes. Keep the drawing and try the same object again next week.',
   },
   {
-    name: 'Deep Specialist',
-    emoji: '🎯',
-    description:
-      'You go deep, not wide. One or two pursuits occupy years of your life. Mastery is the goal. You are the person people turn to.',
+    title: 'Spend time outside',
+    hobby: 'Birdwatching',
+    experience: 'Recognize five birds near home.',
+    session:
+      'Sit in one familiar outdoor place. Note the birds you see or hear. Return at a similar time and notice what changes.',
   },
   {
-    name: 'Creative Soul',
-    emoji: '🎨',
-    description:
-      "Making things is how you think. Whether it's writing, painting, music, or code — your hobbies produce something that wasn't there before.",
+    title: 'Learn with someone',
+    hobby: 'Cooking',
+    experience: 'Learn a family recipe from the person who makes it.',
+    session:
+      'Choose a dish together, check the ingredients you already have, and make one part of the meal alongside them.',
   },
   {
-    name: 'Action Hero',
-    emoji: '⚡',
-    description:
-      'Your body is the instrument. Climbing, running, martial arts, cycling — you need movement, challenge, and physical feedback to feel alive.',
-  },
-  {
-    name: 'Social Connector',
-    emoji: '🤝',
-    description:
-      'Hobbies are how you build relationships. Team sports, board games, group classes — you pursue interests that bring people together.',
-  },
-  {
-    name: 'Mindful Observer',
-    emoji: '🌿',
-    description:
-      'Presence over pace. Gardening, birdwatching, journaling, meditation — you seek stillness and a deeper relationship with the world around you.',
-  },
-  {
-    name: 'Builder & Maker',
-    emoji: '🔧',
-    description:
-      "If something can be built, repaired, or optimized, you're interested. Woodworking, electronics, cooking, homebrewing — tangible results satisfy you.",
-  },
-  {
-    name: 'Curious Scholar',
-    emoji: '📚',
-    description:
-      'Learning is the hobby. History, philosophy, languages, science — your interests are intellectual and you never stop adding to your mental library.',
+    title: 'Explore on foot',
+    hobby: 'Walking',
+    experience: 'Walk a route through a part of town you have never visited.',
+    session:
+      'Pick an accessible route that suits your energy and conditions. Set aside half an hour, including the trip home.',
   },
 ];
 
-const HOBBY_TYPES = [
+const questions = [
   {
-    label: 'Creative',
-    emoji: '🎨',
-    examples: 'Writing, painting, photography, music, ceramics',
-    description: 'Making something that expresses who you are.',
-    href: '/hobbies',
+    question: 'What makes a hobby significant?',
+    answer:
+      'A hobby is significant when you value what it brings to your own life. It might give you a way to make things, spend time with someone, learn, or notice your surroundings. Popularity and expertise are not requirements.',
   },
   {
-    label: 'Physical',
-    emoji: '🏃',
-    examples: 'Running, climbing, yoga, martial arts, cycling',
-    description: 'Activities where your body is the instrument of growth.',
-    href: '/hobbies',
+    question: 'Is a hobby the same as a bucket-list experience?',
+    answer:
+      'A hobby is something you return to, such as cooking or drawing. A bucket-list experience is something you want to do, such as learning a family recipe or filling a sketchbook. An experience can be a small way to try a hobby.',
   },
   {
-    label: 'Intellectual',
-    emoji: '🧠',
-    examples: 'Chess, languages, history, coding, philosophy',
-    description: 'Hobbies that expand how you think and what you know.',
-    href: '/hobbies',
+    question: 'Do I have to choose a lifelong hobby?',
+    answer:
+      'No. Choose one first session that fits your current time, budget and energy. Afterward, decide whether you want another session, a different version of the activity, or something else.',
   },
   {
-    label: 'Social',
-    emoji: '🎭',
-    examples: 'Team sports, tabletop games, improv, volunteering',
-    description: 'Interests that deepen through doing them with others.',
-    href: '/hobbies',
-  },
-  {
-    label: 'Making',
-    emoji: '🔨',
-    examples: 'Woodworking, cooking, electronics, homebrewing',
-    description: 'The satisfaction of producing something tangible.',
-    href: '/hobbies',
+    question: 'What is Live by Significant Hobbies?',
+    answer:
+      'Live is a free catalog of bucket-list ideas and side quests with a personal list, completion logging, optional Life Bingo, a private weekly journal and Life in weeks. You can begin without an account. Signed-out work stays on this device, and publication is opt-in.',
   },
 ];
 
-export default function WhatAreSignificantHobbiesPage() {
+export default function SignificantHobbiesPage() {
   return (
-    <>
+    <div className="min-h-screen bg-background pb-16">
       <JsonLd
         data={{
           '@context': 'https://schema.org',
-          '@type': 'Article',
-          headline: 'What Are Significant Hobbies?',
-          description:
-            'Significant hobbies are the interests that shape who you are across life phases.',
-          author: { '@type': 'Organization', name: 'SignificantHobbies' },
-          publisher: { '@type': 'Organization', name: 'SignificantHobbies' },
-        }}
-      />
-      <JsonLd
-        data={{
-          '@context': 'https://schema.org',
-          '@type': 'FAQPage',
-          mainEntity: [
+          '@graph': [
             {
-              '@type': 'Question',
-              name: 'What are significant hobbies?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'Significant hobbies are interests that shaped who you became — not just things you do, but pursuits that connect to your identity, relationships, and personal growth across life phases.',
-              },
+              '@type': 'Article',
+              headline: 'What are significant hobbies?',
+              description,
+              mainEntityOfPage: `${SITE_URL}${path}`,
+              author: { '@id': `${SITE_URL}/#org` },
+              publisher: { '@id': `${SITE_URL}/#org` },
             },
             {
-              '@type': 'Question',
-              name: 'How do I find my hobby personality?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'Build a hobby timeline mapping your interests across life phases (childhood, teens, college, career, now). SignificantHobbies analyzes your pattern and assigns one of 8 archetypes like Renaissance Explorer, Creative Soul, or Action Hero.',
-              },
-            },
-            {
-              '@type': 'Question',
-              name: 'How many hobbies should I have?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: "Research suggests a balanced 'hobby stack' of 4 types: one creative (Make), one physical (Move), one intellectual (Think), and one social (Connect). You don't need dozens — 3-5 active hobbies is healthy.",
-              },
-            },
-            {
-              '@type': 'Question',
-              name: 'Is it too late to start a new hobby?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: "Never. Julia Child didn't cook until 36. Vera Wang started fashion at 40. Grandma Moses began painting at 78. Age gives you advantages: patience, resources, and knowing what you actually enjoy.",
-              },
+              '@type': 'FAQPage',
+              mainEntity: questions.map(({ question, answer }) => ({
+                '@type': 'Question',
+                name: question,
+                acceptedAnswer: { '@type': 'Answer', text: answer },
+              })),
             },
           ],
         }}
       />
+      <header className="relative overflow-hidden border-b border-border bg-card px-5 py-14 sm:px-8 sm:py-20">
+        <GridBackground />
+        <div className="relative mx-auto max-w-4xl">
+          <p className="text-sm font-semibold text-primary">Live by Significant Hobbies</p>
+          <h1 className="mt-4 max-w-3xl text-balance font-serif text-4xl font-medium leading-tight text-foreground sm:text-5xl">
+            What are significant hobbies?
+          </h1>
+          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+            The things you choose to return to because they matter to you. A hobby can be a quiet
+            half hour, a skill you slowly learn, or time you share with someone. Start with what you
+            want to do, then make room for one real attempt.
+          </p>
+          <Link
+            href="/experiences"
+            className="mt-7 inline-flex min-h-11 items-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90"
+          >
+            Find something to try
+          </Link>
+        </div>
+      </header>
 
-      <div className="min-h-screen bg-background">
-        {/* Hero */}
-        <section className="relative overflow-hidden px-4 py-20 sm:py-28">
-          <GridBackground variant="dots" size={22} />
-          <div className="relative mx-auto max-w-3xl text-center">
-            <FadeIn>
-              <TextGenerateEffect
-                as="h1"
-                words="What Are Significant Hobbies?"
-                className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl"
-              />
-            </FadeIn>
+      <div className="mx-auto max-w-4xl space-y-14 px-5 py-12 sm:px-8">
+        <FadeIn>
+          <section aria-labelledby="hobby-or-experience">
+            <h2
+              id="hobby-or-experience"
+              className="font-serif text-2xl font-medium text-foreground sm:text-3xl"
+            >
+              A hobby can start with one experience
+            </h2>
+            <p className="mt-4 max-w-2xl leading-relaxed text-muted-foreground">
+              Cooking is a hobby. Learning your grandmother's dal recipe is an experience. Drawing
+              is a hobby. Filling a sketchbook is a possible milestone. You can put a specific
+              experience on your list without committing to a new identity or years of practice.
+            </p>
+            <div className="mt-7 grid gap-5 sm:grid-cols-2">
+              {examples.map((example) => (
+                <div key={example.hobby} className="rounded-2xl border border-border bg-card p-6">
+                  <p className="text-sm font-semibold text-primary">{example.title}</p>
+                  <h3 className="mt-2 text-lg font-semibold text-foreground">{example.hobby}</h3>
+                  <p className="mt-3 text-sm font-medium leading-relaxed text-foreground">
+                    {example.experience}
+                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                    {example.session}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+        </FadeIn>
 
-            <FadeIn delay={0.2}>
-              <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-                A significant hobby isn&apos;t just something you do on weekends. It&apos;s an
-                interest that shaped who you became — the guitar phase in high school that taught
-                you discipline, the running habit that carried you through your 30s, the cooking
-                that became your love language.
-              </p>
-            </FadeIn>
-
-            <FadeIn delay={0.3} className="mt-10 flex flex-wrap justify-center gap-4">
-              <Link
-                href="/timeline/new"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3 text-sm font-semibold text-primary-foreground shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-md"
-              >
-                Build your timeline
-                <span>→</span>
-              </Link>
-              <Link
-                href="/explore"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-7 py-3 text-sm font-semibold text-foreground shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-foreground/30 hover:text-foreground hover:shadow-md"
-              >
-                See what others explore
-              </Link>
-            </FadeIn>
-          </div>
+        <section aria-labelledby="choose-a-first-session">
+          <h2
+            id="choose-a-first-session"
+            className="font-serif text-2xl font-medium text-foreground sm:text-3xl"
+          >
+            Choose a first session you can actually do
+          </h2>
+          <p className="mt-4 leading-relaxed text-muted-foreground">
+            Answer these questions before buying equipment or making a long commitment.
+          </p>
+          <ol className="mt-6 list-decimal space-y-5 pl-6 text-muted-foreground">
+            <li className="pl-2 leading-relaxed">
+              <strong className="text-foreground">What time do you have?</strong> Include travel,
+              setup and cleanup. A short walk near home and an afternoon class need different spaces
+              in your week.
+            </li>
+            <li className="pl-2 leading-relaxed">
+              <strong className="text-foreground">What can you use already?</strong> Begin with
+              materials you own, a borrowed tool or a single introductory session. Check the full
+              cost before you sign up.
+            </li>
+            <li className="pl-2 leading-relaxed">
+              <strong className="text-foreground">What company would you enjoy?</strong> Choose time
+              alone, a familiar person or a group. The same activity can feel very different in each
+              setting.
+            </li>
+            <li className="pl-2 leading-relaxed">
+              <strong className="text-foreground">What will you try?</strong> Write a concrete
+              action, such as "draw one mug on Saturday," rather than "become an artist." Afterward,
+              ask whether you want to do it again.
+            </li>
+          </ol>
+          <p className="mt-7 leading-relaxed text-muted-foreground">
+            Use the{' '}
+            <Link
+              href="/experiences/collections"
+              className="text-foreground underline underline-offset-4"
+            >
+              experience collections
+            </Link>{' '}
+            for ideas grouped by time, budget and company, or compare the{' '}
+            <Link
+              href="/tools/cost-calculator"
+              className="text-foreground underline underline-offset-4"
+            >
+              cost of a hobby
+            </Link>{' '}
+            before committing.
+          </p>
         </section>
 
-        {/* Article body */}
-        <div className="mx-auto max-w-3xl px-4 py-16">
-          {/* Section 1: Why some hobbies matter more */}
-          <FadeIn className="mb-16">
-            <section className="mb-16">
-              <h2 className="mb-5 text-2xl font-bold text-foreground sm:text-3xl">
-                Why Some Hobbies Matter More Than Others
-              </h2>
-              <div className="space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                <p>
-                  Most of us have tried dozens of hobbies. Some lasted a week. Some became a part of
-                  our identity for years. The difference between a fleeting interest and a
-                  significant hobby isn&apos;t how much time you log — it&apos;s how deeply the
-                  pursuit weaves into who you are.
-                </p>
-                <p>
-                  Significant hobbies tend to share a few qualities: they challenge you at the right
-                  level, they connect to something you genuinely value, and they leave a trace — in
-                  your skills, your relationships, or your sense of self. You don&apos;t just do
-                  them. You become someone through them.
-                </p>
-                <p>
-                  Psychologists have long studied the role of leisure in identity formation. When
-                  researchers ask people to describe themselves, hobbies and interests feature
-                  prominently. We are, in part, what we choose to spend our discretionary time on.
-                  This is the foundation of what we call your{' '}
-                  <strong className="text-foreground">hobby personality</strong> — the pattern of
-                  interests across your life that reveals something true about who you are.
-                </p>
-                <p>
-                  Browse the{' '}
-                  <Link
-                    href="/hobbies"
-                    className="font-medium text-foreground underline underline-offset-2 hover:opacity-80"
-                  >
-                    hobby directory
-                  </Link>{' '}
-                  to discover hundreds of pursuits organized by category, and see which ones
-                  resonate with the person you&apos;re becoming.
-                </p>
+        <section
+          aria-labelledby="keep-your-own-list"
+          className="rounded-2xl border border-border bg-card p-6 sm:p-8"
+        >
+          <h2 id="keep-your-own-list" className="font-serif text-2xl font-medium text-foreground">
+            Keep the idea. Notice what happened.
+          </h2>
+          <p className="mt-4 leading-relaxed text-muted-foreground">
+            In Live, browse the shared catalog or add your own wording to{' '}
+            <Link href="/bucket-list" className="text-foreground underline underline-offset-4">
+              My list
+            </Link>
+            . Mark an experience done when you finish. Your{' '}
+            <Link href="/journal" className="text-foreground underline underline-offset-4">
+              weekly journal
+            </Link>{' '}
+            is a private place to remember the week before.
+          </p>
+          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+            Begin free without an account. Signed-out records stay on this device. Sign in when you
+            want records across devices. Publication is an explicit choice per item; your weekly
+            journal stays private.
+          </p>
+        </section>
+
+        <section aria-labelledby="questions">
+          <h2
+            id="questions"
+            className="font-serif text-2xl font-medium text-foreground sm:text-3xl"
+          >
+            Questions about significant hobbies
+          </h2>
+          <div className="mt-6 divide-y divide-border">
+            {questions.map(({ question, answer }) => (
+              <div key={question} className="py-5 first:pt-0">
+                <h3 className="font-semibold text-foreground">{question}</h3>
+                <p className="mt-3 max-w-2xl leading-relaxed text-muted-foreground">{answer}</p>
               </div>
-            </section>
-          </FadeIn>
-
-          <div className="mb-16 h-px bg-gradient-to-r from-transparent via-foreground/10 to-transparent" />
-
-          {/* Section 2: The science */}
-          <FadeIn className="mb-16">
-            <section className="mb-16">
-              <h2 className="mb-5 text-2xl font-bold text-foreground sm:text-3xl">
-                The Science Behind Hobby Significance
-              </h2>
-              <div className="space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                <p>
-                  There&apos;s real psychology behind why certain hobbies stick while others fade.
-                  Three mechanisms stand out:
-                </p>
-              </div>
-
-              <StaggerContainer className="mt-8 space-y-6">
-                {[
-                  {
-                    title: 'Flow state (Csikszentmihalyi)',
-                    body: 'The psychologist Mihaly Csikszentmihalyi identified "flow" — a state of deep absorption where challenge and skill are perfectly matched. Hobbies that put you in flow are hobbies you return to. They\'re hard enough to be interesting but not so hard they feel impossible. This is why rock climbing holds people for decades while easy puzzles get abandoned.',
-                  },
-                  {
-                    title: 'Identity formation',
-                    body: "We become what we practice. A person who paints isn't just someone who paints — they start to see the world like a painter. A runner develops not just fitness but resilience, solitude tolerance, and a relationship with early mornings. Significant hobbies reshape cognition, habits, and self-concept over time.",
-                  },
-                  {
-                    title: 'Social connection',
-                    body: "Shared hobbies create unusually strong bonds. The people you climb with, play music with, or run with know a version of you that most people don't — the version that shows up for hard things. Research on friendship consistently finds that shared activity, not shared history, is what actually sustains relationships.",
-                  },
-                ].map(({ title, body }) => (
-                  <StaggerItem key={title}>
-                    <SpotlightCard className="shadow-soft" innerClassName="rounded-2xl p-6">
-                      <h3 className="mb-2 text-base font-bold text-foreground">{title}</h3>
-                      <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
-                        {body}
-                      </p>
-                    </SpotlightCard>
-                  </StaggerItem>
-                ))}
-              </StaggerContainer>
-
-              <p className="mt-6 text-sm text-muted-foreground">
-                Want to go deeper?{' '}
-                <Link
-                  href="/blog"
-                  className="font-medium text-foreground underline underline-offset-2 hover:opacity-80"
-                >
-                  Read the blog
-                </Link>{' '}
-                for long-form essays on the psychology of hobbies, identity, and leisure.
-              </p>
-            </section>
-          </FadeIn>
-
-          <div className="mb-16 h-px bg-gradient-to-r from-transparent via-foreground/10 to-transparent" />
-
-          {/* Section 3: Mapping */}
-          <FadeIn className="mb-16">
-            <section className="mb-16">
-              <h2 className="mb-5 text-2xl font-bold text-foreground sm:text-3xl">
-                Mapping Your Significant Hobbies
-              </h2>
-              <div className="space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                <p>
-                  One of the most revealing exercises you can do is build a hobby timeline — a
-                  visual map of the interests you&apos;ve held across your life. Not just the ones
-                  you have now, but the ones you&apos;ve had, dropped, rekindled, or abandoned.
-                </p>
-                <p>
-                  The timeline moves through life phases: childhood, teenage years, college, early
-                  career, and wherever you are now. When you lay it all out, patterns emerge that
-                  are hard to see from inside any single chapter.
-                </p>
-              </div>
-
-              <SpotlightCard
-                className="mt-8 overflow-hidden shadow-soft"
-                innerClassName="rounded-2xl"
-              >
-                <div className="border-b border-border px-6 py-4">
-                  <p className="text-sm font-semibold text-subtle">What you might discover</p>
-                </div>
-                <div className="divide-y divide-stone-50">
-                  {[
-                    {
-                      phase: 'Childhood',
-                      insight:
-                        'Interests formed before external pressure — often your most authentic ones',
-                    },
-                    {
-                      phase: 'Teens',
-                      insight: 'Hobbies tied to identity formation and social belonging',
-                    },
-                    {
-                      phase: 'College',
-                      insight: 'The widest experimental window — many pivots, some that stuck',
-                    },
-                    {
-                      phase: 'Career',
-                      insight:
-                        'Hobbies as counterweight to work — what you needed vs. what you chose',
-                    },
-                    {
-                      phase: 'Now',
-                      insight: 'What has survived? What came back? What are you building toward?',
-                    },
-                  ].map(({ phase, insight }) => (
-                    <div key={phase} className="flex items-start gap-4 px-6 py-4">
-                      <span className="mt-0.5 rounded-full bg-foreground/10 px-2.5 py-0.5 text-xs font-semibold text-foreground whitespace-nowrap">
-                        {phase}
-                      </span>
-                      <p className="text-sm leading-relaxed text-muted-foreground">{insight}</p>
-                    </div>
-                  ))}
-                </div>
-              </SpotlightCard>
-
-              <SpotlightCard className="mt-8 shadow-soft" innerClassName="rounded-xl p-6">
-                <p className="mb-3 text-base font-semibold text-foreground">
-                  Ready to see your patterns?
-                </p>
-                <p className="mb-4 text-sm text-muted-foreground">
-                  Build your hobby timeline in minutes. Add phases, drop in your hobbies, and watch
-                  your story take shape.
-                </p>
-                <Link
-                  href="/timeline/new"
-                  className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground hover:opacity-90"
-                >
-                  Build your hobby timeline →
-                </Link>
-              </SpotlightCard>
-            </section>
-          </FadeIn>
-
-          <div className="mb-16 h-px bg-gradient-to-r from-transparent via-foreground/10 to-transparent" />
-
-          {/* Section 4: Hobby personality */}
-          <FadeIn className="mb-16">
-            <section className="mb-16">
-              <h2 className="mb-5 text-2xl font-bold text-foreground sm:text-3xl">
-                Discover Your Hobby Personality
-              </h2>
-              <div className="space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                <p>
-                  The hobbies you&apos;ve held — not just the ones you have now, but all of them —
-                  reveal a consistent pattern. We call this your hobby personality. It&apos;s the
-                  archetype that shows up across your interests, regardless of how different they
-                  seem on the surface.
-                </p>
-                <p>
-                  SignificantHobbies identifies eight archetypes. Most people are a blend of two or
-                  three, but one usually dominates.
-                </p>
-              </div>
-
-              <StaggerContainer className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
-                {ARCHETYPES.map(({ name, emoji, description }) => (
-                  <StaggerItem key={name}>
-                    <SpotlightCard className="shadow-soft" innerClassName="rounded-2xl p-5">
-                      <div className="mb-3 flex items-center gap-3">
-                        <span className="text-2xl">{emoji}</span>
-                        <h3 className="text-sm font-bold text-foreground">{name}</h3>
-                      </div>
-                      <p className="text-sm leading-relaxed text-muted-foreground">{description}</p>
-                    </SpotlightCard>
-                  </StaggerItem>
-                ))}
-              </StaggerContainer>
-
-              <p className="mt-6 text-sm text-muted-foreground">
-                Your archetype is calculated from your timeline.{' '}
-                <Link
-                  href="/timeline/new"
-                  className="font-medium text-foreground underline underline-offset-2 hover:opacity-80"
-                >
-                  Build yours to find out which one you are.
-                </Link>
-              </p>
-            </section>
-          </FadeIn>
-
-          <div className="mb-16 h-px bg-gradient-to-r from-transparent via-foreground/10 to-transparent" />
-
-          {/* Section 5: Types of significant hobbies */}
-          <FadeIn className="mb-16">
-            <section className="mb-16">
-              <h2 className="mb-5 text-2xl font-bold text-foreground sm:text-3xl">
-                Types of Significant Hobbies
-              </h2>
-              <div className="space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                <p>
-                  Significant hobbies span every domain of human activity. Here are the five broad
-                  categories — each attracts a different kind of person, though most people have
-                  interests that cross multiple categories.
-                </p>
-              </div>
-
-              <StaggerContainer className="mt-8 space-y-4">
-                {HOBBY_TYPES.map(({ label, emoji, examples, description, href }) => (
-                  <StaggerItem key={label}>
-                    <Link href={href} className="group block" prefetch={false}>
-                      <SpotlightCard
-                        className="shadow-soft transition-transform duration-200 group-hover:-translate-y-0.5"
-                        innerClassName="flex items-start gap-5 rounded-2xl p-6"
-                      >
-                        <span className="text-3xl">{emoji}</span>
-                        <div className="flex-1">
-                          <div className="mb-1 flex items-center gap-2">
-                            <h3 className="font-bold text-foreground">{label} Hobbies</h3>
-                            <span className="text-xs font-semibold text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100">
-                              Explore →
-                            </span>
-                          </div>
-                          <p className="mb-1.5 text-sm text-muted-foreground">{description}</p>
-                          <p className="text-xs text-subtle">{examples}</p>
-                        </div>
-                      </SpotlightCard>
-                    </Link>
-                  </StaggerItem>
-                ))}
-              </StaggerContainer>
-            </section>
-          </FadeIn>
-
-          <div className="mb-16 h-px bg-gradient-to-r from-transparent via-foreground/10 to-transparent" />
-
-          {/* Section 6: How to find your next hobby */}
-          <FadeIn className="mb-16">
-            <section className="mb-16">
-              <h2 className="mb-5 text-2xl font-bold text-foreground sm:text-3xl">
-                How to Find Your Next Significant Hobby
-              </h2>
-              <div className="space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                <p>
-                  The hardest part isn&apos;t sticking to a hobby — it&apos;s knowing which one to
-                  try. Most people cycle through the same familiar categories rather than genuinely
-                  exploring. Here are three approaches that actually work.
-                </p>
-              </div>
-
-              <StaggerContainer className="mt-8 space-y-5">
-                {[
-                  {
-                    number: '01',
-                    title: 'The 20-hour rule',
-                    body: 'You can&apos;t evaluate a hobby in one session. The first few hours of any pursuit are defined by awkwardness and the gap between what you imagine and what you can actually do. Commit to 20 hours before deciding if something is for you. Most hobbies only reveal themselves after you&apos;re past the initial frustration.',
-                  },
-                  {
-                    number: '02',
-                    title: 'Try the opposite of what you usually do',
-                    body: 'If you&apos;re always in your head (reading, coding, strategy games), try something physical or craft-based. If you&apos;re always physical, try something slow and contemplative. Our unexplored quadrants often contain the most growth — because we tend to avoid what we&apos;re not immediately good at.',
-                  },
-                  {
-                    number: '03',
-                    title: 'Look at what you loved as a kid',
-                    body: 'Before external expectations shaped your interests, you gravitated toward things naturally. If you were always building things, drawing, or making up stories — that signal is still relevant. Many adults who return to childhood interests find they weren&apos;t abandoning them; they were just waiting.',
-                  },
-                ].map(({ number, title, body }) => (
-                  <StaggerItem key={number}>
-                    <SpotlightCard
-                      className="shadow-soft"
-                      innerClassName="flex gap-5 rounded-2xl p-6"
-                    >
-                      <div className="shrink-0 text-2xl font-bold text-muted-foreground">
-                        {number}
-                      </div>
-                      <div>
-                        <h3 className="mb-2 font-bold text-foreground">{title}</h3>
-                        <p className="text-sm leading-relaxed text-muted-foreground">
-                          {body.replaceAll('&apos;', "'")}
-                        </p>
-                      </div>
-                    </SpotlightCard>
-                  </StaggerItem>
-                ))}
-              </StaggerContainer>
-
-              <div className="mt-8">
-                <p className="mb-3 text-base text-muted-foreground">
-                  See what the community is exploring right now — filter by category, sort by
-                  trending, and get inspired by what others have picked up recently.
-                </p>
-                <Link
-                  href="/explore"
-                  className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-2.5 text-sm font-semibold text-foreground transition-all duration-200 hover:-translate-y-0.5 hover:border-foreground/30"
-                >
-                  See what others are exploring →
-                </Link>
-              </div>
-            </section>
-          </FadeIn>
-
-          <div className="mb-16 h-px bg-gradient-to-r from-transparent via-foreground/10 to-transparent" />
-
-          {/* Section 7: Start your journey */}
-          <FadeIn className="mb-8">
-            <section className="mb-8">
-              <h2 className="mb-5 text-2xl font-bold text-foreground sm:text-3xl">
-                Start Your Journey
-              </h2>
-              <p className="mb-8 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                The best time to map your significant hobbies was when you first started noticing
-                the patterns. The second best time is now. SignificantHobbies gives you the tools to
-                do it: a timeline builder, a hobby directory, a community to explore alongside, and
-                side quests to push you into new territory.
-              </p>
-
-              <StaggerContainer className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                {[
-                  {
-                    href: '/timeline/new',
-                    label: 'Build your timeline',
-                    description: 'Map your hobby history across every life phase',
-                    accent: true,
-                    emoji: '📅',
-                  },
-                  {
-                    href: '/explore',
-                    label: 'Explore timelines',
-                    description: 'See how others have mapped their hobby journeys',
-                    accent: false,
-                    emoji: '🔍',
-                  },
-                  {
-                    href: '/hobbies',
-                    label: 'Browse the hobby directory',
-                    description: 'Hundreds of hobbies organized by category',
-                    accent: false,
-                    emoji: '📋',
-                  },
-                  {
-                    href: '/blog',
-                    label: 'Read the journal',
-                    description: 'Essays on hobbies, identity, and living curiously',
-                    accent: false,
-                    emoji: '✍️',
-                  },
-                  {
-                    href: '/side-quests',
-                    label: 'Try side quests',
-                    description: 'Structured challenges to push you into new hobbies',
-                    accent: false,
-                    emoji: '⚔️',
-                  },
-                ].map(({ href, label, description, accent, emoji }) => (
-                  <StaggerItem key={href}>
-                    <Link href={href} className="group block" prefetch={false}>
-                      <SpotlightCard
-                        className={`shadow-soft transition-transform duration-200 group-hover:-translate-y-0.5 ${
-                          accent ? 'border-brand bg-field-sun' : ''
-                        }`}
-                        innerClassName="flex h-full items-start gap-4 rounded-2xl p-6"
-                      >
-                        <span className="text-2xl">{emoji}</span>
-                        <div>
-                          <p className="mb-1 font-bold text-foreground">{label}</p>
-                          <p
-                            className={`text-sm leading-relaxed ${
-                              accent ? 'text-muted-foreground' : 'text-muted-foreground'
-                            }`}
-                          >
-                            {description}
-                          </p>
-                        </div>
-                      </SpotlightCard>
-                    </Link>
-                  </StaggerItem>
-                ))}
-              </StaggerContainer>
-            </section>
-          </FadeIn>
-        </div>
+            ))}
+          </div>
+        </section>
       </div>
-    </>
+    </div>
   );
 }
