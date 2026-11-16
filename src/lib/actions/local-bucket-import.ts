@@ -152,7 +152,7 @@ async function insertGraph(item: BucketTransferItem, id: string, owner: string) 
       status: item.status,
       visibility: 'private',
       targetYear: item.targetYear ?? null,
-      lifeScale: item.lifeScale ?? null,
+      lifeScale: item.lifeScale,
       ...bucketTargetPatch(item),
       sourceSlug: item.sourceSlug ?? null,
       sourceItemTitle: item.sourceItemTitle ?? null,
