@@ -5,10 +5,10 @@ export const bucketLifeScaleSchema = z.enum(BUCKET_LIFE_SCALE_VALUES);
 export type BucketLifeScale = z.infer<typeof bucketLifeScaleSchema>;
 
 export const BUCKET_LIFE_SCALES: Record<BucketLifeScale, { label: string; description: string }> = {
-  moment: { label: 'Moment', description: 'Something you want to experience, even once.' },
+  moment: { label: 'Moment', description: 'Something to experience, even once.' },
   adventure: {
     label: 'Adventure',
-    description: 'Something you set out on, with a journey of its own.',
+    description: 'A journey of its own.',
   },
-  chapter: { label: 'Chapter', description: 'Something you make room for in your life.' },
+  chapter: { label: 'Chapter', description: 'Something to make room for.' },
 };

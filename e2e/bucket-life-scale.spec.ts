@@ -32,7 +32,12 @@ for (const mode of ['guest', 'account']) {
       ['adventure', 'Adventure'],
       ['chapter', 'Chapter'],
     ]) {
-      await choices.locator(`input[value="${value}"]`).click();
+      if (value === 'moment') {
+        await choices.locator(`input[value="${value}"]`).focus();
+        await page.keyboard.press('Space');
+      } else {
+        await choices.getByText(label!, { exact: true }).click();
+      }
       await expect(choices.locator(`input[value="${value}"]`)).toBeChecked();
       await expect(open).toContainText(label!);
       await page.reload();
@@ -46,6 +51,7 @@ for (const mode of ['guest', 'account']) {
       await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)
     ).toBe(true);
     await page.screenshot({ path: testInfo.outputPath('bucket-life-scale.png') });
+    await choices.screenshot({ path: testInfo.outputPath('life-scale-detail.png') });
     await panel.getByRole('button', { name: 'Leave open', exact: true }).click();
     await expect(open).not.toContainText('Chapter');
     await page.reload();

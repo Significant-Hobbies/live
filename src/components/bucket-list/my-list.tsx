@@ -10,7 +10,7 @@ import { experienceImage } from '~/lib/experience-images';
 import { normalizeDreamTitle } from '~/lib/dream-atlas';
 import type { BucketUpdateInput } from '~/lib/bucket-updates';
 import { formatBucketTargetDate } from '~/lib/bucket-target';
-import { BUCKET_LIFE_SCALES, BUCKET_LIFE_SCALE_VALUES } from '~/lib/bucket-life-scale';
+import { BUCKET_LIFE_SCALES } from '~/lib/bucket-life-scale';
 import {
   bucketListExport,
   downloadBucketJson,
@@ -18,6 +18,7 @@ import {
   type MyListQuery,
 } from '~/lib/bucket-list-data';
 import { MyListControls } from './my-list-controls';
+import { LifeScalePicker } from './life-scale-picker';
 import { ManualItemInput } from './manual-item-input';
 import { MyListRowsSkeleton } from './my-list-skeleton';
 import {
@@ -500,7 +501,14 @@ function ItemRow({
             {item.title}
           </span>
           <span className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] text-muted-foreground">
-            {item.lifeScale && <span>{BUCKET_LIFE_SCALES[item.lifeScale].label}</span>}
+            {item.lifeScale && (
+              <>
+                <span className="font-serif text-sm italic text-foreground/85">
+                  {BUCKET_LIFE_SCALES[item.lifeScale].label}
+                </span>
+                <span aria-hidden="true">·</span>
+              </>
+            )}
             {done ? (
               <span>Lived{completed ? ` ${completed}` : ''}</span>
             ) : (
@@ -692,44 +700,12 @@ function ItemPanel({
           </button>
         ))}
       </div>
-      <fieldset disabled={saving} aria-describedby={`life-scale-help-${item.id}`} className="mt-6">
-        <legend className="text-sm">How do you picture this?</legend>
-        <p id={`life-scale-help-${item.id}`} className="mt-1 text-[13px] text-muted-foreground">
-          Optional. Choose what feels right to you. You can change it anytime.
-        </p>
-        <div className="mt-3 space-y-1">
-          {BUCKET_LIFE_SCALE_VALUES.map((lifeScale) => (
-            <label
-              key={lifeScale}
-              className={`flex min-h-11 cursor-pointer items-start gap-3 rounded-xl px-3 py-2.5 ${item.lifeScale === lifeScale ? 'bg-surface' : ''}`}
-            >
-              <input
-                type="radio"
-                name={`life-scale-${item.id}`}
-                value={lifeScale}
-                checked={item.lifeScale === lifeScale}
-                onChange={() => void mutate((adapter) => adapter.update(item.id, { lifeScale }))}
-                className="mt-1 size-4 shrink-0 accent-brand focus-visible:ring-2 focus-visible:ring-ring"
-              />
-              <span>
-                <span className="block text-sm">{BUCKET_LIFE_SCALES[lifeScale].label}</span>
-                <span className="mt-0.5 block text-[13px] leading-relaxed text-muted-foreground">
-                  {BUCKET_LIFE_SCALES[lifeScale].description}
-                </span>
-              </span>
-            </label>
-          ))}
-        </div>
-        {item.lifeScale && (
-          <button
-            type="button"
-            onClick={() => void mutate((adapter) => adapter.update(item.id, { lifeScale: null }))}
-            className="min-h-11 px-3 text-sm text-muted-foreground underline underline-offset-4 focus-visible:ring-2 focus-visible:ring-ring"
-          >
-            Leave open
-          </button>
-        )}
-      </fieldset>
+      <LifeScalePicker
+        id={item.id}
+        value={item.lifeScale}
+        disabled={saving}
+        onChange={(lifeScale) => void mutate((adapter) => adapter.update(item.id, { lifeScale }))}
+      />
       <div className="mt-6 flex justify-between text-sm text-muted-foreground">
         <h3>Next steps</h3>
         <span>
