@@ -11,6 +11,7 @@ import { getServerAuthSession } from '~/server/auth';
 import { db } from '~/server/db';
 import { normalizeDreamTitle } from '~/lib/dream-atlas';
 import { bucketTargetDateSchema, bucketTargetPatch } from '~/lib/bucket-target';
+import { bucketLifeScaleSchema, type BucketLifeScale } from '~/lib/bucket-life-scale';
 
 const IntentionSchema = z.enum([
   'adventure',
@@ -345,6 +346,7 @@ const UpdateItemSchema = z.object({
   description: z.string().max(500).nullable().optional(),
   targetYear: z.number().int().min(1900).max(2200).nullable().optional(),
   targetDate: bucketTargetDateSchema.nullable().optional(),
+  lifeScale: bucketLifeScaleSchema.nullable().optional(),
   category: z.enum(CATEGORIES).nullable().optional(),
 });
 
@@ -354,6 +356,7 @@ export async function updateBucketListItem(
     title?: string;
     targetYear?: number | null;
     targetDate?: string | null;
+    lifeScale?: BucketLifeScale | null;
     category?: string | null;
     description?: string | null;
   }
@@ -376,10 +379,12 @@ export async function updateBucketListItem(
     )
       return { success: false, reason: 'duplicate' };
   }
-  await db
+  const changed = await db
     .update(bucketListItems)
     .set({ ...parsed, ...bucketTargetPatch(parsed), updatedAt: new Date() })
-    .where(and(eq(bucketListItems.id, id), eq(bucketListItems.userId, session.user.id)));
+    .where(and(eq(bucketListItems.id, id), eq(bucketListItems.userId, session.user.id)))
+    .returning({ id: bucketListItems.id });
+  if (parsed.lifeScale !== undefined && !changed.length) throw new Error('Item not found');
   await revalidateItemSurfaces(session.user.id);
   return { success: true };
 }

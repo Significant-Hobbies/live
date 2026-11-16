@@ -368,6 +368,46 @@ describe('two-account read isolation', () => {
 });
 
 describe('bucket item writes follow durable commit', () => {
+  it('persists optional life scale without changing other details and rejects unconfirmed writes', async () => {
+    const issuerAuth = issuer(db);
+    const owner = await signUp(issuerAuth, 'life-scale-owner@example.test', 'Scale Owner');
+    const other = await signUp(issuerAuth, 'life-scale-other@example.test', 'Other Owner');
+    asUser(owner);
+    const created = await addBucketListItem({
+      title: 'Learn to sail',
+      description: 'With a friend',
+      targetYear: 2030,
+    });
+    const id = created.id as string;
+    expect((await itemRows(owner.userId))[0]?.lifeScale).toBeNull();
+    for (const lifeScale of ['moment', 'adventure', 'chapter', null] as const) {
+      await updateBucketListItem(id, { lifeScale });
+      expect((await itemRows(owner.userId))[0]).toMatchObject({
+        id,
+        lifeScale,
+        title: 'Learn to sail',
+        description: 'With a friend',
+        targetYear: 2030,
+        status: 'planned',
+      });
+    }
+    store.failOn(/update/i);
+    await expect(updateBucketListItem(id, { lifeScale: 'chapter' })).rejects.toThrow();
+    store.failOn(null);
+    expect((await itemRows(owner.userId))[0]?.lifeScale).toBeNull();
+    asUser(other);
+    await expect(updateBucketListItem(id, { lifeScale: 'chapter' })).rejects.toThrow(
+      'Item not found'
+    );
+    expect((await itemRows(owner.userId))[0]?.lifeScale).toBeNull();
+    await expect(
+      db
+        .update(bucketListItems)
+        .set({ lifeScale: 'large' as never })
+        .where(eq(bucketListItems.id, id))
+    ).rejects.toThrow();
+  });
+
   it('a retried create after a lost acknowledgement reuses the stored row', async () => {
     const issuerAuth = issuer(db);
     const a = await signUp(issuerAuth, 'p06-retry@example.test', 'Retry Owner');

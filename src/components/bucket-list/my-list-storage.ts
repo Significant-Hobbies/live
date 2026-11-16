@@ -9,6 +9,7 @@ import { addBucketStep, removeBucketStep, setBucketStepDone } from '~/lib/action
 import type { BucketStep } from '~/lib/bucket-steps';
 import { normalizeDreamTitle } from '~/lib/dream-atlas';
 import { bucketTargetDateSchema, bucketTargetPatch } from '~/lib/bucket-target';
+import { bucketLifeScaleSchema, type BucketLifeScale } from '~/lib/bucket-life-scale';
 import { addBucketItemUpdate } from '~/lib/actions/bucket-updates';
 import {
   BucketUpdateInputSchema,
@@ -28,6 +29,7 @@ export type MyListItem = {
   status: 'planned' | 'in_progress' | 'done';
   targetYear?: number | null;
   targetDate?: string | null;
+  lifeScale?: BucketLifeScale | null;
   visibility?: string;
   notes?: string | null;
   category?: string | null;
@@ -41,7 +43,10 @@ export type MyListItem = {
 
 type NewItem = { title: string; description?: string; category?: string };
 type ItemPatch = Partial<
-  Pick<MyListItem, 'title' | 'status' | 'targetYear' | 'targetDate' | 'visibility' | 'notes'>
+  Pick<
+    MyListItem,
+    'title' | 'status' | 'targetYear' | 'targetDate' | 'lifeScale' | 'visibility' | 'notes'
+  >
 >;
 type BucketRecord = { items?: Array<string | Record<string, unknown>>; [key: string]: unknown };
 
@@ -99,6 +104,7 @@ export function localMyListStorage(
   }
   async function update(id: string, patch: ItemPatch) {
     patch = { ...patch, ...bucketTargetPatch(patch) };
+    if (patch.lifeScale !== undefined) bucketLifeScaleSchema.nullable().parse(patch.lifeScale);
     if (patch.title !== undefined) {
       const title = patch.title.trim();
       if (!title || title.length > 200)
@@ -136,12 +142,14 @@ export function localMyListStorage(
           return [];
         }
         const targetDate = bucketTargetDateSchema.safeParse(item.targetDate);
+        const lifeScale = bucketLifeScaleSchema.safeParse(item.lifeScale);
         return [
           {
             ...item,
             id: typeof item.id === 'string' && item.id ? item.id : crypto.randomUUID(),
             title: item.title,
             targetDate: targetDate.success ? targetDate.data : null,
+            lifeScale: lifeScale.success ? lifeScale.data : null,
             notes:
               item.notes !== undefined
                 ? (item.notes as string | null)
@@ -216,11 +224,18 @@ export function serverMyListStorage(initial: MyListItem[]): MyListStorage {
       if (patch.status) await updateBucketListItemStatus(id, patch.status);
       if (patch.visibility === 'public' || patch.visibility === 'private')
         await updateBucketListItemVisibility(id, patch.visibility);
-      if ('title' in patch || 'targetYear' in patch || 'targetDate' in patch || 'notes' in patch) {
+      if (
+        'title' in patch ||
+        'targetYear' in patch ||
+        'targetDate' in patch ||
+        'lifeScale' in patch ||
+        'notes' in patch
+      ) {
         const result = await updateBucketListItem(id, {
           ...('title' in patch ? { title: patch.title } : {}),
           ...('targetYear' in patch ? { targetYear: patch.targetYear } : {}),
           ...('targetDate' in patch ? { targetDate: patch.targetDate } : {}),
+          ...('lifeScale' in patch ? { lifeScale: patch.lifeScale } : {}),
           ...('notes' in patch ? { description: patch.notes } : {}),
         });
         if (!result?.success)
