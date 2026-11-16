@@ -308,11 +308,18 @@ export const bucketListItems = sqliteTable(
     sourceItemTitle: text('sourceItemTitle'),
     targetYear: integer('targetYear'),
     targetDate: text('targetDate'),
+    lifeScale: text('lifeScale', { enum: ['moment', 'adventure', 'chapter'] }),
     completedAt: integer('completedAt', { mode: 'timestamp' }),
     createdAt: integer('createdAt', { mode: 'timestamp' }).notNull().default(sql`(unixepoch())`),
     updatedAt: integer('updatedAt', { mode: 'timestamp' }).notNull().default(sql`(unixepoch())`),
   },
-  (table) => [index('BucketListItem_userId_idx').on(table.userId)]
+  (table) => [
+    index('BucketListItem_userId_idx').on(table.userId),
+    check(
+      'BucketListItem_lifeScale_check',
+      sql`${table.lifeScale} IN ('moment', 'adventure', 'chapter')`
+    ),
+  ]
 );
 
 export const bucketItemUpdates = sqliteTable(

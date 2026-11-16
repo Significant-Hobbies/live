@@ -1,9 +1,10 @@
 import { describe, expect, it, vi } from 'vitest';
-import { localMyListStorage } from './my-list-storage';
+import { localMyListStorage, serverMyListStorage } from './my-list-storage';
 import type { LocalRecordAdapter } from '~/lib/local-record-store';
 import { bucketListExport } from '~/lib/bucket-list-data';
 
-vi.mock('~/lib/actions/bucket-list', () => ({}));
+const { updateItem } = vi.hoisted(() => ({ updateItem: vi.fn() }));
+vi.mock('~/lib/actions/bucket-list', () => ({ updateBucketListItem: updateItem }));
 vi.mock('~/lib/actions/bucket-steps', () => ({}));
 vi.mock('~/lib/actions/bucket-updates', () => ({}));
 
@@ -32,6 +33,43 @@ function memoryAdapter(value: unknown) {
 }
 
 describe('local My list storage', () => {
+  it('leaves life scale unset until chosen and preserves it through changes, exports, and reloads', async () => {
+    const evidence = { notes: 'With a friend', targetYear: 2030, extra: 42 };
+    const { adapter } = memoryAdapter({ items: [{ id: 'item', title: 'Sail', ...evidence }] });
+    const storage = localMyListStorage(adapter);
+    expect((await storage.load())[0]!.lifeScale).toBeNull();
+    expect(adapter.put).not.toHaveBeenCalled();
+    for (const lifeScale of ['moment', 'adventure', 'chapter', null] as const) {
+      await storage.update('item', { lifeScale });
+      expect((await localMyListStorage(adapter).load())[0]).toMatchObject({
+        ...evidence,
+        status: 'planned',
+        lifeScale,
+      });
+      expect(bucketListExport(storage.snapshot()).items[0]).toMatchObject({ lifeScale });
+    }
+    const added = await storage.add({ title: 'Swim' });
+    expect(added[1]!.lifeScale).toBeUndefined();
+  });
+  it('rejects invalid life scales and retains the saved choice when persistence fails', async () => {
+    const { adapter } = memoryAdapter({
+      items: [
+        { id: 'item', title: 'Sail', lifeScale: 'adventure' },
+        { id: 'invalid', title: 'Swim', lifeScale: 'large', extra: 'keep' },
+      ],
+    });
+    const storage = localMyListStorage(adapter);
+    expect((await storage.load())[1]).toMatchObject({ lifeScale: null, extra: 'keep' });
+    expect(adapter.put).not.toHaveBeenCalled();
+    await expect(storage.update('item', { lifeScale: 'large' as never })).rejects.toThrow();
+    expect(adapter.put).not.toHaveBeenCalled();
+    vi.mocked(adapter.put).mockRejectedValueOnce(new Error('aborted'));
+    await expect(storage.update('item', { lifeScale: 'chapter' })).rejects.toThrow('aborted');
+    expect(storage.snapshot()[0]!.lifeScale).toBe('adventure');
+    expect((await localMyListStorage(adapter).load())[0]!.lifeScale).toBe('adventure');
+    await storage.update('item', { lifeScale: 'chapter' });
+    expect((await localMyListStorage(adapter).load())[0]!.lifeScale).toBe('chapter');
+  });
   it('ignores malformed stored dates without writing during load or losing the rest of the item', async () => {
     const { adapter } = memoryAdapter({
       items: [
@@ -151,6 +189,22 @@ describe('local My list storage', () => {
     expect(values.get('onboarding:bucket-items')?.value).toEqual({ items: ['Sail'] });
     expect(await storage.update(before[0]!.id, { status: 'done' })).toHaveLength(1);
   });
+});
+
+it('passes account life-scale choices through and retains the last confirmed value after a failed save', async () => {
+  updateItem.mockReset().mockResolvedValue({ success: true });
+  const storage = serverMyListStorage([
+    { id: 'item', title: 'Sail', status: 'planned', steps: [] },
+  ]);
+  for (const lifeScale of ['moment', 'adventure', 'chapter', null] as const) {
+    await storage.update('item', { lifeScale });
+    expect(updateItem).toHaveBeenLastCalledWith('item', { lifeScale });
+    expect(storage.snapshot()[0]!.lifeScale).toBe(lifeScale);
+  }
+  await storage.update('item', { lifeScale: 'adventure' });
+  updateItem.mockRejectedValueOnce(new Error('Offline'));
+  await expect(storage.update('item', { lifeScale: 'chapter' })).rejects.toThrow('Offline');
+  expect(storage.snapshot()[0]!.lifeScale).toBe('adventure');
 });
 
 it('renames without replacing evidence, rejects duplicates, and keeps cleared legacy notes empty', async () => {

@@ -3,6 +3,7 @@ import type { MyListItem } from '~/components/bucket-list/my-list-storage';
 import { normalizeDreamTitle } from './dream-atlas';
 import { EXPERIENCE_CATEGORIES } from './experiences';
 import { bucketTargetDateSchema } from './bucket-target';
+import { bucketLifeScaleSchema } from './bucket-life-scale';
 
 export const bucketTransferItemSchema = z
   .object({
@@ -13,6 +14,7 @@ export const bucketTransferItemSchema = z
     status: z.enum(['planned', 'in_progress', 'done']),
     targetYear: z.number().int().min(1900).max(2200).nullable().optional(),
     targetDate: bucketTargetDateSchema.nullable().optional(),
+    lifeScale: bucketLifeScaleSchema.nullable().optional(),
     sourceSlug: z.string().max(200).nullable().optional(),
     sourceItemTitle: z.string().max(200).nullable().optional(),
     createdAt: z.string().datetime().nullable().optional(),
@@ -84,6 +86,7 @@ export function bucketListExport(items: MyListItem[]) {
         'category',
         'targetYear',
         'targetDate',
+        'lifeScale',
         'sourceSlug',
         'sourceItemTitle',
         'createdAt',

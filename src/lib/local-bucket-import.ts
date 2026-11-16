@@ -54,6 +54,7 @@ function transferItem(raw: unknown) {
     'status',
     'targetYear',
     'targetDate',
+    'lifeScale',
     'sourceSlug',
     'sourceItemTitle',
     'createdAt',

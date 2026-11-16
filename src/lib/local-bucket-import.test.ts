@@ -113,6 +113,41 @@ describe('bounded device import batches', () => {
 });
 
 describe('device bucket import preparation', () => {
+  it('preserves chosen and cleared life scales while keeping invalid source items on device', async () => {
+    seed([
+      ...(['moment', 'adventure', 'chapter', null] as const).map((lifeScale, index) => ({
+        id: `scale-${index}`,
+        title: `Experience ${index}`,
+        lifeScale,
+      })),
+      { id: 'old', title: 'An older wish' },
+      { id: 'invalid', title: 'Future format', lifeScale: 'large' },
+    ]);
+    const snapshot = (await readLocalBucketSnapshot())!;
+    expect(snapshot.items.map((item) => item.lifeScale)).toEqual([
+      'moment',
+      'adventure',
+      'chapter',
+      null,
+      undefined,
+    ]);
+    expect(snapshot.invalid).toBe(1);
+    expect(snapshot.envelope.value.items).toHaveLength(6);
+    const save = vi.fn(async ({ items }: { items: BucketTransferItem[] }) => ({
+      success: true,
+      imported: items.length,
+      matched: 0,
+      conflicts: [],
+    }));
+    await importBucketItems(snapshot.items, save);
+    expect(save.mock.calls[0]![0].items.map((item) => item.lifeScale)).toEqual([
+      'moment',
+      'adventure',
+      'chapter',
+      null,
+      undefined,
+    ]);
+  });
   it('preserves exact tentative dates when preparing the account import', async () => {
     seed([{ id: 'date-item', title: 'Sail', targetYear: 2031, targetDate: '2031-06-12' }]);
     expect((await readLocalBucketSnapshot())!.items[0]).toMatchObject({
