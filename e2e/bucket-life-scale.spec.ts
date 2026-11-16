@@ -32,7 +32,8 @@ for (const mode of ['guest', 'account']) {
       ['adventure', 'Adventure'],
       ['chapter', 'Chapter'],
     ]) {
-      await choices.locator(`input[value="${value}"]`).check();
+      await choices.locator(`input[value="${value}"]`).click();
+      await expect(choices.locator(`input[value="${value}"]`)).toBeChecked();
       await expect(open).toContainText(label!);
       await page.reload();
       await waitForHydrated(open);
