@@ -384,7 +384,7 @@ export async function updateBucketListItem(
     .set({ ...parsed, ...bucketTargetPatch(parsed), updatedAt: new Date() })
     .where(and(eq(bucketListItems.id, id), eq(bucketListItems.userId, session.user.id)))
     .returning({ id: bucketListItems.id });
-  if (!changed.length) throw new Error('Item not found');
+  if (parsed.lifeScale !== undefined && !changed.length) throw new Error('Item not found');
   await revalidateItemSurfaces(session.user.id);
   return { success: true };
 }
