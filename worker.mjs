@@ -13,6 +13,7 @@
 
 import { isLiveHost } from './live-origins.mjs';
 import { withPublicDocumentHints } from './public-document-hints.mjs';
+import { withPrivateLoadingDocument } from './private-loading-document.mjs';
 import openNext from './.open-next/worker.js';
 import { buildId, publicBlogArtifacts, notFoundArtifact } from './.open-next/cache-release.mjs';
 import { createNotFoundAssetHandler } from './not-found-artifact.mjs';
@@ -159,7 +160,7 @@ async function fetchOpenNext(request, env, ctx) {
       pathname
     );
   }
-  return response;
+  return withPrivateLoadingDocument(request, response, pathname);
 }
 
 export default {
